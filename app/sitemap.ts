@@ -10,11 +10,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/industries",
     "/blog",
     "/cases",
+    "/case-studies",
     "/contact",
     "/privacy",
-    "/terms",
-    "/whitepaper",
-    "/learning-centre",
+    "/terms-and-conditions",
     "/use-cases",
     "/work"
   ];
@@ -33,4 +32,3 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: path === "" ? 1 : 0.7
   }));
 }
-

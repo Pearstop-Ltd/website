@@ -60,7 +60,7 @@ export function SiteFooter() {
 
           <div className="ft-col">
             <div className="ft-col-title">Stay informed</div>
-            <p className="ft-newsletter-intro">Data quality insights and Pearstop updates. No spam.</p>
+            <p className="ft-newsletter-intro">Data quality insights, industry thinking, and Pearstop updates direct to your inbox. No spam.</p>
             <form className="ft-form" action="https://formspree.io/f/xyklkdkj" method="POST">
               <input type="text" name="name" placeholder="Your name" autoComplete="name" required />
               <input type="email" name="email" placeholder="Your business email" autoComplete="email" required />
@@ -76,7 +76,7 @@ export function SiteFooter() {
             <span className="ft-sep">·</span>
             <Link href="/privacy">Privacy Policy</Link>
             <span className="ft-sep">·</span>
-            <Link href="/terms">Terms &amp; Conditions</Link>
+            <Link href="/terms-and-conditions">Terms &amp; Conditions</Link>
           </div>
           <img className="ft-fav" src={siteConfig.assets.logo} alt="" aria-hidden="true" />
         </div>

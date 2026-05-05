@@ -1,44 +1,152 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { CTABand, PageHero, SectionTitle } from "@/components/content";
-import { siteConfig } from "@/lib/site";
+import { PageHero, SectionTitle } from "@/components/content";
+import { legacyLearningCentre, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Pearstop Blog",
+  title: "Pearstop Blog and Learning Centre",
   description:
-    "Practical guides, industry analysis, and data quality thinking for hard services, construction, and infrastructure companies.",
+    "Practical guides, archived learning-centre articles, and data quality thinking for hard services, construction, and infrastructure companies.",
   alternates: {
     canonical: `${siteConfig.url}/blog`
   }
 };
+
+const learningCentreArticles = Object.values(legacyLearningCentre);
+
+type PodcastLink = {
+  kind: "youtube" | "spotify" | "apple";
+  label: string;
+  href: string;
+  meta: string;
+};
+
+const podcastLinks: PodcastLink[] = [
+  {
+    kind: "youtube",
+    label: "YouTube",
+    href: siteConfig.socials.youtube,
+    meta: "Watch episodes"
+  },
+  {
+    kind: "spotify",
+    label: "Spotify",
+    href: "https://open.spotify.com/show/37QLB09fDgo8Q4g8wVw4uk",
+    meta: "Listen on Spotify"
+  },
+  {
+    kind: "apple",
+    label: "Apple Podcasts",
+    href: "https://podcasts.apple.com/us/podcast/the-data-edge-data-quality-ai-readiness/id1872757553",
+    meta: "Listen on Apple"
+  }
+];
+
+function PodcastIcon({ kind }: { kind: PodcastLink["kind"] }) {
+  switch (kind) {
+    case "youtube":
+      return (
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <rect x="2.5" y="6" width="19" height="12" rx="3" fill="currentColor" opacity="0.16" />
+          <path
+            d="M15.6 12 10 8.8v6.4L15.6 12Z"
+            fill="currentColor"
+          />
+        </svg>
+      );
+    case "spotify":
+      return (
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="9" fill="currentColor" opacity="0.16" />
+          <path
+            d="M6.8 10.2c3.3-1 6.8-.8 10 .6"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.8"
+            strokeLinecap="round"
+          />
+          <path
+            d="M7.5 13c2.7-.7 5.4-.5 8 .5"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.6"
+            strokeLinecap="round"
+          />
+          <path
+            d="M8.1 15.6c2-.4 4-.2 5.8.4"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.4"
+            strokeLinecap="round"
+          />
+        </svg>
+      );
+    case "apple":
+      return (
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path
+            d="M14.8 4.2c-.8.1-1.8.5-2.5 1.2-.6.6-1.1 1.6-1 2.5.9.1 1.8-.4 2.4-1 .7-.6 1.2-1.5 1.1-2.7Z"
+            fill="currentColor"
+          />
+          <path
+            d="M16.5 8.1c-1.2 0-2.1.7-2.8.7-.8 0-1.8-.7-3-.7-2 0-4.4 1.8-4.4 5.2 0 3.4 1.9 7.1 4 7.1 1 0 1.6-.6 2.6-.6s1.6.6 2.8.6c2.2 0 4.2-3.7 4.2-7.1 0-2.9-1.7-5.2-3.4-5.2Z"
+            fill="currentColor"
+            opacity="0.16"
+          />
+          <path
+            d="M16.7 7.7c-1.1.1-2 .8-2.6.8-.7 0-1.7-.7-2.9-.7"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.4"
+            strokeLinecap="round"
+          />
+        </svg>
+      );
+  }
+}
 
 export default function BlogPage() {
   return (
     <>
       <PageHero
         eyebrow="Insights"
-        title="The Pearstop Blog"
-        lead="Practical guides, industry analysis, and data quality thinking for technical businesses."
+        title="Blog and Learning Centre"
+        lead="Current thinking, archived learning-centre articles, and the Data Edge podcast in one place."
       />
 
-      <section>
+      <section id="learning-centre">
         <div className="container">
-          <SectionTitle title="Articles are on their way" lead="In the meantime, listen to the podcast or connect on LinkedIn for the latest thinking." />
+          <SectionTitle
+            title="Learning Centre"
+            lead="Older Pearstop articles now sit inside the blog hub so there is one clear place for insight content."
+          />
           <div className="article-grid">
-            {[
-              { tag: "Data Quality", title: "Articles publishing soon" },
-              { tag: "Procurement", title: "More content on the way" },
-              { tag: "AI Readiness", title: "Follow on LinkedIn for updates" }
-            ].map((post) => (
-              <article key={post.title} className="blog-card">
-                <div className="blog-img-wrap" style={{ background: "var(--purple-soft)", display: "flex", alignItems: "center", justifyContent: "center", color: "var(--purple)" }}>
-                  Coming soon
+            {learningCentreArticles.map((entry, index) => (
+              <article key={entry.slug} className="blog-card">
+                <div
+                  className="blog-img-wrap"
+                  style={{
+                    background: index % 2 === 0 ? "var(--purple-soft)" : "var(--blue-soft)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    color: "var(--navy)",
+                    fontWeight: 800,
+                    letterSpacing: "0.08em",
+                    textTransform: "uppercase"
+                  }}
+                >
+                  Learning Centre
                 </div>
                 <div className="blog-body">
-                  <span className="blog-tag">{post.tag}</span>
+                  <span className="blog-tag">{entry.category}</span>
                   <h3 className="blog-title">
-                    <Link href="/blog">{post.title}</Link>
+                    <Link href={`/learning-centre/${entry.slug}`}>{entry.title}</Link>
                   </h3>
+                  <p className="light-copy">{entry.summary}</p>
+                  <Link className="blog-read" href={`/learning-centre/${entry.slug}`}>
+                    {entry.ctaLabel}
+                  </Link>
                 </div>
               </article>
             ))}
@@ -48,42 +156,38 @@ export default function BlogPage() {
 
       <section className="section-soft">
         <div className="container">
-          <div className="row" style={{ alignItems: "center", gap: "2.5rem", flexWrap: "wrap" }}>
-            <div className="col-md-6">
+          <div className="blog-podcast-grid">
+            <div className="blog-podcast-copy">
               <span className="podcast-pill">Podcast</span>
-              <h2>The Data Edge podcast</h2>
-              <p className="podcast-lead">Interviews, insights, and actionable thinking on data quality, procurement, and asset management for technical industries.</p>
-              <div className="podcast-btns">
-                <a className="podcast-btn podcast-btn-yt" href={siteConfig.socials.youtube} target="_blank" rel="noopener noreferrer">
-                  YouTube
-                </a>
-                <a className="podcast-btn podcast-btn-sp" href="https://open.spotify.com/show/37QLB09fDgo8Q4g8wVw4uk" target="_blank" rel="noopener noreferrer">
-                  Spotify
-                </a>
-                <a className="podcast-btn podcast-btn-ap" href="https://podcasts.apple.com/us/podcast/the-data-edge-data-quality-ai-readiness/id1872757553" target="_blank" rel="noopener noreferrer">
-                  Apple Podcasts
-                </a>
+              <h2>The Data Edge</h2>
+              <p className="podcast-lead">
+                Interviews, insights, and actionable thinking on data quality, procurement, and asset management for technical industries.
+              </p>
+
+              <div className="blog-podcast-links">
+                {podcastLinks.map((link) => (
+                  <a key={link.label} className="blog-podcast-link" href={link.href} target="_blank" rel="noopener noreferrer">
+                    <span className="blog-podcast-link-icon" aria-hidden="true">
+                      <PodcastIcon kind={link.kind} />
+                    </span>
+                    <span className="blog-podcast-link-copy">
+                      <span className="blog-podcast-link-title">{link.label}</span>
+                      <span className="blog-podcast-link-meta">{link.meta}</span>
+                    </span>
+                    <span className="blog-podcast-link-arrow" aria-hidden="true">
+                      ↗
+                    </span>
+                  </a>
+                ))}
               </div>
             </div>
-            <div className="col-md-5" style={{ marginLeft: "auto", textAlign: "center" }}>
-              <img
-                src={siteConfig.assets.blogPodcast}
-                alt="The Data Edge Podcast"
-                className="podcast-img"
-              />
+
+            <div className="blog-podcast-media">
+              <img src={siteConfig.assets.blogPodcast} alt="The Data Edge Podcast" className="podcast-img" />
             </div>
           </div>
         </div>
       </section>
-
-      <CTABand
-        title="Want the latest Pearstop thinking?"
-        lead="The blog will grow, but the quickest updates are on LinkedIn and through the podcast."
-        actions={[
-          { label: "Visit LinkedIn", href: siteConfig.socials.linkedin, variant: "primary", external: true },
-          { label: "Book a 7-minute discovery", href: "/contact", variant: "secondary" }
-        ]}
-      />
     </>
   );
 }
