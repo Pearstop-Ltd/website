@@ -16,21 +16,26 @@ const leaders = [
   {
     name: "Stephanie Wiechers",
     role: "CEO",
+    image: siteConfig.assets.team.stephanie,
     copy:
       "Stephanie co-founded Pearstop after years of watching good businesses lose margin to data they could not use. She leads strategic direction, and makes sure the work always connects back to real business outcomes."
   },
   {
     name: "Richard Wallace",
     role: "COO",
+    image: siteConfig.assets.team.richard,
     copy:
       "Richard leads client delivery at Pearstop, ensuring every engagement runs smoothly and that what we promise on paper becomes results in practice."
-  },
-  {
-    name: "Erwin de Werd",
-    role: "CRO",
-    copy:
-      "Erwin builds the pipeline and the processes that turn data integrity into commercial growth. If you have had a first conversation with Pearstop, it probably started with Erwin."
   }
+];
+
+const team = [
+  { name: "Robin", role: "Team Lead Development" },
+  { name: "Sjoerd", role: "Development" },
+  { name: "Dania", role: "Developer" },
+  { name: "Dean", role: "Sales" },
+  { name: "Nelia", role: "Operations" },
+  { name: "Seb", role: "Technical Advisor" }
 ];
 
 export default function AboutPage() {
@@ -77,13 +82,15 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section>
+      <section className="about-leadership">
         <div className="container">
           <SectionTitle title="Leadership Team" lead="A group of problem-solvers who love untangling complexity. We are technical enough to build it, practical enough to make it work for real businesses." />
           <div className="testimonials-grid">
             {leaders.map((leader) => (
               <article key={leader.name} className="person-card">
-                <div className="person-photo" />
+                <div className="person-photo">
+                  <img src={leader.image} alt={`${leader.name} portrait`} loading="lazy" />
+                </div>
                 <div className="person-body">
                   <h3>{leader.name}</h3>
                   <div className="person-role">{leader.role}</div>
@@ -99,12 +106,7 @@ export default function AboutPage() {
         <div className="container">
           <SectionTitle title="The Full Team" lead="The people who build, sell, and run Pearstop every day." />
           <div className="industry-grid">
-            {[
-              { name: "Robin", role: "Team Lead Development" },
-              { name: "Sjoerd", role: "Development" },
-              { name: "Dean", role: "Sales" },
-              { name: "Seb", role: "Technical Advisor" }
-            ].map((person) => (
+            {team.map((person) => (
               <div key={person.name} className="team-member">
                 <div className="member-photo" />
                 <h3>{person.name}</h3>
@@ -162,4 +164,3 @@ export default function AboutPage() {
     </>
   );
 }
-

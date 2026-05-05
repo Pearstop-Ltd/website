@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Terms and Conditions",
   description: "Terms and conditions for using the Pearstop website.",
   alternates: {
-    canonical: `${siteConfig.url}/terms`
+    canonical: `${siteConfig.url}/terms-and-conditions`
   }
 };
 
@@ -32,4 +32,3 @@ export default function TermsPage() {
     </>
   );
 }
-

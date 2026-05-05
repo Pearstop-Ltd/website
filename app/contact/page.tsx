@@ -1,80 +1,95 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ContactMailtoForm } from "@/components/contact-mailto-form";
 import { CTABand, PageHero, SectionTitle } from "@/components/content";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contact Pearstop",
-  description: "Got a data problem worth solving? We would love to hear about it.",
+  description: "See what Pearstop can do. Get to know the team or schedule a demo.",
   alternates: {
     canonical: `${siteConfig.url}/contact`
   }
 };
 
 export default function ContactPage() {
+  const leaders = [
+    { name: "Stephanie Wiechers", role: "CEO", image: siteConfig.assets.team.stephanie },
+    { name: "Richard Wallace", role: "CCO", image: siteConfig.assets.team.richard }
+  ];
+
   return (
     <>
-      <PageHero
-        eyebrow="Contact"
-        title="Let's talk."
-        lead="Got a data problem worth solving? We would love to hear about it."
-        actions={[
-          { label: "Book a 7-minute discovery", href: siteConfig.calendly, variant: "primary", external: true },
-          { label: "Email us", href: `mailto:${siteConfig.email}`, variant: "secondary", external: true }
-        ]}
-      />
+      <PageHero eyebrow="Contact" title="See what Pearstop can do." lead="Don't take our word for it. Get to know the team or schedule a demo." />
 
       <section>
         <div className="container">
-          <SectionTitle title="Where We Work" lead="Headquarters and local hubs." />
-          <div className="row" style={{ alignItems: "center", gap: "3rem", flexWrap: "wrap" }}>
+          <div className="row" style={{ alignItems: "flex-start", gap: "3rem", flexWrap: "wrap" }}>
             <div className="col-md-6">
-              <div className="location-eyebrow">Headquarters</div>
-              <h2>Dublin, Ireland</h2>
-              <p className="light-copy">
-                <strong>Dogpatch Labs</strong>
-                <br />
-                CHQ Building, Custom House Quay
-                <br />
-                Dublin D01 Y6H7, Ireland
-              </p>
-              <p>
-                <a className="location-email" href={`mailto:${siteConfig.email}`}>
-                  {siteConfig.email}
-                </a>
-              </p>
-              <div className="hubs-label">Local hubs in</div>
-              <div className="hubs-list">
-                <span className="hub-tag">Ireland</span>
-                <span className="hub-tag">Netherlands</span>
-                <span className="hub-tag">South Africa</span>
-                <span className="hub-tag">Italy</span>
+              <div className="quote-card" style={{ margin: 0 }}>
+                <div className="story-label">Get in touch</div>
+                <p className="light-copy" style={{ marginTop: "1rem" }}>
+                  Fill in the details and your email app will open with a prefilled message ready to send.
+                </p>
+                <ContactMailtoForm />
               </div>
             </div>
-            <div className="col-md-5" style={{ marginLeft: "auto" }}>
+
+            <div className="col-md-6">
+              <SectionTitle title="Our Locations" lead="We have local presence in Ireland, the Netherlands, UK, California and South Africa." />
               <div className="quote-card">
-                <div className="story-label">How to reach us</div>
-                <p className="light-copy">The fastest way to start is a short discovery call. If you are not ready for that yet, send a note and we will point you to the right page or case study.</p>
-                <div className="hero-actions" style={{ justifyContent: "flex-start", marginTop: "1rem" }}>
-                  <Link href="/" className="btn btn-outline">
-                    Back to home
-                  </Link>
-                </div>
+                <div className="story-label">Main OFFICE</div>
+                <p className="light-copy">
+                  Dogpatch labs, CHQ Building
+                  <br />
+                  Custom House Quay,
+                  <br />
+                  D01 Y6H7 Dublin, Ireland
+                </p>
+                <div className="story-label">CONTACT</div>
+                <p>
+                  <a className="location-email" href={`mailto:${siteConfig.email}`}>
+                    {siteConfig.email}
+                  </a>
+                </p>
+                <div className="story-label">Legal</div>
+                <p className="light-copy">
+                  Pearstop Ltd, registered in Ireland
+                  <br />
+                  <Link href="/terms-and-conditions">Terms and conditions</Link>
+                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
+      <section className="technical-team">
+        <div className="container">
+          <SectionTitle title="Technical team" lead="The people behind the work." />
+          <div className="testimonials-grid">
+            {leaders.map((leader) => (
+              <article key={leader.name} className="person-card">
+                <div className="person-photo">
+                  <img src={leader.image} alt={`${leader.name} portrait`} loading="lazy" />
+                </div>
+                <div className="person-body">
+                  <h3>{leader.name}</h3>
+                  <div className="person-role">{leader.role}</div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <CTABand
-        title="Got a data problem worth solving?"
-        lead="We would love to hear about it."
+        title="Not sure if Pearstop is for you?"
+        lead="Let's talk. You're smart - let's work out your solution."
         actions={[
-          { label: "Book a 7-minute discovery", href: siteConfig.calendly, variant: "primary", external: true },
-          { label: "Email us", href: `mailto:${siteConfig.email}`, variant: "secondary", external: true }
+          { label: "Find out what's possible (send email)", href: `mailto:${siteConfig.email}`, variant: "primary", external: true }
         ]}
       />
     </>
   );
 }
-

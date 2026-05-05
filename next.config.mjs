@@ -19,7 +19,10 @@ const nextConfig = {
       { source: "/ai-readiness.html", destination: "/ai-readiness", permanent: true },
       { source: "/unspsc.html", destination: "/unspsc", permanent: true },
       { source: "/privacy.html", destination: "/privacy", permanent: true },
-      { source: "/terms.html", destination: "/terms", permanent: true },
+      { source: "/terms.html", destination: "/terms-and-conditions", permanent: true },
+      { source: "/terms", destination: "/terms-and-conditions", permanent: true },
+      { source: "/whitepaper", destination: "/case-studies", permanent: true },
+      { source: "/whitepaper.html", destination: "/case-studies", permanent: true },
       { source: "/learning-centre.html", destination: "/learning-centre", permanent: true },
       { source: "/use-cases.html", destination: "/use-cases", permanent: true },
       { source: "/work.html", destination: "/work", permanent: true }

@@ -1,13 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Script from "next/script";
-import {
-  CTABand,
-  GeoBlock,
-  PageHero,
-  QuoteBox,
-  SectionTitle
-} from "@/components/content";
+import { PageHero, QuoteBox, SectionTitle } from "@/components/content";
 import { homeBenefits, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -21,7 +14,15 @@ export const metadata: Metadata = {
     title: "Pearstop - Data Quality Solutions for Hard Services",
     description:
       "Pearstop cleans and classifies procurement and asset data for hard services companies. We process 35,000 procurement lines a month, automatically.",
-    url: siteConfig.url
+    url: siteConfig.url,
+    images: ["/opengraph-image"]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Pearstop - Data Quality Solutions for Hard Services",
+    description:
+      "Pearstop cleans and classifies procurement and asset data for hard services companies. We process 35,000 procurement lines a month, automatically.",
+    images: ["/opengraph-image"]
   }
 };
 
@@ -42,43 +43,60 @@ const clientLogos = [
     alt: "FARO"
   },
   {
-    href: "/cases#spie",
-    src: siteConfig.assets.clients.spie,
-    alt: "SPIE"
-  },
-  {
     href: "/cases",
     src: siteConfig.assets.clients.kelpBlue,
-    alt: "Kelp Blue"
+    alt: "Kelp"
+  }
+];
+
+const solutionCards = [
+  {
+    title: "Data Quality & Categorisation",
+    copy: "Clean, structured, consistently categorised data, automatically. The foundation everything else is built on.",
+    href: "/unspsc",
+    linkText: "UNSPSC → How we clean data →"
+  },
+  {
+    title: "Asset Management Optimisation",
+    copy: "Structured asset data that enables predictive maintenance, smarter lifecycle decisions, and reliable bidding.",
+    href: "/asset-data-management",
+    linkText: "Value out of asset data ->"
+  },
+  {
+    title: "Procurement & Tenders",
+    copy: "Know exactly what you are buying, from whom, and at what cost, so you can negotiate better contracts and price tenders with confidence.",
+    href: "/procurement-data-quality",
+    linkText: "Improve your spend visibility →"
+  },
+  {
+    title: "AI & Reporting Readiness",
+    copy: "Your data, ready for Microsoft Fabric, dashboards, and AI tools, without the clean-up project that usually comes first.",
+    href: "/ai-readiness",
+    linkText: "Get AI ready →"
+  }
+];
+
+const blogCards = [
+  {
+    tag: "Insights",
+    title: "This is a headline to one of the most popular blog posts",
+    href: "/blog"
+  },
+  {
+    tag: "Insights",
+    title: "This is another really popular blog post headline",
+    href: "/blog"
+  },
+  {
+    tag: "Insights",
+    title: "This is yet another really popular blog post headline",
+    href: "/blog"
   }
 ];
 
 export default function HomePage() {
   return (
     <>
-      <Script
-        id="home-organization-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            name: siteConfig.name,
-            url: siteConfig.url,
-            description: siteConfig.description,
-            email: siteConfig.email,
-            address: {
-              "@type": "PostalAddress",
-              streetAddress: "CHQ Building, Custom House Quay",
-              addressLocality: "Dublin",
-              postalCode: "D01 Y6H7",
-              addressCountry: "IE"
-            },
-            sameAs: [siteConfig.socials.linkedin, siteConfig.socials.youtube, siteConfig.socials.instagram]
-          })
-        }}
-      />
-
       <PageHero
         eyebrow="Data Quality Solutions"
         title={
@@ -97,21 +115,26 @@ export default function HomePage() {
         ]}
       />
 
-      <section className="lm-band" aria-label="Free resource">
+      <section className="lm-band" aria-label="Case studies download">
         <div className="container">
           <div className="lm-inner">
             <div className="lm-img-wrap">
               <img
                 src={siteConfig.assets.leadMagnet}
-                alt="Whitepaper: How hard services companies use spend data to negotiate better contracts"
+                alt="Pearstop case studies"
               />
             </div>
             <div className="lm-text">
-              <h2>Free Whitepaper</h2>
-              <p>How hard services companies use spend data to negotiate better contracts - a practical guide to building a spend baseline your procurement team can act on.</p>
-              <Link href="/whitepaper" className="btn btn-primary">
-                Download free ↓
-              </Link>
+              <h2>Download the case studies</h2>
+              <p>See how Strukton, FARO, SPIE, and FMO use Pearstop to clean data, protect margin, and reduce manual work.</p>
+              <div className="hero-actions" style={{ justifyContent: "flex-start", marginTop: "1rem" }}>
+                <Link href="/case-studies" className="btn btn-primary">
+                  Get the case studies
+                </Link>
+                <a href={siteConfig.downloads.caseStudiesView} className="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                  View in browser
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -185,7 +208,7 @@ export default function HomePage() {
           <SectionTitle
             eyebrow="How It Works"
             title="From messy data to a foundation you can act on"
-            lead="Structured to be low-risk, with a clear output at every step."
+            lead="From messy data to a foundation you can act on — in three stages."
           />
           <div className="hiw-grid">
             <article className="hiw-card">
@@ -198,7 +221,7 @@ export default function HomePage() {
               <div className="hiw-badge">2</div>
               <div className="hiw-stage-label">Stage 2</div>
               <h3>Automated Quality Control</h3>
-              <p>The system automatically cleans up to 95% of errors and inconsistencies. Items that fall outside confident thresholds get flagged for your team to review - so you stay in control without doing the grunt work. Every human decision feeds back into the system.</p>
+              <p>The system automatically cleans up to 95% of errors and inconsistencies. Items that fall outside confident thresholds get flagged for your team to review — so you stay in control without doing the grunt work. Every human decision feeds directly back into the system, improving accuracy over time.</p>
             </article>
             <article className="hiw-card">
               <div className="hiw-badge">3</div>
@@ -218,18 +241,14 @@ export default function HomePage() {
       <section className="lm-band" aria-label="Book a demo">
         <div className="container">
           <div className="lm-inner">
-            <div className="lm-img-wrap">
-              <img
-                src={siteConfig.assets.home.demo}
-                alt="Schedule a Pearstop demo"
-              />
-            </div>
             <div className="lm-text">
-              <h2>Schedule a Demo</h2>
-              <p>In 30 minutes we will show you where your data is costing you margin and exactly what a fix looks like. No slides. Just your industry, your numbers, your data.</p>
-              <Link href="/contact" className="btn btn-primary">
-                Book a 7-minute discovery
-              </Link>
+              <h2>Schedule a Personal Demo</h2>
+              <p>In 30 minutes we'll show you where your data is costing you margin and exactly what a fix looks like. No slides. Just your industry, your numbers, your data.</p>
+              <form className="ft-form" style={{ maxWidth: "540px", marginTop: "1.25rem" }}>
+                <input type="text" name="name" placeholder="Your Name" autoComplete="name" />
+                <input type="email" name="email" placeholder="Your best E-mail" autoComplete="email" />
+                <button type="submit">Book your demo</button>
+              </form>
             </div>
           </div>
         </div>
@@ -240,65 +259,19 @@ export default function HomePage() {
           <SectionTitle
             eyebrow="Our Solutions"
             title="What Pearstop does for your business"
-            lead="Six core capabilities that give you control over your data, your costs, and your margins."
+            lead="Four core capabilities that give you control over your data, your costs, and your margins."
           />
 
           <div className="bene-cards">
-            <article className="bene-card">
-              <h3>Data Quality & Categorisation</h3>
-              <p>Clean, structured, consistently categorised data - automatically. The foundation everything else is built on.</p>
-              <Link className="bene-link" href="/unspsc">
-                UNSPSC → How we clean data →
-              </Link>
-            </article>
-            <article className="bene-card">
-              <h3>Asset Management Optimisation</h3>
-              <p>Structured asset data that enables predictive maintenance, smarter lifecycle decisions, and reliable bidding.</p>
-              <Link className="bene-link" href="/asset-data-management">
-                Value out of asset data →
-              </Link>
-            </article>
-            <article className="bene-card">
-              <h3>Procurement & Tenders</h3>
-              <p>Know exactly what you are buying, from whom, and at what cost - so you can negotiate better contracts and price tenders with confidence.</p>
-              <Link className="bene-link" href="/procurement-data-quality">
-                Improve your spend visibility →
-              </Link>
-            </article>
-            <article className="bene-card">
-              <h3>Fabric Ready</h3>
-              <p>Prepare your data for Microsoft Fabric migration. Clean, structured data that lands cleanly from day one - no rework after migration.</p>
-              <Link className="bene-link" href="/fabric">
-                Get Fabric ready →
-              </Link>
-            </article>
-            <article className="bene-card">
-              <h3>AI Readiness</h3>
-              <p>Build the data foundation your AI initiatives need. Organisations with governed, structured data are twice as likely to achieve measurable AI ROI within 12 months.</p>
-              <Link className="bene-link" href="/ai-readiness">
-                Get AI ready →
-              </Link>
-            </article>
-            <article className="bene-card">
-              <h3>Data Quality</h3>
-              <p>Clean, standardise, and enrich operational data - procurement, assets, invoices, and more - giving your teams a single source of truth they can actually act on.</p>
-              <Link className="bene-link" href="/data-quality">
-                See the workflow →
-              </Link>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section className="section-tight">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-8 col-md-offset-2">
-              <GeoBlock
-                title="What is procurement data quality and why do hard services companies need it?"
-                copy="Hard services, construction, and infrastructure companies manage purchasing across dozens of sites and suppliers. Invoice data arrives in different formats, supplier names are inconsistent, and spend categories are never applied the same way twice. The result is that category management, the core job of any procurement team, becomes impossible. Pearstop automates the cleaning and classification of this data so procurement teams can see what they are buying, from whom, and at what price - and act on it."
-              />
-            </div>
+            {solutionCards.map((card) => (
+              <article className="bene-card" key={card.title}>
+                <h3>{card.title}</h3>
+                <p>{card.copy}</p>
+                <Link className="bene-link" href={card.href}>
+                  {card.linkText}
+                </Link>
+              </article>
+            ))}
           </div>
         </div>
       </section>
@@ -312,48 +285,24 @@ export default function HomePage() {
           />
 
           <div className="article-grid">
-            <article className="blog-card">
-              <div className="blog-img-wrap" style={{ background: "#E8E0FC", display: "flex", alignItems: "center", justifyContent: "center", color: "var(--purple)" }}>
-                Coming soon
-              </div>
-              <div className="blog-body">
-                <span className="blog-tag">Insights</span>
-                <h3 className="blog-title">
-                  <Link href="/blog">Articles publishing soon</Link>
-                </h3>
-                <Link className="blog-read" href="/blog">
-                  Visit the blog →
-                </Link>
-              </div>
-            </article>
-            <article className="blog-card">
-              <div className="blog-img-wrap" style={{ background: "#DCE1F8", display: "flex", alignItems: "center", justifyContent: "center", color: "#7A8BE6" }}>
-                Coming soon
-              </div>
-              <div className="blog-body">
-                <span className="blog-tag">Podcast</span>
-                <h3 className="blog-title">
-                  <Link href="/blog">The Data Edge Podcast - listen on Spotify</Link>
-                </h3>
-                <Link className="blog-read" href="/blog">
-                  Listen on Spotify →
-                </Link>
-              </div>
-            </article>
-            <article className="blog-card">
-              <div className="blog-img-wrap" style={{ background: "#E8E0FC", display: "flex", alignItems: "center", justifyContent: "center", color: "var(--purple)" }}>
-                Coming soon
-              </div>
-              <div className="blog-body">
-                <span className="blog-tag">Insights</span>
-                <h3 className="blog-title">
-                  <Link href="/blog">More articles on the way</Link>
-                </h3>
-                <Link className="blog-read" href="/blog">
-                  Visit the blog →
-                </Link>
-              </div>
-            </article>
+            {blogCards.map((post, index) => (
+              <article className="blog-card" key={post.title}>
+                <div
+                  className="blog-img-wrap"
+                  aria-hidden="true"
+                  style={{ background: index === 1 ? "#DCE1F8" : "#E8E0FC" }}
+                />
+                <div className="blog-body">
+                  <span className="blog-tag">{post.tag}</span>
+                  <h3 className="blog-title">
+                    <Link href={post.href}>{post.title}</Link>
+                  </h3>
+                  <Link className="blog-read" href={post.href}>
+                    Read article
+                  </Link>
+                </div>
+              </article>
+            ))}
           </div>
 
           <div className="text-center" style={{ marginTop: "1.8rem" }}>
@@ -363,16 +312,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      <CTABand
-        eyebrow="Ready to reduce risk?"
-        title="Let's talk about the data problem costing you margin."
-        lead="Tell us what is slowing your team down. We will show you the quickest path to a clean baseline and the business value on the other side."
-        actions={[
-          { label: "Get in touch", href: "/contact", variant: "primary" },
-          { label: "Book a 7-minute discovery", href: "/contact", variant: "secondary" }
-        ]}
-      />
     </>
   );
 }

@@ -19,12 +19,20 @@ export const siteConfig = {
       spie: "/images/clients/spie.webp",
       kelpBlue: "/images/clients/kelp-blue.png"
     },
+    team: {
+      stephanie: "/images/clients/stephanie-headshot.png",
+      richard: "/images/clients/richard-headshot.png"
+    },
     home: {
       spendControl: "/images/home/spend-control.webp",
       assetManagement: "/images/home/asset-management.webp",
       scaleConfidence: "/images/home/scale-confidence.webp",
       demo: "/images/home/demo.webp"
     }
+  },
+  downloads: {
+    caseStudiesPdf: "https://docs.google.com/presentation/d/1QMJJo8U7Sc4o54PxmjSDQTg76L65pncExkcUvEbuAh8/export/pdf",
+    caseStudiesView: "https://docs.google.com/presentation/d/1QMJJo8U7Sc4o54PxmjSDQTg76L65pncExkcUvEbuAh8/view?usp=sharing"
   },
   socials: {
     linkedin: "https://www.linkedin.com/company/pearstop",
@@ -40,12 +48,12 @@ export type NavLink = {
 };
 
 export const solutionLinks: NavLink[] = [
-  { label: "Data Quality", href: "/data-quality", description: "Clean, standardise, and enrich operational data." },
-  { label: "Procurement", href: "/procurement-data-quality", description: "Category management and spend visibility." },
-  { label: "UNSPSC", href: "/unspsc", description: "Automated procurement classification at scale." },
+  { label: "Procurement data quality", href: "/procurement-data-quality", description: "Category management and spend visibility." },
   { label: "Asset Data Management", href: "/asset-data-management", description: "Reliable asset registers for FM and maintenance." },
+  { label: "Data Quality", href: "/data-quality", description: "Clean, standardise, and enrich operational data." },
   { label: "Fabric Ready", href: "/fabric", description: "Prepare for Microsoft Fabric migration." },
-  { label: "AI Ready", href: "/ai-readiness", description: "Build a trustworthy AI data foundation." }
+  { label: "AI Readiness", href: "/ai-readiness", description: "Build a trustworthy AI data foundation." },
+  { label: "UNSPSC", href: "/unspsc", description: "Automated procurement classification at scale." }
 ];
 
 export const mainNavLinks: NavLink[] = [
@@ -60,11 +68,19 @@ export const footerCompanyLinks: NavLink[] = [
   { label: "Industries", href: "/industries" },
   { label: "About Us", href: "/about-us" },
   { label: "Case Studies", href: "/cases" },
+  { label: "Download Case Studies", href: "/case-studies" },
   { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" }
 ];
 
-export const footerSolutionLinks = solutionLinks;
+export const footerSolutionLinks: NavLink[] = [
+  { label: "Data Quality", href: "/data-quality" },
+  { label: "Procurement", href: "/procurement-data-quality" },
+  { label: "Asset Data Management", href: "/asset-data-management" },
+  { label: "UNSPSC", href: "/unspsc" },
+  { label: "Fabric Ready", href: "/fabric" },
+  { label: "AI Readiness", href: "/ai-readiness" }
+];
 
 export type FeatureCard = {
   title: string;
@@ -76,13 +92,13 @@ export const homeBenefits: FeatureCard[] = [
   {
     title: "Maximize Spend Control",
     copy:
-      "Automatically classify every procurement line, at scale. 35,000 lines a month, no manual work. Turn incoherent ledger lines into a single source of truth so your procurement team can see exactly where money is going, activate competition across suppliers, and negotiate better contracts. Whether you are classifying 11,000 SKUs or 500,000 lines, the system scales without adding headcount.",
+      "Automatically classify every procurement line, at scale. 35,000 lines a month, no manual work. Turn incoherent ledger lines into a single source of truth so your procurement team can see exactly where money is going, activate competition across suppliers, and negotiate better contracts.",
     href: "/unspsc"
   },
   {
     title: "Your Asset List Should Work For You, Not Against You",
     copy:
-      "If your asset list needs human interpretation, it is not usable. We clean spelling errors, fix field mismatches, and structure your asset data so systems and people can actually work with it.",
+      "If your asset list needs human interpretation, it is not usable. We clean spelling errors, fix field mismatches, and structure your asset data so systems - and people - can actually work with it. Ready for maintenance planning, lifecycle analysis, and smarter bidding.",
     href: "/asset-data-management"
   },
   {
@@ -474,34 +490,34 @@ export const legacyWork: Record<string, LegacyEntry> = {
 
 export const industryCards = [
   {
-    title: "Hard Services (FM)",
-    href: "#hard-services",
-    copy: "Retain operational knowledge, protect contract margin, and enable meaningful digital transformation."
+    title: "Soft Services (FM)",
+    href: "#soft-services",
+    copy: "Identify fixed-price contracts creating margin pressure before offering. Provide value beyond basic operations."
   },
   {
     title: "Construction",
     href: "#construction",
-    copy: "Improve margin accuracy with clean procurement and people cost baselines before the bid goes out."
+    copy: "Improve margin accuracy through procurement and people cost estimates. Establish spend baselines."
   },
   {
     title: "Manufacturing",
     href: "#manufacturing",
-    copy: "Reduce cost and protect margin with accurate parts data, standardised supplier codes, and faster procurement workflows."
+    copy: "Reduce costs and protect margins with accurate parts data, standardised supplier codes, and faster procurement workflows."
   },
   {
-    title: "Soft Services (FM)",
-    href: "#soft-services",
-    copy: "Spot fixed-price pressure before signing and provide value beyond basic operations."
+    title: "Hard Services (FM)",
+    href: "#hard-services",
+    copy: "Address workforce knowledge loss. Prevent low-margin execution. Enable meaningful digital transformation."
   },
   {
     title: "Infrastructure",
     href: "#infrastructure",
-    copy: "Keep critical assets reliable while defending margin against rising material and labour costs."
+    copy: "Ensure critical asset reliability. Manage pricing squeeze and rising material costs through data clarity."
   },
   {
     title: "Building Technology",
     href: "#building-tech",
-    copy: "Turn digitalisation and acquisitions into a strategic advantage instead of a data mess."
+    copy: "Move beyond commoditisation. Transform digitalisation strategically. Integrate acquisitions efficiently."
   }
 ];
 
