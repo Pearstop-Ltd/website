@@ -34,7 +34,7 @@ export default function CasesPage() {
             </div>
           </div>
           <div className="row" style={{ alignItems: "flex-start", gap: "2.5rem", flexWrap: "wrap" }}>
-            <div className="col-md-6">
+            <div className="col-md-6" id={featured.slug}>
               <div className="cf-industry">{featured.category}</div>
               <h2>{featured.title}</h2>
               <p className="cf-body">
@@ -139,7 +139,7 @@ export default function CasesPage() {
           <SectionTitle title="More client stories" lead="A selection of projects across industries, challenges, and solution types." />
           <div className="article-grid">
             {others.map((story) => (
-              <article key={story.slug} className="cg-card">
+              <article key={story.slug} className="cg-card" id={story.slug}>
                 <div className={`cg-img ${story.tone}`} style={{ display: "flex", alignItems: "center", justifyContent: "center", color: "rgba(255,255,255,0.5)", fontSize: "2rem", background: story.tone === "from-blue" ? "linear-gradient(135deg,#1F2A68,#353FFF)" : story.tone === "from-slate" ? "linear-gradient(135deg,#0f172a,#1e3a5f)" : story.tone === "from-green" ? "linear-gradient(135deg,#1a4731,#2d7a4f)" : story.tone === "from-amber" ? "linear-gradient(135deg,#7c2d12,#c2410c)" : story.tone === "from-indigo" ? "linear-gradient(135deg,#312e81,#5847a0)" : "linear-gradient(135deg,#1e3a5f,#2563eb)" }}>
                   ✦
                 </div>
