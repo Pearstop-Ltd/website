@@ -244,7 +244,7 @@ const trustedCompanies = [
     href: "/contact"
   },
   {
-    name: "LemTech",
+    name: "Manufacturing | Air Filtration Units",
     href: "/contact"
   }
 ];

@@ -99,7 +99,7 @@ export default function CasesPage() {
               <div className="cq-attr">
                 <div className="cq-avatar" />
                 <div>
-                  <span className="cq-name">Martijn van Balkom</span>
+                  <span className="cq-name">Client</span>
                   <span className="cq-role">Asset Manager · SPIE</span>
                 </div>
               </div>
@@ -107,13 +107,13 @@ export default function CasesPage() {
             <article className="cq-card featured-dark">
               <div className="cq-stars">★★★★★</div>
               <p className="cq-text">
-                Our site visit reports come in every format imaginable - handwritten notes, spelling mistakes, scribbles. Pearstop built a system that reads them and automatically pulls the right items into a clean proposal document. It saves our team hours on every job.
+                Our site visit reports come in every format imaginable - handwritten notes, spelling mistakes, scribbles. Pearstop built a system that automatically pulls them into a clean proposal document. It saves our team hours on every job.
               </p>
               <div className="cq-attr">
                 <div className="cq-avatar" />
                 <div>
-                  <span className="cq-name">Vince Out</span>
-                  <span className="cq-role">Commercial Manager · LemTech</span>
+                  <span className="cq-name">Client</span>
+                  <span className="cq-role">Commercial Manager · Manufacturing | Air Filtration Units</span>
                 </div>
               </div>
             </article>

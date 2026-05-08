@@ -180,7 +180,7 @@ export const caseStudies: CaseStudy[] = [
     title: "Turning site visit reports into clean proposal documents, automatically",
     category: "Manufacturing · Air Filtration",
     excerpt:
-      "LemTech's site visit reports arrived in every format imaginable. Pearstop built a system that reads incoming reports and automatically outputs a clean, accurate proposal document.",
+      "Site visit reports arrived in every format imaginable. Pearstop built a system that reads incoming reports and automatically outputs a clean, accurate proposal document.",
     tags: ["Asset Management", "Data Quality"],
     statPrimary: "Hours",
     statPrimaryLabel: "Saved per proposal",
@@ -273,7 +273,7 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
     eyebrow: "Manufacturing · Air Filtration",
     title: "Turning site visit reports into clean proposal documents, automatically",
     lead:
-      "LemTech's site visit reports arrived in every format imaginable - handwritten notes, spelling mistakes, varying layouts. Pearstop built a system that reads incoming reports and automatically outputs a clean, accurate proposal document.",
+      "Site visit reports arrived in every format imaginable - handwritten notes, spelling mistakes, varying layouts. Pearstop built a system that reads incoming reports and automatically outputs a clean, accurate proposal document.",
     challenge:
       "The commercial team was spending too much time retyping and reconciling site-visit notes into a proposal format that the business could trust.",
     solution:
@@ -284,9 +284,9 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
       { value: "Accurate", label: "specification capture" }
     ],
     quote:
-      "Our site visit reports come in every format imaginable - handwritten notes, spelling mistakes, scribbles. Pearstop built a system that reads them and automatically pulls the right items into a clean proposal document.",
-    author: "Vince Out",
-    role: "Commercial Manager, LemTech",
+      "Our site visit reports come in every format imaginable - handwritten notes, spelling mistakes, scribbles. Pearstop built a system that automatically pulls them into a clean proposal document. It saves our team hours on every job.",
+    author: "Client",
+    role: "Commercial Manager · Manufacturing | Air Filtration Units",
     geo:
       "This is a manufacturing example of the same core problem: operational data is messy, inconsistent, and expensive to handle by hand.",
     ctaLabel: "Explore AI readiness",
