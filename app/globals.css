@@ -1077,7 +1077,7 @@ section {
 
 .blog-img-wrap,
 .cg-img {
-  min-height: 180px;
+  min-height: 120px;
   background: var(--purple-soft);
 }
 
@@ -1768,3 +1768,4 @@ section {
 .hiw-badge {
   font-size: 1rem;
 }
+

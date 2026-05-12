@@ -4,16 +4,16 @@ import { notFound } from "next/navigation";
 import { getBlogPost, blogPosts } from "@/lib/blog-posts";
 import { ArticleSchema, FaqSchema, BlogLayout } from "@/components/blog";
 import { siteConfig } from "@/lib/site";
-import ProcurementDataCost from "@/app/blog/posts/procurement-data-cost";
-import WhatIsUnspsc from "@/app/blog/posts/what-is-unspsc";
-import AssetRegisterProblems from "@/app/blog/posts/asset-register-problems";
-import CategoryManagementKraljic from "@/app/blog/posts/category-management-kraljic-hard-fm";
-import AiReadinessDataQuality from "@/app/blog/posts/ai-readiness-data-quality";
-import FmTenderWinRate from "@/app/blog/posts/fm-tender-win-rate";
-import ExcelHeroics from "@/app/blog/posts/excel-heroics-hard-services";
-import ConstructionProcurement from "@/app/blog/posts/construction-procurement-material-costs";
-import WhatCleanDataEnables from "@/app/blog/posts/what-clean-data-enables";
-import UnspscVsEclassVsCpv from "@/app/blog/posts/unspsc-vs-eclass-vs-cpv";
+import ProcurementDataCost from "@/components/blog-posts/procurement-data-cost";
+import WhatIsUnspsc from "@/components/blog-posts/what-is-unspsc";
+import AssetRegisterProblems from "@/components/blog-posts/asset-register-problems";
+import CategoryManagementKraljic from "@/components/blog-posts/category-management-kraljic-hard-fm";
+import AiReadinessDataQuality from "@/components/blog-posts/ai-readiness-data-quality";
+import FmTenderWinRate from "@/components/blog-posts/fm-tender-win-rate";
+import ExcelHeroics from "@/components/blog-posts/excel-heroics-hard-services";
+import ConstructionProcurement from "@/components/blog-posts/construction-procurement-material-costs";
+import WhatCleanDataEnables from "@/components/blog-posts/what-clean-data-enables";
+import UnspscVsEclassVsCpv from "@/components/blog-posts/unspsc-vs-eclass-vs-cpv";
 
 const POST_COMPONENTS: Record<string, ComponentType> = {
   "procurement-data-cost": ProcurementDataCost,
@@ -38,27 +38,29 @@ export function generateStaticParams() {
   return blogPosts.map((p) => ({ slug: p.slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const post = getBlogPost(params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const post = getBlogPost(slug);
   if (!post) return {};
   return {
     title: post.title,
     description: post.description,
-    alternates: { canonical: `${siteConfig.url}/blog/${params.slug}` },
+    alternates: { canonical: `${siteConfig.url}/blog/${slug}` },
     openGraph: {
       title: post.title,
       description: post.description,
-      url: `${siteConfig.url}/blog/${params.slug}`,
+      url: `${siteConfig.url}/blog/${slug}`,
       type: "article",
       publishedTime: post.publishedAt,
     },
   };
 }
 
-export default function BlogPostPage({ params }: { params: { slug: string } }) {
-  const post = getBlogPost(params.slug);
+export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const post = getBlogPost(slug);
   if (!post) notFound();
-  const PostContent = POST_COMPONENTS[params.slug];
+  const PostContent = POST_COMPONENTS[slug];
   if (!PostContent) notFound();
   return (
     <>

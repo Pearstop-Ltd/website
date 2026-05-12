@@ -74,7 +74,7 @@ export function AuthorBlock({ authorKey }: { authorKey: AuthorKey }) {
   const a = AUTHORS[authorKey];
   return (
     <div style={{ marginTop: "3rem", paddingTop: "2rem", borderTop: "1px solid var(--border, #e5e7eb)", display: "flex", gap: "1.25rem", alignItems: "flex-start" }}>
-      <img src={a.avatar} alt={a.name} style={{ width: 56, height: 56, borderRadius: "50%", objectFit: "cover", flexShrink: 0 }} />
+      <img src={a.avatar} alt={a.name} style={{ width: 56, height: 56, borderRadius: authorKey === "team" ? 6 : "50%", objectFit: authorKey === "team" ? "contain" : "cover", flexShrink: 0, padding: authorKey === "team" ? 4 : 0 }} />
       <div>
         <p style={{ fontWeight: 700, marginBottom: "0.1rem", fontSize: "0.95rem" }}>{a.name}</p>
         <p style={{ color: "var(--muted)", fontSize: "0.8rem", marginBottom: "0.5rem" }}>{a.role}</p>
