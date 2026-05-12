@@ -34,33 +34,31 @@ const AUTHOR_NAMES: Record<string, string> = {
   team: "Pearstop",
 };
 
-export async function generateStaticParams() {
+export function generateStaticParams() {
   return blogPosts.map((p) => ({ slug: p.slug }));
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-  const { slug } = await params;
-  const post = getBlogPost(slug);
+export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
+  const post = getBlogPost(params.slug);
   if (!post) return {};
   return {
     title: post.title,
     description: post.description,
-    alternates: { canonical: `${siteConfig.url}/blog/${slug}` },
+    alternates: { canonical: `${siteConfig.url}/blog/${params.slug}` },
     openGraph: {
       title: post.title,
       description: post.description,
-      url: `${siteConfig.url}/blog/${slug}`,
+      url: `${siteConfig.url}/blog/${params.slug}`,
       type: "article",
       publishedTime: post.publishedAt,
     },
   };
 }
 
-export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
-  const post = getBlogPost(slug);
+export default function BlogPostPage({ params }: { params: { slug: string } }) {
+  const post = getBlogPost(params.slug);
   if (!post) notFound();
-  const PostContent = POST_COMPONENTS[slug];
+  const PostContent = POST_COMPONENTS[params.slug];
   if (!PostContent) notFound();
   return (
     <>
