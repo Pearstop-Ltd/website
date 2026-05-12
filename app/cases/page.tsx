@@ -19,12 +19,9 @@ export default function CasesPage() {
   return (
     <>
       <PageHero
-        className="hero-tall"
         eyebrow="Client Results"
         title="Real work. Real margins."
         lead="How technical businesses in FM, construction, manufacturing, and infrastructure use Pearstop to clean their data and protect their margins."
-        videoUrl={siteConfig.assets.heroVideo}
-        videoPoster={siteConfig.assets.heroVideoPoster}
       />
 
       <section>
@@ -108,12 +105,12 @@ export default function CasesPage() {
             <article className="cq-card featured-dark">
               <div className="cq-stars">★★★★★</div>
               <p className="cq-text">
-                Our site visit reports come in every format imaginable - handwritten notes, spelling mistakes, scribbles. Pearstop built a system that automatically pulls them into a clean proposal document. It saves our team hours on every job.
+                Pearstop built a system that automatically pulls the right items from our visiting reports into a clean proposal document. It saves our team a lot of time by eliminating the repetitive tasks of combining the correct items.
               </p>
               <div className="cq-attr">
                 <div className="cq-avatar" />
                 <div>
-                  <span className="cq-name">Client</span>
+                  <span className="cq-name">Vince Out</span>
                   <span className="cq-role">Commercial Manager · Manufacturing | Air Filtration Units</span>
                 </div>
               </div>

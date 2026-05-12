@@ -394,9 +394,9 @@ export default function IndustriesPage() {
             title="Why Do Technical Industries Struggle With Data Quality?"
             lead="Hard services, construction, infrastructure, and manufacturing companies share a common challenge."
           />
-          <div className="row">
+          <div className="row" style={{ gap: "1.5rem" }}>
             {technicalBlocks.map((block) => (
-              <div key={block.title} className="col-md-4">
+              <div key={block.title} className="col-md-4" style={{ flex: "1 1 260px" }}>
                 <GeoBlock title={block.title} copy={block.copy} />
               </div>
             ))}
