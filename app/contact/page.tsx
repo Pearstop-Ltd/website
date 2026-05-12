@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Script from "next/script";
 import { ContactMailtoForm } from "@/components/contact-mailto-form";
 import { CTABand, PageHero, SectionTitle } from "@/components/content";
 import { siteConfig } from "@/lib/site";
@@ -64,6 +65,29 @@ export default function ContactPage() {
         </div>
       </section>
 
+      <section className="section-soft">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-8 col-md-offset-2">
+              <SectionTitle
+                eyebrow="Calendly"
+                title="Prefer to book directly?"
+                lead="Use the inline calendar below to choose a time with Stephanie without the back-and-forth."
+              />
+              <div className="calendly-card">
+                <div
+                  className="calendly-inline-widget"
+                  data-url={siteConfig.calendly}
+                  style={{ minWidth: "320px", height: "700px" }}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Script id="calendly-widget" src="https://assets.calendly.com/assets/external/widget.js" strategy="afterInteractive" />
+
       <section className="technical-team">
         <div className="container">
           <SectionTitle title="Technical team" lead="The people behind the work." />
@@ -87,7 +111,8 @@ export default function ContactPage() {
         title="Not sure if Pearstop is for you?"
         lead="Let's talk. You're smart - let's work out your solution."
         actions={[
-          { label: "Find out what's possible (send email)", href: `mailto:${siteConfig.email}`, variant: "primary", external: true }
+          { label: "Book a 7-minute discovery", href: siteConfig.calendly, variant: "primary", external: true },
+          { label: "Find out what's possible (send email)", href: `mailto:${siteConfig.email}`, variant: "secondary", external: true }
         ]}
       />
     </>

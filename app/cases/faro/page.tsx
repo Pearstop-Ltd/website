@@ -96,11 +96,10 @@ export default function FaroCaseStudyPage() {
         title="Want a case study built around your data?"
         lead="We can show you what the same approach would look like for your procurement or asset data."
         actions={[
-          { label: "Book a 7-minute discovery", href: "/contact", variant: "primary" },
+          { label: "Book a 7-minute discovery", href: siteConfig.calendly, variant: "primary", external: true },
           { label: "Explore cases", href: "/cases", variant: "secondary" }
         ]}
       />
     </>
   );
 }
-

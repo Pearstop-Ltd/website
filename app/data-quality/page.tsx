@@ -19,7 +19,7 @@ export default function DataQualityPage() {
         title="Clean data is the foundation of every good decision."
         lead="Pearstop automatically cleans, standardises, and enriches your operational data so your teams, systems, and partners all work from the same reliable source rather than their own version of the truth."
         actions={[
-          { label: "Book a 7-minute discovery", href: "/contact", variant: "primary" },
+          { label: "Book a 7-minute discovery", href: siteConfig.calendly, variant: "primary", external: true },
           { label: "See how it works", href: "#how-it-works", variant: "secondary" }
         ]}
       />
@@ -139,9 +139,7 @@ export default function DataQualityPage() {
       <CTABand
         title="Ready to fix your data quality problem?"
         lead="Book a 7-minute discovery call. We will show you exactly where your data is costing you time and margin."
-        actions={[
-          { label: "Book a 7-minute discovery", href: "/contact", variant: "primary" }
-        ]}
+        actions={[{ label: "Book a 7-minute discovery", href: siteConfig.calendly, variant: "primary", external: true }]}
       />
     </>
   );

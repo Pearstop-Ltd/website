@@ -33,7 +33,7 @@ body {
   color: var(--text);
   background: var(--bg);
   line-height: 1.65;
-  font-family: "Plus Jakarta Sans", Inter, "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  font-family: "Plus Jakarta Sans", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -324,7 +324,7 @@ strong {
 .nav-dropdown-menu {
   display: none;
   position: absolute;
-  top: calc(100% + 0.8rem);
+  top: calc(100% + 0.35rem);
   left: 0;
   min-width: 260px;
   padding: 0.5rem 0;
@@ -337,7 +337,8 @@ strong {
 }
 
 .nav-dropdown:hover .nav-dropdown-menu,
-.nav-dropdown.open .nav-dropdown-menu {
+.nav-dropdown.open .nav-dropdown-menu,
+.nav-dropdown:focus-within .nav-dropdown-menu {
   display: block;
 }
 
@@ -1293,6 +1294,20 @@ section {
   margin-top: 1rem;
 }
 
+.calendly-card {
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.calendly-inline-widget {
+  min-width: 320px;
+  height: 700px;
+}
+
 .contact-form input,
 .contact-form textarea {
   width: 100%;
@@ -1512,6 +1527,10 @@ section {
 }
 
 .page-hero {
+  padding: 5rem 0 4rem;
+}
+
+.page-hero.hero-tall {
   padding: 6.25rem 0 5rem;
 }
 
@@ -1681,14 +1700,71 @@ section {
     flex-direction: column;
     align-items: stretch;
   }
+
+  .calendly-inline-widget {
+    height: 820px;
+  }
 }
 
 @media (min-width: 992px) {
-  .page-hero {
+  .page-hero.hero-tall {
     min-height: clamp(620px, 86vh, 920px);
   }
 
-  .hero-bg-video video {
+  .page-hero.hero-tall .hero-bg-video video {
     object-position: center 40%;
   }
+}
+
+.values-icon,
+.ben-icon,
+.ind-card-icon,
+.hiw-badge,
+.blog-podcast-link-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  flex-shrink: 0;
+  font-weight: 800;
+  line-height: 1;
+  background: var(--purple-soft);
+  color: var(--primary-dark);
+}
+
+.values-card.featured .values-icon,
+.ben-card.featured .ben-icon,
+.ind-card.featured .ind-card-icon,
+.hiw-card.featured .hiw-badge {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--navy) 100%);
+  color: #fff;
+}
+
+.blog-podcast-link-icon {
+  width: 44px;
+  height: 44px;
+  background: var(--purple-soft);
+  color: var(--primary-dark);
+}
+
+.blog-podcast-link-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.values-icon,
+.ben-icon,
+.ind-card-icon,
+.hiw-badge {
+  margin-bottom: 1rem;
+}
+
+.ind-card-icon {
+  font-size: 1.05rem;
+}
+
+.hiw-badge {
+  font-size: 1rem;
 }

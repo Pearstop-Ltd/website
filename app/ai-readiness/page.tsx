@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { CTABand, GeoBlock, PageHero, QuoteBox, SectionTitle, StatsGrid } from "@/components/content";
 import { siteConfig } from "@/lib/site";
 
@@ -20,7 +19,7 @@ export default function AiReadinessPage() {
         title="AI is only underdelivering because your data is not ready."
         lead="Every AI tool - from Copilot to custom models - assumes clean, structured, governed data underneath. Pearstop builds that foundation."
         actions={[
-          { label: "Book a 7-minute discovery", href: "/contact", variant: "primary" },
+          { label: "Book a 7-minute discovery", href: siteConfig.calendly, variant: "primary", external: true },
           { label: "How it works", href: "#how-it-works", variant: "secondary" }
         ]}
       />
@@ -164,11 +163,10 @@ export default function AiReadinessPage() {
         title="Is your data ready for AI?"
         lead="Book a 7-minute call and we will tell you exactly what needs to happen before your AI initiatives can deliver results."
         actions={[
-          { label: "Book a 7-minute discovery", href: "/contact", variant: "primary" },
+          { label: "Book a 7-minute discovery", href: siteConfig.calendly, variant: "primary", external: true },
           { label: "See Fabric readiness too", href: "/fabric", variant: "secondary" }
         ]}
       />
     </>
   );
 }
-

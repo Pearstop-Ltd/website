@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { mainNavLinks, solutionLinks, siteConfig } from "@/lib/site";
 
 function isActive(pathname: string, href: string) {
@@ -14,11 +14,25 @@ export function SiteHeader() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const [solutionsOpen, setSolutionsOpen] = useState(false);
+  const solutionsCloseTimer = useRef<number | null>(null);
+
+  const clearSolutionsCloseTimer = () => {
+    if (solutionsCloseTimer.current !== null) {
+      window.clearTimeout(solutionsCloseTimer.current);
+      solutionsCloseTimer.current = null;
+    }
+  };
 
   useEffect(() => {
     setMenuOpen(false);
     setSolutionsOpen(false);
   }, [pathname]);
+
+  useEffect(() => {
+    return () => {
+      clearSolutionsCloseTimer();
+    };
+  }, []);
 
   useEffect(() => {
     if (!menuOpen) {
@@ -34,8 +48,27 @@ export function SiteHeader() {
   }, [menuOpen]);
 
   const closeMenus = () => {
+    clearSolutionsCloseTimer();
     setMenuOpen(false);
     setSolutionsOpen(false);
+  };
+
+  const openSolutionsMenu = () => {
+    clearSolutionsCloseTimer();
+    setSolutionsOpen(true);
+  };
+
+  const toggleSolutionsMenu = () => {
+    clearSolutionsCloseTimer();
+    setSolutionsOpen((open) => !open);
+  };
+
+  const scheduleSolutionsClose = () => {
+    clearSolutionsCloseTimer();
+    solutionsCloseTimer.current = window.setTimeout(() => {
+      setSolutionsOpen(false);
+      solutionsCloseTimer.current = null;
+    }, 140);
   };
 
   return (
@@ -47,7 +80,11 @@ export function SiteHeader() {
           </Link>
 
           <ul className={`nav-menu ${menuOpen ? "open" : ""}`} id="nav-menu">
-            <li className={`nav-dropdown ${solutionsOpen ? "open" : ""}`}>
+            <li
+              className={`nav-dropdown ${solutionsOpen ? "open" : ""}`}
+              onPointerEnter={openSolutionsMenu}
+              onPointerLeave={scheduleSolutionsClose}
+            >
               <div className="nav-dropdown-header">
                 <Link className={`nav-dropdown-toggle ${isActive(pathname, "/solutions") ? "active" : ""}`} href="/solutions" onClick={closeMenus}>
                   Solutions
@@ -55,7 +92,7 @@ export function SiteHeader() {
                 <button
                   type="button"
                   className="nav-dropdown-toggle-btn"
-                  onClick={() => setSolutionsOpen((open) => !open)}
+                  onClick={toggleSolutionsMenu}
                   aria-label={solutionsOpen ? "Close solutions submenu" : "Open solutions submenu"}
                   aria-expanded={solutionsOpen}
                 >

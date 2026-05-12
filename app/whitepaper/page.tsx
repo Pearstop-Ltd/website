@@ -69,11 +69,10 @@ export default function WhitepaperPage() {
         title="Prefer a conversation?"
         lead="We can also walk you through the same thinking on a quick call."
         actions={[
-          { label: "Book a 7-minute discovery", href: "/contact", variant: "primary" },
+          { label: "Book a 7-minute discovery", href: siteConfig.calendly, variant: "primary", external: true },
           { label: "Back to home", href: "/", variant: "secondary" }
         ]}
       />
     </>
   );
 }
-

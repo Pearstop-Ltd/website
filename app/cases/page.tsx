@@ -19,6 +19,7 @@ export default function CasesPage() {
   return (
     <>
       <PageHero
+        className="hero-tall"
         eyebrow="Client Results"
         title="Real work. Real margins."
         lead="How technical businesses in FM, construction, manufacturing, and infrastructure use Pearstop to clean their data and protect their margins."
@@ -179,7 +180,7 @@ export default function CasesPage() {
         title="Let's talk about your data challenge."
         lead="Tell us where your margins are leaking. We will show you exactly how Pearstop fixes it."
         actions={[
-          { label: "Book a demo", href: "/contact", variant: "primary" },
+          { label: "Book a demo", href: siteConfig.calendly, variant: "primary", external: true },
           { label: "Explore solutions", href: "/solutions", variant: "secondary" }
         ]}
       />

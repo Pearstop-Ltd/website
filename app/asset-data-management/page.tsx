@@ -8,6 +8,21 @@ export const metadata: Metadata = {
     "Turn fragmented asset registers into a clean, reliable dataset. Pearstop structures asset data for facilities management, infrastructure, and hard services companies.",
   alternates: {
     canonical: `${siteConfig.url}/asset-data-management`
+  },
+  openGraph: {
+    title: "Asset Data Management for FM and Infrastructure | Pearstop",
+    description:
+      "Turn fragmented asset registers into a clean, reliable dataset. Pearstop structures asset data for facilities management, infrastructure, and hard services companies.",
+    url: `${siteConfig.url}/asset-data-management`,
+    siteName: siteConfig.name,
+    images: ["/opengraph-image"]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Asset Data Management for FM and Infrastructure | Pearstop",
+    description:
+      "Turn fragmented asset registers into a clean, reliable dataset. Pearstop structures asset data for facilities management, infrastructure, and hard services companies.",
+    images: ["/opengraph-image"]
   }
 };
 
@@ -19,7 +34,7 @@ export default function AssetDataManagementPage() {
         title="Your asset list should work for you, not against you."
         lead="If your asset data needs human interpretation to be useful, it is not usable. Pearstop cleans, structures, and standardises asset registers so maintenance teams, procurement buyers, and management can all work from the same trusted source."
         actions={[
-          { label: "Book a 7-minute discovery", href: "/contact", variant: "primary" },
+          { label: "Book a 7-minute discovery", href: siteConfig.calendly, variant: "primary", external: true },
           { label: "See how it works", href: "#how-it-works", variant: "secondary" }
         ]}
       />
@@ -155,7 +170,7 @@ export default function AssetDataManagementPage() {
       <CTABand
         title="Ready to turn your asset data into a strategic asset?"
         lead="Book a 7-minute discovery call and see exactly how Pearstop fixes your specific data challenge."
-        actions={[{ label: "Book a 7-minute discovery", href: "/contact", variant: "primary" }]}
+        actions={[{ label: "Book a 7-minute discovery", href: siteConfig.calendly, variant: "primary", external: true }]}
       />
     </>
   );
