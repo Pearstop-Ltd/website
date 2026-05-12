@@ -35,6 +35,7 @@ export default function FaroCaseStudyPage() {
             </div>
             <div className="col-md-5" style={{ marginLeft: "auto" }}>
               <StatsGrid
+                className="stats-aside"
                 stats={[
                   { value: "30k", label: "lines classified per decision" },
                   { value: "1 wk", label: "classification time" },

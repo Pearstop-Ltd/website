@@ -10,24 +10,26 @@ function titleFromSlug(slug: string) {
     .join(" ");
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const entry = legacyLearningCentre[params.slug];
-  const title = entry?.title ?? titleFromSlug(params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const entry = legacyLearningCentre[slug];
+  const title = entry?.title ?? titleFromSlug(slug);
 
   return {
     title,
     description: entry?.summary ?? "Archived Pearstop learning centre article.",
     alternates: {
-      canonical: `${siteConfig.url}/learning-centre/${params.slug}`
+      canonical: `${siteConfig.url}/learning-centre/${slug}`
     }
   };
 }
 
-export default function LearningCentreArticlePage({ params }: { params: { slug: string } }) {
+export default async function LearningCentreArticlePage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
   const entry =
-    legacyLearningCentre[params.slug] ?? {
-      slug: params.slug,
-      title: titleFromSlug(params.slug),
+    legacyLearningCentre[slug] ?? {
+      slug,
+      title: titleFromSlug(slug),
       category: "Legacy Learning Centre",
       summary: "Archived article preserved for legacy URL continuity.",
       bullets: [

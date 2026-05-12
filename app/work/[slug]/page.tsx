@@ -9,22 +9,24 @@ function titleFromSlug(slug: string) {
     .join(" ");
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const entry = legacyWork[params.slug];
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const entry = legacyWork[slug];
   return {
-    title: entry?.title ?? titleFromSlug(params.slug),
+    title: entry?.title ?? titleFromSlug(slug),
     description: entry?.summary ?? "Archived Pearstop work page.",
     alternates: {
-      canonical: `${siteConfig.url}/work/${params.slug}`
+      canonical: `${siteConfig.url}/work/${slug}`
     }
   };
 }
 
-export default function WorkArticlePage({ params }: { params: { slug: string } }) {
+export default async function WorkArticlePage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
   const entry =
-    legacyWork[params.slug] ?? {
-      slug: params.slug,
-      title: titleFromSlug(params.slug),
+    legacyWork[slug] ?? {
+      slug,
+      title: titleFromSlug(slug),
       category: "Legacy Work",
       summary: "Archived work page preserved for legacy URL continuity.",
       bullets: [

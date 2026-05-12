@@ -10,19 +10,21 @@ function titleFromSlug(slug: string) {
     .join(" ");
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const entry = caseStudyDetails[params.slug];
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const entry = caseStudyDetails[slug];
   return {
-    title: entry?.title ?? titleFromSlug(params.slug),
+    title: entry?.title ?? titleFromSlug(slug),
     description: entry?.lead ?? "Pearstop client case study.",
     alternates: {
-      canonical: `${siteConfig.url}/cases/${params.slug}`
+      canonical: `${siteConfig.url}/cases/${slug}`
     }
   };
 }
 
-export default function CaseDetailPage({ params }: { params: { slug: string } }) {
-  const entry = caseStudyDetails[params.slug];
+export default async function CaseDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const entry = caseStudyDetails[slug];
 
   if (!entry) {
     notFound();
@@ -41,7 +43,7 @@ export default function CaseDetailPage({ params }: { params: { slug: string } })
               <p className="light-copy">{entry.solution}</p>
             </div>
             <div className="col-md-5" style={{ marginLeft: "auto" }}>
-              <StatsGrid stats={entry.wins} />
+              <StatsGrid className="stats-aside" stats={entry.wins} />
             </div>
           </div>
         </div>
@@ -57,7 +59,7 @@ export default function CaseDetailPage({ params }: { params: { slug: string } })
         </div>
       </section>
 
-      <section>
+      <section className="section-tight">
         <div className="container">
           <div className="row">
             <div className="col-md-8 col-md-offset-2">
