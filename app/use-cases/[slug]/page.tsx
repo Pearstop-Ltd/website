@@ -9,22 +9,24 @@ function titleFromSlug(slug: string) {
     .join(" ");
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const entry = legacyUseCases[params.slug];
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const entry = legacyUseCases[slug];
   return {
-    title: entry?.title ?? titleFromSlug(params.slug),
+    title: entry?.title ?? titleFromSlug(slug),
     description: entry?.summary ?? "Archived Pearstop use-case page.",
     alternates: {
-      canonical: `${siteConfig.url}/use-cases/${params.slug}`
+      canonical: `${siteConfig.url}/use-cases/${slug}`
     }
   };
 }
 
-export default function UseCasePage({ params }: { params: { slug: string } }) {
+export default async function UseCasePage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
   const entry =
-    legacyUseCases[params.slug] ?? {
-      slug: params.slug,
-      title: titleFromSlug(params.slug),
+    legacyUseCases[slug] ?? {
+      slug,
+      title: titleFromSlug(slug),
       category: "Legacy Use Case",
       summary: "Archived use-case page preserved for legacy URL continuity.",
       bullets: [

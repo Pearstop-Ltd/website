@@ -139,7 +139,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section>
+      <section className="section-tight">
         <div className="container">
           <div className="row">
             <div className="col-md-8 col-md-offset-2">

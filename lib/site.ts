@@ -286,7 +286,7 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
     quote:
       "Pearstop built a system that automatically pulls the right items from our visiting reports into a clean proposal document. It saves our team a lot of time by eliminating the repetitive tasks of combining the correct items.",
     author: "Vince Out",
-    role: "Lemtech · Manufacturing | Air Filtration Units",
+    role: "Commercial Manager · Lemtech | Air Filtration Units",
     geo:
       "This is a manufacturing example of the same core problem: operational data is messy, inconsistent, and expensive to handle by hand.",
     ctaLabel: "Explore AI readiness",

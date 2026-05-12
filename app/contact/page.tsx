@@ -25,8 +25,8 @@ export default function ContactPage() {
 
       <section>
         <div className="container">
-          <div className="row" style={{ alignItems: "flex-start", gap: "3rem", flexWrap: "wrap" }}>
-            <div className="col-md-6">
+          <div style={{ display: "flex", alignItems: "flex-start", gap: "2rem", flexWrap: "wrap" }}>
+            <div style={{ flex: "1", minWidth: "280px" }}>
               <div className="quote-card" style={{ margin: 0 }}>
                 <div className="story-label">Get in touch</div>
                 <p className="light-copy" style={{ marginTop: "1rem" }}>
@@ -36,10 +36,13 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="col-md-6">
-              <SectionTitle title="Our Locations" lead="We have local presence in Ireland, the Netherlands, UK, California and South Africa." />
+            <div style={{ flex: "1", minWidth: "280px" }}>
               <div className="quote-card">
-                <div className="story-label">Main OFFICE</div>
+                <div className="story-label">Our Locations</div>
+                <p className="light-copy" style={{ marginTop: "1rem" }}>
+                  We have local presence in Ireland, the Netherlands, UK, California and South Africa.
+                </p>
+                <div className="story-label" style={{ marginTop: "1.25rem" }}>Main Office</div>
                 <p className="light-copy">
                   Dogpatch labs, CHQ Building
                   <br />
@@ -47,7 +50,7 @@ export default function ContactPage() {
                   <br />
                   D01 Y6H7 Dublin, Ireland
                 </p>
-                <div className="story-label">CONTACT</div>
+                <div className="story-label">Contact</div>
                 <p>
                   <a className="location-email" href={`mailto:${siteConfig.email}`}>
                     {siteConfig.email}

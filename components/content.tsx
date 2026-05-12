@@ -184,7 +184,7 @@ export function CTABand({
   dark?: boolean;
 }) {
   return (
-    <section className={dark ? "dark" : "light section-soft"}>
+    <section className={dark ? "dark ccta-dark" : "section-soft"}>
       <div className="container">
         <div className="text-center">
           {eyebrow ? <span className="pill">{eyebrow}</span> : null}

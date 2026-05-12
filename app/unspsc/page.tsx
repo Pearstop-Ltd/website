@@ -37,11 +37,11 @@ export default function UnspscPage() {
                 Without UNSPSC classification, procurement spend data is a collection of free-text line items that cannot be compared, aggregated, or analysed meaningfully. With it, every purchase sits in a consistent category - and category management becomes possible.
               </p>
               <div className="quote-card">
-                <div className="story-label">Example UNSPSC hierarchy</div>
-                <p>Segment: 72 - Construction and Maintenance</p>
-                <p>Family: 7210 - Building and Facility Maintenance</p>
-                <p>Class: 721010 - Electrical Maintenance</p>
-                <p>Commodity: 72101505 - Lighting maintenance</p>
+                <div className="story-label"><strong>Example UNSPSC hierarchy</strong></div>
+                <p><strong>Segment:</strong> 72 - Construction and Maintenance</p>
+                <p><strong>Family:</strong> 7210 - Building and Facility Maintenance</p>
+                <p><strong>Class:</strong> 721010 - Electrical Maintenance</p>
+                <p><strong>Commodity:</strong> 72101505 - Lighting maintenance</p>
               </div>
             </div>
             <div className="col-md-5" style={{ marginLeft: "auto" }}>
