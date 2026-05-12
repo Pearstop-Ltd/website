@@ -1,19 +1,17 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero, SectionTitle } from "@/components/content";
-import { legacyLearningCentre, siteConfig } from "@/lib/site";
+import { siteConfig } from "@/lib/site";
 import { blogPosts } from "@/lib/blog-posts";
 
 export const metadata: Metadata = {
-  title: "Pearstop Blog and Learning Centre",
+  title: "Pearstop Blog",
   description:
-    "Practical guides, archived learning-centre articles, and data quality thinking for hard services, construction, and infrastructure companies.",
+    "Practical guides, data quality thinking, and the Data Edge podcast for hard services, construction, and infrastructure companies.",
   alternates: {
     canonical: `${siteConfig.url}/blog`
   }
 };
-
-const learningCentreArticles = Object.values(legacyLearningCentre);
 
 type PodcastLink = {
   kind: "youtube" | "spotify" | "apple";
@@ -72,7 +70,6 @@ function PodcastIcon({ kind }: { kind: PodcastLink["kind"] }) {
   }
 }
 
-
 const CATEGORY_ICONS: Record<string, string> = {
   "Procurement": "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4",
   "Asset Management": "M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10",
@@ -98,8 +95,8 @@ export default function BlogPage() {
     <>
       <PageHero
         eyebrow="Insights"
-        title="Blog and Learning Centre"
-        lead="Current thinking, archived learning-centre articles, and the Data Edge podcast in one place."
+        title="Blog"
+        lead="Current thinking on data quality, procurement, and the Data Edge podcast."
       />
 
       <section id="blog-posts">
@@ -135,46 +132,6 @@ export default function BlogPage() {
                   <p className="light-copy">{post.description}</p>
                   <Link className="blog-read" href={`/blog/${post.slug}`}>
                     Read article →
-                  </Link>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="learning-centre">
-        <div className="container">
-          <SectionTitle
-            title="Learning Centre"
-            lead="Older Pearstop articles now sit inside the blog hub so there is one clear place for insight content."
-          />
-          <div className="article-grid">
-            {learningCentreArticles.map((entry, index) => (
-              <article key={entry.slug} className="blog-card">
-                <div
-                  className="blog-img-wrap"
-                  style={{
-                    background: index % 2 === 0 ? "var(--purple-soft)" : "var(--blue-soft)",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    color: "var(--navy)",
-                    fontWeight: 800,
-                    letterSpacing: "0.08em",
-                    textTransform: "uppercase"
-                  }}
-                >
-                  Learning Centre
-                </div>
-                <div className="blog-body">
-                  <span className="blog-tag">{entry.category}</span>
-                  <h3 className="blog-title">
-                    <Link href={`/learning-centre/${entry.slug}`}>{entry.title}</Link>
-                  </h3>
-                  <p className="light-copy">{entry.summary}</p>
-                  <Link className="blog-read" href={`/learning-centre/${entry.slug}`}>
-                    {entry.ctaLabel}
                   </Link>
                 </div>
               </article>
