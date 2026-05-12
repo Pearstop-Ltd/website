@@ -304,9 +304,9 @@ export default function IndustriesPage() {
             <p>
               Data quality problems are not unique to the industries above. If your teams are managing complex operational data, dealing with inconsistent supplier records, or preparing for a digital transformation, the chances are we can help. Let&apos;s find out.
             </p>
-            <Link href="/contact" className="btn btn-primary">
+            <a href={siteConfig.calendly} className="btn btn-primary" target="_blank" rel="noopener noreferrer">
               Book a 7-minute discovery →
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -380,9 +380,9 @@ export default function IndustriesPage() {
           <div className="ind-wide-banner">
             <h3>Ready to Clean Your Data?</h3>
             <p>Whichever industry you are in, Pearstop has solved your data problem before. Let&apos;s talk about your specific situation.</p>
-            <Link href="/contact" className="btn btn-primary">
+            <a href={siteConfig.calendly} className="btn btn-primary" target="_blank" rel="noopener noreferrer">
               Book a 7-Minute Discovery
-            </Link>
+            </a>
           </div>
         </div>
       </section>

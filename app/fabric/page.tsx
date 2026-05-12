@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { CTABand, GeoBlock, PageHero, QuoteBox, SectionTitle, StatsGrid } from "@/components/content";
 import { siteConfig } from "@/lib/site";
 
@@ -20,7 +19,7 @@ export default function FabricPage() {
         title="Your Microsoft Fabric migration will only deliver if your data is ready first."
         lead="Microsoft Fabric promises company-wide insight. Pearstop makes sure the data feeding it is clean, structured, and reliable so your migration delivers what leadership is expecting."
         actions={[
-          { label: "Book a 7-minute discovery", href: "/contact", variant: "primary" },
+          { label: "Book a 7-minute discovery", href: siteConfig.calendly, variant: "primary", external: true },
           { label: "How it works", href: "#how-it-works", variant: "secondary" }
         ]}
       />
@@ -144,11 +143,10 @@ export default function FabricPage() {
         title="Planning a Fabric migration?"
         lead="Talk to us before the migration starts. A 30-minute call now can save months of rework later."
         actions={[
-          { label: "Book a 7-minute discovery", href: "/contact", variant: "primary" },
+          { label: "Book a 7-minute discovery", href: siteConfig.calendly, variant: "primary", external: true },
           { label: "See AI readiness too", href: "/ai-readiness", variant: "secondary" }
         ]}
       />
     </>
   );
 }
-

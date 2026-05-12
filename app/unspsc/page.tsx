@@ -19,7 +19,7 @@ export default function UnspscPage() {
         title="Unclassified spend is the enemy of procurement performance."
         lead="Pearstop auto-classifies up to 95% of your procurement lines using UNSPSC, the global standard for procurement categorisation, so your team can stop doing it manually."
         actions={[
-          { label: "Book a 7-minute discovery", href: "/contact", variant: "primary" },
+          { label: "Book a 7-minute discovery", href: siteConfig.calendly, variant: "primary", external: true },
           { label: "What is UNSPSC?", href: "#what-is-unspsc", variant: "secondary" }
         ]}
       />
@@ -155,7 +155,7 @@ export default function UnspscPage() {
       <CTABand
         title="Ready to automate your procurement classification?"
         lead="Book a 7-minute discovery. We will show you exactly how the classification engine would work with your data."
-        actions={[{ label: "Book a 7-minute discovery", href: "/contact", variant: "primary" }]}
+        actions={[{ label: "Book a 7-minute discovery", href: siteConfig.calendly, variant: "primary", external: true }]}
       />
     </>
   );

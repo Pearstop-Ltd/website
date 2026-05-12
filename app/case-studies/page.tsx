@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { CTABand, PageHero, SectionTitle } from "@/components/content";
 import { siteConfig } from "@/lib/site";
 
@@ -97,7 +96,7 @@ export default function CaseStudiesPage() {
               <p className="case-studies-note">
                 Prefer to just view it? <a href={siteConfig.downloads.caseStudiesView} target="_blank" rel="noopener noreferrer">Open the Google Slides deck</a>.
                 <br />
-                Prefer to talk first? <Link href="/contact">Book a 7-minute discovery call</Link> instead.
+                Prefer to talk first? <a href={siteConfig.calendly} target="_blank" rel="noopener noreferrer">Book a 7-minute discovery call</a> instead.
               </p>
             </div>
           </div>
@@ -135,7 +134,7 @@ export default function CaseStudiesPage() {
         lead="If you’d rather discuss your data problem directly, we’re happy to help."
         actions={[
           { label: "Follow Stephanie on LinkedIn", href: siteConfig.socials.linkedin, variant: "secondary", external: true },
-          { label: "Book a 7-minute discovery", href: "/contact", variant: "primary" }
+          { label: "Book a 7-minute discovery", href: siteConfig.calendly, variant: "primary", external: true }
         ]}
       />
     </>

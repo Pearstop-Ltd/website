@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { CTABand, GeoBlock, PageHero, SectionTitle } from "@/components/content";
 import { siteConfig } from "@/lib/site";
 
@@ -158,7 +157,7 @@ export default function AboutPage() {
         lead="Got a data problem worth solving? We would love to hear about it."
         actions={[
           { label: "Get in touch", href: "/contact", variant: "primary" },
-          { label: "Book a 7-minute discovery", href: "/contact", variant: "secondary" }
+          { label: "Book a 7-minute discovery", href: siteConfig.calendly, variant: "secondary", external: true }
         ]}
       />
     </>

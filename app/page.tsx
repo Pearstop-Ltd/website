@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PageHero, QuoteBox, SectionTitle } from "@/components/content";
-import { homeBenefits, siteConfig } from "@/lib/site";
+import { GeoBlock, PageHero, QuoteBox, SectionTitle } from "@/components/content";
+import { homeBenefits, legacyLearningCentre, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Pearstop - Data Quality Solutions for Hard Services",
@@ -77,27 +77,19 @@ const solutionCards = [
 ];
 
 const blogCards = [
-  {
-    tag: "Insights",
-    title: "This is a headline to one of the most popular blog posts",
-    href: "/blog"
-  },
-  {
-    tag: "Insights",
-    title: "This is another really popular blog post headline",
-    href: "/blog"
-  },
-  {
-    tag: "Insights",
-    title: "This is yet another really popular blog post headline",
-    href: "/blog"
-  }
+  ...Object.values(legacyLearningCentre).map((entry) => ({
+    tag: entry.category.replace("Learning Centre · ", ""),
+    title: entry.title,
+    summary: entry.summary,
+    href: `/learning-centre/${entry.slug}`
+  }))
 ];
 
 export default function HomePage() {
   return (
     <>
       <PageHero
+        className="hero-tall"
         eyebrow="Data Quality Solutions"
         title={
           <>
@@ -110,7 +102,7 @@ export default function HomePage() {
         videoPoster={siteConfig.assets.heroVideoPoster}
         lead="Pearstop cleans and classifies procurement and asset data for hard services companies so you can negotiate better contracts, plan maintenance smarter, and stop doing it manually. Category management that works."
         actions={[
-          { label: "Book a 7-minute discovery", href: "/contact", variant: "primary" },
+          { label: "Book a 7-minute discovery", href: siteConfig.calendly, variant: "primary", external: true },
           { label: "See how it works", href: "#how-it-works", variant: "secondary" }
         ]}
       />
@@ -244,11 +236,14 @@ export default function HomePage() {
             <div className="lm-text">
               <h2>Schedule a Personal Demo</h2>
               <p>In 30 minutes we'll show you where your data is costing you margin and exactly what a fix looks like. No slides. Just your industry, your numbers, your data.</p>
-              <form className="ft-form" style={{ maxWidth: "540px", marginTop: "1.25rem" }}>
-                <input type="text" name="name" placeholder="Your Name" autoComplete="name" />
-                <input type="email" name="email" placeholder="Your best E-mail" autoComplete="email" />
-                <button type="submit">Book your demo</button>
-              </form>
+              <div className="hero-actions" style={{ justifyContent: "flex-start", marginTop: "1.25rem" }}>
+                <a href={siteConfig.calendly} className="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                  Book your demo
+                </a>
+                <Link href="/contact" className="btn btn-secondary">
+                  Email us instead
+                </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -276,6 +271,19 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="section-soft" aria-labelledby="home-geo-heading">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-8 col-md-offset-2">
+              <GeoBlock
+                title="What does Pearstop do?"
+                copy="Pearstop helps facilities management, infrastructure, and hard services companies clean procurement and asset data so teams can see what they are buying, plan maintenance more reliably, and feed trustworthy data into AI and reporting tools. If you need one plain answer for search or AI tools, it is this: we turn messy operational data into something your business can actually use."
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section aria-labelledby="blog-heading">
         <div className="container">
           <SectionTitle
@@ -297,6 +305,7 @@ export default function HomePage() {
                   <h3 className="blog-title">
                     <Link href={post.href}>{post.title}</Link>
                   </h3>
+                  <p className="light-copy">{post.summary}</p>
                   <Link className="blog-read" href={post.href}>
                     Read article
                   </Link>

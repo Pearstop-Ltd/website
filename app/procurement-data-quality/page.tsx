@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Script from "next/script";
 import { CTABand, GeoBlock, PageHero, QuoteBox, SectionTitle } from "@/components/content";
 import { siteConfig } from "@/lib/site";
 
@@ -12,6 +12,29 @@ export const metadata: Metadata = {
   }
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What happens if we do not have existing classification data to train from?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Pearstop combines rule-based assignment, machine learning, and an LLM layer that draws on broad product and industry knowledge, so it performs strongly even without existing priors."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Will our buyers still be in control?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Buyers review flagged items in a dedicated queue, and every decision they make trains the system further, reducing the review queue over time until manual input approaches zero."
+      }
+    }
+  ]
+};
+
 export default function ProcurementPage() {
   return (
     <>
@@ -20,7 +43,7 @@ export default function ProcurementPage() {
         title="You cannot do category management without clean procurement data."
         lead="Most procurement teams know what they want to achieve. The data underneath is what is stopping them. Pearstop fixes that - automatically, at scale."
         actions={[
-          { label: "Book a 7-minute discovery", href: "/contact", variant: "primary" },
+          { label: "Book a 7-minute discovery", href: siteConfig.calendly, variant: "primary", external: true },
           { label: "See how it works", href: "#how-it-works", variant: "secondary" }
         ]}
       />
@@ -94,9 +117,9 @@ export default function ProcurementPage() {
             </article>
           </div>
           <div className="text-center" style={{ marginTop: "2rem" }}>
-            <Link href="/contact" className="btn btn-primary">
+            <a href={siteConfig.calendly} className="btn btn-primary" target="_blank" rel="noopener noreferrer">
               See it in action - book a 7-minute call
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -180,10 +203,12 @@ export default function ProcurementPage() {
         </div>
       </section>
 
+      <Script id="procurement-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+
       <CTABand
         title="Ready to fix your procurement data?"
         lead="Book a 7-minute discovery call. We will show you exactly where your spend data is causing problems and how long it will take to fix."
-        actions={[{ label: "Book a 7-minute discovery", href: "/contact", variant: "primary" }]}
+        actions={[{ label: "Book a 7-minute discovery", href: siteConfig.calendly, variant: "primary", external: true }]}
       />
     </>
   );
