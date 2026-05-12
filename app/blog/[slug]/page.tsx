@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { ComponentType } from "react";
 import { notFound } from "next/navigation";
 import { getBlogPost, blogPosts } from "@/lib/blog-posts";
 import { ArticleSchema, FaqSchema, BlogLayout } from "@/components/blog";
@@ -14,7 +15,7 @@ import ConstructionProcurement from "@/app/blog/posts/construction-procurement-m
 import WhatCleanDataEnables from "@/app/blog/posts/what-clean-data-enables";
 import UnspscVsEclassVsCpv from "@/app/blog/posts/unspsc-vs-eclass-vs-cpv";
 
-const POST_COMPONENTS: Record<string, React.ComponentType> = {
+const POST_COMPONENTS: Record<string, ComponentType> = {
   "procurement-data-cost": ProcurementDataCost,
   "what-is-unspsc": WhatIsUnspsc,
   "asset-register-problems": AssetRegisterProblems,
@@ -63,7 +64,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   if (!PostContent) notFound();
   return (
     <>
-      <ArticleSchema title={post.title} description={post.description} slug={post.slug} publishedAt={post.publishedAt} authorName={AUTHOR_NAMES[post.author]} />
+      <ArticleSchema title={post.title} description={post.description} slug={post.slug} publishedAt={post.publishedAt} authorName={AUTHOR_NAMES[post.author] ?? "Pearstop"} />
       {post.faqItems && <FaqSchema items={post.faqItems} slug={post.slug} />}
       <header className="page-hero dark" style={{ minHeight: "auto", paddingTop: "5rem", paddingBottom: "3.5rem" }}>
         <div className="hero-bg" aria-hidden="true" />
