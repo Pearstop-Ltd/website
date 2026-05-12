@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { GeoBlock, PageHero, QuoteBox, SectionTitle } from "@/components/content";
-import { homeBenefits, legacyLearningCentre, siteConfig } from "@/lib/site";
+import { homeBenefits, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Pearstop - Data Quality Solutions for Hard Services",
@@ -76,14 +76,6 @@ const solutionCards = [
   }
 ];
 
-const blogCards = [
-  ...Object.values(legacyLearningCentre).map((entry) => ({
-    tag: entry.category.replace("Learning Centre · ", ""),
-    title: entry.title,
-    summary: entry.summary,
-    href: `/learning-centre/${entry.slug}`
-  }))
-];
 
 export default function HomePage() {
   return (
@@ -284,43 +276,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section aria-labelledby="blog-heading">
-        <div className="container">
-          <SectionTitle
-            eyebrow="From the Blog"
-            title="Latest Insights"
-            lead="Practical guides, industry analysis, and data quality thinking for technical businesses."
-          />
-
-          <div className="article-grid">
-            {blogCards.map((post, index) => (
-              <article className="blog-card" key={post.title}>
-                <div
-                  className="blog-img-wrap"
-                  aria-hidden="true"
-                  style={{ background: index === 1 ? "#DCE1F8" : "#E8E0FC" }}
-                />
-                <div className="blog-body">
-                  <span className="blog-tag">{post.tag}</span>
-                  <h3 className="blog-title">
-                    <Link href={post.href}>{post.title}</Link>
-                  </h3>
-                  <p className="light-copy">{post.summary}</p>
-                  <Link className="blog-read" href={post.href}>
-                    Read article
-                  </Link>
-                </div>
-              </article>
-            ))}
-          </div>
-
-          <div className="text-center" style={{ marginTop: "1.8rem" }}>
-            <Link href="/blog" className="btn btn-outline">
-              View all articles
-            </Link>
-          </div>
-        </div>
-      </section>
     </>
   );
 }

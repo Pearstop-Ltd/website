@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { caseStudies, legacyLearningCentre, legacyUseCases, legacyWork, solutionLinks, siteConfig } from "@/lib/site";
+import { caseStudies, solutionLinks, siteConfig } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPaths = [
@@ -13,16 +13,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/case-studies",
     "/contact",
     "/privacy",
-    "/terms-and-conditions",
-    "/use-cases",
-    "/work"
+    "/terms-and-conditions"
   ];
 
   const dynamicPaths = [
-    ...caseStudies.map((item) => `/cases/${item.slug}`),
-    ...Object.keys(legacyLearningCentre).map((slug) => `/learning-centre/${slug}`),
-    ...Object.keys(legacyUseCases).map((slug) => `/use-cases/${slug}`),
-    ...Object.keys(legacyWork).map((slug) => `/work/${slug}`)
+    ...caseStudies.map((item) => `/cases/${item.slug}`)
   ];
 
   return [...staticPaths, ...dynamicPaths].map((path) => ({
