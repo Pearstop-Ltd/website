@@ -1,0 +1,57 @@
+---
+title: "Qu'est-ce que l'UNSPSC – et pourquoi les entreprises de services techniques devraient s'y intéresser"
+description: "L'UNSPSC est le référentiel mondial de classification des achats. Ce guide explique la hiérarchie, pourquoi les ERP ne résolvent pas seuls le problème de classification, et comment la classification automatisée fonctionne à grande échelle."
+date: "2026-02-17"
+category: "Procurement"
+slug: "what-is-unspsc"
+---
+
+UNSPSC signifie United Nations Standard Products and Services Code. C'est un système de classification mondial qui attribue un code standardisé à huit chiffres à chaque produit ou service qu'une entreprise peut acheter – du câble électrique à la lutte antiparasitaire en passant par les licences logicielles.
+
+## La hiérarchie UNSPSC
+
+Les huit chiffres s'inscrivent dans une hiérarchie à quatre niveaux :
+
+| Niveau | Description | Exemple |
+|---|---|---|
+| Segment (2 chiffres) | Regroupement large | 46 – Sécurité et sûreté |
+| Famille (4 chiffres) | Sous-groupe | 4613 – Protection individuelle |
+| Classe (6 chiffres) | Catégorie | 461317 – Protection des mains |
+| Commodity (8 chiffres) | Produit spécifique | 46131701 – Gants jetables |
+
+Ce niveau de précision peut sembler une charge administrative. Pour les entreprises de services techniques gérant des milliers de lignes d'achat sur plusieurs sites et systèmes, c'est la différence entre des données de dépenses exploitables et des données que l'on stocke sans pouvoir les utiliser.
+
+## Pourquoi la classification est importante en pratique
+
+La plupart des bases de données d'achat dans les domaines du facility management, de la construction et des infrastructures présentent le même problème fondamental : des lignes décrites selon le format choisi par la personne qui les a saisies. « Gants nitrile M » sur un site. « Gants nitrile medium » sur un autre. « EPI consommables – mains » sur un troisième.
+
+Il s'agit du même produit. Mais sans classification UNSPSC cohérente, ces lignes ne peuvent être regroupées, comparées ni utilisées pour un effet de volume. La finance voit quatre lignes distinctes. Les achats voient quatre acquisitions séparées. Le fournisseur voit quatre transactions qui pourraient n'en former qu'une, dans le cadre d'un contrat négocié.
+
+## Pourquoi les ERP ne résolvent pas ce problème seuls
+
+Une idée reçue veut que si votre organisation dispose d'un ERP – SAP, Oracle, Microsoft Dynamics – le problème de classification est réglé. En pratique, c'est rarement le cas. Les ERP capturent les transactions. Ils enregistrent ce qui a été acheté, auprès de qui, à quel prix. En revanche, ils n'imposent pas une classification cohérente au moment de la saisie.
+
+Trois approches ont historiquement été utilisées pour ajouter une classification par-dessus :
+
+- **Classification manuelle** – précise entre des mains expertes, mais à grande échelle, elle est lente, coûteuse et incohérente d'un analyste à l'autre.
+- **Équipes offshore de traitement des données** – plus rapides que le travail manuel interne, mais la qualité varie et les équipes manquent de connaissance contextuelle de votre activité spécifique.
+- **Automatisation par règles** – efficace pour les articles fréquents et bien décrits. Inefficace sur tout ce qui est ambigu ou abrégé.
+
+L'approche qui fonctionne à grande échelle combine les trois : des règles déterministes pour les cas clairs, un modèle d'apprentissage automatique entraîné sur vos données spécifiques pour les cas intermédiaires, et une révision humaine pour les articles véritablement ambigus. Chaque décision humaine alimente le modèle et améliore la précision au fil du temps.
+
+## Ce que la classification UNSPSC permet
+
+- **Agrégation des dépenses entre systèmes et entités.** Chaque ligne porte un code de catégorie cohérent, ce qui rend les dépenses comparables entre ERP, unités opérationnelles, sites et exercices.
+- **Consolidation des fournisseurs.** Une fois la dépense totale par commodity visible, vous pouvez identifier les cas où plusieurs fournisseurs livrent la même chose à des prix différents.
+- **Stratégie par catégorie.** Les codes UNSPSC donnent aux category managers la couche de données dont ils ont besoin pour piloter les catégories plutôt que de simplement les décrire.
+- **Compatibilité avec les plateformes d'IA et d'analytique.** Des plateformes comme Microsoft Fabric et Power BI fonctionnent mieux lorsque les données sont structurées de manière cohérente. La classification UNSPSC constitue cette couche de standardisation.
+
+> « Avant, cela représentait des semaines de classification manuelle. Maintenant, j'insère les exports bruts, je vérifie ce qui en ressort et je corrige les zones grises. Ma confiance dans le jeu de données a augmenté. Pour la première fois, le management fait vraiment confiance aux analyses que je produis. »
+>
+> – Analyste de données, entreprise de construction industrielle
+
+## Maintenir la classification dans la durée
+
+La classification n'est pas un exercice ponctuel. De nouveaux fournisseurs sont ajoutés, de nouveaux produits sont achetés, et les descriptions évoluent. Sans maintenance active, la qualité d'un travail de classification se dégrade en quelques mois à mesure que de nouvelles données non classifiées s'accumulent.
+
+La solution concrète est un système de classification automatisé qui traite les nouvelles données à leur arrivée – en attribuant des codes aux éléments certains et en signalant les ambigus pour révision. Le modèle s'améliore au fur et à mesure qu'il traite davantage de vos données spécifiques, et la charge de maintenance continue diminue avec le temps.

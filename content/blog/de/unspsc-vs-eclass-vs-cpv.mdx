@@ -1,0 +1,66 @@
+---
+title: "UNSPSC vs. eClass vs. CPV: Welcher Klassifikationsstandard ist der richtige für Ihr Unternehmen?"
+description: "Ein klarer Überblick über die drei wichtigsten Beschaffungsklassifikationsstandards UNSPSC, eClass und CPV mit einem praktischen Leitfaden zur Implementierung in großem Maßstab."
+date: "2026-05-07"
+category: "Procurement"
+slug: "unspsc-vs-eclass-vs-cpv"
+---
+
+Wenn Sie sich mit der Klassifikation von Beschaffungsdaten beschäftigt haben, sind Sie wahrscheinlich auf mehr als einen Standard gestoßen. UNSPSC, eClass, CPV, GPC – jeder beansprucht, das richtige Rahmenwerk für die Organisation des Einkaufs Ihres Unternehmens zu sein. Die Wahrheit ist, dass der beste Standard davon abhängt, für wen Sie einkaufen, an wen Sie berichten und was Sie mit den Daten tun möchten.
+
+## UNSPSC – United Nations Standard Products and Services Code
+
+UNSPSC ist der am weitesten verbreitete globale Klassifikationsstandard für die Beschaffung. Er umfasst sowohl Produkte als auch Dienstleistungen in einer vierstufigen Hierarchie: Segment, Familie, Klasse und Commodity. Gepflegt von GS1 US im Auftrag der UN und vierteljährlich aktualisiert.
+
+| Code | Beschreibung |
+|---|---|
+| 46000000 | Verteidigungs-, Strafverfolgung-, Sicherheits- und Schutzausrüstung |
+| 46130000 | Persönliche Sicherheit und Schutz |
+| 46131700 | Schutzhandschuhe und Zubehör |
+| 46131701 | Einweghandschuhe |
+| 72154100 | Facility-Wartungs- und Reparaturdienstleistungen |
+| 72154103 | HLK-Systemwartung |
+
+**Am besten geeignet für:** Privatwirtschaftliche Unternehmen, multinationale Organisationen und jedes Unternehmen, das Ausgaben für interne Analysen, Lieferantenkonsolidierung oder Category Management klassifizieren möchte. Der De-facto-Standard in den Bereichen Hard Services, FM, Bau und Fertigung. Die meisten Beschaffungssoftwareplattformen – SAP Ariba, Coupa, Oracle – unterstützen UNSPSC nativ.
+
+## eClass – Europäischer Klassifikationsstandard
+
+eClass ist ein Produktklassifikationsstandard, der primär für die industrielle und technische Beschaffung entwickelt wurde. Besonders stark für technische Produkte – mechanische Komponenten, elektrische Teile, MRO-Zubehör – bei denen genaue Produktattribute genauso wichtig sind wie die Kategorie. Im Gegensatz zu UNSPSC enthält eClass neben den Codes auch Produktattributdefinitionen. Man klassifiziert ein Produkt nicht nur als „Kreiselpumpe" – man kann auch Durchflussrate, Druckklasse, Konstruktionsmaterial und Anschlusstyp angeben.
+
+**Am besten geeignet für:** Fertigungs-, Engineering- und MRO-Umgebungen, in denen produktseitige Präzision erforderlich ist. Weit verbreitet in deutschsprachigen Märkten und in europäischen Industriesektoren.
+
+## CPV – Common Procurement Vocabulary
+
+CPV ist das von der Europäischen Union für die öffentliche Beschaffung vorgeschriebene Klassifikationssystem. Wenn Sie für öffentliche Aufträge in der EU ausschreiben, sind CPV-Codes Pflicht – sie erscheinen auf Bekanntmachungen, die im Amtsblatt der EU veröffentlicht werden.
+
+| Code | Beschreibung |
+|---|---|
+| 45000000 | Bauarbeiten |
+| 45300000 | Gebäudeinstallationsarbeiten |
+| 45331200 | Lüftungs- und Klimaanlageninstallationsarbeiten |
+| 90910000 | Reinigungsdienste |
+| 90919200 | Büroreinigungsdienste |
+
+**Am besten geeignet für:** Anbieter im öffentlichen Sektor und Organisationen, die in regulierten Beschaffungsmärkten tätig sind. Nicht für das interne Ausgabenmanagement ausgelegt.
+
+## Welchen Standard sollten Sie verwenden?
+
+| Standard | Am besten verwendet von | Primärer Anwendungsfall |
+|---|---|---|
+| **UNSPSC** | Privatwirtschaft, alle Branchen | Ausgabenanalyse, Category Management, Lieferantenkonsolidierung |
+| **eClass** | Industrie, Engineering, MRO | Stammdatenmanagement, Produktspezifikation auf Attributebene |
+| **CPV** | Anbieter im öffentlichen Sektor, EU-regulierte Beschaffung | Klassifikation von Bekanntmachungen, OJEU-Compliance |
+
+Für die meisten privatwirtschaftlichen Unternehmen in den Bereichen Hard Services, FM, Bau und Fertigung ist **UNSPSC der richtige Ausgangspunkt**. Er ist am weitesten verbreitet, weltweit am bekanntesten und am nützlichsten für Ausgabenanalysen und Category Management.
+
+## Die Implementierungsrealität: warum der Standard der einfache Teil ist
+
+Unabhängig davon, welchen Standard Sie wählen, ist der schwierige Teil nicht der Standard selbst. Es ist die Klassifikation Ihrer vorhandenen Daten daran. Beschaffungsdatenbanken in komplexen Organisationen enthalten Zehntausende von unterschiedlichen Positionsbeschreibungen – viele inkonsistent, mehrdeutig oder einzigartig für die Person, die sie eingegeben hat. Diese Beschreibungen manuell auf UNSPSC-Commodity-Codes abzubilden, ist in großem Maßstab nicht machbar.
+
+Was funktioniert, ist ein dreischichtiges Klassifikationssystem:
+
+- **Schicht 1 – Deterministische Regeln.** Für klare, häufig vorkommende Artikel ordnen Regeln spezifische Beschreibungen spezifischen Codes zu. Diese Schicht bewältigt die sichere Mehrheit schnell.
+- **Schicht 2 – Machine Learning.** Ein auf Ihre spezifischen Daten trainiertes Modell bewältigt das Mittelfeld – Positionen, die erlernbaren Mustern folgen. Das Modell lernt, wie Ihre Organisation das beschreibt, was sie kauft.
+- **Schicht 3 – Manuelle Prüfung.** Wirklich mehrdeutige Positionen – typischerweise 5–15 % des Volumens – werden zur Prüfung aufgedeckt. Jede menschliche Entscheidung fließt in Schicht 2 zurück und verbessert die Genauigkeit im Laufe der Zeit.
+
+Dieser Drei-Schichten-Ansatz ist der Kern, wie Pearstop Beschaffungsdaten in großem Maßstab klassifiziert: präzise, schnell und auf eine Weise, die sich kontinuierlich verbessert statt periodische Neuklassifizierungsübungen zu erfordern.

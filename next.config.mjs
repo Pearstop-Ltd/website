@@ -1,3 +1,7 @@
+import createNextIntlPlugin from "next-intl/plugin";
+
+const withNextIntl = createNextIntlPlugin("./i18n/request.ts");
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -25,9 +29,9 @@ const nextConfig = {
       { source: "/whitepaper.html", destination: "/case-studies", permanent: true },
       { source: "/learning-centre.html", destination: "/learning-centre", permanent: true },
       { source: "/use-cases.html", destination: "/use-cases", permanent: true },
-      { source: "/work.html", destination: "/work", permanent: true }
+      { source: "/work.html", destination: "/work", permanent: true },
     ];
-  }
+  },
 };
 
-export default nextConfig;
+export default withNextIntl(nextConfig);
