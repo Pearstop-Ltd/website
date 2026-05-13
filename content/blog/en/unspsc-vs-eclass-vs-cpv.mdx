@@ -6,9 +6,9 @@ category: "Procurement"
 slug: "unspsc-vs-eclass-vs-cpv"
 ---
 
-If you have started looking into procurement data classification, you have likely encountered more than one standard. UNSPSC, eClass, CPV, GPC â€” each claims to be the right framework for organising what your business buys. The truth is that the best standard depends on who you are buying for, who you are reporting to, and what you want to do with the data.
+If you have started looking into procurement data classification, you have likely encountered more than one standard. UNSPSC, eClass, CPV, GPC – each claims to be the right framework for organising what your business buys. The truth is that the best standard depends on who you are buying for, who you are reporting to, and what you want to do with the data.
 
-## UNSPSC â€” United Nations Standard Products and Services Code
+## UNSPSC – United Nations Standard Products and Services Code
 
 UNSPSC is the most widely used global classification standard for procurement. It covers both products and services across a four-level hierarchy: Segment, Family, Class, and Commodity. Maintained by GS1 US on behalf of the UN and updated quarterly.
 
@@ -21,17 +21,17 @@ UNSPSC is the most widely used global classification standard for procurement. I
 | 72154100 | Facilities maintenance and repair services |
 | 72154103 | HVAC system maintenance |
 
-**Best for:** Private sector companies, multinational organisations, and any business that wants to classify spend for internal analytics, supplier consolidation, or category management. The de facto standard in hard services, FM, construction, and manufacturing. Most procurement software platforms â€” SAP Ariba, Coupa, Oracle â€” support UNSPSC natively.
+**Best for:** Private sector companies, multinational organisations, and any business that wants to classify spend for internal analytics, supplier consolidation, or category management. The de facto standard in hard services, FM, construction, and manufacturing. Most procurement software platforms – SAP Ariba, Coupa, Oracle – support UNSPSC natively.
 
-## eClass â€” European Classification Standard
+## eClass – European Classification Standard
 
-eClass is a product classification standard developed primarily for industrial and engineering procurement. Particularly strong for technical products â€” mechanical components, electrical parts, MRO supplies â€” where precise product attributes matter as much as the category. Unlike UNSPSC, eClass includes product attribute definitions alongside the codes. You do not just classify a product as "centrifugal pump" â€” you can also specify flow rate, pressure rating, material of construction, and connection type.
+eClass is a product classification standard developed primarily for industrial and engineering procurement. Particularly strong for technical products – mechanical components, electrical parts, MRO supplies – where precise product attributes matter as much as the category. Unlike UNSPSC, eClass includes product attribute definitions alongside the codes. You do not just classify a product as "centrifugal pump" – you can also specify flow rate, pressure rating, material of construction, and connection type.
 
 **Best for:** Manufacturing, engineering, and MRO environments where product-level precision is required. Widely used in German-speaking markets and across European industrial sectors.
 
-## CPV â€” Common Procurement Vocabulary
+## CPV – Common Procurement Vocabulary
 
-CPV is the classification system mandated by the European Union for public procurement. If you are tendering for public sector contracts in the EU, CPV codes are compulsory â€” they appear on contract notices published in the Official Journal of the EU.
+CPV is the classification system mandated by the European Union for public procurement. If you are tendering for public sector contracts in the EU, CPV codes are compulsory – they appear on contract notices published in the Official Journal of the EU.
 
 | Code | Description |
 |---|---|
@@ -55,13 +55,13 @@ For most private sector companies in hard services, FM, construction, and manufa
 
 ## The implementation reality: why the standard is the easy part
 
-Whichever standard you choose, the hard part is not the standard itself. It is the classification of your existing data against it. Procurement databases in complex organisations contain tens of thousands of distinct line item descriptions â€” many inconsistent, ambiguous, or unique to the person who entered them. Manually mapping those descriptions to UNSPSC commodity codes is not feasible at scale.
+Whichever standard you choose, the hard part is not the standard itself. It is the classification of your existing data against it. Procurement databases in complex organisations contain tens of thousands of distinct line item descriptions – many inconsistent, ambiguous, or unique to the person who entered them. Manually mapping those descriptions to UNSPSC commodity codes is not feasible at scale.
 
 What works is a three-layer classification system:
 
-- **Layer 1 â€” Deterministic rules.** For clear, high-frequency items, rules map specific descriptions to specific codes. This layer handles the confident majority quickly.
-- **Layer 2 â€” Machine learning.** A model trained on your specific data handles the middle ground â€” items that follow learnable patterns. The model learns how your organisation describes what it buys.
-- **Layer 3 â€” Human review.** Genuinely ambiguous items â€” typically 5â€“15% of volume â€” are surfaced for review. Every human decision feeds back into Layer 2, improving accuracy over time.
+- **Layer 1 – Deterministic rules.** For clear, high-frequency items, rules map specific descriptions to specific codes. This layer handles the confident majority quickly.
+- **Layer 2 – Machine learning.** A model trained on your specific data handles the middle ground – items that follow learnable patterns. The model learns how your organisation describes what it buys.
+- **Layer 3 – Human review.** Genuinely ambiguous items – typically 5—15% of volume – are surfaced for review. Every human decision feeds back into Layer 2, improving accuracy over time.
 
 This three-layer approach is the core of how Pearstop classifies procurement data at scale: accurately, quickly, and in a way that improves continuously rather than requiring periodic re-classification exercises.
 
