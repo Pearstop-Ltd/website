@@ -122,9 +122,13 @@ async function geminiTranslateBatch(texts, targetLang) {
 
 Translate the following numbered strings from English to ${langName}.
 
-Rules:
+CRITICAL RULE — DO NOT TRANSLATE THESE TERMS, keep them exactly as written in English:
+procurement, category management, spend management, spend analysis, asset management, asset register, facility management, facilities management, hard services, soft services, single source of truth, data quality, data enrichment, tender, UNSPSC, CMMS, ERP, AI, HVAC, lifecycle management, lifecycle analysis, supplier management, contract management, purchase order, invoice, benchmark, dashboard, KPI, spend, buyer, stakeholder, compliance
+
+These are standard industry loanwords used as-is in ${langName} B2B contexts. Never translate them.
+
+Other rules:
 - Keep the same numbered format in your response (1. 2. 3. etc.)
-- Keep English business terms as loanwords where standard in ${langName} B2B context: procurement, asset management, asset register, single source of truth, Hard Services, Soft Services, Facility Management, UNSPSC, CMMS, ERP, AI, data quality, tender, spend, HVAC
 - Preserve any {placeholders}, <tags>, or markdown formatting exactly
 - Do not add explanations, only output the translated numbered list
 - Match the tone: professional, direct, no marketing fluff
@@ -159,8 +163,8 @@ async function translateBatched(texts, targetLang) {
     const translated = await geminiTranslateBatch(batch, targetLang);
     results.push(...translated);
     process.stdout.write(`   ${Math.min(i + BATCH_SIZE, texts.length)}/${texts.length} translated\r`);
-    // 4s between batches — stays under 20 req/min on free tier
-    if (i + BATCH_SIZE < texts.length) await sleep(4000);
+    // 6s between batches — stays under 20 req/min on free tier
+    if (i + BATCH_SIZE < texts.length) await sleep(6000);
   }
   return results;
 }
@@ -299,7 +303,7 @@ async function translateBlogPosts() {
       const translatedContent = await translateMdxContent(enContent, locale);
       fs.writeFileSync(localeFilePath, translatedContent, "utf-8");
       console.log(`  ✓  Wrote ${locale}/${filename}`);
-      await sleep(3000); // pause between files to respect rate limits
+      await sleep(8000); // pause between files to respect rate limits
     }
   }
 }

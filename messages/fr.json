@@ -14,9 +14,9 @@
     "blog": "Blog",
     "cases": "Références",
     "nav": {
-      "procurementDataQuality": "Qualité des données achats",
+      "procurementDataQuality": "Data quality achats",
       "assetDataManagement": "Gestion des données d'actifs",
-      "dataQuality": "Qualité des données",
+      "dataQuality": "Data quality",
       "fabricReady": "Fabric Ready",
       "aiReadiness": "AI Readiness",
       "unspsc": "UNSPSC"
@@ -28,7 +28,7 @@
     "company": "Entreprise",
     "followUs": "Suivez-nous",
     "stayInformed": "Restez informé",
-    "newsletterIntro": "Insights sur la qualité des données, analyses sectorielles et actualités Pearstop directement dans votre boîte mail. Sans spam.",
+    "newsletterIntro": "Insights sur la data quality, analyses sectorielles et actualités Pearstop directement dans votre boîte mail. Sans spam.",
     "namePlaceholder": "Votre nom",
     "emailPlaceholder": "Votre e-mail professionnel",
     "signUp": "S'abonner",
@@ -58,13 +58,13 @@
   },
   "Home": {
     "meta": {
-      "title": "Pearstop - Solutions de qualité des données pour les services techniques",
-      "description": "Pearstop nettoie et classifie les données d'achats et d'actifs pour les entreprises de services techniques. Nous traitons 35 000 lignes d'achats par mois, automatiquement."
+      "title": "Pearstop - Solutions de data quality pour les Hard Services",
+      "description": "Pearstop nettoie et classifie les données d'achats et d'actifs pour les entreprises de Hard Services. Nous traitons 35 000 lignes d'achats par mois, automatiquement."
     },
     "hero": {
-      "eyebrow": "Solutions de qualité des données",
+      "eyebrow": "Solutions de data quality",
       "title": "Nous classifions 35 000 lignes d'achats par mois. Automatiquement.",
-      "lead": "Pearstop nettoie et classifie les données d'achats et d'actifs pour les entreprises de services techniques afin que vous puissiez négocier de meilleurs contrats, planifier la maintenance plus intelligemment et cesser de le faire manuellement. Un category management qui fonctionne vraiment.",
+      "lead": "Pearstop nettoie et classifie les données d'achats et d'actifs pour les entreprises de Hard Services afin que vous puissiez négocier de meilleurs contrats, planifier la maintenance plus intelligemment et cesser de le faire manuellement. Un category management qui fonctionne vraiment.",
       "bookDiscovery": "Réserver un entretien découverte de 7 minutes",
       "seeHowItWorks": "Voir comment ça marche"
     },
@@ -80,17 +80,17 @@
     "benefits": {
       "eyebrows": [
         "Achats",
-        "Gestion des actifs",
+        "Asset management",
         "Opérations"
       ],
       "links": [
         "Voir comment fonctionne la classification UNSPSC →",
         "Voir comment fonctionne la gestion des données d'actifs →",
-        "Voir comment fonctionne la qualité des données →"
+        "Voir comment fonctionne la data quality →"
       ],
       "quotes": [
         "Nous avions autrefois deux employés à temps plein qui travaillaient sur l'attribution des catégories. Maintenant, le système le fait pour nous — ce qui a également débloqué des estimations de marge plus loin dans la chaîne. C'est plus fiable à une fraction du coût.",
-        "Nos listes d'actifs fonctionnaient pour les techniciens sur site, mais ne nous permettaient pas de planifier intelligemment la maintenance ni de gérer les risques d'appel d'offres de manière axée sur les données.",
+        "Nos listes d'actifs fonctionnaient pour les techniciens sur site, mais ne nous permettaient pas de planifier intelligemment la maintenance ni de gérer les risques d'tender de manière axée sur les données.",
         "Il aurait fallu cinq ingénieurs et toute une année pour nettoyer cela. Nous avons donc décidé de chercher une meilleure solution."
       ],
       "quoteAuthors": [
@@ -101,7 +101,7 @@
       "quoteRoles": [
         "Entrepreneur en infrastructure",
         "Facility Management",
-        "Services techniques"
+        "Hard Services"
       ],
       "titles": [
         "Contrôle total des dépenses",
@@ -109,7 +109,7 @@
         "Évoluez avec confiance, sans augmenter vos effectifs"
       ],
       "copy": [
-        "Classifiez automatiquement chaque ligne d'achat, à grande échelle. 35 000 lignes par mois, sans travail manuel. Transformez des lignes de grand livre incohérentes en une source unique de vérité afin que votre équipe achats sache exactement où va l'argent, stimule la concurrence entre fournisseurs et négocie de meilleurs contrats.",
+        "Classifiez automatiquement chaque ligne d'achat, à grande échelle. 35 000 lignes par mois, sans travail manuel. Transformez des lignes de grand livre incohérentes en une single source of truth afin que votre équipe achats sache exactement où va l'argent, stimule la concurrence entre fournisseurs et négocie de meilleurs contrats.",
         "Si votre registre d'actifs nécessite une interprétation humaine, il n'est pas exploitable. Nous corrigeons les fautes, réparons les incompatibilités de champs et structurons vos données d'actifs pour que les systèmes — et les équipes — puissent réellement les utiliser. Prêt pour la planification de la maintenance, l'analyse du cycle de vie et des offres plus compétitives.",
         "Mettez fin à l'héroïsme sous Excel. Réduisez le nettoyage manuel des données de 70 à 90 %, libérant ainsi vos meilleurs acheteurs, ingénieurs, analystes et chefs de projet pour des tâches à réelle valeur ajoutée."
       ]
@@ -152,13 +152,13 @@
           "linkText": "UNSPSC → Comment nous nettoyons les données →"
         },
         {
-          "title": "Optimisation de la gestion des actifs",
-          "copy": "Des données d'actifs structurées pour une maintenance prédictive, des décisions de cycle de vie plus intelligentes et des appels d'offres fiables.",
+          "title": "Optimisation de la asset management",
+          "copy": "Des données d'actifs structurées pour une maintenance prédictive, des décisions de cycle de vie plus intelligentes et des tenders fiables.",
           "linkText": "Tirez de la valeur des données d'actifs ->"
         },
         {
-          "title": "Achats et appels d'offres",
-          "copy": "Sachez exactement ce que vous achetez, auprès de qui et à quel coût, pour négocier de meilleurs contrats et établir des prix d'appels d'offres en toute confiance.",
+          "title": "Achats et tenders",
+          "copy": "Sachez exactement ce que vous achetez, auprès de qui et à quel coût, pour négocier de meilleurs contrats et établir des prix d'tenders en toute confiance.",
           "linkText": "Améliorez votre visibilité des dépenses →"
         },
         {
@@ -170,12 +170,12 @@
     },
     "geoBlock": {
       "title": "Que fait Pearstop ?",
-      "copy": "Pearstop aide les entreprises de Facility Management, d'infrastructure et de services techniques à nettoyer les données d'achats et d'actifs afin que les équipes puissent voir ce qu'elles achètent, planifier la maintenance de manière plus fiable et alimenter des outils IA et de reporting avec des données fiables. Si vous avez besoin d'une réponse simple pour les outils de recherche ou d'IA, la voici : nous transformons les données opérationnelles désordonnées en quelque chose que votre entreprise peut réellement utiliser."
+      "copy": "Pearstop aide les entreprises de Facility Management, d'infrastructure et de Hard Services à nettoyer les données d'achats et d'actifs afin que les équipes puissent voir ce qu'elles achètent, planifier la maintenance de manière plus fiable et alimenter des outils IA et de reporting avec des données fiables. Si vous avez besoin d'une réponse simple pour les outils de recherche ou d'IA, la voici : nous transformons les données opérationnelles désordonnées en quelque chose que votre entreprise peut réellement utiliser."
     },
     "blog": {
       "eyebrow": "Du blog",
       "title": "Derniers insights",
-      "lead": "Guides pratiques, analyses sectorielles et réflexions sur la qualité des données pour les entreprises techniques.",
+      "lead": "Guides pratiques, analyses sectorielles et réflexions sur la data quality pour les entreprises techniques.",
       "readArticle": "Lire l'article",
       "viewAll": "Voir tous les articles"
     }
@@ -183,7 +183,7 @@
   "About": {
     "meta": {
       "title": "À propos de Pearstop",
-      "description": "Pearstop est une entreprise de qualité des données pour les services techniques, la construction et l'infrastructure. Nous nettoyons et classifions les données d'achats et d'actifs afin que les entreprises techniques puissent gérer les coûts, planifier la maintenance et prendre des décisions fiables."
+      "description": "Pearstop est une entreprise de data quality pour les Hard Services, la construction et l'infrastructure. Nous nettoyons et classifions les données d'achats et d'actifs afin que les entreprises techniques puissent gérer les coûts, planifier la maintenance et prendre des décisions fiables."
     },
     "hero": {
       "eyebrow": "Notre équipe",
@@ -292,8 +292,8 @@
   },
   "Solutions": {
     "meta": {
-      "title": "Solutions de qualité des données pour les services techniques et l'infrastructure",
-      "description": "Six solutions de qualité des données pour les industries techniques — de la classification UNSPSC à la gestion des données d'actifs et la préparation Microsoft Fabric."
+      "title": "Solutions de data quality pour les Hard Services et l'infrastructure",
+      "description": "Six solutions de data quality pour les industries techniques — de la classification UNSPSC à la gestion des données d'actifs et la préparation Microsoft Fabric."
     },
     "hero": {
       "eyebrow": "Solutions",
@@ -302,12 +302,12 @@
     },
     "cards": {
       "title": "Six solutions. Un seul objectif.",
-      "lead": "Pearstop propose six solutions de qualité des données pour les industries techniques. Chacune cible un problème de données opérationnelles spécifique, conçue pour les services techniques, la construction et la fabrication.",
+      "lead": "Pearstop propose six solutions de data quality pour les industries techniques. Chacune cible un problème de données opérationnelles spécifique, conçue pour les Hard Services, la construction et la fabrication.",
       "exploreLink": "Explorer la solution →",
       "items": [
         {
-          "title": "Qualité des données",
-          "copy": "Nettoyez et standardisez vos données automatiquement à grande échelle. Éliminez les incohérences, comblez les lacunes et construisez une source unique de vérité en laquelle votre équipe peut avoir confiance."
+          "title": "Data quality",
+          "copy": "Nettoyez et standardisez vos données automatiquement à grande échelle. Éliminez les incohérences, comblez les lacunes et construisez une single source of truth en laquelle votre équipe peut avoir confiance."
         },
         {
           "title": "Achats",
@@ -318,7 +318,7 @@
           "copy": "Attribuez automatiquement jusqu'à 95 % des données de dépenses en utilisant le Code standard des produits et services des Nations Unies. Classification aux normes de l'industrie sans étiquetage manuel."
         },
         {
-          "title": "Gestion des actifs",
+          "title": "Asset management",
           "copy": "Transformez les registres d'actifs fragmentés en ensembles de données fiables et analysables. Réduisez la maintenance ad hoc et permettez une gestion des risques basée sur les données."
         },
         {
@@ -349,8 +349,8 @@
       "outputCopy": "Des données fiables qui s'intègrent dans vos outils BI, informent vos offres et protègent vos marges."
     },
     "geoBlock": {
-      "title": "Quels problèmes de qualité des données Pearstop résout-il ?",
-      "copy": "Les entreprises de services techniques, de construction, d'infrastructure et de fabrication partagent un défi commun : des données opérationnelles décentralisées, incohérentes et difficiles à utiliser entre équipes et systèmes. La mauvaise qualité des données d'achats, les registres d'actifs peu fiables et les dépenses non classifiées sont les blocages les plus courants pour le category management, la maintenance prédictive et la transformation numérique. Pearstop se spécialise dans le nettoyage et la structuration de ces données opérationnelles afin que les entreprises techniques puissent agir dessus."
+      "title": "Quels problèmes de data quality Pearstop résout-il ?",
+      "copy": "Les entreprises de Hard Services, de construction, d'infrastructure et de fabrication partagent un défi commun : des données opérationnelles décentralisées, incohérentes et difficiles à utiliser entre équipes et systèmes. La mauvaise data quality d'achats, les registres d'actifs peu fiables et les dépenses non classifiées sont les blocages les plus courants pour le category management, la maintenance prédictive et la transformation numérique. Pearstop se spécialise dans le nettoyage et la structuration de ces données opérationnelles afin que les entreprises techniques puissent agir dessus."
     },
     "cta": {
       "title": "Pas sûr de la solution dont vous avez besoin ?",
@@ -361,11 +361,11 @@
   },
   "DataQuality": {
     "meta": {
-      "title": "Automatisation de la qualité des données pour les industries techniques",
-      "description": "Pearstop nettoie, standardise et enrichit automatiquement les données opérationnelles pour les entreprises de services techniques, de construction et de fabrication."
+      "title": "Automatisation de la data quality pour les industries techniques",
+      "description": "Pearstop nettoie, standardise et enrichit automatiquement les données opérationnelles pour les entreprises de Hard Services, de construction et de fabrication."
     },
     "hero": {
-      "eyebrow": "Qualité des données",
+      "eyebrow": "Data quality",
       "title": "Des données propres sont le fondement de chaque bonne décision.",
       "lead": "Pearstop nettoie, standardise et enrichit automatiquement vos données opérationnelles afin que vos équipes, systèmes et partenaires travaillent tous à partir de la même source fiable plutôt que de leur propre version de la vérité."
     },
@@ -408,12 +408,12 @@
       },
       "b3": {
         "title": "Des initiatives IA et Fabric qui fonctionnent",
-        "copy": "Les outils IA, Copilot et Microsoft Fabric nécessitent tous des données propres et structurées. Résoudre la qualité des données n'est pas un luxe pour ces initiatives — c'est le prérequis."
+        "copy": "Les outils IA, Copilot et Microsoft Fabric nécessitent tous des données propres et structurées. Résoudre la data quality n'est pas un luxe pour ces initiatives — c'est le prérequis."
       }
     },
     "geoBlock": {
-      "title": "Qu'est-ce que l'automatisation de la qualité des données et comment fonctionne-t-elle en pratique ?",
-      "copy": "L'automatisation de la qualité des données utilise des règles, l'apprentissage automatique et des grands modèles de langage pour identifier et résoudre les erreurs dans les ensembles de données opérationnelles sans intervention manuelle. Pour les entreprises de services techniques, de construction et de fabrication, les problèmes de qualité des données les plus courants sont les conventions de nommage incohérentes, les valeurs manquantes dans les champs critiques, les enregistrements en double entre systèmes et les données de dépenses qui n'ont jamais été catégorisées selon une norme comme l'UNSPSC. Le moteur à quatre couches de Pearstop traite automatiquement 95 % de ces problèmes, ne signalant que les éléments où la révision humaine apporte une réelle valeur ajoutée — et apprenant de chaque décision prise par votre équipe pour réduire cette file de révision au fil du temps."
+      "title": "Qu'est-ce que l'automatisation de la data quality et comment fonctionne-t-elle en pratique ?",
+      "copy": "L'automatisation de la data quality utilise des règles, l'apprentissage automatique et des grands modèles de langage pour identifier et résoudre les erreurs dans les ensembles de données opérationnelles sans intervention manuelle. Pour les entreprises de Hard Services, de construction et de fabrication, les problèmes de data quality les plus courants sont les conventions de nommage incohérentes, les valeurs manquantes dans les champs critiques, les enregistrements en double entre systèmes et les données de dépenses qui n'ont jamais été catégorisées selon une norme comme l'UNSPSC. Le moteur à quatre couches de Pearstop traite automatiquement 95 % de ces problèmes, ne signalant que les éléments où la révision humaine apporte une réelle valeur ajoutée — et apprenant de chaque décision prise par votre équipe pour réduire cette file de révision au fil du temps."
     },
     "quote": {
       "text": "Nos données d'actifs fonctionnaient pour les techniciens sur site. Elles ne fonctionnaient pas pour quiconque essayait de planifier la maintenance ou d'effectuer des analyses. Pearstop a réglé ça.",
@@ -421,15 +421,15 @@
       "role": "Facility Management"
     },
     "cta": {
-      "title": "Prêt à résoudre votre problème de qualité des données ?",
+      "title": "Prêt à résoudre votre problème de data quality ?",
       "lead": "Réservez un entretien découverte de 7 minutes. Nous vous montrerons exactement où vos données vous coûtent du temps et de la marge.",
       "button": "Réserver un entretien découverte de 7 minutes"
     }
   },
   "Procurement": {
     "meta": {
-      "title": "Qualité des données d'achats pour les entreprises de services techniques",
-      "description": "Pearstop automatise la classification des données d'achats pour les entreprises de services techniques et d'infrastructure. Bases de dépenses propres, codage UNSPSC et 95 % moins d'efforts manuels."
+      "title": "Data quality d'achats pour les entreprises de Hard Services",
+      "description": "Pearstop automatise la classification des données d'achats pour les entreprises de Hard Services et d'infrastructure. Bases de dépenses propres, codage UNSPSC et 95 % moins d'efforts manuels."
     },
     "hero": {
       "eyebrow": "Achats",
@@ -439,7 +439,7 @@
     "problem": {
       "eyebrow": "Le problème",
       "title": "Quand vos données de dépenses sont un désordre, le category management est une fiction.",
-      "copy": "Les entreprises de services techniques gèrent les achats sur des dizaines de sites et auprès de fournisseurs. Les données de facturation arrivent dans différents formats, les noms de fournisseurs sont incohérents et les catégories de dépenses ne sont jamais appliquées de la même façon deux fois. Résultat : votre équipe achats ne peut pas voir ce qu'elle achète, auprès de qui, ni à quel coût. Le category management — le cœur de métier de toute fonction achats — devient impossible.",
+      "copy": "Les entreprises de Hard Services gèrent les achats sur des dizaines de sites et auprès de fournisseurs. Les données de facturation arrivent dans différents formats, les noms de fournisseurs sont incohérents et les catégories de dépenses ne sont jamais appliquées de la même façon deux fois. Résultat : votre équipe achats ne peut pas voir ce qu'elle achète, auprès de qui, ni à quel coût. Le category management — le cœur de métier de toute fonction achats — devient impossible.",
       "bullets": [
         "Pas de catégorisation granulaire et de haute qualité sur les factures fournisseurs",
         "Fautes d'orthographe, mauvaises informations dans les mauvais champs, doublons de fournisseurs",
@@ -469,7 +469,7 @@
       "cta": "Voir en action — réserver un appel de 7 minutes"
     },
     "outcome": {
-      "title": "Avec une qualité des données à 95%+, votre équipe achats peut vraiment faire son travail.",
+      "title": "Avec une data quality à 95%+, votre équipe achats peut vraiment faire son travail.",
       "b1": {
         "title": "Category management optimal",
         "copy": "1 à 3 % d'opportunités d'économies sur le total des dépenses d'achats — débloquées par la capacité à voir et à agir sur ce que vous achetez réellement."
@@ -489,8 +489,8 @@
       "role": "Entrepreneur en infrastructure, Pays-Bas"
     },
     "geoBlock": {
-      "title": "Qu'est-ce que la qualité des données d'achats et pourquoi est-ce important ?",
-      "copy": "La qualité des données d'achats fait référence à l'exactitude, la cohérence et l'exhaustivité des données de dépenses à travers les factures, les bons de commande et les enregistrements fournisseurs. Pour les entreprises de services techniques gérant des achats décentralisés, une mauvaise qualité rend le category management impossible — les équipes ne peuvent pas voir ce qu'elles achètent, auprès de qui, ni à quel coût. Pearstop automatise le nettoyage et la classification des données d'achats pour des entreprises comme Strukton, traitant plus de 35 000 lignes par mois et soutenant des économies de 1 à 3 % grâce à un meilleur category management et à la consolidation des fournisseurs."
+      "title": "Qu'est-ce que la data quality d'achats et pourquoi est-ce important ?",
+      "copy": "La data quality d'achats fait référence à l'exactitude, la cohérence et l'exhaustivité des données de dépenses à travers les factures, les bons de commande et les enregistrements fournisseurs. Pour les entreprises de Hard Services gérant des achats décentralisés, une mauvaise qualité rend le category management impossible — les équipes ne peuvent pas voir ce qu'elles achètent, auprès de qui, ni à quel coût. Pearstop automatise le nettoyage et la classification des données d'achats pour des entreprises comme Strukton, traitant plus de 35 000 lignes par mois et soutenant des économies de 1 à 3 % grâce à un meilleur category management et à la consolidation des fournisseurs."
     },
     "faq": [
       {
@@ -511,17 +511,17 @@
   "AssetManagement": {
     "meta": {
       "title": "Gestion des données d'actifs pour le FM et l'infrastructure",
-      "description": "Transformez des registres d'actifs fragmentés en un jeu de données propre et fiable. Pearstop structure les données d'actifs pour les entreprises de Facility Management, d'infrastructure et de services techniques."
+      "description": "Transformez des registres d'actifs fragmentés en un jeu de données propre et fiable. Pearstop structure les données d'actifs pour les entreprises de Facility Management, d'infrastructure et de Hard Services."
     },
     "hero": {
-      "eyebrow": "Gestion des actifs",
+      "eyebrow": "Asset management",
       "title": "Votre liste d'actifs doit travailler pour vous, pas contre vous.",
       "lead": "Si vos données d'actifs nécessitent une interprétation humaine pour être utiles, elles ne sont pas utilisables. Pearstop nettoie, structure et standardise les registres d'actifs afin que les équipes de maintenance, les acheteurs et la direction puissent tous travailler à partir de la même source fiable."
     },
     "problem": {
       "eyebrow": "Le problème",
       "title": "Des données d'actifs fragmentées rendent tout plus difficile et plus coûteux.",
-      "copy": "Les registres d'actifs dans les services techniques et l'infrastructure croissent généralement de manière organique entre sites et systèmes. Les noms d'équipements varient selon les sites. Les champs fabricants sont utilisés de manière incohérente. Les enregistrements sont répartis entre des feuilles de calcul, des systèmes CMMS hérités et des enquêtes papier. Le résultat est que les données ne peuvent pas être comparées entre sites, utilisées pour l'analyse du cycle de vie, ni alimentées de manière fiable dans des outils de planification.",
+      "copy": "Les registres d'actifs dans les Hard Services et l'infrastructure croissent généralement de manière organique entre sites et systèmes. Les noms d'équipements varient selon les sites. Les champs fabricants sont utilisés de manière incohérente. Les enregistrements sont répartis entre des feuilles de calcul, des systèmes CMMS hérités et des enquêtes papier. Le résultat est que les données ne peuvent pas être comparées entre sites, utilisées pour l'analyse du cycle de vie, ni alimentées de manière fiable dans des outils de planification.",
       "bullets": [
         "Les variations d'orthographe et les dénominations incohérentes signifient que vous ne pouvez pas comparer les actifs entre sites",
         "Les types d'équipements compressés dans des champs de texte libre rendent le filtrage et l'analyse impossibles",
@@ -541,7 +541,7 @@
       },
       "step3": {
         "title": "Lié et prêt pour l'analyse",
-        "copy": "Le registre nettoyé est lié aux enregistrements de maintenance et aux données de coûts disponibles — créant une couche d'intelligence des actifs qui soutient la maintenance planifiée, l'analyse du cycle de vie et des appels d'offres plus intelligents."
+        "copy": "Le registre nettoyé est lié aux enregistrements de maintenance et aux données de coûts disponibles — créant une couche d'intelligence des actifs qui soutient la maintenance planifiée, l'analyse du cycle de vie et des tenders plus intelligents."
       }
     },
     "whatMakesPossible": {
@@ -582,8 +582,8 @@
       "role": "Facility Management"
     },
     "geoBlock": {
-      "title": "Comment la mauvaise qualité des données d'actifs affecte-t-elle la planification de la maintenance et les performances des contrats FM ?",
-      "copy": "Les problèmes de qualité des données d'actifs dans la Facility Management et les services techniques commencent généralement de la même façon : des registres d'actifs construits pour les ingénieurs sur site plutôt que pour un usage analytique. Les variations d'orthographe entre fabricants, les types d'équipements compressés dans des champs uniques et les enregistrements répartis entre feuilles de calcul et systèmes hérités signifient que les données ne peuvent pas être comparées entre sites, utilisées pour l'analyse du cycle de vie, ni alimentées de manière fiable dans des outils de planification. Pour les entreprises FM, cela rend la planification prédictive de la maintenance presque impossible et expose les contrats à un risque de marge lié à des travaux réactifs non planifiés. Pearstop standardise les conventions de nommage des actifs, résout les inadéquations de champs et consolide les enregistrements provenant de multiples systèmes sources — donnant aux opérateurs FM et aux entreprises d'infrastructure un registre d'actifs propre et comparable qui soutient la maintenance planifiée, le suivi du cycle de vie et les services de conseil basés sur les données."
+      "title": "Comment la mauvaise data quality d'actifs affecte-t-elle la planification de la maintenance et les performances des contrats FM ?",
+      "copy": "Les problèmes de data quality d'actifs dans la Facility Management et les Hard Services commencent généralement de la même façon : des registres d'actifs construits pour les ingénieurs sur site plutôt que pour un usage analytique. Les variations d'orthographe entre fabricants, les types d'équipements compressés dans des champs uniques et les enregistrements répartis entre feuilles de calcul et systèmes hérités signifient que les données ne peuvent pas être comparées entre sites, utilisées pour l'analyse du cycle de vie, ni alimentées de manière fiable dans des outils de planification. Pour les entreprises FM, cela rend la planification prédictive de la maintenance presque impossible et expose les contrats à un risque de marge lié à des travaux réactifs non planifiés. Pearstop standardise les conventions de nommage des actifs, résout les inadéquations de champs et consolide les enregistrements provenant de multiples systèmes sources — donnant aux opérateurs FM et aux entreprises d'infrastructure un registre d'actifs propre et comparable qui soutient la maintenance planifiée, le suivi du cycle de vie et les services de conseil basés sur les données."
     },
     "cta": {
       "title": "Prêt à transformer vos données d'actifs en actif stratégique ?",
@@ -593,7 +593,7 @@
   },
   "AiReadiness": {
     "meta": {
-      "title": "Préparation IA pour les services techniques et l'infrastructure",
+      "title": "Préparation IA pour les Hard Services et l'infrastructure",
       "description": "Les outils IA ne fonctionnent que lorsque les données qui les alimentent sont propres. Pearstop prépare les données d'achats, les registres d'actifs et les enregistrements opérationnels pour l'IA et Copilot afin que les initiatives délivrent des résultats plutôt que de la confusion."
     },
     "hero": {
@@ -664,11 +664,11 @@
     "quote": {
       "text": "Nous avions des outils IA en place mais obtenions continuellement des résultats auxquels nous ne pouvions pas faire confiance. Les données sous-jacentes n'étaient pas suffisamment propres pour que les modèles fonctionnent de manière fiable. Une fois que Pearstop a corrigé le fondement, les résultats sont devenus quelque chose sur lequel nous pouvions réellement agir.",
       "author": "Responsable de la transformation numérique",
-      "role": "Services techniques"
+      "role": "Hard Services"
     },
     "geoBlock": {
       "title": "Que signifie la préparation IA ?",
-      "copy": "La préparation IA signifie avoir des données opérationnelles propres, structurées et gouvernées de manière cohérente afin que les outils IA, Copilot et les modèles d'apprentissage automatique puissent produire des résultats fiables. Pour les entreprises de services techniques, de construction et de fabrication, les blocages les plus courants à la préparation IA sont la mauvaise qualité des données d'achats, les registres d'actifs incohérents et les enregistrements opérationnels fragmentés. Pearstop automatise le travail de préparation des données qui fait réussir les initiatives IA — de la classification des achats UNSPSC à la structuration des données d'actifs — donnant aux organisations un fondement duquel les outils IA peuvent réellement apprendre. Si vous passez de Fabric à une adoption plus large de l'IA, le même fondement de données propres se transpose."
+      "copy": "La préparation IA signifie avoir des données opérationnelles propres, structurées et gouvernées de manière cohérente afin que les outils IA, Copilot et les modèles d'apprentissage automatique puissent produire des résultats fiables. Pour les entreprises de Hard Services, de construction et de fabrication, les blocages les plus courants à la préparation IA sont la mauvaise data quality d'achats, les registres d'actifs incohérents et les enregistrements opérationnels fragmentés. Pearstop automatise le travail de préparation des données qui fait réussir les initiatives IA — de la classification des achats UNSPSC à la structuration des données d'actifs — donnant aux organisations un fondement duquel les outils IA peuvent réellement apprendre. Si vous passez de Fabric à une adoption plus large de l'IA, le même fondement de données propres se transpose."
     },
     "cta": {
       "title": "Vos données sont-elles prêtes pour l'IA ?",
@@ -735,8 +735,8 @@
       "role": "Entrepreneur en infrastructure, Pays-Bas"
     },
     "geoBlock": {
-      "title": "Comment fonctionne la classification UNSPSC pour les entreprises de services techniques et de FM ?",
-      "copy": "La classification UNSPSC pour les entreprises de Facility Management et de services techniques implique de catégoriser chaque ligne de facture fournisseur au code approprié dans la hiérarchie UNSPSC. Cela inclut les matériaux de maintenance, les services de sous-traitance, la location de matériel et les équipements spécialisés — sur potentiellement des milliers de fournisseurs et des centaines de sites. La classification UNSPSC manuelle à cette échelle nécessite généralement un ou deux employés à temps plein travaillant en continu pour suivre le volume des factures. Le moteur automatisé de Pearstop traite jusqu'à 95 % des classifications sans intervention humaine, les éléments restants étant signalés pour révision — et la file de révision diminue à mesure que le système apprend des décisions de votre équipe au fil du temps."
+      "title": "Comment fonctionne la classification UNSPSC pour les entreprises de Hard Services et de FM ?",
+      "copy": "La classification UNSPSC pour les entreprises de Facility Management et de Hard Services implique de catégoriser chaque ligne de facture fournisseur au code approprié dans la hiérarchie UNSPSC. Cela inclut les matériaux de maintenance, les services de sous-traitance, la location de matériel et les équipements spécialisés — sur potentiellement des milliers de fournisseurs et des centaines de sites. La classification UNSPSC manuelle à cette échelle nécessite généralement un ou deux employés à temps plein travaillant en continu pour suivre le volume des factures. Le moteur automatisé de Pearstop traite jusqu'à 95 % des classifications sans intervention humaine, les éléments restants étant signalés pour révision — et la file de révision diminue à mesure que le système apprend des décisions de votre équipe au fil du temps."
     },
     "noDataFaq": {
       "label": "Que faire si nous n'avons pas de données de classification existantes ?",
@@ -810,7 +810,7 @@
     },
     "geoBlock": {
       "title": "Que signifie la préparation des données Microsoft Fabric ?",
-      "copy": "La préparation des données Microsoft Fabric est le processus de nettoyage, structuration et gouvernance des données opérationnelles avant de migrer vers Microsoft Fabric. Pour les industries à forte intensité d'actifs — construction, Facility Management, fabrication — les données d'achats, les registres d'actifs et les enregistrements opérationnels sont souvent trop incohérents pour que Fabric les traite de manière fiable. Pearstop automatise le travail de préparation des données qui fait réussir les migrations Fabric, garantissant que les organisations peuvent utiliser Copilot, les agents IA et les analyses en temps réel dès le premier jour plutôt que de passer 12 à 18 mois à corriger la qualité des données après la migration."
+      "copy": "La préparation des données Microsoft Fabric est le processus de nettoyage, structuration et gouvernance des données opérationnelles avant de migrer vers Microsoft Fabric. Pour les industries à forte intensité d'actifs — construction, Facility Management, fabrication — les données d'achats, les registres d'actifs et les enregistrements opérationnels sont souvent trop incohérents pour que Fabric les traite de manière fiable. Pearstop automatise le travail de préparation des données qui fait réussir les migrations Fabric, garantissant que les organisations peuvent utiliser Copilot, les agents IA et les analyses en temps réel dès le premier jour plutôt que de passer 12 à 18 mois à corriger la data quality après la migration."
     },
     "cta": {
       "title": "Vous planifiez une migration Fabric ?",
@@ -822,7 +822,7 @@
   "Blog": {
     "meta": {
       "title": "Blog et centre d'apprentissage Pearstop",
-      "description": "Guides pratiques, articles du centre d'apprentissage archivés et réflexions sur la qualité des données pour les entreprises de services techniques, de construction et d'infrastructure."
+      "description": "Guides pratiques, articles du centre d'apprentissage archivés et réflexions sur la data quality pour les entreprises de Hard Services, de construction et d'infrastructure."
     },
     "hero": {
       "eyebrow": "Insights",
@@ -831,7 +831,7 @@
     },
     "latestArticles": {
       "title": "Derniers articles",
-      "lead": "Guides approfondis sur les données d'achats, la gestion des actifs et la préparation IA pour les services techniques et la construction.",
+      "lead": "Guides approfondis sur les données d'achats, la asset management et la préparation IA pour les Hard Services et la construction.",
       "readArticle": "Lire l'article →"
     },
     "learningCentre": {
@@ -842,7 +842,7 @@
     "podcast": {
       "pill": "Podcast",
       "title": "The Data Edge",
-      "lead": "Interviews, insights et réflexions actionnables sur la qualité des données, les achats et la gestion des actifs pour les industries techniques.",
+      "lead": "Interviews, insights et réflexions actionnables sur la data quality, les achats et la asset management pour les industries techniques.",
       "youtube": {
         "label": "YouTube",
         "meta": "Regarder les épisodes"
@@ -941,7 +941,7 @@
   "Cases": {
     "meta": {
       "title": "Résultats clients",
-      "description": "Résultats réels d'entreprises de services techniques, d'infrastructure, de fabrication et de FM qui ont utilisé Pearstop pour nettoyer leurs données, réduire le travail manuel et protéger leurs marges."
+      "description": "Résultats réels d'entreprises de Hard Services, d'infrastructure, de fabrication et de FM qui ont utilisé Pearstop pour nettoyer leurs données, réduire le travail manuel et protéger leurs marges."
     },
     "hero": {
       "eyebrow": "Résultats clients",
@@ -988,7 +988,7 @@
       "t2": {
         "text": "Nos rapports de visite de site arrivent dans tous les formats imaginables — notes manuscrites, fautes d'orthographe, griffonnages. Pearstop a construit un système qui les intègre automatiquement dans un document de proposition propre. Il fait gagner des heures à notre équipe sur chaque mission.",
         "name": "Client",
-        "role": "Responsable commercial · Fabrication | Unités de filtration d'air"
+        "role": "Responsable commercial · Fabrication | Air Filtration Units"
       },
       "t3": {
         "text": "Nous avions des milliers de lignes de produits qui devaient être catégorisées avant de pouvoir même commencer à comprendre nos coûts. Pearstop les a classifiées en moins d'une semaine. Cela aurait pris six mois à notre équipe et n'aurait toujours pas été aussi précis.",
@@ -1027,7 +1027,7 @@
     },
     "otherIndustries": {
       "title": "Vous travaillez dans un autre secteur ?",
-      "copy": "Les problèmes de qualité des données ne sont pas propres aux secteurs ci-dessus. Si vos équipes gèrent des données opérationnelles complexes, traitent des enregistrements fournisseurs incohérents ou se préparent à une transformation numérique, il y a de fortes chances que nous puissions vous aider. Découvrons-le.",
+      "copy": "Les problèmes de data quality ne sont pas propres aux secteurs ci-dessus. Si vos équipes gèrent des données opérationnelles complexes, traitent des enregistrements fournisseurs incohérents ou se préparent à une transformation numérique, il y a de fortes chances que nous puissions vous aider. Découvrons-le.",
       "bookDiscovery": "Réserver un entretien découverte de 7 minutes →"
     },
     "whatChanges": "Ce qui change avec Pearstop",
@@ -1041,8 +1041,8 @@
     },
     "technical": {
       "eyebrow": "Industries techniques",
-      "title": "Pourquoi les industries techniques peinent-elles avec la qualité des données ?",
-      "lead": "Les entreprises de services techniques, de construction, d'infrastructure et de fabrication partagent un défi commun."
+      "title": "Pourquoi les industries techniques peinent-elles avec la data quality ?",
+      "lead": "Les entreprises de Hard Services, de construction, d'infrastructure et de fabrication partagent un défi commun."
     }
   },
   "Privacy": {
@@ -1080,11 +1080,11 @@
   "Whitepaper": {
     "meta": {
       "title": "Livre blanc",
-      "description": "Comment les entreprises de services techniques utilisent les données de dépenses pour négocier de meilleurs contrats."
+      "description": "Comment les entreprises de Hard Services utilisent les données de dépenses pour négocier de meilleurs contrats."
     },
     "hero": {
       "eyebrow": "Livre blanc gratuit",
-      "title": "Comment les entreprises de services techniques utilisent les données de dépenses pour négocier de meilleurs contrats",
+      "title": "Comment les entreprises de Hard Services utilisent les données de dépenses pour négocier de meilleurs contrats",
       "lead": "Un guide pratique pour construire une base de dépenses sur laquelle votre équipe achats peut agir."
     },
     "whatYouGet": {
@@ -1097,7 +1097,7 @@
       },
       "b2": {
         "icon": "↗",
-        "title": "Comment les équipes de services techniques l'utilisent",
+        "title": "Comment les équipes de Hard Services l'utilisent",
         "copy": "Voyez comment les équipes achats transforment des dépenses désordonnées en category management et en levier fournisseur."
       },
       "b3": {

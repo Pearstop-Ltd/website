@@ -15,17 +15,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/case-studies",
     "/contact",
     "/privacy",
-<<<<<<< HEAD
     "/terms-and-conditions",
-    "/use-cases",
-    "/work",
   ];
 
   const dynamicPaths = [
     ...caseStudies.map((item) => `/cases/${item.slug}`),
-    ...Object.keys(legacyLearningCentre).map((slug) => `/learning-centre/${slug}`),
-    ...Object.keys(legacyUseCases).map((slug) => `/use-cases/${slug}`),
-    ...Object.keys(legacyWork).map((slug) => `/work/${slug}`),
   ];
 
   const allPaths = [...staticPaths, ...dynamicPaths];

@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 import { GeoBlock, PageHero, QuoteBox, SectionTitle } from "@/components/content";
-import { homeBenefits, legacyLearningCentre, siteConfig } from "@/lib/site";
+import { homeBenefits, siteConfig } from "@/lib/site";
+import { blogPosts } from "@/lib/blog-posts";
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("Home.meta");
   return {
@@ -38,11 +39,11 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   const prefix = locale === "en" ? "" : `/${locale}`;
   const t = await getTranslations("Home");
 
-  const blogCards = Object.values(legacyLearningCentre).map((entry) => ({
-    tag: entry.category.replace("Learning Centre · ", ""),
-    title: entry.title,
-    summary: entry.summary,
-    href: `${prefix}/learning-centre/${entry.slug}`,
+  const blogCards = blogPosts.slice(0, 3).map((post) => ({
+    tag: post.category,
+    title: post.title,
+    summary: post.description,
+    href: `${prefix}/blog/${post.slug}`,
   }));
 
   return (

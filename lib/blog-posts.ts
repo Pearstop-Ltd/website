@@ -16,7 +16,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "procurement-data-cost",
     title: "Why Your Procurement Data Is Costing You More Than You Think",
-    description: "Poor procurement data quality costs hard services companies 1â€“3% of total spend per year. This article shows where the cost hides and how to fix it.",
+    description: “Poor procurement data quality costs hard services companies 1–3% of total spend per year. This article shows where the cost hides and how to fix it.”,
     publishedAt: "2026-02-04",
     author: "stephanie",
     category: "Procurement",

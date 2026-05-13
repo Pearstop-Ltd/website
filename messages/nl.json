@@ -89,7 +89,7 @@
         "Bekijk hoe datakwaliteit werkt →"
       ],
       "quotes": [
-        "We hadden vroeger twee fulltimemedewerkers voor categorie-indeling. Nu doet het systeem dit voor ons — wat ook margeschattingen verder in de keten heeft ontsloten. Het is betrouwbaarder tegen een fractie van de kosten.",
+        "We hadden vroeger twee fulltimemedewerkers voor category management. Nu doet het systeem dit voor ons — wat ook margeschattingen verder in de keten heeft ontsloten. Het is betrouwbaarder tegen een fractie van de kosten.",
         "Onze assetlijsten werkten voor monteurs op locatie, maar lieten ons niet toe om slim onderhoud te plannen of biedrisico's op een datagestuurde manier te beheren.",
         "Het had vijf ingenieurs en een heel jaar gekost om dit op te ruimen. Dus besloten we een betere oplossing te zoeken."
       ],
@@ -153,12 +153,12 @@
         },
         {
           "title": "Optimalisatie assetbeheer",
-          "copy": "Gestructureerde assetdata voor voorspellend onderhoud, slimmere levenscyclusbeslissingen en betrouwbare aanbestedingen.",
+          "copy": "Gestructureerde assetdata voor voorspellend onderhoud, slimmere levenscyclusbeslissingen en betrouwbare tenders.",
           "linkText": "Haal waarde uit assetdata ->"
         },
         {
-          "title": "Inkoop en aanbestedingen",
-          "copy": "Weet precies wat u koopt, van wie en tegen welke kosten, zodat u betere contracten kunt onderhandelen en aanbestedingen met vertrouwen kunt prijzen.",
+          "title": "Inkoop en tenders",
+          "copy": "Weet precies wat u koopt, van wie en tegen welke kosten, zodat u betere contracten kunt onderhandelen en tenders met vertrouwen kunt prijzen.",
           "linkText": "Verbeter uw bestedingsoverzicht →"
         },
         {
@@ -170,7 +170,7 @@
     },
     "geoBlock": {
       "title": "Wat doet Pearstop?",
-      "copy": "Pearstop helpt facilitair beheer-, infrastructuur- en hard services-bedrijven inkoop- en assetdata te reinigen zodat teams kunnen zien wat ze kopen, onderhoud betrouwbaarder kunnen plannen en betrouwbare data kunnen invoeren in AI- en rapportagetools. Als u één duidelijk antwoord nodig heeft voor zoek- of AI-tools: wij zetten rommelige operationele data om in iets wat uw bedrijf daadwerkelijk kan gebruiken."
+      "copy": "Pearstop helpt facility management-, infrastructuur- en hard services-bedrijven inkoop- en assetdata te reinigen zodat teams kunnen zien wat ze kopen, onderhoud betrouwbaarder kunnen plannen en betrouwbare data kunnen invoeren in AI- en rapportagetools. Als u één duidelijk antwoord nodig heeft voor zoek- of AI-tools: wij zetten rommelige operationele data om in iets wat uw bedrijf daadwerkelijk kan gebruiken."
     },
     "blog": {
       "eyebrow": "Van het blog",
@@ -418,7 +418,7 @@
     "quote": {
       "text": "Onze assetdata werkte voor de monteurs op locatie. Het werkte niet voor iemand die onderhoud probeerde te plannen of er analyses op probeerde uit te voeren. Pearstop heeft dat opgelost.",
       "author": "Assetmanager",
-      "role": "Facilitair beheer"
+      "role": "Facility Management"
     },
     "cta": {
       "title": "Klaar om uw datakwaliteitsprobleem op te lossen?",
@@ -484,7 +484,7 @@
       }
     },
     "quote": {
-      "text": "We hadden vroeger twee fulltimemedewerkers voor categorie-indeling. Nu doet het systeem dit voor ons — wat ook margeschattingen verder in de keten heeft ontsloten. Het is betrouwbaarder tegen een fractie van de kosten.",
+      "text": "We hadden vroeger twee fulltimemedewerkers voor category management. Nu doet het systeem dit voor ons — wat ook margeschattingen verder in de keten heeft ontsloten. Het is betrouwbaarder tegen een fractie van de kosten.",
       "author": "Hoofd Inkoop",
       "role": "Infrastructuuraannemer, Nederland"
     },
@@ -511,7 +511,7 @@
   "AssetManagement": {
     "meta": {
       "title": "Assetdatabeheer voor FM en infrastructuur",
-      "description": "Zet gefragmenteerde assetregisters om in een schone, betrouwbare dataset. Pearstop structureert assetdata voor facilitair beheer-, infrastructuur- en hard services-bedrijven."
+      "description": "Zet gefragmenteerde assetregisters om in een schone, betrouwbare dataset. Pearstop structureert assetdata voor facility management-, infrastructuur- en hard services-bedrijven."
     },
     "hero": {
       "eyebrow": "Assetbeheer",
@@ -541,7 +541,7 @@
       },
       "step3": {
         "title": "Gekoppeld en analyserijp",
-        "copy": "Het gereinigde register is waar beschikbaar gekoppeld aan onderhoudsrecords en kostendata — waardoor een asset-intelligentielaag ontstaat die gepland onderhoud, levenscyclusanalyse en slimmere aanbestedingen ondersteunt."
+        "copy": "Het gereinigde register is waar beschikbaar gekoppeld aan onderhoudsrecords en kostendata — waardoor een asset-intelligentielaag ontstaat die gepland onderhoud, levenscyclusanalyse en slimmere tenders ondersteunt."
       }
     },
     "whatMakesPossible": {
@@ -579,11 +579,11 @@
     "quote": {
       "text": "Onze assetdata werkte voor de monteurs op locatie. Het werkte niet voor iemand die onderhoud probeerde te plannen of er analyses op probeerde uit te voeren. Pearstop heeft dat opgelost.",
       "author": "Assetmanager",
-      "role": "Facilitair beheer"
+      "role": "Facility Management"
     },
     "geoBlock": {
       "title": "Hoe beïnvloedt slechte assetkwaliteit onderhoudsplanning en FM-contractprestaties?",
-      "copy": "Assetkwaliteitsproblemen in facilitair beheer en hard services beginnen doorgaans op dezelfde manier: assetregisters gebouwd voor monteurs op locatie in plaats van analytisch gebruik. Spellingsvariaties over fabrikanten, apparaattypes samengeperst in één veld en records verspreid over spreadsheets en legacy-systemen betekenen dat de data niet vergeleken kan worden over locaties, gebruikt kan worden voor levenscyclusanalyse of betrouwbaar ingevoerd kan worden in planningstools. Voor FM-bedrijven maakt dit voorspellende onderhoudsplanning vrijwel onmogelijk en stelt het contracten bloot aan marginalrisico van reactief, ongepland werk. Pearstop standaardiseert naamgevingsconventies voor assets, lost veldafwijkingen op en consolideert records uit meerdere bronsystemen — waardoor FM-operators en infrastructuurbedrijven een schoon, vergelijkbaar assetregister krijgen dat gepland onderhoud, levenscyclustracking en databased adviesdiensten ondersteunt."
+      "copy": "Assetkwaliteitsproblemen in facility management en hard services beginnen doorgaans op dezelfde manier: assetregisters gebouwd voor monteurs op locatie in plaats van analytisch gebruik. Spellingsvariaties over fabrikanten, apparaattypes samengeperst in één veld en records verspreid over spreadsheets en legacy-systemen betekenen dat de data niet vergeleken kan worden over locaties, gebruikt kan worden voor levenscyclusanalyse of betrouwbaar ingevoerd kan worden in planningstools. Voor FM-bedrijven maakt dit voorspellende onderhoudsplanning vrijwel onmogelijk en stelt het contracten bloot aan marginalrisico van reactief, ongepland werk. Pearstop standaardiseert naamgevingsconventies voor assets, lost veldafwijkingen op en consolideert records uit meerdere bronsystemen — waardoor FM-operators en infrastructuurbedrijven een schoon, vergelijkbaar assetregister krijgen dat gepland onderhoud, levenscyclustracking en databased adviesdiensten ondersteunt."
     },
     "cta": {
       "title": "Klaar om uw assetdata om te zetten in een strategisch asset?",
@@ -730,13 +730,13 @@
       }
     },
     "quote": {
-      "text": "We hadden vroeger twee fulltimemedewerkers voor categorie-indeling. Nu doet het systeem dit voor ons — wat ook margeschattingen verder in de keten heeft ontsloten. Het is betrouwbaarder tegen een fractie van de kosten.",
+      "text": "We hadden vroeger twee fulltimemedewerkers voor category management. Nu doet het systeem dit voor ons — wat ook margeschattingen verder in de keten heeft ontsloten. Het is betrouwbaarder tegen een fractie van de kosten.",
       "author": "Hoofd Inkoop",
       "role": "Infrastructuuraannemer, Nederland"
     },
     "geoBlock": {
       "title": "Hoe werkt UNSPSC-classificatie voor hard services- en FM-bedrijven?",
-      "copy": "UNSPSC-classificatie voor facilitair beheer- en hard services-bedrijven houdt in dat elk leveranciersfactuurregelitem wordt gecategoriseerd naar de juiste code in de UNSPSC-hiërarchie. Dit omvat onderhoudsmaterialen, aannemersdiensten, machineinhuur en specialistisch materieel — over mogelijk duizenden leveranciers en honderden locaties. Handmatige UNSPSC-classificatie op deze schaal vereist doorgaans één of twee fulltimemedewerkers die continu bezig zijn om het factuurvolume bij te houden. Pearstop's geautomatiseerde motor verwerkt tot 95% van classificaties zonder menselijke tussenkomst, met de resterende items gemarkeerd voor beoordeling — en de beoordelingswachtrij krimpt naarmate het systeem leert van de beslissingen van uw team in de loop der tijd."
+      "copy": "UNSPSC-classificatie voor facility management- en hard services-bedrijven houdt in dat elk leveranciersfactuurregelitem wordt gecategoriseerd naar de juiste code in de UNSPSC-hiërarchie. Dit omvat onderhoudsmaterialen, aannemersdiensten, machineinhuur en specialistisch materieel — over mogelijk duizenden leveranciers en honderden locaties. Handmatige UNSPSC-classificatie op deze schaal vereist doorgaans één of twee fulltimemedewerkers die continu bezig zijn om het factuurvolume bij te houden. Pearstop's geautomatiseerde motor verwerkt tot 95% van classificaties zonder menselijke tussenkomst, met de resterende items gemarkeerd voor beoordeling — en de beoordelingswachtrij krimpt naarmate het systeem leert van de beslissingen van uw team in de loop der tijd."
     },
     "noDataFaq": {
       "label": "Wat als we geen bestaande classificatiedata hebben?",
@@ -810,7 +810,7 @@
     },
     "geoBlock": {
       "title": "Wat betekent Microsoft Fabric-gereedheid?",
-      "copy": "Microsoft Fabric-gereedheid is het proces van het reinigen, structureren en beheren van operationele data vóór migratie naar Microsoft Fabric. Voor assetintensieve sectoren — bouw, facilitair beheer, productie — zijn inkoopdata, assetregisters en operationele records vaak te inconsistent voor Fabric om betrouwbaar te verwerken. Pearstop automatiseert het datavoorbereidingswerk dat Fabric-migraties laat slagen, zodat organisaties Copilot, AI-agenten en realtime analytics kunnen gebruiken vanaf dag één in plaats van 12-18 maanden te besteden aan datakwaliteitsreparatie na migratie."
+      "copy": "Microsoft Fabric-gereedheid is het proces van het reinigen, structureren en beheren van operationele data vóór migratie naar Microsoft Fabric. Voor assetintensieve sectoren — bouw, facility management, productie — zijn inkoopdata, assetregisters en operationele records vaak te inconsistent voor Fabric om betrouwbaar te verwerken. Pearstop automatiseert het datavoorbereidingswerk dat Fabric-migraties laat slagen, zodat organisaties Copilot, AI-agenten en realtime analytics kunnen gebruiken vanaf dag één in plaats van 12-18 maanden te besteden aan datakwaliteitsreparatie na migratie."
     },
     "cta": {
       "title": "Plant u een Fabric-migratie?",
@@ -951,8 +951,8 @@
     "featured": {
       "pill": "Uitgelichte casestudie",
       "p1": "Een grote Nederlandse aannemer had twee toegewijde medewerkers die handmatig categorieën toewezen aan leveranciersfacturen — een traag, foutgevoelig proces dat bestedingsanalyse onbetrouwbaar maakte en inkoopbenchmarking onmogelijk.",
-      "p2": "Pearstop automatiseerde categorie-indeling over 140.000+ regelitems, elimineerde dubbele leveranciersrecords en leverde een schone inkoopdataset die direct wordt gevoed in hun SAP-systeem en rapportagetools.",
-      "quote": "We hadden vroeger twee fulltimemedewerkers voor categorie-indeling. Nu doet het systeem dit voor ons — wat ook margeschattingen verder in de keten heeft ontsloten. Het is betrouwbaarder tegen een fractie van de kosten.",
+      "p2": "Pearstop automatiseerde category management over 140.000+ regelitems, elimineerde dubbele leveranciersrecords en leverde een schone inkoopdataset die direct wordt gevoed in hun SAP-systeem en rapportagetools.",
+      "quote": "We hadden vroeger twee fulltimemedewerkers voor category management. Nu doet het systeem dit voor ons — wat ook margeschattingen verder in de keten heeft ontsloten. Het is betrouwbaarder tegen een fractie van de kosten.",
       "quoteAuthor": "Hoofd Inkoop",
       "quoteRole": "Infrastructuuraannemer, Nederland",
       "comingSoon": "Volledige casestudie binnenkort beschikbaar.",
@@ -961,7 +961,7 @@
       "stats": [
         {
           "num": "75%",
-          "label": "Vermindering in handmatige categorie-indelingstijd"
+          "label": "Vermindering in handmatige category managementstijd"
         },
         {
           "num": "140k+",
@@ -988,7 +988,7 @@
       "t2": {
         "text": "Onze locatiebezoekrepporten komen in elk voorstelbaar formaat — handgeschreven aantekeningen, spelfouten, krabbels. Pearstop bouwde een systeem dat ze automatisch in een schoon ofertedocument verwerkt. Het bespaart ons team uren bij elke opdracht.",
         "name": "Klant",
-        "role": "Commercieel manager · Productie | Luchtfilterunits"
+        "role": "Commercieel manager · Productie | Air Filtration Units"
       },
       "t3": {
         "text": "We hadden duizenden productregels die gecategoriseerd moesten worden voordat we zelfs maar onze kosten konden begrijpen. Pearstop classificeerde ze in minder dan een week. Dat had ons team zes maanden gekost en zou nog steeds niet zo nauwkeurig zijn geweest.",
@@ -1013,12 +1013,12 @@
   "Industries": {
     "meta": {
       "title": "Sectoren die we bedienen",
-      "description": "Pearstop werkt met facilitair beheer, bouw, infrastructuur, productie en gebouwtechnologiebedrijven. Elke sector heeft andere data-uitdagingen — we hebben ze allemaal opgelost."
+      "description": "Pearstop werkt met facility management, bouw, infrastructuur, productie en gebouwtechnologiebedrijven. Elke sector heeft andere data-uitdagingen — we hebben ze allemaal opgelost."
     },
     "hero": {
       "eyebrow": "Sectoren",
       "title": "Sectoren die we bedienen",
-      "lead": "Pearstop levert data-integriteitsoplossingen voor de sectoren die onze wereld bouwen, onderhouden en exploiteren. Van facilitair beheer tot infrastructuur — we reinigen rommelige data zodat uw marges kunnen ademen."
+      "lead": "Pearstop levert data-integriteitsoplossingen voor de sectoren die onze wereld bouwen, onderhouden en exploiteren. Van facility management tot infrastructuur — we reinigen rommelige data zodat uw marges kunnen ademen."
     },
     "sixIndustries": {
       "title": "Zes sectoren, één oplossing",

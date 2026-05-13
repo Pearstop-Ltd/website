@@ -50,7 +50,7 @@ function getMdxFrontmatter(locale: string, slug: string): { title?: string; desc
   const tryPath = (loc: string) => path.join(process.cwd(), "content", "blog", loc, `${slug}.mdx`);
   const filePath = existsSync(tryPath(locale)) ? tryPath(locale) : existsSync(tryPath("en")) ? tryPath("en") : null;
   if (!filePath) return {};
-  const raw = readFileSync(filePath, "utf-8");
+  const raw = readFileSync(filePath, "utf-8").replace(/^﻿/, "");
   const match = raw.match(/^---\n([\s\S]*?)\n---/);
   if (!match) return {};
   const fm: Record<string, string> = {};
@@ -62,19 +62,17 @@ function getMdxFrontmatter(locale: string, slug: string): { title?: string; desc
   return { title: fm.title, description: fm.description };
 }
 
+function stripMdx(raw: string): string {
+  // Strip UTF-8 BOM if present, then strip frontmatter
+  const clean = raw.replace(/^﻿/, "");
+  return clean.replace(/^---[\s\S]*?---\n/, "");
+}
+
 function getMdxContent(locale: string, slug: string): string | null {
   const mdxPath = path.join(process.cwd(), "content", "blog", locale, `${slug}.mdx`);
-  if (existsSync(mdxPath)) {
-    const raw = readFileSync(mdxPath, "utf-8");
-    // Strip frontmatter before passing to MDXRemote
-    return raw.replace(/^---[\s\S]*?---\n/, "");
-  }
-  // Fall back to English MDX
+  if (existsSync(mdxPath)) return stripMdx(readFileSync(mdxPath, "utf-8"));
   const enPath = path.join(process.cwd(), "content", "blog", "en", `${slug}.mdx`);
-  if (existsSync(enPath)) {
-    const raw = readFileSync(enPath, "utf-8");
-    return raw.replace(/^---[\s\S]*?---\n/, "");
-  }
+  if (existsSync(enPath)) return stripMdx(readFileSync(enPath, "utf-8"));
   return null;
 }
 

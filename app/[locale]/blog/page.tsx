@@ -4,14 +4,14 @@ import Link from "next/link";
 import { existsSync, readFileSync } from "fs";
 import path from "path";
 import { PageHero, SectionTitle } from "@/components/content";
-import { legacyLearningCentre, siteConfig } from "@/lib/site";
+import { siteConfig } from "@/lib/site";
 import { blogPosts } from "@/lib/blog-posts";
 
 function getMdxFrontmatter(locale: string, slug: string): { title?: string; description?: string } {
   const tryPath = (loc: string) => path.join(process.cwd(), "content", "blog", loc, `${slug}.mdx`);
   const filePath = existsSync(tryPath(locale)) ? tryPath(locale) : existsSync(tryPath("en")) ? tryPath("en") : null;
   if (!filePath) return {};
-  const raw = readFileSync(filePath, "utf-8");
+  const raw = readFileSync(filePath, "utf-8").replace(/^﻿/, "");
   const match = raw.match(/^---\n([\s\S]*?)\n---/);
   if (!match) return {};
   const fm: Record<string, string> = {};
@@ -39,8 +39,6 @@ export async function generateMetadata({
     }
   };
 }
-
-const learningCentreArticles = Object.values(legacyLearningCentre);
 
 type PodcastLink = {
   kind: "youtube" | "spotify" | "apple";
@@ -180,46 +178,6 @@ export default async function BlogPage({
               </article>
               );
             })}
-          </div>
-        </div>
-      </section>
-
-      <section id="learning-centre">
-        <div className="container">
-          <SectionTitle
-            title={t("learningCentre.title")}
-            lead={t("learningCentre.lead")}
-          />
-          <div className="article-grid">
-            {learningCentreArticles.map((entry, index) => (
-              <article key={entry.slug} className="blog-card">
-                <div
-                  className="blog-img-wrap"
-                  style={{
-                    background: index % 2 === 0 ? "var(--purple-soft)" : "var(--blue-soft)",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    color: "var(--navy)",
-                    fontWeight: 800,
-                    letterSpacing: "0.08em",
-                    textTransform: "uppercase"
-                  }}
-                >
-                  {t("learningCentre.label")}
-                </div>
-                <div className="blog-body">
-                  <span className="blog-tag">{entry.category}</span>
-                  <h3 className="blog-title">
-                    <Link href={`${prefix}/learning-centre/${entry.slug}`}>{entry.title}</Link>
-                  </h3>
-                  <p className="light-copy">{entry.summary}</p>
-                  <Link className="blog-read" href={`${prefix}/learning-centre/${entry.slug}`}>
-                    {entry.ctaLabel}
-                  </Link>
-                </div>
-              </article>
-            ))}
           </div>
         </div>
       </section>
