@@ -100,7 +100,7 @@ async function geminiRequest(prompt, retries = 5) {
       return await geminiRequestOnce(prompt);
     } catch (err) {
       if (err.retryable && attempt < retries) {
-        const delay = attempt * 15000; // 15s, 30s, 45s, 60s
+        const delay = attempt * 20000; // 20s, 40s, 60s, 80s
         process.stdout.write(`\n   ⏳ Rate limited, retrying in ${delay / 1000}s (attempt ${attempt}/${retries})...\r`);
         await sleep(delay);
       } else {
@@ -303,7 +303,7 @@ async function translateBlogPosts() {
       const translatedContent = await translateMdxContent(enContent, locale);
       fs.writeFileSync(localeFilePath, translatedContent, "utf-8");
       console.log(`  ✓  Wrote ${locale}/${filename}`);
-      await sleep(8000); // pause between files to respect rate limits
+      await sleep(20000); // pause between files — 20s keeps well under 20 req/min free tier
     }
   }
 }
@@ -371,7 +371,7 @@ async function translateMdxContent(content, targetLang) {
 
 async function main() {
   console.log("🌐  Pearstop auto-translation\n");
-  console.log(`   Engine: Gemini 2.0 Flash`);
+  console.log(`   Engine: Gemini 2.5 Flash`);
   console.log(`   Target locales: ${TARGET_LOCALES.join(", ")}\n`);
 
   try {

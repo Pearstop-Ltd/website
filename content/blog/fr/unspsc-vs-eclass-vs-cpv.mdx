@@ -1,0 +1,67 @@
+﻿---
+title: "UNSPSC vs. eClass vs. CPV : Quelle norme de classification convient le mieux à votre entreprise ?"
+description: "Une présentation claire des trois principales normes de classification procurement : UNSPSC, eClass et CPV, accompagnée d'un guide pratique pour une mise en œuvre à grande échelle."
+date: "2026-05-07"
+category: "Procurement"
+slug: "unspsc-vs-eclass-vs-cpv"
+---
+
+Si vous avez commencé à vous intéresser à la classification des données procurement, vous avez probablement rencontré plus d'une norme. UNSPSC, eClass, CPV, GPC – chacun prétend être le bon cadre pour organiser ce que votre entreprise achète. La vérité est que la meilleure norme dépend de qui vous achetez, à qui vous faites rapport et ce que vous voulez faire des données.
+
+## UNSPSC – United Nations Standard Products and Services Code
+
+UNSPSC est la norme de classification mondiale la plus utilisée pour le procurement. Elle couvre les produits et services selon une hiérarchie à quatre niveaux : Segment, Famille, Classe et Commodity. Elle est maintenue par GS1 US au nom de l'ONU et mise à jour trimestriellement.
+
+| Code | Description |
+|---|---|
+| 46000000 | Équipements de défense, d'application de la loi, de sécurité et de sûreté |
+| 46130000 | Sécurité et protection individuelle |
+| 46131700 | Gants de protection et accessoires |
+| 46131701 | Gants jetables |
+| 72154100 | Services d'entretien et de réparation des installations |
+| 72154103 | Entretien des systèmes HVAC |
+
+**Idéal pour :** Les entreprises du secteur privé, les organisations multinationales et toute entreprise souhaitant classifier le spend pour des analyses internes, la consolidation des fournisseurs ou le category management. La norme de facto dans les hard services, le FM, la construction et la fabrication. La plupart des plateformes logicielles de procurement – SAP Ariba, Coupa, Oracle – prennent en charge UNSPSC nativement.
+
+## eClass – European Classification Standard
+
+eClass est une norme de classification de produits développée principalement pour le procurement industriel et d'ingénierie. Particulièrement solide pour les produits techniques – composants mécaniques, pièces électriques, fournitures MRO – où les attributs de produit précis sont aussi importants que la catégorie. Contrairement à UNSPSC, eClass inclut des définitions d'attributs de produit en plus des codes. Vous ne vous contentez pas de classifier un produit comme "pompe centrifuge" – vous pouvez également spécifier le débit, la pression nominale, le matériau de construction et le type de raccordement.
+
+**Idéal pour :** Les environnements de fabrication, d'ingénierie et MRO où une précision au niveau du produit est requise. Largement utilisé sur les marchés germanophones et dans les secteurs industriels européens.
+
+## CPV – Common Procurement Vocabulary
+
+CPV est le système de classification mandaté par l'Union européenne pour le procurement public. Si vous faites un tender pour des contrats du secteur public dans l'UE, les codes CPV sont obligatoires – ils apparaissent sur les avis de marché publiés au Journal officiel de l'UE.
+
+| Code | Description |
+|---|---|
+| 45000000 | Travaux de construction |
+| 45300000 | Travaux d'installation de bâtiments |
+| 45331200 | Travaux d'installation de ventilation et de climatisation |
+| 90910000 | Services de nettoyage |
+| 90919200 | Services de nettoyage de bureaux |
+
+**Idéal pour :** Les fournisseurs du secteur public et les organisations opérant sur des marchés de procurement réglementés. Non conçu pour le spend management interne.
+
+## Which standard should you use?
+
+| Norme | Utilisation principale par | Cas d'utilisation principal |
+|---|---|---|
+| **UNSPSC** | Secteur privé, toutes industries | Spend analytics, category management, consolidation des fournisseurs |
+| **eClass** | Industriel, ingénierie, MRO | Master data management, spécification de produit au niveau des attributs |
+| **CPV** | Fournisseurs du secteur public, procurement réglementé par l'UE | Classification des avis de marché, compliance OJEU |
+
+Pour la plupart des entreprises du secteur privé dans les hard services, le FM, la construction et la fabrication, **UNSPSC est le bon point de départ**. C'est le plus largement pris en charge, le plus mondialement reconnu et le plus utile pour le spend analytics et le category management.
+
+## The implementation reality: why the standard is the easy part
+
+Quelle que soit la norme que vous choisissez, le plus difficile n'est pas la norme elle-même. C'est la classification de vos données existantes par rapport à celle-ci. Les bases de données procurement dans les organisations complexes contiennent des dizaines de milliers de descriptions d'articles distinctes – souvent incohérentes, ambiguës ou propres à la personne qui les a saisies. Mapper manuellement ces descriptions aux codes commodity UNSPSC n'est pas réalisable à grande échelle.
+
+Ce qui fonctionne est un système de classification à trois couches :
+
+- **Couche 1 – Règles déterministes.** Pour les articles clairs et à haute fréquence, des règles mappent des descriptions spécifiques à des codes spécifiques. Cette couche gère rapidement la majorité avec confiance.
+- **Couche 2 – Machine learning.** Un modèle entraîné sur vos données spécifiques gère les cas intermédiaires – les articles qui suivent des schémas apprenables. Le modèle apprend comment votre organisation décrit ce qu'elle achète.
+- **Couche 3 – Examen humain.** Les articles véritablement ambigus – généralement 5 à 15 % du volume – sont remontés pour examen. Chaque décision humaine alimente la Couche 2, améliorant la précision au fil du temps.
+
+Cette approche à trois couches est le cœur de la façon dont Pearstop classifie les données procurement à grande échelle : avec précision, rapidement et d'une manière qui s'améliore continuellement plutôt que de nécessiter des exercices de re-classification périodiques.
+

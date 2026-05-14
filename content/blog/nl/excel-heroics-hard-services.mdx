@@ -1,0 +1,50 @@
+﻿---
+title: "De Verborgen Kosten van Excel-heldendaden in hard services"
+description: "Elk hard services bedrijf heeft iemand die de data kent. Dit artikel legt uit welk operationeel risico zij dragen, wat het kost en hoe de migratie weg van handmatig data management eruitziet."
+date: "2026-04-03"
+category: "Data Management"
+slug: "excel-heroics-hard-services"
+---
+
+Elk hard services bedrijf heeft er één. De persoon die de data kent. Zij onderhouden de master spreadsheet waar finance van afhankelijk is. Zij weten welke kolommen te vertrouwen en welke te negeren. Zij bouwden de pivot tables die elk kwartaal in board packs verschijnen, en zij weten precies welke handmatige aanpassingen te doen voordat iets naar het management gaat. Zij zijn waardevol, hardwerkend en dragen een operationeel risico dat de organisatie nooit formeel heeft erkend.
+
+## The visible cost vs. the real cost
+
+De zichtbare kosten van Excel-heldendaden is de tijd van de persoon. Als uw beste analist 60% van zijn/haar week besteedt aan het opschonen en voorbereiden van data in plaats van aan het analyseren ervan, dan is dat inefficiëntie die de meeste organisaties hebben genormaliseerd. De werkelijke kosten zijn minder zichtbaar maar belangrijker:
+
+- **Vertraagde beslissingen.** Wanneer het produceren van een spend report een week duurt, worden beslissingen genomen op basis van data van de vorige maand. In een tendering omgeving is een vertraagde kostenraming een gemiste bid.
+- **Versierisico.** Meerdere spreadsheets, onderhouden door meerdere mensen, wijken na verloop van tijd stilletjes af. De versie van het procurement team en de versie van het finance team vertellen aan het einde van het kwartaal verschillende verhalen.
+- **Auditrisico.** Handmatig opgestelde rapporten kunnen niet worden herleid tot een schone single source of truth.
+- **Schaalplafond.** Het systeem dat werkt voor 50 locaties kan niet werken voor 200 zonder meer mensen aan te nemen om hetzelfde te doen.
+- **Sleutelfigurenafhankelijkheid.** Als de persoon die het masterbestand onderhoudt niet beschikbaar is, verliest de organisatie haar vermogen om betrouwbare reporting te produceren.
+
+## Are you in Excel heroics territory?
+
+Enkele diagnostische signalen:
+
+- Het produceren van een spend of kostenrapport kost meer dan een paar uur werk
+- Iemand moet de cijfers controleren voordat ze naar het management gaan
+- Een nieuwe analist zou weken nodig hebben om de datastructuur te begrijpen
+- Uw rapportage zou worden beïnvloed als een specifieke persoon twee weken niet beschikbaar zou zijn
+- U heeft meer dan één versie van dezelfde dataset onderhouden door verschillende mensen
+
+## What the migration away from Excel heroics looks like
+
+**Fase 1: Stel een data baseline vast.** Voordat enige automatisering wordt geïntroduceerd, moet de data in een bekende, schone staat zijn. Deze fase onthult het handmatige werk dat is verricht om de data bruikbaar te maken – de lookup tables, de correctieregels, de aanpassingsnotities in cellen. Die regels worden gedocumenteerd en geformaliseerd zodat ze systematisch in plaats van persoonlijk kunnen worden toegepast.
+
+**Fase 2: Automatiseer de herhaalbare correcties.** Het dedupliceren van supplier namen, het standaardiseren van beschrijvingen, het invullen van ontbrekende category velden, het markeren van afwijkingen voor beoordeling – deze kunnen worden geautomatiseerd. De tijd van de analist verschuift van het uitvoeren van de correcties naar het beoordelen van het werk van het systeem.
+
+**Fase 3: Bouw doorlopende kwaliteitscontrole in de data flow.** Nieuwe data die het systeem binnenkomt, wordt automatisch gevalideerd tegen de vastgestelde structuur. Kwaliteit wordt gehandhaafd door het proces, niet door een persoon.
+
+## What the other side looks like
+
+Na deze transitie verliest de analist die het masterbestand onderhield zijn/haar rol niet. Hun rol verandert. Zij verschuiven van datavoorbereiding naar data analysis – van het draaiende houden van het systeem naar het gebruiken ervan om inzichten te genereren.
+
+> "Pearstop bouwde een systeem dat automatisch de juiste items uit onze bezoekrapporten haalt in een schoon voorsteldocument. Het bespaart ons team veel tijd door de repetitieve taken van het combineren van de juiste items te elimineren."
+>
+> – Vince Out, Lemtech · Manufacturing & Air Filtration
+
+> "Voor het eerst heb ik het gevoel dat ik daadwerkelijk de baan doe waarvoor ik ben aangenomen – analysis, geen admin."
+>
+> – Data Analyst, Procurement team, industrieel bouwbedrijf
+
