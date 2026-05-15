@@ -11,7 +11,7 @@ function getMdxFrontmatter(locale: string, slug: string): { title?: string; desc
   const tryPath = (loc: string) => path.join(process.cwd(), "content", "blog", loc, `${slug}.mdx`);
   const filePath = existsSync(tryPath(locale)) ? tryPath(locale) : existsSync(tryPath("en")) ? tryPath("en") : null;
   if (!filePath) return {};
-  const raw = readFileSync(filePath, "utf-8").replace(/^﻿/, "");
+  const raw = readFileSync(filePath, "utf-8").replace(/^﻿/, "").replace(/\r\n/g, "\n");
   const match = raw.match(/^---\n([\s\S]*?)\n---/);
   if (!match) return {};
   const fm: Record<string, string> = {};

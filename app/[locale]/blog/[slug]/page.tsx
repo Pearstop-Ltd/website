@@ -50,7 +50,7 @@ function getMdxFrontmatter(locale: string, slug: string): { title?: string; desc
   const tryPath = (loc: string) => path.join(process.cwd(), "content", "blog", loc, `${slug}.mdx`);
   const filePath = existsSync(tryPath(locale)) ? tryPath(locale) : existsSync(tryPath("en")) ? tryPath("en") : null;
   if (!filePath) return {};
-  const raw = readFileSync(filePath, "utf-8").replace(/^﻿/, "");
+  const raw = readFileSync(filePath, "utf-8").replace(/^﻿/, "").replace(/\r\n/g, "\n");
   const match = raw.match(/^---\n([\s\S]*?)\n---/);
   if (!match) return {};
   const fm: Record<string, string> = {};
@@ -64,7 +64,7 @@ function getMdxFrontmatter(locale: string, slug: string): { title?: string; desc
 
 function stripMdx(raw: string): string {
   // Strip UTF-8 BOM if present, then strip frontmatter
-  const clean = raw.replace(/^﻿/, "");
+  const clean = raw.replace(/^﻿/, "").replace(/\r\n/g, "\n");
   return clean.replace(/^---[\s\S]*?---\n/, "");
 }
 
