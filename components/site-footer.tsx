@@ -1,7 +1,15 @@
+"use client";
+
 import Link from "next/link";
+import { useTranslations, useLocale } from "next-intl";
 import { footerCompanyLinks, footerSolutionLinks, siteConfig } from "@/lib/site";
 
 export function SiteFooter() {
+  const t = useTranslations("Footer");
+  const locale = useLocale();
+  const prefix = locale === "en" ? "" : `/${locale}`;
+  const year = new Date().getFullYear();
+
   return (
     <footer id="site-footer" role="contentinfo">
       <div className="container">
@@ -9,74 +17,74 @@ export function SiteFooter() {
           <div className="ft-brand">
             <img className="ft-logo-image" src={siteConfig.assets.logoInverse} alt={siteConfig.name} width={172} height={52} />
             <div>
-              <p className="ft-tagline">Data integrity solutions for technical industries. Because margins do not need to be paper thin.</p>
+              <p className="ft-tagline">{t("tagline")}</p>
             </div>
           </div>
         </div>
 
         <div className="ft-cols">
           <div className="ft-col">
-            <div className="ft-col-title">Solutions</div>
+            <div className="ft-col-title">{t("solutions")}</div>
             <ul className="ft-list">
               {footerSolutionLinks.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href}>{link.label}</Link>
+                  <Link href={`${prefix}${link.href}`}>{link.label}</Link>
                 </li>
               ))}
             </ul>
           </div>
 
           <div className="ft-col">
-            <div className="ft-col-title">Company</div>
+            <div className="ft-col-title">{t("company")}</div>
             <ul className="ft-list">
               {footerCompanyLinks.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href}>{link.label}</Link>
+                  <Link href={`${prefix}${link.href}`}>{link.label}</Link>
                 </li>
               ))}
             </ul>
           </div>
 
           <div className="ft-col">
-            <div className="ft-col-title">Follow us</div>
+            <div className="ft-col-title">{t("followUs")}</div>
             <ul className="ft-list">
               <li>
                 <a href={siteConfig.socials.linkedin} target="_blank" rel="noopener noreferrer">
-                  LinkedIn
+                  {t("linkedin")}
                 </a>
               </li>
               <li>
                 <a href={siteConfig.socials.youtube} target="_blank" rel="noopener noreferrer">
-                  YouTube
+                  {t("youtube")}
                 </a>
               </li>
               <li>
                 <a href={siteConfig.socials.instagram} target="_blank" rel="noopener noreferrer">
-                  Instagram
+                  {t("instagram")}
                 </a>
               </li>
             </ul>
           </div>
 
           <div className="ft-col">
-            <div className="ft-col-title">Stay informed</div>
-            <p className="ft-newsletter-intro">Data quality insights, industry thinking, and Pearstop updates direct to your inbox. No spam.</p>
+            <div className="ft-col-title">{t("stayInformed")}</div>
+            <p className="ft-newsletter-intro">{t("newsletterIntro")}</p>
             <form className="ft-form" action="https://formspree.io/f/xyklkdkj" method="POST">
-              <input type="text" name="name" placeholder="Your name" autoComplete="name" required />
-              <input type="email" name="email" placeholder="Your business email" autoComplete="email" required />
-              <input type="hidden" name="_subject" value="Newsletter signup — Pearstop" />
-              <button type="submit">Sign up</button>
+              <input type="text" name="name" placeholder={t("namePlaceholder")} autoComplete="name" required />
+              <input type="email" name="email" placeholder={t("emailPlaceholder")} autoComplete="email" required />
+              <input type="hidden" name="_subject" value={t("newsletterSubject")} />
+              <button type="submit">{t("signUp")}</button>
             </form>
           </div>
         </div>
 
         <div className="ft-bottom">
           <div className="ft-copy">
-            &copy; 2026 Pearstop. All rights reserved.
+            {t("copyright", { year })}
             <span className="ft-sep">·</span>
-            <Link href="/privacy">Privacy Policy</Link>
+            <Link href={`${prefix}/privacy`}>{t("privacyPolicy")}</Link>
             <span className="ft-sep">·</span>
-            <Link href="/terms-and-conditions">Terms &amp; Conditions</Link>
+            <Link href={`${prefix}/terms-and-conditions`}>{t("termsConditions")}</Link>
           </div>
           <img className="ft-fav" src={siteConfig.assets.logo} alt="" aria-hidden="true" />
         </div>

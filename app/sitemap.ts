@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
 import { caseStudies, solutionLinks, siteConfig } from "@/lib/site";
 
+const LOCALES = ["", "/nl", "/fr", "/de"];
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPaths = [
     "",
@@ -13,17 +15,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/case-studies",
     "/contact",
     "/privacy",
-    "/terms-and-conditions"
+    "/terms-and-conditions",
   ];
 
   const dynamicPaths = [
-    ...caseStudies.map((item) => `/cases/${item.slug}`)
+    ...caseStudies.map((item) => `/cases/${item.slug}`),
   ];
 
-  return [...staticPaths, ...dynamicPaths].map((path) => ({
-    url: `${siteConfig.url}${path}`,
-    lastModified: new Date(),
-    changeFrequency: path === "" ? "daily" : "weekly",
-    priority: path === "" ? 1 : 0.7
-  }));
+  const allPaths = [...staticPaths, ...dynamicPaths];
+
+  const entries: MetadataRoute.Sitemap = [];
+
+  for (const path of allPaths) {
+    for (const locale of LOCALES) {
+      entries.push({
+        url: `${siteConfig.url}${locale}${path}`,
+        lastModified: new Date(),
+        changeFrequency: path === "" ? "daily" : "weekly",
+        priority: path === "" ? 1 : locale === "" ? 0.8 : 0.6,
+      });
+    }
+  }
+
+  return entries;
 }

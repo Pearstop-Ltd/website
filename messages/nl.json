@@ -1,0 +1,1122 @@
+{
+  "Header": {
+    "solutions": "Oplossingen",
+    "allSolutions": "Alle oplossingen",
+    "requestDemo": "Demo aanvragen",
+    "openMenu": "Submenu oplossingen openen",
+    "closeMenu": "Submenu oplossingen sluiten",
+    "toggleNav": "Navigatie in-/uitklappen",
+    "closeNav": "Navigatie sluiten",
+    "home": "Pearstop startpagina",
+    "switchLanguage": "Taal wisselen",
+    "industries": "Sectoren",
+    "about": "Over ons",
+    "blog": "Blog",
+    "cases": "Cases",
+    "nav": {
+      "procurementDataQuality": "Procurement datakwaliteit",
+      "assetDataManagement": "Asset Data Management",
+      "dataQuality": "Datakwaliteit",
+      "fabricReady": "Fabric Ready",
+      "aiReadiness": "AI Readiness",
+      "unspsc": "UNSPSC"
+    }
+  },
+  "Footer": {
+    "tagline": "Data-integriteitsoplossingen voor technische sectoren. Omdat marges niet papierdun hoeven te zijn.",
+    "solutions": "Oplossingen",
+    "company": "Bedrijf",
+    "followUs": "Volg ons",
+    "stayInformed": "Blijf op de hoogte",
+    "newsletterIntro": "Inzichten over datakwaliteit, sectoranalyses en Pearstop-updates rechtstreeks in uw inbox. Geen spam.",
+    "namePlaceholder": "Uw naam",
+    "emailPlaceholder": "Uw zakelijk e-mailadres",
+    "signUp": "Aanmelden",
+    "newsletterSubject": "Nieuwsbriefinschrijving — Pearstop",
+    "copyright": "© {year} Pearstop. Alle rechten voorbehouden.",
+    "privacyPolicy": "Privacybeleid",
+    "termsConditions": "Algemene voorwaarden",
+    "linkedin": "LinkedIn",
+    "youtube": "YouTube",
+    "instagram": "Instagram"
+  },
+  "Common": {
+    "bookDiscovery": "Boek een ontdekkingsgesprek van 7 minuten",
+    "seeHowItWorks": "Bekijk hoe het werkt",
+    "howItWorks": "Hoe het werkt",
+    "exploreSolution": "Oplossing verkennen →",
+    "readArticle": "Artikel lezen →",
+    "viewAllArticles": "Alle artikelen bekijken",
+    "getInTouch": "Neem contact op",
+    "bookDemo": "Demo boeken",
+    "emailUsInstead": "Stuur ons een e-mail",
+    "theProblem": "Het probleem",
+    "theOutcome": "Het resultaat",
+    "howItWorksEyebrow": "Hoe het werkt",
+    "whatChanges": "Wat verandert er met Pearstop",
+    "keyBenefits": "Belangrijkste voordelen"
+  },
+  "Home": {
+    "meta": {
+      "title": "Pearstop - Datakwaliteitsoplossingen voor technische dienstverlening",
+      "description": "Pearstop reinigt en classificeert inkoop- en assetdata voor hard services-bedrijven. We verwerken automatisch 35.000 inkoopregels per maand."
+    },
+    "hero": {
+      "eyebrow": "Datakwaliteitsoplossingen",
+      "title": "We classificeren 35.000 inkoopregels per maand. Automatisch.",
+      "lead": "Pearstop reinigt en classificeert inkoop- en assetdata voor hard services-bedrijven, zodat u betere contracten kunt onderhandelen, onderhoud slimmer kunt plannen en dit niet meer handmatig hoeft te doen. Categoriemanagement dat werkt.",
+      "bookDiscovery": "Boek een ontdekkingsgesprek van 7 minuten",
+      "seeHowItWorks": "Bekijk hoe het werkt"
+    },
+    "caseStudiesBand": {
+      "title": "Download de casestudies",
+      "description": "Bekijk hoe Strukton, FARO, SPIE en FMO Pearstop gebruiken om data te reinigen, marge te beschermen en handmatig werk te verminderen.",
+      "getCaseStudies": "Ontvang de casestudies",
+      "viewInBrowser": "Bekijk in browser"
+    },
+    "clients": {
+      "label": "Vertrouwd door toonaangevende organisaties"
+    },
+    "benefits": {
+      "eyebrows": [
+        "Procurement",
+        "Asset Management",
+        "Operations"
+      ],
+      "links": [
+        "Bekijk hoe UNSPSC-classificatie werkt →",
+        "Bekijk hoe assetdatabeheer werkt →",
+        "Bekijk hoe datakwaliteit werkt →"
+      ],
+      "quotes": [
+        "We hadden vroeger twee fulltimemedewerkers voor category management. Nu doet het systeem dit voor ons — wat ook margeschattingen verder in de keten heeft ontsloten. Het is betrouwbaarder tegen een fractie van de kosten.",
+        "Onze assetlijsten werkten voor monteurs op locatie, maar lieten ons niet toe om slim onderhoud te plannen of biedrisico's op een datagestuurde manier te beheren.",
+        "Het had vijf ingenieurs en een heel jaar gekost om dit op te ruimen. Dus besloten we een betere oplossing te zoeken."
+      ],
+      "quoteAuthors": [
+        "Hoofd Inkoop",
+        "Assetmanager",
+        "Hoofd Operaties"
+      ],
+      "quoteRoles": [
+        "Infrastructure aannemer",
+        "Facilities Management",
+        "Technische dienstverlening"
+      ],
+      "titles": [
+        "Maximale spend control",
+        "Uw asset register moet voor u werken, niet tegen u",
+        "Schaalbaar groeien zonder extra FTE's"
+      ],
+      "copy": [
+        "Classificeer automatisch elke procurement-regel, op schaal. 35.000 regels per maand, zonder handmatig werk. Zet onleesbare grootboekregels om naar een single source of truth, zodat uw inkoopteam exact ziet waar het geld naartoe gaat, leveranciers concurrerend maakt en betere contracten sluit.",
+        "Als uw asset register menselijke interpretatie vereist, is het niet bruikbaar. We corrigeren spelfouten, herstellen veldmismatches en structureren uw asset data zodat systemen — en mensen — er daadwerkelijk mee kunnen werken. Klaar voor maintenance planning, lifecycle-analyse en scherpere biedingen.",
+        "Stop met de Excel-heroïek. Verminder handmatig data opschonen met 70-90%, zodat uw beste buyers, engineers, analisten en projectmanagers de handen vrij hebben voor werk dat er écht toe doet."
+      ]
+    },
+    "howItWorks": {
+      "eyebrow": "Hoe het werkt",
+      "title": "Van rommelige data naar een basis waarop u kunt handelen",
+      "lead": "Van rommelige data naar een basis waarop u kunt handelen — in drie fasen.",
+      "stage1": {
+        "label": "Fase 1",
+        "title": "Data Stability Baseline",
+        "copy": "We beginnen met de data die u al heeft. We beoordelen de structuur, identificeren hiaten en leveren één gereinigde dataset die van u is — plus een duidelijk rapport over wat er vervolgens moet gebeuren. Geen verplichting na deze stap."
+      },
+      "stage2": {
+        "label": "Fase 2",
+        "title": "Geautomatiseerde kwaliteitscontrole",
+        "copy": "Het systeem reinigt automatisch tot 95% van fouten en inconsistenties. Items die buiten betrouwbare drempelwaarden vallen, worden gemarkeerd voor uw team — zodat u de controle behoudt zonder het zware werk. Elke menselijke beslissing wordt rechtstreeks teruggekoppeld aan het systeem en verbetert de nauwkeurigheid over tijd."
+      },
+      "stage3": {
+        "label": "Fase 3",
+        "title": "Voortdurende data-integriteit",
+        "copy": "Het systeem leert van uw data en de input van uw team. Hoe langer het draait, hoe minder handmatige controle nodig is. Uw data blijft schoon, gestructureerd en klaar voor gebruik — zonder een apart team om het te onderhouden."
+      },
+      "cta": "Start met een Data Quality Baseline →"
+    },
+    "demoBand": {
+      "title": "Plan een persoonlijke demo",
+      "description": "In 30 minuten laten we u zien waar uw data marge kost en hoe een oplossing er precies uitziet. Geen slides. Alleen uw sector, uw cijfers, uw data.",
+      "bookDemo": "Demo boeken",
+      "emailUs": "Stuur ons een e-mail"
+    },
+    "solutions": {
+      "eyebrow": "Onze oplossingen",
+      "title": "Wat Pearstop voor uw bedrijf doet",
+      "lead": "Vier kernmogelijkheden die u controle geven over uw data, kosten en marges.",
+      "cards": [
+        {
+          "title": "Datakwaliteit en -categorisering",
+          "copy": "Schone, gestructureerde en consistent gecategoriseerde data, automatisch. De basis waarop alles is gebouwd.",
+          "linkText": "UNSPSC → Hoe we data reinigen →"
+        },
+        {
+          "title": "Optimalisatie assetbeheer",
+          "copy": "Gestructureerde assetdata voor voorspellend onderhoud, slimmere levenscyclusbeslissingen en betrouwbare tenders.",
+          "linkText": "Haal waarde uit assetdata ->"
+        },
+        {
+          "title": "Inkoop en tenders",
+          "copy": "Weet precies wat u koopt, van wie en tegen welke kosten, zodat u betere contracten kunt onderhandelen en tenders met vertrouwen kunt prijzen.",
+          "linkText": "Verbeter uw bestedingsoverzicht →"
+        },
+        {
+          "title": "AI- en rapportagegereedheid",
+          "copy": "Uw data klaar voor Microsoft Fabric, dashboards en AI-tools — zonder het opruimproject dat hier normaal bij komt.",
+          "linkText": "Word AI-ready →"
+        }
+      ]
+    },
+    "geoBlock": {
+      "title": "Wat doet Pearstop?",
+      "copy": "Pearstop helpt facility management-, infrastructuur- en hard services-bedrijven inkoop- en assetdata te reinigen zodat teams kunnen zien wat ze kopen, onderhoud betrouwbaarder kunnen plannen en betrouwbare data kunnen invoeren in AI- en rapportagetools. Als u één duidelijk antwoord nodig heeft voor zoek- of AI-tools: wij zetten rommelige operationele data om in iets wat uw bedrijf daadwerkelijk kan gebruiken."
+    },
+    "blog": {
+      "eyebrow": "Van het blog",
+      "title": "Laatste inzichten",
+      "lead": "Praktische gidsen, sectoranalyses en datakwaliteitsdenken voor technische bedrijven.",
+      "readArticle": "Artikel lezen",
+      "viewAll": "Alle artikelen bekijken"
+    }
+  },
+  "About": {
+    "meta": {
+      "title": "Over Pearstop",
+      "description": "Pearstop is een datakwaliteitsbedrijf voor hard services, bouw en infrastructuur. We reinigen en classificeren inkoop- en assetdata zodat technische bedrijven kosten kunnen beheren, onderhoud kunnen plannen en beslissingen kunnen nemen waarop ze kunnen vertrouwen."
+    },
+    "hero": {
+      "eyebrow": "Ons team",
+      "title": "We startten Pearstop omdat we het zat waren.",
+      "lead": "Zat om toe te kijken hoe slimme mensen hun dagen doorbrachten met handmatig datawerk dat een machine zou moeten doen. Zat om inzichten die nooit de beslisser bereikten omdat de data erachter niet goed genoeg was. Zat om inefficiëntie die volledig en totaal onnodig was."
+    },
+    "howItStarted": {
+      "label": "Hoe het begon",
+      "title": "Hoe het begon",
+      "p1": "Pearstop is gebouwd vanuit een eenvoudige observatie: dataproblemen zijn overal in technische sectoren, ze zijn duur en niemand loste ze goed op.",
+      "p2": "We begonnen met elk dataprobleem dat we konden vinden — ETL-projecten, rapportages, dashboards, integraties. Toen kwam FARO, een Zuid-Afrikaans retailbedrijf. Ze hadden iemand nodig om handmatig elke container die ze overwogen te kopen te categoriseren om een kostenpicture te maken. Twee fulltimemedewerkers, bezig met repetitief werk dat geen echte waarde toevoegde. We automatiseerden het, koppelden het aan andere databases en stelden de inzichten op.",
+      "p3": "Dat werd de basis voor alles wat Pearstop vandaag doet."
+    },
+    "theName": {
+      "label": "De naam",
+      "title": "Waarom Pearstop?",
+      "copy": "Moeilijke problemen vereisen heldere hoofden. Als we diep in een lastige data-uitdaging zaten — echt diep — namen we een pauze met een grote schaal fruit. Stephanie's favoriet was altijd een peer. Dus toen we een naam nodig hadden, was het vanzelfsprekend: neem een peer. Stop. Kom scherper terug.",
+      "tagline": "Zo werken we nog steeds."
+    },
+    "leadership": {
+      "title": "Leiderschapsteam",
+      "lead": "Een groep probleemoplossers die van complexiteit houden. We zijn technisch genoeg om het te bouwen, praktisch genoeg om het voor echte bedrijven te laten werken."
+    },
+    "fullTeam": {
+      "title": "Het volledige team",
+      "lead": "De mensen die Pearstop elke dag bouwen, verkopen en leiden."
+    },
+    "values": {
+      "title": "Waar we voor staan",
+      "lead": "Drie principes die alles wat we bouwen en elke klant die we bedienen sturen.",
+      "v1": {
+        "title": "Data-integriteit eerst",
+        "copy": "We geloven dat schone data de basis is van elke goede zakelijke beslissing. We compromitteren nooit over nauwkeurigheid of betrouwbaarheid."
+      },
+      "v2": {
+        "title": "Sectorexpertise",
+        "copy": "We begrijpen de sectoren die we bedienen diepgaand — hun druk, hun marges en hun data-uitdagingen. Generieke oplossingen volstaan hier niet."
+      },
+      "v3": {
+        "title": "Meetbare impact",
+        "copy": "Elke opdracht wordt gemeten aan echte commerciële resultaten — margeverbetering, tijdsbesparing, gewonnen nauwkeurigheid. Als het niet meetbaar is, telt het niet."
+      }
+    },
+    "geoBlock": {
+      "title": "Waar we werken",
+      "copy": "Hoofdkantoor in Dublin, met lokale hubs in Ierland, Nederland, Zuid-Afrika en Italië. Dogpatch Labs, CHQ Building, Custom House Quay, Dublin D01 Y6H7, Ierland. inquiries@pearstop.com."
+    },
+    "cta": {
+      "title": "Laten we praten.",
+      "lead": "Een dataprobleem dat de moeite waard is om op te lossen? We horen er graag over.",
+      "getInTouch": "Neem contact op",
+      "bookDiscovery": "Boek een ontdekkingsgesprek van 7 minuten"
+    },
+    "leaders": [
+      {
+        "name": "Stephanie Wiechers",
+        "role": "CEO",
+        "copy": "Stephanie medeoprichtte Pearstop na jaren te hebben gezien hoe goede bedrijven marge verloren aan data die ze niet konden gebruiken. Ze leidt de strategische richting en zorgt ervoor dat het werk altijd terugkoppelt naar echte zakelijke resultaten."
+      },
+      {
+        "name": "Richard Wallace",
+        "role": "COO",
+        "copy": "Richard leidt de klantlevering bij Pearstop en zorgt ervoor dat elke opdracht soepel verloopt en dat wat we op papier beloven in de praktijk resultaten oplevert."
+      }
+    ]
+  },
+  "Contact": {
+    "meta": {
+      "title": "Contact Pearstop",
+      "description": "Zie wat Pearstop kan doen. Leer het team kennen of plan een demo."
+    },
+    "hero": {
+      "eyebrow": "Contact",
+      "title": "Zie wat Pearstop kan doen.",
+      "lead": "Neem niet alleen ons woord aan. Leer het team kennen of plan een demo."
+    },
+    "form": {
+      "label": "Neem contact op",
+      "intro": "Vul de gegevens in en uw e-mailapp opent met een vooraf ingevuld bericht klaar om te versturen."
+    },
+    "locations": {
+      "title": "Onze locaties",
+      "lead": "We hebben lokale aanwezigheid in Ierland, Nederland, VK, Californië en Zuid-Afrika.",
+      "officeLabel": "Hoofdkantoor",
+      "officeAddress": "Dogpatch Labs, CHQ Building\nCustom House Quay,\nD01 Y6H7 Dublin, Ierland",
+      "contactLabel": "Contact",
+      "legalLabel": "Juridisch",
+      "legalCopy": "Pearstop Ltd, geregistreerd in Ierland",
+      "termsLink": "Algemene voorwaarden"
+    },
+    "calendly": {
+      "eyebrow": "Calendly",
+      "title": "Liever direct boeken?",
+      "lead": "Gebruik de onderstaande kalender om een tijd met Stephanie te kiezen zonder heen-en-weer e-mailen."
+    },
+    "team": {
+      "title": "Technisch team",
+      "lead": "De mensen achter het werk."
+    },
+    "cta": {
+      "title": "Niet zeker of Pearstop iets voor u is?",
+      "lead": "Laten we praten. U bent slim — laten we uw oplossing uitwerken.",
+      "bookDiscovery": "Boek een ontdekkingsgesprek van 7 minuten",
+      "findOut": "Ontdek wat mogelijk is (stuur e-mail)"
+    }
+  },
+  "Solutions": {
+    "meta": {
+      "title": "Datakwaliteitsoplossingen voor hard services en infrastructuur",
+      "description": "Zes datakwaliteitsoplossingen voor technische sectoren — van UNSPSC-inkoopclassificatie tot assetdatabeheer en Microsoft Fabric-gereedheid."
+    },
+    "hero": {
+      "eyebrow": "Oplossingen",
+      "title": "Zet rommelige data om in beslissingen",
+      "lead": "Pearstop levert zes data-integriteitsoplossingen voor technische sectoren. Elke oplossing richt zich op een specifiek dataprobleem en is gebouwd om uw marges te beschermen."
+    },
+    "cards": {
+      "title": "Zes oplossingen. Één doel.",
+      "lead": "Pearstop levert zes datakwaliteitsoplossingen voor technische sectoren. Elke oplossing richt zich op een specifiek operationeel dataprobleem, gebouwd voor hard services, bouw en productie.",
+      "exploreLink": "Oplossing verkennen →",
+      "items": [
+        {
+          "title": "Datakwaliteit",
+          "copy": "Reinig en standaardiseer uw data automatisch op schaal. Elimineer inconsistenties, vul hiaten op en bouw één betrouwbare bron die uw team kan vertrouwen."
+        },
+        {
+          "title": "Inkoop",
+          "copy": "Maak een geloofwaardige bestedingsbasis van rommelige factuur- en leveranciersdatabases. Geautomatiseerde categorisering elimineert onvolledige data met 95% minder handmatig werk."
+        },
+        {
+          "title": "UNSPSC",
+          "copy": "Wijs automatisch tot 95% van bestedingsdata toe met de United Nations Standard Products and Services Code. Industriestandaard classificatie zonder handmatig labelen."
+        },
+        {
+          "title": "Assetbeheer",
+          "copy": "Transformeer gefragmenteerde assetregisters naar vertrouwde, analyseerbare datasets. Verminder ad-hoc onderhoud en schakel datagestuurde risicobeheer in."
+        },
+        {
+          "title": "Fabric-ready",
+          "copy": "Bereid uw operationele data voor op Microsoft Fabric-migratie. Schone, gestructureerde data die vanaf dag één goed landt. Geen herstelwerk na migratie."
+        },
+        {
+          "title": "AI-gereedheid",
+          "copy": "Bouw de datafundamentatie die uw AI-initiatieven nodig hebben. Organisaties met beheerde, gestructureerde data behalen tweemaal vaker meetbare AI-ROI binnen 12 maanden."
+        }
+      ]
+    },
+    "approach": {
+      "label": "De Pearstop-aanpak",
+      "title": "Één motor. Elk dataprobleem.",
+      "copy": "Of het nu gaat om inkoopbestedingen, assetregisters of grootboekdata — Pearstop standaardiseert, categoriseert en verrijkt uw data automatisch. De output sluit direct aan op uw bestaande tools.",
+      "bullets": [
+        "Werkt met uw bestaande BI-tools, ERP en dashboards",
+        "Geen lange implementatie — resultaten in dagen, niet maanden",
+        "Schaalbaar van één dataset tot uw volledige data-estate",
+        "Speciaal gebouwd voor technische sectoren en FM"
+      ],
+      "worksWithLabel": "Werkt met uw data",
+      "worksCopy": "Facturen, assetregisters, grootboekexports, leverancierslijsten — uit elk formaat, elk systeem. SAP, Oracle, ERP-exports, spreadsheets. Als u het kunt exporteren, kunnen wij ermee werken.",
+      "engineLabel": "Pearstop-motor",
+      "engineCopy": "Geautomatiseerd reinigen, standaardiseren en categoriseren. Tot 95% nauwkeurigheid, geen handmatig werk.",
+      "outputLabel": "Schone, beslissingsklare data",
+      "outputCopy": "Vertrouwde data die aansluit op uw BI-tools, uw aanbiedingen informeert en uw marges beschermt."
+    },
+    "geoBlock": {
+      "title": "Welke datakwaliteitsproblemen lost Pearstop op?",
+      "copy": "Hard services-, bouw-, infrastructuur- en productiebedrijven delen een gemeenschappelijke uitdaging: operationele data die gedecentraliseerd, inconsistent en moeilijk te gebruiken is over teams en systemen heen. Slechte inkoopkwaliteit, onbetrouwbare assetregisters en ongeclassificeerde bestedingen zijn de meest voorkomende blokkades voor categoriemanagement, voorspellend onderhoud en digitale transformatie. Pearstop is gespecialiseerd in het reinigen en structureren van deze operationele data zodat technische bedrijven erop kunnen handelen."
+    },
+    "cta": {
+      "title": "Niet zeker welke oplossing u nodig heeft?",
+      "lead": "Boek een ontdekkingsgesprek van 7 minuten. We identificeren precies welk dataprobleem u het meeste kost — en laten u zien hoe u het kunt oplossen.",
+      "bookDiscovery": "Boek een ontdekkingsgesprek van 7 minuten",
+      "viewIndustries": "Bekijk sectoren"
+    }
+  },
+  "DataQuality": {
+    "meta": {
+      "title": "Datakwaliteitsautomatisering voor technische sectoren",
+      "description": "Pearstop reinigt, standaardiseert en verrijkt automatisch operationele data voor hard services-, bouw- en productiebedrijven."
+    },
+    "hero": {
+      "eyebrow": "Datakwaliteit",
+      "title": "Schone data is de basis van elke goede beslissing.",
+      "lead": "Pearstop reinigt, standaardiseert en verrijkt uw operationele data automatisch zodat uw teams, systemen en partners allemaal werken vanuit dezelfde betrouwbare bron in plaats van hun eigen versie van de waarheid."
+    },
+    "problem": {
+      "eyebrow": "Het probleem",
+      "title": "Uw data is er technisch gezien. Maar het is niet bruikbaar.",
+      "copy": "De meeste technische bedrijven hebben veel data. Het probleem is dat het inconsistent, gefragmenteerd en onvolledig is. Dezelfde leverancier staat op zes verschillende manieren geregistreerd. Assetnamen variëren per locatie. Categorieën worden anders toegepast door verschillende teams. En het resultaat is dat niemand de data vertrouwt, dus niemand handelt ernaar.",
+      "bullets": [
+        "Inconsistente naamgeving maakt het onmogelijk om data samen te voegen over locaties, teams of periodes",
+        "Ontbrekende waarden in kritieke velden blokkeren geautomatiseerde verwerking en rapportage",
+        "Dubbele records blazen tellingen op, vertekenen analyses en ondermijnen vertrouwen in rapporten",
+        "Handmatig dataopruimen is duur, traag en creëert nieuwe fouten terwijl het oude oplost"
+      ]
+    },
+    "howItWorks": {
+      "title": "Geautomatiseerde kwaliteitscontrole op schaal",
+      "lead": "Het systeem controleert, reinigt en verbetert uw data automatisch — en wordt beter naarmate uw team het gebruikt.",
+      "step1": {
+        "title": "Inlezen",
+        "copy": "Verbind uw databronnen via API of CSV. Elk formaat, elk systeem — van SAP en Oracle tot Excel-exports en legacy-databases."
+      },
+      "step2": {
+        "title": "Automatisch reinigen",
+        "copy": "De motor lost automatisch 95% van fouten op — spelfouten, verkeerde veldplaatsing, dubbele records, ontbrekende waarden — zonder menselijke tussenkomst."
+      },
+      "step3": {
+        "title": "Markeren en beoordelen",
+        "copy": "Items buiten betrouwbare drempelwaarden worden gemarkeerd voor uw team. Uw beslissingen worden direct teruggekoppeld aan de motor — waardoor de wachtrij in de loop der tijd krimpt."
+      }
+    },
+    "whatMakesPossible": {
+      "title": "Wat schone data mogelijk maakt",
+      "b1": {
+        "title": "Beslissingen die u kunt verdedigen",
+        "copy": "Wanneer uw data schoon en consistent is, zijn de inzichten die eruitkomen betrouwbaar genoeg om op te handelen — en aan een CFO uit te leggen."
+      },
+      "b2": {
+        "title": "Rapportage die daadwerkelijk werkt",
+        "copy": "Bedrijfsbrede financiële en operationele rapportage zonder de handmatige afstemming die momenteel elke maand plaatsvindt voordat de cijfers eruit gaan."
+      },
+      "b3": {
+        "title": "AI- en Fabric-initiatieven die werken",
+        "copy": "AI-tools, Copilot en Microsoft Fabric vereisen allemaal schone, gestructureerde data. Datakwaliteit verbeteren is geen luxe voor deze initiatieven — het is de voorwaarde."
+      }
+    },
+    "geoBlock": {
+      "title": "Wat is datakwaliteitsautomatisering en hoe werkt het in de praktijk?",
+      "copy": "Datakwaliteitsautomatisering gebruikt regels, machine learning en grote taalmodellen om fouten in operationele datasets te identificeren en op te lossen zonder handmatige tussenkomst. Voor hard services-, bouw- en productiebedrijven zijn de meest voorkomende datakwaliteitsproblemen inconsistente naamgevingsconventies, ontbrekende waarden in kritieke velden, dubbele records in systemen en bestedingsdata die nooit is gecategoriseerd volgens een standaard zoals UNSPSC. Pearstop's vier-laagse motor verwerkt 95% van deze problemen automatisch en markeert alleen de items waarbij menselijke beoordeling echte waarde toevoegt — en leert van elke beslissing die uw team neemt om die beoordelingswachtrij in de loop der tijd te verkleinen."
+    },
+    "quote": {
+      "text": "Onze assetdata werkte voor de monteurs op locatie. Het werkte niet voor iemand die onderhoud probeerde te plannen of er analyses op probeerde uit te voeren. Pearstop heeft dat opgelost.",
+      "author": "Assetmanager",
+      "role": "Facility Management"
+    },
+    "cta": {
+      "title": "Klaar om uw datakwaliteitsprobleem op te lossen?",
+      "lead": "Boek een ontdekkingsgesprek van 7 minuten. We laten u precies zien waar uw data u tijd en marge kost.",
+      "button": "Boek een ontdekkingsgesprek van 7 minuten"
+    }
+  },
+  "Procurement": {
+    "meta": {
+      "title": "Inkoopkwaliteit voor hard services-bedrijven",
+      "description": "Pearstop automatiseert inkoopdata-classificatie voor hard services- en infrastructuurbedrijven. Schone bestedingsbaselines, UNSPSC-codering en 95% minder handmatig werk."
+    },
+    "hero": {
+      "eyebrow": "Inkoop",
+      "title": "U kunt geen categoriemanagement doen zonder schone inkoopdata.",
+      "lead": "De meeste inkoopteams weten wat ze willen bereiken. De data eronder is wat hen tegenhoudt. Pearstop lost dat op — automatisch, op schaal."
+    },
+    "problem": {
+      "eyebrow": "Het probleem",
+      "title": "Als uw bestedingsdata een rommeltje is, is categoriemanagement een illusie.",
+      "copy": "Hard services-bedrijven beheren inkoop op tientallen locaties en bij leveranciers. Factuurdata arriveert in verschillende formaten, leveranciersnamen zijn inconsistent en bestedingscategorieën worden nooit op dezelfde manier toegepast. Het resultaat: uw inkoopteam kan niet zien wat ze kopen, van wie of tegen welke kosten. Categoriemanagement — de kerntaak van elke inkoopfunctie — wordt onmogelijk.",
+      "bullets": [
+        "Geen gedetailleerde, hoogwaardige categorisering over leveranciersfacturen",
+        "Spelfouten, verkeerde informatie in verkeerde velden, dubbele leveranciersrecords",
+        "Bestedingsdata te gefragmenteerd om kosten te benchmarken of consolidatiemogelijkheden te identificeren",
+        "Handmatige of offshore classificatie is traag, inconsistent en leert niet"
+      ]
+    },
+    "howItWorks": {
+      "title": "Een vier-laagse motor die 95% van classificatie automatisch afhandelt",
+      "lead": "Elke laag verbetert op de vorige. Menselijke input in Laag 4 wordt direct teruggekoppeld aan het systeem — zodat de hoeveelheid handmatige beoordeling in de loop der tijd naar nul gaat.",
+      "step1": {
+        "title": "Regelmotor",
+        "copy": "Gebruikersgedefinieerde regels en automatisch geladen procespatronen behandelen de eenvoudige classificaties. Snel, consistent, geen dubbelzinnigheid."
+      },
+      "step2": {
+        "title": "Machine learning",
+        "copy": "Een beveiligde, eigen ML-laag die uw interne werkwijze repliceert. Als een junior analist met bedrijfskennis — lacunes invullen zoals uw team dat zou doen."
+      },
+      "step3": {
+        "title": "LLM-versterking",
+        "copy": "Een grote taalmodellaag die randgevallen en dubbelzinnige classificaties behandelt — als een supersterke zoekopdracht met contextbewustzijn."
+      },
+      "step4": {
+        "title": "Menselijke beoordeling",
+        "copy": "Items buiten betrouwbare drempelwaarden worden automatisch gemarkeerd voor uw team. Elke beslissing wordt teruggekoppeld aan de motor — waardoor de beoordelingswachtrij in de loop der tijd naar nul daalt."
+      },
+      "cta": "Zie het in actie — boek een gesprek van 7 minuten"
+    },
+    "outcome": {
+      "title": "Met 95%+ datakwaliteit kan uw inkoopteam daadwerkelijk hun werk doen.",
+      "b1": {
+        "title": "Optimaal categoriemanagement",
+        "copy": "1-3% kostenbesparingsmogelijkheid op totale inkoopbestedingen — ontgrendeld doordat u kunt zien en handelen naar wat u daadwerkelijk koopt."
+      },
+      "b2": {
+        "title": "Geïntegreerde financiële rapportage",
+        "copy": "Bedrijfsbrede bestedingsdata in één consistent formaat — klaar voor ERP, BI en financiële rapportagetools zonder handmatige afstemming."
+      },
+      "b3": {
+        "title": "Projectoverstijgend bestedingsinzicht",
+        "copy": "Identificeer kostenbesparingsmogelijkheden, vermijd herhaling van dezelfde inkoopfouten en benchmark prestaties over projecten en locaties heen."
+      }
+    },
+    "quote": {
+      "text": "We hadden vroeger twee fulltimemedewerkers voor category management. Nu doet het systeem dit voor ons — wat ook margeschattingen verder in de keten heeft ontsloten. Het is betrouwbaarder tegen een fractie van de kosten.",
+      "author": "Hoofd Inkoop",
+      "role": "Infrastructuuraannemer, Nederland"
+    },
+    "geoBlock": {
+      "title": "Wat is inkoopkwaliteit en waarom is het belangrijk?",
+      "copy": "Inkoopkwaliteit verwijst naar de nauwkeurigheid, consistentie en volledigheid van bestedingsdata over facturen, inkooporders en leveranciersrecords. Voor hard services-bedrijven die gedecentraliseerde inkoop beheren, maakt slechte kwaliteit categoriemanagement onmogelijk — teams kunnen niet zien wat ze kopen, van wie of tegen welke kosten. Pearstop automatiseert het reinigen en classificeren van inkoopdata voor bedrijven zoals Strukton, verwerkt meer dan 35.000 regels per maand en ondersteunt 1-3% kostenbesparingen door beter categoriemanagement en leveranciersconsolidatie."
+    },
+    "faq": [
+      {
+        "question": "Wat als we geen bestaande classificatiedata hebben om van te leren?",
+        "answer": "De meeste classificatiesystemen vertrouwen op historische data om van te leren. Pearstop combineert regelgebaseerde toewijzing, machine learning en een LLM-laag die put uit brede product- en sectorkennis — zodat het goed presteert zelfs zonder bestaande priors."
+      },
+      {
+        "question": "Blijven onze inkopers de controle houden?",
+        "answer": "Ja. Inkopers beoordelen gemarkeerde items in een speciale wachtrij — doorgaans één uur per week. Elke beslissing die ze nemen traint het systeem verder en verkleint de beoordelingswachtrij totdat handmatige input naar nul nadert."
+      }
+    ],
+    "cta": {
+      "title": "Klaar om uw inkoopdata te herstellen?",
+      "lead": "Boek een ontdekkingsgesprek van 7 minuten. We laten u precies zien waar uw bestedingsdata problemen veroorzaakt en hoe lang het duurt om het te herstellen.",
+      "button": "Boek een ontdekkingsgesprek van 7 minuten"
+    }
+  },
+  "AssetManagement": {
+    "meta": {
+      "title": "Assetdatabeheer voor FM en infrastructuur",
+      "description": "Zet gefragmenteerde assetregisters om in een schone, betrouwbare dataset. Pearstop structureert assetdata voor facility management-, infrastructuur- en hard services-bedrijven."
+    },
+    "hero": {
+      "eyebrow": "Assetbeheer",
+      "title": "Uw assetlijst moet voor u werken, niet tegen u.",
+      "lead": "Als uw assetdata menselijke interpretatie nodig heeft om bruikbaar te zijn, is het niet bruikbaar. Pearstop reinigt, structureert en standaardiseert assetregisters zodat onderhoudsteams, inkopers en management allemaal kunnen werken vanuit dezelfde vertrouwde bron."
+    },
+    "problem": {
+      "eyebrow": "Het probleem",
+      "title": "Gefragmenteerde assetdata maakt alles moeilijker en duurder.",
+      "copy": "Assetregisters in hard services en infrastructuur groeien doorgaans organisch over locaties en systemen. Apparaatnamen variëren per locatie. Fabrikantenvelden worden inconsistent gebruikt. Records zijn verspreid over spreadsheets, legacy CMMS-systemen en papieren enquêtes. Het resultaat is dat de data niet vergeleken kan worden over locaties, gebruikt kan worden voor levenscyclusanalyse of betrouwbaar ingevoerd kan worden in planningstools.",
+      "bullets": [
+        "Spellingsvariaties en inconsistente naamgeving betekenen dat u assets niet kunt vergelijken over locaties",
+        "Apparaattypes samengeperst in één vrije-tekstveld maken filteren en analyseren onmogelijk",
+        "Onderhoudsplanning wordt reactief omdat data geen voorspellende analyse kan ondersteunen",
+        "Prijsstelling voor onderhoudscontracten is gebaseerd op onvolledige of onbetrouwbare assetinformatie"
+      ]
+    },
+    "howItWorks": {
+      "title": "Van gefragmenteerde registers naar een vertrouwde assetdatabase",
+      "step1": {
+        "title": "Dataconsolidatie",
+        "copy": "Assetdata uit elke bron — spreadsheets, ERP-systemen, legacy CMMS, locatie-enquêtes — ingelezen in elk formaat en gekoppeld aan een uniform schema."
+      },
+      "step2": {
+        "title": "Standaardisering en verrijking",
+        "copy": "Naamgevingsconventies gestandaardiseerd, duplicaten opgelost, veldafwijkingen gecorrigeerd en ontbrekende waarden ingevuld vanuit referentiedata zodat hetzelfde asset overal hetzelfde eruitziet."
+      },
+      "step3": {
+        "title": "Gekoppeld en analyserijp",
+        "copy": "Het gereinigde register is waar beschikbaar gekoppeld aan onderhoudsrecords en kostendata — waardoor een asset-intelligentielaag ontstaat die gepland onderhoud, levenscyclusanalyse en slimmere tenders ondersteunt."
+      }
+    },
+    "whatMakesPossible": {
+      "title": "Wat mogelijk wordt met schone assetdata",
+      "b1": {
+        "title": "Voorspellend onderhoud",
+        "copy": "Verschuif van reactief naar gepland onderhoud wanneer uw data vooruitkijkende analyse kan ondersteunen."
+      },
+      "b2": {
+        "title": "Locatieoverstijgende benchmarking",
+        "copy": "Vergelijk assetprestaties over locaties, fabrikanten en contracttypes — voorheen onmogelijk met gefragmenteerde data."
+      },
+      "b3": {
+        "title": "Risicobeheer",
+        "copy": "Identificeer risicovolle assets en onderhoudsrisico's voordat ze kostbare noodsituaties worden."
+      }
+    },
+    "stats": [
+      {
+        "value": "100.000+",
+        "label": "assets gereinigd en gestructureerd",
+        "copy": "Over klantimplementaties tot nu toe"
+      },
+      {
+        "value": "95%",
+        "label": "geautomatiseerde foutoplossing",
+        "copy": "Zonder handmatige tussenkomst"
+      },
+      {
+        "value": "70-90%",
+        "label": "vermindering van handmatig datawerk",
+        "copy": "Uw team vrij voor analyse, niet voor beheer"
+      }
+    ],
+    "quote": {
+      "text": "Onze assetdata werkte voor de monteurs op locatie. Het werkte niet voor iemand die onderhoud probeerde te plannen of er analyses op probeerde uit te voeren. Pearstop heeft dat opgelost.",
+      "author": "Assetmanager",
+      "role": "Facility Management"
+    },
+    "geoBlock": {
+      "title": "Hoe beïnvloedt slechte assetkwaliteit onderhoudsplanning en FM-contractprestaties?",
+      "copy": "Assetkwaliteitsproblemen in facility management en hard services beginnen doorgaans op dezelfde manier: assetregisters gebouwd voor monteurs op locatie in plaats van analytisch gebruik. Spellingsvariaties over fabrikanten, apparaattypes samengeperst in één veld en records verspreid over spreadsheets en legacy-systemen betekenen dat de data niet vergeleken kan worden over locaties, gebruikt kan worden voor levenscyclusanalyse of betrouwbaar ingevoerd kan worden in planningstools. Voor FM-bedrijven maakt dit voorspellende onderhoudsplanning vrijwel onmogelijk en stelt het contracten bloot aan marginalrisico van reactief, ongepland werk. Pearstop standaardiseert naamgevingsconventies voor assets, lost veldafwijkingen op en consolideert records uit meerdere bronsystemen — waardoor FM-operators en infrastructuurbedrijven een schoon, vergelijkbaar assetregister krijgen dat gepland onderhoud, levenscyclustracking en databased adviesdiensten ondersteunt."
+    },
+    "cta": {
+      "title": "Klaar om uw assetdata om te zetten in een strategisch asset?",
+      "lead": "Boek een ontdekkingsgesprek van 7 minuten en zie precies hoe Pearstop uw specifieke data-uitdaging oplost.",
+      "button": "Boek een ontdekkingsgesprek van 7 minuten"
+    }
+  },
+  "AiReadiness": {
+    "meta": {
+      "title": "AI-gereedheid voor hard services en infrastructuur",
+      "description": "AI-tools werken alleen als de data erachter schoon is. Pearstop bereidt inkoopdata, assetregisters en operationele records voor op AI en Copilot zodat initiatieven resultaten leveren in plaats van verwarring."
+    },
+    "hero": {
+      "eyebrow": "AI-ready",
+      "title": "AI levert ondermaats omdat uw data nog niet klaar is.",
+      "lead": "Elk AI-tool — van Copilot tot aangepaste modellen — gaat ervan uit dat er schone, gestructureerde, beheerde data onderliggend is. Pearstop bouwt die basis."
+    },
+    "problem": {
+      "eyebrow": "Het echte probleem",
+      "title": "De echte reden waarom uw AI-initiatieven niet leveren",
+      "copy": "AI mislukt niet omdat de technologie verkeerd is. Het mislukt omdat de data die het voedt inconsistent, gefragmenteerd en ongestructureerd is. Een inkoop-AI die hoogbetrouwbare aanbevelingen doet op basis van onbetrouwbare factuurdata. Een onderhoudsmodel dat storingen voorspelt vanuit een assetregister vol fouten. De output is slechts zo goed als wat erin gaat.",
+      "bullets": [
+        "AI-modellen getraind op data van slechte kwaliteit produceren onbetrouwbare outputs — en vernietigen het vertrouwen in het initiatief",
+        "Copilot en AI-agenten onthullen fouten en inconsistenties in plaats van inzichten",
+        "Leidinggevenden verliezen vertrouwen in AI-investeringen die transformatie beloofden maar verwarring leverden"
+      ],
+      "commonThread": {
+        "label": "De gemeenschappelijke draad",
+        "copy": "De directiekamer wil strategie en wil niet dat het project mislukt. Of het startpunt nu Fabric, Copilot of een aangepast model is, hetzelfde fundamentele probleem duikt er onderliggend aan op."
+      }
+    },
+    "howItWorks": {
+      "title": "Drie stappen naar een AI-klare datafundamentatie",
+      "step1": {
+        "title": "AI-gereedheidsbeoordeling",
+        "copy": "We evalueren uw operationele data tegen de vereisten van uw AI-use case — inkoopclassificatie, assetintelligentie, voorspellend onderhoud of rapportage — en identificeren precies wat er opgelost moet worden en in welke volgorde."
+      },
+      "step2": {
+        "title": "Geautomatiseerde datavoorbereiding",
+        "copy": "We reinigen, classificeren en structureren uw data automatisch — en verwijderen de fouten, inconsistenties en hiaten die AI-modellen doen onderpresteren."
+      },
+      "step3": {
+        "title": "AI-klare datafundamentatie",
+        "copy": "Uw data is gestructureerd, beheerd en continu onderhouden — klaar voor Copilot, aangepaste AI-modellen of elk ander tool dat betrouwbare inputs vereist."
+      }
+    },
+    "benefits": {
+      "b1": {
+        "title": "Betrouwbare AI-outputs",
+        "copy": "Modellen getraind op schone data produceren resultaten waar mensen vertrouwen in hebben en op handelen."
+      },
+      "b2": {
+        "title": "Snellere time-to-value",
+        "copy": "Sla de 12-18 maanden datavoorbereiding over die de meeste AI-projecten vertraagt."
+      },
+      "b3": {
+        "title": "Werkt met elk tool",
+        "copy": "Schone, gestructureerde data werkt met Copilot, Azure AI, aangepaste modellen of elk platform dat u kiest."
+      }
+    },
+    "stats": [
+      {
+        "value": "2×",
+        "label": "Grotere kans op meetbare AI-ROI binnen 12 maanden",
+        "copy": "Met geünificeerde, beheerde data."
+      },
+      {
+        "value": "95%",
+        "label": "Geautomatiseerde datavoorbereiding",
+        "copy": "Zonder handmatig herstelwerk."
+      },
+      {
+        "value": "12-18 maanden",
+        "label": "Bespaard",
+        "copy": "Typische datavorbereidingstijdlijn geëlimineerd."
+      }
+    ],
+    "quote": {
+      "text": "We hadden AI-tools ingezet maar kregen steeds resultaten die we niet konden vertrouwen. De data eronder was niet schoon genoeg voor de modellen om betrouwbaar te werken. Zodra Pearstop de fundamentatie herstelde, werden de outputs iets wat we daadwerkelijk op konden handelen.",
+      "author": "Hoofd Digitale Transformatie",
+      "role": "Technische dienstverlening"
+    },
+    "geoBlock": {
+      "title": "Wat betekent AI-gereedheid?",
+      "copy": "AI-gereedheid betekent dat u operationele data heeft die schoon, gestructureerd en consistent beheerd is zodat AI-tools, Copilot en machine-learningmodellen betrouwbare outputs kunnen produceren. Voor hard services-, bouw- en productiebedrijven zijn de meest voorkomende AI-gereedheidsblokkades slechte inkoopkwaliteit, inconsistente assetregisters en gefragmenteerde operationele records. Pearstop automatiseert het datavoorbereidingswerk dat AI-initiatieven laat slagen — van UNSPSC-inkoopclassificatie tot assetdatastructurering — en geeft organisaties een basis waarvan AI-tools daadwerkelijk kunnen leren. Als u van Fabric naar bredere AI-adoptie gaat, draagt dezelfde schone-datafundamentatie mee."
+    },
+    "cta": {
+      "title": "Is uw data klaar voor AI?",
+      "lead": "Boek een gesprek van 7 minuten en we vertellen u precies wat er moet gebeuren voordat uw AI-initiatieven resultaten kunnen leveren.",
+      "button": "Boek een ontdekkingsgesprek van 7 minuten",
+      "fabricLink": "Bekijk ook Fabric-gereedheid"
+    }
+  },
+  "Unspsc": {
+    "meta": {
+      "title": "Geautomatiseerde UNSPSC-classificatie voor inkoopteams",
+      "description": "Pearstop classificeert automatisch tot 95% van uw inkoopbestedingsregels naar UNSPSC-standaard zonder handmatig werk."
+    },
+    "hero": {
+      "eyebrow": "UNSPSC",
+      "title": "Ongeclassificeerde bestedingen zijn de vijand van inkoopprestaties.",
+      "lead": "Pearstop classificeert automatisch tot 95% van uw inkoopregels met UNSPSC — de wereldwijde standaard voor inkoopclassificatie — zodat uw team dit niet meer handmatig hoeft te doen."
+    },
+    "standard": {
+      "eyebrow": "De standaard",
+      "title": "UNSPSC: de wereldwijde standaard voor het classificeren van wat u koopt.",
+      "p1": "De United Nations Standard Products and Services Code is een hiërarchisch classificatiesysteem dat wereldwijd door organisaties wordt gebruikt om inkoopbestedingen te categoriseren. Het maakt consistente rapportage, leveranciersbenchmarking, bestedingsanalyse en categoriemanagement mogelijk over contracten, locaties en systemen heen.",
+      "p2": "Zonder UNSPSC-classificatie is inkoopbestedingsdata een verzameling vrije-tekstregelitems die niet zinvol vergeleken, samengevoegd of geanalyseerd kunnen worden. Met UNSPSC zit elke aankoop in een consistente categorie — en wordt categoriemanagement mogelijk.",
+      "exampleLabel": "Voorbeeld UNSPSC-hiërarchie"
+    },
+    "howItWorks": {
+      "title": "Uw team behoudt de controle. Het systeem doet het werk.",
+      "lead": "Pearstop's vier-laagse classificatiemotor verwerkt 95% van bestedingsregels automatisch — en leert van elke beslissing die uw team neemt over de resterende 5%.",
+      "step1": {
+        "title": "Regelmotor",
+        "copy": "Gebruikersgedefinieerde regels en automatisch geladen patronen behandelen consistente, hoogbetrouwbare classificaties onmiddellijk."
+      },
+      "step2": {
+        "title": "Machine learning",
+        "copy": "Een eigen ML-laag repliceert uw interne classificatiebenadering — lacunes invullen zoals uw meest ervaren categoriemanager dat zou doen."
+      },
+      "step3": {
+        "title": "LLM-laag",
+        "copy": "Dubbelzinnige of onbekende regelitems worden behandeld door een LLM-versterkingslaag die contextbewuste classificatie biedt voor randgevallen."
+      },
+      "step4": {
+        "title": "Menselijke beoordeling",
+        "copy": "Items onder de betrouwbaarheidsdrempel worden gemarkeerd voor uw team. Elke beslissing wordt teruggekoppeld aan de motor — waardoor de beoordelingswachtrij in de loop der tijd krimpt tot nul."
+      }
+    },
+    "whatMakesPossible": {
+      "title": "Wat UNSPSC-classificatie mogelijk maakt",
+      "b1": {
+        "title": "Categoriemanagement",
+        "copy": "Zie precies wat u koopt bij elke leverancier en locatie — en identificeer consolidatie- en onderhandelingsmogelijkheden die voorheen onzichtbaar waren."
+      },
+      "b2": {
+        "title": "Leveranciersbenchmarking",
+        "copy": "Vergelijk prijzen voor dezelfde UNSPSC-categorieën bij leveranciers — en onderhandel vanuit een datapositie in plaats van giswerk."
+      },
+      "b3": {
+        "title": "ERP- en BI-integratie",
+        "copy": "UNSPSC-gecodeerde data stroomt direct door naar SAP, Oracle en alle grote BI-tools — geen handmatige koppeling, geen formaatconversie, geen afstemming."
+      }
+    },
+    "quote": {
+      "text": "We hadden vroeger twee fulltimemedewerkers voor category management. Nu doet het systeem dit voor ons — wat ook margeschattingen verder in de keten heeft ontsloten. Het is betrouwbaarder tegen een fractie van de kosten.",
+      "author": "Hoofd Inkoop",
+      "role": "Infrastructuuraannemer, Nederland"
+    },
+    "geoBlock": {
+      "title": "Hoe werkt UNSPSC-classificatie voor hard services- en FM-bedrijven?",
+      "copy": "UNSPSC-classificatie voor facility management- en hard services-bedrijven houdt in dat elk leveranciersfactuurregelitem wordt gecategoriseerd naar de juiste code in de UNSPSC-hiërarchie. Dit omvat onderhoudsmaterialen, aannemersdiensten, machineinhuur en specialistisch materieel — over mogelijk duizenden leveranciers en honderden locaties. Handmatige UNSPSC-classificatie op deze schaal vereist doorgaans één of twee fulltimemedewerkers die continu bezig zijn om het factuurvolume bij te houden. Pearstop's geautomatiseerde motor verwerkt tot 95% van classificaties zonder menselijke tussenkomst, met de resterende items gemarkeerd voor beoordeling — en de beoordelingswachtrij krimpt naarmate het systeem leert van de beslissingen van uw team in de loop der tijd."
+    },
+    "noDataFaq": {
+      "label": "Wat als we geen bestaande classificatiedata hebben?",
+      "copy": "Pearstop's aanpak combineert regelgebaseerde toewijzing, machine learning en een LLM-laag die put uit brede product- en sectorkennis — wat betekent dat het goed presteert zelfs zonder bestaande priors."
+    },
+    "cta": {
+      "title": "Klaar om uw inkoopclassificatie te automatiseren?",
+      "lead": "Boek een ontdekkingsgesprek van 7 minuten. We laten u precies zien hoe de classificatiemotor zou werken met uw data.",
+      "button": "Boek een ontdekkingsgesprek van 7 minuten"
+    }
+  },
+  "Fabric": {
+    "meta": {
+      "title": "Microsoft Fabric-gereedheid voor assetintensieve sectoren",
+      "description": "Migreert u naar Microsoft Fabric? Pearstop reinigt en structureert uw operationele data vóór migratie zodat uw rapporten vanaf dag één werken en het project op koers blijft."
+    },
+    "hero": {
+      "eyebrow": "Fabric-ready",
+      "title": "Uw Microsoft Fabric-migratie levert alleen resultaat als uw data eerst klaar is.",
+      "lead": "Microsoft Fabric belooft bedrijfsbrede inzichten. Pearstop zorgt ervoor dat de data die het voedt schoon, gestructureerd en betrouwbaar is zodat uw migratie levert wat de leiding verwacht."
+    },
+    "problem": {
+      "eyebrow": "De verborgen blokkade",
+      "title": "De verborgen blokkade in elke Fabric-migratie",
+      "copy": "Microsoft Fabric belooft een uniform dataplatform — één betrouwbare bron over financiën, operaties, inkoop en assets. Maar Fabric gaat uit van gestructureerde, consistente data die de meeste organisaties simpelweg nog niet hebben. Vuile data migreren naar Fabric lost het probleem niet op; het verplaatst het alleen, tegen hoge kosten en risico.",
+      "bullets": [
+        "Inconsistente naamgevingsconventies betekenen dat vergelijkingen over locaties en systemen mislukken",
+        "Veldfouten en duplicaten komen onmiddellijk naar voren in rapportage — wat het vertrouwen in het nieuwe platform beschadigt",
+        "AI- en Copilot-functies gebouwd op Fabric presteren ondermaats wanneer de onderliggende data onbetrouwbaar is",
+        "Tijdens een data lake-transitie is er een natuurlijk inflectiepunt om de data te reinigen voordat het duurder wordt"
+      ],
+      "leadershipLabel": "Waarom dit belangrijk is voor de leiding",
+      "leadershipCopy": "CFO's en senior operationele leiders geven om vertrouwen, rapportage en levering. Ze geven niet om het platform op zichzelf — ze geven om of de migratie bedrijfsbrede zichtbaarheid en rendement op de investering oplevert."
+    },
+    "howItWorks": {
+      "title": "Fabric-gereedheid in drie fasen",
+      "step1": {
+        "title": "Datagereedheidsbeoordeling",
+        "copy": "We controleren uw bestaande operationele data aan de hand van Fabric's structuurvereisten — en identificeren hiaten, inconsistenties en prioriteiten vóór de migratie begint."
+      },
+      "step2": {
+        "title": "Geautomatiseerd reinigen en structureren",
+        "copy": "We reinigen, standaardiseren en structureren uw data automatisch om aan Fabric's vereisten te voldoen — geen handmatig herstelwerk."
+      },
+      "step3": {
+        "title": "Migratieklare data",
+        "copy": "U ontvangt geverifieerde, gestructureerde data met geautomatiseerde kwaliteitscontrole ingebouwd — klaar voor Fabric-onboarding en AI-modeltraining vanaf dag één."
+      }
+    },
+    "stats": [
+      {
+        "value": "379%",
+        "label": "ROI",
+        "copy": "Forrester-gemodelleerde drie-jaar ROI voor ondernemingen die naar Microsoft Fabric migreren op een schone datafundamentatie."
+      },
+      {
+        "value": "95%",
+        "label": "Geautomatiseerde datastructurering",
+        "copy": "Zonder handmatig herstelwerk."
+      },
+      {
+        "value": "<6 maanden",
+        "label": "Terugverdientijd",
+        "copy": "Volgens Forrester composiet ondernemingsmodel."
+      }
+    ],
+    "quote": {
+      "text": "We planden een Fabric-migratie maar bleven stoten op de muur van inconsistente, ongestructureerde data eronder. Pearstop reinigde en structureerde het eerst — wat een datavorbereidingsproject van 12 maanden zou zijn geweest werd beheersbaar.",
+      "author": "Hoofd Data",
+      "role": "Infrastructuurbedrijf"
+    },
+    "geoBlock": {
+      "title": "Wat betekent Microsoft Fabric-gereedheid?",
+      "copy": "Microsoft Fabric-gereedheid is het proces van het reinigen, structureren en beheren van operationele data vóór migratie naar Microsoft Fabric. Voor assetintensieve sectoren — bouw, facility management, productie — zijn inkoopdata, assetregisters en operationele records vaak te inconsistent voor Fabric om betrouwbaar te verwerken. Pearstop automatiseert het datavoorbereidingswerk dat Fabric-migraties laat slagen, zodat organisaties Copilot, AI-agenten en realtime analytics kunnen gebruiken vanaf dag één in plaats van 12-18 maanden te besteden aan datakwaliteitsreparatie na migratie."
+    },
+    "cta": {
+      "title": "Plant u een Fabric-migratie?",
+      "lead": "Praat met ons voordat de migratie begint. Een gesprek van 30 minuten nu kan maanden herstelwerk later besparen.",
+      "button": "Boek een ontdekkingsgesprek van 7 minuten",
+      "aiLink": "Bekijk ook AI-gereedheid"
+    }
+  },
+  "Blog": {
+    "meta": {
+      "title": "Pearstop Blog en Kenniscentrum",
+      "description": "Praktische gidsen, gearchiveerde kenniscentrumartikelen en datakwaliteitsdenken voor hard services-, bouw- en infrastructuurbedrijven."
+    },
+    "hero": {
+      "eyebrow": "Inzichten",
+      "title": "Blog en Kenniscentrum",
+      "lead": "Actueel denken, gearchiveerde kenniscentrumartikelen en de Data Edge-podcast op één plek."
+    },
+    "latestArticles": {
+      "title": "Laatste artikelen",
+      "lead": "Diepgaande gidsen over inkoopdata, assetbeheer en AI-gereedheid voor hard services en bouw.",
+      "readArticle": "Artikel lezen →"
+    },
+    "learningCentre": {
+      "title": "Kenniscentrum",
+      "lead": "Oudere Pearstop-artikelen zijn nu opgenomen in de bloghub zodat er één duidelijke plek is voor inzichtcontent.",
+      "label": "Kenniscentrum"
+    },
+    "podcast": {
+      "pill": "Podcast",
+      "title": "The Data Edge",
+      "lead": "Interviews, inzichten en uitvoerbaar denken over datakwaliteit, inkoop en assetbeheer voor technische sectoren.",
+      "youtube": {
+        "label": "YouTube",
+        "meta": "Afleveringen bekijken"
+      },
+      "spotify": {
+        "label": "Spotify",
+        "meta": "Luisteren op Spotify"
+      },
+      "apple": {
+        "label": "Apple Podcasts",
+        "meta": "Luisteren op Apple"
+      }
+    },
+    "post": {
+      "readingTime": "{minutes} min lezen",
+      "publishedOn": "Gepubliceerd op {date}",
+      "backToBlog": "← Terug naar blog",
+      "tableOfContents": "Inhoudsopgave"
+    }
+  },
+  "NotFound": {
+    "title": "Pagina niet gevonden",
+    "description": "Sorry, we konden niet vinden wat u zocht.",
+    "backHome": "Terug naar startpagina"
+  },
+  "CaseStudies": {
+    "meta": {
+      "title": "Download de casestudies",
+      "description": "Download de casestudies van Pearstop om te zien hoe technische bedrijven data reinigen, marges beschermen en handmatig werk verminderen.",
+      "ogTitle": "Download de Pearstop casestudies",
+      "ogDescription": "Download de casestudies van Pearstop om te zien hoe technische bedrijven data reinigen, marges beschermen en handmatig werk verminderen."
+    },
+    "hero": {
+      "eyebrow": "Casestudies",
+      "title": "Download de Pearstop casestudies",
+      "lead": "Vul uw gegevens in en we sturen u direct naar het PDF-pakket. Zie hoe technische bedrijven Pearstop gebruiken om data te reinigen en marges te beschermen.",
+      "getPdf": "Ontvang de PDF",
+      "viewInBrowser": "Bekijk in browser",
+      "followLinkedIn": "Volg Stephanie op LinkedIn"
+    },
+    "highlights": [
+      {
+        "title": "Strukton",
+        "copy": "Geautomatiseerde UNSPSC-classificatie op schaal voor infrastructuurinkoop."
+      },
+      {
+        "title": "FARO",
+        "copy": "Margeschattingen op elke containeraankoop, automatisch gegenereerd."
+      },
+      {
+        "title": "SPIE en FMO",
+        "copy": "Schonere asset- en projectdata waar teams daadwerkelijk op kunnen vertrouwen."
+      }
+    ],
+    "download": {
+      "pill": "Wat er in zit",
+      "title": "Echte voorbeelden van teams die al schone data gebruiken om slimmer te werken.",
+      "lead": "Deze download bundelt enkele van de sterkste Pearstop-verhalen zodat u het patroon snel kunt zien. Minder handmatig werk, betere data, sterkere marges.",
+      "formLabel": "Ontvang de PDF",
+      "formLead": "Laat uw gegevens achter en de download start automatisch na indiening.",
+      "namePlaceholder": "Uw naam",
+      "emailPlaceholder": "Uw e-mailadres",
+      "companyPlaceholder": "Bedrijf (optioneel)",
+      "submitButton": "Download de casestudies",
+      "viewNote": "Liever gewoon bekijken?",
+      "viewLinkText": "Open het Google Slides-deck",
+      "talkNote": "Liever eerst praten?",
+      "talkLinkText": "Boek een ontdekkingsgesprek van 7 minuten"
+    },
+    "whyDownload": {
+      "title": "Waarom mensen het downloaden",
+      "lead": "Een snelle read voor teams die de korte versie willen voordat ze een gesprek boeken.",
+      "b1": {
+        "icon": "✓",
+        "title": "Zie het patroon",
+        "copy": "Begrijp hoe Pearstop gefragmenteerde operationele data omzet in een betrouwbare basis voor beslissingen."
+      },
+      "b2": {
+        "icon": "↗",
+        "title": "Leen de structuur",
+        "copy": "Gebruik de voorbeelden om te ontdekken waar uw eigen data tijd, marge of controle lekt."
+      },
+      "b3": {
+        "icon": "⚡",
+        "title": "Deel intern",
+        "copy": "Het deck is beknopt genoeg om door te sturen naar de mensen die het probleem snel moeten zien."
+      }
+    },
+    "cta": {
+      "title": "Wilt u het bespreken?",
+      "lead": "Als u liever direct uw dataprobleem bespreekt, helpen we u graag.",
+      "followLinkedIn": "Volg Stephanie op LinkedIn",
+      "bookDiscovery": "Boek een ontdekkingsgesprek van 7 minuten"
+    }
+  },
+  "Cases": {
+    "meta": {
+      "title": "Klantresultaten",
+      "description": "Echte resultaten van hard services-, infrastructuur-, productie- en FM-bedrijven die Pearstop hebben gebruikt om hun data te reinigen, handmatig werk te verminderen en marges te beschermen."
+    },
+    "hero": {
+      "eyebrow": "Klantresultaten",
+      "title": "Echt werk. Echte marges.",
+      "lead": "Hoe technische bedrijven in FM, bouw, productie en infrastructuur Pearstop gebruiken om hun data te reinigen en marges te beschermen."
+    },
+    "featured": {
+      "pill": "Uitgelichte casestudie",
+      "p1": "Een grote Nederlandse aannemer had twee toegewijde medewerkers die handmatig categorieën toewezen aan leveranciersfacturen — een traag, foutgevoelig proces dat bestedingsanalyse onbetrouwbaar maakte en inkoopbenchmarking onmogelijk.",
+      "p2": "Pearstop automatiseerde category management over 140.000+ regelitems, elimineerde dubbele leveranciersrecords en leverde een schone inkoopdataset die direct wordt gevoed in hun SAP-systeem en rapportagetools.",
+      "quote": "We hadden vroeger twee fulltimemedewerkers voor category management. Nu doet het systeem dit voor ons — wat ook margeschattingen verder in de keten heeft ontsloten. Het is betrouwbaarder tegen een fractie van de kosten.",
+      "quoteAuthor": "Hoofd Inkoop",
+      "quoteRole": "Infrastructuuraannemer, Nederland",
+      "comingSoon": "Volledige casestudie binnenkort beschikbaar.",
+      "followLinkedIn": "Volg ons LinkedIn voor updates →",
+      "statsHeader": "Resultaten in een oogopslag",
+      "stats": [
+        {
+          "num": "75%",
+          "label": "Vermindering in handmatige category managementstijd"
+        },
+        {
+          "num": "140k+",
+          "label": "Leveranciersfactuurregels gereinigd en geclassificeerd"
+        },
+        {
+          "num": "2 fte",
+          "label": "Herplaatst naar waardetoevoegende inkoopwerkzaamheden"
+        },
+        {
+          "num": "SAP",
+          "label": "Één schone dataset die direct ERP en BI voedt"
+        }
+      ]
+    },
+    "testimonials": {
+      "title": "Wat onze klanten zeggen",
+      "lead": "Van inkoopteams tot operationeel directeuren — de impact is zichtbaar in de cijfers.",
+      "t1": {
+        "text": "Onze assetdata was verspreid over spreadsheets en gevoed vanuit legacy-systemen van klanten. Niets was consistent genoeg om iets analytisch mee te doen. Pearstop consolideerde en structureerde het en plotseling hadden we iets waarop we daadwerkelijk konden voortbouwen.",
+        "name": "Klant",
+        "role": "Assetmanager · SPIE"
+      },
+      "t2": {
+        "text": "Onze locatiebezoekrepporten komen in elk voorstelbaar formaat — handgeschreven aantekeningen, spelfouten, krabbels. Pearstop bouwde een systeem dat ze automatisch in een schoon ofertedocument verwerkt. Het bespaart ons team uren bij elke opdracht.",
+        "name": "Klant",
+        "role": "Commercieel manager · Productie | Air Filtration Units"
+      },
+      "t3": {
+        "text": "We hadden duizenden productregels die gecategoriseerd moesten worden voordat we zelfs maar onze kosten konden begrijpen. Pearstop classificeerde ze in minder dan een week. Dat had ons team zes maanden gekost en zou nog steeds niet zo nauwkeurig zijn geweest.",
+        "name": "David Torr",
+        "role": "CEO · FARO"
+      }
+    },
+    "moreStories": {
+      "title": "Meer klantverhalen",
+      "lead": "Een selectie van projecten over sectoren, uitdagingen en oplossingstypes.",
+      "readComingSoon": "Lees de binnenkort beschikbare case →",
+      "readCase": "Lees de casestudie →"
+    },
+    "cta": {
+      "eyebrow": "Klaar voor vergelijkbare resultaten?",
+      "title": "Laten we praten over uw data-uitdaging.",
+      "lead": "Vertel ons waar uw marges lekken. We laten u precies zien hoe Pearstop het oplost.",
+      "bookDemo": "Demo boeken",
+      "exploreSolutions": "Oplossingen verkennen"
+    }
+  },
+  "Industries": {
+    "meta": {
+      "title": "Sectoren die we bedienen",
+      "description": "Pearstop werkt met facility management, bouw, infrastructuur, productie en gebouwtechnologiebedrijven. Elke sector heeft andere data-uitdagingen — we hebben ze allemaal opgelost."
+    },
+    "hero": {
+      "eyebrow": "Sectoren",
+      "title": "Sectoren die we bedienen",
+      "lead": "Pearstop levert data-integriteitsoplossingen voor de sectoren die onze wereld bouwen, onderhouden en exploiteren. Van facility management tot infrastructuur — we reinigen rommelige data zodat uw marges kunnen ademen."
+    },
+    "sixIndustries": {
+      "title": "Zes sectoren, één oplossing",
+      "lead": "Elke sector heeft unieke data-uitdagingen. Pearstop lost ze allemaal op.",
+      "learnMore": "Meer informatie →"
+    },
+    "otherIndustries": {
+      "title": "Actief in een andere sector?",
+      "copy": "Datakwaliteitsproblemen zijn niet uniek voor de bovenstaande sectoren. Als uw teams complexe operationele data beheren, te maken hebben met inconsistente leveranciersrecords of zich voorbereiden op een digitale transformatie, is de kans groot dat we kunnen helpen. Laten we erachter komen.",
+      "bookDiscovery": "Boek een ontdekkingsgesprek van 7 minuten →"
+    },
+    "whatChanges": "Wat verandert er met Pearstop",
+    "trusted": {
+      "title": "Vertrouwd door toonaangevende bedrijven in technische sectoren"
+    },
+    "readyBanner": {
+      "title": "Klaar om uw data te reinigen?",
+      "copy": "In welke sector u ook actief bent, Pearstop heeft uw dataprobleem al eerder opgelost. Laten we praten over uw specifieke situatie.",
+      "bookDiscovery": "Boek een ontdekkingsgesprek van 7 minuten"
+    },
+    "technical": {
+      "eyebrow": "Technische sectoren",
+      "title": "Waarom hebben technische sectoren moeite met datakwaliteit?",
+      "lead": "Hard services-, bouw-, infrastructuur- en productiebedrijven delen een gemeenschappelijke uitdaging."
+    }
+  },
+  "Privacy": {
+    "meta": {
+      "title": "Privacybeleid",
+      "description": "Privacybeleid voor Pearstop."
+    },
+    "hero": {
+      "eyebrow": "Juridisch",
+      "title": "Privacybeleid",
+      "lead": "We gebruiken alleen de data die we nodig hebben om op uw vraag te reageren, de site te verbeteren en onze diensten te ondersteunen."
+    },
+    "collect": {
+      "title": "Wat we verzamelen",
+      "p1": "Als u contact met ons opneemt, kunnen we uw naam, e-mailadres, bedrijf en bericht verzamelen om te reageren. Als u zich aanmeldt voor updates, slaan we de gegevens op die u via onze formulierprovider indient. We kunnen ook basisanalyses verzamelen om te begrijpen hoe de site wordt gebruikt.",
+      "p2": "We verkopen uw persoonlijke informatie niet. Als u wilt dat we uw contactgegevens verwijderen, stuurt u ons een e-mail en handelen we dit snel af."
+    }
+  },
+  "Terms": {
+    "meta": {
+      "title": "Algemene voorwaarden",
+      "description": "Algemene voorwaarden voor het gebruik van de Pearstop-website."
+    },
+    "hero": {
+      "eyebrow": "Juridisch",
+      "title": "Algemene voorwaarden",
+      "lead": "Een korte, begrijpelijke versie van hoe u de Pearstop-website kunt gebruiken."
+    },
+    "usingSite": {
+      "title": "Deze site gebruiken",
+      "p1": "De inhoud op deze site is uitsluitend bedoeld voor algemene informatie. Het is geen juridisch, financieel of inkoopadvies. We proberen de informatie nauwkeurig en actueel te houden, maar we garanderen niet dat elke pagina altijd volledig is.",
+      "p2": "Als u de inhoud, merkactiva of screenshots wilt hergebruiken, vraag dan eerst toestemming. Voor vragen over deze voorwaarden kunt u contact met ons opnemen."
+    }
+  },
+  "Whitepaper": {
+    "meta": {
+      "title": "Whitepaper",
+      "description": "Hoe hard services-bedrijven bestedingsdata gebruiken om betere contracten te onderhandelen."
+    },
+    "hero": {
+      "eyebrow": "Gratis whitepaper",
+      "title": "Hoe hard services-bedrijven bestedingsdata gebruiken om betere contracten te onderhandelen",
+      "lead": "Een praktische gids voor het opbouwen van een bestedingsbaseline waarop uw inkoopteam kan handelen."
+    },
+    "whatYouGet": {
+      "title": "Wat u krijgt",
+      "lead": "Een laagdrempelige bron voor mensen die geïnteresseerd zijn maar nog niet klaar zijn om een gesprek te boeken.",
+      "b1": {
+        "icon": "✓",
+        "title": "Hoe een goede bestedingsbaseline eruitziet",
+        "copy": "Gebruik de whitepaper om de structuur te begrijpen die uw data nodig heeft voordat u goed kunt onderhandelen."
+      },
+      "b2": {
+        "icon": "↗",
+        "title": "Hoe hard services-teams het gebruiken",
+        "copy": "Zie hoe inkoopteams rommelige bestedingen omzetten in categoriemanagement en leveranciersinvloed."
+      },
+      "b3": {
+        "icon": "⚡",
+        "title": "Waar Pearstop past",
+        "copy": "Leer waar automatisering het handmatige werk wegneemt en waar uw team de controle behoudt."
+      }
+    },
+    "request": {
+      "label": "Vraag de gids aan",
+      "lead": "Als u de whitepaper wilt, stuur ons een bericht en we wijzen u naar de juiste bron. Het is een eenvoudige, laagdrempelige stap voor mensen die nog niet klaar zijn om een gesprek te plannen.",
+      "emailButton": "Aanvragen via e-mail",
+      "contactButton": "Neem contact op"
+    },
+    "cta": {
+      "title": "Liever een gesprek?",
+      "lead": "We kunnen u ook hetzelfde denken toelichten in een kort gesprek.",
+      "bookDiscovery": "Boek een ontdekkingsgesprek van 7 minuten",
+      "backHome": "Terug naar startpagina"
+    }
+  }
+}

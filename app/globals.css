@@ -1913,3 +1913,66 @@ section {
   font-size: 1rem;
 }
 
+
+/* Language switcher */
+.lang-switcher {
+  position: relative;
+  margin-right: 0.75rem;
+}
+
+.lang-switcher-btn {
+  background: none;
+  border: 1.5px solid rgba(255,255,255,0.35);
+  border-radius: 6px;
+  color: inherit;
+  cursor: pointer;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 0.3rem 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.lang-switcher-btn:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.6);
+}
+
+.lang-switcher-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  background: #fff;
+  border: 1px solid var(--border, #e5e7eb);
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  list-style: none;
+  margin: 0;
+  padding: 0.35rem 0;
+  min-width: 72px;
+  z-index: 999;
+}
+
+.lang-switcher-menu li button {
+  background: none;
+  border: none;
+  color: var(--navy, #1a2340);
+  cursor: pointer;
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 0.45rem 1rem;
+  text-align: left;
+  width: 100%;
+  transition: background 0.12s;
+}
+
+.lang-switcher-menu li button:hover,
+.lang-switcher-menu li button.active {
+  background: var(--purple-soft, #f3f0ff);
+  color: var(--purple, #6d28d9);
+}

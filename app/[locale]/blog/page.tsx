@@ -1,17 +1,44 @@
 import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 import Link from "next/link";
+import { existsSync, readFileSync } from "fs";
+import path from "path";
 import { PageHero, SectionTitle } from "@/components/content";
 import { siteConfig } from "@/lib/site";
 import { blogPosts } from "@/lib/blog-posts";
 
-export const metadata: Metadata = {
-  title: "Pearstop Blog",
-  description:
-    "Practical guides, data quality thinking, and the Data Edge podcast for hard services, construction, and infrastructure companies.",
-  alternates: {
-    canonical: `${siteConfig.url}/blog`
+function getMdxFrontmatter(locale: string, slug: string): { title?: string; description?: string } {
+  const tryPath = (loc: string) => path.join(process.cwd(), "content", "blog", loc, `${slug}.mdx`);
+  const filePath = existsSync(tryPath(locale)) ? tryPath(locale) : existsSync(tryPath("en")) ? tryPath("en") : null;
+  if (!filePath) return {};
+  const raw = readFileSync(filePath, "utf-8").replace(/^﻿/, "").replace(/\r\n/g, "\n");
+  const match = raw.match(/^---\n([\s\S]*?)\n---/);
+  if (!match) return {};
+  const fm: Record<string, string> = {};
+  for (const line of match[1].split("\n")) {
+    const colon = line.indexOf(":");
+    if (colon === -1) continue;
+    const key = line.slice(0, colon).trim();
+    fm[key] = line.slice(colon + 1).trim().replace(/^"|"$/g, "");
   }
-};
+  return { title: fm.title, description: fm.description };
+}
+
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "Blog" });
+  return {
+    title: t("meta.title"),
+    description: t("meta.description"),
+    alternates: {
+      canonical: `${siteConfig.url}/blog`
+    }
+  };
+}
 
 type PodcastLink = {
   kind: "youtube" | "spotify" | "apple";
@@ -19,27 +46,6 @@ type PodcastLink = {
   href: string;
   meta: string;
 };
-
-const podcastLinks: PodcastLink[] = [
-  {
-    kind: "youtube",
-    label: "YouTube",
-    href: siteConfig.socials.youtube,
-    meta: "Watch episodes"
-  },
-  {
-    kind: "spotify",
-    label: "Spotify",
-    href: "https://open.spotify.com/show/37QLB09fDgo8Q4g8wVw4uk",
-    meta: "Listen on Spotify"
-  },
-  {
-    kind: "apple",
-    label: "Apple Podcasts",
-    href: "https://podcasts.apple.com/us/podcast/the-data-edge-data-quality-ai-readiness/id1872757553",
-    meta: "Listen on Apple"
-  }
-];
 
 function PodcastIcon({ kind }: { kind: PodcastLink["kind"] }) {
   switch (kind) {
@@ -90,23 +96,58 @@ const CATEGORY_GRADIENTS: Record<string, string> = {
 };
 const DEFAULT_GRADIENT = "linear-gradient(135deg, #4c1d95 0%, #6d28d9 100%)";
 
-export default function BlogPage() {
+export const dynamic = "force-dynamic";
+
+export default async function BlogPage({
+  params
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const prefix = locale === "en" ? "" : `/${locale}`;
+  const t = await getTranslations({ locale, namespace: "Blog" });
+
+  const podcastLinks: PodcastLink[] = [
+    {
+      kind: "youtube",
+      label: t("podcast.youtube.label"),
+      href: siteConfig.socials.youtube,
+      meta: t("podcast.youtube.meta")
+    },
+    {
+      kind: "spotify",
+      label: t("podcast.spotify.label"),
+      href: "https://open.spotify.com/show/37QLB09fDgo8Q4g8wVw4uk",
+      meta: t("podcast.spotify.meta")
+    },
+    {
+      kind: "apple",
+      label: t("podcast.apple.label"),
+      href: "https://podcasts.apple.com/us/podcast/the-data-edge-data-quality-ai-readiness/id1872757553",
+      meta: t("podcast.apple.meta")
+    }
+  ];
+
   return (
     <>
       <PageHero
-        eyebrow="Insights"
-        title="Blog"
-        lead="Current thinking on data quality, procurement, and the Data Edge podcast."
+        eyebrow={t("hero.eyebrow")}
+        title={t("hero.title")}
+        lead={t("hero.lead")}
       />
 
       <section id="blog-posts">
         <div className="container">
           <SectionTitle
-            title="Latest Articles"
-            lead="In-depth guides on procurement data, asset management, and AI readiness for hard services and construction."
+            title={t("latestArticles.title")}
+            lead={t("latestArticles.lead")}
           />
           <div className="article-grid">
-            {blogPosts.map((post) => (
+            {blogPosts.map((post) => {
+              const fm = getMdxFrontmatter(locale, post.slug);
+              const title = fm.title ?? post.title;
+              const description = fm.description ?? post.description;
+              return (
               <article key={post.slug} className="blog-card">
                 <div
                   className="blog-img-wrap"
@@ -127,15 +168,16 @@ export default function BlogPage() {
                 <div className="blog-body">
                   <span className="blog-tag">{post.category}</span>
                   <h3 className="blog-title">
-                    <Link href={`/blog/${post.slug}`}>{post.title}</Link>
+                    <Link href={`${prefix}/blog/${post.slug}`}>{title}</Link>
                   </h3>
-                  <p className="light-copy">{post.description}</p>
-                  <Link className="blog-read" href={`/blog/${post.slug}`}>
-                    Read article →
+                  <p className="light-copy">{description}</p>
+                  <Link className="blog-read" href={`${prefix}/blog/${post.slug}`}>
+                    {t("latestArticles.readArticle")}
                   </Link>
                 </div>
               </article>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -144,11 +186,9 @@ export default function BlogPage() {
         <div className="container">
           <div className="blog-podcast-grid">
             <div className="blog-podcast-copy">
-              <span className="podcast-pill">Podcast</span>
-              <h2>The Data Edge</h2>
-              <p className="podcast-lead">
-                Interviews, insights, and actionable thinking on data quality, procurement, and asset management for technical industries.
-              </p>
+              <span className="podcast-pill">{t("podcast.pill")}</span>
+              <h2>{t("podcast.title")}</h2>
+              <p className="podcast-lead">{t("podcast.lead")}</p>
               <div className="blog-podcast-links">
                 {podcastLinks.map((link) => (
                   <a key={link.label} className="blog-podcast-link" href={link.href} target="_blank" rel="noopener noreferrer">
@@ -165,7 +205,7 @@ export default function BlogPage() {
               </div>
             </div>
             <div className="blog-podcast-media">
-              <img src={siteConfig.assets.blogPodcast} alt="The Data Edge Podcast" className="podcast-img" />
+              <img src={siteConfig.assets.blogPodcast} alt={t("podcast.title")} className="podcast-img" />
             </div>
           </div>
         </div>

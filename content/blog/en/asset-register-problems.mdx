@@ -1,0 +1,52 @@
+﻿---
+title: "The Real Reason Your Asset Register Isn't Working"
+description: "Most FM companies have an asset register. Most don't trust it. This article explains the specific data gaps, their financial cost, and how AI-assisted enrichment fixes them."
+date: "2026-02-24"
+category: "Asset Management"
+slug: "asset-register-problems"
+---
+
+Most facilities management companies have an asset register. Most of them do not trust it. In conversations with asset managers across hard FM and infrastructure, the same pattern comes up: the register exists, people refer to it, but the underlying data is unreliable enough that real decisions – maintenance planning, lifecycle replacement, bid pricing – still get made on instinct or from memory.
+
+## What a failing asset register actually looks like
+
+The signs are specific and recognisable:
+
+- **Missing manufacturer and model data.** A significant percentage of assets are listed as "Pump – Building A" or "HVAC Unit – Floor 3" with no manufacturer name, no model number, and no installation date.
+- **Inconsistent naming conventions.** "Air Handling Unit", "AHU", "air handler", and "ventilation unit" are four descriptions of the same thing – but in a database, they are four separate categories.
+- **Duplicate records.** The same generator might appear three times with three different asset IDs and three different maintenance histories.
+- **Decommissioned assets still listed as active.** When assets are removed or replaced, the register often is not updated. Ghost records accumulate with ghost maintenance schedules and ghost insurance premiums.
+- **No linkage between asset and parts data.** The asset exists in the register but there is no structured connection to the components used to maintain it.
+
+## The financial cost: a real example
+
+One Asset Manager we worked with discovered, after running a data quality baseline, that his company had been paying insurance premiums on assets they had sold or decommissioned years earlier. The register had never been updated to reflect the disposals. When the cleaned register was compared against the insurance schedule, the discrepancy was significant. Assets that no longer existed were still being insured. The annual premium adjustment was substantial – and the issue had been invisible until the data was cleaned.
+
+## What an accurate asset register enables
+
+**Predictive maintenance.** When assets carry accurate manufacturer, model, and installation date information, you can link them to lifecycle and failure data. The shift from reactive to predictive maintenance is only possible when the data supports it.
+
+**Lifecycle decision-making.** The question "should we repair or replace this asset?" is a straightforward financial calculation – if you know the asset's age, its maintenance history, and its replacement cost.
+
+**Accurate bid pricing.** When pricing a maintenance contract, the asset register is the source of truth for what you are committing to maintain. An inaccurate register means you are pricing based on an estimate of what is on site.
+
+**Rapid recall response.** When a manufacturer issues a recall for a specific model of HVAC motor, the ability to identify every affected unit across a portfolio should take minutes, not weeks.
+
+## What is typically missing and how AI fills the gaps
+
+| Field | Typical gap | How it gets filled |
+|---|---|---|
+| Manufacturer | Missing or abbreviated | Matched against supplier invoice data and manufacturer databases |
+| Model number | Missing or free-text | Extracted from maintenance records, PDFs, and previous service reports |
+| Installation date | Missing or estimated | Inferred from commissioning records and historical maintenance logs |
+| Asset classification | Inconsistent naming | Standardised against Uniclass or OmniClass taxonomy |
+| Component linkage | Not structured | Built from MRO purchase history linked to asset ID |
+
+## The ongoing maintenance problem
+
+A cleaned asset register degrades without active maintenance. New assets get added, old ones get removed, and unless there is a systematic quality check on incoming data, the problems accumulate again. The sustainable fix is an automated quality control layer: every new asset record is checked against the existing structure and flagged if it is missing key fields or inconsistent with the naming convention.
+
+> "I used to dread the phrase data cleanup. Now it is just another click in my week."
+>
+> – Asset Manager, National utility company
+

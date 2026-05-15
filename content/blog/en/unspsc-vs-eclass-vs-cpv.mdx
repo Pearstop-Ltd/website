@@ -1,0 +1,67 @@
+﻿---
+title: "UNSPSC vs. eClass vs. CPV: Which Classification Standard Is Right for Your Business?"
+description: "A clear breakdown of the three main procurement classification standards UNSPSC, eClass, and CPV with a practical guide to implementation at scale."
+date: "2026-05-07"
+category: "Procurement"
+slug: "unspsc-vs-eclass-vs-cpv"
+---
+
+If you have started looking into procurement data classification, you have likely encountered more than one standard. UNSPSC, eClass, CPV, GPC – each claims to be the right framework for organising what your business buys. The truth is that the best standard depends on who you are buying for, who you are reporting to, and what you want to do with the data.
+
+## UNSPSC – United Nations Standard Products and Services Code
+
+UNSPSC is the most widely used global classification standard for procurement. It covers both products and services across a four-level hierarchy: Segment, Family, Class, and Commodity. Maintained by GS1 US on behalf of the UN and updated quarterly.
+
+| Code | Description |
+|---|---|
+| 46000000 | Defence, Law Enforcement, Security and Safety Equipment |
+| 46130000 | Personal safety and protection |
+| 46131700 | Protective gloves and accessories |
+| 46131701 | Disposable gloves |
+| 72154100 | Facilities maintenance and repair services |
+| 72154103 | HVAC system maintenance |
+
+**Best for:** Private sector companies, multinational organisations, and any business that wants to classify spend for internal analytics, supplier consolidation, or category management. The de facto standard in hard services, FM, construction, and manufacturing. Most procurement software platforms – SAP Ariba, Coupa, Oracle – support UNSPSC natively.
+
+## eClass – European Classification Standard
+
+eClass is a product classification standard developed primarily for industrial and engineering procurement. Particularly strong for technical products – mechanical components, electrical parts, MRO supplies – where precise product attributes matter as much as the category. Unlike UNSPSC, eClass includes product attribute definitions alongside the codes. You do not just classify a product as "centrifugal pump" – you can also specify flow rate, pressure rating, material of construction, and connection type.
+
+**Best for:** Manufacturing, engineering, and MRO environments where product-level precision is required. Widely used in German-speaking markets and across European industrial sectors.
+
+## CPV – Common Procurement Vocabulary
+
+CPV is the classification system mandated by the European Union for public procurement. If you are tendering for public sector contracts in the EU, CPV codes are compulsory – they appear on contract notices published in the Official Journal of the EU.
+
+| Code | Description |
+|---|---|
+| 45000000 | Construction work |
+| 45300000 | Building installation work |
+| 45331200 | Ventilation and air-conditioning installation work |
+| 90910000 | Cleaning services |
+| 90919200 | Office cleaning services |
+
+**Best for:** Public sector suppliers and organisations operating in regulated procurement markets. Not designed for internal spend management.
+
+## Which standard should you use?
+
+| Standard | Best used by | Primary use case |
+|---|---|---|
+| **UNSPSC** | Private sector, all industries | Spend analytics, category management, supplier consolidation |
+| **eClass** | Industrial, engineering, MRO | Master data management, attribute-level product specification |
+| **CPV** | Public sector suppliers, EU-regulated procurement | Contract notice classification, OJEU compliance |
+
+For most private sector companies in hard services, FM, construction, and manufacturing, **UNSPSC is the right starting point**. It is the most widely supported, the most globally recognised, and the most useful for spend analytics and category management.
+
+## The implementation reality: why the standard is the easy part
+
+Whichever standard you choose, the hard part is not the standard itself. It is the classification of your existing data against it. Procurement databases in complex organisations contain tens of thousands of distinct line item descriptions – many inconsistent, ambiguous, or unique to the person who entered them. Manually mapping those descriptions to UNSPSC commodity codes is not feasible at scale.
+
+What works is a three-layer classification system:
+
+- **Layer 1 – Deterministic rules.** For clear, high-frequency items, rules map specific descriptions to specific codes. This layer handles the confident majority quickly.
+- **Layer 2 – Machine learning.** A model trained on your specific data handles the middle ground – items that follow learnable patterns. The model learns how your organisation describes what it buys.
+- **Layer 3 – Human review.** Genuinely ambiguous items – typically 5—15% of volume – are surfaced for review. Every human decision feeds back into Layer 2, improving accuracy over time.
+
+This three-layer approach is the core of how Pearstop classifies procurement data at scale: accurately, quickly, and in a way that improves continuously rather than requiring periodic re-classification exercises.
+
