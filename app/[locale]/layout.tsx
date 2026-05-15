@@ -10,6 +10,8 @@ import { routing } from "@/i18n/routing";
 import { siteConfig } from "@/lib/site";
 import "../globals.css";
 
+const googleSiteVerification = "C8qp78nVUWNoce0nCLL3e3n0PQ92mP9y_n6MdgSdvRs";
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
@@ -51,6 +53,7 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  ...(googleSiteVerification ? { verification: { google: googleSiteVerification } } : {}),
 };
 
 export function generateStaticParams() {
