@@ -1,9 +1,33 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 import { GeoBlock, PageHero, QuoteBox, SectionTitle } from "@/components/content";
 import { homeBenefits, siteConfig } from "@/lib/site";
 import { blogPosts } from "@/lib/blog-posts";
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Pearstop",
+  url: siteConfig.url,
+  logo: `${siteConfig.url}/brand/logo-dark.webp`,
+  description: siteConfig.description,
+  email: siteConfig.email,
+  areaServed: "Europe",
+  sameAs: [
+    siteConfig.socials.linkedin,
+    siteConfig.socials.youtube,
+    siteConfig.socials.instagram
+  ],
+  knowsAbout: [
+    "UNSPSC Classification",
+    "Procurement Data Quality",
+    "Asset Data Management",
+    "Spend Analysis",
+    "Facilities Management Procurement"
+  ]
+};
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("Home.meta");
   return {
@@ -48,6 +72,11 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
   return (
     <>
+      <Script
+        id="org-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
       <PageHero
         className="hero-tall"
         eyebrow={t("hero.eyebrow")}
