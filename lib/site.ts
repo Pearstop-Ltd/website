@@ -70,6 +70,7 @@ export const footerCompanyLinks: NavLink[] = [
   { label: "Case Studies", href: "/cases" },
   { label: "Download Case Studies", href: "/case-studies" },
   { label: "Blog", href: "/blog" },
+  { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" }
 ];
 

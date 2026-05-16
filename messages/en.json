@@ -683,50 +683,50 @@
       "description": "Pearstop auto-classifies up to 95% of your procurement spend lines to UNSPSC standard without manual effort."
     },
     "hero": {
-      "eyebrow": "UNSPSC",
-      "title": "Unclassified spend is the enemy of procurement performance.",
-      "lead": "Pearstop auto-classifies up to 95% of your procurement lines using UNSPSC, the global standard for procurement categorisation, so your team can stop doing it manually."
+      "eyebrow": "UNSPSC Classification",
+      "title": "Your procurement data contains the answers. You just cannot read it yet.",
+      "lead": "Most hard services and FM companies have years of purchase order data in SAP or Oracle. Without UNSPSC classification, it is a pile of free-text line items. With it, you can see exactly what you spend by category, benchmark suppliers, and build tenders from actual cost data. Pearstop classifies 35,000 lines a month automatically."
     },
     "standard": {
-      "eyebrow": "The Standard",
-      "title": "UNSPSC: the global standard for classifying what you buy.",
-      "p1": "The United Nations Standard Products and Services Code is a hierarchical classification system used by organisations worldwide to categorise procurement spend. It enables consistent reporting, supplier benchmarking, spend analysis, and category management across contracts, sites, and systems.",
-      "p2": "Without UNSPSC classification, procurement spend data is a collection of free-text line items that cannot be compared, aggregated, or analysed meaningfully. With it, every purchase sits in a consistent category - and category management becomes possible.",
+      "eyebrow": "What is UNSPSC?",
+      "title": "The four-level code that makes procurement data comparable.",
+      "p1": "UNSPSC (United Nations Standard Products and Services Code) is a global four-level hierarchy used to categorise every product and service a company buys. Segment and Family give you broad spend visibility. Class and Commodity give you the precision to negotiate, benchmark, and manage categories effectively.",
+      "p2": "Without it, the same physical work appears under dozens of different strings. At SPIE, invoice lines like 'HVAC unt' were enriched to 'HVAC Unit, Air Handler, Climate Control, Carrier' with a consistent UNSPSC commodity code. That is the difference between data you can act on and data you cannot.",
       "exampleLabel": "Example UNSPSC hierarchy"
     },
     "howItWorks": {
-      "title": "Your team stays in control. The system does the work.",
-      "lead": "Pearstop's four-layer classification engine handles 95% of spend lines automatically - and learns from every decision your team makes on the remaining 5%.",
+      "title": "Four layers of classification. 95% without your team touching it.",
+      "lead": "Most items are classified automatically. The small fraction that needs review gets shorter every month as the engine learns from your team's decisions.",
       "step1": {
         "title": "Rules Engine",
-        "copy": "User-defined rules and automatically loaded patterns handle consistent, high-confidence classifications immediately."
+        "copy": "Supplier-specific and GL-specific rules handle the high-volume, high-confidence classifications immediately. No ML needed for patterns the engine already knows."
       },
       "step2": {
         "title": "Machine Learning",
-        "copy": "A proprietary ML layer replicates your internal classification approach - filling gaps the way your most experienced category manager would."
+        "copy": "An ML layer trained on your historical spend replicates the classification logic your most experienced category manager applies — at scale and without fatigue."
       },
       "step3": {
         "title": "LLM Layer",
-        "copy": "Ambiguous or unfamiliar line items are handled by an LLM augmentation layer that provides context-aware classification for edge cases."
+        "copy": "Field engineer shorthand, part numbers, and multilingual descriptions are handled by an LLM with deep product and industry knowledge. The layer that handles what rules and ML cannot."
       },
       "step4": {
         "title": "Human Review",
-        "copy": "Items below the confidence threshold are flagged for your team. Every decision feeds back into the engine - shrinking the review queue over time until it reaches zero."
+        "copy": "The 5-10% the engine is uncertain about gets flagged for your team. Each decision feeds back into the model. After 12 months, most clients see the review queue drop to near zero."
       }
     },
     "whatMakesPossible": {
-      "title": "What UNSPSC classification makes possible",
+      "title": "What a classified spend baseline makes possible",
       "b1": {
         "title": "Category Management",
-        "copy": "See exactly what you are buying across every supplier and site - and identify consolidation and negotiation opportunities that were invisible before."
+        "copy": "See what you actually spend by commodity across every supplier and site. At FARO, this replaced 2 FTE and cut processing time from weeks to under a day per container."
       },
       "b2": {
         "title": "Supplier Benchmarking",
-        "copy": "Compare prices for the same UNSPSC categories across suppliers - and negotiate from a position of data rather than guesswork."
+        "copy": "Compare prices for the same UNSPSC commodity across suppliers. The benchmark only works when both sides of the comparison carry the same code."
       },
       "b3": {
         "title": "ERP and BI Integration",
-        "copy": "UNSPSC-coded data feeds directly into SAP, Oracle, and all major BI tools - no manual mapping, no format conversion, no reconciliation."
+        "copy": "UNSPSC-coded data feeds directly into SAP, Oracle, Power BI, and Microsoft Fabric. No custom mapping. No format conversion. No reconciliation work."
       }
     },
     "quote": {
@@ -736,11 +736,23 @@
     },
     "geoBlock": {
       "title": "How does UNSPSC classification work for hard services and FM companies?",
-      "copy": "UNSPSC classification for facilities management and hard services companies involves categorising every supplier invoice line item to the appropriate code in the UNSPSC hierarchy. This includes maintenance materials, subcontractor services, plant hire, and specialist equipment - across potentially thousands of suppliers and hundreds of sites. Manual UNSPSC classification at this scale typically requires one or two full-time staff members working continuously to keep up with invoice volume. Pearstop's automated engine handles up to 95% of classification without human intervention, with the remaining items flagged for review - and the review queue shrinks as the system learns from your team's decisions over time."
+      "copy": "Hard services FM companies typically buy from 500 to 3,000 suppliers across multiple sites. Invoice descriptions are written by field engineers, not buyers - which means the same work appears under hundreds of different strings. Manual UNSPSC classification at 5,000 to 35,000 lines per month requires one or two dedicated staff working continuously just to stay current. Pearstop's automated engine classifies 90-95% of those lines without human input, with the remainder flagged for review. The review queue shrinks each month as the engine learns from your team's decisions. Strukton currently processes 35,000 lines per month this way via SAP integration."
     },
     "noDataFaq": {
-      "label": "What if we do not have existing classification data?",
-      "copy": "Pearstop's approach combines rule-based assignment, machine learning, and an LLM layer that draws on broad product and industry knowledge - meaning it performs strongly even without existing priors."
+      "label": "What if we have never classified before?",
+      "copy": "Most clients start with years of unclassified SAP data and no historical UNSPSC codes. The rules layer applies supplier and GL-based patterns immediately. The ML layer is pre-trained on procurement data across industries. The LLM layer covers the gaps. First-run auto-classification typically reaches 84-88%, improving to 90-95% within 12 weeks as your team reviews flagged items."
+    },
+    "stats": {
+      "s1": { "title": "Lines per month (Strukton)", "copy": "A major Dutch infrastructure contractor processes 35,000 procurement lines per month through Pearstop via SAP integration." },
+      "s2": { "title": "Auto-classification rate", "copy": "90-95% of lines are classified automatically at commodity level, without your team touching them." },
+      "s3": { "title": "Reduction in manual effort", "copy": "Clients typically reduce manual procurement data work by 70-90%, freeing buyers for category strategy and contract negotiation." }
+    },
+    "related": {
+      "label": "More UNSPSC resources",
+      "fm": "UNSPSC for FM and Hard Services",
+      "nl": "UNSPSC in the Netherlands",
+      "de": "UNSPSC in Germany",
+      "faq": "Full FAQ"
     },
     "cta": {
       "title": "Ready to automate your procurement classification?",

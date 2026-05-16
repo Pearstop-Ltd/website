@@ -178,6 +178,28 @@ export default async function UnspscPage({ params }: { params: Promise<{ locale:
 
       <section>
         <div className="container">
+          <div className="bene-cards">
+            <article className="ben-card">
+              <div className="ben-icon" style={{ fontSize: "2rem", fontWeight: 700 }}>35k</div>
+              <h3>{t("stats.s1.title")}</h3>
+              <p>{t("stats.s1.copy")}</p>
+            </article>
+            <article className="ben-card">
+              <div className="ben-icon" style={{ fontSize: "2rem", fontWeight: 700 }}>90–95%</div>
+              <h3>{t("stats.s2.title")}</h3>
+              <p>{t("stats.s2.copy")}</p>
+            </article>
+            <article className="ben-card">
+              <div className="ben-icon" style={{ fontSize: "2rem", fontWeight: 700 }}>70–90%</div>
+              <h3>{t("stats.s3.title")}</h3>
+              <p>{t("stats.s3.copy")}</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div className="container">
           <SectionTitle title={t("whatMakesPossible.title")} />
           <div className="bene-cards">
             <article className="ben-card">
@@ -235,6 +257,30 @@ export default async function UnspscPage({ params }: { params: Promise<{ locale:
                 <p>
                   {t("noDataFaq.copy")}
                 </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-soft">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-8 col-md-offset-2">
+              <div className="story-label" style={{ marginBottom: "1rem" }}>{t("related.label")}</div>
+              <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
+                <a href={`${prefix}/unspsc-classification-facilities-management`} className="btn btn-secondary">
+                  {t("related.fm")}
+                </a>
+                <a href={`${prefix}/unspsc-classification-netherlands`} className="btn btn-secondary">
+                  {t("related.nl")}
+                </a>
+                <a href={`${prefix}/unspsc-classification-germany`} className="btn btn-secondary">
+                  {t("related.de")}
+                </a>
+                <a href={`${prefix}/faq`} className="btn btn-secondary">
+                  {t("related.faq")}
+                </a>
               </div>
             </div>
           </div>
