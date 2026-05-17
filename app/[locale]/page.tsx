@@ -278,9 +278,12 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
               </article>
             ))}
           </div>
-          <div className="text-center" style={{ marginTop: "1.8rem" }}>
+          <div className="text-center" style={{ marginTop: "1.8rem", display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
             <Link href={`${prefix}/blog`} className="btn btn-outline">
               {t("blog.viewAll")}
+            </Link>
+            <Link href={`${prefix}/faq`} className="btn btn-outline">
+              {t("blog.faq")}
             </Link>
           </div>
         </div>

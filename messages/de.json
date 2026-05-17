@@ -177,7 +177,8 @@
       "title": "Neueste Einblicke",
       "lead": "Praxisleitfäden, Branchenanalysen und Data Qualitysdenken für technische Unternehmen.",
       "readArticle": "Artikel lesen",
-      "viewAll": "Alle Artikel anzeigen"
+      "viewAll": "Alle Artikel anzeigen",
+      "faq": "FAQ durchsuchen"
     }
   },
   "About": {
@@ -1366,23 +1367,23 @@
       "items": [
         {
           "q": "Welche UNSPSC Segmente gelten für facilities management?",
-          "a": "Die gängigsten Segmente für FM sind Segment 72 (Bau- und Wartungsdienstleistungen), Segment 76 (Industrielle Reinigungsdienstleistungen), Segment 80 (Management- und Verwaltungsdienstleistungen) und Segment 73 (Industrielle Produktion). Hard services FM Unternehmen verzeichnen typischerweise das höchste spend Volumen in Segment 72, das Elektrik, HVAC, Sanitär und Gebäudewartung abdeckt."
+          "a": "Die gängigsten Segmente für FM sind Segment 72 (Bau- und Wartungsdienstleistungen), Segment 76 (Industrielle Reinigungsdienstleistungen), Segment 80 (Management- und Verwaltungsdienstleistungen) und Segment 73 (Industrielle Produktion). Hard services FM-Unternehmen verzeichnen typischerweise das höchste spend-Volumen in Segment 72, das Elektrik, HVAC, Sanitär und Gebäudewartung umfasst."
         },
         {
-          "q": "Warum ist UNSPSC Klassifizierung schwierig für FM Unternehmen?",
-          "a": "FM Unternehmen kaufen bei Hunderten von suppliern an dezentralen Standorten ein. invoice Zeilen sind oft Freitextbeschreibungen, die von Außendiensttechnikern und nicht von procurement Teams verfasst werden. Manuelle Klassifizierung in diesem Umfang erfordert ein oder zwei engagierte Mitarbeiter, die kontinuierlich arbeiten, nur um Schritt zu halten."
+          "q": "Warum ist UNSPSC-Klassifizierung schwierig für FM-Unternehmen?",
+          "a": "FM-Unternehmen kaufen bei Hunderten von Lieferanten an dezentralen Standorten ein. invoice-Positionen sind oft Freitextbeschreibungen, die von Außendiensttechnikern und nicht von procurement-Teams verfasst wurden. Manuelle Klassifizierung in diesem Umfang erfordert ein oder zwei engagierte Mitarbeiter, die kontinuierlich arbeiten, nur um Schritt zu halten."
         },
         {
-          "q": "Wie lange dauert die UNSPSC Klassifizierung für ein FM Unternehmen?",
-          "a": "Eine initiale Klassifizierung eines vollständigen spend Datensatzes ist typischerweise innerhalb von vier bis sechs Wochen abgeschlossen, einschließlich einer Data Stability Baseline zur Validierung der Genauigkeit. Die fortlaufende monatliche Klassifizierung erfolgt automatisch."
+          "q": "Wie lange dauert UNSPSC-Klassifizierung für ein FM-Unternehmen?",
+          "a": "Eine initiale Klassifizierung eines vollständigen spend-Datensatzes ist typischerweise innerhalb von vier bis sechs Wochen abgeschlossen, einschließlich einer Baseline zur Datenstabilität zur Validierung der Genauigkeit. Die fortlaufende monatliche Klassifizierung läuft automatisch ab."
         },
         {
-          "q": "Integriert Pearstop mit FM-spezifischen Systemen wie Maximo oder ServiceNow?",
-          "a": "Pearstop empfängt Daten über CSV Export oder direkte API Verbindung und gibt klassifizierte Daten im gleichen Format zurück, kompatibel mit jedem CAFM oder CMMS System, einschließlich IBM Maximo, ServiceNow, Planon und SAP PM."
+          "q": "Integriert Pearstop sich mit FM-spezifischen Systemen wie Maximo oder ServiceNow?",
+          "a": "Pearstop empfängt Daten per CSV-Export oder direkter API-Verbindung und gibt klassifizierte Daten im gleichen Format zurück, kompatibel mit jedem CAFM- oder CMMS-System einschließlich IBM Maximo, ServiceNow, Planon und SAP PM."
         },
         {
-          "q": "Welche Genauigkeitsrate können FM Unternehmen erwarten?",
-          "a": "Pearstops vierstufige Engine erreicht eine automatische Klassifizierung von 90–95 % bei typischen FM spend Datensätzen. Die verbleibenden 5–10 % werden zur manuellen Überprüfung markiert, und jede überprüfte Entscheidung fließt zurück in die Engine."
+          "q": "Welche Genauigkeitsrate können FM-Unternehmen erwarten?",
+          "a": "Pearstops vierstufige Engine erreicht eine automatische Klassifizierung von 90–95 % bei typischen FM spend-Datensätzen. Die verbleibenden 5–10 % werden zur manuellen Überprüfung markiert, und jede überprüfte Entscheidung fließt zurück in die Engine."
         }
       ]
     },
@@ -1455,24 +1456,24 @@
       "title": "Häufig gestellte Fragen",
       "items": [
         {
-          "q": "Ist UNSPSC Klassifizierung in den Niederlanden Pflicht?",
-          "a": "UNSPSC ist keine gesetzliche Pflicht in den Niederlanden, wird aber zunehmend als best-practice Standard verwendet. Peppol E-Rechnungsstellung, verpflichtend für den öffentlichen Einkauf, erfordert strukturierte Produktcodes, wobei UNSPSC der meistgenutzte internationale Standard ist."
+          "q": "Ist UNSPSC-Klassifizierung in den Niederlanden Pflicht?",
+          "a": "UNSPSC ist keine gesetzliche Pflicht in den Niederlanden, wird aber zunehmend als best-practice Standard verwendet. Peppol E-Rechnungsstellung, verpflichtend für den öffentlichen Einkauf, erfordert strukturierte Produktcodes, wobei UNSPSC der am häufigsten verwendete internationale Standard ist."
         },
         {
           "q": "Was ist Peppol und wie verhält es sich zu UNSPSC?",
-          "a": "Peppol ist das E-Rechnungsnetzwerk, das für den öffentlichen Einkauf in den Niederlanden verpflichtend ist. Peppol erfordert strukturierte Rechnungsdaten einschließlich Produkt- und Dienstleistungscodes. UNSPSC ist der meistgenutzte Klassifizierungsstandard, der hierzu passt."
+          "a": "Peppol ist das E-Rechnungsnetzwerk, das für den öffentlichen Einkauf in den Niederlanden verpflichtend ist. Peppol erfordert strukturierte invoice-Daten einschließlich Produkt- und Dienstleistungscodes. UNSPSC ist der am häufigsten verwendete Klassifizierungsstandard, der hierzu passt."
         },
         {
-          "q": "Was ist UNSPSC Klassifizierung und warum ist sie wichtig?",
-          "a": "UNSPSC steht für United Nations Standard Products and Services Code. Ohne UNSPSC sind Einkaufsdaten schwer zu analysieren — mit UNSPSC erhält jede purchase order eine konsistente Kategorie, wodurch spend-analyse, Lieferantenkonsolidierung und category management ermöglicht werden."
+          "q": "Was ist UNSPSC-Klassifizierung und warum ist sie wichtig?",
+          "a": "UNSPSC steht für United Nations Standard Products and Services Code. Ohne UNSPSC sind procurement-Daten schwer zu analysieren — mit UNSPSC erhält jede purchase order eine konsistente Kategorie, wodurch spend-analyse, Lieferantenkonsolidierung und category management ermöglicht werden."
         },
         {
-          "q": "Welche niederländischen Unternehmen benötigen UNSPSC Klassifizierung am dringendsten?",
-          "a": "Niederländische Infrastrukturauftragnehmer, facility management Dienstleister und Bauunternehmen haben in der Regel den größten Bedarf an UNSPSC Klassifizierung."
+          "q": "Welche niederländischen Unternehmen benötigen UNSPSC-Klassifizierung am meisten?",
+          "a": "Niederländische Infrastruktur-Contractors, facility management-Dienstleister und Bauunternehmen haben typischerweise den größten Bedarf an UNSPSC-Klassifizierung."
         },
         {
-          "q": "Wie klassifiziert Pearstop niederländische Einkaufsdaten?",
-          "a": "Pearstop empfängt Einkaufsdaten über CSV oder direkte API-Verbindung aus niederländischen ERP-Systemen, einschließlich SAP, Oracle und AFAS. Die vierstufige Klassifizierungs-Engine verarbeitet auch niederländischsprachige Rechnungsbeschreibungen."
+          "q": "Wie klassifiziert Pearstop niederländische procurement-Daten?",
+          "a": "Pearstop empfängt procurement-Daten per CSV oder direkter API-Verbindung aus niederländischen ERP-Systemen einschließlich SAP, Oracle und AFAS. Die vierstufige Klassifizierungs-Engine verarbeitet auch niederländischsprachige invoice-Beschreibungen."
         }
       ]
     },

@@ -177,7 +177,8 @@
       "title": "Laatste inzichten",
       "lead": "Praktische gidsen, sectoranalyses en datakwaliteitsdenken voor technische bedrijven.",
       "readArticle": "Artikel lezen",
-      "viewAll": "Alle artikelen bekijken"
+      "viewAll": "Alle artikelen bekijken",
+      "faq": "Blader door de FAQ"
     }
   },
   "About": {
@@ -1366,23 +1367,23 @@
       "items": [
         {
           "q": "Welke UNSPSC segmenten zijn van toepassing op facilities management?",
-          "a": "De meest voorkomende segmenten voor FM zijn Segment 72 (Bouw- en onderhoudsdiensten), Segment 76 (Industriële reinigingsdiensten), Segment 80 (Management- en administratieve diensten), en Segment 73 (Industriële productie). Hard services FM-bedrijven zien doorgaans het hoogste spend-volume in Segment 72, dat elektriciteit, HVAC, loodgieterswerk en gebouwonderhoud omvat."
+          "a": "De meest voorkomende segmenten voor FM zijn Segment 72 (Bouw- en Onderhoudsdiensten), Segment 76 (Industriële Reinigingsdiensten), Segment 80 (Management- en Administratieve Diensten), en Segment 73 (Industriële Productie). Hard services FM-bedrijven zien doorgaans het hoogste spend-volume in Segment 72, dat elektriciteit, HVAC, loodgieterswerk en gebouwonderhoud omvat."
         },
         {
           "q": "Waarom is UNSPSC classificatie moeilijk voor FM-bedrijven?",
-          "a": "FM-bedrijven kopen in bij honderden suppliers verspreid over gedecentraliseerde locaties. Invoice-regels zijn vaak vrije-tekstbeschrijvingen geschreven door veldmonteurs, niet door procurement-teams. Handmatige classificatie op deze schaal vereist één of twee toegewijde medewerkers die continu werken om het tempo bij te houden."
+          "a": "FM-bedrijven kopen in bij honderden leveranciers verspreid over gedecentraliseerde locaties. Invoice-regels zijn vaak vrije-tekstbeschrijvingen geschreven door buitendienstmonteurs, niet door procurement-teams. Handmatige classificatie op deze schaal vereist één of twee toegewijde medewerkers die continu werken om het tempo bij te houden."
         },
         {
           "q": "Hoe lang duurt UNSPSC classificatie voor een FM-bedrijf?",
-          "a": "Een initiële classificatie van een volledige spend-dataset is doorgaans binnen vier tot zes weken voltooid, inclusief een Data Stability Baseline om de nauwkeurigheid te valideren. Voortdurende maandelijkse classificatie wordt automatisch uitgevoerd."
+          "a": "Een initiële classificatie van een volledige spend-dataset is doorgaans binnen vier tot zes weken voltooid, inclusief een Data Stability Baseline om de nauwkeurigheid te valideren. Doorlopende maandelijkse classificatie wordt automatisch uitgevoerd."
         },
         {
           "q": "Integreert Pearstop met FM-specifieke systemen zoals Maximo of ServiceNow?",
           "a": "Pearstop ontvangt data via CSV-export of directe API-verbinding en retourneert geclassificeerde data in hetzelfde formaat, compatibel met elk CAFM- of CMMS-systeem, inclusief IBM Maximo, ServiceNow, Planon en SAP PM."
         },
         {
-          "q": "Welke nauwkeurigheidsgraad kunnen FM-bedrijven verwachten?",
-          "a": "Pearstop's vierlaagse engine behaalt 90–95% automatische classificatie op typische FM spend-datasets. De resterende 5–10% wordt gemarkeerd voor menselijke beoordeling, en elke beoordeelde beslissing wordt teruggekoppeld naar de engine."
+          "q": "Welke nauwkeurigheid kunnen FM-bedrijven verwachten?",
+          "a": "Pearstops vierlaagse engine behaalt 90–95% automatische classificatie op typische FM spend-datasets. De resterende 5–10% wordt gemarkeerd voor menselijke beoordeling, en elke beoordeelde beslissing wordt teruggekoppeld naar de engine."
         }
       ]
     },
@@ -1543,7 +1544,7 @@
       "title": "Veelgestelde vragen",
       "items": [
         {
-          "q": "Is UNSPSC classificatie verplicht in Duitsland?",
+          "q": "Is UNSPSC-classificatie verplicht in Duitsland?",
           "a": "UNSPSC is geen wettelijke verplichting, maar de e-facturatieplicht 2025 vereist gestructureerde productcodes. UNSPSC is de meest gebruikte internationale standaard die aan deze eis voldoet."
         },
         {
@@ -1551,16 +1552,16 @@
           "a": "De e-facturatieplicht 2025 vereist gestructureerde, machinaal leesbare factuurdata voor B2B-transacties. UNSPSC biedt een consistent, internationaal erkend coderingssysteem dat aan deze eis voldoet."
         },
         {
-          "q": "Wat is UNSPSC classificatie en waarom hebben Duitse bedrijven deze nodig?",
-          "a": "UNSPSC staat voor United Nations Standard Products and Services Code. Duitse bedrijven gebruiken UNSPSC om spend te categoriseren, suppliers te vergelijken en de spend-transparantie te verbeteren."
+          "q": "Wat is UNSPSC-classificatie en waarom hebben Duitse bedrijven deze nodig?",
+          "a": "UNSPSC staat voor United Nations Standard Products and Services Code. Duitse bedrijven gebruiken UNSPSC om spend te categoriseren, leveranciers te vergelijken en de spend-transparantie te verbeteren."
         },
         {
           "q": "Welke Duitse sectoren profiteren het meest?",
-          "a": "Duitse productiebedrijven, machinebouwbedrijven, facility management-bedrijven en infrastructuurbedrijven profiteren het meest. Productiebedrijven met een groot MRO-aandeel profiteren vooral van consistente onderdeelcodering."
+          "a": "Duitse productiebedrijven, machinebouwbedrijven, facility management-bedrijven en infrastructuurbedrijven profiteren het meest. Productiebedrijven met een groot MRO-aandeel profiteren bijzonder van consistente onderdeelcodering."
         },
         {
           "q": "Kan Pearstop Duitstalige inkoopdata classificeren?",
-          "a": "Ja. Pearstop's classificatie-engine verwerkt Duitstalige factuurbeschrijvingen native, inclusief gangbare afkortingen en technische terminologie."
+          "a": "Ja. Pearstops classificatie-engine verwerkt Duitstalige factuurbeschrijvingen native, inclusief gangbare afkortingen en technische terminologie."
         }
       ]
     },
