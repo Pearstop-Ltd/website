@@ -17,11 +17,13 @@ export const siteConfig = {
       fmo: "/images/clients/fmo.png",
       faro: "/images/clients/faro.png",
       spie: "/images/clients/spie.webp",
-      kelpBlue: "/images/clients/kelp-blue.png"
+      kelpBlue: "/images/clients/kelp-blue.png",
+      lemtech: "/images/clients/lemtech.svg"
     },
     team: {
       stephanie: "/images/clients/stephanie-headshot.png",
-      richard: "/images/clients/richard-headshot.png"
+      richard: "/images/clients/richard-headshot.png",
+      vince: "/images/clients/vince-headshot.jpg"
     },
     home: {
       spendControl: "/images/home/spend-control.webp",

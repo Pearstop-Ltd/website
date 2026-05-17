@@ -54,6 +54,8 @@ const clientLogos = [
   { href: "/cases#fmo", src: siteConfig.assets.clients.fmo, alt: "FMO" },
   { href: "/cases#faro", src: siteConfig.assets.clients.faro, alt: "FARO" },
   { href: "/cases", src: siteConfig.assets.clients.kelpBlue, alt: "Kelp" },
+  { href: "/cases/spie", src: siteConfig.assets.clients.spie, alt: "SPIE" },
+  { href: "https://www.lemtech.nl/", src: siteConfig.assets.clients.lemtech, alt: "LemTech", external: true },
 ];
 
 const solutionHrefs = ["/unspsc", "/asset-data-management", "/procurement-data-quality", "/ai-readiness"];
@@ -121,9 +123,15 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           <p className="clients-label">{t("clients.label")}</p>
           <div className="clients-logos">
             {clientLogos.map((logo) => (
-              <Link key={logo.alt} href={`${prefix}${logo.href}`} aria-label={`${logo.alt} case study`}>
-                <img src={logo.src} alt={logo.alt} />
-              </Link>
+              logo.external ? (
+                <a key={logo.alt} href={logo.href} target="_blank" rel="noopener noreferrer" aria-label={`${logo.alt} website`}>
+                  <img src={logo.src} alt={logo.alt} />
+                </a>
+              ) : (
+                <Link key={logo.alt} href={`${prefix}${logo.href}`} aria-label={`${logo.alt} case study`}>
+                  <img src={logo.src} alt={logo.alt} />
+                </Link>
+              )
             ))}
           </div>
         </div>
