@@ -229,6 +229,7 @@ export default async function UnspscPage({ params }: { params: Promise<{ locale:
                 quote={t("quote.text")}
                 author={t("quote.author")}
                 role={t("quote.role")}
+                image={siteConfig.assets.team.vince}
               />
             </div>
           </div>

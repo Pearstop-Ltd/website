@@ -118,6 +118,7 @@ export default function UnspscPage() {
                 quote="We used to have two full-time staff working on category assignment. Now the system does this for us - which has unlocked margin estimations further down the line too. It is more reliable at a fraction of the cost."
                 author="Head of Procurement"
                 role="Infrastructure Contractor, Netherlands"
+                image={siteConfig.assets.team.vince}
               />
             </div>
           </div>
