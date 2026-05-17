@@ -83,9 +83,6 @@ export const footerSolutionLinks: NavLink[] = [
   { label: "UNSPSC for FM", href: "/unspsc-classification-facilities-management" },
   { label: "UNSPSC Netherlands", href: "/unspsc-classification-netherlands" },
   { label: "UNSPSC Germany", href: "/unspsc-classification-germany" },
-  { label: "Pearstop vs Qvalia", href: "/unspsc-classification-vs-qvalia" },
-  { label: "Pearstop vs PROSOL", href: "/unspsc-classification-vs-prosol" },
-  { label: "Pearstop vs AICA", href: "/unspsc-classification-vs-aica" },
   { label: "Fabric Ready", href: "/fabric" },
   { label: "AI Readiness", href: "/ai-readiness" }
 ];
