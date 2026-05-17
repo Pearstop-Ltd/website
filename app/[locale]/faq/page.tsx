@@ -69,6 +69,19 @@ export default async function FaqPage({ params }: { params: Promise<{ locale: st
           <div className="row">
             <div className="col-md-8 col-md-offset-2">
 
+              <nav aria-label="FAQ sections" style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem", marginBottom: "2.5rem" }}>
+                {SECTIONS.map((section) => (
+                  <a
+                    key={section}
+                    href={`#faq-${section}`}
+                    className="pill"
+                    style={{ textDecoration: "none" }}
+                  >
+                    {t(`sections.${section}.title`)}
+                  </a>
+                ))}
+              </nav>
+
               {SECTIONS.map((section) => {
                 const items = t.raw(`sections.${section}.items`) as { q: string; a: string }[];
                 return (

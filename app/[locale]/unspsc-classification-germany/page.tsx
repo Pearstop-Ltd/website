@@ -88,6 +88,16 @@ const serviceSchema = {
   }
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: siteConfig.url },
+    { "@type": "ListItem", position: 2, name: "UNSPSC Classification", item: `${siteConfig.url}/unspsc` },
+    { "@type": "ListItem", position: 3, name: "UNSPSC Classification Germany", item: `${siteConfig.url}/unspsc-classification-germany` }
+  ]
+};
+
 export default async function UnspscDEPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const prefix = locale === "en" ? "" : `/${locale}`;
@@ -104,6 +114,11 @@ export default async function UnspscDEPage({ params }: { params: Promise<{ local
         id="service-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       <PageHero
@@ -180,9 +195,9 @@ export default async function UnspscDEPage({ params }: { params: Promise<{ local
           <div className="row">
             <div className="col-md-8 col-md-offset-2">
               <QuoteBox
-                quote="We used to have two full-time staff working on category assignment. Now the system does this for us — which has unlocked margin estimations further down the line too."
-                author="Head of Procurement"
-                role="Infrastructure Contractor, Netherlands"
+                quote="It would have taken five engineers and a full year to clean this up manually. We needed a better solution — and the turnaround went from weeks to under a day."
+                author="Head of Operations"
+                role="FARO"
               />
             </div>
           </div>

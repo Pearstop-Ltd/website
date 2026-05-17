@@ -88,6 +88,16 @@ const serviceSchema = {
   }
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: siteConfig.url },
+    { "@type": "ListItem", position: 2, name: "UNSPSC Classification", item: `${siteConfig.url}/unspsc` },
+    { "@type": "ListItem", position: 3, name: "UNSPSC Classification Netherlands", item: `${siteConfig.url}/unspsc-classification-netherlands` }
+  ]
+};
+
 export default async function UnspscNLPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const prefix = locale === "en" ? "" : `/${locale}`;
@@ -104,6 +114,11 @@ export default async function UnspscNLPage({ params }: { params: Promise<{ local
         id="service-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       <PageHero
