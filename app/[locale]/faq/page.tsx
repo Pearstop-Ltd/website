@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-const SECTIONS = ["general", "unspsc", "process", "technical", "industries"] as const;
+const SECTIONS = ["general", "unspsc", "process", "solutions", "technical", "industries"] as const;
 
 export default async function FaqPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
