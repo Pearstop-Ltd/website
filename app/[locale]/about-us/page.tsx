@@ -28,7 +28,6 @@ const leaders = [
 ];
 
 const team = [
-  { name: "Vince", role: "Sales", image: siteConfig.assets.team.vince },
   { name: "Robin", role: "Team Lead Development" },
   { name: "Sjoerd", role: "Development" },
   { name: "Dania", role: "Developer" },
@@ -110,9 +109,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
           <div className="industry-grid">
             {team.map((person) => (
               <div key={person.name} className="team-member">
-                {person.image
-                  ? <img src={person.image} alt={person.name} className="member-photo" style={{ borderRadius: "50%", width: 80, height: 80, objectFit: "cover" }} />
-                  : <div className="member-photo" />}
+                <div className="member-photo" />
                 <h3>{person.name}</h3>
                 <div className="member-role">{person.role}</div>
               </div>
