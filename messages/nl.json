@@ -746,6 +746,27 @@
       "title": "Klaar om uw inkoopclassificatie te automatiseren?",
       "lead": "Boek een ontdekkingsgesprek van 7 minuten. We laten u precies zien hoe de classificatiemotor zou werken met uw data.",
       "button": "Boek een ontdekkingsgesprek van 7 minuten"
+    },
+    "stats": {
+      "s1": {
+        "title": "Regels per maand (Strukton)",
+        "copy": "Een grote Nederlandse infrastructuurcontractor verwerkt 35.000 procurement regels per maand via Pearstop via SAP integratie."
+      },
+      "s2": {
+        "title": "Automatische classificatiegraad",
+        "copy": "90-95% van de regels wordt automatisch geclassificeerd op commodity-niveau, zonder dat uw team ze aanraakt."
+      },
+      "s3": {
+        "title": "Vermindering van handmatige inspanning",
+        "copy": "Klanten verminderen doorgaans handmatig procurement datawerk met 70-90%, waardoor buyers vrijkomen voor categorystrategie en contractonderhandeling."
+      }
+    },
+    "related": {
+      "label": "Meer UNSPSC bronnen",
+      "fm": "UNSPSC voor FM en Hard Services",
+      "nl": "UNSPSC in Nederland",
+      "de": "UNSPSC in Duitsland",
+      "faq": "Volledige FAQ"
     }
   },
   "Fabric": {
@@ -1345,23 +1366,23 @@
       "items": [
         {
           "q": "Welke UNSPSC segmenten zijn van toepassing op facilities management?",
-          "a": "De meest voorkomende segmenten voor FM zijn Segment 72 (Bouw- en Onderhoudsdiensten), Segment 76 (Industriële Reinigingsdiensten), Segment 80 (Management- en Administratieve Diensten) en Segment 73 (Industriële Productie). Hard services FM-bedrijven zien doorgaans het hoogste spend volume in Segment 72, dat elektra, HVAC, loodgieterswerk en gebouwonderhoud omvat."
+          "a": "De meest voorkomende segmenten voor FM zijn Segment 72 (Bouw- en onderhoudsdiensten), Segment 76 (Industriële reinigingsdiensten), Segment 80 (Management- en administratieve diensten), en Segment 73 (Industriële productie). Hard services FM-bedrijven zien doorgaans het hoogste spend-volume in Segment 72, dat elektriciteit, HVAC, loodgieterswerk en gebouwonderhoud omvat."
         },
         {
           "q": "Waarom is UNSPSC classificatie moeilijk voor FM-bedrijven?",
-          "a": "FM-bedrijven kopen in bij honderden suppliers op gedecentraliseerde locaties. Invoice regels zijn vaak vrije-tekst beschrijvingen geschreven door buitendienstmonteurs, niet door procurement teams. Handmatige classificatie op deze schaal vereist één of twee toegewijde medewerkers die continu werken om het tempo bij te houden."
+          "a": "FM-bedrijven kopen in bij honderden suppliers verspreid over gedecentraliseerde locaties. Invoice-regels zijn vaak vrije-tekstbeschrijvingen geschreven door veldmonteurs, niet door procurement-teams. Handmatige classificatie op deze schaal vereist één of twee toegewijde medewerkers die continu werken om het tempo bij te houden."
         },
         {
           "q": "Hoe lang duurt UNSPSC classificatie voor een FM-bedrijf?",
-          "a": "Een initiële classificatie van een volledige spend dataset is doorgaans binnen vier tot zes weken voltooid, inclusief een Data Stability Baseline om de nauwkeurigheid te valideren. Doorlopende maandelijkse classificatie wordt automatisch uitgevoerd."
+          "a": "Een initiële classificatie van een volledige spend-dataset is doorgaans binnen vier tot zes weken voltooid, inclusief een Data Stability Baseline om de nauwkeurigheid te valideren. Voortdurende maandelijkse classificatie wordt automatisch uitgevoerd."
         },
         {
           "q": "Integreert Pearstop met FM-specifieke systemen zoals Maximo of ServiceNow?",
-          "a": "Pearstop ontvangt data via CSV-export of directe API-verbinding en retourneert geclassificeerde data in hetzelfde formaat, compatibel met elk CAFM- of CMMS systeem inclusief IBM Maximo, ServiceNow, Planon en SAP PM."
+          "a": "Pearstop ontvangt data via CSV-export of directe API-verbinding en retourneert geclassificeerde data in hetzelfde formaat, compatibel met elk CAFM- of CMMS-systeem, inclusief IBM Maximo, ServiceNow, Planon en SAP PM."
         },
         {
           "q": "Welke nauwkeurigheidsgraad kunnen FM-bedrijven verwachten?",
-          "a": "Pearstops vierlaagse engine bereikt 90–95% automatische classificatie op typische FM spend datasets. De resterende 5–10% wordt gemarkeerd voor menselijke beoordeling, en elke beoordeelde beslissing wordt teruggekoppeld naar de engine."
+          "a": "Pearstop's vierlaagse engine behaalt 90–95% automatische classificatie op typische FM spend-datasets. De resterende 5–10% wordt gemarkeerd voor menselijke beoordeling, en elke beoordeelde beslissing wordt teruggekoppeld naar de engine."
         }
       ]
     },
@@ -1443,7 +1464,7 @@
         },
         {
           "q": "Wat is UNSPSC classificatie en waarom is het belangrijk?",
-          "a": "UNSPSC staat voor United Nations Standard Products and Services Code. Zonder UNSPSC zijn inkoopdata moeilijk te analyseren — met UNSPSC krijgt elke inkooporder een consistente categorie waardoor spend analysis, leveranciersconsolidatie en category management mogelijk worden."
+          "a": "UNSPSC staat voor United Nations Standard Products and Services Code. Zonder UNSPSC zijn inkoopdata moeilijk te analyseren — met UNSPSC krijgt elke inkooporder een consistente categorie waardoor spend-analyse, leveranciersconsolidatie en categoriebeheer mogelijk worden."
         },
         {
           "q": "Welke Nederlandse bedrijven hebben UNSPSC classificatie het meest nodig?",
@@ -1522,24 +1543,24 @@
       "title": "Veelgestelde vragen",
       "items": [
         {
-          "q": "Is UNSPSC classificatie in Duitsland verplicht?",
+          "q": "Is UNSPSC classificatie verplicht in Duitsland?",
           "a": "UNSPSC is geen wettelijke verplichting, maar de e-facturatieplicht 2025 vereist gestructureerde productcodes. UNSPSC is de meest gebruikte internationale standaard die aan deze eis voldoet."
         },
         {
-          "q": "Hoe beïnvloedt de Duitse e-facturatieplicht de procurement classificatie?",
-          "a": "De e-facturatieplicht 2025 vereist gestructureerde, machineleesbare invoice data voor B2B-transacties. UNSPSC biedt een consistent, internationaal erkend coderingssysteem dat aan deze eis voldoet."
+          "q": "Hoe beïnvloedt de Duitse e-facturatieplicht de procurement-classificatie?",
+          "a": "De e-facturatieplicht 2025 vereist gestructureerde, machinaal leesbare factuurdata voor B2B-transacties. UNSPSC biedt een consistent, internationaal erkend coderingssysteem dat aan deze eis voldoet."
         },
         {
           "q": "Wat is UNSPSC classificatie en waarom hebben Duitse bedrijven deze nodig?",
-          "a": "UNSPSC staat voor United Nations Standard Products and Services Code. Duitse bedrijven gebruiken UNSPSC om spend te categoriseren, suppliers te vergelijken en de spend transparantie te verbeteren."
+          "a": "UNSPSC staat voor United Nations Standard Products and Services Code. Duitse bedrijven gebruiken UNSPSC om spend te categoriseren, suppliers te vergelijken en de spend-transparantie te verbeteren."
         },
         {
           "q": "Welke Duitse sectoren profiteren het meest?",
-          "a": "Duitse productiebedrijven, machinebouwbedrijven, Facility-Management-bedrijven en infrastructuurbedrijven profiteren het meest. Productiebedrijven met een groot MRO-aandeel profiteren bijzonder van consistente onderdeelcodering."
+          "a": "Duitse productiebedrijven, machinebouwbedrijven, facility management-bedrijven en infrastructuurbedrijven profiteren het meest. Productiebedrijven met een groot MRO-aandeel profiteren vooral van consistente onderdeelcodering."
         },
         {
           "q": "Kan Pearstop Duitstalige inkoopdata classificeren?",
-          "a": "Ja. Pearstops classificatie-engine verwerkt Duitstalige invoice beschrijvingen native, inclusief gangbare afkortingen en technische terminologie."
+          "a": "Ja. Pearstop's classificatie-engine verwerkt Duitstalige factuurbeschrijvingen native, inclusief gangbare afkortingen en technische terminologie."
         }
       ]
     },

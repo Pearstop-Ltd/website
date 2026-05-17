@@ -746,6 +746,27 @@
       "title": "Prêt à automatiser votre classification des achats ?",
       "lead": "Réservez un entretien découverte de 7 minutes. Nous vous montrerons exactement comment le moteur de classification fonctionnerait avec vos données.",
       "button": "Réserver un entretien découverte de 7 minutes"
+    },
+    "stats": {
+      "s1": {
+        "title": "Lignes par mois (Strukton)",
+        "copy": "Un grand entrepreneur néerlandais en infrastructure traite 35 000 lignes de procurement par mois via Pearstop grâce à l'intégration SAP."
+      },
+      "s2": {
+        "title": "Taux d'auto-classification",
+        "copy": "90 à 95 % des lignes sont classifiées automatiquement au niveau des produits de base, sans intervention de votre équipe."
+      },
+      "s3": {
+        "title": "Réduction de l'effort manuel",
+        "copy": "Les clients réduisent généralement le travail manuel sur les données de procurement de 70 à 90 %, libérant ainsi les buyers pour la stratégie de catégorie et la négociation de contrats."
+      }
+    },
+    "related": {
+      "label": "Plus de ressources UNSPSC",
+      "fm": "UNSPSC pour le FM et les hard services",
+      "nl": "UNSPSC aux Pays-Bas",
+      "de": "UNSPSC en Allemagne",
+      "faq": "FAQ complète"
     }
   },
   "Fabric": {
@@ -1344,16 +1365,16 @@
       "title": "Questions fréquentes",
       "items": [
         {
-          "q": "Quels segments UNSPSC s'appliquent au facilities management ?",
-          "a": "Les segments les plus courants pour le FM sont le Segment 72 (Services de construction et de maintenance), le Segment 76 (Services de nettoyage industriel), le Segment 80 (Services de gestion et administratifs) et le Segment 73 (Production industrielle). Les entreprises de FM spécialisées dans les hard services enregistrent généralement le volume de spend le plus élevé dans le Segment 72, couvrant l'électricité, le HVAC, la plomberie et l'entretien des bâtiments."
+          "q": "Quels segments UNSPSC s'appliquent au facility management ?",
+          "a": "Les segments les plus courants pour le FM sont le Segment 72 (Services de construction et de maintenance), le Segment 76 (Services de nettoyage industriel), le Segment 80 (Services de gestion et administratifs) et le Segment 73 (Production industrielle). Les entreprises de FM spécialisées dans les hard services enregistrent généralement le volume de spend le plus élevé dans le Segment 72, couvrant l'électricité, le HVAC, la plomberie et la maintenance des bâtiments."
         },
         {
           "q": "Pourquoi la classification UNSPSC est-elle difficile pour les entreprises de FM ?",
-          "a": "Les entreprises de FM achètent auprès de centaines de fournisseurs sur des sites décentralisés. Les lignes d'invoice sont souvent des descriptions en texte libre rédigées par des ingénieurs de terrain, et non par les équipes procurement. La classification manuelle à cette échelle nécessite un ou deux employés dédiés travaillant en continu juste pour suivre le rythme."
+          "a": "Les entreprises de FM achètent auprès de centaines de fournisseurs sur des sites décentralisés. Les lignes d'invoice sont souvent des descriptions en texte libre rédigées par des ing��nieurs de terrain, et non par les équipes procurement. La classification manuelle à cette échelle nécessite un ou deux employés dédiés travaillant en continu juste pour suivre le rythme."
         },
         {
           "q": "Combien de temps prend la classification UNSPSC pour une entreprise de FM ?",
-          "a": "Une classification initiale d'un ensemble complet de données de spend est généralement réalisée en quatre à six semaines, incluant une Base de référence de stabilité des données pour valider la précision. La classification mensuelle continue s'exécute automatiquement."
+          "a": "Une classification initiale d'un ensemble complet de données de spend est généralement effectuée en quatre à six semaines, incluant une base de référence de stabilité des données pour valider la précision. La classification mensuelle continue s'exécute automatiquement."
         },
         {
           "q": "Pearstop s'intègre-t-il avec des systèmes spécifiques au FM comme Maximo ou ServiceNow ?",
@@ -1361,7 +1382,7 @@
         },
         {
           "q": "Quel taux de précision les entreprises de FM peuvent-elles attendre ?",
-          "a": "Le moteur à quatre couches de Pearstop atteint 90 à 95 % de classification automatique sur les ensembles de données de spend typiques du FM. Les 5 à 10 % restants sont signalés pour examen humain, et chaque décision examinée est réintégrée dans le moteur."
+          "a": "Le moteur à quatre couches de Pearstop atteint 90 à 95 % de classification automatique sur les ensembles de données de spend FM typiques. Les 5 à 10 % restants sont signalés pour examen humain, et chaque décision examinée est réintégrée dans le moteur."
         }
       ]
     },
@@ -1435,23 +1456,23 @@
       "items": [
         {
           "q": "La classification UNSPSC est-elle obligatoire aux Pays-Bas ?",
-          "a": "L'UNSPSC n'est pas une obligation légale aux Pays-Bas, mais est de plus en plus utilisé comme standard de best-practice. La facturation électronique Peppol, obligatoire pour le procurement public, exige des codes produit structurés, l'UNSPSC étant la norme internationale la plus utilisée."
+          "a": "UNSPSC n'est pas une obligation légale aux Pays-Bas, mais est de plus en plus utilis�� comme standard de best-practice. La facturation électronique Peppol, obligatoire pour le procurement public, exige des codes produit structurés, UNSPSC étant la norme internationale la plus utilisée."
         },
         {
-          "q": "Qu'est-ce que Peppol et",
-          "a": "Peppol is het e-facturatienetwerk dat verplicht is voor overheidsinkoop in Nederland. Peppol vereist gestructureerde factuurdata inclusief product- en dienstcodes. UNSPSC is de meest gebruikte classificatiestandaard die hierbij aansluit."
+          "q": "Qu'est-ce que Peppol et quel est son rapport avec UNSPSC ?",
+          "a": "Peppol est le réseau de facturation électronique obligatoire pour le procurement public aux Pays-Bas. Peppol exige des données d'invoice structurées, y compris les codes de produits et de services. UNSPSC est la norme de classification la plus utilisée qui s'y conforme."
         },
         {
-          "q": "Wat is UNSPSC classificatie en waarom is het belangrijk?",
-          "a": "UNSPSC staat voor United Nations Standard Products and Services Code. Zonder UNSPSC zijn inkoopdata moeilijk te analyseren — met UNSPSC krijgt elke inkooporder een consistente categorie waardoor spend-analyse, leveranciersconsolidatie en categoriebeheer mogelijk worden."
+          "q": "Qu'est-ce que la classification UNSPSC et pourquoi est-elle importante ?",
+          "a": "UNSPSC signifie United Nations Standard Products and Services Code. Sans UNSPSC, les données de procurement sont difficiles à analyser — avec UNSPSC, chaque purchase order reçoit une catégorie cohérente, ce qui rend possibles le spend analysis, la consolidation des fournisseurs et le category management."
         },
         {
-          "q": "Welke Nederlandse bedrijven hebben UNSPSC classificatie het meest nodig?",
-          "a": "Nederlandse infrastructuurcontractors, facilitaire dienstverleners, en bouwbedrijven hebben doorgaans de meeste behoefte aan UNSPSC classificatie."
+          "q": "Quelles entreprises néerlandaises ont le plus besoin de la classification UNSPSC ?",
+          "a": "Les entrepreneurs en infrastructure néerlandais, les prestataires de services de facility management et les entreprises de construction ont généralement le plus grand besoin de la classification UNSPSC."
         },
         {
-          "q": "Hoe classificeert Pearstop Nederlandse inkoopdata?",
-          "a": "Pearstop ontvangt inkoopdata via CSV of directe API-verbinding vanuit Nederlandse ERP-systemen inclusief SAP, Oracle, en AFAS. De vier-laags classificatie-engine verwerkt ook Nederlandstalige factuuromschrijvingen."
+          "q": "Comment Pearstop classifie-t-il les données de procurement néerlandaises ?",
+          "a": "Pearstop reçoit les données de procurement via CSV ou connexion API directe depuis les systèmes ERP néerlandais, y compris SAP, Oracle et AFAS. Le moteur de classification à quatre couches traite également les descriptions d'invoice en néerlandais."
         }
       ]
     },
@@ -1522,15 +1543,15 @@
       "title": "Questions fréquentes",
       "items": [
         {
-          "q": "Ist UNSPSC-Klassifizierung in Deutschland Pflicht?",
-          "a": "UNSPSC ist keine gesetzliche Pflicht, aber die E-Rechnungspflicht 2025 erfordert strukturierte Produktcodes. UNSPSC ist der meistgenutzte internationale Standard, der diese Anforderung erfüllt."
+          "q": "La classification UNSPSC est-elle obligatoire en Allemagne ?",
+          "a": "UNSPSC n'est pas une obligation légale, mais l'obligation de facturation électronique 2025 exige des codes produit structurés. UNSPSC est la norme internationale la plus utilisée qui répond à cette exigence."
         },
         {
-          "q": "Wie wirkt sich die deutsche E-Rechnungspflicht auf die Beschaffungsklassifizierung aus?",
-          "a": "Die E-Rechnungspflicht 2025 erfordert strukturierte, maschinenlesbare Rechnungsdaten für B2B-Transaktionen. UNSPSC bietet ein konsistentes, international anerkanntes Codierungssystem, das diese Anforderung erfüllt."
+          "q": "Comment l'obligation allemande de facturation électronique affecte-t-elle la classification du procurement ?",
+          "a": "L'obligation de facturation électronique 2025 exige des données d'invoice structurées et lisibles par machine pour les transactions B2B. UNSPSC offre un système de codification cohérent et internationalement reconnu qui répond à cette exigence."
         },
         {
-          "q": "Was ist UNSPSC-Klassifizierung und warum brauchen deutsche Unternehmen sie?",
+          "q": "Qu'est-ce que la classification UNSPSC et pourquoi les entreprises allemandes",
           "a": "UNSPSC steht für United Nations Standard Products and Services Code. Deutsche Unternehmen nutzen UNSPSC, um Einkaufsausgaben zu kategorisieren, Lieferanten zu vergleichen und die Ausgabentransparenz zu verbessern."
         },
         {
