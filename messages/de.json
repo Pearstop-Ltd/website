@@ -880,12 +880,11 @@
       "title": "Pearstop Fallstudien herunterladen",
       "lead": "Geben Sie Ihre Daten ein und wir leiten Sie direkt zum PDF-Deck weiter. Sehen Sie, wie technische Unternehmen Pearstop nutzen, um Daten zu bereinigen und Margen zu schützen.",
       "getPdf": "PDF erhalten",
-      "viewInBrowser": "Im Browser anzeigen",
-      "followLinkedIn": "Stephanie auf LinkedIn folgen"
+      "followLinkedIn": "Pearstop auf LinkedIn für Updates folgen"
     },
     "highlights": [
       {
-        "title": "Strukton",
+        "title": "Strukton (Projekt in Bearbeitung)",
         "copy": "Automatisierte UNSPSC-Klassifizierung in großem Maßstab für Infrastrukturbeschaffung."
       },
       {
@@ -893,8 +892,12 @@
         "copy": "Margenabschätzungen für jeden Container-Kauf, automatisch generiert."
       },
       {
-        "title": "SPIE und FMO",
-        "copy": "Sauberere Asset- und Projektdaten, denen Teams wirklich vertrauen können."
+        "title": "SPIE",
+        "copy": "Sauberere Asset-Daten, denen Teams wirklich vertrauen können."
+      },
+      {
+        "title": "MRO (Vertraulich)",
+        "copy": "Teilenummern-Anreicherung für den Direktbezug beim Hersteller."
       }
     ],
     "download": {
@@ -907,8 +910,6 @@
       "emailPlaceholder": "Ihre E-Mail",
       "companyPlaceholder": "Unternehmen (optional)",
       "submitButton": "Fallstudien herunterladen",
-      "viewNote": "Lieber einfach ansehen?",
-      "viewLinkText": "Google Slides-Deck öffnen",
       "talkNote": "Lieber zuerst sprechen?",
       "talkLinkText": "7-Minuten-Entdeckungsgespräch buchen"
     },
@@ -934,7 +935,7 @@
     "cta": {
       "title": "Möchten Sie es besprechen?",
       "lead": "Wenn Sie lieber direkt über Ihr Datenproblem sprechen möchten, helfen wir Ihnen gerne.",
-      "followLinkedIn": "Stephanie auf LinkedIn folgen",
+      "followLinkedIn": "Pearstop auf LinkedIn für Updates folgen",
       "bookDiscovery": "7-Minuten-Entdeckungsgespräch buchen"
     }
   },

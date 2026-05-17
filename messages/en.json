@@ -880,12 +880,11 @@
       "title": "Download the Pearstop case studies",
       "lead": "Enter your details and we'll send you straight to the PDF deck. See how technical businesses use Pearstop to clean data and protect margin.",
       "getPdf": "Get the PDF",
-      "viewInBrowser": "View in browser",
-      "followLinkedIn": "Follow Stephanie on LinkedIn"
+      "followLinkedIn": "Follow Pearstop on LinkedIn for updates"
     },
     "highlights": [
       {
-        "title": "Strukton",
+        "title": "Strukton (project in progress)",
         "copy": "Automated UNSPSC classification at scale for infrastructure procurement."
       },
       {
@@ -893,8 +892,12 @@
         "copy": "Margin estimates on every container purchase, generated automatically."
       },
       {
-        "title": "SPIE and FMO",
-        "copy": "Cleaner asset and project data that teams can actually trust."
+        "title": "SPIE",
+        "copy": "Cleaner asset data that teams can actually trust."
+      },
+      {
+        "title": "MRO (Confidential)",
+        "copy": "Part number enrichment to go direct to manufacturer."
       }
     ],
     "download": {
@@ -907,8 +910,6 @@
       "emailPlaceholder": "Your email",
       "companyPlaceholder": "Company (optional)",
       "submitButton": "Download the case studies",
-      "viewNote": "Prefer to just view it?",
-      "viewLinkText": "Open the Google Slides deck",
       "talkNote": "Prefer to talk first?",
       "talkLinkText": "Book a 7-minute discovery call"
     },
@@ -934,7 +935,7 @@
     "cta": {
       "title": "Want to talk it through?",
       "lead": "If you'd rather discuss your data problem directly, we're happy to help.",
-      "followLinkedIn": "Follow Stephanie on LinkedIn",
+      "followLinkedIn": "Follow Pearstop on LinkedIn for updates",
       "bookDiscovery": "Book a 7-minute discovery"
     }
   },

@@ -880,12 +880,11 @@
       "title": "Download de Pearstop casestudies",
       "lead": "Vul uw gegevens in en we sturen u direct naar het PDF-pakket. Zie hoe technische bedrijven Pearstop gebruiken om data te reinigen en marges te beschermen.",
       "getPdf": "Ontvang de PDF",
-      "viewInBrowser": "Bekijk in browser",
-      "followLinkedIn": "Volg Stephanie op LinkedIn"
+      "followLinkedIn": "Volg Pearstop op LinkedIn voor updates"
     },
     "highlights": [
       {
-        "title": "Strukton",
+        "title": "Strukton (project in uitvoering)",
         "copy": "Geautomatiseerde UNSPSC-classificatie op schaal voor infrastructuurinkoop."
       },
       {
@@ -893,8 +892,12 @@
         "copy": "Margeschattingen op elke containeraankoop, automatisch gegenereerd."
       },
       {
-        "title": "SPIE en FMO",
-        "copy": "Schonere asset- en projectdata waar teams daadwerkelijk op kunnen vertrouwen."
+        "title": "SPIE",
+        "copy": "Schonere assetdata waar teams daadwerkelijk op kunnen vertrouwen."
+      },
+      {
+        "title": "MRO (Vertrouwelijk)",
+        "copy": "Onderdeelnummers verrijkt om direct bij de fabrikant in te kopen."
       }
     ],
     "download": {
@@ -907,8 +910,6 @@
       "emailPlaceholder": "Uw e-mailadres",
       "companyPlaceholder": "Bedrijf (optioneel)",
       "submitButton": "Download de casestudies",
-      "viewNote": "Liever gewoon bekijken?",
-      "viewLinkText": "Open het Google Slides-deck",
       "talkNote": "Liever eerst praten?",
       "talkLinkText": "Boek een ontdekkingsgesprek van 7 minuten"
     },
@@ -934,7 +935,7 @@
     "cta": {
       "title": "Wilt u het bespreken?",
       "lead": "Als u liever direct uw dataprobleem bespreekt, helpen we u graag.",
-      "followLinkedIn": "Volg Stephanie op LinkedIn",
+      "followLinkedIn": "Volg Pearstop op LinkedIn voor updates",
       "bookDiscovery": "Boek een ontdekkingsgesprek van 7 minuten"
     }
   },

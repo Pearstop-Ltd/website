@@ -48,7 +48,6 @@ export default async function CaseStudiesPage({
         lead={t("hero.lead")}
         actions={[
           { label: t("hero.getPdf"), href: "#get-the-download", variant: "primary" },
-          { label: t("hero.viewInBrowser"), href: siteConfig.downloads.caseStudiesView, variant: "secondary", external: true },
           { label: t("hero.followLinkedIn"), href: siteConfig.socials.linkedin, variant: "secondary", external: true }
         ]}
       />
@@ -61,7 +60,7 @@ export default async function CaseStudiesPage({
               <h2>{t("download.title")}</h2>
               <p>{t("download.lead")}</p>
               <ul className="ind-pains case-studies-list">
-                {(["0", "1", "2"] as const).map((i) => (
+                {(["0", "1", "2", "3"] as const).map((i) => (
                   <li key={i}>
                     <span className="ind-ok">✓</span>
                     <div>
@@ -78,22 +77,15 @@ export default async function CaseStudiesPage({
               <p className="light-copy" style={{ marginTop: "1rem" }}>
                 {t("download.formLead")}
               </p>
-              <form className="contact-form" action="https://formspree.io/f/xyklkdkj" method="POST">
+              <form className="contact-form" action="/api/download/case-studies" method="POST">
                 <input type="text" name="name" placeholder={t("download.namePlaceholder")} autoComplete="name" required aria-label={t("download.namePlaceholder")} />
                 <input type="email" name="email" placeholder={t("download.emailPlaceholder")} autoComplete="email" required aria-label={t("download.emailPlaceholder")} />
                 <input type="text" name="company" placeholder={t("download.companyPlaceholder")} autoComplete="organization" aria-label={t("download.companyPlaceholder")} />
-                <input type="hidden" name="_subject" value="Case studies download request" />
-                <input type="hidden" name="_next" value={siteConfig.downloads.caseStudiesPdf} />
                 <button type="submit" className="btn btn-primary">
                   {t("download.submitButton")}
                 </button>
               </form>
               <p className="case-studies-note">
-                {t("download.viewNote")}{" "}
-                <a href={siteConfig.downloads.caseStudiesView} target="_blank" rel="noopener noreferrer">
-                  {t("download.viewLinkText")}
-                </a>.
-                <br />
                 {t("download.talkNote")}{" "}
                 <a href={siteConfig.calendly} target="_blank" rel="noopener noreferrer">
                   {t("download.talkLinkText")}

@@ -880,12 +880,11 @@
       "title": "Télécharger les études de cas Pearstop",
       "lead": "Entrez vos coordonnées et nous vous enverrons directement vers le deck PDF. Voyez comment les entreprises techniques utilisent Pearstop pour nettoyer les données et protéger les marges.",
       "getPdf": "Obtenir le PDF",
-      "viewInBrowser": "Voir dans le navigateur",
-      "followLinkedIn": "Suivez Stephanie sur LinkedIn"
+      "followLinkedIn": "Suivez Pearstop sur LinkedIn pour les mises à jour"
     },
     "highlights": [
       {
-        "title": "Strukton",
+        "title": "Strukton (projet en cours)",
         "copy": "Classification UNSPSC automatisée à grande échelle pour les achats d'infrastructure."
       },
       {
@@ -893,8 +892,12 @@
         "copy": "Estimations de marge sur chaque achat de conteneur, générées automatiquement."
       },
       {
-        "title": "SPIE et FMO",
-        "copy": "Des données d'actifs et de projets plus propres en lesquelles les équipes peuvent réellement avoir confiance."
+        "title": "SPIE",
+        "copy": "Des données d'actifs plus propres en lesquelles les équipes peuvent réellement avoir confiance."
+      },
+      {
+        "title": "MRO (Confidentiel)",
+        "copy": "Enrichissement des références pour acheter directement auprès du fabricant."
       }
     ],
     "download": {
@@ -907,8 +910,6 @@
       "emailPlaceholder": "Votre e-mail",
       "companyPlaceholder": "Entreprise (optionnel)",
       "submitButton": "Télécharger les études de cas",
-      "viewNote": "Vous préférez simplement le consulter ?",
-      "viewLinkText": "Ouvrir le deck Google Slides",
       "talkNote": "Vous préférez parler d'abord ?",
       "talkLinkText": "Réserver un entretien découverte de 7 minutes"
     },
@@ -934,7 +935,7 @@
     "cta": {
       "title": "Vous voulez en discuter ?",
       "lead": "Si vous préférez discuter directement de votre problème de données, nous sommes là pour vous aider.",
-      "followLinkedIn": "Suivez Stephanie sur LinkedIn",
+      "followLinkedIn": "Suivez Pearstop sur LinkedIn pour les mises à jour",
       "bookDiscovery": "Réserver un entretien découverte de 7 minutes"
     }
   },

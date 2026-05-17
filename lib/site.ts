@@ -125,7 +125,7 @@ export type CaseStudy = {
 export const caseStudies: CaseStudy[] = [
   {
     slug: "strukton",
-    title: "Classifying 35,000 procurement lines a month into UNSPSC",
+    title: "Strukton (project in progress) — Classifying 35,000 procurement lines a month into UNSPSC",
     category: "Infrastructure · Netherlands",
     excerpt:
       "We are currently working with a major Dutch infrastructure contractor on automated UNSPSC classification at scale. Case study coming soon.",
@@ -189,16 +189,16 @@ export const caseStudies: CaseStudy[] = [
     tone: "from-indigo"
   },
   {
-    slug: "fmo",
-    title: "From fragmented project data to MT-level capacity planning",
-    category: "Finance · Netherlands",
+    slug: "mro-confidential",
+    title: "MRO (Confidential) — Part number enrichment to go direct to manufacturer",
+    category: "Manufacturing / MRO",
     excerpt:
-      "FMO's PMO needed a clear view of project capacity and resource allocation across a complex portfolio. Pearstop cleaned and structured the full project dataset and built the dashboards that gave MT visibility to make confident decisions.",
-    tags: ["Data Quality", "Reporting"],
-    statPrimary: "Full",
-    statPrimaryLabel: "Portfolio visibility",
-    statSecondary: "0",
-    statSecondaryLabel: "Manual aggregation",
+      "Part number enrichment to go direct to manufacturer. Full case study confidential.",
+    tags: ["Procurement", "Data Quality"],
+    statPrimary: "Direct",
+    statPrimaryLabel: "To manufacturer",
+    statSecondary: "MRO",
+    statSecondaryLabel: "Part enrichment",
     tone: "from-cobalt"
   }
 ];
