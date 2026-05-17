@@ -112,7 +112,7 @@ export default async function CasesPage({
               <div className="cq-stars">★★★★★</div>
               <p className="cq-text">{t("testimonials.t2.text")}</p>
               <div className="cq-attr">
-                <div className="cq-avatar" />
+                <img src="/images/clients/vince-headshot.jpg" alt="Vince Out" className="cq-avatar" style={{ borderRadius: "50%", objectFit: "cover" }} />
                 <div>
                   <span className="cq-name">{t("testimonials.t2.name")}</span>
                   <span className="cq-role">{t("testimonials.t2.role")}</span>
@@ -123,7 +123,7 @@ export default async function CasesPage({
               <div className="cq-stars">★★★★★</div>
               <p className="cq-text">{t("testimonials.t3.text")}</p>
               <div className="cq-attr">
-                <div className="cq-avatar" />
+                <img src="/images/clients/david-headshot.jpg" alt="David Torr" className="cq-avatar" style={{ borderRadius: "50%", objectFit: "cover" }} />
                 <div>
                   <span className="cq-name">{t("testimonials.t3.name")}</span>
                   <span className="cq-role">{t("testimonials.t3.role")}</span>

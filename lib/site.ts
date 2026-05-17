@@ -24,6 +24,7 @@ export const siteConfig = {
       stephanie: "/images/clients/stephanie-headshot.png",
       richard: "/images/clients/richard-headshot.png",
       vince: "/images/clients/vince-headshot.jpg",
+      david: "/images/clients/david-headshot.jpg",
     },
     home: {
       spendControl: "/images/home/spend-control.webp",
