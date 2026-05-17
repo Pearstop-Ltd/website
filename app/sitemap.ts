@@ -10,7 +10,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...solutionLinks.map((link) => link.href),
     "/faq",
     "/unspsc",
-    "/unspsc-code-lookup",
     "/unspsc-classification-facilities-management",
     "/unspsc-classification-netherlands",
     "/unspsc-classification-germany",
