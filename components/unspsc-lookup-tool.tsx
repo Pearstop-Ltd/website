@@ -1,6 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
+const FREE_LIMIT = 5;
+const STORAGE_KEY = "unspsc_uses";
 
 type ResultLabels = {
   code: string;
@@ -55,10 +58,17 @@ export function UnspscLookupTool({
   const [result, setResult] = useState<LookupResult | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [usesLeft, setUsesLeft] = useState(FREE_LIMIT);
+
+  useEffect(() => {
+    const stored = parseInt(localStorage.getItem(STORAGE_KEY) ?? "0", 10);
+    setUsesLeft(Math.max(0, FREE_LIMIT - stored));
+  }, []);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (!description.trim()) return;
+    if (usesLeft <= 0) return;
     setLoading(true);
     setResult(null);
     setError(null);
@@ -74,6 +84,9 @@ export function UnspscLookupTool({
         setError(data.error);
       } else {
         setResult(data);
+        const used = parseInt(localStorage.getItem(STORAGE_KEY) ?? "0", 10) + 1;
+        localStorage.setItem(STORAGE_KEY, String(used));
+        setUsesLeft(Math.max(0, FREE_LIMIT - used));
       }
     } catch {
       setError("Something went wrong. Please try again.");
@@ -94,6 +107,21 @@ export function UnspscLookupTool({
     : result?.confidence === "medium"
       ? resultLabels.medium
       : resultLabels.low;
+
+  if (usesLeft <= 0) {
+    return (
+      <div style={{ border: "1.5px solid var(--primary, #6b46c1)", borderRadius: 16, padding: "2rem", background: "var(--purple-soft, #f5f3ff)", textAlign: "center" }}>
+        <p style={{ fontSize: "1.5rem", marginBottom: "0.5rem" }}>✓</p>
+        <p style={{ fontWeight: 700, fontSize: "1.05rem", marginBottom: "0.5rem" }}>You've used your 5 free lookups</p>
+        <p style={{ color: "var(--muted)", fontSize: "0.9rem", marginBottom: "1.5rem", lineHeight: 1.6 }}>
+          For bulk classification — thousands of invoice lines, automated and accurate — talk to us about the full service.
+        </p>
+        <a href="https://calendly.com/stephanie-pearstop/7-min-discovery" className="btn btn-primary" target="_blank" rel="noopener noreferrer">
+          Book a 7-minute discovery call
+        </a>
+      </div>
+    );
+  }
 
   return (
     <div>
@@ -128,6 +156,9 @@ export function UnspscLookupTool({
             </button>
             <span style={{ fontSize: "0.85rem", color: "#888" }}>
               {description.length}/500
+            </span>
+            <span style={{ fontSize: "0.8rem", color: usesLeft <= 2 ? "#b45309" : "#888", marginLeft: "auto" }}>
+              {usesLeft} free {usesLeft === 1 ? "lookup" : "lookups"} remaining
             </span>
           </div>
         </div>
