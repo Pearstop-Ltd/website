@@ -158,6 +158,8 @@ export default async function BlogPostPage({
         publishedAt={post.publishedAt}
         readingTime={post.readingTime}
         category={post.category}
+        slug={post.slug}
+        tags={post.tags}
       >
         {mdxContent ? (
           <MDXRemote source={mdxContent} components={MDX_COMPONENTS} options={{ mdxOptions: { rehypePlugins: [rehypeSlug] } }} />

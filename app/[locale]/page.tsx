@@ -258,44 +258,6 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         </div>
       </section>
 
-      <section aria-labelledby="blog-heading">
-        <div className="container">
-          <SectionTitle
-            eyebrow={t("blog.eyebrow")}
-            title={t("blog.title")}
-            lead={t("blog.lead")}
-          />
-          <div className="article-grid">
-            {blogCards.map((post, index) => (
-              <article className="blog-card" key={post.title}>
-                <div
-                  className="blog-img-wrap"
-                  aria-hidden="true"
-                  style={{ background: index === 1 ? "#DCE1F8" : "#E8E0FC" }}
-                />
-                <div className="blog-body">
-                  <span className="blog-tag">{post.tag}</span>
-                  <h3 className="blog-title">
-                    <Link href={post.href}>{post.title}</Link>
-                  </h3>
-                  <p className="light-copy">{post.summary}</p>
-                  <Link className="blog-read" href={post.href}>
-                    {t("blog.readArticle")}
-                  </Link>
-                </div>
-              </article>
-            ))}
-          </div>
-          <div className="text-center" style={{ marginTop: "1.8rem", display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
-            <Link href={`${prefix}/blog`} className="btn btn-outline">
-              {t("blog.viewAll")}
-            </Link>
-            <Link href={`${prefix}/faq`} className="btn btn-outline">
-              {t("blog.faq")}
-            </Link>
-          </div>
-        </div>
-      </section>
     </>
   );
 }

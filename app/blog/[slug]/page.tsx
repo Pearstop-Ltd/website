@@ -76,7 +76,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           </div>
         </div>
       </header>
-      <BlogLayout tocItems={post.tocItems} author={post.author} publishedAt={post.publishedAt} readingTime={post.readingTime} category={post.category}>
+      <BlogLayout tocItems={post.tocItems} author={post.author} publishedAt={post.publishedAt} readingTime={post.readingTime} category={post.category} slug={post.slug} tags={post.tags}>
         <PostContent />
       </BlogLayout>
     </>

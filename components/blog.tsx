@@ -3,6 +3,7 @@ import Script from "next/script";
 import type { ReactNode } from "react";
 import { TableOfContents, type TocItem } from "@/components/blog-toc";
 import { siteConfig } from "@/lib/site";
+import { blogPosts, type BlogPost } from "@/lib/blog-posts";
 
 export function ArticleSchema({ title, description, slug, publishedAt, authorName }: {
   title: string; description: string; slug: string; publishedAt: string; authorName: string;
@@ -85,9 +86,20 @@ export function AuthorBlock({ authorKey }: { authorKey: AuthorKey }) {
   );
 }
 
-export function BlogLayout({ children, tocItems, author, publishedAt, readingTime, category }: {
-  children: ReactNode; tocItems: TocItem[]; author: AuthorKey; publishedAt: string; readingTime: number; category: string;
+function getRelatedPosts(currentSlug: string, currentTags: string[]): BlogPost[] {
+  const others = blogPosts.filter((p) => p.slug !== currentSlug);
+  const scored = others.map((p) => ({
+    post: p,
+    score: p.tags.filter((t) => currentTags.includes(t)).length,
+  }));
+  scored.sort((a, b) => b.score - a.score || new Date(b.post.publishedAt).getTime() - new Date(a.post.publishedAt).getTime());
+  return scored.slice(0, 2).map((s) => s.post);
+}
+
+export function BlogLayout({ children, tocItems, author, publishedAt, readingTime, category, slug, tags }: {
+  children: ReactNode; tocItems: TocItem[]; author: AuthorKey; publishedAt: string; readingTime: number; category: string; slug: string; tags: string[];
 }) {
+  const related = getRelatedPosts(slug, tags);
   return (
     <div className="container" style={{ paddingTop: "3rem", paddingBottom: "5rem" }}>
       <div style={{ display: "grid", gridTemplateColumns: "minmax(0,1fr) 220px", gap: "4rem", alignItems: "start" }}>
@@ -99,6 +111,21 @@ export function BlogLayout({ children, tocItems, author, publishedAt, readingTim
           </div>
           {children}
           <AuthorBlock authorKey={author} />
+          {related.length > 0 && (
+            <section style={{ marginTop: "4rem", paddingTop: "2.5rem", borderTop: "1px solid var(--border, #e5e7eb)" }}>
+              <h2 style={{ fontSize: "1.1rem", fontWeight: 700, marginBottom: "1.5rem", color: "var(--primary-dark)" }}>Further reading</h2>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: "1.25rem" }}>
+                {related.map((p) => (
+                  <Link key={p.slug} href={`/blog/${p.slug}`} style={{ textDecoration: "none", display: "block", border: "1px solid var(--border, #e5e7eb)", borderRadius: 12, padding: "1.25rem 1.5rem", transition: "box-shadow 0.2s", background: "#fff" }} className="related-post-card">
+                    <span style={{ background: "var(--purple-soft)", color: "var(--primary-dark)", padding: "0.2rem 0.6rem", borderRadius: "999px", fontWeight: 600, fontSize: "0.7rem", display: "inline-block", marginBottom: "0.6rem" }}>{p.category}</span>
+                    <p style={{ fontWeight: 600, fontSize: "0.95rem", lineHeight: 1.45, color: "var(--foreground, #111)", marginBottom: "0.5rem" }}>{p.title}</p>
+                    <p style={{ fontSize: "0.82rem", color: "var(--muted)", lineHeight: 1.55 }}>{p.description}</p>
+                    <span style={{ fontSize: "0.8rem", color: "var(--primary)", fontWeight: 600, marginTop: "0.75rem", display: "inline-block" }}>Read more →</span>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          )}
         </article>
         <aside style={{ display: "none" }} className="blog-toc-col">
           <TableOfContents items={tocItems} />
@@ -115,6 +142,7 @@ export function BlogLayout({ children, tocItems, author, publishedAt, readingTim
         .blog-article th { background: var(--purple-soft); color: var(--primary-dark); font-weight: 600; text-align: left; padding: 0.65rem 1rem; }
         .blog-article td { padding: 0.6rem 1rem; border-bottom: 1px solid var(--border, #e5e7eb); vertical-align: top; }
         .blog-article tr:last-child td { border-bottom: none; }
+        .related-post-card:hover { box-shadow: 0 4px 16px rgba(107,70,193,0.12); border-color: var(--primary) !important; }
       `}</style>
     </div>
   );
