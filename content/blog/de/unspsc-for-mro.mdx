@@ -1,0 +1,112 @@
+---
+title: "UNSPSC für MRO: Klassifizierung von Maintenance, Repair, and Operations Spend"
+description: "MRO procurement ist die am schwierigsten konsistent zu klassifizierende Kategorie. Hier ist, warum UNSPSC für Wartungs-spend funktioniert und was es braucht, um saubere MRO-Daten aus einem System wie SAP oder Maximo zu erhalten."
+publishedAt: "2026-05-05"
+author: "richard"
+category: "Procurement"
+tags: ["UNSPSC", "MRO", "Procurement Data", "Asset Management"]
+readingTime: "7 min"
+---
+
+## Why MRO spend is the hardest to classify
+
+Jede procurement Kategorie hat Klassifizierungsherausforderungen. MRO spend — die Teile, Materialien, Werkzeuge und Dienstleistungen, die Anlagen und assets am Laufen halten — hat mehr als die meisten anderen.
+
+Hier ist, was die MRO-Klassifizierung schwierig macht:
+
+**Teilebeschreibungen sind für Ingenieure geschrieben, nicht für category manager.** "Seal kit 47mm OD — pump bearing housing" ist präzise genug für den Wartungsingenieur, der es bestellt hat. Es sagt einem Klassifizierungssystem sehr wenig darüber aus, ob dies unter Industriemaschinen (Segment 23), Industrieausrüstung (Segment 24) oder Elektronische Komponenten (Segment 32) gehört.
+
+**Dasselbe Teil hat Dutzende von Beschreibungen.** Verschiedene Standorte, verschiedene Ingenieure, verschiedene Lieferantenkataloge — eine einzelne physische Komponente erscheint unter vielen verschiedenen Bezeichnungen in der gesamten Einkaufshistorie desselben Unternehmens.
+
+**Teilenummern ohne Beschreibungen sind üblich.** buyer gibt "47234-B" in die purchase order ein. Das System benötigt Liefer
+
+**MRO spend is decentralised.** In manufacturing and FM environments, maintenance buyers often have significant local autonomy. Category management at headquarters may not see the spend detail until months later.
+
+The result is an MRO spend file where 30–50% of lines are either unclassified, inconsistently classified, or parked in catch-all categories that make analysis impossible.
+
+---
+
+## What UNSPSC segments cover MRO spend
+
+Most MRO spend for manufacturing, FM, and infrastructure companies falls across these UNSPSC segments:
+
+| Segment | Description | Typical MRO spend |
+|---|---|---|
+| 23 | Industrial Machinery and Equipment | Pumps, compressors, motors, conveyors |
+| 24 | Power Generation and Distribution | Electrical components, switchgear, cables |
+| 26 | Electronic Components and Supplies | Sensors, controllers, relays |
+| 31 | Manufacturing Components and Supplies | Fasteners, seals, gaskets, bearings |
+| 47 | Cleaning and Janitorial Supplies | Maintenance cleaning products |
+| 72 | Construction and Maintenance Services | Labour and contractor services |
+| 73 | Industrial Production and Manufacturing | Fabrication and specialist work |
+
+Getting classification right at the commodity level — 8 digits — within these segments requires either extensive manual lookup against the UNSPSC codeset or an automated engine trained on MRO-specific data.
+
+---
+
+## The case for UNSPSC over manufacturer part numbers
+
+Some procurement teams argue that manufacturer part numbers (MPNs) are a better way to track MRO spend than UNSPSC codes. MPNs are precise and enable exact duplicate identification. But they have significant limitations:
+
+- **MPNs are supplier-specific.** The same component from a different manufacturer has a different MPN, making cross-supplier analysis impossible.
+- **MPNs go obsolete.** When a manufacturer discontinues a product, its MPN disappears. UNSPSC commodity codes are stable across supplier changes.
+- **MPNs do not enable category-level aggregation.** You cannot ask "how much did we spend on bearings last year?" from MPN data alone. UNSPSC enables exactly this.
+
+The answer for most companies is both: enrich your spend data with MPNs where possible, and apply UNSPSC codes for category-level spend analysis. These are complementary, not competing, approaches.
+
+---
+
+## How automated MRO classification works in practice
+
+A good automated classification engine for MRO spend uses multiple signals beyond the line item description:
+
+**Supplier context.** If a supplier is known to supply only bearings and seals (from historical purchasing patterns), even a bare part number triggers a high-confidence classification in the right commodity area.
+
+**GL account routing.** Maintenance spend coded to GL account 6400 (or its equivalent) signals a different probability distribution across UNSPSC segments than capital expenditure coded to GL 0700.
+
+**Historical priors.** If the same part description has been classified as 31161500 (Plain bearings) 95 times in the past twelve months, the 96th occurrence is classified automatically at high confidence.
+
+**LLM augmentation.** For genuinely ambiguous descriptions, a large language model brings broad product knowledge. "Seal kit 47mm OD — pump bearing housing" resolves to the correct commodity code because the model understands what a pump bearing housing seal kit is, even if it has never seen this exact string before.
+
+---
+
+## Enriching to manufacturer part number level
+
+For MRO categories where part number precision matters — typically for companies that want to go direct to manufacturer and cut out distributor margin — UNSPSC classification is the first step, not the last.
+
+Once spend is classified at commodity level, the next step is **part number enrichment**: matching line items to a manufacturer's official catalogue to identify the exact OEM part, the manufacturer's direct price, and alternative sourcing options.
+
+This is the approach used in Pearstop's MRO work. Classification gives you the category view. Part number enrichment gives you the commercial lever — knowing that the bearing you are buying from a distributor at margin is available direct from the manufacturer at 30% less.
+
+The combination of UNSPSC classification and part number enrichment is what makes the "go direct to manufacturer" strategy operationally feasible at scale.
+
+---
+
+## Getting started with MRO classification
+
+The fastest route to clean MRO spend data is a Data Stability Baseline:
+
+1. **Export your spend data** from SAP, Maximo, or your procurement system — typically 12–24 months of purchase history
+2. **Pearstop classifies the export** using the four-layer engine, returning UNSPSC codes at commodity level
+3. **Your team reviews** the flagged items — typically 5–10% of lines — via a review interface
+4. **The classified dataset** becomes your spend baseline for category analysis and negotiation
+
+From that baseline, ongoing classification of new MRO purchases runs automatically each month.
+
+---
+
+## The downstream value of clean MRO data
+
+A classified MRO spend dataset unlocks several commercial decisions that were impossible with unclassified free-text data:
+
+**Supplier consolidation.** You can see how many suppliers you are using in each commodity category, and whether consolidating to fewer preferred suppliers would produce better pricing or service terms.
+
+**Price benchmarking.** With consistent category codes, you can compare the price you are paying for the same UNSPSC commodity across suppliers, sites, and time periods.
+
+**Spend baseline for contract negotiation.** A classified spend baseline is the foundation for any meaningful negotiation. Without it, suppliers know more about your spend than you do.
+
+Identifizierung der Direktbezugsmöglichkeit beim Hersteller. Die Anreicherung von Teilenummern, zusätzlich zur UNSPSC Klassifizierung, identifiziert, welche MRO-Güter die größte Marge durch Direktbezug bieten.
+
+---
+
+*Weiterführende Lektüre: [UNSPSC Klassifizierungsgenauigkeit — Was 90–95 % tatsächlich bedeutet](/blog/unspsc-classification-accuracy) | [So implementieren Sie die UNSPSC Klassifizierung in SAP](/blog/unspsc-classification-sap) | [Probleme mit dem asset register, die intelligente Wartung verhindern](/blog/asset-register-problems)*

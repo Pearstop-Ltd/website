@@ -108,7 +108,7 @@ export default function CasesPage() {
                 Pearstop built a system that automatically pulls the right items from our visiting reports into a clean proposal document. It saves our team a lot of time by eliminating the repetitive tasks of combining the correct items.
               </p>
               <div className="cq-attr">
-                <div className="cq-avatar" />
+                <img src="/images/clients/vince-headshot.jpg" alt="Vince Out" className="cq-avatar" style={{ borderRadius: "50%", objectFit: "cover" }} />
                 <div>
                   <span className="cq-name">Vince Out</span>
                   <span className="cq-role">Commercial Manager · Manufacturing | Air Filtration Units</span>
@@ -121,7 +121,7 @@ export default function CasesPage() {
                 We had thousands of product lines that needed to be categorised before we could even begin to understand our costs. Pearstop classified them in under a week. That would have taken our team six months and still would not have been this accurate.
               </p>
               <div className="cq-attr">
-                <div className="cq-avatar" />
+                <img src="/images/clients/david-headshot.jpg" alt="David Torr" className="cq-avatar" style={{ borderRadius: "50%", objectFit: "cover" }} />
                 <div>
                   <span className="cq-name">David Torr</span>
                   <span className="cq-role">CEO · FARO</span>

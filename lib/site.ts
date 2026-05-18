@@ -17,11 +17,14 @@ export const siteConfig = {
       fmo: "/images/clients/fmo.png",
       faro: "/images/clients/faro.png",
       spie: "/images/clients/spie.webp",
-      kelpBlue: "/images/clients/kelp-blue.png"
+      kelpBlue: "/images/clients/kelp-blue.png",
+      lemtech: "/images/clients/lemtech.svg"
     },
     team: {
       stephanie: "/images/clients/stephanie-headshot.png",
-      richard: "/images/clients/richard-headshot.png"
+      richard: "/images/clients/richard-headshot.png",
+      vince: "/images/clients/vince-headshot.jpg",
+      david: "/images/clients/david-headshot.jpg",
     },
     home: {
       spendControl: "/images/home/spend-control.webp",
@@ -70,6 +73,7 @@ export const footerCompanyLinks: NavLink[] = [
   { label: "Case Studies", href: "/cases" },
   { label: "Download Case Studies", href: "/case-studies" },
   { label: "Blog", href: "/blog" },
+  { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" }
 ];
 
@@ -77,7 +81,11 @@ export const footerSolutionLinks: NavLink[] = [
   { label: "Data Quality", href: "/data-quality" },
   { label: "Procurement", href: "/procurement-data-quality" },
   { label: "Asset Data Management", href: "/asset-data-management" },
-  { label: "UNSPSC", href: "/unspsc" },
+  { label: "UNSPSC Classification", href: "/unspsc" },
+  { label: "Free UNSPSC Lookup", href: "/unspsc-code-lookup" },
+  { label: "UNSPSC for FM", href: "/unspsc-classification-facilities-management" },
+  { label: "UNSPSC Netherlands", href: "/unspsc-classification-netherlands" },
+  { label: "UNSPSC Germany", href: "/unspsc-classification-germany" },
   { label: "Fabric Ready", href: "/fabric" },
   { label: "AI Readiness", href: "/ai-readiness" }
 ];

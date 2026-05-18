@@ -177,7 +177,8 @@
       "title": "Neueste Einblicke",
       "lead": "Praxisleitfäden, Branchenanalysen und Data Qualitysdenken für technische Unternehmen.",
       "readArticle": "Artikel lesen",
-      "viewAll": "Alle Artikel anzeigen"
+      "viewAll": "Alle Artikel anzeigen",
+      "faq": "FAQ durchsuchen"
     }
   },
   "About": {
@@ -746,6 +747,27 @@
       "title": "Bereit, Ihre Beschaffungsklassifizierung zu automatisieren?",
       "lead": "Buchen Sie ein 7-Minuten-Entdeckungsgespräch. Wir zeigen Ihnen genau, wie die Klassifizierungsengine mit Ihren Daten funktionieren würde.",
       "button": "7-Minuten-Entdeckungsgespräch buchen"
+    },
+    "stats": {
+      "s1": {
+        "title": "Zeilen pro Monat (Strukton)",
+        "copy": "Ein großer niederländischer Infrastrukturauftragnehmer verarbeitet 35.000 procurement Zeilen pro Monat über Pearstop mittels SAP Integration."
+      },
+      "s2": {
+        "title": "Auto-Klassifizierungsrate",
+        "copy": "90-95 % der Zeilen werden automatisch auf Warenebene klassifiziert, ohne dass Ihr Team sie manuell bearbeitet."
+      },
+      "s3": {
+        "title": "Reduzierung des manuellen Aufwands",
+        "copy": "Kunden reduzieren typischerweise den manuellen Aufwand für procurement Daten um 70-90 %, wodurch buyer für category strategy und contract negotiation freigestellt werden."
+      }
+    },
+    "related": {
+      "label": "Weitere UNSPSC Ressourcen",
+      "fm": "UNSPSC für FM und Hard Services",
+      "nl": "UNSPSC in den Niederlanden",
+      "de": "UNSPSC in Deutschland",
+      "faq": "Vollständige FAQ"
     }
   },
   "Fabric": {
@@ -1118,6 +1140,442 @@
       "lead": "Wir können Ihnen denselben Gedankengang auch in einem kurzen Anruf vorstellen.",
       "bookDiscovery": "7-Minuten-Entdeckungsgespräch buchen",
       "backHome": "Zurück zur Startseite"
+    }
+  },
+  "Faq": {
+    "meta": {
+      "title": "Häufig gestellte Fragen | Pearstop",
+      "description": "Antworten auf die häufigsten Fragen zu Pearstops UNSPSC classification, procurement data quality, Asset-Datenmanagement und wie der Service funktioniert."
+    },
+    "hero": {
+      "eyebrow": "FAQ",
+      "title": "Fragen, die uns am häufigsten gestellt werden.",
+      "lead": "Alles, was Sie wissen müssen über wie Pearstop funktioniert, was es kostet und ob es für Ihr Unternehmen geeignet ist.",
+      "cta": "Buchen Sie ein 7-minütiges Kennenlerngespräch",
+      "secondary": "Zu den Fragen springen"
+    },
+    "sections": {
+      "general": {
+        "title": "Was ist UNSPSC-Klassifizierung?",
+        "items": [
+          {
+            "q": "Was ist UNSPSC-Klassifizierung und warum ist sie wichtig für procurement?",
+            "a": "UNSPSC (United Nations Standard Products and Services Code) ist eine globale vierstufige Hierarchie – Segment, Family, Class, Commodity –, die verwendet wird, um jedes Produkt und jede Dienstleistung zu kategorisieren, die ein Unternehmen einkauft. Ohne sie sind procurement spend Daten eine Sammlung von Freitext-invoice-Positionen, die nicht verglichen, aggregiert oder analysiert werden können. Mit konsistent angewendeten UNSPSC codes können procurement Teams genau sehen, was sie nach Kategorie ausgeben, supplier-Preise benchmarken, die supplier-Basis konsolidieren und genaue Kostenschätzungen für tenders erstellen. Sie ist die Grundlage, die category management ermöglicht."
+          },
+          {
+            "q": "Was ist die richtige UNSPSC-Ebene für die Klassifizierung – Segment, Family, Class oder Commodity?",
+            "a": "Commodity-Ebene (alle 8 Ziffern"
+          },
+          {
+            "q": "What is the difference between UNSPSC and eClass or CPV codes?",
+            "a": "UNSPSC is a global four-level taxonomy covering all products and services, widely used in private sector procurement for spend analytics and category management. eClass is more precise for industrial and engineering master data because it includes product attribute definitions alongside codes — better suited for technical parts catalogues than for spend analysis. CPV (Common Procurement Vocabulary) is mandated only for EU public procurement tender notices and is not used for internal spend management. For European companies managing procurement data across FM, infrastructure, and manufacturing, UNSPSC is the most practical and widely supported standard."
+          },
+          {
+            "q": "How does UNSPSC classification work when invoice descriptions are in Dutch, German, or French?",
+            "a": "Pearstop's classification engine handles Dutch, German, and French-language invoice descriptions natively, including field engineer abbreviations, technical shorthand, and mixed-language lines where a Dutch description includes English product names. The LLM layer has strong multilingual capability and understands industry-specific terminology across languages. No pre-processing or translation is required before classification."
+          },
+          {
+            "q": "What is the difference between UNSPSC and a custom internal spend taxonomy?",
+            "a": "A custom taxonomy is faster to build and can be tuned to your internal reporting structure, but it creates an island — your spend data cannot be benchmarked against industry peers, and every supplier or system integration requires a custom mapping. UNSPSC is the international standard used by organisations worldwide, which means classified data is directly comparable across companies, can feed into Peppol e-invoicing networks, and is understood by all major ERP and BI platforms without custom connectors."
+          }
+        ]
+      },
+      "unspsc": {
+        "title": "Accuracy and automation",
+        "items": [
+          {
+            "q": "What accuracy rate should I expect from automated UNSPSC classification?",
+            "a": "Pearstop's four-layer engine — rules, machine learning, LLM, and human review — achieves 90–95% automatic classification at commodity level on typical procurement datasets. This is measured on real client data including Dutch infrastructure and FM spend where descriptions are inconsistent and multilingual, not on clean test datasets. The remaining 5–10% is flagged for human review. Each reviewed decision feeds back into the engine, so the auto-classification rate improves over time and typically exceeds 95% after 12 months of operation."
+          },
+          {
+            "q": "Can automated UNSPSC classification work with messy or incomplete invoice descriptions?",
+            "a": "Yes — messy data is exactly what Pearstop is built for. The engine uses multiple signals beyond the line item description: supplier identity, GL account, cost element, purchase history, and the LLM layer's broad product knowledge. A description like 'elektra H3 Q2' or a bare part number gets classified correctly because the engine triangulates from supplier patterns and GL context, not just the text string. Rules-based tools fail on this kind of data. Pearstop's ML and LLM layers are specifically designed for it."
+          },
+          {
+            "q": "How does AI-based UNSPSC classification compare to manual classification by a consultant or buyer?",
+            "a": "Manual classification by an experienced buyer typically achieves 70–80% consistency — different people assign different codes to the same description, and fatigue increases error rates at scale. It also cannot keep pace: a team processing 10,000 invoice lines per month needs one to two dedicated staff working continuously. Pearstop's automated engine achieves 90–95% consistency at commodity level, processes months of historical data in days, and improves over time. The human review queue — typically 500–1,000 items per 10,000 lines — takes 20–30 minutes per month, not full-time headcount."
+          },
+          {
+            "q": "How long does it take to classify a full year of historical invoice data?",
+            "a": "A full historical dataset — typically 12–24 months of purchase orders or invoice lines — is classified and returned within four to six weeks. This includes the Data Stability Baseline phase where accuracy is validated and your team reviews the flagged items. Ongoing monthly classification of new invoice data runs automatically with no additional setup."
+          },
+          {
+            "q": "What happens if UNSPSC classification is wrong — what are the risks of misclassification?",
+            "a": "Misclassification at the commodity level creates two practical problems. First, category analysis is wrong — spend that belongs in HVAC maintenance appears in electrical maintenance, distorting supplier benchmarking and contract negotiations. Second, downstream systems that use the codes — Peppol invoicing, ERP reporting, BI dashboards — produce unreliable outputs. Pearstop's confidence-threshold system surfaces items the engine is uncertain about for human review, rather than assigning a wrong code silently. The review queue is where misclassification risk is managed, not eliminated from the process entirely."
+          },
+          {
+            "q": "What if we have no existing classification data to train on?",
+            "a": "Pearstop's engine performs strongly without existing priors. The rules layer applies supplier and GL-based patterns immediately. The ML layer is pre-trained on a broad corpus of procurement transactions across industries. The LLM layer brings deep product and industry knowledge that covers gaps the ML layer has not seen before. Many Pearstop clients start with years of unclassified SAP data and achieve 90%+ auto-classification on the first run."
+          }
+        ]
+      },
+      "process": {
+        "title": "Costs, timelines, and ROI",
+        "items": [
+          {
+            "q": "What is the ROI of UNSPSC classification — what cost savings can I expect?",
+            "a": "The ROI comes from three places. First, supplier consolidation: a classified spend baseline typically reveals 20–40% of spend in categories where the supplier base can be reduced and pricing renegotiated. Second, tender pricing accuracy: companies that price tenders from classified spend data rather than estimates reduce margin risk by having a factual cost baseline. Third, headcount: automated classification reduces manual data processing by 70–90%, freeing buyers and analysts for work that directly affects commercial outcomes. Clients typically recover the cost of the service within the first negotiation cycle."
+          },
+          {
+            "q": "Which procurement data solution works best for companies with messy invoice data?",
+            "a": "For companies with inconsistent, free-text invoice data from SAP or other ERP systems — which describes most hard services FM, infrastructure, and manufacturing procurement — an AI-powered classification engine that combines rules, ML, and LLM layers outperforms both manual processes and simple rules-based tools. Pearstop is specifically built for this profile: European companies with high invoice volumes, multilingual data, and spend spread across hundreds of suppliers and sites."
+          },
+          {
+            "q": "What are the best UNSPSC classification tools for supplier consolidation?",
+            "a": "Supplier consolidation requires commodity-level spend visibility across your entire supplier base — which means your classification tool must reach commodity level (8-digit codes), not just segment or family level. Tools that classify at segment level will show you that you spend heavily on maintenance but not which maintenance commodities are fragmented across too many suppliers. Pearstop classifies to commodity level as standard, which is what makes the supplier consolidation analysis meaningful."
+          },
+          {
+            "q": "Which UNSPSC classification tools help reduce manual effort in tender pricing for infrastructure projects?",
+            "a": "Tender pricing for infrastructure projects requires an accurate cost baseline by category — knowing what you paid for specific materials, services, and subcontractor work on comparable projects. UNSPSC classification of historical spend creates exactly this baseline. Pearstop clients use classified historical spend data to price new tenders from actual cost experience rather than estimations, reducing both the time to produce a bid and the margin risk in the final price."
+          },
+          {
+            "q": "How do I build a reliable spend baseline from messy historical SAP data?",
+            "a": "The fastest route is to export 12–24 months of purchase order or invoice data from SAP (transaction ME2M or ME2N for POs, or an accounts payable export for invoices) and run it through an automated classification engine. Pearstop's Data Stability Baseline engagement does exactly this: classify the full historical dataset, validate accuracy, surface the items for human review, and return a clean UNSPSC-coded spend file. The whole process takes four to six weeks and requires minimal input from your team."
+          }
+        ]
+      },
+      "technical": {
+        "title": "Integration and technical setup",
+        "items": [
+          {
+            "q": "Which UNSPSC classification software integrates with SAP, Oracle, or existing ERP systems?",
+            "a": "Pearstop integrates with SAP (ECC and S/4HANA), Oracle, AFAS, and all major ERP and P2P platforms via CSV export or direct API connection. No SAP configuration changes are required — data is exported in standard format, classified, and returned ready to load back into SAP as a material attribute or to feed into SAP Analytics Cloud or Power BI. For ongoing monthly classification, the export-classify-return cycle can be fully automated."
+          },
+          {
+            "q": "Can UNSPSC classification tools integrate with existing supplier databases and master data?",
+            "a": "Yes. Pearstop can incorporate existing supplier master data — supplier codes, approved supplier lists, commodity assignments — as input to the rules layer. This means existing manual classifications you trust are preserved and used as high-confidence priors, while gaps in the supplier master are filled by the ML and LLM layers. The output can be returned in formats compatible with SAP MDG, Oracle Product Hub, or custom supplier master structures."
+          },
+          {
+            "q": "Can AI classify UNSPSC codes directly from PDF invoices?",
+            "a": "Pearstop works from structured data extracted from your ERP system, not raw PDF invoices. PDF invoice processing requires a separate OCR and data extraction layer before classification. For companies whose invoices live in ERP systems (SAP, Oracle, AFAS), the structured export is the fastest and most reliable input. For companies receiving invoices only as PDFs without ERP capture, Pearstop can discuss a combined extraction and classification approach."
+          },
+          {
+            "q": "Does Pearstop work with Microsoft Fabric or Power BI for spend analytics?",
+            "a": "Ja. Klassifizierte spend Daten von Pearstop fließen direkt in Microsoft Fabric, Power BI, Tableau und alle gängigen BI- und Analyseplattformen. UNSPSC Codes sind konsistent und hierarchisch, was bedeutet, dass Sie Drill-down spend Dashboards von der Commodity- bis zur Segmentebene ohne benutzerdefinierte Datenaufbereitung erstellen können. Pearstop bietet auch einen dedizierten Fabric Readiness Service für Unternehmen, die eine Microsoft Fabric Migration vorbereiten – um sicherzustellen, dass die zugrunde liegenden procurement Daten sauber sind, bevor sie geladen werden."
+          },
+          {
+            "q": "Wie werden procurement Daten sicher gehandhabt – GDPR und Vertraulichkeit?",
+            "a": "Pearstop verarbeitet Kundendaten unter strengen Vertraulichkeitsvereinbarungen. Daten werden nicht an Dritte weitergegeben oder zum Trainieren von Modellen verwendet, die andere Kunden bedienen. Die Verarbeitung ist GDPR-konform mit Datenresidenz in Europa. Spezifische Vereinbarungen, einschließlich Datenaufbewahrungsfristen und Übertragungsprotokolle, werden während des Onboarding-Prozesses schriftlich vereinbart."
+          }
+        ]
+      },
+      "industries": {
+        "title": "Welche Unternehmen profitieren am meisten?",
+        "items": [
+          {
+            "q": "Welche procurement Datenlösungen eignen sich am besten für Infrastruktur- und facilities management Unternehmen?",
+            "a": "FM und Infrastrukturunternehmen stehen vor einer spezifischen Kombination von Herausforderungen: hohe Rechnungsvolumen, dezentraler Einkauf über mehrere Standorte, Freitextbeschreibungen, die von Außendiensttechnikern statt von buyer verfasst wurden, und spend, der sich auf Hunderte oder Tausende von supplier verteilt. Regelbasierte Tools versagen bei den Edge Cases. Generischen AI Tools fehlt procurement Domänenwissen. Pearstops vierstufige Engine – Regeln, ML, LLM und menschliche Überprüfung – ist speziell für dieses Profil entwickelt. Zu den aktuellen Kunden gehören ein großer niederländischer Infrastrukturunternehmer, der 35.000 Zeilen pro Monat verarbeitet, und europäische FM Unternehmen, die Wartungs- und MRO spend über Multi-Site-Betriebe hinweg verwalten."
+          },
+          {
+            "q": "Warum haben Infrastrukturunternehmen Schwierigkeiten mit procurement Datenqualität und spend Transparenz?",
+            "a": "Infrastruktur procurement ist strukturell fragmentiert. Der Einkauf erfolgt auf Projektebene, nicht zentral – Standortleiter, Projekt buyer und Subunternehmer erstellen alle purchase order ohne konsistente Kodierungsdisziplin. SAP erfasst die Transaktionen, aber nicht die Kategorielogik. Das Ergebnis sind Jahre von spend Daten, die nicht sinnvoll über Projekte hinweg aggregiert werden können, was supplier Konsolidierung, benchmark Preisgestaltung und Kategoriestrategie ohne eine Klassifizierungsebene praktisch unmöglich macht."
+          },
+          {
+            "q": "Was verursacht unzuverlässige spend Baselines in procurement – und wie behebt UNSPSC dies?",
+            "a": "Unzuverlässige spend Baselines resultieren aus drei Hauptursachen: inkonsistente Beschreibungen (derselbe Artikel erscheint unter Dutzenden von Bezeichnungen), fehlende Codes (purchase order, die ohne Kategoriezuteilung erstellt wurden) und Systemfragmentierung (spend, der über SAP, Altsysteme und Tabellenkalkulationen ohne einheitliche Taxonomie verteilt ist). Die UNSPSC Klassifizierung löst alle drei Probleme, indem sie jedem Posten einen konsistenten vierstufigen Code zuweist, unabhängig davon, wie er beschrieben wurde oder aus welchem System er stammte. Das Ergebnis ist eine einzige spend Baseline, der für Verhandlungen, tender Preisgestaltung und Kategoriestrategie vertraut werden kann."
+          },
+          {
+            "q": "Welche UNSPSC Klassifizierungslösung ist am besten für MRO spend in der Fertigung?",
+            "a": "MRO spend ist die am schwierigsten zu klassifizierende Kategorie, da die Teilebeschreibungen bei supplier, Standorten und Ingenieuren enorm variieren – und viele Zeilen nur Teilenummern ohne jegliche Beschreibung sind. Die Klassifizierungs-Engine benötigt supplier Kontext, Kontierungslogik und LLM-Niveau Produktwissen, um dies gut zu handhaben. Pearstops Ansatz kombiniert alle drei. Für MRO Kunden bietet Pearstop zusätzlich zur UNSPSC Klassifizierung auch eine Teilenummernanreicherung an – die Identifizierung des OEM Herstellers und des Direktbeschaffungspreises für jedes Teil, was der Hebel zur Reduzierung der MRO Kosten durch direkten Bezug vom Hersteller ist."
+          },
+          {
+            "q": "Welches",
+            "a": "Pearstop is specifiek gebouwd voor Nederlandse en Europese infrastructuur-, facilitaire- en bouwbedrijven. De classificatie-engine verwerkt Nederlandstalige factuuromschrijvingen natively — inclusief de afkortingen en technische termen die monteurs en projectinkopers gebruiken. Pearstop classificeert momenteel 35.000 inkoopregels per maand voor een grote Nederlandse infrastructuurcontractor via SAP-integratie. Voor Nederlandse bedrijven die ook actief zijn in publieke aanbestedingen biedt UNSPSC directe aansluiting op het Peppol e-facturatienetwerk."
+          }
+        ]
+      }
+    },
+    "stillHaveQuestions": {
+      "label": "Still have a question?",
+      "copy": "If your question is not answered here, the fastest way to get an answer is a 7-minute discovery call. There is no sales pressure — it is a direct conversation about your data situation.",
+      "cta": "Book a 7-minute discovery",
+      "email": "Send us a message"
+    },
+    "cta": {
+      "title": "Ready to see it in action?",
+      "lead": "Book a 7-minute discovery and we will show you exactly how the classification engine works with your data.",
+      "button": "Book a 7-minute discovery"
+    }
+  },
+  "UnspscFM": {
+    "meta": {
+      "title": "UNSPSC Classification for Facilities Management | Pearstop",
+      "description": "Automated UNSPSC classification for hard services and FM companies. Classify maintenance, MRO, and subcontractor spend across multi-site operations without manual effort."
+    },
+    "hero": {
+      "eyebrow": "UNSPSC for Facilities Management",
+      "title": "FM procurement data is the hardest to classify. Here is how to fix it.",
+      "lead": "Hard services and FM companies manage thousands of invoice lines across hundreds of suppliers and sites. Pearstop classifies all of it automatically — 90–95% without human input — so your team can focus on category management, not data entry.",
+      "cta": "Book a 7-minute discovery",
+      "secondary": "How it works"
+    },
+    "challenge": {
+      "eyebrow": "The problem",
+      "title": "Why FM spend is uniquely difficult to classify",
+      "lead": "FM companies face three procurement data problems that most tools are not built for.",
+      "p1": {
+        "title": "Descriptions written by engineers, not buyers",
+        "copy": "Invoice lines like 'elektra werkzaamheden Q3' or 'pump seal replacement unit 4B' are meaningful on-site but impossible to classify consistently at scale. The same physical work appears under dozens of different strings across sites."
+      },
+      "p2": {
+        "title": "Thousands of suppliers, zero consistency",
+        "copy": "A large FM operation may buy from 500–3,000 suppliers. Each invoices differently. Without a consistent classification layer, spend data cannot be aggregated or compared — making category management guesswork."
+      },
+      "p3": {
+        "title": "Manual classification cannot keep pace",
+        "copy": "At 5,000–35,000 invoice lines per month, manual UNSPSC classification requires one or two dedicated staff working continuously just to stay current."
+      }
+    },
+    "solution": {
+      "eyebrow": "How Pearstop works",
+      "title": "Four layers of classification. One clean spend dataset.",
+      "lead": "Pearstop's engine handles 90–95% of FM spend lines automatically — and gets better the longer you use it.",
+      "step1": {
+        "title": "Rules Engine",
+        "copy": "Supplier-specific and GL-specific rules handle high-volume, high-confidence classifications immediately."
+      },
+      "step2": {
+        "title": "Machine Learning",
+        "copy": "An ML layer trained on your spend history replicates the classification logic your best category managers apply."
+      },
+      "step3": {
+        "title": "LLM Layer",
+        "copy": "Ambiguous descriptions, foreign-language lines, and edge cases are resolved by a large language model with deep product and industry knowledge."
+      },
+      "step4": {
+        "title": "Human Review",
+        "copy": "Items below the confidence threshold are flagged for your team. Every decision feeds back into the engine."
+      }
+    },
+    "stats": {
+      "title": "What clients see in practice",
+      "s1": {
+        "title": "Automatic classification rate",
+        "copy": "90–95 % der invoice-Zeilen werden nach der anfänglichen Lernphase ohne menschliches Zutun klassifiziert."
+      },
+      "s2": {
+        "title": "Zeilen pro Monat — Strukton",
+        "copy": "Verarbeitung von 35.000 procurement-Zeilen monatlich für einen großen niederländischen Infrastruktur-Dienstleister."
+      },
+      "s3": {
+        "title": "Reduzierung des manuellen Aufwands",
+        "copy": "FM-Teams reduzieren typischerweise die manuelle Datenarbeit um 70–90 %, wodurch buyer für die category strategy entlastet werden."
+      }
+    },
+    "faq": {
+      "title": "Häufige Fragen",
+      "items": [
+        {
+          "q": "Welche UNSPSC Segmente gelten für facilities management?",
+          "a": "Die gängigsten Segmente für FM sind Segment 72 (Bau- und Wartungsdienstleistungen), Segment 76 (Industrielle Reinigungsdienstleistungen), Segment 80 (Management- und Verwaltungsdienstleistungen) und Segment 73 (Industrielle Produktion). Hard services FM-Unternehmen verzeichnen typischerweise das höchste spend-Volumen in Segment 72, das Elektrik, HVAC, Sanitär und Gebäudewartung umfasst."
+        },
+        {
+          "q": "Warum ist UNSPSC-Klassifizierung schwierig für FM-Unternehmen?",
+          "a": "FM-Unternehmen kaufen bei Hunderten von Lieferanten an dezentralen Standorten ein. invoice-Positionen sind oft Freitextbeschreibungen, die von Außendiensttechnikern und nicht von procurement-Teams verfasst wurden. Manuelle Klassifizierung in diesem Umfang erfordert ein oder zwei engagierte Mitarbeiter, die kontinuierlich arbeiten, nur um Schritt zu halten."
+        },
+        {
+          "q": "Wie lange dauert UNSPSC-Klassifizierung für ein FM-Unternehmen?",
+          "a": "Eine initiale Klassifizierung eines vollständigen spend-Datensatzes ist typischerweise innerhalb von vier bis sechs Wochen abgeschlossen, einschließlich einer Baseline zur Datenstabilität zur Validierung der Genauigkeit. Die fortlaufende monatliche Klassifizierung läuft automatisch ab."
+        },
+        {
+          "q": "Integriert Pearstop sich mit FM-spezifischen Systemen wie Maximo oder ServiceNow?",
+          "a": "Pearstop empfängt Daten per CSV-Export oder direkter API-Verbindung und gibt klassifizierte Daten im gleichen Format zurück, kompatibel mit jedem CAFM- oder CMMS-System einschließlich IBM Maximo, ServiceNow, Planon und SAP PM."
+        },
+        {
+          "q": "Welche Genauigkeitsrate können FM-Unternehmen erwarten?",
+          "a": "Pearstops vierstufige Engine erreicht eine automatische Klassifizierung von 90–95 % bei typischen FM spend-Datensätzen. Die verbleibenden 5–10 % werden zur manuellen Überprüfung markiert, und jede überprüfte Entscheidung fließt zurück in die Engine."
+        }
+      ]
+    },
+    "related": {
+      "label": "Related",
+      "copy": "Explore the full UNSPSC classification service, real FM case studies, and the broader procurement data quality offering.",
+      "link1": "UNSPSC Classification",
+      "link2": "Case Studies",
+      "link3": "Procurement Data Quality"
+    },
+    "cta": {
+      "title": "Ready to automate FM procurement classification?",
+      "lead": "Book a 7-minute discovery. We will show you exactly how the engine works with your spend data.",
+      "button": "Book a 7-minute discovery"
+    }
+  },
+  "UnspscNL": {
+    "meta": {
+      "title": "UNSPSC Classificatie Nederland | Geautomatiseerde Inkoopclassificatie | Pearstop",
+      "description": "Geautomatiseerde UNSPSC classificatie voor Nederlandse inkoop- en procurement teams. Pearstop classificeert inkoopdata vanuit SAP, AFAS, en andere ERP-systemen — inclusief Peppol-ondersteuning."
+    },
+    "hero": {
+      "eyebrow": "UNSPSC Classificatie Nederland",
+      "title": "UNSPSC classificatie voor Nederlandse infrastructuur-, FM-, en bouwbedrijven.",
+      "lead": "Pearstop automatiseert de classificatie van inkoopregels naar UNSPSC-standaard — 90–95% zonder handmatige inspanning. Inclusief ondersteuning voor Peppol e-facturatie en Nederlandse ERP-systemen.",
+      "cta": "Boek een 7-minuten discovery",
+      "secondary": "Peppol en UNSPSC"
+    },
+    "peppol": {
+      "eyebrow": "Peppol en UNSPSC in Nederland",
+      "title": "Waarom Nederlandse bedrijven nu aan UNSPSC classificatie werken",
+      "lead": "Peppol e-facturatie is verplicht voor overheidsinkoop in Nederland. UNSPSC is de internationale standaard die daarbij aansluit.",
+      "b1": {
+        "title": "Peppol vereist gestructureerde productcodes",
+        "copy": "Het Peppol-netwerk vereist gestructureerde, machineleesbare factuurdata. UNSPSC is de meest gebruikte internationale classificatiestandaard die hieraan voldoet."
+      },
+      "b2": {
+        "title": "Consistente categorisering over leveranciers heen",
+        "copy": "Met UNSPSC krijgt elke inkooporder een consistente categorie — ongeacht de leverancier of het systeem."
+      },
+      "b3": {
+        "title": "Spend-zichtbaarheid voor categoriebeheer",
+        "copy": "Een geclassificeerd inkoopbestand is de basis voor categoriebeheer, contractonderhandeling, en het identificeren van besparingsmogelijkheden."
+      }
+    },
+    "challenge": {
+      "eyebrow": "De aanpak",
+      "title": "Hoe Pearstop Nederlandse inkoopdata classificeert",
+      "lead": "Pearstop verwerkt inkoopdata uit SAP, AFAS, Oracle, en andere systemen — inclusief Nederlandstalige omschrijvingen."
+    },
+    "solution": {
+      "step1": {
+        "title": "Data-export uit uw ERP",
+        "copy": "Exporteer inkooporders, factuurregels, of een combinatie — via CSV of directe API-verbinding vanuit SAP, AFAS, of een ander systeem."
+      },
+      "step2": {
+        "title": "Automatische classificatie",
+        "copy": "Pearstop's vier-laags engine classificeert 90–95% van de regels automatisch, inclusief Nederlandstalige omschrijvingen."
+      },
+      "step3": {
+        "title": "Menselijke review van twijfelgevallen",
+        "copy": "De resterende 5–10% wordt ter beoordeling aangeboden aan uw team. Elke beslissing verbetert het model."
+      },
+      "step4": {
+        "title": "Geclassificeerde data terug in uw systeem",
+        "copy": "Die klassifizierte Datei wird in Ihrem Originalformat zurückgegeben — bereit für SAP, Power BI oder Peppol-Rechnungsstellung."
+      }
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "items": [
+        {
+          "q": "Ist UNSPSC-Klassifizierung in den Niederlanden Pflicht?",
+          "a": "UNSPSC ist keine gesetzliche Pflicht in den Niederlanden, wird aber zunehmend als best-practice Standard verwendet. Peppol E-Rechnungsstellung, verpflichtend für den öffentlichen Einkauf, erfordert strukturierte Produktcodes, wobei UNSPSC der am häufigsten verwendete internationale Standard ist."
+        },
+        {
+          "q": "Was ist Peppol und wie verhält es sich zu UNSPSC?",
+          "a": "Peppol ist das E-Rechnungsnetzwerk, das für den öffentlichen Einkauf in den Niederlanden verpflichtend ist. Peppol erfordert strukturierte invoice-Daten einschließlich Produkt- und Dienstleistungscodes. UNSPSC ist der am häufigsten verwendete Klassifizierungsstandard, der hierzu passt."
+        },
+        {
+          "q": "Was ist UNSPSC-Klassifizierung und warum ist sie wichtig?",
+          "a": "UNSPSC steht für United Nations Standard Products and Services Code. Ohne UNSPSC sind procurement-Daten schwer zu analysieren — mit UNSPSC erhält jede purchase order eine konsistente Kategorie, wodurch spend-analyse, Lieferantenkonsolidierung und category management ermöglicht werden."
+        },
+        {
+          "q": "Welche niederländischen Unternehmen benötigen UNSPSC-Klassifizierung am meisten?",
+          "a": "Niederländische Infrastruktur-Contractors, facility management-Dienstleister und Bauunternehmen haben typischerweise den größten Bedarf an UNSPSC-Klassifizierung."
+        },
+        {
+          "q": "Wie klassifiziert Pearstop niederländische procurement-Daten?",
+          "a": "Pearstop empfängt procurement-Daten per CSV oder direkter API-Verbindung aus niederländischen ERP-Systemen einschließlich SAP, Oracle und AFAS. Die vierstufige Klassifizierungs-Engine verarbeitet auch niederländischsprachige invoice-Beschreibungen."
+        }
+      ]
+    },
+    "related": {
+      "label": "Gerelateerd",
+      "copy": "Bekijk de volledige UNSPSC classificatiedienst, Nederlandse cases, en de FM-specifieke aanpak.",
+      "link1": "UNSPSC Classificatie",
+      "link2": "Cases",
+      "link3": "UNSPSC voor Facilitaire Diensten"
+    },
+    "cta": {
+      "title": "Klaar om uw inkoopclassificatie te automatiseren?",
+      "lead": "Boek een 7-minuten discovery. We laten u zien hoe de classificatie-engine met uw data werkt.",
+      "button": "Boek een 7-minuten discovery"
+    }
+  },
+  "UnspscDE": {
+    "meta": {
+      "title": "UNSPSC Klassifizierung Deutschland | Automatisierte Beschaffungsklassifizierung | Pearstop",
+      "description": "Automatisierte UNSPSC-Klassifizierung für deutsche Beschaffungsteams. Pearstop klassifiziert Einkaufsdaten aus SAP und anderen ERP-Systemen — mit Unterstützung für die deutsche E-Rechnungspflicht 2025."
+    },
+    "hero": {
+      "eyebrow": "UNSPSC Klassifizierung Deutschland",
+      "title": "UNSPSC-Klassifizierung für deutsche Fertigungs-, FM- und Infrastrukturunternehmen.",
+      "lead": "Pearstop automatisiert die Klassifizierung von Einkaufszeilen nach UNSPSC-Standard — 90–95% ohne manuellen Aufwand. Mit Unterstützung für die deutsche E-Rechnungspflicht 2025 und SAP-Integration.",
+      "cta": "7-minütige Discovery buchen",
+      "secondary": "E-Rechnung und UNSPSC"
+    },
+    "einvoicing": {
+      "eyebrow": "E-Rechnungspflicht 2025 und UNSPSC",
+      "title": "Warum deutsche Unternehmen jetzt an strukturierter Produktcodierung arbeiten",
+      "lead": "Das Wachstumschancengesetz 2025 verpflichtet deutsche Unternehmen zur strukturierten B2B-E-Rechnung. UNSPSC ist der internationale Standard, der dies ermöglicht.",
+      "b1": {
+        "title": "E-Rechnungspflicht erfordert Produktcodes",
+        "copy": "Die deutsche E-Rechnungspflicht 2025 erfordert strukturierte, maschinenlesbare Rechnungsdaten. UNSPSC bietet das international anerkannte Klassifizierungssystem, das diese Anforderung erfüllt."
+      },
+      "b2": {
+        "title": "Konsistente Kategorisierung über Lieferanten hinweg",
+        "copy": "Mit UNSPSC erhält jede Bestellung eine konsistente Kategorie — unabhängig von Lieferant oder System."
+      },
+      "b3": {
+        "title": "Ausgabentransparenz für das Kategoriemanagement",
+        "copy": "Eine klassifizierte Einkaufsdatenbasis ist die Grundlage für Kategoriemanagement, Vertragsverhandlungen und Einsparidentifikation."
+      }
+    },
+    "solution": {
+      "eyebrow": "Wie Pearstop vorgeht",
+      "title": "Wie Pearstop deutsche Einkaufsdaten klassifiziert",
+      "lead": "Pearstop verarbeitet Einkaufsdaten aus SAP, Oracle und anderen deutschen ERP-Systemen — einschließlich deutschsprachiger Beschreibungen.",
+      "step1": {
+        "title": "Datenexport aus Ihrem ERP",
+        "copy": "Exportieren Sie Bestellungen, Rechnungszeilen oder beides — per CSV oder direkter API-Verbindung aus SAP, Oracle oder einem anderen System."
+      },
+      "step2": {
+        "title": "Automatische Klassifizierung",
+        "copy": "Pearstops vier-schichtige Engine klassifiziert 90–95% der Zeilen automatisch, einschließlich deutschsprachiger Beschreibungen."
+      },
+      "step3": {
+        "title": "Manuelle Überprüfung von Grenzfällen",
+        "copy": "Die verbleibenden 5–10% werden Ihrem Team zur Überprüfung vorgelegt. Jede Entscheidung verbessert das Modell."
+      },
+      "step4": {
+        "title": "Klassifizierte Daten zurück in Ihr System",
+        "copy": "Die klassifizierte Datei wird in Ihrem Originalformat zurückgegeben — bereit für SAP, Power BI oder E-Rechnungssysteme."
+      }
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "items": [
+        {
+          "q": "Ist UNSPSC-Klassifizierung in Deutschland Pflicht?",
+          "a": "UNSPSC ist keine gesetzliche Pflicht, aber die E-Rechnungspflicht 2025 erfordert strukturierte Produktcodes. UNSPSC ist der meistgenutzte internationale Standard, der diese Anforderung erfüllt."
+        },
+        {
+          "q": "Wie wirkt sich die deutsche E-Rechnungspflicht auf die Beschaffungsklassifizierung aus?",
+          "a": "Die E-Rechnungspflicht 2025 erfordert strukturierte, maschinenlesbare Rechnungsdaten für B2B-Transaktionen. UNSPSC bietet ein konsistentes, international anerkanntes Codierungssystem, das diese Anforderung erfüllt."
+        },
+        {
+          "q": "Was ist UNSPSC-Klassifizierung und warum brauchen deutsche Unternehmen sie?",
+          "a": "UNSPSC steht für United Nations Standard Products and Services Code. Deutsche Unternehmen nutzen UNSPSC, um Einkaufsausgaben zu kategorisieren, Lieferanten zu vergleichen und die Ausgabentransparenz zu verbessern."
+        },
+        {
+          "q": "Welche deutschen Branchen profitieren am meisten?",
+          "a": "Deutsche Fertigungsunternehmen, Maschinenbauunternehmen, Facility-Management-Unternehmen und Infrastrukturunternehmen profitieren am meisten. Fertigungsunternehmen mit großem MRO-Anteil gewinnen besonders durch konsistente Teilecodierung."
+        },
+        {
+          "q": "Kann Pearstop deutschsprachige Einkaufsdaten klassifizieren?",
+          "a": "Ja. Pearstops Klassifizierungs-Engine verarbeitet deutschsprachige Rechnungsbeschreibungen nativ, einschließlich gängiger Abkürzungen und technischer Terminologie."
+        }
+      ]
+    },
+    "related": {
+      "label": "Verwandte Seiten",
+      "copy": "Entdecken Sie den vollständigen UNSPSC-Klassifizierungsservice, unsere Niederlande-Seite und den FM-spezifischen Ansatz.",
+      "link1": "UNSPSC Klassifizierung",
+      "link2": "UNSPSC Klassifizierung Niederlande",
+      "link3": "UNSPSC für Facility Management"
+    },
+    "cta": {
+      "title": "Bereit, Ihre Beschaffungsklassifizierung zu automatisieren?",
+      "lead": "Buchen Sie eine 7-minütige Discovery. Wir zeigen Ihnen, wie die Klassifizierungs-Engine mit Ihren Daten funktioniert.",
+      "button": "7-minütige Discovery buchen"
     }
   }
 }

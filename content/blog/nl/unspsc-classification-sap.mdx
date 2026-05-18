@@ -1,0 +1,126 @@
+---
+title: "Hoe UNSPSC Classificatie in SAP te Implementeren"
+description: "Een praktische gids voor het automatiseren van UNSPSC codering in SAP-gebaseerde procurement omgevingen — wat werkt, wat niet werkt, en hoe je van rommelige spend data naar een schone categorie baseline komt."
+publishedAt: "2026-04-14"
+author: "team"
+category: "Procurement"
+tags: ["UNSPSC", "SAP", "Procurement Data"]
+readingTime: "8 min"
+---
+
+## The SAP problem nobody talks about
+
+SAP is het systeem van record voor procurement bij honderden infrastructuur-, productie- en facilities management bedrijven in heel Europa. Het legt purchase orders, goederenontvangsten en invoices vast met indrukwekkende betrouwbaarheid. Wat het niet goed doet — en waarvoor het nooit is ontworpen — is classificeren wat er is gekocht.
+
+SAP slaat line items op als vrije-tekst beschrijvingen ingevoerd door engineers, buyers of suppliers. Dezelfde bout verschijnt als "M8 bolt galvanised," "galv bolt M8," "bolt M8 HDG," en "bolzen M8 verzinkt" op verschillende locaties en bij verschillende suppliers. Een onderhoudstaak kan luiden "elektra werkzaamheden," "electrical works," of simpelweg "works Q3." Zonder consistente classificatie is geen van deze data vergelijkbaar of aggregeerbaar.
+
+UNSPSC lost dit op door een standaard hiërarchie van vier niveaus te bieden — segment, family, class, commodity — die die vrije-tekst beschrijvingen omzet in consistente categorieën. Maar het krijgen van UNSPSC codes in SAP is waar de meeste procurement teams vastlopen.
+
+---
+
+## Three approaches to UNSPSC in SAP
+
+### Option 1: Manual coding in SAP master data
+
+Sommige procurement teams proberen UNSPSC classificatie af te dwingen bij het invoerpunt — door buyers te verplichten een UNSPSC code te selecteren bij het aanmaken van een purchase order of materiaalstamrecord.
+
+Dit klinkt in theorie netjes. In de praktijk faalt het om drie redenen:
+
+- **Buyers kiezen de verkeerde code.** De UNSPSC hiërarchie heeft meer dan 55.000 commodity codes. Zonder diepgaande categoriekennis kiezen buyers standaard de code die het dichtstbij ligt of al in de dropdown staat. Consistentie verdwijnt snel.
+- **Het dekt
+- **It creates admin overhead.** In high-volume procurement environments, adding a mandatory field to every transaction slows down the people who matter most.
+
+### Option 2: Classification via a third-party tool integrated with SAP
+
+Several procurement platforms offer UNSPSC modules that can be integrated directly with SAP via API or middleware. These tools classify spend automatically based on material descriptions, supplier codes, and purchase categories.
+
+The challenge is that most of these tools are rules-based: they work well for standard materials (MRO parts, common consumables) but fail on the unusual, the ambiguous, or the industry-specific terminology that makes up a large share of FM and infrastructure spend.
+
+A rules engine alone typically achieves 60–70% coverage. The remainder sits unclassified or is assigned to a catch-all category that defeats the purpose.
+
+### Option 3: Automated classification outside SAP, with clean data returned
+
+The most practical approach for SAP users is to export spend data — purchase orders, invoices, or a combination — and run it through a classification engine that combines rules, machine learning, and LLM layers. Classified data is then returned in the original format and loaded back into SAP as a material attribute or spend analytics field.
+
+This approach does not require any SAP configuration changes. It works on historical data as well as ongoing transactions. And it handles the edge cases that rules-based tools miss.
+
+---
+
+## What data to export from SAP
+
+For UNSPSC classification, you need at minimum:
+
+- Line item description (the free-text field — usually MAKTX or the PO item text)
+- Supplier name or supplier ID
+- Purchase order value
+- GL account or cost element (useful for routing boost — maintenance costs vs. capital expenditure)
+- Existing material group or commodity code if available (used as a prior by the ML layer)
+
+The export can be done via SAP transaction ME2M or ME2N for purchase orders, or FB03 for invoices. Most teams export to CSV and share via secure file transfer.
+
+---
+
+## What good UNSPSC classification looks like in SAP output
+
+A well-classified SAP spend dataset should achieve:
+
+- **90–95% commodity-level classification** — not just segment or family, but the four-digit commodity code
+- **Consistent coding across sites and suppliers** — the same physical item gets the same code regardless of how it was described in the PO
+- **Minimal "catch-all" codes** — codes like 95121500 (Paper materials) or 80101500 (Management advisory services) should cover only genuinely ambiguous items
+
+Once classified, the data is typically loaded into SAP as a custom field on the purchase order or material master, or fed into a BI layer (SAP Analytics Cloud, Power BI, or Tableau) for spend analysis.
+
+---
+
+## The review queue — and why it matters
+
+Even the best automated classification engines leave some items below the confidence threshold. These items are flagged for human review — typically 5–10% of the dataset.
+
+The critical thing is what happens after review. Every human decision should feed back into the classification model, so the same item type is automatically classified correctly next time. Over six to twelve months of continuous operation, the review queue shrinks to near zero as the model learns from your team's decisions.
+
+This is the difference between a tool that classifies your spend once and a system that gets better the longer you use it.
+
+---
+
+## Timing: how long does it take?
+
+A typical SAP spend classification engagement for a mid-sized infrastructure or FM company:
+
+| Phase | Duration |
+|---|---|
+| Data export and preparation | 1 week |
+| Initial classification baseline (Data Stability Baseline) | 2–3 weeks |
+| Review of flagged items | 1 week |
+| Final classified dataset returned | 4–6 weeks total |
+
+Ongoing monthly classification of new invoice data runs automatically with no additional input from the client team.
+
+---
+
+## Common questions from SAP procurement teams
+
+**Can you classify data from SAP S/4HANA as well as older ECC versions?**
+
+Yes. The classification engine works on exported data regardless of SAP version. The export format is the same for both ECC and S/4HANA.
+
+**What if our material descriptions are in Dutch or German?**
+
+Dutch and German-language descriptions are handled natively. The LLM layer has strong multi-language capability, and the rules layer can be configured with language-specific patterns.
+
+**Do you need access to our SAP system?**
+
+No. Classification runs on an export. Pearstop never needs direct access to your ERP environment.
+
+Wat als we zowel SAP- als non-SAP-systemen hebben?
+
+Gegevens uit meerdere systemen kunnen in één keer worden samengevoegd en geclassificeerd, met een uniforme taxonomie toegepast op alle bronnen.
+
+---
+
+## Next steps
+
+Als uw SAP spend data ongeclassificeerd is — of inconsistent geclassificeerd is over verschillende locaties — is de snelste manier om een spend baseline te verkrijgen een Data Stability Baseline engagement. U exporteert uw spend data, Pearstop classificeert deze en levert binnen vier tot zes weken een schone, UNSPSC-gecodeerde dataset op. Die baseline vormt de basis voor category management, leveranciersconsolidatie en nauwkeurige margebepaling.
+
+[Boek een discovery call van 7 minuten](/contact) om te zien hoe de classificatie-engine zou werken met uw SAP data.
+
+*Gerelateerd leesvoer: [Wat is UNSPSC — en waarom Hard Services bedrijven erom zouden moeten geven](/blog/what-is-unspsc) | [UNSPSC vs. eClass vs. CPV](/blog/unspsc-vs-eclass-vs-cpv)*
