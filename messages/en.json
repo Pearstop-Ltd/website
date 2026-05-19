@@ -1595,5 +1595,69 @@
       "lead": "Buchen Sie eine 7-minütige Discovery. Wir zeigen Ihnen, wie die Klassifizierungs-Engine mit Ihren Daten funktioniert.",
       "button": "7-minütige Discovery buchen"
     }
+  },
+  "UnspscLookup": {
+    "meta": {
+      "title": "Free UNSPSC Code Lookup Tool | Find UNSPSC Codes Instantly | Pearstop",
+      "description": "Free AI-powered UNSPSC code lookup. Paste any product or service description and get the correct 8-digit UNSPSC commodity code with full hierarchy path in seconds."
+    },
+    "hero": {
+      "eyebrow": "Free Tool",
+      "title": "Find the right UNSPSC code in seconds.",
+      "lead": "Paste any product or service description. The tool returns the 8-digit UNSPSC commodity code, the full hierarchy path, and a confidence level. Free. No signup required."
+    },
+    "tool": {
+      "placeholder": "e.g. 'lighting maintenance', 'HVAC filter replacement', 'galvanised M8 bolt', 'subcontractor plumbing works'...",
+      "button": "Find UNSPSC code",
+      "loading": "Classifying...",
+      "result": {
+        "code": "Code",
+        "segment": "Segment",
+        "family": "Family",
+        "class": "Class",
+        "commodity": "Commodity",
+        "confidence": "Confidence",
+        "notes": "Note",
+        "high": "High",
+        "medium": "Medium",
+        "low": "Low"
+      }
+    },
+    "bulk": {
+      "label": "Need to classify thousands of lines?",
+      "copy": "This tool handles single lookups. Pearstop’s automated classification engine processes 35,000 procurement lines per month — with 90-95% auto-classification and full SAP integration. Book a 7-minute discovery to see it with your data.",
+      "cta": "Book a 7-minute discovery",
+      "learnMore": "See how it works"
+    },
+    "faq": {
+      "title": "How UNSPSC codes work",
+      "items": [
+        {
+          "q": "What is a UNSPSC code?",
+          "a": "A UNSPSC (United Nations Standard Products and Services Code) is an 8-digit code that classifies any product or service into a global standard hierarchy. The first 2 digits are the Segment, digits 3-4 are the Family, digits 5-6 are the Class, and digits 7-8 are the Commodity. Organisations use UNSPSC codes to categorise procurement spend, enable supplier benchmarking, and build spend analytics."
+        },
+        {
+          "q": "How do I find the right UNSPSC code for a product?",
+          "a": "Paste a clear description of the product or service into the lookup tool above. The AI engine searches the UNSPSC taxonomy and returns the best matching 8-digit commodity code, along with the full hierarchy path and a confidence level. For ambiguous descriptions, the tool also flags nearby codes that might apply."
+        },
+        {
+          "q": "Is this UNSPSC lookup tool free?",
+          "a": "Yes. The Pearstop UNSPSC lookup tool is completely free for individual queries. For bulk classification — processing thousands of invoice lines automatically — Pearstop offers an automated classification service that handles up to 35,000 lines per month."
+        },
+        {
+          "q": "How accurate is the UNSPSC code suggestion?",
+          "a": "The tool returns a confidence level with each result: high, medium, or low. High-confidence results are typically correct at commodity level. For low-confidence results, use the suggested code as a starting point and verify against the official UNSPSC taxonomy. Pearstop’s full classification service achieves 90-95% accuracy using additional signals — supplier identity, GL account, and purchase history — which the free tool does not have access to."
+        },
+        {
+          "q": "What is the difference between UNSPSC segment, family, class, and commodity?",
+          "a": "UNSPSC has four levels. Segment (2 digits) is broadest — 72 covers Construction and Maintenance Services. Family (4 digits) narrows it — 7210 covers Building and Facility Maintenance. Class (6 digits) is more specific — 721015 covers Electrical Systems Maintenance. Commodity (8 digits) is most precise — 72101505 covers Lighting Maintenance Services. For procurement analytics, always classify at commodity level."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Need to classify thousands of lines?",
+      "lead": "Book a 7-minute discovery and we will show you how the full classification engine works with your actual procurement data.",
+      "button": "Book a 7-minute discovery"
+    }
   }
 }
