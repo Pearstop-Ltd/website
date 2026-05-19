@@ -9,8 +9,6 @@ import { mainNavLinks, solutionLinks, siteConfig } from "@/lib/site";
 const LOCALES = [
   { code: "en", label: "EN" },
   { code: "nl", label: "NL" },
-  { code: "fr", label: "FR" },
-  { code: "de", label: "DE" },
 ];
 
 function isActive(pathname: string, href: string) {

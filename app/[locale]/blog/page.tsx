@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getTranslations , setRequestLocale } from "next-intl/server";
 import Link from "next/link";
 import { existsSync, readFileSync } from "fs";
 import path from "path";
@@ -31,6 +31,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "Blog" });
   return {
     title: t("meta.title"),
@@ -86,6 +87,7 @@ export default async function BlogPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  setRequestLocale(locale);
   const prefix = locale === "en" ? "" : `/${locale}`;
   const t = await getTranslations({ locale, namespace: "Blog" });
 
@@ -125,7 +127,7 @@ export default async function BlogPage({
             lead={t("latestArticles.lead")}
           />
           <div className="article-grid">
-            {blogPosts.map((post) => {
+            {[...blogPosts].sort((a, b) => b.publishedAt.localeCompare(a.publishedAt)).map((post) => {
               const fm = getMdxFrontmatter(locale, post.slug);
               const title = fm.title ?? post.title;
               const description = fm.description ?? post.description;

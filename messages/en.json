@@ -884,7 +884,9 @@
       "publishedOn": "Published {date}",
       "backToBlog": "← Back to blog",
       "tableOfContents": "Table of Contents"
-    }
+    },
+    "latestInsights": "Latest Insights",
+    "readMore": "Read more"
   },
   "NotFound": {
     "title": "Page not found",

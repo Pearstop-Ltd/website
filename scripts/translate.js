@@ -26,82 +26,56 @@ const https = require("https");
 const ROOT = path.join(__dirname, "..");
 const MESSAGES_DIR = path.join(ROOT, "messages");
 const BLOG_EN_DIR = path.join(ROOT, "content", "blog", "en");
-const TARGET_LOCALES = ["nl", "fr", "de"];
+const TARGET_LOCALES = ["nl"];
 
 const LOCALE_NAMES = { nl: "Dutch", fr: "French", de: "German" };
 const BATCH_SIZE = 50;
 
-const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
-if (!GEMINI_API_KEY) {
-  console.error("❌  GEMINI_API_KEY environment variable is required.");
+const GROQ_API_KEY = process.env.GROQ_API_KEY;
+if (!GROQ_API_KEY) {
+  console.error("❌  GROQ_API_KEY environment variable is required.");
   console.error("   Get a free key at https://aistudio.google.com/apikey");
   process.exit(1);
 }
 
 // ---------------------------------------------------------------------------
-// Gemini API
+// Groq API
 // ---------------------------------------------------------------------------
 
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-function geminiRequestOnce(prompt) {
-  return new Promise((resolve, reject) => {
-    const body = JSON.stringify({
-      contents: [{ parts: [{ text: prompt }] }],
-      generationConfig: { temperature: 0.1, maxOutputTokens: 8192 },
-    });
-
-    const options = {
-      hostname: "generativelanguage.googleapis.com",
-      path: `/v1beta/models/gemini-2.5-flash:generateContent?key=${GEMINI_API_KEY}`,
-      method: "POST",
-      headers: { "Content-Type": "application/json", "Content-Length": Buffer.byteLength(body) },
-    };
-
-    const req = https.request(options, (res) => {
-      let data = "";
-      res.on("data", (chunk) => (data += chunk));
-      res.on("end", () => {
-        try {
-          const json = JSON.parse(data);
-          if (json.error) {
-            const msg = json.error.message || "";
-            // Surface retry-able errors with a special prefix
-            if (res.statusCode === 429 || msg.toLowerCase().includes("high demand") || msg.toLowerCase().includes("quota") || msg.toLowerCase().includes("retry")) {
-              reject(Object.assign(new Error(`Gemini API error: ${msg}`), { retryable: true }));
-            } else {
-              reject(new Error(`Gemini API error: ${msg}`));
-            }
-            return;
-          }
-          const text = json.candidates?.[0]?.content?.parts?.[0]?.text;
-          if (!text) {
-            reject(new Error(`Empty Gemini response: ${data}`));
-            return;
-          }
-          resolve(text.trim());
-        } catch (e) {
-          reject(new Error(`Failed to parse Gemini response: ${data}`));
-        }
-      });
-    });
-
-    req.on("error", reject);
-    req.write(body);
-    req.end();
+async function groqRequestOnce(prompt) {
+  const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + GROQ_API_KEY },
+    body: JSON.stringify({
+      model: 'llama-3.3-70b-versatile',
+      messages: [{ role: 'user', content: prompt }],
+      temperature: 0.1,
+      max_tokens: 8192,
+    }),
   });
+  const json = await res.json();
+  if (!res.ok) {
+    const msg = json.error?.message || res.status;
+    throw Object.assign(new Error('Groq API error: ' + msg), { retryable: res.status === 429 });
+  }
+  const text = json.choices?.[0]?.message?.content;
+  if (!text) throw new Error('Empty Groq response');
+  return text.trim();
 }
 
 async function geminiRequest(prompt, retries = 5) {
   for (let attempt = 1; attempt <= retries; attempt++) {
     try {
-      return await geminiRequestOnce(prompt);
+      return await groqRequestOnce(prompt);
     } catch (err) {
       if (err.retryable && attempt < retries) {
-        const delay = attempt * 20000; // 20s, 40s, 60s, 80s
-        process.stdout.write(`\n   ⏳ Rate limited, retrying in ${delay / 1000}s (attempt ${attempt}/${retries})...\r`);
+        const delay = attempt * 10000;
+        const msg = '\n   Rate limited, retrying in ' + (delay / 1000) + 's...';
+        process.stdout.write(msg);
         await sleep(delay);
       } else {
         throw err;
@@ -109,7 +83,6 @@ async function geminiRequest(prompt, retries = 5) {
     }
   }
 }
-
 /**
  * Translate an array of strings to targetLang in one Gemini call.
  * Uses a numbered list format so we can reliably parse the output.
