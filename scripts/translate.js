@@ -26,7 +26,7 @@ const https = require("https");
 const ROOT = path.join(__dirname, "..");
 const MESSAGES_DIR = path.join(ROOT, "messages");
 const BLOG_EN_DIR = path.join(ROOT, "content", "blog", "en");
-const TARGET_LOCALES = ["nl", "fr", "de"];
+const TARGET_LOCALES = ["nl"];
 
 const LOCALE_NAMES = { nl: "Dutch", fr: "French", de: "German" };
 const BATCH_SIZE = 50;

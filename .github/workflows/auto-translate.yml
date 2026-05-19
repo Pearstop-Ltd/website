@@ -31,10 +31,10 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add messages/nl.json messages/fr.json messages/de.json content/blog/nl content/blog/fr content/blog/de
+          git add messages/nl.json content/blog/nl
           if git diff --staged --quiet; then
             echo "No translation changes to commit."
           else
-            git commit -m "chore: auto-translate updated EN content to NL/FR/DE"
+            git commit -m "chore: auto-translate updated EN content to NL"
             git push
           fi
