@@ -1414,24 +1414,24 @@
       "title": "Veelgestelde vragen",
       "items": [
         {
-          "q": "Welke UNSPSC-segmenten zijn van toepassing op facilities management?",
-          "a": "De meest voorkomende segmenten voor FM zijn Segment 72 (Bouw- en onderhoudsdiensten), Segment 76 (Industriële schoonmaakdiensten), Segment 80 (Management- en administratieve diensten) en Segment 73 (Industriële productie). Hard services FM-bedrijven zien doorgaans het hoogste spend volume in Segment 72, dat elektrische, HVAC, loodgieters- en textielonderhoud omvat."
+          "q": "Welke UNSPSC-segmenten zijn van toepassing op facility management?",
+          "a": "De meest voorkomende segmenten voor FM zijn Segment 72 (Bouw- en onderhoudsdiensten), Segment 76 (Industriële schoonmaakdiensten), Segment 80 (Management- en administratieve diensten) en Segment 73 (Industriële productie). Hard services FM-bedrijven zien doorgaans het hoogste spend volume in Segment 72, dat elektrische, HVAC, loodgieters- en stoffenonderhoud omvat."
         },
         {
           "q": "Waarom is UNSPSC-classificatie moeilijk voor FM-bedrijven?",
-          "a": "FM-bedrijven kopen van honderden leveranciers op gedecentraliseerde locaties. Factuurregels zijn vaak vrije-tekstbeschrijvingen geschreven door field engineers, niet door inkoopteams. Handmatige classificatie op deze schaal vereist één of twee voltijds medewerkers die continu werken om het tempo bij te houden."
+          "a": "FM-bedrijven kopen van honderden leveranciers op gedecentraliseerde locaties. Factuurregels zijn vaak vrije-tekstbeschrijvingen geschreven door veldtechnici, niet door inkoopteams. Handmatige classificatie op deze schaal vereist één of twee voltijds medewerkers die continu werken om het tempo bij te houden."
         },
         {
           "q": "Hoe lang duurt UNSPSC-classificatie voor een FM-bedrijf?",
-          "a": "Een initiële classificatie van een volledig spend dataset is doorgaans binnen vier tot zes weken voltooid, inclusief een Data Stability Baseline om de nauwkeurigheid te valideren. Maandelijkse classificatieruns worden automatisch uitgevoerd."
+          "a": "Een initiële classificatie van een volledig spend dataset is doorgaans binnen vier tot zes weken voltooid, inclusief een Data Stability Baseline om de nauwkeurigheid te valideren. Maandelijkse classificatie loopt automatisch."
         },
         {
           "q": "Integreert Pearstop met FM-specifieke systemen zoals Maximo of ServiceNow?",
-          "a": "Pearstop ontvangt gegevens via CSV-export of directe API-verbinding en retourneert geclassificeerde gegevens in hetzelfde formaat, compatibel met elk CAFM- of CMMS-systeem, waaronder IBM Maximo, ServiceNow, Planon en SAP PM."
+          "a": "Pearstop ontvangt gegevens via CSV-export of directe API-verbinding en retourneert geclassificeerde gegevens in hetzelfde formaat, compatibel met elk CAFM- of CMMS-systeem, inclusief IBM Maximo, ServiceNow, Planon en SAP PM."
         },
         {
           "q": "Wat is de nauwkeurigheidsgraad die FM-bedrijven kunnen verwachten?",
-          "a": "Pearstops vierlaagse engine bereikt 90–95% automatische classificatie op typische FM-spend datasets. De resterende 5–10% wordt gemarkeerd voor menselijke herziening, en elke herziene beslissing voedt terug naar de engine."
+          "a": "Pearstops vierlaagse engine bereikt 90-95% automatische classificatie op typische FM-spend datasets. De resterende 5-10% wordt gemarkeerd voor menselijke revisie, en elke herziene beslissing voedt terug naar de engine."
         }
       ]
     },
@@ -1517,11 +1517,11 @@
         },
         {
           "q": "Welke Nederlandse bedrijven hebben UNSPSC-classificatie het meest nodig?",
-          "a": "Nederlandse infrastructuurcontractors, facilitaire dienstverleners, en bouwbedrijven hebben doorgaans de meeste behoefte aan UNSPSC-classificatie."
+          "a": "Nederlandse infrastructuurcontractors, facilitaire dienstverleners en bouwbedrijven hebben doorgaans de meeste behoefte aan UNSPSC-classificatie."
         },
         {
           "q": "Hoe classificeert Pearstop Nederlandse inkoopdata?",
-          "a": "Pearstop ontvangt inkoopdata via CSV of directe API-verbinding vanuit Nederlandse ERP-systemen inclusief SAP, Oracle, en AFAS. De vier-laags classificatie-engine verwerkt ook Nederlandstalige factuuromschrijvingen."
+          "a": "Pearstop ontvangt inkoopdata via CSV of directe API-verbinding vanuit Nederlandse ERP-systemen inclusief SAP, Oracle en AFAS. De vierlaagse classificatie-engine verwerkt ook Nederlandstalige factuuromschrijvingen."
         }
       ]
     },
@@ -1597,7 +1597,7 @@
         },
         {
           "q": "Hoe beïnvloedt de Duitse E-Rechnungspflicht de inkoopclassificatie?",
-          "a": "De E-Rechnungspflicht 2025 vereist gestructureerde, maschinenlesbare Rechnungsdaten voor B2B-transacties. UNSPSC biedt een konsistent, internationaal erkend codificeringssysteem dat deze eis vervult."
+          "a": "De E-Rechnungspflicht 2025 vereist gestructureerde, machineleesbare factuurdata voor B2B-transacties. UNSPSC biedt een consistent, internationaal erkend codificeringssysteem dat deze eis vervult."
         },
         {
           "q": "Wat is UNSPSC-classificatie en waarom hebben Duitse bedrijven het nodig?",
@@ -1609,7 +1609,7 @@
         },
         {
           "q": "Kan Pearstop Duitstalige inkoopdata classificeren?",
-          "a": "Ja. Pearstops classificatie-engine verwerkt Duitstalige Rechnungsbeschrijvingen natief, inclusief gangbare afkortingen en technische terminologie."
+          "a": "Ja. Pearstops classificatie-engine verwerkt Duitstalige factuur beschrijvingen natief, inclusief gangbare afkortingen en technische terminologie."
         }
       ]
     },
