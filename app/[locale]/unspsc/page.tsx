@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { getTranslations } from "next-intl/server";
+import { getTranslations , setRequestLocale } from "next-intl/server";
 import { CTABand, GeoBlock, PageHero, QuoteBox, SectionTitle } from "@/components/content";
 import { siteConfig } from "@/lib/site";
 
@@ -76,6 +76,7 @@ const serviceSchema = {
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "Unspsc" });
   return {
     title: t("meta.title"),
@@ -88,6 +89,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 export default async function UnspscPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
+  setRequestLocale(locale);
   const prefix = locale === "en" ? "" : `/${locale}`;
   const t = await getTranslations("Unspsc");
 

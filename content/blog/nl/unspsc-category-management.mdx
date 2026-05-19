@@ -1,0 +1,125 @@
+---
+title: "Het Category Management-probleem waar niemand over praat: Waarom je UNSPSC-spendclassificatie nodig hebt"
+description: "Category management in FM en infrastructuur faalt zonder commodity-niveau spenddata. Leer hoe UNSPSC-classificatie ongestructureerde invoicedata omzet in een actiegerichte procurementstrategie."
+publishedAt: "2026-05-18"
+author: "team"
+category: "Procurement"
+tags: ["UNSPSC", "Category Management", "FM", "Infrastructure", "Spend Analysis"]
+readingTime: "7 min"
+---
+
+## The category management problem no one talks about
+
+Vraag elke category manager bij een FM- of infrastructuurbedrijf hoeveel van hun week wordt besteed aan het schoonmaken van spreadsheets versus het daadwerkelijk opstellen van een procurementstrategie. Het eerlijke antwoord is meestal 70-80% datapreparatie, 20-30% strategie. Die verhouding is geen vaardigheidsprobleem of een personeelsprobleem. Het is een dataprobleem — en UNSPSC-classificatie is de oplossing.
+
+Category management wordt algemeen begrepen als een raamwerk. Groepeer je spend per categorie, behandel elke categorie als een bedrijfseenheid, pas een sourcingstrategie toe. De theorie houdt stand. Wat in de praktijk faalt, is de stap die voorafgaat aan al het andere: weten met precisie wat je koopt, van wie, in welke hoeveelheid, op welke locaties en projecten.
+
+Zonder die zichtbaarheid is category management geen strategie. Het is gokwerk met een presentatie erbij.
+
+---
+
+## What unclassified spend data actually looks like
+
+Voor classificatie is een typische FM- of infrastructuurspenddatabase een verzameling van vrije-tekstinvoiceregels. Hier is wat een representatief monster kan laten zien voor een enkel product:
+
+- "HVAC unt"
+- "misc maint parts"
+- "unk equip filter"
+- "ventilation consummables Q3"
+- "filter 400mm site 7"
+
+Deze vijf regels zijn waarschijnlijk hetzelfde verbruiksartikel, gekocht van drie verschillende leveranciers, geregistreerd door vier verschillende locatiemanagers en gecodeerd naar vijf verschillende grootboekrekeningen. Zonder classificatie zijn ze onzichtbaar als categorie. Je kunt ze niet samenvoegen, benchmarken of een sourcingstrategie toepassen. Ze bestaan simpelweg niet als een samenhangend spenditem.
+
+Dit is geen randgeval. In de meeste FM- en bouwomgevingen is tussen 30-60% van de invoiceniveau-spenddata effectief uncategoriseerbaar zonder classificatieverrijking. De spend is echt. Het geld stroomt. Maar vanuit een procurementstrategieperspectief kan het net zo goed niet bestaan.
+
+---
+
+## The before and after: a concrete example
+
+Een van de duidelijkste illustraties komt van infrastructuuronderhoud. Voor classificatie toonde een klantenspendrapport een regel voor "projectlocatiekosten" met een totaal van ongeveer €4M per jaar. Na UNSPSC-verrijking en classificatie viel die enkele regel uiteen in identificeerbare categorieën:
+
+| Categorie | Jaarlijks spend |
+|---|---|
+| Soft landscaping (grondonderhoud, bomenchirurgie, gras snijden) verdeeld over 50 projectcodes | €2.000.000 |
+| Civiel drainageonderhoud — niet herkend als categorie omdat elke locatie het anders codeerde | €900.000 |
+| Wegmarkering en signalisatie, gefragmenteerd over projectidentificatoren | €700.000 |
+| Echt divers | €400.000 |
+
+De €2M voor soft landscaping was de bevinding die actie uitlokte. Niemand in procurement had geweten dat het bestond als categorie. Er was geen tender, geen kaderovereenkomst, geen volumehefboom — alleen 50 afzonderlijke projectteams die onafhankelijke aankoopbeslissingen namen. Zodra het zichtbaar was, was het meteen herkenbaar als een hefboomcategorie: hoog volume, meerdere capabele leveranciers, laag leveranciersrisico. Een geconsolideerde tender volgde.
+
+Dat is wat UNSPSC-classificatie mogelijk maakt. Niet een afrondingsverbetering in gegevenskwaliteit. Een fundamenteel andere kijk op waar het geld naartoe gaat.
+
+---
+
+## Why the Kraljic matrix requires classification
+
+De Kraljic-matrix is het fundamentale instrument voor categorystrategie — kwadrantpositionering bepaalt of je consolideert, partner, dual-source of automatiseert. Maar om spend nauwkeurig in de matrix te plaatsen, moet je weten wat je koopt op commodity-niveau.
+
+Je kunt geen leveranciersrisico beoordelen voor "misc maintenance parts." Je kunt leveranciersrisico beoordelen voor UNSPSC 72103203 (Onderhoud van HVAC-systemen) of 31161501 (Moeren en bouten). De specificiteit van de commoditycode is wat risicobeoordeling mogelijk maakt.
+
+Hetzelfde geldt voor winstimpact. Segment 72 (Bouw- en onderhoudsdiensten) en Segment 76 (Facility Management) domineren de meeste harde FM-spend. Binnen die segmenten bepaalt de commodityverdeling welke categorieën strategisch, welke hefboom en welke niet-kritiek zijn. Zonder classificatie tot dat niveau van granulariteit wordt Kraljic een theoretische oefening.
+
+---
+
+## Case Study: Improving Spend Visibility at Strukton
+
+Strukton verwerkt ongeveer 35.000 procurementregels per maand via SAP. Voor geautomatiseerde classificatie was de data nominaal gestructureerd — grootboekcodes, kostencentra, projectidentificatoren — maar niet geclassificeerd op commodity-niveau. Het resultaat was dat spendanalyse significante handmatige inspanning vereiste elke keer dat het nodig was, en de uitvoer was vaak gedeeltelijk onbetrouwbaar omdat dezelfde spend in meerdere categorieën verscheen, afhankelijk van hoe een locatiemanager het had gecodeerd.
+
+Pearstop's classificatiemotor wordt ingezet om dit aan te pakken. Vroege eerste-pasnauwkeurigheid loopt op ongeveer 70%, met het model dat verbetert naarmate het de specifieke leverancier- en beschrijvingspatronen van de organisatie leert — een traject dat consistent is met andere implementaties. Het doel is commodity-niveau spendrapportage die automatisch wordt gegenereerd uit SAP-invoicedata, beschikbaar binnen enkele dagen na het einde van de maand in plaats van weken.
+
+Het doel is om Strukton's procurementteam een spendbasis te geven die categorystrategie kan ondersteunen: identificeren welke spend in hefboomcategorieën zit en waar volumeconsolidatie haalbaar is over projecten.
+
+---
+
+## Asset enrichment in a large FM dataset
+
+In asset-intensieve FM gaat het classificatieprobleem verder dan procurement-spend naar de assetregister zelf. Wanneer assetdata wordt geregistreerd als "HVAC unt," "misc" of "unk" — wat vaak voorkomt, vooral voor assets die zijn overgenomen van eerdere contracten — is gepland onderhoud onmogelijk om intelligent te plannen. Je weet niet wat je hebt.
+
+Assetverrijking met UNSPSC en fabrikantntaxonomie adresseert dit direct. "HVAC unt" wordt "HVAC-unit / Luchtbehandelingsunit / Klimaatbeheersing / Carrier." Die verrijking maakt gepland onderhoudsplanning mogelijk omdat het assettype nu bekend is. Het maakt levensduuranalyse mogelijk omdat de apparatuurklasse identificeerbaar is. En het maakt reserveonderdelenoptimalisatie mogelijk omdat het asset en de onderdelen die het bedienen eindelijk kunnen worden gekoppeld.
+
+Dit is het startpunt voor werk dat momenteel gaande is met SPIE — verrijking van assetdata die waren verdeeld over spreadsheets en voedden van legacy-systemen, met als doel het consistent genoeg te maken om analytisch op te bouwen. Een FM-contractor die 10.000 assets beheert met accurate classificatie kan onderhoudsplannen opstellen die zijn gebaseerd op assetdata. Een die 10.000 assets beheert die zijn geregistreerd als "misc" kan dat niet.
+
+---
+
+## The category manager's real problem
+
+Een category manager die zijn spenddata niet kan vertrouwen, besteedt zijn tijd aan het beheren van de data. Elke analyse vereist een voorbereidingsfase van deduplicatie, opnieuw coderen en kruisverwijzen van grootboekrekeningen met locatierecords en projectcodes. Tegen de tijd dat die werk is gedaan, is de data al een maand oud en is het analysevenster verplaatst.
+
+Met classificatie op haar plaats — geautomatiseerd, bijgewerkt maandelijks, rechtstreeks vanuit ERP-uitvoer — klapt de voorbereidingsfase in. De category manager komt bij een spendrapport dat al is gecategoriseerd op commodity-niveau, vergelijkbaar over locaties en projecten, en actueel tot de meest recente invoicerun.
+
+Het strategiewerk dat category management zou moeten leveren — leveranciersbenchmarking, kaderovereenkomsten, volumeconsolidatie, Kraljic-positionering — wordt mogelijk omdat de datafoundation het ondersteunt. De verhouding van datapreparatie tot strategiewerk keert om.
+
+Classificatie maakt [maverick spend](/blog/maverick-spend-unspsc) voor het eerst zichtbaar — een afzonderlijk maar nauw verwant probleem dat in detail wordt behandeld in de post over hoe UNSPSC-classificatie laat zien wat je mist.
+
+---
+
+## Which UNSPSC segments matter most in FM and infrastructure
+
+Voor organisaties in FM, bouw en infrastructuur, concentreert de spenduniversum zich in een klein aantal UNSPSC-segmenten. Het begrijpen van welke segmenten je spend domineren, is de eerste uitvoer van elke classificatieoefening:
+
+- **Segment 72 — Bouw- en onderhoudsdiensten.** Het grootste segment voor de meeste FM- en infrastructuurorganisaties. Dekking van gebouwonderhoud, civiele werken, M&E-onderhoud en specialistische aannemersspend.
+- **Segment 73 — Industriële productie- en fabricagediensten.** Relevant voor klanten met fabricage- of procesinstallatie-assets.
+- **Segment 76 — Facility Management.** Schoonmaak, beveiliging, catering, afvalbeheer, grondonderhoud — de soft services-spend die vaak het meest gefragmenteerd is.
+- **Segment 80 — Financiële en verzekeringsdiensten.** Ondergewaardeerd in FM-spendanalyse maar relevant voor organisaties met significante projectfinanciering, borgstelling of contractverzekering.
+
+De verdeling van spend over deze segmenten vertelt een category manager waar hij eerst moet focussen. Het vertelt hem ook welke spend momenteel onzichtbaar is — omdat ongeclassificeerde spend, per definitie, niet in een segment verschijnt.
+
+---
+
+## Frequently asked questions
+
+**Hebben we UNSPSC-classificatie nodig als we al een goed onderhouden grootboek hebben?**
+
+Een chart of accounts geeft u financiële zichtbaarheid — welke GL-codes welke spend dragen. UNSPSC-classificatie geeft u grondstofzichtbaarheid — wat er daadwerkelijk is aangeschaft. Deze beantwoorden verschillende vragen. Een GL-rekening voor "onderhoudsmaterialen" kan bijvoorbeeld schroeven, smeermiddelen, afdichtingen en elektrische componenten bevatten. Alleen classificatie op grondstofniveau schept daaruit actiebare categorieën. Beide zijn noodzakelijk; geen van beiden vervangt de ander.
+
+**Hoe lang duurt het om van ruwe factuurdata te komen tot een bruikbare geclassificeerde spend-dataset?**
+
+Met geautomatiseerde classificatie duurt de eerste verwerking van een historische dataset meestal dagen, niet weken. Voor Strukton's 35.000 regels per maand produceert de initiële classificatie-run resultaten binnen 48–72 uur. De review-queue — items onder de betrouwbaarheidsgrens — vereist extra tijd van een buyer of category manager, maar die werklast is meestal 5–10% van het totale aantal regels, niet de volledige dataset.
+
+**Wat is de minimale datakwaliteit die vereist is om te classificeren op grondstofniveau?**
+
+De classificatiemotor werkt het beste met de naam van de leverancier, een beschrijvingsveld en een GL-code of kostenelement. De kwaliteit van de beschrijving is de belangrijkste variabele. Zelfs afgekorte beschrijvingen ("F7 filter 400mm") bieden voldoende signaal voor een vertrouwelijke classificatie in de meeste gevallen. Volledig lege beschrijvingsvelden of enkele-teken-invoer vereisen ofwel aanvulling vanuit een andere gegevensbron of menselijke beoordeling. In de praktijk komen volledig lege beschrijvingen voor bij minder dan 5% van de regels in een typische SAP- of Oracle-export.
+
+---
+
+*Gerelateerde lectuur: [UNSPSC-Classificatie nauwkeurigheid: Wat 90–95% eigenlijk betekent](/blog/unspsc-classificatie-nauwkeurigheid) | [De Kraljic Matrix, category management, en waarom uw gegevens het ontbrekende stuk zijn](/blog/category-management-kraljic-hard-fm)*

@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { getTranslations } from "next-intl/server";
+import { getTranslations , setRequestLocale } from "next-intl/server";
 import { CTABand, GeoBlock, PageHero, QuoteBox, SectionTitle } from "@/components/content";
 import { siteConfig } from "@/lib/site";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "Procurement" });
   return {
     title: t("meta.title"),
@@ -41,6 +42,7 @@ const faqSchema = {
 
 export default async function ProcurementPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
+  setRequestLocale(locale);
   const prefix = locale === "en" ? "" : `/${locale}`;
   const t = await getTranslations("Procurement");
 

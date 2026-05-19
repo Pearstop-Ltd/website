@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import Link from "next/link";
-import { getTranslations } from "next-intl/server";
+import { getTranslations , setRequestLocale } from "next-intl/server";
 import { GeoBlock, PageHero, QuoteBox, SectionTitle } from "@/components/content";
 import { homeBenefits, siteConfig } from "@/lib/site";
 import { blogPosts } from "@/lib/blog-posts";
@@ -62,6 +62,7 @@ const solutionHrefs = ["/unspsc", "/asset-data-management", "/procurement-data-q
 
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
+  setRequestLocale(locale);
   const prefix = locale === "en" ? "" : `/${locale}`;
   const t = await getTranslations("Home");
 
