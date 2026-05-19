@@ -35,7 +35,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Description must be 500 characters or fewer." }, { status: 400 });
   }
 
-  const apiKey = process.env.GEMINI_API_KEY;
+  const apiKey = process.env.LOOKUP_GEMINI_API_KEY;
   if (!apiKey) {
     return NextResponse.json({ error: "Classification service unavailable. Please try again later." }, { status: 503 });
   }
