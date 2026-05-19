@@ -17,7 +17,7 @@ function deepMerge(base: Record<string, unknown>, override: Record<string, unkno
 
 export default getRequestConfig(async ({ requestLocale }) => {
   let locale = await requestLocale;
-  if (!locale || !routing.locales.includes(locale as "en" | "nl" | "fr" | "de")) {
+  if (!locale || !routing.locales.includes(locale as "en" | "nl")) {
     locale = routing.defaultLocale;
   }
 
