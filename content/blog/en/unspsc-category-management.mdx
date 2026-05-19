@@ -1,0 +1,125 @@
+---
+title: "The Category Management Problem No One Talks About: Why You Need UNSPSC Spend Classification"
+description: "Category management in FM and infrastructure fails without commodity-level spend data. Learn how UNSPSC classification transforms unstructured invoice data into actionable procurement strategy."
+publishedAt: "2026-05-18"
+author: "team"
+category: "Procurement"
+tags: ["UNSPSC", "Category Management", "FM", "Infrastructure", "Spend Analysis"]
+readingTime: "7 min"
+---
+
+## The category management problem no one talks about
+
+Ask any category manager at an FM or infrastructure company how much of their week is spent cleaning spreadsheets versus doing actual procurement strategy. The honest answer is usually 70–80% data preparation, 20–30% strategy. That ratio is not a skills problem or a headcount problem. It is a data problem — and UNSPSC classification is the fix.
+
+Category management is well understood as a framework. Group your spend by category, treat each category as a business unit, apply sourcing strategy accordingly. The theory holds. What breaks in practice is the step that comes before any of that: knowing with precision what you are buying, from whom, at what volume, across which sites and projects.
+
+Without that visibility, category management is not strategy. It is guesswork with a slide deck attached.
+
+---
+
+## What unclassified spend data actually looks like
+
+Before classification, a typical FM or infrastructure spend database is a collection of free-text invoice lines. Here is what a representative sample might show for a single product:
+
+- "HVAC unt"
+- "misc maint parts"
+- "unk equip filter"
+- "ventilation consummables Q3"
+- "filter 400mm site 7"
+
+These five lines are likely the same consumable, bought from three different suppliers, recorded by four different site managers, and coded to five different GL accounts. Without classification, they are invisible as a category. You cannot aggregate them, benchmark them, or apply a sourcing strategy to them. They simply do not exist as a coherent spend item.
+
+This is not an edge case. In most FM and construction environments, between 30–60% of invoice-level spend data is effectively uncategorisable without classification enrichment. The spend is real. The money is flowing. But from a procurement strategy perspective, it might as well not exist.
+
+---
+
+## The before and after: a concrete example
+
+One of the clearest illustrations comes from infrastructure maintenance. Before classification, a client's spend report showed a line for "project site costs" totalling approximately €4M annually. After UNSPSC enrichment and classification, that single line decomposed into identifiable categories:
+
+| Category | Annual spend |
+|---|---|
+| Soft landscaping (grounds maintenance, tree surgery, grass cutting) distributed across 50 project codes | €2,000,000 |
+| Civil drainage maintenance — unrecognised as a category because each site coded it differently | €900,000 |
+| Road marking and signage, fragmented across project identifiers | €700,000 |
+| Genuinely miscellaneous | €400,000 |
+
+The €2M on soft landscaping was the finding that prompted action. No one in procurement had known it existed as a category. There had been no tender, no framework agreement, no volume leverage — just 50 separate project teams each making independent buying decisions. Once visible, it was immediately identifiable as a leverage category: high volume, multiple capable suppliers, low supply risk. A consolidated tender followed.
+
+That is what UNSPSC classification enables. Not a rounding improvement in data quality. A fundamentally different view of where the money goes.
+
+---
+
+## Why the Kraljic matrix requires classification
+
+The Kraljic Matrix is the foundational tool for category strategy — quadrant positioning determines whether you consolidate, partner, dual-source, or automate. But placing spend accurately in the matrix requires knowing what you are buying at commodity level.
+
+You cannot assess supply risk for "misc maintenance parts." You can assess supply risk for UNSPSC 72103203 (Maintenance of HVAC systems) or 31161501 (Nuts and bolts). The specificity of the commodity code is what makes risk assessment tractable.
+
+The same applies to profit impact. Segment 72 (Construction and Maintenance Services) and Segment 76 (Facility Management) dominate most hard FM spend. Within those segments, the commodity distribution determines which categories are strategic, which are leverage, and which are non-critical. Without classification to that level of granularity, Kraljic becomes a theoretical exercise.
+
+---
+
+## Case Study: Improving Spend Visibility at Strukton
+
+Strukton processes approximately 35,000 procurement lines per month through SAP. Before automated classification, the data was nominally structured — GL codes, cost centres, project identifiers — but not classified at commodity level. The result was that spend analysis required significant manual effort each time it was needed, and the outputs were often partially unreliable because the same spend appeared in multiple categories depending on how a site manager had coded it.
+
+Pearstop's classification engine is being deployed to address this. Early first-pass accuracy runs at approximately 70%, with the model improving as it learns the organisation's specific supplier and description patterns — a trajectory consistent with other deployments. The goal is commodity-level spend reporting produced automatically from SAP invoice data, available within days of month-end rather than weeks.
+
+The aim is to give Strukton's procurement team a spend baseline that can support category strategy: identifying which spend sits in leverage categories and where volume consolidation is feasible across projects.
+
+---
+
+## Asset enrichment in a large FM dataset
+
+In asset-intensive FM, the classification problem extends beyond procurement spend to the asset register itself. When asset data is recorded as "HVAC unt," "misc," or "unk" — which is common, particularly for assets inherited from previous contracts — planned maintenance is impossible to schedule intelligently. You do not know what you have.
+
+Asset enrichment using UNSPSC and manufacturer taxonomy addresses this directly. "HVAC unt" becomes "HVAC Unit / Air Handler / Climate Control / Carrier." That enrichment enables planned maintenance scheduling because the asset type is now known. It enables lifecycle analysis because the equipment class is identifiable. And it enables spare parts optimisation because the asset and the parts that service it can finally be linked.
+
+This is the starting point for work currently underway with SPIE — enriching asset data that was distributed across spreadsheets and feeding from legacy systems, with the goal of making it consistent enough to build on analytically. An FM contractor managing 10,000 assets with accurate classification can build maintenance plans grounded in asset data. One managing 10,000 assets recorded as "misc" cannot.
+
+---
+
+## The category manager's real problem
+
+A category manager who cannot trust the spend data spends their time managing the data. Every analysis requires a preparatory phase of deduplication, re-coding, and cross-referencing GL accounts with site records and project codes. By the time that work is done, the data is already a month old and the analysis window has moved.
+
+With classification in place — automated, updated monthly, running directly from ERP output — the preparatory phase collapses. The category manager arrives at a spend report that is already categorised at commodity level, comparable across sites and projects, and current to the most recent invoice run.
+
+The strategy work that category management is supposed to deliver — supplier benchmarking, framework agreements, volume consolidation, Kraljic positioning — becomes possible because the data foundation supports it. The ratio of data preparation to strategy work inverts.
+
+Classification also makes [maverick spend](/blog/maverick-spend-unspsc) visible for the first time — a separate but closely related problem covered in detail in the post on how UNSPSC classification exposes what you are missing.
+
+---
+
+## Which UNSPSC segments matter most in FM and infrastructure
+
+For organisations in FM, construction, and infrastructure, the spend universe concentrates in a small number of UNSPSC segments. Understanding which segments dominate your spend is the first output of any classification exercise:
+
+- **Segment 72 — Construction and Maintenance Services.** The largest segment for most FM and infrastructure organisations. Covers building maintenance, civil works, M&E maintenance, and specialist contractor spend.
+- **Segment 73 — Industrial Production and Manufacturing Services.** Relevant for clients with manufacturing or process plant assets.
+- **Segment 76 — Facility Management.** Cleaning, security, catering, waste management, grounds maintenance — the soft services spend that is frequently the most fragmented.
+- **Segment 80 — Financial and Insurance Services.** Underappreciated in FM spend analysis but relevant for organisations with significant project financing, bonding, or contract insurance.
+
+The distribution of spend across these segments tells a category manager where to focus first. It also tells them which spend is currently invisible — because unclassified spend, by definition, does not appear in any segment.
+
+---
+
+## Frequently asked questions
+
+**Do we need UNSPSC classification if we already have a well-maintained chart of accounts?**
+
+A chart of accounts gives you financial visibility — which GL codes carry which spend. UNSPSC classification gives you commodity visibility — what was actually purchased. These answer different questions. A GL account for "maintenance materials" might contain fasteners, lubricants, seals, and electrical components. Only commodity-level classification separates those into actionable categories. Both are necessary; neither replaces the other.
+
+**How long does it take to get from raw invoice data to a usable classified spend dataset?**
+
+With automated classification, the first pass on a historical dataset typically takes days, not weeks. For Strukton's 35,000 lines per month, the initial classification run produces results within 48–72 hours. The review queue — items below the confidence threshold — requires additional time from a buyer or category manager, but that workload is typically 5–10% of total lines, not the full dataset.
+
+**What is the minimum data quality required to classify at commodity level?**
+
+The classification engine works best with supplier name, a description field, and a GL code or cost element. Description quality is the most important variable. Even abbreviated descriptions ("F7 filter 400mm") provide enough signal for confident classification in most cases. Completely blank description fields or single-character entries require either enrichment from another data source or human review. In practice, fully blank descriptions account for fewer than 5% of lines in a typical SAP or Oracle export.
+
+---
+
+*Related reading: [UNSPSC Classification Accuracy: What 90–95% Actually Means](/blog/unspsc-classification-accuracy) | [The Kraljic Matrix, Category Management, and Why Your Data Is the Missing Piece](/blog/category-management-kraljic-hard-fm)*

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { existsSync, readFileSync } from "fs";
 import path from "path";
 import { PageHero, SectionTitle } from "@/components/content";
+import { BlogCardPattern } from "@/components/blog-card-pattern";
 import { siteConfig } from "@/lib/site";
 import { blogPosts } from "@/lib/blog-posts";
 
@@ -76,25 +77,6 @@ function PodcastIcon({ kind }: { kind: PodcastLink["kind"] }) {
   }
 }
 
-const CATEGORY_ICONS: Record<string, string> = {
-  "Procurement": "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4",
-  "Asset Management": "M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10",
-  "AI & Digital": "M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
-  "Commercial FM": "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z",
-  "Data Management": "M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4",
-  "Construction": "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4",
-};
-const DEFAULT_ICON = "M13 10V3L4 14h7v7l9-11h-7z";
-
-const CATEGORY_GRADIENTS: Record<string, string> = {
-  "Procurement": "linear-gradient(135deg, #4c1d95 0%, #6d28d9 50%, #7c3aed 100%)",
-  "Asset Management": "linear-gradient(135deg, #1e3a5f 0%, #1e40af 50%, #3b82f6 100%)",
-  "AI & Digital": "linear-gradient(135deg, #134e4a 0%, #0f766e 50%, #14b8a6 100%)",
-  "Commercial FM": "linear-gradient(135deg, #7c2d12 0%, #c2410c 50%, #ea580c 100%)",
-  "Data Management": "linear-gradient(135deg, #1e1b4b 0%, #3730a3 50%, #6366f1 100%)",
-  "Construction": "linear-gradient(135deg, #14532d 0%, #15803d 50%, #22c55e 100%)",
-};
-const DEFAULT_GRADIENT = "linear-gradient(135deg, #4c1d95 0%, #6d28d9 100%)";
 
 export const dynamic = "force-dynamic";
 
@@ -149,22 +131,7 @@ export default async function BlogPage({
               const description = fm.description ?? post.description;
               return (
               <article key={post.slug} className="blog-card">
-                <div
-                  className="blog-img-wrap"
-                  style={{
-                    background: CATEGORY_GRADIENTS[post.category] ?? DEFAULT_GRADIENT,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    overflow: "hidden",
-                    position: "relative",
-                  }}
-                >
-                  <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" style={{ width: 72, height: 72, opacity: 0.18, position: "absolute" }} aria-hidden="true">
-                    <path d={CATEGORY_ICONS[post.category] ?? DEFAULT_ICON} />
-                  </svg>
-                  <span style={{ position: "relative", color: "rgba(255,255,255,0.9)", fontWeight: 700, fontSize: "0.7rem", letterSpacing: "0.12em", textTransform: "uppercase" }}>{post.category}</span>
-                </div>
+                <BlogCardPattern category={post.category} image={post.image} showLabel={false} />
                 <div className="blog-body">
                   <span className="blog-tag">{post.category}</span>
                   <h3 className="blog-title">

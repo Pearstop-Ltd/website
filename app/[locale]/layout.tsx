@@ -6,6 +6,7 @@ import Script from "next/script";
 import { Analytics } from "@vercel/analytics/react";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { LatestBlogPosts } from "@/components/latest-blog-posts";
 import { routing } from "@/i18n/routing";
 import { siteConfig } from "@/lib/site";
 import "../globals.css";
@@ -125,6 +126,7 @@ export default async function LocaleLayout({
             dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
           />
           <main>{children}</main>
+          <LatestBlogPosts locale={locale} />
           <SiteFooter />
         </NextIntlClientProvider>
         <Analytics />

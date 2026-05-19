@@ -1,4 +1,4 @@
-export type BlogPost = {
+﻿export type BlogPost = {
   slug: string;
   title: string;
   description: string;
@@ -10,11 +10,13 @@ export type BlogPost = {
   tocItems: { id: string; label: string }[];
   softCta: "checklist" | "case-study" | "discovery" | "template";
   faqItems?: { q: string; a: string }[];
+  image?: string;
 };
 
 export const blogPosts: BlogPost[] = [
   {
     slug: "procurement-data-cost",
+    image: "/images/blog/procurement-data-cost.jpg",
     title: "Why Your Procurement Data Is Costing You More Than You Think",
     description: "Poor procurement data quality costs hard services companies 1-3% of total spend per year. This article shows where the cost hides and how to fix it.",
     publishedAt: "2026-02-04",
@@ -32,6 +34,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "what-is-unspsc",
+    image: "/images/blog/what-is-unspsc.jpg",
     title: "What Is UNSPSC — And Why Hard Services Companies Should Care",
     description: "UNSPSC is the global procurement classification standard. This guide explains the hierarchy, why ERP systems don't solve classification on their own, and how automated classification works at scale.",
     publishedAt: "2026-02-17",
@@ -50,6 +53,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "asset-register-problems",
+    image: "/images/blog/asset-register-problems.jpg",
     title: "The Real Reason Your Asset Register Isn't Working",
     description: "Most FM companies have an asset register. Most don't trust it. This article explains the specific data gaps, their financial cost, and how AI-assisted enrichment fixes them.",
     publishedAt: "2026-02-24",
@@ -68,6 +72,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "category-management-kraljic-hard-fm",
+    image: "/images/blog/category-management-kraljic-hard-fm.jpg",
     title: "The Kraljic Matrix, Category Management, and Why Your Data Is the Missing Piece",
     description: "The Kraljic Matrix is the most useful tool in procurement strategy but it requires clean spend data to work. This article applies it to hard FM, construction, and MRO.",
     publishedAt: "2026-03-06",
@@ -85,6 +90,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "ai-readiness-data-quality",
+    image: "/images/blog/ai-readiness-data-quality.jpg",
     title: "AI Readiness Isn't an IT Problem. It's a Data Problem.",
     description: "AI tools amplify whatever structure exists in your data. If your procurement and asset data is messy, AI makes it expensively wrong. Here is what readiness actually requires.",
     publishedAt: "2026-03-18",
@@ -107,6 +113,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "fm-tender-win-rate",
+    image: "/images/blog/fm-tender-win-rate.jpg",
     title: "How to Win More FM Tenders Without Increasing Your Team",
     description: "Most FM tender losses come down to pricing confidence, not capability. Clean cost data changes bid accuracy, speed, and win rate without adding headcount.",
     publishedAt: "2026-03-27",
@@ -125,6 +132,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "excel-heroics-hard-services",
+    image: "/images/blog/excel-heroics-hard-services.jpg",
     title: "The Hidden Cost of Excel Heroics in Hard Services",
     description: "Every hard services company has someone who knows the data. This article explains the operational risk they carry, what it costs, and what the migration away from manual data management looks like.",
     publishedAt: "2026-04-03",
@@ -142,6 +150,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "construction-procurement-material-costs",
+    image: "/images/blog/construction-procurement-material-costs.jpg",
     title: "Construction Procurement Data: Why Your Material Costs Are Harder to Control Than You Think",
     description: "Construction spend is structurally fragmented across projects. This article explains why material cost control requires spend classification and what steel procurement looks like as a case study.",
     publishedAt: "2026-04-14",
@@ -159,6 +168,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "what-clean-data-enables",
+    image: "/images/blog/what-clean-data-enables.jpg",
     title: "What Happens When Your Data Is Finally Clean: 5 Things That Become Possible",
     description: "Five specific capabilities that open up when procurement and asset data is clean, classified, and consistently maintained with practical examples of what each looks like.",
     publishedAt: "2026-04-28",
@@ -177,6 +187,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "unspsc-vs-eclass-vs-cpv",
+    image: "/images/blog/unspsc-vs-eclass-vs-cpv.jpg",
     title: "UNSPSC vs. eClass vs. CPV: Which Classification Standard Is Right for Your Business?",
     description: "A clear breakdown of the three main procurement classification standards UNSPSC, eClass, and CPV with a practical guide to implementation at scale.",
     publishedAt: "2026-05-07",
@@ -200,6 +211,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "unspsc-classification-sap",
+    image: "/images/blog/unspsc-classification-sap.jpg",
     title: "How to Implement UNSPSC Classification in SAP",
     description: "A practical guide to automating UNSPSC coding in SAP-based procurement environments — what works, what does not, and how to get from messy spend data to a clean category baseline.",
     publishedAt: "2026-04-14",
@@ -219,6 +231,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "unspsc-classification-accuracy",
+    image: "/images/blog/unspsc-classification-accuracy.jpg",
     title: "UNSPSC Classification Accuracy: What 90–95% Actually Means",
     description: "What does 90–95% automated UNSPSC classification accuracy mean in practice? How is it measured, what does the remaining 5–10% look like, and how does accuracy improve over time?",
     publishedAt: "2026-04-28",
@@ -243,6 +256,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "unspsc-for-mro",
+    image: "/images/blog/unspsc-for-mro.jpg",
     title: "UNSPSC for MRO: Classifying Maintenance, Repair, and Operations Spend",
     description: "MRO procurement is the hardest category to classify consistently. Here is why UNSPSC works for maintenance spend, and what it takes to get clean MRO data from SAP or Maximo.",
     publishedAt: "2026-05-05",
@@ -260,8 +274,46 @@ export const blogPosts: BlogPost[] = [
     ],
     softCta: "discovery",
   },
+  {
+    slug: "unspsc-category-management",
+    image: "/images/blog/unspsc-category-management.jpg",
+    title: "The Category Management Problem No One Talks About: Why You Need UNSPSC Spend Classification",
+    description: "Category management in FM and infrastructure fails without commodity-level spend data. Learn how UNSPSC classification transforms unstructured invoice data into actionable procurement strategy.",
+    publishedAt: "2026-05-18",
+    author: "team",
+    category: "Procurement",
+    tags: ["UNSPSC", "Category Management", "FM", "Infrastructure", "Spend Analysis"],
+    readingTime: 7,
+    tocItems: [
+      { id: "the-category-management-problem", label: "The category management problem" },
+      { id: "what-unspsc-makes-possible", label: "What UNSPSC makes possible" },
+      { id: "before-after", label: "Before and after: a real example" },
+      { id: "where-to-start", label: "Where to start" },
+    ],
+    softCta: "discovery",
+  },
+  {
+    slug: "maverick-spend-unspsc",
+    image: "/images/blog/maverick-spend-unspsc.jpg",
+    title: "How to Control Maverick Spend: Why It's a Data Problem, Not a Discipline Problem",
+    description: "Discover why maverick spend in FM and construction is a data visibility issue, and how commodity-level UNSPSC classification can uncover hidden procurement savings.",
+    publishedAt: "2026-05-18",
+    author: "team",
+    category: "Procurement",
+    tags: ["UNSPSC", "Maverick Spend", "Procurement", "MRO", "FM", "Spend Control"],
+    readingTime: 7,
+    tocItems: [
+      { id: "maverick-spend-is-not-a-discipline-problem", label: "Not a discipline problem" },
+      { id: "what-gets-exposed", label: "What gets exposed" },
+      { id: "the-golden-500", label: "The Golden 500 SKU approach" },
+      { id: "the-mro-case", label: "The MRO case" },
+    ],
+    softCta: "discovery",
+  },
 ];
 
 export function getBlogPost(slug: string): BlogPost | undefined {
   return blogPosts.find((p) => p.slug === slug);
 }
+
+
