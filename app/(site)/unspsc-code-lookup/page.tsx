@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import Link from "next/link";
 import { CTABand, PageHero } from "@/components/content";
+import { CalendlyButton } from "@/components/calendly-button";
 import { siteConfig } from "@/lib/site";
 import { UnspscLookupTool } from "@/components/unspsc-lookup-tool";
 
@@ -89,9 +90,7 @@ export default function UnspscLookupPage() {
                 <div className="story-label">Need bulk classification?</div>
                 <p>This tool handles individual lookups. For bulk classification — processing thousands of invoice lines automatically — Pearstop's engine handles up to 35,000 lines per month at 90–95% accuracy.</p>
                 <div style={{ marginTop: "1rem", display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-                  <a href={siteConfig.calendly} className="btn btn-primary" target="_blank" rel="noopener noreferrer">
-                    Book a 7-minute discovery
-                  </a>
+            <CalendlyButton label="Book a 7-minute discovery" className="btn btn-primary" />
                   <Link href="/unspsc" className="btn btn-secondary">
                     Learn about bulk classification
                   </Link>

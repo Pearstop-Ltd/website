@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations , setRequestLocale } from "next-intl/server";
 import { CTABand, PageHero, SectionTitle } from "@/components/content";
+import { CalendlyButton } from "@/components/calendly-button";
 import { siteConfig } from "@/lib/site";
 
 export async function generateMetadata({
@@ -89,9 +90,7 @@ export default async function CaseStudiesPage({
               </form>
               <p className="case-studies-note">
                 {t("download.talkNote")}{" "}
-                <a href={siteConfig.calendly} target="_blank" rel="noopener noreferrer">
-                  {t("download.talkLinkText")}
-                </a>{" "}instead.
+                <CalendlyButton label={t("download.talkLinkText")} className="calendly-inline-link" />
               </p>
             </div>
           </div>

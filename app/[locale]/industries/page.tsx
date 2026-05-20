@@ -1,3 +1,4 @@
+import { CalendlyButton } from "@/components/calendly-button";
 import type { Metadata } from "next";
 import { getTranslations , setRequestLocale } from "next-intl/server";
 import Link from "next/link";
@@ -298,9 +299,7 @@ export default async function IndustriesPage({
           <div className="ind-wide-banner">
             <h3>{t("otherIndustries.title")}</h3>
             <p>{t("otherIndustries.copy")}</p>
-            <a href={siteConfig.calendly} className="btn btn-primary" target="_blank" rel="noopener noreferrer">
-              {t("otherIndustries.bookDiscovery")}
-            </a>
+            <CalendlyButton label={t("otherIndustries.bookDiscovery")} className="btn btn-primary" />
           </div>
         </div>
       </section>
@@ -374,9 +373,7 @@ export default async function IndustriesPage({
           <div className="ind-wide-banner">
             <h3>{t("readyBanner.title")}</h3>
             <p>{t("readyBanner.copy")}</p>
-            <a href={siteConfig.calendly} className="btn btn-primary" target="_blank" rel="noopener noreferrer">
-              {t("readyBanner.bookDiscovery")}
-            </a>
+            <CalendlyButton label={t("readyBanner.bookDiscovery")} className="btn btn-primary" />
           </div>
         </div>
       </section>

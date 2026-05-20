@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import { CTABand, GeoBlock, PageHero, QuoteBox, SectionTitle } from "@/components/content";
+import { CalendlyButton } from "@/components/calendly-button";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -117,9 +118,7 @@ export default function ProcurementPage() {
             </article>
           </div>
           <div className="text-center" style={{ marginTop: "2rem" }}>
-            <a href={siteConfig.calendly} className="btn btn-primary" target="_blank" rel="noopener noreferrer">
-              See it in action - book a 7-minute call
-            </a>
+            <CalendlyButton label="See it in action - book a 7-minute call" className="btn btn-primary" />
           </div>
         </div>
       </section>

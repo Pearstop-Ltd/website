@@ -1,3 +1,4 @@
+import { CalendlyButton } from "@/components/calendly-button";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { GeoBlock, PageHero, QuoteBox, SectionTitle } from "@/components/content";
@@ -229,9 +230,7 @@ export default function HomePage() {
               <h2>Schedule a Personal Demo</h2>
               <p>In 30 minutes we'll show you where your data is costing you margin and exactly what a fix looks like. No slides. Just your industry, your numbers, your data.</p>
               <div className="hero-actions" style={{ justifyContent: "flex-start", marginTop: "1.25rem" }}>
-                <a href={siteConfig.calendly} className="btn btn-primary" target="_blank" rel="noopener noreferrer">
-                  Book your demo
-                </a>
+            <CalendlyButton label="Book your demo" className="btn btn-primary" />
                 <Link href="/contact" className="btn btn-secondary">
                   Email us instead
                 </Link>

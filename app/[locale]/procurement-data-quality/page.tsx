@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { getTranslations , setRequestLocale } from "next-intl/server";
 import { CTABand, GeoBlock, PageHero, QuoteBox, SectionTitle } from "@/components/content";
+import { CalendlyButton } from "@/components/calendly-button";
 import { siteConfig } from "@/lib/site";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -127,9 +128,7 @@ export default async function ProcurementPage({ params }: { params: Promise<{ lo
             </article>
           </div>
           <div className="text-center" style={{ marginTop: "2rem" }}>
-            <a href={siteConfig.calendly} className="btn btn-primary" target="_blank" rel="noopener noreferrer">
-              {t("howItWorks.cta")}
-            </a>
+            <CalendlyButton label={t("howItWorks.cta")} className="btn btn-primary" />
           </div>
         </div>
       </section>
