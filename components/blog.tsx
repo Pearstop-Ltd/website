@@ -3,6 +3,7 @@ import Script from "next/script";
 import type { ReactNode } from "react";
 import { TableOfContents, type TocItem } from "@/components/blog-toc";
 import { siteConfig } from "@/lib/site";
+import { UnspscLookupCta } from "@/components/unspsc-lookup-cta";
 import { blogPosts, type BlogPost } from "@/lib/blog-posts";
 
 export function ArticleSchema({ title, description, slug, publishedAt, authorName }: {
@@ -110,6 +111,7 @@ export function BlogLayout({ children, tocItems, author, publishedAt, readingTim
             <span>{readingTime} min read</span>
           </div>
           {children}
+          {tags.some(t => t.toLowerCase() === "unspsc") && <UnspscLookupCta />}
           <AuthorBlock authorKey={author} />
           {related.length > 0 && (
             <section style={{ marginTop: "4rem", paddingTop: "2.5rem", borderTop: "1px solid var(--border, #e5e7eb)" }}>

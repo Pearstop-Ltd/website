@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { getTranslations , setRequestLocale } from "next-intl/server";
 import { CTABand, GeoBlock, PageHero, QuoteBox, SectionTitle } from "@/components/content";
+import { UnspscLookupCta } from "@/components/unspsc-lookup-cta";
 import { siteConfig } from "@/lib/site";
 
 const faqSchema = {
@@ -146,6 +147,7 @@ export default async function UnspscPage({ params }: { params: Promise<{ locale:
         </div>
       </section>
 
+
       <section className="section-soft">
         <div className="container">
           <SectionTitle
@@ -223,6 +225,8 @@ export default async function UnspscPage({ params }: { params: Promise<{ locale:
         </div>
       </section>
 
+      <UnspscLookupCta prefix={prefix} />
+
       <section className="section-tight">
         <div className="container">
           <div className="row">
@@ -289,6 +293,7 @@ export default async function UnspscPage({ params }: { params: Promise<{ locale:
           </div>
         </div>
       </section>
+
 
       <CTABand
         title={t("cta.title")}

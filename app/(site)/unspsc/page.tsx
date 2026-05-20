@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { CTABand, GeoBlock, PageHero, QuoteBox, SectionTitle } from "@/components/content";
+import { UnspscLookupCta } from "@/components/unspsc-lookup-cta";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -54,6 +55,7 @@ export default function UnspscPage() {
           </div>
         </div>
       </section>
+
 
       <section className="section-soft">
         <div className="container">
@@ -110,6 +112,8 @@ export default function UnspscPage() {
         </div>
       </section>
 
+      <UnspscLookupCta />
+
       <section className="section-tight">
         <div className="container">
           <div className="row">
@@ -152,6 +156,7 @@ export default function UnspscPage() {
           </div>
         </div>
       </section>
+
 
       <CTABand
         title="Ready to automate your procurement classification?"

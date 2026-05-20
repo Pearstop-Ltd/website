@@ -3,6 +3,7 @@ import Script from "next/script";
 import { getTranslations , setRequestLocale } from "next-intl/server";
 import Link from "next/link";
 import { CTABand, PageHero, QuoteBox, SectionTitle } from "@/components/content";
+import { UnspscLookupCta } from "@/components/unspsc-lookup-cta";
 import { siteConfig } from "@/lib/site";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -160,6 +161,7 @@ export default async function UnspscDEPage({ params }: { params: Promise<{ local
         </div>
       </section>
 
+
       <section className="section-soft">
         <div className="container">
           <SectionTitle
@@ -206,6 +208,8 @@ export default async function UnspscDEPage({ params }: { params: Promise<{ local
         </div>
       </section>
 
+      <UnspscLookupCta prefix={prefix} />
+
       <section className="section-soft" id="faq">
         <div className="container">
           <div className="row">
@@ -241,6 +245,7 @@ export default async function UnspscDEPage({ params }: { params: Promise<{ local
           </div>
         </div>
       </section>
+
 
       <CTABand
         title={t("cta.title")}
