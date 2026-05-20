@@ -243,8 +243,13 @@ strong {
   font-size: 0.875rem;
 }
 
+main {
+  padding-top: 68px;
+}
+
 #site-nav {
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   z-index: 1000;
   background: rgba(248, 249, 250, 0.96);
