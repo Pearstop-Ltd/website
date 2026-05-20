@@ -6,6 +6,7 @@ import { CTABand, PageHero } from "@/components/content";
 import { CalendlyButton } from "@/components/calendly-button";
 import { siteConfig } from "@/lib/site";
 import { UnspscLookupTool } from "@/components/unspsc-lookup-tool";
+import { UnspscTree } from "@/components/unspsc-tree";
 
 const toolSchema = {
   "@context": "https://schema.org",
@@ -153,6 +154,41 @@ export default async function UnspscLookupPage({ params }: { params: Promise<{ l
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Taxonomy tree demo */}
+      <section style={{ padding: "3rem 0 1rem", background: "#f8fafc", borderTop: "1px solid #eef1f6" }}>
+        <div className="container">
+          <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", flexWrap: "wrap", gap: 12, marginBottom: 20 }}>
+            <div>
+              <h2 style={{ fontWeight: 700, fontSize: "1.3rem", color: "#111827", marginBottom: 4 }}>
+                Explore the UNSPSC hierarchy
+              </h2>
+              <p style={{ color: "#94a3b8", fontSize: "0.875rem", margin: 0 }}>
+                Click through Segment → Family → Class → Commodity to understand where any code sits.
+              </p>
+            </div>
+            <Link href="/unspsc-classification-demo" style={{
+              display: "inline-flex", alignItems: "center", gap: "0.4rem",
+              fontSize: "0.85rem", fontWeight: 600, color: "#2563eb",
+              textDecoration: "none", whiteSpace: "nowrap",
+              padding: "6px 14px", borderRadius: 8,
+              border: "1px solid #dbeafe", background: "#eff6ff",
+            }}>
+              Open full demo →
+            </Link>
+          </div>
+          <div style={{
+            background: "#fff",
+            borderRadius: 16,
+            border: "1px solid #eaeff5",
+            padding: "22px 18px",
+            boxShadow: "0 2px 20px rgba(0,0,0,0.04)",
+            marginBottom: "2rem",
+          }}>
+            <UnspscTree />
           </div>
         </div>
       </section>
