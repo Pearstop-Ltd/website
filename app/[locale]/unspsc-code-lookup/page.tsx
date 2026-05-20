@@ -3,6 +3,7 @@ import Script from "next/script";
 import { getTranslations , setRequestLocale } from "next-intl/server";
 import Link from "next/link";
 import { CTABand, PageHero } from "@/components/content";
+import { CalendlyButton } from "@/components/calendly-button";
 import { siteConfig } from "@/lib/site";
 import { UnspscLookupTool } from "@/components/unspsc-lookup-tool";
 
@@ -145,9 +146,7 @@ export default async function UnspscLookupPage({ params }: { params: Promise<{ l
                 <div className="story-label">{t("bulk.label")}</div>
                 <p>{t("bulk.copy")}</p>
                 <div style={{ marginTop: "1rem", display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-                  <a href={siteConfig.calendly} className="btn btn-primary" target="_blank" rel="noopener noreferrer">
-                    {t("bulk.cta")}
-                  </a>
+            <CalendlyButton label={t("bulk.cta")} className="btn btn-primary" />
                   <Link href={`${prefix}/unspsc`} className="btn btn-secondary">
                     {t("bulk.learnMore")}
                   </Link>

@@ -1,4 +1,5 @@
 "use client";
+import { CalendlyButton } from "@/components/calendly-button";
 
 import { useState, useEffect } from "react";
 
@@ -116,9 +117,7 @@ export function UnspscLookupTool({
         <p style={{ color: "var(--muted)", fontSize: "0.9rem", marginBottom: "1.5rem", lineHeight: 1.6 }}>
           For bulk classification — thousands of invoice lines, automated and accurate — talk to us about the full service.
         </p>
-        <a href="https://calendly.com/stephanie-pearstop/7-min-discovery" className="btn btn-primary" target="_blank" rel="noopener noreferrer">
-          Book a 7-minute discovery call
-        </a>
+        <CalendlyButton label="Book a 7-minute discovery call" className="btn btn-primary" />
       </div>
     );
   }

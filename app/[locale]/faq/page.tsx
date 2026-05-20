@@ -3,6 +3,7 @@ import Script from "next/script";
 import { getTranslations , setRequestLocale } from "next-intl/server";
 import Link from "next/link";
 import { CTABand, PageHero } from "@/components/content";
+import { CalendlyButton } from "@/components/calendly-button";
 import { siteConfig } from "@/lib/site";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -105,9 +106,7 @@ export default async function FaqPage({ params }: { params: Promise<{ locale: st
                 <div className="story-label">{t("stillHaveQuestions.label")}</div>
                 <p>{t("stillHaveQuestions.copy")}</p>
                 <div style={{ marginTop: "1rem", display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-                  <a href={siteConfig.calendly} className="btn btn-primary" target="_blank" rel="noopener noreferrer">
-                    {t("stillHaveQuestions.cta")}
-                  </a>
+            <CalendlyButton label={t("stillHaveQuestions.cta")} className="btn btn-primary" />
                   <Link href={`${prefix}/contact`} className="btn btn-secondary">
                     {t("stillHaveQuestions.email")}
                   </Link>

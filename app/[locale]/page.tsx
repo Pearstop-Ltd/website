@@ -1,3 +1,4 @@
+import { CalendlyButton } from "@/components/calendly-button";
 import type { Metadata } from "next";
 import Script from "next/script";
 import Link from "next/link";
@@ -216,9 +217,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
               <h2>{t("demoBand.title")}</h2>
               <p>{t("demoBand.description")}</p>
               <div className="hero-actions" style={{ justifyContent: "flex-start", marginTop: "1.25rem" }}>
-                <a href={siteConfig.calendly} className="btn btn-primary" target="_blank" rel="noopener noreferrer">
-                  {t("demoBand.bookDemo")}
-                </a>
+            <CalendlyButton label={t("demoBand.bookDemo")} className="btn btn-primary" />
                 <Link href={`${prefix}/contact`} className="btn btn-secondary">
                   {t("demoBand.emailUs")}
                 </Link>

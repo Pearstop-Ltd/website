@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { CTABand, PageHero, SectionTitle } from "@/components/content";
+import { CalendlyButton } from "@/components/calendly-button";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -96,7 +97,7 @@ export default function CaseStudiesPage() {
               <p className="case-studies-note">
                 Prefer to just view it? <a href={siteConfig.downloads.caseStudiesView} target="_blank" rel="noopener noreferrer">Open the Google Slides deck</a>.
                 <br />
-                Prefer to talk first? <a href={siteConfig.calendly} target="_blank" rel="noopener noreferrer">Book a 7-minute discovery call</a> instead.
+                Prefer to talk first? <CalendlyButton label="Book a 7-minute discovery call" className="calendly-inline-link" /> instead.
               </p>
             </div>
           </div>

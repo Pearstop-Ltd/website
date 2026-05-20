@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import Link from "next/link";
 import { CTABand, PageHero } from "@/components/content";
+import { CalendlyButton } from "@/components/calendly-button";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -245,9 +246,7 @@ export default function FaqPage() {
                 <div className="story-label">Still have a question?</div>
                 <p>If your question is not answered here, the fastest way to get an answer is a 7-minute discovery call. There is no sales pressure — it is a direct conversation about your data situation.</p>
                 <div style={{ marginTop: "1rem", display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-                  <a href={siteConfig.calendly} className="btn btn-primary" target="_blank" rel="noopener noreferrer">
-                    Book a 7-minute discovery
-                  </a>
+            <CalendlyButton label="Book a 7-minute discovery" className="btn btn-primary" />
                   <Link href="/contact" className="btn btn-secondary">
                     Send us a message
                   </Link>

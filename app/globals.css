@@ -1981,3 +1981,15 @@ section {
   background: var(--purple-soft, #f3f0ff);
   color: var(--purple, #6d28d9);
 }
+
+.calendly-inline-link {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--primary);
+  font-weight: 600;
+  cursor: pointer;
+  font-size: inherit;
+  text-decoration: underline;
+}
+.calendly-inline-link:hover { color: var(--primary-dark); }

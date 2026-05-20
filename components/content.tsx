@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { CalendlyButton } from "@/components/calendly-button";
+import { siteConfig } from "@/lib/site";
 import type { ReactNode } from "react";
 import { HeroBackgroundVideo } from "@/components/hero-background-video";
 
@@ -43,6 +45,9 @@ export function PageHero({ eyebrow, title, lead, actions, videoUrl, videoPoster,
                       ? "btn btn-outline"
                       : "btn btn-primary";
 
+                if (action.href === siteConfig.calendly) {
+                  return <CalendlyButton key={action.label} label={action.label} className={className} />;
+                }
                 if (action.external) {
                   return (
                     <a key={`${action.label}-${action.href}`} href={action.href} className={className} target="_blank" rel="noopener noreferrer">
@@ -202,6 +207,9 @@ export function CTABand({
                   : action.variant === "outline"
                     ? "btn btn-outline"
                     : "btn btn-primary";
+              if (action.href === siteConfig.calendly) {
+                return <CalendlyButton key={action.label} label={action.label} className={className} />;
+              }
               return action.external ? (
                 <a key={`${action.label}-${action.href}`} href={action.href} className={className} target="_blank" rel="noopener noreferrer">
                   {action.label}
