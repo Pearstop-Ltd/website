@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
 import type { ComponentType } from "react";
 import { notFound } from "next/navigation";
+import { existsSync, readFileSync } from "fs";
+import path from "path";
+import { MDXRemote } from "next-mdx-remote/rsc";
+import rehypeSlug from "rehype-slug";
 import { getBlogPost, blogPosts } from "@/lib/blog-posts";
-import { ArticleSchema, FaqSchema, BlogLayout } from "@/components/blog";
+import { ArticleSchema, FaqSchema, BlogLayout, BlogQuote, SoftCta, ComparisonCards, ChecklistSection, KraljicMatrix } from "@/components/blog";
 import { siteConfig } from "@/lib/site";
 import ProcurementDataCost from "@/components/blog-posts/procurement-data-cost";
 import WhatIsUnspsc from "@/components/blog-posts/what-is-unspsc";
@@ -28,11 +32,20 @@ const POST_COMPONENTS: Record<string, ComponentType> = {
   "unspsc-vs-eclass-vs-cpv": UnspscVsEclassVsCpv,
 };
 
+const MDX_COMPONENTS = { BlogQuote, SoftCta, ComparisonCards, ChecklistSection, KraljicMatrix };
+
 const AUTHOR_NAMES: Record<string, string> = {
   stephanie: "Stephanie Wiechers",
   richard: "Richard Wallace",
   team: "Pearstop",
 };
+
+function getMdxContent(slug: string): string | null {
+  const mdxPath = path.join(process.cwd(), "content", "blog", "en", `${slug}.mdx`);
+  if (!existsSync(mdxPath)) return null;
+  const raw = readFileSync(mdxPath, "utf-8").replace(/^﻿/, "").replace(/\r\n/g, "\n");
+  return raw.replace(/^---[\s\S]*?---\n/, "");
+}
 
 export function generateStaticParams() {
   return blogPosts.map((p) => ({ slug: p.slug }));
@@ -60,8 +73,11 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   const { slug } = await params;
   const post = getBlogPost(slug);
   if (!post) notFound();
-  const PostContent = POST_COMPONENTS[slug];
-  if (!PostContent) notFound();
+
+  const PostComponent = POST_COMPONENTS[slug];
+  const mdxContent = PostComponent ? null : getMdxContent(slug);
+  if (!PostComponent && !mdxContent) notFound();
+
   return (
     <>
       <ArticleSchema title={post.title} description={post.description} slug={post.slug} publishedAt={post.publishedAt} authorName={AUTHOR_NAMES[post.author] ?? "Pearstop"} />
@@ -77,7 +93,12 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         </div>
       </header>
       <BlogLayout tocItems={post.tocItems} author={post.author} publishedAt={post.publishedAt} readingTime={post.readingTime} category={post.category} slug={post.slug} tags={post.tags}>
-        <PostContent />
+        {mdxContent ? (
+          <MDXRemote source={mdxContent} components={MDX_COMPONENTS} options={{ mdxOptions: { rehypePlugins: [rehypeSlug] } }} />
+        ) : (
+          // @ts-expect-error PostComponent is defined here
+          <PostComponent />
+        )}
       </BlogLayout>
     </>
   );
