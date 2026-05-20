@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import Link from "next/link";
 import { CTABand, PageHero, QuoteBox, SectionTitle } from "@/components/content";
+import { UnspscLookupCta } from "@/components/unspsc-lookup-cta";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -158,6 +159,7 @@ export default function UnspscFMPage() {
         </div>
       </section>
 
+
       <section id="how-it-works" className="section-soft">
         <div className="container">
           <SectionTitle
@@ -212,6 +214,8 @@ export default function UnspscFMPage() {
           </div>
         </div>
       </section>
+
+      <UnspscLookupCta />
 
       <section className="section-tight">
         <div className="container">
@@ -283,6 +287,7 @@ export default function UnspscFMPage() {
           </div>
         </div>
       </section>
+
 
       <CTABand
         title="Ready to automate FM procurement classification?"

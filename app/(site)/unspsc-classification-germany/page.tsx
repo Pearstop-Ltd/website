@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import Link from "next/link";
 import { CTABand, PageHero, QuoteBox, SectionTitle } from "@/components/content";
+import { UnspscLookupCta } from "@/components/unspsc-lookup-cta";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -157,6 +158,7 @@ export default function UnspscDEPage() {
         </div>
       </section>
 
+
       <section className="section-soft">
         <div className="container">
           <SectionTitle
@@ -202,6 +204,8 @@ export default function UnspscDEPage() {
           </div>
         </div>
       </section>
+
+      <UnspscLookupCta />
 
       <section className="section-soft" id="faq">
         <div className="container">
@@ -259,6 +263,7 @@ export default function UnspscDEPage() {
           </div>
         </div>
       </section>
+
 
       <CTABand
         title="Bereit, Ihre Beschaffungsklassifizierung zu automatisieren?"
