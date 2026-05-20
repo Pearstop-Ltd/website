@@ -96,7 +96,6 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         {mdxContent ? (
           <MDXRemote source={mdxContent} components={MDX_COMPONENTS} options={{ mdxOptions: { rehypePlugins: [rehypeSlug] } }} />
         ) : (
-          // @ts-expect-error PostComponent is defined here
           <PostComponent />
         )}
       </BlogLayout>
