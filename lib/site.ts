@@ -56,7 +56,9 @@ export const solutionLinks: NavLink[] = [
   { label: "Data Quality", href: "/data-quality", description: "Clean, standardise, and enrich operational data." },
   { label: "Fabric Ready", href: "/fabric", description: "Prepare for Microsoft Fabric migration." },
   { label: "AI Readiness", href: "/ai-readiness", description: "Build a trustworthy AI data foundation." },
-  { label: "UNSPSC", href: "/unspsc", description: "Automated procurement classification at scale." }
+  { label: "UNSPSC Classification", href: "/unspsc", description: "Automated procurement classification at scale." },
+  { label: "Free UNSPSC Lookup", href: "/unspsc-code-lookup", description: "Find the right 8-digit code instantly." },
+  { label: "UNSPSC Taxonomy Tree", href: "/unspsc-classification-demo", description: "Explore the hierarchy interactively." }
 ];
 
 export const mainNavLinks: NavLink[] = [
@@ -83,6 +85,7 @@ export const footerSolutionLinks: NavLink[] = [
   { label: "Asset Data Management", href: "/asset-data-management" },
   { label: "UNSPSC Classification", href: "/unspsc" },
   { label: "Free UNSPSC Lookup", href: "/unspsc-code-lookup" },
+  { label: "UNSPSC Taxonomy Tree", href: "/unspsc-classification-demo" },
   { label: "UNSPSC for FM", href: "/unspsc-classification-facilities-management" },
   { label: "UNSPSC Netherlands", href: "/unspsc-classification-netherlands" },
   { label: "UNSPSC Germany", href: "/unspsc-classification-germany" },
