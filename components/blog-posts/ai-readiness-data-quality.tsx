@@ -1,3 +1,4 @@
+import { siteConfig } from "@/lib/site";
 import { BlogQuote, ChecklistSection, SoftCta } from "@/components/blog";
 import Link from "next/link";
 
@@ -47,7 +48,8 @@ export default function AiReadinessDataQuality() {
         title="Download: AI Data Readiness Checklist"
         description="A one-page checklist you can run against your current ERP and asset data today. Identify exactly where your data readiness gaps are before your next AI or Fabric project."
         ctaLabel="Book a 7-minute discovery call"
-        ctaHref="/contact"
+        ctaHref={siteConfig.calendly}
+        external={true}
       />
     </>
   );

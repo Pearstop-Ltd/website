@@ -4,6 +4,7 @@ import type { ReactNode } from "react";
 import { TableOfContents, type TocItem } from "@/components/blog-toc";
 import { siteConfig } from "@/lib/site";
 import { UnspscLookupCta } from "@/components/unspsc-lookup-cta";
+import { CalendlyButton } from "@/components/calendly-button";
 import { blogPosts, type BlogPost } from "@/lib/blog-posts";
 
 export function ArticleSchema({ title, description, slug, publishedAt, authorName }: {
@@ -172,7 +173,9 @@ export function SoftCta({ type, title, description, ctaLabel, ctaHref, external 
       <div>
         <p style={{ fontWeight: 700, fontSize: "1rem", marginBottom: "0.35rem" }}>{title}</p>
         <p style={{ color: "var(--muted)", fontSize: "0.9rem", marginBottom: "1rem", lineHeight: 1.6 }}>{description}</p>
-        {external ? (
+        {ctaHref === siteConfig.calendly ? (
+          <CalendlyButton label={ctaLabel} className="btn btn-primary" style={{ fontSize: "0.875rem" }} />
+        ) : external ? (
           <a href={ctaHref} target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ fontSize: "0.875rem" }}>{ctaLabel}</a>
         ) : (
           <Link href={ctaHref} className="btn btn-primary" style={{ fontSize: "0.875rem" }}>{ctaLabel}</Link>

@@ -1,4 +1,5 @@
 "use client";
+import type React from "react";
 
 import { useEffect } from "react";
 
@@ -12,7 +13,7 @@ declare global {
 
 const CALENDLY_URL = "https://calendly.com/stephanie-pearstop/7-min-discovery";
 
-export function CalendlyButton({ label, className }: { label: string; className?: string }) {
+export function CalendlyButton({ label, className, style }: { label: string; className?: string; style?: React.CSSProperties }) {
   useEffect(() => {
     if (document.getElementById("calendly-widget-css")) return;
     const link = document.createElement("link");
@@ -33,6 +34,7 @@ export function CalendlyButton({ label, className }: { label: string; className?
     <button
       type="button"
       className={className}
+      style={style}
       onClick={() => window.Calendly?.initPopupWidget({ url: CALENDLY_URL })}
     >
       {label}

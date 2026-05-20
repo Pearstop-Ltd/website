@@ -1,3 +1,4 @@
+import { siteConfig } from "@/lib/site";
 import { SoftCta } from "@/components/blog";
 import Link from "next/link";
 
@@ -65,7 +66,8 @@ export default function UnspscVsEclassVsCpv() {
         title="Not sure which standard is right for your data?"
         description="In a 7-minute call we will walk through your current procurement data and show you exactly what automated classification would look like — including which standard fits your industry and reporting requirements."
         ctaLabel="Book a 7-minute discovery"
-        ctaHref="/contact"
+        ctaHref={siteConfig.calendly}
+        external={true}
       />
     </>
   );

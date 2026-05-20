@@ -1,3 +1,4 @@
+import { siteConfig } from "@/lib/site";
 import { BlogQuote, SoftCta } from "@/components/blog";
 
 export default function ExcelHeroics() {
@@ -48,7 +49,8 @@ export default function ExcelHeroics() {
         title="Curious what automated data management would look like for your team?"
         description="Book a 7-minute discovery call and we will walk through your current data flow and show you specifically where automation would eliminate the most manual work."
         ctaLabel="Book a discovery call"
-        ctaHref="/contact"
+        ctaHref={siteConfig.calendly}
+        external={true}
       />
     </>
   );
