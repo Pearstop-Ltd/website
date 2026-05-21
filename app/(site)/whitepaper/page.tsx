@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { CTABand, PageHero, SectionTitle } from "@/components/content";
 import { siteConfig } from "@/lib/site";
 
@@ -55,9 +56,9 @@ export default function WhitepaperPage() {
                   <a className="btn btn-primary" href={`mailto:${siteConfig.email}?subject=Whitepaper%20request`}>
                     Request via email
                   </a>
-                  <a className="btn btn-outline" href="/contact">
+                  <Link className="btn btn-outline" href="/contact">
                     Contact us
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

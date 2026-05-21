@@ -96,7 +96,7 @@ export function UnspscLookupTool({
     }
   }
 
-  function useExample(example: string) {
+  function handleExampleClick(example: string) {
     setDescription(example);
     setResult(null);
     setError(null);
@@ -168,7 +168,7 @@ export function UnspscLookupTool({
           <button
             key={ex}
             type="button"
-            onClick={() => useExample(ex)}
+            onClick={() => handleExampleClick(ex)}
             style={{
               background: "none",
               border: "1px solid #d0d5dd",
