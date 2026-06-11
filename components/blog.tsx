@@ -104,7 +104,7 @@ export function BlogLayout({ children, tocItems, author, publishedAt, readingTim
   const related = getRelatedPosts(slug, tags);
   return (
     <div className="container" style={{ paddingTop: "3rem", paddingBottom: "5rem" }}>
-      <div style={{ display: "grid", gridTemplateColumns: "minmax(0,1fr) 220px", gap: "4rem", alignItems: "start" }}>
+      <div className="blog-layout-grid">
         <article className="blog-article" style={{ minWidth: 0 }}>
           <div style={{ display: "flex", gap: "1rem", alignItems: "center", fontSize: "0.8rem", color: "var(--muted)", marginBottom: "2.5rem", flexWrap: "wrap" }}>
             <span style={{ background: "var(--purple-soft)", color: "var(--primary-dark)", padding: "0.25rem 0.75rem", borderRadius: "999px", fontWeight: 600, fontSize: "0.75rem" }}>{category}</span>
@@ -135,6 +135,8 @@ export function BlogLayout({ children, tocItems, author, publishedAt, readingTim
         </aside>
       </div>
       <style>{`
+        .blog-layout-grid { display: grid; grid-template-columns: 1fr; align-items: start; }
+        @media (min-width: 1024px) { .blog-layout-grid { grid-template-columns: minmax(0,1fr) 220px; gap: 4rem; } }
         @media (min-width: 1024px) { .blog-toc-col { display: block !important; } }
         .blog-article h2 { margin-top: 2.5rem; scroll-margin-top: 5.5rem; }
         .blog-article h3 { margin-top: 1.75rem; scroll-margin-top: 5.5rem; }
