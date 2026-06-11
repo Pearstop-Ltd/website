@@ -210,7 +210,6 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-<<<<<<< Updated upstream
     slug: "unspsc-classification-sap",
     image: "/images/blog/unspsc-classification-sap.jpg",
     title: "How to Implement UNSPSC Classification in SAP",
@@ -308,7 +307,10 @@ export const blogPosts: BlogPost[] = [
       { id: "what-gets-exposed", label: "What gets exposed" },
       { id: "the-golden-500", label: "The Golden 500 SKU approach" },
       { id: "the-mro-case", label: "The MRO case" },
-=======
+    ],
+    softCta: "discovery",
+  },
+  {
     slug: "win-ai-race-procurement-data-quality",
     title: "How to Win the AI Race in Procurement: Start with Clean Data",
     description: "AI in procurement only works when your data is clean, classified, and trusted. Learn how Pearstop helps hard services teams turn procurement and asset data into an AI-ready advantage.",
@@ -324,7 +326,6 @@ export const blogPosts: BlogPost[] = [
       { id: "why-classification-matters", label: "Why classification matters" },
       { id: "human-in-control-automation", label: "Human-in-control automation" },
       { id: "how-to-win-the-ai-race", label: "How to win the AI race" },
->>>>>>> Stashed changes
     ],
     softCta: "discovery",
   },
@@ -333,5 +334,4 @@ export const blogPosts: BlogPost[] = [
 export function getBlogPost(slug: string): BlogPost | undefined {
   return blogPosts.find((p) => p.slug === slug);
 }
-
 
