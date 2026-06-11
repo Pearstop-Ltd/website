@@ -18,6 +18,7 @@ import ExcelHeroics from "@/components/blog-posts/excel-heroics-hard-services";
 import ConstructionProcurement from "@/components/blog-posts/construction-procurement-material-costs";
 import WhatCleanDataEnables from "@/components/blog-posts/what-clean-data-enables";
 import UnspscVsEclassVsCpv from "@/components/blog-posts/unspsc-vs-eclass-vs-cpv";
+import WinAiRaceProcurementDataQuality from "@/components/blog-posts/win-ai-race-procurement-data-quality";
 
 const POST_COMPONENTS: Record<string, ComponentType> = {
   "procurement-data-cost": ProcurementDataCost,
@@ -30,6 +31,7 @@ const POST_COMPONENTS: Record<string, ComponentType> = {
   "construction-procurement-material-costs": ConstructionProcurement,
   "what-clean-data-enables": WhatCleanDataEnables,
   "unspsc-vs-eclass-vs-cpv": UnspscVsEclassVsCpv,
+  "win-ai-race-procurement-data-quality": WinAiRaceProcurementDataQuality,
 };
 
 const MDX_COMPONENTS = { BlogQuote, SoftCta, ComparisonCards, ChecklistSection, KraljicMatrix };
