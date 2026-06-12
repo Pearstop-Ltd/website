@@ -5,6 +5,7 @@ import { existsSync, readFileSync } from "fs";
 import path from "path";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import rehypeSlug from "rehype-slug";
+import remarkGfm from "remark-gfm";
 import { getBlogPost, blogPosts } from "@/lib/blog-posts";
 import { ArticleSchema, FaqSchema, BlogLayout, BlogQuote, SoftCta, ComparisonCards, ChecklistSection, KraljicMatrix } from "@/components/blog";
 import { siteConfig } from "@/lib/site";
@@ -18,6 +19,7 @@ import ExcelHeroics from "@/components/blog-posts/excel-heroics-hard-services";
 import ConstructionProcurement from "@/components/blog-posts/construction-procurement-material-costs";
 import WhatCleanDataEnables from "@/components/blog-posts/what-clean-data-enables";
 import UnspscVsEclassVsCpv from "@/components/blog-posts/unspsc-vs-eclass-vs-cpv";
+import WinAiRaceProcurementDataQuality from "@/components/blog-posts/win-ai-race-procurement-data-quality";
 
 const POST_COMPONENTS: Record<string, ComponentType> = {
   "procurement-data-cost": ProcurementDataCost,
@@ -30,6 +32,7 @@ const POST_COMPONENTS: Record<string, ComponentType> = {
   "construction-procurement-material-costs": ConstructionProcurement,
   "what-clean-data-enables": WhatCleanDataEnables,
   "unspsc-vs-eclass-vs-cpv": UnspscVsEclassVsCpv,
+  "win-ai-race-procurement-data-quality": WinAiRaceProcurementDataQuality,
 };
 
 const MDX_COMPONENTS = {
@@ -118,6 +121,8 @@ export default async function BlogPostPage({
   const fm = getMdxFrontmatter(locale, slug);
   const title = fm.title ?? post.title;
   const description = fm.description ?? post.description;
+  const tocItems = locale === "nl" && post.tocItemsNl ? post.tocItemsNl : post.tocItems;
+  const tocHeading = locale === "nl" ? "In dit artikel" : "In this article";
 
   // Try MDX (translated if available, fallback to EN MDX, then TSX)
   const mdxContent = getMdxContent(locale, slug);
@@ -153,7 +158,8 @@ export default async function BlogPostPage({
         </div>
       </header>
       <BlogLayout
-        tocItems={post.tocItems}
+        tocItems={tocItems}
+        tocHeading={tocHeading}
         author={post.author}
         publishedAt={post.publishedAt}
         readingTime={post.readingTime}
@@ -162,7 +168,7 @@ export default async function BlogPostPage({
         tags={post.tags}
       >
         {mdxContent ? (
-          <MDXRemote source={mdxContent} components={MDX_COMPONENTS} options={{ mdxOptions: { rehypePlugins: [rehypeSlug] } }} />
+          <MDXRemote source={mdxContent} components={MDX_COMPONENTS} options={{ mdxOptions: { rehypePlugins: [rehypeSlug], remarkPlugins: [remarkGfm] } }} />
         ) : (
           (() => {
             const PostContent = POST_COMPONENTS[slug];

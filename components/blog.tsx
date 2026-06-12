@@ -98,8 +98,8 @@ function getRelatedPosts(currentSlug: string, currentTags: string[]): BlogPost[]
   return scored.slice(0, 2).map((s) => s.post);
 }
 
-export function BlogLayout({ children, tocItems, author, publishedAt, readingTime, category, slug, tags }: {
-  children: ReactNode; tocItems: TocItem[]; author: AuthorKey; publishedAt: string; readingTime: number; category: string; slug: string; tags: string[];
+export function BlogLayout({ children, tocItems, tocHeading, author, publishedAt, readingTime, category, slug, tags }: {
+  children: ReactNode; tocItems: TocItem[]; tocHeading?: string; author: AuthorKey; publishedAt: string; readingTime: number; category: string; slug: string; tags: string[];
 }) {
   const related = getRelatedPosts(slug, tags);
   return (
@@ -131,7 +131,7 @@ export function BlogLayout({ children, tocItems, author, publishedAt, readingTim
           )}
         </article>
         <aside style={{ display: "none" }} className="blog-toc-col">
-          <TableOfContents items={tocItems} />
+          <TableOfContents items={tocItems} heading={tocHeading} />
         </aside>
       </div>
       <style>{`

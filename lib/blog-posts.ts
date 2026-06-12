@@ -1,4 +1,4 @@
-﻿export type BlogPost = {
+export type BlogPost = {
   slug: string;
   title: string;
   description: string;
@@ -8,6 +8,7 @@
   tags: string[];
   readingTime: number;
   tocItems: { id: string; label: string }[];
+  tocItemsNl?: { id: string; label: string }[];
   softCta: "checklist" | "case-study" | "discovery" | "template";
   faqItems?: { q: string; a: string }[];
   image?: string;
@@ -30,6 +31,12 @@ export const blogPosts: BlogPost[] = [
       { id: "what-clean-data-enables", label: "What clean data enables" },
       { id: "the-process", label: "How the fix works" },
     ],
+    tocItemsNl: [
+      { id: "the-problem", label: "Het probleem met procurement data" },
+      { id: "where-cost-hides", label: "Waar de kosten verborgen zitten" },
+      { id: "what-clean-data-enables", label: "Wat schone data mogelijk maakt" },
+      { id: "the-process", label: "Hoe de oplossing werkt" },
+    ],
     softCta: "case-study",
   },
   {
@@ -48,6 +55,13 @@ export const blogPosts: BlogPost[] = [
       { id: "erp-problem", label: "Why ERPs don't solve this" },
       { id: "what-it-unlocks", label: "What classification unlocks" },
       { id: "maintaining", label: "Maintaining classification" },
+    ],
+    tocItemsNl: [
+      { id: "what-is-unspsc", label: "Wat UNSPSC is" },
+      { id: "why-it-matters", label: "Waarom het in de praktijk belangrijk is" },
+      { id: "erp-problem", label: "Waarom ERP's dit niet oplossen" },
+      { id: "what-it-unlocks", label: "Wat classificatie mogelijk maakt" },
+      { id: "maintaining", label: "Classificatie onderhouden" },
     ],
     softCta: "template",
   },
@@ -68,6 +82,13 @@ export const blogPosts: BlogPost[] = [
       { id: "missing-data", label: "What is typically missing" },
       { id: "ongoing-maintenance", label: "Ongoing maintenance" },
     ],
+    tocItemsNl: [
+      { id: "what-bad-looks-like", label: "Hoe een falend register eruitziet" },
+      { id: "financial-cost", label: "De financiële kosten" },
+      { id: "what-it-enables", label: "Wat nauwkeurigheid mogelijk maakt" },
+      { id: "missing-data", label: "Wat er typisch ontbreekt" },
+      { id: "ongoing-maintenance", label: "Doorlopend onderhoud" },
+    ],
     softCta: "discovery",
   },
   {
@@ -86,6 +107,12 @@ export const blogPosts: BlogPost[] = [
       { id: "five-scenarios", label: "5 category scenarios" },
       { id: "data-as-fuel", label: "Data as category management fuel" },
     ],
+    tocItemsNl: [
+      { id: "kraljic", label: "De Kraljic Matrix uitgelegd" },
+      { id: "data-problem", label: "Waarom data de blokkade is" },
+      { id: "five-scenarios", label: "5 categoriescenario's" },
+      { id: "data-as-fuel", label: "Data als brandstof voor category management" },
+    ],
     softCta: "case-study",
   },
   {
@@ -103,6 +130,12 @@ export const blogPosts: BlogPost[] = [
       { id: "fabric-reality", label: "The Microsoft Fabric reality" },
       { id: "checklist", label: "AI readiness checklist" },
       { id: "preparation", label: "What preparation looks like" },
+    ],
+    tocItemsNl: [
+      { id: "what-ai-requires", label: "Wat AI-tools vereisen" },
+      { id: "fabric-reality", label: "De Microsoft Fabric-realiteit" },
+      { id: "checklist", label: "AI-gereedheidscontrolelijst" },
+      { id: "preparation", label: "Hoe voorbereiding eruitziet" },
     ],
     softCta: "checklist",
     faqItems: [
@@ -128,6 +161,13 @@ export const blogPosts: BlogPost[] = [
       { id: "what-changes", label: "What changes with clean data" },
       { id: "compounding", label: "The compounding effect" },
     ],
+    tocItemsNl: [
+      { id: "pricing-problem", label: "Het prijsvertrouwensprobleem" },
+      { id: "two-scenarios", label: "Scenario A vs B" },
+      { id: "what-slows", label: "Wat aanbestedingsteams vertraagt" },
+      { id: "what-changes", label: "Wat verandert met schone data" },
+      { id: "compounding", label: "Het cumulatieve effect" },
+    ],
     softCta: "discovery",
   },
   {
@@ -146,6 +186,12 @@ export const blogPosts: BlogPost[] = [
       { id: "migration", label: "What the migration looks like" },
       { id: "other-side", label: "What the other side looks like" },
     ],
+    tocItemsNl: [
+      { id: "visible-cost", label: "Zichtbare vs werkelijke kosten" },
+      { id: "diagnostic", label: "Zit u in het Excel-heldenterritorium?" },
+      { id: "migration", label: "Hoe de migratie eruitziet" },
+      { id: "other-side", label: "Hoe de andere kant eruitziet" },
+    ],
     softCta: "template",
   },
   {
@@ -163,6 +209,12 @@ export const blogPosts: BlogPost[] = [
       { id: "steel-case-study", label: "Steel: a case study" },
       { id: "spec-standardisation", label: "Specification standardisation" },
       { id: "software-integration", label: "Integration with construction software" },
+    ],
+    tocItemsNl: [
+      { id: "structural-problem", label: "Waarom bouwdata anders is" },
+      { id: "steel-case-study", label: "Staal: een casestudy" },
+      { id: "spec-standardisation", label: "Specificatiestandardisatie" },
+      { id: "software-integration", label: "Integratie met bouwsoftware" },
     ],
     softCta: "case-study",
   },
@@ -183,6 +235,13 @@ export const blogPosts: BlogPost[] = [
       { id: "ai-tools", label: "4. AI tools that deliver" },
       { id: "strategic-procurement", label: "5. Strategic procurement" },
     ],
+    tocItemsNl: [
+      { id: "supplier-consolidation", label: "1. Leveranciersconsolidatie" },
+      { id: "predictive-maintenance", label: "2. Voorspellend onderhoud" },
+      { id: "tender-pricing", label: "3. Nauwkeurige aanbestedingsprijzen" },
+      { id: "ai-tools", label: "4. AI-tools die leveren" },
+      { id: "strategic-procurement", label: "5. Strategische inkoop" },
+    ],
     softCta: "case-study",
   },
   {
@@ -201,6 +260,13 @@ export const blogPosts: BlogPost[] = [
       { id: "cpv", label: "CPV" },
       { id: "which-to-use", label: "Which to use" },
       { id: "implementation", label: "Implementation reality" },
+    ],
+    tocItemsNl: [
+      { id: "unspsc", label: "UNSPSC" },
+      { id: "eclass", label: "eClass" },
+      { id: "cpv", label: "CPV" },
+      { id: "which-to-use", label: "Welke te gebruiken" },
+      { id: "implementation", label: "Implementatierealiteit" },
     ],
     softCta: "discovery",
     faqItems: [
@@ -227,6 +293,14 @@ export const blogPosts: BlogPost[] = [
       { id: "review-queue", label: "The review queue" },
       { id: "timing", label: "Timing" },
     ],
+    tocItemsNl: [
+      { id: "sap-problem", label: "Het SAP-probleem waar niemand over spreekt" },
+      { id: "three-approaches", label: "Drie benaderingen van UNSPSC in SAP" },
+      { id: "what-to-export", label: "Welke data uit SAP te exporteren" },
+      { id: "good-classification", label: "Hoe goede classificatie eruitziet" },
+      { id: "review-queue", label: "De reviewwachtrij" },
+      { id: "timing", label: "Timing" },
+    ],
     softCta: "discovery",
   },
   {
@@ -246,6 +320,14 @@ export const blogPosts: BlogPost[] = [
       { id: "accuracy-stages", label: "Accuracy at different stages" },
       { id: "four-layer", label: "How the four-layer engine works" },
       { id: "downstream", label: "What accuracy actually buys you" },
+    ],
+    tocItemsNl: [
+      { id: "the-number", label: "Het getal dat u blijft zien" },
+      { id: "how-measured", label: "Hoe nauwkeurigheid wordt gedefinieerd" },
+      { id: "hard-items", label: "Wat een item moeilijk te classificeren maakt" },
+      { id: "accuracy-stages", label: "Nauwkeurigheid in verschillende fasen" },
+      { id: "four-layer", label: "Hoe de vierlaagsmotor werkt" },
+      { id: "downstream", label: "Wat nauwkeurigheid u oplevert" },
     ],
     softCta: "discovery",
     faqItems: [
@@ -272,6 +354,14 @@ export const blogPosts: BlogPost[] = [
       { id: "enrichment", label: "Enriching to part number level" },
       { id: "downstream", label: "The downstream value" },
     ],
+    tocItemsNl: [
+      { id: "why-hard", label: "Waarom MRO-spend het moeilijkst te classificeren is" },
+      { id: "segments", label: "UNSPSC-segmenten voor MRO" },
+      { id: "vs-mpn", label: "UNSPSC vs fabrikantonderdeelnummers" },
+      { id: "how-it-works", label: "Hoe geautomatiseerde MRO-classificatie werkt" },
+      { id: "enrichment", label: "Verrijken tot onderdeelnummerniveau" },
+      { id: "downstream", label: "De neerwaartse waarde" },
+    ],
     softCta: "discovery",
   },
   {
@@ -289,6 +379,12 @@ export const blogPosts: BlogPost[] = [
       { id: "what-unspsc-makes-possible", label: "What UNSPSC makes possible" },
       { id: "before-after", label: "Before and after: a real example" },
       { id: "where-to-start", label: "Where to start" },
+    ],
+    tocItemsNl: [
+      { id: "the-category-management-problem", label: "Het category management-probleem" },
+      { id: "what-unspsc-makes-possible", label: "Wat UNSPSC mogelijk maakt" },
+      { id: "before-after", label: "Voor en na: een echt voorbeeld" },
+      { id: "where-to-start", label: "Waar te beginnen" },
     ],
     softCta: "discovery",
   },
@@ -308,13 +404,20 @@ export const blogPosts: BlogPost[] = [
       { id: "the-golden-500", label: "The Golden 500 SKU approach" },
       { id: "the-mro-case", label: "The MRO case" },
     ],
+    tocItemsNl: [
+      { id: "maverick-spend-is-not-a-discipline-problem", label: "Geen disciplineprobleem" },
+      { id: "what-gets-exposed", label: "Wat wordt blootgelegd" },
+      { id: "the-golden-500", label: "De Gouden 500 SKU-aanpak" },
+      { id: "the-mro-case", label: "De MRO-casus" },
+    ],
     softCta: "discovery",
   },
   {
     slug: "win-ai-race-procurement-data-quality",
+    image: "/images/blog/win-ai-race-procurement-data-quality.jpg",
     title: "How to Win the AI Race in Procurement: Start with Clean Data",
     description: "AI in procurement only works when your data is clean, classified, and trusted. Learn how Pearstop helps hard services teams turn procurement and asset data into an AI-ready advantage.",
-    publishedAt: "2026-06-10",
+    publishedAt: "2026-06-11",
     author: "team",
     category: "AI & Digital",
     tags: ["AI readiness", "procurement data quality", "data classification", "digital transformation"],
@@ -327,6 +430,42 @@ export const blogPosts: BlogPost[] = [
       { id: "human-in-control-automation", label: "Human-in-control automation" },
       { id: "how-to-win-the-ai-race", label: "How to win the AI race" },
     ],
+    tocItemsNl: [
+      { id: "the-problem-is-not-lack-of-data", label: "Het probleem is niet een gebrek aan data" },
+      { id: "ai-readiness-is-a-procurement-issue", label: "AI-gereedheid is een procurement-vraagstuk" },
+      { id: "what-pearstop-does", label: "Wat Pearstop doet" },
+      { id: "why-classification-matters", label: "Waarom classificatie belangrijk is" },
+      { id: "human-in-control-automation", label: "Mens-in-controle-automatisering" },
+      { id: "how-to-win-the-ai-race", label: "Hoe de AI-race te winnen" },
+    ],
+    softCta: "discovery",
+  },
+  {
+    slug: "procurement-data-readiness-ai",
+    image: "/images/blog/procurement-data-readiness-ai.jpg",
+    title: "What Is Procurement Data Readiness, and Why Does It Matter for AI?",
+    description: "Procurement data readiness is the foundation of AI in procurement. Learn what it means, why data quality matters, and how Pearstop helps hard services teams get AI-ready.",
+    publishedAt: "2026-06-11",
+    author: "team",
+    category: "AI & Digital",
+    tags: ["AI readiness", "procurement data quality", "data readiness", "digital transformation"],
+    readingTime: 8,
+    tocItems: [
+      { id: "why-procurement-data-is-often-difficult-to-use", label: "Why procurement data is difficult to use" },
+      { id: "what-does-clean-procurement-data-look-like", label: "What clean procurement data looks like" },
+      { id: "how-pearstop-supports-procurement-data-readiness", label: "How Pearstop supports data readiness" },
+      { id: "why-ai-in-procurement-depends-on-data-quality", label: "Why AI depends on data quality" },
+      { id: "how-organisations-can-win-the-ai-race-in-procurement", label: "How to win the AI race" },
+      { id: "the-future-of-procurement-is-ai-ready-data", label: "The future of procurement" },
+    ],
+    tocItemsNl: [
+      { id: "why-procurement-data-is-often-difficult-to-use", label: "Waarom procurement data moeilijk te gebruiken is" },
+      { id: "what-does-clean-procurement-data-look-like", label: "Hoe schone procurement data eruitziet" },
+      { id: "how-pearstop-supports-procurement-data-readiness", label: "Hoe Pearstop data readiness ondersteunt" },
+      { id: "why-ai-in-procurement-depends-on-data-quality", label: "Waarom AI afhankelijk is van datakwaliteit" },
+      { id: "how-organisations-can-win-the-ai-race-in-procurement", label: "Hoe de AI-race te winnen" },
+      { id: "the-future-of-procurement-is-ai-ready-data", label: "De toekomst van procurement" },
+    ],
     softCta: "discovery",
   },
 ];
@@ -334,4 +473,3 @@ export const blogPosts: BlogPost[] = [
 export function getBlogPost(slug: string): BlogPost | undefined {
   return blogPosts.find((p) => p.slug === slug);
 }
-
