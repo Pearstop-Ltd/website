@@ -5,6 +5,7 @@ import { existsSync, readFileSync } from "fs";
 import path from "path";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import rehypeSlug from "rehype-slug";
+import remarkGfm from "remark-gfm";
 import { getBlogPost, blogPosts } from "@/lib/blog-posts";
 import { ArticleSchema, FaqSchema, BlogLayout, BlogQuote, SoftCta, ComparisonCards, ChecklistSection, KraljicMatrix } from "@/components/blog";
 import { siteConfig } from "@/lib/site";
@@ -96,7 +97,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       </header>
       <BlogLayout tocItems={post.tocItems} author={post.author} publishedAt={post.publishedAt} readingTime={post.readingTime} category={post.category} slug={post.slug} tags={post.tags}>
         {mdxContent ? (
-          <MDXRemote source={mdxContent} components={MDX_COMPONENTS} options={{ mdxOptions: { rehypePlugins: [rehypeSlug] } }} />
+          <MDXRemote source={mdxContent} components={MDX_COMPONENTS} options={{ mdxOptions: { rehypePlugins: [rehypeSlug], remarkPlugins: [remarkGfm] } }} />
         ) : (
           <PostComponent />
         )}

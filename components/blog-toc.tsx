@@ -7,7 +7,7 @@ export type TocItem = {
   label: string;
 };
 
-export function TableOfContents({ items }: { items: TocItem[] }) {
+export function TableOfContents({ items, heading = "In this article" }: { items: TocItem[]; heading?: string }) {
   const [activeId, setActiveId] = useState<string>(items[0]?.id ?? "");
 
   useEffect(() => {
@@ -31,7 +31,7 @@ export function TableOfContents({ items }: { items: TocItem[] }) {
         fontWeight: 600, fontSize: "0.75rem", textTransform: "uppercase",
         letterSpacing: "0.08em", color: "var(--muted)", marginBottom: "0.75rem", margin: 0
       }}>
-        In this article
+        {heading}
       </p>
       <ol style={{ listStyle: "none", padding: 0, margin: "0.75rem 0 0" }}>
         {items.map((item) => (
