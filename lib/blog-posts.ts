@@ -12,9 +12,10 @@ export type BlogPost = {
   softCta: "checklist" | "case-study" | "discovery" | "template";
   faqItems?: { q: string; a: string }[];
   image?: string;
+  hidden?: boolean;
 };
 
-export const blogPosts: BlogPost[] = [
+const _allBlogPosts: BlogPost[] = [
   {
     slug: "procurement-data-cost",
     image: "/images/blog/procurement-data-cost.jpg",
@@ -487,28 +488,11 @@ export const blogPosts: BlogPost[] = [
       { id: "two-complementary-layers-of-the-same-journey", label: "Two complementary layers" },
     ],
     softCta: "discovery",
-  },
-  {
-    slug: "procurement-data-readiness-ai",
-    image: "/images/blog/procurement-data-readiness-ai.jpg",
-    title: "What Is Procurement Data Readiness, and Why Does It Matter for AI?",
-    description: "Procurement data readiness is the foundation of AI in procurement. Learn what it means, why data quality matters, and how Pearstop helps hard services teams get AI-ready.",
-    publishedAt: "2026-06-11",
-    author: "team",
-    category: "AI & Digital",
-    tags: ["AI readiness", "procurement data quality", "data readiness", "digital transformation"],
-    readingTime: 8,
-    tocItems: [
-      { id: "why-procurement-data-is-often-difficult-to-use", label: "Why procurement data is difficult to use" },
-      { id: "what-does-clean-procurement-data-look-like", label: "What clean procurement data looks like" },
-      { id: "how-pearstop-supports-procurement-data-readiness", label: "How Pearstop supports data readiness" },
-      { id: "why-ai-in-procurement-depends-on-data-quality", label: "Why AI depends on data quality" },
-      { id: "how-organisations-can-win-the-ai-race-in-procurement", label: "How to win the AI race" },
-      { id: "the-future-of-procurement-is-ai-ready-data", label: "The future of procurement" },
-    ],
-    softCta: "discovery",
+    hidden: true,
   },
 ];
+
+export const blogPosts: BlogPost[] = _allBlogPosts.filter((p) => !p.hidden);
 
 export function getBlogPost(slug: string): BlogPost | undefined {
   return blogPosts.find((p) => p.slug === slug);
