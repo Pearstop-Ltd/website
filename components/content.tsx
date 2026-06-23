@@ -56,6 +56,14 @@ export function PageHero({ eyebrow, title, lead, actions, videoUrl, videoPoster,
                   );
                 }
 
+                if (action.href.startsWith("#")) {
+                  return (
+                    <a key={`${action.label}-${action.href}`} href={action.href} className={className}>
+                      {action.label}
+                    </a>
+                  );
+                }
+
                 return (
                   <Link key={`${action.label}-${action.href}`} href={action.href} className={className}>
                     {action.label}
@@ -149,23 +157,25 @@ export function QuoteBox({
   dark = false
 }: {
   quote: ReactNode;
-  author: ReactNode;
-  role: ReactNode;
+  author?: ReactNode;
+  role?: ReactNode;
   image?: string;
   dark?: boolean;
 }) {
   return (
     <div className={`quote-card ${dark ? "featured-dark" : ""}`}>
       <p style={{ fontStyle: "italic" }}>{quote}</p>
-      <div className="quote-author">
-        {image
-          ? <img src={image} alt={String(author)} className="cf-avatar" style={{ borderRadius: "50%", objectFit: "cover" }} />
-          : <div className="cf-avatar" />}
-        <div>
-          <span className="quote-author-name">{author}</span>
-          <span className="quote-author-role">{role}</span>
+      {author ? (
+        <div className="quote-author">
+          {image
+            ? <img src={image} alt={String(author)} className="cf-avatar" style={{ borderRadius: "50%", objectFit: "cover" }} />
+            : <div className="cf-avatar" />}
+          <div>
+            <span className="quote-author-name">{author}</span>
+            {role ? <span className="quote-author-role">{role}</span> : null}
+          </div>
         </div>
-      </div>
+      ) : null}
     </div>
   );
 }

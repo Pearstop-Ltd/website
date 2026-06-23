@@ -64,7 +64,7 @@
     "hero": {
       "eyebrow": "Data Quality Solutions",
       "title": "We classify 35,000 procurement lines a month. Automatically.",
-      "lead": "Pearstop cleans and classifies procurement and asset data for hard services companies so you can negotiate better contracts, plan maintenance smarter, and stop doing it manually. Category management that works.",
+      "lead": "Pearstop cleans and classifies procurement and asset data for hard services companies so you can better negotiate contracts and plan maintenance. We automate, so that you don't have to do it manually - Category management that works.",
       "bookDiscovery": "Book a 7-minute discovery",
       "seeHowItWorks": "See how it works"
     },
@@ -206,7 +206,7 @@
     },
     "leadership": {
       "title": "Leadership Team",
-      "lead": "A group of problem-solvers who love untangling complexity. We are technical enough to build it, practical enough to make it work for real businesses."
+      "lead": "A group of problem-solvers who love untangling complexity. We are technical enough to build it, and practical enough to make it work for real businesses."
     },
     "fullTeam": {
       "title": "The Full Team",
@@ -281,8 +281,8 @@
       "lead": "Use the inline calendar below to choose a time with Stephanie without the back-and-forth."
     },
     "team": {
-      "title": "Technical team",
-      "lead": "The people behind the work."
+      "title": "Leadership Team",
+      "lead": "Your Solution Drivers"
     },
     "cta": {
       "title": "Not sure if Pearstop is for you?",

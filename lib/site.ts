@@ -23,6 +23,12 @@ export const siteConfig = {
     team: {
       stephanie: "/images/clients/stephanie-headshot.png",
       richard: "/images/clients/richard-headshot.png",
+      raeesah: "/images/clients/raeesah-headshot.png",
+      neharika: "/images/clients/neharika-headshot.png",
+      max: "/images/clients/max-headshot.png",
+      robin: "/images/clients/robin-headshot.png",
+      dania: "/images/clients/dania-headshot.png",
+      sjoerd: "/images/clients/sjoerd-headshot.png",
       vince: "/images/clients/vince-headshot.jpg",
       david: "/images/clients/david-headshot.jpg",
     },

@@ -27,13 +27,46 @@ const leaders = [
   },
 ];
 
-const team = [
-  { name: "Robin", role: "Team Lead Development" },
-  { name: "Sjoerd", role: "Development" },
-  { name: "Dania", role: "Developer" },
-  { name: "Dean", role: "Sales" },
-  { name: "Nelia", role: "Operations" },
-  { name: "Seb", role: "Technical Advisor" },
+const operationsTeam = [
+  {
+    name: "Raeesah Thomas",
+    role: "Director of Operations",
+    image: siteConfig.assets.team.raeesah,
+    copy: "Raeesah's priority is practical results, efficiency, and growth. Balancing operations oversight with hands-on project management and sales leadership, Raeesah streamlines processes, drives client success, and turns strategy into measurable results.",
+  },
+  {
+    name: "Neharika Kishore",
+    role: "Marketing and Public Relations Manager",
+    image: siteConfig.assets.team.neharika,
+    copy: "Neharika is the voice behind clean data. Seamlessly blending marketing, public relations, and content strategy, Neharika crafts campaigns that build trust, spark conversations, and turn technical solutions into stories that resonate.",
+  },
+  {
+    name: "Max Capelle",
+    role: "Technical Advisor",
+    image: siteConfig.assets.team.max,
+    copy: "Max specialises in critically evaluating backend architecture, fine-tuning artificial intelligence, and aligning software design and client needs. Drawing on carefully honed expertise, Max ensures that the technical and practical dimensions are harmoniously integrated to deliver solutions that are both robust and client-focused.",
+  },
+];
+
+const developmentTeam = [
+  {
+    name: "Robin Muhia",
+    role: "Lead Developer",
+    image: siteConfig.assets.team.robin,
+    copy: "Robin is the solutions architect. Driving innovation in backend systems, Robin leads the development team, designs scalable platforms, and ensures every algorithm delivers accuracy and efficiency.",
+  },
+  {
+    name: "Dania Butt",
+    role: "Associate Developer",
+    image: siteConfig.assets.team.dania,
+    copy: "Dania focuses on building intuitive interfaces which turns complex datasets into user-friendly dashboards and tools.",
+  },
+  {
+    name: "Sjoerd Schoufs",
+    role: "Junior Developer",
+    image: siteConfig.assets.team.sjoerd,
+    copy: "Sjoerd manages Pearstop's digital front door. Sjoerd is dedicated to maintaining and enhancing Pearstop's website, blending clean design and reliable functionality together.",
+  },
 ];
 
 export default async function AboutPage({ params }: { params: Promise<{ locale: string }> }) {
@@ -104,16 +137,41 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
         </div>
       </section>
 
-      <section className="section-soft">
+      <section className="about-leadership">
         <div className="container">
-          <SectionTitle title={t("fullTeam.title")} lead={t("fullTeam.lead")} />
-          <div className="industry-grid">
-            {team.map((person) => (
-              <div key={person.name} className="team-member">
-                <div className="member-photo" />
-                <h3>{person.name}</h3>
-                <div className="member-role">{person.role}</div>
-              </div>
+          <SectionTitle title="Operations Team" />
+          <div className="testimonials-grid">
+            {operationsTeam.map((person) => (
+              <article key={person.name} className="person-card">
+                <div className="person-photo">
+                  <img src={person.image} alt={`${person.name} portrait`} loading="lazy" />
+                </div>
+                <div className="person-body">
+                  <h3>{person.name}</h3>
+                  <div className="person-role">{person.role}</div>
+                  <p className="light-copy">{person.copy}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="about-leadership section-soft">
+        <div className="container">
+          <SectionTitle title="Development Team" />
+          <div className="testimonials-grid">
+            {developmentTeam.map((person) => (
+              <article key={person.name} className="person-card">
+                <div className="person-photo">
+                  <img src={person.image} alt={`${person.name} portrait`} loading="lazy" />
+                </div>
+                <div className="person-body">
+                  <h3>{person.name}</h3>
+                  <div className="person-role">{person.role}</div>
+                  <p className="light-copy">{person.copy}</p>
+                </div>
+              </article>
             ))}
           </div>
         </div>
