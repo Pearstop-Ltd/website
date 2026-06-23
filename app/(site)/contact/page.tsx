@@ -16,7 +16,8 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   const leaders = [
     { name: "Stephanie Wiechers", role: "CEO", image: siteConfig.assets.team.stephanie },
-    { name: "Richard Wallace", role: "CCO", image: siteConfig.assets.team.richard }
+    { name: "Richard Wallace", role: "CCO", image: siteConfig.assets.team.richard },
+    { name: "Raeesah Thomas", role: "Director of Operations", image: siteConfig.assets.team.raeesah }
   ];
 
   return (
@@ -93,7 +94,7 @@ export default function ContactPage() {
 
       <section className="technical-team">
         <div className="container">
-          <SectionTitle title="Technical team" lead="The people behind the work." />
+          <SectionTitle title="Leadership Team" lead="Your Solution Drivers" />
           <div className="testimonials-grid">
             {leaders.map((leader) => (
               <article key={leader.name} className="person-card">

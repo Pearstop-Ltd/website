@@ -93,7 +93,7 @@ export default function HomePage() {
         }
         videoUrl={siteConfig.assets.heroVideo}
         videoPoster={siteConfig.assets.heroVideoPoster}
-        lead="Pearstop cleans and classifies procurement and asset data for hard services companies so you can negotiate better contracts, plan maintenance smarter, and stop doing it manually. Category management that works."
+        lead="Pearstop cleans and classifies procurement and asset data for hard services companies so you can better negotiate contracts and plan maintenance. We automate, so that you don't have to do it manually - Category management that works."
         actions={[
           { label: "Book a 7-minute discovery", href: siteConfig.calendly, variant: "primary", external: true },
           { label: "See how it works", href: "#how-it-works", variant: "secondary" }
@@ -167,8 +167,6 @@ export default function HomePage() {
                         ? "Our asset lists worked for mechanics on-site, but did not allow us to plan smart maintenance or manage bid risk in a data-driven way."
                         : "It would have taken five engineers and a full year to clean this up. So we decided to look for a better solution."
                   }
-                  author={index === 0 ? "Head of Procurement" : index === 1 ? "Asset Manager" : "Head of Operations"}
-                  role={index === 0 ? "Infrastructure Contractor" : index === 1 ? "Facilities Management" : "Technical Services"}
                 />
               </div>
               <div className="benefit-block-image">

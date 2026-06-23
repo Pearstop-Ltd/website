@@ -8,12 +8,16 @@ import "../globals.css";
 
 export default function SiteLayout({ children }: { children: React.ReactNode }) {
   return (
-    <NextIntlClientProvider locale="en" messages={enMessages as Record<string, unknown>}>
-      <SiteHeader />
-      <main>{children}</main>
-      <LatestBlogPosts locale="en" />
-      <SiteFooter />
-      <Analytics />
-    </NextIntlClientProvider>
+    <html lang="en">
+      <body>
+        <NextIntlClientProvider locale="en" messages={enMessages as Record<string, unknown>}>
+          <SiteHeader />
+          <main>{children}</main>
+          <LatestBlogPosts locale="en" />
+          <SiteFooter />
+          <Analytics />
+        </NextIntlClientProvider>
+      </body>
+    </html>
   );
 }

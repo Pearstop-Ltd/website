@@ -154,8 +154,6 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                 </p>
                 <QuoteBox
                   quote={t(`benefits.quotes.${index}`)}
-                  author={t(`benefits.quoteAuthors.${index}`)}
-                  role={t(`benefits.quoteRoles.${index}`)}
                 />
               </div>
               <div className="benefit-block-image">
