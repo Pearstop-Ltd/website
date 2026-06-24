@@ -21,7 +21,7 @@ const leaders = [
   },
   {
     name: "Richard Wallace",
-    role: "COO",
+    role: "CCO",
     image: siteConfig.assets.team.richard,
     copy:
       "Richard leads client delivery at Pearstop, ensuring every engagement runs smoothly and that what we promise on paper becomes results in practice."

@@ -21,7 +21,7 @@ const leaders = [
   },
   {
     name: "Richard Wallace",
-    role: "COO",
+    role: "CCO",
     image: siteConfig.assets.team.richard,
     copyKey: "richard",
   },
