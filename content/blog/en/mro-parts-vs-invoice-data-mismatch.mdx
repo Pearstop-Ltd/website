@@ -1,0 +1,23 @@
+---
+title: "Why Your MRO Parts Data Never Matches Your MRO Invoice Data"
+description: "The parts recorded in your maintenance system and the parts billed on your invoices are often two different datasets that were never designed to talk to each other."
+date: "2026-06-28"
+category: "Data Management"
+slug: "mro-parts-vs-invoice-data-mismatch"
+---
+
+**Quick answer:** Your maintenance system records what part was used on a job. Your AP system records what was invoiced for it. These two records are rarely reconciled, because they live in different systems with different naming conventions for the same part. Classifying both against one taxonomy is the only way to check that what you're paying for is actually what got used.
+
+## Two systems, two versions of the truth
+
+A maintenance engineer logs a part in a CMMS using an internal part number or description. The supplier invoices the same part using their own product code and name. Nothing forces these two records to line up, and in most FM operations, nobody checks whether they do.
+
+## Why this gap matters more than it seems
+
+Without reconciling the two, you can't catch overbilling, duplicate charges, or parts invoiced but never actually fitted, because each system tells its own internal story with no cross-check against the other.
+
+## What matching them actually requires
+
+Not a new maintenance system. Classifying both datasets against one shared taxonomy for parts and materials, so a part logged in the CMMS and the same part billed on an invoice are recognisable as the same thing regardless of what each system calls it.
+
+Pearstop classifies parts data from both maintenance records and invoices against one shared taxonomy, so the two datasets can finally be checked against each other instead of living in separate, unreconciled silos.

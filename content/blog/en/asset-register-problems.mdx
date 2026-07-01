@@ -1,4 +1,4 @@
-﻿---
+---
 title: "The Real Reason Your Asset Register Isn't Working"
 description: "Most FM companies have an asset register. Most don't trust it. This article explains the specific data gaps, their financial cost, and how AI-assisted enrichment fixes them."
 date: "2026-02-24"
@@ -6,47 +6,18 @@ category: "Asset Management"
 slug: "asset-register-problems"
 ---
 
-Most facilities management companies have an asset register. Most of them do not trust it. In conversations with asset managers across hard FM and infrastructure, the same pattern comes up: the register exists, people refer to it, but the underlying data is unreliable enough that real decisions – maintenance planning, lifecycle replacement, bid pricing – still get made on instinct or from memory.
+**Quick answer:** Most asset registers fail not because nobody updates them, but because the data going in was never consistent to begin with. Missing attributes, inconsistent naming, and no shared classification standard mean the register technically exists but nobody trusts it enough to use it for real decisions. AI-assisted enrichment fixes the specific gaps, it doesn't just digitise the same bad data.
 
-## What a failing asset register actually looks like
+## The specific gaps behind "we don't trust the register"
 
-The signs are specific and recognisable:
+It's rarely one dramatic problem. It's missing install dates, inconsistent naming for the same asset type across sites, duplicate entries created by different surveys over the years, and attributes that were never captured in the first place because the original data entry didn't require them.
 
-- **Missing manufacturer and model data.** A significant percentage of assets are listed as "Pump – Building A" or "HVAC Unit – Floor 3" with no manufacturer name, no model number, and no installation date.
-- **Inconsistent naming conventions.** "Air Handling Unit", "AHU", "air handler", and "ventilation unit" are four descriptions of the same thing – but in a database, they are four separate categories.
-- **Duplicate records.** The same generator might appear three times with three different asset IDs and three different maintenance histories.
-- **Decommissioned assets still listed as active.** When assets are removed or replaced, the register often is not updated. Ghost records accumulate with ghost maintenance schedules and ghost insurance premiums.
-- **No linkage between asset and parts data.** The asset exists in the register but there is no structured connection to the components used to maintain it.
+## What an unreliable register actually costs
 
-## The financial cost: a real example
+A register nobody trusts gets worked around, not used. Maintenance planning reverts to tribal knowledge, capital planning relies on guesswork about remaining asset life, and every audit starts by rebuilding the same information from scratch because the register can't be relied on.
 
-One Asset Manager we worked with discovered, after running a data quality baseline, that his company had been paying insurance premiums on assets they had sold or decommissioned years earlier. The register had never been updated to reflect the disposals. When the cleaned register was compared against the insurance schedule, the discrepancy was significant. Assets that no longer existed were still being insured. The annual premium adjustment was substantial – and the issue had been invisible until the data was cleaned.
+## Why AI-assisted enrichment is different from just re-surveying
 
-## What an accurate asset register enables
+Re-surveying every asset manually is slow and expensive. Enrichment uses existing data you already have, invoice history, maintenance records, nameplate data, to fill the specific gaps and standardise naming, without requiring someone to physically re-visit every asset.
 
-**Predictive maintenance.** When assets carry accurate manufacturer, model, and installation date information, you can link them to lifecycle and failure data. The shift from reactive to predictive maintenance is only possible when the data supports it.
-
-**Lifecycle decision-making.** The question "should we repair or replace this asset?" is a straightforward financial calculation – if you know the asset's age, its maintenance history, and its replacement cost.
-
-**Accurate bid pricing.** When pricing a maintenance contract, the asset register is the source of truth for what you are committing to maintain. An inaccurate register means you are pricing based on an estimate of what is on site.
-
-**Rapid recall response.** When a manufacturer issues a recall for a specific model of HVAC motor, the ability to identify every affected unit across a portfolio should take minutes, not weeks.
-
-## What is typically missing and how AI fills the gaps
-
-| Field | Typical gap | How it gets filled |
-|---|---|---|
-| Manufacturer | Missing or abbreviated | Matched against supplier invoice data and manufacturer databases |
-| Model number | Missing or free-text | Extracted from maintenance records, PDFs, and previous service reports |
-| Installation date | Missing or estimated | Inferred from commissioning records and historical maintenance logs |
-| Asset classification | Inconsistent naming | Standardised against Uniclass or OmniClass taxonomy |
-| Component linkage | Not structured | Built from MRO purchase history linked to asset ID |
-
-## The ongoing maintenance problem
-
-A cleaned asset register degrades without active maintenance. New assets get added, old ones get removed, and unless there is a systematic quality check on incoming data, the problems accumulate again. The sustainable fix is an automated quality control layer: every new asset record is checked against the existing structure and flagged if it is missing key fields or inconsistent with the naming convention.
-
-> "I used to dread the phrase data cleanup. Now it is just another click in my week."
->
-> – Asset Manager, National utility company
-
+Pearstop enriches asset registers using data you already have, closing the specific gaps that make a register untrustworthy without requiring a full manual re-survey, so the register becomes something teams can actually plan against.
