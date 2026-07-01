@@ -26,7 +26,7 @@ export function TableOfContents({ items, heading = "In this article" }: { items:
   }, [items]);
 
   return (
-    <nav aria-label="Table of contents" style={{ position: "sticky", top: "6rem", alignSelf: "start" }}>
+    <nav aria-label="Table of contents">
       <p style={{
         fontWeight: 600, fontSize: "0.75rem", textTransform: "uppercase",
         letterSpacing: "0.08em", color: "var(--muted)", marginBottom: "0.75rem", margin: 0
