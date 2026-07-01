@@ -88,9 +88,9 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       <header className="page-hero dark" style={{ minHeight: "auto", paddingTop: "5rem", paddingBottom: "3.5rem" }}>
         <div className="hero-bg" aria-hidden="true" />
         <div className="container hero-copy">
-          <div style={{ maxWidth: 760, margin: "0 auto", textAlign: "left" }}>
+          <div className="text-center">
             <span className="pill">{post.category}</span>
-            <h1 className="hero-title dark" style={{ fontSize: "clamp(1.75rem, 4vw, 2.75rem)", marginTop: "0.75rem" }}>{post.title}</h1>
+            <h1 className="hero-title dark" style={{ fontSize: "clamp(1.75rem, 4vw, 2.75rem)", marginTop: "0.75rem", maxWidth: 1000, marginInline: "auto" }}>{post.title}</h1>
             <p className="hero-lead" style={{ marginTop: "0.75rem", opacity: 0.85 }}>{post.description}</p>
           </div>
         </div>
