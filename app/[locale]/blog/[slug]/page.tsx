@@ -143,11 +143,11 @@ export default async function BlogPostPage({
       >
         <div className="hero-bg" aria-hidden="true" />
         <div className="container hero-copy">
-          <div style={{ maxWidth: 760, margin: "0 auto", textAlign: "left" }}>
+          <div className="text-center">
             <span className="pill">{post.category}</span>
             <h1
               className="hero-title dark"
-              style={{ fontSize: "clamp(1.75rem, 4vw, 2.75rem)", marginTop: "0.75rem" }}
+              style={{ fontSize: "clamp(1.75rem, 4vw, 2.75rem)", marginTop: "0.75rem", maxWidth: 1000, marginInline: "auto" }}
             >
               {title}
             </h1>
