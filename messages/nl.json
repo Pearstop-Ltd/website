@@ -1415,23 +1415,23 @@
       "items": [
         {
           "q": "Welke UNSPSC-segmenten zijn van toepassing op facilities management?",
-          "a": "De meest voorkomende segmenten voor FM zijn Segment 72 (Bouw- en onderhoudsdiensten), Segment 76 (Industriële schoonmaakdiensten), Segment 80 (Management- en administratieve diensten) en Segment 73 (Industriële productie). Hard services FM-bedrijven zien doorgaans het hoogste uitgavevolume in Segment 72, dat elektrische, HVAC, loodgieters- en textielonderhoud omvat."
+          "a": "De meest voorkomende segmenten voor FM zijn Segment 72 (Bouw- en onderhoudsdiensten), Segment 76 (Industriële schoonmaakdiensten), Segment 80 (Management- en administratieve diensten) en Segment 73 (Industriële productie). Hard services FM-bedrijven zien doorgaans het hoogste spend volume in Segment 72, dat elektrische, HVAC, loodgieters- en textielonderhoud omvat."
         },
         {
           "q": "Waarom is UNSPSC-classificatie moeilijk voor FM-bedrijven?",
-          "a": "FM-bedrijven kopen van honderden leveranciers op gedecentraliseerde locaties. Factuurregels zijn vaak vrije-tekstbeschrijvingen geschreven door terreinengineers, niet door inkoopteams. Handmatige classificatie op deze schaal vereist één of twee voltijds medewerkers die continu werken om het tempo bij te houden."
+          "a": "FM-bedrijven kopen van honderden leveranciers op gedecentraliseerde locaties. Factuurregels zijn vaak vrije-tekstbeschrijvingen geschreven door field engineers, niet door inkoopteams. Handmatige classificatie op deze schaal vereist één of twee voltijds medewerkers die continu werken om het tempo bij te houden."
         },
         {
           "q": "Hoe lang duurt UNSPSC-classificatie voor een FM-bedrijf?",
-          "a": "Een initiële classificatie van een volledig uitgavedataset is doorgaans binnen vier tot zes weken voltooid, inclusief een Data Stability Baseline om de nauwkeurigheid te valideren. Maandelijkse classificatieruns worden automatisch uitgevoerd."
+          "a": "Een initiële classificatie van een volledig spend dataset is doorgaans binnen vier tot zes weken voltooid, inclusief een Data Stability Baseline om de nauwkeurigheid te valideren. Maandelijkse classificatieruns vinden automatisch plaats."
         },
         {
           "q": "Integreert Pearstop met FM-specifieke systemen zoals Maximo of ServiceNow?",
-          "a": "Pearstop ontvangt gegevens via CSV-export of directe API-verbinding en retourneert geclassificeerde gegevens in hetzelfde formaat, compatibel met elk CAFM- of CMMS-systeem, waaronder IBM Maximo, ServiceNow, Planon en SAP PM."
+          "a": "Pearstop ontvangt gegevens via CSV-export of directe API-verbinding en retourneert geclassificeerde gegevens in hetzelfde formaat, compatibel met elk CAFM- of CMMS-systeem, inclusief IBM Maximo, ServiceNow, Planon en SAP PM."
         },
         {
-          "q": "Wat is het te verwachten nauwkeurigheidspercentage voor FM-bedrijven?",
-          "a": "Pearstops vierlaagse engine bereikt 90–95% automatische classificatie op typische FM-uitgavedatasets. De resterende 5–10% wordt gemarkeerd voor menselijke herziening, en elke herziene beslissing voedt terug naar de engine."
+          "q": "Wat is de nauwkeurigheidsgraad die FM-bedrijven kunnen verwachten?",
+          "a": "Pearstops vierlaagse engine bereikt 90–95% automatische classificatie op typische FM-spend datasets. De resterende 5–10% wordt gemarkeerd voor menselijke herziening, en elke herziene beslissing voedt terug naar de engine."
         }
       ]
     },
@@ -1605,7 +1605,7 @@
         },
         {
           "q": "Welke Duitse branches profiteren het meest?",
-          "a": "Duitse productiebedrijven, machinebouwbedrijven, facility-managementbedrijven en infrastructuurbedrijven profiteren het meest. Productiebedrijven met een groot MRO-aandeel winnen vooral door consistente onderdeelcodificering."
+          "a": "Duitse productiebedrijven, machinebouwbedrijven, facility management-bedrijven en infrastructuurbedrijven profiteren het meest. Productiebedrijven met een groot MRO-aandeel winnen vooral door consistente onderdeelcodificering."
         },
         {
           "q": "Kan Pearstop Duitstalige inkoopdata classificeren?",
