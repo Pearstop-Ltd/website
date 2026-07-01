@@ -4,6 +4,7 @@ import type { ReactNode } from "react";
 import { TableOfContents, type TocItem } from "@/components/blog-toc";
 import { siteConfig } from "@/lib/site";
 import { UnspscLookupCta } from "@/components/unspsc-lookup-cta";
+import { BlogNewsletterWidget } from "@/components/blog-newsletter-widget";
 import { CalendlyButton } from "@/components/calendly-button";
 import { blogPosts, type BlogPost } from "@/lib/blog-posts";
 
@@ -132,11 +133,14 @@ export function BlogLayout({ children, tocItems, tocHeading, author, publishedAt
         </article>
         <aside style={{ display: "none" }} className="blog-toc-col">
           <TableOfContents items={tocItems} heading={tocHeading} />
+          <div style={{ position: "sticky", top: "6rem", marginTop: "2rem" }}>
+            <BlogNewsletterWidget />
+          </div>
         </aside>
       </div>
       <style>{`
         .blog-layout-grid { display: grid; grid-template-columns: 1fr; align-items: start; }
-        @media (min-width: 1024px) { .blog-layout-grid { grid-template-columns: minmax(0,1fr) 220px; gap: 4rem; } }
+        @media (min-width: 1024px) { .blog-layout-grid { grid-template-columns: minmax(0,1fr) 280px; gap: 4rem; } }
         @media (min-width: 1024px) { .blog-toc-col { display: block !important; } }
         .blog-article h2 { margin-top: 2.5rem; scroll-margin-top: 5.5rem; }
         .blog-article h3 { margin-top: 1.75rem; scroll-margin-top: 5.5rem; }
