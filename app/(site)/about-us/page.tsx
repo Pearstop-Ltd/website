@@ -58,7 +58,7 @@ const developmentTeam = [
   },
   {
     name: "Dania Butt",
-    role: "Associate Developer",
+    role: "Senior Developer",
     image: siteConfig.assets.team.dania,
     copy: "Dania focuses on building intuitive interfaces which turns complex datasets into user-friendly dashboards and tools."
   },
