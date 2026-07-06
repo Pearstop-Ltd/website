@@ -6,7 +6,7 @@ export function BlogNewsletterWidget() {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
-  async function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus("loading");
     try {
@@ -59,7 +59,7 @@ export function BlogNewsletterWidget() {
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder=""
+              placeholder="Your business email"
               style={{
                 width: "100%",
                 padding: "0.65rem 1rem",

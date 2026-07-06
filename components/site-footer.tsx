@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { footerCompanyLinks, footerSolutionLinks, siteConfig } from "@/lib/site";
 
@@ -9,6 +10,24 @@ export function SiteFooter() {
   const locale = useLocale();
   const prefix = locale === "en" ? "" : `/${locale}`;
   const year = new Date().getFullYear();
+  const [ftName, setFtName] = useState("");
+  const [ftEmail, setFtEmail] = useState("");
+  const [ftStatus, setFtStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+
+  async function handleFooterSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setFtStatus("loading");
+    try {
+      const res = await fetch("/api/newsletter", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name: ftName, email: ftEmail }),
+      });
+      setFtStatus(res.ok ? "success" : "error");
+    } catch {
+      setFtStatus("error");
+    }
+  }
 
   return (
     <footer id="site-footer" role="contentinfo">
@@ -69,12 +88,16 @@ export function SiteFooter() {
           <div className="ft-col">
             <div className="ft-col-title">{t("stayInformed")}</div>
             <p className="ft-newsletter-intro">{t("newsletterIntro")}</p>
-            <form className="ft-form" action="https://formspree.io/f/xyklkdkj" method="POST">
-              <input type="text" name="name" placeholder={t("namePlaceholder")} autoComplete="name" required />
-              <input type="email" name="email" placeholder={t("emailPlaceholder")} autoComplete="email" required />
-              <input type="hidden" name="_subject" value={t("newsletterSubject")} />
-              <button type="submit">{t("signUp")}</button>
-            </form>
+            {ftStatus === "success" ? (
+              <p style={{ color: "#a5f3c0", fontSize: "0.9rem", marginTop: "0.5rem" }}>You&apos;re signed up — thanks!</p>
+            ) : (
+              <form className="ft-form" onSubmit={handleFooterSubmit}>
+                <input type="text" placeholder={t("namePlaceholder")} autoComplete="name" required value={ftName} onChange={(e) => setFtName(e.target.value)} />
+                <input type="email" placeholder={t("emailPlaceholder")} autoComplete="email" required value={ftEmail} onChange={(e) => setFtEmail(e.target.value)} />
+                {ftStatus === "error" && <p style={{ color: "#fca5a5", fontSize: "0.8rem" }}>Something went wrong. Try again.</p>}
+                <button type="submit" disabled={ftStatus === "loading"}>{ftStatus === "loading" ? "…" : t("signUp")}</button>
+              </form>
+            )}
           </div>
         </div>
 
