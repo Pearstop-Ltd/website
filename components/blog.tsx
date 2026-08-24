@@ -48,9 +48,13 @@ export function FaqSchema({ items, slug }: { items: { q: string; a: string }[]; 
   return <Script id={`faq-schema-${slug}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />;
 }
 
-type AuthorKey = "stephanie" | "richard" | "team";
+export type AuthorKey = "stephanie" | "richard" | "rae" | "seb" | "sjoerd" | "dania" | "neharika" | "team";
 
-const AUTHORS: Record<AuthorKey, { name: string; role: string; bio: string; linkedin: string; avatar: string }> = {
+export function isAuthorKey(value: string): value is AuthorKey {
+  return value in AUTHORS;
+}
+
+export const AUTHORS: Record<AuthorKey, { name: string; role: string; bio: string; linkedin: string; avatar: string }> = {
   stephanie: {
     name: "Stephanie Wiechers",
     role: "CEO & Co-founder, Pearstop",
@@ -64,6 +68,41 @@ const AUTHORS: Record<AuthorKey, { name: string; role: string; bio: string; link
     bio: "Richard brings deep commercial experience in hard services and FM. He works with clients to design data quality programmes that translate directly into procurement performance and contract accuracy.",
     linkedin: "https://www.linkedin.com/company/pearstop",
     avatar: "/images/clients/richard-headshot.png",
+  },
+  rae: {
+    name: "Rae Thomas",
+    role: "Chief of Staff, Pearstop",
+    bio: "Rae heads up operations at Pearstop, in both the traditional and non-traditional sense. She's as committed to the internal success of the business as she is to the value clients get out of it, which is why she leads delivery on most projects and is the main point of contact for clients throughout.",
+    linkedin: "https://www.linkedin.com/company/pearstop",
+    avatar: "/images/clients/raeesah-headshot.png",
+  },
+  seb: {
+    name: "Sebastiaan Wiechers",
+    role: "Classification Logic, Pearstop",
+    bio: "Seb designs the classification logic behind Pearstop. He built the rule set model that lets clients steer how their spend is categorised, combining machine classification with deterministic rules so that results stay explainable rather than opaque. His work focuses on the engineering problem most AI procurement tools avoid, which is making automated labels auditable line by line.",
+    linkedin: "https://www.linkedin.com/in/sebastiaanwiechers/",
+    avatar: "/images/clients/seb-headshot.png",
+  },
+  sjoerd: {
+    name: "Sjoerd Schoufs",
+    role: "Data Extraction & Classification, Pearstop",
+    bio: "Sjoerd works on data extraction and classification at Pearstop. He built a metadata extraction algorithm that pulls structured attributes out of engineering and technical files that would otherwise have to be opened and read one at a time. He also works on the classification pipeline itself.",
+    linkedin: "https://www.linkedin.com/in/sjoerd-schoufs-15a51a349/",
+    avatar: "/images/clients/sjoerd-headshot.png",
+  },
+  dania: {
+    name: "Dania Butt",
+    role: "Full Stack Developer, Pearstop",
+    bio: "Dania is a full stack developer at Pearstop. Recent work includes the classification ruleset upload flow, giving procurement teams direct control over how their data is labelled through override, boost and block rules, and the onboarding experience that takes a client from raw file to classified spend.",
+    linkedin: "https://www.linkedin.com/in/dania-butt-27b5871a1/",
+    avatar: "/images/clients/dania-headshot.png",
+  },
+  neharika: {
+    name: "Neharika Kishore",
+    role: "Content & Visibility, Pearstop",
+    bio: "Neha works on content and visibility at Pearstop. She writes articles on procurement data quality for facilities management, construction and infrastructure teams, and supports The Data Edge podcast. She also runs outreach to procurement and finance leaders, which keeps her writing close to the problems those teams are actually raising.",
+    linkedin: "https://www.linkedin.com/in/neharika-kishore-9474361b7/",
+    avatar: "/images/clients/neharika-headshot.png",
   },
   team: {
     name: "Pearstop Team",

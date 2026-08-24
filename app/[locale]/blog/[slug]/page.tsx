@@ -7,7 +7,7 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import rehypeSlug from "rehype-slug";
 import remarkGfm from "remark-gfm";
 import { getBlogPost, blogPosts } from "@/lib/blog-posts";
-import { ArticleSchema, FaqSchema, BlogLayout, BlogQuote, SoftCta, ComparisonCards, ChecklistSection, KraljicMatrix } from "@/components/blog";
+import { ArticleSchema, FaqSchema, BlogLayout, BlogQuote, SoftCta, ComparisonCards, ChecklistSection, KraljicMatrix, AUTHORS, isAuthorKey, type AuthorKey } from "@/components/blog";
 import { siteConfig } from "@/lib/site";
 import ProcurementDataCost from "@/components/blog-posts/procurement-data-cost";
 import WhatIsUnspsc from "@/components/blog-posts/what-is-unspsc";
@@ -43,13 +43,7 @@ const MDX_COMPONENTS = {
   KraljicMatrix,
 };
 
-const AUTHOR_NAMES: Record<string, string> = {
-  stephanie: "Stephanie Wiechers",
-  richard: "Richard Wallace",
-  team: "Pearstop",
-};
-
-function getMdxFrontmatter(locale: string, slug: string): { title?: string; description?: string } {
+function getMdxFrontmatter(locale: string, slug: string): { title?: string; description?: string; author?: AuthorKey } {
   const tryPath = (loc: string) => path.join(process.cwd(), "content", "blog", loc, `${slug}.mdx`);
   const filePath = existsSync(tryPath(locale)) ? tryPath(locale) : existsSync(tryPath("en")) ? tryPath("en") : null;
   if (!filePath) return {};
@@ -62,7 +56,11 @@ function getMdxFrontmatter(locale: string, slug: string): { title?: string; desc
     if (colon === -1) continue;
     fm[line.slice(0, colon).trim()] = line.slice(colon + 1).trim().replace(/^"|"$/g, "");
   }
-  return { title: fm.title, description: fm.description };
+  return {
+    title: fm.title,
+    description: fm.description,
+    author: fm.author && isAuthorKey(fm.author) ? fm.author : undefined,
+  };
 }
 
 function stripMdx(raw: string): string {
@@ -121,6 +119,7 @@ export default async function BlogPostPage({
   const fm = getMdxFrontmatter(locale, slug);
   const title = fm.title ?? post.title;
   const description = fm.description ?? post.description;
+  const author = fm.author ?? "team";
   const tocItems = locale === "nl" && post.tocItemsNl ? post.tocItemsNl : post.tocItems;
   const tocHeading = locale === "nl" ? "In dit artikel" : "In this article";
 
@@ -134,7 +133,7 @@ export default async function BlogPostPage({
         description={description}
         slug={post.slug}
         publishedAt={post.publishedAt}
-        authorName={AUTHOR_NAMES[post.author] ?? "Pearstop"}
+        authorName={AUTHORS[author].name}
       />
       {post.faqItems && <FaqSchema items={post.faqItems} slug={post.slug} />}
       <header
@@ -160,7 +159,7 @@ export default async function BlogPostPage({
       <BlogLayout
         tocItems={tocItems}
         tocHeading={tocHeading}
-        author={post.author}
+        author={author}
         publishedAt={post.publishedAt}
         readingTime={post.readingTime}
         category={post.category}
