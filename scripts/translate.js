@@ -29,10 +29,11 @@ const BLOG_EN_DIR = path.join(ROOT, "content", "blog", "en");
 const TARGET_LOCALES = ["nl"];
 
 const LOCALE_NAMES = { nl: "Dutch", fr: "French", de: "German" };
-// Free-tier TPM for openai/gpt-oss-120b is 8000, and max_tokens counts
-// against that budget as a reservation — keep batches and the reservation
-// small enough that prompt + max_tokens stays comfortably under the limit.
-const BATCH_SIZE = 12;
+// Free-tier TPM for openai/gpt-oss-120b is 8000, enforced as a rolling
+// per-minute budget (prompt + max_tokens reserved per call, counted against
+// tokens already used in the last 60s). Keep each call's reservation small
+// and space calls out so consecutive requests don't stack past the cap.
+const BATCH_SIZE = 8;
 
 const GROQ_API_KEY = process.env.GROQ_API_KEY;
 if (!GROQ_API_KEY) {
@@ -57,7 +58,7 @@ async function groqRequestOnce(prompt) {
       model: 'openai/gpt-oss-120b',
       messages: [{ role: 'user', content: prompt }],
       temperature: 0.1,
-      max_tokens: 3000,
+      max_tokens: 1200,
     }),
   });
   const json = await res.json();
@@ -140,7 +141,9 @@ async function translateBatched(texts, targetLang) {
     results.push(...translated);
     process.stdout.write(`   ${Math.min(i + BATCH_SIZE, texts.length)}/${texts.length} translated\r`);
     // 6s between batches — stays under 20 req/min on free tier
-    if (i + BATCH_SIZE < texts.length) await sleep(6000);
+    // ~1500 tokens reserved per call (prompt + max_tokens); at 20s spacing
+    // that's ~4500 tokens/min reserved, comfortably under the 8000 TPM cap.
+    if (i + BATCH_SIZE < texts.length) await sleep(20000);
   }
   return results;
 }
