@@ -29,7 +29,10 @@ const BLOG_EN_DIR = path.join(ROOT, "content", "blog", "en");
 const TARGET_LOCALES = ["nl"];
 
 const LOCALE_NAMES = { nl: "Dutch", fr: "French", de: "German" };
-const BATCH_SIZE = 50;
+// Free-tier TPM for openai/gpt-oss-120b is 8000, and max_tokens counts
+// against that budget as a reservation — keep batches and the reservation
+// small enough that prompt + max_tokens stays comfortably under the limit.
+const BATCH_SIZE = 12;
 
 const GROQ_API_KEY = process.env.GROQ_API_KEY;
 if (!GROQ_API_KEY) {
@@ -54,7 +57,7 @@ async function groqRequestOnce(prompt) {
       model: 'openai/gpt-oss-120b',
       messages: [{ role: 'user', content: prompt }],
       temperature: 0.1,
-      max_tokens: 8192,
+      max_tokens: 3000,
     }),
   });
   const json = await res.json();
