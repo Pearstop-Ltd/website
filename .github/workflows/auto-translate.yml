@@ -6,6 +6,7 @@ on:
     paths:
       - "messages/en.json"
       - "content/blog/en/**"
+  workflow_dispatch: {}
 
 jobs:
   translate:
