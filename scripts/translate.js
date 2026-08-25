@@ -58,7 +58,11 @@ async function groqRequestOnce(prompt) {
       model: 'openai/gpt-oss-120b',
       messages: [{ role: 'user', content: prompt }],
       temperature: 0.1,
-      max_tokens: 1200,
+      max_tokens: 1500,
+      // gpt-oss is a reasoning model — without this, chain-of-thought can
+      // consume the whole max_tokens budget and leave an empty final answer.
+      reasoning_effort: 'low',
+      include_reasoning: false,
     }),
   });
   const json = await res.json();
