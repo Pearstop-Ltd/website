@@ -940,6 +940,92 @@ const _allBlogPosts: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: "how-to-build-a-spend-cube-with-ai",
+    title: "How to build a spend cube with AI",
+    description: "The five steps to building a spend cube, what data you need, what usually goes wrong, and when a consultant is a better choice than an AI classification pipeline.",
+    publishedAt: "2026-08-25",
+    category: "AI & Digital",
+    tags: ["spend cube", "spend analysis", "AI classification", "procurement data"],
+    readingTime: 9,
+    tocItems: [
+      { id: "what-a-spend-cube-actually-is", label: "What a spend cube actually is" },
+      { id: "building-a-spend-cube-step-by-step", label: "Building a spend cube step by step" },
+      { id: "when-to-use-a-procurement-consultant", label: "When to use a procurement consultant" },
+      { id: "when-to-use-an-ai-pipeline", label: "When to use an AI pipeline" },
+      { id: "frequently-asked-questions", label: "FAQ" },
+    ],
+    softCta: "discovery",
+    faqItems: [
+      {
+        q: "What is a spend cube in procurement?",
+        a: "A spend cube is procurement spend organised across several dimensions at once, so it can be sliced from any angle. The standard dimensions are supplier, category and business unit or cost centre, with time as a fourth. It answers who bought what, from whom, and when, without anyone rebuilding a spreadsheet each time.",
+      },
+      {
+        q: "What data do you need to build a spend cube?",
+        a: "You need line-level transaction data, not summary totals. The minimum useful export contains a document number, a date, a supplier name and number, the free-text line description, quantity, unit price, total value, currency, and a cost centre or entity reference. An internal material or product number, where one exists, materially improves accuracy.",
+      },
+      {
+        q: "How long does it take to build a spend cube?",
+        a: "A pilot on around one year of data takes roughly four weeks, including time to review findings and adjust the classification rules before the full run. Extracting and cleaning the source data is usually the slowest part and depends on the finance team, not the classification method. A full historical backlog follows once the rules are settled.",
+      },
+      {
+        q: "Is it cheaper to build a spend cube with AI or a consultant?",
+        a: "AI is cheaper for the classification work and cheaper again for keeping the cube current, because the marginal cost of the next month of data is close to zero. A consultant costs more per exercise but includes negotiation strategy and execution support that a pipeline does not provide. The two solve different problems.",
+      },
+      {
+        q: "Can ChatGPT or Copilot classify procurement spend data?",
+        a: "Not reliably at scale. General assistants invent category codes that do not exist in the taxonomy, classify the same description differently across runs, and give no indication of how confident they are. They are useful for exploring a few hundred lines. They do not produce the repeatability a spend cube depends on.",
+      },
+      {
+        q: "How does Pearstop build a spend cube?",
+        a: "Pearstop ingests line-level data, resolves the supplier list against a reference database, applies a constrained taxonomy so codes cannot be invented, encodes the rules agreed with the procurement team, and routes low-confidence lines to human review. Corrections feed back into the pipeline, and the cube updates as new data arrives rather than being rebuilt.",
+      },
+    ],
+  },
+  {
+    slug: "unspsc-classification-construction-guide",
+    title: "UNSPSC classification in construction: a practical guide",
+    description: "How construction and engineering teams apply UNSPSC to procurement data, who owns the decisions, how to handle edge cases, and where AI actually fits.",
+    publishedAt: "2026-08-25",
+    category: "Procurement",
+    tags: ["UNSPSC", "construction procurement", "spend classification", "category management"],
+    readingTime: 9,
+    tocItems: [
+      { id: "unspsc-explained-in-four-levels", label: "UNSPSC explained in four levels" },
+      { id: "who-owns-unspsc-classification-decisions", label: "Who owns UNSPSC classification decisions" },
+      { id: "how-to-handle-unspsc-edge-cases", label: "How to handle UNSPSC edge cases" },
+      { id: "using-ai-for-unspsc-classification", label: "Using AI for UNSPSC classification" },
+      { id: "frequently-asked-questions", label: "FAQ" },
+    ],
+    softCta: "template",
+    faqItems: [
+      {
+        q: "What does UNSPSC stand for?",
+        a: "UNSPSC stands for United Nations Standard Products and Services Code. It is a classification system designed as a single standard for procurement worldwide. It covers goods and services across every industry, including construction, manufacturing and facilities management, and organises them into a four-level hierarchy running from a broad segment down to an individual commodity.",
+      },
+      {
+        q: "How many levels does UNSPSC have?",
+        a: "UNSPSC has four levels: segment, family, class and commodity. Segment is the broadest grouping, such as structures and building components. Commodity is the individual item, such as an aluminium I profile. Most organisations classify to family or class level for reporting and only go to commodity level where a specific category is being actively negotiated.",
+      },
+      {
+        q: "Is UNSPSC suitable for construction procurement?",
+        a: "Yes. UNSPSC expands into construction-specific branches covering structural elements, building materials, HVAC equipment and subcontracted services. Because the standard is used across industries and borders, suppliers and clients often already hold codes against their own catalogues. That makes it easier to compare spend externally than a taxonomy built in-house for one company.",
+      },
+      {
+        q: "Can AI classify purchase orders to UNSPSC codes accurately?",
+        a: "It can, but not with a general-purpose chatbot alone. Language models invent codes that do not exist in the taxonomy, which destroys the repeatability the exercise depends on. Accurate classification requires the taxonomy loaded as a constrained reference, supplier context weighted against the line description, company-specific rules, and a review step for low-confidence lines.",
+      },
+      {
+        q: "How long does it take to classify a backlog of purchase orders?",
+        a: "A pilot on roughly one year of data takes about four weeks, which allows time to build the structures, review initial findings and adjust the rules. A full historical backlog runs after the pilot, and the timeline depends on how much custom configuration the data needs rather than on the number of lines involved.",
+      },
+      {
+        q: "How does Pearstop handle UNSPSC classification?",
+        a: "Pearstop loads the UNSPSC taxonomy as a constrained reference so codes cannot be invented, weights supplier context against the line description, applies company-specific rules agreed with the procurement team, and routes low-confidence lines to human review. Corrections feed back into the pipeline so the same ambiguous line does not need deciding twice.",
+      },
+    ],
+  },
 ];
 
 export const blogPosts: BlogPost[] = _allBlogPosts.filter((p) => !p.hidden);

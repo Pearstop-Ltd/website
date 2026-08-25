@@ -1,0 +1,197 @@
+---
+title: "How to build a spend cube with AI"
+description: "The five steps to building a spend cube, what data you need, what usually goes wrong, and when a consultant is a better choice than an AI classification pipeline."
+date: "2026-08-25"
+category: "AI & Digital"
+slug: "how-to-build-a-spend-cube-with-ai"
+author: "stephanie"
+lang: "en"
+---
+
+<script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://pearstop.com/blog/how-to-build-a-spend-cube-with-ai",
+      "headline": "How to build a spend cube with AI",
+      "description": "The five steps to building a spend cube, what data you need, what usually goes wrong, and when a consultant is a better choice than an AI classification pipeline.",
+      "datePublished": "2026-08-25",
+      "dateModified": "2026-08-25",
+      "author": {
+        "@type": "Person",
+        "name": "Stephanie Wiechers",
+        "jobTitle": "CEO, Pearstop"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Pearstop",
+        "url": "https://pearstop.com"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://pearstop.com/blog/how-to-build-a-spend-cube-with-ai"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a spend cube in procurement?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A spend cube is procurement spend organised across several dimensions at once, so it can be sliced from any angle. The standard dimensions are supplier, category and business unit or cost centre, with time as a fourth. It answers who bought what, from whom, and when, without anyone rebuilding a spreadsheet each time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What data do you need to build a spend cube?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You need line-level transaction data, not summary totals. The minimum useful export contains a document number, a date, a supplier name and number, the free-text line description, quantity, unit price, total value, currency, and a cost centre or entity reference. An internal material or product number, where one exists, materially improves accuracy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take to build a spend cube?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A pilot on around one year of data takes roughly four weeks, including time to review findings and adjust the classification rules before the full run. Extracting and cleaning the source data is usually the slowest part and depends on the finance team, not the classification method. A full historical backlog follows once the rules are settled."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is it cheaper to build a spend cube with AI or a consultant?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AI is cheaper for the classification work and cheaper again for keeping the cube current, because the marginal cost of the next month of data is close to zero. A consultant costs more per exercise but includes negotiation strategy and execution support that a pipeline does not provide. The two solve different problems."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can ChatGPT or Copilot classify procurement spend data?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not reliably at scale. General assistants invent category codes that do not exist in the taxonomy, classify the same description differently across runs, and give no indication of how confident they are. They are useful for exploring a few hundred lines. They do not produce the repeatability a spend cube depends on."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does Pearstop build a spend cube?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pearstop ingests line-level data, resolves the supplier list against a reference database, applies a constrained taxonomy so codes cannot be invented, encodes the rules agreed with the procurement team, and routes low-confidence lines to human review. Corrections feed back into the pipeline, and the cube updates as new data arrives rather than being rebuilt."
+          }
+        }
+      ]
+    }
+  ]
+})}} />
+
+**Quick answer:** A spend cube is procurement spend organised so it can be viewed from several angles at once: by supplier, by category, and by the part of the business that bought it. Building one takes five steps: extract line-level data, clean it, resolve the supplier list, set the taxonomy and rules, then classify and review. A consultant builds it once. An AI pipeline rebuilds it every month.
+
+On this page: [What a spend cube actually is](#what-a-spend-cube-actually-is) · [Building a spend cube step by step](#building-a-spend-cube-step-by-step) · [When to use a procurement consultant](#when-to-use-a-procurement-consultant) · [When to use an AI pipeline](#when-to-use-an-ai-pipeline) · [Frequently asked questions](#frequently-asked-questions)
+
+Most companies that ask for a spend cube already know roughly where their money goes. What they cannot do is answer a follow-up question without a week of work.
+
+They know the top ten suppliers. They cannot tell you whether the same product is being bought at three different prices across four sites. They know facilities spend went up. They cannot tell you whether that is volume, price, or a category boundary that moved.
+
+The gap is not analysis. It is that the underlying data has no structure to analyse. A finance export gives you a supplier, an amount and a sentence of free text. Everything useful sits inside that sentence, and nobody has ever pulled it out.
+
+## What a spend cube actually is
+
+A cube is spend organised along more than one dimension at the same time, so that any slice is available without rebuilding anything.
+
+Three dimensions do most of the work.
+
+**Supplier.** Who you paid, resolved to a single entity. Not four spellings of the same company name, and not a parent group hiding three trading subsidiaries.
+
+**Category.** What was actually bought, classified against a taxonomy. This is the dimension that does not exist in the source system, and it is the reason spend cube projects exist.
+
+**Business unit.** Which entity, site or cost centre the spend belongs to. For any company operating across multiple legal entities this is the dimension that turns a report into a negotiating position, because it shows the same item bought separately in five places.
+
+Time sits across all three. The point of the cube is not the snapshot. It is being able to see whether a price moved, whether a category grew, and whether a decision you made nine months ago changed anything.
+
+Everything else people want from a spend cube, savings identification, supplier consolidation, benchmarking, price variance, is a query against those dimensions. If the dimensions are clean, the questions are easy. If they are not, no dashboard rescues it.
+
+## Building a spend cube step by step
+
+**Step one: extract line-level data.** Summary totals are useless here. You need every transaction line, with a document number, date, supplier name and number, the free-text description, quantity, unit price, total value, currency and a cost centre reference. Where an internal material number exists, take it. Twelve months is the minimum for a credible baseline, because anything shorter cannot separate seasonality from a trend.
+
+This step is usually the slow one, and it has nothing to do with classification. It depends on how quickly finance can produce the export, and on how much of it turns out to be locked in an ageing ERP with no reporting layer.
+
+**Step two: clean the file.** Expect problems, and expect them to be specific. Duplicate lines from an export run twice. Missing unit prices on a subset of rows. A currency field that was never populated for one country, quietly converting a foreign invoice into a local-currency figure and distorting every total above it. If the data arrived through document capture rather than a system export, expect dates and addresses picked up as line items.
+
+None of this is exotic. All of it changes the answer, and all of it is invisible once the numbers reach a chart.
+
+**Step three: resolve the supplier list.** Do this before classifying anything. The supplier is one of the strongest signals for working out what a line actually is, so a clean supplier list makes the next step meaningfully more accurate. It also tends to be the first place a real finding appears, because deduplicating the list is usually how a company discovers it has three separate accounts with the same distributor.
+
+**Step four: set the taxonomy and write the rules.** Decide which standard you are using and how deep you need to go. UNSPSC is the usual choice because it is external, which means suppliers and clients may already use it. Then hold one session with the people who actually buy, and work through the edge cases the business genuinely has. Does a line reading "hours" mean subcontracted labour or plant hire. How are transport charges, fuel surcharges and credit notes treated. Write down every decision.
+
+Skipping this step is the single most common reason a spend cube gets built twice.
+
+**Step five: classify, score, review.** Every line gets a code and a confidence score. Lines the system is unsure about, a description that is only a part number, a supplier appearing for the first time, an item that could sit in two families, go to a person. That review is not a quality checkpoint bolted on the end. It is where the rules get refined, and where the corrections that stop the same ambiguity recurring come from.
+
+At Pearstop this runs as a managed pipeline: constrained taxonomy so codes cannot be invented, supplier context weighted against the description, company rules applied, low-confidence lines routed to review, corrections fed back.
+
+## When to use a procurement consultant
+
+A consultant is the right call when the problem is not really the data.
+
+If a company has never run professional procurement, the spend cube is a small part of what it needs. It needs to know which spend is addressable in the first place. It needs a commercial model. It needs someone to design the function, decide who negotiates what, and sit in the room when a supplier pushes back. Diagnostics from established procurement consultancies cover exactly this, and the fee reflects the fact that a senior person is doing judgement work rather than data work.
+
+The rule of thumb in the market is that touching genuinely unmanaged spend at a mid-sized firm surfaces around ten percent in savings fairly quickly. When that is the situation, the business case for a consultant is straightforward, and arguing about the cost of the classification component misses the point.
+
+Use a consultant when you need a decision, a mandate and someone accountable for delivering the number. The output is a strategy and a set of executed negotiations.
+
+The limitation is not quality. It is shelf life. A consultant-built cube is accurate on the day it is delivered and starts decaying immediately, because next month's invoices arrive unclassified and nobody in the building knows the rules that were used. Twelve months later the same exercise gets commissioned again.
+
+## When to use an AI pipeline
+
+An AI pipeline is the right call when the classification itself is the bottleneck, and when the answer needs to still be true next quarter.
+
+Three situations make it obvious.
+
+**An ERP migration is coming.** This is the strongest trigger we see. There is no point loading unstructured history into a new system, and there is every reason to start coding new purchase orders correctly now so that the migration inherits clean data instead of the same problem in a better interface.
+
+**The backlog is too large to be a person's job.** Classifying several hundred thousand historical lines by hand is a full-time analyst role that does not end, because new lines keep arriving. The comparison worth making is not accuracy per line. It is whether you want a buyer spending their week coding data or negotiating with the suppliers the data points at.
+
+**Someone has already tried it with a general assistant.** This happens constantly. A capable person takes their data, works through it with a chatbot, and finds it invents codes, contradicts itself between runs, and offers no signal about which answers to trust. The money already spent was not wasted on classification. It was spent discovering that the guardrails are the product.
+
+The economics differ in structure, not just in size. A consultant is a project fee that buys a point-in-time answer. A pipeline is a setup cost plus a volume-based running cost, and the marginal cost of next month is close to zero.
+
+The two are not really competing. The most sensible arrangement we see is a consultant running the strategy and the negotiations, with the cube built and maintained underneath by a pipeline, so that year two does not start from a blank sheet.
+
+## Frequently asked questions
+
+**What is a spend cube in procurement?**
+
+A spend cube is procurement spend organised across several dimensions at once, so it can be sliced from any angle. The standard dimensions are supplier, category and business unit or cost centre, with time as a fourth. It answers who bought what, from whom, and when, without anyone rebuilding a spreadsheet each time.
+
+**What data do you need to build a spend cube?**
+
+You need line-level transaction data, not summary totals. The minimum useful export contains a document number, a date, a supplier name and number, the free-text line description, quantity, unit price, total value, currency, and a cost centre or entity reference. An internal material or product number, where one exists, materially improves accuracy.
+
+**How long does it take to build a spend cube?**
+
+A pilot on around one year of data takes roughly four weeks, including time to review findings and adjust the classification rules before the full run. Extracting and cleaning the source data is usually the slowest part and depends on the finance team, not the classification method. A full historical backlog follows once the rules are settled.
+
+**Is it cheaper to build a spend cube with AI or a consultant?**
+
+AI is cheaper for the classification work and cheaper again for keeping the cube current, because the marginal cost of the next month of data is close to zero. A consultant costs more per exercise but includes negotiation strategy and execution support that a pipeline does not provide. The two solve different problems.
+
+**Can ChatGPT or Copilot classify procurement spend data?**
+
+Not reliably at scale. General assistants invent category codes that do not exist in the taxonomy, classify the same description differently across runs, and give no indication of how confident they are. They are useful for exploring a few hundred lines. They do not produce the repeatability a spend cube depends on.
+
+**How does Pearstop build a spend cube?**
+
+Pearstop ingests line-level data, resolves the supplier list against a reference database, applies a constrained taxonomy so codes cannot be invented, encodes the rules agreed with the procurement team, and routes low-confidence lines to human review. Corrections feed back into the pipeline, and the cube updates as new data arrives rather than being rebuilt.
+
+---
+
+## Free resources
+
+- [Pearstop case studies](https://pearstopcs-ccdc3wwj.manus.space/)
+- [Procurement Opportunity Mapper](https://pearstopmap-7zost2x4.manus.space)
