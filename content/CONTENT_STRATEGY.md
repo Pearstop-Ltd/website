@@ -35,23 +35,115 @@ the standing rotation above, so they don't get an invented topic on a quiet
 week. Only the "invent something if nothing was suggested" behaviour is
 restricted to the standard writers list.
 
-<!-- STEPHANIE: replace this section with your brief. Keep it short — a few
-bullets is plenty. Suggested angles: target segments this quarter, SEO/topic
-areas we want more coverage on, campaigns or launches to tie content to,
-anything we're currently over- or under-indexed on. -->
+## Voice profiles
 
-## Current priorities
+Before drafting for a writer, check `content/voice-profiles/<AUTHORS-key>.md`.
+If one exists, it is the authoritative voice reference — follow its rules
+exactly, especially any "hard constraints" / never-use list. If no profile
+exists for that writer yet, fall back to reading 2-3 of their own existing
+published articles in `content/blog/en/` as a style reference instead.
 
-_(placeholder — not yet filled in)_
+Profiles available: `stephanie`. Not yet available: `rae`, `neharika` — use
+the fallback for these until a profile is added.
 
-## Target segments
+---
 
-_(placeholder)_
+# Pearstop: Company & Marketing Context
 
-## SEO / topic focus
+Use this to weigh whether a topic is worth writing about. When something
+here conflicts with an older strategy doc, this wins — it's built from the
+most recent signal (client calls, team check-ins), not the archived plans.
 
-_(placeholder)_
+## What Pearstop does
 
-## Things to avoid or de-prioritise right now
+Go-to data quality and data integrity player for asset-heavy companies.
+Wedge: hard facilities management first, then construction, infrastructure,
+manufacturing. Same shape of messy data across these industries means
+repeatable patterns and faster delivery.
 
-_(placeholder)_
+## The problem we write about
+
+Client spend and asset data is inconsistent, messy, context-dependent. They
+can't trust their own reports or asset lists. Humans are stitching data
+together by hand, and it never gets fixed because that's not their actual
+job. What they want isn't "clean data" as an abstraction — it's trusting
+their numbers, moving faster, and not needing an analyst to spend a week
+cleaning a spreadsheet before any real decision gets made.
+
+### Trigger moments (what actually gets someone looking for us)
+
+Write toward these — they're the real reasons someone starts searching, not
+the abstract "we have messy data" framing.
+
+- **ERP migration.** Moving to SAP S/4HANA, Microsoft Dynamics Business
+  Central, or Microsoft Fabric forces a clean baseline before go-live, and
+  nobody has one. This is the single most reliable trigger — data has to be
+  right before the new system goes live, not after.
+- **UNSPSC (or similar taxonomy) mandate.** Head office, a parent company,
+  or a client requires standardised classification and the team has no
+  in-house expertise to do it, so it stalls.
+- **New head of procurement.** Someone starts, goes looking for a
+  categorisation or classification baseline, and finds there isn't one.
+  This is often the moment someone first reaches for AI as the fix.
+- **The Copilot dead end.** They try Microsoft Copilot (or a general AI
+  tool) on the classification problem, it hallucinates categories or can't
+  hold consistency across thousands of lines, and they realise
+  general-purpose AI isn't built for this. This is the "we tried the
+  obvious thing and it didn't work" beat — a strong angle because it meets
+  people exactly where they are, mid-frustration.
+
+These four show up in that rough order in real conversations. A topic that
+speaks to one of these moments directly is worth more than a topic that
+only speaks to the abstract pain.
+
+## Who we're writing for
+
+- **Personas:** Head of Procurement, CFO, Commercial Director.
+  - Procurement: data isn't good enough to support analysis.
+  - CFO: no spend visibility.
+  - Commercial Director: losing tenders to competitors with better cost
+    data.
+- **Company size:** £/€/$50m+ revenue.
+- **Verticals:** hard FM (cleaning, HVAC, electrical, plumbing, lifts,
+  building maintenance), construction, infrastructure, manufacturing.
+
+## Current positioning (as of Aug 2026 — treat as live)
+
+Don't lead with "cost savings." It's overused and prospects are numb to it.
+Lead with **not being able to trust your numbers / better decision making
+through data quality**.
+
+AI is a bolt-on to what they already run (CAFM, ERP), not a replacement
+platform. Fragmentation across incompatible systems — data duplicated,
+inconsistently formatted, nobody able to talk to anybody else's system — is
+a live, resonant pain point.
+
+Outbound targets procurement managers and data analysts as champions who
+carry it to the actual decision-maker, not the CEO directly.
+
+## Content stances (recurring positions — reuse, don't contradict)
+
+- Data quality before AI: if the data is fragmented, AI gives confident
+  answers to the wrong questions. You get faster at being wrong.
+- The problem is ownership, not technology: nobody owns data quality end to
+  end, so it degrades quietly.
+- Speed + reliability + pragmatism beat elegant internals or clever
+  features. Clients don't care about the latter.
+
+## Format rules
+
+- Tagline/framing: `{concrete result} {for who}`. Lead with the number, end
+  with the audience.
+- Categories (use exactly): Procurement, AI & Digital, Data Quality, Data
+  Management, Asset Management, Construction, Commercial FM.
+- Don't list geographies by default.
+
+## Lead magnets
+
+None currently live — don't reference or link any lead magnet until this
+section is updated.
+
+## Cadence
+
+Weekly blog post. Weekly podcast. Continuous LinkedIn. Monthly lead magnet
+iteration.
