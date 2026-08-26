@@ -17,9 +17,8 @@
  *    the scene includes people — this lands at ~30% across the blog as a
  *    whole, and is stable across reruns.
  * 4. Appends a fixed brand style suffix so every image shares one look.
- * 5. Renders the image via Pollinations.ai (free; POLLINATIONS_API_TOKEN
- *    is optional locally but effectively required in CI — GitHub Actions'
- *    IP range gets blocked on the unauthenticated anonymous tier), saves it to
+ * 5. Renders the image via OpenAI's gpt-image-1 (requires OPENAI_API_KEY;
+ *    ~$0.04-0.06/image at medium quality), saves it to
  *    public/images/blog/<slug>.jpg, and adds `image: "..."` to that post's
  *    entry in lib/blog-posts.ts.
  * 6. Records the exact prompt used in content/blog/image-prompts.json so
@@ -42,9 +41,11 @@ if (!GROQ_API_KEY) {
   process.exit(1);
 }
 
-// Optional locally; without it Pollinations' anonymous tier is used, which
-// works from a residential IP but is blocked from GitHub Actions' IP range.
-const POLLINATIONS_API_TOKEN = process.env.POLLINATIONS_API_TOKEN;
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
+if (!OPENAI_API_KEY) {
+  console.error("❌  OPENAI_API_KEY environment variable is required.");
+  process.exit(1);
+}
 
 // ---------------------------------------------------------------------------
 // Brand style — the fixed suffix every generated image shares, for a
@@ -151,37 +152,37 @@ Respond with ONLY strict JSON, no markdown fences, no commentary, in this exact 
 }
 
 // ---------------------------------------------------------------------------
-// Pollinations — image rendering
+// OpenAI gpt-image-1 — image rendering
 // ---------------------------------------------------------------------------
 
-async function renderImage(prompt, seed, retries = 4) {
-  const url =
-    `https://image.pollinations.ai/prompt/${encodeURIComponent(prompt)}` +
-    `?width=800&height=450&seed=${seed}&nologo=true`;
-
+async function renderImage(prompt, retries = 3) {
   for (let attempt = 1; attempt <= retries; attempt++) {
     try {
-      // A bare Node fetch has no User-Agent, which trips Cloudflare bot
-      // protection more readily on datacenter IPs (e.g. CI runners) than
-      // on residential ones — send a normal browser UA to match. The
-      // anonymous tier also outright blocks GitHub Actions' IP range, so
-      // an authenticated token (raises the tier) is effectively required
-      // for this to work from CI, even though it's optional locally.
-      const res = await fetch(url, {
-        headers: {
-          "User-Agent":
-            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36",
-          ...(POLLINATIONS_API_TOKEN ? { Authorization: `Bearer ${POLLINATIONS_API_TOKEN}` } : {}),
-        },
+      const res = await fetch("https://api.openai.com/v1/images/generations", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Authorization: `Bearer ${OPENAI_API_KEY}` },
+        body: JSON.stringify({
+          model: "gpt-image-1",
+          prompt,
+          size: "1536x1024", // landscape; site renders it with object-fit: cover so exact ratio isn't critical
+          quality: "medium",
+          output_format: "jpeg",
+          output_compression: 80,
+          n: 1,
+        }),
       });
-      if (!res.ok) throw new Error(`Pollinations error: ${res.status}`);
-      const buf = Buffer.from(await res.arrayBuffer());
-      if (buf.length < 1000) throw new Error("Pollinations returned a suspiciously small image");
-      return buf;
+      const json = await res.json();
+      if (!res.ok) {
+        const msg = json.error?.message || res.status;
+        throw new Error(`OpenAI image error: ${msg}`);
+      }
+      const b64 = json.data?.[0]?.b64_json;
+      if (!b64) throw new Error("OpenAI response had no image data");
+      return Buffer.from(b64, "base64");
     } catch (err) {
       if (attempt === retries) throw err;
-      const delay = attempt * 15000; // free anonymous tier is ~1 request per 15s
-      process.stdout.write(`\n    Pollinations request failed (${err.message}), retrying in ${delay / 1000}s...`);
+      const delay = attempt * 10000;
+      process.stdout.write(`\n    OpenAI image request failed (${err.message}), retrying in ${delay / 1000}s...`);
       await sleep(delay);
     }
   }
@@ -285,7 +286,7 @@ async function main() {
     console.log(`    sector: ${sector}`);
     console.log(`    prompt: ${fullPrompt}`);
 
-    const imageBuffer = await renderImage(fullPrompt, seed);
+    const imageBuffer = await renderImage(fullPrompt);
     const imagePath = path.join(IMAGES_DIR, `${post.slug}.jpg`);
     fs.writeFileSync(imagePath, imageBuffer);
     console.log(`    ✓  wrote public/images/blog/${post.slug}.jpg (${(imageBuffer.length / 1024).toFixed(0)}KB)`);
@@ -300,9 +301,6 @@ async function main() {
 
     fs.writeFileSync(BLOG_POSTS_PATH, source, "utf-8");
     fs.writeFileSync(PROMPTS_MANIFEST_PATH, JSON.stringify(manifest, null, 2) + "\n", "utf-8");
-
-    // Anonymous Pollinations tier allows one request per ~15s.
-    await sleep(16000);
   }
 
   console.log("\n✅  Blog image generation complete.");
