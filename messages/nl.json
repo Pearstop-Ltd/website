@@ -1414,20 +1414,20 @@
       "title": "Veelgestelde vragen",
       "items": [
         {
-          "q": "Welke UNSPSC-segmenten zijn van toepassing op facilities management?",
-          "a": "De meest voorkomende segmenten voor FM zijn Segment 72 (Construction and Maintenance Services), Segment 76 (Industrial Cleaning Services), Segment 80 (Management and Administrative Services) en Segment 73 (Industrial Production). Hard services FM-bedrijven zien doorgaans het hoogste spend‑volume in Segment 72, dat elektrische installaties, HVAC, sanitair en fabrieksonderhoud omvat."
+          "q": "Welke UNSPSC‑segmenten zijn van toepassing op facilities management?",
+          "a": "De meest voorkomende segmenten voor FM zijn Segment 72 (Construction and Maintenance Services), Segment 76 (Industrial Cleaning Services), Segment 80 (Management and Administrative Services) en Segment 73 (Industrial Production). Hard services FM‑bedrijven zien doorgaans het hoogste bestedingsvolume in Segment 72, dat elektrische installaties, HVAC, sanitair en fabrieksonderhoud omvat."
         },
         {
-          "q": "Waarom is UNSPSC-classificatie moeilijk voor FM-bedrijven?",
-          "a": "FM-bedrijven kopen van honderden leveranciers op gedecentraliseerde locaties. Factuurregels zijn vaak vrije‑tekstbeschrijvingen die door veld‑ingenieurs worden geschreven, niet door procurement‑teams. Handmatige classificatie op deze schaal vereist één of twee toegewijde medewerkers die continu werken om het tempo bij te houden."
+          "q": "Waarom is UNSPSC‑classificatie moeilijk voor FM‑bedrijven?",
+          "a": "FM‑bedrijven kopen van honderden leveranciers op gedecentraliseerde locaties. Factuurregels zijn vaak vrije‑tekstbeschrijvingen die door veld‑engineers worden geschreven, niet door procurement‑teams. Handmatige classificatie op deze schaal vereist één of twee toegewijde medewerkers die continu werken om het tempo bij te houden."
         },
         {
-          "q": "Hoe lang duurt UNSPSC-classificatie voor een FM-bedrijf?",
-          "a": "Een eerste classificatie van een volledige spend‑dataset wordt doorgaans binnen vier tot zes weken voltooid, inclusief een Data Stability Baseline om de nauwkeurigheid te valideren. Doorlopende maandelijkse classificaties worden automatisch uitgevoerd."
+          "q": "Hoe lang duurt UNSPSC‑classificatie voor een FM‑bedrijf?",
+          "a": "Een eerste classificatie van een volledige spend‑dataset wordt doorgaans binnen vier tot zes weken voltooid, inclusief een Data Stability Baseline om de nauwkeurigheid te valideren. Doorlopende maandelijkse classificatieruns verlopen automatisch."
         },
         {
           "q": "Integreert Pearstop met FM‑specifieke systemen zoals Maximo of ServiceNow?",
-          "a": "Pearstop ontvangt gegevens via CSV‑export of directe API‑verbinding en levert geclassificeerde data terug in hetzelfde formaat, compatibel met elk CAFM‑ of CMMS‑systeem, inclusief IBM Maximo, ServiceNow, Planon en SAP PM."
+          "a": "Pearstop ontvangt gegevens via CSV‑export of directe API‑verbinding en levert geclassificeerde data terug in hetzelfde formaat, compatibel met elk CAFM‑ of CMMS‑systeem, inclusief IBM Maximo, ServiceNow, Planon en SAP PM."
         },
         {
           "q": "Welke nauwkeurigheidsgraad kunnen FM‑bedrijven verwachten?",
@@ -1513,7 +1513,7 @@
         },
         {
           "q": "Wat is UNSPSC‑classificatie en waarom is het belangrijk?",
-          "a": "UNSPSC staat voor United Nations Standard Products and Services Code. Zonder UNSPSC zijn inkoopdata moeilijk te analyseren — met UNSPSC krijgt elke purchase order een consistente categorie waardoor spend‑analysis, supplier management en category management mogelijk worden."
+          "a": "UNSPSC staat voor United Nations Standard Products and Services Code. Zonder UNSPSC zijn inkoopdata moeilijk te analyseren — met UNSPSC krijgt elke purchase order een consistente categorie waardoor spend‑analyse, supplier management en category management mogelijk worden."
         },
         {
           "q": "Welke Nederlandse bedrijven hebben UNSPSC classificatie het meest nodig?",
@@ -1521,7 +1521,7 @@
         },
         {
           "q": "Hoe classificeert Pearstop Nederlandse inkoopdata?",
-          "a": "Pearstop ontvangt inkoopdata via CSV of directe API-verbinding vanuit Nederlandse ERP-systemen inclusief SAP, Oracle, en AFAS. De vier-laags classificatie-engine verwerkt ook Nederlandstalige factuuromschrijvingen."
+          "a": "Pearstop ontvangt inkoopdata via CSV of directe API-verbinding vanuit Nederlandse ERP-systemen inclusief SAP, Oracle, en AFAS. De vier‑laags classificatie‑engine verwerkt ook Nederlandstalige factuuromschrijvingen."
         }
       ]
     },
@@ -1592,16 +1592,16 @@
       "title": "Veelgestelde vragen",
       "items": [
         {
-          "q": "Is UNSPSC-classificatie in Duitsland verplicht?",
-          "a": "UNSPSC is geen wettelijke verplichting, maar de E‑factuurplicht 2025 vereist gestructureerde productcodes. UNSPSC is de meest gebruikte internationale standaard die aan deze eis voldoet."
+          "q": "Is UNSPSC‑classificatie in Duitsland verplicht?",
+          "a": "UNSPSC is geen wettelijke verplichting, maar de e‑factuurplicht 2025 vereist gestructureerde productcodes. UNSPSC is de meest gebruikte internationale standaard die aan deze eis voldoet."
         },
         {
-          "q": "Hoe beïnvloedt de Duitse E‑factuurplicht de inkoopclassificatie?",
-          "a": "De E‑factuurplicht 2025 vereist gestructureerde, machinale leesbare factuurgegevens voor B2B‑transacties. UNSPSC biedt een consistent, internationaal erkend coderingssysteem dat aan deze eis voldoet."
+          "q": "Hoe beïnvloedt de Duitse e‑factuurplicht de inkoopclassificatie?",
+          "a": "De e‑factuurplicht 2025 vereist gestructureerde, machinale leesbare factuurgegevens voor B2B‑transacties. UNSPSC biedt een consistent, internationaal erkend coderingssysteem dat aan deze eis voldoet."
         },
         {
           "q": "Wat is UNSPSC-classificatie en waarom hebben Duitse bedrijven deze nodig?",
-          "a": "UNSPSC staat voor United Nations Standard Products and Services Code. Duitse bedrijven gebruiken UNSPSC om inkoopuitgaven te categoriseren, leveranciers te vergelijken en de uitgaventransparantie te verbeteren."
+          "a": "UNSPSC staat voor United Nations Standard Products and Services Code. Duitse bedrijven gebruiken UNSPSC om inkoopuitgaven te categoriseren, leveranciers te vergelijken en de uitgaven‑transparantie te verbeteren."
         },
         {
           "q": "Welke Duitse sectoren profiteren het meest?",
@@ -1609,7 +1609,7 @@
         },
         {
           "q": "Kan Pearstop Duitstalige inkoopgegevens classificeren?",
-          "a": "Ja. Pearstops classificatie‑engine verwerkt Duitstalige factuurbeschrijvingen natively, inclusief gangbare afkortingen en technische terminologie."
+          "a": "Ja. De classificatie‑engine van Pearstop verwerkt Duitstalige factuurbeschrijvingen natuurlijk, inclusief gangbare afkortingen en technische terminologie."
         }
       ]
     },
