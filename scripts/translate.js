@@ -303,6 +303,15 @@ async function translateMdxContent(content, targetLang) {
   let frontmatterDone = false;
   let inCodeBlock = false;
   let frontmatterCount = 0;
+  // Tracks a multi-line JSX/JS block opened by a line starting with "<"
+  // (e.g. a <script>{{__html: JSON.stringify({...})}} /> block) so every
+  // line inside it — including bare JSON body lines like `"key": "value",`
+  // that don't themselves start with "<" or "{" — is skipped, not sent to
+  // the translator. Translating JSON body lines individually breaks commas
+  // and quoted enum values (e.g. "Organization" -> "Organisatie"), which
+  // produces invalid JS/JSON and fails the MDX build.
+  let inJsxBlock = false;
+  let jsxBalance = 0;
 
   const segments = []; // { index, text }
 
@@ -328,7 +337,22 @@ async function translateMdxContent(content, targetLang) {
     if (line.trim().startsWith("```")) { inCodeBlock = !inCodeBlock; continue; }
     if (inCodeBlock) continue;
     if (/^(import|export)\s/.test(line.trim())) continue;
-    if (/^\s*[<{]/.test(line)) continue;
+
+    if (inJsxBlock) {
+      jsxBalance += (line.match(/[{(]/g) || []).length - (line.match(/[})]/g) || []).length;
+      if (jsxBalance <= 0) inJsxBlock = false;
+      continue;
+    }
+
+    if (/^\s*</.test(line)) {
+      const net = (line.match(/[{(]/g) || []).length - (line.match(/[})]/g) || []).length;
+      if (net > 0) {
+        inJsxBlock = true;
+        jsxBalance = net;
+      }
+      continue;
+    }
+    if (/^\s*\{/.test(line)) continue;
     if (!line.trim() || /^#{1,6}\s/.test(line)) continue;
 
     // Prose paragraph — translate
