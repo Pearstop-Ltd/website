@@ -148,15 +148,25 @@ Respond with ONLY strict JSON, no markdown fences, no commentary, in this exact 
 // Pollinations — image rendering
 // ---------------------------------------------------------------------------
 
-async function renderImage(prompt, seed) {
+async function renderImage(prompt, seed, retries = 4) {
   const url =
     `https://image.pollinations.ai/prompt/${encodeURIComponent(prompt)}` +
     `?width=800&height=450&seed=${seed}&nologo=true`;
-  const res = await fetch(url);
-  if (!res.ok) throw new Error(`Pollinations error: ${res.status}`);
-  const buf = Buffer.from(await res.arrayBuffer());
-  if (buf.length < 1000) throw new Error("Pollinations returned a suspiciously small image");
-  return buf;
+
+  for (let attempt = 1; attempt <= retries; attempt++) {
+    try {
+      const res = await fetch(url);
+      if (!res.ok) throw new Error(`Pollinations error: ${res.status}`);
+      const buf = Buffer.from(await res.arrayBuffer());
+      if (buf.length < 1000) throw new Error("Pollinations returned a suspiciously small image");
+      return buf;
+    } catch (err) {
+      if (attempt === retries) throw err;
+      const delay = attempt * 15000; // free anonymous tier is ~1 request per 15s
+      process.stdout.write(`\n    Pollinations request failed (${err.message}), retrying in ${delay / 1000}s...`);
+      await sleep(delay);
+    }
+  }
 }
 
 // ---------------------------------------------------------------------------
