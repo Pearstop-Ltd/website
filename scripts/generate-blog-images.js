@@ -17,7 +17,9 @@
  *    the scene includes people — this lands at ~30% across the blog as a
  *    whole, and is stable across reruns.
  * 4. Appends a fixed brand style suffix so every image shares one look.
- * 5. Renders the image via Pollinations.ai (free, no key), saves it to
+ * 5. Renders the image via Pollinations.ai (free; POLLINATIONS_API_TOKEN
+ *    is optional locally but effectively required in CI — GitHub Actions'
+ *    IP range gets blocked on the unauthenticated anonymous tier), saves it to
  *    public/images/blog/<slug>.jpg, and adds `image: "..."` to that post's
  *    entry in lib/blog-posts.ts.
  * 6. Records the exact prompt used in content/blog/image-prompts.json so
@@ -39,6 +41,10 @@ if (!GROQ_API_KEY) {
   console.error("❌  GROQ_API_KEY environment variable is required.");
   process.exit(1);
 }
+
+// Optional locally; without it Pollinations' anonymous tier is used, which
+// works from a residential IP but is blocked from GitHub Actions' IP range.
+const POLLINATIONS_API_TOKEN = process.env.POLLINATIONS_API_TOKEN;
 
 // ---------------------------------------------------------------------------
 // Brand style — the fixed suffix every generated image shares, for a
@@ -157,11 +163,15 @@ async function renderImage(prompt, seed, retries = 4) {
     try {
       // A bare Node fetch has no User-Agent, which trips Cloudflare bot
       // protection more readily on datacenter IPs (e.g. CI runners) than
-      // on residential ones — send a normal browser UA to match.
+      // on residential ones — send a normal browser UA to match. The
+      // anonymous tier also outright blocks GitHub Actions' IP range, so
+      // an authenticated token (raises the tier) is effectively required
+      // for this to work from CI, even though it's optional locally.
       const res = await fetch(url, {
         headers: {
           "User-Agent":
             "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36",
+          ...(POLLINATIONS_API_TOKEN ? { Authorization: `Bearer ${POLLINATIONS_API_TOKEN}` } : {}),
         },
       });
       if (!res.ok) throw new Error(`Pollinations error: ${res.status}`);
