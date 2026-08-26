@@ -1,0 +1,216 @@
+# Pearstop blog post spec (MDX)
+
+This is Stephanie's spec for converting an approved draft into a
+publish-ready post. Read this alongside the note at the bottom before
+applying it — one part of the original spec doesn't match how this
+codebase actually works, and the note explains the adapted approach.
+
+---
+
+How to use this: paste this whole document into Claude, then paste your draft underneath it. Claude returns one finished `.mdx` file, ready to commit. Send that file to Stephanie.
+
+---
+
+You are converting a writer's draft into a Pearstop blog post as a `.mdx` file. Follow this structure exactly.
+
+## What the writer supplies
+
+Draft body copy, the target search query the post should rank for, the category, the author key, and the publish date. If any of those are missing, ask for them. Do not guess the category or the author key.
+
+## What you generate from the draft
+
+The quick answer, the TOC line, the FAQ section, and the JSON-LD block. Build all of them from what is in the draft. Do not introduce statistics, client names, results, or claims that the writer did not provide. If the draft does not contain enough substance for four FAQ answers, say so rather than padding.
+
+Return the complete file as a single downloadable `.mdx`. No commentary inside the file. Raise anything uncertain in the chat instead.
+
+## Filename
+
+`{slug}.mdx`, lowercase, hyphenated, matching the `slug` frontmatter field. Write the English file only. The Dutch version is generated from it by the translation tooling in git.
+
+## Frontmatter
+
+```yaml
+---
+title: "Headline in sentence case, under 60 characters where possible"
+description: "140 to 160 characters. Keyword-rich, written for a human, no clickbait."
+date: "YYYY-MM-DD"
+category: "AI & Digital"
+slug: "post-slug"
+author: "rae"
+lang: "en"
+---
+```
+
+Rules:
+
+- `category` must be one of: Procurement, AI & Digital, Data Quality, Data Management, Asset Management, Construction, Commercial FM. Exact spelling and casing.
+- `author` is the author key, not a display name. The site resolves it and appends the author bio automatically.
+- Never write an author bio into the body. The site adds it.
+- `lang` is `en` or `nl`.
+
+## Body order
+
+1. JSON-LD schema block
+2. Quick answer paragraph
+3. On this page line
+4. Content sections (3 to 4 H2s)
+5. FAQ section
+6. Horizontal rule
+7. Free resources section
+
+## Structured data (JSON-LD)
+
+The site does not generate this. The writer adds it manually, directly under the frontmatter, before the quick answer. Without it the FAQ is just text on a page and will not be picked up as structured Q&A by search or AI answer engines.
+
+One combined block covering Article and FAQPage:
+
+```jsx
+<script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "headline": "Same as the title field",
+          "description": "Same as the description field",
+          "datePublished": "YYYY-MM-DD",
+          "dateModified": "YYYY-MM-DD",
+          "inLanguage": "en",
+          "author": {
+            "@type": "Person",
+            "name": "Author display name"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Pearstop",
+            "url": "https://www.pearstop.com"
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://pearstop.com/blog/post-slug"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "First question, worded exactly as it appears in the FAQ section",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The answer, worded exactly as it appears in the FAQ section."
+              }
+            }
+          ]
+        }
+      ]
+    })
+  }}
+/>
+```
+
+Rules:
+
+- Do not paste raw JSON inside a plain `<script>` tag. MDX reads `{` as the start of an expression and the build will fail. Use the `dangerouslySetInnerHTML` form above.
+- Every question and answer in the FAQ section must appear in `mainEntity`, worded identically. Mismatched or hidden answers get the markup ignored.
+- `headline` and `description` must match the frontmatter exactly.
+- `@id` is the live post URL: `https://pearstop.com/blog/{slug}`.
+- `author.name` is the display name, not the author key used in frontmatter.
+- Validate before handing over: paste the rendered page into Google's Rich Results Test.
+
+## Quick answer
+
+Opens the post. Starts with `**Quick answer:**`. 40 to 80 words. Answers the title question outright, in full sentences, with no setup. This is the block that gets lifted into AI summaries and search snippets, so it has to stand alone without the rest of the article.
+
+## Headings and the table of contents
+
+The TOC is built from H2 headings. Anchors are generated by lowercasing the heading, stripping all punctuation, and replacing spaces with hyphens. `## What just happened: the EU AI Act context` becomes `#what-just-happened-the-eu-ai-act-context`.
+
+- Front-load the keyword. The heading is an SEO surface, not a chapter title.
+- Keep H2s under 8 words. Long headings produce unreadable anchors.
+- Avoid apostrophes in H2s. They are stripped, so "isn't" becomes "isnt" in the URL.
+- Every H2 must be unique within the post.
+- H3s are used for sub-points inside a section and do not appear in the TOC.
+
+Directly under the quick answer, add the manual TOC line:
+
+```
+On this page: [Section one](#section-one) · [Section two](#section-two) · [FAQ](#frequently-asked-questions)
+```
+
+Separator is a middle dot. Anchors must match the generated heading anchors exactly.
+
+## FAQ section
+
+Every post ends with an FAQ. This is the primary asset for generative engine visibility, so it is not optional and it is not filler.
+
+- Heading is exactly `## Frequently asked questions`.
+- 4 to 6 questions.
+- Question on its own line, bolded, phrased as a real search query in full. Not "Penalties?" but "What are the penalties for non-compliance with the EU AI Act?"
+- Answer directly below as a plain paragraph, 40 to 70 words.
+- Each answer must be self-contained. No "as covered above", no pronouns pointing back at earlier sections. Assume the answer is being read on its own with no surrounding article.
+- Lead with the direct answer in the first sentence, then add detail.
+- At least one question covers how Pearstop solves the problem. Keep it factual, one product mention, no pitch language.
+- Every question and answer must also be copied into the `FAQPage` block at the top of the file, word for word. If the two versions drift, the markup is ignored.
+
+## Product mention
+
+One sentence in the body naming what Pearstop does for this specific problem. Format: {concrete result} {for who}. Lead with the number where there is one. Never use row counts or dataset sizes as proof.
+
+## Free resources
+
+Closes every post, after a `---` rule:
+
+```markdown
+## Free resources
+
+- [Pearstop case studies](https://pearstopcs-ccdc3wwj.manus.space/)
+- [Procurement Opportunity Mapper](https://pearstopmap-7zost2x4.manus.space)
+- Taxonomy generator, coming soon
+```
+
+## Voice
+
+Serious, factual, CEO register. Short declarative sentences. No em dashes. No exclamation marks. No jargon without a plain-English gloss. Banned phrases: "quick one", "hope you're well", "just checking in", "circling back", "reaching out", "happy to".
+
+## Output
+
+Produce the English version only. Dutch is generated by the translation tooling in git, so do not hand-write an NL file. Files must be clean and publish-ready with no editorial notes, flags, or TODOs inside them.
+
+---
+
+## Adaptation note (read this before applying the spec above)
+
+The "Structured data (JSON-LD)" section above says the site does not
+generate Article/FAQPage schema and the writer must hand-embed a
+`<script>` block. That's incorrect for this codebase:
+`components/blog.tsx` exports `ArticleSchema` and `FaqSchema`, and
+`app/[locale]/blog/[slug]/page.tsx` renders both automatically on every
+post, sourced from that post's entry in `lib/blog-posts.ts` (the
+`faqItems` field specifically drives `FaqSchema`).
+
+Hand-embedding the JSON-LD block anyway, as originally specified,
+causes two real problems that already happened once:
+
+1. **Duplicate schema** — the page ends up with both the hand-written
+   block and the auto-generated one.
+2. **Drift risk** — the spec's own FAQ rule ("if the two versions
+   drift, the markup is ignored") becomes a real risk the moment
+   someone edits the FAQ section without also updating the JSON-LD by
+   hand.
+3. It also broke the NL auto-translate pipeline once already (the
+   translator didn't recognise the multi-line embedded JSON as
+   non-prose and corrupted it), which silently blocked a production
+   deploy. That translator bug is now fixed defensively, but there's
+   still no reason to hand-maintain something the site already
+   generates correctly.
+
+**Adapted rule:** skip the "Structured data (JSON-LD)" section's
+`<script>` block entirely. Instead, produce a matching `lib/blog-posts.ts`
+entry alongside the `.mdx` file: `tags`, `readingTime`, `tocItems`
+(mirroring the H2 anchors), `softCta`, and `faqItems` — an array of
+`{ q, a }` objects copied word-for-word from the FAQ section. Everything
+else in the spec above (voice, quick answer, TOC line, FAQ content rules,
+frontmatter, free resources, filename) applies exactly as written.
