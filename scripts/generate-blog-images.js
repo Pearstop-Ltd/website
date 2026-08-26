@@ -155,7 +155,15 @@ async function renderImage(prompt, seed, retries = 4) {
 
   for (let attempt = 1; attempt <= retries; attempt++) {
     try {
-      const res = await fetch(url);
+      // A bare Node fetch has no User-Agent, which trips Cloudflare bot
+      // protection more readily on datacenter IPs (e.g. CI runners) than
+      // on residential ones — send a normal browser UA to match.
+      const res = await fetch(url, {
+        headers: {
+          "User-Agent":
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36",
+        },
+      });
       if (!res.ok) throw new Error(`Pollinations error: ${res.status}`);
       const buf = Buffer.from(await res.arrayBuffer());
       if (buf.length < 1000) throw new Error("Pollinations returned a suspiciously small image");
