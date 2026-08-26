@@ -6,6 +6,14 @@ claude.ai/code/routines) to weigh topic suggestions against current company
 and marketing priorities. Edit it directly — the agent picks up whatever is
 here at the start of each run, no code changes needed.
 
+## Slack message style
+
+Every message the pipeline posts to #blog-ideas (assignments, reminders,
+draft sign-off requests) should be as short as possible. Cut anything that
+isn't load-bearing — no restating context the thread already has, no
+filler sentences, no over-explaining. A topic + a one-line direction beats
+a topic + a paragraph. When in doubt, cut it shorter.
+
 ## Standard writers
 
 These people always get 2-3 blog assignments every week, even if nobody
