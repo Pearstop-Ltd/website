@@ -1,0 +1,16 @@
+{
+  "how-to-build-a-spend-cube-with-ai": {
+    "sector": "construction",
+    "includePeople": false,
+    "scene": "A sunlit construction site showing stacked steel beams, concrete formwork, and a towering crane against a backdrop of half-built scaffolding and exposed rebar.",
+    "prompt": "A sunlit construction site showing stacked steel beams, concrete formwork, and a towering crane against a backdrop of half-built scaffolding and exposed rebar., photorealistic photograph, natural daylight, cool blue-grey colour grading, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
+    "seed": 3876730147
+  },
+  "unspsc-classification-construction-guide": {
+    "sector": "construction",
+    "includePeople": false,
+    "scene": "A half-completed high-rise steel frame with towering crane booms and piles of bundled rebar stacked beside the scaffolded façade.",
+    "prompt": "A half-completed high-rise steel frame with towering crane booms and piles of bundled rebar stacked beside the scaffolded façade., photorealistic photograph, natural daylight, cool blue-grey colour grading, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
+    "seed": 1811120145
+  }
+}

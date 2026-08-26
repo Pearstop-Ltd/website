@@ -942,6 +942,7 @@ const _allBlogPosts: BlogPost[] = [
   },
   {
     slug: "how-to-build-a-spend-cube-with-ai",
+    image: "/images/blog/how-to-build-a-spend-cube-with-ai.jpg",
     title: "How to build a spend cube with AI",
     description: "The five steps to building a spend cube, what data you need, what usually goes wrong, and when a consultant is a better choice than an AI classification pipeline.",
     publishedAt: "2026-08-25",
@@ -985,6 +986,7 @@ const _allBlogPosts: BlogPost[] = [
   },
   {
     slug: "unspsc-classification-construction-guide",
+    image: "/images/blog/unspsc-classification-construction-guide.jpg",
     title: "UNSPSC classification in construction: a practical guide",
     description: "How construction and engineering teams apply UNSPSC to procurement data, who owns the decisions, how to handle edge cases, and where AI actually fits.",
     publishedAt: "2026-08-25",
