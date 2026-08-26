@@ -6,11 +6,13 @@ claude.ai/code/routines) to weigh topic suggestions against current company
 and marketing priorities. Edit it directly — the agent picks up whatever is
 here at the start of each run, no code changes needed.
 
-## Current writers
+## Standard writers
 
-This is the authoritative list of who the weekly assignment agent may assign
-topics to — it does NOT infer writer status from bios in `components/blog.tsx`.
-Update this list directly as the roster changes.
+These people always get 2-3 blog assignments every week, even if nobody
+posted a suggestion for them — the agent invents topics grounded in the
+priorities below and in coverage gaps when there's nothing suggested for
+them specifically. This does NOT infer writer status from bios in
+`components/blog.tsx` — update this list directly as the roster changes.
 
 - Stephanie (AUTHORS key: `stephanie`)
 - Rae (AUTHORS key: `rae`)
@@ -18,6 +20,12 @@ Update this list directly as the roster changes.
 
 <!-- Pending: Richard and Seb are being asked whether they want to write.
 Move them into the list above once confirmed. -->
+
+Anyone else on the team can still post a topic suggestion in #blog-ideas and
+have it picked up and assigned to them for that week — they're just not on
+the standing rotation above, so they don't get an invented topic on a quiet
+week. Only the "invent something if nothing was suggested" behaviour is
+restricted to the standard writers list.
 
 <!-- STEPHANIE: replace this section with your brief. Keep it short — a few
 bullets is plenty. Suggested angles: target segments this quarter, SEO/topic
