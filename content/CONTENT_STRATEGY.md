@@ -26,8 +26,8 @@ them specifically. This does NOT infer writer status from bios in
 - Rae (AUTHORS key: `rae`)
 - Neharika (AUTHORS key: `neharika`)
 
-<!-- Pending: Richard and Seb are being asked whether they want to write.
-Move them into the list above once confirmed. -->
+<!-- Richard: excluded, not a writer (publicly announced he's on Challengers
+Crease). Seb: deferred, on holiday — revisit adding him later. -->
 
 Anyone else on the team can still post a topic suggestion in #blog-ideas and
 have it picked up and assigned to them for that week — they're just not on
