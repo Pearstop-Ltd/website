@@ -1028,6 +1028,32 @@ const _allBlogPosts: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: "manufacturing-procurement-sap-data-quality",
+    title: "Manufacturing procurement data: the SAP problem hard FM already solved",
+    description: "95% of manufacturing spend auto-classified, without touching the SAP structure underneath it.",
+    publishedAt: "2026-08-27",
+    category: "Procurement",
+    tags: ["manufacturing procurement", "SAP data quality", "spend classification", "supplier data", "master data"],
+    readingTime: 5,
+    tocItems: [
+      { id: "why-manufacturers-assume-this-is-a-data-problem", label: "Why this looks like a data problem" },
+      { id: "what-does-unclassified-spend-actually-cost", label: "What unclassified spend costs" },
+      { id: "who-is-responsible-for-fixing-it", label: "Who is responsible for fixing it" },
+      { id: "what-this-looks-like-on-a-real-sap-export", label: "What this looks like on a real SAP export" },
+      { id: "why-not-just-point-a-general-ai-tool-at-the-export", label: "Why not a general AI tool" },
+      { id: "what-the-first-step-actually-looks-like", label: "What the first step looks like" },
+    ],
+    softCta: "discovery",
+    faqItems: [
+      { q: "Why does a manufacturer with years of SAP history still have unclassified spend data?", a: "Because item descriptions vary by whoever entered the purchase order, supplier names drift across plants, and categories were set up locally when the ERP was configured. It is a structure problem, not a missing data problem: the transactions exist, but nobody built the taxonomy that lets anyone query them consistently." },
+      { q: "How much does poor master data cost manufacturers?", a: "Poor master data costs organisations an average of 12.9 million dollars a year. For manufacturers running material master records across multiple plants and ERP instances, the same part often exists under several different material numbers, producing duplicate purchase orders and redundant inventory." },
+      { q: "What accuracy do legacy classification tools typically achieve on spend data?", a: "Legacy classification tools generally land at 75 to 85 percent accuracy on structured spend. The remaining 15 to 25 percent is usually tail spend, services, and P-card transactions, which is exactly where supplier consolidation and price benchmarking would help most." },
+      { q: "What are the steps to classify unstructured SAP procurement data?", a: "Three steps: resolve the supplier list to find duplicate suppliers bought under different names, apply a constrained taxonomy so a part cannot be given a category outside the standard, then classify every line and route uncertain cases to a person through confidence scoring." },
+      { q: "Why not use a general AI tool to classify SAP spend data instead?", a: "A general-purpose model invents category codes that do not exist in your taxonomy and classifies the same description differently across runs, so it produces an answer but not a repeatable one. On a live SAP feed that needs to stay accurate as new purchase orders land daily, that inconsistency is not tolerable." },
+      { q: "How does Pearstop classify manufacturing procurement data in SAP?", a: "Pearstop resolves the supplier list, applies a constrained taxonomy, encodes the categorisation rules the procurement team already uses, and classifies the backlog. On one mid-sized manufacturer's SAP export, this auto-classified 95 percent of lines directly against the existing SAP structure." },
+    ],
+  },
 ];
 
 export const blogPosts: BlogPost[] = _allBlogPosts.filter((p) => !p.hidden);
