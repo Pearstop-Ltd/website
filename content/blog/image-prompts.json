@@ -12,5 +12,12 @@
     "scene": "A half-completed high-rise steel frame with towering crane booms and piles of bundled rebar stacked beside the scaffolded façade.",
     "prompt": "A half-completed high-rise steel frame with towering crane booms and piles of bundled rebar stacked beside the scaffolded façade., photorealistic photograph, natural daylight, cool blue-grey colour grading, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
     "seed": 1811120145
+  },
+  "manufacturing-procurement-sap-data-quality": {
+    "sector": "hard-fm",
+    "includePeople": true,
+    "scene": "A senior facilities manager in a hard‑FM office walks alongside a mechanical engineer as they check newly delivered air‑handling units on a construction site, verifying the correct valves and filters against the delivery manifest.",
+    "prompt": "A senior facilities manager in a hard‑FM office walks alongside a mechanical engineer as they check newly delivered air‑handling units on a construction site, verifying the correct valves and filters against the delivery manifest., photorealistic photograph, natural daylight, cool blue-grey colour grading, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
+    "seed": 2183255812
   }
 }

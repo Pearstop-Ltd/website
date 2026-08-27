@@ -1030,6 +1030,7 @@ const _allBlogPosts: BlogPost[] = [
   },
   {
     slug: "manufacturing-procurement-sap-data-quality",
+    image: "/images/blog/manufacturing-procurement-sap-data-quality.jpg",
     title: "Manufacturing procurement data: the SAP problem hard FM already solved",
     description: "95% of manufacturing spend auto-classified, without touching the SAP structure underneath it.",
     publishedAt: "2026-08-27",
