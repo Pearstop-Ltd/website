@@ -37,5 +37,12 @@ jobs:
             echo "No translation changes to commit."
           else
             git commit -m "chore: auto-translate updated EN content to NL"
-            git push
+            # Another workflow (e.g. auto-blog-image) may push to main at the
+            # same time this one does — rebase onto the latest main before
+            # pushing so neither run clobbers the other's commit.
+            for i in 1 2 3 4 5; do
+              git pull --rebase origin main && git push && break
+              echo "Push failed, retrying ($i)..."
+              sleep 5
+            done
           fi
