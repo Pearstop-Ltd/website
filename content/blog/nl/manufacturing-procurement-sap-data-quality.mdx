@@ -1,0 +1,89 @@
+---
+title: "Manufacturing procurement data: het SAP‑probleem dat hard FM al heeft opgelost"
+description: "95 % van de manufacturing spend automatisch geclassificeerd, zonder de onderliggende SAP‑structuur aan te raken."
+date: "2026-08-27"
+category: "Procurement"
+slug: "manufacturing-procurement-sap-data-quality"
+author: "stephanie"
+lang: "en"
+---
+
+**Quick answer:** Een fabrikant met jarenlange historie in SAP heeft meestal alle data die hij nodig heeft, maar geen manier om ze te gebruiken. Artikelomschrijvingen variëren per degene die de purchase order heeft ingevoerd. Leveranciersnamen drijven tussen plants. Categorieën werden lokaal opgezet door degene die het ERP jaren geleden configureerde. Dit is geen missing data‑probleem. Het is een structure‑probleem, en het is hetzelfde probleem dat hard FM heeft met invoices, alleen met parts en supplier‑codes. De oplossing bestaat uit dezelfde drie stappen in beide gevallen: de supplier‑lijst oplossen, een taxonomy toepassen die geen eigen categories kan uitvinden, en vervolgens elke regel classificeren.
+
+Op deze pagina: [Why manufacturers assume this is a data problem](#why-manufacturers-assume-this-is-a-data-problem) · [What does unclassified spend actually cost?](#what-does-unclassified-spend-actually-cost) · [Who is responsible for fixing it?](#who-is-responsible-for-fixing-it) · [What this looks like on a real SAP export](#what-this-looks-like-on-a-real-sap-export) · [Why not just point a general AI tool at the export?](#why-not-just-point-a-general-ai-tool-at-the-export) · [What the first step actually looks like](#what-the-first-step-actually-looks-like) · [FAQ](#frequently-asked-questions)
+
+## Why manufacturers assume this is a data problem
+
+Als we investeren, controleren we hoe het bedrijf heeft gepresteerd voordat we toezeggen. Als we een route naar een belangrijke vergadering plannen, houden we rekening met het verkeer. De meeste beslissingen die we vertrouwen, zijn beslissingen die we al hebben gestructureerd, zelfs als we er niet zo over denken. Procurement spend
+
+That is why "we have all the data" and "we cannot answer a basic question about it" are true at the same time. The transactions exist. Nobody built the structure that would let anyone query them.
+
+## What does unclassified spend actually cost?
+
+Legacy classification tools generally land at 75 to 85 percent accuracy on structured spend. The remaining 15 to 25 percent is usually tail spend, services, and P-card transactions, which is exactly where supplier consolidation and price benchmarking would do the most good. Anything above roughly 10 percent unclassified is worth treating as a live gap, not background noise.
+
+Poor master data costs organisations an average of 12.9 million dollars a year. For a manufacturer running material master records across several plants and ERP instances, that number climbs, because the same part often exists under three different material numbers, one per site that set it up independently. That produces duplicate purchase orders, redundant inventory sitting in two warehouses under two part numbers, and a maintenance team searching for a part that technically exists in the system, just not under the code they are searching.
+
+## Who is responsible for fixing it?
+
+Niemand, meestal. Finance beheert het grootboek. Procurement beheert de onderhandeling. Niemand beheert de taxonomie, dus die degradeert stilletjes totdat iemand een categorie‑niveau overzicht nodig heeft en ontdekt dat die er niet is.
+
+De oplossing is geen nieuw systeem. Het is dezelfde drie‑stappenmethode die werkt op elke procurement‑dataset zonder structuur.
+
+De eerste stap is: de leverancierslijst oplossen. Leveranciersidentiteit is een van de sterkste signalen om een regel correct te classificeren, en het dedupliceren van de lijst is meestal hoe een bedrijf ontdekt dat twee fabrieken bij dezelfde distributeur hebben gekocht onder verschillende namen, tegen verschillende prijzen.
+
+De tweede stap is: een beperkte taxonomie toepassen. Een onderdeel kan geen categorie krijgen die niet bestaat in de standaard. Dit is de stap die voorkomt dat het systeem eigen codes verzint.
+
+De derde stap is: elke regel classificeren en de onzekere naar een persoon routeren. Confidence scoring maakt dit herhaalbaar. Een beschrijving die alleen een onderdeelnummer is, of een item dat in twee families kan passen, gaat naar review in plaats van geraden te worden.
+
+## What this looks like on a real SAP export
+
+We hebben dit uitgevoerd op SAP‑gegevens van een middelgrote fabrikant: jaren aan procurement‑geschiedenis zonder consistente categorisatie, geen zicht op of hetzelfde onderdeel tegen verschillende prijzen op sites werd gekocht, geen manier om te zien welke leveranciers konden worden geconsolideerd. We hebben de leverancierslijst opgelost, een beperkte taxonomie toegepast, de categorisatieregels gecodeerd die het procurement‑team daadwerkelijk gebruikte, en de achterstand geclassificeerd. 95 procent van de regels werd automatisch geclassificeerd tegen de bestaande SAP‑structuur. Dat is wat “we hebben de data ergens” omzette in een categorie‑niveau overzicht waar het team vanuit kon onderhandelen.
+
+Hetzelfde ongestructureerde‑dataprobleem komt ook buiten spend voor. Een luchtfiltratie‑fabrikant waarmee we werken kreeg site‑bezoekrapporten in elke denkbare indeling: handgeschreven notities, inconsistente lay‑outs, verkeerd gespelde onderdeelnamen, die handmatig moesten worden overgetypt naar een voorstel‑document waar het bedrijf op kon vertrouwen. Andere data. Zelfde falen: informatie bestond maar was nooit georganiseerd tot iets bruikbaars.
+
+## Why not just point a general AI tool at the export?
+
+Het zal een antwoord produceren. Het zal geen herhaalbaar antwoord produceren. Een general‑purpose model verzint categorie‑codes die niet bestaan in uw taxonomie, classificeert dezelfde beschrijving verschillend per run, en geeft geen signaal over welke van zijn antwoorden u kunt vertrouwen. Op een eenmalige steekproef van enkele honderden regels is dat acceptabel. Op een live SAP‑feed die nauwkeurig moet blijven terwijl elke dag nieuwe purchase orders binnenkomen, is dat dat niet, omdat het hele punt is dat het antwoord ook volgend kwartaal nog correct moet zijn.
+
+Een pipeline verschilt in één opzicht van een classificatie‑oefening: hij houdt de taxonomie constant en lost de identiteit van de leverancier op voordat hij een categorie raadt, in plaats van elke keer vanaf nul te beginnen. Nieuwe purchase orders worden op dezelfde manier geclassificeerd als de backlog. Die consistentie is de enige reden waarom een cijfer van 95 procent zes maanden later nog steeds geldt in plaats van terug te glijden naar een ongeclassificeerde stapel zodra niemand ernaar kijkt.
+
+We hebben dit niet getest op elke ERP‑configuratie die een fabrikant zou kunnen gebruiken. Wat we wel kunnen zeggen is wat de methode vereist: een leverancierslijst die wordt opgelost voordat de classificatie start, een taxonomie waar het systeem niet van kan afwijken, en een beoordelingsstap voor de regels waar het echt onzeker over is.
+
+## What the first step actually looks like
+
+Begin met de leverancierslijst, voordat je een enkele category aanraakt. Als twee locaties blijken te kopen bij dezelfde distributeur onder verschillende namen, is dat meestal de eerste bevinding. Bepaal vervolgens hoe diep de taxonomie moet gaan. De meeste fabrikanten hebben niet overal detail op grondstofniveau nodig. Ze hebben het nodig waar ze daadwerkelijk onderhandelen, en op familie‑ of klassenniveau overal elders. Schrijf de randgevallen op met de mensen die daadwerkelijk inkopen: wat telt als MRO versus kapitaal‑spend, hoe onderaannemersarbeid wordt gecodeerd, wat er gebeurt met vracht‑ en toeslagregels die eigenlijk geen product zijn. Classificeer vervolgens, beoordeel het vertrouwen, en routeer wat het systeem niet zeker weet naar een persoon, omdat daar de regels die dezelfde ambiguïteit voorkomen worden vastgelegd.
+
+## Frequently asked questions
+
+**Waarom heeft een fabrikant met jaren SAP‑geschiedenis nog steeds ongeclassificeerde spend‑data?**
+
+Omdat artikelbeschrijvingen variëren per persoon die de purchase order invoert, leveranciersnamen afdrijven tussen fabrieken, en categories lokaal werden opgezet toen de ERP werd geconfigureerd. Het is een structuurprobleem, geen ontbrekend‑data‑probleem: de transacties bestaan, maar niemand heeft de taxonomie gebouwd die iedereen consistent kan raadplegen.
+
+**Hoeveel kost slechte master‑data fabrikanten?**
+
+Slechte master‑data kost organisaties gemiddeld 12,9 miljoen dollar per jaar. Voor fabrikanten die materiaal‑masterrecords beheren over meerdere fabrieken en ERP‑instanties, bestaat hetzelfde onderdeel vaak onder verschillende materiaal‑nummers, wat leidt tot dubbele purchase orders en overbodige voorraad.
+
+**Welke nauwkeurigheid behalen legacy‑classificatietools doorgaans op spend‑data?**
+
+Legacy‑classificatietools behalen doorgaans een nauwkeurigheid van 75 tot 85 procent op gestructureerde spend. De resterende 15 tot 25 procent bestaat meestal uit tail spend, services en P‑card‑transacties, precies waar supplier consolidation en price benchmarking het meeste zouden helpen.
+
+**What are the steps to classify unstructured SAP procurement data?**
+
+Drie stappen: los de supplier list op om dubbele leveranciers te vinden die onder verschillende namen zijn ingekocht, pas een constrained taxonomy toe zodat een onderdeel geen category buiten de standaard kan krijgen, en classificeer vervolgens elke regel en routeer onzekere gevallen naar een persoon via confidence scoring.
+
+**Why not use a general AI tool to classify SAP spend data instead?**
+
+Een general‑purpose model verzint category codes die niet bestaan in uw taxonomy en classificeert dezelfde beschrijving verschillend per run, waardoor er een antwoord ontstaat maar geen herhaalbaar resultaat. Op een live SAP‑feed die nauwkeurig moet blijven terwijl er dagelijks nieuwe purchase orders binnenkomen, is die inconsistentie onaanvaardbaar.
+
+**How does Pearstop classify manufacturing procurement data in SAP?**
+
+Pearstop lost de supplier list op, past een constrained taxonomy toe, codeert de categorisation‑regels die het procurement‑team al gebruikt, en classificeert de backlog. Op één mid‑sized manufacturer‑SAP‑export classificeerde dit automatisch 95 procent van de regels direct tegen de bestaande SAP‑structuur.
+
+---
+
+## Free resources
+
+- [Pearstop case‑studies](https://pearstopcs-ccdc3wwj.manus.space/)
+- [Procurement Opportunity Mapper](https://pearstopmap-7zost2x4.manus.space)
+- Taxonomy generator, binnenkort beschikbaar
