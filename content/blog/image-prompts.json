@@ -19,5 +19,12 @@
     "scene": "A senior facilities manager in a hard‑FM office walks alongside a mechanical engineer as they check newly delivered air‑handling units on a construction site, verifying the correct valves and filters against the delivery manifest.",
     "prompt": "A senior facilities manager in a hard‑FM office walks alongside a mechanical engineer as they check newly delivered air‑handling units on a construction site, verifying the correct valves and filters against the delivery manifest., photorealistic photograph, natural daylight, cool blue-grey colour grading, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
     "seed": 2183255812
+  },
+  "new-head-of-procurement-week-one": {
+    "sector": "hard-fm",
+    "includePeople": false,
+    "scene": "A spacious mechanical plant room filled with rows of stainless‑steel HVAC chillers, large water pumps, and a maze of exposed ductwork bathed in cool fluorescent lighting.",
+    "prompt": "A spacious mechanical plant room filled with rows of stainless‑steel HVAC chillers, large water pumps, and a maze of exposed ductwork bathed in cool fluorescent lighting., photorealistic photograph, natural daylight, cool blue-grey colour grading, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
+    "seed": 4231821779
   }
 }

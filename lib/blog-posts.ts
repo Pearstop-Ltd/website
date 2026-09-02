@@ -1057,6 +1057,7 @@ const _allBlogPosts: BlogPost[] = [
   },
   {
     slug: "new-head-of-procurement-week-one",
+    image: "/images/blog/new-head-of-procurement-week-one.jpg",
     title: "What a new head of procurement should do in week one",
     description: "A new head of procurement rarely inherits a spend data baseline. Here is what to check first, why AI is not the fix, and who should own it long term.",
     publishedAt: "2026-09-02",
