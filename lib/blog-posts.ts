@@ -1078,6 +1078,29 @@ const _allBlogPosts: BlogPost[] = [
       { q: "Who should own data quality in a procurement team?", a: "Data quality needs a named, permanent owner, not a responsibility split informally across procurement, IT and finance. Without one accountable owner, categorisation standards drift the moment the person who understood the data leaves or gets reassigned, and the next leader inherits the same unreliable numbers all over again." },
     ],
   },
+  {
+    slug: "procurement-finance-sign-off-gap",
+    title: "Procurement said yes. Why did finance say no?",
+    description: "Procurement approves a data-quality initiative, then finance stalls it. Here is what finance actually needs to see before it releases budget.",
+    publishedAt: "2026-09-02",
+    category: "Procurement",
+    tags: ["budget sign-off", "finance approval", "business case", "data quality ownership"],
+    readingTime: 7,
+    tocItems: [
+      { id: "two-different-conversations", label: "Two different conversations" },
+      { id: "what-finance-actually-needs-to-see", label: "What finance actually needs to see" },
+      { id: "why-procurement-cannot-supply-it-alone", label: "Why procurement cannot supply it alone" },
+    ],
+    softCta: "discovery",
+    faqItems: [
+      { q: "Why does finance reject a procurement project that procurement already approved?", a: "Finance is not rejecting the problem. It is rejecting the case as presented, usually because there is no named owner for the outcome, no independently checkable before-and-after, and no payback period stated in finance's own terms. Procurement approval reflects operational value; finance approval requires a financial case built separately from it." },
+      { q: "What financial information does a CFO need to approve a data quality project?", a: "A CFO typically needs a baseline drawn from the company's own data, a quantified before-and-after stated in terms finance already tracks such as spend visibility or forecast accuracy, and a payback period. Under twelve months is generally approvable, under six months is considered strong, and anything measured in years usually gets deferred rather than declined outright." },
+      { q: "How long should a data quality business case take to pay back?", a: "There is no fixed rule, but the pattern across software and data initiatives is consistent: a payback period under twelve months is usually straightforward to approve, and under six months is considered a strong case. Business cases that only show payback in years tend not to get an outright no, they simply stop being prioritised against faster-paying alternatives." },
+      { q: "Who should own a data quality initiative inside a company?", a: "Ownership should sit with a named individual accountable for the outcome after the project ends, not with a department. Most data quality failures happen because the data sits between procurement, finance, IT, and operations, with no single person accountable for it end to end, which is also why business cases that cannot name an owner struggle to get funded." },
+      { q: "How does Pearstop help procurement teams get finance sign-off?", a: "Pearstop builds a categorised, audit-ready before-and-after directly from a company's own procurement and asset data inside a scoped pilot, giving an internal champion a checkable baseline to bring to finance rather than a vendor claim to repeat on their behalf. This is aimed at hard FM, construction, manufacturing, and infrastructure teams carrying the case internally." },
+      { q: "Why do B2B purchases stall even when the internal champion is convinced?", a: "Research from Forrester finds 86% of B2B purchases stall at some point, most often because of the buyer's own internal structure rather than vendor performance or price. With an average of 13 people involved across two or more departments, a convinced champion is rarely enough on its own. The case has to survive contact with stakeholders who were never part of the original conversation." },
+    ],
+  },
 ];
 
 export const blogPosts: BlogPost[] = _allBlogPosts.filter((p) => !p.hidden);
