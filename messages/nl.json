@@ -1423,7 +1423,7 @@
         },
         {
           "q": "Hoe lang duurt UNSPSC-classificatie voor een FM-bedrijf?",
-          "a": "Een initiële classificatie van een volledige spend-dataset is doorgaans binnen vier tot zes weken voltooid, inclusief een Data Stability Baseline om de nauwkeurigheid te valideren. Lopende maandelijkse classificatie wordt automatisch uitgevoerd."
+          "a": "Een initiële classificatie van een volledige spend-dataset is doorgaans binnen vier tot zes weken voltooid, inclusief een Data Stability Baseline om de nauwkeurigheid te valideren. Lopende maandelijkse classificatie runs automatisch."
         },
         {
           "q": "Integreert Pearstop met FM-specifieke systemen zoals Maximo of ServiceNow?",
@@ -1605,7 +1605,7 @@
         },
         {
           "q": "Welke Duitse sectoren profiteren het meest?",
-          "a": "Duitse productiebedrijven, machinebouwbedrijven, facility management bedrijven en infrastructuurbedrijven profiteren het meest. Productiebedrijven met een groot MRO-aandeel profiteren bijzonder van consistente onderdeelcodering."
+          "a": "Duitse productiebedrijven, machinebouwbedrijven, facility management bedrijven en infrastructuurbedrijven profiteren het meest. Productiebedrijven met een groot MRO-aandeel profiteren in het bijzonder van consistente onderdeelcodering."
         },
         {
           "q": "Kan Pearstop Duitstalige procurement data classificeren?",
