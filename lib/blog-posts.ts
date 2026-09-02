@@ -1055,6 +1055,29 @@ const _allBlogPosts: BlogPost[] = [
       { q: "How does Pearstop classify manufacturing procurement data in SAP?", a: "Pearstop resolves the supplier list, applies a constrained taxonomy, encodes the categorisation rules the procurement team already uses, and classifies the backlog. On one mid-sized manufacturer's SAP export, this auto-classified 95 percent of lines directly against the existing SAP structure." },
     ],
   },
+  {
+    slug: "new-head-of-procurement-week-one",
+    title: "What a new head of procurement should do in week one",
+    description: "A new head of procurement rarely inherits a spend data baseline. Here is what to check first, why AI is not the fix, and who should own it long term.",
+    publishedAt: "2026-09-02",
+    category: "Procurement",
+    tags: ["new head of procurement", "spend data baseline", "procurement onboarding", "data quality ownership"],
+    readingTime: 7,
+    tocItems: [
+      { id: "the-baseline-gap-new-procurement-leaders-inherit", label: "The baseline gap you inherit" },
+      { id: "why-ai-is-the-wrong-first-move", label: "Why AI is the wrong first move" },
+      { id: "what-to-actually-do-in-week-one", label: "What to actually do in week one" },
+      { id: "why-data-quality-needs-a-single-owner", label: "Why data quality needs an owner" },
+    ],
+    softCta: "checklist",
+    faqItems: [
+      { q: "What should a new head of procurement do in the first 30 days?", a: "In the first 30 days, a new head of procurement should map what spend data already exists, check whether it is categorised consistently, and identify who currently owns data quality, if anyone. Building a savings plan or a technology roadmap before this diagnosis is complete means building on numbers nobody has actually verified." },
+      { q: "Why is there no spend data baseline when I start a new procurement role?", a: "Most organisations never assign permanent ownership of spend classification, so it decays as new suppliers, sites and product lines are added without anyone maintaining the category structure. By the time a new head of procurement arrives, the data reflects years of ad hoc fixes rather than a maintained standard, which is why no usable baseline exists." },
+      { q: "Can AI tools like Copilot classify procurement spend data accurately?", a: "General-purpose AI tools can produce a first pass at classification, but they are not built to hold consistency across thousands of line items or to apply a company's specific category rules. In practice they hallucinate categories, drift on similar items, and often require as much manual correction as they save, especially without human oversight built in." },
+      { q: "How does Pearstop help a new head of procurement build a spend baseline?", a: "Pearstop builds a categorised, audit-ready spend baseline in four to six weeks for procurement leaders starting without one, using a classification model trained on the company's own purchasing descriptions rather than generic AI. The output gives a new head of procurement a verified starting point to report from and build strategy on." },
+      { q: "Who should own data quality in a procurement team?", a: "Data quality needs a named, permanent owner, not a responsibility split informally across procurement, IT and finance. Without one accountable owner, categorisation standards drift the moment the person who understood the data leaves or gets reassigned, and the next leader inherits the same unreliable numbers all over again." },
+    ],
+  },
 ];
 
 export const blogPosts: BlogPost[] = _allBlogPosts.filter((p) => !p.hidden);
