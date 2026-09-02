@@ -4,36 +4,23 @@ jobs:
   probe:
     runs-on: ubuntu-latest
     steps:
-      - name: Check key validity and free-tier limits
+      - name: Validate exact batch-translation payload
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
-          if [ -z "$GEMINI_API_KEY" ]; then echo "KEY EMPTY"; exit 1; fi
-          echo "key length: ${#GEMINI_API_KEY}"
-
-          echo "--- models list (HTTP status only) ---"
-          code=$(curl -s -o /tmp/models.json -w "%{http_code}" \
-            -H "x-goog-api-key: $GEMINI_API_KEY" \
-            "https://generativelanguage.googleapis.com/v1beta/models")
-          echo "HTTP $code"
-          if [ "$code" != "200" ]; then
-            echo "--- error body (key redacted) ---"
-            sed "s/$GEMINI_API_KEY/***/g" /tmp/models.json | head -20
-            exit 1
-          fi
-          echo "--- flash models available ---"
-          grep -o '"name": "models/[^"]*"' /tmp/models.json | grep -i flash | head -12
-
-          echo "--- live translation test ---"
-          for m in gemini-2.5-flash gemini-2.0-flash; do
-            code=$(curl -s -o /tmp/gen.json -w "%{http_code}" \
-              -H "x-goog-api-key: $GEMINI_API_KEY" -H 'Content-Type: application/json' \
-              -X POST "https://generativelanguage.googleapis.com/v1beta/models/$m:generateContent" \
-              -d '{"contents":[{"parts":[{"text":"Translate to Dutch, output only the translation: Procurement data is messy."}]}]}')
-            echo "$m -> HTTP $code"
-            if [ "$code" = "200" ]; then
-              grep -o '"text": "[^"]*"' /tmp/gen.json | head -2
-            else
-              sed "s/$GEMINI_API_KEY/***/g" /tmp/gen.json | head -8
-            fi
-          done
+          cat > /tmp/body.json <<'JSON'
+          {
+            "contents": [{"parts": [{"text": "Translate each numbered line to Dutch. Output only the numbered translations, same numbering, one per line.\n1. Procurement data is messy.\n2. Asset registers drift over time.\n3. Clean data is a prerequisite for AI."}]}],
+            "generationConfig": {
+              "temperature": 0.1,
+              "maxOutputTokens": 4096,
+              "thinkingConfig": {"thinkingBudget": 0}
+            }
+          }
+          JSON
+          code=$(curl -s -o /tmp/r.json -w "%{http_code}" \
+            -H "x-goog-api-key: $GEMINI_API_KEY" -H 'Content-Type: application/json' \
+            -X POST "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent" \
+            --data @/tmp/body.json)
+          echo "PAYLOAD_HTTP $code"
+          sed "s/$GEMINI_API_KEY/***/g" /tmp/r.json | head -40
