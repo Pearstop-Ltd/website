@@ -24,10 +24,11 @@ them specifically. This does NOT infer writer status from bios in
 
 - Stephanie (AUTHORS key: `stephanie`)
 - Rae (AUTHORS key: `rae`)
-- Neharika (AUTHORS key: `neharika`)
 
 <!-- Richard: excluded, not a writer (publicly announced he's on Challengers
-Crease). Seb: deferred, on holiday — revisit adding him later. -->
+Crease). Seb: deferred, on holiday — revisit adding him later. Neharika:
+removed from the rotation, internship ended — her AUTHORS entry in
+components/blog.tsx stays so her published posts keep rendering. -->
 
 Anyone else on the team can still post a topic suggestion in #blog-ideas and
 have it picked up and assigned to them for that week — they're just not on

@@ -55,8 +55,6 @@ Rules:
 3. On this page line
 4. Content sections (3 to 4 H2s)
 5. FAQ section
-6. Horizontal rule
-7. Free resources section
 
 ## Structured data (JSON-LD)
 
@@ -159,18 +157,6 @@ Every post ends with an FAQ. This is the primary asset for generative engine vis
 
 One sentence in the body naming what Pearstop does for this specific problem. Format: {concrete result} {for who}. Lead with the number where there is one. Never use row counts or dataset sizes as proof.
 
-## Free resources
-
-Closes every post, after a `---` rule:
-
-```markdown
-## Free resources
-
-- [Pearstop case studies](https://pearstopcs-ccdc3wwj.manus.space/)
-- [Procurement Opportunity Mapper](https://pearstopmap-7zost2x4.manus.space)
-- Taxonomy generator, coming soon
-```
-
 ## Voice
 
 Serious, factual, CEO register. Short declarative sentences. No em dashes. No exclamation marks. No jargon without a plain-English gloss. Banned phrases: "quick one", "hope you're well", "just checking in", "circling back", "reaching out", "happy to".
@@ -213,4 +199,4 @@ entry alongside the `.mdx` file: `tags`, `readingTime`, `tocItems`
 (mirroring the H2 anchors), `softCta`, and `faqItems` — an array of
 `{ q, a }` objects copied word-for-word from the FAQ section. Everything
 else in the spec above (voice, quick answer, TOC line, FAQ content rules,
-frontmatter, free resources, filename) applies exactly as written.
+frontmatter, filename) applies exactly as written.
