@@ -169,11 +169,17 @@ function flattenObject(obj, prefix = "") {
     if (typeof value === "string") {
       result[fullKey] = value;
     } else if (Array.isArray(value)) {
+      // Dot notation, not `[i]`: en.json stores some of these collections as
+      // objects with numeric keys ("0", "1") while nl.json stores real arrays.
+      // Bracket notation made the two flatten to different key strings, so
+      // those entries looked permanently "missing" and were re-translated on
+      // every run — rewriting valid Dutch with a slightly different wording
+      // and committing the churn back to main each time.
       value.forEach((item, i) => {
         if (typeof item === "string") {
-          result[`${fullKey}[${i}]`] = item;
+          result[`${fullKey}.${i}`] = item;
         } else if (typeof item === "object" && item !== null) {
-          Object.assign(result, flattenObject(item, `${fullKey}[${i}]`));
+          Object.assign(result, flattenObject(item, `${fullKey}.${i}`));
         }
       });
     } else if (typeof value === "object" && value !== null) {
