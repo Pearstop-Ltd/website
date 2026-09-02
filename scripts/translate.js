@@ -5,7 +5,7 @@
  * Usage:
  *   GEMINI_API_KEY=your-key node scripts/translate.js
  *
- * Uses Google Gemini 1.5 Flash (free tier: 1,500 req/day, 1M tokens/day).
+ * Uses Google Gemini 2.5 Flash (free tier), with thinking disabled.
  * Translates in batches of up to 50 strings per API call for efficiency.
  *
  * What it does:
@@ -29,56 +29,62 @@ const BLOG_EN_DIR = path.join(ROOT, "content", "blog", "en");
 const TARGET_LOCALES = ["nl"];
 
 const LOCALE_NAMES = { nl: "Dutch", fr: "French", de: "German" };
-// Free-tier TPM for openai/gpt-oss-120b is 8000, enforced as a rolling
-// per-minute budget (prompt + max_tokens reserved per call, counted against
-// tokens already used in the last 60s). Keep each call's reservation small
-// and space calls out so consecutive requests don't stack past the cap.
-const BATCH_SIZE = 8;
+// Gemini's free tier is limited by requests-per-minute far more than by
+// tokens, the opposite of Groq's 8000 TPM cap — so batch aggressively and
+// make fewer, larger calls rather than many small spaced-out ones.
+const BATCH_SIZE = 25;
 
-const GROQ_API_KEY = process.env.GROQ_API_KEY;
-if (!GROQ_API_KEY) {
-  console.error("❌  GROQ_API_KEY environment variable is required.");
+const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
+if (!GEMINI_API_KEY) {
+  console.error("❌  GEMINI_API_KEY environment variable is required.");
   console.error("   Get a free key at https://aistudio.google.com/apikey");
   process.exit(1);
 }
+const GEMINI_MODEL = "gemini-2.5-flash";
 
 // ---------------------------------------------------------------------------
-// Groq API
+// Gemini API
 // ---------------------------------------------------------------------------
 
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-async function groqRequestOnce(prompt) {
-  const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+async function geminiRequestOnce(prompt) {
+  const url =
+    'https://generativelanguage.googleapis.com/v1beta/models/' +
+    GEMINI_MODEL + ':generateContent';
+  const res = await fetch(url, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + GROQ_API_KEY },
+    headers: { 'Content-Type': 'application/json', 'x-goog-api-key': GEMINI_API_KEY },
     body: JSON.stringify({
-      model: 'openai/gpt-oss-120b',
-      messages: [{ role: 'user', content: prompt }],
-      temperature: 0.1,
-      max_tokens: 1500,
-      // gpt-oss is a reasoning model — without this, chain-of-thought can
-      // consume the whole max_tokens budget and leave an empty final answer.
-      reasoning_effort: 'low',
-      include_reasoning: false,
+      contents: [{ parts: [{ text: prompt }] }],
+      generationConfig: {
+        temperature: 0.1,
+        maxOutputTokens: 4096,
+        // 2.5-flash reasons by default; without this, thinking tokens eat the
+        // output budget and the response comes back empty (same failure mode
+        // gpt-oss had without reasoning_effort: 'low').
+        thinkingConfig: { thinkingBudget: 0 },
+      },
     }),
   });
   const json = await res.json();
   if (!res.ok) {
     const msg = json.error?.message || res.status;
-    throw Object.assign(new Error('Groq API error: ' + msg), { retryable: res.status === 429 });
+    throw Object.assign(new Error('Gemini API error: ' + msg), {
+      retryable: res.status === 429 || res.status === 503,
+    });
   }
-  const text = json.choices?.[0]?.message?.content;
-  if (!text) throw new Error('Empty Groq response');
+  const text = json.candidates?.[0]?.content?.parts?.[0]?.text;
+  if (!text) throw new Error('Empty Gemini response');
   return text.trim();
 }
 
 async function geminiRequest(prompt, retries = 5) {
   for (let attempt = 1; attempt <= retries; attempt++) {
     try {
-      return await groqRequestOnce(prompt);
+      return await geminiRequestOnce(prompt);
     } catch (err) {
       if (err.retryable && attempt < retries) {
         const delay = attempt * 10000;
@@ -147,7 +153,7 @@ async function translateBatched(texts, targetLang) {
     // 6s between batches — stays under 20 req/min on free tier
     // ~1500 tokens reserved per call (prompt + max_tokens); at 20s spacing
     // that's ~4500 tokens/min reserved, comfortably under the 8000 TPM cap.
-    if (i + BATCH_SIZE < texts.length) await sleep(20000);
+    if (i + BATCH_SIZE < texts.length) await sleep(5000);
   }
   return results;
 }
@@ -286,7 +292,7 @@ async function translateBlogPosts() {
       const translatedContent = await translateMdxContent(enContent, locale);
       fs.writeFileSync(localeFilePath, translatedContent, "utf-8");
       console.log(`  ✓  Wrote ${locale}/${filename}`);
-      await sleep(20000); // pause between files — 20s keeps well under 20 req/min free tier
+      await sleep(5000); // pause between files — Gemini's free tier is RPM-bound, not TPM-bound
     }
   }
 }

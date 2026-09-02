@@ -8,6 +8,12 @@ on:
       - "content/blog/en/**"
   workflow_dispatch: {}
 
+concurrency:
+  # Shared across both content workflows: they push to main and both touch
+  # lib/blog-posts.ts, so concurrent runs rebase-conflict and lose work.
+  group: main-content-push
+  cancel-in-progress: false
+
 jobs:
   translate:
     runs-on: ubuntu-latest
@@ -25,7 +31,7 @@ jobs:
 
       - name: Run translation script
         env:
-          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: node scripts/translate.js
 
       - name: Commit translated files
@@ -40,9 +46,20 @@ jobs:
             # Another workflow (e.g. auto-blog-image) may push to main at the
             # same time this one does — rebase onto the latest main before
             # pushing so neither run clobbers the other's commit.
+            pushed=false
             for i in 1 2 3 4 5; do
-              git pull --rebase origin main && git push && break
+              if git pull --rebase origin main && git push; then
+                pushed=true
+                break
+              fi
+              # A conflicted rebase leaves the tree mid-rebase, and every later
+              # `git pull` then fails with "unmerged files" — so reset before retrying.
+              git rebase --abort 2>/dev/null || true
               echo "Push failed, retrying ($i)..."
-              sleep 5
+              sleep $((i * 10))
             done
+            if [ "$pushed" != true ]; then
+              echo "::error::Could not push after 5 attempts — generated work was discarded."
+              exit 1
+            fi
           fi
