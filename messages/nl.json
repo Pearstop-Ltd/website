@@ -1419,19 +1419,19 @@
         },
         {
           "q": "Waarom is UNSPSC-classificatie moeilijk voor FM-bedrijven?",
-          "a": "FM-bedrijven kopen van honderden leveranciers over gedecentraliseerde locaties. Factuurregels zijn vaak vrije‑tekstbeschrijvingen geschreven door veld‑ingenieurs, niet door procurement‑teams. Handmatige classificatie op deze schaal vereist één of twee toegewijde medewerkers die continu werken om het tempo bij te houden."
+          "a": "FM-bedrijven kopen van honderden leveranciers op gedecentraliseerde locaties. Factuurregels zijn vaak vrije‑tekstbeschrijvingen die door veld‑engineers worden geschreven, niet door procurement‑teams. Handmatige classificatie op deze schaal vereist één of twee toegewijde medewerkers die continu werken om het tempo bij te houden."
         },
         {
           "q": "Hoe lang duurt UNSPSC-classificatie voor een FM-bedrijf?",
-          "a": "Een eerste classificatie van een volledige spend‑dataset wordt doorgaans binnen vier tot zes weken voltooid, inclusief een Data Stability Baseline om de nauwkeurigheid te valideren. Doorlopende maandelijkse classificatieruns worden automatisch uitgevoerd."
+          "a": "Een eerste classificatie van een volledige spend‑dataset wordt doorgaans binnen vier tot zes weken voltooid, inclusief een Data Stability Baseline om de nauwkeurigheid te valideren. Doorlopende maandelijkse classificaties worden automatisch uitgevoerd."
         },
         {
           "q": "Integreert Pearstop met FM‑specifieke systemen zoals Maximo of ServiceNow?",
-          "a": "Pearstop ontvangt data via CSV‑export of directe API‑verbinding en levert geclassificeerde data terug in hetzelfde formaat, compatibel met elk CAFM‑ of CMMS‑systeem, inclusief IBM Maximo, ServiceNow, Planon en SAP PM."
+          "a": "Pearstop ontvangt gegevens via CSV‑export of directe API‑verbinding en levert geclassificeerde data terug in hetzelfde formaat, compatibel met elk CAFM‑ of CMMS‑systeem, inclusief IBM Maximo, ServiceNow, Planon en SAP PM."
         },
         {
-          "q": "Welke nauwkeurigheidsgraad kunnen FM‑bedrijven verwachten?",
-          "a": "De vier‑lagige engine van Pearstop behaalt 90–95 % automatische classificatie op typische FM‑spend‑datasets. De resterende 5–10 % wordt gemarkeerd voor menselijke beoordeling, en elke beoordeelde beslissing wordt teruggevoerd naar de engine."
+          "q": "Welke nauwkeurigheidsgraad kunnen FM-bedrijven verwachten?",
+          "a": "De vierlagige engine van Pearstop behaalt 90–95 % automatische classificatie op typische FM spend‑datasets. De resterende 5–10 % wordt gemarkeerd voor menselijke beoordeling, en elke beoordeelde beslissing wordt teruggevoerd naar de engine."
         }
       ]
     },
@@ -1504,7 +1504,7 @@
       "title": "Veelgestelde vragen",
       "items": [
         {
-          "q": "Is UNSPSC‑classificatie verplicht in Nederland?",
+          "q": "Is UNSPSC classificatie verplicht in Nederland?",
           "a": "UNSPSC is geen wettelijke verplichting in Nederland, maar wordt steeds meer gebruikt als best‑practice standaard. Peppol e‑facturatie, verplicht voor overheidsinkoop, vereist gestructureerde productcodes waarbij UNSPSC de meest gebruikte internationale standaard is."
         },
         {
@@ -1512,8 +1512,8 @@
           "a": "Peppol is het e‑facturatienetwerk dat verplicht is voor overheidsinkoop in Nederland. Peppol vereist gestructureerde factuurdata inclusief product‑ en dienstcodes. UNSPSC is de meest gebruikte classificatiestandaard die hierbij aansluit."
         },
         {
-          "q": "Wat is UNSPSC‑classificatie en waarom is het belangrijk?",
-          "a": "UNSPSC staat voor United Nations Standard Products and Services Code. Zonder UNSPSC zijn inkoopdata moeilijk te analyseren — met UNSPSC krijgt elke inkooporder een consistente categorie waardoor spend‑analyse, leveranciersconsolidatie en category management mogelijk worden."
+          "q": "Wat is UNSPSC classificatie en waarom is het belangrijk?",
+          "a": "UNSPSC staat voor United Nations Standard Products and Services Code. Zonder UNSPSC zijn inkoopdata moeilijk te analyseren — met UNSPSC krijgt elke inkooporder een consistente categorie waardoor spend‑analyse, supplier management en category management mogelijk worden."
         },
         {
           "q": "Welke Nederlandse bedrijven hebben UNSPSC classificatie het meest nodig?",
