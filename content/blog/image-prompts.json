@@ -26,5 +26,12 @@
     "scene": "A spacious mechanical plant room filled with rows of stainless‑steel HVAC chillers, large water pumps, and a maze of exposed ductwork bathed in cool fluorescent lighting.",
     "prompt": "A spacious mechanical plant room filled with rows of stainless‑steel HVAC chillers, large water pumps, and a maze of exposed ductwork bathed in cool fluorescent lighting., photorealistic photograph, natural daylight, cool blue-grey colour grading, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
     "seed": 4231821779
+  },
+  "procurement-finance-sign-off-gap": {
+    "sector": "hard-fm",
+    "includePeople": false,
+    "scene": "A dimly lit mechanical room filled with rows of stainless‑steel air handling units, exposed pipework, and a wall‑mounted digital thermostat panel, all bathed in the soft glow of emergency exit lighting.",
+    "prompt": "A dimly lit mechanical room filled with rows of stainless‑steel air handling units, exposed pipework, and a wall‑mounted digital thermostat panel, all bathed in the soft glow of emergency exit lighting., photorealistic photograph, natural daylight, cool blue-grey colour grading, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
+    "seed": 3185070809
   }
 }

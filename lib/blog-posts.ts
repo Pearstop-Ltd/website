@@ -1081,6 +1081,7 @@ const _allBlogPosts: BlogPost[] = [
   },
   {
     slug: "procurement-finance-sign-off-gap",
+    image: "/images/blog/procurement-finance-sign-off-gap.jpg",
     title: "Procurement said yes. Why did finance say no?",
     description: "Procurement approves a data-quality initiative, then finance stalls it. Here is what finance actually needs to see before it releases budget.",
     publishedAt: "2026-09-02",
