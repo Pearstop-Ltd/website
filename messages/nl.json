@@ -1414,24 +1414,24 @@
       "title": "Veelgestelde vragen",
       "items": [
         {
-          "q": "Welke UNSPSC-segmenten zijn van toepassing op facilities management?",
-          "a": "De meest voorkomende segmenten voor FM zijn Segment 72 (Construction and Maintenance Services), Segment 76 (Industrial Cleaning Services), Segment 80 (Management and Administrative Services) en Segment 73 (Industrial Production). Hard services FM-bedrijven zien doorgaans het hoogste spend‑volume in Segment 72, dat elektrische installaties, HVAC, sanitair en fabrieksonderhoud omvat."
+          "q": "Welke UNSPSC-segmenten zijn van toepassing op facility management?",
+          "a": "De meest voorkomende segmenten voor FM zijn Segment 72 (Construction and Maintenance Services), Segment 76 (Industrial Cleaning Services), Segment 80 (Management and Administrative Services) en Segment 73 (Industrial Production). Hard services FM-bedrijven zien doorgaans het hoogste spend-volume in Segment 72, dat elektrische, HVAC, loodgieterswerk en gebouwonderhoud omvat."
         },
         {
           "q": "Waarom is UNSPSC-classificatie moeilijk voor FM-bedrijven?",
-          "a": "FM-bedrijven kopen van honderden leveranciers op gedecentraliseerde locaties. Factuurregels zijn vaak vrije‑tekstbeschrijvingen die door veld‑engineers worden geschreven, niet door procurement‑teams. Handmatige classificatie op deze schaal vereist één of twee toegewijde medewerkers die continu werken om het tempo bij te houden."
+          "a": "FM-bedrijven kopen in bij honderden suppliers op gedecentraliseerde sites. Invoice-regels zijn vaak vrije-tekstbeschrijvingen geschreven door field engineers, niet door procurement-teams. Handmatige classificatie op deze schaal vereist één of twee toegewijde medewerkers die continu werken om gelijke tred te houden."
         },
         {
           "q": "Hoe lang duurt UNSPSC-classificatie voor een FM-bedrijf?",
-          "a": "Een eerste classificatie van een volledige spend‑dataset wordt doorgaans binnen vier tot zes weken voltooid, inclusief een Data Stability Baseline om de nauwkeurigheid te valideren. Doorlopende maandelijkse classificaties worden automatisch uitgevoerd."
+          "a": "Een initiële classificatie van een volledige spend-dataset is doorgaans binnen vier tot zes weken voltooid, inclusief een Data Stability Baseline om de nauwkeurigheid te valideren. Lopende maandelijkse classificatie wordt automatisch uitgevoerd."
         },
         {
-          "q": "Integreert Pearstop met FM‑specifieke systemen zoals Maximo of ServiceNow?",
-          "a": "Pearstop ontvangt gegevens via CSV‑export of directe API‑verbinding en levert geclassificeerde data terug in hetzelfde formaat, compatibel met elk CAFM‑ of CMMS‑systeem, inclusief IBM Maximo, ServiceNow, Planon en SAP PM."
+          "q": "Integreert Pearstop met FM-specifieke systemen zoals Maximo of ServiceNow?",
+          "a": "Pearstop ontvangt data via CSV-export of directe API-verbinding en retourneert geclassificeerde data in hetzelfde formaat, compatibel met elk CAFM- of CMMS-systeem, inclusief IBM Maximo, ServiceNow, Planon en SAP PM."
         },
         {
           "q": "Welke nauwkeurigheidsgraad kunnen FM-bedrijven verwachten?",
-          "a": "De vierlagige engine van Pearstop behaalt 90–95 % automatische classificatie op typische FM spend‑datasets. De resterende 5–10 % wordt gemarkeerd voor menselijke beoordeling, en elke beoordeelde beslissing wordt teruggevoerd naar de engine."
+          "a": "Pearstop's vierlaagse engine behaalt 90–95% automatische classificatie op typische FM spend-datasets. De resterende 5–10% wordt gemarkeerd voor menselijke beoordeling, en elke beoordeelde beslissing wordt teruggekoppeld naar de engine."
         }
       ]
     },
@@ -1505,15 +1505,15 @@
       "items": [
         {
           "q": "Is UNSPSC classificatie verplicht in Nederland?",
-          "a": "UNSPSC is geen wettelijke verplichting in Nederland, maar wordt steeds meer gebruikt als best‑practice standaard. Peppol e‑facturatie, verplicht voor overheidsinkoop, vereist gestructureerde productcodes waarbij UNSPSC de meest gebruikte internationale standaard is."
+          "a": "UNSPSC is geen wettelijke verplichting in Nederland, maar wordt steeds meer gebruikt als best-practice standaard. Peppol e-facturatie, verplicht voor overheidsinkoop, vereist gestructureerde productcodes waarbij UNSPSC de meest gebruikte internationale standaard is."
         },
         {
           "q": "Wat is Peppol en hoe verhoudt het zich tot UNSPSC?",
-          "a": "Peppol is het e‑facturatienetwerk dat verplicht is voor overheidsinkoop in Nederland. Peppol vereist gestructureerde factuurdata inclusief product‑ en dienstcodes. UNSPSC is de meest gebruikte classificatiestandaard die hierbij aansluit."
+          "a": "Peppol is het e-facturatienetwerk dat verplicht is voor overheidsinkoop in Nederland. Peppol vereist gestructureerde factuurdata inclusief product- en dienstcodes. UNSPSC is de meest gebruikte classificatiestandaard die hierbij aansluit."
         },
         {
           "q": "Wat is UNSPSC classificatie en waarom is het belangrijk?",
-          "a": "UNSPSC staat voor United Nations Standard Products and Services Code. Zonder UNSPSC zijn inkoopdata moeilijk te analyseren — met UNSPSC krijgt elke inkooporder een consistente categorie waardoor spend‑analyse, supplier management en category management mogelijk worden."
+          "a": "UNSPSC staat voor United Nations Standard Products and Services Code. Zonder UNSPSC zijn inkoopdata moeilijk te analyseren — met UNSPSC krijgt elke purchase order een consistente categorie waardoor spend-analyse, leveranciersconsolidatie en category management mogelijk worden."
         },
         {
           "q": "Welke Nederlandse bedrijven hebben UNSPSC classificatie het meest nodig?",
@@ -1592,24 +1592,24 @@
       "title": "Veelgestelde vragen",
       "items": [
         {
-          "q": "Is UNSPSC-classificatie in Duitsland verplicht?",
-          "a": "UNSPSC is geen wettelijke verplichting, maar de e‑factuurplicht 2025 vereist gestructureerde productcodes. UNSPSC is de meest gebruikte internationale standaard die aan deze eis voldoet."
+          "q": "Ist UNSPSC-Klassifizierung in Deutschland Pflicht?",
+          "a": "UNSPSC ist keine gesetzliche Pflicht, aber die E-Rechnungspflicht 2025 erfordert strukturierte Produktcodes. UNSPSC ist der meistgenutzte internationale Standard, der diese Anforderung erfüllt."
         },
         {
-          "q": "Hoe beïnvloedt de Duitse e‑factuurplicht de inkoopclassificatie?",
-          "a": "De e‑factuurplicht 2025 vereist gestructureerde, machinale leesbare factuurgegevens voor B2B‑transacties. UNSPSC biedt een consistent, internationaal erkend coderingssysteem dat aan deze eis voldoet."
+          "q": "Wie wirkt sich die deutsche E-Rechnungspflicht auf die Beschaffungsklassifizierung aus?",
+          "a": "Die E-Rechnungspflicht 2025 erfordert strukturierte, maschinenlesbare Rechnungsdaten für B2B-Transaktionen. UNSPSC bietet ein konsistentes, international anerkanntes Codierungssystem, das diese Anforderung erfüllt."
         },
         {
-          "q": "Wat is UNSPSC-classificatie en waarom hebben Duitse bedrijven deze nodig?",
-          "a": "UNSPSC staat voor United Nations Standard Products and Services Code. Duitse bedrijven gebruiken UNSPSC om inkoopuitgaven te categoriseren, leveranciers te vergelijken en de uitgaven‑transparantie te verbeteren."
+          "q": "Was ist UNSPSC-Klassifizierung und warum brauchen deutsche Unternehmen sie?",
+          "a": "UNSPSC staat voor United Nations Standard Products and Services Code. Duitse bedrijven gebruiken UNSPSC om procurement uitgaven te categoriseren, leveranciers te vergelijken en de spend transparantie te verbeteren."
         },
         {
           "q": "Welke Duitse sectoren profiteren het meest?",
-          "a": "Duitse productiebedrijven, machinebouwbedrijven, Facility-Management-bedrijven en infrastructuurbedrijven profiteren het meest. Productiebedrijven met een groot MRO‑aandeel profiteren vooral van consistente onderdelencodering."
+          "a": "Duitse productiebedrijven, machinebouwbedrijven, facility management bedrijven en infrastructuurbedrijven profiteren het meest. Productiebedrijven met een groot MRO-aandeel profiteren bijzonder van consistente onderdeelcodering."
         },
         {
-          "q": "Kan Pearstop Duitstalige inkoopgegevens classificeren?",
-          "a": "Ja. De classificatie‑engine van Pearstop verwerkt Duitstalige factuurbeschrijvingen natuurlijk, inclusief gangbare afkortingen en technische terminologie."
+          "q": "Kan Pearstop Duitstalige procurement data classificeren?",
+          "a": "Ja. Pearstops classificatie-engine verwerkt Duitstalige factuurbeschrijvingen native, inclusief gangbare afkortingen en technische terminologie."
         }
       ]
     },
