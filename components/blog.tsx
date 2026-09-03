@@ -71,9 +71,9 @@ export const AUTHORS: Record<AuthorKey, { name: string; role: string; bio: strin
   },
   rae: {
     name: "Rae Thomas",
-    role: "Chief of Staff, Pearstop",
+    role: "Director of Operations, Pearstop",
     bio: "Rae heads up operations at Pearstop, in both the traditional and non-traditional sense. She's as committed to the internal success of the business as she is to the value clients get out of it, which is why she leads delivery on most projects and is the main point of contact for clients throughout.",
-    linkedin: "https://www.linkedin.com/company/pearstop",
+    linkedin: "https://www.linkedin.com/in/raeesah-thomas-114937158/",
     avatar: "/images/clients/raeesah-headshot.png",
   },
   seb: {
