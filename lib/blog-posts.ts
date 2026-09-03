@@ -1105,6 +1105,7 @@ const _allBlogPosts: BlogPost[] = [
   },
   {
     slug: "credit-notes-classification-edge-case",
+    image: "/images/blog/credit-notes-classification-edge-case.jpg",
     title: "Why credit notes break automated classification",
     description: "Credit notes and adjustments reference an earlier line, which breaks automatic classification and is exactly why they belong in a review queue, not a guess.",
     publishedAt: "2026-09-03",
@@ -1129,6 +1130,7 @@ const _allBlogPosts: BlogPost[] = [
   },
   {
     slug: "fm-classification-engagement-pricing",
+    image: "/images/blog/fm-classification-engagement-pricing.jpg",
     title: "Why FM classification pricing has to flex with volume",
     description: "Facilities management spend volume swings from 500 to 20,000 lines a month. Here is why flat-fee classification pricing breaks, and what replaces it.",
     publishedAt: "2026-09-03",

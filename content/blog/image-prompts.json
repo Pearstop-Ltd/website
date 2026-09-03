@@ -33,5 +33,19 @@
     "scene": "A dimly lit mechanical room filled with rows of stainless‑steel air handling units, exposed pipework, and a wall‑mounted digital thermostat panel, all bathed in the soft glow of emergency exit lighting.",
     "prompt": "A dimly lit mechanical room filled with rows of stainless‑steel air handling units, exposed pipework, and a wall‑mounted digital thermostat panel, all bathed in the soft glow of emergency exit lighting., photorealistic photograph, natural daylight, cool blue-grey colour grading, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
     "seed": 3185070809
+  },
+  "credit-notes-classification-edge-case": {
+    "sector": "hard-fm",
+    "includePeople": false,
+    "scene": "A dimly lit mechanical plant room showing rows of exposed pipework, valve assemblies, and a scattered stack of printed invoices and credit notes beside a large boiler unit, with no people present.",
+    "prompt": "A dimly lit mechanical plant room showing rows of exposed pipework, valve assemblies, and a scattered stack of printed invoices and credit notes beside a large boiler unit, with no people present., photorealistic photograph, natural daylight, cool blue-grey colour grading, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
+    "seed": 860948618
+  },
+  "fm-classification-engagement-pricing": {
+    "sector": "hard-fm",
+    "includePeople": false,
+    "scene": "A cavernous building basement filled with exposed steel conduit, valve banks, and massive air handling units humming beneath rows of pipework and control panels.",
+    "prompt": "A cavernous building basement filled with exposed steel conduit, valve banks, and massive air handling units humming beneath rows of pipework and control panels., photorealistic photograph, natural daylight, cool blue-grey colour grading, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
+    "seed": 1118770688
   }
 }
