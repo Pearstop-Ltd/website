@@ -1127,6 +1127,29 @@ const _allBlogPosts: BlogPost[] = [
       { q: "Do credit notes and adjustments affect reported classification accuracy figures?", a: "Yes, and that is exactly why they should be counted rather than excluded. A classification accuracy figure that quietly leaves out contested, reversed, or rebated lines overstates how reliable the categorisation actually is. Counting credit notes and adjustments within the same accuracy measure, and routing the genuinely ambiguous ones to review, keeps a reported accuracy figure honest instead of inflated by omission." },
     ],
   },
+  {
+    slug: "fm-classification-engagement-pricing",
+    title: "Why FM classification pricing has to flex with volume",
+    description: "Facilities management spend volume swings from 500 to 20,000 lines a month. Here is why flat-fee classification pricing breaks, and what replaces it.",
+    publishedAt: "2026-09-03",
+    category: "Commercial FM",
+    tags: ["facilities management", "classification pricing", "usage-based pricing", "spend data volume"],
+    readingTime: 8,
+    tocItems: [
+      { id: "fm-spend-volume-swings-by-design", label: "FM spend volume swings by design" },
+      { id: "flat-fees-assume-spend-that-never-moves", label: "Flat fees assume spend that never moves" },
+      { id: "why-usage-based-pricing-fits-fm", label: "Why usage-based pricing fits FM" },
+      { id: "what-a-volume-flexible-engagement-looks-like", label: "What a volume-flexible engagement looks like" },
+    ],
+    softCta: "discovery",
+    faqItems: [
+      { q: "Why does facilities management spend volume vary so much month to month?", a: "FM spend is project-driven, not level. Routine planned maintenance and standard supplier invoices produce a steady baseline, but a refurbishment, a new site onboarding, or a portfolio-wide asset survey concentrates a large volume of transactions into a short window. The same client can generate a few hundred spend lines in a quiet month and tens of thousands in a month with active capital works." },
+      { q: "Why does a flat-fee classification engagement not work for FM clients?", a: "A flat fee prices the engagement to one assumed volume, usually whatever the contract was sized on at kickoff. When actual monthly volume runs far above that number, delivery quality slips under the extra load. When it runs far below, the client pays for capacity it does not use. FM volume swings by design, so a flat fee is wrong for most months in the contract." },
+      { q: "How does Pearstop price a facilities management classification engagement?", a: "Pearstop prices per line rather than as a fixed annual fee, so a heavy month with a refurbishment or new-site onboarding costs more and a quiet month costs less, matched to volume actually run through the pipeline. This works because the pipeline's cost per additional line stays close to zero once the taxonomy and client rules are set up, unlike a day-rate engagement where every extra line is more time." },
+      { q: "What is usage-based pricing and how does it differ from a fixed fee?", a: "Usage-based pricing ties the price to measurable consumption, such as the number of lines processed in a given period, rather than charging one fixed amount regardless of volume. A fixed fee gives predictable billing but assumes a workload that does not move much month to month. Usage-based pricing gives up some of that predictability in exchange for a price that tracks what was actually delivered." },
+      { q: "Does a volume-based pricing model mean costs are unpredictable for the client?", a: "Not in practice, because FM clients generally know their own project calendar well before the spend lands. A client planning a refurbishment or bringing on a new site can see the volume increase coming months ahead and plan the month's cost around it, which is a more accurate kind of predictability than a flat number that ignores the same information." },
+    ],
+  },
 ];
 
 export const blogPosts: BlogPost[] = _allBlogPosts.filter((p) => !p.hidden);
