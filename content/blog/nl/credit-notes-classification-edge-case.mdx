@@ -1,0 +1,73 @@
+---
+title: "Waarom creditnota's geautomatiseerde classificatie doorbreken"
+description: "Creditnota's en aanpassingen verwijzen naar een eerdere regel, wat automatische classificatie doorbreekt en precies de reden is waarom ze in een review queue thuishoren, en niet in een gok."
+date: "2026-09-03"
+category: "Data Quality"
+slug: "credit-notes-classification-edge-case"
+author: "rae"
+lang: "en"
+---
+
+**Kort antwoord:** Creditnota's en aanpassingen zijn gekoppeld aan een purchase order, maar corrigeren, annuleren of vergoeden meestal een andere, eerdere regel: een retour, een prijscorrectie, een supplier rebate. Een classifier die alleen de regel voor zich leest, kan die eerdere regel niet zien, dus heeft deze geen betrouwbare basis voor een category. De pragmatische oplossing is geen slimmer model. Het is het routeren van deze regels naar een human review queue in plaats van het toewijzen van een zelfverzekerde, ongeverifieerde category.
+
+Op deze pagina: [Waarom creditnota's classifiers in verwarring brengen](#why-credit-notes-confuse-classifiers) · [De verborgen context die classificatie niet kan zien](#the-hidden-context-classification-cannot-see) · [Waarom gokken erger is dan markeren](#why-guessing-is-worse-than-flagging) · [Hoe de review queue daadwerkelijk werkt](#how-the-review-queue-actually-works) · [FAQ](#frequently-asked-questions)
+
+## Why credit notes confuse classifiers
+
+De meeste classificatieproblemen in procurement data zijn patroonproblemen. Een line item description is rommelig, afgekort of inconsistent tussen locaties en suppliers, maar de onderliggende category is kenbaar uit de tekst zelf: een M8-bout is een M8-bout, hoe het ook gespeld is. Creditnota's zijn een heel ander soort probleem, en het kwam deze week direct ter sprake in een klantdemo.
+
+Een creditnota of aanpassing is gekoppeld aan een purchase order op dezelfde manier als een normale invoice regel. Het heeft een PO number, een supplier, een value, soms een line description. Alles aan de vorm ervan ziet er classificeerbaar uit. Maar de value op die regel beschrijft zelden een purchase. Het beschrijft een correctie op een purchase die ergens anders, op een eerder tijdstip, vaak op een ander PO of een geheel andere regel, heeft plaatsgevonden.
+
+Een retour credit corrigeert de oorspronkelijke purchase category. Een prijscorrectie herformuleert de value van goederen die al onder een andere regel zijn geclassificeerd. Een rebate is helemaal geen purchase, het is geld dat terugkomt tegen een hele category van past spend, niet een enkele transactie. In elk van deze gevallen bevindt de "echte" category waartoe de creditnota behoort zich in een record waar de classifier niet naar kijkt.
+
+Dit is geen zeldzame gebeurtenis aan de randen van een dataset. Overal waar invoices worden betwist, geretourneerd of opnieuw onderhandeld, wat in hard FM, construction en manufacturing procurement routine is, zijn creditnota's en aanpassingen een terugkerend, structureel kenmerk van de data, geen eenmalige uitzondering.
+
+## The hidden context classification cannot see
+
+Geautomatiseerde classificatie, op elk niveau van verfijning, van rules engines tot machine learning tot LLM-assisted matching, werkt vanuit wat er voorhanden is: de line description, de supplier, de PO, de GL code, soms een eerdere classificatie op hetzelfde materiaal. Dit alles is een snapshot van één transactie.
+
+Een creditnota doorbreekt de snapshot-aanname. Om deze correct te classificeren, zou een systeem de oorspronkelijke invoice of PO line waarnaar deze verwijst, moeten identificeren, bevestigen dat de twee daadwerkelijk gekoppeld zijn (wat niet altijd expliciet wordt vastgelegd, vooral bij oudere ERP data of gedeeltelijke exports), en vervolgens de category van die eerdere regel overnemen in plaats van er een af te leiden uit de creditnota-tekst zelf. Dat is een cross-record reasoning problem, geen tekstclassificatieprobleem, en de meeste procurement systemen hebben geen schone, betrouwbare link tussen een creditnota en de invoice die deze corrigeert. Het papieren spoor bestaat ergens. Het is zelden gestructureerd op een manier die een classifier automatisch kan volgen.
+
+Zelfs waar een link wel bestaat in de data, compliceert een rebate het verder. Een volume rebate of een end-of-quarter settlement van een supplier corrigeert niet één regel, het wordt verrekend met een hele category van spend over een periode. Er is helemaal geen enkele "original line" om een category van over te nemen. Het enige eerlijke antwoord, bij gebrek aan meer context, is dat de category op basis van de beschikbare data echt onopgelost is.
+
+## Why guessing is worse than flagging
+
+Dit is waar de verleiding om "gewoon de dichtstbijzijnde category te kiezen" echte schade veroorzaakt. Een classifier die onder druk staat om een coverage target te halen, kan een creditnota toewijzen aan welke category dan ook waar de supplier of GL code het meest mee overeenkomt. Dat levert een zelfverzekerde, compleet ogende dataset op. Het levert ook een category total op die stilletjes verkeerd is, en niemand downstream heeft enige reden om het in twijfel te trekken, omdat een zelfverzekerd antwoord zijn eigen onzekerheid niet aankondigt.
+
+Dat is het kernprobleem met het behandelen van AI classificatie als een black box die gewoon zou moeten werken: een zelfverzekerd verkeerd antwoord kost meer dan een zichtbaar onzeker antwoord, omdat het verkeerde antwoord wordt vertrouwd en waarop wordt voortgebouwd. Een CFO die spend per category afstemt, een category manager die rapporteert over een rebate-heavy supplier relationship, of een procurement team dat spend benchmarkt tegen vorig jaar, nemen allemaal over wat de classifier besloot, stilzwijgend, zonder vlag.
+
+Flagging kost ook iets: een persoon moet een minuut of twee besteden aan het oplossen van de regel. Maar die kosten zijn zichtbaar, begrensd en eenmalig. Een stilzwijgend verkeerde classificatie stapelt zich op elke keer dat iemand er een rapport tegenaan draait, en het is veel duurder om achteraf te vinden en ongedaan te maken dan het vooraf te beoordelen.
+
+## How the review queue actually works
+
+In de praktijk is de oplossing geen slimme modellering, het is een review queue die precies deze categorie van gevallen opvangt en naar een persoon routeert voordat het een rapport bereikt. Elke regel krijgt een confidence score op basis van hoe goed de beschikbare context een category ondersteunt. Gewone line items met duidelijke, consistente descriptions scoren hoog en gaan er direct doorheen. Creditnota's, aanpassingen en rebates scoren bijna altijd laag, omdat de tekst een correctie beschrijft in plaats van een purchase, en dat is de juiste uitkomst, geen falen van het model.
+
+Minder dan 10 procent van de regels komt doorgaans in de review queue terecht voor classificatiewerkzaamheden in procurement en asset data, voor teams die willen dat elke category total traceerbaar is naar een echte beslissing in plaats van een gok. Een persoon met inzicht in de account, niet alleen de line item, lost de creditnota op tegen de oorspronkelijke transactie waartoe deze behoort, en die beslissing wordt teruggekoppeld zodat toekomstige creditnota's van dezelfde supplier de volgende keer sneller worden afgehandeld.
+
+De queue is geen workaround voor een model dat nog niet goed genoeg is. In de hele branche liggen de invoice exception rates die handmatige afhandeling vereisen tussen de 10 en 25 procent, zelfs in geautomatiseerde accounts payable systemen, en best-in-class operations routeren nog steeds een aanzienlijk deel van de exceptions naar een persoon in plaats van een automatische match af te dwingen. Een review queue die is gebouwd rond echt ambigue gevallen, met creditnota's als belangrijkste, is het pragmatische antwoord dat snelheid en betrouwbaarheid daadwerkelijk vereisen. Een elegant model dat gokt, is erger dan een eenvoudig model dat weet wat het niet weet.
+
+## Frequently asked questions
+
+**Waarom worden creditnota's verkeerd geclassificeerd door geautomatiseerde classificatiesystemen?**
+
+Een creditnota corrigeert, annuleert of vergoedt meestal een andere, eerdere transactie in plaats van een purchase op zichzelf te beschrijven. Geautomatiseerde classifiers lezen de line description en PO context die voor hen liggen, en die context beschrijft de correctie, niet de oorspronkelijke purchase category. Zonder een betrouwbare link naar de eerdere regel heeft het systeem geen solide basis voor het toewijzen van een category, dus gokken levert een ongeverifieerd resultaat op.
+
+**Wat is het verschil tussen een creditnota en een aanpassing in procurement data?**
+
+Een creditnota vermindert of annuleert formeel de value van een eerdere invoice, meestal voor een retour, een overcharge of een contractuele rebate. Een aanpassing is de bredere term, die elke correctie op een eerder vastgelegde transactie omvat, inclusief prijscorrecties, hoeveelheidscorrecties en herclassificaties. Beide delen hetzelfde onderliggende probleem: geen van beide kan correct worden geclassificeerd zonder het record waarnaar het verwijst.
+
+**Waarom is een zelfverzekerd verkeerde classificatie erger dan een gemarkeerde?**
+
+Een zelfverzekerd verkeerde classificatie komt in spend reports en category totals terecht als geverifieerd, en niemand twijfelt aan cijfers die al compleet lijken. Een gemarkeerde regel blijft zichtbaar totdat een persoon deze oplost, zodat de fout niet stilzwijgend kan oplopen tot een verkeerde category total of een misleidende rebate calculation. Zichtbaar onzeker zijn kost een paar minuten review. Onzichtbaar verkeerd zijn kost veel meer zodra er beslissingen op worden gebouwd.
+
+**Hoe gaat Pearstop om met creditnota's en andere ambigue regels tijdens classificatie?**
+
+Pearstop scoort elke regel op classification confidence en routeert alles onder de drempel, inclusief creditnota's en aanpassingen die verwijzen naar een andere transactie, naar een human review queue in plaats van een gegokte category toe te wijzen. Doorgaans heeft minder dan 10 procent van de regels deze stap nodig. Elke review beslissing wordt teruggekoppeld naar het model, zodat terugkerende creditnota's van dezelfde supplier sneller worden opgelost bij de volgende run.
+
+**Kan geautomatiseerde classificatie credit notes ooit volledig oplossen zonder menselijke tussenkomst?**
+
+Niet betrouwbaar, omdat de benodigde informatie zich in een andere transactie bevindt dan degene die wordt geclassificeerd, en tekstpatroonherkenning die kloof niet zelfstandig kan overbruggen. Automatisch herstel zou een schone, expliciete link vereisen tussen elke credit note en de invoice die deze corrigeert, wat de meeste procurement- en ERP-systemen niet bijhouden. Totdat die link bestaat, is routering voor beoordeling de verstandigere aanpak.
+
+**Beïnvloeden credit notes en aanpassingen de gerapporteerde classificatienauwkeurigheidscijfers?**
+
+Ja, en dat is precies waarom ze moeten worden meegeteld in plaats van uitgesloten. Een classificatienauwkeurigheidscijfer dat betwiste, teruggedraaide of verrekende regels stilzwijgend weglaat, overschat hoe betrouwbaar de categorisatie werkelijk is. Het meetellen van credit notes en aanpassingen binnen dezelfde nauwkeurigheidsmeting, en het routeren van de werkelijk ambigue gevallen voor beoordeling, houdt een gerapporteerd nauwkeurigheidscijfer eerlijk in plaats van opgeblazen door weglating.
