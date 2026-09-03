@@ -1,0 +1,73 @@
+---
+title: "Why credit notes break automated classification"
+description: "Credit notes and adjustments reference an earlier line, which breaks automatic classification and is exactly why they belong in a review queue, not a guess."
+date: "2026-09-03"
+category: "Data Quality"
+slug: "credit-notes-classification-edge-case"
+author: "rae"
+lang: "en"
+---
+
+**Quick answer:** Credit notes and adjustments attach to a purchase order but usually correct, reverse, or rebate a different, earlier line: a return, a price correction, a supplier rebate. A classifier reading only the line in front of it has no way to see that earlier line, so it has no reliable basis for a category. The pragmatic fix is not a smarter model. It is routing these lines to a human review queue instead of assigning a confident, unverified category.
+
+On this page: [Why credit notes confuse classifiers](#why-credit-notes-confuse-classifiers) · [The hidden context classification cannot see](#the-hidden-context-classification-cannot-see) · [Why guessing is worse than flagging](#why-guessing-is-worse-than-flagging) · [How the review queue actually works](#how-the-review-queue-actually-works) · [FAQ](#frequently-asked-questions)
+
+## Why credit notes confuse classifiers
+
+Most classification problems in procurement data are pattern problems. A line item description is messy, abbreviated, or inconsistent across sites and suppliers, but the underlying category is knowable from the text itself: an M8 bolt is an M8 bolt however it is spelled. Credit notes are a different kind of problem entirely, and it came up directly in a client demo this week.
+
+A credit note or adjustment attaches to a purchase order the same way a normal invoice line does. It has a PO number, a supplier, a value, sometimes a line description. Everything about its shape looks classifiable. But the value on that line rarely describes a purchase. It describes a correction to a purchase that happened somewhere else, at an earlier point in time, often on a different PO or a different line entirely.
+
+A return credit corrects the original purchase category. A price correction restates the value of goods already classified under a different line. A rebate is not a purchase at all, it is money coming back against a whole category of past spend, not a single transaction. In every one of these cases, the "real" category the credit note belongs to lives in a record the classifier is not looking at.
+
+This is not a rare occurrence at the edges of a dataset. Anywhere invoices get disputed, returned, or renegotiated, which in hard FM, construction, and manufacturing procurement is routine, credit notes and adjustments are a recurring, structural feature of the data, not a one-off exception.
+
+## The hidden context classification cannot see
+
+Automated classification, at every level of sophistication from rules engines to machine learning to LLM-assisted matching, works from what is in front of it: the line description, the supplier, the PO, the GL code, sometimes a prior classification on the same material. All of that is a snapshot of one transaction.
+
+A credit note breaks the snapshot assumption. To classify it correctly, a system would need to identify the original invoice or PO line it relates to, confirm that the two are actually linked (which is not always recorded explicitly, especially across older ERP data or partial exports), and then inherit the category from that earlier line rather than deriving one from the credit note text itself. That is a cross-record reasoning problem, not a text classification problem, and most procurement systems do not carry a clean, reliable link between a credit note and the invoice it corrects. The paper trail exists somewhere. It is rarely structured in a way a classifier can follow automatically.
+
+Even where a link does exist in the data, a rebate complicates it further. A volume rebate or an end-of-quarter settlement from a supplier does not correct one line, it nets against a whole category of spend across a period. There is no single "original line" to inherit a category from at all. The only honest answer, absent more context, is that the category is genuinely unresolved from the data available.
+
+## Why guessing is worse than flagging
+
+This is where the temptation to "just pick the closest category" causes real damage. A classifier under pressure to hit a coverage target can assign a credit note to whatever category its supplier or GL code most commonly maps to. That produces a confident, complete-looking dataset. It also produces a category total that is quietly wrong, and nobody downstream has any reason to question it, because a confident answer does not announce its own uncertainty.
+
+That is the core problem with treating AI classification as a black box that should just work: a confidently wrong answer costs more than a visibly uncertain one, because the wrong answer gets trusted and built on. A CFO reconciling spend by category, a category manager reporting on a rebate-heavy supplier relationship, or a procurement team benchmarking spend against last year, all inherit whatever the classifier decided, silently, with no flag attached.
+
+Flagging costs something too: a person has to spend a minute or two resolving the line. But that cost is visible, bounded, and one-time. A silently wrong classification compounds every time someone runs a report against it, and it is far more expensive to find and unwind after the fact than it would have been to review upfront.
+
+## How the review queue actually works
+
+In practice, the fix is not clever modelling, it is a review queue that catches exactly this category of case and routes it to a person before it reaches a report. Every line gets a confidence score based on how well the available context supports a category. Ordinary line items with clear, consistent descriptions score high and pass straight through. Credit notes, adjustments, and rebates almost always score low, because the text describes a correction rather than a purchase, and that is the correct outcome, not a failure of the model.
+
+Under 10 percent of lines typically land in the review queue for classification work across procurement and asset data, for teams that need every category total to be traceable back to a real decision rather than a guess. A person with visibility into the account, not just the line item, resolves the credit note against the original transaction it belongs to, and that decision gets fed back so the same supplier's future credit notes are handled faster next time.
+
+The queue is not a workaround for a model that is not good enough yet. Industry-wide, invoice exception rates that require manual handling run in the 10 to 25 percent range even in automated accounts payable systems, and best-in-class operations still route a meaningful share of exceptions to a person rather than force an automatic match. A review queue built around genuinely ambiguous cases, credit notes chief among them, is the pragmatic answer that speed and reliability actually require. An elegant model that guesses is worse than a plain one that knows what it does not know.
+
+## Frequently asked questions
+
+**Why do credit notes get misclassified by automated classification systems?**
+
+A credit note usually corrects, reverses, or rebates a different, earlier transaction rather than describing a purchase in its own right. Automated classifiers read the line description and PO context in front of them, and that context describes the correction, not the original purchase category. Without a reliable link to the earlier line, the system has no sound basis for assigning a category, so guessing produces an unverified result.
+
+**What is the difference between a credit note and an adjustment in procurement data?**
+
+A credit note formally reduces or reverses the value of an earlier invoice, typically for a return, an overcharge, or a contractual rebate. An adjustment is the broader term, covering any correction to a previously recorded transaction, including price corrections, quantity corrections, and reclassifications. Both share the same underlying problem: neither can be classified correctly without the record it refers back to.
+
+**Why is a confidently wrong classification worse than a flagged one?**
+
+A confidently wrong classification enters spend reports and category totals looking verified, and nobody questions numbers that already appear complete. A flagged line stays visible until a person resolves it, so the error cannot silently compound into a wrong category total or a misleading rebate calculation. Being visibly uncertain costs a few minutes of review. Being invisibly wrong costs far more once decisions are built on it.
+
+**How does Pearstop handle credit notes and other ambiguous lines during classification?**
+
+Pearstop scores every line for classification confidence and routes anything below the threshold, including credit notes and adjustments that reference a different transaction, to a human review queue rather than assigning a guessed category. Typically under 10 percent of lines need this step. Every review decision feeds back into the model, so the same supplier's recurring credit notes get resolved faster on the next run.
+
+**Can automated classification ever fully resolve credit notes without a person involved?**
+
+Not reliably, because the information needed sits in a different transaction than the one being classified, and text pattern matching cannot bridge that gap on its own. Recovering it automatically would require a clean, explicit link between every credit note and the invoice it corrects, which most procurement and ERP systems do not maintain. Until that link exists, routing to review is the sounder approach.
+
+**Do credit notes and adjustments affect reported classification accuracy figures?**
+
+Yes, and that is exactly why they should be counted rather than excluded. A classification accuracy figure that quietly leaves out contested, reversed, or rebated lines overstates how reliable the categorisation actually is. Counting credit notes and adjustments within the same accuracy measure, and routing the genuinely ambiguous ones to review, keeps a reported accuracy figure honest instead of inflated by omission.

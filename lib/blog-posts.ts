@@ -1103,6 +1103,30 @@ const _allBlogPosts: BlogPost[] = [
       { q: "Why do B2B purchases stall even when the internal champion is convinced?", a: "Research from Forrester finds 86% of B2B purchases stall at some point, most often because of the buyer's own internal structure rather than vendor performance or price. With an average of 13 people involved across two or more departments, a convinced champion is rarely enough on its own. The case has to survive contact with stakeholders who were never part of the original conversation." },
     ],
   },
+  {
+    slug: "credit-notes-classification-edge-case",
+    title: "Why credit notes break automated classification",
+    description: "Credit notes and adjustments reference an earlier line, which breaks automatic classification and is exactly why they belong in a review queue, not a guess.",
+    publishedAt: "2026-09-03",
+    category: "Data Quality",
+    tags: ["credit notes", "classification exceptions", "review queue", "confidence scoring", "accounts payable"],
+    readingTime: 8,
+    tocItems: [
+      { id: "why-credit-notes-confuse-classifiers", label: "Why credit notes confuse classifiers" },
+      { id: "the-hidden-context-classification-cannot-see", label: "The hidden context classification cannot see" },
+      { id: "why-guessing-is-worse-than-flagging", label: "Why guessing is worse than flagging" },
+      { id: "how-the-review-queue-actually-works", label: "How the review queue actually works" },
+    ],
+    softCta: "discovery",
+    faqItems: [
+      { q: "Why do credit notes get misclassified by automated classification systems?", a: "A credit note usually corrects, reverses, or rebates a different, earlier transaction rather than describing a purchase in its own right. Automated classifiers read the line description and PO context in front of them, and that context describes the correction, not the original purchase category. Without a reliable link to the earlier line, the system has no sound basis for assigning a category, so guessing produces an unverified result." },
+      { q: "What is the difference between a credit note and an adjustment in procurement data?", a: "A credit note formally reduces or reverses the value of an earlier invoice, typically for a return, an overcharge, or a contractual rebate. An adjustment is the broader term, covering any correction to a previously recorded transaction, including price corrections, quantity corrections, and reclassifications. Both share the same underlying problem: neither can be classified correctly without the record it refers back to." },
+      { q: "Why is a confidently wrong classification worse than a flagged one?", a: "A confidently wrong classification enters spend reports and category totals looking verified, and nobody questions numbers that already appear complete. A flagged line stays visible until a person resolves it, so the error cannot silently compound into a wrong category total or a misleading rebate calculation. Being visibly uncertain costs a few minutes of review. Being invisibly wrong costs far more once decisions are built on it." },
+      { q: "How does Pearstop handle credit notes and other ambiguous lines during classification?", a: "Pearstop scores every line for classification confidence and routes anything below the threshold, including credit notes and adjustments that reference a different transaction, to a human review queue rather than assigning a guessed category. Typically under 10 percent of lines need this step. Every review decision feeds back into the model, so the same supplier's recurring credit notes get resolved faster on the next run." },
+      { q: "Can automated classification ever fully resolve credit notes without a person involved?", a: "Not reliably, because the information needed sits in a different transaction than the one being classified, and text pattern matching cannot bridge that gap on its own. Recovering it automatically would require a clean, explicit link between every credit note and the invoice it corrects, which most procurement and ERP systems do not maintain. Until that link exists, routing to review is the sounder approach." },
+      { q: "Do credit notes and adjustments affect reported classification accuracy figures?", a: "Yes, and that is exactly why they should be counted rather than excluded. A classification accuracy figure that quietly leaves out contested, reversed, or rebated lines overstates how reliable the categorisation actually is. Counting credit notes and adjustments within the same accuracy measure, and routing the genuinely ambiguous ones to review, keeps a reported accuracy figure honest instead of inflated by omission." },
+    ],
+  },
 ];
 
 export const blogPosts: BlogPost[] = _allBlogPosts.filter((p) => !p.hidden);
