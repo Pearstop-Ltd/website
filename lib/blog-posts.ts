@@ -1152,6 +1152,29 @@ const _allBlogPosts: BlogPost[] = [
       { q: "Does a volume-based pricing model mean costs are unpredictable for the client?", a: "Not in practice, because FM clients generally know their own project calendar well before the spend lands. A client planning a refurbishment or bringing on a new site can see the volume increase coming months ahead and plan the month's cost around it, which is a more accurate kind of predictability than a flat number that ignores the same information." },
     ],
   },
+  {
+    slug: "spend-cube-ai-for-procurement-consultancies",
+    title: "Spend cube delivery for procurement consultancies",
+    description: "How procurement consultancies can replace manual spend cube builds with an AI pipeline, guardrails against hallucination, and a fixed-fee pricing model.",
+    publishedAt: "2026-09-04",
+    category: "AI & Digital",
+    tags: ["spend cube", "procurement consultancy", "AI classification", "taxonomy guardrails", "UNSPSC"],
+    readingTime: 8,
+    tocItems: [
+      { id: "why-manual-cube-building-limits-a-consultancy", label: "Why manual cube building limits a consultancy" },
+      { id: "taxonomy-guardrails-against-hallucinated-categories", label: "Taxonomy guardrails against hallucinated categories" },
+      { id: "a-fixed-fee-or-token-cost-model", label: "A fixed fee or token cost model" },
+      { id: "what-this-changes-for-client-delivery", label: "What this changes for client delivery" },
+    ],
+    softCta: "discovery",
+    faqItems: [
+      { q: "Can a procurement consultancy offer spend cube building as a service using AI?", a: "Yes. A consultancy can run spend classification through an AI pipeline instead of manual coding, then apply its own judgement to the strategy and negotiation work around it. The classification step becomes infrastructure the consultancy runs under its own name, with a constrained taxonomy and human review on the lines the system is unsure about, rather than a purely manual build." },
+      { q: "How do you stop an AI classification pipeline from hallucinating categories?", a: "By constraining what the model is allowed to output. A pipeline that can only select from the fixed codes in a taxonomy, rather than generate a plausible sounding one, cannot invent a category that does not exist. Paired with confidence scoring that flags uncertain lines for human review, guardrails like this have been shown to cut hallucination rates by roughly 70 to 90 percent compared with an unguarded setup." },
+      { q: "What is a fixed fee plus token cost pricing model for spend cube work?", a: "It is a pricing structure where an engagement up to an agreed line item threshold is billed at one fixed fee, and any volume above that threshold is billed per token or per line classified. It replaces a day rate model that charges for analyst hours with a structure that reflects the actual cost of running a pipeline: a fixed setup cost plus a variable cost tied to data volume." },
+      { q: "How does a consultancy trust AI classified spend enough to present it to a client?", a: "Trust comes from the guardrails, not the model itself. A constrained taxonomy stops the system inventing codes, confidence scoring separates lines it is sure about from lines it is not, and uncertain lines go to a person before anything reaches a client deliverable. A consultancy is checking the flagged exceptions, not re verifying every line, which is what makes the output defensible under its own name." },
+      { q: "How does Pearstop help procurement consultancies build spend cubes faster?", a: "Pearstop runs the classification layer that sits under a consultancy's delivery work: a constrained taxonomy so codes cannot be invented, supplier resolution, and confidence scoring that routes uncertain lines to review. Consultancies use it to produce the classified spend cube in less time than a manual build, and spend their own hours on the category strategy and negotiation the client actually engaged them for." },
+    ],
+  },
 ];
 
 export const blogPosts: BlogPost[] = _allBlogPosts.filter((p) => !p.hidden);
