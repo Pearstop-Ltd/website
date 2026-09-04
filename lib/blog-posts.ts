@@ -1175,6 +1175,30 @@ const _allBlogPosts: BlogPost[] = [
       { q: "How does Pearstop help procurement consultancies build spend cubes faster?", a: "Pearstop runs the classification layer that sits under a consultancy's delivery work: a constrained taxonomy so codes cannot be invented, supplier resolution, and confidence scoring that routes uncertain lines to review. Consultancies use it to produce the classified spend cube in less time than a manual build, and spend their own hours on the category strategy and negotiation the client actually engaged them for." },
     ],
   },
+  {
+    slug: "sap-migration-readiness-construction",
+    title: "Construction SAP readiness starts years before migration",
+    description: "Construction firms wait for the SAP deadline to force a data cleanup. Here is why the classification work should start years earlier instead.",
+    publishedAt: "2026-09-04",
+    category: "Construction",
+    tags: ["SAP migration", "construction procurement", "ERP data readiness", "spend classification"],
+    readingTime: 9,
+    tocItems: [
+      { id: "construction-po-data-breaks-general-ai-tools", label: "Construction PO data breaks general AI tools" },
+      { id: "why-rushed-sap-prep-fails", label: "Why rushed SAP prep fails" },
+      { id: "why-construction-spend-resists-a-shared-taxonomy", label: "Why construction spend resists a shared taxonomy" },
+      { id: "what-early-sap-readiness-work-involves", label: "What early SAP readiness work involves" },
+    ],
+    softCta: "discovery",
+    faqItems: [
+      { q: "Why should SAP data cleanup start years before a construction firm actually migrates?", a: "Because classification decisions made in a hurry, in the final months before go-live, tend to get made by whoever is available rather than by someone who understands the cost codes. Starting years earlier means the taxonomy gets tested against real purchase orders from new projects over time, so the edge cases get caught and corrected long before a deadline forces a rushed decision." },
+      { q: "Can Microsoft Copilot classify construction purchase order data accurately?", a: "Not reliably at scale. Copilot can produce a plausible category for an individual line, but it has no memory of previous decisions and nothing forces it to check its answer against a fixed list of categories. Feed it the same line description from two different projects and it can return two different answers, or invent a category that does not exist in the firm's own cost structure." },
+      { q: "Why is construction procurement data harder to classify than manufacturing spend?", a: "Manufacturing typically classifies against a material master that stays largely fixed across quarters. Construction spend is split across live projects that each open with their own cost code structure, their own project manager, and their own naming conventions for subcontractors and plant hire, so the same category can be described three different ways depending on which project the line came from." },
+      { q: "When does SAP ECC lose mainstream support, and what does that mean for the migration timeline?", a: "SAP has set 31 December 2027 as the end of mainstream maintenance for ECC. A full migration to S/4HANA typically takes 18 to 36 months, which leaves limited room for data cleanup if a construction firm waits until the migration project itself begins to look at the state of its purchase order and cost code data." },
+      { q: "What happens if a construction firm waits until the run-up to migration to fix its data?", a: "Data quality problems usually surface during user acceptance testing, once the business tries to run reports against categories that were never actually consistent across projects. At that point the team is also testing the new system and training users, so classification decisions get rushed rather than properly resolved, and the same inconsistencies often carry straight into the new system." },
+      { q: "How does Pearstop help construction firms prepare procurement data for an SAP migration?", a: "Pearstop resolves supplier and subcontractor identity across projects, applies a taxonomy that holds its meaning regardless of which project a line came from, and classifies purchase orders on an ongoing basis rather than as a one-off backlog exercise. This is the approach currently running with a major infrastructure contractor, classifying procurement lines out of SAP every month as new projects open." },
+    ],
+  },
 ];
 
 export const blogPosts: BlogPost[] = _allBlogPosts.filter((p) => !p.hidden);

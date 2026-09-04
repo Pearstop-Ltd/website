@@ -1,0 +1,85 @@
+---
+title: "Construction SAP readiness starts years before migration"
+description: "Construction firms wait for the SAP deadline to force a data cleanup. Here is why the classification work should start years earlier instead."
+date: "2026-09-04"
+category: "Construction"
+slug: "sap-migration-readiness-construction"
+author: "stephanie"
+lang: "en"
+---
+
+**Quick answer:** Construction procurement data does not get easier to classify by waiting. Subcontractor invoices, plant hire, and materials sit under different cost codes on every live project, and a general AI tool like Copilot cannot hold one consistent category across that volume. Starting the classification work years before a planned SAP move, instead of in the run-up to go-live, means the taxonomy is already proven and stable long before the deadline forces the issue.
+
+On this page: [Construction PO data breaks general AI tools](#construction-po-data-breaks-general-ai-tools) · [Why rushed SAP prep fails](#why-rushed-sap-prep-fails) · [Why construction spend resists a shared taxonomy](#why-construction-spend-resists-a-shared-taxonomy) · [What early SAP readiness work involves](#what-early-sap-readiness-work-involves) · [FAQ](#frequently-asked-questions)
+
+## Construction PO data breaks general AI tools
+
+A construction firm we spoke with this year had purchase order lines running across a dozen live projects at once: subcontractor invoices, plant hire, materials, each priced and coded against a cost code structure that a different project manager had set up for a different job. Nobody had ever tried to make those cost codes agree with each other, because nobody had needed to until an SAP move was raised as a real possibility.
+
+The team tried Microsoft Copilot first. It was already licensed, already open on every laptop in the office, and it looked like the obvious way to get a first pass at classifying the backlog before anyone spent money on anything else. It produced categories. It also produced a different category for the same line description depending on which project the line came from, and it occasionally invented a category that did not exist anywhere in the firm's own cost structure.
+
+The reason is simple: Copilot is built to answer a question about the document in front of it, not to hold one consistent rule across hundreds of thousands of purchase order lines spread over a dozen projects that keep changing shape as new jobs open and old ones close out. A general model has no memory of the decision it made on a similar line an hour earlier, and nothing forces it to check its answer against a fixed list of categories the business actually uses. Every run starts from zero.
+
+That is the moment the team stopped treating this as an AI prompt problem and started treating it as a data structure problem, which is what it always was.
+
+## Why rushed SAP prep fails
+
+SAP has set 31 December 2027 as the end of mainstream maintenance for ECC, and a full ECC to S/4HANA migration typically runs 18 to 36 months for a business of any size. Run that timeline backward from the deadline and there is very little slack left for the part of the project nobody wants to own: making sure the data going into the new system is actually consistent.
+
+Industry research on ERP data migrations is unusually blunt about where they go wrong. The majority of migration projects either miss their objectives or run over budget and timeline, and poor data quality is consistently named as a primary cause. The pattern is the same one construction teams describe from the inside: the problem does not surface during planning workshops, it surfaces during user acceptance testing, when someone tries to run a report by cost category and finds that three different projects have been calling the same thing three different names.
+
+Starting the cleanup in the six months before go-live means doing it at the worst possible time. The team is already stretched testing the new system, training users, and reconciling opening balances. Classification decisions that need input from someone who actually knows what "hire" means on a groundworks contract get made in a hurry, by whoever is available, and they do not get revisited.
+
+Starting years earlier changes what kind of decision this is. The current system is still stable. The people who set up the original cost codes are usually still around to explain what they meant. And a taxonomy built and tested against live purchase orders for two or three years has already survived the edge cases a new project throws at it, rather than meeting them for the first time during a go-live weekend.
+
+## Why construction spend resists a shared taxonomy
+
+Manufacturing has a material master that mostly holds still. A part bought this quarter is usually still the same part next quarter, made in the same plant, ordered from the same list. Construction does not work that way. Every project is a new legal entity in miniature, with its own budget, its own project manager, and its own cost code list built from whatever template that person happened to use last time.
+
+The result is a specific kind of mess. A line marked simply "hire" could be a tower crane booked for six weeks or a generator booked for two days, and nothing in the description tells you which without checking the supplier and the project. The same groundworks subcontractor can invoice three regional offices under three different trading names, none of which obviously match, because nobody in procurement had a reason to notice until spend needed comparing across projects. Materials get coded to whatever line the person raising the purchase order had open that day, which is rarely the line a cost analyst would choose six months later.
+
+None of this is a data entry failure. Everyone involved coded their own project correctly for their own purposes. The problem is that "correct for this project" and "consistent across every project the business runs" were never the same requirement, and nothing in a standard construction ERP forces them to become the same requirement on its own.
+
+## What early SAP readiness work involves
+
+The first step is resolving supplier and subcontractor identity across projects, before touching a single category. This is usually where a construction firm gets its first real finding: the same subcontractor bidding under two names, or two suppliers who are actually one company after a merger nobody updated the records for.
+
+The second step is applying a taxonomy that is fixed, not invented per project. A cost code cannot mean one thing on site A and something else on site B. Plant hire, subcontracted labour, and materials need categories that hold their meaning whichever project the line came from, mapped back to the cost code structure the business actually reports against.
+
+The third step is classifying continuously, not as a one-off exercise. New projects open every quarter with new cost codes and new subcontractors, so the classification work has to run against live purchase orders as they land, not just against a fixed historical backlog. This is also where starting years ahead pays for itself: a taxonomy tested against a new project opening every few months, for two or three years running, has already been forced to handle the trade categories, hire arrangements, and naming quirks a migration would otherwise surface all at once, in the middle of go-live testing.
+
+Ongoing monthly classification of live SAP purchase orders, run years before any migration date is even confirmed, is what Pearstop currently does for a major infrastructure contractor: resolving supplier identity and classifying procurement lines out of SAP as an ongoing process rather than a single backlog exercise, so the categories are already stable for construction and infrastructure teams long before a system change forces the question.
+
+## Frequently asked questions
+
+**Why should SAP data cleanup start years before a construction firm actually migrates?**
+
+Because classification decisions made in a hurry, in the final months before go-live, tend to get made by whoever is available rather than by someone who understands the cost codes. Starting years earlier means the taxonomy gets tested against real purchase orders from new projects over time, so the edge cases get caught and corrected long before a deadline forces a rushed decision.
+
+**Can Microsoft Copilot classify construction purchase order data accurately?**
+
+Not reliably at scale. Copilot can produce a plausible category for an individual line, but it has no memory of previous decisions and nothing forces it to check its answer against a fixed list of categories. Feed it the same line description from two different projects and it can return two different answers, or invent a category that does not exist in the firm's own cost structure.
+
+**Why is construction procurement data harder to classify than manufacturing spend?**
+
+Manufacturing typically classifies against a material master that stays largely fixed across quarters. Construction spend is split across live projects that each open with their own cost code structure, their own project manager, and their own naming conventions for subcontractors and plant hire, so the same category can be described three different ways depending on which project the line came from.
+
+**When does SAP ECC lose mainstream support, and what does that mean for the migration timeline?**
+
+SAP has set 31 December 2027 as the end of mainstream maintenance for ECC. A full migration to S/4HANA typically takes 18 to 36 months, which leaves limited room for data cleanup if a construction firm waits until the migration project itself begins to look at the state of its purchase order and cost code data.
+
+**What happens if a construction firm waits until the run-up to migration to fix its data?**
+
+Data quality problems usually surface during user acceptance testing, once the business tries to run reports against categories that were never actually consistent across projects. At that point the team is also testing the new system and training users, so classification decisions get rushed rather than properly resolved, and the same inconsistencies often carry straight into the new system.
+
+**How does Pearstop help construction firms prepare procurement data for an SAP migration?**
+
+Pearstop resolves supplier and subcontractor identity across projects, applies a taxonomy that holds its meaning regardless of which project a line came from, and classifies purchase orders on an ongoing basis rather than as a one-off backlog exercise. This is the approach currently running with a major infrastructure contractor, classifying procurement lines out of SAP every month as new projects open.
+
+---
+
+## Free resources
+
+* [Pearstop case studies](https://pearstopcs-ccdc3wwj.manus.space/)
+* [Procurement Opportunity Mapper](https://pearstopmap-7zost2x4.manus.space)
+* Taxonomy generator, coming soon
