@@ -1154,6 +1154,7 @@ const _allBlogPosts: BlogPost[] = [
   },
   {
     slug: "spend-cube-ai-for-procurement-consultancies",
+    image: "/images/blog/spend-cube-ai-for-procurement-consultancies.jpg",
     title: "Spend cube delivery for procurement consultancies",
     description: "How procurement consultancies can replace manual spend cube builds with an AI pipeline, guardrails against hallucination, and a fixed-fee pricing model.",
     publishedAt: "2026-09-04",
@@ -1177,6 +1178,7 @@ const _allBlogPosts: BlogPost[] = [
   },
   {
     slug: "sap-migration-readiness-construction",
+    image: "/images/blog/sap-migration-readiness-construction.jpg",
     title: "Construction SAP readiness starts years before migration",
     description: "Construction firms wait for the SAP deadline to force a data cleanup. Here is why the classification work should start years earlier instead.",
     publishedAt: "2026-09-04",

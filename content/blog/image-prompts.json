@@ -47,5 +47,19 @@
     "scene": "A cavernous building basement filled with exposed steel conduit, valve banks, and massive air handling units humming beneath rows of pipework and control panels.",
     "prompt": "A cavernous building basement filled with exposed steel conduit, valve banks, and massive air handling units humming beneath rows of pipework and control panels., photorealistic photograph, natural daylight, cool blue-grey colour grading, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
     "seed": 1118770688
+  },
+  "spend-cube-ai-for-procurement-consultancies": {
+    "sector": "construction",
+    "includePeople": false,
+    "scene": "A sprawling construction site showing towering steel scaffolding, a half-erect concrete frame of a high-rise building, and a row of stacked timber formwork panels beside a diesel-powered excavator parked on a dusty ground.",
+    "prompt": "A sprawling construction site showing towering steel scaffolding, a half-erect concrete frame of a high-rise building, and a row of stacked timber formwork panels beside a diesel-powered excavator parked on a dusty ground., photorealistic photograph, natural daylight, cool blue-grey colour grading, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
+    "seed": 3242033143
+  },
+  "sap-migration-readiness-construction": {
+    "sector": "construction",
+    "includePeople": false,
+    "scene": "A partially built high-rise skeleton with exposed steel beams, concrete formwork, and a towering crane positioned on a bustling construction site under a clear sky",
+    "prompt": "A partially built high-rise skeleton with exposed steel beams, concrete formwork, and a towering crane positioned on a bustling construction site under a clear sky, photorealistic photograph, natural daylight, cool blue-grey colour grading, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
+    "seed": 2695890635
   }
 }
