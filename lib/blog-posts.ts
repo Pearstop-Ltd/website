@@ -1203,6 +1203,7 @@ const _allBlogPosts: BlogPost[] = [
   },
   {
     slug: "who-owns-your-procurement-data-problem",
+    image: "/images/blog/who-owns-your-procurement-data-problem.jpg",
     title: "Who actually owns your procurement data problem",
     description: "Finance owns the ledger, procurement owns the deal, and IT owns the system. Nobody owns the taxonomy underneath, and that gap is the real problem.",
     publishedAt: "2026-09-05",

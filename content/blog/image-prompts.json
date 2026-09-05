@@ -61,5 +61,12 @@
     "scene": "A partially built high-rise skeleton with exposed steel beams, concrete formwork, and a towering crane positioned on a bustling construction site under a clear sky",
     "prompt": "A partially built high-rise skeleton with exposed steel beams, concrete formwork, and a towering crane positioned on a bustling construction site under a clear sky, photorealistic photograph, natural daylight, cool blue-grey colour grading, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
     "seed": 2695890635
+  },
+  "who-owns-your-procurement-data-problem": {
+    "sector": "hard-fm",
+    "includePeople": false,
+    "scene": "A sprawling mechanical room filled with exposed steel pipework, valve manifolds, and a wall of labeled conduit trays running alongside a humming air handling unit under fluorescent lighting.",
+    "prompt": "A sprawling mechanical room filled with exposed steel pipework, valve manifolds, and a wall of labeled conduit trays running alongside a humming air handling unit under fluorescent lighting., photorealistic photograph, natural daylight, cool blue-grey colour grading, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
+    "seed": 2249920873
   }
 }
