@@ -1,0 +1,85 @@
+---
+title: "SAP-gereedheid in de bouw begint jaren vóór de migratie"
+description: "Bouwbedrijven wachten op de SAP-deadline om een data-opschoning af te dwingen. Hierom zou het classificatiewerk jaren eerder moeten beginnen."
+date: "2026-09-04"
+category: "Construction"
+slug: "sap-migration-readiness-construction"
+author: "stephanie"
+lang: "en"
+---
+
+**Kort antwoord:** procurement data in de bouw wordt niet gemakkelijker te classificeren door te wachten. Subcontractor invoices, plant hire en materialen vallen onder verschillende cost codes op elk live project, en een algemene AI-tool zoals Copilot kan geen consistente category handhaven over dat volume. Door het classificatiewerk jaren vóór een geplande SAP-verhuizing te starten, in plaats van in de aanloop naar go-live, is de taxonomie al bewezen en stabiel lang voordat de deadline de kwestie afdwingt.
+
+Op deze pagina: [Construction PO data breaks general AI tools](#construction-po-data-breaks-general-ai-tools) · [Why rushed SAP prep fails](#why-rushed-sap-prep-fails) · [Why construction spend resists a shared taxonomy](#why-construction-spend-resists-a-shared-taxonomy) · [What early SAP readiness work involves](#what-early-sap-readiness-work-involves) · [FAQ](#frequently-asked-questions)
+
+## Construction PO data breaks general AI tools
+
+Een bouwbedrijf waarmee we dit jaar spraken, had purchase order regels die tegelijkertijd over een tiental live projecten liepen: subcontractor invoices, plant hire, materialen, elk geprijsd en gecodeerd tegen een cost code structuur die een andere projectmanager voor een andere job had opgezet. Niemand had ooit geprobeerd die cost codes met elkaar te laten overeenstemmen, omdat niemand dat nodig had gehad totdat een SAP-verhuizing als een reële mogelijkheid werd geopperd.
+
+Het team probeerde eerst Microsoft Copilot. Het was al gelicentieerd, al open op elke laptop op kantoor, en het leek de voor de hand liggende manier om een eerste poging te doen om de backlog te classificeren voordat iemand geld uitgaf aan iets anders. Het produceerde categories. Het produceerde ook een andere category voor dezelfde regelbeschrijving, afhankelijk van welk project de regel afkomstig was, en het verzon af en toe een category die nergens in de eigen kostenstructuur van het bedrijf bestond.
+
+De reden is simpel: Copilot is gebouwd om een vraag te beantwoorden over het document dat voor hem ligt, niet om één consistente regel te handhaven over honderdduizenden purchase order regels verspreid over een tiental projecten die voortdurend van vorm veranderen naarmate nieuwe jobs openen en oude worden afgesloten. Een algemeen model heeft geen geheugen van de beslissing die het een uur eerder over een vergelijkbare regel nam, en niets dwingt het om zijn antwoord te controleren aan de hand van een vaste lijst van categories die het bedrijf daadwerkelijk gebruikt. Elke run begint vanaf nul.
+
+Dat is het moment waarop het team dit niet langer als een AI prompt probleem behandelde, maar als een datastructuurprobleem, wat het altijd al was.
+
+## Why rushed SAP prep fails
+
+SAP heeft 31 december 2027 vastgesteld als het einde van de mainstream maintenance voor ECC, en een volledige ECC naar S/4HANA migratie duurt doorgaans 18 tot 36 maanden voor een bedrijf van elke omvang. Als je die tijdlijn terugrekent vanaf de deadline, blijft er heel weinig speling over voor het deel van het project dat niemand wil bezitten: ervoor zorgen dat de data die in het nieuwe systeem terechtkomt daadwerkelijk consistent is.
+
+Industrieel onderzoek naar ERP data migraties is ongewoon direct over waar ze misgaan. De meerderheid van de migratieprojecten mist hun doelstellingen of overschrijdt het budget en de tijdlijn, en slechte data quality wordt consequent genoemd als een primaire oorzaak. Het patroon is hetzelfde dat bouwteams van binnenuit beschrijven: het probleem komt niet naar boven tijdens planningsworkshops, het komt naar boven tijdens user acceptance testing, wanneer iemand een rapport probeert te draaien op cost category en ontdekt dat drie verschillende projecten hetzelfde ding drie verschillende namen hebben gegeven.
+
+De opschoning starten in de zes maanden vóór go-live betekent dit op het slechtst mogelijke moment doen. Het team is al overbelast met het testen van het nieuwe systeem, het trainen van gebruikers en het afstemmen van openingsbalansen. Classificatiebeslissingen die input nodig hebben van iemand die daadwerkelijk weet wat "hire" betekent op een grondwerkcontract, worden haastig genomen, door wie dan ook beschikbaar is, en ze worden niet opnieuw bekeken.
+
+Jaren eerder beginnen verandert de aard van deze beslissing. Het huidige systeem is nog stabiel. De mensen die de oorspronkelijke cost codes hebben opgezet, zijn meestal nog aanwezig om uit te leggen wat ze bedoelden. En een taxonomie die twee of drie jaar lang is opgebouwd en getest tegen live purchase orders, heeft de uitzonderlijke gevallen die een nieuw project met zich meebrengt al overleefd, in plaats van ze voor het eerst tegen te komen tijdens een go-live weekend.
+
+## Why construction spend resists a shared taxonomy
+
+Manufacturing heeft een material master die grotendeels stilstaat. Een onderdeel dat dit kwartaal is gekocht, is meestal volgend kwartaal nog steeds hetzelfde onderdeel, gemaakt in dezelfde plant, besteld uit dezelfde lijst. Construction werkt niet zo. Elk project is een nieuwe juridische entiteit in het klein, met zijn eigen budget, zijn eigen projectmanager en zijn eigen cost code lijst, opgebouwd uit welke template die persoon toevallig de laatste keer heeft gebruikt.
+
+Het resultaat is een specifieke soort chaos. Een regel die eenvoudigweg "hire" is gemarkeerd, kan een torenkraan zijn die voor zes weken is geboekt of een generator die voor twee dagen is geboekt, en niets in de beschrijving vertelt je welke zonder de supplier en het project te controleren. Dezelfde grondwerk subcontractor kan drie regionale kantoren factureren onder drie verschillende handelsnamen, waarvan geen enkele duidelijk overeenkomt, omdat niemand in procurement een reden had om het op te merken totdat spend moest worden vergeleken tussen projecten. Materialen worden gecodeerd naar welke regel de persoon die de purchase order opstelde die dag open had staan, wat zelden de regel is die een cost analyst zes maanden later zou kiezen.
+
+Niets hiervan is een data entry fout. Iedereen die betrokken was, codeerde zijn eigen project correct voor zijn eigen doeleinden. Het probleem is dat "correct voor dit project" en "consistent over elk project dat het bedrijf uitvoert" nooit dezelfde vereiste waren, en niets in een standaard construction ERP dwingt ze om vanzelf dezelfde vereiste te worden.
+
+## What early SAP readiness work involves
+
+De eerste stap is het oplossen van supplier en subcontractor identiteit over projecten heen, voordat er ook maar één category wordt aangeraakt. Dit is meestal waar een bouwbedrijf zijn eerste echte bevinding doet: dezelfde subcontractor die onder twee namen biedt, of twee suppliers die na een fusie waarvoor niemand de records heeft bijgewerkt, eigenlijk één bedrijf zijn.
+
+De tweede stap is het toepassen van een taxonomie die vaststaat, niet per project wordt uitgevonden. Een cost code kan niet op site A één ding betekenen en op site B iets anders. Plant hire, subcontracted labour en materialen hebben categories nodig die hun betekenis behouden, ongeacht van welk project de regel afkomstig is, teruggekoppeld naar de cost code structuur waartegen het bedrijf daadwerkelijk rapporteert.
+
+De derde stap is continu classificeren, niet als een eenmalige oefening. Elk kwartaal openen nieuwe projecten met nieuwe cost codes en nieuwe subcontractors, dus het classificatiewerk moet worden uitgevoerd op live purchase orders zodra ze binnenkomen, niet alleen op een vaste historische backlog. Dit is ook waar jaren eerder beginnen zichzelf terugbetaalt: een taxonomie die gedurende twee of drie jaar is getest tegen een nieuw project dat elke paar maanden opent, is al gedwongen om de trade categories, hire arrangements en naamgevingspecifieke kenmerken te verwerken die een migratie anders allemaal tegelijkertijd, midden in de go-live testing, aan het licht zou brengen.
+
+Voortdurende maandelijkse classificatie van live SAP purchase orders, jaren voordat een migratiedatum zelfs maar is bevestigd, is wat Pearstop momenteel doet voor een grote infrastructuur contractor: het oplossen van supplier identiteit en het classificeren van procurement regels uit SAP als een doorlopend proces in plaats van een eenmalige backlog oefening, zodat de categories al stabiel zijn voor construction en infrastructuur teams lang voordat een systeemwijziging de vraag afdwingt.
+
+## Frequently asked questions
+
+**Waarom zou de SAP data cleanup jaren vóór een daadwerkelijke migratie van een bouwbedrijf moeten beginnen?**
+
+Omdat classificatiebeslissingen die haastig worden genomen, in de laatste maanden vóór go-live, meestal worden genomen door wie dan ook beschikbaar is, in plaats van door iemand die de cost codes begrijpt. Jaren eerder beginnen betekent dat de taxonomie na verloop van tijd wordt getest tegen echte purchase orders van nieuwe projecten, zodat de uitzonderlijke gevallen worden opgespoord en gecorrigeerd lang voordat een deadline een overhaaste beslissing afdwingt.
+
+**Kan Microsoft Copilot construction purchase order data nauwkeurig classificeren?**
+
+Niet betrouwbaar op schaal. Copilot kan een plausibele category produceren voor een individuele regel, maar het heeft geen geheugen van eerdere beslissingen en niets dwingt het om zijn antwoord te controleren aan de hand van een vaste lijst van categories. Voer het dezelfde regelbeschrijving van twee verschillende projecten in en het kan twee verschillende antwoorden geven, of een category verzinnen die niet bestaat in de eigen kostenstructuur van het bedrijf.
+
+**Waarom is construction procurement data moeilijker te classificeren dan manufacturing spend?**
+
+Manufacturing classificeert doorgaans tegen een material master die grotendeels vast blijft over kwartalen. Construction spend is verdeeld over live projecten die elk openen met hun eigen cost code structuur, hun eigen projectmanager en hun eigen naamgevingsconventies voor subcontractors en plant hire, zodat dezelfde category op drie verschillende manieren kan worden beschreven, afhankelijk van welk project de regel afkomstig is.
+
+**Wanneer verliest SAP ECC mainstream support, en wat betekent dat voor de migratietijdlijn?**
+
+SAP heeft 31 december 2027 vastgesteld als het einde van de mainstream maintenance voor ECC. Een volledige migratie naar S/4HANA duurt doorgaans 18 tot 36 maanden, wat beperkte ruimte laat voor data cleanup als een bouwbedrijf wacht met het beoordelen van de staat van zijn purchase order en kosten codedata totdat het migratieproject zelf begint.
+
+**Wat gebeurt er als een bouwbedrijf wacht met het oplossen van zijn data tot aanloop naar de migratie?**
+
+data quality problemen komen meestal aan het licht tijdens user acceptance testing, zodra de business probeert rapporten uit te voeren op basis van categorieën die nooit consistent waren over projecten heen. Op dat moment test het team ook het nieuwe systeem en traint het gebruikers, waardoor classificatiebeslissingen worden overhaast in plaats van goed opgelost, en dezelfde inconsistenties vaak rechtstreeks in het nieuwe systeem terechtkomen.
+
+**Hoe helpt Pearstop bouwbedrijven bij het voorbereiden van procurement data voor een SAP-migratie?**
+
+Pearstop lost de identiteit van supplier en onderaannemer op over projecten heen, past een taxonomie toe die zijn betekenis behoudt, ongeacht van welk project een regel afkomstig is, en classificeert purchase orders op een doorlopende basis in plaats van als een eenmalige backlog-oefening. Dit is de aanpak die momenteel wordt toegepast bij een grote infrastructuur contractor, waarbij elke maand procurement regels uit SAP worden geclassificeerd naarmate nieuwe projecten starten.
+
+---
+
+## Free resources
+
+* [Pearstop case studies](https://pearstopcs-ccdc3wwj.manus.space/)
+* [Procurement Opportunity Mapper](https://pearstopmap-7zost2x4.manus.space)
+* Taxonomy generator, binnenkort beschikbaar
