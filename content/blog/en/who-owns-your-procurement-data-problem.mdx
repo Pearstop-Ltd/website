@@ -1,0 +1,71 @@
+---
+title: "Who actually owns your procurement data problem"
+description: "Finance owns the ledger, procurement owns the deal, and IT owns the system. Nobody owns the taxonomy underneath, and that gap is the real problem."
+date: "2026-09-05"
+category: "Data Quality"
+slug: "who-owns-your-procurement-data-problem"
+author: "stephanie"
+lang: "en"
+---
+
+**Quick answer:** Nobody owns procurement data quality by default, because no single function has both the visibility and the mandate to own it end to end. Finance owns the ledger, procurement owns supplier relationships, and IT owns the system the data lives in. Classification and taxonomy sit in the gap between them, unowned, until someone gives one person or role explicit accountability for it.
+
+On this page: [Finance owns the ledger, not the taxonomy](#finance-owns-the-ledger-not-the-taxonomy) · [Procurement owns the deal, not the data](#procurement-owns-the-deal-not-the-data) · [IT owns the system, not the structure](#it-owns-the-system-not-the-structure) · [Who should own classification instead](#who-should-own-classification-instead) · [FAQ](#frequently-asked-questions)
+
+Ask a Head of Procurement who owns their data quality problem and most point up, toward finance, toward whoever signs off the budget. It is a reasonable first guess. Finance sees the whole spend picture, or thinks it does. But the CFO does not own the classification underneath the numbers, and neither does anyone else by default. Three functions each hold a real piece of the problem, and each has a legitimate reason for not holding all of it.
+
+## Finance owns the ledger, not the taxonomy
+
+Finance's job is the ledger reconciling at month end. A general ledger code such as "reactive maintenance" covers a call-out fee, a replacement compressor, and three hours of subcontractor labour, all coded identically, because the ledger only needs the total against that code to be correct. Whether the line underneath it describes what was actually bought is a different question, and not the one finance is measured on.
+
+That is the legitimate reason finance will not take this on end to end. Their incentive stops at the total reconciling. Holding them accountable for category-level consistency means holding someone accountable for a decision they were never asked to make, using a level of detail their own reporting does not require.
+
+## Procurement owns the deal, not the data
+
+Procurement's job is the next negotiation, not the history sitting behind it. Two sites can buy the same work gloves from the same distributor and file them under two different categories, one under PPE, one under consumables, because two different buyers logged the purchase order and neither one was wrong within their own job that day.
+
+Category management is a forward-looking discipline. It benchmarks next year's rate against this year's, and consolidates suppliers going forward. Backfilling three years of inconsistently tagged history competes directly with live negotiations for the same buyer's time, and the negotiation wins, because that is what procurement gets measured on. Fixing the taxonomy is real work with no deal attached to it, so it keeps losing to work that closes.
+
+## IT owns the system, not the structure
+
+IT keeps the ERP or CAFM platform running, migrates it when the business outgrows it, and connects it to whatever else needs to talk to it. A UNSPSC or category field often sits inside that system already, present in the schema, empty or filled with whatever the implementation vendor defaulted it to at go live. IT can build the field. Deciding what belongs inside it needs someone who knows the difference between an actuator and a damper, and IT is not that person.
+
+IT is measured on uptime, successful migrations, and systems that talk to each other. Asking IT to arbitrate whether a windowsill delivery belongs under construction materials or facilities maintenance is asking the wrong department to make a business judgement it has no basis for making.
+
+## Who should own classification instead
+
+Data governance has a useful distinction here: a data owner is accountable for a domain end to end, usually someone senior enough to make the category decision stick across systems. A data steward does the day-to-day maintenance work under that owner's mandate, resolving the actual edge cases. Without a named owner, the steward work has no one to report into, so it happens inconsistently or not at all. This is not a headcount problem. Most companies at fifty million pounds or more in revenue do not have a chief data officer, and hiring one just to fix a taxonomy would be a strange use of that role. What is missing is not a person. It is an explicit assignment: one place where a classification decision gets made once, written down, and applied the same way the next time the same ambiguous item shows up.
+
+Once classification has that kind of owner, the effect shows up in the work that used to eat a week before every board pack or tender response. Seventy to ninety percent less manual data clean-up is the realistic number once that ownership gap closes, which is what procurement and finance teams see once Pearstop takes on the classification layer for them instead of leaving it to whoever has time that week. An ERP migration stops surfacing years of unclassified spend as a surprise the week before go-live, because the classification work was already done. A tender response draws on cost data that means the same thing across every site, instead of a spreadsheet somebody rebuilt from memory.
+
+The question worth asking before any tool gets shortlisted is not which system will fix this. It is who, specifically, is accountable for the taxonomy staying right after the project ends. If the honest answer is nobody, that is the actual problem, and it will still be there after the next system migration too.
+
+## Frequently asked questions
+
+**Who is responsible for procurement data quality in most organisations?**
+
+By default, nobody is, because no single function has both the visibility into every purchase and the mandate to enforce a consistent category structure across it. Finance, procurement, and IT each hold a legitimate piece of the problem without owning it end to end. The gap only closes when someone is explicitly assigned accountability for the taxonomy itself, separate from their day job.
+
+**Why doesn't finance own procurement data quality?**
+
+Finance is measured on the ledger reconciling, not on whether the categories underneath a GL code are applied consistently. A code like "reactive maintenance" can cover a call-out fee, a part, and a day of labour without breaking finance's own reporting. Holding finance accountable for classification means holding them to a standard their actual job never required.
+
+**Should IT be responsible for classification and taxonomy data?**
+
+No, not on its own. IT owns the system the data lives in, including uptime, migrations, and integrations, but classification decisions require procurement domain knowledge that IT does not have. A category field can exist in the ERP schema and stay empty for years because building the field and deciding what belongs in it are different jobs.
+
+**What is the difference between a data owner and a data steward?**
+
+A data owner is accountable for a data domain end to end, typically someone senior enough to make a category decision stick across every system it touches. A data steward carries out the day-to-day maintenance and resolves edge cases under that owner's mandate. Without a named owner, steward-level work has no one to report into and tends to happen inconsistently or stop.
+
+**How does Pearstop help organisations own their procurement data?**
+
+Pearstop takes on the classification layer directly, applying a constrained taxonomy so a purchase line cannot be filed outside the categories the business actually uses, and routing genuinely ambiguous lines to a person instead of guessing. Teams using it see seventy to ninety percent less manual data clean-up, because the ownership gap that used to sit between finance, procurement, and IT has a place to land.
+
+---
+
+## Free resources
+
+* [Pearstop case studies](https://pearstopcs-ccdc3wwj.manus.space/)
+* [Procurement Opportunity Mapper](https://pearstopmap-7zost2x4.manus.space)
+* Taxonomy generator, coming soon
