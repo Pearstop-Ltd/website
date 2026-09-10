@@ -1227,6 +1227,7 @@ const _allBlogPosts: BlogPost[] = [
   },
   {
     slug: "hvac-air-filtration-spend-classification",
+    image: "/images/blog/hvac-air-filtration-spend-classification.jpg",
     title: "Classifying air filtration spend inside HVAC maintenance",
     description: "Filter changes are a predictable consumable cost, but most HVAC codes blend them with reactive parts spend. Here is why splitting them matters.",
     publishedAt: "2026-09-10",

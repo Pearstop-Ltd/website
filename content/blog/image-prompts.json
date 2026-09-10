@@ -68,5 +68,12 @@
     "scene": "A sprawling mechanical room filled with exposed steel pipework, valve manifolds, and a wall of labeled conduit trays running alongside a humming air handling unit under fluorescent lighting.",
     "prompt": "A sprawling mechanical room filled with exposed steel pipework, valve manifolds, and a wall of labeled conduit trays running alongside a humming air handling unit under fluorescent lighting., photorealistic photograph, natural daylight, cool blue-grey colour grading, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
     "seed": 2249920873
+  },
+  "hvac-air-filtration-spend-classification": {
+    "sector": "hvac-filtration",
+    "includePeople": false,
+    "scene": "A close-up view of a commercial rooftop HVAC unit with its service panel open, revealing a stack of new air filters neatly arranged beside a used filter being slid out on a metal tray.",
+    "prompt": "A close-up view of a commercial rooftop HVAC unit with its service panel open, revealing a stack of new air filters neatly arranged beside a used filter being slid out on a metal tray., photorealistic photograph, natural daylight, cool blue-grey colour grading, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
+    "seed": 1406515713
   }
 }
