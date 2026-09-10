@@ -1,5 +1,7 @@
 "use client";
 import { CalendlyButton } from "@/components/calendly-button";
+import { TurnstileWidget } from "@/components/turnstile-widget";
+import { INDUSTRIES, type IndustryKey } from "@/lib/unspsc-industries";
 
 import { useState, useEffect } from "react";
 
@@ -28,6 +30,9 @@ type LookupResult = {
   confidence?: "high" | "medium" | "low";
   notes?: string;
   error?: string;
+  rateLimited?: boolean;
+  consumed?: boolean;
+  remaining?: number;
 };
 
 const CONFIDENCE_COLOURS: Record<string, string> = {
@@ -56,6 +61,10 @@ export function UnspscLookupTool({
   resultLabels: ResultLabels;
 }) {
   const [description, setDescription] = useState("");
+  const [supplier, setSupplier] = useState("");
+  const [industry, setIndustry] = useState<IndustryKey | "">("");
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
+  const [turnstileReset, setTurnstileReset] = useState(0);
   const [result, setResult] = useState<LookupResult | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -70,6 +79,10 @@ export function UnspscLookupTool({
     e.preventDefault();
     if (!description.trim()) return;
     if (usesLeft <= 0) return;
+    if (!turnstileToken) {
+      setError("Please complete the verification check above.");
+      return;
+    }
     setLoading(true);
     setResult(null);
     setError(null);
@@ -78,19 +91,43 @@ export function UnspscLookupTool({
       const res = await fetch("/api/unspsc-lookup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ description }),
+        body: JSON.stringify({
+          description,
+          supplier: supplier.trim() || undefined,
+          industry: industry || undefined,
+          turnstileToken,
+        }),
       });
       const data: LookupResult = await res.json();
-      if (data.error) {
-        setError(data.error);
+      // Each token is single-use — always get a fresh one for the next submit.
+      setTurnstileToken(null);
+      setTurnstileReset((n) => n + 1);
+
+      if (data.rateLimited) {
+        setError(data.error ?? "You've reached today's free limit.");
+        setUsesLeft(0);
+      } else if (data.consumed) {
+        // The request actually reached the model (success, or a verified "no
+        // confident match" — both cost a real API call), so it counts toward
+        // the free quota either way. The server's own KV-backed count is
+        // authoritative when present; local storage is just a UI fallback.
+        if (data.error) setError(data.error); else setResult(data);
+        if (typeof data.remaining === "number") {
+          setUsesLeft(data.remaining);
+        } else {
+          const used = parseInt(localStorage.getItem(STORAGE_KEY) ?? "0", 10) + 1;
+          localStorage.setItem(STORAGE_KEY, String(used));
+          setUsesLeft(Math.max(0, FREE_LIMIT - used));
+        }
       } else {
-        setResult(data);
-        const used = parseInt(localStorage.getItem(STORAGE_KEY) ?? "0", 10) + 1;
-        localStorage.setItem(STORAGE_KEY, String(used));
-        setUsesLeft(Math.max(0, FREE_LIMIT - used));
+        // Rejected before reaching the model (bad input, failed bot check) —
+        // doesn't cost anything, so it shouldn't count against the quota.
+        setError(data.error ?? "Something went wrong. Please try again.");
       }
     } catch {
       setError("Something went wrong. Please try again.");
+      setTurnstileToken(null);
+      setTurnstileReset((n) => n + 1);
     } finally {
       setLoading(false);
     }
@@ -126,6 +163,43 @@ export function UnspscLookupTool({
     <div>
       <form onSubmit={handleSubmit} style={{ marginBottom: "1.5rem" }}>
         <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+          <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
+            <input
+              type="text"
+              value={supplier}
+              onChange={(e) => setSupplier(e.target.value)}
+              placeholder="Supplier name (optional)"
+              maxLength={200}
+              style={{
+                flex: "1 1 220px",
+                padding: "0.7rem 0.9rem",
+                fontSize: "0.92rem",
+                border: "1.5px solid #d0d5dd",
+                borderRadius: "8px",
+                fontFamily: "inherit",
+              }}
+            />
+            <select
+              value={industry}
+              onChange={(e) => setIndustry(e.target.value as IndustryKey | "")}
+              style={{
+                flex: "1 1 220px",
+                padding: "0.7rem 0.9rem",
+                fontSize: "0.92rem",
+                border: "1.5px solid #d0d5dd",
+                borderRadius: "8px",
+                fontFamily: "inherit",
+                background: "#fff",
+                color: industry ? "#1a1a1a" : "#888",
+              }}
+            >
+              <option value="">Industry (optional, narrows the search)</option>
+              {INDUSTRIES.map((i) => (
+                <option key={i.key} value={i.key}>{i.label}</option>
+              ))}
+            </select>
+          </div>
+
           <textarea
             value={description}
             onChange={(e) => setDescription(e.target.value)}
@@ -144,6 +218,9 @@ export function UnspscLookupTool({
               lineHeight: 1.5,
             }}
           />
+
+          <TurnstileWidget onToken={setTurnstileToken} reset={turnstileReset} />
+
           <div style={{ display: "flex", alignItems: "center", gap: "1rem", flexWrap: "wrap" }}>
             <button
               type="submit"

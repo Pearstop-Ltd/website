@@ -19,14 +19,25 @@ const toolSchema = {
   provider: { "@type": "Organization", name: "Pearstop", url: siteConfig.url }
 };
 
+const FAQ_ITEMS = [
+  { q: "What is a UNSPSC code?", a: "A UNSPSC (United Nations Standard Products and Services Code) is an 8-digit code that classifies any product or service into a global standard hierarchy. The first 2 digits are the Segment, digits 3–4 are the Family, digits 5–6 are the Class, and digits 7–8 are the Commodity." },
+  { q: "How do I find the right UNSPSC code for a product?", a: "Paste a clear description of the product or service into the lookup tool above. The AI engine returns the best matching 8-digit commodity code, along with the full hierarchy path and a confidence level." },
+  { q: "Is this UNSPSC lookup tool free?", a: "Yes. The tool is completely free for individual queries. For bulk classification — processing thousands of invoice lines — Pearstop offers an automated classification service." },
+  { q: "How accurate is the UNSPSC code suggestion?", a: "The tool returns a confidence level with each result: high, medium, or low. High-confidence results are typically correct at commodity level. For bulk classification at production accuracy (90–95%), Pearstop's full service uses additional signals beyond the description text." },
+  { q: "What is the difference between segments, families, classes, and commodities?", a: "Segment (2 digits) is the broadest — e.g. 72 is Construction and Maintenance. Family (4 digits) narrows it — 7210 is Building and Facility Maintenance. Class (6 digits) is more specific — 721015 is Electrical Systems Maintenance. Commodity (8 digits) is the most precise — 72101505 is Lighting Maintenance Services." },
+  { q: "How is UNSPSC different from eCl@ss or CPV?", a: "UNSPSC, eCl@ss and CPV are all product and service classification standards, but they serve different purposes. UNSPSC is the most widely used for spend analysis and category management. eCl@ss adds detailed technical attributes per product, common in German manufacturing. CPV is used specifically for EU public procurement tenders. Most organisations only need one, chosen based on their ERP system and reporting requirements — Pearstop works with UNSPSC as the most common standard for spend analytics." },
+  { q: "Can I classify an entire spend file or supplier catalog at once?", a: "The free tool above is built for one description at a time. For a full spend file, invoice history, or supplier catalog — hundreds to millions of lines — Pearstop's automated classification engine processes the whole dataset at once, reaching 90-95% automatic classification with the remainder flagged for human review. Book a 7-minute call to see it run on a sample of your own data." },
+  { q: "Should I trust an AI-generated UNSPSC code without checking it?", a: "For a single, low-stakes lookup, a high-confidence AI result is usually reliable enough to use directly. For contract-critical, audit-relevant, or bulk classification, we recommend a verification layer — which is exactly why Pearstop's classification engine combines rules, machine learning and an LLM with a human review step for lower-confidence results, rather than trusting AI output blindly." },
+];
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: [
-    { "@type": "Question", name: "What is a UNSPSC code?", acceptedAnswer: { "@type": "Answer", text: "A UNSPSC (United Nations Standard Products and Services Code) is an 8-digit code that classifies any product or service into a global standard hierarchy." } },
-    { "@type": "Question", name: "How do I find the right UNSPSC code?", acceptedAnswer: { "@type": "Answer", text: "Paste a clear description into the lookup tool. The AI engine returns the best matching 8-digit commodity code with a confidence level." } },
-    { "@type": "Question", name: "Is this UNSPSC lookup tool free?", acceptedAnswer: { "@type": "Answer", text: "Yes. The tool is completely free for individual queries. For bulk classification, Pearstop offers an automated classification service." } },
-  ]
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: { "@type": "Answer", text: item.a },
+  })),
 };
 
 const breadcrumbSchema = {
@@ -143,13 +154,7 @@ export default function UnspscLookupPage() {
             <div className="col-md-8 col-md-offset-2">
               <h2 style={{ marginBottom: "1.5rem" }}>Frequently asked questions</h2>
               <div className="faq-list">
-                {[
-                  { q: "What is a UNSPSC code?", a: "A UNSPSC (United Nations Standard Products and Services Code) is an 8-digit code that classifies any product or service into a global standard hierarchy. The first 2 digits are the Segment, digits 3–4 are the Family, digits 5–6 are the Class, and digits 7–8 are the Commodity." },
-                  { q: "How do I find the right UNSPSC code for a product?", a: "Paste a clear description of the product or service into the lookup tool above. The AI engine returns the best matching 8-digit commodity code, along with the full hierarchy path and a confidence level." },
-                  { q: "Is this UNSPSC lookup tool free?", a: "Yes. The tool is completely free for individual queries. For bulk classification — processing thousands of invoice lines — Pearstop offers an automated classification service." },
-                  { q: "How accurate is the UNSPSC code suggestion?", a: "The tool returns a confidence level with each result: high, medium, or low. High-confidence results are typically correct at commodity level. For bulk classification at production accuracy (90–95%), Pearstop's full service uses additional signals beyond the description text." },
-                  { q: "What is the difference between segments, families, classes, and commodities?", a: "Segment (2 digits) is the broadest — e.g. 72 is Construction and Maintenance. Family (4 digits) narrows it — 7210 is Building and Facility Maintenance. Class (6 digits) is more specific — 721015 is Electrical Systems Maintenance. Commodity (8 digits) is the most precise — 72101505 is Lighting Maintenance Services." },
-                ].map((item, i) => (
+                {FAQ_ITEMS.map((item, i) => (
                   <details key={i} className="faq-item">
                     <summary className="faq-q">{item.q}</summary>
                     <p className="faq-a">{item.a}</p>

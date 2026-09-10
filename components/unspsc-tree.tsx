@@ -403,7 +403,7 @@ function Children({
               boxed={pickedId === id}
               matched={pickedId !== id && matchIds.has(id)}
             />
-            {isOpen && node.level < 4 && (
+            {isOpen && node.level !== 4 && (
               <Branch id={id} level={node.level} expandedIds={expandedIds} onToggle={onToggle} rowRefs={rowRefs} pickedId={pickedId} matchIds={matchIds} />
             )}
             {isOpen && node.level === 4 && <CommodityDetail node={node} depth={level} />}

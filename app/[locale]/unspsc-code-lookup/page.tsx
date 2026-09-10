@@ -71,6 +71,30 @@ const faqSchema = {
         "@type": "Answer",
         text: "UNSPSC has four levels. Segment (2 digits) is the broadest — for example, 72 covers Construction and Maintenance Services. Family (4 digits) narrows it down — 7210 covers Building and Facility Maintenance. Class (6 digits) is more specific — 721015 covers Electrical Systems Maintenance. Commodity (8 digits) is the most precise — 72101505 covers Lighting Maintenance Services specifically. For procurement analytics, you always want to classify at commodity level."
       }
+    },
+    {
+      "@type": "Question",
+      name: "How is UNSPSC different from eCl@ss or CPV?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "UNSPSC, eCl@ss and CPV are all product and service classification standards, but they serve different purposes. UNSPSC is the most widely used for spend analysis and category management. eCl@ss adds detailed technical attributes per product, common in German manufacturing. CPV is used specifically for EU public procurement tenders. Most organisations only need one, chosen based on their ERP system and reporting requirements — Pearstop works with UNSPSC as the most common standard for spend analytics."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Can I classify an entire spend file or supplier catalog at once?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The free tool above is built for one description at a time. For a full spend file, invoice history, or supplier catalog — hundreds to millions of lines — Pearstop's automated classification engine processes the whole dataset at once, reaching 90-95% automatic classification with the remainder flagged for human review. Book a 7-minute call to see it run on a sample of your own data."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Should I trust an AI-generated UNSPSC code without checking it?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "For a single, low-stakes lookup, a high-confidence AI result is usually reliable enough to use directly. For contract-critical, audit-relevant, or bulk classification, we recommend a verification layer — which is exactly why Pearstop's classification engine combines rules, machine learning and an LLM with a human review step for lower-confidence results, rather than trusting AI output blindly."
+      }
     }
   ]
 };
