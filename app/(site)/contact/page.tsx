@@ -41,7 +41,7 @@ export default function ContactPage() {
               <div className="quote-card">
                 <div className="story-label">Our Locations</div>
                 <p className="light-copy" style={{ marginTop: "1rem" }}>
-                  We have local presence in Ireland, the Netherlands, UK, California and South Africa.
+                  We have local presence in Ireland, the Netherlands, UK and South Africa.
                 </p>
                 <div className="story-label" style={{ marginTop: "1.25rem" }}>Main Office</div>
                 <p className="light-copy">

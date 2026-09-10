@@ -21,7 +21,7 @@ export const siteConfig = {
       lemtech: "/images/clients/lemtech.svg"
     },
     team: {
-      stephanie: "/images/clients/stephanie-headshot.png",
+      stephanie: "/images/clients/stephanie-headshot-team.png",
       richard: "/images/clients/richard-headshot.png",
       raeesah: "/images/clients/raeesah-headshot.png",
       neharika: "/images/clients/neharika-headshot.png",
