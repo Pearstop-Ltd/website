@@ -1681,6 +1681,18 @@
         {
           "q": "Wat is het verschil tussen UNSPSC-segment, -familie, -klasse en -commodity?",
           "a": "UNSPSC heeft vier niveaus. Segment (2 cijfers) is het breedst — 72 dekt Constructie- en Onderhoudsdiensten. Familie (4 cijfers) verkleint het — 7210 dekt Gebouw- en Faciliteitsonderhoud. Klasse (6 cijfers) is specifieker — 721015 dekt Elektrische Systemen Onderhoud. Commodity (8 cijfers) is het meest precies — 72101505 dekt Verlichtingsonderhoudsdiensten. Voor procurement-analyse classificeert u altijd op commodity-niveau."
+        },
+        {
+          "q": "Wat is het verschil tussen UNSPSC en eCl@ss of CPV?",
+          "a": "UNSPSC, eCl@ss en CPV zijn allemaal classificatiestandaarden voor producten en diensten, maar ze dienen verschillende doelen. UNSPSC wordt het meest gebruikt voor spend analysis en category management. eCl@ss voegt gedetailleerde technische attributen per product toe, wat veel voorkomt in de Duitse maakindustrie. CPV wordt specifiek gebruikt voor EU-aanbestedingen in public procurement. De meeste organisaties hebben er maar één nodig, gekozen op basis van hun ERP-systeem en rapportagevereisten — Pearstop werkt met UNSPSC als de meest voorkomende standaard voor spend analytics."
+        },
+        {
+          "q": "Kan ik een volledig spend-bestand of supplier catalog in één keer classificeren?",
+          "a": "De gratis tool hierboven is gebouwd voor één beschrijving tegelijk. Voor een volledig spend-bestand, invoice history of supplier catalog — honderden tot miljoenen regels — verwerkt Pearstop's geautomatiseerde classificatie-engine de hele dataset in één keer, waarbij 90-95% automatische classificatie wordt bereikt en de rest wordt gemarkeerd voor menselijke beoordeling. Boek een gesprek van 7 minuten om het te zien werken op een voorbeeld van uw eigen data."
+        },
+        {
+          "q": "Moet ik een door AI gegenereerde UNSPSC-code vertrouwen zonder deze te controleren?",
+          "a": "Voor een enkele, laagdrempelige lookup is een AI-resultaat met hoge confidence meestal betrouwbaar genoeg om direct te gebruiken. Voor contract-kritische, audit-relevante of bulkclassificatie adviseren wij een verificatielaag — en dat is precies waarom Pearstop's classificatie-engine regels, machine learning en een LLM combineert met een menselijke beoordelingsstap voor resultaten met lagere confidence, in plaats van blindelings te vertrouwen op AI-output."
         }
       ]
     },
