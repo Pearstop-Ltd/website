@@ -1252,6 +1252,7 @@ const _allBlogPosts: BlogPost[] = [
   },
   {
     slug: "unspsc-classification-tools-compared",
+    image: "/images/blog/unspsc-classification-tools-compared.jpg",
     title: "UNSPSC classification tools compared",
     description: "A rigor-based comparison of UNSPSC classification tools, from procurement suites to specialist MDM platforms, matched to real procurement use cases.",
     publishedAt: "2026-09-10",

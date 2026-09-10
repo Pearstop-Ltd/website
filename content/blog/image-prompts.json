@@ -75,5 +75,12 @@
     "scene": "A close-up view of a commercial rooftop HVAC unit with its service panel open, revealing a stack of new air filters neatly arranged beside a used filter being slid out on a metal tray.",
     "prompt": "A close-up view of a commercial rooftop HVAC unit with its service panel open, revealing a stack of new air filters neatly arranged beside a used filter being slid out on a metal tray., photorealistic photograph, natural daylight, cool blue-grey colour grading, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
     "seed": 1406515713
+  },
+  "unspsc-classification-tools-compared": {
+    "sector": "hard-fm",
+    "includePeople": false,
+    "scene": "A spacious mechanical room filled with rows of stainless‑steel air handling units, large electrical switchgear panels, and bundled conduit pipes illuminated by overhead fluorescent lighting.",
+    "prompt": "A spacious mechanical room filled with rows of stainless‑steel air handling units, large electrical switchgear panels, and bundled conduit pipes illuminated by overhead fluorescent lighting., photorealistic photograph, natural daylight, cool blue-grey colour grading, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
+    "seed": 283126526
   }
 }
