@@ -57,6 +57,7 @@ export type NavLink = {
 };
 
 export const solutionLinks: NavLink[] = [
+  { label: "Invoice & Document Extraction", href: "/invoice-data-extraction", description: "Turn unread PDFs and scans into structured data." },
   { label: "Procurement data quality", href: "/procurement-data-quality", description: "Category management and spend visibility." },
   { label: "Asset Data Management", href: "/asset-data-management", description: "Reliable asset registers for FM and maintenance." },
   { label: "Data Quality", href: "/data-quality", description: "Clean, standardise, and enrich operational data." },
@@ -86,6 +87,7 @@ export const footerCompanyLinks: NavLink[] = [
 ];
 
 export const footerSolutionLinks: NavLink[] = [
+  { label: "Invoice & Document Extraction", href: "/invoice-data-extraction" },
   { label: "Data Quality", href: "/data-quality" },
   { label: "Procurement", href: "/procurement-data-quality" },
   { label: "Asset Data Management", href: "/asset-data-management" },
