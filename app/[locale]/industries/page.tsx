@@ -2,8 +2,43 @@ import { CalendlyButton } from "@/components/calendly-button";
 import type { Metadata } from "next";
 import { getTranslations , setRequestLocale } from "next-intl/server";
 import Link from "next/link";
+import Script from "next/script";
 import { GeoBlock, PageHero, SectionTitle } from "@/components/content";
 import { industryCards, siteConfig } from "@/lib/site";
+
+const FAQ_ITEMS = [
+  {
+    q: "Which industries does Pearstop work with?",
+    a: "Pearstop works with infrastructure and rail operators, integrated FM providers, hard services and technical FM contractors, construction and project-based firms, soft services and cleaning contractors, manufacturers of building systems and equipment, and asset owners who outsource FM delivery. Each has a different version of the same underlying problem: spend or asset data too fragmented or unread to act on."
+  },
+  {
+    q: "Do I need to be a large organisation to benefit?",
+    a: "Pearstop fits organisations with several hundred employees or more, operating across multiple sites or projects, with a meaningful volume of external supplier and subcontractor spend. The precondition is not size on its own, it is distributed spend: different suppliers for the same product or service across sites or entities, without anyone having properly mapped it."
+  },
+  {
+    q: "What if my industry is not listed here?",
+    a: "The data problems above are not unique to these seven industries. If your team manages complex operational spend or asset data, deals with inconsistent supplier records, or is preparing for a digital transformation, the underlying problem is usually the same one. Book a call and we will tell you plainly whether it is a fit."
+  }
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: { "@type": "Answer", text: item.a }
+  }))
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: siteConfig.url },
+    { "@type": "ListItem", position: 2, name: "Industries", item: `${siteConfig.url}/industries` }
+  ]
+};
 
 export async function generateMetadata({
   params
@@ -40,191 +75,222 @@ type IndustryDetail = {
 
 const details: IndustryDetail[] = [
   {
-    id: "soft-services",
-    title: "Soft Services (FM)",
-    copy: "Identify margin pressure before you commit to a contract.",
+    id: "infrastructure",
+    title: "Infrastructure",
+    copy: "Know where the money goes before you try to save it.",
     intro:
-      "Soft services FM providers face a persistent challenge: fixed-price contracts that look viable at bid stage but erode margins in delivery. The difference between a profitable contract and a loss-maker is often hiding in the data, before the ink is dry.",
+      "A cost-savings target gets named, sometimes running to eight figures, and nobody can point to where in the spend it actually sits. That gap between the target and the data is a recurring pattern in infrastructure and rail: a savings programme identifies tens of millions in potential savings, and the underlying spend data cannot show where to find them.",
     points: [
       {
-        title: "Fixed-price contracts creating unseen margin pressure",
+        title: "A savings target with no data to back it",
         copy:
-          "Without accurate cost baselines, it is nearly impossible to price a contract correctly, let alone defend your margin once you are in delivery."
+          "A transformation programme names a number. Spend is not classified consistently enough to say which categories the number is hiding in."
       },
       {
-        title: "Inability to demonstrate value beyond basic operations",
+        title: "Framework coverage nobody can see across the business",
         copy:
-          "Clients see soft services as a commodity. Without data-backed insights, proving your strategic contribution is difficult."
+          "One buyer can see the ten framework agreements for their category. The other fifty categories have no equivalent visibility, so the organisation cannot steer spend onto agreements it already has."
       },
       {
-        title: "Spend data too fragmented to act on",
+        title: "No baseline to negotiate or tender from",
         copy:
-          "Unclassified procurement data across contracts makes it impossible to benchmark costs or identify consolidation opportunities."
+          "Negotiating with a supplier, or pricing a new tender, both start from knowing what you already spend. Without that baseline, every negotiation starts from a guess."
       }
     ],
     changes: [
-      "Spend baselines that expose loss-making contracts before signing",
-      "UNSPSC-coded procurement data to benchmark costs across contracts",
-      "Clean data foundation to demonstrate value and retain clients beyond basic delivery"
+      "Spend classified consistently enough to show where a named savings target actually sits",
+      "Framework and contract coverage visible across every category, not just the ones already being watched",
+      "A real spend baseline to negotiate suppliers and price tenders against, not an estimate",
+      "Buyer review speed improved by an order of magnitude as classification becomes familiar, not a marginal gain"
     ],
     href: "/procurement-data-quality",
-    linkLabel: "See how Pearstop helps Soft Services FM"
+    linkLabel: "See how Pearstop builds a real spend baseline"
   },
   {
-    id: "construction",
-    title: "Construction",
-    copy: "Improve margin accuracy before the project starts.",
+    id: "integrated-fm",
+    title: "Integrated FM",
+    copy: "One contract, five service lines, five data formats.",
     intro:
-      "Construction margins live or die on the quality of estimates. Inaccurate procurement costs and unreliable people cost data lead to bids that win but bleed and projects that deliver less than they promised.",
+      "Multi-service FM contracts win on breadth: cleaning, hard services, security, and catering under one roof. The data underneath rarely reflects that unity. Each service line arrives from its own system, in its own format, and asset or cost records that should describe the same thing end up looking like they belong to different companies.",
     points: [
       {
-        title: "Inaccurate procurement and materials cost estimates",
+        title: "Reference data that does not match what is installed",
         copy:
-          "Without clean cost baselines from previous projects, estimating teams are flying blind - and margin erosion starts at bid stage."
+          "Manufacturer and equipment reference data supplied at contract start is sometimes simply wrong, and spelling, naming, and coding inconsistencies compound across sites and years."
       },
       {
-        title: "People cost data too fragmented to rely on",
+        title: "Spend and service data siloed by service line",
         copy:
-          "Labour is the single biggest cost driver in construction. Without reliable people cost data, it is impossible to price risk accurately."
+          "Cleaning, hard services, and security each report differently, so nobody sees the full cost or performance picture for a single contract."
       },
       {
-        title: "No reliable spend baseline across projects",
+        title: "A first pass that delivers less than expected",
         copy:
-          "Fragmented spend data across subcontractors and categories prevents teams from learning from past performance or benchmarking suppliers."
+          "Expectations set at the start of a project often outpace what a first data pass can support, because the underlying reference data was flawed before it reached any system."
       }
     ],
     changes: [
-      "Accurate procurement cost estimates grounded in clean, classified spend data",
-      "Labour cost baselines to protect margin across projects and regions",
-      "Spend baselines that improve bid accuracy and reduce post-contract surprises"
+      "Manufacturer and equipment reference data corrected and standardised across every service line and site",
+      "One structured dataset instead of five service-line silos, so real contract-level cost and performance is visible",
+      "A realistic view of what the data can support, set from a corrected baseline, not the state it arrived in"
     ],
-    href: "/procurement-data-quality",
-    linkLabel: "See how Pearstop helps Construction"
-  },
-  {
-    id: "manufacturing",
-    title: "Manufacturing",
-    copy: "Better data. Tighter margins.",
-    intro:
-      "In manufacturing, margin erosion often starts with bad data. Duplicate parts records, inconsistent supplier codes, and unclassified spend make it nearly impossible to benchmark costs, negotiate accurately, or plan procurement efficiently.",
-    points: [
-      {
-        title: "Inaccurate bills of materials",
-        copy:
-          "Errors in BOMs drive up procurement costs, cause production delays, and make accurate quoting impossible."
-      },
-      {
-        title: "Fragmented supplier and parts data",
-        copy:
-          "Duplicate and inconsistent records across systems prevent you from benchmarking suppliers or negotiating from a position of strength."
-      },
-      {
-        title: "Slow quoting and bid preparation",
-        copy:
-          "Manual data lookups and re-entry slow your teams down precisely when speed and accuracy matter most."
-      }
-    ],
-    changes: [
-      "UNSPSC-coded spend data for accurate category management and supplier benchmarking",
-      "Deduplicated parts master to eliminate ghost stock and cut procurement errors",
-      "AI-ready asset and parts data to support predictive maintenance and demand planning",
-      "Faster quoting with clean, standardised cost and supplier data"
-    ],
-    href: "/unspsc",
-    linkLabel: "See how Pearstop helps Manufacturers"
+    href: "/data-quality",
+    linkLabel: "See how Pearstop unifies FM data"
   },
   {
     id: "hard-services",
     title: "Hard Services (FM)",
-    copy: "Stop losing margin to knowledge gaps and poor data.",
+    copy: "Stop paying a middleman because nobody can confirm what the part is.",
     intro:
-      "Hard services FM providers face three compounding challenges: experienced engineers retiring and taking critical knowledge with them; contracts being executed at thin margins because cost data was wrong at bid stage; and digital transformation investments that fail to deliver because the underlying data is not clean enough to build on.",
+      "When a component arrives with only a supplier's own part code attached, there is no way to buy it from anyone except that supplier. Getting to the original manufacturer code means someone tracing it by hand, and every step of that chain, from the engineer who ordered it to the team who has to ask for a clearer description, costs time most contracts do not budget for.",
     points: [
       {
-        title: "Workforce knowledge loss as experienced staff retire",
+        title: "The original manufacturer code is hidden behind a supplier code",
         copy:
-          "Critical asset knowledge locked in people's heads, not in systems, creates operational risk and service delivery gaps."
+          "Without it, there is no alternative supplier to buy from, and no way to check the price is fair."
       },
       {
-        title: "Low-margin contract execution",
+        title: "Vague descriptions create a slow back-and-forth loop",
         copy:
-          "When labour, parts, and subcontractor cost data is not accurate, bids win and contracts bleed."
+          "An unclear part description sent back to site and back again is the default when descriptions were never captured consistently in the first place."
       },
       {
-        title: "Digital transformation stalling without clean data",
+        title: "No way to check a match before it is used",
         copy:
-          "IoT, predictive maintenance, and digital twins all require a clean, structured data foundation. Without it, transformation budgets are wasted."
+          "A classification result is only useful once it can be checked against the real part number, not taken on faith."
       }
     ],
     changes: [
-      "Structured asset and maintenance data to retain operational knowledge as teams change",
-      "Accurate cost data to prevent low-margin contract execution before it starts",
-      "Clean data foundation to support meaningful, revenue-generating digital transformation"
+      "Original manufacturer codes identified so parts can be bought direct, not through a markup",
+      "Consistent part descriptions captured once, not re-requested site to site",
+      "Every match traceable back to a real part number, so your team can verify it rather than trust it"
     ],
-    href: "/asset-data-management",
-    linkLabel: "See how Pearstop helps Hard Services FM"
+    href: "/unspsc",
+    linkLabel: "See how Pearstop verifies parts and components"
   },
   {
-    id: "infrastructure",
-    title: "Infrastructure",
-    copy: "Critical asset reliability starts with data clarity.",
+    id: "construction",
+    title: "Construction",
+    copy: "Turning years of spend into one number should not take years.",
     intro:
-      "Infrastructure operators are being squeezed from both sides, pricing pressure from contracts and rising material and labour costs in delivery. Ensuring critical assets stay reliable while protecting margins requires a level of data clarity that most organisations have not yet achieved.",
+      "A construction group doing hundreds of millions in annual spend across more than a dozen entities can state its turnover to the euro and still not know, with any precision, what it actually spent last year, or on what. Framework agreements exist, but they were signed years ago and nobody has checked since whether buying still follows them.",
     points: [
       {
-        title: "Unreliable asset data leading to unexpected failures",
+        title: "Group-wide spend nobody can add up precisely",
         copy:
-          "When asset registers are incomplete or out of date, maintenance planning is reactive - and critical failures become inevitable."
+          "Spend spread across many entities and systems means turnover is known to the euro; what was actually bought rarely is."
       },
       {
-        title: "Rising material costs eroding contract margins",
+        title: "Framework agreements nobody has checked lately",
         copy:
-          "Without accurate spend baselines and supply chain visibility, cost increases hit margins without warning and with no data to negotiate against."
+          "Agreements signed years ago keep running on trust, with no live comparison of whether current buying still follows them."
       },
       {
-        title: "Pricing squeeze with no data leverage",
+        title: "Categorising spend by hand, project after project",
         copy:
-          "Clients push for lower prices while costs rise. Without clean data, infrastructure operators have no basis from which to push back."
+          "Translating raw spend into quantities, sections, and contractors manually is still how a categorised view gets built, repeated every reporting cycle."
       }
     ],
     changes: [
-      "Complete, accurate asset registers to support planned maintenance and reduce failures",
-      "Clean spend and materials data to track and respond to rising costs in real time",
-      "Data clarity that gives procurement teams leverage in supplier and client negotiations"
+      "Group-wide spend visible in one consolidated, coded view, not per entity",
+      "Framework agreement compliance checked against live buying, not assumed",
+      "Categorisation that happens once per line, not by hand every reporting cycle"
     ],
-    href: "/asset-data-management",
-    linkLabel: "See how Pearstop helps Infrastructure"
+    href: "/procurement-data-quality",
+    linkLabel: "See how Pearstop builds a group-wide spend view"
   },
   {
-    id: "building-tech",
-    title: "Building Technology",
-    copy: "Move beyond commoditization with data as your edge.",
+    id: "soft-services",
+    title: "Soft Services (FM)",
+    copy: "If the invoice is never read, the spend underneath it does not exist yet.",
     intro:
-      "Building technology providers are under pressure on all fronts: clients treating services as a commodity, digitalization programmes that promise transformation but underdeliver, and acquisitions that take years to integrate. The common thread in all three challenges is data quality.",
+      "Ask a procurement team in cleaning or soft services how confident they are in their own spend data, and \"ground level\" is a common, self-deprecating answer. Before any of that spend can be categorised or benchmarked, someone has to actually read every invoice, and at real volume, across hundreds of sites, that step is where most soft services providers are still stuck.",
     points: [
       {
-        title: "Services commoditised - competing on price alone",
+        title: "Invoices arriving faster than anyone can read them",
         copy:
-          "Without clean data to back your value proposition, building technology services look identical to every competitor - and procurement teams buy on price."
+          "ERP master data described as too poor for the automatic flow to even start, with deadlines that have been missed for years, not months."
       },
       {
-        title: "Digitalization investments failing to deliver",
+        title: "No justification when a client challenges a price",
         copy:
-          "Smart building platforms, IoT integrations, and analytics dashboards all fail when they are built on poorly structured, unclassified data."
+          "Asked to defend a tender cost, the honest answer is often that nobody knows. The margin on the number was a feeling, not a calculation."
       },
       {
-        title: "Acquisitions stalling on data integration",
+        title: "A supplier that controls the data you need to negotiate",
         copy:
-          "M&A synergies depend on integrating people, systems, and data. Without standardised data across entities, integration drags on and synergies evaporate."
+          "When a single supplier accounts for most of a category's spend, they can share only the data that suits them, leaving no independent way to check it."
       }
     ],
     changes: [
-      "Clean product and service data to differentiate on value and escape commoditization",
-      "Structured data foundation to make digitalization investments actually deliver ROI",
-      "Standardised data across acquired entities to accelerate integration and realise synergies"
+      "Invoices and delivery notes read and structured automatically, in any format, so there is something to classify",
+      "A real cost baseline to defend pricing under client challenge, not a feeling",
+      "Spend visibility that does not depend on what a single supplier chooses to share"
     ],
-    href: "/ai-readiness",
-    linkLabel: "See how Pearstop helps Building Technology"
+    href: "/invoice-data-extraction",
+    linkLabel: "See how Pearstop reads the invoice first"
+  },
+  {
+    id: "manufacturing",
+    title: "Manufacturers of Building Systems",
+    copy: "One entity already runs a standard. The rest of the group does not.",
+    intro:
+      "It is common in multi-entity manufacturers for one part of the business, often the most established or the most recently scrutinised, to already classify spend against a real standard, while sister entities and newer sites still run on inconsistent, free-text supplier and parts data. The gap does not stay contained to one region for long: audits, group reporting, and shared procurement all eventually need the same view everywhere.",
+    points: [
+      {
+        title: "One entity on a standard, others not",
+        copy:
+          "A group classification standard already exists somewhere in the business. Extending it to every entity by hand is slower than the reason it was requested in the first place."
+      },
+      {
+        title: "Duplicate and inconsistent parts records across plants",
+        copy:
+          "The same part shows up under different codes and spellings depending on which plant or system entered it, which blocks supplier benchmarking and hides duplicate stock."
+      },
+      {
+        title: "Slow quoting built on manual lookups",
+        copy:
+          "Re-keying and re-checking part data by hand slows quoting exactly when speed and accuracy both matter."
+      }
+    ],
+    changes: [
+      "The group's existing classification standard extended to every entity, not just the one that already had it",
+      "Deduplicated, standardised parts data across plants and systems",
+      "Faster quoting on cost and supplier data that does not need re-checking by hand"
+    ],
+    href: "/unspsc",
+    linkLabel: "See how Pearstop aligns every entity to one standard"
+  },
+  {
+    id: "asset-owners",
+    title: "Asset Owners",
+    copy: "You do not touch the invoices. You still need to know what they say.",
+    intro:
+      "Property investors, landlords, and public estate owners who outsource facilities management do not generate their own spend data. They receive it, filtered through whichever provider delivers the contract. The question that follows is not a category strategy question. It is simpler, and harder to dodge: what is actually being spent on our behalf, is it competitive, and how would we know if it was not.",
+    points: [
+      {
+        title: "Cost data you receive but do not control",
+        copy:
+          "A managing agent or FM provider reports the numbers. There is rarely an independent way to check them against what similar sites or portfolios pay."
+      },
+      {
+        title: "No benchmark across providers or sites",
+        copy:
+          "Without a common, classified view of spend, comparing one provider's costs to another, or one site to the next, is not possible."
+      },
+      {
+        title: "Wanting to hold the narrative, not just receive it",
+        copy:
+          "Reviewing a provider's own reporting after the fact is not the same as holding an independent, comparable record of your own."
+      }
+    ],
+    changes: [
+      "An independent, classified view of spend managed on your behalf, not just the provider's own report",
+      "Cost benchmarking across providers and sites, on the same basis",
+      "Assurance you can bring to a provider review, not just a file you received from one"
+    ],
+    href: "/asset-data-management",
+    linkLabel: "See how Pearstop gives asset owners assurance"
   }
 ];
 
@@ -267,6 +333,9 @@ export default async function IndustriesPage({
 
   return (
     <>
+      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+
       <PageHero
         eyebrow={t("hero.eyebrow")}
         title={t("hero.title")}
@@ -391,6 +460,24 @@ export default async function IndustriesPage({
                 <GeoBlock title={block.title} copy={block.copy} />
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div className="container">
+          <div className="row">
+            <div className="col-md-8 col-md-offset-2">
+              <h2 style={{ marginBottom: "1.5rem" }}>Frequently asked questions</h2>
+              <div className="faq-list">
+                {FAQ_ITEMS.map((item, i) => (
+                  <details key={i} className="faq-item">
+                    <summary className="faq-q">{item.q}</summary>
+                    <p className="faq-a">{item.a}</p>
+                  </details>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>

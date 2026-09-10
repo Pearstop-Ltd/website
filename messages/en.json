@@ -1039,16 +1039,16 @@
   "Industries": {
     "meta": {
       "title": "Industries We Serve",
-      "description": "Pearstop works with facilities management, construction, infrastructure, manufacturing, and building technology companies. Each industry has different data challenges - we have solved them all."
+      "description": "Pearstop works with infrastructure, integrated and hard services FM, construction, soft services and cleaning, manufacturing, and asset owner organisations. Each industry has a different data problem - see how we solve it."
     },
     "hero": {
       "eyebrow": "Industries",
       "title": "Industries We Serve",
-      "lead": "Pearstop delivers data integrity solutions for the industries that build, maintain, and operate our world. From facilities management to infrastructure, we clean messy data so your margins can breathe."
+      "lead": "Pearstop cleans and classifies operational data for the industries carrying the heaviest, messiest spend: infrastructure, facilities management, construction, and manufacturing. Find your industry below."
     },
     "sixIndustries": {
-      "title": "Six Industries, One Solution",
-      "lead": "Every industry has unique data challenges. Pearstop solves them all.",
+      "title": "Where Pearstop Fits",
+      "lead": "Seven industries, seven different ways the same problem shows up: spend or asset data nobody can act on yet.",
       "learnMore": "Learn more →"
     },
     "otherIndustries": {
@@ -1062,7 +1062,7 @@
     },
     "readyBanner": {
       "title": "Ready to Clean Your Data?",
-      "copy": "Whichever industry you are in, Pearstop has solved your data problem before. Let's talk about your specific situation.",
+      "copy": "We have solved this exact problem in infrastructure, facilities management, construction, and manufacturing. If yours is a different industry with the same kind of data, tell us about it.",
       "bookDiscovery": "Book a 7-Minute Discovery"
     },
     "technical": {

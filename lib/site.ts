@@ -365,34 +365,39 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
 
 export const industryCards = [
   {
-    title: "Soft Services (FM)",
-    href: "#soft-services",
-    copy: "Identify fixed-price contracts creating margin pressure before offering. Provide value beyond basic operations."
+    title: "Infrastructure",
+    href: "#infrastructure",
+    copy: "Know where a named savings target actually sits in the spend, before you try to find it by hand."
   },
   {
-    title: "Construction",
-    href: "#construction",
-    copy: "Improve margin accuracy through procurement and people cost estimates. Establish spend baselines."
-  },
-  {
-    title: "Manufacturing",
-    href: "#manufacturing",
-    copy: "Reduce costs and protect margins with accurate parts data, standardised supplier codes, and faster procurement workflows."
+    title: "Integrated FM",
+    href: "#integrated-fm",
+    copy: "Bring five service lines and five data formats into one structured view of a contract."
   },
   {
     title: "Hard Services (FM)",
     href: "#hard-services",
-    copy: "Address workforce knowledge loss. Prevent low-margin execution. Enable meaningful digital transformation."
+    copy: "Confirm what a part actually is, so you can buy it direct instead of through a markup."
   },
   {
-    title: "Infrastructure",
-    href: "#infrastructure",
-    copy: "Ensure critical asset reliability. Manage pricing squeeze and rising material costs through data clarity."
+    title: "Construction",
+    href: "#construction",
+    copy: "Turn spend spread across entities and projects into one categorised, group-wide view."
   },
   {
-    title: "Building Technology",
-    href: "#building-tech",
-    copy: "Move beyond commoditisation. Transform digitalisation strategically. Integrate acquisitions efficiently."
+    title: "Soft Services (FM)",
+    href: "#soft-services",
+    copy: "Get invoices read and structured automatically, so there is spend data to defend a price with."
+  },
+  {
+    title: "Manufacturers of Building Systems",
+    href: "#manufacturing",
+    copy: "Extend the classification standard one entity already runs to every plant and site."
+  },
+  {
+    title: "Asset Owners",
+    href: "#asset-owners",
+    copy: "Get an independent, comparable view of what is spent on your behalf, not just a provider's report."
   }
 ];
 
