@@ -1225,6 +1225,30 @@ const _allBlogPosts: BlogPost[] = [
       { q: "How does Pearstop help organisations own their procurement data?", a: "Pearstop takes on the classification layer directly, applying a constrained taxonomy so a purchase line cannot be filed outside the categories the business actually uses, and routing genuinely ambiguous lines to a person instead of guessing. Teams using it see seventy to ninety percent less manual data clean-up, because the ownership gap that used to sit between finance, procurement, and IT has a place to land." },
     ],
   },
+  {
+    slug: "hvac-air-filtration-spend-classification",
+    title: "Classifying air filtration spend inside HVAC maintenance",
+    description: "Filter changes are a predictable consumable cost, but most HVAC codes blend them with reactive parts spend. Here is why splitting them matters.",
+    publishedAt: "2026-09-10",
+    category: "Data Quality",
+    tags: ["HVAC maintenance", "UNSPSC classification", "hard FM", "air filtration", "spend classification"],
+    readingTime: 7,
+    tocItems: [
+      { id: "air-filters-get-buried-in-hvac-spend", label: "Air filters buried in HVAC spend" },
+      { id: "filter-replacement-is-a-consumable-cycle", label: "Filter replacement as a consumable cycle" },
+      { id: "what-one-blended-hvac-code-hides", label: "What one blended code hides" },
+      { id: "splitting-filter-spend-from-reactive-parts", label: "Splitting filter from reactive spend" },
+    ],
+    softCta: "discovery",
+    faqItems: [
+      { q: "What is the UNSPSC code for HVAC air filters?", a: "Air filters carry the UNSPSC commodity code 40161505, sitting within the filters class under the distribution and conditioning systems segment. Applying this code consistently at the transaction level, rather than leaving filter purchases coded generically as HVAC maintenance, is what lets air filtration roll up as its own line in any commodity-based spend report or taxonomy mandate." },
+      { q: "Why should filter replacement spend be classified separately from HVAC repairs?", a: "Filter replacement is a scheduled, cadence-driven consumable cost with a known unit price and quantity, while a repair like a compressor or fan motor failure is unplanned and variable. Blending both into one HVAC maintenance code removes the ability to forecast filter spend accurately, benchmark supplier pricing per unit, or confirm the replacement cadence is actually being followed on site." },
+      { q: "How often should commercial HVAC filters be replaced?", a: "Most commercial offices replace standard filters every two to three months, while higher-efficiency MERV 13-and-above media typically needs changing every 60 to 90 days because it loads faster. Healthcare and industrial sites often run a monthly cycle. Some sites use condition-based replacement instead, swapping the filter once a pressure sensor shows resistance has roughly doubled from its clean baseline." },
+      { q: "Does a dirty or overdue air filter actually increase energy costs?", a: "Yes. A clogged filter restricts airflow, which forces the HVAC system to run longer to reach the same temperature setpoint, and this is widely cited as increasing a system's energy consumption by as much as 15 percent. That extra cost is easy to miss if filter replacement spend is not tracked as its own line against a known cadence, since there is nothing to check the delay against." },
+      { q: "How does Pearstop classify air filtration spend?", a: "Pearstop separates filter media purchases from reactive HVAC parts and repairs and applies the UNSPSC commodity code for air filters at the transaction level automatically, rather than leaving both coded generically as HVAC maintenance. This gives hard FM teams a clean filter spend line for budgeting and supplier benchmarking, separate from unplanned repair costs." },
+      { q: "What is the difference between planned HVAC maintenance and filter replacement classification?", a: "Planned HVAC maintenance classification splits scheduled service visits from reactive repair callouts at the contract level, generally. Filter replacement classification is narrower: it separates the consumable filter media itself, a recurring commodity purchase with its own UNSPSC code, from every other cost sitting inside a maintenance visit, including both planned labour and reactive parts." },
+    ],
+  },
 ];
 
 export const blogPosts: BlogPost[] = _allBlogPosts.filter((p) => !p.hidden);

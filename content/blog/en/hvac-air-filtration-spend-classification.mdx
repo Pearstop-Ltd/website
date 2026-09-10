@@ -1,0 +1,81 @@
+---
+title: "Classifying air filtration spend inside HVAC maintenance"
+description: "Filter changes are a predictable consumable cost, but most HVAC codes blend them with reactive parts spend. Here is why splitting them matters."
+date: "2026-09-10"
+category: "Data Quality"
+slug: "hvac-air-filtration-spend-classification"
+author: "rae"
+lang: "en"
+---
+
+**Quick answer:** Air filter replacement is a predictable, cadence-driven consumable cost, not a one-off repair, but most FM spend data bundles it into a single generic HVAC maintenance code alongside reactive parts like fan motors, compressors, and coils. Splitting filter spend out under its own commodity classification is what makes filter budgeting, supplier benchmarking, and taxonomy rollups possible in the first place.
+
+On this page: [Air filters get buried in HVAC spend](#air-filters-get-buried-in-hvac-spend) · [Filter replacement is a consumable cycle](#filter-replacement-is-a-consumable-cycle) · [What one blended HVAC code hides](#what-one-blended-hvac-code-hides) · [Splitting filter spend from reactive parts](#splitting-filter-spend-from-reactive-parts) · [FAQ](#frequently-asked-questions)
+
+## Air filters get buried in HVAC spend
+
+I was mapping a client's hard FM cost base a few months ago and asked a simple question: how much do you spend on filter media a year? Nobody could answer it. Not because the number does not exist, but because it is sitting inside a single line called HVAC maintenance, next to a compressor replacement, a fan motor swap, and a duct repair from a burst seal.
+
+That is the pattern across most of the sites I look at. A contractor changes filters on a scheduled visit, notices something else needs attention, and fixes it in the same call-out. Both get billed to the same contract, coded to the same GL line, and reported as one number: HVAC maintenance spend. The filter change and the compressor repair are treated as the same kind of cost, even though they behave nothing alike.
+
+## Filter replacement is a consumable cycle
+
+A filter is not a repair. It is a scheduled swap-out on a known cadence, the same shape of spend as any other consumable. Commercial offices typically replace standard filters every two to three months; MERV 13-and-above media, which loads faster, is often changed every 60 to 90 days; healthcare and industrial environments frequently run a monthly cycle. Some sites move to condition-based replacement instead, swapping the filter when a pressure sensor shows the differential has doubled from its clean baseline, rather than on a fixed calendar date. Either way, the trigger is known in advance. Nobody is waiting for the filter to fail before ordering the next one.
+
+That is exactly how Pearstop's content treats other consumable categories elsewhere in hard FM: recurring, cadence-driven, price-per-unit trackable, plannable a year out. A fan motor or a compressor is the opposite. You do not know it is failing until it does, and the cost is whatever the repair turns out to require. Grouping a plannable consumable and an unplannable repair under one label erases the one distinction that actually matters for managing either of them well.
+
+## What one blended HVAC code hides
+
+Once filter spend and reactive parts spend sit inside the same "HVAC maintenance" number, three things become impossible, and I see all three come up with clients running a multi-site estate.
+
+Budgeting is the first. Filter spend should be one of the more forecastable lines in an FM budget: you know the count of units, the rated cadence, and the unit price, so next year's figure is close to arithmetic. Blended into a category that also carries an unpredictable compressor failure, that forecastability disappears. The number swings with whatever broke last year, not with what is actually plannable.
+
+Supplier benchmarking is the second. If filter media is invoiced inside a blended HVAC visit, you cannot compare what one contractor charges per filter against another, or check whether a site's per-unit filter cost has crept up year over year. The unit price is in there somewhere, mixed into a line total with labour and parts that have nothing to do with it.
+
+Commodity classification is the third, and it is the one that shows up hardest when a client is under a UNSPSC or taxonomy mandate. Air filters carry their own UNSPSC commodity code, 40161505, sitting under the filters class within the distribution and conditioning systems segment. That code only means anything if it gets applied at the transaction level. A GL code that stops at "HVAC maintenance" never gets that far, so a filter line and a coil-repair line report identically in any commodity rollup, and the taxonomy exercise a head of procurement was mandated to deliver produces a category that is technically populated and practically useless.
+
+There is a real cost sitting behind the missed cadence too. A dirty, overdue filter is widely cited as increasing an HVAC system's energy use by as much as 15 percent, because restricted airflow makes the system run longer to hit the same setpoint. You cannot see whether that cadence is actually being kept, or is quietly slipping site by site, if filter spend is not visible as its own line to check against the schedule in the first place.
+
+Pearstop splits filter media out from reactive HVAC parts and repairs and codes it to its own UNSPSC commodity line automatically, for hard FM teams running a taxonomy or ERP migration programme across a multi-site HVAC estate.
+
+## Splitting filter spend from reactive parts
+
+Once the split exists, the questions I get asked in reviews change shape. Instead of "why did HVAC cost more this quarter," it becomes "why did filter spend at this site come in over the forecast," which is a question the data can actually answer, because filter spend has a known cadence to check it against.
+
+It also changes what a taxonomy or ERP migration project delivers. A commodity code applied consistently to filter transactions means air filtration rolls up cleanly under its own UNSPSC line rather than disappearing into a generic maintenance category, which is usually the specific gap a new head of procurement finds first when they inherit a taxonomy that was never checked at the transaction level.
+
+None of this requires a new maintenance strategy or a new contract. It requires the spend data underneath the existing contract to carry the distinction that was always there operationally, filter change versus reactive parts, all the way through to the category it gets reported against. That is a data quality fix, not a procurement one, and it is usually the cheaper of the two to make.
+
+## Frequently asked questions
+
+**What is the UNSPSC code for HVAC air filters?**
+
+Air filters carry the UNSPSC commodity code 40161505, sitting within the filters class under the distribution and conditioning systems segment. Applying this code consistently at the transaction level, rather than leaving filter purchases coded generically as HVAC maintenance, is what lets air filtration roll up as its own line in any commodity-based spend report or taxonomy mandate.
+
+**Why should filter replacement spend be classified separately from HVAC repairs?**
+
+Filter replacement is a scheduled, cadence-driven consumable cost with a known unit price and quantity, while a repair like a compressor or fan motor failure is unplanned and variable. Blending both into one HVAC maintenance code removes the ability to forecast filter spend accurately, benchmark supplier pricing per unit, or confirm the replacement cadence is actually being followed on site.
+
+**How often should commercial HVAC filters be replaced?**
+
+Most commercial offices replace standard filters every two to three months, while higher-efficiency MERV 13-and-above media typically needs changing every 60 to 90 days because it loads faster. Healthcare and industrial sites often run a monthly cycle. Some sites use condition-based replacement instead, swapping the filter once a pressure sensor shows resistance has roughly doubled from its clean baseline.
+
+**Does a dirty or overdue air filter actually increase energy costs?**
+
+Yes. A clogged filter restricts airflow, which forces the HVAC system to run longer to reach the same temperature setpoint, and this is widely cited as increasing a system's energy consumption by as much as 15 percent. That extra cost is easy to miss if filter replacement spend is not tracked as its own line against a known cadence, since there is nothing to check the delay against.
+
+**How does Pearstop classify air filtration spend?**
+
+Pearstop separates filter media purchases from reactive HVAC parts and repairs and applies the UNSPSC commodity code for air filters at the transaction level automatically, rather than leaving both coded generically as HVAC maintenance. This gives hard FM teams a clean filter spend line for budgeting and supplier benchmarking, separate from unplanned repair costs.
+
+**What is the difference between planned HVAC maintenance and filter replacement classification?**
+
+Planned HVAC maintenance classification splits scheduled service visits from reactive repair callouts at the contract level, generally. Filter replacement classification is narrower: it separates the consumable filter media itself, a recurring commodity purchase with its own UNSPSC code, from every other cost sitting inside a maintenance visit, including both planned labour and reactive parts.
+
+---
+
+## Free resources
+
+* [Pearstop case studies](https://pearstopcs-ccdc3wwj.manus.space/)
+* [Procurement Opportunity Mapper](https://pearstopmap-7zost2x4.manus.space)
+* Taxonomy generator, coming soon
