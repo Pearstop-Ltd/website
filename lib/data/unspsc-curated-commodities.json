@@ -1,0 +1,2362 @@
+[
+ {
+  "code": "10101501",
+  "title": "Cats",
+  "description": "Domestic cats supplied as livestock, working animals or companion stock.",
+  "exampleItems": [
+   "Farm cat stock replenishment",
+   "Pedigree cat purchase",
+   "Cattery breeding stock"
+  ]
+ },
+ {
+  "code": "10101502",
+  "title": "Dogs",
+  "description": "Dogs supplied as working animals, livestock guardians or companion stock.",
+  "exampleItems": [
+   "Working dog purchase",
+   "Guard dog procurement",
+   "Breeding stock acquisition"
+  ]
+ },
+ {
+  "code": "10101506",
+  "title": "Horses",
+  "description": "Horses supplied for agricultural, equestrian or working purposes.",
+  "exampleItems": [
+   "Draft horse purchase",
+   "Riding school stock",
+   "Breeding mare acquisition"
+  ]
+ },
+ {
+  "code": "11101501",
+  "title": "Mica",
+  "description": "Raw mica mineral supplied for industrial and electrical insulation use.",
+  "exampleItems": [
+   "Electrical insulation supply",
+   "Cosmetic-grade mica order",
+   "Construction material additive"
+  ]
+ },
+ {
+  "code": "11101506",
+  "title": "Chalk",
+  "description": "Raw chalk mineral supplied for industrial, agricultural or writing use.",
+  "exampleItems": [
+   "Agricultural lime supply",
+   "Industrial filler material",
+   "Blackboard chalk supply"
+  ]
+ },
+ {
+  "code": "12131501",
+  "title": "Dynamite",
+  "description": "Commercial dynamite supplied for controlled blasting and demolition.",
+  "exampleItems": [
+   "Quarry blasting supply",
+   "Controlled demolition charge",
+   "Mining explosive order"
+  ]
+ },
+ {
+  "code": "12131502",
+  "title": "Explosive cartridges",
+  "description": "Pre-packaged explosive cartridges for blasting applications.",
+  "exampleItems": [
+   "Quarry cartridge supply",
+   "Tunnel blasting order",
+   "Seismic survey charge"
+  ]
+ },
+ {
+  "code": "12131503",
+  "title": "Propellant explosives",
+  "description": "Propellant-grade explosive materials used in ammunition and specialist applications.",
+  "exampleItems": [
+   "Ammunition manufacturing supply",
+   "Industrial propellant order",
+   "Specialist propellant charge"
+  ]
+ },
+ {
+  "code": "13111201",
+  "title": "Polyethylene films",
+  "description": "Polyethylene film supplied for packaging, construction and agricultural use.",
+  "exampleItems": [
+   "Packaging film order",
+   "Construction vapour barrier",
+   "Agricultural mulch film"
+  ]
+ },
+ {
+  "code": "13111202",
+  "title": "Polyurethane films",
+  "description": "Polyurethane film supplied for protective coatings and flexible applications.",
+  "exampleItems": [
+   "Protective film supply",
+   "Flexible membrane order",
+   "Industrial coating film"
+  ]
+ },
+ {
+  "code": "13111203",
+  "title": "Acetate films",
+  "description": "Acetate film supplied for packaging, printing and optical applications.",
+  "exampleItems": [
+   "Printing overlay film",
+   "Packaging window film",
+   "Optical-grade acetate order"
+  ]
+ },
+ {
+  "code": "14111501",
+  "title": "Onion skin paper",
+  "description": "Lightweight translucent paper used for drafting, copies and correspondence.",
+  "exampleItems": [
+   "Archival document paper",
+   "Drafting paper order",
+   "Legal correspondence stock"
+  ]
+ },
+ {
+  "code": "14111502",
+  "title": "Vellum paper",
+  "description": "Vellum-finish paper used for technical drawing and formal documents.",
+  "exampleItems": [
+   "Technical drawing stock",
+   "Certificate paper order",
+   "Architectural drafting supply"
+  ]
+ },
+ {
+  "code": "14111503",
+  "title": "Parchment paper",
+  "description": "Parchment-style paper used for certificates, menus and specialty printing.",
+  "exampleItems": [
+   "Certificate printing stock",
+   "Menu paper order",
+   "Specialty document supply"
+  ]
+ },
+ {
+  "code": "15101502",
+  "title": "Kerosene",
+  "description": "Kerosene fuel supplied for heating, lighting and industrial use.",
+  "exampleItems": [
+   "Site heating fuel supply",
+   "Industrial burner fuel",
+   "Backup lighting fuel order"
+  ]
+ },
+ {
+  "code": "15101503",
+  "title": "Naphtha",
+  "description": "Naphtha supplied as an industrial solvent and petrochemical feedstock.",
+  "exampleItems": [
+   "Industrial solvent supply",
+   "Petrochemical feedstock order",
+   "Cleaning solvent procurement"
+  ]
+ },
+ {
+  "code": "15101504",
+  "title": "Aviation fuel",
+  "description": "Aviation-grade fuel supplied for aircraft operations.",
+  "exampleItems": [
+   "Airport fuel supply contract",
+   "Charter fleet fuel order",
+   "Helicopter operations fuel"
+  ]
+ },
+ {
+  "code": "20101501",
+  "title": "Continuous mining equipment",
+  "description": "Continuous mining machines used to cut and extract coal or ore without blasting.",
+  "exampleItems": [
+   "Underground coal extraction unit",
+   "Ore face cutting machine",
+   "Quarry cutting equipment order"
+  ]
+ },
+ {
+  "code": "20101502",
+  "title": "Longwall shears",
+  "description": "Shearer equipment used in longwall coal mining operations.",
+  "exampleItems": [
+   "Longwall panel equipment order",
+   "Coal face shearer supply",
+   "Underground mining equipment upgrade"
+  ]
+ },
+ {
+  "code": "21101501",
+  "title": "Ploughs",
+  "description": "Ploughs used to turn and prepare soil ahead of planting.",
+  "exampleItems": [
+   "Farm tillage equipment order",
+   "Contract ploughing service",
+   "Estate ground preparation"
+  ]
+ },
+ {
+  "code": "21101502",
+  "title": "Harrows",
+  "description": "Harrows used to break up and level ploughed soil.",
+  "exampleItems": [
+   "Seedbed preparation equipment",
+   "Field levelling order",
+   "Agricultural contractor supply"
+  ]
+ },
+ {
+  "code": "21101503",
+  "title": "Cultivators",
+  "description": "Cultivators used for soil aeration and weed control between crop rows.",
+  "exampleItems": [
+   "Row-crop cultivation equipment",
+   "Weed control machinery order",
+   "Soil aeration tool supply"
+  ]
+ },
+ {
+  "code": "23101501",
+  "title": "Coping machines",
+  "description": "Coping machines used to cut profile joints in wood, stone or ceramic materials.",
+  "exampleItems": [
+   "Joinery workshop equipment",
+   "Stone fabrication machine order",
+   "Ceramic tile cutting equipment"
+  ]
+ },
+ {
+  "code": "23101513",
+  "title": "Milling machines",
+  "description": "Milling machines used to shape and finish wood, stone or metal stock.",
+  "exampleItems": [
+   "Workshop milling equipment order",
+   "Fabrication shop machine supply",
+   "Precision component milling unit"
+  ]
+ },
+ {
+  "code": "24101501",
+  "title": "Carts",
+  "description": "Manual or powered carts used to move goods within a warehouse or plant.",
+  "exampleItems": [
+   "Warehouse trolley order",
+   "Plant floor material cart",
+   "Distribution centre cart fleet"
+  ]
+ },
+ {
+  "code": "24101502",
+  "title": "Bulk transporters",
+  "description": "Bulk transporters used to move loose or bulk materials within a facility.",
+  "exampleItems": [
+   "Bulk goods transporter order",
+   "Aggregate handling equipment",
+   "Plant bulk material mover"
+  ]
+ },
+ {
+  "code": "24101503",
+  "title": "Dollies",
+  "description": "Dollies used to move heavy or awkward loads short distances.",
+  "exampleItems": [
+   "Equipment relocation dolly",
+   "Warehouse load mover",
+   "Furniture moving dolly order"
+  ]
+ },
+ {
+  "code": "26101501",
+  "title": "Hydraulic engines",
+  "description": "Hydraulic engines used to power industrial and mobile equipment.",
+  "exampleItems": [
+   "Plant machinery power unit",
+   "Mobile equipment engine order",
+   "Industrial hydraulic drive supply"
+  ]
+ },
+ {
+  "code": "26101502",
+  "title": "Pneumatic engines",
+  "description": "Pneumatic engines used to power tools and equipment in compressed-air systems.",
+  "exampleItems": [
+   "Compressed air tool drive",
+   "Plant pneumatic power unit",
+   "Workshop equipment engine order"
+  ]
+ },
+ {
+  "code": "26101503",
+  "title": "Gas engines",
+  "description": "Gas-fuelled engines used for stationary power and equipment drive.",
+  "exampleItems": [
+   "Backup generator engine",
+   "Plant power unit order",
+   "Stationary equipment drive supply"
+  ]
+ },
+ {
+  "code": "27111504",
+  "title": "Pocket knives",
+  "description": "Pocket knives supplied as general-purpose hand tools.",
+  "exampleItems": [
+   "Site toolkit supply",
+   "Maintenance crew hand tool",
+   "General workshop knife order"
+  ]
+ },
+ {
+  "code": "27111509",
+  "title": "Augers",
+  "description": "Hand or powered augers used for drilling holes in wood, ground or ice.",
+  "exampleItems": [
+   "Fence post hole auger",
+   "Ground drilling tool order",
+   "Site installation equipment"
+  ]
+ },
+ {
+  "code": "30111501",
+  "title": "Foamed concrete",
+  "description": "Lightweight foamed concrete used for insulation and void-filling in construction.",
+  "exampleItems": [
+   "Void-fill concrete order",
+   "Lightweight insulation pour",
+   "Foundation backfill material"
+  ]
+ },
+ {
+  "code": "30111502",
+  "title": "Conductive concrete",
+  "description": "Specialist concrete formulated to conduct electricity, used for grounding and de-icing.",
+  "exampleItems": [
+   "Grounding slab material",
+   "De-icing pavement pour",
+   "Specialist floor construction"
+  ]
+ },
+ {
+  "code": "30111503",
+  "title": "Insulating concrete",
+  "description": "Concrete formulated for thermal insulation in building construction.",
+  "exampleItems": [
+   "Insulated foundation pour",
+   "Thermal barrier construction",
+   "Energy-efficient slab material"
+  ]
+ },
+ {
+  "code": "31151902",
+  "title": "Leather straps",
+  "description": "Leather strapping used for securing, fastening or equipment assembly.",
+  "exampleItems": [
+   "Equipment securing strap",
+   "Fastening component order",
+   "Assembly line strap supply"
+  ]
+ },
+ {
+  "code": "31151904",
+  "title": "Plastic straps",
+  "description": "Plastic strapping used for packaging and load securing.",
+  "exampleItems": [
+   "Pallet strapping supply",
+   "Load securing strap order",
+   "Packaging line consumable"
+  ]
+ },
+ {
+  "code": "32121701",
+  "title": "Rectifiers",
+  "description": "Rectifier components used to convert alternating current to direct current.",
+  "exampleItems": [
+   "Power supply component order",
+   "Electronics assembly part",
+   "Circuit board component supply"
+  ]
+ },
+ {
+  "code": "32121702",
+  "title": "Inductors",
+  "description": "Inductor components used in electronic circuits for filtering and energy storage.",
+  "exampleItems": [
+   "Circuit board component order",
+   "Power electronics part",
+   "Filter component supply"
+  ]
+ },
+ {
+  "code": "32121703",
+  "title": "Ferrites",
+  "description": "Ferrite components used for electromagnetic interference suppression.",
+  "exampleItems": [
+   "EMI suppression component",
+   "Electronics assembly part",
+   "Signal filtering component order"
+  ]
+ },
+ {
+  "code": "39101601",
+  "title": "Halogen lamps",
+  "description": "Halogen lamps used for general and task lighting applications.",
+  "exampleItems": [
+   "Facility relamping order",
+   "Task lighting supply",
+   "Display lighting replacement"
+  ]
+ },
+ {
+  "code": "39101602",
+  "title": "Medical lamps",
+  "description": "Specialist lamps used in clinical and examination settings.",
+  "exampleItems": [
+   "Clinic examination lamp",
+   "Surgical lighting supply",
+   "Healthcare facility relamping"
+  ]
+ },
+ {
+  "code": "39101603",
+  "title": "Solar lamps",
+  "description": "Solar-powered lamps used for off-grid or outdoor lighting.",
+  "exampleItems": [
+   "Outdoor solar lighting order",
+   "Off-grid site lighting",
+   "Car park solar lamp supply"
+  ]
+ },
+ {
+  "code": "22101501",
+  "title": "Front end loaders",
+  "description": "Front end loaders used for moving and loading earth, aggregate and materials.",
+  "exampleItems": [
+   "Site earthworks equipment",
+   "Aggregate loading machine order",
+   "Plant hire loader supply"
+  ]
+ },
+ {
+  "code": "22101502",
+  "title": "Graders",
+  "description": "Motor graders used to level and shape ground for roads and site works.",
+  "exampleItems": [
+   "Road surface levelling equipment",
+   "Site grading machine order",
+   "Highway works plant hire"
+  ]
+ },
+ {
+  "code": "22101504",
+  "title": "Pile drivers",
+  "description": "Pile driving equipment used to install foundation piles.",
+  "exampleItems": [
+   "Foundation piling equipment",
+   "Marine piling machine order",
+   "Deep foundation works plant"
+  ]
+ },
+ {
+  "code": "25101501",
+  "title": "Minibuses",
+  "description": "Minibuses used for staff, passenger or shuttle transport.",
+  "exampleItems": [
+   "Staff shuttle minibus order",
+   "Site transport vehicle",
+   "Fleet minibus procurement"
+  ]
+ },
+ {
+  "code": "25101502",
+  "title": "Busses",
+  "description": "Buses used for scheduled or contracted passenger transport.",
+  "exampleItems": [
+   "Staff transport bus order",
+   "Contracted coach service vehicle",
+   "Fleet bus procurement"
+  ]
+ },
+ {
+  "code": "25101503",
+  "title": "Automobiles or cars",
+  "description": "Passenger cars procured for fleet, pool or business use.",
+  "exampleItems": [
+   "Company pool car order",
+   "Fleet vehicle procurement",
+   "Business lease car"
+  ]
+ },
+ {
+  "code": "40101503",
+  "title": "Vents",
+  "description": "Ventilation vents used to control airflow in buildings and equipment.",
+  "exampleItems": [
+   "HVAC vent supply",
+   "Building ventilation grille order",
+   "Plant airflow component"
+  ]
+ },
+ {
+  "code": "40101512",
+  "title": "Ventilation tube fittings",
+  "description": "Fittings used to join and route ventilation ductwork.",
+  "exampleItems": [
+   "Ductwork fitting supply",
+   "HVAC installation component",
+   "Ventilation system accessory order"
+  ]
+ },
+ {
+  "code": "95111503",
+  "title": "Access roads",
+  "description": "Access roads constructed or maintained to serve a site or facility.",
+  "exampleItems": [
+   "Site access road construction",
+   "Depot access road maintenance",
+   "Private road resurfacing"
+  ]
+ },
+ {
+  "code": "95111504",
+  "title": "Highway ramp or slip road",
+  "description": "Ramp or slip road infrastructure connecting to a main highway.",
+  "exampleItems": [
+   "Highway slip road construction",
+   "Interchange ramp works",
+   "Access ramp resurfacing project"
+  ]
+ },
+ {
+  "code": "41101502",
+  "title": "Stomachers",
+  "description": "Laboratory stomacher equipment used to homogenize samples for testing.",
+  "exampleItems": [
+   "Food testing lab equipment",
+   "Microbiology sample prep unit",
+   "QA laboratory equipment order"
+  ]
+ },
+ {
+  "code": "41101503",
+  "title": "Laboratory sprayers",
+  "description": "Sprayers used in laboratory sample preparation and application.",
+  "exampleItems": [
+   "Lab sample application tool",
+   "Testing facility equipment order",
+   "Research lab consumable"
+  ]
+ },
+ {
+  "code": "41101504",
+  "title": "Homogenizers",
+  "description": "Homogenizers used to blend and standardise laboratory samples.",
+  "exampleItems": [
+   "Sample prep equipment order",
+   "QA lab homogenizer supply",
+   "Research facility equipment"
+  ]
+ },
+ {
+  "code": "42121501",
+  "title": "Veterinary blood pressure testers",
+  "description": "Blood pressure testing equipment used in veterinary practice.",
+  "exampleItems": [
+   "Veterinary clinic equipment order",
+   "Animal health monitoring device",
+   "Practice equipment upgrade"
+  ]
+ },
+ {
+  "code": "42121506",
+  "title": "Veterinary surgical instrument and supply sets",
+  "description": "Surgical instrument sets used in veterinary procedures.",
+  "exampleItems": [
+   "Veterinary practice equipment order",
+   "Animal surgery instrument set",
+   "Clinic supply procurement"
+  ]
+ },
+ {
+  "code": "42121507",
+  "title": "Veterinary injection or suction units or accessories",
+  "description": "Injection and suction equipment used in veterinary treatment.",
+  "exampleItems": [
+   "Veterinary treatment equipment order",
+   "Clinic consumable supply",
+   "Animal care equipment procurement"
+  ]
+ },
+ {
+  "code": "51101602",
+  "title": "Eflornithine",
+  "description": "Pharmaceutical compound used in the treatment of certain parasitic infections.",
+  "exampleItems": [
+   "Hospital pharmacy stock order",
+   "Healthcare procurement line",
+   "Clinical supply contract"
+  ]
+ },
+ {
+  "code": "51101604",
+  "title": "Meglumine antimonate",
+  "description": "Pharmaceutical compound used in antiprotozoal treatment.",
+  "exampleItems": [
+   "Hospital pharmacy procurement",
+   "Clinical treatment supply",
+   "Healthcare stock order"
+  ]
+ },
+ {
+  "code": "51101607",
+  "title": "Calcium oxide",
+  "description": "Pharmaceutical-grade compound used in specific medical formulations.",
+  "exampleItems": [
+   "Pharmaceutical manufacturing input",
+   "Healthcare supply order",
+   "Clinical formulation ingredient"
+  ]
+ },
+ {
+  "code": "47101501",
+  "title": "Activated carbon equipment",
+  "description": "Activated carbon filtration equipment used in water treatment.",
+  "exampleItems": [
+   "Water treatment plant equipment",
+   "Filtration system upgrade",
+   "Site water purification order"
+  ]
+ },
+ {
+  "code": "47101502",
+  "title": "Ammonia removal equipment",
+  "description": "Equipment used to remove ammonia from water in treatment processes.",
+  "exampleItems": [
+   "Water treatment facility equipment",
+   "Effluent treatment upgrade",
+   "Site water quality equipment order"
+  ]
+ },
+ {
+  "code": "47101503",
+  "title": "Carbon filtration equipment",
+  "description": "Carbon filtration systems used to purify water supplies.",
+  "exampleItems": [
+   "Water treatment equipment order",
+   "Site filtration upgrade",
+   "Facility water purification system"
+  ]
+ },
+ {
+  "code": "48101501",
+  "title": "Commercial use bain maries",
+  "description": "Bain marie units used to keep food warm in commercial kitchens.",
+  "exampleItems": [
+   "Canteen kitchen equipment order",
+   "Catering equipment supply",
+   "Commercial kitchen fit-out item"
+  ]
+ },
+ {
+  "code": "48101502",
+  "title": "Commercial use barbeque ovens",
+  "description": "Commercial barbeque ovens used in catering and food service.",
+  "exampleItems": [
+   "Catering equipment order",
+   "Commercial kitchen appliance",
+   "Food service equipment supply"
+  ]
+ },
+ {
+  "code": "48101503",
+  "title": "Commercial use broilers",
+  "description": "Commercial broiler units used for high-volume food cooking.",
+  "exampleItems": [
+   "Canteen kitchen equipment",
+   "Catering appliance order",
+   "Commercial kitchen fit-out item"
+  ]
+ },
+ {
+  "code": "50121537",
+  "title": "Frozen fish",
+  "description": "Frozen fish products supplied for catering or retail use.",
+  "exampleItems": [
+   "Canteen food supply order",
+   "Catering ingredient contract",
+   "Institutional food procurement"
+  ]
+ },
+ {
+  "code": "50121538",
+  "title": "Shelf stable fish",
+  "description": "Shelf-stable fish products supplied for catering or retail use.",
+  "exampleItems": [
+   "Catering pantry stock order",
+   "Institutional food supply",
+   "Canteen ingredient contract"
+  ]
+ },
+ {
+  "code": "50121539",
+  "title": "Fresh fish",
+  "description": "Fresh fish products supplied for catering or retail use.",
+  "exampleItems": [
+   "Canteen fresh food order",
+   "Catering ingredient supply",
+   "Institutional kitchen procurement"
+  ]
+ },
+ {
+  "code": "43191501",
+  "title": "Mobile phones",
+  "description": "Mobile phones procured for staff or business communication use.",
+  "exampleItems": [
+   "Corporate mobile fleet order",
+   "Staff device procurement",
+   "Business communication equipment"
+  ]
+ },
+ {
+  "code": "43191502",
+  "title": "Pagers",
+  "description": "Pager devices used for alerting and short-message communication.",
+  "exampleItems": [
+   "Facility alert system device",
+   "On-call notification pager",
+   "Site communication equipment"
+  ]
+ },
+ {
+  "code": "43191503",
+  "title": "Pay phones",
+  "description": "Public or site pay phone units for coin or card-operated calls.",
+  "exampleItems": [
+   "Site public phone installation",
+   "Facility communication equipment",
+   "Public area phone unit"
+  ]
+ },
+ {
+  "code": "44101501",
+  "title": "Photocopiers",
+  "description": "Photocopiers procured for office document reproduction.",
+  "exampleItems": [
+   "Office equipment lease",
+   "Print room copier order",
+   "Facility equipment procurement"
+  ]
+ },
+ {
+  "code": "44101503",
+  "title": "Multifunction machines",
+  "description": "Multifunction print, scan and copy devices for office use.",
+  "exampleItems": [
+   "Office MFD lease",
+   "Print room equipment order",
+   "Facility device procurement"
+  ]
+ },
+ {
+  "code": "44101504",
+  "title": "Digital senders",
+  "description": "Digital sender devices used to scan and route documents electronically.",
+  "exampleItems": [
+   "Office document workflow equipment",
+   "Print room device order",
+   "Facility scanning equipment"
+  ]
+ },
+ {
+  "code": "45101501",
+  "title": "Heliographic printers",
+  "description": "Heliographic (diazo/blueprint) printers used for technical drawing reproduction.",
+  "exampleItems": [
+   "Drawing office equipment order",
+   "Technical print room machine",
+   "Archive reproduction equipment"
+  ]
+ },
+ {
+  "code": "45101502",
+  "title": "Offset printing presses",
+  "description": "Offset printing presses used for high-volume commercial printing.",
+  "exampleItems": [
+   "Print shop equipment order",
+   "Publishing press procurement",
+   "Commercial printing machine"
+  ]
+ },
+ {
+  "code": "45101503",
+  "title": "Letterpress equipment",
+  "description": "Letterpress printing equipment used for specialty printing.",
+  "exampleItems": [
+   "Specialty print shop equipment",
+   "Publishing house machine order",
+   "Print studio equipment procurement"
+  ]
+ },
+ {
+  "code": "55101501",
+  "title": "Charts or maps or atlases",
+  "description": "Printed charts, maps or atlases supplied for reference or navigation use.",
+  "exampleItems": [
+   "Site reference map order",
+   "Navigation chart supply",
+   "Facility reference material"
+  ]
+ },
+ {
+  "code": "55101502",
+  "title": "Directories",
+  "description": "Printed directories supplied for reference use.",
+  "exampleItems": [
+   "Business directory order",
+   "Reference material supply",
+   "Facility information resource"
+  ]
+ },
+ {
+  "code": "55101503",
+  "title": "Catalogs",
+  "description": "Printed catalogs supplied for product or service reference.",
+  "exampleItems": [
+   "Supplier catalog order",
+   "Reference material procurement",
+   "Marketing material supply"
+  ]
+ },
+ {
+  "code": "46101504",
+  "title": "Handguns",
+  "description": "Handguns procured for licensed law enforcement or security use.",
+  "exampleItems": [
+   "Security service equipment order",
+   "Law enforcement procurement",
+   "Licensed firearms supply"
+  ]
+ },
+ {
+  "code": "46101505",
+  "title": "Air rifles or air handguns",
+  "description": "Air-powered rifles or handguns used for controlled or training purposes.",
+  "exampleItems": [
+   "Training equipment order",
+   "Licensed pest control device",
+   "Controlled-use equipment supply"
+  ]
+ },
+ {
+  "code": "57010101",
+  "title": "Personal travel kits for UN staff",
+  "description": "Pre-packed personal kits issued to staff for field travel and deployment.",
+  "exampleItems": [
+   "Field deployment kit order",
+   "Staff travel supply pack",
+   "Emergency response kit procurement"
+  ]
+ },
+ {
+  "code": "57010102",
+  "title": "Field Kits for UN staff",
+  "description": "Field kits issued to staff operating in remote or emergency settings.",
+  "exampleItems": [
+   "Emergency field kit order",
+   "Remote deployment supply pack",
+   "Relief operation equipment"
+  ]
+ },
+ {
+  "code": "57010103",
+  "title": "Individual kit",
+  "description": "Individual survival or relief kit issued in emergency response operations.",
+  "exampleItems": [
+   "Disaster relief kit order",
+   "Emergency response supply pack",
+   "Field operation equipment"
+  ]
+ },
+ {
+  "code": "49101701",
+  "title": "Medals",
+  "description": "Medals supplied for recognition, awards or ceremonial use.",
+  "exampleItems": [
+   "Corporate recognition award order",
+   "Event medal supply",
+   "Ceremonial award procurement"
+  ]
+ },
+ {
+  "code": "49101702",
+  "title": "Trophies",
+  "description": "Trophies supplied for recognition or competition awards.",
+  "exampleItems": [
+   "Recognition programme award order",
+   "Event trophy supply",
+   "Corporate awards procurement"
+  ]
+ },
+ {
+  "code": "52121501",
+  "title": "Quilts",
+  "description": "Quilts supplied for residential, hospitality or institutional use.",
+  "exampleItems": [
+   "Hospitality linen order",
+   "Staff accommodation supply",
+   "Institutional bedding procurement"
+  ]
+ },
+ {
+  "code": "52121505",
+  "title": "Pillows",
+  "description": "Pillows supplied for residential, hospitality or institutional use.",
+  "exampleItems": [
+   "Hospitality supply order",
+   "Accommodation linen procurement",
+   "Institutional bedding supply"
+  ]
+ },
+ {
+  "code": "52121508",
+  "title": "Blankets",
+  "description": "Blankets supplied for residential, hospitality or institutional use.",
+  "exampleItems": [
+   "Accommodation linen order",
+   "Emergency supply procurement",
+   "Institutional bedding stock"
+  ]
+ },
+ {
+  "code": "53101806",
+  "title": "Poncho",
+  "description": "Poncho-style outerwear supplied for weather protection.",
+  "exampleItems": [
+   "Site PPE supply order",
+   "Outdoor worker clothing",
+   "Event weather-protection gear"
+  ]
+ },
+ {
+  "code": "53101807",
+  "title": "Jacket, Winter",
+  "description": "Winter jackets supplied for staff or site outerwear.",
+  "exampleItems": [
+   "Site workwear order",
+   "Staff uniform supply",
+   "Outdoor crew clothing procurement"
+  ]
+ },
+ {
+  "code": "54111601",
+  "title": "Wall clocks",
+  "description": "Wall clocks supplied for office, facility or public-area use.",
+  "exampleItems": [
+   "Office fit-out supply",
+   "Facility clock installation",
+   "Reception area equipment order"
+  ]
+ },
+ {
+  "code": "54111603",
+  "title": "Free standing clocks",
+  "description": "Free-standing clocks supplied for facility or public-area use.",
+  "exampleItems": [
+   "Facility fit-out procurement",
+   "Public area clock installation",
+   "Office equipment supply"
+  ]
+ },
+ {
+  "code": "56101502",
+  "title": "Sofas",
+  "description": "Sofas supplied for office, hospitality or reception furnishing.",
+  "exampleItems": [
+   "Reception area furniture order",
+   "Office breakout space supply",
+   "Hospitality furnishing procurement"
+  ]
+ },
+ {
+  "code": "56101503",
+  "title": "Coat racks",
+  "description": "Coat racks supplied for office or facility cloakroom use.",
+  "exampleItems": [
+   "Office fit-out furniture",
+   "Facility cloakroom supply",
+   "Reception furnishing order"
+  ]
+ },
+ {
+  "code": "56101504",
+  "title": "Chairs",
+  "description": "Chairs supplied for office, meeting or public-area use.",
+  "exampleItems": [
+   "Office furniture order",
+   "Meeting room seating supply",
+   "Facility fit-out procurement"
+  ]
+ },
+ {
+  "code": "60103701",
+  "title": "Resources for learning to speak Spanish",
+  "description": "Teaching materials and resources for learning Spanish.",
+  "exampleItems": [
+   "Corporate training material order",
+   "Language course resource supply",
+   "Educational programme procurement"
+  ]
+ },
+ {
+  "code": "60103702",
+  "title": "Resources for learning to speak French",
+  "description": "Teaching materials and resources for learning French.",
+  "exampleItems": [
+   "Corporate training material order",
+   "Language course resource supply",
+   "Educational programme procurement"
+  ]
+ },
+ {
+  "code": "60103704",
+  "title": "Resources for learning to speak English",
+  "description": "Teaching materials and resources for learning English.",
+  "exampleItems": [
+   "Corporate training material order",
+   "Language course resource supply",
+   "Educational programme procurement"
+  ]
+ },
+ {
+  "code": "64101701",
+  "title": "Bill paying application",
+  "description": "Software or service enabling electronic bill payment.",
+  "exampleItems": [
+   "Finance system module order",
+   "Payment platform procurement",
+   "Accounts payable tool"
+  ]
+ },
+ {
+  "code": "64101702",
+  "title": "Currency exchange application",
+  "description": "Software or service enabling currency exchange transactions.",
+  "exampleItems": [
+   "Treasury system module",
+   "Finance platform procurement",
+   "Cross-border payment tool"
+  ]
+ },
+ {
+  "code": "64101703",
+  "title": "Money transfer application",
+  "description": "Software or service enabling electronic money transfers.",
+  "exampleItems": [
+   "Payments platform procurement",
+   "Finance system module order",
+   "Treasury service contract"
+  ]
+ },
+ {
+  "code": "70101501",
+  "title": "Commercial fishing operations",
+  "description": "Contracted commercial fishing operation services.",
+  "exampleItems": [
+   "Fishing fleet contract",
+   "Aquaculture operation service",
+   "Seafood supply chain contract"
+  ]
+ },
+ {
+  "code": "70101502",
+  "title": "Fishing port services",
+  "description": "Port services supporting commercial fishing fleet operations.",
+  "exampleItems": [
+   "Port facility service contract",
+   "Fishing fleet support service",
+   "Harbour operations agreement"
+  ]
+ },
+ {
+  "code": "70101503",
+  "title": "Fishing onshore facilities",
+  "description": "Onshore facility services supporting fishing operations.",
+  "exampleItems": [
+   "Processing facility service",
+   "Fishing fleet support contract",
+   "Coastal facility operation agreement"
+  ]
+ },
+ {
+  "code": "71141103",
+  "title": "Well abandonment platform removal services",
+  "description": "Services to decommission and remove oil or gas platforms at end of well life.",
+  "exampleItems": [
+   "Offshore decommissioning contract",
+   "Platform removal service",
+   "End-of-life well services agreement"
+  ]
+ },
+ {
+  "code": "72101505",
+  "title": "Locksmith services",
+  "description": "Supply, repair and rekeying of locks, cylinders and access hardware across a building estate.",
+  "exampleItems": [
+   "Lock change on tenant turnover",
+   "Master key system rekey",
+   "Emergency lockout callout",
+   "Digital lock retrofit",
+   "Panic bar repair"
+  ]
+ },
+ {
+  "code": "72101506",
+  "title": "Elevator maintenance services",
+  "description": "Routine servicing, callout and compliance maintenance of passenger and goods lifts.",
+  "exampleItems": [
+   "Monthly lift service visit",
+   "Lift breakdown callout",
+   "LOLER inspection support",
+   "Door sensor adjustment",
+   "Lift modernisation survey"
+  ]
+ },
+ {
+  "code": "72101509",
+  "title": "Fire protection system and equipment maintenance or repair service",
+  "description": "Inspection, testing and repair of fire alarms, extinguishers and suppression equipment.",
+  "exampleItems": [
+   "Annual fire alarm test",
+   "Extinguisher recharge and swap",
+   "Sprinkler head replacement",
+   "Fire panel fault repair",
+   "Smoke detector servicing"
+  ]
+ },
+ {
+  "code": "72101510",
+  "title": "Plumbing system maintenance or repair",
+  "description": "Reactive and planned maintenance of pipework, fittings and plumbing fixtures.",
+  "exampleItems": [
+   "Burst pipe repair",
+   "Tap and valve replacement",
+   "Blocked drain clearance",
+   "Cistern fault fix",
+   "Leak detection callout"
+  ]
+ },
+ {
+  "code": "72102902",
+  "title": "Landscaping services",
+  "description": "Planting, planting maintenance and grounds upkeep for commercial and institutional sites.",
+  "exampleItems": [
+   "Grounds maintenance contract",
+   "Seasonal planting scheme",
+   "Hedge and shrub trimming",
+   "Turf treatment programme",
+   "Site tree survey"
+  ]
+ },
+ {
+  "code": "72102903",
+  "title": "Snow removal services",
+  "description": "Clearance and gritting of car parks, walkways and access roads in winter conditions.",
+  "exampleItems": [
+   "Winter gritting contract",
+   "Car park snow clearance",
+   "Priority walkway gritting",
+   "Salt bin refill service",
+   "Weather-triggered callout"
+  ]
+ },
+ {
+  "code": "72102905",
+  "title": "Exterior grounds maintenance",
+  "description": "General upkeep of external site areas including litter picking and boundary maintenance.",
+  "exampleItems": [
+   "Litter picking round",
+   "Boundary fence check",
+   "External bin store upkeep",
+   "Car park line repainting",
+   "Site signage maintenance"
+  ]
+ },
+ {
+  "code": "72121101",
+  "title": "Commercial and office building new construction service",
+  "description": "Ground-up construction of new commercial office premises.",
+  "exampleItems": [
+   "Corporate HQ build",
+   "Business park unit",
+   "Speculative office shell",
+   "Fit-out ready office build",
+   "Multi-storey office tower"
+  ]
+ },
+ {
+  "code": "72121103",
+  "title": "Commercial and office building renovation and repair service",
+  "description": "Refurbishment and repair of existing commercial and office buildings.",
+  "exampleItems": [
+   "Office refurbishment project",
+   "Reception area renovation",
+   "Building envelope repair",
+   "Floor-by-floor refit",
+   "Post-tenancy restoration"
+  ]
+ },
+ {
+  "code": "72121105",
+  "title": "Shopping center and mall construction service",
+  "description": "Construction of retail centres, malls and associated common areas.",
+  "exampleItems": [
+   "Shopping centre new build",
+   "Mall common-area works",
+   "Retail unit shell construction",
+   "Food court build-out",
+   "Anchor store construction"
+  ]
+ },
+ {
+  "code": "72121006",
+  "title": "Prefabricated industrial building erection and remodeling service",
+  "description": "Erection and reconfiguration of prefabricated industrial structures.",
+  "exampleItems": [
+   "Prefab warehouse erection",
+   "Modular plant building",
+   "Steel-frame unit assembly",
+   "Industrial shell reconfiguration",
+   "Prefabricated extension"
+  ]
+ },
+ {
+  "code": "72121008",
+  "title": "Warehouse construction and remodeling service",
+  "description": "New build and remodelling of warehouse and distribution facilities.",
+  "exampleItems": [
+   "Distribution centre build",
+   "Warehouse mezzanine addition",
+   "Loading bay construction",
+   "Cold store conversion",
+   "Racking bay reconfiguration"
+  ]
+ },
+ {
+  "code": "72151201",
+  "title": "HVAC mechanical construction service",
+  "description": "Installation of mechanical HVAC plant and associated pipework.",
+  "exampleItems": [
+   "Chiller installation",
+   "AHU mechanical fit",
+   "Plant room build-out",
+   "Boiler house construction",
+   "Mechanical ventilation install"
+  ]
+ },
+ {
+  "code": "72151204",
+  "title": "HVAC ventilation and duct work construction service",
+  "description": "Design-build and installation of ductwork and ventilation distribution.",
+  "exampleItems": [
+   "Ductwork installation",
+   "Extract ventilation fit-out",
+   "Riser ducting works",
+   "Kitchen extract system",
+   "Fresh air intake install"
+  ]
+ },
+ {
+  "code": "72151207",
+  "title": "Heating and cooling and air conditioning HVAC installation and maintenance service",
+  "description": "Combined installation and ongoing maintenance of HVAC systems.",
+  "exampleItems": [
+   "HVAC PPM contract",
+   "VRF system install and service",
+   "Split unit installation",
+   "Annual HVAC health check",
+   "Controls commissioning"
+  ]
+ },
+ {
+  "code": "72151501",
+  "title": "Lighting installation services",
+  "description": "Supply and installation of interior and exterior lighting systems.",
+  "exampleItems": [
+   "LED retrofit installation",
+   "Office lighting fit-out",
+   "Car park lighting install",
+   "Emergency lighting install",
+   "External floodlight installation"
+  ]
+ },
+ {
+  "code": "72151511",
+  "title": "Lighting system maintenance or repair service",
+  "description": "Lamp replacement, fault-finding and repair of lighting installations.",
+  "exampleItems": [
+   "Lamp replacement programme",
+   "Lighting fault callout",
+   "Emergency light testing",
+   "Sensor and control repair",
+   "Luminaire cleaning and check"
+  ]
+ },
+ {
+  "code": "72151515",
+  "title": "Electrical inspection service",
+  "description": "Periodic inspection and testing of fixed electrical installations.",
+  "exampleItems": [
+   "EICR inspection",
+   "PAT testing round",
+   "Distribution board inspection",
+   "Earthing system check",
+   "Thermal imaging survey"
+  ]
+ },
+ {
+  "code": "73152101",
+  "title": "Manufacturing equipment maintenance services",
+  "description": "Planned maintenance of production line machinery and plant.",
+  "exampleItems": [
+   "Production line PPM contract",
+   "Conveyor system maintenance",
+   "Packaging line servicing",
+   "Plant lubrication programme",
+   "Preventive maintenance scheduling"
+  ]
+ },
+ {
+  "code": "73152102",
+  "title": "Manufacturing equipment repair services",
+  "description": "Reactive repair of faulty or failed manufacturing equipment.",
+  "exampleItems": [
+   "Breakdown repair callout",
+   "Motor and drive repair",
+   "Conveyor belt replacement",
+   "Hydraulic system repair",
+   "Emergency line repair"
+  ]
+ },
+ {
+  "code": "73152108",
+  "title": "Electrical equipment maintenance and repair service",
+  "description": "Maintenance and repair of electrical plant used in manufacturing.",
+  "exampleItems": [
+   "Switchgear maintenance",
+   "Control panel repair",
+   "Motor rewind service",
+   "Electrical fault diagnosis",
+   "Panel upgrade works"
+  ]
+ },
+ {
+  "code": "73151501",
+  "title": "Assembly line work",
+  "description": "Contracted labour or line-management support for product assembly.",
+  "exampleItems": [
+   "Contract assembly line staffing",
+   "Sub-assembly production run",
+   "Kitting and assembly service",
+   "Seasonal assembly capacity",
+   "Assembly line supervision"
+  ]
+ },
+ {
+  "code": "73151502",
+  "title": "Joint sealing services",
+  "description": "Application of sealants and joint treatments in production processes.",
+  "exampleItems": [
+   "Weld seam sealing",
+   "Panel joint sealing",
+   "Gasket sealing service",
+   "Enclosure sealing treatment",
+   "Weatherproof joint sealing"
+  ]
+ },
+ {
+  "code": "73171501",
+  "title": "Power generation or transmission or distribution equipment manufacture services",
+  "description": "Contract manufacture of power generation and distribution equipment.",
+  "exampleItems": [
+   "Switchgear manufacture",
+   "Transformer production run",
+   "Generator set assembly",
+   "Distribution panel manufacture",
+   "Cabling assembly production"
+  ]
+ },
+ {
+  "code": "73171507",
+  "title": "Electrical household appliances manufacture services",
+  "description": "Contract manufacture of household electrical appliances.",
+  "exampleItems": [
+   "Appliance sub-assembly production",
+   "White goods component manufacture",
+   "Small appliance assembly run",
+   "Appliance housing production",
+   "Appliance testing and packout"
+  ]
+ },
+ {
+  "code": "73171511",
+  "title": "Electronic equipment manufacture services",
+  "description": "Contract manufacture of electronic devices and components.",
+  "exampleItems": [
+   "PCB assembly service",
+   "Electronic enclosure manufacture",
+   "Device sub-assembly production",
+   "Cable and harness manufacture",
+   "Electronics box-build service"
+  ]
+ },
+ {
+  "code": "73171602",
+  "title": "Medical or dental equipment manufacture services",
+  "description": "Contract manufacture of medical and dental instruments and devices.",
+  "exampleItems": [
+   "Medical device sub-assembly",
+   "Dental instrument production",
+   "Diagnostic equipment manufacture",
+   "Surgical tool production run",
+   "Medical device packaging"
+  ]
+ },
+ {
+  "code": "73171605",
+  "title": "Laboratory equipment manufacture services",
+  "description": "Contract manufacture of laboratory instruments and apparatus.",
+  "exampleItems": [
+   "Lab instrument assembly",
+   "Test rig fabrication",
+   "Calibration equipment manufacture",
+   "Scientific apparatus production",
+   "Lab equipment housing manufacture"
+  ]
+ },
+ {
+  "code": "76101601",
+  "title": "Radioactive decontamination services",
+  "description": "Specialist decontamination of surfaces and materials affected by radioactive contamination.",
+  "exampleItems": [
+   "Radiation source cleanup",
+   "Lab decontamination",
+   "Contaminated equipment disposal",
+   "Radiological survey and clean",
+   "Controlled area decontamination"
+  ]
+ },
+ {
+  "code": "76101602",
+  "title": "Asbestos removal or encapsulation",
+  "description": "Licensed removal or encapsulation of asbestos-containing materials.",
+  "exampleItems": [
+   "ACM removal project",
+   "Asbestos encapsulation works",
+   "Licensed strip-out",
+   "AIB removal",
+   "Asbestos survey follow-up removal"
+  ]
+ },
+ {
+  "code": "76111501",
+  "title": "Building cleaning services",
+  "description": "Routine cleaning of interior building spaces including offices and common areas.",
+  "exampleItems": [
+   "Daily office cleaning",
+   "Common area cleaning contract",
+   "Reception cleaning service",
+   "Out-of-hours office clean",
+   "Multi-site cleaning contract"
+  ]
+ },
+ {
+  "code": "76111504",
+  "title": "Window or window blind cleaning services",
+  "description": "Cleaning of internal and external glazing and window blinds.",
+  "exampleItems": [
+   "External facade window clean",
+   "Internal glass partition clean",
+   "Blind dusting and clean",
+   "High-rise window cleaning",
+   "Atrium glazing clean"
+  ]
+ },
+ {
+  "code": "76111505",
+  "title": "Fabric and furniture cleaning services",
+  "description": "Deep cleaning of upholstery, carpets and soft furnishings.",
+  "exampleItems": [
+   "Office chair upholstery clean",
+   "Carpet deep clean",
+   "Curtain and blind steam clean",
+   "Reception sofa cleaning",
+   "Conference room fabric refresh"
+  ]
+ },
+ {
+  "code": "76111602",
+  "title": "Air duct cleaning",
+  "description": "Cleaning and decontamination of ventilation ductwork.",
+  "exampleItems": [
+   "HVAC duct clean",
+   "Kitchen extract duct clean",
+   "Air handling unit clean",
+   "Riser duct decontamination",
+   "Post-refurbishment duct clean"
+  ]
+ },
+ {
+  "code": "76111603",
+  "title": "Chimney cleaning",
+  "description": "Sweeping and inspection of chimneys and flues.",
+  "exampleItems": [
+   "Boiler flue sweep",
+   "Commercial kitchen chimney clean",
+   "Annual flue inspection",
+   "Chimney liner check",
+   "Soot and creosote removal"
+  ]
+ },
+ {
+  "code": "76111604",
+  "title": "Floor waxing or carpet cleaning",
+  "description": "Machine cleaning, waxing and restoration of hard and soft floor surfaces.",
+  "exampleItems": [
+   "Warehouse floor scrub and wax",
+   "Corridor carpet deep clean",
+   "Showroom floor polish",
+   "Stripping and resealing",
+   "Stain treatment service"
+  ]
+ },
+ {
+  "code": "76121501",
+  "title": "Garbage collection or destruction or processing or disposal",
+  "description": "Scheduled collection and disposal of general commercial waste.",
+  "exampleItems": [
+   "Weekly bin collection",
+   "Compactor emptying service",
+   "Bulk waste collection",
+   "Trade waste agreement",
+   "Skip hire and collection"
+  ]
+ },
+ {
+  "code": "76121502",
+  "title": "Liquid waste collection or processing or disposal",
+  "description": "Collection and treatment of non-hazardous liquid waste streams.",
+  "exampleItems": [
+   "Grease trap emptying",
+   "Interceptor tank emptying",
+   "Wastewater tanker collection",
+   "Sludge removal service",
+   "Effluent collection contract"
+  ]
+ },
+ {
+  "code": "76121504",
+  "title": "Tire collection and disposal",
+  "description": "Collection and licensed disposal or recycling of waste tyres.",
+  "exampleItems": [
+   "Fleet tyre disposal",
+   "Bulk tyre collection",
+   "Tyre recycling service",
+   "Depot tyre clearance",
+   "End-of-life tyre uplift"
+  ]
+ },
+ {
+  "code": "76121901",
+  "title": "Medical waste disposal",
+  "description": "Collection and licensed disposal of clinical and medical waste.",
+  "exampleItems": [
+   "Clinical waste collection",
+   "Sharps bin uplift",
+   "Pharmaceutical waste disposal",
+   "Offensive waste collection",
+   "Site clinical waste contract"
+  ]
+ },
+ {
+  "code": "76121902",
+  "title": "Acid waste collection or disposal",
+  "description": "Collection and treatment of acidic and corrosive waste streams.",
+  "exampleItems": [
+   "Laboratory acid waste uplift",
+   "Battery acid disposal",
+   "Corrosive liquid collection",
+   "Neutralisation and disposal service",
+   "Chemical store clearance"
+  ]
+ },
+ {
+  "code": "77101501",
+  "title": "Risk or hazard assessment",
+  "description": "Environmental risk or hazard assessment services.",
+  "exampleItems": [
+   "Site environmental audit",
+   "Compliance risk assessment",
+   "Development impact study"
+  ]
+ },
+ {
+  "code": "77101502",
+  "title": "Environmental standards",
+  "description": "Advisory services on environmental compliance standards.",
+  "exampleItems": [
+   "Compliance advisory engagement",
+   "Regulatory standards review",
+   "Environmental policy consultation"
+  ]
+ },
+ {
+  "code": "77101503",
+  "title": "Environmental indicators analysis",
+  "description": "Analysis services tracking environmental performance indicators.",
+  "exampleItems": [
+   "Sustainability reporting service",
+   "Environmental KPI analysis",
+   "ESG data assessment"
+  ]
+ },
+ {
+  "code": "78101801",
+  "title": "Local area trucking services",
+  "description": "Local delivery of goods by road within a defined regional area.",
+  "exampleItems": [
+   "Local pallet delivery",
+   "Same-city multi-drop run",
+   "Local depot-to-store transfer",
+   "Regional distribution run",
+   "Short-haul goods delivery"
+  ]
+ },
+ {
+  "code": "78101802",
+  "title": "Regional or national trucking services",
+  "description": "Longer-distance road haulage across regions or nationally.",
+  "exampleItems": [
+   "FTL national haulage",
+   "Cross-country distribution",
+   "National pallet network service",
+   "Long-haul freight movement",
+   "Trunking service between depots"
+  ]
+ },
+ {
+  "code": "78101804",
+  "title": "Relocation services",
+  "description": "Removal and relocation of office, site or household goods.",
+  "exampleItems": [
+   "Office relocation project",
+   "Site equipment move",
+   "Archive and records relocation",
+   "Furniture removal and reinstall",
+   "Multi-site consolidation move"
+  ]
+ },
+ {
+  "code": "78102201",
+  "title": "National postal delivery services",
+  "description": "Standard national postal delivery of letters and parcels.",
+  "exampleItems": [
+   "Bulk mail dispatch",
+   "Standard parcel post",
+   "Franking and mailroom service",
+   "Nationwide letter delivery",
+   "Outbound invoice mailing"
+  ]
+ },
+ {
+  "code": "78102204",
+  "title": "Letter or small parcel worldwide delivery services",
+  "description": "International courier delivery of letters and small parcels.",
+  "exampleItems": [
+   "International courier dispatch",
+   "Cross-border parcel delivery",
+   "Time-critical international shipment",
+   "Export documentation courier",
+   "Global small-parcel network"
+  ]
+ },
+ {
+  "code": "78102205",
+  "title": "Letter or small parcel local delivery services",
+  "description": "Same-area courier delivery of letters and small parcels.",
+  "exampleItems": [
+   "Same-day local courier",
+   "Urgent document delivery",
+   "Inter-site parcel run",
+   "Local same-day parcel service",
+   "Legal document courier"
+  ]
+ },
+ {
+  "code": "78111802",
+  "title": "Scheduled bus services",
+  "description": "Fixed-route scheduled bus services for staff or public transport.",
+  "exampleItems": [
+   "Staff shuttle bus route",
+   "Site-to-station shuttle",
+   "Scheduled works bus service",
+   "Campus shuttle route",
+   "Fixed-schedule coach route"
+  ]
+ },
+ {
+  "code": "78111804",
+  "title": "Taxicab services",
+  "description": "On-demand taxi transport for business or site travel.",
+  "exampleItems": [
+   "Corporate taxi account",
+   "Airport transfer booking",
+   "On-site visitor taxi service",
+   "Late-shift staff taxi",
+   "Client meeting transfer"
+  ]
+ },
+ {
+  "code": "78111808",
+  "title": "Vehicle rental",
+  "description": "Short and medium-term rental of vehicles for business use.",
+  "exampleItems": [
+   "Pool car rental",
+   "Van hire for site visits",
+   "Short-term fleet top-up",
+   "Event vehicle rental",
+   "Project vehicle hire"
+  ]
+ },
+ {
+  "code": "78111502",
+  "title": "Commercial airplane travel",
+  "description": "Scheduled commercial air travel for business purposes.",
+  "exampleItems": [
+   "Business travel booking",
+   "Conference travel arrangement",
+   "Multi-site inspection flights",
+   "International client visit travel",
+   "Site audit travel booking"
+  ]
+ },
+ {
+  "code": "78111505",
+  "title": "Passenger aircraft rental or leasing service",
+  "description": "Chartered or leased aircraft for passenger transport.",
+  "exampleItems": [
+   "Executive charter flight",
+   "Group site-visit charter",
+   "Regional charter service",
+   "VIP transfer flight",
+   "Time-critical charter booking"
+  ]
+ },
+ {
+  "code": "78131601",
+  "title": "Palletized cargo storage",
+  "description": "Storage of palletised goods in general warehouse conditions.",
+  "exampleItems": [
+   "Pallet storage contract",
+   "Inventory buffer storage",
+   "Seasonal stock storage",
+   "Cross-dock pallet holding",
+   "Overflow warehouse storage"
+  ]
+ },
+ {
+  "code": "78131602",
+  "title": "File archive storage",
+  "description": "Off-site storage of physical records and archive boxes.",
+  "exampleItems": [
+   "Archive box storage contract",
+   "Records retention storage",
+   "Deed and title storage",
+   "Scan-on-demand archive service",
+   "Retrieval and re-file service"
+  ]
+ },
+ {
+  "code": "78131603",
+  "title": "Furniture storage",
+  "description": "Storage of office or household furniture during moves or refits.",
+  "exampleItems": [
+   "Office decant furniture storage",
+   "Refit interim storage",
+   "Surplus furniture storage",
+   "Furniture storage during relocation",
+   "Short-term storage for refurbishment"
+  ]
+ },
+ {
+  "code": "78131801",
+  "title": "Refrigerated storage",
+  "description": "Chilled or frozen storage for temperature-sensitive goods.",
+  "exampleItems": [
+   "Cold chain storage contract",
+   "Frozen goods storage",
+   "Pharmaceutical cold store",
+   "Chilled produce holding",
+   "Vaccine storage facility"
+  ]
+ },
+ {
+  "code": "78131803",
+  "title": "Hazardous materials storage",
+  "description": "Licensed storage of hazardous or controlled substances.",
+  "exampleItems": [
+   "Chemical store contract",
+   "Flammable liquids storage",
+   "COSHH-compliant storage unit",
+   "Hazardous goods warehousing",
+   "Controlled substance store"
+  ]
+ },
+ {
+  "code": "78131804",
+  "title": "Document storage services",
+  "description": "Secure storage of sensitive or confidential documents.",
+  "exampleItems": [
+   "Confidential records storage",
+   "Secure document vault",
+   "Compliance document storage",
+   "Contract archive storage",
+   "Data protection-compliant storage"
+  ]
+ },
+ {
+  "code": "80101504",
+  "title": "Strategic planning consultation services",
+  "description": "Advisory support for corporate and functional strategy development.",
+  "exampleItems": [
+   "Category strategy workshop",
+   "Three-year business plan support",
+   "Operating model review",
+   "Board strategy day facilitation",
+   "Market entry strategy"
+  ]
+ },
+ {
+  "code": "80101507",
+  "title": "Information technology consultation services",
+  "description": "Advisory services on IT strategy, systems selection and architecture.",
+  "exampleItems": [
+   "ERP selection advisory",
+   "IT roadmap consultation",
+   "Data architecture review",
+   "Systems integration advisory",
+   "Digital transformation consulting"
+  ]
+ },
+ {
+  "code": "80101510",
+  "title": "Risk management consultation service",
+  "description": "Assessment and advisory on organisational and operational risk.",
+  "exampleItems": [
+   "Enterprise risk assessment",
+   "Supplier risk review",
+   "Business continuity advisory",
+   "Compliance risk audit",
+   "Contract risk assessment"
+  ]
+ },
+ {
+  "code": "80101704",
+  "title": "Supply chain analysis or re engineering services",
+  "description": "Analysis and redesign of supply chain and procurement processes.",
+  "exampleItems": [
+   "Spend analysis project",
+   "Supplier rationalisation study",
+   "Category re-engineering",
+   "Tail spend consolidation",
+   "Procurement process redesign"
+  ]
+ },
+ {
+  "code": "80101706",
+  "title": "Professional procurement services",
+  "description": "Outsourced or advisory procurement execution and category management.",
+  "exampleItems": [
+   "Interim procurement support",
+   "Category management service",
+   "Sourcing event management",
+   "Contract negotiation support",
+   "Procurement data enrichment project"
+  ]
+ },
+ {
+  "code": "80111501",
+  "title": "Management development",
+  "description": "Structured development programmes for managers and emerging leaders.",
+  "exampleItems": [
+   "Leadership accelerator programme",
+   "First-time manager training",
+   "360-degree feedback programme",
+   "Coaching and mentoring scheme",
+   "Succession planning support"
+  ]
+ },
+ {
+  "code": "80111504",
+  "title": "Labor training or development",
+  "description": "Skills training and development for operational and frontline staff.",
+  "exampleItems": [
+   "Site induction training",
+   "Health and safety training",
+   "Technical skills course",
+   "Apprenticeship programme",
+   "Compliance refresher training"
+  ]
+ },
+ {
+  "code": "80111701",
+  "title": "Staff recruiting services",
+  "description": "Search and selection support for permanent and contract roles.",
+  "exampleItems": [
+   "Procurement manager search",
+   "FM team recruitment",
+   "Category manager placement",
+   "Graduate recruitment campaign",
+   "Volume hiring support"
+  ]
+ },
+ {
+  "code": "80111707",
+  "title": "Permanent technical staffing needs",
+  "description": "Recruitment of permanent staff into technical and specialist roles.",
+  "exampleItems": [
+   "Data analyst hire",
+   "Engineering technician recruitment",
+   "Systems administrator search",
+   "Technical project manager hire",
+   "Specialist trades recruitment"
+  ]
+ },
+ {
+  "code": "80111709",
+  "title": "Permanent medical staff needs",
+  "description": "Recruitment of permanent clinical and medical personnel.",
+  "exampleItems": [
+   "Occupational health nurse hire",
+   "Site medic recruitment",
+   "Clinical lead placement",
+   "Healthcare facility staffing",
+   "Medical officer recruitment"
+  ]
+ },
+ {
+  "code": "81101505",
+  "title": "Structural engineering",
+  "description": "Structural design and assessment for buildings and infrastructure.",
+  "exampleItems": [
+   "Structural calculations package",
+   "Steel frame design",
+   "Foundation design review",
+   "Structural condition survey",
+   "Load-bearing wall assessment"
+  ]
+ },
+ {
+  "code": "81101508",
+  "title": "Architectural engineering",
+  "description": "Engineering input into architectural design and building systems.",
+  "exampleItems": [
+   "Building services integration",
+   "Facade engineering support",
+   "Architectural technical design",
+   "Building envelope engineering",
+   "Design coordination service"
+  ]
+ },
+ {
+  "code": "81101513",
+  "title": "Building construction management",
+  "description": "Management and oversight of building construction projects.",
+  "exampleItems": [
+   "Site construction management",
+   "Principal contractor role",
+   "Build programme management",
+   "Construction quality oversight",
+   "Handover and snagging management"
+  ]
+ },
+ {
+  "code": "81101526",
+  "title": "Quantity surveying service",
+  "description": "Cost estimation, measurement and contract administration for construction.",
+  "exampleItems": [
+   "Cost plan preparation",
+   "Bill of quantities production",
+   "Contract administration service",
+   "Valuation and payment certification",
+   "Final account settlement"
+  ]
+ },
+ {
+  "code": "81101701",
+  "title": "Electrical engineering services",
+  "description": "Design and technical engineering of electrical systems.",
+  "exampleItems": [
+   "Electrical design package",
+   "Load calculation and design",
+   "Switchgear specification",
+   "Electrical systems review",
+   "Distribution network design"
+  ]
+ },
+ {
+  "code": "81101703",
+  "title": "Engineering testing services",
+  "description": "Testing and validation of engineered systems and components.",
+  "exampleItems": [
+   "Commissioning test programme",
+   "Systems performance testing",
+   "Load testing service",
+   "Compliance test certification",
+   "Factory acceptance testing"
+  ]
+ },
+ {
+  "code": "81111504",
+  "title": "Application programming services",
+  "description": "Custom software development for business applications.",
+  "exampleItems": [
+   "Web application build",
+   "Internal tool development",
+   "API development project",
+   "Legacy system modernisation",
+   "Custom reporting tool build"
+  ]
+ },
+ {
+  "code": "81111507",
+  "title": "ERP or database applications programming services",
+  "description": "Development and configuration of ERP and database applications.",
+  "exampleItems": [
+   "ERP module configuration",
+   "Database application build",
+   "SAP customisation project",
+   "Data model design and build",
+   "ERP integration development"
+  ]
+ },
+ {
+  "code": "81111509",
+  "title": "Internet or intranet client application development services",
+  "description": "Development of web-based client applications and portals.",
+  "exampleItems": [
+   "Supplier portal build",
+   "Internal intranet development",
+   "Customer self-service portal",
+   "Web dashboard development",
+   "Client-facing web app build"
+  ]
+ },
+ {
+  "code": "81112204",
+  "title": "Operating system software maintenance",
+  "description": "Ongoing maintenance and patching of operating system software.",
+  "exampleItems": [
+   "OS patching service",
+   "Server OS maintenance contract",
+   "Endpoint OS update management",
+   "Security patch rollout",
+   "OS upgrade project support"
+  ]
+ },
+ {
+  "code": "81112211",
+  "title": "Enterprise resource planning software maintenance",
+  "description": "Maintenance and support of ERP software platforms.",
+  "exampleItems": [
+   "ERP support contract",
+   "SAP maintenance agreement",
+   "ERP patch and upgrade support",
+   "ERP helpdesk service",
+   "ERP performance tuning"
+  ]
+ },
+ {
+  "code": "81112213",
+  "title": "Accounting software maintenance",
+  "description": "Maintenance and support of financial and accounting software.",
+  "exampleItems": [
+   "Finance system support contract",
+   "Accounting software upgrade",
+   "Ledger system maintenance",
+   "Payroll software support",
+   "Financial reporting tool maintenance"
+  ]
+ },
+ {
+  "code": "82101701",
+  "title": "Banner advertising services",
+  "description": "Aerial banner advertising services for events or campaigns.",
+  "exampleItems": [
+   "Event promotion service",
+   "Aerial marketing campaign",
+   "Outdoor advertising contract"
+  ]
+ },
+ {
+  "code": "82101702",
+  "title": "Skywriting advertising services",
+  "description": "Skywriting advertising services for promotional campaigns.",
+  "exampleItems": [
+   "Brand launch promotion",
+   "Event marketing service",
+   "Aerial advertising campaign"
+  ]
+ },
+ {
+  "code": "83101501",
+  "title": "Supply of water",
+  "description": "Contracted water supply services to a site or facility.",
+  "exampleItems": [
+   "Site water supply contract",
+   "Facility utility agreement",
+   "Municipal water service contract"
+  ]
+ },
+ {
+  "code": "83101502",
+  "title": "Water resource management",
+  "description": "Services managing water resource allocation and use.",
+  "exampleItems": [
+   "Site water management contract",
+   "Utility resource planning service",
+   "Sustainability water programme"
+  ]
+ },
+ {
+  "code": "83101503",
+  "title": "Water quality control management",
+  "description": "Services monitoring and managing water quality standards.",
+  "exampleItems": [
+   "Site water quality testing contract",
+   "Compliance monitoring service",
+   "Utility quality management programme"
+  ]
+ },
+ {
+  "code": "84101501",
+  "title": "Financial assistance",
+  "description": "Development finance assistance services or programmes.",
+  "exampleItems": [
+   "Grant funding programme",
+   "Development finance agreement",
+   "Institutional funding service"
+  ]
+ },
+ {
+  "code": "84101502",
+  "title": "Savings mobilization programs",
+  "description": "Programmes designed to mobilise savings within a target population or sector.",
+  "exampleItems": [
+   "Development finance programme",
+   "Institutional savings scheme",
+   "Financial inclusion initiative"
+  ]
+ },
+ {
+  "code": "84101503",
+  "title": "Guarantee agreements",
+  "description": "Financial guarantee agreements supporting development or trade finance.",
+  "exampleItems": [
+   "Trade finance guarantee",
+   "Development finance agreement",
+   "Institutional guarantee contract"
+  ]
+ },
+ {
+  "code": "85101501",
+  "title": "Emergency or surgical hospital services",
+  "description": "Hospital services providing emergency or surgical care.",
+  "exampleItems": [
+   "Hospital services contract",
+   "Emergency care agreement",
+   "Surgical services procurement"
+  ]
+ },
+ {
+  "code": "85101502",
+  "title": "Private specialized clinic services",
+  "description": "Specialist clinical services delivered through private clinics.",
+  "exampleItems": [
+   "Occupational health clinic contract",
+   "Specialist clinic agreement",
+   "Private healthcare service"
+  ]
+ },
+ {
+  "code": "85101503",
+  "title": "Medical office services",
+  "description": "General medical office and outpatient services.",
+  "exampleItems": [
+   "Occupational health service contract",
+   "Onsite medical office agreement",
+   "Outpatient services procurement"
+  ]
+ },
+ {
+  "code": "86101401",
+  "title": "Training - Avionics",
+  "description": "Specialist training services covering aircraft avionics systems.",
+  "exampleItems": [
+   "Technical training contract",
+   "Aviation maintenance training",
+   "Specialist certification course"
+  ]
+ },
+ {
+  "code": "86101402",
+  "title": "Training - Aviation Security",
+  "description": "Specialist training services covering aviation security procedures.",
+  "exampleItems": [
+   "Security training contract",
+   "Compliance certification course",
+   "Staff training programme"
+  ]
+ },
+ {
+  "code": "86101403",
+  "title": "Training - Search and Rescue",
+  "description": "Specialist training services covering search and rescue operations.",
+  "exampleItems": [
+   "Emergency response training",
+   "Specialist certification programme",
+   "Operational training contract"
+  ]
+ },
+ {
+  "code": "90101501",
+  "title": "Restaurants",
+  "description": "Restaurant services procured for corporate catering or hospitality.",
+  "exampleItems": [
+   "Corporate hospitality contract",
+   "Site catering service",
+   "Event dining service"
+  ]
+ },
+ {
+  "code": "90101502",
+  "title": "Bars",
+  "description": "Bar services procured for corporate events or hospitality.",
+  "exampleItems": [
+   "Corporate event service",
+   "Hospitality venue contract",
+   "Staff social event service"
+  ]
+ },
+ {
+  "code": "90101503",
+  "title": "Fast food establishments",
+  "description": "Quick-service food outlets procured for site or event catering.",
+  "exampleItems": [
+   "Site canteen concession",
+   "Event catering service",
+   "Staff facility food outlet"
+  ]
+ },
+ {
+  "code": "91101501",
+  "title": "Health or fitness clubs",
+  "description": "Health or fitness club services procured as an employee benefit.",
+  "exampleItems": [
+   "Staff wellness benefit contract",
+   "Corporate gym membership scheme",
+   "Employee fitness programme"
+  ]
+ },
+ {
+  "code": "92101501",
+  "title": "Policing services",
+  "description": "Contracted or public policing services for site or event security.",
+  "exampleItems": [
+   "Event policing contract",
+   "Site security service agreement",
+   "Public safety service contract"
+  ]
+ },
+ {
+  "code": "92101502",
+  "title": "Special weapons and tactics SWAT or riot teams",
+  "description": "Specialist tactical response services for high-risk security situations.",
+  "exampleItems": [
+   "High-risk event security contract",
+   "Specialist response service agreement",
+   "Public safety tactical support"
+  ]
+ },
+ {
+  "code": "92101503",
+  "title": "Community outreach programs",
+  "description": "Community engagement programmes run by public safety or policing bodies.",
+  "exampleItems": [
+   "Community safety programme",
+   "Public engagement initiative",
+   "Local outreach service contract"
+  ]
+ },
+ {
+  "code": "93101601",
+  "title": "Cabinet officers services",
+  "description": "Services provided by or to cabinet-level government officials.",
+  "exampleItems": [
+   "Government advisory engagement",
+   "Public sector service contract",
+   "Institutional support service"
+  ]
+ },
+ {
+  "code": "93101602",
+  "title": "Governors services",
+  "description": "Services provided by or to regional governors or equivalent officials.",
+  "exampleItems": [
+   "Regional government service",
+   "Public sector engagement",
+   "Institutional advisory contract"
+  ]
+ },
+ {
+  "code": "93101603",
+  "title": "Heads of states services",
+  "description": "Services provided by or to a head of state office.",
+  "exampleItems": [
+   "State protocol service",
+   "Institutional support contract",
+   "Government office service agreement"
+  ]
+ },
+ {
+  "code": "94131601",
+  "title": "Charity organizations shelter services",
+  "description": "Shelter services delivered by charitable organisations.",
+  "exampleItems": [
+   "Community shelter programme",
+   "Charitable services contract",
+   "Relief organisation service"
+  ]
+ },
+ {
+  "code": "94131602",
+  "title": "Food relief services",
+  "description": "Food relief services delivered by charitable organisations.",
+  "exampleItems": [
+   "Food bank programme",
+   "Charitable relief contract",
+   "Community support service"
+  ]
+ },
+ {
+  "code": "94131603",
+  "title": "Legal assistance services",
+  "description": "Legal assistance services delivered by charitable or civic organisations.",
+  "exampleItems": [
+   "Pro bono legal service programme",
+   "Civic legal aid contract",
+   "Community legal support service"
+  ]
+ }
+]
