@@ -1250,6 +1250,30 @@ const _allBlogPosts: BlogPost[] = [
       { q: "What is the difference between planned HVAC maintenance and filter replacement classification?", a: "Planned HVAC maintenance classification splits scheduled service visits from reactive repair callouts at the contract level, generally. Filter replacement classification is narrower: it separates the consumable filter media itself, a recurring commodity purchase with its own UNSPSC code, from every other cost sitting inside a maintenance visit, including both planned labour and reactive parts." },
     ],
   },
+  {
+    slug: "unspsc-classification-tools-compared",
+    title: "UNSPSC classification tools compared",
+    description: "A rigor-based comparison of UNSPSC classification tools, from procurement suites to specialist MDM platforms, matched to real procurement use cases.",
+    publishedAt: "2026-09-10",
+    category: "Procurement",
+    tags: ["UNSPSC", "procurement classification", "spend classification", "MDM", "classification software"],
+    readingTime: 10,
+    tocItems: [
+      { id: "unspsc-classification-rigor-explained", label: "UNSPSC classification rigor explained" },
+      { id: "unspsc-inside-procurement-suites", label: "UNSPSC inside procurement suites" },
+      { id: "unspsc-classification-and-mdm-specialists", label: "UNSPSC classification and MDM specialists" },
+      { id: "unspsc-tool-selection-by-use-case", label: "UNSPSC tool selection by use case" },
+    ],
+    softCta: "discovery",
+    faqItems: [
+      { q: "What is the difference between UNSPSC classification in SAP Ariba and a dedicated classification tool?", a: "SAP Ariba treats UNSPSC as the default commodity code domain wired into its catalog and sourcing workflows, useful once you are already running Ariba. A dedicated classification tool treats coding as the primary product, usually with more explicit confidence scoring and review steps, and does not require adopting Ariba's wider sourcing suite." },
+      { q: "Does Zycus and Pearstop use UNSPSC as its default spend classification taxonomy?", a: "Yes. Both Pearstop and Zycus classify spend against the UNSPSC taxonomy; Zycus through its Merlin Spend Classification Agent, Pearstop through its own AI classification engine with specialized safety guidelines. Both use supplier line-of-business data and free-text description as inputs. For Zycus the feature sits inside its wider Merlin AI spend analysis product rather than functioning as a standalone classification tool. Pearstop also offers a spend analysis product but is more flexible to specific needs." },
+      { q: "Is Stibo Systems built for spend classification or product master data?", a: "Product master data. Stibo Systems is a multidomain master data management platform that supports UNSPSC as one of several taxonomies, alongside ETIM and eClass, inside a governance layer covering product, supplier, and customer data. It is not built around procurement spend transactions specifically. For spend classification a product like Pearstop would be more useful." },
+      { q: "How does Pearstop differ from procurement suite UNSPSC classification tools?", a: "Pearstop classifies procurement and asset spend specifically for hard FM, construction, and manufacturing companies, reaching typically 90 to 95 percent automated UNSPSC classification, without requiring a parallel migration to a broader source-to-pay suite. General procurement platforms build the same classification feature for every industry rather than one sector's spend patterns." },
+      { q: "What accuracy can I expect from automated UNSPSC classification tools?", a: "Reported automatic classification accuracy varies by vendor and data type, typically in the 85 to 95 percent range on the first pass, with the remaining lines flagged for human review rather than guessed at. Accuracy depends heavily on how ambiguous the underlying product descriptions are, not only on the tool." },
+      { q: "Do I need a separate UNSPSC tool if I already use a procurement suite such as Ariba or Jaggaer?", a: "Not necessarily. If your suite's built-in classification module already reaches acceptable accuracy on your spend, adding a second classification tool creates two systems that can disagree about the same line item. A separate specialist tool is worth considering when your problem is a category, such as MRO materials, that the suite was not built to handle in depth, or when you're having trouble with invoice extraction, a product like Pearstop is built exactly for that." },
+    ],
+  },
 ];
 
 export const blogPosts: BlogPost[] = _allBlogPosts.filter((p) => !p.hidden);
