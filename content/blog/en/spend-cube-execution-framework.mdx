@@ -1,0 +1,101 @@
+---
+title: "The spend cube framework, executed with AI"
+description: "The classic three-dimension spend cube, adapted for an AI classification pipeline: what changes in speed, cost, and staying power after delivery day."
+date: "2026-09-11"
+category: "AI & Digital"
+slug: "spend-cube-execution-framework"
+author: "stephanie"
+lang: "en"
+---
+
+**Quick answer:** The classic spend cube used in strategic sourcing organises spend across three dimensions: supplier, category, and business unit, sliced over time. Strategic sourcing consultancies have built this by hand for decades, using a team of analysts working through a fixed data extract over several weeks. An AI classification pipeline runs the same three-dimension model but keeps it current, because classification happens as transactions arrive, not once per engagement.
+
+On this page: [Spend cube dimensions in strategic sourcing](#spend-cube-dimensions-in-strategic-sourcing) · [Spend cube decay after a consulting engagement](#spend-cube-decay-after-a-consulting-engagement) · [Spend cube execution with an AI pipeline](#spend-cube-execution-with-an-ai-pipeline) · [Spend cube ownership after the pipeline launches](#spend-cube-ownership-after-the-pipeline-launches) · [Frequently asked questions](#frequently-asked-questions)
+
+Every large strategic sourcing engagement produces the same artefact: a spend cube. Supplier on one axis, category on another, business unit on a third, sliced over time so a partner can point at a slide and show where the money went. The structure was popularised by the strategic sourcing consultancies, and most large ones run a version of it. Building one has traditionally meant buying several weeks of analyst time, which is why the exercise has been priced as a consulting engagement rather than run as a routine part of procurement reporting. It works exactly as intended, on the day it is delivered.
+
+The complaint we hear from procurement leaders and CFOs is not about that day. It is about month four, when the deck is still sitting in someone's downloads folder and every number in it describes a business that no longer exists. New suppliers have been onboarded. New categories have opened. Nobody has updated the cube, because nobody owns the mechanism that built it, only the file it produced.
+
+One large sourcing consultancy's procurement analytics research makes a version of this argument: it quotes a CPO calling the spend cube close to a waste of time once it stops connecting to how the business runs, because it becomes a backward-looking artefact sitting apart from the general ledger and the negotiations it was meant to inform. The framework is not the problem. What generates it, a team of people working through a fixed extract for several weeks, is.
+
+## Spend cube dimensions in strategic sourcing
+
+In classic strategic sourcing methodology, the spend cube sits at the front of the process, before a category gets profiled and before a negotiation gets planned. The established consulting methodologies all move through profiling a category, assessing the supply market, and only then building a strategy and running the negotiation. None of that sequence works without an accurate answer to a basic question: what was actually spent on what, by whom, and where.
+
+Three dimensions carry that answer.
+
+**Supplier.** Who the money went to, resolved to one entity rather than four spellings and three subsidiaries of the same group.
+
+**Category.** What was actually bought, classified against a standard taxonomy rather than whatever free text a requisitioner typed into a purchase order.
+
+**Business unit.** Which site, region or cost centre the spend sits in. This is the dimension that turns a report into a negotiating position, because it shows the same product bought separately by six sites at six different prices.
+
+Time cuts across all three. A snapshot tells a partner where the money went last year. Only a time series shows whether a negotiated rate held, or whether a category grew because volume grew, or because someone quietly stopped enforcing the framework contract.
+
+This is the model, and it has not changed in decades of spend diagnostics. It does not need to. What has changed is what it costs to build, and how long it stays true once it exists.
+
+## Spend cube decay after a consulting engagement
+
+A full spend diagnostic run by hand typically takes six to twelve weeks once data is genuinely fragmented across systems, and most of that time goes to cleaning the extract, not classifying it. Reconciling several ERPs, several currencies and decades of inconsistent supplier naming does not compress just because someone would like it to.
+
+The output of that engagement is accurate on delivery day and starts drifting the moment it is delivered, because the mechanism that produced it leaves the building with the consulting team. New purchase orders keep arriving unclassified. Nobody left in the business knows the rule the analysts used to decide that a line reading "hours" meant subcontracted labour rather than plant hire, so the next person to touch the cube either guesses or starts again.
+
+This is the mechanism behind the critique quoted earlier: a spend cube treated as a one-off diagnostic, disconnected from financial reporting, stops being useful almost as soon as it is finished. The critique is fair. It is also a description of what happens to any classification a team does once, rather than a system that runs continuously.
+
+## Spend cube execution with an AI pipeline
+
+Run the same three dimensions through a classification pipeline instead of a project team, and the sequence does not change. What changes is which parts take weeks and which take days, and what happens after delivery day. It also changes what the work costs, because classification no longer scales with the number of analyst hours available to spend on it.
+
+Supplier resolution stops being a one-time deduplication pass and becomes a standing reference check. Every new invoice gets matched against a maintained supplier database as it arrives, so the entity list is never allowed to drift back into four spellings of the same distributor.
+
+Category classification stops being sample-based. A manual engagement can afford to hand-code the highest-value suppliers and extrapolate the rest, because a person can only review so many lines in six weeks. A pipeline classifies every line, assigns a confidence score to each one, and routes only the genuinely ambiguous cases, a part number with no description, a first-time supplier, an item that could sit in two families, to a person. The taxonomy rules a company agrees in its first working session get encoded once and applied consistently after that, rather than living in one analyst's head.
+
+Business unit mapping, the dimension that exposes the same item bought six times at six prices, stops depending on a cost centre field being populated correctly at the point of purchase. Site and entity context gets attached from the purchase order and the supplier relationship, not assumed from a chart of accounts that half the business ignores anyway.
+
+Time is where the structural difference actually shows up. A manually built cube is a snapshot with a delivery date stamped on it. A pipeline-built cube has no delivery date, because classification runs as transactions land, and the marginal cost of adding another month of data is close to zero. That is the difference between a cube a company commissions once a year and a cube a company simply has.
+
+90 to 95 percent of lines get classified automatically within the first quarter of running Pearstop's pipeline for a hard FM, construction or manufacturing company, with the remainder routed to a person rather than left sitting in a category nobody reviews.
+
+## Spend cube ownership after the pipeline launches
+
+None of this removes the judgement calls the three-dimension model was always built to surface. Someone still has to decide whether "gloves" means medical, cleaning or site gloves. Someone still has to decide how a credit note nets against the invoice it corrects. What changes is where that decision sits.
+
+In a consulting engagement, the decision sits with the analyst doing the classification, and it leaves the building with them. In a pipeline, the decision sits with the person reviewing the low-confidence queue on the client side, and it gets written into a rule that applies to every future line that looks the same. That is the actual argument for running the framework this way. It is not that AI is more accurate than a senior analyst on a single ambiguous line. It is that ownership of the rule stays inside the business instead of leaving with the consultants.
+
+Three moments tend to push a company from wanting a spend cube to actually running one continuously. An ERP migration, because there is no reason to load unstructured history into a new system when new purchase orders could be coded correctly from day one. A UNSPSC or taxonomy mandate coming from a parent company or a major client, which turns classification from a nice-to-have into a contractual requirement. And a general AI tool someone already tried on the spend file, which classified the first fifty lines convincingly and then contradicted itself on the fifty-first, because a chat interface has no constrained taxonomy and no memory of the rule it applied five minutes earlier.
+
+None of this replaces the ERP or the CAFM system a company already runs. The pipeline sits alongside it, feeding classified, structured spend back into the systems finance and procurement already use.
+
+## Frequently asked questions
+
+**What is the spend cube methodology in procurement?**
+
+The spend cube methodology organises procurement spend across three dimensions at once: supplier, category and business unit, layered with time so trends are visible alongside totals. It sits at the front of the wider strategic sourcing process, providing the baseline used to profile a category and assess the supply market before building a sourcing strategy.
+
+**How long does it take to build a spend cube manually?**
+
+A manual spend cube typically takes six to twelve weeks when data is spread across multiple systems, because cleaning and reconciling the source extract takes longer than the classification itself. Most of that time goes to resolving supplier names, fixing missing fields and reconciling currencies, not to deciding which category each line belongs to.
+
+**Why do spend cubes go out of date so quickly?**
+
+Spend cubes go out of date because the classification rules used to build them usually exist only in the heads of the analysts who ran the engagement. New invoices keep arriving unclassified after delivery, and nobody left in the business knows how the ambiguous lines were coded, so the cube stops reflecting reality within months unless someone recommissions the exercise.
+
+**Can AI replace a strategic sourcing consultancy for spend analysis?**
+
+Not for the whole engagement. AI replaces the manual classification work inside a spend cube, the part that takes weeks and decays after delivery, but it does not replace the judgement of designing a sourcing strategy, running a negotiation or being accountable for a savings number. The two are usually best combined rather than treated as alternatives.
+
+**How does Pearstop build and maintain a spend cube with AI?**
+
+Pearstop resolves the supplier list against a reference database, classifies every spend line against a constrained taxonomy so codes cannot be invented, and routes low-confidence lines to a person for review. Corrections feed back into the rules, and the cube updates as new transactions arrive instead of being rebuilt at the next engagement.
+
+**What data is needed to run a spend cube through an AI pipeline?**
+
+Line-level transaction data is needed, not summary totals: a document number, date, supplier name, the free-text description, quantity, unit price, total value, currency and a cost centre or entity reference. An internal material number, where one exists, improves accuracy because it removes ambiguity free text alone cannot resolve.
+
+---
+
+## Free resources
+
+* [Pearstop case studies](https://pearstopcs-ccdc3wwj.manus.space/)
+* [Procurement Opportunity Mapper](https://pearstopmap-7zost2x4.manus.space)
+* Taxonomy generator, coming soon

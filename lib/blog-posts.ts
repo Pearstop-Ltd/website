@@ -1275,6 +1275,31 @@ const _allBlogPosts: BlogPost[] = [
       { q: "Do I need a separate UNSPSC tool if I already use a procurement suite such as Ariba or Jaggaer?", a: "Not necessarily. If your suite's built-in classification module already reaches acceptable accuracy on your spend, adding a second classification tool creates two systems that can disagree about the same line item. A separate specialist tool is worth considering when your problem is a category, such as MRO materials, that the suite was not built to handle in depth, or when you're having trouble with invoice extraction, a product like Pearstop is built exactly for that." },
     ],
   },
+  {
+    slug: "spend-cube-execution-framework",
+    image: "/images/blog/spend-cube-execution-framework.jpg",
+    title: "The spend cube framework, executed with AI",
+    description: "The classic three-dimension spend cube, adapted for an AI classification pipeline: what changes in speed, cost, and staying power after delivery day.",
+    publishedAt: "2026-09-11",
+    category: "AI & Digital",
+    tags: ["spend cube", "AI classification", "procurement analytics", "spend visibility"],
+    readingTime: 9,
+    tocItems: [
+      { id: "spend-cube-dimensions-in-strategic-sourcing", label: "Spend cube dimensions" },
+      { id: "spend-cube-decay-after-a-consulting-engagement", label: "Why spend cubes decay" },
+      { id: "spend-cube-execution-with-an-ai-pipeline", label: "Execution with an AI pipeline" },
+      { id: "spend-cube-ownership-after-the-pipeline-launches", label: "Ownership after launch" },
+    ],
+    softCta: "discovery",
+    faqItems: [
+      { q: "What is the spend cube methodology in procurement?", a: "The spend cube methodology organises procurement spend across three dimensions at once: supplier, category and business unit, layered with time so trends are visible alongside totals. It sits at the front of the wider strategic sourcing process, providing the baseline used to profile a category and assess the supply market before building a sourcing strategy." },
+      { q: "How long does it take to build a spend cube manually?", a: "A manual spend cube typically takes six to twelve weeks when data is spread across multiple systems, because cleaning and reconciling the source extract takes longer than the classification itself. Most of that time goes to resolving supplier names, fixing missing fields and reconciling currencies, not to deciding which category each line belongs to." },
+      { q: "Why do spend cubes go out of date so quickly?", a: "Spend cubes go out of date because the classification rules used to build them usually exist only in the heads of the analysts who ran the engagement. New invoices keep arriving unclassified after delivery, and nobody left in the business knows how the ambiguous lines were coded, so the cube stops reflecting reality within months unless someone recommissions the exercise." },
+      { q: "Can AI replace a strategic sourcing consultancy for spend analysis?", a: "Not for the whole engagement. AI replaces the manual classification work inside a spend cube, the part that takes weeks and decays after delivery, but it does not replace the judgement of designing a sourcing strategy, running a negotiation or being accountable for a savings number. The two are usually best combined rather than treated as alternatives." },
+      { q: "How does Pearstop build and maintain a spend cube with AI?", a: "Pearstop resolves the supplier list against a reference database, classifies every spend line against a constrained taxonomy so codes cannot be invented, and routes low-confidence lines to a person for review. Corrections feed back into the rules, and the cube updates as new transactions arrive instead of being rebuilt at the next engagement." },
+      { q: "What data is needed to run a spend cube through an AI pipeline?", a: "Line-level transaction data is needed, not summary totals: a document number, date, supplier name, the free-text description, quantity, unit price, total value, currency and a cost centre or entity reference. An internal material number, where one exists, improves accuracy because it removes ambiguity free text alone cannot resolve." },
+    ],
+  },
 ];
 
 export const blogPosts: BlogPost[] = _allBlogPosts.filter((p) => !p.hidden);
