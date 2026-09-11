@@ -370,24 +370,19 @@ export const industryCards = [
     copy: "Know where a named savings target actually sits in the spend, before you try to find it by hand."
   },
   {
-    title: "Integrated FM",
-    href: "#integrated-fm",
-    copy: "Bring five service lines and five data formats into one structured view of a contract."
+    title: "Facilities Management",
+    href: "#facilities-management",
+    copy: "Integrated FM, hard services, and soft services, each with its own data problem and its own fix."
   },
   {
-    title: "Hard Services (FM)",
-    href: "#hard-services",
-    copy: "Confirm what a part actually is, so you can buy it direct instead of through a markup."
+    title: "Cleaning",
+    href: "#cleaning",
+    copy: "Get every invoice read and checked against the contract, instead of taking the total on trust."
   },
   {
     title: "Construction",
     href: "#construction",
     copy: "Turn spend spread across entities and projects into one categorised, group-wide view."
-  },
-  {
-    title: "Soft Services (FM)",
-    href: "#soft-services",
-    copy: "Get invoices read and structured automatically, so there is spend data to defend a price with."
   },
   {
     title: "Manufacturers of Building Systems",

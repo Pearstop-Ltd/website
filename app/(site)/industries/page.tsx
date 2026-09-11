@@ -1,5 +1,6 @@
 import { CalendlyButton } from "@/components/calendly-button";
 import type { Metadata } from "next";
+import { Fragment } from "react";
 import Link from "next/link";
 import Script from "next/script";
 import { GeoBlock, PageHero, SectionTitle } from "@/components/content";
@@ -10,7 +11,7 @@ const PAGE_URL = `${siteConfig.url}/industries`;
 export const metadata: Metadata = {
   title: "Industries We Serve",
   description:
-    "Pearstop works with infrastructure, integrated and hard services FM, construction, soft services and cleaning, manufacturing, and asset owner organisations. Each industry has a different data problem - see how we solve it.",
+    "Pearstop works with infrastructure, facilities management, cleaning, construction, manufacturing, and asset owner organisations. Each industry has a different data problem - see how we solve it.",
   alternates: {
     canonical: PAGE_URL
   }
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
 const FAQ_ITEMS = [
   {
     q: "Which industries does Pearstop work with?",
-    a: "Pearstop works with infrastructure and rail operators, integrated FM providers, hard services and technical FM contractors, construction and project-based firms, soft services and cleaning contractors, manufacturers of building systems and equipment, and asset owners who outsource FM delivery. Each has a different version of the same underlying problem: spend or asset data too fragmented or unread to act on."
+    a: "Pearstop works with infrastructure and rail operators, integrated FM providers, hard services and technical FM contractors, soft services providers, cleaning contractors, construction and project-based firms, manufacturers of building systems and equipment, and asset owners who outsource FM delivery. Each has a different version of the same underlying problem: spend or asset data too fragmented or unread to act on."
   },
   {
     q: "Do I need to be a large organisation to benefit?",
@@ -27,7 +28,7 @@ const FAQ_ITEMS = [
   },
   {
     q: "What if my industry is not listed here?",
-    a: "The data problems above are not unique to these seven industries. If your team manages complex operational spend or asset data, deals with inconsistent supplier records, or is preparing for a digital transformation, the underlying problem is usually the same one. Book a call and we will tell you plainly whether it is a fit."
+    a: "The data problems above are not unique to these industries. If your team manages complex operational spend or asset data, deals with inconsistent supplier records, or is preparing for a digital transformation, the underlying problem is usually the same one. Book a call and we will tell you plainly whether it is a fit."
   }
 ];
 
@@ -66,13 +67,24 @@ type IndustryDetail = {
   linkLabel: string;
 };
 
+const FACILITIES_MANAGEMENT = {
+  title: "Facilities Management",
+  intro:
+    "Facilities management is not one problem, it is three. An integrated FM contract has to unify data arriving from every service line in a different format. A hard services contract lives or dies on knowing what a part actually is. A soft services contract is priced once, as one bundle, then has to be defended line by line for years. Each has its own detail below.",
+  links: [
+    { label: "Integrated FM", id: "integrated-fm" },
+    { label: "Hard Services", id: "hard-services" },
+    { label: "Soft Services", id: "soft-services" }
+  ]
+};
+
 const details: IndustryDetail[] = [
   {
     id: "infrastructure",
     title: "Infrastructure",
-    copy: "Know where the money goes before you try to save it.",
+    copy: "You cannot negotiate what you cannot see.",
     intro:
-      "A cost-savings target gets named, sometimes running to eight figures, and nobody can point to where in the spend it actually sits. That gap between the target and the data is a recurring pattern in infrastructure and rail: a savings programme identifies tens of millions in potential savings, and the underlying spend data cannot show where to find them.",
+      "A cost-savings target gets named, sometimes running to eight figures, and nobody can point to where in the spend it actually sits. That gap between the target and the data is a recurring pattern in infrastructure and rail: a savings programme identifies tens of millions in potential savings, and the underlying spend data cannot show where to find them. Savings come third. First you see where the money goes, then you see the coverage gaps, then you negotiate.",
     points: [
       {
         title: "A savings target with no data to back it",
@@ -132,7 +144,7 @@ const details: IndustryDetail[] = [
   },
   {
     id: "hard-services",
-    title: "Hard Services (FM)",
+    title: "Hard Services",
     copy: "Stop paying a middleman because nobody can confirm what the part is.",
     intro:
       "When a component arrives with only a supplier's own part code attached, there is no way to buy it from anyone except that supplier. Getting to the original manufacturer code means someone tracing it by hand, and every step of that chain, from the engineer who ordered it to the team who has to ask for a clearer description, costs time most contracts do not budget for.",
@@ -159,7 +171,69 @@ const details: IndustryDetail[] = [
       "Every match traceable back to a real part number, so your team can verify it rather than trust it"
     ],
     href: "/unspsc",
-    linkLabel: "See how Pearstop verifies parts and components"
+    linkLabel: "See how Pearstop classifies hard services spend"
+  },
+  {
+    id: "soft-services",
+    title: "Soft Services",
+    copy: "One price covering several service lines. Defending it takes more than that.",
+    intro:
+      "Soft services rarely means one thing. A single contract can bundle cleaning, security, reception, waste, and landscaping under one price, set once at tender and expected to hold for years. When a client questions that price, or a renewal comes around, the cost of running each line separately is often not something anyone can produce quickly, because spend was never broken apart by service in the first place.",
+    points: [
+      {
+        title: "One blended price, no visibility into what each service actually costs",
+        copy:
+          "Combined pricing at bid stage means nobody can say, line by line, what cleaning costs versus security versus waste, which makes a renewal or a client challenge hard to defend."
+      },
+      {
+        title: "Services treated as a commodity, with no data to prove otherwise",
+        copy:
+          "Without a cost and performance record broken out by service, it is difficult to demonstrate value beyond simply turning up."
+      },
+      {
+        title: "Consolidation opportunities invisible across bundled contracts",
+        copy:
+          "The same supplier or service type can recur across many bundled contracts without anyone seeing it, because spend is never classified consistently enough to compare."
+      }
+    ],
+    changes: [
+      "Spend broken out by service line within a bundled contract, not one blended number",
+      "A cost and performance record for each service, to defend value beyond price alone",
+      "Consolidation opportunities visible across bundled contracts and sites"
+    ],
+    href: "/procurement-data-quality",
+    linkLabel: "See how Pearstop breaks down bundled contract spend"
+  },
+  {
+    id: "cleaning",
+    title: "Cleaning",
+    copy: "If the invoice is never read, the spend underneath it does not exist yet.",
+    intro:
+      "Ask a cleaning contractor's procurement team how confident they are in their own numbers, and \"ground level\" is a common, self-deprecating answer. Before spend can be checked against a contract, someone has to actually read the invoice, and separately, roughly eighty percent of invoices on cleaning contracts do not match the terms that were agreed. Two visibility problems, stacked.",
+    points: [
+      {
+        title: "Invoices arriving faster than anyone can read them",
+        copy:
+          "ERP master data described as too poor for the automatic flow to even start, with deadlines that have been missed for years, not months."
+      },
+      {
+        title: "Spend nobody has checked against the contract",
+        copy:
+          "Roughly four in five cleaning-contract invoices do not match the agreed terms. That gap stays invisible until someone reads every line and compares it."
+      },
+      {
+        title: "No justification when a client challenges a price",
+        copy:
+          "Asked to defend a tender cost, the honest answer is often that nobody knows. The margin on the number was a feeling, not a calculation."
+      }
+    ],
+    changes: [
+      "Invoices read and structured automatically, in any format, so there is something to check",
+      "Actual spend checked against agreed contract terms as a matter of course, not an audit exercise",
+      "A real cost baseline to defend pricing under client challenge, not a feeling"
+    ],
+    href: "/invoice-data-extraction",
+    linkLabel: "See how Pearstop reads the invoice first"
   },
   {
     id: "construction",
@@ -190,38 +264,7 @@ const details: IndustryDetail[] = [
       "Categorisation that happens once per line, not by hand every reporting cycle"
     ],
     href: "/procurement-data-quality",
-    linkLabel: "See how Pearstop builds a group-wide spend view"
-  },
-  {
-    id: "soft-services",
-    title: "Soft Services (FM)",
-    copy: "If the invoice is never read, the spend underneath it does not exist yet.",
-    intro:
-      "Ask a procurement team in cleaning or soft services how confident they are in their own spend data, and \"ground level\" is a common, self-deprecating answer. Before any of that spend can be categorised or benchmarked, someone has to actually read every invoice, and at real volume, across hundreds of sites, that step is where most soft services providers are still stuck.",
-    points: [
-      {
-        title: "Invoices arriving faster than anyone can read them",
-        copy:
-          "ERP master data described as too poor for the automatic flow to even start, with deadlines that have been missed for years, not months."
-      },
-      {
-        title: "No justification when a client challenges a price",
-        copy:
-          "Asked to defend a tender cost, the honest answer is often that nobody knows. The margin on the number was a feeling, not a calculation."
-      },
-      {
-        title: "A supplier that controls the data you need to negotiate",
-        copy:
-          "When a single supplier accounts for most of a category's spend, they can share only the data that suits them, leaving no independent way to check it."
-      }
-    ],
-    changes: [
-      "Invoices and delivery notes read and structured automatically, in any format, so there is something to classify",
-      "A real cost baseline to defend pricing under client challenge, not a feeling",
-      "Spend visibility that does not depend on what a single supplier chooses to share"
-    ],
-    href: "/invoice-data-extraction",
-    linkLabel: "See how Pearstop reads the invoice first"
+    linkLabel: "See how Pearstop cleans procurement data at scale"
   },
   {
     id: "manufacturing",
@@ -352,7 +395,7 @@ export default function IndustriesPage() {
         <div className="container">
           <SectionTitle
             title="Where Pearstop Fits"
-            lead="Seven industries, seven different ways the same problem shows up: spend or asset data nobody can act on yet."
+            lead="Six industries, six different ways the same problem shows up: spend or asset data nobody can act on yet."
           />
           <div className="industry-grid">
             {industryCards.map((card) => (
@@ -382,44 +425,63 @@ export default function IndustriesPage() {
       </section>
 
       {details.map((detail, index) => (
-        <section key={detail.id} id={detail.id} className={index % 2 ? "ind-detail bg-soft" : "ind-detail"}>
-          <div className="container">
-            <div className={`ind-detail-inner ${index % 2 ? "reverse" : ""}`}>
-              <div className="ind-detail-text">
-                <div className="ind-detail-eyebrow">{detail.title}</div>
-                <h2>{detail.copy}</h2>
-                <p className="light-copy">{detail.intro}</p>
-                <ul className="ind-pains">
-                  {detail.points.map((point) => (
-                    <li key={point.title}>
-                      <span className="ind-pains-icon">•</span>
-                      <div>
-                        <strong>{point.title}</strong>
-                        <p>{point.copy}</p>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-                <Link className="ind-card-link" href={detail.href}>
-                  {detail.linkLabel} →
-                </Link>
+        <Fragment key={detail.id}>
+          {detail.id === "integrated-fm" && (
+            <section id="facilities-management" className="ind-detail bg-soft">
+              <div className="container">
+                <div className="ind-fm-intro">
+                  <h2>{FACILITIES_MANAGEMENT.title}</h2>
+                  <p className="light-copy">{FACILITIES_MANAGEMENT.intro}</p>
+                  <div className="ind-fm-links">
+                    {FACILITIES_MANAGEMENT.links.map((link) => (
+                      <Link key={link.id} className="btn btn-secondary" href={`/industries#${link.id}`}>
+                        {link.label} →
+                      </Link>
+                    ))}
+                  </div>
+                </div>
               </div>
-              <div className="ind-detail-aside">
-                <div className="quote-card">
-                  <div className="story-label">What changes with Pearstop</div>
+            </section>
+          )}
+          <section id={detail.id} className={index % 2 ? "ind-detail bg-soft" : "ind-detail"}>
+            <div className="container">
+              <div className={`ind-detail-inner ${index % 2 ? "reverse" : ""}`}>
+                <div className="ind-detail-text">
+                  <div className="ind-detail-eyebrow">{detail.title}</div>
+                  <h2>{detail.copy}</h2>
+                  <p className="light-copy">{detail.intro}</p>
                   <ul className="ind-pains">
-                    {detail.changes.map((change) => (
-                      <li key={change}>
-                        <span className="ind-ok">✓</span>
-                        <div>{change}</div>
+                    {detail.points.map((point) => (
+                      <li key={point.title}>
+                        <span className="ind-pains-icon">•</span>
+                        <div>
+                          <strong>{point.title}</strong>
+                          <p>{point.copy}</p>
+                        </div>
                       </li>
                     ))}
                   </ul>
+                  <Link className="ind-card-link" href={detail.href}>
+                    {detail.linkLabel} →
+                  </Link>
+                </div>
+                <div className="ind-detail-aside">
+                  <div className="quote-card">
+                    <div className="story-label">What changes with Pearstop</div>
+                    <ul className="ind-pains">
+                      {detail.changes.map((change) => (
+                        <li key={change}>
+                          <span className="ind-ok">✓</span>
+                          <div>{change}</div>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </Fragment>
       ))}
 
       <section>
@@ -449,7 +511,7 @@ export default function IndustriesPage() {
         <div className="container">
           <div className="ind-wide-banner">
             <h3>Ready to Clean Your Data?</h3>
-            <p>We have solved this exact problem in infrastructure, facilities management, construction, and manufacturing. If yours is a different industry with the same kind of data, tell us about it.</p>
+            <p>We have solved this exact problem in infrastructure, facilities management, cleaning, construction, and manufacturing. If yours is a different industry with the same kind of data, tell us about it.</p>
             <CalendlyButton label="Book a 7-Minute Discovery" className="btn btn-primary" />
           </div>
         </div>

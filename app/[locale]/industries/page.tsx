@@ -2,34 +2,10 @@ import { CalendlyButton } from "@/components/calendly-button";
 import type { Metadata } from "next";
 import { getTranslations , setRequestLocale } from "next-intl/server";
 import Link from "next/link";
+import { Fragment } from "react";
 import Script from "next/script";
 import { GeoBlock, PageHero, SectionTitle } from "@/components/content";
 import { industryCards, siteConfig } from "@/lib/site";
-
-const FAQ_ITEMS = [
-  {
-    q: "Which industries does Pearstop work with?",
-    a: "Pearstop works with infrastructure and rail operators, integrated FM providers, hard services and technical FM contractors, construction and project-based firms, soft services and cleaning contractors, manufacturers of building systems and equipment, and asset owners who outsource FM delivery. Each has a different version of the same underlying problem: spend or asset data too fragmented or unread to act on."
-  },
-  {
-    q: "Do I need to be a large organisation to benefit?",
-    a: "Pearstop fits organisations with several hundred employees or more, operating across multiple sites or projects, with a meaningful volume of external supplier and subcontractor spend. The precondition is not size on its own, it is distributed spend: different suppliers for the same product or service across sites or entities, without anyone having properly mapped it."
-  },
-  {
-    q: "What if my industry is not listed here?",
-    a: "The data problems above are not unique to these seven industries. If your team manages complex operational spend or asset data, deals with inconsistent supplier records, or is preparing for a digital transformation, the underlying problem is usually the same one. Book a call and we will tell you plainly whether it is a fit."
-  }
-];
-
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: FAQ_ITEMS.map((item) => ({
-    "@type": "Question",
-    name: item.q,
-    acceptedAnswer: { "@type": "Answer", text: item.a }
-  }))
-};
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
@@ -73,226 +49,13 @@ type IndustryDetail = {
   linkLabel: string;
 };
 
-const details: IndustryDetail[] = [
-  {
-    id: "infrastructure",
-    title: "Infrastructure",
-    copy: "Know where the money goes before you try to save it.",
-    intro:
-      "A cost-savings target gets named, sometimes running to eight figures, and nobody can point to where in the spend it actually sits. That gap between the target and the data is a recurring pattern in infrastructure and rail: a savings programme identifies tens of millions in potential savings, and the underlying spend data cannot show where to find them.",
-    points: [
-      {
-        title: "A savings target with no data to back it",
-        copy:
-          "A transformation programme names a number. Spend is not classified consistently enough to say which categories the number is hiding in."
-      },
-      {
-        title: "Framework coverage nobody can see across the business",
-        copy:
-          "One buyer can see the ten framework agreements for their category. The other fifty categories have no equivalent visibility, so the organisation cannot steer spend onto agreements it already has."
-      },
-      {
-        title: "No baseline to negotiate or tender from",
-        copy:
-          "Negotiating with a supplier, or pricing a new tender, both start from knowing what you already spend. Without that baseline, every negotiation starts from a guess."
-      }
-    ],
-    changes: [
-      "Spend classified consistently enough to show where a named savings target actually sits",
-      "Framework and contract coverage visible across every category, not just the ones already being watched",
-      "A real spend baseline to negotiate suppliers and price tenders against, not an estimate",
-      "Buyer review speed improved by an order of magnitude as classification becomes familiar, not a marginal gain"
-    ],
-    href: "/procurement-data-quality",
-    linkLabel: "See how Pearstop builds a real spend baseline"
-  },
-  {
-    id: "integrated-fm",
-    title: "Integrated FM",
-    copy: "One contract, five service lines, five data formats.",
-    intro:
-      "Multi-service FM contracts win on breadth: cleaning, hard services, security, and catering under one roof. The data underneath rarely reflects that unity. Each service line arrives from its own system, in its own format, and asset or cost records that should describe the same thing end up looking like they belong to different companies.",
-    points: [
-      {
-        title: "Reference data that does not match what is installed",
-        copy:
-          "Manufacturer and equipment reference data supplied at contract start is sometimes simply wrong, and spelling, naming, and coding inconsistencies compound across sites and years."
-      },
-      {
-        title: "Spend and service data siloed by service line",
-        copy:
-          "Cleaning, hard services, and security each report differently, so nobody sees the full cost or performance picture for a single contract."
-      },
-      {
-        title: "A first pass that delivers less than expected",
-        copy:
-          "Expectations set at the start of a project often outpace what a first data pass can support, because the underlying reference data was flawed before it reached any system."
-      }
-    ],
-    changes: [
-      "Manufacturer and equipment reference data corrected and standardised across every service line and site",
-      "One structured dataset instead of five service-line silos, so real contract-level cost and performance is visible",
-      "A realistic view of what the data can support, set from a corrected baseline, not the state it arrived in"
-    ],
-    href: "/data-quality",
-    linkLabel: "See how Pearstop unifies FM data"
-  },
-  {
-    id: "hard-services",
-    title: "Hard Services (FM)",
-    copy: "Stop paying a middleman because nobody can confirm what the part is.",
-    intro:
-      "When a component arrives with only a supplier's own part code attached, there is no way to buy it from anyone except that supplier. Getting to the original manufacturer code means someone tracing it by hand, and every step of that chain, from the engineer who ordered it to the team who has to ask for a clearer description, costs time most contracts do not budget for.",
-    points: [
-      {
-        title: "The original manufacturer code is hidden behind a supplier code",
-        copy:
-          "Without it, there is no alternative supplier to buy from, and no way to check the price is fair."
-      },
-      {
-        title: "Vague descriptions create a slow back-and-forth loop",
-        copy:
-          "An unclear part description sent back to site and back again is the default when descriptions were never captured consistently in the first place."
-      },
-      {
-        title: "No way to check a match before it is used",
-        copy:
-          "A classification result is only useful once it can be checked against the real part number, not taken on faith."
-      }
-    ],
-    changes: [
-      "Original manufacturer codes identified so parts can be bought direct, not through a markup",
-      "Consistent part descriptions captured once, not re-requested site to site",
-      "Every match traceable back to a real part number, so your team can verify it rather than trust it"
-    ],
-    href: "/unspsc",
-    linkLabel: "See how Pearstop verifies parts and components"
-  },
-  {
-    id: "construction",
-    title: "Construction",
-    copy: "Turning years of spend into one number should not take years.",
-    intro:
-      "A construction group doing hundreds of millions in annual spend across more than a dozen entities can state its turnover to the euro and still not know, with any precision, what it actually spent last year, or on what. Framework agreements exist, but they were signed years ago and nobody has checked since whether buying still follows them.",
-    points: [
-      {
-        title: "Group-wide spend nobody can add up precisely",
-        copy:
-          "Spend spread across many entities and systems means turnover is known to the euro; what was actually bought rarely is."
-      },
-      {
-        title: "Framework agreements nobody has checked lately",
-        copy:
-          "Agreements signed years ago keep running on trust, with no live comparison of whether current buying still follows them."
-      },
-      {
-        title: "Categorising spend by hand, project after project",
-        copy:
-          "Translating raw spend into quantities, sections, and contractors manually is still how a categorised view gets built, repeated every reporting cycle."
-      }
-    ],
-    changes: [
-      "Group-wide spend visible in one consolidated, coded view, not per entity",
-      "Framework agreement compliance checked against live buying, not assumed",
-      "Categorisation that happens once per line, not by hand every reporting cycle"
-    ],
-    href: "/procurement-data-quality",
-    linkLabel: "See how Pearstop builds a group-wide spend view"
-  },
-  {
-    id: "soft-services",
-    title: "Soft Services (FM)",
-    copy: "If the invoice is never read, the spend underneath it does not exist yet.",
-    intro:
-      "Ask a procurement team in cleaning or soft services how confident they are in their own spend data, and \"ground level\" is a common, self-deprecating answer. Before any of that spend can be categorised or benchmarked, someone has to actually read every invoice, and at real volume, across hundreds of sites, that step is where most soft services providers are still stuck.",
-    points: [
-      {
-        title: "Invoices arriving faster than anyone can read them",
-        copy:
-          "ERP master data described as too poor for the automatic flow to even start, with deadlines that have been missed for years, not months."
-      },
-      {
-        title: "No justification when a client challenges a price",
-        copy:
-          "Asked to defend a tender cost, the honest answer is often that nobody knows. The margin on the number was a feeling, not a calculation."
-      },
-      {
-        title: "A supplier that controls the data you need to negotiate",
-        copy:
-          "When a single supplier accounts for most of a category's spend, they can share only the data that suits them, leaving no independent way to check it."
-      }
-    ],
-    changes: [
-      "Invoices and delivery notes read and structured automatically, in any format, so there is something to classify",
-      "A real cost baseline to defend pricing under client challenge, not a feeling",
-      "Spend visibility that does not depend on what a single supplier chooses to share"
-    ],
-    href: "/invoice-data-extraction",
-    linkLabel: "See how Pearstop reads the invoice first"
-  },
-  {
-    id: "manufacturing",
-    title: "Manufacturers of Building Systems",
-    copy: "One entity already runs a standard. The rest of the group does not.",
-    intro:
-      "It is common in multi-entity manufacturers for one part of the business, often the most established or the most recently scrutinised, to already classify spend against a real standard, while sister entities and newer sites still run on inconsistent, free-text supplier and parts data. The gap does not stay contained to one region for long: audits, group reporting, and shared procurement all eventually need the same view everywhere.",
-    points: [
-      {
-        title: "One entity on a standard, others not",
-        copy:
-          "A group classification standard already exists somewhere in the business. Extending it to every entity by hand is slower than the reason it was requested in the first place."
-      },
-      {
-        title: "Duplicate and inconsistent parts records across plants",
-        copy:
-          "The same part shows up under different codes and spellings depending on which plant or system entered it, which blocks supplier benchmarking and hides duplicate stock."
-      },
-      {
-        title: "Slow quoting built on manual lookups",
-        copy:
-          "Re-keying and re-checking part data by hand slows quoting exactly when speed and accuracy both matter."
-      }
-    ],
-    changes: [
-      "The group's existing classification standard extended to every entity, not just the one that already had it",
-      "Deduplicated, standardised parts data across plants and systems",
-      "Faster quoting on cost and supplier data that does not need re-checking by hand"
-    ],
-    href: "/unspsc",
-    linkLabel: "See how Pearstop aligns every entity to one standard"
-  },
-  {
-    id: "asset-owners",
-    title: "Asset Owners",
-    copy: "You do not touch the invoices. You still need to know what they say.",
-    intro:
-      "Property investors, landlords, and public estate owners who outsource facilities management do not generate their own spend data. They receive it, filtered through whichever provider delivers the contract. The question that follows is not a category strategy question. It is simpler, and harder to dodge: what is actually being spent on our behalf, is it competitive, and how would we know if it was not.",
-    points: [
-      {
-        title: "Cost data you receive but do not control",
-        copy:
-          "A managing agent or FM provider reports the numbers. There is rarely an independent way to check them against what similar sites or portfolios pay."
-      },
-      {
-        title: "No benchmark across providers or sites",
-        copy:
-          "Without a common, classified view of spend, comparing one provider's costs to another, or one site to the next, is not possible."
-      },
-      {
-        title: "Wanting to hold the narrative, not just receive it",
-        copy:
-          "Reviewing a provider's own reporting after the fact is not the same as holding an independent, comparable record of your own."
-      }
-    ],
-    changes: [
-      "An independent, classified view of spend managed on your behalf, not just the provider's own report",
-      "Cost benchmarking across providers and sites, on the same basis",
-      "Assurance you can bring to a provider review, not just a file you received from one"
-    ],
-    href: "/asset-data-management",
-    linkLabel: "See how Pearstop gives asset owners assurance"
-  }
-];
+type FaqItem = { q: string; a: string };
+
+type FacilitiesManagementIntro = {
+  title: string;
+  intro: string;
+  links: { label: string; id: string }[];
+};
 
 const trustedCompanies = [
   { name: "Strukton", href: "/cases#strukton", src: siteConfig.assets.clients.strukton },
@@ -330,6 +93,20 @@ export default async function IndustriesPage({
   setRequestLocale(locale);
   const prefix = locale === "en" ? "" : `/${locale}`;
   const t = await getTranslations({ locale, namespace: "Industries" });
+
+  const details = t.raw("details") as IndustryDetail[];
+  const faqItems = t.raw("faq.items") as FaqItem[];
+  const fm = t.raw("facilitiesManagement") as FacilitiesManagementIntro;
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a }
+    }))
+  };
 
   return (
     <>
@@ -374,44 +151,63 @@ export default async function IndustriesPage({
       </section>
 
       {details.map((detail, index) => (
-        <section key={detail.id} id={detail.id} className={index % 2 ? "ind-detail bg-soft" : "ind-detail"}>
-          <div className="container">
-            <div className={`ind-detail-inner ${index % 2 ? "reverse" : ""}`}>
-              <div className="ind-detail-text">
-                <div className="ind-detail-eyebrow">{detail.title}</div>
-                <h2>{detail.copy}</h2>
-                <p className="light-copy">{detail.intro}</p>
-                <ul className="ind-pains">
-                  {detail.points.map((point) => (
-                    <li key={point.title}>
-                      <span className="ind-pains-icon">•</span>
-                      <div>
-                        <strong>{point.title}</strong>
-                        <p>{point.copy}</p>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-                <Link className="ind-card-link" href={`${prefix}${detail.href}`}>
-                  {detail.linkLabel} →
-                </Link>
+        <Fragment key={detail.id}>
+          {detail.id === "integrated-fm" && (
+            <section id="facilities-management" className="ind-detail bg-soft">
+              <div className="container">
+                <div className="ind-fm-intro">
+                  <h2>{fm.title}</h2>
+                  <p className="light-copy">{fm.intro}</p>
+                  <div className="ind-fm-links">
+                    {fm.links.map((link) => (
+                      <Link key={link.id} className="btn btn-secondary" href={`${prefix}/industries#${link.id}`}>
+                        {link.label} →
+                      </Link>
+                    ))}
+                  </div>
+                </div>
               </div>
-              <div className="ind-detail-aside">
-                <div className="quote-card">
-                  <div className="story-label">{t("whatChanges")}</div>
+            </section>
+          )}
+          <section key={detail.id} id={detail.id} className={index % 2 ? "ind-detail bg-soft" : "ind-detail"}>
+            <div className="container">
+              <div className={`ind-detail-inner ${index % 2 ? "reverse" : ""}`}>
+                <div className="ind-detail-text">
+                  <div className="ind-detail-eyebrow">{detail.title}</div>
+                  <h2>{detail.copy}</h2>
+                  <p className="light-copy">{detail.intro}</p>
                   <ul className="ind-pains">
-                    {detail.changes.map((change) => (
-                      <li key={change}>
-                        <span className="ind-ok">✓</span>
-                        <div>{change}</div>
+                    {detail.points.map((point) => (
+                      <li key={point.title}>
+                        <span className="ind-pains-icon">•</span>
+                        <div>
+                          <strong>{point.title}</strong>
+                          <p>{point.copy}</p>
+                        </div>
                       </li>
                     ))}
                   </ul>
+                  <Link className="ind-card-link" href={`${prefix}${detail.href}`}>
+                    {detail.linkLabel} →
+                  </Link>
+                </div>
+                <div className="ind-detail-aside">
+                  <div className="quote-card">
+                    <div className="story-label">{t("whatChanges")}</div>
+                    <ul className="ind-pains">
+                      {detail.changes.map((change) => (
+                        <li key={change}>
+                          <span className="ind-ok">✓</span>
+                          <div>{change}</div>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </Fragment>
       ))}
 
       <section>
@@ -470,7 +266,7 @@ export default async function IndustriesPage({
             <div className="col-md-8 col-md-offset-2">
               <h2 style={{ marginBottom: "1.5rem" }}>Frequently asked questions</h2>
               <div className="faq-list">
-                {FAQ_ITEMS.map((item, i) => (
+                {faqItems.map((item, i) => (
                   <details key={i} className="faq-item">
                     <summary className="faq-q">{item.q}</summary>
                     <p className="faq-a">{item.a}</p>
