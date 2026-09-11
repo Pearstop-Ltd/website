@@ -7,6 +7,12 @@ const nextConfig = {
   reactStrictMode: true,
   async redirects() {
     return [
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "pearstop.com" }],
+        destination: "https://www.pearstop.com/:path*",
+        permanent: true,
+      },
       { source: "/home", destination: "/", permanent: true },
       { source: "/home.html", destination: "/", permanent: true },
       { source: "/index.html", destination: "/", permanent: true },
