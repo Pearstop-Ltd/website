@@ -1,7 +1,12 @@
 import type { MetadataRoute } from "next";
 import { caseStudies, solutionLinks, siteConfig } from "@/lib/site";
+import { routing } from "@/i18n/routing";
 
-const LOCALES = ["", "/nl", "/fr", "/de"];
+// Derived from routing.locales (not a second hardcoded list) so the sitemap
+// can't drift out of sync with the locales the site actually serves.
+const LOCALES = routing.locales.map((locale) =>
+  locale === routing.defaultLocale ? "" : `/${locale}`
+);
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPaths = [

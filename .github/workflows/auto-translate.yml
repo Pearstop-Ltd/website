@@ -9,9 +9,9 @@ on:
   workflow_dispatch: {}
 
 concurrency:
-  # Own group per workflow: this one only ever commits messages/nl.json and
-  # content/blog/nl, which auto-blog-image never touches, so the two
-  # workflows don't need to share a lane — sharing one previously let a
+  # Own group per workflow: this one only ever commits messages/{nl,fr,de}.json
+  # and content/blog/{nl,fr,de}, which auto-blog-image never touches, so the
+  # two workflows don't need to share a lane — sharing one previously let a
   # translate run's queued slot get bumped by an image run (or vice versa),
   # so the bumped workflow never ran at all for that push. Runs of *this*
   # workflow still queue behind each other rather than overlap.
@@ -51,11 +51,11 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add messages/nl.json content/blog/nl
+          git add messages/nl.json messages/fr.json messages/de.json content/blog/nl content/blog/fr content/blog/de
           if git diff --staged --quiet; then
             echo "No translation changes to commit."
           else
-            git commit -m "chore: auto-translate updated EN content to NL"
+            git commit -m "chore: auto-translate updated EN content to NL, FR, DE"
             # Another workflow (e.g. auto-blog-image) may push to main at the
             # same time this one does — rebase onto the latest main before
             # pushing so neither run clobbers the other's commit.

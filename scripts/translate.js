@@ -26,7 +26,7 @@ const https = require("https");
 const ROOT = path.join(__dirname, "..");
 const MESSAGES_DIR = path.join(ROOT, "messages");
 const BLOG_EN_DIR = path.join(ROOT, "content", "blog", "en");
-const TARGET_LOCALES = ["nl"];
+const TARGET_LOCALES = ["nl", "fr", "de"];
 
 const LOCALE_NAMES = { nl: "Dutch", fr: "French", de: "German" };
 // Gemini's free tier is limited by requests-per-minute far more than by

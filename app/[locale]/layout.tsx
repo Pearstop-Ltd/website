@@ -24,8 +24,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: siteConfig.url,
     languages: {
-      "en": siteConfig.url,
-      "nl": `${siteConfig.url}/nl`,
+      ...Object.fromEntries(
+        routing.locales.map((locale) => [
+          locale,
+          locale === routing.defaultLocale ? siteConfig.url : `${siteConfig.url}/${locale}`,
+        ])
+      ),
       "x-default": siteConfig.url,
     },
   },
@@ -68,7 +72,7 @@ export default async function LocaleLayout({
 }) {
   const { locale } = await params;
 
-  if (!routing.locales.includes(locale as "en" | "nl")) {
+  if (!routing.locales.includes(locale as (typeof routing.locales)[number])) {
     notFound();
   }
 
