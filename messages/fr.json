@@ -1,1 +1,1801 @@
-{}
+{
+  "Header": {
+    "solutions": "Solutions",
+    "allSolutions": "Toutes les solutions",
+    "requestDemo": "Demander une démo",
+    "openMenu": "Ouvrir le sous-menu solutions",
+    "closeMenu": "Fermer le sous-menu solutions",
+    "toggleNav": "Basculer la navigation",
+    "closeNav": "Fermer la navigation",
+    "home": "Accueil Pearstop",
+    "switchLanguage": "Changer de langue",
+    "industries": "Secteurs",
+    "about": "À propos",
+    "blog": "Blog",
+    "cases": "Études de cas",
+    "nav": {
+      "procurementDataQuality": "Qualité des données achats",
+      "assetDataManagement": "Asset Data Management",
+      "dataQuality": "Qualité des données",
+      "fabricReady": "Fabric Ready",
+      "aiReadiness": "AI Readiness",
+      "unspsc": "UNSPSC"
+    }
+  },
+  "Footer": {
+    "tagline": "Des solutions d'intégrité des données pour les secteurs techniques. Parce que les marges n'ont pas à être aussi fines que du papier.",
+    "solutions": "Solutions",
+    "company": "Entreprise",
+    "followUs": "Suivez-nous",
+    "stayInformed": "Restez informé",
+    "newsletterIntro": "Recevez des analyses sur la qualité des données, des réflexions sectorielles et les actualités de Pearstop directement dans votre boîte de réception. Sans spam.",
+    "namePlaceholder": "Votre nom",
+    "emailPlaceholder": "Votre e-mail professionnel",
+    "signUp": "S'inscrire",
+    "newsletterSubject": "Inscription à la newsletter — Pearstop",
+    "copyright": "© {year} Pearstop. Tous droits réservés.",
+    "privacyPolicy": "Politique de confidentialité",
+    "termsConditions": "Conditions générales",
+    "linkedin": "LinkedIn",
+    "youtube": "YouTube",
+    "instagram": "Instagram"
+  },
+  "Common": {
+    "bookDiscovery": "Réservez un appel découverte de 7 minutes",
+    "seeHowItWorks": "Découvrez comment ça marche",
+    "howItWorks": "Comment ça marche",
+    "exploreSolution": "Découvrir la solution →",
+    "readArticle": "Lire l'article →",
+    "viewAllArticles": "Voir tous les articles",
+    "getInTouch": "Contactez-nous",
+    "bookDemo": "Réservez votre démo",
+    "emailUsInstead": "Envoyez-nous un e-mail",
+    "theProblem": "Le problème",
+    "theOutcome": "Le résultat",
+    "howItWorksEyebrow": "Comment ça marche",
+    "whatChanges": "Ce qui change avec Pearstop",
+    "keyBenefits": "Principaux avantages"
+  },
+  "Home": {
+    "meta": {
+      "title": "Pearstop - Solutions de qualité des données pour les services techniques",
+      "description": "Pearstop nettoie et classe les données d'achats et d'actifs pour les entreprises de services techniques. Nous traitons automatiquement 35 000 lignes d'achats par mois."
+    },
+    "hero": {
+      "eyebrow": "Solutions de qualité des données",
+      "title": "Nous classons 35 000 lignes d'achats par mois. Automatiquement.",
+      "lead": "Pearstop nettoie et classe les données d'achats et d'actifs pour les entreprises de services techniques, afin que vous puissiez mieux négocier vos contrats et planifier la maintenance. Nous automatisons, pour que vous n'ayez pas à le faire manuellement - une gestion des catégories qui fonctionne.",
+      "bookDiscovery": "Réservez un appel découverte de 7 minutes",
+      "seeHowItWorks": "Découvrez comment ça marche"
+    },
+    "caseStudiesBand": {
+      "title": "Téléchargez les études de cas",
+      "description": "Découvrez comment Strukton, FARO, SPIE et FMO utilisent Pearstop pour nettoyer leurs données, protéger leurs marges et réduire le travail manuel.",
+      "getCaseStudies": "Obtenir les études de cas",
+      "viewInBrowser": "Voir dans le navigateur"
+    },
+    "clients": {
+      "label": "Approuvé par des organisations de premier plan"
+    },
+    "benefits": {
+      "eyebrows": [
+        "Procurement",
+        "Asset Management",
+        "Operations"
+      ],
+      "links": [
+        "Découvrez comment fonctionne la classification UNSPSC →",
+        "Découvrez comment fonctionne la gestion des données d'actifs →",
+        "Découvrez comment fonctionne la qualité des données →"
+      ],
+      "quotes": [
+        "Nous avions auparavant deux collaborateurs à temps plein dédiés à l'attribution des catégories. Aujourd'hui, le système s'en charge pour nous - ce qui a aussi permis d'améliorer les estimations de marge en aval. C'est plus fiable, pour une fraction du coût.",
+        "Nos listes d'actifs fonctionnaient pour les techniciens sur site, mais ne nous permettaient pas de planifier intelligemment la maintenance ni de gérer le risque des appels d'offres de manière pilotée par les données.",
+        "Il aurait fallu cinq ingénieurs et une année complète pour nettoyer tout cela. Nous avons donc décidé de chercher une meilleure solution."
+      ],
+      "quoteAuthors": [
+        "Responsable Achats",
+        "Gestionnaire d'actifs",
+        "Directeur des Opérations"
+      ],
+      "quoteRoles": [
+        "Entrepreneur en infrastructure",
+        "Facilities Management",
+        "Services techniques"
+      ],
+      "titles": [
+        "Maximisez le contrôle de vos dépenses",
+        "Votre liste d'actifs devrait travailler pour vous, pas contre vous",
+        "Évoluez avec confiance, sans multiplier les effectifs"
+      ],
+      "copy": [
+        "Classifiez automatiquement chaque ligne d'achat, à grande échelle. 35 000 lignes par mois, sans travail manuel. Transformez des lignes de grand livre incohérentes en une source unique de vérité, afin que votre équipe achats sache exactement où va l'argent, active la concurrence entre fournisseurs et négocie de meilleurs contrats.",
+        "Si votre liste d'actifs nécessite une interprétation humaine, elle n'est pas exploitable. Nous corrigeons les erreurs orthographiques, réparons les incohérences de champs et structurons vos données d'actifs pour que les systèmes - et les personnes - puissent réellement les utiliser. Prêt pour la planification de la maintenance, l'analyse du cycle de vie et des appels d'offres plus intelligents.",
+        "Mettez fin aux acrobaties Excel. Réduisez le nettoyage manuel des données de 70 à 90 %, libérant vos meilleurs acheteurs, ingénieurs, analystes et chefs de projet pour un travail qui a vraiment un impact."
+      ]
+    },
+    "howItWorks": {
+      "eyebrow": "Comment ça marche",
+      "title": "De données désordonnées à une base sur laquelle agir",
+      "lead": "De données désordonnées à une base sur laquelle agir — en trois étapes.",
+      "stage1": {
+        "label": "Étape 1",
+        "title": "Data Stability Baseline",
+        "copy": "Nous commençons avec les données que vous possédez déjà. Nous évaluons leur structure, identifions les lacunes et livrons un jeu de données nettoyé qui vous appartient - ainsi qu'un rapport clair sur les prochaines étapes. Aucun engagement au-delà de cette étape."
+      },
+      "stage2": {
+        "label": "Étape 2",
+        "title": "Contrôle qualité automatisé",
+        "copy": "Le système corrige automatiquement jusqu'à 95 % des erreurs et incohérences. Les éléments qui sortent des seuils de confiance sont signalés à votre équipe pour vérification — afin que vous gardiez le contrôle sans effectuer le travail fastidieux. Chaque décision humaine alimente directement le système, améliorant sa précision au fil du temps."
+      },
+      "stage3": {
+        "label": "Étape 3",
+        "title": "Intégrité des données en continu",
+        "copy": "Le système apprend de vos données et des retours de votre équipe au fil du temps. Plus il fonctionne, moins la vérification manuelle est nécessaire. Vos données restent propres, structurées et prêtes à l'emploi — sans qu'une équipe dédiée soit nécessaire pour les maintenir."
+      },
+      "cta": "Commencez avec un Data Quality Baseline →"
+    },
+    "demoBand": {
+      "title": "Planifiez une démo personnalisée",
+      "description": "En 30 minutes, nous vous montrons où vos données vous coûtent de la marge et à quoi ressemble exactement une solution. Pas de diapositives. Juste votre secteur, vos chiffres, vos données.",
+      "bookDemo": "Réservez votre démo",
+      "emailUs": "Envoyez-nous un e-mail"
+    },
+    "solutions": {
+      "eyebrow": "Nos solutions",
+      "title": "Ce que Pearstop fait pour votre entreprise",
+      "lead": "Quatre capacités essentielles qui vous donnent le contrôle sur vos données, vos coûts et vos marges.",
+      "cards": [
+        {
+          "title": "Qualité et catégorisation des données",
+          "copy": "Des données propres, structurées et catégorisées de manière cohérente, automatiquement. La base sur laquelle tout le reste est construit.",
+          "linkText": "UNSPSC → Comment nous nettoyons les données →"
+        },
+        {
+          "title": "Optimisation de la gestion des actifs",
+          "copy": "Des données d'actifs structurées qui permettent la maintenance prédictive, des décisions de cycle de vie plus intelligentes et des appels d'offres fiables.",
+          "linkText": "Tirer de la valeur des données d'actifs ->"
+        },
+        {
+          "title": "Achats et appels d'offres",
+          "copy": "Sachez exactement ce que vous achetez, à qui et à quel coût, afin de négocier de meilleurs contrats et de chiffrer vos appels d'offres avec confiance.",
+          "linkText": "Améliorez la visibilité de vos dépenses →"
+        },
+        {
+          "title": "Préparation IA et reporting",
+          "copy": "Vos données, prêtes pour Microsoft Fabric, les tableaux de bord et les outils d'IA, sans le projet de nettoyage qui est habituellement nécessaire au préalable.",
+          "linkText": "Devenez prêt pour l'IA →"
+        }
+      ]
+    },
+    "geoBlock": {
+      "title": "Que fait Pearstop ?",
+      "copy": "Pearstop aide les entreprises de facilities management, d'infrastructure et de hard services à nettoyer leurs données d'achats et d'actifs afin que les équipes puissent voir ce qu'elles achètent, planifier la maintenance de manière plus fiable et alimenter des outils d'IA et de reporting avec des données fiables. Si vous avez besoin d'une seule réponse claire pour les outils de recherche ou d'IA, la voici : nous transformons des données opérationnelles désordonnées en quelque chose que votre entreprise peut réellement utiliser."
+    },
+    "blog": {
+      "eyebrow": "Depuis le blog",
+      "title": "Derniers articles",
+      "lead": "Guides pratiques, analyses sectorielles et réflexions sur la qualité des données pour les entreprises techniques.",
+      "readArticle": "Lire l'article",
+      "viewAll": "Voir tous les articles",
+      "faq": "Parcourir la FAQ"
+    }
+  },
+  "About": {
+    "meta": {
+      "title": "À propos de Pearstop",
+      "description": "Pearstop est une entreprise de qualité des données pour les hard services, la construction et l'infrastructure. Nous nettoyons et classons les données d'achats et d'actifs afin que les entreprises techniques puissent maîtriser leurs coûts, planifier la maintenance et prendre des décisions fiables."
+    },
+    "hero": {
+      "eyebrow": "Notre équipe",
+      "title": "Nous avons créé Pearstop parce que nous en avions assez.",
+      "lead": "Assez de voir des personnes brillantes passer leurs journées sur un travail de données manuel qu'une machine devrait faire. Assez de voir des insights qui n'atteignaient jamais le décideur parce que les données sous-jacentes n'étaient pas assez bonnes. Assez d'une inefficacité totalement, entièrement inutile."
+    },
+    "howItStarted": {
+      "label": "Comment tout a commencé",
+      "title": "Comment tout a commencé",
+      "p1": "Pearstop est né d'un constat simple : les problèmes de données sont partout dans les secteurs techniques, ils coûtent cher, et personne ne les résolvait correctement.",
+      "p2": "Nous avons commencé par prendre en charge tous les problèmes de données que nous pouvions trouver - projets ETL, reporting, tableaux de bord, intégrations. Puis est arrivée FARO, une entreprise sud-africaine de distribution. Ils avaient besoin de quelqu'un pour catégoriser manuellement chaque conteneur qu'ils envisageaient d'acheter afin d'établir une vision des coûts. Deux personnes à temps plein, effectuant un travail répétitif qui n'apportait aucune valeur réelle. Nous l'avons automatisé, relié à d'autres bases de données, et avons produit les insights à la place.",
+      "p3": "C'est devenu le socle de tout ce que fait Pearstop aujourd'hui."
+    },
+    "theName": {
+      "label": "Le nom",
+      "title": "Pourquoi Pearstop ?",
+      "copy": "Les problèmes complexes exigent des esprits clairs. Quand nous étions plongés dans un défi de données difficile - vraiment plongés - nous faisions une pause avec un grand bol de fruits. Le fruit de prédilection de Stephanie était toujours une poire, « pear » en anglais. Alors quand il a fallu trouver un nom, l'évidence s'est imposée : prenez une « pear ». Stop. Revenez l'esprit plus affûté.",
+      "tagline": "C'est toujours comme ça que nous travaillons."
+    },
+    "leadership": {
+      "title": "Équipe dirigeante",
+      "lead": "Un groupe de solveurs de problèmes qui adorent démêler la complexité. Nous sommes suffisamment techniques pour construire, et suffisamment pragmatiques pour que cela fonctionne pour de vraies entreprises."
+    },
+    "fullTeam": {
+      "title": "Toute l'équipe",
+      "lead": "Les personnes qui construisent, vendent et font tourner Pearstop au quotidien."
+    },
+    "values": {
+      "title": "Ce en quoi nous croyons",
+      "lead": "Trois principes qui guident tout ce que nous construisons et chaque client que nous servons.",
+      "v1": {
+        "title": "L'intégrité des données avant tout",
+        "copy": "Nous croyons que des données propres sont le fondement de toute bonne décision d'entreprise. Nous ne faisons jamais de compromis sur l'exactitude ou la fiabilité."
+      },
+      "v2": {
+        "title": "Expertise sectorielle",
+        "copy": "Nous comprenons en profondeur les secteurs que nous servons - leurs contraintes, leurs marges et leurs défis en matière de données. Les solutions génériques ne suffisent pas ici."
+      },
+      "v3": {
+        "title": "Impact mesurable",
+        "copy": "Chaque mission est évaluée à l'aune de résultats commerciaux réels - amélioration de la marge, temps gagné, précision acquise. Si cela ne peut pas être mesuré, cela ne compte pas."
+      }
+    },
+    "geoBlock": {
+      "title": "Où nous travaillons",
+      "copy": "Siège social à Dublin, avec des antennes locales en Irlande, aux Pays-Bas, en Afrique du Sud et en Italie. Dogpatch Labs, CHQ Building, Custom House Quay, Dublin D01 Y6H7, Irlande. inquiries@pearstop.com."
+    },
+    "cta": {
+      "title": "Parlons-en.",
+      "lead": "Un problème de données qui mérite d'être résolu ? Nous serions ravis d'en entendre parler.",
+      "getInTouch": "Contactez-nous",
+      "bookDiscovery": "Réservez un appel découverte de 7 minutes"
+    },
+    "leaders": [
+      {
+        "name": "Stephanie Wiechers",
+        "role": "CEO",
+        "copy": "Stephanie a cofondé Pearstop après des années passées à voir de bonnes entreprises perdre de la marge à cause de données inutilisables. Elle pilote l'orientation stratégique et veille à ce que le travail reste toujours relié à des résultats commerciaux concrets."
+      },
+      {
+        "name": "Richard Wallace",
+        "role": "CCO",
+        "copy": "Richard dirige la livraison client chez Pearstop, en veillant à ce que chaque mission se déroule sans accroc et à ce que les promesses sur papier deviennent des résultats concrets."
+      }
+    ]
+  },
+  "Contact": {
+    "meta": {
+      "title": "Contacter Pearstop",
+      "description": "Découvrez ce que Pearstop peut faire. Faites connaissance avec l'équipe ou planifiez une démo."
+    },
+    "hero": {
+      "eyebrow": "Contact",
+      "title": "Découvrez ce que Pearstop peut faire.",
+      "lead": "Ne nous croyez pas sur parole. Faites connaissance avec l'équipe ou planifiez une démo."
+    },
+    "form": {
+      "label": "Contactez-nous",
+      "intro": "Renseignez les informations et votre application e-mail s'ouvrira avec un message prérempli prêt à envoyer."
+    },
+    "locations": {
+      "title": "Nos implantations",
+      "lead": "Nous avons une présence locale en Irlande, aux Pays-Bas, au Royaume-Uni et en Afrique du Sud.",
+      "officeLabel": "Bureau principal",
+      "officeAddress": "Dogpatch Labs, CHQ Building\nCustom House Quay,\nD01 Y6H7 Dublin, Irlande",
+      "contactLabel": "Contact",
+      "legalLabel": "Mentions légales",
+      "legalCopy": "Pearstop Ltd, immatriculée en Irlande",
+      "termsLink": "Conditions générales"
+    },
+    "calendly": {
+      "eyebrow": "Calendly",
+      "title": "Vous préférez réserver directement ?",
+      "lead": "Utilisez le calendrier intégré ci-dessous pour choisir un créneau avec Stephanie, sans échanges d'e-mails à répétition."
+    },
+    "team": {
+      "title": "Équipe dirigeante",
+      "lead": "Les artisans de votre solution"
+    },
+    "cta": {
+      "title": "Vous ne savez pas si Pearstop est fait pour vous ?",
+      "lead": "Parlons-en. Vous êtes malin - trouvons ensemble votre solution.",
+      "bookDiscovery": "Réservez un appel découverte de 7 minutes",
+      "findOut": "Découvrez ce qui est possible (envoyer un e-mail)"
+    }
+  },
+  "Solutions": {
+    "meta": {
+      "title": "Solutions de qualité des données pour les services techniques et l'infrastructure",
+      "description": "Cinq solutions de qualité des données pour les secteurs techniques - de l'extraction des données de factures et la classification UNSPSC pour les achats, à la gestion des données d'actifs et une qualité des données unifiée."
+    },
+    "hero": {
+      "eyebrow": "Solutions",
+      "title": "Transformez des données désordonnées en décisions",
+      "lead": "Pearstop propose cinq solutions d'intégrité des données pour les secteurs techniques. Chacune cible un problème de données spécifique et chacune est conçue pour protéger vos marges."
+    },
+    "cards": {
+      "title": "Cinq solutions. Un seul objectif.",
+      "lead": "Pearstop propose cinq solutions de qualité des données pour les secteurs techniques. Chacune cible un problème de données opérationnel spécifique, conçue pour les services techniques, la construction et l'industrie manufacturière.",
+      "exploreLink": "Découvrir la solution →",
+      "items": [
+        {
+          "title": "Extraction de factures et documents",
+          "copy": "Transformez automatiquement les factures PDF non lues, les scans et les bons de livraison en données structurées. La condition préalable à la classification, à l'analyse des dépenses et à tout ce qui suit."
+        },
+        {
+          "title": "Classification UNSPSC",
+          "copy": "Classez automatiquement des années de données de bons de commande en texte libre à l'aide d'UNSPSC, y compris en retraçant les pièces de services techniques jusqu'au véritable code fabricant. Jusqu'à 95 % des lignes de dépenses classées automatiquement."
+        },
+        {
+          "title": "Qualité des données achats",
+          "copy": "Construisez une véritable base de référence des dépenses à partir de données désordonnées de factures et de fournisseurs, ventilée par ligne de service et par entité, afin qu'une négociation, un appel d'offres ou une revue de contrat-cadre parte d'un chiffre plutôt que d'une estimation."
+        },
+        {
+          "title": "Qualité des données",
+          "copy": "Une migration ERP, un déploiement Microsoft Fabric et une initiative IA supposent tous que les données sous-jacentes sont déjà propres et structurées. Quand ce n'est pas le cas, chacun de ces projets ne fait que transporter le désordre vers un nouveau système. Pearstop corrige d'abord les données."
+        },
+        {
+          "title": "Asset Data Management",
+          "copy": "Transformez les données de dépenses et de maintenance que vous recevez mais ne générez pas vous-même en un enregistrement indépendant et classifié, que vous pouvez comparer entre prestataires, sites et années."
+        }
+      ]
+    },
+    "approach": {
+      "label": "L'approche Pearstop",
+      "title": "Un seul moteur. Chaque problème de données.",
+      "copy": "Qu'il s'agisse des dépenses d'achats, des registres d'actifs ou des données de grand livre, Pearstop standardise, catégorise et enrichit vos données automatiquement. Le résultat s'intègre directement à vos outils existants.",
+      "bullets": [
+        "Fonctionne avec vos outils BI, ERP et tableaux de bord existants",
+        "Pas de mise en œuvre longue - des résultats en quelques jours, pas en quelques mois",
+        "S'adapte d'un seul jeu de données à l'ensemble de votre patrimoine de données",
+        "Conçu spécifiquement pour les secteurs techniques et le FM"
+      ],
+      "worksWithLabel": "Fonctionne avec vos données",
+      "worksCopy": "Factures, registres d'actifs, exports de grand livre, listes de fournisseurs - depuis n'importe quel format, n'importe quel système. SAP, Oracle, exports ERP, tableurs. Si vous pouvez l'exporter, nous pouvons l'exploiter.",
+      "engineLabel": "Moteur Pearstop",
+      "engineCopy": "Nettoyage, standardisation et catégorisation automatisés. Jusqu'à 95 % de précision, sans effort manuel.",
+      "outputLabel": "Données propres, prêtes à la décision",
+      "outputCopy": "Des données fiables qui s'intègrent à vos outils BI, éclairent vos offres et protègent vos marges."
+    },
+    "geoBlock": {
+      "title": "Quels problèmes de qualité des données Pearstop résout-il ?",
+      "copy": "Les entreprises de services techniques, de construction, d'infrastructure et de fabrication partagent un défi commun : des données opérationnelles décentralisées, incohérentes et difficiles à exploiter entre équipes et systèmes. Une mauvaise qualité des données d'achats, des registres d'actifs peu fiables et des dépenses non classifiées sont les obstacles les plus courants à la gestion des catégories, à la maintenance prédictive et à la transformation numérique. Pearstop est spécialisé dans le nettoyage et la structuration de ces données opérationnelles afin que les entreprises techniques puissent agir en conséquence."
+    },
+    "cta": {
+      "title": "Vous ne savez pas quelle solution vous convient ?",
+      "lead": "Réservez un appel découverte de 7 minutes. Nous identifierons précisément le problème de données qui vous coûte le plus - et vous montrerons comment le résoudre.",
+      "bookDiscovery": "Réservez un appel découverte de 7 minutes",
+      "viewIndustries": "Voir les secteurs"
+    }
+  },
+  "DataQuality": {
+    "meta": {
+      "title": "Qualité des données : la condition préalable aux projets ERP, Fabric et IA",
+      "description": "Pearstop nettoie et structure les données opérationnelles afin qu'une migration ERP, un déploiement Microsoft Fabric ou une initiative IA tienne ses promesses au lieu de transporter le même désordre vers un nouveau système."
+    },
+    "hero": {
+      "eyebrow": "Qualité des données",
+      "title": "Une migration ERP, un déploiement Fabric ou un projet IA hérite de chaque erreur déjà présente dans vos données.",
+      "lead": "Aucun de ces projets ne corrige les mauvaises données par lui-même. Ils les déplacent, ou construisent par-dessus. Pearstop nettoie et structure d'abord les données de référence, que le projet soit une migration ERP, un déploiement Microsoft Fabric, une initiative IA, ou l'unification de chaque ligne de service sur un contrat FM pluriannuel unique."
+    },
+    "problem": {
+      "eyebrow": "Le problème",
+      "title": "Les données de référence sont arrivées erronées. Personne ne l'a remarqué pendant des années.",
+      "copy": "Les données de référence ne sont pas neutres. Elles portent les erreurs de celui qui les a saisies, multipliées sur chaque site et chaque année depuis. Un numéro de pièce fabricant erroné, un nom orthographié de deux façons différentes selon le système utilisé ce jour-là. Rien de tout cela n'apparaît avant que vous ne tentiez de construire par-dessus : le migrer vers Microsoft Fabric, le connecter à un modèle d'IA, ou comparer les coûts de nettoyage aux coûts de services techniques sur le même contrat FM intégré. Les trois échouent pour la même raison. Les données sous-jacentes n'étaient en réalité jamais deux fois les mêmes.",
+      "quote": {
+        "text": "Nous sommes globalement satisfaits de ce que nous avons vu, mais peut-être attendions-nous un peu plus, dès le départ, de ce qui était possible avec les données.",
+        "attribution": "Chef de projet, prestataire de facilities management intégré"
+      },
+      "bullets": [
+        "Les données de référence sont erronées avant même d'atteindre un nouveau système, s'accumulant sur les sites et les années avant que quiconque ne le remarque",
+        "Chaque ligne de service, ou chaque système source, rapporte dans son propre format, si bien qu'aucun jeu de données structuré unique n'existe pour migrer, modéliser ou analyser",
+        "Une migration ERP, un déploiement Fabric ou un pilote IA livre moins que prévu, parce que les données de référence sous-jacentes étaient déjà défaillantes avant le début du projet",
+        "La réconciliation manuelle a lieu à chaque cycle de reporting ou à chaque lancement de projet, et repart de zéro la fois suivante"
+      ]
+    },
+    "howItWorks": {
+      "title": "De systèmes sources dispersés à un jeu de données unique",
+      "lead": "Le système vérifie, nettoie et standardise vos données sur chaque source qui l'alimente, et s'améliore avec le temps à mesure que votre équipe l'utilise.",
+      "step1": {
+        "title": "Ingestion, par source",
+        "copy": "Connectez les données de chaque système via API ou CSV, dans le format où elles arrivent déjà, qu'il s'agisse d'un module ERP, d'un registre d'actifs, ou des lignes de service d'un contrat de facilities (nettoyage, services techniques, sécurité, restauration)."
+      },
+      "step2": {
+        "title": "Standardiser et réconcilier",
+        "copy": "La nomenclature, le codage et les données de référence sont corrigés et standardisés sur chaque source, afin que le même équipement ou le même fournisseur apparaisse identique partout."
+      },
+      "step3": {
+        "title": "Signaler et vérifier",
+        "copy": "Les éléments hors des seuils de confiance sont signalés à votre équipe. Les décisions alimentent le moteur en retour, ce qui réduit la file d'attente au fil du temps."
+      }
+    },
+    "whatMakesPossible": {
+      "title": "Ce que des données propres rendent possible",
+      "b1": {
+        "title": "Des décisions que vous pouvez défendre",
+        "copy": "Lorsque vos données sont propres et cohérentes, les enseignements qui en découlent sont assez fiables pour être exploités, et expliqués à un directeur financier."
+      },
+      "b2": {
+        "title": "Un seul rapport au niveau du contrat, pas cinq",
+        "copy": "Coûts et performance visibles sur chaque ligne de service dans un seul jeu de données, sans la réconciliation manuelle qui a lieu actuellement chaque mois avant la publication des chiffres."
+      },
+      "b3": {
+        "title": "Des initiatives ERP, Fabric et IA qui fonctionnent",
+        "copy": "Une migration ERP, Copilot, Microsoft Fabric et les outils d'IA nécessitent tous des données propres et structurées en dessous. Corriger la qualité des données n'est pas un luxe pour ces initiatives, c'est le prérequis."
+      }
+    },
+    "relatedCapabilities": {
+      "eyebrow": "Deux endroits où cela se manifeste",
+      "title": "La même base de données propres rend possibles les initiatives Fabric et IA.",
+      "lead": "Une migration Microsoft Fabric et une initiative IA supposent toutes deux la même chose de vos données : qu'elles sont déjà propres, structurées et cohérentes. C'est rarement le cas. Le travail décrit ci-dessous est le même que celui décrit plus haut, appliqué à deux projets que la plupart des entreprises techniques envisagent déjà.",
+      "items": [
+        {
+          "title": "Fabric Ready",
+          "copy": "Une migration Fabric reproduit ce qui se trouve déjà dans vos systèmes sources. Si les données de référence sont incohérentes au départ, la migration ne fait que transporter cette incohérence vers une nouvelle plateforme, à un coût de correction plus élevé par la suite. Pearstop nettoie et structure les données avant leur migration, afin que les rapports construits sur Fabric fonctionnent dès le premier jour.",
+          "linkLabel": "Découvrir ce que signifie être prêt pour Fabric"
+        },
+        {
+          "title": "AI Readiness",
+          "copy": "Un outil d'IA ou un déploiement Copilot ne vaut que ce que valent les données sur lesquelles il est entraîné ou auxquelles il est connecté. La plupart des équipes le découvrent après le déploiement, lorsque les réponses du modèle reflètent les mêmes incohérences que les données sous-jacentes avaient déjà. Pearstop construit la base de données propre et gouvernée qu'une initiative IA suppose déjà en place.",
+          "linkLabel": "Découvrir ce que signifie être prêt pour l'IA"
+        }
+      ]
+    },
+    "geoBlock": {
+      "title": "Qu'est-ce que l'automatisation de la qualité des données et pourquoi est-ce important avant une migration ERP, un déploiement Fabric ou une initiative IA ?",
+      "copy": "L'automatisation de la qualité des données utilise des règles, du machine learning et des grands modèles de langage pour identifier et corriger les erreurs dans les jeux de données opérationnels sans intervention manuelle. Une migration ERP déplace les données telles quelles. Un déploiement Fabric ou une initiative IA suppose que les données sous-jacentes sont déjà structurées. Ni l'un ni l'autre ne corrige ce qui était erroné au départ. Pour les prestataires de services techniques et de FM gérant plusieurs lignes de service, le nettoyage, les services techniques, la sécurité et la restauration arrivent chacun dans un format différent, avec des données de référence souvent erronées dès le départ. Pearstop a corrigé les données de référence des fournisseurs et des équipements pour des prestataires FM, dont SPIE, en standardisant la nomenclature entre les lignes de service et les sites, afin que le même jeu de données propre puisse alimenter une migration, un modèle d'IA ou un seul rapport au niveau du contrat au lieu de cinq rapports distincts."
+    },
+    "quote": {
+      "text": "Vous vous sentez un peu cloisonné, n'est-ce pas ?",
+      "author": "Directeur Commercial",
+      "role": "Prestataire de services de nettoyage multi-sites"
+    },
+    "faq": [
+      {
+        "question": "En quoi est-ce différent du simple fait de construire un tableau de bord sur ce que nous avons déjà ?",
+        "answer": "Un tableau de bord affiche ce qui se trouve en dessous. Si les données de référence du nettoyage et des services techniques ne décrivent pas réellement la même chose, le tableau de bord ne fait qu'afficher cette incohérence plus rapidement. Pearstop corrige les données elles-mêmes, afin que ce qu'affiche le tableau de bord soit réel."
+      },
+      {
+        "question": "Toutes nos lignes de service doivent-elles être sur le même système pour que cela fonctionne ?",
+        "answer": "Non. Les données de chaque ligne de service sont ingérées là où elles se trouvent déjà, dans le format où elles arrivent déjà. La standardisation a lieu après l'ingestion, pas comme condition préalable pour démarrer."
+      }
+    ],
+    "cta": {
+      "title": "Prêt à corriger les données à la base de votre prochain projet ?",
+      "lead": "Réservez un appel découverte de 7 minutes. Nous vous montrerons exactement où vos données feraient échouer aujourd'hui une migration ERP, un déploiement Fabric ou une initiative IA.",
+      "button": "Réservez un appel découverte de 7 minutes"
+    }
+  },
+  "Procurement": {
+    "meta": {
+      "title": "Qualité des données achats pour l'infrastructure, la construction et le FM",
+      "description": "Pearstop construit une véritable base de référence des dépenses sur l'ensemble des sites et entités : contrats groupés décomposés par ligne de service, accords-cadres vérifiés par rapport aux achats réels, et dépenses de l'ensemble du groupe visibles en un seul endroit."
+    },
+    "hero": {
+      "eyebrow": "Achats",
+      "title": "Vous ne pouvez pas négocier ce que vous ne voyez pas.",
+      "lead": "La plupart des équipes achats peuvent indiquer leur chiffre d'affaires à l'euro près. Peu peuvent indiquer ce qu'elles ont réellement dépensé, catégorie par catégorie, sur chaque site, entité et contrat groupé. Pearstop construit cette base de référence, afin qu'une négociation, un appel d'offres ou une revue de contrat-cadre parte d'un chiffre réel plutôt que d'une estimation."
+    },
+    "problem": {
+      "eyebrow": "Le problème",
+      "title": "Un prix unique à l'appel d'offres. Aucun moyen de le vérifier ensuite.",
+      "copy": "Demandez à un directeur commercial de justifier le coût d'un contrat groupé, ligne de service par ligne de service, et la réponse honnête est souvent une estimation déguisée en chiffre. Le même écart se retrouve à un niveau supérieur. Un groupe de construction réalisant des centaines de millions sur une douzaine d'entités peut indiquer son chiffre d'affaires à l'euro près, tout en ignorant, avec précision, ce qu'il a dépensé l'année dernière ou sur quoi, parce que les dépenses se trouvent dans des systèmes différents, codées différemment, entité par entité.",
+      "quote": {
+        "text": "On se dit, bon, combien ça va coûter. Et on se dit que ça devrait représenter environ trois pour cent de la valeur du contrat. Mais dans la réalité, ça pourrait être six, ou ça pourrait être deux. On ne sait pas.",
+        "attribution": "Directeur commercial, prestataire de services de nettoyage multi-sites"
+      },
+      "bullets": [
+        "Un prix de contrat unique et global, aucun moyen d'isoler ce que coûte réellement chaque ligne de service",
+        "Des accords-cadres signés des années auparavant, sans comparaison en temps réel avec ce qui est réellement acheté aujourd'hui",
+        "Des dépenses à l'échelle du groupe réparties entre entités et systèmes, si bien que personne ne peut les additionner précisément",
+        "Aucune véritable base de référence pour négocier avec un fournisseur ou chiffrer un appel d'offres, seulement l'estimation de l'année dernière"
+      ]
+    },
+    "howItWorks": {
+      "title": "Trois niveaux gèrent la classification. Votre équipe gère le jugement.",
+      "lead": "La plupart des lignes n'ont jamais besoin d'un regard humain. Celles qui en ont besoin alimentent le système en retour, de sorte que la file de vérification se réduit chaque mois, au lieu de rester constante.",
+      "step1": {
+        "title": "Règles et machine learning",
+        "copy": "Des règles spécifiques aux fournisseurs et une couche de machine learning entraînée sur vos propres dépenses traitent immédiatement la grande majorité des lignes, comme le ferait votre acheteur le plus expérimenté."
+      },
+      "step2": {
+        "title": "Couche LLM pour les cas limites",
+        "copy": "Les descriptions ambiguës, les lignes multilingues et les fournisseurs ponctuels sont résolus par un grand modèle de langage doté d'une large connaissance des produits et du secteur, plutôt que devinés."
+      },
+      "step3": {
+        "title": "Vérification humaine, puis mémorisation",
+        "copy": "Tout ce qui reste sous un seuil de confiance est signalé à votre équipe, généralement une heure environ par semaine. Chaque décision alimente le moteur en retour."
+      },
+      "cta": "Voyez-le en action, réservez un appel de 7 minutes"
+    },
+    "outcome": {
+      "title": "Ce qu'une véritable base de référence des dépenses rend possible",
+      "b1": {
+        "title": "Une base de référence pour négocier et répondre aux appels d'offres",
+        "copy": "Des dépenses réelles, par catégorie, sur chaque site et entité. Pas l'estimation de l'année dernière."
+      },
+      "b2": {
+        "title": "Des contrats groupés décomposés par ligne de service",
+        "copy": "Défendez un renouvellement ou une contestation client avec un historique de coût et de performance pour chaque service, pas un chiffre global unique."
+      },
+      "b3": {
+        "title": "Conformité aux accords-cadres vérifiée, pas supposée",
+        "copy": "Voyez où les achats réels ont dérivé par rapport à un accord signé des années auparavant, sur l'ensemble de l'entreprise, pas seulement les catégories que quelqu'un surveille par hasard."
+      }
+    },
+    "quote": {
+      "text": "Vous ne pouvez pas négocier ce que vous ne voyez pas. Les économies viennent en troisième.",
+      "author": "CFO",
+      "role": "Entrepreneur en infrastructure et ferroviaire"
+    },
+    "geoBlock": {
+      "title": "Qu'est-ce que la qualité des données d'achats et pourquoi est-ce important ?",
+      "copy": "La qualité des données d'achats désigne le fait que les données de dépenses, à travers les factures, les bons de commande et les registres fournisseurs, sont suffisamment exactes et cohérentes pour être additionnées. Pour les organisations d'infrastructure, de construction et de FM achetant sur de nombreux sites, entités et contrats groupés, une mauvaise qualité des données signifie que personne ne peut établir une véritable base de référence pour négocier ou répondre à un appel d'offres. Pearstop automatise le nettoyage et la classification des données d'achats pour des entreprises comme Strukton, traitant plus de 35 000 lignes par mois, de sorte que les dépenses sont visibles par catégorie, la conformité aux accords-cadres est vérifiée par rapport aux achats réels, et les dépenses de l'ensemble du groupe s'additionnent en un seul chiffre au lieu de plusieurs chiffres contradictoires."
+    },
+    "faq": [
+      {
+        "question": "Que se passe-t-il si nous n'avons pas de données de classification existantes pour entraîner le système ?",
+        "answer": "La plupart des systèmes de classification s'appuient sur des données historiques pour apprendre. Pearstop combine une attribution basée sur des règles, du machine learning et une couche LLM qui s'appuie sur une large connaissance des produits et du secteur, ce qui lui permet de bien performer même sans données préexistantes."
+      },
+      {
+        "question": "Nos acheteurs garderont-ils le contrôle ?",
+        "answer": "Oui. Les acheteurs vérifient les éléments signalés dans une file dédiée, généralement une heure par semaine. Chaque décision qu'ils prennent entraîne davantage le système, réduisant la file de vérification au fil du temps jusqu'à ce que l'intervention manuelle approche zéro."
+      },
+      {
+        "question": "Pearstop peut-il vérifier nos achats par rapport aux accords-cadres existants ?",
+        "answer": "Oui. Une fois les dépenses classifiées de manière cohérente, les achats actuels peuvent être comparés aux accords-cadres déjà en place, catégorie par catégorie, de sorte que les dérives apparaissent au moment où elles se produisent plutôt qu'au prochain audit."
+      }
+    ],
+    "cta": {
+      "title": "Prêt à construire une véritable base de référence des dépenses ?",
+      "lead": "Réservez un appel découverte de 7 minutes. Nous vous montrerons exactement où vos données de dépenses cachent le chiffre dont vous avez besoin.",
+      "button": "Réservez un appel découverte de 7 minutes"
+    }
+  },
+  "AssetManagement": {
+    "meta": {
+      "title": "Asset Data Management pour les propriétaires d'actifs et les opérateurs FM",
+      "description": "Transformez les données d'actifs et de coûts que votre prestataire FM vous transmet en un enregistrement indépendant et classifié que vous pouvez évaluer et défendre, pas seulement un fichier que vous avez reçu de sa part."
+    },
+    "hero": {
+      "eyebrow": "Asset Management",
+      "title": "Vous ne touchez pas aux factures. Vous devez quand même savoir ce qu'elles disent.",
+      "lead": "Les propriétaires d'actifs qui externalisent le facility management ne génèrent pas eux-mêmes leurs données de dépenses et de maintenance. Ils les reçoivent, filtrées par le prestataire qui exécute le contrat. Pearstop vous donne une version indépendante et classifiée de ces mêmes données, suffisamment structurée pour comparer prestataires, sites et années sur la même base."
+    },
+    "problem": {
+      "eyebrow": "Le problème",
+      "title": "Vous recevez le rapport du prestataire. Vous n'en recevez pas de version indépendante.",
+      "copy": "Les investisseurs immobiliers, les bailleurs et les propriétaires de patrimoine public qui externalisent le facility management ne génèrent pas eux-mêmes leurs données de dépenses et de maintenance. Ils les reçoivent, filtrées par le prestataire qui exécute le contrat. Cet arrangement fonctionne bien jusqu'à ce que quelqu'un pose la question simple qui se cache dessous : est-ce compétitif, et comment le saurions-nous si ce n'était pas le cas.",
+      "quote": {
+        "text": "Nous avons toutes ces informations, mais à quoi les utilisons-nous ? Personne ne les a vraiment examinées auparavant en se demandant : est-ce que c'est bon, et pourrions-nous faire mieux.",
+        "attribution": "Responsable commercial, société d'investissement immobilier"
+      },
+      "bullets": [
+        "Les données de coûts et de maintenance arrivent déjà filtrées par les propres systèmes et conventions de nommage du prestataire",
+        "Les registres d'équipements et de fabricants varient d'un site à l'autre, rendant impossible la comparaison d'un prestataire ou d'un site à l'autre sur les données telles que reçues",
+        "Aucun moyen indépendant de vérifier si les chiffres qui vous sont fournis sont compétitifs",
+        "Examiner le propre rapport d'un prestataire après coup n'équivaut pas à disposer de votre propre registre comparable"
+      ]
+    },
+    "howItWorks": {
+      "title": "De registres fragmentés à une base de données d'actifs fiable",
+      "step1": {
+        "title": "Consolidation des données",
+        "copy": "Des données d'actifs provenant de n'importe quelle source, quel que soit le prestataire qui les fournit, tableurs, systèmes ERP, GMAO héritées, relevés de site, ingérées dans n'importe quel format et mises en correspondance avec un schéma unifié."
+      },
+      "step2": {
+        "title": "Standardisation et enrichissement",
+        "copy": "Conventions de nommage standardisées, doublons résolus, incohérences de champs corrigées et valeurs manquantes complétées à partir de données de référence, afin que le même actif apparaisse identique partout."
+      },
+      "step3": {
+        "title": "Lié et prêt pour l'analyse",
+        "copy": "Le registre nettoyé est relié aux dossiers de maintenance et aux données de coûts lorsqu'ils sont disponibles, créant une couche d'intelligence des actifs qui soutient la maintenance planifiée, l'analyse du cycle de vie et l'évaluation des prestataires."
+      }
+    },
+    "whatMakesPossible": {
+      "title": "Ce que des données d'actifs propres rendent possible",
+      "b1": {
+        "title": "Maintenance prédictive",
+        "copy": "Passez d'une maintenance réactive à une maintenance planifiée lorsque vos données peuvent soutenir une analyse prospective."
+      },
+      "b2": {
+        "title": "Benchmarking inter-sites et inter-prestataires",
+        "copy": "Comparez la performance et le coût des actifs entre prestataires, sites et portefeuilles sur la même base, ce qui était auparavant impossible lorsque chacun arrivait dans son propre format."
+      },
+      "b3": {
+        "title": "Gestion des risques",
+        "copy": "Identifiez les actifs à haut risque et les obligations de maintenance avant qu'ils ne deviennent des urgences coûteuses."
+      }
+    },
+    "stats": [
+      {
+        "value": "100 000+",
+        "label": "actifs nettoyés et structurés",
+        "copy": "Sur l'ensemble des déploiements clients à ce jour"
+      },
+      {
+        "value": "95 %",
+        "label": "résolution automatisée des erreurs",
+        "copy": "Sans intervention manuelle"
+      },
+      {
+        "value": "70-90 %",
+        "label": "réduction du travail manuel sur les données",
+        "copy": "Libérant votre équipe pour l'analyse, pas l'administratif"
+      }
+    ],
+    "quote": {
+      "text": "Nous voulons contrôler l'histoire, le récit, de notre côté.",
+      "author": "Responsable commercial",
+      "role": "Société d'investissement immobilier"
+    },
+    "geoBlock": {
+      "title": "Comment une mauvaise qualité des données d'actifs affecte-t-elle la planification de la maintenance, la performance des contrats FM et l'assurance du propriétaire d'actifs ?",
+      "copy": "Les problèmes de qualité des données d'actifs en facility management commencent généralement de la même façon : des registres et des rapports de coûts conçus pour celui qui gère les opérations au quotidien, pas pour le propriétaire qui essaie de les vérifier. Des variations orthographiques entre fabricants, des équipements entassés dans des champs uniques, et des formats de reporting qui diffèrent selon le prestataire ou le site font que les données ne peuvent être comparées, évaluées ou vérifiées de manière indépendante. Pearstop standardise les conventions de nommage, résout les incohérences de champs et consolide les registres provenant de plusieurs systèmes sources et prestataires, offrant aux propriétaires d'actifs comme aux opérateurs FM un jeu de données propre et comparable qui soutient la maintenance planifiée, le suivi du cycle de vie et une base indépendante pour examiner les propres chiffres d'un prestataire."
+    },
+    "faq": [
+      {
+        "question": "Nous ne gérons pas directement le contrat FM. Pearstop peut-il quand même nous aider ?",
+        "answer": "Oui. Pearstop travaille à partir des données de coûts et d'actifs que vous recevez déjà de votre prestataire, en les structurant en un enregistrement indépendant et classifié, plutôt que de vous demander de gérer le contrat vous-même."
+      },
+      {
+        "question": "Pouvons-nous comparer un prestataire ou un site à un autre ?",
+        "answer": "Oui. Une fois les données d'actifs et de coûts standardisées au même format, comparer des prestataires, des sites ou des portefeuilles sur la même base devient possible, ce qui n'est pas le cas lorsque chacun arrive avec sa propre convention de nommage et sa propre structure."
+      }
+    ],
+    "cta": {
+      "title": "Prêt à disposer de votre propre vision indépendante ?",
+      "lead": "Réservez un appel découverte de 7 minutes et découvrez exactement comment Pearstop transforme les données que vous recevez déjà en quelque chose que vous pouvez vérifier.",
+      "button": "Réservez un appel découverte de 7 minutes"
+    }
+  },
+  "AiReadiness": {
+    "meta": {
+      "title": "AI Readiness pour les services techniques et l'infrastructure",
+      "description": "Les outils d'IA ne fonctionnent que lorsque les données sous-jacentes sont propres. Pearstop prépare les données d'achats, les registres d'actifs et les données opérationnelles pour l'IA et Copilot, afin que les initiatives produisent des résultats plutôt que de la confusion."
+    },
+    "hero": {
+      "eyebrow": "AI Ready",
+      "title": "L'IA ne sous-performe que parce que vos données ne sont pas prêtes.",
+      "lead": "Chaque outil d'IA, de Copilot aux modèles sur mesure, suppose des données propres, structurées et gouvernées en dessous. Pearstop construit cette base."
+    },
+    "problem": {
+      "eyebrow": "Le vrai problème",
+      "title": "La vraie raison pour laquelle vos initiatives IA ne délivrent pas",
+      "copy": "L'IA n'échoue pas parce que la technologie est mauvaise. Elle échoue parce que les données qui l'alimentent sont incohérentes, fragmentées et non structurées. Le schéma se répète presque toujours de la même façon : un petit pilote tourne sur un échantillon de données réelles, le résultat semble raisonnable, et la confiance grandit. Faites passer la même approche au volume que produit une opération réelle, et elle commence à faire des erreurs que le pilote n'avait jamais révélées. Ce n'est pas un problème d'outillage. C'est ce qui se produit quand des données propres n'ont jamais été la base au départ.",
+      "bullets": [
+        "Un pilote semble correct à petite échelle, puis la même approche s'effondre au volume opérationnel réel",
+        "Copilot et les agents IA font remonter des erreurs et des incohérences plutôt que des enseignements",
+        "Les dirigeants perdent confiance dans des investissements IA qui promettaient une transformation mais ont livré de la confusion"
+      ],
+      "commonThread": {
+        "label": "Le fil conducteur",
+        "copy": "Que le point de départ soit Fabric, Copilot ou un modèle sur mesure, le même problème de fondation apparaît en dessous. Trois dirigeants de services techniques distincts, dans trois conversations séparées et spontanées, sont arrivés à la même conclusion : corriger les données avant la stratégie IA, pas après."
+      }
+    },
+    "howItWorks": {
+      "title": "Trois étapes vers une base de données prête pour l'IA",
+      "step1": {
+        "title": "Évaluation de la préparation à l'IA",
+        "copy": "Nous évaluons vos données opérationnelles par rapport aux exigences de votre cas d'usage IA, classification des achats, intelligence des actifs, maintenance prédictive ou reporting, en identifiant précisément ce qui doit être corrigé et dans quel ordre."
+      },
+      "step2": {
+        "title": "Préparation automatisée des données",
+        "copy": "Nous nettoyons, classifions et structurons vos données automatiquement, en supprimant les erreurs, incohérences et lacunes qui font sous-performer les modèles d'IA."
+      },
+      "step3": {
+        "title": "Base de données prête pour l'IA",
+        "copy": "Vos données sont structurées, gouvernées et maintenues en continu, prêtes pour Copilot, des modèles d'IA sur mesure, ou tout outil nécessitant des entrées fiables."
+      }
+    },
+    "benefits": {
+      "b1": {
+        "title": "Des résultats IA fiables",
+        "copy": "Des modèles entraînés sur des données propres produisent des résultats auxquels les gens font confiance et sur lesquels ils agissent."
+      },
+      "b2": {
+        "title": "Une valeur générée plus rapidement",
+        "copy": "Évitez les 12 à 18 mois de préparation des données qui retardent la plupart des projets IA."
+      },
+      "b3": {
+        "title": "Liberté de changer d'outil",
+        "copy": "Des données propres et structurées ne sont liées à aucune plateforme, vous pouvez donc passer de Copilot à Azure AI, ou à un modèle sur mesure, sans reprendre le travail de données à zéro."
+      }
+    },
+    "stats": [
+      {
+        "value": "2x",
+        "label": "Plus de chances d'atteindre un ROI IA mesurable en 12 mois",
+        "copy": "Avec des données unifiées et gouvernées."
+      },
+      {
+        "value": "95 %",
+        "label": "Préparation des données automatisée",
+        "copy": "Sans retouche manuelle."
+      },
+      {
+        "value": "12-18 mois",
+        "label": "Économisés",
+        "copy": "Le délai habituel de préparation des données, éliminé."
+      }
+    ],
+    "quote": {
+      "text": "J'ai essayé de le passer dans Copilot et c'était pire. Vous l'avez rendu pire, en fait vous avez ajouté un tas d'onglets que personne n'utilisera jamais. Je pense qu'on a probablement gaspillé vingt-cinq mille là-dedans sur des choses qui vont juste rester là, parce qu'on pense en avoir besoin.",
+      "author": "Directeur Commercial",
+      "role": "Prestataire de services de nettoyage"
+    },
+    "geoBlock": {
+      "title": "Que signifie l'AI Readiness ?",
+      "copy": "Être prêt pour l'IA signifie disposer de données opérationnelles propres, structurées et systématiquement gouvernées, afin que les outils d'IA, Copilot et les modèles de machine learning puissent produire des résultats fiables. Pour les entreprises de services techniques, de construction et de fabrication, les obstacles les plus courants à la préparation à l'IA sont une mauvaise qualité des données d'achats, des registres d'actifs incohérents et des données opérationnelles fragmentées. Pearstop automatise le travail de préparation des données qui fait réussir les initiatives IA, de la classification des achats UNSPSC à la structuration des données d'actifs, donnant aux organisations une base dont les outils d'IA peuvent réellement apprendre. Si vous passez de Fabric à une adoption plus large de l'IA, la même base de données propres se poursuit."
+    },
+    "faq": [
+      {
+        "question": "Nous avons déjà essayé un pilote IA et ça ne s'est pas bien passé. Cela signifie-t-il que l'IA ne fonctionnera pas pour nous ?",
+        "answer": "Pas nécessairement. Un pilote qui semble correct à petite échelle et s'effondre à volume réel vous révèle généralement quelque chose de vrai sur les données sous-jacentes, pas sur l'IA en général. Corrigez d'abord cette base et les mêmes outils ont tendance à se comporter très différemment."
+      },
+      {
+        "question": "Devons-nous avoir choisi un outil IA spécifique pour que cela ait un sens ?",
+        "answer": "Non. Le travail de préparation des données est le même, quel que soit l'outil d'IA, ou la combinaison d'outils, que vous choisirez finalement. Des données propres et structurées sont ce qui vous permet de basculer entre eux plus tard sans repartir de zéro."
+      }
+    ],
+    "cta": {
+      "title": "Vos données sont-elles prêtes pour l'IA ?",
+      "lead": "Réservez un appel de 7 minutes et nous vous dirons exactement ce qui doit se passer avant que vos initiatives IA puissent produire des résultats.",
+      "button": "Réservez un appel découverte de 7 minutes",
+      "fabricLink": "Découvrez aussi votre préparation pour Fabric"
+    }
+  },
+  "Unspsc": {
+    "meta": {
+      "title": "Classification UNSPSC et vérification du code fabricant",
+      "description": "Pearstop automatise la classification des achats, codant automatiquement jusqu'à 95 % des dépenses en UNSPSC et retrouvant le code fabricant réel à partir du propre code fournisseur, sans traçage manuel."
+    },
+    "hero": {
+      "eyebrow": "Classification UNSPSC",
+      "title": "Vos données d'achats contiennent les réponses. Vous ne pouvez simplement pas encore les lire.",
+      "lead": "La plupart des entreprises de services techniques et de FM disposent de plusieurs années de données de bons de commande dans SAP ou Oracle. Sans classification UNSPSC, ce n'est qu'un amas de lignes en texte libre. Avec elle, vous pouvez voir exactement ce que vous dépensez par catégorie, comparer les fournisseurs et construire des appels d'offres à partir de données de coûts réelles. Pearstop classe 35 000 lignes par mois, automatiquement."
+    },
+    "standard": {
+      "eyebrow": "Qu'est-ce qu'UNSPSC ?",
+      "title": "Le code à quatre niveaux qui rend les données d'achats comparables.",
+      "p1": "UNSPSC (United Nations Standard Products and Services Code) est une hiérarchie mondiale à quatre niveaux utilisée pour catégoriser chaque produit et service qu'une entreprise achète. Le Segment et la Famille donnent une visibilité globale des dépenses. La Classe et le Produit de base (Commodity) donnent la précision nécessaire pour négocier, comparer et gérer les catégories efficacement.",
+      "p2": "Sans cela, le même travail physique apparaît sous des dizaines de libellés différents. Chez SPIE, des lignes de facture comme « HVAC unt » ont été enrichies en « HVAC Unit, Air Handler, Climate Control, Carrier » avec un code UNSPSC de produit de base cohérent. C'est la différence entre des données exploitables et des données qui ne le sont pas.",
+      "exampleLabel": "Exemple de hiérarchie UNSPSC"
+    },
+    "howItWorks": {
+      "title": "La plupart des lignes se classent d'elles-mêmes. Le reste bénéficie d'un second regard.",
+      "lead": "Les règles et le machine learning classent immédiatement les lignes à haute confiance. La couche qui nécessitait auparavant une équipe dédiée fonctionne désormais en arrière-plan.",
+      "step1": {
+        "title": "Règles et machine learning",
+        "copy": "Des règles basées sur le fournisseur et le grand livre, combinées à une couche de machine learning entraînée sur vos propres dépenses, classent immédiatement la majorité des lignes à haute confiance."
+      },
+      "step2": {
+        "title": "Couche LLM pour les cas limites",
+        "copy": "Les abréviations des techniciens de terrain, les numéros de pièces et les descriptions multilingues sont résolus par un grand modèle de langage doté d'une connaissance approfondie des produits et du secteur, la couche qui traite ce que les règles et le ML ne peuvent pas."
+      },
+      "step3": {
+        "title": "Vérification humaine, puis mémorisation",
+        "copy": "Les cinq à dix pour cent sur lesquels le moteur n'est pas certain sont signalés à votre équipe. Chaque décision alimente le modèle en retour, et la file de vérification diminue au fil des mois."
+      }
+    },
+    "manufacturerCode": {
+      "eyebrow": "Vérification du fabricant",
+      "title": "Et si la pièce ne porte que le propre code du fournisseur ?",
+      "copy": "Les acheteurs de services techniques et de MRO rencontrent constamment ce problème. Le seul code enregistré pour un composant de maintenance appartient au fournisseur qui l'a livré, pas au fabricant qui l'a produit. Sans le code propre du fabricant, il n'y a aucun moyen de comparer le prix avec quiconque d'autre, ni de confirmer que deux équipes décrivant le même composant parlent bien de la même chose. Le retracer manuellement implique généralement de contacter celui qui a commandé la pièce à l'origine et de demander une description plus claire, puis d'attendre.",
+      "example": "Ce n'est pas hypothétique. Dans une mission de services techniques, des ingénieurs commandaient des composants en utilisant le propre code de pièce du fournisseur, car c'était le seul code présent sur les documents. Le vrai code du fabricant, celui qui permettrait à l'entreprise d'acheter auprès de n'importe qui d'autre, existait, mais y accéder impliquait de retracer la pièce à travers la commande d'origine, souvent après plusieurs cycles de demandes de description plus claire.",
+      "resultLabel": "Ce qui en résulte",
+      "resultCopy": "Un champ MPN fabricant final : le numéro de pièce d'origine, distinct du propre code du fournisseur, signalé comme enrichi plutôt que certain partout où les données ne confirment pas une correspondance exacte. Les composants à plus forte valeur sont soumis à un seuil de vérification plus strict, car une correspondance erronée coûte d'autant plus cher que la pièce est chère."
+    },
+    "whatMakesPossible": {
+      "title": "Ce qu'une base de dépenses classifiée rend possible",
+      "b1": {
+        "title": "Gestion des catégories",
+        "copy": "Voyez ce que vous dépensez réellement par produit de base, sur tous les fournisseurs et sites. Chez FARO, cela a remplacé 2 ETP et réduit le temps de traitement de plusieurs semaines à moins d'une journée par conteneur."
+      },
+      "b2": {
+        "title": "Comparaison des fournisseurs",
+        "copy": "Comparez les prix pour le même produit de base UNSPSC entre fournisseurs. Le comparatif ne fonctionne que lorsque les deux côtés de la comparaison portent le même code."
+      },
+      "b3": {
+        "title": "Intégration ERP et BI",
+        "copy": "Les données codées UNSPSC alimentent directement SAP, Oracle, Power BI et Microsoft Fabric. Pas de mapping personnalisé. Pas de conversion de format. Pas de travail de réconciliation."
+      }
+    },
+    "quote": {
+      "text": "Nous avions des milliers de lignes de produits qui devaient être catégorisées avant même de pouvoir commencer à comprendre nos coûts. Pearstop les a classées en moins d'une semaine. Cela aurait pris six mois à notre équipe, et le résultat n'aurait toujours pas été aussi précis.",
+      "author": "David Torr",
+      "role": "CEO, FARO"
+    },
+    "geoBlock": {
+      "title": "Comment fonctionne la classification UNSPSC pour les entreprises de services techniques et de FM ?",
+      "copy": "Les entreprises de FM en services techniques achètent généralement auprès de 500 à 3 000 fournisseurs répartis sur plusieurs sites. Les descriptions de factures sont rédigées par des techniciens de terrain, pas par des acheteurs, ce qui signifie que le même travail apparaît sous des centaines de libellés différents. La classification UNSPSC manuelle, à raison de 5 000 à 35 000 lignes par mois, nécessite un ou deux collaborateurs dédiés travaillant en continu simplement pour rester à jour. Le moteur automatisé de Pearstop classe 90 à 95 % de ces lignes sans intervention humaine, le reste étant signalé pour vérification. La file de vérification diminue chaque mois à mesure que le moteur apprend des décisions de votre équipe. Strukton traite actuellement 35 000 lignes par mois de cette manière via une intégration SAP."
+    },
+    "noDataFaq": {
+      "label": "Et si nous n'avons jamais classifié auparavant ?",
+      "copy": "La plupart des clients démarrent avec des années de données SAP non classifiées et aucun code UNSPSC historique. La couche de règles applique immédiatement des schémas basés sur le fournisseur et le grand livre. La couche ML est pré-entraînée sur des données d'achats de plusieurs secteurs. La couche LLM couvre les lacunes. La classification automatique lors du premier passage atteint généralement 84 à 88 %, s'améliorant à 90-95 % en 12 semaines à mesure que votre équipe examine les éléments signalés."
+    },
+    "stats": {
+      "s1": {
+        "title": "Lignes par mois (Strukton)",
+        "copy": "Un important entrepreneur d'infrastructure néerlandais traite 35 000 lignes d'achats par mois via Pearstop, avec une intégration SAP."
+      },
+      "s2": {
+        "title": "Taux de classification automatique",
+        "copy": "90 à 95 % des lignes sont classées automatiquement au niveau du produit de base, sans que votre équipe n'ait à les toucher."
+      },
+      "s3": {
+        "title": "Réduction de l'effort manuel",
+        "copy": "Les clients réduisent généralement le travail manuel sur les données d'achats de 70 à 90 %, libérant les acheteurs pour la stratégie de catégorie et la négociation de contrats."
+      }
+    },
+    "faq": [
+      {
+        "question": "Qu'est-ce que la classification UNSPSC ?",
+        "answer": "UNSPSC (United Nations Standard Products and Services Code) est un système de classification hiérarchique utilisé dans le monde entier pour catégoriser les dépenses d'achats. Il comporte quatre niveaux : Segment, Famille, Classe et Produit de base (Commodity). Les organisations utilisent UNSPSC pour permettre une analyse cohérente des dépenses, une comparaison des fournisseurs et une gestion des catégories homogène entre contrats, sites et systèmes ERP."
+      },
+      {
+        "question": "Quelle est la précision de la classification UNSPSC automatisée ?",
+        "answer": "Le moteur de classification de Pearstop, combinant règles, machine learning, une couche LLM et une vérification humaine, atteint 90 à 95 % de classification automatique sur des jeux de données d'achats typiques. Les 5 à 10 % restants sont signalés pour vérification humaine. Chaque décision vérifiée alimente le moteur en retour, réduisant la file de vérification au fil du temps jusqu'à ce qu'elle approche de zéro."
+      },
+      {
+        "question": "La classification UNSPSC peut-elle identifier le numéro de pièce du fabricant derrière le propre code d'un fournisseur ?",
+        "answer": "Oui. Lorsque le numéro de pièce d'origine du fabricant existe dans les données ou dans une source de référence connectée, le moteur le résout et le renvoie dans un champ MPN fabricant final distinct, plutôt que de laisser le propre code du fournisseur comme seule référence sur la ligne."
+      },
+      {
+        "question": "Pearstop s'intègre-t-il à SAP pour la classification UNSPSC ?",
+        "answer": "Oui. Pearstop reçoit les données via un export CSV ou une connexion API directe depuis SAP, Oracle et d'autres plateformes ERP et P2P. En pratique, de nombreux clients trouvent que l'export CSV est le moyen le plus simple de démarrer. Les données classifiées sont renvoyées dans le même format, prêtes à être rechargées dans SAP ou à alimenter des outils BI."
+      },
+      {
+        "question": "Combien de temps prend la classification UNSPSC ?",
+        "answer": "La plupart des clients disposent d'un jeu de données propre et classifié dans un délai de quatre à six semaines après le démarrage. Le premier engagement commence par un Data Stability Baseline afin que vous puissiez évaluer la qualité du résultat avant de vous engager dans une classification continue."
+      }
+    ],
+    "related": {
+      "label": "Plus de ressources UNSPSC",
+      "tool": "Recherche gratuite de code UNSPSC",
+      "guide": "Comment fonctionne réellement la classification par IA",
+      "fm": "UNSPSC pour le FM et les services techniques",
+      "nl": "UNSPSC aux Pays-Bas",
+      "de": "UNSPSC en Allemagne",
+      "faq": "FAQ complète"
+    },
+    "cta": {
+      "title": "Prêt à automatiser votre classification des achats ?",
+      "lead": "Réservez un appel découverte de 7 minutes. Nous vous montrerons exactement comment le moteur de classification fonctionnerait avec vos données.",
+      "button": "Réservez un appel découverte de 7 minutes"
+    }
+  },
+  "UnspscAiGuide": {
+    "meta": {
+      "title": "Classification UNSPSC par IA : le guide pratique",
+      "description": "Comment Pearstop classe un grand catalogue d'achats Excel ou CSV en UNSPSC grâce à l'IA : extraction de factures PDF, pilote gratuit de 500 lignes, mémoire spécifique au fournisseur et codes de produit de base complets à 8 chiffres pour votre ERP."
+    },
+    "hero": {
+      "eyebrow": "Guide de classification UNSPSC par IA",
+      "title": "Vous avez un grand catalogue Excel. Vous voulez que l'IA le classe en UNSPSC.",
+      "lead": "C'est la demande que nous entendons le plus souvent, parfois sous la forme d'un fichier de dépenses qui n'a jamais porté de code, parfois sous la forme d'une pile de factures PDF qui n'est même pas encore devenue un fichier de dépenses. Ce guide décrit le processus réel : comment Pearstop transforme l'un ou l'autre point de départ en un jeu de données codé UNSPSC, ce qu'un pilote mesure avant de vous engager sur le fichier complet, et pourquoi la classification ne provient pas simplement du fait de demander à un modèle quel devrait être un code.",
+      "ctaPrimary": "Réservez un appel découverte de 7 minutes",
+      "ctaSecondary": "Voir le processus"
+    },
+    "paths": {
+      "eyebrow": "Où vous en êtes",
+      "title": "Où vos données commencent-elles aujourd'hui ?",
+      "lead": "Deux situations différentes se présentent. Pearstop couvre les deux, et ne vous demande pas de faire plus que l'étape dont vous avez réellement besoin.",
+      "path1": {
+        "title": "Point de départ un : factures PDF, pas encore structurées",
+        "copy": "Certains clients détiennent des années d'historique d'achats sous forme de factures PDF scannées ou exportées, et rien d'autre. Avant qu'un code UNSPSC ne soit possible, ces données doivent devenir des lignes : fournisseur, description, quantité, prix unitaire, date. Pearstop extrait les champs spécifiés pour les factures de votre secteur directement depuis les PDF, de sorte que le résultat prend la forme d'un fichier de dépenses normal plutôt que d'un dossier de documents que personne ne peut interroger."
+      },
+      "path2": {
+        "title": "Point de départ deux : déjà un fichier CSV ou Excel",
+        "copy": "D'autres clients disposent déjà d'un fichier de dépenses structuré, exporté depuis SAP, Oracle ou un système P2P, ou tenu à la main. Si c'est votre cas, l'étape d'extraction PDF est entièrement ignorée et la classification démarre directement sur le fichier que vous avez déjà."
+      },
+      "note": "Ce sont deux workflows distincts, pas un seul pipeline tout-ou-rien. Si vous n'avez besoin que de l'étape de classification, c'est ce que vous obtenez. Si vous avez besoin des deux, l'extraction PDF s'exécute d'abord et la classification s'exécute sur ce qui en résulte."
+    },
+    "process": {
+      "eyebrow": "Le processus",
+      "title": "Que se passe-t-il une fois vos données structurées ?",
+      "lead": "À partir de là, le processus est le même quel que soit votre point de départ.",
+      "step1": {
+        "title": "Construire une taxonomie ancrée à UNSPSC",
+        "copy": "Nous générons une taxonomie d'achats à quatre niveaux pour vos dépenses et l'ancrons à la hiérarchie UNSPSC officielle, ainsi qu'à NACE lorsque votre secteur l'exige. Cette taxonomie est ce sous quoi chaque ligne finira par se ranger, pas seulement un code renvoyé par ligne."
+      },
+      "step2": {
+        "title": "Classer un échantillon gratuit d'environ 500 lignes",
+        "copy": "Nous faisons passer un échantillon représentatif d'environ 500 lignes dans le moteur, à titre de pilote, sans frais. C'est suffisamment petit pour être vérifié à la main et suffisamment grand pour démontrer une précision réelle, pas une poignée d'exemples faciles."
+      },
+      "step3": {
+        "title": "Vous vérifiez et corrigez",
+        "copy": "Votre équipe vérifie l'échantillon par rapport à ce qu'elle sait de vos propres données et corrige ce qui est faux. C'est de cette étape que provient le véritable signal : non pas si le moteur peut produire un code, mais si vos propres équipes achats sont d'accord avec lui."
+      },
+      "step4": {
+        "title": "Les corrections deviennent une mémoire spécifique au fournisseur",
+        "copy": "Chaque correction est enregistrée en association avec le fournisseur et le schéma de description qui l'a produite. Le système retient, par exemple, que la ligne « gants » de ce fournisseur désigne toujours des gants de nettoyage, pas des gants médicaux, sans que cela doive être reprécisé."
+      },
+      "step5": {
+        "title": "Le jeu de données complet est classé grâce à cette mémoire",
+        "copy": "Une fois le pilote corrigé et la mémoire en place, nous exécutons la classification sur l'ensemble du fichier. Les lignes correspondant à un schéma fournisseur connu passent avec la mémoire déjà appliquée. Les nouveaux schémas passent quant à eux par les mêmes règles, vérifications de mots-clés et couche LLM que le pilote."
+      },
+      "step6": {
+        "title": "Exporter vers Excel, ou vous connecter directement à votre ERP",
+        "copy": "Les résultats reviennent sous forme de fichier Excel, ou via une connexion API directe vers votre ERP, de sorte que les données classifiées arrivent là où votre équipe travaille déjà plutôt que dans un outil séparé."
+      },
+      "hierarchyNote": "Chaque ligne reçoit la hiérarchie complète, pas un simple code : segment, famille, classe, et le code de produit de base UNSPSC réel à 8 chiffres, chacun avec son intitulé en langage clair, afin qu'un relecteur puisse voir ce que signifie un code sans avoir à le rechercher séparément."
+    },
+    "whyNotLlm": {
+      "eyebrow": "Pourquoi c'est fiable",
+      "title": "Pourquoi ne pas simplement demander le code à ChatGPT ?",
+      "p1": "Collez une description dans un modèle généraliste et demandez un code UNSPSC, il vous en donnera un. Il vous en donnera également un lorsqu'aucun code réel ne convient vraiment, car un modèle de langage répond à la question posée plutôt que d'admettre qu'il ne sait pas. C'est un code halluciné : confiant, précis, et difficile à repérer sur un tableur qui en est plein.",
+      "p2": "Pearstop ne demande pas un code à un modèle pour prendre la réponse telle quelle. La description passe par une couche de classification IA et LLM, mais le code que cette couche propose est ensuite vérifié par rapport au jeu de données UNSPSC réel lui-même, chaque segment, famille, classe et produit de base, avant d'être accepté. Si un code proposé n'existe pas dans la norme réelle, il est rejeté plutôt que présenté comme un résultat.",
+      "p3": "Parallèlement à cette vérification, des règles de mots-clés déterministes captent les schémas qui n'ont besoin d'aucun modèle. Une base de données spécifique au fournisseur restreint le champ des possibles avant que la classification ne commence, de la même façon que savoir qu'un fournisseur vend des composants électriques exclut les pièces d'irrigation. La mémoire spécifique au fournisseur, construite à partir de vos propres corrections vérifiées, signifie que la deuxième fois qu'un schéma apparaît, il n'a plus besoin d'être raisonné depuis le début. Et lorsque vos propres données portent déjà une certaine structure de catégories, groupes d'achats, codes de grand livre, étiquettes existantes, cette structure est utilisée pour restreindre et vérifier le résultat, plutôt que de repartir de zéro comme si le fichier n'avait pas d'historique.",
+      "p4": "Ce qui reste après les règles, la base de données fournisseur, la mémoire et la validation fait encore l'objet d'une vérification de confiance. Tout élément à faible confiance est signalé à une personne, et non renvoyé comme un fait établi."
+    },
+    "pilotMetrics": {
+      "eyebrow": "Mener un pilote",
+      "title": "Que devriez-vous réellement vérifier dans un pilote ?",
+      "lead": "Si vous testez cela, nous recommandons toujours de mesurer trois éléments, pas seulement si cela « a fonctionné ».",
+      "m1": {
+        "title": "Pourcentage de précision UNSPSC",
+        "copy": "La part des lignes échantillonnées où le code renvoyé correspond à ce que vos propres relecteurs auraient choisi."
+      },
+      "m2": {
+        "title": "Auto-classifié contre signalé pour vérification",
+        "copy": "La répartition entre les lignes que le moteur était suffisamment confiant pour compléter seul, et les lignes qu'il a signalées à une personne. Un pilote qui auto-classifie tout sans rien signaler n'est pas plus précis. Il ne se vérifie simplement pas lui-même."
+      },
+      "m3": {
+        "title": "Profondeur atteinte dans la hiérarchie",
+        "copy": "Si le résultat atteint le niveau segment, famille, classe, ou le niveau complet de produit de base à 8 chiffres. Un code qui n'atteint que le segment vous indique qu'il s'agissait d'un service de maintenance. Un code qui atteint le produit de base vous indique qu'il s'agissait spécifiquement de maintenance d'ascenseurs, le niveau dont vous avez besoin pour comparer des fournisseurs ou alimenter un champ ERP qui attend un véritable code de produit de base."
+      }
+    },
+    "economics": {
+      "eyebrow": "Économie",
+      "title": "Pourquoi le coût par enregistrement baisse-t-il à mesure que le volume augmente ?",
+      "p1": "Chaque ligne qui passe par un nouvel appel LLM coûte des tokens, et l'usage de tokens est ce qui détermine le coût de la classification par IA. Au début d'un jeu de données, la plupart des lignes sont nouvelles : nouveaux fournisseurs, nouvelles descriptions de pièces, rien en mémoire encore pour raccourcir le raisonnement.",
+      "p2": "Cela change à mesure que le volume augmente. La mémoire spécifique au fournisseur signifie qu'un schéma de description n'a besoin que d'un seul passage LLM complet. Une fois cette correction enregistrée, les schémas récurrents du même fournisseur sont comparés à la mémoire plutôt que raisonnés à nouveau. À faible volume, presque rien ne se répète, donc presque chaque ligne coûte le prix plein. À grand volume, les mêmes fournisseurs et les mêmes descriptions de pièces reviennent constamment, si bien qu'une part de plus en plus réduite des lignes nécessite un nouvel appel au modèle. Le coût par enregistrement baisse parce que le système fait moins de nouveau raisonnement par enregistrement, pas à cause d'un prix par token plus faible."
+    },
+    "forYouIf": {
+      "title": "Est-ce vraiment ce dont vous avez besoin ?",
+      "case1": "Vous avez besoin de transformer 100 000 transactions d'achats en une seule taxonomie cohérente alignée sur UNSPSC. C'est exactement ce pour quoi c'est conçu.",
+      "case2": "Vous avez besoin que chaque référence ou ligne porte un véritable code UNSPSC à 8 chiffres que vous pouvez charger dans votre ERP. C'est exactement ce pour quoi c'est conçu, aussi."
+    },
+    "faq": [
+      {
+        "question": "Que faire si je n'ai pas encore de données de facturation propres ?",
+        "answer": "C'est le premier point de départ couvert par ce guide. Si votre historique d'achats n'existe que sous forme de factures PDF, Pearstop extrait d'abord les champs spécifiés pour les factures de votre secteur directement depuis ces PDF, afin que vous obteniez un fichier de dépenses structuré avant que la classification ne commence."
+      },
+      {
+        "question": "Quelle est la précision d'une classification uniquement par IA par rapport à l'approche de Pearstop ?",
+        "answer": "Un modèle généraliste directement interrogé pour un code UNSPSC répondra même lorsqu'aucun code ne convient vraiment, car il est conçu pour produire une réponse, pas pour admettre une incertitude. Pearstop vérifie chaque code proposé par rapport au jeu de données UNSPSC réel avant de l'accepter, combine cela avec des règles, une base de données fournisseur et une mémoire spécifique au fournisseur, et signale malgré tout les lignes à faible confiance pour une vérification humaine. Sur des jeux de données d'achats typiques, cela atteint 90 à 95 % de classification automatique, le reste étant vérifié par une personne plutôt que deviné."
+      },
+      {
+        "question": "Cela peut-il se connecter à notre ERP ?",
+        "answer": "Oui. Les données classifiées s'exportent vers Excel, ou se connectent directement via API à SAP, Oracle et d'autres plateformes ERP ou P2P. De nombreux clients commencent par un export Excel ou CSV et passent à une connexion directe une fois la classification validée."
+      },
+      {
+        "question": "Qu'implique réellement le pilote gratuit ?",
+        "answer": "Nous classons un échantillon représentatif d'environ 500 lignes de vos données, sans frais. Votre équipe vérifie et corrige cet échantillon, et ces corrections deviennent la mémoire spécifique au fournisseur que l'exécution sur l'ensemble du jeu de données utilise ensuite."
+      },
+      {
+        "question": "En quoi est-ce différent du simple fait d'utiliser ChatGPT ou Copilot sur notre fichier de dépenses ?",
+        "answer": "Vous pouvez le faire vous-même, et pour une poignée de lignes, c'est un moyen raisonnable d'obtenir une première réponse. Cela ne s'adapte pas à l'échelle, et cela ne vérifie pas son propre travail : il n'y a aucune validation par rapport au véritable jeu de codes UNSPSC, aucune mémoire fournisseur qui s'améliore avec le volume, et aucune étape de vérification intégrée pour les lignes mal classées. Pearstop est conçu pour faire tout cela sur un fichier complet, pas sur une seule ligne."
+      },
+      {
+        "question": "Le système apprend-il, ou chaque fichier repart-il de zéro ?",
+        "answer": "Il apprend. Les corrections issues du pilote sont enregistrées comme mémoire spécifique au fournisseur, de sorte qu'un schéma de description de pièce déjà vérifié pour un fournisseur donné n'a pas besoin d'être à nouveau raisonné par le LLM la prochaine fois qu'il apparaît."
+      },
+      {
+        "question": "Qu'est-ce que NACE, et pourquoi ferait-il partie de la taxonomie ?",
+        "answer": "NACE est la classification statistique européenne des activités économiques. Lorsque le reporting ou le benchmarking sectoriel d'un client repose sur NACE en plus d'UNSPSC, la taxonomie que nous construisons s'ancre aux deux, pas seulement à UNSPSC seul."
+      }
+    ],
+    "related": {
+      "label": "Plus de ressources UNSPSC",
+      "main": "Classification UNSPSC",
+      "lookup": "Recherche gratuite de code UNSPSC",
+      "tree": "Arborescence de la taxonomie UNSPSC",
+      "faq": "FAQ complète"
+    },
+    "cta": {
+      "title": "Prêt à voir cela fonctionner sur vos propres données ?",
+      "lead": "Réservez un appel découverte de 7 minutes, ou testez d'abord une seule description sur l'outil de recherche gratuit.",
+      "button": "Réservez un appel découverte de 7 minutes",
+      "secondaryButton": "Essayer la recherche gratuite"
+    }
+  },
+  "Fabric": {
+    "meta": {
+      "title": "Préparation des données Microsoft Fabric pour les industries à forte intensité d'actifs",
+      "description": "Vous migrez vers Microsoft Fabric ? Pearstop nettoie et structure vos données opérationnelles avant la migration afin que vos rapports fonctionnent dès le premier jour et que le projet reste sur la bonne voie."
+    },
+    "hero": {
+      "eyebrow": "Fabric Ready",
+      "title": "Votre migration Microsoft Fabric ne délivrera que si vos données sont prêtes en premier.",
+      "lead": "Microsoft Fabric promet une visibilité à l'échelle de l'entreprise. Pearstop veille à ce que les données qui l'alimentent soient propres, structurées et fiables, afin que votre migration délivre ce que la direction attend."
+    },
+    "problem": {
+      "eyebrow": "Le blocage caché",
+      "title": "Le blocage caché dans chaque migration Fabric",
+      "copy": "Microsoft Fabric promet une plateforme de données unifiée, une source unique de vérité entre finance, opérations, achats et actifs. Mais Fabric suppose des données structurées et cohérentes que la plupart des organisations n'ont pas encore. Migrer des données sales vers Fabric ne corrige pas le problème, cela ne fait que le déplacer, à un coût et un risque plus élevés.",
+      "bullets": [
+        "Des conventions de nommage incohérentes font échouer les comparaisons inter-sites et inter-systèmes",
+        "Les erreurs de champs et les doublons apparaissent immédiatement dans le reporting, nuisant à la confiance dans la nouvelle plateforme",
+        "Les fonctionnalités IA et Copilot construites sur Fabric sous-performent lorsque les données sous-jacentes ne sont pas fiables",
+        "Pendant une transition vers un data lake, il existe un point d'inflexion naturel pour nettoyer les données avant que cela ne devienne plus coûteux"
+      ],
+      "leadershipLabel": "Pourquoi cela compte pour la direction",
+      "leadershipCopy": "Les directeurs financiers et les dirigeants opérationnels seniors se soucient de la confiance, du reporting et de la livraison. Ils ne se soucient pas de la plateforme pour elle-même, ils se soucient de savoir si la migration produit une visibilité à l'échelle de l'entreprise et un retour sur l'investissement."
+    },
+    "howItWorks": {
+      "title": "La préparation Fabric en trois étapes",
+      "step1": {
+        "title": "Évaluation de la préparation des données",
+        "copy": "Nous auditons vos données opérationnelles existantes par rapport aux exigences structurelles de Fabric, en identifiant les lacunes, les incohérences et les priorités avant que la migration ne commence."
+      },
+      "step2": {
+        "title": "Nettoyage et structuration automatisés",
+        "copy": "Nous nettoyons, standardisons et structurons vos données pour répondre aux exigences de Fabric automatiquement, à grande échelle, sans retouche manuelle."
+      },
+      "step3": {
+        "title": "Données prêtes pour la migration",
+        "copy": "Vous recevez des données vérifiées et structurées avec un contrôle qualité automatisé intégré, prêtes pour l'intégration à Fabric et l'entraînement de modèles d'IA dès le premier jour."
+      }
+    },
+    "stats": [
+      {
+        "value": "379%",
+        "label": "ROI",
+        "copy": "ROI sur trois ans modélisé par Forrester pour les entreprises qui migrent vers Microsoft Fabric sur une base de données propre."
+      },
+      {
+        "value": "95%",
+        "label": "Structuration des données automatisée",
+        "copy": "Sans retouche manuelle."
+      },
+      {
+        "value": "<6 mois",
+        "label": "Délai de rentabilité",
+        "copy": "Selon le modèle d'entreprise composite de Forrester."
+      }
+    ],
+    "quote": {
+      "text": "Si nous voulons un bot qui connaît tout de notre contrat, nous devons d'abord nous assurer que les données de gouvernance du contrat sont correctement validées.",
+      "author": "Responsable stratégie de données",
+      "role": "Prestataire de facilities management intégré"
+    },
+    "geoBlock": {
+      "title": "Que signifie la préparation des données Microsoft Fabric ?",
+      "copy": "La préparation des données Microsoft Fabric est le processus de nettoyage, de structuration et de gouvernance des données opérationnelles avant la migration vers Microsoft Fabric. Pour les industries à forte intensité d'actifs, la construction, le facility management, la fabrication, les données d'achats, les registres d'actifs et les données opérationnelles sont souvent trop incohérents pour que Fabric les traite de manière fiable. Pearstop automatise le travail de préparation des données qui fait réussir les migrations Fabric, afin que les organisations puissent utiliser Copilot, les agents IA et l'analyse en temps réel dès le premier jour plutôt que de passer 12 à 18 mois à corriger la qualité des données après la migration."
+    },
+    "faq": [
+      {
+        "question": "Devrions-nous corriger nos données avant Fabric, ou Pearstop peut-il intervenir en parallèle de la migration ?",
+        "answer": "Les deux fonctionnent, mais plus tôt coûte moins cher. Migrer des données incohérentes vers Fabric ne les corrige pas, cela les déplace, et les nettoyer après la migration coûte généralement plus cher que de les nettoyer avant."
+      },
+      {
+        "question": "Est-ce que cela remplace notre partenaire d'implémentation Fabric ?",
+        "answer": "Non. Pearstop prépare la couche de données sous-jacente à la migration. Votre partenaire d'implémentation continue de construire la plateforme, il la construit simplement sur des données déjà structurées."
+      }
+    ],
+    "cta": {
+      "title": "Vous planifiez une migration Fabric ?",
+      "lead": "Parlez-nous avant que la migration ne commence. Un appel de 30 minutes maintenant peut vous économiser des mois de retouches plus tard.",
+      "button": "Réservez un appel découverte de 7 minutes",
+      "aiLink": "Découvrez aussi votre préparation à l'IA"
+    }
+  },
+  "Blog": {
+    "meta": {
+      "title": "Blog et Centre d'Apprentissage Pearstop",
+      "description": "Guides pratiques, articles archivés du centre d'apprentissage et réflexions sur la qualité des données pour les entreprises de services techniques, de construction et d'infrastructure."
+    },
+    "hero": {
+      "eyebrow": "Analyses",
+      "title": "Blog et Centre d'Apprentissage",
+      "lead": "Réflexions actuelles, articles archivés du centre d'apprentissage et le podcast Data Edge, réunis en un seul endroit."
+    },
+    "latestArticles": {
+      "title": "Derniers articles",
+      "lead": "Des guides approfondis sur les données d'achats, la gestion des actifs et la préparation à l'IA pour les services techniques et la construction.",
+      "readArticle": "Lire l'article →"
+    },
+    "learningCentre": {
+      "title": "Centre d'apprentissage",
+      "lead": "Les anciens articles de Pearstop se trouvent désormais dans le hub du blog, afin qu'il n'y ait qu'un seul endroit clair pour le contenu d'analyse.",
+      "label": "Centre d'apprentissage"
+    },
+    "podcast": {
+      "pill": "Podcast",
+      "title": "The Data Edge",
+      "lead": "Interviews, analyses et réflexions concrètes sur la qualité des données, les achats et la gestion des actifs pour les secteurs techniques.",
+      "youtube": {
+        "label": "YouTube",
+        "meta": "Regarder les épisodes"
+      },
+      "spotify": {
+        "label": "Spotify",
+        "meta": "Écouter sur Spotify"
+      },
+      "apple": {
+        "label": "Apple Podcasts",
+        "meta": "Écouter sur Apple"
+      }
+    },
+    "post": {
+      "readingTime": "{minutes} min de lecture",
+      "publishedOn": "Publié le {date}",
+      "backToBlog": "← Retour au blog",
+      "tableOfContents": "Table des matières"
+    },
+    "latestInsights": "Derniers articles",
+    "readMore": "Lire la suite"
+  },
+  "NotFound": {
+    "title": "Page introuvable",
+    "description": "Désolé, nous n'avons pas trouvé ce que vous cherchiez.",
+    "backHome": "Retour à l'accueil"
+  },
+  "CaseStudies": {
+    "meta": {
+      "title": "Téléchargez les études de cas",
+      "description": "Téléchargez les études de cas de Pearstop pour découvrir comment les entreprises techniques nettoient leurs données, protègent leurs marges et réduisent le travail manuel.",
+      "ogTitle": "Téléchargez les études de cas Pearstop",
+      "ogDescription": "Téléchargez les études de cas de Pearstop pour découvrir comment les entreprises techniques nettoient leurs données, protègent leurs marges et réduisent le travail manuel."
+    },
+    "hero": {
+      "eyebrow": "Études de cas",
+      "title": "Téléchargez les études de cas Pearstop",
+      "lead": "Renseignez vos coordonnées et nous vous enverrons directement vers le PDF. Découvrez comment les entreprises techniques utilisent Pearstop pour nettoyer leurs données et protéger leurs marges.",
+      "getPdf": "Obtenir le PDF",
+      "followLinkedIn": "Suivez Pearstop sur LinkedIn pour les actualités"
+    },
+    "highlights": [
+      {
+        "title": "Strukton (projet en cours)",
+        "copy": "Classification UNSPSC automatisée à grande échelle pour les achats d'infrastructure."
+      },
+      {
+        "title": "FARO",
+        "copy": "Estimations de marge générées automatiquement sur chaque achat de conteneur."
+      },
+      {
+        "title": "SPIE",
+        "copy": "Des données d'actifs plus propres, auxquelles les équipes peuvent réellement faire confiance."
+      },
+      {
+        "title": "MRO (Confidentiel)",
+        "copy": "Enrichissement des numéros de pièces pour passer directement au fabricant."
+      }
+    ],
+    "download": {
+      "pill": "Ce que vous y trouverez",
+      "title": "Des exemples concrets d'équipes qui utilisent déjà des données propres pour travailler plus intelligemment.",
+      "lead": "Ce téléchargement rassemble quelques-unes des meilleures histoires de Pearstop afin que vous puissiez rapidement en repérer le schéma. Moins de travail manuel, de meilleures données, des marges plus serrées.",
+      "formLabel": "Obtenir le PDF",
+      "formLead": "Laissez vos coordonnées et le téléchargement démarrera automatiquement après l'envoi.",
+      "namePlaceholder": "Votre nom",
+      "emailPlaceholder": "Votre e-mail",
+      "companyPlaceholder": "Entreprise (facultatif)",
+      "submitButton": "Télécharger les études de cas",
+      "talkNote": "Vous préférez d'abord en parler ?",
+      "talkLinkText": "Réservez un appel découverte de 7 minutes"
+    },
+    "whyDownload": {
+      "title": "Pourquoi les gens le téléchargent",
+      "lead": "Une lecture rapide pour les équipes qui veulent la version courte avant de réserver un appel.",
+      "b1": {
+        "icon": "✓",
+        "title": "Voyez le schéma",
+        "copy": "Comprenez comment Pearstop transforme des données opérationnelles fragmentées en une base fiable pour la prise de décision."
+      },
+      "b2": {
+        "icon": "↗",
+        "title": "Empruntez la structure",
+        "copy": "Utilisez les exemples pour repérer où vos propres données font perdre du temps, de la marge ou du contrôle."
+      },
+      "b3": {
+        "icon": "⚡",
+        "title": "Partagez-le en interne",
+        "copy": "Le document est suffisamment concis pour être transmis aux personnes qui doivent rapidement comprendre le problème."
+      }
+    },
+    "cta": {
+      "title": "Vous voulez en discuter ?",
+      "lead": "Si vous préférez discuter directement de votre problème de données, nous serons ravis de vous aider.",
+      "followLinkedIn": "Suivez Pearstop sur LinkedIn pour les actualités",
+      "bookDiscovery": "Réservez un appel découverte de 7 minutes"
+    }
+  },
+  "Cases": {
+    "meta": {
+      "title": "Résultats clients",
+      "description": "Des résultats concrets d'entreprises de services techniques, d'infrastructure, de fabrication et de FM qui ont utilisé Pearstop pour nettoyer leurs données, réduire le travail manuel et protéger leurs marges."
+    },
+    "hero": {
+      "eyebrow": "Résultats clients",
+      "title": "Du travail concret. Des marges concrètes.",
+      "lead": "Comment les entreprises techniques du FM, de la construction, de la fabrication et de l'infrastructure utilisent Pearstop pour nettoyer leurs données et protéger leurs marges."
+    },
+    "featured": {
+      "pill": "Étude de cas à la une",
+      "p1": "Un important entrepreneur néerlandais employait deux collaborateurs dédiés à l'attribution manuelle des catégories aux factures fournisseurs - un processus lent et sujet aux erreurs qui rendait l'analyse des dépenses peu fiable et le benchmarking des achats impossible.",
+      "p2": "Pearstop a automatisé l'attribution des catégories sur plus de 140 000 lignes, éliminé les doublons de fiches fournisseurs, et livré un jeu de données d'achats propre qui alimente directement leur système SAP et leurs outils de reporting.",
+      "quote": "Nous avions autrefois deux collaborateurs à temps plein dédiés à l'attribution des catégories. Aujourd'hui, le système s'en charge pour nous - ce qui a aussi permis de débloquer des estimations de marge en aval. C'est plus fiable, pour une fraction du coût.",
+      "quoteAuthor": "Responsable Achats",
+      "quoteRole": "Entrepreneur en infrastructure, Pays-Bas",
+      "comingSoon": "Étude de cas complète bientôt disponible.",
+      "followLinkedIn": "Suivez notre LinkedIn pour les actualités →",
+      "statsHeader": "Résultats en un coup d'œil",
+      "stats": [
+        {
+          "num": "75%",
+          "label": "Réduction du temps d'attribution manuelle des catégories"
+        },
+        {
+          "num": "140k+",
+          "label": "Lignes de factures fournisseurs nettoyées et classifiées"
+        },
+        {
+          "num": "2 ETP",
+          "label": "Redéployés vers des tâches d'achats à plus forte valeur ajoutée"
+        },
+        {
+          "num": "SAP",
+          "label": "Un seul jeu de données propre alimentant directement l'ERP et la BI"
+        }
+      ]
+    },
+    "testimonials": {
+      "title": "Ce que disent nos clients",
+      "lead": "Des équipes achats aux directeurs des opérations - l'impact se voit dans les chiffres.",
+      "t1": {
+        "text": "Nos données d'actifs étaient éparpillées entre des tableurs et alimentées par les anciens systèmes des clients. Rien n'était assez cohérent pour en tirer une quelconque analyse. Pearstop les a consolidées et structurées, et soudain nous avions quelque chose sur lequel construire.",
+        "name": "Client",
+        "role": "Gestionnaire d'actifs · SPIE"
+      },
+      "t2": {
+        "text": "Nos rapports de visite de site arrivent sous tous les formats imaginables - notes manuscrites, fautes d'orthographe, gribouillages. Pearstop a conçu un système qui les intègre automatiquement dans un document de proposition propre. Cela fait gagner des heures à notre équipe sur chaque mission.",
+        "name": "Vince Out",
+        "role": "Directeur Commercial · Fabrication | Unités de filtration d'air"
+      },
+      "t3": {
+        "text": "Nous avions des milliers de lignes de produits qui devaient être catégorisées avant même de pouvoir commencer à comprendre nos coûts. Pearstop les a classées en moins d'une semaine. Cela aurait pris six mois à notre équipe, et le résultat n'aurait toujours pas été aussi précis.",
+        "name": "David Torr",
+        "role": "CEO · FARO"
+      }
+    },
+    "moreStories": {
+      "title": "Plus d'histoires clients",
+      "lead": "Une sélection de projets à travers différents secteurs, défis et types de solutions.",
+      "readComingSoon": "Lire le cas bientôt disponible →",
+      "readCase": "Lire l'étude de cas →"
+    },
+    "cta": {
+      "eyebrow": "Prêt à obtenir des résultats comme ceux-ci ?",
+      "title": "Parlons de votre défi de données.",
+      "lead": "Dites-nous où vos marges fuient. Nous vous montrerons exactement comment Pearstop y remédie.",
+      "bookDemo": "Réservez une démo",
+      "exploreSolutions": "Découvrir les solutions"
+    }
+  },
+  "Industries": {
+    "meta": {
+      "title": "Secteurs que nous servons",
+      "description": "Pearstop travaille avec des organisations d'infrastructure, de facilities management, de nettoyage, de construction, de fabrication et de propriétaires d'actifs. Chaque secteur a un problème de données différent - découvrez comment nous le résolvons."
+    },
+    "hero": {
+      "eyebrow": "Secteurs",
+      "title": "Secteurs que nous servons",
+      "lead": "Pearstop nettoie et classe les données opérationnelles pour les secteurs qui portent les dépenses les plus lourdes et les plus désordonnées : infrastructure, facilities management, construction et fabrication. Trouvez votre secteur ci-dessous."
+    },
+    "sixIndustries": {
+      "title": "Où Pearstop s'intègre",
+      "lead": "Six secteurs, six façons différentes dont le même problème se manifeste : des données de dépenses ou d'actifs sur lesquelles personne ne peut encore agir.",
+      "learnMore": "En savoir plus →"
+    },
+    "otherIndustries": {
+      "title": "Vous travaillez dans un autre secteur ?",
+      "copy": "Les problèmes de qualité des données ne sont pas propres aux secteurs ci-dessus. Si vos équipes gèrent des données opérationnelles complexes, font face à des fiches fournisseurs incohérentes, ou se préparent à une transformation numérique, il y a de fortes chances que nous puissions vous aider. Voyons cela ensemble.",
+      "bookDiscovery": "Réservez un appel découverte de 7 minutes →"
+    },
+    "whatChanges": "Ce qui change avec Pearstop",
+    "trusted": {
+      "title": "Approuvé par les entreprises leaders des secteurs techniques"
+    },
+    "readyBanner": {
+      "title": "Prêt à nettoyer vos données ?",
+      "copy": "Nous avons résolu exactement ce problème dans l'infrastructure, le facilities management, le nettoyage, la construction et la fabrication. Si votre secteur est différent mais rencontre le même type de données, parlez-nous-en.",
+      "bookDiscovery": "Réservez un appel découverte de 7 minutes"
+    },
+    "technical": {
+      "eyebrow": "Secteurs techniques",
+      "title": "Pourquoi les secteurs techniques peinent-ils avec la qualité des données ?",
+      "lead": "Les entreprises de services techniques, de construction, d'infrastructure et de fabrication partagent un défi commun."
+    },
+    "facilitiesManagement": {
+      "title": "Facilities Management",
+      "intro": "Le facilities management n'est pas un problème, ce sont trois problèmes. Un contrat FM intégré doit unifier des données arrivant de chaque ligne de service dans un format différent. Un contrat de services techniques vit ou meurt selon que l'on sait réellement ce qu'est une pièce. Un contrat de services non techniques est chiffré une seule fois, comme un lot global, puis doit être défendu ligne par ligne pendant des années. Chacun est détaillé ci-dessous.",
+      "links": [
+        {
+          "label": "FM intégré",
+          "id": "integrated-fm"
+        },
+        {
+          "label": "Services techniques",
+          "id": "hard-services"
+        },
+        {
+          "label": "Services non techniques",
+          "id": "soft-services"
+        }
+      ]
+    },
+    "details": [
+      {
+        "id": "infrastructure",
+        "title": "Infrastructure",
+        "copy": "Vous ne pouvez pas négocier ce que vous ne voyez pas.",
+        "intro": "Un objectif d'économies est fixé, atteignant parfois huit chiffres, et personne ne peut indiquer où il se situe réellement dans les dépenses. Cet écart entre l'objectif et les données est un schéma récurrent dans l'infrastructure et le ferroviaire : un programme d'économies identifie des dizaines de millions d'économies potentielles, et les données de dépenses sous-jacentes ne permettent pas de savoir où les trouver. Les économies viennent en troisième. D'abord vous voyez où va l'argent, ensuite vous voyez les lacunes de couverture, puis vous négociez.",
+        "points": [
+          {
+            "title": "Un objectif d'économies sans données pour l'étayer",
+            "copy": "Un programme de transformation fixe un chiffre. Les dépenses ne sont pas classifiées de manière suffisamment cohérente pour dire dans quelles catégories ce chiffre se cache."
+          },
+          {
+            "title": "Une couverture des accords-cadres que personne ne voit à l'échelle de l'entreprise",
+            "copy": "Un acheteur peut voir les dix accords-cadres de sa propre catégorie. Les cinquante autres catégories n'ont pas de visibilité équivalente, donc l'organisation ne peut pas orienter les dépenses vers des accords qu'elle a déjà."
+          },
+          {
+            "title": "Aucune base de référence pour négocier ou répondre à un appel d'offres",
+            "copy": "Négocier avec un fournisseur, ou chiffrer un nouvel appel d'offres, commencent tous deux par savoir ce que vous dépensez déjà. Sans cette base de référence, chaque négociation part d'une estimation."
+          }
+        ],
+        "changes": [
+          "Des dépenses classifiées de manière suffisamment cohérente pour montrer où se situe réellement un objectif d'économies nommé",
+          "Une couverture des accords-cadres et contrats visible sur toutes les catégories, pas seulement celles déjà surveillées",
+          "Une véritable base de référence des dépenses pour négocier avec les fournisseurs et chiffrer les appels d'offres, pas une estimation",
+          "Une vitesse de vérification des acheteurs améliorée d'un ordre de grandeur à mesure que la classification devient familière, pas un gain marginal"
+        ],
+        "href": "/procurement-data-quality",
+        "linkLabel": "Voir comment Pearstop construit une véritable base de référence des dépenses"
+      },
+      {
+        "id": "integrated-fm",
+        "title": "FM intégré",
+        "copy": "Un contrat, cinq lignes de service, cinq formats de données.",
+        "intro": "Les contrats FM multiservices l'emportent par leur étendue : nettoyage, services techniques, sécurité et restauration sous un même toit. Les données sous-jacentes reflètent rarement cette unité. Chaque ligne de service arrive depuis son propre système, dans son propre format, et des registres d'actifs ou de coûts censés décrire la même chose finissent par sembler appartenir à des entreprises différentes.",
+        "points": [
+          {
+            "title": "Des données de référence qui ne correspondent pas à ce qui est installé",
+            "copy": "Les données de référence sur les fabricants et équipements fournies au démarrage du contrat sont parfois tout simplement erronées, et les incohérences d'orthographe, de nommage et de codage s'accumulent au fil des sites et des années."
+          },
+          {
+            "title": "Données de dépenses et de service cloisonnées par ligne de service",
+            "copy": "Le nettoyage, les services techniques et la sécurité rapportent chacun différemment, si bien que personne ne voit l'image complète des coûts ou de la performance pour un seul contrat."
+          },
+          {
+            "title": "Un premier passage qui livre moins que prévu",
+            "copy": "Les attentes fixées au début d'un projet dépassent souvent ce qu'un premier passage sur les données peut soutenir, parce que les données de référence sous-jacentes étaient déjà défaillantes avant d'atteindre le moindre système."
+          }
+        ],
+        "changes": [
+          "Données de référence sur les fabricants et équipements corrigées et standardisées sur chaque ligne de service et chaque site",
+          "Un seul jeu de données structuré au lieu de cinq silos par ligne de service, rendant visible le coût et la performance réels au niveau du contrat",
+          "Une vision réaliste de ce que les données peuvent soutenir, fondée sur une base corrigée, pas sur l'état dans lequel elles sont arrivées"
+        ],
+        "href": "/data-quality",
+        "linkLabel": "Voir comment Pearstop unifie les données FM"
+      },
+      {
+        "id": "hard-services",
+        "title": "Services techniques",
+        "copy": "Cessez de payer un intermédiaire parce que personne ne peut confirmer ce qu'est la pièce.",
+        "intro": "Lorsqu'un composant arrive avec pour seule référence le code de pièce propre à un fournisseur, il n'existe aucun moyen de l'acheter ailleurs que chez ce fournisseur. Retrouver le code fabricant d'origine implique que quelqu'un le retrace manuellement, et chaque étape de cette chaîne, de l'ingénieur qui l'a commandé à l'équipe qui doit demander une description plus claire, coûte un temps que la plupart des contrats ne budgétisent pas.",
+        "points": [
+          {
+            "title": "Le code fabricant d'origine est caché derrière un code fournisseur",
+            "copy": "Sans lui, il n'existe aucun fournisseur alternatif chez qui acheter, ni aucun moyen de vérifier que le prix est équitable."
+          },
+          {
+            "title": "Des descriptions vagues créent une boucle lente d'allers-retours",
+            "copy": "Une description de pièce peu claire renvoyée sur site puis retour est la norme lorsque les descriptions n'ont jamais été saisies de manière cohérente au départ."
+          },
+          {
+            "title": "Aucun moyen de vérifier une correspondance avant qu'elle ne soit utilisée",
+            "copy": "Un résultat de classification n'est utile qu'une fois qu'il peut être vérifié par rapport au véritable numéro de pièce, et non pris pour argent comptant."
+          }
+        ],
+        "changes": [
+          "Codes fabricants d'origine identifiés afin que les pièces puissent être achetées directement, sans marge d'intermédiaire",
+          "Descriptions de pièces cohérentes saisies une seule fois, sans être redemandées site après site",
+          "Chaque correspondance traçable jusqu'à un véritable numéro de pièce, pour que votre équipe puisse la vérifier plutôt que d'y faire simplement confiance"
+        ],
+        "href": "/unspsc",
+        "linkLabel": "Voir comment Pearstop classe les dépenses de services techniques"
+      },
+      {
+        "id": "soft-services",
+        "title": "Services non techniques",
+        "copy": "Un prix unique couvrant plusieurs lignes de service. Le défendre demande davantage que cela.",
+        "intro": "Les services non techniques ne désignent que rarement une seule chose. Un contrat unique peut regrouper nettoyage, sécurité, accueil, déchets et espaces verts sous un seul prix, fixé une fois à l'appel d'offres et censé tenir plusieurs années. Lorsqu'un client remet ce prix en question, ou qu'un renouvellement approche, le coût de chaque ligne prise séparément n'est souvent pas quelque chose que quiconque peut produire rapidement, parce que les dépenses n'ont jamais été décomposées par service dès le départ.",
+        "points": [
+          {
+            "title": "Un prix global, sans visibilité sur ce que coûte réellement chaque service",
+            "copy": "Un prix combiné au stade de l'offre signifie que personne ne peut dire, ligne par ligne, ce que coûte le nettoyage par rapport à la sécurité ou aux déchets, ce qui rend un renouvellement ou une contestation client difficile à défendre."
+          },
+          {
+            "title": "Des services traités comme une commodité, sans données pour prouver le contraire",
+            "copy": "Sans un historique de coût et de performance décomposé par service, il est difficile de démontrer une valeur au-delà de la simple présence sur site."
+          },
+          {
+            "title": "Des opportunités de consolidation invisibles à travers les contrats groupés",
+            "copy": "Le même fournisseur ou type de service peut se répéter à travers de nombreux contrats groupés sans que personne ne le voie, parce que les dépenses ne sont jamais classifiées de manière suffisamment cohérente pour être comparées."
+          }
+        ],
+        "changes": [
+          "Dépenses décomposées par ligne de service au sein d'un contrat groupé, pas un chiffre global unique",
+          "Un historique de coût et de performance pour chaque service, pour défendre la valeur au-delà du seul prix",
+          "Opportunités de consolidation visibles à travers les contrats groupés et les sites"
+        ],
+        "href": "/procurement-data-quality",
+        "linkLabel": "Voir comment Pearstop décompose les dépenses des contrats groupés"
+      },
+      {
+        "id": "cleaning",
+        "title": "Nettoyage",
+        "copy": "Si la facture n'est jamais lue, la dépense sous-jacente n'existe pas encore.",
+        "intro": "Demandez à l'équipe achats d'un prestataire de nettoyage à quel point elle a confiance dans ses propres chiffres, et « au ras du sol » est une réponse courante et autodépréciative. Avant que les dépenses puissent être vérifiées par rapport à un contrat, quelqu'un doit d'abord réellement lire la facture, et séparément, environ quatre-vingts pour cent des factures des contrats de nettoyage ne correspondent pas aux conditions convenues. Deux problèmes de visibilité, superposés.",
+        "points": [
+          {
+            "title": "Des factures arrivant plus vite que quiconque ne peut les lire",
+            "copy": "Des données de référence ERP décrites comme trop médiocres pour que le flux automatique puisse même démarrer, avec des échéances manquées depuis des années, pas des mois."
+          },
+          {
+            "title": "Des dépenses que personne n'a vérifiées par rapport au contrat",
+            "copy": "Environ quatre factures sur cinq de contrats de nettoyage ne correspondent pas aux conditions convenues. Cet écart reste invisible jusqu'à ce que quelqu'un lise chaque ligne et la compare."
+          },
+          {
+            "title": "Aucune justification lorsqu'un client conteste un prix",
+            "copy": "Lorsqu'on lui demande de défendre le coût d'un appel d'offres, la réponse honnête est souvent que personne ne sait. La marge sur le chiffre était une impression, pas un calcul."
+          }
+        ],
+        "changes": [
+          "Factures lues et structurées automatiquement, quel que soit le format, pour qu'il y ait quelque chose à vérifier",
+          "Dépenses réelles vérifiées par rapport aux conditions contractuelles convenues, par défaut, et non comme un exercice d'audit",
+          "Une véritable base de coûts pour défendre les prix face à une contestation client, pas une impression"
+        ],
+        "href": "/invoice-data-extraction",
+        "linkLabel": "Voir comment Pearstop lit la facture en premier"
+      },
+      {
+        "id": "construction",
+        "title": "Construction",
+        "copy": "Transformer des années de dépenses en un seul chiffre ne devrait pas prendre des années.",
+        "intro": "Un groupe de construction réalisant des centaines de millions de dépenses annuelles sur plus d'une douzaine d'entités peut indiquer son chiffre d'affaires à l'euro près, tout en ignorant, avec précision, ce qu'il a réellement dépensé l'année dernière, ou sur quoi. Des accords-cadres existent, mais ils ont été signés il y a des années et personne n'a vérifié depuis si les achats les suivent encore.",
+        "points": [
+          {
+            "title": "Des dépenses à l'échelle du groupe que personne ne peut additionner précisément",
+            "copy": "Des dépenses réparties entre de nombreuses entités et systèmes signifient que le chiffre d'affaires est connu à l'euro près ; ce qui a été réellement acheté l'est rarement."
+          },
+          {
+            "title": "Des accords-cadres que personne n'a vérifiés récemment",
+            "copy": "Des accords signés il y a des années continuent de fonctionner sur la confiance, sans comparaison en temps réel pour savoir si les achats actuels les suivent toujours."
+          },
+          {
+            "title": "Catégoriser les dépenses à la main, projet après projet",
+            "copy": "Traduire manuellement les dépenses brutes en quantités, lots et entrepreneurs reste la façon dont une vue catégorisée est construite, répétée à chaque cycle de reporting."
+          }
+        ],
+        "changes": [
+          "Dépenses à l'échelle du groupe visibles dans une seule vue consolidée et codée, pas par entité",
+          "Conformité aux accords-cadres vérifiée par rapport aux achats réels, pas supposée",
+          "Une catégorisation qui se fait une fois par ligne, pas à la main à chaque cycle de reporting"
+        ],
+        "href": "/procurement-data-quality",
+        "linkLabel": "Voir comment Pearstop nettoie les données d'achats à grande échelle"
+      },
+      {
+        "id": "manufacturing",
+        "title": "Fabricants de systèmes de construction",
+        "copy": "Une entité applique déjà un standard. Le reste du groupe, non.",
+        "intro": "Il est courant, chez les fabricants multi-entités, qu'une partie de l'entreprise, souvent la plus ancienne ou la plus récemment auditée, classe déjà les dépenses selon un véritable standard, tandis que les entités sœurs et les sites plus récents fonctionnent encore avec des données fournisseurs et pièces incohérentes, en texte libre. Cet écart ne reste pas longtemps confiné à une seule région : les audits, le reporting de groupe et les achats mutualisés finissent tous par exiger la même vue partout.",
+        "points": [
+          {
+            "title": "Une entité sur un standard, les autres non",
+            "copy": "Un standard de classification de groupe existe déjà quelque part dans l'entreprise. L'étendre manuellement à chaque entité est plus lent que la raison même pour laquelle il avait été demandé."
+          },
+          {
+            "title": "Des fiches de pièces dupliquées et incohérentes entre les usines",
+            "copy": "La même pièce apparaît sous des codes et orthographes différents selon l'usine ou le système qui l'a saisie, ce qui bloque le benchmarking fournisseurs et masque les stocks en double."
+          },
+          {
+            "title": "Des devis lents fondés sur des recherches manuelles",
+            "copy": "Ressaisir et revérifier manuellement les données de pièces ralentit les devis précisément quand la vitesse et la précision comptent toutes deux."
+          }
+        ],
+        "changes": [
+          "Le standard de classification existant du groupe étendu à chaque entité, pas seulement celle qui l'avait déjà",
+          "Des données de pièces dédupliquées et standardisées entre usines et systèmes",
+          "Des devis plus rapides sur des données de coûts et de fournisseurs qui n'ont pas besoin d'être revérifiées à la main"
+        ],
+        "href": "/unspsc",
+        "linkLabel": "Voir comment Pearstop aligne chaque entité sur un seul standard"
+      },
+      {
+        "id": "asset-owners",
+        "title": "Propriétaires d'actifs",
+        "copy": "Vous ne touchez pas aux factures. Vous devez quand même savoir ce qu'elles disent.",
+        "intro": "Les investisseurs immobiliers, les bailleurs et les propriétaires de patrimoine public qui externalisent le facilities management ne génèrent pas leurs propres données de dépenses. Ils les reçoivent, filtrées par le prestataire qui exécute le contrat. La question qui suit n'est pas une question de stratégie de catégorie. Elle est plus simple, et plus difficile à éviter : qu'est-ce qui est réellement dépensé en notre nom, est-ce compétitif, et comment le saurions-nous si ce n'était pas le cas.",
+        "points": [
+          {
+            "title": "Des données de coûts que vous recevez mais ne contrôlez pas",
+            "copy": "Un mandataire de gestion ou un prestataire FM rapporte les chiffres. Il existe rarement un moyen indépendant de les vérifier par rapport à ce que paient des sites ou portefeuilles similaires."
+          },
+          {
+            "title": "Aucun benchmark entre prestataires ou sites",
+            "copy": "Sans une vue commune et classifiée des dépenses, comparer les coûts d'un prestataire à un autre, ou d'un site au suivant, n'est pas possible."
+          },
+          {
+            "title": "Vouloir maîtriser le récit, pas seulement le recevoir",
+            "copy": "Examiner le propre rapport d'un prestataire après coup n'équivaut pas à disposer de son propre registre indépendant et comparable."
+          }
+        ],
+        "changes": [
+          "Une vue indépendante et classifiée des dépenses gérées en votre nom, pas seulement le rapport du prestataire",
+          "Un benchmarking des coûts entre prestataires et sites, sur la même base",
+          "Une assurance que vous pouvez apporter à l'évaluation d'un prestataire, pas seulement un fichier reçu de sa part"
+        ],
+        "href": "/asset-data-management",
+        "linkLabel": "Voir comment Pearstop donne de l'assurance aux propriétaires d'actifs"
+      }
+    ],
+    "faq": {
+      "items": [
+        {
+          "q": "Avec quels secteurs Pearstop travaille-t-il ?",
+          "a": "Pearstop travaille avec des opérateurs d'infrastructure et ferroviaires, des prestataires FM intégrés, des contractants de services techniques et de FM technique, des prestataires de services non techniques, des prestataires de nettoyage, des entreprises de construction et de projets, des fabricants de systèmes et d'équipements de construction, et des propriétaires d'actifs qui externalisent la livraison FM. Chacun a sa propre version du même problème sous-jacent : des données de dépenses ou d'actifs trop fragmentées ou jamais lues pour agir dessus."
+        },
+        {
+          "q": "Dois-je être une grande organisation pour en bénéficier ?",
+          "a": "Pearstop convient aux organisations de plusieurs centaines d'employés ou plus, opérant sur plusieurs sites ou projets, avec un volume significatif de dépenses auprès de fournisseurs et sous-traitants externes. La condition préalable n'est pas la taille en soi, c'est la dispersion des dépenses : différents fournisseurs pour le même produit ou service à travers les sites ou entités, sans que personne ne les ait correctement cartographiés."
+        },
+        {
+          "q": "Et si mon secteur n'est pas listé ici ?",
+          "a": "Les problèmes de données ci-dessus ne sont pas propres à ces secteurs. Si votre équipe gère des dépenses opérationnelles ou des données d'actifs complexes, fait face à des fiches fournisseurs incohérentes, ou se prépare à une transformation numérique, le problème sous-jacent est généralement le même. Réservez un appel et nous vous dirons clairement si c'est adapté."
+        }
+      ]
+    }
+  },
+  "Privacy": {
+    "meta": {
+      "title": "Politique de confidentialité",
+      "description": "Politique de confidentialité de Pearstop."
+    },
+    "hero": {
+      "eyebrow": "Mentions légales",
+      "title": "Politique de confidentialité",
+      "lead": "Nous n'utilisons que les données nécessaires pour répondre à votre demande, améliorer le site et soutenir nos services."
+    },
+    "collect": {
+      "title": "Ce que nous collectons",
+      "p1": "Si vous nous contactez, nous pouvons collecter votre nom, votre adresse e-mail, votre entreprise et votre message afin de pouvoir vous répondre. Si vous vous inscrivez pour recevoir des actualités, nous conservons les informations que vous soumettez via le prestataire de formulaire que nous utilisons. Nous pouvons également collecter des données analytiques de base pour comprendre l'utilisation du site.",
+      "p2": "Nous ne vendons pas vos informations personnelles. Si vous souhaitez que nous supprimions vos coordonnées, envoyez-nous un e-mail et nous traiterons votre demande rapidement."
+    }
+  },
+  "Terms": {
+    "meta": {
+      "title": "Conditions générales",
+      "description": "Conditions générales d'utilisation du site web de Pearstop."
+    },
+    "hero": {
+      "eyebrow": "Mentions légales",
+      "title": "Conditions générales",
+      "lead": "Une version courte et en langage clair de la façon dont vous pouvez utiliser le site web de Pearstop."
+    },
+    "usingSite": {
+      "title": "Utilisation de ce site",
+      "p1": "Le contenu de ce site est fourni à titre d'information générale uniquement. Il ne constitue pas un conseil juridique, financier ou en matière d'achats. Nous nous efforçons de maintenir les informations exactes et à jour, mais nous ne garantissons pas que chaque page sera toujours complète.",
+      "p2": "Si vous souhaitez réutiliser le contenu, les éléments de marque ou les captures d'écran, merci de nous demander au préalable. Pour toute question concernant ces conditions, contactez-nous."
+    }
+  },
+  "Whitepaper": {
+    "meta": {
+      "title": "Livre blanc",
+      "description": "Comment les entreprises de services techniques utilisent les données de dépenses pour négocier de meilleurs contrats."
+    },
+    "hero": {
+      "eyebrow": "Livre blanc gratuit",
+      "title": "Comment les entreprises de services techniques utilisent les données de dépenses pour négocier de meilleurs contrats",
+      "lead": "Un guide pratique pour construire une base de référence des dépenses sur laquelle votre équipe achats peut agir."
+    },
+    "whatYouGet": {
+      "title": "Ce que vous obtiendrez",
+      "lead": "Une ressource sans engagement pour les personnes intéressées mais pas encore prêtes à réserver un appel.",
+      "b1": {
+        "icon": "✓",
+        "title": "À quoi ressemble une bonne base de référence des dépenses",
+        "copy": "Utilisez le livre blanc pour comprendre la structure dont vos données ont besoin avant de pouvoir bien négocier."
+      },
+      "b2": {
+        "icon": "↗",
+        "title": "Comment les équipes de services techniques l'utilisent",
+        "copy": "Découvrez comment les équipes achats transforment des dépenses désordonnées en gestion des catégories et en levier de négociation fournisseur."
+      },
+      "b3": {
+        "icon": "⚡",
+        "title": "Où Pearstop s'intègre",
+        "copy": "Découvrez où l'automatisation supprime le travail manuel et où votre équipe garde le contrôle."
+      }
+    },
+    "request": {
+      "label": "Demandez le guide",
+      "lead": "Si vous souhaitez le livre blanc, envoyez-nous un message et nous vous orienterons vers la bonne ressource. C'est une étape simple et sans friction pour les personnes qui ne sont pas encore prêtes à planifier un appel.",
+      "emailButton": "Demander par e-mail",
+      "contactButton": "Nous contacter"
+    },
+    "cta": {
+      "title": "Vous préférez en discuter ?",
+      "lead": "Nous pouvons aussi vous présenter la même réflexion lors d'un appel rapide.",
+      "bookDiscovery": "Réservez un appel découverte de 7 minutes",
+      "backHome": "Retour à l'accueil"
+    }
+  },
+  "Faq": {
+    "meta": {
+      "title": "Foire aux questions | Pearstop",
+      "description": "Réponses aux questions les plus fréquentes sur la classification UNSPSC de Pearstop, la qualité des données d'achats, la gestion des données d'actifs et le fonctionnement du service."
+    },
+    "hero": {
+      "eyebrow": "FAQ",
+      "title": "Les questions qu'on nous pose le plus souvent.",
+      "lead": "Tout ce que vous devez savoir sur le fonctionnement de Pearstop, son coût, et si c'est adapté à votre organisation.",
+      "cta": "Réservez un appel découverte de 7 minutes",
+      "secondary": "Accéder aux questions"
+    },
+    "sections": {
+      "general": {
+        "title": "Qu'est-ce que la classification UNSPSC ?",
+        "items": [
+          {
+            "q": "Qu'est-ce que la classification UNSPSC et pourquoi est-ce important pour les achats ?",
+            "a": "UNSPSC (United Nations Standard Products and Services Code) est une hiérarchie mondiale à quatre niveaux — Segment, Famille, Classe, Produit de base — utilisée pour catégoriser chaque produit et service qu'une entreprise achète. Sans cela, les données de dépenses d'achats forment une collection de lignes de facture en texte libre qui ne peuvent être comparées, agrégées ou analysées. Avec des codes UNSPSC appliqués de manière cohérente, les équipes achats peuvent voir exactement ce qu'elles dépensent par catégorie, comparer les prix des fournisseurs, consolider la base fournisseurs et établir des estimations de coûts précises pour les appels d'offres. C'est le socle qui rend possible la gestion des catégories."
+          },
+          {
+            "q": "Quel est le bon niveau de classification UNSPSC — segment, famille, classe ou produit de base ?",
+            "a": "Le niveau produit de base (les 8 chiffres complets) est le seul niveau qui apporte une réelle valeur pour les achats. Classer au niveau segment (les 2 premiers chiffres) est l'erreur la plus courante — cela indique globalement que la dépense concerne la Construction et la Maintenance, mais pas s'il s'agit de maintenance électrique, de CVC ou de réparation d'enveloppe du bâtiment. La classification au niveau produit de base est ce qui permet le benchmarking fournisseurs, la comparaison de prix et la stratégie de catégorie. Pearstop classe au niveau produit de base par défaut."
+          },
+          {
+            "q": "Quelle est la différence entre UNSPSC et les codes eClass ou CPV ?",
+            "a": "UNSPSC est une taxonomie mondiale à quatre niveaux couvrant tous les produits et services, largement utilisée dans les achats du secteur privé pour l'analyse des dépenses et la gestion des catégories. eClass est plus précis pour les données de référence industrielles et techniques car il inclut des définitions d'attributs produits en plus des codes — mieux adapté aux catalogues de pièces techniques qu'à l'analyse des dépenses. Le CPV (Vocabulaire commun pour les marchés publics) n'est obligatoire que pour les avis d'appels d'offres publics de l'UE et n'est pas utilisé pour la gestion interne des dépenses. Pour les entreprises européennes qui gèrent des données d'achats dans le FM, l'infrastructure et la fabrication, UNSPSC est le standard le plus pratique et le plus largement pris en charge."
+          },
+          {
+            "q": "Comment fonctionne la classification UNSPSC lorsque les descriptions de factures sont en néerlandais, en allemand ou en français ?",
+            "a": "Le moteur de classification de Pearstop traite nativement les descriptions de factures en néerlandais, en allemand et en français, y compris les abréviations des techniciens de terrain, le jargon technique et les lignes multilingues où une description néerlandaise inclut des noms de produits anglais. La couche LLM dispose d'une solide capacité multilingue et comprend la terminologie spécifique au secteur dans toutes ces langues. Aucun prétraitement ni traduction n'est nécessaire avant la classification."
+          }
+        ]
+      },
+      "unspsc": {
+        "title": "Précision et automatisation",
+        "items": [
+          {
+            "q": "Quel taux de précision devrais-je attendre d'une classification UNSPSC automatisée ?",
+            "a": "Le moteur à quatre couches de Pearstop — règles, machine learning, LLM et vérification humaine — atteint 90 à 95 % de classification automatique au niveau produit de base sur des jeux de données d'achats typiques. Cette mesure est effectuée sur des données clients réelles, y compris des dépenses d'infrastructure et de FM néerlandaises où les descriptions sont incohérentes et multilingues, et non sur des jeux de données de test propres. Les 5 à 10 % restants sont signalés pour vérification humaine. Chaque décision vérifiée alimente le moteur en retour, de sorte que le taux de classification automatique s'améliore avec le temps et dépasse généralement 95 % après 12 mois de fonctionnement."
+          },
+          {
+            "q": "La classification UNSPSC automatisée peut-elle fonctionner avec des descriptions de factures désordonnées ou incomplètes ?",
+            "a": "Oui — les données désordonnées sont exactement ce pour quoi Pearstop est conçu. Le moteur utilise plusieurs signaux au-delà de la description de la ligne : l'identité du fournisseur, le compte de grand livre, l'élément de coût, l'historique d'achats, et la large connaissance produit de la couche LLM. Une description comme « elektra H3 Q2 » ou un simple numéro de pièce est classée correctement parce que le moteur triangule à partir des schémas fournisseurs et du contexte du grand livre, pas seulement de la chaîne de texte. Les outils basés sur des règles échouent sur ce type de données. Les couches ML et LLM de Pearstop sont spécifiquement conçues pour cela."
+          },
+          {
+            "q": "Comment la classification UNSPSC basée sur l'IA se compare-t-elle à une classification manuelle par un consultant ou un acheteur ?",
+            "a": "La classification manuelle par un acheteur expérimenté atteint généralement 70 à 80 % de cohérence — des personnes différentes attribuent des codes différents à la même description, et la fatigue augmente le taux d'erreur à grande échelle. Elle ne peut pas non plus suivre le rythme : une équipe traitant 10 000 lignes de facture par mois nécessite un à deux collaborateurs dédiés travaillant en continu. Le moteur automatisé de Pearstop atteint 90 à 95 % de cohérence au niveau produit de base, traite des mois de données historiques en quelques jours, et s'améliore avec le temps. La file de vérification humaine — typiquement 500 à 1 000 éléments pour 10 000 lignes — prend 20 à 30 minutes par mois, pas un poste à temps plein."
+          },
+          {
+            "q": "Combien de temps faut-il pour classifier une année complète de données de factures historiques ?",
+            "a": "Un jeu de données historique complet — typiquement 12 à 24 mois de bons de commande ou de lignes de facture — est classifié et restitué en quatre à six semaines. Cela inclut la phase Data Stability Baseline où la précision est validée et votre équipe examine les éléments signalés. La classification mensuelle continue des nouvelles données de facture s'exécute automatiquement sans configuration supplémentaire."
+          },
+          {
+            "q": "Que se passe-t-il si nous n'avons pas de données de classification existantes pour entraîner le système ?",
+            "a": "Le moteur de Pearstop performe fortement sans données préexistantes. La couche de règles applique immédiatement des schémas basés sur le fournisseur et le grand livre. La couche ML est pré-entraînée sur un large corpus de transactions d'achats à travers les secteurs. La couche LLM apporte une connaissance approfondie des produits et du secteur qui couvre les lacunes que la couche ML n'a encore jamais rencontrées. De nombreux clients Pearstop démarrent avec des années de données SAP non classifiées et atteignent plus de 90 % de classification automatique dès le premier passage."
+          }
+        ]
+      },
+      "process": {
+        "title": "Coûts, délais et ROI",
+        "items": [
+          {
+            "q": "Quel est le ROI de la classification UNSPSC — quelles économies puis-je attendre ?",
+            "a": "Le ROI provient de trois sources. D'abord, la consolidation des fournisseurs : une base de dépenses classifiée révèle typiquement 20 à 40 % des dépenses dans des catégories où la base fournisseurs peut être réduite et les prix renégociés. Ensuite, la précision du chiffrage des appels d'offres : les entreprises qui chiffrent leurs appels d'offres à partir de données de dépenses classifiées plutôt que d'estimations réduisent le risque de marge grâce à une base de coûts factuelle. Enfin, les effectifs : la classification automatisée réduit le traitement manuel des données de 70 à 90 %, libérant les acheteurs et analystes pour un travail qui affecte directement les résultats commerciaux. Les clients récupèrent généralement le coût du service dès le premier cycle de négociation."
+          },
+          {
+            "q": "Quels sont les meilleurs outils de classification UNSPSC pour la consolidation des fournisseurs ?",
+            "a": "La consolidation des fournisseurs nécessite une visibilité des dépenses au niveau produit de base sur l'ensemble de votre base fournisseurs — ce qui signifie que votre outil de classification doit atteindre le niveau produit de base (codes à 8 chiffres), pas seulement le niveau segment ou famille. Les outils qui classent au niveau segment vous montreront que vous dépensez fortement en maintenance, mais pas quels produits de maintenance spécifiques sont fragmentés entre trop de fournisseurs. Pearstop classe au niveau produit de base par défaut, ce qui rend l'analyse de consolidation des fournisseurs significative."
+          },
+          {
+            "q": "Quels outils de classification UNSPSC aident à réduire le travail manuel dans le chiffrage des appels d'offres pour les projets d'infrastructure ?",
+            "a": "Le chiffrage des appels d'offres pour les projets d'infrastructure nécessite une base de coûts précise par catégorie — savoir ce que vous avez payé pour des matériaux, services et travaux de sous-traitance spécifiques sur des projets comparables. La classification UNSPSC des dépenses historiques crée exactement cette base. Les clients de Pearstop utilisent les données de dépenses historiques classifiées pour chiffrer de nouveaux appels d'offres à partir d'une expérience de coût réelle plutôt que d'estimations, réduisant à la fois le temps de préparation d'une offre et le risque de marge dans le prix final."
+          },
+          {
+            "q": "Comment construire une base de référence des dépenses fiable à partir de données SAP historiques désordonnées ?",
+            "a": "La voie la plus rapide consiste à exporter 12 à 24 mois de données de bons de commande ou de factures depuis SAP (transaction ME2M ou ME2N pour les bons de commande, ou un export des comptes fournisseurs pour les factures) et à les faire passer par un moteur de classification automatisé. La mission Data Stability Baseline de Pearstop fait exactement cela : classifier l'ensemble du jeu de données historique, valider la précision, faire remonter les éléments pour vérification humaine, et restituer un fichier de dépenses propre codé UNSPSC. L'ensemble du processus prend quatre à six semaines et nécessite un apport minimal de votre équipe."
+          }
+        ]
+      },
+      "solutions": {
+        "title": "Solutions de données d'achats pour l'infrastructure et le FM",
+        "items": [
+          {
+            "q": "Pourquoi les entreprises d'infrastructure peinent-elles avec les solutions de données d'achats ?",
+            "a": "Les achats d'infrastructure sont structurellement fragmentés. Les achats se font au niveau du projet — les chefs de site, les acheteurs de projet et les sous-traitants créent chacun des bons de commande sans discipline de codage cohérente. Les données finissent dans SAP ou Oracle, mais pas la logique de catégorie. La plupart des solutions de données d'achats sont conçues pour des achats centralisés avec des entrées propres et cohérentes. Elles sous-performent sur les dépenses décentralisées, à fort volume et multilingues que génèrent les entreprises d'infrastructure. Sans une couche de classification conçue pour ce profil de données, les dépenses restent non agrégées et inexploitables."
+          },
+          {
+            "q": "Qu'est-ce qui fait que les solutions de données d'achats produisent des bases de dépenses peu fiables ?",
+            "a": "Trois causes profondes. D'abord, des descriptions incohérentes : le même article apparaît sous des dizaines de libellés en texte libre selon les sites et fournisseurs. Ensuite, des codes manquants : des bons de commande créés sans attribution de catégorie laissent de grandes lacunes. Enfin, une classification au mauvais niveau : un outil qui classe au niveau segment ou famille plutôt qu'au niveau produit de base produit une base qui paraît complète mais ne peut pas soutenir le benchmarking de prix ou la consolidation des fournisseurs. Une base de dépenses n'est utile qu'à la hauteur de la classification qui la sous-tend."
+          },
+          {
+            "q": "Comment les solutions de données d'achats réduisent-elles le travail manuel dans le chiffrage des appels d'offres ?",
+            "a": "Le chiffrage des appels d'offres pour les projets d'infrastructure repose sur le fait de savoir ce que vous avez réellement payé pour des catégories de travaux spécifiques sur des projets comparables. Sans données de dépenses classifiées, les équipes de soumission construisent des estimations à partir de la mémoire et des taux du marché — un processus lent avec un réel risque de marge. Une solution de données d'achats qui classe les dépenses historiques au niveau produit de base crée une base de coûts consultable. Les clients de Pearstop remplacent des semaines de travail manuel de données par une simple requête. FARO a éliminé entièrement 2 ETP de traitement manuel, réduisant le délai de traitement de plusieurs semaines à moins d'une journée."
+          },
+          {
+            "q": "Quelles solutions de données d'achats conviennent aux entreprises d'infrastructure et de facilities management ?",
+            "a": "Les entreprises d'infrastructure et de FM ont besoin de solutions capables de gérer des volumes de factures élevés (5 000 à plus de 35 000 lignes par mois), des descriptions rédigées par des techniciens de terrain plutôt que des acheteurs, des données multilingues sur plusieurs sites, et des dépenses fragmentées entre des centaines de fournisseurs. Les outils basés sur des règles atteignent généralement 60 à 70 % de couverture et échouent sur les cas limites qui dominent les dépenses de FM et d'infrastructure. Les solutions combinant règles, machine learning et couches LLM atteignent 90 à 95 % sur ce profil de données. Pearstop classe actuellement 35 000 lignes par mois pour un important entrepreneur d'infrastructure néerlandais."
+          },
+          {
+            "q": "Quelle est la meilleure solution de données d'achats pour des données de factures désordonnées ?",
+            "a": "Le véritable test est la performance sur des données clients réelles, pas sur des benchmarks propres. Les données de factures désordonnées — abréviations d'ingénieurs, numéros de pièces bruts, descriptions multilingues, nommage incohérent des fournisseurs — nécessitent une triangulation entre plusieurs signaux : identité du fournisseur, compte de grand livre, élément de coût, historique d'achats et connaissance produit au niveau LLM. Les outils basés sur des règles et les outils ML à couche unique sous-performent tous deux ici. Le moteur à quatre couches de Pearstop (règles, ML, LLM, vérification humaine) est spécifiquement conçu pour ce profil de données et atteint 90 à 95 % de classification automatique sur des jeux de données typiques de FM et d'infrastructure."
+          },
+          {
+            "q": "Quelles solutions de données d'achats aident à estimer les marges et à chiffrer plus rapidement ?",
+            "a": "L'estimation des marges et le chiffrage des offres dépendent tous deux du même socle : savoir ce que vous avez payé pour des catégories de travaux spécifiques sur des projets passés comparables. Le goulot d'étranglement n'est généralement pas la capacité analytique — c'est que les données de dépenses sous-jacentes ne sont pas catégorisées et ne peuvent pas être interrogées par catégorie. Une solution de données d'achats qui classe les données ERP historiques au niveau produit de base UNSPSC crée une base de coûts que les équipes de soumission peuvent interroger directement. Cela remplace l'estimation par une expérience de coût réelle, réduit le temps de préparation des offres et abaisse le risque de marge sur le chiffrage des contrats."
+          },
+          {
+            "q": "Quelles sont les meilleures solutions de données d'achats pour la consolidation des fournisseurs ?",
+            "a": "La consolidation des fournisseurs nécessite une visibilité des dépenses au niveau produit de base sur l'ensemble de votre base fournisseurs. Vous devez voir non seulement que vous dépensez fortement en maintenance, mais quels produits de maintenance spécifiques sont répartis entre trop de fournisseurs à des prix différents. Cela nécessite une classification au niveau produit de base (codes UNSPSC à 8 chiffres), pas au niveau segment ou famille. Une analyse des dépenses fondée sur une classification au niveau segment identifiera des tendances générales mais ne pourra pas faire ressortir les opportunités de consolidation spécifiques qui génèrent de réelles économies."
+          },
+          {
+            "q": "Quelles solutions de données d'achats aident à construire des bases de dépenses précises ?",
+            "a": "Une base de dépenses précise nécessite une classification cohérente au niveau produit de base sur l'ensemble des bons de commande et factures — y compris les données historiques, pas seulement les nouvelles transactions à venir. L'approche la plus rapide consiste à exporter 12 à 24 mois de données ERP et à les faire passer par un moteur de classification automatisé. La mission Data Stability Baseline de Pearstop classe l'ensemble du jeu de données, valide la précision, fait remonter les éléments signalés pour vérification humaine, et restitue un fichier de dépenses propre codé UNSPSC en quatre à six semaines. La base est ensuite maintenue automatiquement à mesure que de nouvelles transactions arrivent."
+          },
+          {
+            "q": "Quelles solutions de données d'achats fonctionnent le mieux pour les opérateurs d'infrastructure ?",
+            "a": "Les opérateurs d'infrastructure ont besoin de solutions capables de gérer des volumes de factures élevés à travers des projets décentralisés, des dépenses réparties entre location de matériel, matériaux, sous-traitants et services professionnels, et SAP ou Oracle comme système de référence. La solution doit gérer des données de factures multilingues (les descriptions en néerlandais, en allemand et en français sont courantes dans l'infrastructure européenne), s'intégrer à SAP sans nécessiter de changements de configuration, et classer de manière cohérente au niveau produit de base. Pearstop est utilisé par des opérateurs d'infrastructure aux Pays-Bas et dans le reste de l'Europe, traitant 35 000 lignes par mois pour un client via une intégration SAP."
+          },
+          {
+            "q": "Quelles solutions de données d'achats s'intègrent bien avec les bases de données fournisseurs et les données de référence existantes ?",
+            "a": "Pearstop s'intègre avec SAP (ECC et S/4HANA), Oracle, AFAS et toutes les principales plateformes ERP et P2P via export CSV ou API directe. Les données de référence fournisseurs existantes — codes fournisseurs, listes de fournisseurs approuvés, attributions de produits existantes — alimentent la couche de règles comme éléments de confiance élevée. Les classifications manuelles auxquelles votre équipe fait déjà confiance sont préservées. Les lacunes sont comblées par les couches ML et LLM. Les résultats classifiés sont restitués dans des formats compatibles avec SAP MDG, Oracle Product Hub, ou des structures de données de référence personnalisées."
+          }
+        ]
+      },
+      "technical": {
+        "title": "Intégration et configuration technique",
+        "items": [
+          {
+            "q": "Quel logiciel de classification UNSPSC s'intègre avec SAP, Oracle ou les systèmes ERP existants ?",
+            "a": "Pearstop s'intègre avec SAP (ECC et S/4HANA), Oracle, AFAS et toutes les principales plateformes ERP et P2P via export CSV ou connexion API directe. Aucun changement de configuration SAP n'est requis — les données sont exportées au format standard, classifiées, et restituées prêtes à être rechargées dans SAP comme attribut matériel ou à alimenter SAP Analytics Cloud ou Power BI. Pour la classification mensuelle continue, le cycle export-classification-retour peut être entièrement automatisé."
+          },
+          {
+            "q": "Pearstop fonctionne-t-il avec Microsoft Fabric ou Power BI pour l'analyse des dépenses ?",
+            "a": "Oui. Les données de dépenses classifiées de Pearstop alimentent directement Microsoft Fabric, Power BI, Tableau et toutes les principales plateformes BI et analytiques. Les codes UNSPSC sont cohérents et hiérarchiques, ce qui signifie que vous pouvez construire des tableaux de bord de dépenses avec exploration du niveau produit de base au niveau segment sans préparation de données personnalisée. Pearstop propose également un service dédié Fabric Readiness pour les entreprises préparant une migration Microsoft Fabric — garantissant que les données d'achats sous-jacentes sont propres avant le chargement."
+          }
+        ]
+      },
+      "industries": {
+        "title": "Quelles entreprises en bénéficient le plus",
+        "items": [
+          {
+            "q": "Pourquoi les entreprises d'infrastructure peinent-elles avec la qualité des données d'achats et la visibilité des dépenses ?",
+            "a": "Les achats d'infrastructure sont structurellement fragmentés. Les achats se font au niveau du projet, pas de manière centralisée — les chefs de site, les acheteurs de projet et les sous-traitants créent tous des bons de commande sans discipline de codage cohérente. SAP capture les transactions mais pas la logique de catégorie. Le résultat est des années de données de dépenses qui ne peuvent être agrégées de manière significative à travers les projets, rendant la consolidation des fournisseurs, le benchmarking de prix et la stratégie de catégorie effectivement impossibles sans une couche de classification."
+          },
+          {
+            "q": "Qu'est-ce qui cause des bases de dépenses peu fiables dans les achats — et comment UNSPSC y remédie-t-il ?",
+            "a": "Les bases de dépenses peu fiables proviennent de trois causes profondes : des descriptions incohérentes (le même article apparaît sous des dizaines de libellés), des codes manquants (des bons de commande créés sans attribution de catégorie), et une fragmentation des systèmes (les dépenses réparties entre SAP, des systèmes hérités et des tableurs sans taxonomie unifiée). La classification UNSPSC résout ces trois problèmes en appliquant un code cohérent à quatre niveaux à chaque ligne, quelle que soit la façon dont elle a été décrite ou le système d'où elle provient. Le résultat est une base de dépenses unique et fiable pour la négociation, le chiffrage des appels d'offres et la stratégie de catégorie."
+          },
+          {
+            "q": "Quelle solution de classification UNSPSC est la meilleure pour les dépenses MRO dans la fabrication ?",
+            "a": "Les dépenses MRO constituent la catégorie la plus difficile à classer car les descriptions de pièces varient énormément selon les fournisseurs, les sites et les ingénieurs — et de nombreuses lignes ne sont que des numéros de pièces bruts sans aucune description. Le moteur de classification a besoin du contexte fournisseur, du routage du grand livre et d'une connaissance produit au niveau LLM pour bien gérer cela. L'approche de Pearstop combine ces trois éléments. Pour les clients MRO, Pearstop propose également un enrichissement des numéros de pièces en complément de la classification UNSPSC — identifiant le fabricant OEM et le prix d'approvisionnement direct pour chaque pièce, ce qui constitue le levier pour réduire les coûts MRO en passant directement par le fabricant."
+          },
+          {
+            "q": "Quel outil UNSPSC fonctionne le mieux pour les entreprises d'infrastructure et de facilities aux Pays-Bas ?",
+            "a": "Pearstop est spécifiquement conçu pour les entreprises d'infrastructure, de facilities management et de construction néerlandaises et européennes. Le moteur de classification traite nativement les descriptions de factures en langue néerlandaise — y compris les abréviations et les termes techniques utilisés par les techniciens et les acheteurs de projet. Pearstop classe actuellement 35 000 lignes d'achats par mois pour un important entrepreneur d'infrastructure néerlandais via une intégration SAP. Pour les entreprises néerlandaises également actives dans les marchés publics, UNSPSC offre une connexion directe au réseau de facturation électronique Peppol."
+          }
+        ]
+      }
+    },
+    "stillHaveQuestions": {
+      "label": "Encore une question ?",
+      "copy": "Si votre question n'a pas de réponse ici, le moyen le plus rapide d'obtenir une réponse est un appel découverte de 7 minutes. Aucune pression commerciale — c'est une conversation directe sur votre situation en matière de données.",
+      "cta": "Réservez un appel découverte de 7 minutes",
+      "email": "Envoyez-nous un message"
+    },
+    "cta": {
+      "title": "Prêt à le voir en action ?",
+      "lead": "Réservez un appel découverte de 7 minutes et nous vous montrerons exactement comment le moteur de classification fonctionne avec vos données.",
+      "button": "Réservez un appel découverte de 7 minutes"
+    }
+  }
+}

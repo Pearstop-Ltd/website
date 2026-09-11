@@ -1,1 +1,1130 @@
-{}
+{
+  "Header": {
+    "solutions": "Lösungen",
+    "allSolutions": "Alle Lösungen",
+    "requestDemo": "Demo anfordern",
+    "openMenu": "Untermenü Lösungen öffnen",
+    "closeMenu": "Untermenü Lösungen schließen",
+    "toggleNav": "Navigation ein-/ausblenden",
+    "closeNav": "Navigation schließen",
+    "home": "Pearstop Startseite",
+    "switchLanguage": "Sprache wechseln",
+    "industries": "Branchen",
+    "about": "Über uns",
+    "blog": "Blog",
+    "cases": "Fallstudien",
+    "nav": {
+      "procurementDataQuality": "Beschaffungsdatenqualität",
+      "assetDataManagement": "Asset Data Management",
+      "dataQuality": "Datenqualität",
+      "fabricReady": "Fabric Ready",
+      "aiReadiness": "AI Readiness",
+      "unspsc": "UNSPSC"
+    }
+  },
+  "Footer": {
+    "tagline": "Datenintegritätslösungen für technische Branchen. Denn Margen müssen nicht hauchdünn sein.",
+    "solutions": "Lösungen",
+    "company": "Unternehmen",
+    "followUs": "Folgen Sie uns",
+    "stayInformed": "Bleiben Sie informiert",
+    "newsletterIntro": "Einblicke zu Datenqualität, Brancheneinschätzungen und Pearstop-Updates direkt in Ihr Postfach. Kein Spam.",
+    "namePlaceholder": "Ihr Name",
+    "emailPlaceholder": "Ihre geschäftliche E-Mail-Adresse",
+    "signUp": "Anmelden",
+    "newsletterSubject": "Newsletter-Anmeldung — Pearstop",
+    "copyright": "© {year} Pearstop. Alle Rechte vorbehalten.",
+    "privacyPolicy": "Datenschutzerklärung",
+    "termsConditions": "Allgemeine Geschäftsbedingungen",
+    "linkedin": "LinkedIn",
+    "youtube": "YouTube",
+    "instagram": "Instagram"
+  },
+  "Common": {
+    "bookDiscovery": "7-minütige Discovery buchen",
+    "seeHowItWorks": "So funktioniert es ansehen",
+    "howItWorks": "So funktioniert es",
+    "exploreSolution": "Lösung entdecken →",
+    "readArticle": "Artikel lesen →",
+    "viewAllArticles": "Alle Artikel ansehen",
+    "getInTouch": "Kontakt aufnehmen",
+    "bookDemo": "Demo buchen",
+    "emailUsInstead": "Schreiben Sie uns stattdessen eine E-Mail",
+    "theProblem": "Das Problem",
+    "theOutcome": "Das Ergebnis",
+    "howItWorksEyebrow": "So funktioniert es",
+    "whatChanges": "Was sich mit Pearstop ändert",
+    "keyBenefits": "Wichtigste Vorteile"
+  },
+  "Home": {
+    "meta": {
+      "title": "Pearstop - Datenqualitätslösungen für Hard Services",
+      "description": "Pearstop bereinigt und klassifiziert Beschaffungs- und Anlagendaten für Hard-Services-Unternehmen. Wir verarbeiten automatisch 35.000 Beschaffungspositionen pro Monat."
+    },
+    "hero": {
+      "eyebrow": "Datenqualitätslösungen",
+      "title": "Wir klassifizieren 35.000 Beschaffungspositionen pro Monat. Automatisch.",
+      "lead": "Pearstop bereinigt und klassifiziert Beschaffungs- und Anlagendaten für Hard-Services-Unternehmen, damit Sie Verträge besser verhandeln und Wartung besser planen können. Wir automatisieren, damit Sie es nicht manuell tun müssen - Category Management, das funktioniert.",
+      "bookDiscovery": "7-minütige Discovery buchen",
+      "seeHowItWorks": "So funktioniert es ansehen"
+    },
+    "caseStudiesBand": {
+      "title": "Laden Sie die Fallstudien herunter",
+      "description": "Erfahren Sie, wie Strukton, FARO, SPIE und FMO Pearstop nutzen, um Daten zu bereinigen, Margen zu schützen und manuelle Arbeit zu reduzieren.",
+      "getCaseStudies": "Fallstudien anfordern",
+      "viewInBrowser": "Im Browser ansehen"
+    },
+    "clients": {
+      "label": "Vertraut von führenden Unternehmen"
+    },
+    "benefits": {
+      "eyebrows": [
+        "Procurement",
+        "Asset Management",
+        "Operations"
+      ],
+      "links": [
+        "So funktioniert die UNSPSC-Klassifizierung →",
+        "So funktioniert Asset Data Management →",
+        "So funktioniert Datenqualität →"
+      ],
+      "quotes": [
+        "Früher hatten wir zwei Vollzeitkräfte für die Kategoriezuordnung. Jetzt übernimmt das System das für uns - was auch Margenschätzungen weiter unten in der Kette ermöglicht hat. Es ist zuverlässiger, und das zu einem Bruchteil der Kosten.",
+        "Unsere Anlagenlisten funktionierten für Techniker vor Ort, erlaubten uns aber nicht, Wartung intelligent zu planen oder Angebotsrisiken datengestützt zu managen.",
+        "Es hätte fünf Ingenieure und ein ganzes Jahr gekostet, das zu bereinigen. Also haben wir uns entschieden, nach einer besseren Lösung zu suchen."
+      ],
+      "quoteAuthors": [
+        "Leiter Einkauf",
+        "Asset Manager",
+        "Leiter Betrieb"
+      ],
+      "quoteRoles": [
+        "Infrastruktur-Bauunternehmen",
+        "Facility Management",
+        "Technische Dienstleistungen"
+      ],
+      "titles": [
+        "Maximale Kostenkontrolle",
+        "Ihre Anlagenliste sollte für Sie arbeiten, nicht gegen Sie",
+        "Skalieren mit Zuversicht, nicht mit mehr Personal"
+      ],
+      "copy": [
+        "Klassifizieren Sie automatisch jede Beschaffungsposition, im großen Maßstab. 35.000 Positionen pro Monat, ohne manuelle Arbeit. Verwandeln Sie uneinheitliche Buchungszeilen in eine einzige verlässliche Datenquelle, damit Ihr Einkaufsteam genau sieht, wohin das Geld fließt, Wettbewerb zwischen Lieferanten aktiviert und bessere Verträge aushandelt.",
+        "Wenn Ihre Anlagenliste menschliche Interpretation erfordert, ist sie nicht nutzbar. Wir korrigieren Rechtschreibfehler, beheben Feldabweichungen und strukturieren Ihre Anlagendaten, sodass Systeme - und Menschen - tatsächlich damit arbeiten können. Bereit für Wartungsplanung, Lebenszyklusanalyse und klügere Angebote.",
+        "Schluss mit der Excel-Heldentat. Reduzieren Sie die manuelle Datenbereinigung um 70-90% und geben Sie Ihren besten Einkäufern, Ingenieuren, Analysten und Projektmanagern die Zeit für Arbeit, die wirklich etwas bewirkt."
+      ]
+    },
+    "howItWorks": {
+      "eyebrow": "So funktioniert es",
+      "title": "Von unübersichtlichen Daten zu einer Basis, auf der Sie handeln können",
+      "lead": "Von unübersichtlichen Daten zu einer Basis, auf der Sie handeln können — in drei Phasen.",
+      "stage1": {
+        "label": "Phase 1",
+        "title": "Data Stability Baseline",
+        "copy": "Wir beginnen mit den Daten, die Sie bereits haben. Wir bewerten deren Struktur, identifizieren Lücken und liefern einen bereinigten Datensatz, der Ihnen gehört - plus einen klaren Bericht darüber, was als Nächstes zu tun ist. Keine Verpflichtung über diesen Schritt hinaus."
+      },
+      "stage2": {
+        "label": "Phase 2",
+        "title": "Automatisierte Qualitätskontrolle",
+        "copy": "Das System bereinigt automatisch bis zu 95% der Fehler und Inkonsistenzen. Elemente außerhalb sicherer Schwellenwerte werden zur Überprüfung an Ihr Team markiert — sodass Sie die Kontrolle behalten, ohne die Handarbeit selbst zu erledigen. Jede menschliche Entscheidung fließt direkt in das System zurück und verbessert die Genauigkeit im Laufe der Zeit."
+      },
+      "stage3": {
+        "label": "Phase 3",
+        "title": "Fortlaufende Datenintegrität",
+        "copy": "Das System lernt im Laufe der Zeit aus Ihren Daten und dem Input Ihres Teams. Je länger es läuft, desto weniger manuelle Prüfung ist nötig. Ihre Daten bleiben sauber, strukturiert und einsatzbereit — ohne ein eigenes Team zur Pflege."
+      },
+      "cta": "Mit einer Data Quality Baseline starten →"
+    },
+    "demoBand": {
+      "title": "Vereinbaren Sie eine persönliche Demo",
+      "description": "In 30 Minuten zeigen wir Ihnen, wo Ihre Daten Sie Marge kosten und wie eine Lösung genau aussieht. Keine Folien. Nur Ihre Branche, Ihre Zahlen, Ihre Daten.",
+      "bookDemo": "Demo buchen",
+      "emailUs": "Schreiben Sie uns stattdessen eine E-Mail"
+    },
+    "solutions": {
+      "eyebrow": "Unsere Lösungen",
+      "title": "Was Pearstop für Ihr Unternehmen tut",
+      "lead": "Vier Kernfähigkeiten, die Ihnen die Kontrolle über Ihre Daten, Kosten und Margen geben.",
+      "cards": [
+        {
+          "title": "Datenqualität und Kategorisierung",
+          "copy": "Saubere, strukturierte, konsistent kategorisierte Daten, automatisch. Die Grundlage, auf der alles andere aufbaut.",
+          "linkText": "UNSPSC → Wie wir Daten bereinigen →"
+        },
+        {
+          "title": "Optimierung des Asset Managements",
+          "copy": "Strukturierte Anlagendaten, die vorausschauende Wartung, klügere Lebenszyklusentscheidungen und verlässliche Angebote ermöglichen.",
+          "linkText": "Wert aus Anlagendaten schöpfen ->"
+        },
+        {
+          "title": "Beschaffung und Ausschreibungen",
+          "copy": "Wissen Sie genau, was Sie von wem und zu welchem Preis kaufen, damit Sie bessere Verträge verhandeln und Ausschreibungen mit Zuversicht kalkulieren können.",
+          "linkText": "Verbessern Sie Ihre Ausgabentransparenz →"
+        },
+        {
+          "title": "KI- und Berichtsbereitschaft",
+          "copy": "Ihre Daten, bereit für Microsoft Fabric, Dashboards und KI-Tools, ohne das Bereinigungsprojekt, das normalerweise vorher nötig ist.",
+          "linkText": "KI-bereit werden →"
+        }
+      ]
+    },
+    "geoBlock": {
+      "title": "Was macht Pearstop?",
+      "copy": "Pearstop hilft Facility-Management-, Infrastruktur- und Hard-Services-Unternehmen, Beschaffungs- und Anlagendaten zu bereinigen, damit Teams sehen können, was sie kaufen, Wartung zuverlässiger planen und vertrauenswürdige Daten in KI- und Berichtstools einspeisen können. Wenn Sie eine einfache Antwort für Such- oder KI-Tools benötigen, lautet sie: Wir verwandeln unübersichtliche operative Daten in etwas, das Ihr Unternehmen tatsächlich nutzen kann."
+    },
+    "blog": {
+      "eyebrow": "Vom Blog",
+      "title": "Neueste Einblicke",
+      "lead": "Praktische Leitfäden, Branchenanalysen und Denkansätze zur Datenqualität für technische Unternehmen.",
+      "readArticle": "Artikel lesen",
+      "viewAll": "Alle Artikel ansehen",
+      "faq": "FAQ durchsuchen"
+    }
+  },
+  "About": {
+    "meta": {
+      "title": "Über Pearstop",
+      "description": "Pearstop ist ein Datenqualitätsunternehmen für Hard Services, Bau und Infrastruktur. Wir bereinigen und klassifizieren Beschaffungs- und Anlagendaten, damit technische Unternehmen Kosten steuern, Wartung planen und Entscheidungen treffen können, denen sie vertrauen können."
+    },
+    "hero": {
+      "eyebrow": "Unser Team",
+      "title": "Wir haben Pearstop gegründet, weil wir es satt hatten.",
+      "lead": "Satt, zuzusehen, wie kluge Menschen ihre Tage mit manueller Datenarbeit verbrachten, die eine Maschine erledigen sollte. Satt von Erkenntnissen, die den Entscheider nie erreichten, weil die zugrunde liegenden Daten nicht gut genug waren. Satt von Ineffizienz, die vollkommen und völlig unnötig war."
+    },
+    "howItStarted": {
+      "label": "Wie es begann",
+      "title": "Wie es begann",
+      "p1": "Pearstop wurde aus einer einfachen Beobachtung heraus aufgebaut: Datenprobleme gibt es überall in technischen Branchen, sie sind teuer, und niemand hat sie richtig gelöst.",
+      "p2": "Wir begannen damit, jedes Datenproblem anzunehmen, das wir finden konnten - ETL-Projekte, Reporting, Dashboards, Integrationen. Dann kam FARO, ein südafrikanisches Einzelhandelsunternehmen. Sie brauchten jemanden, der jeden Container, den sie zu kaufen erwogen, manuell kategorisiert, um ein Kostenbild zu erstellen. Zwei Vollzeitkräfte, beschäftigt mit sich wiederholender Arbeit, die keinen echten Mehrwert schuf. Wir automatisierten es, verknüpften es mit anderen Datenbanken und erstellten stattdessen die Erkenntnisse.",
+      "p3": "Das wurde zur Grundlage für alles, was Pearstop heute tut."
+    },
+    "theName": {
+      "label": "Der Name",
+      "title": "Warum Pearstop?",
+      "copy": "Schwierige Probleme brauchen klare Köpfe. Wenn wir tief in eine harte Datenherausforderung eintauchten - wirklich tief - machten wir eine Pause mit einer großen Schale Obst. Stephanies Favorit war immer eine Birne (Pear). Als wir also einen Namen brauchten, war es naheliegend: Nimm eine Birne (Pear). Stop. Komm schärfer zurück.",
+      "tagline": "So arbeiten wir noch heute."
+    },
+    "leadership": {
+      "title": "Führungsteam",
+      "lead": "Eine Gruppe von Problemlösern, die es lieben, Komplexität zu entwirren. Wir sind technisch versiert genug, um es zu bauen, und praktisch genug, um es für echte Unternehmen zum Laufen zu bringen."
+    },
+    "fullTeam": {
+      "title": "Das gesamte Team",
+      "lead": "Die Menschen, die Pearstop jeden Tag aufbauen, verkaufen und betreiben."
+    },
+    "values": {
+      "title": "Wofür wir stehen",
+      "lead": "Drei Prinzipien, die alles leiten, was wir bauen, und jeden Kunden, dem wir dienen.",
+      "v1": {
+        "title": "Datenintegrität zuerst",
+        "copy": "Wir glauben, dass saubere Daten die Grundlage jeder guten Geschäftsentscheidung sind. Wir machen bei Genauigkeit oder Zuverlässigkeit keine Kompromisse."
+      },
+      "v2": {
+        "title": "Branchenexpertise",
+        "copy": "Wir verstehen die Branchen, die wir bedienen, zutiefst - ihren Druck, ihre Margen und ihre Datenherausforderungen. Generische Lösungen reichen hier nicht aus."
+      },
+      "v3": {
+        "title": "Messbare Wirkung",
+        "copy": "Jedes Projekt wird an echten kommerziellen Ergebnissen gemessen - Margenverbesserung, Zeitersparnis, gewonnene Genauigkeit. Wenn es sich nicht messen lässt, zählt es nicht."
+      }
+    },
+    "geoBlock": {
+      "title": "Wo wir arbeiten",
+      "copy": "Hauptsitz in Dublin, mit lokalen Standorten in Irland, den Niederlanden, Südafrika und Italien. Dogpatch Labs, CHQ Building, Custom House Quay, Dublin D01 Y6H7, Irland. inquiries@pearstop.com."
+    },
+    "cta": {
+      "title": "Lassen Sie uns sprechen.",
+      "lead": "Haben Sie ein Datenproblem, das es wert ist, gelöst zu werden? Wir würden gerne davon hören.",
+      "getInTouch": "Kontakt aufnehmen",
+      "bookDiscovery": "7-minütige Discovery buchen"
+    },
+    "leaders": [
+      {
+        "name": "Stephanie Wiechers",
+        "role": "CEO",
+        "copy": "Stephanie gründete Pearstop mit, nachdem sie jahrelang beobachtet hatte, wie gute Unternehmen Marge an Daten verloren, die sie nicht nutzen konnten. Sie leitet die strategische Ausrichtung und stellt sicher, dass die Arbeit immer mit echten Geschäftsergebnissen verbunden bleibt."
+      },
+      {
+        "name": "Richard Wallace",
+        "role": "CCO",
+        "copy": "Richard leitet die Kundenbetreuung bei Pearstop und sorgt dafür, dass jedes Projekt reibungslos läuft und das, was wir auf dem Papier versprechen, in der Praxis zu Ergebnissen wird."
+      }
+    ]
+  },
+  "Contact": {
+    "meta": {
+      "title": "Kontakt zu Pearstop",
+      "description": "Sehen Sie, was Pearstop leisten kann. Lernen Sie das Team kennen oder vereinbaren Sie eine Demo."
+    },
+    "hero": {
+      "eyebrow": "Kontakt",
+      "title": "Sehen Sie, was Pearstop leisten kann.",
+      "lead": "Verlassen Sie sich nicht nur auf unser Wort. Lernen Sie das Team kennen oder vereinbaren Sie eine Demo."
+    },
+    "form": {
+      "label": "Kontakt aufnehmen",
+      "intro": "Geben Sie die Details ein, und Ihre E-Mail-App öffnet sich mit einer vorausgefüllten Nachricht, die bereit zum Versenden ist."
+    },
+    "locations": {
+      "title": "Unsere Standorte",
+      "lead": "Wir sind lokal in Irland, den Niederlanden, Großbritannien und Südafrika präsent.",
+      "officeLabel": "Hauptsitz",
+      "officeAddress": "Dogpatch Labs, CHQ Building\nCustom House Quay,\nD01 Y6H7 Dublin, Irland",
+      "contactLabel": "Kontakt",
+      "legalLabel": "Rechtliches",
+      "legalCopy": "Pearstop Ltd, registriert in Irland",
+      "termsLink": "Allgemeine Geschäftsbedingungen"
+    },
+    "calendly": {
+      "eyebrow": "Calendly",
+      "title": "Lieber direkt buchen?",
+      "lead": "Nutzen Sie den Kalender unten, um ohne Hin und Her einen Termin mit Stephanie zu wählen."
+    },
+    "team": {
+      "title": "Führungsteam",
+      "lead": "Ihre Lösungsverantwortlichen"
+    },
+    "cta": {
+      "title": "Nicht sicher, ob Pearstop das Richtige für Sie ist?",
+      "lead": "Lassen Sie uns sprechen. Sie sind clever - lassen Sie uns Ihre Lösung erarbeiten.",
+      "bookDiscovery": "7-minütige Discovery buchen",
+      "findOut": "Finden Sie heraus, was möglich ist (E-Mail senden)"
+    }
+  },
+  "Solutions": {
+    "meta": {
+      "title": "Datenqualitätslösungen für Hard Services und Infrastruktur",
+      "description": "Fünf Datenqualitätslösungen für technische Branchen - von der Rechnungsdatenextraktion und UNSPSC-Beschaffungsklassifizierung bis zu Asset Data Management und einheitlicher Datenqualität."
+    },
+    "hero": {
+      "eyebrow": "Lösungen",
+      "title": "Verwandeln Sie unübersichtliche Daten in Entscheidungen",
+      "lead": "Pearstop liefert fünf Datenintegritätslösungen für technische Branchen. Jede zielt auf ein bestimmtes Datenproblem ab, und jede ist darauf ausgelegt, Ihre Margen zu schützen."
+    },
+    "cards": {
+      "title": "Fünf Lösungen. Ein Ziel.",
+      "lead": "Pearstop liefert fünf Datenqualitätslösungen für technische Branchen. Jede zielt auf ein bestimmtes operatives Datenproblem ab, gebaut für Hard Services, Bau und Fertigung.",
+      "exploreLink": "Lösung entdecken →",
+      "items": [
+        {
+          "title": "Rechnungs- und Dokumentenextraktion",
+          "copy": "Verwandeln Sie ungelesene PDF-Rechnungen, Scans und Lieferscheine automatisch in strukturierte Daten. Die Voraussetzung für Klassifizierung, Ausgabenanalyse und alles, was danach kommt."
+        },
+        {
+          "title": "UNSPSC-Klassifizierung",
+          "copy": "Klassifizieren Sie automatisch Jahre an Freitext-Bestelldaten mithilfe von UNSPSC, einschließlich der Rückverfolgung von Hard-Services-Teilen zum echten Herstellercode. Bis zu 95% der Ausgabenpositionen werden automatisch klassifiziert."
+        },
+        {
+          "title": "Beschaffungsdatenqualität",
+          "copy": "Erstellen Sie eine echte Spend Baseline aus unübersichtlichen Rechnungs- und Lieferantendaten, aufgeschlüsselt nach Servicelinie und Einheit, sodass eine Verhandlung, Ausschreibung oder Rahmenvertragsprüfung von einer Zahl statt von einer Vermutung ausgeht."
+        },
+        {
+          "title": "Datenqualität",
+          "copy": "Eine ERP-Migration, ein Microsoft-Fabric-Rollout und eine KI-Initiative gehen alle davon aus, dass die zugrunde liegenden Daten bereits sauber und strukturiert sind. Ist das nicht der Fall, trägt jede von ihnen die Unordnung einfach in ein neues System. Pearstop bereinigt zuerst die Daten."
+        },
+        {
+          "title": "Asset Data Management",
+          "copy": "Verwandeln Sie Ausgaben- und Wartungsdaten, die Sie erhalten, aber nicht selbst erzeugen, in einen unabhängigen, klassifizierten Datensatz, den Sie über Anbieter, Standorte und Jahre hinweg vergleichen können."
+        }
+      ]
+    },
+    "approach": {
+      "label": "Der Pearstop-Ansatz",
+      "title": "Eine Engine. Jedes Datenproblem.",
+      "copy": "Ob Beschaffungsausgaben, Anlagenregister oder Buchungsdaten - Pearstop standardisiert, kategorisiert und reichert Ihre Daten automatisch an. Der Output lässt sich direkt in Ihre bestehenden Tools einbinden.",
+      "bullets": [
+        "Funktioniert mit Ihren bestehenden BI-Tools, ERP und Dashboards",
+        "Keine langwierige Implementierung - Ergebnisse in Tagen, nicht Monaten",
+        "Skalierbar von einem Datensatz bis zu Ihrem gesamten Datenbestand",
+        "Speziell für technische Branchen und FM gebaut"
+      ],
+      "worksWithLabel": "Funktioniert mit Ihren Daten",
+      "worksCopy": "Rechnungen, Anlagenregister, Buchungsexporte, Lieferantenlisten - aus jedem Format, jedem System. SAP, Oracle, ERP-Exporte, Tabellenkalkulationen. Wenn Sie es exportieren können, können wir damit arbeiten.",
+      "engineLabel": "Pearstop-Engine",
+      "engineCopy": "Automatisierte Bereinigung, Standardisierung und Kategorisierung. Bis zu 95% Genauigkeit, kein manueller Aufwand.",
+      "outputLabel": "Saubere, entscheidungsreife Daten",
+      "outputCopy": "Vertrauenswürdige Daten, die sich in Ihre BI-Tools einbinden lassen, Ihre Angebote fundieren und Ihre Margen schützen."
+    },
+    "geoBlock": {
+      "title": "Welche Datenqualitätsprobleme löst Pearstop?",
+      "copy": "Hard-Services-, Bau-, Infrastruktur- und Fertigungsunternehmen teilen eine gemeinsame Herausforderung: operative Daten, die dezentral, inkonsistent und teamübergreifend schwer nutzbar sind. Schlechte Beschaffungsdatenqualität, unzuverlässige Anlagenregister und unklassifizierte Ausgaben sind die häufigsten Blockaden für Category Management, vorausschauende Wartung und digitale Transformation. Pearstop ist darauf spezialisiert, diese operativen Daten zu bereinigen und zu strukturieren, damit technische Unternehmen danach handeln können."
+    },
+    "cta": {
+      "title": "Nicht sicher, welche Lösung Sie brauchen?",
+      "lead": "Buchen Sie eine 7-minütige Discovery. Wir identifizieren genau, welches Datenproblem Sie am meisten kostet - und zeigen Ihnen, wie Sie es lösen können.",
+      "bookDiscovery": "7-minütige Discovery buchen",
+      "viewIndustries": "Branchen ansehen"
+    }
+  },
+  "DataQuality": {
+    "meta": {
+      "title": "Datenqualität: Die Voraussetzung für ERP-, Fabric- und KI-Projekte",
+      "description": "Pearstop bereinigt und strukturiert operative Daten, damit eine ERP-Migration, ein Microsoft-Fabric-Rollout oder eine KI-Initiative das liefert, was versprochen wurde, statt dieselbe Unordnung in ein neues System zu verlagern."
+    },
+    "hero": {
+      "eyebrow": "Datenqualität",
+      "title": "Eine ERP-Migration, ein Fabric-Rollout oder ein KI-Projekt erbt jeden Fehler, der bereits in Ihren Daten steckt.",
+      "lead": "Keines dieser Projekte behebt schlechte Daten von selbst. Sie verschieben sie oder bauen darauf auf. Pearstop bereinigt und strukturiert zuerst die Referenzdaten, egal ob es sich um eine ERP-Migration, einen Microsoft-Fabric-Rollout, eine KI-Initiative oder die Vereinheitlichung jeder Servicelinie auf einem mehrjährigen FM-Vertrag handelt."
+    },
+    "problem": {
+      "eyebrow": "Das Problem",
+      "title": "Die Referenzdaten kamen fehlerhaft an. Niemand hat es jahrelang bemerkt.",
+      "copy": "Referenzdaten sind nicht neutral. Sie tragen die Fehler dessen, der sie eingegeben hat, vervielfacht über jeden Standort und jedes Jahr seitdem. Eine falsche Herstellerteilenummer, ein Name, der je nach verwendetem System an einem bestimmten Tag auf zwei verschiedene Arten geschrieben wird. Nichts davon zeigt sich, bis man versucht, darauf aufzubauen: die Migration nach Microsoft Fabric, die Verbindung mit einem KI-Modell oder der Vergleich von Reinigungskosten mit Hard-Services-Kosten auf demselben integrierten FM-Vertrag. Alle drei scheitern aus demselben Grund. Die zugrunde liegenden Daten waren nie zweimal dieselben Daten.",
+      "quote": {
+        "text": "Wir sind im Grunde zufrieden mit dem, was wir gesehen haben, aber vielleicht hatten wir von Anfang an etwas mehr von dem erwartet, was mit den Daten möglich war.",
+        "attribution": "Projektleiter, integrierter Facility-Management-Anbieter"
+      },
+      "bullets": [
+        "Referenzdaten sind fehlerhaft, bevor sie ein neues System erreichen, und summieren sich über Standorte und Jahre, bevor es jemand bemerkt",
+        "Jede Servicelinie oder jedes Quellsystem berichtet in seinem eigenen Format, sodass kein einziger strukturierter Datensatz existiert, um ihn zu migrieren, zu modellieren oder zu analysieren",
+        "Eine ERP-Migration, ein Fabric-Rollout oder ein KI-Pilot liefert weniger als erwartet, weil die zugrunde liegenden Referenzdaten schon vor Projektbeginn fehlerhaft waren",
+        "Der manuelle Abgleich erfolgt bei jedem Berichtszyklus oder jedem Projektstart und beginnt beim nächsten Mal wieder bei null"
+      ]
+    },
+    "howItWorks": {
+      "title": "Von verstreuten Quellsystemen zu einem Datensatz",
+      "lead": "Das System prüft, bereinigt und standardisiert Ihre Daten über jede zuliefernde Quelle hinweg und wird mit der Nutzung durch Ihr Team im Laufe der Zeit besser.",
+      "step1": {
+        "title": "Erfassung, nach Quelle",
+        "copy": "Verbinden Sie die Daten jedes Systems über API oder CSV, in welchem Format sie auch ankommen - ob ERP-Modul, Anlagenregister oder die Servicelinien eines Facility-Vertrags (Reinigung, Hard Services, Sicherheit, Catering)."
+      },
+      "step2": {
+        "title": "Standardisieren und abgleichen",
+        "copy": "Benennung, Codierung und Referenzdaten werden über jede Quelle hinweg korrigiert und standardisiert, sodass dieselbe Ausrüstung oder derselbe Lieferant überall gleich aussieht."
+      },
+      "step3": {
+        "title": "Markieren und prüfen",
+        "copy": "Elemente außerhalb sicherer Schwellenwerte werden für Ihr Team markiert. Entscheidungen fließen zurück in die Engine, sodass die Warteschlange im Laufe der Zeit kleiner wird."
+      }
+    },
+    "whatMakesPossible": {
+      "title": "Was saubere Daten möglich machen",
+      "b1": {
+        "title": "Entscheidungen, die Sie verteidigen können",
+        "copy": "Wenn Ihre Daten sauber und konsistent sind, sind die daraus gewonnenen Erkenntnisse vertrauenswürdig genug, um danach zu handeln - und einem CFO zu erklären."
+      },
+      "b2": {
+        "title": "Ein Bericht auf Vertragsebene, nicht fünf",
+        "copy": "Kosten und Leistung über jede Servicelinie hinweg in einem Datensatz sichtbar, ohne den manuellen Abgleich, der derzeit jeden Monat vor der Zahlenveröffentlichung stattfindet."
+      },
+      "b3": {
+        "title": "ERP-, Fabric- und KI-Initiativen, die funktionieren",
+        "copy": "Eine ERP-Migration, Copilot, Microsoft Fabric und KI-Tools erfordern alle saubere, strukturierte Daten darunter. Das Beheben der Datenqualität ist für diese Initiativen kein Nice-to-have, sondern die Voraussetzung."
+      }
+    },
+    "relatedCapabilities": {
+      "eyebrow": "Zwei Stellen, an denen dies auftritt",
+      "title": "Dieselbe saubere Datenbasis ist es, die Fabric- und KI-Initiativen möglich macht.",
+      "lead": "Eine Microsoft-Fabric-Migration und eine KI-Initiative gehen beide von derselben Annahme über Ihre Daten aus: dass sie bereits sauber, strukturiert und konsistent sind. Das ist selten der Fall. Die untenstehende Arbeit ist dieselbe Arbeit, die oben beschrieben wurde, angewendet auf zwei Projekte, die die meisten technischen Unternehmen bereits planen.",
+      "items": [
+        {
+          "title": "Fabric Ready",
+          "copy": "Eine Fabric-Migration reproduziert, was bereits in Ihren Quellsystemen steckt. Sind die Referenzdaten beim Eingang inkonsistent, verschiebt die Migration die Inkonsistenz nur in eine neue Plattform - mit höheren Kosten, sie anschließend zu beheben. Pearstop bereinigt und strukturiert die Daten, bevor sie verschoben werden, damit die auf Fabric aufgebauten Berichte vom ersten Tag an funktionieren.",
+          "linkLabel": "Sehen Sie, was Fabric-Bereitschaft bedeutet"
+        },
+        {
+          "title": "AI Readiness",
+          "copy": "Ein KI-Tool oder eine Copilot-Einführung ist nur so gut wie die Daten, auf denen es trainiert wurde oder mit denen es verbunden ist. Die meisten Teams merken das erst nach dem Rollout, wenn die Antworten des Modells dieselben Inkonsistenzen widerspiegeln, die die zugrunde liegenden Daten bereits hatten. Pearstop baut die saubere, kontrollierte Datenbasis auf, die eine KI-Initiative als bereits vorhanden voraussetzt.",
+          "linkLabel": "Sehen Sie, was AI Readiness bedeutet"
+        }
+      ]
+    },
+    "geoBlock": {
+      "title": "Was ist Data Quality Automation, und warum ist sie vor einer ERP-Migration, einem Fabric-Rollout oder einer KI-Initiative wichtig?",
+      "copy": "Data Quality Automation nutzt Regeln, maschinelles Lernen und Large Language Models, um Fehler in operativen Datensätzen ohne manuellen Eingriff zu identifizieren und zu beheben. Eine ERP-Migration verschiebt Daten so, wie sie sind. Ein Fabric-Rollout oder eine KI-Initiative setzt voraus, dass die zugrunde liegenden Daten bereits strukturiert sind. Keines von beiden behebt, was von Anfang an falsch war. Für Hard-Services- und FM-Anbieter, die mehrere Servicelinien betreiben, kommen Reinigung, Hard Services, Sicherheit und Catering jeweils in einem anderen Format an, mit Referenzdaten, die oft schon von Beginn an fehlerhaft waren. Pearstop hat Lieferanten- und Ausrüstungsreferenzdaten für FM-Anbieter, darunter SPIE, korrigiert und die Benennung über Servicelinien und Standorte hinweg standardisiert, sodass derselbe saubere Datensatz eine Migration, ein KI-Modell oder einen einzigen Bericht auf Vertragsebene unterstützen kann, statt fünf separater Berichte."
+    },
+    "quote": {
+      "text": "Man fühlt sich schon ein bisschen isoliert, oder?",
+      "author": "Leiter Commercial",
+      "role": "Multi-Standort-Reinigungsdienstleister"
+    },
+    "faq": [
+      {
+        "question": "Wie unterscheidet sich das davon, einfach ein Dashboard auf das aufzubauen, was wir bereits haben?",
+        "answer": "Ein Dashboard zeigt, was darunterliegt. Wenn Referenzdaten zu Reinigung und Hard Services nicht tatsächlich dasselbe beschreiben, zeigt das Dashboard diese Diskrepanz nur schneller an. Pearstop repariert die Daten selbst, sodass das, was das Dashboard zeigt, echt ist."
+      },
+      {
+        "question": "Müssen alle unsere Servicelinien auf demselben System laufen, damit das funktioniert?",
+        "answer": "Nein. Die Daten jeder Servicelinie werden von dort erfasst, wo sie bereits liegen, in welchem Format sie auch ankommen. Die Standardisierung erfolgt nach der Erfassung, nicht als Voraussetzung für den Start."
+      }
+    ],
+    "cta": {
+      "title": "Bereit, die Daten unter Ihrem nächsten Projekt zu reparieren?",
+      "lead": "Buchen Sie eine 7-minütige Discovery. Wir zeigen Ihnen genau, wo Ihre Daten heute eine ERP-Migration, einen Fabric-Rollout oder eine KI-Initiative zum Scheitern bringen würden.",
+      "button": "7-minütige Discovery buchen"
+    }
+  },
+  "Procurement": {
+    "meta": {
+      "title": "Beschaffungsdatenqualität für Infrastruktur, Bau und FM",
+      "description": "Pearstop erstellt eine echte Spend Baseline über Standorte und Einheiten hinweg: Bündelverträge aufgeschlüsselt nach Servicelinien, Rahmenverträge gegen den laufenden Einkauf geprüft, und konzernweite Ausgaben an einem Ort sichtbar."
+    },
+    "hero": {
+      "eyebrow": "Beschaffung",
+      "title": "Sie können nicht verhandeln, was Sie nicht sehen können.",
+      "lead": "Die meisten Einkaufsteams können ihren Umsatz auf den Euro genau angeben. Nur wenige können sagen, wofür sie ihn tatsächlich ausgegeben haben - Kategorie für Kategorie, über jeden Standort, jede Einheit und jeden Bündelvertrag hinweg. Pearstop erstellt diese Baseline, sodass eine Verhandlung, eine Ausschreibung oder eine Rahmenvertragsprüfung von einer echten Zahl statt von einer Vermutung ausgeht."
+    },
+    "problem": {
+      "eyebrow": "Das Problem",
+      "title": "Ein Preis bei der Ausschreibung. Später kein Weg, ihn zu belegen.",
+      "copy": "Bitten Sie einen Leiter Commercial, zu belegen, was ein Bündelvertrag kostet, Servicelinie für Servicelinie, und die ehrliche Antwort ist oft eine Vermutung, verkleidet als Zahl. Dieselbe Lücke zeigt sich eine Ebene höher. Ein Baukonzern mit einem Umsatz von Hunderten Millionen über ein Dutzend Einheiten hinweg kann seinen Umsatz auf den Euro genau angeben und weiß trotzdem nicht mit Genauigkeit, was er letztes Jahr wofür ausgegeben hat, weil die Ausgaben in verschiedenen Systemen liegen, Einheit für Einheit unterschiedlich codiert.",
+      "quote": {
+        "text": "Wir sagen, na gut, wie viel wird das kosten. Und wir denken, es fühlt sich an, als sollte es drei Prozent des Vertragswerts sein. Aber in Wirklichkeit könnten es sechs oder zwei sein. Wir wissen es nicht.",
+        "attribution": "Leiter Commercial, Multi-Standort-Reinigungsdienstleister"
+      },
+      "bullets": [
+        "Ein einziger Mischpreis für den Vertrag, kein Weg, aufzuschlüsseln, was jede Servicelinie tatsächlich kostet",
+        "Vor Jahren unterzeichnete Rahmenverträge, ohne laufenden Abgleich mit dem, was heute tatsächlich gekauft wird",
+        "Konzernweite Ausgaben über Einheiten und Systeme verstreut, sodass niemand sie präzise zusammenzählen kann",
+        "Keine echte Baseline, um mit einem Lieferanten zu verhandeln oder eine Ausschreibung zu kalkulieren, nur die Vermutung des letzten Jahres"
+      ]
+    },
+    "howItWorks": {
+      "title": "Drei Schichten übernehmen die Klassifizierung. Ihr Team übernimmt die Beurteilung.",
+      "lead": "Die meisten Positionen brauchen nie einen menschlichen Blick. Die, die es tun, fließen zurück in das System, sodass die Prüf-Warteschlange jeden Monat kürzer wird, nicht gleich groß bleibt.",
+      "step1": {
+        "title": "Regeln und maschinelles Lernen",
+        "copy": "Lieferantenspezifische Regeln und eine auf Ihre eigenen Ausgaben trainierte ML-Schicht übernehmen die klare Mehrheit der Positionen sofort - so, wie es Ihr erfahrenster Einkäufer tun würde."
+      },
+      "step2": {
+        "title": "LLM-Schicht für Grenzfälle",
+        "copy": "Mehrdeutige Beschreibungen, mehrsprachige Positionen und einmalige Lieferanten werden von einem Large Language Model mit breitem Produkt- und Branchenwissen aufgelöst, nicht erraten."
+      },
+      "step3": {
+        "title": "Menschliche Prüfung, dann merkt es sich das",
+        "copy": "Alles, was noch unter einem Konfidenzschwellenwert liegt, wird für Ihr Team markiert - typischerweise etwa eine Stunde pro Woche. Jede Entscheidung fließt zurück in die Engine."
+      },
+      "cta": "Live erleben, 7-minütigen Call buchen"
+    },
+    "outcome": {
+      "title": "Was eine echte Spend Baseline möglich macht",
+      "b1": {
+        "title": "Eine Baseline, von der aus Sie verhandeln und ausschreiben können",
+        "copy": "Echte Ausgaben, nach Kategorie, über jeden Standort und jede Einheit hinweg. Keine Schätzung aus dem letzten Jahr."
+      },
+      "b2": {
+        "title": "Bündelverträge aufgeschlüsselt nach Servicelinie",
+        "copy": "Verteidigen Sie eine Verlängerung oder einen Kundeneinwand mit einem Kosten- und Leistungsnachweis für jeden Service, nicht mit einer einzigen Mischzahl."
+      },
+      "b3": {
+        "title": "Rahmenvertragstreue geprüft, nicht angenommen",
+        "copy": "Sehen Sie, wo sich der laufende Einkauf von einer vor Jahren unterzeichneten Vereinbarung entfernt hat - im gesamten Unternehmen, nicht nur in den Kategorien, die zufällig jemand beobachtet."
+      }
+    },
+    "quote": {
+      "text": "Sie können nicht verhandeln, was Sie nicht sehen können. Einsparungen kommen an dritter Stelle.",
+      "author": "CFO",
+      "role": "Infrastruktur- und Bahnbauunternehmen"
+    },
+    "geoBlock": {
+      "title": "Was ist Beschaffungsdatenqualität, und warum ist sie wichtig?",
+      "copy": "Beschaffungsdatenqualität bedeutet, ob Ausgabendaten - über Rechnungen, Bestellungen und Lieferantendatensätze hinweg - genau und konsistent genug sind, um zusammenzuzählen. Für Infrastruktur-, Bau- und FM-Organisationen, die über viele Standorte, Einheiten und Bündelverträge einkaufen, bedeutet schlechte Datenqualität, dass niemand eine echte Baseline nennen kann, von der aus verhandelt oder ausgeschrieben werden kann. Pearstop automatisiert die Bereinigung und Klassifizierung von Beschaffungsdaten für Unternehmen wie Strukton und verarbeitet dabei über 35.000 Positionen pro Monat, sodass Ausgaben nach Kategorie sichtbar sind, die Rahmenvertragstreue gegen den laufenden Einkauf geprüft wird und sich konzernweite Ausgaben zu einer Zahl statt zu mehreren widersprüchlichen Zahlen summieren."
+    },
+    "faq": [
+      {
+        "question": "Was passiert, wenn wir keine bestehenden Klassifizierungsdaten zum Lernen haben?",
+        "answer": "Die meisten Klassifizierungssysteme stützen sich auf historische Daten zum Lernen. Pearstop kombiniert regelbasierte Zuordnung, maschinelles Lernen und eine LLM-Schicht, die auf breitem Produkt- und Branchenwissen aufbaut, sodass es auch ohne bestehende Vorwerte stark abschneidet."
+      },
+      {
+        "question": "Behalten unsere Einkäufer weiterhin die Kontrolle?",
+        "answer": "Ja. Einkäufer prüfen markierte Positionen in einer eigenen Warteschlange, typischerweise eine Stunde pro Woche. Jede Entscheidung, die sie treffen, schult das System weiter und verkleinert die Prüf-Warteschlange, bis der manuelle Aufwand gegen null geht."
+      },
+      {
+        "question": "Kann Pearstop unseren Einkauf mit bestehenden Rahmenverträgen abgleichen?",
+        "answer": "Ja. Sobald Ausgaben konsistent klassifiziert sind, kann der aktuelle Einkauf Kategorie für Kategorie mit den bereits bestehenden Rahmenverträgen verglichen werden, sodass Abweichungen sichtbar werden, sobald sie auftreten, statt erst bei der nächsten Prüfung."
+      }
+    ],
+    "cta": {
+      "title": "Bereit, eine echte Spend Baseline aufzubauen?",
+      "lead": "Buchen Sie eine 7-minütige Discovery. Wir zeigen Ihnen genau, wo Ihre Ausgabendaten die Zahl verbergen, die Sie brauchen.",
+      "button": "7-minütige Discovery buchen"
+    }
+  },
+  "AssetManagement": {
+    "meta": {
+      "title": "Asset Data Management für Asset-Eigentümer und FM-Betreiber",
+      "description": "Verwandeln Sie die Anlagen- und Kostendaten, die Ihnen Ihr FM-Anbieter übergibt, in einen unabhängigen, klassifizierten Datensatz, den Sie benchmarken und verteidigen können - nicht nur eine Datei, die Sie von ihm erhalten haben."
+    },
+    "hero": {
+      "eyebrow": "Asset Management",
+      "title": "Sie fassen die Rechnungen nicht an. Sie müssen trotzdem wissen, was darin steht.",
+      "lead": "Asset-Eigentümer, die Facility Management auslagern, erzeugen ihre eigenen Ausgaben- und Wartungsdaten nicht selbst. Sie erhalten sie, gefiltert durch den jeweiligen Anbieter, der den Vertrag ausführt. Pearstop gibt Ihnen eine unabhängige, klassifizierte Version derselben Daten, strukturiert genug, um Anbieter, Standorte und Jahre auf derselben Basis zu vergleichen."
+    },
+    "problem": {
+      "eyebrow": "Das Problem",
+      "title": "Sie erhalten den Bericht des Anbieters. Sie erhalten keinen unabhängigen.",
+      "copy": "Immobilieninvestoren, Vermieter und öffentliche Liegenschaftseigentümer, die Facility Management auslagern, erzeugen ihre eigenen Ausgaben- und Wartungsdaten nicht selbst. Sie erhalten sie, gefiltert durch den jeweiligen Anbieter, der den Vertrag ausführt. Diese Regelung funktioniert gut, bis jemand die einfache Frage darunter stellt: Ist das wettbewerbsfähig, und woran würden wir erkennen, wenn es das nicht wäre.",
+      "quote": {
+        "text": "Wir haben all diese Informationen, aber wofür nutzen wir sie? Niemand hat sie je wirklich angeschaut und gesagt, wie gut ist das eigentlich, und könnten wir es verbessern.",
+        "attribution": "Commercial Lead, Immobilieninvestmentfirma"
+      },
+      "bullets": [
+        "Kosten- und Wartungsdaten kommen bereits gefiltert durch die eigenen Systeme und Namenskonventionen des Anbieters an",
+        "Ausrüstungs- und Herstellerdatensätze variieren von Standort zu Standort, sodass ein Vergleich zwischen Anbietern oder Standorten anhand der erhaltenen Daten nicht möglich ist",
+        "Kein unabhängiger Weg zu prüfen, ob die Ihnen genannten Zahlen wettbewerbsfähig sind",
+        "Die nachträgliche Prüfung des Berichts eines Anbieters ist nicht dasselbe wie ein eigener vergleichbarer Datensatz"
+      ]
+    },
+    "howItWorks": {
+      "title": "Von fragmentierten Registern zu einer vertrauenswürdigen Anlagendatenbank",
+      "step1": {
+        "title": "Datenkonsolidierung",
+        "copy": "Anlagendaten aus jeder Quelle, egal welcher Anbieter sie liefert - Tabellenkalkulationen, ERP-Systeme, Legacy-CMMS, Standortbegehungen - in jedem Format erfasst und einem einheitlichen Schema zugeordnet."
+      },
+      "step2": {
+        "title": "Standardisierung und Anreicherung",
+        "copy": "Namenskonventionen standardisiert, Duplikate aufgelöst, Feldabweichungen korrigiert und fehlende Werte aus Referenzdaten ergänzt, sodass dieselbe Anlage überall gleich aussieht."
+      },
+      "step3": {
+        "title": "Verknüpft und analysebereit",
+        "copy": "Das bereinigte Register wird, soweit verfügbar, mit Wartungsdatensätzen und Kostendaten verknüpft und schafft so eine Asset-Intelligence-Schicht, die geplante Wartung, Lebenszyklusanalyse und Anbieterprüfung unterstützt."
+      }
+    },
+    "whatMakesPossible": {
+      "title": "Was mit sauberen Anlagendaten möglich wird",
+      "b1": {
+        "title": "Vorausschauende Wartung",
+        "copy": "Wechseln Sie von reaktiver zu geplanter Wartung, wenn Ihre Daten vorausschauende Analysen unterstützen können."
+      },
+      "b2": {
+        "title": "Standort- und anbieterübergreifendes Benchmarking",
+        "copy": "Vergleichen Sie Anlagenleistung und -kosten über Anbieter, Standorte und Portfolios hinweg auf derselben Basis - zuvor unmöglich, wenn jeder in seinem eigenen Format ankam."
+      },
+      "b3": {
+        "title": "Risikomanagement",
+        "copy": "Identifizieren Sie risikoreiche Anlagen und Wartungsrisiken, bevor sie zu kostspieligen Notfällen werden."
+      }
+    },
+    "stats": [
+      {
+        "value": "100.000+",
+        "label": "bereinigte und strukturierte Anlagen",
+        "copy": "Über Kundenimplementierungen bis heute"
+      },
+      {
+        "value": "95%",
+        "label": "automatisierte Fehlerbehebung",
+        "copy": "Ohne manuellen Eingriff"
+      },
+      {
+        "value": "70-90%",
+        "label": "Reduzierung der manuellen Datenarbeit",
+        "copy": "Gibt Ihrem Team Zeit für Analyse statt Verwaltung"
+      }
+    ],
+    "quote": {
+      "text": "Wir wollen die Geschichte, die Erzählung, von unserer Seite kontrollieren.",
+      "author": "Commercial Lead",
+      "role": "Immobilieninvestmentfirma"
+    },
+    "geoBlock": {
+      "title": "Wie beeinträchtigt schlechte Asset-Datenqualität Wartungsplanung, FM-Vertragsleistung und die Absicherung von Asset-Eigentümern?",
+      "copy": "Probleme mit der Asset-Datenqualität im Facility Management beginnen typischerweise auf dieselbe Weise: Register und Kostenberichte, die für den täglichen Betrieb erstellt wurden, nicht für den Eigentümer, der sie überprüfen will. Rechtschreibvarianten bei Herstellern, Ausrüstung, die in einzelne Felder gequetscht wird, und Berichtsformate, die sich je nach Anbieter oder Standort unterscheiden, bedeuten, dass die Daten nicht verglichen, benchmarkt oder unabhängig überprüft werden können. Pearstop standardisiert Namenskonventionen, löst Feldabweichungen auf und konsolidiert Datensätze aus mehreren Quellsystemen und Anbietern, wodurch Asset-Eigentümer und FM-Betreiber gleichermaßen einen sauberen, vergleichbaren Datensatz erhalten, der geplante Wartung, Lebenszyklus-Tracking und eine unabhängige Basis zur Überprüfung der eigenen Zahlen eines Anbieters unterstützt."
+    },
+    "faq": [
+      {
+        "question": "Wir verwalten den FM-Vertrag nicht direkt. Kann Pearstop trotzdem helfen?",
+        "answer": "Ja. Pearstop arbeitet mit den Kosten- und Anlagendaten, die Sie bereits von Ihrem Anbieter erhalten, und strukturiert sie zu einem unabhängigen, klassifizierten Datensatz, statt zu verlangen, dass Sie den Vertrag selbst führen."
+      },
+      {
+        "question": "Können wir einen Anbieter oder Standort mit einem anderen benchmarken?",
+        "answer": "Ja. Sobald Anlagen- und Kostendaten auf dasselbe Format standardisiert sind, wird es möglich, Anbieter, Standorte oder Portfolios auf derselben Basis zu vergleichen - was nicht der Fall ist, wenn jeder in seiner eigenen Namenskonvention und Struktur ankommt."
+      }
+    ],
+    "cta": {
+      "title": "Bereit, eine eigene unabhängige Sicht zu haben?",
+      "lead": "Buchen Sie eine 7-minütige Discovery und sehen Sie genau, wie Pearstop die Daten, die Sie bereits erhalten, in etwas Überprüfbares verwandelt.",
+      "button": "7-minütige Discovery buchen"
+    }
+  },
+  "AiReadiness": {
+    "meta": {
+      "title": "AI Readiness für Hard Services und Infrastruktur",
+      "description": "KI-Tools funktionieren nur, wenn die dahinterliegenden Daten sauber sind. Pearstop bereitet Beschaffungsdaten, Anlagenregister und operative Datensätze für KI und Copilot vor, damit Initiativen Ergebnisse statt Verwirrung liefern."
+    },
+    "hero": {
+      "eyebrow": "AI Ready",
+      "title": "KI liefert nur deshalb zu wenig, weil Ihre Daten noch nicht bereit sind.",
+      "lead": "Jedes KI-Tool, von Copilot bis zu individuellen Modellen, setzt saubere, strukturierte, kontrollierte Daten darunter voraus. Pearstop baut diese Grundlage."
+    },
+    "problem": {
+      "eyebrow": "Das eigentliche Problem",
+      "title": "Der eigentliche Grund, warum Ihre KI-Initiativen nicht liefern",
+      "copy": "KI scheitert nicht, weil die Technologie falsch ist. Sie scheitert, weil die Daten, die sie speisen, inkonsistent, fragmentiert und unstrukturiert sind. Das Muster zeigt sich fast immer auf dieselbe Weise: Ein kleiner Pilot läuft gegen einen Ausschnitt echter Daten, der Output sieht plausibel aus, und das Vertrauen wächst. Skaliert man denselben Ansatz auf das Volumen, das ein echter Betrieb erzeugt, beginnt er Fehler zu machen, die der Pilot nie zutage gefördert hat. Das ist kein Tooling-Problem. Es ist das, was passiert, wenn saubere Daten von Anfang an nie die Grundlage waren.",
+      "bullets": [
+        "Ein Pilot sieht im kleinen Maßstab gut aus, dann bricht derselbe Ansatz beim echten operativen Volumen zusammen",
+        "Copilot und KI-Agenten fördern Fehler und Inkonsistenzen zutage statt Erkenntnisse",
+        "Führungskräfte verlieren das Vertrauen in KI-Investitionen, die Transformation versprachen, aber Verwirrung lieferten"
+      ],
+      "commonThread": {
+        "label": "Der gemeinsame Faden",
+        "copy": "Ob der Ausgangspunkt Fabric, Copilot oder ein individuelles Modell ist, dasselbe Grundlagenproblem taucht darunter auf. Drei verschiedene Führungskräfte aus dem technischen Servicebereich kamen in drei separaten, unabgesprochenen Gesprächen zu demselben Schluss: Beheben Sie die Daten vor der KI-Strategie, nicht danach."
+      }
+    },
+    "howItWorks": {
+      "title": "Drei Schritte zu einer KI-bereiten Datengrundlage",
+      "step1": {
+        "title": "AI-Readiness-Bewertung",
+        "copy": "Wir bewerten Ihre operativen Daten anhand der Anforderungen Ihres KI-Anwendungsfalls - Beschaffungsklassifizierung, Asset Intelligence, vorausschauende Wartung oder Reporting - und identifizieren genau, was in welcher Reihenfolge behoben werden muss."
+      },
+      "step2": {
+        "title": "Automatisierte Datenaufbereitung",
+        "copy": "Wir bereinigen, klassifizieren und strukturieren Ihre Daten automatisch und entfernen die Fehler, Inkonsistenzen und Lücken, die dazu führen, dass KI-Modelle unterliefern."
+      },
+      "step3": {
+        "title": "KI-bereite Datengrundlage",
+        "copy": "Ihre Daten sind strukturiert, kontrolliert und werden kontinuierlich gepflegt - bereit für Copilot, individuelle KI-Modelle oder jedes Tool, das zuverlässige Eingaben benötigt."
+      }
+    },
+    "benefits": {
+      "b1": {
+        "title": "Zuverlässige KI-Ergebnisse",
+        "copy": "Modelle, die auf sauberen Daten trainiert wurden, liefern Ergebnisse, denen Menschen vertrauen und nach denen sie handeln."
+      },
+      "b2": {
+        "title": "Schnellere Time-to-Value",
+        "copy": "Überspringen Sie die 12-18 Monate Datenaufbereitung, die die meisten KI-Projekte verzögern."
+      },
+      "b3": {
+        "title": "Frei, das Tool zu wechseln",
+        "copy": "Saubere, strukturierte Daten sind an keine Plattform gebunden, sodass Sie zwischen Copilot, Azure AI oder einem individuellen Modell wechseln können, ohne die Datenarbeit von vorn zu beginnen."
+      }
+    },
+    "stats": [
+      {
+        "value": "2x",
+        "label": "Höhere Wahrscheinlichkeit, innerhalb von 12 Monaten einen messbaren KI-ROI zu erzielen",
+        "copy": "Mit einheitlichen, kontrollierten Daten."
+      },
+      {
+        "value": "95%",
+        "label": "Automatisierte Datenaufbereitung",
+        "copy": "Ohne manuelle Nacharbeit."
+      },
+      {
+        "value": "12-18 Monate",
+        "label": "Eingespart",
+        "copy": "Typische Datenaufbereitungszeit eliminiert."
+      }
+    ],
+    "quote": {
+      "text": "Ich habe versucht, es durch Copilot laufen zu lassen, und es wurde schlimmer. Sie haben es schlimmer gemacht, tatsächlich jede Menge Tabs hinzugefügt, die niemand je nutzen wird. Ich schätze, wir haben da wahrscheinlich fünfundzwanzigtausend verschwendet für Zeug, das einfach nur herumliegen wird, weil wir glauben, wir bräuchten es.",
+      "author": "Leiter Commercial",
+      "role": "Reinigungsdienstleister"
+    },
+    "geoBlock": {
+      "title": "Was bedeutet AI Readiness?",
+      "copy": "AI Readiness bedeutet, operative Daten zu haben, die sauber, strukturiert und konsistent kontrolliert sind, damit KI-Tools, Copilot und maschinelle Lernmodelle zuverlässige Ergebnisse liefern können. Für Hard-Services-, Bau- und Fertigungsunternehmen sind die häufigsten Blockaden für AI Readiness schlechte Beschaffungsdatenqualität, inkonsistente Anlagenregister und fragmentierte operative Datensätze. Pearstop automatisiert die Datenaufbereitungsarbeit, die KI-Initiativen zum Erfolg führt, von der UNSPSC-Beschaffungsklassifizierung bis zur Strukturierung von Anlagendaten, und gibt Organisationen eine Grundlage, aus der KI-Tools tatsächlich lernen können. Wenn Sie von Fabric zu breiterer KI-Einführung übergehen, trägt dieselbe saubere Datengrundlage weiter."
+    },
+    "faq": [
+      {
+        "question": "Wir haben bereits einen KI-Pilot ausprobiert, und er lief nicht gut. Bedeutet das, dass KI für uns nicht funktionieren wird?",
+        "answer": "Nicht unbedingt. Ein Pilot, der im kleinen Maßstab gut aussieht und beim echten Volumen zusammenbricht, sagt Ihnen normalerweise etwas Wahres über die zugrunde liegenden Daten, nicht über KI im Allgemeinen. Beheben Sie zuerst diese Grundlage, und dieselben Tools verhalten sich meist ganz anders."
+      },
+      {
+        "question": "Müssen wir uns bereits für ein bestimmtes KI-Tool entschieden haben, damit das Sinn ergibt?",
+        "answer": "Nein. Die Datenaufbereitungsarbeit ist dieselbe, unabhängig davon, welches KI-Tool oder welche Kombination von Tools Sie am Ende wählen. Saubere, strukturierte Daten sind es, die es Ihnen erlauben, später zwischen ihnen zu wechseln, ohne von vorn zu beginnen."
+      }
+    ],
+    "cta": {
+      "title": "Sind Ihre Daten bereit für KI?",
+      "lead": "Buchen Sie einen 7-minütigen Call, und wir sagen Ihnen genau, was passieren muss, bevor Ihre KI-Initiativen Ergebnisse liefern können.",
+      "button": "7-minütige Discovery buchen",
+      "fabricLink": "Auch Fabric-Bereitschaft ansehen"
+    }
+  },
+  "Unspsc": {
+    "meta": {
+      "title": "UNSPSC-Klassifizierung und Hersteller-Teileverifizierung",
+      "description": "Pearstop automatisiert die Beschaffungsklassifizierung, kodiert bis zu 95% der Ausgaben automatisch nach UNSPSC und löst den eigenen Teilecode eines Lieferanten zum echten Herstellercode auf, ohne manuelle Rückverfolgung."
+    },
+    "hero": {
+      "eyebrow": "UNSPSC-Klassifizierung",
+      "title": "Ihre Beschaffungsdaten enthalten die Antworten. Sie können sie nur noch nicht lesen.",
+      "lead": "Die meisten Hard-Services- und FM-Unternehmen verfügen über Jahre an Bestelldaten in SAP oder Oracle. Ohne UNSPSC-Klassifizierung ist das ein Haufen Freitext-Positionen. Mit ihr sehen Sie genau, was Sie nach Kategorie ausgeben, benchmarken Lieferanten und erstellen Ausschreibungen auf Basis echter Kostendaten. Pearstop klassifiziert automatisch 35.000 Positionen pro Monat."
+    },
+    "standard": {
+      "eyebrow": "Was ist UNSPSC?",
+      "title": "Der vierstufige Code, der Beschaffungsdaten vergleichbar macht.",
+      "p1": "UNSPSC (United Nations Standard Products and Services Code) ist eine globale, vierstufige Hierarchie zur Kategorisierung jedes Produkts und jeder Dienstleistung, die ein Unternehmen kauft. Segment und Family geben Ihnen einen groben Überblick über die Ausgaben. Class und Commodity geben Ihnen die Präzision, um Kategorien effektiv zu verhandeln, zu benchmarken und zu steuern.",
+      "p2": "Ohne sie erscheint dieselbe physische Arbeit unter Dutzenden verschiedener Zeichenketten. Bei SPIE wurden Rechnungspositionen wie 'HVAC unt' zu 'HVAC Unit, Air Handler, Climate Control, Carrier' angereichert, mit einem konsistenten UNSPSC-Commodity-Code. Das ist der Unterschied zwischen Daten, nach denen Sie handeln können, und Daten, bei denen das nicht möglich ist.",
+      "exampleLabel": "Beispiel einer UNSPSC-Hierarchie"
+    },
+    "howItWorks": {
+      "title": "Die meisten Positionen klassifizieren sich selbst. Der Rest bekommt einen zweiten Blick.",
+      "lead": "Regeln und maschinelles Lernen klassifizieren Positionen mit hoher Konfidenz sofort. Die Schicht, für die früher ein eigenes Team nötig war, läuft jetzt im Hintergrund.",
+      "step1": {
+        "title": "Regeln und maschinelles Lernen",
+        "copy": "Lieferanten- und sachkontobasierte Regeln, kombiniert mit einer auf Ihre eigenen Ausgaben trainierten ML-Schicht, klassifizieren die Mehrheit der Positionen mit hoher Konfidenz sofort."
+      },
+      "step2": {
+        "title": "LLM-Schicht für Grenzfälle",
+        "copy": "Kürzel von Außendiensttechnikern, Teilenummern und mehrsprachige Beschreibungen werden von einem Large Language Model mit tiefem Produkt- und Branchenwissen aufgelöst - der Schicht, die übernimmt, was Regeln und ML nicht können."
+      },
+      "step3": {
+        "title": "Menschliche Prüfung, dann merkt es sich das",
+        "copy": "Die fünf bis zehn Prozent, bei denen sich die Engine unsicher ist, werden für Ihr Team markiert. Jede Entscheidung fließt zurück in das Modell, und die Prüf-Warteschlange sinkt über die folgenden Monate."
+      }
+    },
+    "manufacturerCode": {
+      "eyebrow": "Herstellerverifizierung",
+      "title": "Was, wenn das Teil nur den eigenen Code des Lieferanten trägt?",
+      "copy": "Hard-Services- und MRO-Einkäufer stoßen ständig darauf. Der einzige auf der Akte vermerkte Code eines Wartungsbauteils gehört dem Lieferanten, der es geliefert hat, nicht dem Hersteller, der es gefertigt hat. Ohne den eigenen Code des Herstellers gibt es keine Möglichkeit, den Preis gegen einen anderen Anbieter zu prüfen oder zu bestätigen, dass zwei Teams, die dasselbe Bauteil beschreiben, tatsächlich von derselben Sache sprechen. Die manuelle Rückverfolgung bedeutet meist, denjenigen zu kontaktieren, der das Teil ursprünglich bestellt hat, um eine klarere Beschreibung zu bitten, und dann zu warten.",
+      "example": "Das ist kein hypothetisches Beispiel. Bei einem Hard-Services-Projekt bestellten Techniker Bauteile anhand des eigenen Teilecodes des Lieferanten, weil das der einzige Code auf den Unterlagen war. Der echte Code des Herstellers, der es dem Unternehmen erlaubt hätte, bei jedem anderen einzukaufen, existierte, aber ihn zu finden bedeutete, das Teil über die ursprüngliche Bestellung zurückzuverfolgen, oft nach mehreren Runden, in denen um eine klarere Beschreibung gebeten wurde.",
+      "resultLabel": "Was zurückkommt",
+      "resultCopy": "Ein Feld für die Endhersteller-MPN: die ursprüngliche Teilenummer, getrennt vom eigenen Code des Lieferanten, überall dort als angereichert statt als sicher markiert, wo die Daten keine eindeutige Übereinstimmung bestätigen. Höherwertige Bauteile unterliegen einer strengeren Prüfschwelle, weil eine falsche Zuordnung umso teurer wird, je teurer das Teil ist."
+    },
+    "whatMakesPossible": {
+      "title": "Was eine klassifizierte Ausgaben-Baseline möglich macht",
+      "b1": {
+        "title": "Category Management",
+        "copy": "Sehen Sie, was Sie tatsächlich nach Commodity über jeden Lieferanten und Standort hinweg ausgeben. Bei FARO ersetzte dies 2 Vollzeitkräfte und verkürzte die Bearbeitungszeit von Wochen auf unter einen Tag pro Container."
+      },
+      "b2": {
+        "title": "Lieferanten-Benchmarking",
+        "copy": "Vergleichen Sie Preise für dieselbe UNSPSC-Commodity über Lieferanten hinweg. Der Benchmark funktioniert nur, wenn beide Seiten des Vergleichs denselben Code tragen."
+      },
+      "b3": {
+        "title": "ERP- und BI-Integration",
+        "copy": "UNSPSC-codierte Daten fließen direkt in SAP, Oracle, Power BI und Microsoft Fabric ein. Kein individuelles Mapping. Keine Formatkonvertierung. Kein Abgleichsaufwand."
+      }
+    },
+    "quote": {
+      "text": "Wir hatten Tausende von Produktpositionen, die klassifiziert werden mussten, bevor wir überhaupt anfangen konnten, unsere Kosten zu verstehen. Pearstop klassifizierte sie in weniger als einer Woche. Das hätte unser Team sechs Monate gekostet und wäre immer noch nicht so genau gewesen.",
+      "author": "David Torr",
+      "role": "CEO, FARO"
+    },
+    "geoBlock": {
+      "title": "Wie funktioniert die UNSPSC-Klassifizierung für Hard-Services- und FM-Unternehmen?",
+      "copy": "Hard-Services-FM-Unternehmen kaufen typischerweise bei 500 bis 3.000 Lieferanten über mehrere Standorte hinweg ein. Rechnungsbeschreibungen werden von Außendiensttechnikern geschrieben, nicht von Einkäufern, was bedeutet, dass dieselbe Arbeit unter Hunderten verschiedener Zeichenketten erscheint. Manuelle UNSPSC-Klassifizierung bei 5.000 bis 35.000 Positionen pro Monat erfordert ein bis zwei fest zugeordnete Mitarbeitende, die kontinuierlich arbeiten, nur um aktuell zu bleiben. Pearstops automatisierte Engine klassifiziert 90-95% dieser Positionen ohne menschliches Zutun, wobei der Rest zur Prüfung markiert wird. Die Prüf-Warteschlange schrumpft jeden Monat, da die Engine aus den Entscheidungen Ihres Teams lernt. Strukton verarbeitet derzeit auf diese Weise 35.000 Positionen pro Monat über die SAP-Integration."
+    },
+    "noDataFaq": {
+      "label": "Was, wenn wir noch nie klassifiziert haben?",
+      "copy": "Die meisten Kunden starten mit Jahren an unklassifizierten SAP-Daten und ohne historische UNSPSC-Codes. Die Regelschicht wendet sofort lieferanten- und sachkontobasierte Muster an. Die ML-Schicht ist branchenübergreifend auf Beschaffungsdaten vortrainiert. Die LLM-Schicht deckt die Lücken ab. Die automatische Klassifizierung beim ersten Durchlauf erreicht typischerweise 84-88%, verbessert sich innerhalb von 12 Wochen auf 90-95%, während Ihr Team markierte Positionen prüft."
+    },
+    "stats": {
+      "s1": {
+        "title": "Positionen pro Monat (Strukton)",
+        "copy": "Ein großer niederländischer Infrastrukturbauer verarbeitet 35.000 Beschaffungspositionen pro Monat über Pearstop via SAP-Integration."
+      },
+      "s2": {
+        "title": "Autoklassifizierungsrate",
+        "copy": "90-95% der Positionen werden automatisch auf Commodity-Ebene klassifiziert, ohne dass Ihr Team sie anfasst."
+      },
+      "s3": {
+        "title": "Reduzierung des manuellen Aufwands",
+        "copy": "Kunden reduzieren die manuelle Beschaffungsdatenarbeit typischerweise um 70-90% und geben Einkäufern Zeit für Kategoriestrategie und Vertragsverhandlung."
+      }
+    },
+    "faq": [
+      {
+        "question": "Was ist UNSPSC-Klassifizierung?",
+        "answer": "UNSPSC (United Nations Standard Products and Services Code) ist ein hierarchisches Klassifizierungssystem, das weltweit zur Kategorisierung von Beschaffungsausgaben verwendet wird. Es hat vier Ebenen: Segment, Family, Class und Commodity. Organisationen nutzen UNSPSC, um konsistente Ausgabenanalysen, Lieferanten-Benchmarking und Category Management über Verträge, Standorte und ERP-Systeme hinweg zu ermöglichen."
+      },
+      {
+        "question": "Wie genau ist automatisierte UNSPSC-Klassifizierung?",
+        "answer": "Pearstops Klassifizierungs-Engine, die Regeln, maschinelles Lernen, eine LLM-Schicht und menschliche Prüfung kombiniert, erreicht 90 bis 95% automatische Klassifizierung bei typischen Beschaffungsdatensätzen. Die verbleibenden 5 bis 10% werden zur menschlichen Prüfung markiert. Jede geprüfte Entscheidung fließt zurück in die Engine und verkleinert die Prüf-Warteschlange im Laufe der Zeit, bis sie nahezu null erreicht."
+      },
+      {
+        "question": "Kann UNSPSC-Klassifizierung die Herstellerteilenummer hinter dem eigenen Code eines Lieferanten identifizieren?",
+        "answer": "Ja. Wo eine ursprüngliche Herstellerteilenummer in den Daten oder einer verbundenen Referenzquelle existiert, löst die Engine sie auf und gibt sie als separates Feld für die Endhersteller-MPN zurück, statt den eigenen Code des Lieferanten als einzige Referenz auf der Position zu belassen."
+      },
+      {
+        "question": "Integriert sich Pearstop mit SAP für die UNSPSC-Klassifizierung?",
+        "answer": "Ja. Pearstop erhält Daten per CSV-Export oder direkter API-Verbindung von SAP, Oracle und anderen ERP- und P2P-Plattformen. In der Praxis empfinden viele Kunden den CSV-Export als den einfachsten Einstieg. Klassifizierte Daten werden im selben Format zurückgegeben, bereit zum Zurückladen in SAP oder zur Einspeisung in BI-Tools."
+      },
+      {
+        "question": "Wie lange dauert die UNSPSC-Klassifizierung?",
+        "answer": "Die meisten Kunden haben innerhalb von vier bis sechs Wochen nach dem Start einen sauberen, klassifizierten Datensatz. Das erste Projekt beginnt mit einer Data Stability Baseline, damit Sie die Ausgabequalität beurteilen können, bevor Sie sich zur laufenden Klassifizierung verpflichten."
+      }
+    ],
+    "related": {
+      "label": "Weitere UNSPSC-Ressourcen",
+      "tool": "Kostenloses UNSPSC-Code-Nachschlagetool",
+      "fm": "UNSPSC für FM und Hard Services",
+      "nl": "UNSPSC in den Niederlanden",
+      "de": "UNSPSC in Deutschland",
+      "faq": "Vollständige FAQ"
+    },
+    "cta": {
+      "title": "Bereit, Ihre Beschaffungsklassifizierung zu automatisieren?",
+      "lead": "Buchen Sie eine 7-minütige Discovery. Wir zeigen Ihnen genau, wie die Klassifizierungs-Engine mit Ihren Daten funktionieren würde.",
+      "button": "7-minütige Discovery buchen"
+    }
+  },
+  "Fabric": {
+    "meta": {
+      "title": "Microsoft Fabric Datenbereitschaft für anlagenintensive Branchen",
+      "description": "Migration zu Microsoft Fabric geplant? Pearstop bereinigt und strukturiert Ihre operativen Daten vor der Migration, damit Ihre Berichte vom ersten Tag an funktionieren und das Projekt im Zeitplan bleibt."
+    },
+    "hero": {
+      "eyebrow": "Fabric Ready",
+      "title": "Ihre Microsoft-Fabric-Migration liefert nur, wenn Ihre Daten zuerst bereit sind.",
+      "lead": "Microsoft Fabric verspricht unternehmensweite Einblicke. Pearstop sorgt dafür, dass die zuliefernden Daten sauber, strukturiert und zuverlässig sind, damit Ihre Migration das liefert, was die Führung erwartet."
+    },
+    "problem": {
+      "eyebrow": "Die versteckte Blockade",
+      "title": "Die versteckte Blockade in jeder Fabric-Migration",
+      "copy": "Microsoft Fabric verspricht eine einheitliche Datenplattform, eine einzige verlässliche Quelle über Finanzen, Betrieb, Beschaffung und Anlagen hinweg. Aber Fabric setzt strukturierte, konsistente Daten voraus, die die meisten Organisationen noch nicht haben. Die Migration unsauberer Daten nach Fabric behebt das Problem nicht, sie verschiebt es nur - mit höheren Kosten und Risiken.",
+      "bullets": [
+        "Inkonsistente Namenskonventionen führen dazu, dass standort- und systemübergreifende Vergleiche scheitern",
+        "Feldfehler und Duplikate zeigen sich sofort im Reporting und schädigen das Vertrauen in die neue Plattform",
+        "KI- und Copilot-Funktionen, die auf Fabric aufbauen, liefern zu wenig, wenn die zugrunde liegenden Daten unzuverlässig sind",
+        "Während eines Data-Lake-Übergangs gibt es einen natürlichen Wendepunkt, um die Daten zu bereinigen, bevor es teurer wird"
+      ],
+      "leadershipLabel": "Warum das für die Führungsebene wichtig ist",
+      "leadershipCopy": "CFOs und leitende Betriebsverantwortliche kümmern sich um Vertrauen, Reporting und Lieferfähigkeit. Die Plattform als solche interessiert sie nicht - sie interessiert, ob die Migration unternehmensweite Sichtbarkeit und eine Rendite auf die Ausgabe erzeugt."
+    },
+    "howItWorks": {
+      "title": "Fabric-Bereitschaft in drei Phasen",
+      "step1": {
+        "title": "Datenbereitschafts-Bewertung",
+        "copy": "Wir prüfen Ihre bestehenden operativen Daten anhand der strukturellen Anforderungen von Fabric und identifizieren Lücken, Inkonsistenzen und Prioritäten vor Beginn der Migration."
+      },
+      "step2": {
+        "title": "Automatisierte Bereinigung und Strukturierung",
+        "copy": "Wir bereinigen, standardisieren und strukturieren Ihre Daten automatisch, im großen Maßstab und ohne manuelle Nacharbeit, damit sie den Anforderungen von Fabric entsprechen."
+      },
+      "step3": {
+        "title": "Migrationsbereite Daten",
+        "copy": "Sie erhalten verifizierte, strukturierte Daten mit integrierter automatisierter Qualitätskontrolle - bereit für das Fabric-Onboarding und das Training von KI-Modellen vom ersten Tag an."
+      }
+    },
+    "stats": [
+      {
+        "value": "379%",
+        "label": "ROI",
+        "copy": "Von Forrester modellierter dreijähriger ROI für Unternehmen, die auf einer sauberen Datengrundlage zu Microsoft Fabric migrieren."
+      },
+      {
+        "value": "95%",
+        "label": "Automatisierte Datenstrukturierung",
+        "copy": "Ohne manuelle Nacharbeit."
+      },
+      {
+        "value": "<6 Monate",
+        "label": "Amortisationszeit",
+        "copy": "Gemäß Forrester-Kompositmodell für Unternehmen."
+      }
+    ],
+    "quote": {
+      "text": "Wenn wir einen Bot wollen, der alles über unseren Vertrag weiß, müssen wir zuerst sicherstellen, dass die Governance-Daten im Vertrag ordnungsgemäß vereinbart sind.",
+      "author": "Leiter Datenstrategie",
+      "role": "Integrierter Facility-Management-Anbieter"
+    },
+    "geoBlock": {
+      "title": "Was bedeutet Microsoft-Fabric-Datenbereitschaft?",
+      "copy": "Microsoft-Fabric-Datenbereitschaft ist der Prozess, operative Daten vor der Migration zu Microsoft Fabric zu bereinigen, zu strukturieren und zu kontrollieren. Für anlagenintensive Branchen, Bau und Facility Management sind Beschaffungsdaten, Anlagenregister und operative Datensätze oft zu inkonsistent, als dass Fabric sie zuverlässig verarbeiten könnte. Pearstop automatisiert die Datenaufbereitungsarbeit, die Fabric-Migrationen zum Erfolg führt, sodass Organisationen Copilot, KI-Agenten und Echtzeitanalysen vom ersten Tag an nutzen können, statt 12-18 Monate mit der Behebung der Datenqualität nach der Migration zu verbringen."
+    },
+    "faq": [
+      {
+        "question": "Sollten wir unsere Daten vor Fabric bereinigen, oder kann Pearstop parallel zur Migration laufen?",
+        "answer": "Beides funktioniert, aber früher ist günstiger. Die Migration inkonsistenter Daten nach Fabric behebt sie nicht, sie verschiebt sie nur, und die Bereinigung nach der Migration kostet typischerweise mehr als die Bereinigung davor."
+      },
+      {
+        "question": "Ersetzt das unseren Fabric-Implementierungspartner?",
+        "answer": "Nein. Pearstop bereitet die Datenebene unter der Migration vor. Ihr Implementierungspartner baut weiterhin die Plattform, nur eben auf Daten, die bereits strukturiert sind."
+      }
+    ],
+    "cta": {
+      "title": "Planen Sie eine Fabric-Migration?",
+      "lead": "Sprechen Sie mit uns, bevor die Migration beginnt. Ein 30-minütiges Gespräch jetzt kann später Monate an Nacharbeit sparen.",
+      "button": "7-minütige Discovery buchen",
+      "aiLink": "Auch AI Readiness ansehen"
+    }
+  },
+  "Blog": {
+    "meta": {
+      "title": "Pearstop Blog und Learning Centre",
+      "description": "Praktische Leitfäden, archivierte Learning-Centre-Artikel und Denkansätze zur Datenqualität für Hard-Services-, Bau- und Infrastrukturunternehmen."
+    },
+    "hero": {
+      "eyebrow": "Einblicke",
+      "title": "Blog und Learning Centre",
+      "lead": "Aktuelle Denkansätze, archivierte Learning-Centre-Artikel und der Data-Edge-Podcast an einem Ort."
+    },
+    "latestArticles": {
+      "title": "Neueste Artikel",
+      "lead": "Ausführliche Leitfäden zu Beschaffungsdaten, Asset Management und AI Readiness für Hard Services und Bau.",
+      "readArticle": "Artikel lesen →"
+    },
+    "learningCentre": {
+      "title": "Learning Centre",
+      "lead": "Ältere Pearstop-Artikel befinden sich jetzt im Blog-Hub, sodass es einen klaren Ort für Einblicksinhalte gibt.",
+      "label": "Learning Centre"
+    },
+    "podcast": {
+      "pill": "Podcast",
+      "title": "The Data Edge",
+      "lead": "Interviews, Einblicke und umsetzbare Denkansätze zu Datenqualität, Beschaffung und Asset Management für technische Branchen.",
+      "youtube": {
+        "label": "YouTube",
+        "meta": "Episoden ansehen"
+      },
+      "spotify": {
+        "label": "Spotify",
+        "meta": "Auf Spotify hören"
+      },
+      "apple": {
+        "label": "Apple Podcasts",
+        "meta": "Auf Apple hören"
+      }
+    },
+    "post": {
+      "readingTime": "{minutes} Min. Lesezeit",
+      "publishedOn": "Veröffentlicht am {date}",
+      "backToBlog": "← Zurück zum Blog",
+      "tableOfContents": "Inhaltsverzeichnis"
+    },
+    "latestInsights": "Neueste Einblicke",
+    "readMore": "Weiterlesen"
+  },
+  "NotFound": {
+    "title": "Seite nicht gefunden",
+    "description": "Entschuldigung, wir konnten nicht finden, wonach Sie gesucht haben.",
+    "backHome": "Zurück zur Startseite"
+  },
+  "CaseStudies": {
+    "meta": {
+      "title": "Laden Sie die Fallstudien herunter",
+      "description": "Laden Sie die Fallstudien von Pearstop herunter, um zu sehen, wie technische Unternehmen Daten bereinigen, Margen schützen und manuelle Arbeit reduzieren.",
+      "ogTitle": "Laden Sie die Pearstop-Fallstudien herunter",
+      "ogDescription": "Laden Sie die Fallstudien von Pearstop herunter, um zu sehen, wie technische Unternehmen Daten bereinigen, Margen schützen und manuelle Arbeit reduzieren."
+    },
+    "hero": {
+      "eyebrow": "Fallstudien",
+      "title": "Laden Sie die Pearstop-Fallstudien herunter",
+      "lead": "Geben Sie Ihre Daten ein, und wir leiten Sie direkt zum PDF-Dokument weiter. Sehen Sie, wie technische Unternehmen Pearstop nutzen, um Daten zu bereinigen und Margen zu schützen.",
+      "getPdf": "PDF anfordern",
+      "followLinkedIn": "Folgen Sie Pearstop auf LinkedIn für Updates"
+    },
+    "highlights": [
+      {
+        "title": "Strukton (Projekt läuft)",
+        "copy": "Automatisierte UNSPSC-Klassifizierung im großen Maßstab für die Infrastrukturbeschaffung."
+      },
+      {
+        "title": "FARO",
+        "copy": "Margenschätzungen für jeden Containerkauf, automatisch erstellt."
+      },
+      {
+        "title": "SPIE",
+        "copy": "Sauberere Anlagendaten, denen Teams tatsächlich vertrauen können."
+      },
+      {
+        "title": "MRO (Vertraulich)",
+        "copy": "Teilenummernanreicherung für den direkten Einkauf beim Hersteller."
+      }
+    ],
+    "download": {
+      "pill": "Was Sie erwartet",
+      "title": "Echte Beispiele von Teams, die bereits saubere Daten nutzen, um klüger zu arbeiten.",
+      "lead": "Dieser Download bündelt einige der stärksten Pearstop-Geschichten, damit Sie das Muster schnell erkennen. Weniger manuelle Arbeit, bessere Daten, engere Margen.",
+      "formLabel": "PDF anfordern",
+      "formLead": "Hinterlassen Sie Ihre Daten, und der Download startet nach dem Absenden automatisch.",
+      "namePlaceholder": "Ihr Name",
+      "emailPlaceholder": "Ihre E-Mail-Adresse",
+      "companyPlaceholder": "Unternehmen (optional)",
+      "submitButton": "Fallstudien herunterladen",
+      "talkNote": "Lieber erst sprechen?",
+      "talkLinkText": "7-minütige Discovery buchen"
+    },
+    "whyDownload": {
+      "title": "Warum Menschen es herunterladen",
+      "lead": "Eine schnelle Lektüre für Teams, die die Kurzversion wollen, bevor sie einen Termin buchen.",
+      "b1": {
+        "icon": "✓",
+        "title": "Das Muster erkennen",
+        "copy": "Verstehen Sie, wie Pearstop fragmentierte operative Daten in eine verlässliche Entscheidungsgrundlage verwandelt."
+      },
+      "b2": {
+        "icon": "↗",
+        "title": "Die Struktur übernehmen",
+        "copy": "Nutzen Sie die Beispiele, um zu erkennen, wo Ihre eigenen Daten Zeit, Marge oder Kontrolle verlieren lassen."
+      },
+      "b3": {
+        "icon": "⚡",
+        "title": "Intern teilen",
+        "copy": "Das Dokument ist kurz genug, um es an die Personen weiterzuleiten, die das Problem schnell erkennen müssen."
+      }
+    },
+    "cta": {
+      "title": "Möchten Sie es durchsprechen?",
+      "lead": "Wenn Sie Ihr Datenproblem lieber direkt besprechen möchten, helfen wir gerne.",
+      "followLinkedIn": "Folgen Sie Pearstop auf LinkedIn für Updates",
+      "bookDiscovery": "7-minütige Discovery buchen"
+    }
+  },
+  "Cases": {
+    "meta": {
+      "title": "Kundenergebnisse",
+      "description": "Echte Ergebnisse von Hard-Services-, Infrastruktur-, Fertigungs- und FM-Unternehmen, die Pearstop genutzt haben, um ihre Daten zu bereinigen, manuelle Arbeit zu reduzieren und ihre Margen zu schützen."
+    },
+    "hero": {
+      "eyebrow": "Kundenergebnisse",
+      "title": "Echte Arbeit. Echte Margen.",
+      "lead": "Wie technische Unternehmen in FM, Bau, Fertigung und Infrastruktur Pearstop nutzen, um ihre Daten zu bereinigen und ihre Margen zu schützen."
+    },
+    "featured": {
+      "pill": "Ausgewählte Fallstudie",
+      "p1": "Ein großer niederländischer Bauunternehmer hatte zwei fest zugeordnete Mitarbeitende, die Lieferantenrechnungen manuell Kategorien zuordneten - ein langsamer, fehleranfälliger Prozess, der die Ausgabenanalyse unzuverlässig und das Beschaffungs-Benchmarking unmöglich machte.",
+      "p2": "Pearstop automatisierte die Kategoriezuordnung über mehr als 140.000 Positionen, eliminierte doppelte Lieferantendatensätze und lieferte einen sauberen Beschaffungsdatensatz, der direkt in ihr SAP-System und ihre Reporting-Tools einfließt.",
+      "quote": "Früher hatten wir zwei Vollzeitkräfte für die Kategoriezuordnung. Jetzt übernimmt das System das für uns - was auch Margenschätzungen weiter unten in der Kette ermöglicht hat. Es ist zuverlässiger, und das zu einem Bruchteil der Kosten.",
+      "quoteAuthor": "Leiter Einkauf",
+      "quoteRole": "Infrastruktur-Bauunternehmen, Niederlande",
+      "comingSoon": "Vollständige Fallstudie folgt in Kürze.",
+      "followLinkedIn": "Folgen Sie unserem LinkedIn für Updates →",
+      "statsHeader": "Ergebnisse auf einen Blick",
+      "stats": [
+        {
+          "num": "75%",
+          "label": "Reduzierung der Zeit für manuelle Kategoriezuordnung"
+        },
+        {
+          "num": "140k+",
+          "label": "Bereinigte und klassifizierte Lieferantenrechnungspositionen"
+        },
+        {
+          "num": "2 FTE",
+          "label": "Umgesetzt in wertschöpfende Beschaffungsarbeit"
+        },
+        {
+          "num": "SAP",
+          "label": "Ein einziger sauberer Datensatz, der direkt in ERP und BI einfließt"
+        }
+      ]
+    },
+    "testimonials": {
+      "title": "Was unsere Kunden sagen",
+      "lead": "Von Einkaufsteams bis zu Betriebsleitern - die Wirkung zeigt sich in den Zahlen.",
+      "t1": {
+        "text": "Unsere Anlagendaten waren über Tabellenkalkulationen verstreut und speisten sich aus den Altsystemen unserer Kunden. Nichts davon war konsistent genug, um analytisch etwas damit anzufangen. Pearstop konsolidierte und strukturierte es, und plötzlich hatten wir etwas, worauf wir tatsächlich aufbauen konnten.",
+        "name": "Kunde",
+        "role": "Asset Manager · SPIE"
+      },
+      "t2": {
+        "text": "Unsere Standortbesuchsberichte kommen in jedem erdenklichen Format - handschriftliche Notizen, Rechtschreibfehler, Kritzeleien. Pearstop hat ein System gebaut, das sie automatisch in ein sauberes Angebotsdokument überführt. Das spart unserem Team bei jedem Auftrag Stunden.",
+        "name": "Vince Out",
+        "role": "Commercial Manager · Fertigung | Luftfiltereinheiten"
+      },
+      "t3": {
+        "text": "Wir hatten Tausende von Produktpositionen, die klassifiziert werden mussten, bevor wir überhaupt anfangen konnten, unsere Kosten zu verstehen. Pearstop klassifizierte sie in weniger als einer Woche. Das hätte unser Team sechs Monate gekostet und wäre immer noch nicht so genau gewesen.",
+        "name": "David Torr",
+        "role": "CEO · FARO"
+      }
+    },
+    "moreStories": {
+      "title": "Weitere Kundengeschichten",
+      "lead": "Eine Auswahl an Projekten über Branchen, Herausforderungen und Lösungsarten hinweg.",
+      "readComingSoon": "Den bald erscheinenden Case lesen →",
+      "readCase": "Fallstudie lesen →"
+    },
+    "cta": {
+      "eyebrow": "Bereit für solche Ergebnisse?",
+      "title": "Lassen Sie uns über Ihre Datenherausforderung sprechen.",
+      "lead": "Sagen Sie uns, wo Ihre Margen verloren gehen. Wir zeigen Ihnen genau, wie Pearstop das behebt.",
+      "bookDemo": "Demo buchen",
+      "exploreSolutions": "Lösungen entdecken"
+    }
+  }
+}

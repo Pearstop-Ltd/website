@@ -1,0 +1,109 @@
+---
+title: "Le problème de gestion par catégorie dont personne ne parle : pourquoi vous avez besoin de la classification UNSPSC des dépenses"
+description: "La gestion par catégorie en FM et infrastructure échoue sans données de dépenses au niveau marchandise. Découvrez comment la classification UNSPSC transforme des données de facture non structurées en stratégie achats exploitable."
+publishedAt: "2026-05-18"
+author: "sjoerd"
+category: "Procurement"
+tags: ["UNSPSC", "Category Management", "FM", "Infrastructure", "Spend Analysis"]
+readingTime: "7 min"
+---
+
+## Le problème de gestion par catégorie dont personne ne parle
+
+Demandez à n'importe quel category manager d'une entreprise FM ou infrastructure quelle part de sa semaine est consacrée à nettoyer des tableurs par rapport à faire de la véritable stratégie achats. La réponse honnête est généralement 70 à 80 % de préparation de données, 20 à 30 % de stratégie. Ce ratio n'est pas un problème de compétence ni un problème d'effectif. C'est un problème de données, et la classification UNSPSC est la solution.
+
+La gestion par catégorie est bien comprise comme cadre. Regroupez vos dépenses par catégorie, traitez chaque catégorie comme une unité opérationnelle, appliquez une stratégie de sourcing en conséquence. La théorie tient. Ce qui casse en pratique, c'est l'étape qui précède tout cela : savoir avec précision ce que vous achetez, auprès de qui, à quel volume, sur quels sites et projets.
+
+Sans cette visibilité, la gestion par catégorie n'est pas une stratégie. C'est de la supposition avec un diaporama attaché.
+
+---
+
+## À quoi ressemblent réellement des données de dépenses non classifiées
+
+Avant classification, une base de données de dépenses FM ou infrastructure typique est une collection de lignes de facture en texte libre. Voici ce qu'un échantillon représentatif pourrait montrer pour un seul produit :
+
+- « HVAC unt »
+- « pièces maint divers »
+- « filtre équip inc »
+- « consommables ventil T3 »
+- « filtre 400mm site 7 »
+
+Ces cinq lignes sont probablement le même consommable, acheté auprès de trois fournisseurs différents, enregistré par quatre gestionnaires de site différents, et codé sur cinq comptes comptables différents. Sans classification, ils sont invisibles en tant que catégorie. Vous ne pouvez pas les agréger, les comparer, ou leur appliquer une stratégie de sourcing. Ils n'existent tout simplement pas comme un article de dépense cohérent.
+
+Ce n'est pas un cas marginal. Dans la plupart des environnements FM et construction, entre 30 et 60 % des données de dépenses au niveau facture sont effectivement inclassables sans enrichissement de classification. La dépense est réelle. L'argent circule. Mais du point de vue de la stratégie achats, autant qu'elle n'existe pas.
+
+---
+
+## L'avant et l'après : un exemple concret
+
+L'une des illustrations les plus claires vient de la maintenance d'infrastructure. Avant classification, le rapport de dépenses d'un client montrait une ligne « coûts de site projet » totalisant environ 4 M€ par an. Après enrichissement et classification UNSPSC, cette ligne unique s'est décomposée en catégories identifiables :
+
+| Catégorie | Dépense annuelle |
+|---|---|
+| Aménagement paysager doux (entretien des espaces verts, élagage, tonte) réparti sur 50 codes de projet | 2 000 000 € |
+| Maintenance des drainages civils, non reconnue comme catégorie parce que chaque site la codait différemment | 900 000 € |
+| Marquage routier et signalisation, fragmenté entre identifiants de projet | 700 000 € |
+| Réellement divers | 400 000 € |
+
+Les 2 M€ d'aménagement paysager étaient la découverte qui a déclenché l'action. Personne aux achats ne savait qu'elle existait comme catégorie. Il n'y avait eu aucun appel d'offres, aucun accord-cadre, aucun effet de levier de volume, juste 50 équipes de projet séparées prenant chacune des décisions d'achat indépendantes. Une fois visible, elle a été immédiatement identifiable comme catégorie levier : volume élevé, plusieurs fournisseurs capables, faible risque d'approvisionnement. Un appel d'offres consolidé a suivi.
+
+C'est ce que permet la classification UNSPSC. Pas une amélioration marginale de la qualité des données. Une vision fondamentalement différente de là où va l'argent.
+
+---
+
+## Pourquoi la matrice de Kraljic exige la classification
+
+La matrice de Kraljic est l'outil fondateur de la stratégie de catégorie, le positionnement en quadrant détermine si vous consolidez, formez un partenariat, doublez le sourcing, ou automatisez. Mais placer les dépenses avec précision dans la matrice exige de savoir ce que vous achetez au niveau marchandise.
+
+Vous ne pouvez pas évaluer le risque d'approvisionnement pour « pièces maint divers ». Vous pouvez évaluer le risque d'approvisionnement pour UNSPSC 72103203 (maintenance des systèmes CVC) ou 31161501 (écrous et boulons). La spécificité du code marchandise est ce qui rend l'évaluation du risque praticable.
+
+Il en va de même pour l'impact sur le profit. Le segment 72 (services de construction et de maintenance) et le segment 76 (facility management) dominent la plupart des dépenses hard FM. Au sein de ces segments, la distribution par marchandise détermine quelles catégories sont stratégiques, lesquelles sont levier, et lesquelles sont non critiques. Sans classification à ce niveau de granularité, Kraljic devient un exercice théorique.
+
+---
+
+## Étude de cas : améliorer la visibilité des dépenses chez Strukton
+
+Strukton traite environ 35 000 lignes d'achats par mois via SAP. Avant la classification automatisée, les données étaient nominalement structurées, codes comptables, centres de coûts, identifiants de projet, mais pas classifiées au niveau marchandise. Le résultat était que l'analyse des dépenses exigeait un effort manuel significatif à chaque fois qu'elle était nécessaire, et les résultats étaient souvent partiellement peu fiables parce que la même dépense apparaissait dans plusieurs catégories selon la façon dont un gestionnaire de site l'avait codée.
+
+Le moteur de classification de Pearstop est en cours de déploiement pour résoudre cela. La précision de première passe précoce tourne à environ 70 %, le modèle s'améliorant à mesure qu'il apprend les schémas de fournisseurs et de description propres à l'organisation, une trajectoire cohérente avec d'autres déploiements. L'objectif est un reporting des dépenses au niveau marchandise produit automatiquement à partir des données de facture SAP, disponible en quelques jours après la fin du mois plutôt qu'en semaines.
+
+L'objectif est de donner à l'équipe achats de Strukton une référence de dépenses capable de soutenir une stratégie de catégorie : identifier quelles dépenses relèvent de catégories levier et où la consolidation de volume est faisable entre projets.
+
+---
+
+## Enrichissement d'actifs dans un grand jeu de données FM
+
+Dans le FM à forte intensité d'actifs, le problème de classification s'étend au-delà des dépenses achats jusqu'au registre d'actifs lui-même. Quand les données d'actifs sont enregistrées comme « HVAC unt », « divers », ou « inc », ce qui est courant, en particulier pour les actifs hérités de contrats précédents, la maintenance planifiée est impossible à programmer intelligemment. Vous ne savez pas ce que vous avez.
+
+L'enrichissement d'actifs utilisant l'UNSPSC et la taxonomie du fabricant résout cela directement. « HVAC unt » devient « Centrale de traitement d'air / Climatisation / Carrier ». Cet enrichissement permet la programmation de la maintenance planifiée parce que le type d'actif est désormais connu. Il permet l'analyse du cycle de vie parce que la classe d'équipement est identifiable. Et il permet l'optimisation des pièces de rechange parce que l'actif et les pièces qui le desservent peuvent enfin être reliés.
+
+C'est le point de départ du travail actuellement en cours avec SPIE, enrichir des données d'actifs qui étaient réparties sur des tableurs et alimentées par des systèmes hérités, dans le but de les rendre assez cohérentes pour construire dessus analytiquement. Un prestataire FM gérant 10 000 actifs avec une classification précise peut construire des plans de maintenance ancrés dans les données d'actifs. Un prestataire gérant 10 000 actifs enregistrés comme « divers » ne le peut pas.
+
+---
+
+## Le vrai problème du category manager
+
+Un category manager qui ne peut pas faire confiance aux données de dépenses passe son temps à gérer les données. Chaque analyse exige une phase préparatoire de déduplication, de recodage, et de recoupement des comptes comptables avec les relevés de site et les codes de projet. Le temps que ce travail soit fait, les données ont déjà un mois et la fenêtre d'analyse a bougé.
+
+Avec une classification en place, automatisée, mise à jour mensuellement, s'exécutant directement à partir de la sortie ERP, la phase préparatoire s'effondre. Le category manager arrive à un rapport de dépenses déjà catégorisé au niveau marchandise, comparable entre sites et projets, et à jour jusqu'au dernier passage de facturation.
+
+Le travail de stratégie que la gestion par catégorie est censée livrer, benchmarking fournisseurs, accords-cadres, consolidation de volume, positionnement Kraljic, devient possible parce que la fondation de données le soutient. Le ratio entre préparation des données et travail de stratégie s'inverse.
+
+La classification rend aussi les [achats sauvages](/blog/maverick-spend-unspsc) visibles pour la première fois, un problème distinct mais étroitement lié, traité en détail dans l'article sur la façon dont la classification UNSPSC expose ce que vous manquez.
+
+---
+
+## Quels segments UNSPSC comptent le plus en FM et infrastructure
+
+Pour les organisations du FM, de la construction et des infrastructures, l'univers des dépenses se concentre dans un petit nombre de segments UNSPSC. Comprendre quels segments dominent vos dépenses est le premier résultat de tout exercice de classification :
+
+- **Segment 72 — Services de construction et de maintenance.** Le plus grand segment pour la plupart des organisations FM et infrastructure. Couvre la maintenance des bâtiments, les travaux de génie civil, la maintenance CVCE, et les dépenses de sous-traitants spécialisés.
+- **Segment 73 — Services de production industrielle et de fabrication.** Pertinent pour les clients ayant des actifs de fabrication ou d'usine de process.
+- **Segment 76 — Facility Management.** Nettoyage, sécurité, restauration, gestion des déchets, entretien des espaces verts, les dépenses de soft services qui sont fréquemment les plus fragmentées.
+- **Segment 80 — Services financiers et d'assurance.** Sous-estimé dans l'analyse des dépenses FM mais pertinent pour les organisations avec un financement de projet, un cautionnement, ou une assurance contractuelle significatifs.
+
+La distribution des dépenses sur ces segments indique à un category manager où se concentrer en premier. Elle lui indique aussi quelles dépenses sont actuellement invisibles, car les dépenses non classifiées, par définition, n'apparaissent dans aucun segment.
+
+---
+
+*Lecture connexe : [Précision de la classification UNSPSC : ce que signifient réellement 90-95 %](/blog/unspsc-classification-accuracy) | [La matrice de Kraljic, la gestion par catégorie, et pourquoi vos données sont la pièce manquante](/blog/category-management-kraljic-hard-fm)*
