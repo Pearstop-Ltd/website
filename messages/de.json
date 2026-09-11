@@ -1625,5 +1625,177 @@
       "bookDiscovery": "7-minütige Erstberatung buchen",
       "backHome": "Zurück zur Startseite"
     }
+  },
+  "Faq": {
+    "meta": {
+      "title": "Häufig gestellte Fragen | Pearstop",
+      "description": "Antworten auf die häufigsten Fragen zu Pearstops UNSPSC-Klassifizierung, Datenqualität im Beschaffungswesen, Asset-Datenmanagement und der Funktionsweise des Service."
+    },
+    "hero": {
+      "eyebrow": "FAQ",
+      "title": "Die Fragen, die uns am häufigsten gestellt werden.",
+      "lead": "Alles, was Sie darüber wissen müssen, wie Pearstop funktioniert, was es kostet und ob es zu Ihrer Organisation passt.",
+      "cta": "7-minütige Erstberatung buchen",
+      "secondary": "Zu den Fragen springen"
+    },
+    "sections": {
+      "general": {
+        "title": "Was ist UNSPSC-Klassifizierung?",
+        "items": [
+          {
+            "q": "Was ist UNSPSC-Klassifizierung, und warum ist sie für die Beschaffung wichtig?",
+            "a": "UNSPSC (United Nations Standard Products and Services Code) ist eine globale vierstufige Hierarchie — Segment, Familie, Klasse, Commodity — mit der jedes Produkt und jede Dienstleistung, die ein Unternehmen einkauft, kategorisiert wird. Ohne sie sind Beschaffungsausgabendaten eine Sammlung von Freitext-Rechnungszeilen, die sich nicht vergleichen, aggregieren oder analysieren lassen. Mit konsistent angewendeten UNSPSC-Codes sehen Einkaufsteams genau, was sie nach Kategorie ausgeben, benchmarken Lieferantenpreise, konsolidieren die Lieferantenbasis und erstellen präzise Kostenschätzungen für Ausschreibungen. Sie ist das Fundament, das Category Management überhaupt erst möglich macht."
+          },
+          {
+            "q": "Auf welcher UNSPSC-Ebene sollte klassifiziert werden — Segment, Familie, Klasse oder Commodity?",
+            "a": "Die Commodity-Ebene (alle 8 Stellen) ist die einzige Ebene, die echten Beschaffungsmehrwert liefert. Die Klassifizierung auf Segmentebene (die ersten 2 Stellen) ist der häufigste Fehler — sie zeigt grob, dass Ausgaben in Bau und Instandhaltung fallen, aber nicht, ob es sich um Elektroinstandhaltung, HLK oder Fassadenreparatur handelt. Erst die Klassifizierung auf Commodity-Ebene ermöglicht Lieferantenbenchmarking, Preisvergleich und Kategoriestrategie. Pearstop klassifiziert standardmäßig bis auf Commodity-Ebene."
+          },
+          {
+            "q": "Was ist der Unterschied zwischen UNSPSC und eCl@ss- oder CPV-Codes?",
+            "a": "UNSPSC ist eine globale vierstufige Taxonomie, die alle Produkte und Dienstleistungen abdeckt und in der privatwirtschaftlichen Beschaffung breit für Ausgabenanalysen und Category Management genutzt wird. eCl@ss ist für industrielle und technische Stammdaten präziser, da es neben Codes auch Produktattributdefinitionen enthält — besser geeignet für technische Teilekataloge als für Ausgabenanalysen. CPV (Common Procurement Vocabulary) ist nur für Ausschreibungsbekanntmachungen im EU-Vergaberecht vorgeschrieben und wird nicht für internes Ausgabenmanagement genutzt. Für europäische Unternehmen, die Beschaffungsdaten über FM, Infrastruktur und Fertigung hinweg verwalten, ist UNSPSC der praktikabelste und am breitesten unterstützte Standard."
+          },
+          {
+            "q": "Wie funktioniert die UNSPSC-Klassifizierung, wenn Rechnungsbeschreibungen auf Niederländisch, Deutsch oder Französisch verfasst sind?",
+            "a": "Die Klassifizierungs-Engine von Pearstop verarbeitet niederländisch-, deutsch- und französischsprachige Rechnungsbeschreibungen nativ, einschließlich Abkürzungen von Servicetechnikern, technischer Kurzformen und gemischtsprachiger Zeilen, bei denen eine deutsche Beschreibung englische Produktnamen enthält. Die LLM-Schicht verfügt über starke mehrsprachige Fähigkeiten und versteht branchenspezifische Terminologie sprachübergreifend. Vor der Klassifizierung ist keine Vorverarbeitung oder Übersetzung erforderlich."
+          }
+        ]
+      },
+      "unspsc": {
+        "title": "Genauigkeit und Automatisierung",
+        "items": [
+          {
+            "q": "Welche Genauigkeit sollte ich von automatisierter UNSPSC-Klassifizierung erwarten?",
+            "a": "Die vierschichtige Engine von Pearstop — Regeln, maschinelles Lernen, LLM und menschliche Prüfung — erreicht 90–95 % automatische Klassifizierung auf Commodity-Ebene bei typischen Beschaffungsdatensätzen. Das wird an echten Kundendaten gemessen, einschließlich niederländischer Infrastruktur- und FM-Ausgaben mit uneinheitlichen, mehrsprachigen Beschreibungen, nicht an sauberen Testdatensätzen. Die verbleibenden 5–10 % werden zur menschlichen Prüfung markiert. Jede geprüfte Entscheidung fließt zurück in die Engine, sodass die automatische Klassifizierungsrate mit der Zeit steigt und nach 12 Betriebsmonaten in der Regel 95 % übersteigt."
+          },
+          {
+            "q": "Funktioniert automatisierte UNSPSC-Klassifizierung auch bei unsauberen oder unvollständigen Rechnungsbeschreibungen?",
+            "a": "Ja — genau dafür ist Pearstop gebaut. Die Engine nutzt mehrere Signale über die reine Positionsbeschreibung hinaus: Lieferantenidentität, Sachkonto, Kostenelement, Einkaufshistorie und das breite Produktwissen der LLM-Schicht. Eine Beschreibung wie „elektra H3 Q2“ oder eine bloße Teilenummer wird korrekt klassifiziert, weil die Engine über Lieferantenmuster und Sachkontenkontext trianguliert, nicht nur über die Textzeichenfolge. Regelbasierte Tools scheitern an dieser Art von Daten. Die ML- und LLM-Schichten von Pearstop sind speziell dafür ausgelegt."
+          },
+          {
+            "q": "Wie schneidet KI-basierte UNSPSC-Klassifizierung im Vergleich zur manuellen Klassifizierung durch einen Berater oder Einkäufer ab?",
+            "a": "Manuelle Klassifizierung durch einen erfahrenen Einkäufer erreicht typischerweise 70–80 % Konsistenz — unterschiedliche Personen vergeben unterschiedliche Codes für dieselbe Beschreibung, und Ermüdung erhöht die Fehlerrate im großen Maßstab. Sie hält auch nicht Schritt: Ein Team, das 10.000 Rechnungszeilen pro Monat verarbeitet, braucht ein bis zwei durchgehend beschäftigte Mitarbeitende. Die automatisierte Engine von Pearstop erreicht 90–95 % Konsistenz auf Commodity-Ebene, verarbeitet Monate historischer Daten in Tagen und verbessert sich mit der Zeit. Die menschliche Prüfwarteschlange — typischerweise 500–1.000 Positionen pro 10.000 Zeilen — braucht 20–30 Minuten pro Monat, keine Vollzeitstelle."
+          },
+          {
+            "q": "Wie lange dauert es, ein volles Jahr historischer Rechnungsdaten zu klassifizieren?",
+            "a": "Ein vollständiger historischer Datensatz — typischerweise 12–24 Monate an Bestellungen oder Rechnungszeilen — wird innerhalb von vier bis sechs Wochen klassifiziert und zurückgeliefert. Das schließt die Data-Stability-Baseline-Phase ein, in der die Genauigkeit validiert wird und Ihr Team die markierten Positionen prüft. Die laufende monatliche Klassifizierung neuer Rechnungsdaten läuft danach automatisch, ohne zusätzlichen Einrichtungsaufwand."
+          },
+          {
+            "q": "Was, wenn wir noch keine vorhandenen Klassifizierungsdaten zum Trainieren haben?",
+            "a": "Die Engine von Pearstop funktioniert auch ohne bestehende Vorprägungen stark. Die Regelschicht wendet lieferanten- und sachkontenbasierte Muster sofort an. Die ML-Schicht ist auf einem breiten Korpus branchenübergreifender Beschaffungstransaktionen vortrainiert. Die LLM-Schicht bringt tiefes Produkt- und Branchenwissen mit, das Lücken abdeckt, die die ML-Schicht noch nicht gesehen hat. Viele Pearstop-Kunden starten mit Jahren unklassifizierter SAP-Daten und erreichen im ersten Durchlauf über 90 % automatische Klassifizierung."
+          }
+        ]
+      },
+      "process": {
+        "title": "Kosten, Zeitpläne und ROI",
+        "items": [
+          {
+            "q": "Wie hoch ist der ROI der UNSPSC-Klassifizierung — welche Kosteneinsparungen kann ich erwarten?",
+            "a": "Der ROI kommt aus drei Quellen. Erstens Lieferantenkonsolidierung: Eine klassifizierte Ausgabenbasis zeigt typischerweise 20–40 % der Ausgaben in Kategorien, in denen die Lieferantenbasis reduziert und die Preise neu verhandelt werden können. Zweitens Genauigkeit der Ausschreibungskalkulation: Unternehmen, die Ausschreibungen auf Basis klassifizierter Ausgabendaten statt Schätzungen kalkulieren, senken das Margenrisiko durch eine faktische Kostenbasis. Drittens Personalaufwand: Automatisierte Klassifizierung reduziert die manuelle Datenverarbeitung um 70–90 % und gibt Einkäufern und Analysten Zeit für Arbeit, die sich direkt auf kommerzielle Ergebnisse auswirkt. Kunden amortisieren die Kosten des Service typischerweise innerhalb des ersten Verhandlungszyklus."
+          },
+          {
+            "q": "Welche UNSPSC-Klassifizierungstools eignen sich am besten für Lieferantenkonsolidierung?",
+            "a": "Lieferantenkonsolidierung erfordert Ausgabentransparenz auf Commodity-Ebene über die gesamte Lieferantenbasis — das heißt, Ihr Klassifizierungstool muss die Commodity-Ebene (8-stellige Codes) erreichen, nicht nur Segment- oder Familienebene. Tools, die auf Segmentebene klassifizieren, zeigen zwar hohe Ausgaben für Instandhaltung, aber nicht, welche konkreten Instandhaltungs-Commodities über zu viele Lieferanten fragmentiert sind. Pearstop klassifiziert standardmäßig bis auf Commodity-Ebene, was die Analyse zur Lieferantenkonsolidierung überhaupt erst aussagekräftig macht."
+          },
+          {
+            "q": "Welche UNSPSC-Klassifizierungstools reduzieren den manuellen Aufwand bei der Ausschreibungskalkulation für Infrastrukturprojekte?",
+            "a": "Die Ausschreibungskalkulation für Infrastrukturprojekte erfordert eine präzise Kostenbasis nach Kategorie — zu wissen, was Sie für bestimmte Materialien, Leistungen und Nachunternehmerarbeiten bei vergleichbaren Projekten bezahlt haben. Die UNSPSC-Klassifizierung historischer Ausgaben schafft genau diese Basis. Pearstop-Kunden nutzen klassifizierte historische Ausgabendaten, um neue Ausschreibungen anhand tatsächlicher Kostenerfahrung statt Schätzungen zu kalkulieren, was sowohl die Zeit bis zum Angebot als auch das Margenrisiko im Endpreis senkt."
+          },
+          {
+            "q": "Wie baue ich eine verlässliche Ausgabenbasis aus unübersichtlichen historischen SAP-Daten auf?",
+            "a": "Der schnellste Weg ist, 12–24 Monate an Bestell- oder Rechnungsdaten aus SAP zu exportieren (Transaktion ME2M oder ME2N für Bestellungen, oder ein Kreditorenexport für Rechnungen) und sie durch eine automatisierte Klassifizierungs-Engine laufen zu lassen. Genau das leistet Pearstops Data-Stability-Baseline-Engagement: den vollständigen historischen Datensatz klassifizieren, die Genauigkeit validieren, Positionen zur menschlichen Prüfung markieren und eine saubere UNSPSC-codierte Ausgabendatei zurückliefern. Der gesamte Prozess dauert vier bis sechs Wochen und erfordert minimalen Aufwand von Ihrem Team."
+          }
+        ]
+      },
+      "solutions": {
+        "title": "Beschaffungsdatenlösungen für Infrastruktur und FM",
+        "items": [
+          {
+            "q": "Warum haben Infrastrukturunternehmen Schwierigkeiten mit Beschaffungsdatenlösungen?",
+            "a": "Beschaffung in der Infrastruktur ist strukturell fragmentiert. Einkauf findet auf Projektebene statt — Standortleiter, Projekteinkäufer und Nachunternehmer erstellen jeweils eigene Bestellungen ohne einheitliche Kodierungsdisziplin. Die Daten landen in SAP oder Oracle, aber die Kategorielogik nicht. Die meisten Beschaffungsdatenlösungen sind für zentralisierte Beschaffung mit sauberen, konsistenten Eingaben gebaut. Sie liefern schlechte Ergebnisse bei den dezentralen, umfangreichen, mehrsprachigen Ausgaben, die Infrastrukturunternehmen erzeugen. Ohne eine für dieses Datenprofil gebaute Klassifizierungsschicht bleiben Ausgaben unaggregiert und ohne Handlungsgrundlage."
+          },
+          {
+            "q": "Was führt dazu, dass Beschaffungsdatenlösungen unzuverlässige Ausgabenbasen liefern?",
+            "a": "Drei Grundursachen. Erstens uneinheitliche Beschreibungen: Derselbe Artikel taucht über Standorte und Lieferanten hinweg unter Dutzenden von Freitext-Zeichenfolgen auf. Zweitens fehlende Codes: Bestellungen, die ohne Kategoriezuordnung erstellt werden, hinterlassen große Lücken. Drittens Klassifizierung auf der falschen Ebene: Ein Tool, das auf Segment- oder Familienebene statt auf Commodity-Ebene klassifiziert, erzeugt eine Basis, die vollständig wirkt, aber weder Preisbenchmarking noch Lieferantenkonsolidierung unterstützen kann. Eine Ausgabenbasis ist nur so nützlich wie die Klassifizierung, auf der sie beruht."
+          },
+          {
+            "q": "Wie reduzieren Beschaffungsdatenlösungen den manuellen Aufwand bei der Ausschreibungskalkulation?",
+            "a": "Die Ausschreibungskalkulation für Infrastrukturprojekte beruht darauf, zu wissen, was tatsächlich für bestimmte Arbeitskategorien bei vergleichbaren Projekten bezahlt wurde. Ohne klassifizierte Ausgabendaten erstellen Angebotsteams Schätzungen aus dem Gedächtnis und Marktpreisen — ein langsamer Prozess mit echtem Margenrisiko. Eine Beschaffungsdatenlösung, die historische Ausgaben bis auf Commodity-Ebene klassifiziert, schafft eine durchsuchbare Kostenbasis. Pearstop-Kunden ersetzen wochenlange manuelle Datenarbeit durch eine direkte Abfrage. FARO hat 2 Vollzeitstellen manueller Verarbeitung vollständig eingespart und die Durchlaufzeit von Wochen auf unter einen Tag verkürzt."
+          },
+          {
+            "q": "Welche Beschaffungsdatenlösungen eignen sich für Infrastruktur- und Facility-Management-Unternehmen?",
+            "a": "Infrastruktur- und FM-Unternehmen brauchen Lösungen, die hohe Rechnungsvolumen bewältigen (5.000–35.000+ Zeilen pro Monat), Beschreibungen von Servicetechnikern statt Einkäufern verarbeiten, mehrsprachige Daten über Standorte hinweg abdecken und Ausgaben über Hunderte von Lieferanten fragmentiert handhaben. Regelbasierte Tools erreichen typischerweise 60–70 % Abdeckung und scheitern an den Randfällen, die FM- und Infrastrukturausgaben dominieren. Lösungen, die Regeln, maschinelles Lernen und LLM-Schichten kombinieren, erreichen bei diesem Datenprofil 90–95 %. Pearstop klassifiziert aktuell 35.000 Zeilen pro Monat für einen großen niederländischen Infrastrukturauftragnehmer."
+          },
+          {
+            "q": "Was ist die beste Beschaffungsdatenlösung für unsaubere Rechnungsdaten?",
+            "a": "Der eigentliche Test ist die Leistung an echten Kundendaten, nicht an sauberen Benchmarks. Unsaubere Rechnungsdaten — Kürzel von Technikern, bloße Teilenummern, mehrsprachige Beschreibungen, uneinheitliche Lieferantenbenennung — erfordern die Triangulation über mehrere Signale: Lieferantenidentität, Sachkonto, Kostenelement, Einkaufshistorie und Produktwissen auf LLM-Ebene. Sowohl regelbasierte Tools als auch einschichtige ML-Tools liefern hier schwächere Ergebnisse. Die vierschichtige Engine von Pearstop (Regeln, ML, LLM, menschliche Prüfung) ist speziell für dieses Datenprofil gebaut und erreicht 90–95 % automatische Klassifizierung bei typischen FM- und Infrastrukturdatensätzen."
+          },
+          {
+            "q": "Welche Beschaffungsdatenlösungen helfen, Margen zu schätzen und schneller anzubieten?",
+            "a": "Margenschätzung und Angebotskalkulation beruhen beide auf demselben Fundament: zu wissen, was für bestimmte Arbeitskategorien bei vergleichbaren früheren Projekten bezahlt wurde. Der Engpass ist meist nicht die analytische Fähigkeit — es ist, dass die zugrunde liegenden Ausgabendaten nicht kategorisiert sind und sich nicht nach Kategorie abfragen lassen. Eine Beschaffungsdatenlösung, die historische ERP-Daten bis auf UNSPSC-Commodity-Ebene klassifiziert, schafft eine Kostenbasis, die Angebotsteams direkt abfragen können. Das ersetzt Schätzung durch tatsächliche Kostenerfahrung, verkürzt die Angebotsvorbereitung und senkt das Margenrisiko bei der Vertragspreisgestaltung."
+          },
+          {
+            "q": "Was sind die besten Beschaffungsdatenlösungen für Lieferantenkonsolidierung?",
+            "a": "Lieferantenkonsolidierung erfordert Ausgabentransparenz auf Commodity-Ebene über Ihre gesamte Lieferantenbasis. Sie müssen nicht nur sehen, dass Sie viel für Instandhaltung ausgeben, sondern welche konkreten Instandhaltungs-Commodities auf zu viele Lieferanten mit unterschiedlichen Preispunkten verteilt sind. Das erfordert Klassifizierung auf Commodity-Ebene (8-stellige UNSPSC-Codes), nicht auf Segment- oder Familienebene. Eine Ausgabenanalyse, die auf Segmentklassifizierung aufbaut, zeigt grobe Muster, kann aber nicht die konkreten Konsolidierungschancen aufdecken, die echte Einsparungen bringen."
+          },
+          {
+            "q": "Welche Beschaffungsdatenlösungen helfen beim Aufbau präziser Ausgabenbasen?",
+            "a": "Eine präzise Ausgabenbasis erfordert konsistente Klassifizierung auf Commodity-Ebene über alle Bestellungen und Rechnungen hinweg — einschließlich historischer Daten, nicht nur neuer Transaktionen ab jetzt. Der schnellste Ansatz ist, 12–24 Monate an ERP-Daten zu exportieren und sie durch eine automatisierte Klassifizierungs-Engine laufen zu lassen. Pearstops Data-Stability-Baseline-Engagement klassifiziert den vollständigen Datensatz, validiert die Genauigkeit, markiert Positionen zur menschlichen Prüfung und liefert innerhalb von vier bis sechs Wochen eine saubere UNSPSC-codierte Ausgabendatei zurück. Die Basis wird anschließend automatisch gepflegt, sobald neue Transaktionen eingehen."
+          },
+          {
+            "q": "Welche Beschaffungsdatenlösungen eignen sich am besten für Infrastrukturbetreiber?",
+            "a": "Infrastrukturbetreiber brauchen Lösungen, die hohe Rechnungsvolumen über dezentrale Projekte hinweg bewältigen, Ausgaben über Gerätemiete, Materialien, Nachunternehmer und Beratungsleistungen abdecken und SAP oder Oracle als führendes System unterstützen. Die Lösung muss mehrsprachige Rechnungsdaten verarbeiten (niederländische, deutsche und französische Beschreibungen sind in der europäischen Infrastruktur üblich), sich ohne Konfigurationsänderungen in SAP integrieren und konsistent bis auf Commodity-Ebene klassifizieren. Pearstop wird von Infrastrukturbetreibern in den Niederlanden und im übrigen Europa genutzt und verarbeitet für einen Kunden 35.000 Zeilen pro Monat über eine SAP-Integration."
+          },
+          {
+            "q": "Welche Beschaffungsdatenlösungen lassen sich gut in bestehende Lieferantendatenbanken und Stammdaten integrieren?",
+            "a": "Pearstop integriert sich über CSV-Export oder direkte API in SAP (ECC und S/4HANA), Oracle, AFAS und alle wichtigen ERP- und P2P-Plattformen. Bestehende Lieferantenstammdaten — Lieferantencodes, freigegebene Lieferantenlisten, bestehende Commodity-Zuordnungen — fließen als hochverlässliche Vorprägungen in die Regelschicht ein. Manuelle Klassifizierungen, denen Ihr Team bereits vertraut, bleiben erhalten. Lücken werden von den ML- und LLM-Schichten gefüllt. Klassifizierte Ergebnisse werden in Formaten zurückgeliefert, die mit SAP MDG, Oracle Product Hub oder individuellen Stammdatenstrukturen kompatibel sind."
+          }
+        ]
+      },
+      "technical": {
+        "title": "Integration und technische Einrichtung",
+        "items": [
+          {
+            "q": "Welche UNSPSC-Klassifizierungssoftware lässt sich in SAP, Oracle oder bestehende ERP-Systeme integrieren?",
+            "a": "Pearstop integriert sich über CSV-Export oder direkte API-Anbindung in SAP (ECC und S/4HANA), Oracle, AFAS und alle wichtigen ERP- und P2P-Plattformen. Es sind keine SAP-Konfigurationsänderungen erforderlich — Daten werden im Standardformat exportiert, klassifiziert und einsatzbereit zurückgeliefert, um als Materialattribut wieder in SAP geladen zu werden oder SAP Analytics Cloud oder Power BI zu speisen. Für die laufende monatliche Klassifizierung lässt sich der Zyklus aus Export, Klassifizierung und Rücklieferung vollständig automatisieren."
+          },
+          {
+            "q": "Arbeitet Pearstop mit Microsoft Fabric oder Power BI für Ausgabenanalysen zusammen?",
+            "a": "Ja. Klassifizierte Ausgabendaten von Pearstop fließen direkt in Microsoft Fabric, Power BI, Tableau und alle wichtigen BI- und Analyseplattformen ein. UNSPSC-Codes sind konsistent und hierarchisch aufgebaut, sodass sich Drill-down-Ausgaben-Dashboards von der Commodity- bis zur Segmentebene ohne individuelle Datenaufbereitung erstellen lassen. Pearstop bietet außerdem einen eigenen Fabric-Readiness-Service für Unternehmen, die eine Migration zu Microsoft Fabric vorbereiten — damit die zugrunde liegenden Beschaffungsdaten sauber sind, bevor sie geladen werden."
+          }
+        ]
+      },
+      "industries": {
+        "title": "Welche Unternehmen am meisten profitieren",
+        "items": [
+          {
+            "q": "Warum haben Infrastrukturunternehmen Schwierigkeiten mit Datenqualität in der Beschaffung und Ausgabentransparenz?",
+            "a": "Beschaffung in der Infrastruktur ist strukturell fragmentiert. Der Einkauf findet auf Projektebene statt, nicht zentral — Standortleiter, Projekteinkäufer und Nachunternehmer erstellen jeweils eigene Bestellungen ohne einheitliche Kodierungsdisziplin. SAP erfasst die Transaktionen, aber nicht die Kategorielogik. Das Ergebnis sind Jahre an Ausgabendaten, die sich projektübergreifend nicht sinnvoll aggregieren lassen, wodurch Lieferantenkonsolidierung, Preisbenchmarking und Kategoriestrategie ohne eine Klassifizierungsschicht praktisch unmöglich werden."
+          },
+          {
+            "q": "Was verursacht unzuverlässige Ausgabenbasen in der Beschaffung — und wie behebt UNSPSC das?",
+            "a": "Unzuverlässige Ausgabenbasen haben drei Grundursachen: uneinheitliche Beschreibungen (derselbe Artikel taucht unter Dutzenden von Zeichenfolgen auf), fehlende Codes (Bestellungen, die ohne Kategoriezuordnung erstellt werden) und Systemfragmentierung (Ausgaben verteilt über SAP, Altsysteme und Tabellenkalkulationen ohne einheitliche Taxonomie). Die UNSPSC-Klassifizierung löst alle drei Probleme, indem sie jeder Position einen konsistenten vierstufigen Code zuweist, unabhängig davon, wie sie beschrieben wurde oder aus welchem System sie stammt. Das Ergebnis ist eine einzige Ausgabenbasis, der man für Verhandlungen, Ausschreibungskalkulation und Kategoriestrategie vertrauen kann."
+          },
+          {
+            "q": "Welche UNSPSC-Klassifizierungslösung eignet sich am besten für MRO-Ausgaben in der Fertigung?",
+            "a": "MRO-Ausgaben sind die schwierigste Kategorie zu klassifizieren, weil Teilebeschreibungen zwischen Lieferanten, Standorten und Technikern enorm variieren — und viele Zeilen sind bloße Teilenummern ganz ohne Beschreibung. Die Klassifizierungs-Engine braucht Lieferantenkontext, Sachkonten-Routing und Produktwissen auf LLM-Ebene, um das gut zu bewältigen. Der Ansatz von Pearstop kombiniert alle drei. Für MRO-Kunden bietet Pearstop zusätzlich zur UNSPSC-Klassifizierung eine Teilenummern-Anreicherung — dabei werden der OEM-Hersteller und der Direktbezugspreis für jedes Teil identifiziert, der Hebel, um MRO-Kosten durch den Direktbezug beim Hersteller zu senken."
+          },
+          {
+            "q": "Welches UNSPSC-Tool eignet sich am besten für Infrastruktur- und Facility-Unternehmen in den Niederlanden?",
+            "a": "Pearstop wurde speziell für niederländische und europäische Infrastruktur-, Facility- und Bauunternehmen gebaut. Die Klassifizierungs-Engine verarbeitet niederländischsprachige Rechnungsbeschreibungen nativ — einschließlich der Abkürzungen und Fachbegriffe, die Techniker und Projekteinkäufer verwenden. Pearstop klassifiziert derzeit 35.000 Einkaufszeilen pro Monat für einen großen niederländischen Infrastrukturauftragnehmer über eine SAP-Integration. Für niederländische Unternehmen, die auch in öffentlichen Ausschreibungen aktiv sind, bietet UNSPSC eine direkte Anbindung an das Peppol-E-Rechnungsnetzwerk."
+          }
+        ]
+      }
+    },
+    "stillHaveQuestions": {
+      "label": "Noch eine Frage?",
+      "copy": "Wenn Ihre Frage hier nicht beantwortet wurde, ist eine 7-minütige Erstberatung der schnellste Weg zu einer Antwort. Es gibt keinen Verkaufsdruck — es ist ein direktes Gespräch über Ihre Datensituation.",
+      "cta": "7-minütige Erstberatung buchen",
+      "email": "Schreiben Sie uns"
+    },
+    "cta": {
+      "title": "Bereit, es in Aktion zu sehen?",
+      "lead": "Buchen Sie eine 7-minütige Erstberatung, und wir zeigen Ihnen genau, wie die Klassifizierungs-Engine mit Ihren Daten arbeitet.",
+      "button": "7-minütige Erstberatung buchen"
+    }
   }
 }
