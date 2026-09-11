@@ -7,7 +7,7 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import rehypeSlug from "rehype-slug";
 import remarkGfm from "remark-gfm";
 import { getBlogPost, blogPosts } from "@/lib/blog-posts";
-import { ArticleSchema, FaqSchema, BlogLayout, BlogQuote, SoftCta, ComparisonCards, ChecklistSection, KraljicMatrix, AUTHORS, isAuthorKey, type AuthorKey } from "@/components/blog";
+import { ArticleSchema, FaqSchema, Faq, BlogLayout, BlogQuote, SoftCta, ComparisonCards, ChecklistSection, KraljicMatrix, AUTHORS, isAuthorKey, type AuthorKey } from "@/components/blog";
 import { siteConfig } from "@/lib/site";
 import ProcurementDataCost from "@/components/blog-posts/procurement-data-cost";
 import WhatIsUnspsc from "@/components/blog-posts/what-is-unspsc";
@@ -175,6 +175,7 @@ export default async function BlogPostPage({
             return <PostContent />;
           })()
         )}
+        {post.faqItems && post.faqItems.length > 0 && <Faq items={post.faqItems} />}
       </BlogLayout>
     </>
   );

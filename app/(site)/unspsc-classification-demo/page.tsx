@@ -56,7 +56,7 @@ const FAQ_ITEMS = [
   },
   {
     q: "How is UNSPSC different from eCl@ss or CPV?",
-    a: "UNSPSC, eCl@ss and CPV are all product and service classification standards, but they serve different purposes. UNSPSC is the most widely used for spend analysis and category management, especially in North America and increasingly in Europe. eCl@ss adds detailed technical attributes per product, common in German manufacturing. CPV is used specifically for EU public procurement tenders. Most organisations only need one, chosen based on their ERP system and reporting requirements.",
+    a: "UNSPSC, eCl@ss and CPV are all procurement classification standards, but they serve different purposes. UNSPSC is the most widely used for spend analysis and category management, especially in North America and increasingly in Europe. eCl@ss adds detailed technical attributes per product, common in German manufacturing. CPV is used specifically for EU public procurement tenders. Most organisations only need one, chosen based on their ERP system and reporting requirements.",
   },
   {
     q: "How can I use AI for UNSPSC classification?",

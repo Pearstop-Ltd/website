@@ -53,29 +53,3 @@ We have not tested this on every ERP configuration a manufacturer might run. Wha
 ## What the first step actually looks like
 
 Start with the supplier list, before touching a single category. If two sites turn out to be buying from the same distributor under different names, that is usually the first finding. Then decide how deep the taxonomy needs to go. Most manufacturers do not need commodity-level detail everywhere. They need it where they are actually negotiating, and family or class level everywhere else. Write the edge cases down with the people who actually buy: what counts as MRO versus capital spend, how subcontracted labour gets coded, what happens to freight and surcharge lines that are not really a product at all. Then classify, score confidence, and route what the system is unsure about to a person, because that is where the rules that stop the same ambiguity recurring get written down.
-
-## Frequently asked questions
-
-**Why does a manufacturer with years of SAP history still have unclassified spend data?**
-
-Because item descriptions vary by whoever entered the purchase order, supplier names drift across plants, and categories were set up locally when the ERP was configured. It is a structure problem, not a missing data problem: the transactions exist, but nobody built the taxonomy that lets anyone query them consistently.
-
-**How much does poor master data cost manufacturers?**
-
-Poor master data costs organisations an average of 12.9 million dollars a year. For manufacturers running material master records across multiple plants and ERP instances, the same part often exists under several different material numbers, producing duplicate purchase orders and redundant inventory.
-
-**What accuracy do legacy classification tools typically achieve on spend data?**
-
-Legacy classification tools generally land at 75 to 85 percent accuracy on structured spend. The remaining 15 to 25 percent is usually tail spend, services, and P-card transactions, which is exactly where supplier consolidation and price benchmarking would help most.
-
-**What are the steps to classify unstructured SAP procurement data?**
-
-Three steps: resolve the supplier list to find duplicate suppliers bought under different names, apply a constrained taxonomy so a part cannot be given a category outside the standard, then classify every line and route uncertain cases to a person through confidence scoring.
-
-**Why not use a general AI tool to classify SAP spend data instead?**
-
-A general-purpose model invents category codes that do not exist in your taxonomy and classifies the same description differently across runs, so it produces an answer but not a repeatable one. On a live SAP feed that needs to stay accurate as new purchase orders land daily, that inconsistency is not tolerable.
-
-**How does Pearstop classify manufacturing procurement data in SAP?**
-
-Pearstop resolves the supplier list, applies a constrained taxonomy, encodes the categorisation rules the procurement team already uses, and classifies the backlog. On one mid-sized manufacturer's SAP export, this auto-classified 95 percent of lines directly against the existing SAP structure.

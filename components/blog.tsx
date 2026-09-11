@@ -48,6 +48,30 @@ export function FaqSchema({ items, slug }: { items: { q: string; a: string }[]; 
   return <Script id={`faq-schema-${slug}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />;
 }
 
+// Renders a blog post's FAQ as the same foldable `<details>` accordion used
+// elsewhere on the site (industries, unspsc-code-lookup, unspsc-classification-*
+// pages), reusing the existing faq-list/faq-item/faq-q/faq-a classes so it
+// looks identical to those. `faqItems` in lib/blog-posts.ts is the single
+// source of truth for the questions and answers; MDX post bodies no longer
+// carry their own "## Frequently asked questions" prose section, so changing
+// this component is the one place to change to restyle every post's FAQ.
+export function Faq({ items }: { items: { q: string; a: string }[] }) {
+  if (!items || items.length === 0) return null;
+  return (
+    <section>
+      <h2 id="frequently-asked-questions">Frequently asked questions</h2>
+      <div className="faq-list">
+        {items.map((item, i) => (
+          <details key={i} className="faq-item">
+            <summary className="faq-q">{item.q}</summary>
+            <p className="faq-a">{item.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 export type AuthorKey = "stephanie" | "richard" | "rae" | "seb" | "sjoerd" | "dania" | "neharika" | "team";
 
 export function isAuthorKey(value: string): value is AuthorKey {

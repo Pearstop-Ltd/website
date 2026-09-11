@@ -10,7 +10,7 @@ export function UnspscLookupCta({ prefix = "" }: { prefix?: string }) {
             Not sure which UNSPSC code to use?
           </h3>
           <p style={{ color: "rgba(255,255,255,0.7)", fontSize: "1rem", lineHeight: 1.6, margin: "0 0 2rem" }}>
-            Paste any product or service description and get the correct 8-digit code instantly — or explore the full taxonomy tree to understand the hierarchy.
+            Paste any product or service description and get the correct 8-digit code instantly — or explore the full UNSPSC tree to understand the hierarchy.
           </p>
           <div style={{ display: "flex", gap: "0.75rem", justifyContent: "center", flexWrap: "wrap" }}>
             <Link
@@ -50,7 +50,7 @@ export function UnspscLookupCta({ prefix = "" }: { prefix?: string }) {
               }}
               className="unspsc-demo-btn"
             >
-              Explore the taxonomy tree
+              Explore the UNSPSC tree
             </Link>
           </div>
         </div>

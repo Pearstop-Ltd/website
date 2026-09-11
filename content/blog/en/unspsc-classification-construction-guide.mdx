@@ -77,29 +77,3 @@ Pearstop runs this as a managed pipeline: taxonomy constrained, supplier context
 The practical reason to use a pipeline rather than a chatbot is cost, and it is not the cost people expect. Teams who try this internally usually arrive having already spent a meaningful amount on tokens and several weeks of a buyer's time, with output they do not trust. The spend was not wasted on the classification. It was spent discovering the guardrails.
 
 The other comparison worth making is against hiring. Classifying a large backlog by hand is a full-time analyst role, and it never ends, because new lines arrive every month. The question is not whether a person or a machine is more accurate on a single line. It is whether you want a buyer spending their week on data coding or on the negotiations the data is supposed to inform.
-
-## Frequently asked questions
-
-**What does UNSPSC stand for?**
-
-UNSPSC stands for United Nations Standard Products and Services Code. It is a classification system designed as a single standard for procurement worldwide. It covers goods and services across every industry, including construction, manufacturing and facilities management, and organises them into a four-level hierarchy running from a broad segment down to an individual commodity.
-
-**How many levels does UNSPSC have?**
-
-UNSPSC has four levels: segment, family, class and commodity. Segment is the broadest grouping, such as structures and building components. Commodity is the individual item, such as an aluminium I profile. Most organisations classify to family or class level for reporting and only go to commodity level where a specific category is being actively negotiated.
-
-**Is UNSPSC suitable for construction procurement?**
-
-Yes. UNSPSC expands into construction-specific branches covering structural elements, building materials, HVAC equipment and subcontracted services. Because the standard is used across industries and borders, suppliers and clients often already hold codes against their own catalogues. That makes it easier to compare spend externally than a taxonomy built in-house for one company.
-
-**Can AI classify purchase orders to UNSPSC codes accurately?**
-
-It can, but not with a general-purpose chatbot alone. Language models invent codes that do not exist in the taxonomy, which destroys the repeatability the exercise depends on. Accurate classification requires the taxonomy loaded as a constrained reference, supplier context weighted against the line description, company-specific rules, and a review step for low-confidence lines.
-
-**How long does it take to classify a backlog of purchase orders?**
-
-A pilot on roughly one year of data takes about four weeks, which allows time to build the structures, review initial findings and adjust the rules. A full historical backlog runs after the pilot, and the timeline depends on how much custom configuration the data needs rather than on the number of lines involved.
-
-**How does Pearstop handle UNSPSC classification?**
-
-Pearstop loads the UNSPSC taxonomy as a constrained reference so codes cannot be invented, weights supplier context against the line description, applies company-specific rules agreed with the procurement team, and routes low-confidence lines to human review. Corrections feed back into the pipeline so the same ambiguous line does not need deciding twice.

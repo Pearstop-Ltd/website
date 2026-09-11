@@ -49,29 +49,3 @@ The second step is applying a taxonomy that is fixed, not invented per project. 
 The third step is classifying continuously, not as a one-off exercise. New projects open every quarter with new cost codes and new subcontractors, so the classification work has to run against live purchase orders as they land, not just against a fixed historical backlog. This is also where starting years ahead pays for itself: a taxonomy tested against a new project opening every few months, for two or three years running, has already been forced to handle the trade categories, hire arrangements, and naming quirks a migration would otherwise surface all at once, in the middle of go-live testing.
 
 Ongoing monthly classification of live SAP purchase orders, run years before any migration date is even confirmed, is what Pearstop currently does for a major infrastructure contractor: resolving supplier identity and classifying procurement lines out of SAP as an ongoing process rather than a single backlog exercise, so the categories are already stable for construction and infrastructure teams long before a system change forces the question.
-
-## Frequently asked questions
-
-**Why should SAP data cleanup start years before a construction firm actually migrates?**
-
-Because classification decisions made in a hurry, in the final months before go-live, tend to get made by whoever is available rather than by someone who understands the cost codes. Starting years earlier means the taxonomy gets tested against real purchase orders from new projects over time, so the edge cases get caught and corrected long before a deadline forces a rushed decision.
-
-**Can Microsoft Copilot classify construction purchase order data accurately?**
-
-Not reliably at scale. Copilot can produce a plausible category for an individual line, but it has no memory of previous decisions and nothing forces it to check its answer against a fixed list of categories. Feed it the same line description from two different projects and it can return two different answers, or invent a category that does not exist in the firm's own cost structure.
-
-**Why is construction procurement data harder to classify than manufacturing spend?**
-
-Manufacturing typically classifies against a material master that stays largely fixed across quarters. Construction spend is split across live projects that each open with their own cost code structure, their own project manager, and their own naming conventions for subcontractors and plant hire, so the same category can be described three different ways depending on which project the line came from.
-
-**When does SAP ECC lose mainstream support, and what does that mean for the migration timeline?**
-
-SAP has set 31 December 2027 as the end of mainstream maintenance for ECC. A full migration to S/4HANA typically takes 18 to 36 months, which leaves limited room for data cleanup if a construction firm waits until the migration project itself begins to look at the state of its purchase order and cost code data.
-
-**What happens if a construction firm waits until the run-up to migration to fix its data?**
-
-Data quality problems usually surface during user acceptance testing, once the business tries to run reports against categories that were never actually consistent across projects. At that point the team is also testing the new system and training users, so classification decisions get rushed rather than properly resolved, and the same inconsistencies often carry straight into the new system.
-
-**How does Pearstop help construction firms prepare procurement data for an SAP migration?**
-
-Pearstop resolves supplier and subcontractor identity across projects, applies a taxonomy that holds its meaning regardless of which project a line came from, and classifies purchase orders on an ongoing basis rather than as a one-off backlog exercise. This is the approach currently running with a major infrastructure contractor, classifying procurement lines out of SAP every month as new projects open.

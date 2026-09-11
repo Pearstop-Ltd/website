@@ -53,25 +53,3 @@ It also changes what happens after the engagement ends. A manually built cube is
 Pearstop runs that classification layer for consultancies who want to keep their delivery model and stop billing analyst hours for the coding step, freeing the consultant to sell the strategy work a spreadsheet was never going to do.
 
 For a consultancy weighing this up, the decision is not whether AI replaces the judgement work. It does not. It is whether the classification step, the part that was never really judgement to begin with, keeps consuming a senior person's week on every engagement, or becomes infrastructure the consultancy runs underneath the work it was actually hired to do.
-
-## Frequently asked questions
-
-**Can a procurement consultancy offer spend cube building as a service using AI?**
-
-Yes. A consultancy can run spend classification through an AI pipeline instead of manual coding, then apply its own judgement to the strategy and negotiation work around it. The classification step becomes infrastructure the consultancy runs under its own name, with a constrained taxonomy and human review on the lines the system is unsure about, rather than a purely manual build.
-
-**How do you stop an AI classification pipeline from hallucinating categories?**
-
-By constraining what the model is allowed to output. A pipeline that can only select from the fixed codes in a taxonomy, rather than generate a plausible sounding one, cannot invent a category that does not exist. Paired with confidence scoring that flags uncertain lines for human review, guardrails like this have been shown to cut hallucination rates by roughly 70 to 90 percent compared with an unguarded setup.
-
-**What is a fixed fee plus token cost pricing model for spend cube work?**
-
-It is a pricing structure where an engagement up to an agreed line item threshold is billed at one fixed fee, and any volume above that threshold is billed per token or per line classified. It replaces a day rate model that charges for analyst hours with a structure that reflects the actual cost of running a pipeline: a fixed setup cost plus a variable cost tied to data volume.
-
-**How does a consultancy trust AI classified spend enough to present it to a client?**
-
-Trust comes from the guardrails, not the model itself. A constrained taxonomy stops the system inventing codes, confidence scoring separates lines it is sure about from lines it is not, and uncertain lines go to a person before anything reaches a client deliverable. A consultancy is checking the flagged exceptions, not re verifying every line, which is what makes the output defensible under its own name.
-
-**How does Pearstop help procurement consultancies build spend cubes faster?**
-
-Pearstop runs the classification layer that sits under a consultancy's delivery work: a constrained taxonomy so codes cannot be invented, supplier resolution, and confidence scoring that routes uncertain lines to review. Consultancies use it to produce the classified spend cube in less time than a manual build, and spend their own hours on the category strategy and negotiation the client actually engaged them for.

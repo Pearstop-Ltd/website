@@ -62,6 +62,11 @@ const _allBlogPosts: BlogPost[] = [
       { id: "maintaining", label: "Classificatie onderhouden" },
     ],
     softCta: "template",
+    faqItems: [
+      { q: "How do I look up a specific UNSPSC code?", a: "Paste the product or service description into a UNSPSC lookup tool and it returns the matching 8-digit commodity code along with the segment, family and class above it. That works for checking one line by hand. A full spend file or invoice history needs the same lookup applied automatically across every line, which is the classification work described above." },
+      { q: "Is there a way to browse the whole UNSPSC taxonomy at once, not just look up one code?", a: "Yes. The four-level hierarchy in the table above, segment, family, class and commodity, is the same structure the full UNSPSC taxonomy uses end to end. An interactive tree lets you click down from a broad segment to a single commodity code without knowing the code in advance, which is useful for scoping a category before you have real line-item data to classify." },
+      { q: "Is UNSPSC the only procurement classification standard?", a: "No. UNSPSC is the most widely used standard for spend analysis and category management, but eCl@ss and CPV exist for different purposes: eCl@ss adds technical attributes common in German manufacturing, and CPV is mandatory for EU public sector tenders. Most hard services companies only need UNSPSC, chosen because it matches the ERP and reporting setup described above." },
+    ],
   },
   {
     slug: "asset-register-problems",
@@ -291,6 +296,13 @@ const _allBlogPosts: BlogPost[] = [
       { id: "timing", label: "Timing" },
     ],
     softCta: "discovery",
+    faqItems: [
+      { q: "Can you classify data from SAP S/4HANA as well as older ECC versions?", a: "Yes. The classification engine works on exported data regardless of SAP version. The export format is the same for both ECC and S/4HANA." },
+      { q: "What if our material descriptions are in Dutch or German?", a: "Dutch and German-language descriptions are handled natively. The LLM layer has strong multi-language capability, and the rules layer can be configured with language-specific patterns." },
+      { q: "Do you need access to our SAP system?", a: "No. Classification runs on an export. Pearstop never needs direct access to your ERP environment." },
+      { q: "What if we have both SAP and non-SAP systems?", a: "Data from multiple systems can be merged and classified in a single run, with a unified taxonomy applied across all sources." },
+      { q: "Can our team look up a UNSPSC code manually inside SAP before running a full classification project?", a: "Yes, for spot checks. A UNSPSC lookup tool works from a single line description the same way it would outside SAP, since it does not need system access to return a code. That is useful for checking one material master record or one open question from a buyer. It is not a substitute for classifying the full purchase order and invoice history, which is where the automated engine described above does the work." },
+    ],
   },
   {
     slug: "unspsc-classification-accuracy",
@@ -350,6 +362,11 @@ const _allBlogPosts: BlogPost[] = [
       { id: "downstream", label: "De neerwaartse waarde" },
     ],
     softCta: "discovery",
+    faqItems: [
+      { q: "Why is MRO spend harder to classify than other procurement categories?", a: "Part descriptions are written by engineers for engineers, not for a category manager trying to compare spend. The same physical part gets a different string from every site, every engineer, and every supplier catalogue, and a bare part number with no description is common. Manual review of a typical MRO spend file finds 30–50% of lines either unclassified, inconsistently classified, or parked in a catch-all category." },
+      { q: "Which UNSPSC segments cover MRO spend?", a: "Most MRO spend falls across Segment 23 (Industrial Machinery and Equipment: pumps, compressors, motors, conveyors), Segment 24 (Power Generation and Distribution: electrical components, switchgear, cables), Segment 26 (Electronic Components and Supplies: sensors, controllers, relays), Segment 31 (Manufacturing Components and Supplies: fasteners, seals, gaskets, bearings), Segment 47 (Cleaning and Janitorial Supplies), and Segments 72 and 73 for maintenance labour and contracted fabrication work." },
+      { q: "Should I classify MRO spend with UNSPSC codes or manufacturer part numbers?", a: "Both, for different jobs. Manufacturer part numbers (MPNs) are supplier-specific, go obsolete when a manufacturer discontinues a product, and cannot answer a category-level question like how much was spent on bearings last year. UNSPSC codes stay stable across supplier changes and enable that category-level view. Enrich spend data with MPNs where exact duplicate identification matters, and apply UNSPSC codes for category-level spend analysis, they are complementary, not competing." },
+    ],
   },
   {
     slug: "unspsc-category-management",
@@ -373,6 +390,11 @@ const _allBlogPosts: BlogPost[] = [
       { id: "where-to-start", label: "Waar te beginnen" },
     ],
     softCta: "discovery",
+    faqItems: [
+      { q: "Do we need UNSPSC classification if we already have a well-maintained chart of accounts?", a: "A chart of accounts gives you financial visibility, which GL codes carry which spend. UNSPSC classification gives you commodity visibility, what was actually purchased. These answer different questions. A GL account for \"maintenance materials\" might contain fasteners, lubricants, seals, and electrical components. Only commodity-level classification separates those into actionable categories. Both are necessary; neither replaces the other." },
+      { q: "How long does it take to get from raw invoice data to a usable classified spend dataset?", a: "With automated classification, the first pass on a historical dataset typically takes days, not weeks. For Strukton's 35,000 lines per month, the initial classification run produces results within 48 to 72 hours. The review queue, items below the confidence threshold, requires additional time from a buyer or category manager, but that workload is typically 5 to 10 percent of total lines, not the full dataset." },
+      { q: "What is the minimum data quality required to classify at commodity level?", a: "The classification engine works best with supplier name, a description field, and a GL code or cost element. Description quality is the most important variable. Even abbreviated descriptions (\"F7 filter 400mm\") provide enough signal for confident classification in most cases. Completely blank description fields or single-character entries require either enrichment from another data source or human review. In practice, fully blank descriptions account for fewer than 5 percent of lines in a typical SAP or Oracle export." },
+    ],
   },
   {
     slug: "maverick-spend-unspsc",
@@ -396,6 +418,11 @@ const _allBlogPosts: BlogPost[] = [
       { id: "the-mro-case", label: "De MRO-casus" },
     ],
     softCta: "discovery",
+    faqItems: [
+      { q: "How do we know whether our maverick spend is a data visibility problem or a genuine compliance problem?", a: "The test is whether procurement can currently show, at commodity level, what is being purchased outside negotiated frameworks. If that analysis does not exist, if the answer is \"we think it is significant but we cannot quantify it\", you have a visibility problem. Compliance problems can only be assessed after visibility problems are solved. Classification is the first step." },
+      { q: "We have an approved vendor list. Does that not already control maverick spend?", a: "An approved vendor list controls which suppliers are authorised. It does not control whether purchases from those suppliers are going through negotiated contracts at agreed pricing, versus spot purchases at list price from the same supplier. Classification of transaction data distinguishes between these: you can see, for each commodity, whether the unit price paid aligns with the framework rate. Approved vendor lists create the policy; spend classification measures compliance with it." },
+      { q: "At what spend volume does a classification and maverick spend analysis become worthwhile?", a: "As a rough guide: if you have more than 20 sites or projects, or more than 5 million euros in annual MRO and maintenance spend, or more than 500 active suppliers, the analysis will almost certainly surface recoverable spend that exceeds the cost of running it. The MRO manufacturer case above involved 40,000 parts and produced 200 thousand euros in annual savings. Smaller datasets produce proportionally smaller findings, but the cost of a classification exercise scales with data volume, the analysis itself is not expensive relative to what it typically finds." },
+    ],
   },
   {
     slug: "win-ai-race-procurement-data-quality",
@@ -1232,7 +1259,7 @@ const _allBlogPosts: BlogPost[] = [
     description: "Filter changes are a predictable consumable cost, but most HVAC codes blend them with reactive parts spend. Here is why splitting them matters.",
     publishedAt: "2026-09-10",
     category: "Data Quality",
-    tags: ["HVAC maintenance", "UNSPSC classification", "hard FM", "air filtration", "spend classification"],
+    tags: ["HVAC maintenance", "UNSPSC", "UNSPSC classification", "hard FM", "air filtration", "spend classification"],
     readingTime: 7,
     tocItems: [
       { id: "air-filters-get-buried-in-hvac-spend", label: "Air filters buried in HVAC spend" },

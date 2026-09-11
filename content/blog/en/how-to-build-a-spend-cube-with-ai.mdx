@@ -81,29 +81,3 @@ Three situations make it obvious.
 The economics differ in structure, not just in size. A consultant is a project fee that buys a point-in-time answer. A pipeline is a setup cost plus a volume-based running cost, and the marginal cost of next month is close to zero.
 
 The two are not really competing. The most sensible arrangement we see is a consultant running the strategy and the negotiations, with the cube built and maintained underneath by a pipeline, so that year two does not start from a blank sheet.
-
-## Frequently asked questions
-
-**What is a spend cube in procurement?**
-
-A spend cube is procurement spend organised across several dimensions at once, so it can be sliced from any angle. The standard dimensions are supplier, category and business unit or cost centre, with time as a fourth. It answers who bought what, from whom, and when, without anyone rebuilding a spreadsheet each time.
-
-**What data do you need to build a spend cube?**
-
-You need line-level transaction data, not summary totals. The minimum useful export contains a document number, a date, a supplier name and number, the free-text line description, quantity, unit price, total value, currency, and a cost centre or entity reference. An internal material or product number, where one exists, materially improves accuracy.
-
-**How long does it take to build a spend cube?**
-
-A pilot on around one year of data takes roughly four weeks, including time to review findings and adjust the classification rules before the full run. Extracting and cleaning the source data is usually the slowest part and depends on the finance team, not the classification method. A full historical backlog follows once the rules are settled.
-
-**Is it cheaper to build a spend cube with AI or a consultant?**
-
-AI is cheaper for the classification work and cheaper again for keeping the cube current, because the marginal cost of the next month of data is close to zero. A consultant costs more per exercise but includes negotiation strategy and execution support that a pipeline does not provide. The two solve different problems.
-
-**Can ChatGPT or Copilot classify procurement spend data?**
-
-Not reliably at scale. General assistants invent category codes that do not exist in the taxonomy, classify the same description differently across runs, and give no indication of how confident they are. They are useful for exploring a few hundred lines. They do not produce the repeatability a spend cube depends on.
-
-**How does Pearstop build a spend cube?**
-
-Pearstop ingests line-level data, resolves the supplier list against a reference database, applies a constrained taxonomy so codes cannot be invented, encodes the rules agreed with the procurement team, and routes low-confidence lines to human review. Corrections feed back into the pipeline, and the cube updates as new data arrives rather than being rebuilt.

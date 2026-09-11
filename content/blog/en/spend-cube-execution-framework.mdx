@@ -65,29 +65,3 @@ In a consulting engagement, the decision sits with the analyst doing the classif
 Three moments tend to push a company from wanting a spend cube to actually running one continuously. An ERP migration, because there is no reason to load unstructured history into a new system when new purchase orders could be coded correctly from day one. A UNSPSC or taxonomy mandate coming from a parent company or a major client, which turns classification from a nice-to-have into a contractual requirement. And a general AI tool someone already tried on the spend file, which classified the first fifty lines convincingly and then contradicted itself on the fifty-first, because a chat interface has no constrained taxonomy and no memory of the rule it applied five minutes earlier.
 
 None of this replaces the ERP or the CAFM system a company already runs. The pipeline sits alongside it, feeding classified, structured spend back into the systems finance and procurement already use.
-
-## Frequently asked questions
-
-**What is the spend cube methodology in procurement?**
-
-The spend cube methodology organises procurement spend across three dimensions at once: supplier, category and business unit, layered with time so trends are visible alongside totals. It sits at the front of the wider strategic sourcing process, providing the baseline used to profile a category and assess the supply market before building a sourcing strategy.
-
-**How long does it take to build a spend cube manually?**
-
-A manual spend cube typically takes six to twelve weeks when data is spread across multiple systems, because cleaning and reconciling the source extract takes longer than the classification itself. Most of that time goes to resolving supplier names, fixing missing fields and reconciling currencies, not to deciding which category each line belongs to.
-
-**Why do spend cubes go out of date so quickly?**
-
-Spend cubes go out of date because the classification rules used to build them usually exist only in the heads of the analysts who ran the engagement. New invoices keep arriving unclassified after delivery, and nobody left in the business knows how the ambiguous lines were coded, so the cube stops reflecting reality within months unless someone recommissions the exercise.
-
-**Can AI replace a strategic sourcing consultancy for spend analysis?**
-
-Not for the whole engagement. AI replaces the manual classification work inside a spend cube, the part that takes weeks and decays after delivery, but it does not replace the judgement of designing a sourcing strategy, running a negotiation or being accountable for a savings number. The two are usually best combined rather than treated as alternatives.
-
-**How does Pearstop build and maintain a spend cube with AI?**
-
-Pearstop resolves the supplier list against a reference database, classifies every spend line against a constrained taxonomy so codes cannot be invented, and routes low-confidence lines to a person for review. Corrections feed back into the rules, and the cube updates as new transactions arrive instead of being rebuilt at the next engagement.
-
-**What data is needed to run a spend cube through an AI pipeline?**
-
-Line-level transaction data is needed, not summary totals: a document number, date, supplier name, the free-text description, quantity, unit price, total value, currency and a cost centre or entity reference. An internal material number, where one exists, improves accuracy because it removes ambiguity free text alone cannot resolve.

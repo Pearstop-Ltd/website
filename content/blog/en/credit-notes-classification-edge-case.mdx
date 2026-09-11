@@ -45,29 +45,3 @@ In practice, the fix is not clever modelling, it is a review queue that catches 
 Under 10 percent of lines typically land in the review queue for classification work across procurement and asset data, for teams that need every category total to be traceable back to a real decision rather than a guess. A person with visibility into the account, not just the line item, resolves the credit note against the original transaction it belongs to, and that decision gets fed back so the same supplier's future credit notes are handled faster next time.
 
 The queue is not a workaround for a model that is not good enough yet. Industry-wide, invoice exception rates that require manual handling run in the 10 to 25 percent range even in automated accounts payable systems, and best-in-class operations still route a meaningful share of exceptions to a person rather than force an automatic match. A review queue built around genuinely ambiguous cases, credit notes chief among them, is the pragmatic answer that speed and reliability actually require. An elegant model that guesses is worse than a plain one that knows what it does not know.
-
-## Frequently asked questions
-
-**Why do credit notes get misclassified by automated classification systems?**
-
-A credit note usually corrects, reverses, or rebates a different, earlier transaction rather than describing a purchase in its own right. Automated classifiers read the line description and PO context in front of them, and that context describes the correction, not the original purchase category. Without a reliable link to the earlier line, the system has no sound basis for assigning a category, so guessing produces an unverified result.
-
-**What is the difference between a credit note and an adjustment in procurement data?**
-
-A credit note formally reduces or reverses the value of an earlier invoice, typically for a return, an overcharge, or a contractual rebate. An adjustment is the broader term, covering any correction to a previously recorded transaction, including price corrections, quantity corrections, and reclassifications. Both share the same underlying problem: neither can be classified correctly without the record it refers back to.
-
-**Why is a confidently wrong classification worse than a flagged one?**
-
-A confidently wrong classification enters spend reports and category totals looking verified, and nobody questions numbers that already appear complete. A flagged line stays visible until a person resolves it, so the error cannot silently compound into a wrong category total or a misleading rebate calculation. Being visibly uncertain costs a few minutes of review. Being invisibly wrong costs far more once decisions are built on it.
-
-**How does Pearstop handle credit notes and other ambiguous lines during classification?**
-
-Pearstop scores every line for classification confidence and routes anything below the threshold, including credit notes and adjustments that reference a different transaction, to a human review queue rather than assigning a guessed category. Typically under 10 percent of lines need this step. Every review decision feeds back into the model, so the same supplier's recurring credit notes get resolved faster on the next run.
-
-**Can automated classification ever fully resolve credit notes without a person involved?**
-
-Not reliably, because the information needed sits in a different transaction than the one being classified, and text pattern matching cannot bridge that gap on its own. Recovering it automatically would require a clean, explicit link between every credit note and the invoice it corrects, which most procurement and ERP systems do not maintain. Until that link exists, routing to review is the sounder approach.
-
-**Do credit notes and adjustments affect reported classification accuracy figures?**
-
-Yes, and that is exactly why they should be counted rather than excluded. A classification accuracy figure that quietly leaves out contested, reversed, or rebated lines overstates how reliable the categorisation actually is. Counting credit notes and adjustments within the same accuracy measure, and routing the genuinely ambiguous ones to review, keeps a reported accuracy figure honest instead of inflated by omission.

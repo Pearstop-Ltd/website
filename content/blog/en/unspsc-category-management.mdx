@@ -106,20 +106,4 @@ The distribution of spend across these segments tells a category manager where t
 
 ---
 
-## Frequently asked questions
-
-**Do we need UNSPSC classification if we already have a well-maintained chart of accounts?**
-
-A chart of accounts gives you financial visibility — which GL codes carry which spend. UNSPSC classification gives you commodity visibility — what was actually purchased. These answer different questions. A GL account for "maintenance materials" might contain fasteners, lubricants, seals, and electrical components. Only commodity-level classification separates those into actionable categories. Both are necessary; neither replaces the other.
-
-**How long does it take to get from raw invoice data to a usable classified spend dataset?**
-
-With automated classification, the first pass on a historical dataset typically takes days, not weeks. For Strukton's 35,000 lines per month, the initial classification run produces results within 48–72 hours. The review queue — items below the confidence threshold — requires additional time from a buyer or category manager, but that workload is typically 5–10% of total lines, not the full dataset.
-
-**What is the minimum data quality required to classify at commodity level?**
-
-The classification engine works best with supplier name, a description field, and a GL code or cost element. Description quality is the most important variable. Even abbreviated descriptions ("F7 filter 400mm") provide enough signal for confident classification in most cases. Completely blank description fields or single-character entries require either enrichment from another data source or human review. In practice, fully blank descriptions account for fewer than 5% of lines in a typical SAP or Oracle export.
-
----
-
 *Related reading: [UNSPSC Classification Accuracy: What 90–95% Actually Means](/blog/unspsc-classification-accuracy) | [The Kraljic Matrix, Category Management, and Why Your Data Is the Missing Piece](/blog/category-management-kraljic-hard-fm)*
