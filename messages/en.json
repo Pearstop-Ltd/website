@@ -362,179 +362,201 @@
   },
   "DataQuality": {
     "meta": {
-      "title": "Data Quality Automation for Technical Industries",
-      "description": "Pearstop automatically cleans, standardises, and enriches operational data for hard services, construction, and manufacturing companies."
+      "title": "Data Quality for Multi-Service Facilities Management",
+      "description": "Pearstop unifies reference, cost, and asset data from every service line in an FM contract into one structured dataset, so contract-level cost and performance is visible instead of five separate reports."
     },
     "hero": {
       "eyebrow": "Data Quality",
-      "title": "Clean data is the foundation of every good decision.",
-      "lead": "Pearstop automatically cleans, standardises, and enriches your operational data so your teams, systems, and partners all work from the same reliable source rather than their own version of the truth."
+      "title": "One contract, five service lines, five data formats.",
+      "lead": "Cleaning, hard services, security, and catering all report differently under the same contract. Pearstop turns those service-line silos into one structured dataset, so contract-level cost and performance is something you can actually see, not five things you have to reconcile by hand."
     },
     "problem": {
       "eyebrow": "The Problem",
-      "title": "Your data is technically there. But it is not usable.",
-      "copy": "Most technical businesses have plenty of data. The problem is that it is inconsistent, fragmented, and incomplete. The same supplier is recorded six different ways. Asset names vary between sites. Categories are applied differently by different teams. And the result is that no one trusts the data, so no one acts on it.",
+      "title": "The reference data arrived wrong. Nobody caught it for years.",
+      "copy": "A service line's reference data is not neutral. It carries the mistakes of whoever entered it, multiplied across every site and year since. A wrong manufacturer part number, a name spelled two different ways depending on which system a technician used that day. None of it shows up until someone tries to compare cleaning costs against hard services costs on the same contract, and finds the two datasets do not actually describe the same thing.",
+      "quote": {
+        "text": "We are basically happy with what we have seen, but maybe we expected a little bit more from the beginning of what was possible with the data.",
+        "attribution": "Project Manager, integrated facilities management provider"
+      },
       "bullets": [
-        "Inconsistent naming makes it impossible to aggregate data across sites, teams, or periods",
-        "Missing values in critical fields block automated processing and reporting",
-        "Duplicate records inflate counts, distort analysis, and erode trust in reports",
-        "Manual data cleaning is expensive, slow, and creates new errors at the same time as fixing old ones"
+        "Reference data supplied at contract start already wrong, compounding across sites and years before anyone catches it",
+        "Each service line reports in its own format, so no single view of contract-level cost or performance exists",
+        "A first data pass delivers less than expected, because the underlying reference data was flawed before it reached any system",
+        "Reconciling service lines by hand happens every reporting cycle, and starts from zero again next time"
       ]
     },
     "howItWorks": {
-      "title": "Automated quality control at scale",
-      "lead": "The system automatically checks, cleans, and improves your data - and gets better over time as your team uses it.",
+      "title": "From five service-line silos to one dataset",
+      "lead": "The system checks, cleans, and standardises your data across service lines, and gets better over time as your team uses it.",
       "step1": {
-        "title": "Ingest",
-        "copy": "Connect your data sources via API or CSV. Any format, any system - from SAP and Oracle to Excel exports and legacy databases."
+        "title": "Ingest, by service line",
+        "copy": "Cleaning, hard services, security, catering: connect each service line's data via API or CSV, in whatever format it already arrives."
       },
       "step2": {
-        "title": "Auto-clean",
-        "copy": "The engine automatically resolves 95% of errors - spelling mistakes, wrong field placement, duplicate records, missing values - without human intervention."
+        "title": "Standardise and reconcile",
+        "copy": "Naming, coding, and reference data are corrected and standardised across every service line, so the same equipment or supplier looks the same everywhere."
       },
       "step3": {
-        "title": "Flag and Review",
-        "copy": "Items outside confident thresholds are flagged for your team. Your decisions feed directly back into the engine - so the queue shrinks over time."
+        "title": "Flag and review",
+        "copy": "Items outside confident thresholds are flagged for your team. Decisions feed back into the engine, so the queue shrinks over time."
       }
     },
     "whatMakesPossible": {
       "title": "What clean data makes possible",
       "b1": {
         "title": "Decisions you can defend",
-        "copy": "When your data is clean and consistent, the insights that come from it are trustworthy enough to act on - and explain to a CFO."
+        "copy": "When your data is clean and consistent, the insights that come from it are trustworthy enough to act on, and explain to a CFO."
       },
       "b2": {
-        "title": "Reporting that actually runs",
-        "copy": "Company-wide financial and operational reporting without the manual reconciliation that currently happens every month before the numbers go out."
+        "title": "One contract-level report, not five",
+        "copy": "Cost and performance visible across every service line on one dataset, without the manual reconciliation that currently happens every month before the numbers go out."
       },
       "b3": {
         "title": "AI and Fabric initiatives that work",
-        "copy": "AI tools, Copilot, and Microsoft Fabric all require clean, structured data. Fixing data quality is not a nice-to-have for these initiatives - it is the prerequisite."
+        "copy": "AI tools, Copilot, and Microsoft Fabric all require clean, structured data. Fixing data quality is not a nice-to-have for these initiatives, it is the prerequisite."
       }
     },
     "geoBlock": {
-      "title": "What is data quality automation and how does it work in practice?",
-      "copy": "Data quality automation uses rules, machine learning, and large language models to identify and resolve errors in operational datasets without manual intervention. For hard services, construction, and manufacturing companies, the most common data quality problems are inconsistent naming conventions, missing values in critical fields, duplicate records across systems, and spend data that has never been categorised to a standard like UNSPSC. Pearstop's four-layer engine handles 95% of these issues automatically, flagging only the items where human review adds real value - and learning from every decision your team makes to reduce that review queue over time."
+      "title": "What is data quality automation and how does it work for multi-service FM contracts?",
+      "copy": "Data quality automation uses rules, machine learning, and large language models to identify and resolve errors in operational datasets without manual intervention. For integrated FM providers, the most common problem is not any single service line's data, it is that cleaning, hard services, security, and catering each arrive in a different format, with reference data that was often wrong from the start. Pearstop has corrected supplier and equipment reference data for FM providers including SPIE, standardising naming across service lines and sites so contract-level cost and performance is visible on one dataset instead of five."
     },
     "quote": {
-      "text": "Our asset data worked for the mechanics on-site. It did not work for anyone trying to plan maintenance or run analysis on it. Pearstop fixed that.",
-      "author": "Asset Manager",
-      "role": "Facilities Management"
+      "text": "You feel a bit siloed, don't you?",
+      "author": "Head of Commercial",
+      "role": "Multi-site cleaning services contractor"
     },
+    "faq": [
+      {
+        "question": "How is this different from just building a dashboard on top of what we already have?",
+        "answer": "A dashboard displays whatever is underneath it. If cleaning and hard services reference data do not actually describe the same thing, the dashboard just shows that mismatch faster. Pearstop fixes the data itself, so what the dashboard displays is real."
+      },
+      {
+        "question": "Do all our service lines need to be on the same system before this works?",
+        "answer": "No. Each service line's data is ingested from wherever it already lives, in whatever format it already arrives. Standardisation happens after ingestion, not as a precondition for starting."
+      }
+    ],
     "cta": {
-      "title": "Ready to fix your data quality problem?",
-      "lead": "Book a 7-minute discovery call. We will show you exactly where your data is costing you time and margin.",
+      "title": "Ready to unify your FM data?",
+      "lead": "Book a 7-minute discovery call. We will show you exactly where your service lines stop agreeing with each other.",
       "button": "Book a 7-minute discovery"
     }
   },
   "Procurement": {
     "meta": {
-      "title": "Procurement Data Quality for Hard Services Companies",
-      "description": "Pearstop automates procurement data classification for hard services and infrastructure companies. Clean spend baselines, UNSPSC coding, and 95% less manual effort."
+      "title": "Procurement Data Quality for Infrastructure, Construction, and FM",
+      "description": "Pearstop builds a real spend baseline across sites and entities: bundled contracts broken into service lines, framework agreements checked against live buying, and group-wide spend visible in one place."
     },
     "hero": {
       "eyebrow": "Procurement",
-      "title": "You cannot do category management without clean procurement data.",
-      "lead": "Most procurement teams know what they want to achieve. The data underneath is what is stopping them. Pearstop fixes that - automatically, at scale."
+      "title": "You cannot negotiate what you cannot see.",
+      "lead": "Most procurement teams can state their turnover to the euro. Few can state what they actually spent it on, category by category, across every site, entity, and bundled contract. Pearstop builds that baseline, so a negotiation, a tender, or a framework review starts from a real number instead of a guess."
     },
     "problem": {
       "eyebrow": "The Problem",
-      "title": "When your spend data is a mess, category management is a fiction.",
-      "copy": "Hard services companies manage purchasing across dozens of sites and suppliers. Invoice data arrives in different formats, supplier names are inconsistent, and spend categories are never applied the same way twice. The result: your procurement team cannot see what they are buying, from whom, or at what cost. Category management, the core job of any procurement function, becomes impossible.",
+      "title": "One price at tender. No way to prove it later.",
+      "copy": "Ask a head of commercial to defend what a bundled contract costs, service line by service line, and the honest answer is often a guess dressed up as a number. The same gap shows up a level higher. A construction group turning over hundreds of millions across a dozen entities can state its revenue to the euro and still not know, with any precision, what it spent last year or on what, because spend sits in different systems, coded differently, entity by entity.",
+      "quote": {
+        "text": "We say, well how much is this going to be. And we go, it feels like it should be three percent of the contract value. But in real terms that could be six or that could be two. We don't know.",
+        "attribution": "Head of Commercial, multi-site cleaning services contractor"
+      },
       "bullets": [
-        "No granular, high-quality categorisation across supplier invoices",
-        "Spelling errors, wrong information in wrong fields, duplicate supplier records",
-        "Spend data too fragmented to benchmark costs or identify consolidation opportunities",
-        "Manual or offshore classification is slow, inconsistent, and does not learn"
+        "One blended contract price, no way to break out what each service line actually costs",
+        "Framework agreements signed years ago, with no live comparison against what is actually being bought today",
+        "Group-wide spend spread across entities and systems, so nobody can add it up precisely",
+        "No real baseline to negotiate a supplier or price a tender against, only last year's guess"
       ]
     },
     "howItWorks": {
-      "title": "A four-layer engine that handles 95% of classification automatically",
-      "lead": "Each layer improves on the last. Human input at Layer 4 feeds directly back into the system - so over time, the amount of manual review needed goes to zero.",
+      "title": "Three layers handle classification. Your team handles judgment.",
+      "lead": "Most lines never need a human look at them. The ones that do feed back into the system, so the review queue gets shorter, not the same size, every month.",
       "step1": {
-        "title": "Rules Engine",
-        "copy": "User-defined rules and automatically loaded process patterns handle the straightforward classifications. Fast, consistent, zero ambiguity."
+        "title": "Rules and machine learning",
+        "copy": "Supplier-specific rules and a machine learning layer trained on your own spend handle the clear majority of lines immediately, the way your most experienced buyer would."
       },
       "step2": {
-        "title": "Machine Learning",
-        "copy": "A secure, proprietary ML layer that replicates your internal way of working. Like a junior analyst with company knowledge - filling gaps the way your team would."
+        "title": "LLM layer for the edge cases",
+        "copy": "Ambiguous descriptions, multilingual line items, and one-off suppliers are resolved by a large language model with broad product and industry knowledge, not guessed at."
       },
       "step3": {
-        "title": "LLM Augmentation",
-        "copy": "A large language model layer that handles edge cases and ambiguous classifications - like a super-powered search with context awareness."
+        "title": "Human review, then it remembers",
+        "copy": "Anything still below a confidence threshold is flagged for your team, typically an hour or so a week. Every decision feeds back into the engine."
       },
-      "step4": {
-        "title": "Human Review",
-        "copy": "Items outside confident thresholds are auto-flagged for your team. Every decision feeds back into the engine - reducing the review queue over time until it reaches zero."
-      },
-      "cta": "See it in action - book a 7-minute call"
+      "cta": "See it in action, book a 7-minute call"
     },
     "outcome": {
-      "title": "With 95%+ data quality, your procurement team can actually do their job.",
+      "title": "What a real spend baseline makes possible",
       "b1": {
-        "title": "Optimal Category Management",
-        "copy": "1-3% cost saving opportunity on total procurement spend - unlocked by being able to see and act on what you are actually buying."
+        "title": "A baseline to negotiate and tender from",
+        "copy": "Real spend, by category, across every site and entity. Not last year's estimate."
       },
       "b2": {
-        "title": "Integrated Financial Reporting",
-        "copy": "Company-wide spend data in one consistent format - ready for ERP, BI, and financial reporting tools without manual reconciliation."
+        "title": "Bundled contracts broken out by service line",
+        "copy": "Defend a renewal or a client challenge with a cost and performance record for each service, not one blended number."
       },
       "b3": {
-        "title": "Cross-Project Spend Insight",
-        "copy": "Identify cost saving opportunities, avoid repeating the same procurement mistakes, and benchmark performance across projects and sites."
+        "title": "Framework compliance checked, not assumed",
+        "copy": "See where live buying has drifted from an agreement signed years ago, across the whole business, not just the categories someone happens to be watching."
       }
     },
     "quote": {
-      "text": "We used to have two full-time staff working on category assignment. Now the system does this for us - which has unlocked margin estimations further down the line too. It is more reliable at a fraction of the cost.",
-      "author": "Head of Procurement",
-      "role": "Infrastructure Contractor, Netherlands"
+      "text": "You cannot negotiate what you cannot see. Savings come third.",
+      "author": "CFO",
+      "role": "Infrastructure and rail contractor"
     },
     "geoBlock": {
       "title": "What is procurement data quality and why does it matter?",
-      "copy": "Procurement data quality refers to the accuracy, consistency, and completeness of spend data across invoices, purchase orders, and supplier records. For hard services companies managing decentralised purchasing, poor data quality makes category management impossible - teams cannot see what they are buying, from whom, or at what cost. Pearstop automates the cleaning and classification of procurement data for companies like Strukton, processing over 35,000 lines a month and supporting 1-3% cost savings through better category management and supplier consolidation."
+      "copy": "Procurement data quality is whether spend data, across invoices, purchase orders, and supplier records, is accurate and consistent enough to add up. For infrastructure, construction, and FM organisations buying across many sites, entities, and bundled contracts, poor data quality means nobody can state a real baseline to negotiate or tender from. Pearstop automates the cleaning and classification of procurement data for companies like Strukton, processing over 35,000 lines a month, so spend is visible by category, framework compliance is checked against live buying, and group-wide spend adds up to one number instead of several conflicting ones."
     },
     "faq": [
       {
         "question": "What happens if we do not have existing classification data to train from?",
-        "answer": "Most classification systems rely on historical data to learn from. Pearstop combines rule-based assignment, machine learning, and an LLM layer that draws on broad product and industry knowledge - so it performs strongly even without existing priors."
+        "answer": "Most classification systems rely on historical data to learn from. Pearstop combines rule-based assignment, machine learning, and an LLM layer that draws on broad product and industry knowledge, so it performs strongly even without existing priors."
       },
       {
         "question": "Will our buyers still be in control?",
-        "answer": "Yes. Buyers review flagged items in a dedicated queue - typically one hour per week. Every decision they make trains the system further, reducing the review queue over time until manual input approaches zero."
+        "answer": "Yes. Buyers review flagged items in a dedicated queue, typically one hour per week. Every decision they make trains the system further, reducing the review queue over time until manual input approaches zero."
+      },
+      {
+        "question": "Can Pearstop check our buying against existing framework agreements?",
+        "answer": "Yes. Once spend is classified consistently, current buying can be compared against the framework agreements already in place, category by category, so drift shows up as it happens rather than at the next audit."
       }
     ],
     "cta": {
-      "title": "Ready to fix your procurement data?",
-      "lead": "Book a 7-minute discovery call. We will show you exactly where your spend data is causing problems and how long it will take to fix.",
+      "title": "Ready to build a real spend baseline?",
+      "lead": "Book a 7-minute discovery call. We will show you exactly where your spend data is hiding the number you need.",
       "button": "Book a 7-minute discovery"
     }
   },
   "AssetManagement": {
     "meta": {
-      "title": "Asset Data Management for FM and Infrastructure",
-      "description": "Turn fragmented asset registers into a clean, reliable dataset. Pearstop structures asset data for facilities management, infrastructure, and hard services companies."
+      "title": "Asset Data Management for Asset Owners and FM Operators",
+      "description": "Turn the asset and cost data your FM provider hands you into an independent, classified record you can benchmark and defend, not just a file you received from them."
     },
     "hero": {
       "eyebrow": "Asset Management",
-      "title": "Your asset list should work for you, not against you.",
-      "lead": "If your asset data needs human interpretation to be useful, it is not usable. Pearstop cleans, structures, and standardises asset registers so maintenance teams, procurement buyers, and management can all work from the same trusted source."
+      "title": "You do not touch the invoices. You still need to know what they say.",
+      "lead": "Asset owners who outsource facilities management do not generate their own spend and maintenance data. They receive it, filtered through whichever provider delivers the contract. Pearstop gives you an independent, classified version of that same data, structured well enough to compare providers, sites, and years on the same basis."
     },
     "problem": {
       "eyebrow": "The Problem",
-      "title": "Fragmented asset data makes everything harder and more expensive.",
-      "copy": "Asset registers in hard services and infrastructure typically grow organically across sites and systems. Equipment names vary by site. Manufacturer fields are used inconsistently. Records are split across spreadsheets, legacy CMMS systems, and paper surveys. The result is that the data cannot be compared across sites, used for lifecycle analysis, or fed into planning tools reliably.",
+      "title": "You get the provider's report. You do not get an independent one.",
+      "copy": "Property investors, landlords, and public estate owners who outsource facilities management do not generate their own spend and maintenance data. They receive it, filtered through whichever provider delivers the contract. That arrangement holds up fine until someone asks the simple question underneath it: is this competitive, and how would we know if it was not.",
+      "quote": {
+        "text": "We've got all this information, but what are we using it for? No one's ever really looked at it before and gone, how good is this, and could we be improving on it.",
+        "attribution": "Commercial lead, real estate investment firm"
+      },
       "bullets": [
-        "Spelling variations and inconsistent naming mean you cannot compare assets across sites",
-        "Equipment types crammed into single free-text fields make filtering and analysis impossible",
-        "Maintenance planning becomes reactive because data cannot support predictive analysis",
-        "Bid pricing for maintenance contracts is based on incomplete or unreliable asset information"
+        "Cost and maintenance data arrives already filtered through the provider's own systems and naming conventions",
+        "Equipment and manufacturer records vary site to site, so comparing one provider or site against another is not possible on the data as received",
+        "No independent way to check whether the numbers you are given are competitive",
+        "Reviewing a provider's own reporting after the fact is not the same as holding a comparable record of your own"
       ]
     },
     "howItWorks": {
       "title": "From fragmented registers to a trusted asset database",
       "step1": {
         "title": "Data Consolidation",
-        "copy": "Asset data from any source - spreadsheets, ERP systems, legacy CMMS, site surveys - ingested in any format and mapped to a unified schema."
+        "copy": "Asset data from any source, whichever provider supplies it, spreadsheets, ERP systems, legacy CMMS, site surveys, ingested in any format and mapped to a unified schema."
       },
       "step2": {
         "title": "Standardisation and Enrichment",
@@ -542,7 +564,7 @@
       },
       "step3": {
         "title": "Linked and Analysis-Ready",
-        "copy": "The cleaned register is linked to maintenance records and cost data where available - creating an asset intelligence layer that supports planned maintenance, lifecycle analysis, and smarter bidding."
+        "copy": "The cleaned register is linked to maintenance records and cost data where available, creating an asset intelligence layer that supports planned maintenance, lifecycle analysis, and provider review."
       }
     },
     "whatMakesPossible": {
@@ -552,8 +574,8 @@
         "copy": "Shift from reactive to planned maintenance when your data can support forward-looking analysis."
       },
       "b2": {
-        "title": "Cross-Site Benchmarking",
-        "copy": "Compare asset performance across sites, manufacturers, and contract types - previously impossible with fragmented data."
+        "title": "Cross-Site and Cross-Provider Benchmarking",
+        "copy": "Compare asset performance and cost across providers, sites, and portfolios on the same basis, previously impossible when each arrived in its own format."
       },
       "b3": {
         "title": "Risk Management",
@@ -578,17 +600,27 @@
       }
     ],
     "quote": {
-      "text": "Our asset data worked for the mechanics on-site. It did not work for anyone trying to plan maintenance or run analysis on it. Pearstop fixed that.",
-      "author": "Asset Manager",
-      "role": "Facilities Management"
+      "text": "We want to control the story, the narrative, from our side.",
+      "author": "Commercial lead",
+      "role": "Real estate investment firm"
     },
     "geoBlock": {
-      "title": "How does poor asset data quality affect maintenance planning and FM contract performance?",
-      "copy": "Asset data quality problems in facilities management and hard services typically start the same way: asset registers built for on-site engineers rather than analytical use. Spelling variations across manufacturers, equipment types crammed into single fields, and records spread across spreadsheets and legacy systems mean the data cannot be compared across sites, used for lifecycle analysis, or fed into planning tools reliably. For FM companies, this makes predictive maintenance planning nearly impossible and exposes contracts to margin risk from reactive, unplanned work. Pearstop standardises asset naming conventions, resolves field mismatches, and consolidates records from multiple source systems - giving FM operators and infrastructure companies a clean, comparable asset register that supports planned maintenance, lifecycle tracking, and data-backed advisory services."
+      "title": "How does poor asset data quality affect maintenance planning, FM contract performance, and asset owner assurance?",
+      "copy": "Asset data quality problems in facilities management typically start the same way: registers and cost reports built for whoever runs day to day operations, not for the owner trying to check them. Spelling variations across manufacturers, equipment crammed into single fields, and reporting formats that differ by provider or site mean the data cannot be compared, benchmarked, or verified independently. Pearstop standardises naming conventions, resolves field mismatches, and consolidates records from multiple source systems and providers, giving asset owners and FM operators alike a clean, comparable dataset that supports planned maintenance, lifecycle tracking, and an independent basis for reviewing a provider's own numbers."
     },
+    "faq": [
+      {
+        "question": "We do not manage the FM contract directly. Can Pearstop still help?",
+        "answer": "Yes. Pearstop works from whatever cost and asset data you already receive from your provider, structuring it into an independent, classified record rather than requiring you to run the contract yourself."
+      },
+      {
+        "question": "Can we benchmark one provider or site against another?",
+        "answer": "Yes. Once asset and cost data is standardised to the same format, comparing providers, sites, or portfolios on the same basis becomes possible, which it is not when each arrives in its own naming convention and structure."
+      }
+    ],
     "cta": {
-      "title": "Ready to turn your asset data into a strategic asset?",
-      "lead": "Book a 7-minute discovery call and see exactly how Pearstop fixes your specific data challenge.",
+      "title": "Ready to hold an independent view of your own?",
+      "lead": "Book a 7-minute discovery call and see exactly how Pearstop turns the data you already receive into something you can verify.",
       "button": "Book a 7-minute discovery"
     }
   },
@@ -600,35 +632,35 @@
     "hero": {
       "eyebrow": "AI Ready",
       "title": "AI is only underdelivering because your data is not ready.",
-      "lead": "Every AI tool - from Copilot to custom models - assumes clean, structured, governed data underneath. Pearstop builds that foundation."
+      "lead": "Every AI tool, from Copilot to custom models, assumes clean, structured, governed data underneath. Pearstop builds that foundation."
     },
     "problem": {
       "eyebrow": "The Real Problem",
       "title": "The real reason your AI initiatives are not delivering",
-      "copy": "AI does not fail because the technology is wrong. It fails because the data feeding it is inconsistent, fragmented, and unstructured. A procurement AI making high-confidence recommendations from unreliable invoice data. A maintenance model predicting failures from an asset register full of errors. The output is only as good as what goes in.",
+      "copy": "AI does not fail because the technology is wrong. It fails because the data feeding it is inconsistent, fragmented, and unstructured. The pattern shows up the same way almost every time: a small pilot runs against a slice of real data, the output looks reasonable, and confidence builds. Scale the same approach to the volume a real operation produces, and it starts making mistakes the pilot never surfaced. That is not a tooling problem. It is what happens when clean data was never the foundation to begin with.",
       "bullets": [
-        "AI models trained on poor-quality data produce unreliable outputs - destroying trust in the initiative",
+        "A pilot looks fine at small scale, then the same approach breaks down at real operational volume",
         "Copilot and AI agents surface errors and inconsistencies rather than insights",
         "Executives lose confidence in AI investments that promised transformation but delivered confusion"
       ],
       "commonThread": {
         "label": "The common thread",
-        "copy": "The boardroom wants strategy and they do not want the project to fail. Whether the starting point is Fabric, Copilot, or a custom model, the same foundation problem appears underneath."
+        "copy": "Whether the starting point is Fabric, Copilot, or a custom model, the same foundation problem appears underneath. Three separate technical services leaders, in three separate and unprompted conversations, reached the same conclusion: fix the data before the AI strategy, not after."
       }
     },
     "howItWorks": {
       "title": "Three steps to an AI-ready data foundation",
       "step1": {
         "title": "AI Readiness Assessment",
-        "copy": "We evaluate your operational data against the requirements of your AI use case - procurement classification, asset intelligence, predictive maintenance, or reporting - identifying exactly what needs to be fixed and in what order."
+        "copy": "We evaluate your operational data against the requirements of your AI use case, procurement classification, asset intelligence, predictive maintenance, or reporting, identifying exactly what needs to be fixed and in what order."
       },
       "step2": {
         "title": "Automated Data Preparation",
-        "copy": "We clean, classify, and structure your data automatically - removing the errors, inconsistencies, and gaps that cause AI models to underdeliver."
+        "copy": "We clean, classify, and structure your data automatically, removing the errors, inconsistencies, and gaps that cause AI models to underdeliver."
       },
       "step3": {
         "title": "AI-Ready Data Foundation",
-        "copy": "Your data is structured, governed, and continuously maintained - ready for Copilot, custom AI models, or any tool that requires reliable inputs."
+        "copy": "Your data is structured, governed, and continuously maintained, ready for Copilot, custom AI models, or any tool that requires reliable inputs."
       }
     },
     "benefits": {
@@ -641,8 +673,8 @@
         "copy": "Skip the 12-18 months of data preparation that delays most AI projects."
       },
       "b3": {
-        "title": "Works With Any Tool",
-        "copy": "Clean, structured data works with Copilot, Azure AI, custom models, or any platform you choose."
+        "title": "Free to Switch Tools",
+        "copy": "Clean, structured data is not locked to one platform, so you can move between Copilot, Azure AI, or a custom model without starting the data work over."
       }
     },
     "stats": [
@@ -663,14 +695,24 @@
       }
     ],
     "quote": {
-      "text": "We had AI tools in place but kept getting results we could not trust. The data underneath was not clean enough for the models to work reliably. Once Pearstop fixed the foundation, the outputs became something we could actually act on.",
-      "author": "Head of Digital Transformation",
-      "role": "Technical Services"
+      "text": "I tried putting it through Copilot and it was worse. You've made it worse, in fact added loads of tabs that no one will ever use. I reckon we probably wasted twenty five grand there on stuff that will just sit, because we think we need it.",
+      "author": "Head of Commercial",
+      "role": "Cleaning services contractor"
     },
     "geoBlock": {
       "title": "What does AI readiness mean?",
-      "copy": "AI readiness means having operational data that is clean, structured, and consistently governed so that AI tools, Copilot, and machine learning models can produce reliable outputs. For hard services, construction, and manufacturing companies, the most common AI readiness blockers are poor procurement data quality, inconsistent asset registers, and fragmented operational records. Pearstop automates the data preparation work that makes AI initiatives succeed - from UNSPSC procurement classification to asset data structuring - giving organisations a foundation that AI tools can actually learn from. If you are moving from Fabric into broader AI adoption, the same clean-data foundation carries forward."
+      "copy": "AI readiness means having operational data that is clean, structured, and consistently governed so that AI tools, Copilot, and machine learning models can produce reliable outputs. For hard services, construction, and manufacturing companies, the most common AI readiness blockers are poor procurement data quality, inconsistent asset registers, and fragmented operational records. Pearstop automates the data preparation work that makes AI initiatives succeed, from UNSPSC procurement classification to asset data structuring, giving organisations a foundation that AI tools can actually learn from. If you are moving from Fabric into broader AI adoption, the same clean-data foundation carries forward."
     },
+    "faq": [
+      {
+        "question": "We already tried an AI pilot and it did not go well. Does that mean AI will not work for us?",
+        "answer": "Not necessarily. A pilot that looks fine at small scale and breaks down at real volume is usually telling you something true about the data underneath it, not about AI in general. Fix that foundation first and the same tools tend to behave very differently."
+      },
+      {
+        "question": "Do we need to have picked a specific AI tool before this makes sense?",
+        "answer": "No. The data preparation work is the same regardless of which AI tool, or combination of tools, you eventually choose. Clean, structured data is what lets you switch between them later without starting over."
+      }
+    ],
     "cta": {
       "title": "Is your data ready for AI?",
       "lead": "Book a 7-minute call and we will tell you exactly what needs to happen before your AI initiatives can deliver results.",
@@ -680,8 +722,8 @@
   },
   "Unspsc": {
     "meta": {
-      "title": "Automated UNSPSC Classification for Procurement Teams",
-      "description": "Pearstop auto-classifies up to 95% of your procurement spend lines to UNSPSC standard without manual effort."
+      "title": "UNSPSC Classification and Manufacturer Part Verification",
+      "description": "Pearstop auto-classifies up to 95% of procurement spend to UNSPSC, and resolves a supplier's own part code back to the real manufacturer code, without manual tracing."
     },
     "hero": {
       "eyebrow": "UNSPSC Classification",
@@ -696,24 +738,28 @@
       "exampleLabel": "Example UNSPSC hierarchy"
     },
     "howItWorks": {
-      "title": "Four layers of classification. 95% without your team touching it.",
-      "lead": "Most items are classified automatically. The small fraction that needs review gets shorter every month as the engine learns from your team's decisions.",
+      "title": "Most lines classify themselves. The rest get a second look.",
+      "lead": "Rules and machine learning classify high-confidence lines immediately. The layer that used to need a dedicated team now runs in the background.",
       "step1": {
-        "title": "Rules Engine",
-        "copy": "Supplier-specific and GL-specific rules handle the high-volume, high-confidence classifications immediately. No ML needed for patterns the engine already knows."
+        "title": "Rules and machine learning",
+        "copy": "Supplier and GL-based rules combined with a machine learning layer trained on your own spend classify the high-confidence majority of lines immediately."
       },
       "step2": {
-        "title": "Machine Learning",
-        "copy": "An ML layer trained on your historical spend replicates the classification logic your most experienced category manager applies — at scale and without fatigue."
+        "title": "LLM layer for the edge cases",
+        "copy": "Field engineer shorthand, part numbers, and multilingual descriptions are resolved by a large language model with deep product and industry knowledge, the layer that handles what rules and ML cannot."
       },
       "step3": {
-        "title": "LLM Layer",
-        "copy": "Field engineer shorthand, part numbers, and multilingual descriptions are handled by an LLM with deep product and industry knowledge. The layer that handles what rules and ML cannot."
-      },
-      "step4": {
-        "title": "Human Review",
-        "copy": "The 5-10% the engine is uncertain about gets flagged for your team. Each decision feeds back into the model. After 12 months, most clients see the review queue drop to near zero."
+        "title": "Human review, then it remembers",
+        "copy": "The five to ten percent the engine is uncertain about is flagged for your team. Each decision feeds back into the model, and the review queue drops over successive months."
       }
+    },
+    "manufacturerCode": {
+      "eyebrow": "Manufacturer Verification",
+      "title": "What if the part only has the supplier's own code on it?",
+      "copy": "Hard services and MRO buyers run into this constantly. A maintenance component's only code on file belongs to the supplier who delivered it, not the manufacturer who made it. Without the manufacturer's own code, there is no way to check the price against anyone else, or confirm that two teams describing the same component are actually talking about the same thing. Tracing it back by hand usually means going through whoever ordered the part originally and asking for a clearer description, then waiting.",
+      "example": "This is not a hypothetical. In one hard services engagement, engineers were ordering components against the supplier's own part code because that was the only code on the paperwork. The manufacturer's real code, the one that would let the business buy from anyone else, existed, but getting to it meant tracing the part back through the original order, often after several rounds of asking for a clearer description.",
+      "resultLabel": "What comes back",
+      "resultCopy": "An end manufacturer MPN field: the original part number, separate from the supplier's own code, flagged as enriched rather than certain wherever the data does not confirm a match outright. Higher-value components are held to a tighter review threshold, because a wrong match costs more the more the part costs."
     },
     "whatMakesPossible": {
       "title": "What a classified spend baseline makes possible",
@@ -731,13 +777,13 @@
       }
     },
     "quote": {
-      "text": "We used to have two full-time staff working on category assignment. Now the system does this for us - which has unlocked margin estimations further down the line too. It is more reliable at a fraction of the cost.",
-      "author": "Head of Procurement",
-      "role": "Infrastructure Contractor, Netherlands"
+      "text": "We had thousands of product lines that needed to be categorised before we could even begin to understand our costs. Pearstop classified them in under a week. That would have taken our team six months and still would not have been this accurate.",
+      "author": "David Torr",
+      "role": "CEO, FARO"
     },
     "geoBlock": {
       "title": "How does UNSPSC classification work for hard services and FM companies?",
-      "copy": "Hard services FM companies typically buy from 500 to 3,000 suppliers across multiple sites. Invoice descriptions are written by field engineers, not buyers - which means the same work appears under hundreds of different strings. Manual UNSPSC classification at 5,000 to 35,000 lines per month requires one or two dedicated staff working continuously just to stay current. Pearstop's automated engine classifies 90-95% of those lines without human input, with the remainder flagged for review. The review queue shrinks each month as the engine learns from your team's decisions. Strukton currently processes 35,000 lines per month this way via SAP integration."
+      "copy": "Hard services FM companies typically buy from 500 to 3,000 suppliers across multiple sites. Invoice descriptions are written by field engineers, not buyers, which means the same work appears under hundreds of different strings. Manual UNSPSC classification at 5,000 to 35,000 lines per month requires one or two dedicated staff working continuously just to stay current. Pearstop's automated engine classifies 90-95% of those lines without human input, with the remainder flagged for review. The review queue shrinks each month as the engine learns from your team's decisions. Strukton currently processes 35,000 lines per month this way via SAP integration."
     },
     "noDataFaq": {
       "label": "What if we have never classified before?",
@@ -757,6 +803,28 @@
         "copy": "Clients typically reduce manual procurement data work by 70-90%, freeing buyers for category strategy and contract negotiation."
       }
     },
+    "faq": [
+      {
+        "question": "What is UNSPSC classification?",
+        "answer": "UNSPSC (United Nations Standard Products and Services Code) is a hierarchical classification system used worldwide to categorise procurement spend. It has four levels: Segment, Family, Class, and Commodity. Organisations use UNSPSC to enable consistent spend analysis, supplier benchmarking, and category management across contracts, sites, and ERP systems."
+      },
+      {
+        "question": "How accurate is automated UNSPSC classification?",
+        "answer": "Pearstop's classification engine, combining rules, machine learning, an LLM layer, and human review, achieves 90 to 95% automatic classification on typical procurement datasets. The remaining 5 to 10% is flagged for human review. Each reviewed decision feeds back into the engine, shrinking the review queue over time until it reaches near zero."
+      },
+      {
+        "question": "Can UNSPSC classification identify the manufacturer's part number behind a supplier's own code?",
+        "answer": "Yes. Where a manufacturer's original part number exists in the data or a connected reference source, the engine resolves it and returns it as a separate end manufacturer MPN field, rather than leaving the supplier's own code as the only reference on the line."
+      },
+      {
+        "question": "Does Pearstop integrate with SAP for UNSPSC classification?",
+        "answer": "Yes. Pearstop receives data via CSV export or direct API connection from SAP, Oracle, and other ERP and P2P platforms. In practice, many clients find that CSV export is the simplest way to start. Classified data is returned in the same format, ready to load back into SAP or feed into BI tools."
+      },
+      {
+        "question": "How long does UNSPSC classification take?",
+        "answer": "Most clients have a clean, classified dataset ready within four to six weeks of starting. The first engagement begins with a Data Stability Baseline so you can assess the output quality before committing to ongoing classification."
+      }
+    ],
     "related": {
       "label": "More UNSPSC resources",
       "tool": "Free UNSPSC Code Lookup",
@@ -784,29 +852,29 @@
     "problem": {
       "eyebrow": "The Hidden Blocker",
       "title": "The hidden blocker in every Fabric migration",
-      "copy": "Microsoft Fabric promises a unified data platform - one source of truth across finance, operations, procurement, and assets. But Fabric assumes structured, consistent data that most organisations simply do not have yet. Migrating dirty data into Fabric does not fix the problem; it just moves it, at great cost and risk.",
+      "copy": "Microsoft Fabric promises a unified data platform, one source of truth across finance, operations, procurement, and assets. But Fabric assumes structured, consistent data that most organisations do not have yet. Migrating dirty data into Fabric does not fix the problem, it just moves it, at greater cost and risk.",
       "bullets": [
         "Inconsistent naming conventions mean cross-site and cross-system comparisons fail",
-        "Field errors and duplicates surface immediately in reporting - damaging trust in the new platform",
+        "Field errors and duplicates surface immediately in reporting, damaging trust in the new platform",
         "AI and Copilot features built on Fabric underdeliver when the underlying data is unreliable",
         "During a data lake transition there is a natural inflection point to clean the data before it gets more expensive"
       ],
       "leadershipLabel": "Why this matters to leadership",
-      "leadershipCopy": "CFOs and senior operations leaders care about trust, reporting, and delivery. They do not care about the platform for its own sake - they care about whether the migration produces company-wide visibility and a return on the spend."
+      "leadershipCopy": "CFOs and senior operations leaders care about trust, reporting, and delivery. They do not care about the platform for its own sake, they care about whether the migration produces company-wide visibility and a return on the spend."
     },
     "howItWorks": {
       "title": "Fabric readiness in three stages",
       "step1": {
         "title": "Data Readiness Assessment",
-        "copy": "We audit your existing operational data against Fabric's structural requirements - identifying gaps, inconsistencies, and priorities before migration begins."
+        "copy": "We audit your existing operational data against Fabric's structural requirements, identifying gaps, inconsistencies, and priorities before migration begins."
       },
       "step2": {
         "title": "Automated Cleaning and Structuring",
-        "copy": "We clean, standardise, and structure your data to meet Fabric's requirements automatically, at scale - no manual rework."
+        "copy": "We clean, standardise, and structure your data to meet Fabric's requirements automatically, at scale, with no manual rework."
       },
       "step3": {
         "title": "Migration-Ready Data",
-        "copy": "You receive verified, structured data with automated quality control built in - ready for Fabric onboarding and AI model training from day one."
+        "copy": "You receive verified, structured data with automated quality control built in, ready for Fabric onboarding and AI model training from day one."
       }
     },
     "stats": [
@@ -827,14 +895,24 @@
       }
     ],
     "quote": {
-      "text": "We were planning a Fabric migration but kept hitting the wall of inconsistent, unstructured data underneath. Pearstop cleaned and structured it first - what would have been a 12-month data preparation project became manageable.",
-      "author": "Head of Data",
-      "role": "Infrastructure Company"
+      "text": "If we want a bot that knows everything about our contract, we need to make sure the governance data in the contract is properly agreed first.",
+      "author": "Data strategy lead",
+      "role": "Integrated facilities management provider"
     },
     "geoBlock": {
       "title": "What does Microsoft Fabric data readiness mean?",
-      "copy": "Microsoft Fabric data readiness is the process of cleaning, structuring, and governing operational data before migrating to Microsoft Fabric. For asset-intensive industries - construction, facilities management, manufacturing - procurement data, asset registers, and operational records are often too inconsistent for Fabric to process reliably. Pearstop automates the data preparation work that makes Fabric migrations succeed, ensuring organisations can use Copilot, AI agents, and real-time analytics from day one rather than spending 12-18 months fixing data quality after migration."
+      "copy": "Microsoft Fabric data readiness is the process of cleaning, structuring, and governing operational data before migrating to Microsoft Fabric. For asset-intensive industries, construction, facilities management, manufacturing, procurement data, asset registers, and operational records are often too inconsistent for Fabric to process reliably. Pearstop automates the data preparation work that makes Fabric migrations succeed, so organisations can use Copilot, AI agents, and real-time analytics from day one rather than spending 12-18 months fixing data quality after migration."
     },
+    "faq": [
+      {
+        "question": "Should we fix our data before Fabric, or can Pearstop run alongside the migration?",
+        "answer": "Either works, but earlier is cheaper. Migrating inconsistent data into Fabric does not fix it, it moves it, and cleaning it up after migration typically costs more than cleaning it before."
+      },
+      {
+        "question": "Does this replace our Fabric implementation partner?",
+        "answer": "No. Pearstop prepares the data layer underneath the migration. Your implementation partner still builds the platform, they are just building it on data that is already structured."
+      }
+    ],
     "cta": {
       "title": "Planning a Fabric migration?",
       "lead": "Talk to us before the migration starts. A 30-minute call now can save months of rework later.",

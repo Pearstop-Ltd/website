@@ -5,35 +5,37 @@ import { CalendlyButton } from "@/components/calendly-button";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Procurement Data Quality for Hard Services Companies",
+  title: "Procurement Data Quality for Infrastructure, Construction, and FM",
   description:
-    "Pearstop automates procurement data classification for hard services and infrastructure companies. Clean spend baselines, UNSPSC coding, and 95% less manual effort.",
+    "Pearstop builds a real spend baseline across sites and entities: bundled contracts broken into service lines, framework agreements checked against live buying, and group-wide spend visible in one place.",
   alternates: {
     canonical: `${siteConfig.url}/procurement-data-quality`
   }
 };
 
+const FAQ_ITEMS = [
+  {
+    q: "What happens if we do not have existing classification data to train from?",
+    a: "Most classification systems rely on historical data to learn from. Pearstop combines rule-based assignment, machine learning, and an LLM layer that draws on broad product and industry knowledge, so it performs strongly even without existing priors."
+  },
+  {
+    q: "Will our buyers still be in control?",
+    a: "Yes. Buyers review flagged items in a dedicated queue, typically one hour per week. Every decision they make trains the system further, reducing the review queue over time until manual input approaches zero."
+  },
+  {
+    q: "Can Pearstop check our buying against existing framework agreements?",
+    a: "Yes. Once spend is classified consistently, current buying can be compared against the framework agreements already in place, category by category, so drift shows up as it happens rather than at the next audit."
+  }
+];
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "What happens if we do not have existing classification data to train from?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Pearstop combines rule-based assignment, machine learning, and an LLM layer that draws on broad product and industry knowledge, so it performs strongly even without existing priors."
-      }
-    },
-    {
-      "@type": "Question",
-      name: "Will our buyers still be in control?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Buyers review flagged items in a dedicated queue, and every decision they make trains the system further, reducing the review queue over time until manual input approaches zero."
-      }
-    }
-  ]
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: { "@type": "Answer", text: item.a }
+  }))
 };
 
 export default function ProcurementPage() {
@@ -41,8 +43,8 @@ export default function ProcurementPage() {
     <>
       <PageHero
         eyebrow="Procurement"
-        title="You cannot do category management without clean procurement data."
-        lead="Most procurement teams know what they want to achieve. The data underneath is what is stopping them. Pearstop fixes that - automatically, at scale."
+        title="You cannot negotiate what you cannot see."
+        lead="Most procurement teams can state their turnover to the euro. Few can state what they actually spent it on, category by category, across every site, entity, and bundled contract. Pearstop builds that baseline, so a negotiation, a tender, or a framework review starts from a real number instead of a guess."
         actions={[
           { label: "Book a 7-minute discovery", href: siteConfig.calendly, variant: "primary", external: true },
           { label: "See how it works", href: "#how-it-works", variant: "secondary" }
@@ -54,26 +56,34 @@ export default function ProcurementPage() {
           <div className="row" style={{ alignItems: "center", gap: "3rem", flexWrap: "wrap" }}>
             <div className="col-md-6">
               <div className="benefit-eyebrow">The Problem</div>
-              <h2>When your spend data is a mess, category management is a fiction.</h2>
+              <h2>One price at tender. No way to prove it later.</h2>
               <p className="light-copy">
-                Hard services companies manage purchasing across dozens of sites and suppliers. Invoice data arrives in different formats, supplier names are inconsistent, and spend categories are never applied the same way twice. The result: your procurement team cannot see what they are buying, from whom, or at what cost. Category management, the core job of any procurement function, becomes impossible.
+                Ask a head of commercial to defend what a bundled contract costs, service line by service line, and the honest answer is often a guess dressed up as a number. The same gap shows up a level higher. A construction group turning over hundreds of millions across a dozen entities can state its revenue to the euro and still not know, with any precision, what it spent last year or on what, because spend sits in different systems, coded differently, entity by entity.
               </p>
+              <blockquote className="quote-card" style={{ fontStyle: "italic", marginBottom: "1.5rem" }}>
+                <p style={{ margin: 0 }}>
+                  &ldquo;We say, well how much is this going to be. And we go, it feels like it should be three percent of the contract value. But in real terms that could be six or that could be two. We don&rsquo;t know.&rdquo;
+                </p>
+                <p style={{ margin: "0.6rem 0 0", fontSize: "0.85rem", color: "var(--muted)" }}>
+                  Head of Commercial, multi-site cleaning services contractor
+                </p>
+              </blockquote>
               <ul className="ind-pains">
                 <li>
                   <span className="ind-ok">×</span>
-                  <div>No granular, high-quality categorisation across supplier invoices</div>
+                  <div>One blended contract price, no way to break out what each service line actually costs</div>
                 </li>
                 <li>
                   <span className="ind-ok">×</span>
-                  <div>Spelling errors, wrong information in wrong fields, duplicate supplier records</div>
+                  <div>Framework agreements signed years ago, with no live comparison against what is actually being bought today</div>
                 </li>
                 <li>
                   <span className="ind-ok">×</span>
-                  <div>Spend data too fragmented to benchmark costs or identify consolidation opportunities</div>
+                  <div>Group-wide spend spread across entities and systems, so nobody can add it up precisely</div>
                 </li>
                 <li>
                   <span className="ind-ok">×</span>
-                  <div>Manual or offshore classification is slow, inconsistent, and does not learn</div>
+                  <div>No real baseline to negotiate a supplier or price a tender against, only last year&rsquo;s guess</div>
                 </li>
               </ul>
             </div>
@@ -91,56 +101,51 @@ export default function ProcurementPage() {
       <section id="how-it-works" className="section-soft">
         <div className="container">
           <SectionTitle
-            eyebrow="How It Works"
-            title="A four-layer engine that handles 95% of classification automatically"
-            lead="Each layer improves on the last. Human input at Layer 4 feeds directly back into the system - so over time, the amount of manual review needed goes to zero."
+            eyebrow="The Problem"
+            title="Three layers handle classification. Your team handles judgment."
+            lead="Most lines never need a human look at them. The ones that do feed back into the system, so the review queue gets shorter, not the same size, every month."
           />
           <div className="hiw-grid">
             <article className="hiw-card">
               <div className="hiw-badge">1</div>
-              <h3>Rules Engine</h3>
-              <p>User-defined rules and automatically loaded process patterns handle the straightforward classifications. Fast, consistent, zero ambiguity.</p>
+              <h3>Rules and machine learning</h3>
+              <p>Supplier-specific rules and a machine learning layer trained on your own spend handle the clear majority of lines immediately, the way your most experienced buyer would.</p>
             </article>
             <article className="hiw-card featured">
               <div className="hiw-badge">2</div>
-              <h3>Machine Learning</h3>
-              <p>A secure, proprietary ML layer that replicates your internal way of working. Like a junior analyst with company knowledge - filling gaps the way your team would.</p>
+              <h3>LLM layer for the edge cases</h3>
+              <p>Ambiguous descriptions, multilingual line items, and one-off suppliers are resolved by a large language model with broad product and industry knowledge, not guessed at.</p>
             </article>
             <article className="hiw-card">
               <div className="hiw-badge">3</div>
-              <h3>LLM Augmentation</h3>
-              <p>A large language model layer that handles edge cases and ambiguous classifications - like a super-powered search with context awareness.</p>
-            </article>
-            <article className="hiw-card">
-              <div className="hiw-badge">4</div>
-              <h3>Human Review</h3>
-              <p>Items outside confident thresholds are auto-flagged for your team. Every decision feeds back into the engine - reducing the review queue over time until it reaches zero.</p>
+              <h3>Human review, then it remembers</h3>
+              <p>Anything still below a confidence threshold is flagged for your team, typically an hour or so a week. Every decision feeds back into the engine.</p>
             </article>
           </div>
           <div className="text-center" style={{ marginTop: "2rem" }}>
-            <CalendlyButton label="See it in action - book a 7-minute call" className="btn btn-primary" />
+            <CalendlyButton label="See it in action, book a 7-minute call" className="btn btn-primary" />
           </div>
         </div>
       </section>
 
       <section>
         <div className="container">
-          <SectionTitle eyebrow="The Outcome" title="With 95%+ data quality, your procurement team can actually do their job." />
+          <SectionTitle title="What a real spend baseline makes possible" />
           <div className="bene-cards">
             <article className="ben-card">
               <div className="ben-icon">↗</div>
-              <h3>Optimal Category Management</h3>
-              <p>1-3% cost saving opportunity on total procurement spend - unlocked by being able to see and act on what you are actually buying.</p>
+              <h3>A baseline to negotiate and tender from</h3>
+              <p>Real spend, by category, across every site and entity. Not last year&rsquo;s estimate.</p>
             </article>
             <article className="ben-card">
               <div className="ben-icon">≡</div>
-              <h3>Integrated Financial Reporting</h3>
-              <p>Company-wide spend data in one consistent format - ready for ERP, BI, and financial reporting tools without manual reconciliation.</p>
+              <h3>Bundled contracts broken out by service line</h3>
+              <p>Defend a renewal or a client challenge with a cost and performance record for each service, not one blended number.</p>
             </article>
             <article className="ben-card">
               <div className="ben-icon">⚡</div>
-              <h3>Cross-Project Spend Insight</h3>
-              <p>Identify cost saving opportunities, avoid repeating the same procurement mistakes, and benchmark performance across projects and sites.</p>
+              <h3>Framework compliance checked, not assumed</h3>
+              <p>See where live buying has drifted from an agreement signed years ago, across the whole business, not just the categories someone happens to be watching.</p>
             </article>
           </div>
         </div>
@@ -151,9 +156,9 @@ export default function ProcurementPage() {
           <div className="row">
             <div className="col-md-8 col-md-offset-2">
               <QuoteBox
-                quote="We used to have two full-time staff working on category assignment. Now the system does this for us - which has unlocked margin estimations further down the line too. It is more reliable at a fraction of the cost."
-                author="Head of Procurement"
-                role="Infrastructure Contractor, Netherlands"
+                quote="You cannot negotiate what you cannot see. Savings come third."
+                author="CFO"
+                role="Infrastructure and rail contractor"
               />
             </div>
           </div>
@@ -166,7 +171,7 @@ export default function ProcurementPage() {
             <div className="col-md-8 col-md-offset-2">
               <GeoBlock
                 title="What is procurement data quality and why does it matter?"
-                copy="Procurement data quality refers to the accuracy, consistency, and completeness of spend data across invoices, purchase orders, and supplier records. For hard services companies managing decentralised purchasing, poor data quality makes category management impossible - teams cannot see what they are buying, from whom, or at what cost. Pearstop automates the cleaning and classification of procurement data for companies like Strukton, processing over 35,000 lines a month and supporting 1-3% cost savings through better category management and supplier consolidation."
+                copy="Procurement data quality is whether spend data, across invoices, purchase orders, and supplier records, is accurate and consistent enough to add up. For infrastructure, construction, and FM organisations buying across many sites, entities, and bundled contracts, poor data quality means nobody can state a real baseline to negotiate or tender from. Pearstop automates the cleaning and classification of procurement data for companies like Strukton, processing over 35,000 lines a month, so spend is visible by category, framework compliance is checked against live buying, and group-wide spend adds up to one number instead of several conflicting ones."
               />
             </div>
           </div>
@@ -177,25 +182,14 @@ export default function ProcurementPage() {
         <div className="container">
           <div className="row">
             <div className="col-md-8 col-md-offset-2">
-              <div className="faq-item">
-                <div className="faq-question">
-                  <h3 className="faq-q">What happens if we do not have existing classification data to train from?</h3>
-                </div>
-                <div className="faq-answer">
-                  <p>
-                    Most classification systems rely on historical data to learn from. Pearstop combines rule-based assignment, machine learning, and an LLM layer that draws on broad product and industry knowledge - so it performs strongly even without existing priors.
-                  </p>
-                </div>
-              </div>
-              <div className="faq-item">
-                <div className="faq-question">
-                  <h3 className="faq-q">Will our buyers still be in control?</h3>
-                </div>
-                <div className="faq-answer">
-                  <p>
-                    Yes. Buyers review flagged items in a dedicated queue - typically one hour per week. Every decision they make trains the system further, reducing the review queue over time until manual input approaches zero.
-                  </p>
-                </div>
+              <h2 style={{ marginBottom: "1.5rem" }}>Frequently asked questions</h2>
+              <div className="faq-list">
+                {FAQ_ITEMS.map((item, i) => (
+                  <details key={i} className="faq-item">
+                    <summary className="faq-q">{item.q}</summary>
+                    <p className="faq-a">{item.a}</p>
+                  </details>
+                ))}
               </div>
             </div>
           </div>
@@ -205,8 +199,8 @@ export default function ProcurementPage() {
       <Script id="procurement-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <CTABand
-        title="Ready to fix your procurement data?"
-        lead="Book a 7-minute discovery call. We will show you exactly where your spend data is causing problems and how long it will take to fix."
+        title="Ready to build a real spend baseline?"
+        lead="Book a 7-minute discovery call. We will show you exactly where your spend data is hiding the number you need."
         actions={[{ label: "Book a 7-minute discovery", href: siteConfig.calendly, variant: "primary", external: true }]}
       />
     </>

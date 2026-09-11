@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { CTABand, GeoBlock, PageHero, QuoteBox, SectionTitle, StatsGrid } from "@/components/content";
 import { siteConfig } from "@/lib/site";
 
@@ -11,9 +12,32 @@ export const metadata: Metadata = {
   }
 };
 
+const FAQ_ITEMS = [
+  {
+    q: "Should we fix our data before Fabric, or can Pearstop run alongside the migration?",
+    a: "Either works, but earlier is cheaper. Migrating inconsistent data into Fabric does not fix it, it moves it, and cleaning it up after migration typically costs more than cleaning it before."
+  },
+  {
+    q: "Does this replace our Fabric implementation partner?",
+    a: "No. Pearstop prepares the data layer underneath the migration. Your implementation partner still builds the platform, they are just building it on data that is already structured."
+  }
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: { "@type": "Answer", text: item.a }
+  }))
+};
+
 export default function FabricPage() {
   return (
     <>
+      <Script id="fabric-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+
       <PageHero
         eyebrow="Fabric Ready"
         title="Your Microsoft Fabric migration will only deliver if your data is ready first."
@@ -31,7 +55,7 @@ export default function FabricPage() {
               <div className="benefit-eyebrow">The Hidden Blocker</div>
               <h2>The hidden blocker in every Fabric migration</h2>
               <p className="light-copy">
-                Microsoft Fabric promises a unified data platform - one source of truth across finance, operations, procurement, and assets. But Fabric assumes structured, consistent data that most organisations simply do not have yet. Migrating dirty data into Fabric does not fix the problem; it just moves it, at great cost and risk.
+                Microsoft Fabric promises a unified data platform, one source of truth across finance, operations, procurement, and assets. But Fabric assumes structured, consistent data that most organisations do not have yet. Migrating dirty data into Fabric does not fix the problem, it just moves it, at greater cost and risk.
               </p>
               <ul className="ind-pains">
                 <li>
@@ -40,7 +64,7 @@ export default function FabricPage() {
                 </li>
                 <li>
                   <span className="ind-ok">×</span>
-                  <div>Field errors and duplicates surface immediately in reporting - damaging trust in the new platform</div>
+                  <div>Field errors and duplicates surface immediately in reporting, damaging trust in the new platform</div>
                 </li>
                 <li>
                   <span className="ind-ok">×</span>
@@ -56,7 +80,7 @@ export default function FabricPage() {
               <div className="quote-card">
                 <div className="story-label">Why this matters to leadership</div>
                 <p className="light-copy">
-                  CFOs and senior operations leaders care about trust, reporting, and delivery. They do not care about the platform for its own sake - they care about whether the migration produces company-wide visibility and a return on the spend.
+                  CFOs and senior operations leaders care about trust, reporting, and delivery. They do not care about the platform for its own sake, they care about whether the migration produces company-wide visibility and a return on the spend.
                 </p>
               </div>
             </div>
@@ -71,17 +95,17 @@ export default function FabricPage() {
             <article className="hiw-card">
               <div className="hiw-badge">1</div>
               <h3>Data Readiness Assessment</h3>
-              <p>We audit your existing operational data against Fabric's structural requirements - identifying gaps, inconsistencies, and priorities before migration begins.</p>
+              <p>We audit your existing operational data against Fabric&rsquo;s structural requirements, identifying gaps, inconsistencies, and priorities before migration begins.</p>
             </article>
             <article className="hiw-card featured">
               <div className="hiw-badge">2</div>
               <h3>Automated Cleaning and Structuring</h3>
-              <p>We clean, standardise, and structure your data to meet Fabric's requirements automatically, at scale - no manual rework.</p>
+              <p>We clean, standardise, and structure your data to meet Fabric&rsquo;s requirements automatically, at scale, with no manual rework.</p>
             </article>
             <article className="hiw-card">
               <div className="hiw-badge">3</div>
               <h3>Migration-Ready Data</h3>
-              <p>You receive verified, structured data with automated quality control built in - ready for Fabric onboarding and AI model training from day one.</p>
+              <p>You receive verified, structured data with automated quality control built in, ready for Fabric onboarding and AI model training from day one.</p>
             </article>
           </div>
         </div>
@@ -117,9 +141,9 @@ export default function FabricPage() {
           <div className="row">
             <div className="col-md-8 col-md-offset-2">
               <QuoteBox
-                quote="We were planning a Fabric migration but kept hitting the wall of inconsistent, unstructured data underneath. Pearstop cleaned and structured it first - what would have been a 12-month data preparation project became manageable."
-                author="Head of Data"
-                role="Infrastructure Company"
+                quote="If we want a bot that knows everything about our contract, we need to make sure the governance data in the contract is properly agreed first."
+                author="Data strategy lead"
+                role="Integrated facilities management provider"
               />
             </div>
           </div>
@@ -132,8 +156,26 @@ export default function FabricPage() {
             <div className="col-md-8 col-md-offset-2">
               <GeoBlock
                 title="What does Microsoft Fabric data readiness mean?"
-                copy="Microsoft Fabric data readiness is the process of cleaning, structuring, and governing operational data before migrating to Microsoft Fabric. For asset-intensive industries - construction, facilities management, manufacturing - procurement data, asset registers, and operational records are often too inconsistent for Fabric to process reliably. Pearstop automates the data preparation work that makes Fabric migrations succeed, ensuring organisations can use Copilot, AI agents, and real-time analytics from day one rather than spending 12-18 months fixing data quality after migration."
+                copy="Microsoft Fabric data readiness is the process of cleaning, structuring, and governing operational data before migrating to Microsoft Fabric. For asset-intensive industries, construction, facilities management, manufacturing, procurement data, asset registers, and operational records are often too inconsistent for Fabric to process reliably. Pearstop automates the data preparation work that makes Fabric migrations succeed, so organisations can use Copilot, AI agents, and real-time analytics from day one rather than spending 12-18 months fixing data quality after migration."
               />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-soft">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-8 col-md-offset-2">
+              <h2 style={{ marginBottom: "1.5rem" }}>Frequently asked questions</h2>
+              <div className="faq-list">
+                {FAQ_ITEMS.map((item, i) => (
+                  <details key={i} className="faq-item">
+                    <summary className="faq-q">{item.q}</summary>
+                    <p className="faq-a">{item.a}</p>
+                  </details>
+                ))}
+              </div>
             </div>
           </div>
         </div>

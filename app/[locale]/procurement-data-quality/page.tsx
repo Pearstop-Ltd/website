@@ -5,6 +5,8 @@ import { CTABand, GeoBlock, PageHero, QuoteBox, SectionTitle } from "@/component
 import { CalendlyButton } from "@/components/calendly-button";
 import { siteConfig } from "@/lib/site";
 
+type FaqItem = { question: string; answer: string };
+
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   setRequestLocale(locale);
@@ -18,34 +20,21 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "What happens if we do not have existing classification data to train from?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Pearstop combines rule-based assignment, machine learning, and an LLM layer that draws on broad product and industry knowledge, so it performs strongly even without existing priors."
-      }
-    },
-    {
-      "@type": "Question",
-      name: "Will our buyers still be in control?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Buyers review flagged items in a dedicated queue, and every decision they make trains the system further, reducing the review queue over time until manual input approaches zero."
-      }
-    }
-  ]
-};
-
 export default async function ProcurementPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const prefix = locale === "en" ? "" : `/${locale}`;
   const t = await getTranslations("Procurement");
+  const faqItems = t.raw("faq") as FaqItem[];
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: { "@type": "Answer", text: item.answer }
+    }))
+  };
 
   return (
     <>
@@ -68,6 +57,12 @@ export default async function ProcurementPage({ params }: { params: Promise<{ lo
               <p className="light-copy">
                 {t("problem.copy")}
               </p>
+              <blockquote className="quote-card" style={{ fontStyle: "italic", marginBottom: "1.5rem" }}>
+                <p style={{ margin: 0 }}>&ldquo;{t("problem.quote.text")}&rdquo;</p>
+                <p style={{ margin: "0.6rem 0 0", fontSize: "0.85rem", color: "var(--muted)" }}>
+                  {t("problem.quote.attribution")}
+                </p>
+              </blockquote>
               <ul className="ind-pains">
                 <li>
                   <span className="ind-ok">×</span>
@@ -121,11 +116,6 @@ export default async function ProcurementPage({ params }: { params: Promise<{ lo
               <h3>{t("howItWorks.step3.title")}</h3>
               <p>{t("howItWorks.step3.copy")}</p>
             </article>
-            <article className="hiw-card">
-              <div className="hiw-badge">4</div>
-              <h3>{t("howItWorks.step4.title")}</h3>
-              <p>{t("howItWorks.step4.copy")}</p>
-            </article>
           </div>
           <div className="text-center" style={{ marginTop: "2rem" }}>
             <CalendlyButton label={t("howItWorks.cta")} className="btn btn-primary" />
@@ -135,7 +125,7 @@ export default async function ProcurementPage({ params }: { params: Promise<{ lo
 
       <section>
         <div className="container">
-          <SectionTitle eyebrow={t("outcome.title")} title={t("outcome.title")} />
+          <SectionTitle title={t("outcome.title")} />
           <div className="bene-cards">
             <article className="ben-card">
               <div className="ben-icon">↗</div>
@@ -187,25 +177,14 @@ export default async function ProcurementPage({ params }: { params: Promise<{ lo
         <div className="container">
           <div className="row">
             <div className="col-md-8 col-md-offset-2">
-              <div className="faq-item">
-                <div className="faq-question">
-                  <h3 className="faq-q">{t("faq.0.question")}</h3>
-                </div>
-                <div className="faq-answer">
-                  <p>
-                    {t("faq.0.answer")}
-                  </p>
-                </div>
-              </div>
-              <div className="faq-item">
-                <div className="faq-question">
-                  <h3 className="faq-q">{t("faq.1.question")}</h3>
-                </div>
-                <div className="faq-answer">
-                  <p>
-                    {t("faq.1.answer")}
-                  </p>
-                </div>
+              <h2 style={{ marginBottom: "1.5rem" }}>Frequently asked questions</h2>
+              <div className="faq-list">
+                {faqItems.map((item, i) => (
+                  <details key={i} className="faq-item">
+                    <summary className="faq-q">{item.question}</summary>
+                    <p className="faq-a">{item.answer}</p>
+                  </details>
+                ))}
               </div>
             </div>
           </div>

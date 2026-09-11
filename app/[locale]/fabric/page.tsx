@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { getTranslations , setRequestLocale } from "next-intl/server";
 import { CTABand, GeoBlock, PageHero, QuoteBox, SectionTitle, StatsGrid } from "@/components/content";
 import { siteConfig } from "@/lib/site";
+
+type FaqItem = { question: string; answer: string };
 
 export async function generateMetadata({
   params
@@ -29,9 +32,22 @@ export default async function FabricPage({
   setRequestLocale(locale);
   const prefix = locale === "en" ? "" : `/${locale}`;
   const t = await getTranslations({ locale, namespace: "Fabric" });
+  const faqItems = t.raw("faq") as FaqItem[];
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: { "@type": "Answer", text: item.answer }
+    }))
+  };
 
   return (
     <>
+      <Script id="fabric-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+
       <PageHero
         eyebrow={t("hero.eyebrow")}
         title={t("hero.title")}
@@ -138,6 +154,24 @@ export default async function FabricPage({
                 title={t("geoBlock.title")}
                 copy={t("geoBlock.copy")}
               />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-soft">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-8 col-md-offset-2">
+              <h2 style={{ marginBottom: "1.5rem" }}>Frequently asked questions</h2>
+              <div className="faq-list">
+                {faqItems.map((item, i) => (
+                  <details key={i} className="faq-item">
+                    <summary className="faq-q">{item.question}</summary>
+                    <p className="faq-a">{item.answer}</p>
+                  </details>
+                ))}
+              </div>
             </div>
           </div>
         </div>

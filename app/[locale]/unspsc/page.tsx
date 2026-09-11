@@ -5,66 +5,13 @@ import { CTABand, GeoBlock, PageHero, QuoteBox, SectionTitle } from "@/component
 import { UnspscLookupCta } from "@/components/unspsc-lookup-cta";
 import { siteConfig } from "@/lib/site";
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "What is UNSPSC classification?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "UNSPSC (United Nations Standard Products and Services Code) is a hierarchical classification system used worldwide to categorise procurement spend. It has four levels: Segment, Family, Class, and Commodity. Organisations use UNSPSC to enable consistent spend analysis, supplier benchmarking, and category management across contracts, sites, and ERP systems."
-      }
-    },
-    {
-      "@type": "Question",
-      name: "How accurate is automated UNSPSC classification?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Pearstop's four-layer classification engine — combining rules, machine learning, an LLM layer, and human review — achieves 90–95% automatic classification on typical procurement datasets. The remaining 5–10% is flagged for human review. Each reviewed decision feeds back into the engine, shrinking the review queue over time until it reaches near zero."
-      }
-    },
-    {
-      "@type": "Question",
-      name: "How long does UNSPSC classification take?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Most clients have a clean, classified dataset ready within four to six weeks of starting. The first engagement begins with a Data Stability Baseline so you can assess the output quality before committing to ongoing classification."
-      }
-    },
-    {
-      "@type": "Question",
-      name: "Does Pearstop integrate with SAP for UNSPSC classification?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Pearstop receives data via CSV export or direct API connection from SAP, Oracle, and other ERP and P2P platforms. In practice, many clients find that CSV export is the simplest way to start. Classified data is returned in the same format, ready to load back into SAP or feed into BI tools."
-      }
-    },
-    {
-      "@type": "Question",
-      name: "What if we do not have existing classification data?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Pearstop's approach combines rule-based assignment, machine learning, and an LLM layer that draws on broad product and industry knowledge — meaning it performs strongly even without existing priors or historical classification data."
-      }
-    },
-    {
-      "@type": "Question",
-      name: "Which industries does Pearstop serve for UNSPSC classification?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Pearstop specialises in UNSPSC classification for hard services FM, infrastructure, construction, and manufacturing companies. These industries manage high volumes of procurement spend across decentralised sites, where manual classification is impractical and automated classification has the highest impact."
-      }
-    }
-  ]
-};
+type FaqItem = { question: string; answer: string };
 
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   name: "Automated UNSPSC Classification",
-  description: "Pearstop auto-classifies up to 95% of procurement spend lines to UNSPSC standard without manual effort. Built for hard services FM, infrastructure, construction, and manufacturing companies.",
+  description: "Pearstop auto-classifies up to 95% of procurement spend lines to UNSPSC standard without manual effort, and resolves a supplier's own part code back to the real manufacturer code. Built for hard services FM, infrastructure, construction, and manufacturing companies.",
   provider: {
     "@type": "Organization",
     name: "Pearstop",
@@ -93,6 +40,17 @@ export default async function UnspscPage({ params }: { params: Promise<{ locale:
   setRequestLocale(locale);
   const prefix = locale === "en" ? "" : `/${locale}`;
   const t = await getTranslations("Unspsc");
+  const faqItems = t.raw("faq") as FaqItem[];
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: { "@type": "Answer", text: item.answer }
+    }))
+  };
 
   return (
     <>
@@ -171,11 +129,25 @@ export default async function UnspscPage({ params }: { params: Promise<{ locale:
               <h3>{t("howItWorks.step3.title")}</h3>
               <p>{t("howItWorks.step3.copy")}</p>
             </article>
-            <article className="hiw-card">
-              <div className="hiw-badge">4</div>
-              <h3>{t("howItWorks.step4.title")}</h3>
-              <p>{t("howItWorks.step4.copy")}</p>
-            </article>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div className="container">
+          <div className="row" style={{ alignItems: "center", gap: "3rem", flexWrap: "wrap" }}>
+            <div className="col-md-6">
+              <div className="benefit-eyebrow">{t("manufacturerCode.eyebrow")}</div>
+              <h2>{t("manufacturerCode.title")}</h2>
+              <p className="light-copy">{t("manufacturerCode.copy")}</p>
+              <p className="light-copy">{t("manufacturerCode.example")}</p>
+            </div>
+            <div className="col-md-5" style={{ marginLeft: "auto" }}>
+              <div className="quote-card">
+                <div className="story-label">{t("manufacturerCode.resultLabel")}</div>
+                <p className="light-copy">{t("manufacturerCode.resultCopy")}</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -189,12 +161,12 @@ export default async function UnspscPage({ params }: { params: Promise<{ locale:
               <p>{t("stats.s1.copy")}</p>
             </article>
             <article className="ben-card">
-              <div className="ben-icon" style={{ fontSize: "2rem", fontWeight: 700 }}>90–95%</div>
+              <div className="ben-icon" style={{ fontSize: "2rem", fontWeight: 700 }}>90-95%</div>
               <h3>{t("stats.s2.title")}</h3>
               <p>{t("stats.s2.copy")}</p>
             </article>
             <article className="ben-card">
-              <div className="ben-icon" style={{ fontSize: "2rem", fontWeight: 700 }}>70–90%</div>
+              <div className="ben-icon" style={{ fontSize: "2rem", fontWeight: 700 }}>70-90%</div>
               <h3>{t("stats.s3.title")}</h3>
               <p>{t("stats.s3.copy")}</p>
             </article>
@@ -235,7 +207,6 @@ export default async function UnspscPage({ params }: { params: Promise<{ locale:
                 quote={t("quote.text")}
                 author={t("quote.author")}
                 role={t("quote.role")}
-                image={siteConfig.assets.team.vince}
               />
             </div>
           </div>
@@ -264,6 +235,24 @@ export default async function UnspscPage({ params }: { params: Promise<{ locale:
                 <p>
                   {t("noDataFaq.copy")}
                 </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-soft">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-8 col-md-offset-2">
+              <h2 style={{ marginBottom: "1.5rem" }}>Frequently asked questions</h2>
+              <div className="faq-list">
+                {faqItems.map((item, i) => (
+                  <details key={i} className="faq-item">
+                    <summary className="faq-q">{item.question}</summary>
+                    <p className="faq-a">{item.answer}</p>
+                  </details>
+                ))}
               </div>
             </div>
           </div>

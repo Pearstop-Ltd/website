@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { getTranslations , setRequestLocale } from "next-intl/server";
 import { CTABand, GeoBlock, PageHero, QuoteBox, SectionTitle } from "@/components/content";
 import { siteConfig } from "@/lib/site";
+
+type FaqItem = { question: string; answer: string };
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -19,11 +22,23 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function DataQualityPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const prefix = locale === "en" ? "" : `/${locale}`;
   const t = await getTranslations("DataQuality");
+  const faqItems = t.raw("faq") as FaqItem[];
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: { "@type": "Answer", text: item.answer }
+    }))
+  };
 
   return (
     <>
+      <Script id="dataquality-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+
       <PageHero
         eyebrow={t("hero.eyebrow")}
         title={t("hero.title")}
@@ -43,6 +58,12 @@ export default async function DataQualityPage({ params }: { params: Promise<{ lo
               <p className="light-copy">
                 {t("problem.copy")}
               </p>
+              <blockquote className="quote-card" style={{ fontStyle: "italic", marginBottom: "1.5rem" }}>
+                <p style={{ margin: 0 }}>&ldquo;{t("problem.quote.text")}&rdquo;</p>
+                <p style={{ margin: "0.6rem 0 0", fontSize: "0.85rem", color: "var(--muted)" }}>
+                  {t("problem.quote.attribution")}
+                </p>
+              </blockquote>
               <ul className="ind-pains">
                 <li>
                   <span className="ind-ok">×</span>
@@ -141,6 +162,24 @@ export default async function DataQualityPage({ params }: { params: Promise<{ lo
                 author={t("quote.author")}
                 role={t("quote.role")}
               />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-soft">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-8 col-md-offset-2">
+              <h2 style={{ marginBottom: "1.5rem" }}>Frequently asked questions</h2>
+              <div className="faq-list">
+                {faqItems.map((item, i) => (
+                  <details key={i} className="faq-item">
+                    <summary className="faq-q">{item.question}</summary>
+                    <p className="faq-a">{item.answer}</p>
+                  </details>
+                ))}
+              </div>
             </div>
           </div>
         </div>
