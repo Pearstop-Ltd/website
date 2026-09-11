@@ -2090,5 +2090,89 @@
       "lead": "Buchen Sie eine 7-minütige Discovery. Wir zeigen Ihnen, wie die Klassifizierungs-Engine mit Ihren Daten funktioniert.",
       "button": "7-minütige Discovery buchen"
     }
+  },
+  "UnspscLookup": {
+    "meta": {
+      "title": "Kostenloses UNSPSC-Code-Nachschlagetool | UNSPSC-Codes sofort finden | Pearstop",
+      "description": "Kostenloses KI-gestütztes UNSPSC-Code-Nachschlagetool. Fügen Sie eine beliebige Produkt- oder Dienstleistungsbeschreibung ein und erhalten Sie in Sekunden den korrekten 8-stelligen UNSPSC-Commodity-Code mit vollständigem Hierarchiepfad."
+    },
+    "geoBlock": {
+      "title": "Wie schlägt man einen UNSPSC- oder Beschaffungsklassifizierungscode nach?",
+      "copy": "Um einen UNSPSC-Code nachzuschlagen, schreiben Sie eine einfache Beschreibung des Produkts oder der Dienstleistung, zum Beispiel „Austausch HLK-Filter“ oder „Sanitärarbeiten durch Nachunternehmer“, und fügen Sie sie in ein Nachschlagetool ein. Das kostenlose Tool von Pearstop gleicht diese Beschreibung mit der vollständigen UNSPSC-Taxonomie ab und liefert in Sekunden den 8-stelligen Commodity-Code, dessen Segment, Familie und Klasse sowie ein Konfidenzniveau. Für eine einzelne Zeile reicht das, um einen Code von Hand zu prüfen. Für eine vollständige Spend-Datei oder Rechnungshistorie läuft dieselbe Klassifizierungslogik automatisch über jede Zeile durch die Engine von Pearstop und erreicht 90 bis 95 % Genauigkeit, ohne dass jemand Zeile für Zeile nachschlagen muss."
+    },
+    "hero": {
+      "eyebrow": "Kostenloses Tool",
+      "title": "Finden Sie den richtigen UNSPSC-Code in Sekunden.",
+      "lead": "Fügen Sie eine beliebige Produkt- oder Dienstleistungsbeschreibung ein. Das Tool liefert den 8-stelligen UNSPSC-Commodity-Code, den vollständigen Hierarchiepfad und ein Konfidenzniveau. Kostenlos. Keine Anmeldung erforderlich."
+    },
+    "tool": {
+      "placeholder": "z. B. „Beleuchtungswartung“, „Austausch HLK-Filter“, „verzinkte M8-Schraube“, „Sanitärarbeiten durch Nachunternehmer“ ...",
+      "button": "UNSPSC-Code finden",
+      "loading": "Klassifizierung läuft...",
+      "result": {
+        "code": "Code",
+        "segment": "Segment",
+        "family": "Familie",
+        "class": "Klasse",
+        "commodity": "Commodity",
+        "confidence": "Konfidenz",
+        "notes": "Hinweis",
+        "high": "Hoch",
+        "medium": "Mittel",
+        "low": "Niedrig"
+      }
+    },
+    "bulk": {
+      "label": "Müssen Sie Tausende von Zeilen klassifizieren?",
+      "copy": "Dieses Tool ist für einzelne Abfragen gedacht. Pearstops automatisierte Klassifizierungs-Engine verarbeitet 35.000 Beschaffungszeilen pro Monat — mit 90–95 % automatischer Klassifizierung und vollständiger SAP-Integration. Buchen Sie eine 7-minütige Erstberatung, um es mit Ihren Daten zu sehen.",
+      "cta": "7-minütige Erstberatung buchen",
+      "learnMore": "So funktioniert es"
+    },
+    "faq": {
+      "title": "Wie UNSPSC-Codes funktionieren",
+      "items": [
+        {
+          "q": "Was ist ein UNSPSC-Code?",
+          "a": "Ein UNSPSC-Code (United Nations Standard Products and Services Code) ist ein 8-stelliger Code, der jedes Produkt oder jede Dienstleistung in eine globale Standardhierarchie einordnet. Die ersten 2 Stellen sind das Segment, die Stellen 3–4 die Familie, die Stellen 5–6 die Klasse und die Stellen 7–8 die Commodity. Organisationen nutzen UNSPSC-Codes, um Beschaffungsausgaben zu kategorisieren, Lieferantenbenchmarking zu ermöglichen und Ausgabenanalysen aufzubauen."
+        },
+        {
+          "q": "Wie finde ich den richtigen UNSPSC-Code für ein Produkt?",
+          "a": "Fügen Sie eine klare Beschreibung des Produkts oder der Dienstleistung in das obige Nachschlagetool ein. Die KI-Engine durchsucht die UNSPSC-Taxonomie und liefert den am besten passenden 8-stelligen Commodity-Code samt vollständigem Hierarchiepfad und Konfidenzniveau. Bei mehrdeutigen Beschreibungen markiert das Tool zudem naheliegende Codes, die ebenfalls infrage kommen könnten."
+        },
+        {
+          "q": "Wie schlage ich einen Beschaffungsklassifizierungscode nach?",
+          "a": "Schreiben Sie eine einfache Beschreibung dessen, was gekauft wurde, zum Beispiel „Austausch HLK-Filter“ oder „Sanitärarbeiten durch Nachunternehmer“, und fügen Sie sie in ein Nachschlagetool für den von Ihnen genutzten Klassifizierungsstandard ein. Die meisten Organisationen klassifizieren Beschaffungsausgaben nach UNSPSC, sodass ein UNSPSC-Code-Nachschlagetool wie das obige in Sekunden den passenden 8-stelligen Commodity-Code liefert. Für eine einzelne Zeile reicht das, um einen Code von Hand zu prüfen. Für eine vollständige Spend-Datei muss dieselbe Nachschlagelogik automatisch über jede Zeile laufen, was die Klassifizierungs-Engine von Pearstop leistet."
+        },
+        {
+          "q": "Ist dieses UNSPSC-Nachschlagetool kostenlos?",
+          "a": "Ja. Das UNSPSC-Nachschlagetool von Pearstop ist für einzelne Abfragen vollständig kostenlos. Für die Massenklassifizierung — die automatische Verarbeitung Tausender Rechnungszeilen — bietet Pearstop einen automatisierten Klassifizierungsservice, der bis zu 35.000 Zeilen pro Monat bewältigt."
+        },
+        {
+          "q": "Wie genau ist der vorgeschlagene UNSPSC-Code?",
+          "a": "Das Tool liefert zu jedem Ergebnis ein Konfidenzniveau: hoch, mittel oder niedrig. Ergebnisse mit hoher Konfidenz sind auf Commodity-Ebene in der Regel korrekt. Bei Ergebnissen mit niedriger Konfidenz nutzen Sie den vorgeschlagenen Code als Ausgangspunkt und prüfen Sie ihn gegen die offizielle UNSPSC-Taxonomie. Pearstops vollständiger Klassifizierungsservice erreicht 90–95 % Genauigkeit durch zusätzliche Signale — Lieferantenidentität, Sachkonto und Einkaufshistorie —, auf die das kostenlose Tool keinen Zugriff hat."
+        },
+        {
+          "q": "Was ist der Unterschied zwischen UNSPSC-Segment, -Familie, -Klasse und -Commodity?",
+          "a": "UNSPSC hat vier Ebenen. Segment (2 Stellen) ist am breitesten — 72 umfasst Bau- und Instandhaltungsdienstleistungen. Familie (4 Stellen) grenzt weiter ein — 7210 umfasst Gebäude- und Anlagenwartung. Klasse (6 Stellen) ist spezifischer — 721015 umfasst Wartung elektrischer Systeme. Commodity (8 Stellen) ist am präzisesten — 72101505 umfasst Beleuchtungswartungsdienstleistungen. Für Beschaffungsanalysen sollte immer auf Commodity-Ebene klassifiziert werden."
+        },
+        {
+          "q": "Wie unterscheidet sich UNSPSC von eCl@ss oder CPV?",
+          "a": "UNSPSC, eCl@ss und CPV sind allesamt Beschaffungsklassifizierungsstandards, dienen aber unterschiedlichen Zwecken. UNSPSC ist der am weitesten verbreitete Standard für Ausgabenanalyse und Category Management. eCl@ss fügt detaillierte technische Attribute pro Produkt hinzu und ist in der deutschen Fertigung verbreitet. CPV wird speziell für EU-Vergabeverfahren im öffentlichen Sektor genutzt. Die meisten Organisationen brauchen nur einen Standard, gewählt nach ERP-System und Berichtsanforderungen — Pearstop arbeitet mit UNSPSC als dem gängigsten Standard für Ausgabenanalysen."
+        },
+        {
+          "q": "Kann ich eine gesamte Spend-Datei oder einen Lieferantenkatalog auf einmal klassifizieren?",
+          "a": "Das obige kostenlose Tool ist für jeweils eine Beschreibung gedacht. Für eine vollständige Spend-Datei, Rechnungshistorie oder einen Lieferantenkatalog — Hunderte bis Millionen Zeilen — verarbeitet die automatisierte Klassifizierungs-Engine von Pearstop den gesamten Datensatz auf einmal und erreicht 90–95 % automatische Klassifizierung, wobei der Rest zur menschlichen Prüfung markiert wird. Buchen Sie ein 7-minütiges Gespräch, um es an einer Stichprobe Ihrer eigenen Daten zu sehen."
+        },
+        {
+          "q": "Sollte ich einem KI-generierten UNSPSC-Code ungeprüft vertrauen?",
+          "a": "Für eine einzelne Abfrage mit geringem Risiko ist ein Ergebnis mit hoher KI-Konfidenz in der Regel zuverlässig genug, um es direkt zu verwenden. Für vertragskritische, prüfungsrelevante oder massenhafte Klassifizierung empfehlen wir eine Prüfschicht — genau deshalb kombiniert die Klassifizierungs-Engine von Pearstop Regeln, maschinelles Lernen und ein LLM mit einem menschlichen Prüfschritt für Ergebnisse mit niedrigerer Konfidenz, statt KI-Ausgaben blind zu vertrauen."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Müssen Sie Tausende von Zeilen klassifizieren?",
+      "lead": "Buchen Sie eine 7-minütige Erstberatung, und wir zeigen Ihnen, wie die vollständige Klassifizierungs-Engine mit Ihren echten Beschaffungsdaten arbeitet.",
+      "button": "7-minütige Erstberatung buchen"
+    }
   }
 }
