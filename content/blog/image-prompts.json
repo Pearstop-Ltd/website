@@ -82,5 +82,159 @@
     "scene": "A spacious mechanical room filled with rows of stainless‑steel air handling units, large electrical switchgear panels, and bundled conduit pipes illuminated by overhead fluorescent lighting.",
     "prompt": "A spacious mechanical room filled with rows of stainless‑steel air handling units, large electrical switchgear panels, and bundled conduit pipes illuminated by overhead fluorescent lighting., photorealistic photograph, natural daylight, cool blue-grey colour grading, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
     "seed": 283126526
+  },
+  "fm-oil-price-procurement-margins": {
+    "sector": "hard-fm",
+    "includePeople": false,
+    "scene": "A rooftop view of a commercial building showing multiple diesel generators, fuel storage tanks, and a network of exhaust pipes against a clear sky.",
+    "prompt": "A rooftop view of a commercial building showing multiple diesel generators, fuel storage tanks, and a network of exhaust pipes against a clear sky., photorealistic photograph, warm natural daylight or warm interior work-light, true-to-life saturated colour, vivid but realistic tones, rich contrast, NOT desaturated, NOT monochrome, NOT a cool blue-grey colour grade, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
+    "seed": 2600461658
+  },
+  "cleaning-invoices-dont-match-contract": {
+    "sector": "soft-fm-cleaning",
+    "includePeople": true,
+    "scene": "A cleaning supervisor in a navy‑blue uniform checks a floor‑plan checklist while a custodial worker in a yellow vest mops the lobby of a glass‑fronted office building, both surrounded by rows of polished desks and a visible invoice pad on a nearby table.",
+    "prompt": "A cleaning supervisor in a navy‑blue uniform checks a floor‑plan checklist while a custodial worker in a yellow vest mops the lobby of a glass‑fronted office building, both surrounded by rows of polished desks and a visible invoice pad on a nearby table., photorealistic photograph, warm natural daylight or warm interior work-light, true-to-life saturated colour, vivid but realistic tones, rich contrast, NOT desaturated, NOT monochrome, NOT a cool blue-grey colour grade, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
+    "seed": 3622612722
+  },
+  "consumables-creep-cleaning-spend": {
+    "sector": "soft-fm-cleaning",
+    "includePeople": false,
+    "scene": "A row of identical cleaning supply carts stacked with overflowing boxes of paper towels, mop heads, and disinfectant bottles in a large office hallway, with the floor showing subtle wear from constant foot traffic.",
+    "prompt": "A row of identical cleaning supply carts stacked with overflowing boxes of paper towels, mop heads, and disinfectant bottles in a large office hallway, with the floor showing subtle wear from constant foot traffic., photorealistic photograph, warm natural daylight or warm interior work-light, true-to-life saturated colour, vivid but realistic tones, rich contrast, NOT desaturated, NOT monochrome, NOT a cool blue-grey colour grade, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
+    "seed": 1701289904
+  },
+  "security-spend-data-quality": {
+    "sector": "hard-fm",
+    "includePeople": false,
+    "scene": "A dimly lit security control room lined with racks of CCTV monitors, alarm panels, and network switches, with cables snaking across the floor and a wall-mounted clock showing late-night hours.",
+    "prompt": "A dimly lit security control room lined with racks of CCTV monitors, alarm panels, and network switches, with cables snaking across the floor and a wall-mounted clock showing late-night hours., photorealistic photograph, warm natural daylight or warm interior work-light, true-to-life saturated colour, vivid but realistic tones, rich contrast, NOT desaturated, NOT monochrome, NOT a cool blue-grey colour grade, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
+    "seed": 1396864207
+  },
+  "catering-vending-spend-classification": {
+    "sector": "soft-fm-cleaning",
+    "includePeople": true,
+    "scene": "A facilities manager in a corporate lobby opens the service panel of a vending machine while a catering supervisor in a uniform restocks snack trays beside it.",
+    "prompt": "A facilities manager in a corporate lobby opens the service panel of a vending machine while a catering supervisor in a uniform restocks snack trays beside it., photorealistic photograph, warm natural daylight or warm interior work-light, true-to-life saturated colour, vivid but realistic tones, rich contrast, NOT desaturated, NOT monochrome, NOT a cool blue-grey colour grade, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
+    "seed": 4245181610
+  },
+  "hvac-maintenance-invoice-reconciliation": {
+    "sector": "hvac-filtration",
+    "includePeople": false,
+    "scene": "A commercial building's rooftop mechanical area showing rows of large HVAC units with open service panels, tangled ductwork, and a scattered pile of assorted metal parts and unlabeled paper sheets on the concrete floor",
+    "prompt": "A commercial building's rooftop mechanical area showing rows of large HVAC units with open service panels, tangled ductwork, and a scattered pile of assorted metal parts and unlabeled paper sheets on the concrete floor, photorealistic photograph, warm natural daylight or warm interior work-light, true-to-life saturated colour, vivid but realistic tones, rich contrast, NOT desaturated, NOT monochrome, NOT a cool blue-grey colour grade, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
+    "seed": 3729423103
+  },
+  "ppm-mande-spend-visibility": {
+    "sector": "hard-fm",
+    "includePeople": false,
+    "scene": "A cavernous mechanical room filled with rows of humming HVAC chillers, large centrifugal pumps, exposed ductwork, and a wall of brushed‑steel control panels, all bathed in the cool, diffused light of overhead industrial fixtures.",
+    "prompt": "A cavernous mechanical room filled with rows of humming HVAC chillers, large centrifugal pumps, exposed ductwork, and a wall of brushed‑steel control panels, all bathed in the cool, diffused light of overhead industrial fixtures., photorealistic photograph, warm natural daylight or warm interior work-light, true-to-life saturated colour, vivid but realistic tones, rich contrast, NOT desaturated, NOT monochrome, NOT a cool blue-grey colour grade, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
+    "seed": 1784333324
+  },
+  "reactive-maintenance-callout-spend": {
+    "sector": "hard-fm",
+    "includePeople": false,
+    "scene": "A large commercial building's exposed mechanical room showing a corroded chilled water pipe leaking onto the concrete floor, with a partially disassembled HVAC unit, rusted valves, and a pile of replacement gaskets beside it.",
+    "prompt": "A large commercial building's exposed mechanical room showing a corroded chilled water pipe leaking onto the concrete floor, with a partially disassembled HVAC unit, rusted valves, and a pile of replacement gaskets beside it., photorealistic photograph, warm natural daylight or warm interior work-light, true-to-life saturated colour, vivid but realistic tones, rich contrast, NOT desaturated, NOT monochrome, NOT a cool blue-grey colour grade, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
+    "seed": 625822286
+  },
+  "subcontractor-invoice-data-quality": {
+    "sector": "construction",
+    "includePeople": false,
+    "scene": "A cluttered wooden site office table covered with an assortment of paper invoices in various sizes, formats, and colors, scattered among rolled blueprints and a half-open toolbox.",
+    "prompt": "A cluttered wooden site office table covered with an assortment of paper invoices in various sizes, formats, and colors, scattered among rolled blueprints and a half-open toolbox., photorealistic photograph, warm natural daylight or warm interior work-light, true-to-life saturated colour, vivid but realistic tones, rich contrast, NOT desaturated, NOT monochrome, NOT a cool blue-grey colour grade, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
+    "seed": 1641685967
+  },
+  "construction-procurement-data-benchmarking": {
+    "sector": "construction",
+    "includePeople": false,
+    "scene": "A half‑built high‑rise under a cloudy sky, showing exposed steel framing, concrete formwork, and piles of timber, rebar, and bundled insulation materials neatly arranged on the construction site",
+    "prompt": "A half‑built high‑rise under a cloudy sky, showing exposed steel framing, concrete formwork, and piles of timber, rebar, and bundled insulation materials neatly arranged on the construction site, photorealistic photograph, warm natural daylight or warm interior work-light, true-to-life saturated colour, vivid but realistic tones, rich contrast, NOT desaturated, NOT monochrome, NOT a cool blue-grey colour grade, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
+    "seed": 2446962348
+  },
+  "fuel-plant-hire-surcharges-construction": {
+    "sector": "construction",
+    "includePeople": false,
+    "scene": "A vacant construction site showing a diesel fuel drum beside a rented excavator parked on a gravel pad, with fuel hoses coiled and the plant’s control box exposed",
+    "prompt": "A vacant construction site showing a diesel fuel drum beside a rented excavator parked on a gravel pad, with fuel hoses coiled and the plant’s control box exposed, photorealistic photograph, warm natural daylight or warm interior work-light, true-to-life saturated colour, vivid but realistic tones, rich contrast, NOT desaturated, NOT monochrome, NOT a cool blue-grey colour grade, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
+    "seed": 3346625326
+  },
+  "infrastructure-procurement-data-portability": {
+    "sector": "construction",
+    "includePeople": true,
+    "scene": "On a bustling construction site, a procurement officer in a high‑visibility vest hands a stack of sealed contract documents to a foreman standing beside a concrete mixer, while a crane operator watches nearby.",
+    "prompt": "On a bustling construction site, a procurement officer in a high‑visibility vest hands a stack of sealed contract documents to a foreman standing beside a concrete mixer, while a crane operator watches nearby., photorealistic photograph, warm natural daylight or warm interior work-light, true-to-life saturated colour, vivid but realistic tones, rich contrast, NOT desaturated, NOT monochrome, NOT a cool blue-grey colour grade, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
+    "seed": 1288194650
+  },
+  "multi-site-infrastructure-classification": {
+    "sector": "construction",
+    "includePeople": false,
+    "scene": "A sprawling construction site with stacked steel I-beams, concrete formwork, and a tower crane silhouetted against a cloudy sky, with piles of mixed building materials awaiting classification.",
+    "prompt": "A sprawling construction site with stacked steel I-beams, concrete formwork, and a tower crane silhouetted against a cloudy sky, with piles of mixed building materials awaiting classification., photorealistic photograph, warm natural daylight or warm interior work-light, true-to-life saturated colour, vivid but realistic tones, rich contrast, NOT desaturated, NOT monochrome, NOT a cool blue-grey colour grade, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
+    "seed": 620104827
+  },
+  "infrastructure-contract-spend-visibility": {
+    "sector": "construction",
+    "includePeople": false,
+    "scene": "A sprawling construction site showing a skeletal high-rise frame of steel beams and girders, piles of labeled steel beams and concrete bags stacked on the ground, and a network of exposed utility conduits running along the scaffolding.",
+    "prompt": "A sprawling construction site showing a skeletal high-rise frame of steel beams and girders, piles of labeled steel beams and concrete bags stacked on the ground, and a network of exposed utility conduits running along the scaffolding., photorealistic photograph, warm natural daylight or warm interior work-light, true-to-life saturated colour, vivid but realistic tones, rich contrast, NOT desaturated, NOT monochrome, NOT a cool blue-grey colour grade, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
+    "seed": 1096532279
+  },
+  "mro-spend-classification": {
+    "sector": "hard-fm",
+    "includePeople": false,
+    "scene": "A dimly lit mechanical room filled with metal shelving units stacked with assorted spare parts, valves, filters, and consumable boxes, all loosely organized amid exposed ductwork and piping.",
+    "prompt": "A dimly lit mechanical room filled with metal shelving units stacked with assorted spare parts, valves, filters, and consumable boxes, all loosely organized amid exposed ductwork and piping., photorealistic photograph, warm natural daylight or warm interior work-light, true-to-life saturated colour, vivid but realistic tones, rich contrast, NOT desaturated, NOT monochrome, NOT a cool blue-grey colour grade, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
+    "seed": 499206063
+  },
+  "mro-parts-vs-invoice-data-mismatch": {
+    "sector": "hard-fm",
+    "includePeople": false,
+    "scene": "A dimly lit maintenance closet shows rows of open metal shelves packed with assorted MRO components—screws, valves, filters—and nearby a chaotic pile of sealed invoice envelopes scattered on the concrete floor.",
+    "prompt": "A dimly lit maintenance closet shows rows of open metal shelves packed with assorted MRO components—screws, valves, filters—and nearby a chaotic pile of sealed invoice envelopes scattered on the concrete floor., photorealistic photograph, warm natural daylight or warm interior work-light, true-to-life saturated colour, vivid but realistic tones, rich contrast, NOT desaturated, NOT monochrome, NOT a cool blue-grey colour grade, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
+    "seed": 4232090108
+  },
+  "asset-data-vs-spend-data-mismatch": {
+    "sector": "hard-fm",
+    "includePeople": false,
+    "scene": "A close-up view of a building's mechanical room showing a maze of exposed steel pipework, valve banks, and labeled conduit trays with mismatched serial plates scattered across the floor.",
+    "prompt": "A close-up view of a building's mechanical room showing a maze of exposed steel pipework, valve banks, and labeled conduit trays with mismatched serial plates scattered across the floor., photorealistic photograph, warm natural daylight or warm interior work-light, true-to-life saturated colour, vivid but realistic tones, rich contrast, NOT desaturated, NOT monochrome, NOT a cool blue-grey colour grade, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
+    "seed": 2724124533
+  },
+  "emergency-mro-purchases-spend-control": {
+    "sector": "hard-fm",
+    "includePeople": false,
+    "scene": "A large, open mechanical room with a gutted HVAC air handling unit, exposed ductwork and pipework, a rusted valve on the floor and an open cardboard box of emergency replacement filters spilling onto the concrete.",
+    "prompt": "A large, open mechanical room with a gutted HVAC air handling unit, exposed ductwork and pipework, a rusted valve on the floor and an open cardboard box of emergency replacement filters spilling onto the concrete., photorealistic photograph, warm natural daylight or warm interior work-light, true-to-life saturated colour, vivid but realistic tones, rich contrast, NOT desaturated, NOT monochrome, NOT a cool blue-grey colour grade, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
+    "seed": 4171761839
+  },
+  "ai-procurement-data-classification-reality": {
+    "sector": "construction",
+    "includePeople": false,
+    "scene": "A sprawling construction site showing rows of neatly stacked steel I-beams, concrete formwork panels, and pallets of bricks beside a stationary crane against a backdrop of an unfinished high-rise skeleton.",
+    "prompt": "A sprawling construction site showing rows of neatly stacked steel I-beams, concrete formwork panels, and pallets of bricks beside a stationary crane against a backdrop of an unfinished high-rise skeleton., photorealistic photograph, warm natural daylight or warm interior work-light, true-to-life saturated colour, vivid but realistic tones, rich contrast, NOT desaturated, NOT monochrome, NOT a cool blue-grey colour grade, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
+    "seed": 4169763083
+  },
+  "commercial-fm-contract-billing-mismatch": {
+    "sector": "soft-fm-cleaning",
+    "includePeople": true,
+    "scene": "A senior cleaning supervisor in a high‑rise office lobby directs a team of two janitors as they mop the polished marble floor while a third janitor empties a large waste bin beside a reception desk.",
+    "prompt": "A senior cleaning supervisor in a high‑rise office lobby directs a team of two janitors as they mop the polished marble floor while a third janitor empties a large waste bin beside a reception desk., photorealistic photograph, warm natural daylight or warm interior work-light, true-to-life saturated colour, vivid but realistic tones, rich contrast, NOT desaturated, NOT monochrome, NOT a cool blue-grey colour grade, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
+    "seed": 107273231
+  },
+  "spend-cube-execution-framework": {
+    "sector": "construction",
+    "includePeople": false,
+    "scene": "A crane lifts a steel I-beam onto a neatly arranged stack of precast concrete panels on a busy construction site, with scaffolding and unfinished building frames surrounding the pile.",
+    "prompt": "A crane lifts a steel I-beam onto a neatly arranged stack of precast concrete panels on a busy construction site, with scaffolding and unfinished building frames surrounding the pile., photorealistic photograph, warm natural daylight or warm interior work-light, true-to-life saturated colour, vivid but realistic tones, rich contrast, NOT desaturated, NOT monochrome, NOT a cool blue-grey colour grade, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
+    "seed": 3152617467
+  },
+  "spend-classification-tools-compared-2026": {
+    "sector": "construction",
+    "includePeople": false,
+    "scene": "A panoramic view of a bustling construction site with towering steel scaffolding, piles of raw concrete blocks, and a network of exposed ductwork and rebar framing the skeleton of a new high-rise building.",
+    "prompt": "A panoramic view of a bustling construction site with towering steel scaffolding, piles of raw concrete blocks, and a network of exposed ductwork and rebar framing the skeleton of a new high-rise building., photorealistic photograph, warm natural daylight or warm interior work-light, true-to-life saturated colour, vivid but realistic tones, rich contrast, NOT desaturated, NOT monochrome, NOT a cool blue-grey colour grade, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
+    "seed": 3190570033
   }
 }
