@@ -841,6 +841,7 @@
     "related": {
       "label": "Weitere UNSPSC-Ressourcen",
       "tool": "Kostenloses UNSPSC-Code-Nachschlagetool",
+      "guide": "Wie KI-Klassifizierung wirklich funktioniert",
       "fm": "UNSPSC für FM und Hard Services",
       "nl": "UNSPSC in den Niederlanden",
       "de": "UNSPSC in Deutschland",
@@ -850,6 +851,142 @@
       "title": "Bereit, Ihre Beschaffungsklassifizierung zu automatisieren?",
       "lead": "Buchen Sie eine 7-minütige Discovery. Wir zeigen Ihnen genau, wie die Klassifizierungs-Engine mit Ihren Daten funktionieren würde.",
       "button": "7-minütige Discovery buchen"
+    }
+  },
+  "UnspscAiGuide": {
+    "meta": {
+      "title": "KI-UNSPSC-Klassifizierung: Der Praxisleitfaden",
+      "description": "Wie Pearstop einen großen Excel- oder CSV-Beschaffungskatalog mit KI in UNSPSC klassifiziert: PDF-Rechnungsextraktion, ein kostenloser Pilot mit 500 Zeilen, lieferantenspezifisches Gedächtnis und vollständige 8-stellige Commodity-Codes für Ihr ERP."
+    },
+    "hero": {
+      "eyebrow": "Leitfaden zur KI-UNSPSC-Klassifizierung",
+      "title": "Sie haben einen großen Excel-Katalog. Sie möchten, dass KI ihn in UNSPSC klassifiziert.",
+      "lead": "Das ist die Anfrage, die wir am häufigsten hören, mal als Spend-Datei, die noch nie einen Code getragen hat, mal als Stapel PDF-Rechnungen, der noch nicht einmal zu einer Spend-Datei geworden ist. Dieser Leitfaden beschreibt den tatsächlichen Prozess: wie Pearstop beide Ausgangspunkte in einen UNSPSC-codierten Datensatz verwandelt, was ein Pilot misst, bevor Sie sich auf die vollständige Datei festlegen, und warum die Klassifizierung nicht daraus entsteht, ein Modell einfach zu fragen, welcher Code passen sollte.",
+      "ctaPrimary": "7-minütige Erstberatung buchen",
+      "ctaSecondary": "Den Prozess ansehen"
+    },
+    "paths": {
+      "eyebrow": "Wo Sie starten",
+      "title": "Wo beginnen Ihre Daten heute?",
+      "lead": "Zwei unterschiedliche Situationen kommen bei uns an. Pearstop deckt beide ab und verlangt von Ihnen nicht mehr als genau den Schritt, den Sie tatsächlich brauchen.",
+      "path1": {
+        "title": "Ausgangspunkt eins: PDF-Rechnungen, noch nicht strukturiert",
+        "copy": "Manche Kunden verfügen über Jahre an Einkaufshistorie ausschließlich als gescannte oder exportierte PDF-Rechnungen. Bevor überhaupt ein UNSPSC-Code möglich ist, müssen diese Daten zu Zeilen werden: Lieferant, Beschreibung, Menge, Einzelpreis, Datum. Pearstop extrahiert die für Rechnungen in Ihrer Branche festgelegten Felder direkt aus den PDFs, sodass das Ergebnis eine normale Spend-Datei ist statt eines Ordners voller Dokumente, die niemand abfragen kann."
+      },
+      "path2": {
+        "title": "Ausgangspunkt zwei: bereits eine CSV- oder Excel-Datei",
+        "copy": "Andere Kunden verfügen bereits über eine strukturierte Spend-Datei, exportiert aus SAP, Oracle oder einem P2P-System, oder manuell gepflegt. Wenn das Ihr Ausgangspunkt ist, entfällt der Schritt der PDF-Extraktion vollständig, und die Klassifizierung beginnt direkt mit der Datei, die Sie bereits haben."
+      },
+      "note": "Das sind zwei getrennte Workflows, keine einzige Alles-oder-nichts-Pipeline. Wenn Sie nur den Klassifizierungsschritt brauchen, ist das genau das, was Sie bekommen. Wenn Sie beides brauchen, läuft zuerst die PDF-Extraktion, und die Klassifizierung läuft anschließend auf dem, was daraus entsteht."
+    },
+    "process": {
+      "eyebrow": "Der Prozess",
+      "title": "Was passiert, sobald Ihre Daten strukturiert sind?",
+      "lead": "Ab hier ist der Prozess derselbe, unabhängig davon, von welchem Ausgangspunkt Sie kommen.",
+      "step1": {
+        "title": "Eine an UNSPSC verankerte Taxonomie aufbauen",
+        "copy": "Wir erstellen eine vierstufige Beschaffungstaxonomie für Ihre Ausgaben und verankern sie in der offiziellen UNSPSC-Hierarchie sowie, wo Ihre Branche es erfordert, in NACE. Diese Taxonomie ist das, worunter am Ende jede Zeile steht, nicht nur ein pro Zeile zurückgegebener Code."
+      },
+      "step2": {
+        "title": "Eine kostenlose Stichprobe von etwa 500 Zeilen klassifizieren",
+        "copy": "Wir führen eine repräsentative Stichprobe von rund 500 Zeilen als Pilot durch die Engine, kostenlos. Das ist klein genug, um von Hand geprüft zu werden, und groß genug, um echte Genauigkeit zu zeigen, nicht nur eine Handvoll einfacher Beispiele."
+      },
+      "step3": {
+        "title": "Sie prüfen und korrigieren",
+        "copy": "Ihr Team gleicht die Stichprobe mit dem ab, was es über die eigenen Daten weiß, und korrigiert, was falsch ist. In diesem Schritt entsteht das eigentliche Signal: nicht ob die Engine einen Code liefern kann, sondern ob Ihre eigenen Einkäufer ihm zustimmen."
+      },
+      "step4": {
+        "title": "Korrekturen werden zu lieferantenspezifischem Gedächtnis",
+        "copy": "Jede Korrektur wird dem Lieferanten und dem Beschreibungsmuster zugeordnet, das sie ausgelöst hat. Das System merkt sich zum Beispiel, dass die Position „Handschuhe“ bei diesem Lieferanten immer Reinigungshandschuhe meint, nicht medizinische Handschuhe, ohne dass das erneut ausbuchstabiert werden muss."
+      },
+      "step5": {
+        "title": "Der vollständige Datensatz wird mit diesem Gedächtnis klassifiziert",
+        "copy": "Sobald der Pilot korrigiert und das Gedächtnis vorhanden ist, klassifizieren wir die gesamte Datei. Zeilen, die einem bekannten Lieferantenmuster entsprechen, durchlaufen den Prozess mit bereits angewendetem Gedächtnis. Neue Muster durchlaufen weiterhin dieselben Regeln, Schlüsselwortprüfungen und die LLM-Schicht wie im Pilot."
+      },
+      "step6": {
+        "title": "Export nach Excel oder direkte Anbindung an Ihr ERP",
+        "copy": "Die Ergebnisse kommen als Excel-Datei zurück oder über eine direkte API-Anbindung in Ihr ERP, sodass die klassifizierten Daten dort landen, wo Ihr Team bereits arbeitet, statt in einem separaten Tool."
+      },
+      "hierarchyNote": "Jede Zeile erhält die vollständige Hierarchie, nicht nur einen nackten Code: Segment, Familie, Klasse und den tatsächlichen 8-stelligen UNSPSC-Commodity-Code, jeweils mit Bezeichnung in Klartext, sodass ein Prüfer sieht, was ein Code bedeutet, ohne ihn separat nachschlagen zu müssen."
+    },
+    "whyNotLlm": {
+      "eyebrow": "Warum das zuverlässig ist",
+      "title": "Warum nicht einfach ChatGPT nach dem Code fragen?",
+      "p1": "Fügen Sie eine Beschreibung in ein allgemeines Modell ein und bitten Sie um einen UNSPSC-Code, bekommen Sie einen. Sie bekommen auch dann einen, wenn kein echter Code wirklich passt, denn ein Sprachmodell beantwortet die gestellte Frage, statt zuzugeben, dass es die Antwort nicht kennt. Das ist ein halluzinierter Code: überzeugend, konkret und in einer Tabelle voller solcher Codes kaum zu erkennen.",
+      "p2": "Pearstop fragt kein Modell nach einem Code und übernimmt die Antwort einfach. Die Beschreibung durchläuft eine KI- und LLM-Klassifizierungsschicht, aber der dort vorgeschlagene Code wird anschließend gegen den echten UNSPSC-Datensatz selbst geprüft, jedes Segment, jede Familie, jede Klasse und jede Commodity, bevor er akzeptiert wird. Existiert ein vorgeschlagener Code im tatsächlichen Standard nicht, wird er verworfen statt als Ergebnis angezeigt.",
+      "p3": "Neben dieser Prüfung fangen deterministische Schlüsselwortregeln die Muster ab, für die überhaupt kein Modell nötig ist. Eine lieferantenspezifische Datenbank grenzt das Feld schon vor Beginn der Klassifizierung ein, ähnlich wie das Wissen, dass ein Lieferant elektrische Komponenten verkauft, Bewässerungsteile von vornherein ausschließt. Lieferantenspezifisches Gedächtnis, aufgebaut aus Ihren eigenen geprüften Korrekturen, sorgt dafür, dass ein Muster beim zweiten Auftreten nicht mehr von Grund auf neu durchdacht werden muss. Und wo Ihre eigenen Daten bereits eine gewisse Kategoriestruktur tragen, Einkaufsgruppen, Sachkonten, bestehende Tags, wird diese Struktur genutzt, um das Ergebnis einzugrenzen und zu prüfen, statt bei null anzufangen, als hätte die Datei keine Historie.",
+      "p4": "Was nach Regeln, Lieferantendatenbank, Gedächtnis und Validierung übrig bleibt, erhält zusätzlich eine Konfidenzprüfung. Alles mit geringer Konfidenz wird einem Menschen zur Prüfung vorgelegt, nicht als Tatsache zurückgegeben."
+    },
+    "pilotMetrics": {
+      "eyebrow": "Einen Piloten durchführen",
+      "title": "Was sollten Sie in einem Piloten tatsächlich prüfen?",
+      "lead": "Wenn Sie das testen, empfehlen wir immer, drei Dinge zu messen, nicht nur ob es „funktioniert hat“.",
+      "m1": {
+        "title": "UNSPSC-Genauigkeit in Prozent",
+        "copy": "Der Anteil der Stichprobenzeilen, bei denen der zurückgegebene Code dem entspricht, den Ihre eigenen Prüfer gewählt hätten."
+      },
+      "m2": {
+        "title": "Automatisch klassifiziert im Vergleich zu zur Prüfung markiert",
+        "copy": "Das Verhältnis zwischen Zeilen, bei denen die Engine sicher genug war, sie selbstständig abzuschließen, und Zeilen, die sie einem Menschen zur Prüfung vorgelegt hat. Ein Pilot, der alles automatisch klassifiziert, ohne etwas zu markieren, ist nicht genauer. Er prüft sich nur nicht selbst."
+      },
+      "m3": {
+        "title": "Erreichte Tiefe in der Hierarchie",
+        "copy": "Ob das Ergebnis auf Ebene Segment, Familie, Klasse oder der vollständigen 8-stelligen Commodity-Ebene landet. Ein Code, der nur das Segment erreicht, sagt Ihnen, dass es sich um eine Wartungsdienstleistung handelte. Ein Code, der die Commodity-Ebene erreicht, sagt Ihnen, dass es konkret Aufzugswartung war, genau die Ebene, die Sie brauchen, um Lieferanten zu benchmarken oder ein ERP-Feld zu befüllen, das einen echten Commodity-Code erwartet."
+      }
+    },
+    "economics": {
+      "eyebrow": "Wirtschaftlichkeit",
+      "title": "Warum sinken die Kosten pro Datensatz mit steigendem Volumen?",
+      "p1": "Jede Zeile, die einen neuen LLM-Aufruf durchläuft, kostet Token, und der Token-Verbrauch treibt die Kosten der KI-Klassifizierung. Zu Beginn eines Datensatzes sind die meisten Zeilen neu: neue Lieferanten, neue Artikelbeschreibungen, noch nichts im Gedächtnis, das die Auswertung abkürzen könnte.",
+      "p2": "Das ändert sich mit wachsendem Volumen. Lieferantenspezifisches Gedächtnis bedeutet, dass ein Beschreibungsmuster nur einmal einen vollständigen LLM-Durchlauf braucht. Sobald diese Korrektur gespeichert ist, werden wiederkehrende Muster desselben Lieferanten mit dem Gedächtnis abgeglichen, statt erneut durchdacht zu werden. Bei kleinem Volumen wiederholt sich fast nichts, sodass fast jede Zeile den vollen Preis kostet. Bei großem Volumen kehren dieselben Lieferanten und dieselben Artikelbeschreibungen ständig wieder, sodass ein schrumpfender Anteil der Zeilen überhaupt einen neuen Modellaufruf braucht. Die Kosten pro Datensatz sinken, weil das System pro Datensatz weniger neu durchdenken muss, nicht wegen eines niedrigeren Preises pro Token."
+    },
+    "forYouIf": {
+      "title": "Ist das tatsächlich das, was Sie brauchen?",
+      "case1": "Sie müssen 100.000 Beschaffungstransaktionen in eine einzige, konsistente, an UNSPSC ausgerichtete Taxonomie überführen. Genau dafür ist das gebaut.",
+      "case2": "Sie brauchen jede SKU oder Zeile mit einem echten 8-stelligen UNSPSC-Code, den Sie in Ihr ERP laden können. Auch genau dafür ist das gebaut."
+    },
+    "faq": [
+      {
+        "question": "Was, wenn ich noch keine sauberen Rechnungsdaten habe?",
+        "answer": "Das ist der erste Ausgangspunkt, den dieser Leitfaden behandelt. Wenn Ihre Einkaufshistorie nur als PDF-Rechnungen existiert, extrahiert Pearstop zunächst die für Rechnungen in Ihrer Branche festgelegten Felder direkt aus diesen PDFs, sodass Sie eine strukturierte Spend-Datei erhalten, bevor die Klassifizierung beginnt."
+      },
+      {
+        "question": "Wie genau ist reine KI-Klassifizierung im Vergleich zum Ansatz von Pearstop?",
+        "answer": "Ein allgemeines Modell, das direkt nach einem UNSPSC-Code gefragt wird, antwortet auch dann, wenn kein Code wirklich passt, weil es darauf ausgelegt ist, eine Antwort zu liefern, nicht Unsicherheit zuzugeben. Pearstop prüft jeden vorgeschlagenen Code gegen den echten UNSPSC-Datensatz, bevor er akzeptiert wird, kombiniert das mit Regeln, einer Lieferantendatenbank und lieferantenspezifischem Gedächtnis und markiert Zeilen mit geringer Konfidenz weiterhin für die menschliche Prüfung. Bei typischen Beschaffungsdatensätzen erreicht das 90 bis 95 % automatische Klassifizierung, der Rest wird von einem Menschen geprüft statt geraten."
+      },
+      {
+        "question": "Kann das an unser ERP angebunden werden?",
+        "answer": "Ja. Klassifizierte Daten werden nach Excel exportiert oder direkt per API an SAP, Oracle und andere ERP- oder P2P-Plattformen angebunden. Viele Kunden starten mit einem Excel- oder CSV-Export und wechseln zu einer direkten Anbindung, sobald sich die Klassifizierung bewährt hat."
+      },
+      {
+        "question": "Was genau umfasst der kostenlose Pilot?",
+        "answer": "Wir klassifizieren kostenlos eine repräsentative Stichprobe von rund 500 Zeilen aus Ihren Daten. Ihr Team prüft und korrigiert diese Stichprobe, und diese Korrekturen werden zum lieferantenspezifischen Gedächtnis, das der Lauf über den vollständigen Datensatz anschließend nutzt."
+      },
+      {
+        "question": "Wie unterscheidet sich das davon, einfach ChatGPT oder Copilot auf unsere Spend-Datei anzuwenden?",
+        "answer": "Das können Sie selbst tun, und für eine Handvoll Zeilen ist das ein vertretbarer Weg zu einer ersten Antwort. Es skaliert nicht, und es prüft sich nicht selbst: Es gibt keine Validierung gegen den echten UNSPSC-Codesatz, kein Lieferantengedächtnis, das mit dem Volumen besser wird, und keinen eingebauten Prüfschritt für die Zeilen, die falsch klassifiziert wurden. Pearstop ist darauf ausgelegt, all das auf eine vollständige Datei anzuwenden, nicht auf eine einzelne Zeile."
+      },
+      {
+        "question": "Lernt das System, oder beginnt jede Datei bei null?",
+        "answer": "Es lernt. Korrekturen aus dem Piloten werden als lieferantenspezifisches Gedächtnis gespeichert, sodass ein Artikelbeschreibungsmuster, das für einen bestimmten Lieferanten bereits geprüft wurde, beim nächsten Auftreten nicht erneut vom LLM durchdacht werden muss."
+      },
+      {
+        "question": "Was ist NACE, und warum wäre es Teil der Taxonomie?",
+        "answer": "NACE ist die europäische statistische Klassifikation der Wirtschaftszweige. Wo das Reporting oder Branchen-Benchmarking eines Kunden neben UNSPSC auch auf NACE läuft, verankern wir die von uns aufgebaute Taxonomie in beiden, nicht nur in UNSPSC allein."
+      }
+    ],
+    "related": {
+      "label": "Weitere UNSPSC-Ressourcen",
+      "main": "UNSPSC-Klassifizierung",
+      "lookup": "Kostenloses UNSPSC-Code-Nachschlagetool",
+      "tree": "UNSPSC-Taxonomiebaum",
+      "faq": "Vollständige FAQ"
+    },
+    "cta": {
+      "title": "Bereit, das an Ihren eigenen Daten zu sehen?",
+      "lead": "Buchen Sie eine 7-minütige Erstberatung oder testen Sie zunächst eine einzelne Beschreibung im kostenlosen Nachschlagetool.",
+      "button": "7-minütige Erstberatung buchen",
+      "secondaryButton": "Kostenloses Nachschlagetool testen"
     }
   },
   "Fabric": {
