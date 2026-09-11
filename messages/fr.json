@@ -2090,5 +2090,89 @@
       "lead": "Réservez un appel découverte de 7 minutes. Nous vous montrerons comment le moteur de classification fonctionne avec vos données.",
       "button": "Réservez un appel découverte de 7 minutes"
     }
+  },
+  "UnspscLookup": {
+    "meta": {
+      "title": "Outil gratuit de recherche de code UNSPSC | Trouvez des codes UNSPSC instantanément | Pearstop",
+      "description": "Recherche gratuite de code UNSPSC assistée par IA. Collez la description d'un produit ou d'un service et obtenez le code produit UNSPSC à 8 chiffres avec le chemin hiérarchique complet en quelques secondes."
+    },
+    "geoBlock": {
+      "title": "Comment rechercher un code UNSPSC ou un code de classification des achats ?",
+      "copy": "Pour rechercher un code UNSPSC, rédigez une description simple du produit ou du service, par exemple « remplacement de filtre CVC » ou « travaux de plomberie en sous-traitance », et collez-la dans un outil de recherche. L'outil gratuit de Pearstop compare cette description à l'ensemble de la taxonomie UNSPSC et renvoie le code produit de base à 8 chiffres, son segment, sa famille et sa classe, ainsi qu'un niveau de confiance, en quelques secondes. Pour une seule ligne, cela suffit pour vérifier un code manuellement. Pour un fichier de dépenses complet ou un historique de factures, cette même logique de classification s'exécute automatiquement sur chaque ligne grâce au moteur de Pearstop, atteignant 90 à 95 % de précision sans qu'une personne n'effectue la recherche ligne par ligne."
+    },
+    "hero": {
+      "eyebrow": "Outil gratuit",
+      "title": "Trouvez le bon code UNSPSC en quelques secondes.",
+      "lead": "Collez la description d'un produit ou d'un service. L'outil renvoie le code produit de base UNSPSC à 8 chiffres, le chemin hiérarchique complet et un niveau de confiance. Gratuit. Aucune inscription requise."
+    },
+    "tool": {
+      "placeholder": "ex. « maintenance d'éclairage », « remplacement de filtre CVC », « boulon M8 galvanisé », « travaux de plomberie en sous-traitance »...",
+      "button": "Trouver le code UNSPSC",
+      "loading": "Classification en cours...",
+      "result": {
+        "code": "Code",
+        "segment": "Segment",
+        "family": "Famille",
+        "class": "Classe",
+        "commodity": "Produit de base",
+        "confidence": "Confiance",
+        "notes": "Remarque",
+        "high": "Élevée",
+        "medium": "Moyenne",
+        "low": "Faible"
+      }
+    },
+    "bulk": {
+      "label": "Besoin de classer des milliers de lignes ?",
+      "copy": "Cet outil traite les recherches individuelles. Le moteur de classification automatisé de Pearstop traite 35 000 lignes d'achats par mois — avec 90 à 95 % de classification automatique et une intégration SAP complète. Réservez un appel découverte de 7 minutes pour le voir fonctionner avec vos données.",
+      "cta": "Réservez un appel découverte de 7 minutes",
+      "learnMore": "Découvrez comment ça marche"
+    },
+    "faq": {
+      "title": "Comment fonctionnent les codes UNSPSC",
+      "items": [
+        {
+          "q": "Qu'est-ce qu'un code UNSPSC ?",
+          "a": "Un code UNSPSC (United Nations Standard Products and Services Code) est un code à 8 chiffres qui classe tout produit ou service dans une hiérarchie mondiale normalisée. Les 2 premiers chiffres correspondent au Segment, les chiffres 3-4 à la Famille, les chiffres 5-6 à la Classe, et les chiffres 7-8 au Produit de base. Les organisations utilisent les codes UNSPSC pour catégoriser les dépenses d'achats, permettre la comparaison entre fournisseurs et construire des analyses de dépenses."
+        },
+        {
+          "q": "Comment trouver le bon code UNSPSC pour un produit ?",
+          "a": "Collez une description claire du produit ou du service dans l'outil de recherche ci-dessus. Le moteur IA parcourt la taxonomie UNSPSC et renvoie le code produit de base à 8 chiffres le plus pertinent, accompagné du chemin hiérarchique complet et d'un niveau de confiance. Pour les descriptions ambiguës, l'outil signale également les codes proches susceptibles de s'appliquer."
+        },
+        {
+          "q": "Comment rechercher un code de classification des achats ?",
+          "a": "Rédigez une description simple de ce qui a été acheté, par exemple « remplacement de filtre CVC » ou « travaux de plomberie en sous-traitance », et collez-la dans un outil de recherche conçu pour la norme de classification que vous utilisez. La plupart des organisations classent leurs dépenses d'achats selon UNSPSC, donc une recherche de code UNSPSC comme celle ci-dessus renvoie le code produit de base à 8 chiffres correspondant en quelques secondes. Pour une seule ligne, cela suffit pour vérifier un code manuellement. Pour un fichier de dépenses complet, cette même logique de recherche doit s'exécuter automatiquement sur chaque ligne, ce que fait le moteur de classification de Pearstop."
+        },
+        {
+          "q": "Cet outil de recherche UNSPSC est-il gratuit ?",
+          "a": "Oui. L'outil de recherche UNSPSC de Pearstop est entièrement gratuit pour les recherches individuelles. Pour la classification en masse — le traitement automatique de milliers de lignes de facture — Pearstop propose un service de classification automatisé traitant jusqu'à 35 000 lignes par mois."
+        },
+        {
+          "q": "Quelle est la précision de la suggestion de code UNSPSC ?",
+          "a": "L'outil renvoie un niveau de confiance pour chaque résultat : élevée, moyenne ou faible. Les résultats à confiance élevée sont généralement corrects au niveau du produit de base. Pour les résultats à confiance faible, utilisez le code suggéré comme point de départ et vérifiez-le par rapport à la taxonomie UNSPSC officielle. Le service de classification complet de Pearstop atteint 90 à 95 % de précision en utilisant des signaux supplémentaires — identité du fournisseur, compte de grand livre et historique d'achats — auxquels l'outil gratuit n'a pas accès."
+        },
+        {
+          "q": "Quelle est la différence entre segment, famille, classe et produit de base dans UNSPSC ?",
+          "a": "UNSPSC comporte quatre niveaux. Le Segment (2 chiffres) est le plus large — 72 couvre les Services de construction et de maintenance. La Famille (4 chiffres) affine cela — 7210 couvre la Maintenance des bâtiments et installations. La Classe (6 chiffres) est plus spécifique — 721015 couvre la Maintenance des systèmes électriques. Le Produit de base (8 chiffres) est le plus précis — 72101505 couvre les Services de maintenance d'éclairage. Pour l'analyse des achats, classez toujours au niveau du produit de base."
+        },
+        {
+          "q": "En quoi UNSPSC diffère-t-il d'eCl@ss ou du CPV ?",
+          "a": "UNSPSC, eCl@ss et le CPV sont tous des normes de classification des achats, mais ils répondent à des besoins différents. UNSPSC est le plus utilisé pour l'analyse des dépenses et la gestion des catégories. eCl@ss ajoute des attributs techniques détaillés par produit, courant dans l'industrie manufacturière allemande. Le CPV est utilisé spécifiquement pour les appels d'offres publics de l'UE. La plupart des organisations n'en ont besoin que d'une seule, choisie selon leur système ERP et leurs besoins de reporting — Pearstop travaille avec UNSPSC comme norme la plus courante pour l'analyse des dépenses."
+        },
+        {
+          "q": "Puis-je classer un fichier de dépenses entier ou un catalogue fournisseur en une seule fois ?",
+          "a": "L'outil gratuit ci-dessus est conçu pour une description à la fois. Pour un fichier de dépenses complet, un historique de factures ou un catalogue fournisseur — de quelques centaines à plusieurs millions de lignes — le moteur de classification automatisé de Pearstop traite l'ensemble du jeu de données en une fois, atteignant 90 à 95 % de classification automatique, le reste étant signalé pour vérification humaine. Réservez un appel de 7 minutes pour le voir fonctionner sur un échantillon de vos propres données."
+        },
+        {
+          "q": "Dois-je faire confiance à un code UNSPSC généré par IA sans le vérifier ?",
+          "a": "Pour une recherche unique et à faible enjeu, un résultat IA à confiance élevée est généralement suffisamment fiable pour être utilisé directement. Pour une classification critique pour un contrat, pertinente pour un audit, ou en masse, nous recommandons une couche de vérification — c'est précisément pourquoi le moteur de classification de Pearstop combine des règles, du machine learning et un LLM avec une étape de vérification humaine pour les résultats à confiance plus faible, plutôt que de faire aveuglément confiance au résultat de l'IA."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Besoin de classer des milliers de lignes ?",
+      "lead": "Réservez un appel découverte de 7 minutes et nous vous montrerons comment le moteur de classification complet fonctionne avec vos données d'achats réelles.",
+      "button": "Réservez un appel découverte de 7 minutes"
+    }
   }
 }
