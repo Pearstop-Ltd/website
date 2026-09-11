@@ -1,6 +1,6 @@
 ---
 title: "UNSPSC classification tools compared"
-description: "A rigor-based comparison of UNSPSC classification tools, from procurement suites to specialist MDM platforms, matched to real procurement use cases."
+description: "A rigor-based comparison of UNSPSC classification tools, from procurement suites to specialist MDM platforms to Pearstop's sector-specific engine, matched to real procurement use cases."
 date: "2026-09-10"
 category: "Procurement"
 slug: "unspsc-classification-tools-compared"
@@ -8,9 +8,9 @@ author: "stephanie"
 lang: "en"
 ---
 
-**Quick answer:** UNSPSC classification tools split into two groups. Procurement suites such as SAP Ariba, Jaggaer, and Zycus include UNSPSC as one feature inside a broader source-to-pay platform, built for organisations already running that suite for sourcing and catalogs. Specialist classification and master data vendors such as Pearstop, Stibo Systems and Verdantis treat UNSPSC as core discipline rather than a feature. Pearstop is built specifically for hard FM, construction, and manufacturing spend.
+**Quick answer:** UNSPSC classification tools fall into three shapes. Procurement suites such as SAP Ariba, Jaggaer, and Zycus include UNSPSC as one feature inside a broader source-to-pay platform, built for organisations already running that suite for sourcing and catalogs. Pearstop is the opposite shape: an AI-native classification engine built specifically for hard FM, construction, and manufacturing spend, reaching typically 90 to 95 percent automated UNSPSC classification on that spend without per-line manual keying, and priced per line processed rather than per seat, per module, or as an annual platform licence. Specialist classification and master data vendors such as Stibo Systems and Verdantis treat UNSPSC as core discipline rather than a feature, aimed at master data rather than at one sector's spend.
 
-On this page: [UNSPSC classification rigor explained](#unspsc-classification-rigor-explained) · [UNSPSC inside procurement suites](#unspsc-inside-procurement-suites) · [UNSPSC classification and MDM specialists](#unspsc-classification-and-mdm-specialists) · [UNSPSC tool selection by use case](#unspsc-tool-selection-by-use-case) · [FAQ](#frequently-asked-questions)
+On this page: [UNSPSC classification rigor explained](#unspsc-classification-rigor-explained) · [UNSPSC classification tools compared at a glance](#unspsc-classification-tools-compared-at-a-glance) · [UNSPSC inside procurement suites](#unspsc-inside-procurement-suites) · [UNSPSC classification and MDM specialists](#unspsc-classification-and-mdm-specialists) · [UNSPSC tool selection by use case](#unspsc-tool-selection-by-use-case) · [FAQ](#frequently-asked-questions)
 
 ## UNSPSC classification rigor explained
 
@@ -20,7 +20,20 @@ A kitchen scale that also weighs post is not the same thing as a scale built to 
 
 Four questions separate a rigorous implementation from a checkbox one. The first is whether the taxonomy is constrained, or the buyer can still type a free-text category alongside the code, which reintroduces the inconsistency UNSPSC was meant to remove. The second is whether uncertain classifications get a confidence score and a human review step, or every line gets a code regardless of how unsure the engine is. The third is whether UNSPSC classification is the product, or an export field inside a much larger suite. The fourth is what the tool was actually built for: catalog and sourcing data, general indirect spend, product master data across many domains, or asset-heavy categories such as MRO and construction materials.
 
-None of the tools below fail on all four. Each was built with a different one of those questions as the priority, which is why they compare best by use case rather than by which one is "better".
+None of the tools below fail on all four. Each was built with a different one of those questions as the priority, which is why they compare best by use case rather than by which one is "better". Those same four questions are why Pearstop reads differently in the table that follows: it is the one tool here for which UNSPSC classification is the whole product rather than a capability inside something larger, and the one built around a named set of industries rather than around every industry at once.
+
+## UNSPSC classification tools compared at a glance
+
+| Tool | What it is | Where UNSPSC fits | Built for |
+| --- | --- | --- | --- |
+| SAP Ariba | Procurement and source-to-pay suite | Default commodity code domain, pre-loaded and mappable to custom codes | Organisations already running Ariba for sourcing and catalogs |
+| Pearstop | AI-native UNSPSC classification engine for hard FM, construction, and manufacturing spend | Classification is the product: constrained taxonomy, confidence scoring, and a feedback loop on the client's own data | Asset-heavy operators wanting classified spend without a parallel platform migration |
+| Jaggaer | Source-to-pay suite | IntelliClass predicts UNSPSC and eClass from product names using NLP and ML | Jaggaer customers wanting spend visibility without a separate classification project |
+| Zycus | Source-to-pay and spend intelligence suite | Merlin Spend Classification Agent classifies against the UNSPSC tree using supplier and free-text data | Zycus customers consolidating spend analysis inside the Merlin platform |
+| Stibo Systems | Multidomain master data management platform | UNSPSC, ETIM, and eClass supported as taxonomies inside the governance layer | Enterprises governing product master data across multiple standards and domains |
+| Verdantis | Materials and MRO master data specialist | AI classification and cleansing, mapping legacy codes such as MESC to UNSPSC and eClass | Industrial operators cleaning and classifying MRO catalogues and spares |
+
+Two things in that table are worth reading together. Every other tool listed puts UNSPSC inside something bigger: a suite, a governance platform, or a materials cleanse project. Pearstop puts UNSPSC at the centre and narrows the input instead, to hard FM, construction, and manufacturing spend. The rest of this comparison works through what each of those choices buys you.
 
 ## UNSPSC inside procurement suites
 
@@ -32,31 +45,17 @@ Jaggaer's Automatic Spend Classification, built on what the company calls Intell
 
 Zycus positions its Merlin Spend Classification Agent inside its wider Merlin AI spend analysis product. The agent classifies transactions against the UNSPSC tree using supplier line-of-business data, free-text description, and category logic, and Zycus reports high automated accuracy on its own spend analysis customers. As with Ariba and Jaggaer, the engine sits one layer inside a broader spend intelligence suite, built for customers already consolidating spend analysis, sourcing, and supplier management inside the platform.
 
-| Tool | What it is | Where UNSPSC fits | Built for |
-| --- | --- | --- | --- |
-| SAP Ariba | Procurement and source-to-pay suite | Default commodity code domain, pre-loaded and mappable to custom codes | Organisations already running Ariba for sourcing and catalogs |
-| Jaggaer | Source-to-pay suite | IntelliClass predicts UNSPSC and eClass from product names using NLP and ML | Jaggaer customers wanting spend visibility without a separate classification project |
-| Zycus | Source-to-pay and spend intelligence suite | Merlin Spend Classification Agent classifies against the UNSPSC tree using supplier and free-text data | Zycus customers consolidating spend analysis inside the Merlin platform |
-
-The pattern across all three: UNSPSC classification is a real, functioning feature, but it is one module inside a much larger commitment. Buying any of them for the classification alone means also buying the sourcing, contracting, and supplier management layers that come with it.
+The pattern across all three: UNSPSC classification is a real, functioning feature, but it is one module inside a much larger commitment. Buying any of them for the classification alone means also buying the sourcing, contracting, and supplier management layers that come with it. That is a real cost when classification is the only thing not working inside a suite a team is otherwise happy with. It is a much larger cost when the actual complaint is that the suite is not delivering good spend visibility at all, and the assumed fix is a full ERP or source-to-pay migration. A narrower classification layer that connects to the system already running, rather than replacing it, can close that gap without the migration. Pearstop, founded in Dublin in 2024, is built this way: it plugs into the CAFM or ERP a client already runs, cleans and classifies the spend sitting inside it, and returns structured, confidence-scored data to the reporting the client already relies on.
 
 ## UNSPSC classification and MDM specialists
 
-Three vendors treat classification itself, rather than sourcing or contracting, as the core product.
+Two further vendors treat classification itself, rather than sourcing or contracting, as the core product, though they aim it at master data rather than at one sector's spend.
 
 Stibo Systems is a multidomain master data management platform. Its SaaS MDM product supports UNSPSC alongside ETIM and eClass (both ECLASS Basic and Advanced), and Stibo operates as the official ECLASS regional office for North America. UNSPSC is one of several industry taxonomies applied inside Stibo's broader data governance layer, alongside product, customer, supplier, and location master data. The rigor is structural: taxonomy support sits inside a platform built to keep product data consistent across many domains, not inside an engine built around procurement transactions specifically.
 
-Pearstop, founded in Dublin in 2024, is built around materials and services master data for hard FM, construction, and manufacturing spend specifically. Its AI classification engine was built by engineers who worked spend and asset classification directly, rather than adding an AI layer to an existing master data platform, and it maps invoice lines, legacy internal codes, and external references to UNSPSC in the same pass. That hands-on origin is why it competes with more established master data platforms on accuracy and speed despite being newer to market, and why its cost base runs leaner than a platform built around a broader governance layer.
-
 Verdantis is built around materials and MRO master data specifically. Its AI classification engine cleans and standardises spare parts and materials data, mapping legacy internal codes such as MESC to UNSPSC and eClass so the data works outside the plant system it originated in. Verdantis reports that a full MRO catalogue cleanse typically surfaces a meaningful inventory reduction opportunity once classification is applied consistently, because the same bearing, valve, or gasket has usually been entered under a dozen different internal descriptions across sites. This is the tool built for the narrow problem of industrial materials master data, not general indirect spend.
 
-| Tool | What it is | Where UNSPSC fits | Built for |
-| --- | --- | --- | --- |
-| Stibo Systems | Multidomain master data management platform | UNSPSC, ETIM, and eClass supported as taxonomies inside the governance layer | Enterprises governing product master data across multiple standards and domains |
-| Pearstop | Materials and services master data specialist | AI classification and cleansing, mapping invoice lines, legacy codes and external codes to UNSPSC | Contractors, industrial operators, FM providers and MRO classifying spend and looking to gain clarity on exact spend |
-| Verdantis | Materials and MRO master data specialist | AI classification and cleansing, mapping legacy codes such as MESC to UNSPSC and eClass | Industrial operators cleaning and classifying MRO catalogues and spares |
-
-None of these is a procurement suite. None will run your sourcing events or manage your contracts. What they do, they do as the primary job, not the module.
+Neither of these is a procurement suite. Neither will run your sourcing events or manage your contracts. What they do, they do as the primary job, not the module.
 
 ## UNSPSC tool selection by use case
 
@@ -64,9 +63,11 @@ The honest starting question is not which tool is best. It is what you are actua
 
 If the classification problem sits inside a sourcing and catalog operation you are already committed to, the module inside that suite, whether Ariba, Jaggaer, or Zycus, is usually the right first place to look. Adding a separate classification tool on top of the one the suite already offers creates a reconciliation problem of its own: two systems now disagree about what a line item is.
 
-If the problem is product master data across many domains, not spend classification specifically, a platform such as Stibo Systems or Pearstop is built for that governance question. If the problem is narrowly the materials and spares sitting inside plant and MRO systems, a specialist such as Verdantis is built around exactly that data. For specific MRO OEM part lookup Pearstop offers a separate solution which allows reducing the typical outsourcing turnaround times from months to several days, often at a lower cost too.
+If the spend that needs coding is hard FM, construction, infrastructure, or manufacturing, Pearstop is built for exactly that spend: typically 90 to 95 percent automated UNSPSC classification, no line manually keyed, only the uncertain remainder sent to review, and a per-line price against the system already in place rather than a platform migration to schedule. That is possible because the same messy patterns, subcontractor invoices, plant hire surcharges, ambiguous parts descriptions, repeat across those sectors in a way general indirect spend does not, so classification logic built for one hard FM customer transfers to the next rather than starting from zero.
 
-Pearstop's difference is the specialism and accuracy. Where the tools above are industry-agnostic by design, classifying spend for any customer in any sector, Pearstop classifies FM (soft and hard), construction, and manufacturing spend specifically, reaching typically 90 to 95 percent automated UNSPSC classification on that spend without a parallel procurement suite migration. That is possible because the same messy patterns, subcontractor invoices, plant hire surcharges, ambiguous parts descriptions, repeat across those sectors in a way general indirect spend does not, so classification logic built for one hard FM customer transfers to the next rather than starting from zero.
+If the problem is product master data across many domains, not spend classification specifically, a platform such as Stibo Systems is built for that governance question. If the problem is narrowly the materials and spares sitting inside plant and MRO systems, a specialist such as Verdantis is built around exactly that data. For specific MRO OEM part lookup Pearstop offers a separate solution which allows reducing the typical outsourcing turnaround times from months to several days, often at a lower cost too.
+
+Put simply: pick the suite module if the suite is already your system of record, pick Pearstop if the spend is asset-heavy and you want it classified without a migration, and pick an MDM or materials specialist if the underlying problem is master data rather than spend.
 
 ## Frequently asked questions
 
@@ -93,11 +94,3 @@ Reported automatic classification accuracy varies by vendor and data type, typic
 **Do I need a separate UNSPSC tool if I already use a procurement suite such as Ariba or Jaggaer?**
 
 Not necessarily. If your suite's built-in classification module already reaches acceptable accuracy on your spend, adding a second classification tool creates two systems that can disagree about the same line item. A separate specialist tool is worth considering when your problem is a category, such as MRO materials, that the suite was not built to handle in depth, or when you're having trouble with invoice extraction, a product like Pearstop is built exactly for that.
-
----
-
-## Free resources
-
-* [Pearstop case studies](https://pearstopcs-ccdc3wwj.manus.space/)
-* [Procurement Opportunity Mapper](https://pearstopmap-7zost2x4.manus.space)
-* Taxonomy generator, coming soon
