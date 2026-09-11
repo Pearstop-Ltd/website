@@ -292,6 +292,9 @@ export default function UnspscPage() {
             <div className="col-md-8 col-md-offset-2">
               <div className="story-label" style={{ marginBottom: "1rem" }}>More UNSPSC resources</div>
               <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
+                <Link href="/unspsc-ai-classification-guide" className="btn btn-secondary">
+                  How AI Classification Actually Works
+                </Link>
                 <Link href="/unspsc-classification-facilities-management" className="btn btn-secondary">
                   UNSPSC for FM and Hard Services
                 </Link>

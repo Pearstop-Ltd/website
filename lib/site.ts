@@ -88,6 +88,7 @@ export const footerSolutionLinks: NavLink[] = [
   { label: "Procurement", href: "/procurement-data-quality" },
   { label: "Asset Data Management", href: "/asset-data-management" },
   { label: "UNSPSC Classification", href: "/unspsc" },
+  { label: "AI UNSPSC Classification Guide", href: "/unspsc-ai-classification-guide" },
   { label: "Free UNSPSC Lookup", href: "/unspsc-code-lookup" },
   { label: "UNSPSC Taxonomy Tree", href: "/unspsc-classification-demo" },
   { label: "UNSPSC for FM", href: "/unspsc-classification-facilities-management" },

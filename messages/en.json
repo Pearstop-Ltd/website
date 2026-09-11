@@ -841,6 +841,7 @@
     "related": {
       "label": "More UNSPSC resources",
       "tool": "Free UNSPSC Code Lookup",
+      "guide": "How AI Classification Actually Works",
       "fm": "UNSPSC for FM and Hard Services",
       "nl": "UNSPSC in the Netherlands",
       "de": "UNSPSC in Germany",
@@ -850,6 +851,142 @@
       "title": "Ready to automate your procurement classification?",
       "lead": "Book a 7-minute discovery. We will show you exactly how the classification engine would work with your data.",
       "button": "Book a 7-minute discovery"
+    }
+  },
+  "UnspscAiGuide": {
+    "meta": {
+      "title": "AI UNSPSC Classification: The Practical Guide",
+      "description": "How Pearstop classifies a large Excel or CSV procurement catalog into UNSPSC with AI: PDF invoice extraction, a free 500-row pilot, supplier-specific memory, and full 8-digit commodity codes for your ERP."
+    },
+    "hero": {
+      "eyebrow": "AI UNSPSC Classification Guide",
+      "title": "You have a large Excel catalog. You want AI to classify it into UNSPSC.",
+      "lead": "That is the request we hear most often, sometimes as a spend file that has never carried a code, sometimes as a stack of PDF invoices that has not even become a spend file yet. This guide describes the actual process: how Pearstop turns either starting point into a UNSPSC-coded dataset, what a pilot measures before you commit to the full file, and why the classification does not come from simply asking a model what a code should be.",
+      "ctaPrimary": "Book a 7-minute discovery",
+      "ctaSecondary": "See the process"
+    },
+    "paths": {
+      "eyebrow": "Where you start",
+      "title": "Where does your data start today?",
+      "lead": "Two different situations walk in the door. Pearstop covers both, and does not ask you to do more than the step you actually need.",
+      "path1": {
+        "title": "Starting point one: PDF invoices, not yet structured",
+        "copy": "Some clients hold years of purchasing history as scanned or exported PDF invoices and nothing else. Before any UNSPSC code is possible, that data has to become rows: supplier, description, quantity, unit price, date. Pearstop extracts the fields specified for invoices in your industry directly from the PDFs, so the output lands as a normal spend file rather than a folder of documents nobody can query."
+      },
+      "path2": {
+        "title": "Starting point two: already a CSV or Excel file",
+        "copy": "Other clients already have a structured spend file, exported from SAP, Oracle, or a P2P system, or maintained by hand. If that is where you are, the PDF extraction step is skipped entirely and classification starts directly on the file you already have."
+      },
+      "note": "These are two separate workflows, not one all-or-nothing pipeline. If you only need the classification step, that is what you get. If you need both, PDF extraction runs first and classification runs on what comes out of it."
+    },
+    "process": {
+      "eyebrow": "The process",
+      "title": "What happens once your data is structured?",
+      "lead": "From here the process is the same regardless of which starting point you came from.",
+      "step1": {
+        "title": "Build a taxonomy anchored to UNSPSC",
+        "copy": "We generate a four-level procurement taxonomy for your spend and anchor it to the official UNSPSC hierarchy, and to NACE where your sector calls for it. This taxonomy is what every line will eventually sit under, not just a code returned per row."
+      },
+      "step2": {
+        "title": "Classify a free sample of about 500 rows",
+        "copy": "We run a representative sample of roughly 500 rows through the engine as a pilot, at no cost. That is small enough to review by hand and large enough to show real accuracy, not a handful of easy examples."
+      },
+      "step3": {
+        "title": "You review and correct",
+        "copy": "Your team checks the sample against what you know about your own data and corrects what is wrong. This step is where the real signal comes from: not whether the engine can produce a code, but whether your own procurement people agree with it."
+      },
+      "step4": {
+        "title": "Corrections become supplier-specific memory",
+        "copy": "Every correction is stored against the supplier and the description pattern that produced it. The system remembers, for example, that this supplier's 'gloves' line is always cleaning gloves, not medical gloves, without needing that spelled out again."
+      },
+      "step5": {
+        "title": "The full dataset is classified using that memory",
+        "copy": "With the pilot corrected and the memory in place, we run classification across the full file. Lines that match a known supplier pattern go through with the memory already applied. New patterns still go through the same rules, keyword checks, and LLM layer the pilot did."
+      },
+      "step6": {
+        "title": "Export to Excel, or connect directly to your ERP",
+        "copy": "Results come back as an Excel file, or through a direct API connection into your ERP, so the classified data lands where your team already works rather than in a separate tool."
+      },
+      "hierarchyNote": "Every line gets the full hierarchy, not a bare code: segment, family, class, and the actual 8-digit UNSPSC commodity code, each with its title in plain language, so a reviewer can see what a code means without looking it up separately."
+    },
+    "whyNotLlm": {
+      "eyebrow": "Why this is reliable",
+      "title": "Why not just ask ChatGPT for the code?",
+      "p1": "Paste a description into a general model and ask for a UNSPSC code, and it will give you one. It will also give you one when no real code fits well, because a language model answers the question it is asked rather than admitting it does not know. That is a hallucinated code: confident, specific, and hard to catch on a spreadsheet full of them.",
+      "p2": "Pearstop does not ask a model for a code and take the answer. The description goes through an AI and LLM classification layer, but the code that layer proposes is then checked against the real UNSPSC dataset itself, every segment, family, class and commodity, before it is accepted. If a proposed code does not exist in the actual standard, it is rejected rather than shown as a result.",
+      "p3": "Alongside that check, deterministic keyword rules catch the patterns that do not need a model at all. A supplier-specific database narrows the field before classification starts, the same way knowing a supplier sells electrical components rules out irrigation parts. Supplier-specific memory, built from your own reviewed corrections, means the second time a pattern appears, it does not need to be reasoned through from scratch. And where your own data already carries some category structure, purchase groups, GL codes, existing tags, that structure is used to narrow and check the result, rather than starting from zero as if the file had no history.",
+      "p4": "What is left after rules, the supplier database, memory, and validation still gets a confidence check. Anything low confidence is flagged for a person, not returned as fact."
+    },
+    "pilotMetrics": {
+      "eyebrow": "Running a pilot",
+      "title": "What should you actually check in a pilot?",
+      "lead": "If you are testing this, we would always recommend measuring three things, not just whether it 'worked'.",
+      "m1": {
+        "title": "UNSPSC accuracy percentage",
+        "copy": "The share of sampled rows where the code returned matches what your own reviewers would have chosen."
+      },
+      "m2": {
+        "title": "Auto-classified vs flagged for review",
+        "copy": "The split between rows the engine was confident enough to complete on its own, and rows it flagged for a person. A pilot that auto-classifies everything with nothing flagged is not more accurate. It is just not checking itself."
+      },
+      "m3": {
+        "title": "Depth reached in the hierarchy",
+        "copy": "Whether the result lands at segment, family, class, or the full 8-digit commodity level. A code that only reaches segment tells you this was a maintenance service. A code that reaches commodity tells you it was elevator maintenance specifically, the level you need to benchmark suppliers or feed an ERP field that expects a real commodity code."
+      }
+    },
+    "economics": {
+      "eyebrow": "Economics",
+      "title": "Why does cost per record go down as volume goes up?",
+      "p1": "Every row that goes through a fresh LLM call costs tokens, and token use is what drives the cost of AI classification. Early in a dataset, most rows are new: new suppliers, new part descriptions, nothing in memory yet to shortcut the reasoning.",
+      "p2": "That changes as volume grows. Supplier-specific memory means a description pattern only needs a full LLM pass once. After that correction is stored, the same supplier's recurring patterns are matched against memory rather than reasoned through again. At small volume, almost nothing repeats, so almost every row costs full price. At large volume, the same suppliers and the same part descriptions come back constantly, so a shrinking share of rows need a fresh model call at all. Cost per record falls because the system does less new reasoning per record, not because of a lower price per token."
+    },
+    "forYouIf": {
+      "title": "Is this what you actually need?",
+      "case1": "You need 100,000 procurement transactions turned into one consistent taxonomy aligned to UNSPSC. That is exactly what this is built for.",
+      "case2": "You need every SKU or line carrying an actual 8-digit UNSPSC code you can load into your ERP. That is exactly what this is built for, too."
+    },
+    "faq": [
+      {
+        "question": "What if I don't have clean invoice data yet?",
+        "answer": "That is the first starting point this guide covers. If your purchasing history exists only as PDF invoices, Pearstop extracts the fields specified for invoices in your industry directly from those PDFs first, so you get a structured spend file before classification begins."
+      },
+      {
+        "question": "How accurate is AI-only classification compared to Pearstop's approach?",
+        "answer": "A general model asked directly for a UNSPSC code will answer even when no code fits well, because it is built to produce an answer, not to admit uncertainty. Pearstop checks every proposed code against the real UNSPSC dataset before accepting it, combines that with rules, a supplier database, and supplier-specific memory, and still flags low-confidence lines for human review. On typical procurement datasets this reaches 90 to 95% automatic classification, with the remainder reviewed by a person rather than guessed."
+      },
+      {
+        "question": "Can this connect to our ERP?",
+        "answer": "Yes. Classified data exports to Excel, or connects directly via API into SAP, Oracle, and other ERP or P2P platforms. Many clients start with an Excel or CSV export and move to a direct connection once the classification is proven."
+      },
+      {
+        "question": "What does the free pilot actually involve?",
+        "answer": "We classify a representative sample of roughly 500 rows from your data at no cost. Your team reviews and corrects that sample, and those corrections become the supplier-specific memory the full-dataset run then uses."
+      },
+      {
+        "question": "How is this different from just using ChatGPT or Copilot on our spend file?",
+        "answer": "You can do that yourself, and for a handful of lines it is a reasonable way to get a first answer. It does not scale, and it does not check its own work: there is no validation against the real UNSPSC codeset, no supplier memory that improves with volume, and no built-in review step for the lines it got wrong. Pearstop is built to do all of that on a full file, not a single line."
+      },
+      {
+        "question": "Does the system learn, or does every file start from zero?",
+        "answer": "It learns. Corrections from the pilot are stored as supplier-specific memory, so a part description pattern that has already been reviewed for a given supplier does not need to be reasoned through again by the LLM the next time it appears."
+      },
+      {
+        "question": "What is NACE, and why would it be part of the taxonomy?",
+        "answer": "NACE is the European statistical classification of economic activities. Where a client's reporting or sector benchmarking runs on NACE alongside UNSPSC, the taxonomy we build is anchored to both, not just to UNSPSC on its own."
+      }
+    ],
+    "related": {
+      "label": "More UNSPSC resources",
+      "main": "UNSPSC Classification",
+      "lookup": "Free UNSPSC Code Lookup",
+      "tree": "UNSPSC Taxonomy Tree",
+      "faq": "Full FAQ"
+    },
+    "cta": {
+      "title": "Ready to see this run against your own data?",
+      "lead": "Book a 7-minute discovery, or test a single description on the free lookup tool first.",
+      "button": "Book a 7-minute discovery",
+      "secondaryButton": "Try the free lookup"
     }
   },
   "Fabric": {

@@ -286,6 +286,9 @@ export default async function UnspscPage({ params }: { params: Promise<{ locale:
             <div className="col-md-8 col-md-offset-2">
               <div className="story-label" style={{ marginBottom: "1rem" }}>{t("related.label")}</div>
               <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
+                <a href={`${prefix}/unspsc-ai-classification-guide`} className="btn btn-secondary">
+                  {t("related.guide")}
+                </a>
                 <a href={`${prefix}/unspsc-classification-facilities-management`} className="btn btn-secondary">
                   {t("related.fm")}
                 </a>
