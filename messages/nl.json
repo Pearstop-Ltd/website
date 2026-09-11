@@ -1789,6 +1789,10 @@
       "title": "Ready to automate FM procurement classification?",
       "lead": "Book a 7-minute discovery. We will show you exactly how the engine works with your spend data.",
       "button": "Book a 7-minute discovery"
+    },
+    "geoBlock": {
+      "title": "Wat houdt UNSPSC-classificatie voor facilities management precies in?",
+      "copy": "Een facilities management bedrijf koopt doorgaans in bij 500 tot 3.000 suppliers per locatie die het bedient, en elk factureert anders. UNSPSC-classificatie kent dezelfde 8-cijferige commodity code toe aan hetzelfde onderliggende werk, of een invoice regel nu 'elektra werkzaamheden Q3' of 'electrical maintenance callout' luidt, zodat procurement en finance spend kunnen vergelijken tussen suppliers en locaties in plaats van vrije tekst regel voor regel te lezen. De engine van Pearstop doet dit automatisch voor FM-bedrijven die 5.000 tot 35.000 invoice regels per maand verwerken, waarbij 90 tot 95% ervan wordt geclassificeerd zonder menselijke tussenkomst."
     }
   },
   "UnspscNL": {
@@ -1879,6 +1883,10 @@
       "title": "Klaar om uw inkoopclassificatie te automatiseren?",
       "lead": "Boek een 7-minuten discovery. We laten u zien hoe de classificatie-engine met uw data werkt.",
       "button": "Boek een 7-minuten discovery"
+    },
+    "geoBlock": {
+      "title": "Hoe ziet UNSPSC-classificatie eruit voor een Nederlands infrastructuur- of FM-bedrijf?",
+      "copy": "Nederlandse infrastructuur- en FM-bedrijven voeren purchasing doorgaans uit via SAP of AFAS, met invoice regels die door field teams zijn geschreven in plaats van buyers, bijvoorbeeld 'elektra werkzaamheden Q3' of 'pompafdichting vervangen'. UNSPSC-classificatie kent aan elk van deze regels een consistente 8-cijferige commodity code toe, wat een Peppol-compliant invoice machine-readable maakt in plaats van alleen gestructureerd. Strukton, een Nederlandse infrastructuur contractor, verwerkt op deze manier 35.000 procurement regels per maand via de SAP-integratie van Pearstop, waarbij 90 tot 95% automatisch wordt geclassificeerd."
     }
   },
   "UnspscDE": {
@@ -1967,6 +1975,10 @@
       "title": "Klaar om uw procurement classificatie te automatiseren?",
       "lead": "Boek een 7-minuten Discovery. We laten u zien hoe de classificatie-engine met uw data werkt.",
       "button": "Boek een 7-minuten Discovery"
+    },
+    "geoBlock": {
+      "title": "Hoe ziet UNSPSC-classificatie eruit voor een Duits productie- of FM-bedrijf?",
+      "copy": "Duitse productie- en FM-bedrijven bewaren doorgaans jaren aan purchase order data in SAP, vaak met invoice regels geschreven in Duits technisch jargon zoals 'Wartung Pumpe Dichtung' of 'Elektra Rundgang Q3'. UNSPSC-classificatie kent aan elk van deze regels dezelfde 8-cijferige commodity code toe als het Engelse equivalent, zodat een fabriek in München en een fabriek in Rotterdam als dezelfde category of spend verschijnen. De engine van Pearstop leest Duitstalige beschrijvingen native en bereikt 90 tot 95% automatische classificatie zonder vertaling als aparte stap."
     }
   },
   "UnspscLookup": {
@@ -2036,6 +2048,10 @@
         {
           "q": "Moet ik een door AI gegenereerde UNSPSC-code vertrouwen zonder deze te controleren?",
           "a": "Voor een enkele, laagdrempelige lookup is een AI-resultaat met hoge confidence meestal betrouwbaar genoeg om direct te gebruiken. Voor contract-kritische, audit-relevante of bulkclassificatie adviseren wij een verificatielaag — en dat is precies waarom Pearstop's classificatie-engine regels, machine learning en een LLM combineert met een menselijke beoordelingsstap voor resultaten met lagere confidence, in plaats van blindelings te vertrouwen op AI-output."
+        },
+        {
+          "q": "Moet ik een AI-gegenereerde UNSPSC code vertrouwen zonder deze te controleren?",
+          "a": "Voor een enkele, laagdrempelige lookup is een AI-resultaat met hoge confidence meestal betrouwbaar genoeg om direct te gebruiken. Voor contract-critical, audit-relevant, of bulk classificatie adviseren wij een verificatielaag — en dat is precies waarom de classificatie-engine van Pearstop regels, machine learning en een LLM combineert met een menselijke review stap voor resultaten met lagere confidence, in plaats van blindelings te vertrouwen op AI output."
         }
       ]
     },
@@ -2043,6 +2059,10 @@
       "title": "Moet u duizenden regels classificeren?",
       "lead": "Boek een 7-minuten ontdekking en wij zullen u laten zien hoe de volledige classificatiemotor werkt met uw eigen procurement-gegevens.",
       "button": "Boek een 7-minuten ontdekking"
+    },
+    "geoBlock": {
+      "title": "Hoe zoek je een UNSPSC- of procurement classificatiecode op?",
+      "copy": "Om een UNSPSC code op te zoeken, schrijf je een eenvoudige beschrijving van het product of de dienst, bijvoorbeeld 'HVAC filter replacement' of 'subcontractor plumbing works', en plak je deze in een lookup tool. De gratis tool van Pearstop vergelijkt die beschrijving met de volledige UNSPSC taxonomy en retourneert de 8-cijferige commodity code, het segment, de family en class, en een confidence level, binnen enkele seconden. Voor een enkele regel is dat voldoende om een code handmatig te controleren. Voor een volledig spend file of invoice history wordt dezelfde classificatielogica automatisch toegepast op elke regel via de engine van Pearstop, met een nauwkeurigheid van 90 tot 95% zonder dat een persoon de lookup regel voor regel uitvoert."
     }
   }
 }
