@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
-import { caseStudies, solutionLinks, siteConfig } from "@/lib/site";
+import { caseStudies, siteConfig } from "@/lib/site";
+import { blogPosts } from "@/lib/blog-posts";
 import { routing } from "@/i18n/routing";
 
 // Derived from routing.locales (not a second hardcoded list) so the sitemap
@@ -9,12 +10,24 @@ const LOCALES = routing.locales.map((locale) =>
 );
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  // Every real page's path is listed explicitly here, independent of any nav
+  // array (lib/site.ts's solutionLinks/footerSolutionLinks are curated for
+  // menus and change independently of which pages actually exist - deriving
+  // the sitemap from a nav array previously caused /fabric and /ai-readiness
+  // to silently disappear from the sitemap when they were demoted from the
+  // main Solutions nav, even though the pages themselves were untouched).
   const staticPaths = [
     "",
     "/solutions",
-    ...solutionLinks.map((link) => link.href),
-    "/faq",
+    "/invoice-data-extraction",
+    "/procurement-data-quality",
+    "/data-quality",
     "/unspsc",
+    "/unspsc-ai-classification-guide",
+    "/asset-data-management",
+    "/fabric",
+    "/ai-readiness",
+    "/faq",
     "/unspsc-code-lookup",
     "/unspsc-classification-demo",
     "/unspsc-classification-facilities-management",
@@ -32,6 +45,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const dynamicPaths = [
     ...caseStudies.map((item) => `/cases/${item.slug}`),
+    ...blogPosts.map((post) => `/blog/${post.slug}`),
   ];
 
   const allPaths = [...staticPaths, ...dynamicPaths];
