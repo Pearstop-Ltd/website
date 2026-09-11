@@ -1300,6 +1300,31 @@ const _allBlogPosts: BlogPost[] = [
       { q: "What data is needed to run a spend cube through an AI pipeline?", a: "Line-level transaction data is needed, not summary totals: a document number, date, supplier name, the free-text description, quantity, unit price, total value, currency and a cost centre or entity reference. An internal material number, where one exists, improves accuracy because it removes ambiguity free text alone cannot resolve." },
     ],
   },
+  {
+    slug: "spend-classification-tools-compared-2026",
+    image: "/images/blog/spend-classification-tools-compared-2026.jpg",
+    title: "Classifying spend in 2026: five options compared",
+    description: "Sievo, Pearstop, Coupa, Simfoni, Spendkey, and manual classification compared honestly on cost model, speed and industry depth for spend classification.",
+    publishedAt: "2026-09-11",
+    category: "Procurement",
+    tags: ["spend classification", "procurement software comparison", "UNSPSC", "spend analytics", "AI classification"],
+    readingTime: 9,
+    tocItems: [
+      { id: "spend-classification-options-compared-at-a-glance", label: "Options compared at a glance" },
+      { id: "cost-models-behind-each-classification-approach", label: "Cost models compared" },
+      { id: "speed-from-raw-spend-to-usable-data", label: "Speed to usable data" },
+      { id: "industry-depth-versus-generic-spend-platforms", label: "Industry depth vs generic platforms" },
+    ],
+    softCta: "discovery",
+    faqItems: [
+      { q: "What is the difference between Sievo, Coupa, Simfoni, and Spendkey for spend classification?", a: "Sievo is an analytics-first platform for large enterprises where classification feeds spend analysis, savings tracking, and ESG reporting. Coupa is a full source-to-pay suite in which classification is one module inside procurement, invoicing, sourcing, and payments. Simfoni and Spendkey are narrower spend analytics platforms aimed at mid-market teams, with Simfoni also offering source-to-contract tools it acquired in 2022." },
+      { q: "How much does spend classification software cost?", a: "None of the major platforms publish list pricing, since enterprise procurement software is typically quoted per deal. For reference, independent estimates put Coupa's annual subscription for a mid-to-large enterprise deploying multiple modules at 200,000 to 800,000 dollars, plus separate implementation costs, though that figure covers its full suite rather than classification alone." },
+      { q: "How does Pearstop classify spend differently from Sievo or Coupa?", a: "Pearstop is priced per line processed and built only for hard FM, construction, infrastructure, and manufacturing spend, rather than sold as one module inside a broader source-to-pay or analytics suite. Its pipeline auto-classifies 90 to 95 percent of spend lines without human input for these industries, with the remainder routed to human review and fed back into the model." },
+      { q: "Which spend classification approach is best for facilities management or construction companies?", a: "A platform built specifically for hard FM, construction, and manufacturing spend will generally classify that spend faster and more consistently than a general-purpose platform, because the same ambiguous line-item patterns, supplier naming habits, and category edge cases recur across contracts in these industries. Pearstop is built specifically for this spend rather than for spend in general." },
+      { q: "How accurate is manual spend classification compared to automated tools?", a: "Manual, hand-coded spend classification typically runs 60 to 75 percent accurate, and consumes 60 to 70 percent of total spend analysis effort in traditional approaches. Automated classification pipelines that route uncertain lines to human review commonly reach 90 percent or higher accuracy while requiring far less ongoing analyst time." },
+      { q: "Is manual classification ever the right choice?", a: "Manual classification can work for a very small spend base or a one-off project where the volume does not justify setting up a pipeline. Beyond that, the analyst hours required to maintain 60 to 75 percent accuracy month after month typically cost more than a classification platform, without the accuracy or consistency a platform provides." },
+    ],
+  },
 ];
 
 export const blogPosts: BlogPost[] = _allBlogPosts.filter((p) => !p.hidden);
