@@ -379,7 +379,11 @@
         "Ontbrekende waarden in kritieke velden blokkeren geautomatiseerde verwerking en rapportage",
         "Dubbele records blazen tellingen op, vertekenen analyses en ondermijnen vertrouwen in rapporten",
         "Handmatig dataopruimen is duur, traag en creëert nieuwe fouten terwijl het oude oplost"
-      ]
+      ],
+      "quote": {
+        "text": "We zijn in principe tevreden met wat we hebben gezien, maar misschien hadden we vanaf het begin iets meer verwacht van wat er mogelijk was met de data.",
+        "attribution": "Project Manager, geïntegreerde facilities management provider"
+      }
     },
     "howItWorks": {
       "title": "Geautomatiseerde kwaliteitscontrole op schaal",
@@ -425,7 +429,17 @@
       "title": "Klaar om uw datakwaliteitsprobleem op te lossen?",
       "lead": "Boek een ontdekkingsgesprek van 7 minuten. We laten u precies zien waar uw data u tijd en marge kost.",
       "button": "Boek een ontdekkingsgesprek van 7 minuten"
-    }
+    },
+    "faq": [
+      {
+        "question": "Hoe verschilt dit van het simpelweg bouwen van een dashboard bovenop wat we al hebben?",
+        "answer": "Een dashboard toont wat eronder ligt. Als referentiedata voor schoonmaak en hard services niet daadwerkelijk hetzelfde beschrijven, toont het dashboard die mismatch alleen maar sneller. Pearstop repareert de data zelf, dus wat het dashboard toont, is echt."
+      },
+      {
+        "question": "Moeten al onze servicelijnen op hetzelfde systeem staan voordat dit werkt?",
+        "answer": "Nee. De data van elke servicelijn wordt ingelezen van waar deze al aanwezig is, in welk formaat deze ook binnenkomt. Standaardisatie vindt plaats na het inlezen, niet als voorwaarde om te starten."
+      }
+    ]
   },
   "Procurement": {
     "meta": {
@@ -446,7 +460,11 @@
         "Spelfouten, verkeerde informatie in verkeerde velden, dubbele leveranciersrecords",
         "Bestedingsdata te gefragmenteerd om kosten te benchmarken of consolidatiemogelijkheden te identificeren",
         "Handmatige of offshore classificatie is traag, inconsistent en leert niet"
-      ]
+      ],
+      "quote": {
+        "text": "We zeggen, nou, hoeveel gaat dit kosten. En we denken, het voelt alsof het drie procent van de contractwaarde zou moeten zijn. Maar in werkelijkheid kan dat zes of twee zijn. We weten het niet.",
+        "attribution": "Head of Commercial, multi-site schoonmaakdiensten aannemer"
+      }
     },
     "howItWorks": {
       "title": "Een vier-laagse motor die 95% van classificatie automatisch afhandelt",
@@ -501,6 +519,10 @@
       {
         "question": "Blijven onze inkopers de controle houden?",
         "answer": "Ja. Inkopers beoordelen gemarkeerde items in een speciale wachtrij — doorgaans één uur per week. Elke beslissing die ze nemen traint het systeem verder en verkleint de beoordelingswachtrij totdat handmatige input naar nul nadert."
+      },
+      {
+        "question": "Kan Pearstop onze buying controleren tegen bestaande raamovereenkomsten?",
+        "answer": "Ja. Zodra spend consistent is geclassificeerd, kan de huidige buying per category worden vergeleken met de reeds bestaande raamovereenkomsten, zodat afwijkingen zichtbaar worden zodra ze zich voordoen, in plaats van pas bij de volgende audit."
       }
     ],
     "cta": {
@@ -528,7 +550,11 @@
         "Apparaattypes samengeperst in één vrije-tekstveld maken filteren en analyseren onmogelijk",
         "Onderhoudsplanning wordt reactief omdat data geen voorspellende analyse kan ondersteunen",
         "Prijsstelling voor onderhoudscontracten is gebaseerd op onvolledige of onbetrouwbare assetinformatie"
-      ]
+      ],
+      "quote": {
+        "text": "We hebben al deze informatie, maar waar gebruiken we het voor? Niemand heeft er ooit echt naar gekeken en gedacht, hoe goed is dit, en zouden we het kunnen verbeteren.",
+        "attribution": "Commercial lead, vastgoedbeleggingsfirma"
+      }
     },
     "howItWorks": {
       "title": "Van gefragmenteerde registers naar een vertrouwde assetdatabase",
@@ -590,7 +616,17 @@
       "title": "Klaar om uw assetdata om te zetten in een strategisch asset?",
       "lead": "Boek een ontdekkingsgesprek van 7 minuten en zie precies hoe Pearstop uw specifieke data-uitdaging oplost.",
       "button": "Boek een ontdekkingsgesprek van 7 minuten"
-    }
+    },
+    "faq": [
+      {
+        "question": "Wij beheren het FM contract niet direct. Kan Pearstop dan nog steeds helpen?",
+        "answer": "Ja. Pearstop werkt met de kosten- en asset data die u al van uw provider ontvangt, en structureert deze tot een onafhankelijk, geclassificeerd record, in plaats van dat u het contract zelf hoeft te beheren."
+      },
+      {
+        "question": "Kunnen we de ene provider of site benchmarken tegen de andere?",
+        "answer": "Ja. Zodra asset en kosten data gestandaardiseerd zijn naar hetzelfde formaat, wordt het mogelijk om providers, sites of portfolio's op dezelfde basis te vergelijken, wat niet het geval is wanneer elk in zijn eigen naamgevingsconventie en structuur arriveert."
+      }
+    ]
   },
   "AiReadiness": {
     "meta": {
@@ -676,7 +712,17 @@
       "lead": "Boek een gesprek van 7 minuten en we vertellen u precies wat er moet gebeuren voordat uw AI-initiatieven resultaten kunnen leveren.",
       "button": "Boek een ontdekkingsgesprek van 7 minuten",
       "fabricLink": "Bekijk ook Fabric-gereedheid"
-    }
+    },
+    "faq": [
+      {
+        "question": "We hebben al een AI pilot geprobeerd en die verliep niet goed. Betekent dat dat AI niet voor ons zal werken?",
+        "answer": "Niet noodzakelijk. Een pilot die op kleine schaal goed lijkt en bij een reëel volume faalt, vertelt u meestal iets waars over de onderliggende data, niet over AI in het algemeen. Repareer die basis eerst en dezelfde tools gedragen zich doorgaans heel anders."
+      },
+      {
+        "question": "Moeten we een specifieke AI tool hebben gekozen voordat dit zinvol is?",
+        "answer": "Nee. Het data voorbereidingswerk is hetzelfde, ongeacht welke AI tool, of combinatie van tools, u uiteindelijk kiest. Schone, gestructureerde data is wat u in staat stelt om later tussen deze tools te wisselen zonder opnieuw te beginnen."
+      }
+    ]
   },
   "Unspsc": {
     "meta": {
@@ -769,7 +815,37 @@
       "de": "UNSPSC in Duitsland",
       "faq": "Volledige FAQ",
       "tool": "Gratis UNSPSC Code Opzoeken"
-    }
+    },
+    "manufacturerCode": {
+      "eyebrow": "Fabrikantverificatie",
+      "title": "Wat als het onderdeel alleen de eigen code van de supplier heeft?",
+      "copy": "Hard services en MRO buyers komen dit voortdurend tegen. De enige code van een onderhoudscomponent in het bestand behoort toe aan de supplier die het heeft geleverd, niet aan de fabrikant die het heeft gemaakt. Zonder de eigen code van de fabrikant is er geen manier om de prijs te controleren tegen die van iemand anders, of om te bevestigen dat twee teams die hetzelfde component beschrijven, daadwerkelijk over hetzelfde praten. Handmatig terug traceren betekent meestal contact opnemen met degene die het onderdeel oorspronkelijk heeft besteld en om een duidelijkere beschrijving vragen, en dan wachten.",
+      "example": "Dit is geen hypothese. Bij een hard services engagement bestelden ingenieurs componenten met de eigen onderdeelcode van de supplier, omdat dat de enige code op de papieren was. De echte code van de fabrikant, degene die het bedrijf in staat zou stellen om bij iemand anders te kopen, bestond wel, maar om die te achterhalen moest het onderdeel worden teruggetraceerd via de oorspronkelijke order, vaak na verschillende rondes van vragen om een duidelijkere beschrijving.",
+      "resultLabel": "Wat er terugkomt",
+      "resultCopy": "Een MPN-veld van de eindfabrikant: het originele onderdeelnummer, los van de eigen code van de supplier, gemarkeerd als 'enriched' in plaats van 'certain' wanneer de data geen directe match bevestigt. Componenten met een hogere waarde worden onderworpen aan een strengere beoordelingsdrempel, omdat een verkeerde match meer kost naarmate het onderdeel duurder is."
+    },
+    "faq": [
+      {
+        "question": "Wat is UNSPSC classificatie?",
+        "answer": "UNSPSC (United Nations Standard Products and Services Code) is een hiërarchisch classificatiesysteem dat wereldwijd wordt gebruikt om procurement spend te categoriseren. Het heeft vier niveaus: Segment, Family, Class en Commodity. Organisaties gebruiken UNSPSC om consistente spend analysis, supplier benchmarking en category management mogelijk te maken over contracten, locaties en ERP systemen heen."
+      },
+      {
+        "question": "Hoe nauwkeurig is geautomatiseerde UNSPSC classificatie?",
+        "answer": "Pearstop's classificatie-engine, die regels, machine learning, een LLM-laag en menselijke beoordeling combineert, behaalt 90 tot 95% automatische classificatie op typische procurement datasets. De resterende 5 tot 10% wordt gemarkeerd voor menselijke beoordeling. Elke beoordeelde beslissing wordt teruggekoppeld naar de engine, waardoor de beoordelingswachtrij na verloop van tijd krimpt totdat deze bijna nul bereikt."
+      },
+      {
+        "question": "Kan UNSPSC classificatie het onderdeelnummer van de fabrikant achter de eigen code van een supplier identificeren?",
+        "answer": "Ja. Wanneer een origineel onderdeelnummer van de fabrikant aanwezig is in de data of een gekoppelde referentiebron, lost de engine dit op en retourneert het als een afzonderlijk MPN-veld van de eindfabrikant, in plaats van de eigen code van de supplier als enige referentie op de regel te laten staan."
+      },
+      {
+        "question": "Integreert Pearstop met SAP voor UNSPSC classificatie?",
+        "answer": "Ja. Pearstop ontvangt data via CSV-export of directe API-verbinding van SAP, Oracle en andere ERP en P2P platforms. In de praktijk merken veel klanten dat CSV-export de eenvoudigste manier is om te beginnen. Geklassificeerde data wordt in hetzelfde formaat geretourneerd, klaar om terug in SAP te laden of te voeden aan BI-tools."
+      },
+      {
+        "question": "Hoe lang duurt UNSPSC classificatie?",
+        "answer": "De meeste klanten hebben binnen vier tot zes weken na aanvang een schone, geclassificeerde dataset klaar. De eerste engagement begint met een Data Stability Baseline, zodat u de output quality kunt beoordelen voordat u zich verbindt aan doorlopende classificatie."
+      }
+    ]
   },
   "Fabric": {
     "meta": {
@@ -840,7 +916,17 @@
       "lead": "Praat met ons voordat de migratie begint. Een gesprek van 30 minuten nu kan maanden herstelwerk later besparen.",
       "button": "Boek een ontdekkingsgesprek van 7 minuten",
       "aiLink": "Bekijk ook AI-gereedheid"
-    }
+    },
+    "faq": [
+      {
+        "question": "Moeten we onze data repareren vóór Fabric, of kan Pearstop naast de migratie draaien?",
+        "answer": "Beide werken, maar eerder is goedkoper. Het migreren van inconsistente data naar Fabric lost het niet op, het verplaatst het, en het opschonen ervan na migratie kost doorgaans meer dan het opschonen ervoor."
+      },
+      {
+        "question": "Vervangt dit onze Fabric implementatiepartner?",
+        "answer": "Nee. Pearstop bereidt de data layer onder de migratie voor. Uw implementatiepartner bouwt nog steeds het platform, ze bouwen het alleen op data die al gestructureerd is."
+      }
+    ]
   },
   "Blog": {
     "meta": {
