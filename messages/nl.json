@@ -318,6 +318,42 @@
       "lead": "Boek een ontdekkingsgesprek van 7 minuten. We identificeren precies welk dataprobleem u het meeste kost — en laten u zien hoe u het kunt oplossen.",
       "bookDiscovery": "Boek een ontdekkingsgesprek van 7 minuten",
       "viewIndustries": "Bekijk sectoren"
+    },
+    "meta": {
+      "title": "Data Quality Oplossingen voor Hard Services en Infrastructuur",
+      "description": "Vijf data quality oplossingen voor technische sectoren - van extractie van factuurdata en UNSPSC procurement classificatie tot asset data management en uniforme data quality."
+    },
+    "hero": {
+      "eyebrow": "Oplossingen",
+      "title": "Zet rommelige data om in beslissingen",
+      "lead": "Pearstop levert vijf data-integriteitsoplossingen voor technische sectoren. Elk richt zich op een specifiek dataprobleem en elk is gebouwd om uw marges te beschermen."
+    },
+    "cards": {
+      "title": "Vijf Oplossingen. Eén Doel.",
+      "lead": "Pearstop levert vijf data quality oplossingen voor technische sectoren. Elk richt zich op een specifiek operationeel dataprobleem, gebouwd voor hard services, bouw en productie.",
+      "exploreLink": "Ontdek oplossing →",
+      "items": [
+        {
+          "title": "Factuur- & Documentextractie",
+          "copy": "Zet ongelezen PDF-facturen, scans en leveringsbonnen automatisch om in gestructureerde data. De voorwaarde voor classificatie, spend analysis en alles wat daarna komt."
+        },
+        {
+          "title": "UNSPSC Classificatie",
+          "copy": "Classificeer automatisch jaren aan vrije-tekst purchase order data met behulp van UNSPSC, inclusief het traceren van hard services onderdelen naar de echte fabrikantcode. Tot 95% van de spend lijnen wordt automatisch geclassificeerd."
+        },
+        {
+          "title": "Procurement Data Quality",
+          "copy": "Bouw een echte spend baseline op basis van rommelige factuur- en supplier data, uitgesplitst per servicelijn en entiteit, zodat een onderhandeling, tender of framework review begint vanuit een cijfer in plaats van een gok."
+        },
+        {
+          "title": "Data Quality",
+          "copy": "Een ERP migratie, een Microsoft Fabric rollout en een AI initiatief gaan er allemaal van uit dat de onderliggende data al schoon en gestructureerd is. Wanneer dit niet het geval is, draagt elk van deze projecten de rommel alleen maar over naar een nieuw systeem. Pearstop lost de data eerst op."
+        },
+        {
+          "title": "Asset Data Management",
+          "copy": "Zet spend en onderhoudsdata die u ontvangt maar niet genereert om in een onafhankelijk, geclassificeerd record dat u kunt vergelijken tussen providers, sites en jaren."
+        }
+      ]
     }
   },
   "DataQuality": {
@@ -327,7 +363,9 @@
       "role": "Facility Management"
     },
     "cta": {
-      "button": "Boek een ontdekkingsgesprek van 7 minuten"
+      "button": "Boek een ontdekkingsgesprek van 7 minuten",
+      "title": "Klaar om de data onder uw volgende project te herstellen?",
+      "lead": "Boek een discovery call van 7 minuten. We laten u precies zien waar uw data vandaag een ERP-migratie, een Fabric-uitrol of een AI-initiatief zou belemmeren."
     },
     "faq": [
       {
@@ -338,7 +376,83 @@
         "question": "Moeten al onze servicelijnen op hetzelfde systeem staan voordat dit werkt?",
         "answer": "Nee. De data van elke servicelijn wordt ingelezen van waar deze al aanwezig is, in welk formaat deze ook binnenkomt. Standaardisatie vindt plaats na het inlezen, niet als voorwaarde om te starten."
       }
-    ]
+    ],
+    "meta": {
+      "title": "Data Quality: De Voorwaarde voor ERP, Fabric en AI Projecten",
+      "description": "Pearstop reinigt en structureert operationele data zodat een ERP migratie, een Microsoft Fabric rollout of een AI initiatief levert wat het beloofde, in plaats van dezelfde rommel naar een nieuw systeem te verplaatsen."
+    },
+    "hero": {
+      "eyebrow": "Data Quality",
+      "title": "Een ERP migratie, een Fabric rollout of een AI project erft elke fout die al in uw data zit.",
+      "lead": "Geen van deze projecten lost slechte data op zichzelf op. Ze verplaatsen het, of bouwen erop voort. Pearstop reinigt en structureert de referentiedata eerst, of het project nu een ERP migratie, een Microsoft Fabric rollout, een AI initiatief is, of het verenigen van elke servicelijn op één meerjarig FM contract."
+    },
+    "problem": {
+      "eyebrow": "Het Probleem",
+      "title": "De referentiedata kwam verkeerd binnen. Niemand heeft het jarenlang opgemerkt.",
+      "copy": "Referentiedata is niet neutraal. Het draagt de fouten van degene die het heeft ingevoerd, vermenigvuldigd over elke locatie en elk jaar sindsdien. Een verkeerd onderdeelnummer van de fabrikant, een naam die op twee verschillende manieren is gespeld, afhankelijk van welk systeem iemand die dag gebruikte. Niets daarvan komt aan het licht totdat u erop probeert voort te bouwen: het migreren naar Microsoft Fabric, het verbinden met een AI-model, of het vergelijken van schoonmaakkosten met hard services kosten op hetzelfde geïntegreerde FM-contract. Alle drie falen om dezelfde reden. De onderliggende data was nooit twee keer dezelfde data.",
+      "quote": {
+        "text": "We zijn in principe tevreden met wat we hebben gezien, maar misschien hadden we vanaf het begin iets meer verwacht van wat mogelijk was met de data.",
+        "attribution": "Projectmanager, geïntegreerde facilities management provider"
+      },
+      "bullets": [
+        "Referentiedata is fout voordat het een nieuw systeem bereikt, en stapelt zich op over locaties en jaren voordat iemand het opmerkt",
+        "Elke servicelijn, of elk bronsysteem, rapporteert in zijn eigen formaat, dus er bestaat geen enkele gestructureerde dataset om te migreren, modelleren of analyseren",
+        "Een ERP-migratie, een Fabric-uitrol of een AI-pilot levert minder op dan verwacht, omdat de onderliggende referentiedata gebrekkig was voordat het project begon",
+        "Handmatige reconciliatie vindt plaats bij elke rapportagecyclus of elke project kickoff, en begint de volgende keer weer vanaf nul"
+      ]
+    },
+    "howItWorks": {
+      "title": "Van verspreide bronsystemen naar één dataset",
+      "lead": "Het systeem controleert, reinigt en standaardiseert uw data over elke bron die het voedt, en wordt beter naarmate uw team het gebruikt.",
+      "step1": {
+        "title": "Inlezen, per bron",
+        "copy": "Verbind de data van elk systeem via API of CSV, in welk formaat het ook binnenkomt, of dat nu een ERP-module, een asset register, of de servicelijnen van een facilities contract (schoonmaak, hard services, beveiliging, catering) zijn."
+      },
+      "step2": {
+        "title": "Standaardiseren en reconciliëren",
+        "copy": "Naamgeving, codering en referentiedata worden gecorrigeerd en gestandaardiseerd over elke bron, zodat dezelfde apparatuur of supplier overal hetzelfde oogt."
+      },
+      "step3": {
+        "title": "Markeren en beoordelen",
+        "copy": "Items buiten betrouwbare drempels worden gemarkeerd voor uw team. Beslissingen voeden terug in de engine, zodat de wachtrij na verloop van tijd kleiner wordt."
+      }
+    },
+    "whatMakesPossible": {
+      "title": "Wat schone data mogelijk maakt",
+      "b1": {
+        "title": "Beslissingen die u kunt verdedigen",
+        "copy": "Wanneer uw data schoon en consistent is, zijn de inzichten die daaruit voortkomen betrouwbaar genoeg om op te handelen en uit te leggen aan een CFO."
+      },
+      "b2": {
+        "title": "Eén rapport op contractniveau, niet vijf",
+        "copy": "Kosten en prestaties zichtbaar over elke servicelijn op één dataset, zonder de handmatige reconciliatie die momenteel elke maand plaatsvindt voordat de cijfers uitgaan."
+      },
+      "b3": {
+        "title": "ERP-, Fabric- en AI-initiatieven die werken",
+        "copy": "Een ERP-migratie, Copilot, Microsoft Fabric en AI-tools vereisen allemaal schone, gestructureerde data eronder. Het oplossen van data quality is geen nice-to-have voor deze initiatieven, het is de voorwaarde."
+      }
+    },
+    "relatedCapabilities": {
+      "eyebrow": "Twee plaatsen waar dit zich voordoet",
+      "title": "Dezelfde schone-data-fundering is wat Fabric- en AI-initiatieven mogelijk maakt.",
+      "lead": "Een Microsoft Fabric-migratie en een AI-initiatief gaan beide uit van hetzelfde over uw data: dat deze al schoon, gestructureerd en consistent is. Dat is zelden het geval. Het onderstaande werk is hetzelfde werk als hierboven beschreven, toegepast op twee projecten die de meeste technische bedrijven al plannen.",
+      "items": [
+        {
+          "title": "Fabric Ready",
+          "copy": "Een Fabric-migratie reproduceert wat al in uw bronsystemen aanwezig is. Als de referentiedata inconsistent is bij de invoer, verplaatst de migratie de inconsistentie alleen naar een nieuw platform, met hogere kosten om dit achteraf te herstellen. Pearstop reinigt en structureert de data voordat deze wordt verplaatst, zodat de rapporten die op Fabric zijn gebouwd vanaf dag één werken.",
+          "linkLabel": "Zie wat Fabric readiness betekent"
+        },
+        {
+          "title": "AI Readiness",
+          "copy": "Een AI-tool of een Copilot-implementatie is slechts zo goed als de data waarop deze is getraind of waarmee deze is verbonden. De meeste teams komen daar pas na de uitrol achter, wanneer de antwoorden van het model dezelfde inconsistenties weerspiegelen die de onderliggende data al had. Pearstop bouwt de schone, beheerde datafundering die een AI-initiatief veronderstelt al aanwezig te zijn.",
+          "linkLabel": "Zie wat AI readiness betekent"
+        }
+      ]
+    },
+    "geoBlock": {
+      "title": "Wat is data quality automation en waarom is het belangrijk vóór een ERP-migratie, een Fabric-uitrol of een AI-initiatief?",
+      "copy": "Data quality automation gebruikt regels, machine learning en large language models om fouten in operationele datasets te identificeren en op te lossen zonder handmatige tussenkomst. Een ERP-migratie verplaatst data zoals deze is. Een Fabric-uitrol of een AI-initiatief gaat ervan uit dat de onderliggende data al gestructureerd is. Geen van beide lost op wat in eerste instantie al fout was. Voor hard services en FM-providers die meerdere servicelijnen beheren, komen cleaning, hard services, security en catering elk in een ander formaat aan, met referentiedata die vaak vanaf het begin al fout was. Pearstop heeft supplier- en equipment-referentiedata gecorrigeerd voor FM-providers, waaronder SPIE, door de naamgeving te standaardiseren over servicelijnen en sites heen, zodat dezelfde schone dataset een migratie, een AI-model of een enkel contract-level rapport kan ondersteunen in plaats van vijf afzonderlijke."
+    }
   },
   "Procurement": {
     "meta": {
