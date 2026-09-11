@@ -1797,5 +1797,112 @@
       "lead": "Buchen Sie eine 7-minütige Erstberatung, und wir zeigen Ihnen genau, wie die Klassifizierungs-Engine mit Ihren Daten arbeitet.",
       "button": "7-minütige Erstberatung buchen"
     }
+  },
+  "UnspscFM": {
+    "meta": {
+      "title": "UNSPSC-Klassifizierung für Facility Management | Pearstop",
+      "description": "Automatisierte UNSPSC-Klassifizierung für Hard-Services- und FM-Unternehmen. Klassifizieren Sie Instandhaltungs-, MRO- und Nachunternehmerausgaben über Multi-Standort-Betriebe hinweg ohne manuellen Aufwand."
+    },
+    "geoBlock": {
+      "title": "Was umfasst UNSPSC-Klassifizierung für Facility Management konkret?",
+      "copy": "Ein Facility-Management-Unternehmen kauft typischerweise bei 500 bis 3.000 Lieferanten über alle betreuten Standorte hinweg ein, und jeder Lieferant stellt anders in Rechnung. UNSPSC-Klassifizierung ordnet derselben zugrunde liegenden Arbeit denselben 8-stelligen Commodity-Code zu, unabhängig davon, ob eine Rechnungszeile „elektra werkzaamheden Q3“ oder „Elektroinstandhaltungseinsatz“ lautet, sodass Einkauf und Finanzen Ausgaben über Lieferanten und Standorte hinweg vergleichen können, statt Freitext Zeile für Zeile zu lesen. Die Engine von Pearstop leistet das automatisch für FM-Unternehmen, die 5.000 bis 35.000 Rechnungszeilen pro Monat verarbeiten, und klassifiziert 90 bis 95 % davon, ohne dass ein Mensch die Zeile anfassen muss."
+    },
+    "hero": {
+      "eyebrow": "UNSPSC für Facility Management",
+      "title": "FM-Beschaffungsdaten sind am schwersten zu klassifizieren. So beheben Sie das.",
+      "lead": "Hard-Services- und FM-Unternehmen verwalten Tausende von Rechnungszeilen über Hunderte von Lieferanten und Standorten hinweg. Pearstop klassifiziert alles automatisch — 90–95 % ohne menschliches Zutun —, sodass sich Ihr Team auf Category Management statt Dateneingabe konzentrieren kann.",
+      "cta": "7-minütige Erstberatung buchen",
+      "secondary": "So funktioniert es"
+    },
+    "challenge": {
+      "eyebrow": "Das Problem",
+      "title": "Warum FM-Ausgaben besonders schwer zu klassifizieren sind",
+      "lead": "FM-Unternehmen stehen vor drei Beschaffungsdatenproblemen, für die die meisten Tools nicht gebaut sind.",
+      "p1": {
+        "title": "Beschreibungen von Technikern, nicht von Einkäufern verfasst",
+        "copy": "Rechnungszeilen wie „elektra werkzaamheden Q3“ oder „Pumpendichtung Austausch Einheit 4B“ sind vor Ort aussagekräftig, aber im großen Maßstab unmöglich konsistent zu klassifizieren. Dieselbe physische Arbeit erscheint standortübergreifend unter Dutzenden verschiedener Zeichenfolgen."
+      },
+      "p2": {
+        "title": "Tausende Lieferanten, null Konsistenz",
+        "copy": "Ein großer FM-Betrieb kauft möglicherweise bei 500–3.000 Lieferanten ein. Jeder stellt anders in Rechnung. Ohne eine konsistente Klassifizierungsschicht lassen sich Ausgabendaten weder aggregieren noch vergleichen — Category Management wird zum Raten."
+      },
+      "p3": {
+        "title": "Manuelle Klassifizierung kann nicht Schritt halten",
+        "copy": "Bei 5.000–35.000 Rechnungszeilen pro Monat erfordert manuelle UNSPSC-Klassifizierung ein bis zwei durchgehend beschäftigte Mitarbeitende, nur um aktuell zu bleiben."
+      }
+    },
+    "solution": {
+      "eyebrow": "Wie Pearstop funktioniert",
+      "title": "Vier Klassifizierungsschichten. Ein sauberer Ausgabendatensatz.",
+      "lead": "Die Engine von Pearstop verarbeitet 90–95 % der FM-Ausgabenzeilen automatisch — und wird umso besser, je länger Sie sie nutzen.",
+      "step1": {
+        "title": "Regel-Engine",
+        "copy": "Lieferanten- und sachkontenspezifische Regeln übernehmen sofort hochvolumige Klassifizierungen mit hoher Konfidenz."
+      },
+      "step2": {
+        "title": "Maschinelles Lernen",
+        "copy": "Eine auf Ihrer Ausgabenhistorie trainierte ML-Schicht bildet die Klassifizierungslogik Ihrer besten Category Manager nach."
+      },
+      "step3": {
+        "title": "LLM-Schicht",
+        "copy": "Mehrdeutige Beschreibungen, fremdsprachige Zeilen und Randfälle werden von einem großen Sprachmodell mit tiefem Produkt- und Branchenwissen aufgelöst."
+      },
+      "step4": {
+        "title": "Menschliche Prüfung",
+        "copy": "Positionen unterhalb der Konfidenzschwelle werden für Ihr Team markiert. Jede Entscheidung fließt zurück in die Engine."
+      }
+    },
+    "stats": {
+      "title": "Was Kunden in der Praxis sehen",
+      "s1": {
+        "title": "Automatische Klassifizierungsrate",
+        "copy": "90–95 % der Rechnungszeilen werden nach der anfänglichen Lernphase ohne menschliches Zutun klassifiziert."
+      },
+      "s2": {
+        "title": "Zeilen pro Monat — Strukton",
+        "copy": "35.000 Beschaffungszeilen monatlich für einen großen niederländischen Infrastrukturauftragnehmer verarbeitet."
+      },
+      "s3": {
+        "title": "Reduzierung des manuellen Aufwands",
+        "copy": "FM-Teams reduzieren manuelle Datenarbeit typischerweise um 70–90 % und geben Einkäufern so Zeit für Kategoriestrategie."
+      }
+    },
+    "faq": {
+      "title": "Häufige Fragen",
+      "items": {
+        "0": {
+          "q": "Welche UNSPSC-Segmente gelten für Facility Management?",
+          "a": "Die häufigsten Segmente für FM sind Segment 72 (Bau- und Instandhaltungsdienstleistungen), Segment 76 (Industrielle Reinigungsdienstleistungen), Segment 80 (Management- und Verwaltungsdienstleistungen) und Segment 73 (Industrielle Produktion). Hard-Services-FM-Unternehmen verzeichnen das höchste Ausgabenvolumen typischerweise in Segment 72, das Elektro-, HLK-, Sanitär- und Fassadeninstandhaltung umfasst."
+        },
+        "1": {
+          "q": "Warum ist UNSPSC-Klassifizierung für FM-Unternehmen schwierig?",
+          "a": "FM-Unternehmen kaufen bei Hunderten von Lieferanten über dezentrale Standorte hinweg ein. Rechnungszeilen sind oft Freitextbeschreibungen von Servicetechnikern, nicht von Einkaufsteams verfasst. Manuelle Klassifizierung in diesem Umfang erfordert ein bis zwei durchgehend beschäftigte Mitarbeitende, nur um Schritt zu halten."
+        },
+        "2": {
+          "q": "Wie lange dauert UNSPSC-Klassifizierung für ein FM-Unternehmen?",
+          "a": "Eine erste Klassifizierung eines vollständigen Ausgabendatensatzes ist typischerweise innerhalb von vier bis sechs Wochen abgeschlossen, einschließlich einer Data-Stability-Baseline zur Validierung der Genauigkeit. Die laufende monatliche Klassifizierung läuft danach automatisch."
+        },
+        "3": {
+          "q": "Integriert sich Pearstop in FM-spezifische Systeme wie Maximo oder ServiceNow?",
+          "a": "Pearstop empfängt Daten per CSV-Export oder direkter API-Anbindung und liefert klassifizierte Daten im selben Format zurück, kompatibel mit jedem CAFM- oder CMMS-System, einschließlich IBM Maximo, ServiceNow, Planon und SAP PM."
+        },
+        "4": {
+          "q": "Welche Genauigkeit können FM-Unternehmen erwarten?",
+          "a": "Die vierschichtige Engine von Pearstop erreicht 90–95 % automatische Klassifizierung bei typischen FM-Ausgabendatensätzen. Die verbleibenden 5–10 % werden zur menschlichen Prüfung markiert, und jede geprüfte Entscheidung fließt zurück in die Engine."
+        }
+      }
+    },
+    "related": {
+      "label": "Verwandte Themen",
+      "copy": "Entdecken Sie den vollständigen UNSPSC-Klassifizierungsservice, echte FM-Fallstudien und das umfassendere Angebot zur Datenqualität in der Beschaffung.",
+      "link1": "UNSPSC-Klassifizierung",
+      "link2": "Fallstudien",
+      "link3": "Datenqualität in der Beschaffung"
+    },
+    "cta": {
+      "title": "Bereit, die FM-Beschaffungsklassifizierung zu automatisieren?",
+      "lead": "Buchen Sie eine 7-minütige Erstberatung. Wir zeigen Ihnen genau, wie die Engine mit Ihren Ausgabendaten arbeitet.",
+      "button": "7-minütige Erstberatung buchen"
+    }
   }
 }
