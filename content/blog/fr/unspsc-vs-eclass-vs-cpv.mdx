@@ -1,0 +1,67 @@
+---
+title: "UNSPSC contre eClass contre CPV : quelle norme de classification convient à votre entreprise ?"
+description: "Une analyse claire des trois principales normes de classification achats, UNSPSC, eClass et CPV, avec un guide pratique de mise en œuvre à grande échelle."
+date: "2026-05-07"
+category: "Procurement"
+slug: "unspsc-vs-eclass-vs-cpv"
+author: "sjoerd"
+---
+
+Si vous avez commencé à vous pencher sur la classification des données achats, vous avez probablement rencontré plus d'une norme. UNSPSC, eClass, CPV, GPC, chacune prétend être le bon cadre pour organiser ce que votre entreprise achète. La vérité est que la meilleure norme dépend de pour qui vous achetez, à qui vous rendez des comptes, et de ce que vous voulez faire des données.
+
+## UNSPSC – United Nations Standard Products and Services Code
+
+L'UNSPSC est la norme de classification mondiale la plus utilisée pour les achats. Elle couvre à la fois les produits et les services selon une hiérarchie à quatre niveaux : segment, famille, classe et marchandise. Maintenue par GS1 US pour le compte de l'ONU et mise à jour trimestriellement.
+
+| Code | Description |
+|---|---|
+| 46000000 | Équipement de défense, application de la loi, sécurité et sûreté |
+| 46130000 | Sécurité et protection individuelle |
+| 46131700 | Gants de protection et accessoires |
+| 46131701 | Gants jetables |
+| 72154100 | Services de maintenance et réparation des installations |
+| 72154103 | Maintenance des systèmes CVC |
+
+**Le mieux adapté pour :** les entreprises du secteur privé, les organisations multinationales, et toute entreprise qui veut classifier ses dépenses pour l'analytique interne, la consolidation des fournisseurs, ou la gestion par catégorie. La norme de facto dans le hard services, le FM, la construction et l'industrie. La plupart des plateformes logicielles achats, SAP Ariba, Coupa, Oracle, prennent nativement en charge l'UNSPSC.
+
+## eClass – Norme de classification européenne
+
+L'eClass est une norme de classification produit développée principalement pour les achats industriels et d'ingénierie. Particulièrement solide pour les produits techniques, composants mécaniques, pièces électriques, fournitures MRO, où les attributs précis du produit comptent autant que la catégorie. Contrairement à l'UNSPSC, l'eClass inclut des définitions d'attributs produit aux côtés des codes. Vous ne classifiez pas simplement un produit comme « pompe centrifuge », vous pouvez aussi préciser le débit, la pression nominale, le matériau de construction, et le type de raccordement.
+
+**Le mieux adapté pour :** l'industrie manufacturière, l'ingénierie et les environnements MRO où une précision au niveau produit est requise. Largement utilisée dans les marchés germanophones et dans les secteurs industriels européens.
+
+## CPV – Vocabulaire commun pour les marchés publics
+
+Le CPV est le système de classification imposé par l'Union européenne pour les marchés publics. Si vous répondez à des appels d'offres du secteur public dans l'UE, les codes CPV sont obligatoires, ils apparaissent sur les avis de marché publiés au Journal officiel de l'UE.
+
+| Code | Description |
+|---|---|
+| 45000000 | Travaux de construction |
+| 45300000 | Travaux d'installation de bâtiment |
+| 45331200 | Travaux d'installation de ventilation et de climatisation |
+| 90910000 | Services de nettoyage |
+| 90919200 | Services de nettoyage de bureaux |
+
+**Le mieux adapté pour :** les fournisseurs du secteur public et les organisations opérant sur des marchés d'achats réglementés. Pas conçu pour la gestion interne des dépenses.
+
+## Quelle norme devriez-vous utiliser ?
+
+| Norme | Utilisée principalement par | Cas d'usage principal |
+|---|---|---|
+| **UNSPSC** | Secteur privé, tous secteurs | Analytique des dépenses, gestion par catégorie, consolidation des fournisseurs |
+| **eClass** | Industrie, ingénierie, MRO | Gestion des données de référence, spécification produit au niveau attribut |
+| **CPV** | Fournisseurs du secteur public, achats réglementés par l'UE | Classification des avis de marché, conformité JOUE |
+
+Pour la plupart des entreprises du secteur privé dans le hard services, le FM, la construction et l'industrie, **l'UNSPSC est le bon point de départ**. C'est la norme la plus largement prise en charge, la plus reconnue mondialement, et la plus utile pour l'analytique des dépenses et la gestion par catégorie.
+
+## La réalité de la mise en œuvre : pourquoi la norme est la partie facile
+
+Quelle que soit la norme choisie, la partie difficile n'est pas la norme elle-même. C'est la classification de vos données existantes selon celle-ci. Les bases de données achats des organisations complexes contiennent des dizaines de milliers de descriptions de lignes distinctes, beaucoup incohérentes, ambiguës, ou propres à la personne qui les a saisies. Cartographier manuellement ces descriptions vers des codes marchandise UNSPSC n'est pas faisable à grande échelle.
+
+Ce qui fonctionne est un système de classification à trois couches :
+
+- **Couche 1 – Règles déterministes.** Pour les articles clairs et à haute fréquence, des règles cartographient des descriptions spécifiques vers des codes spécifiques. Cette couche traite rapidement la majorité assurée.
+- **Couche 2 – Machine learning.** Un modèle entraîné sur vos données spécifiques traite le terrain intermédiaire, les articles qui suivent des schémas apprenables. Le modèle apprend comment votre organisation décrit ce qu'elle achète.
+- **Couche 3 – Révision humaine.** Les articles réellement ambigus, généralement 5 à 15 % du volume, sont remontés pour révision. Chaque décision humaine réalimente la couche 2, améliorant la précision dans le temps.
+
+Cette approche à trois couches est au cœur de la façon dont Pearstop classifie les données achats à grande échelle : avec précision, rapidement, et d'une façon qui s'améliore en continu plutôt que d'exiger des exercices de reclassification périodiques.
