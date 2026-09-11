@@ -1,0 +1,41 @@
+---
+title: "Wem gehört Ihr Procurement-Datenproblem eigentlich"
+description: "Finance besitzt das Hauptbuch, Procurement besitzt den Deal, und IT besitzt das System. Die Taxonomie darunter gehört niemandem, und diese Lücke ist das eigentliche Problem."
+date: "2026-09-05"
+category: "Data Quality"
+slug: "who-owns-your-procurement-data-problem"
+author: "stephanie"
+lang: "en"
+---
+
+**Kurzantwort:** Procurement-Datenqualität gehört standardmäßig niemandem, weil keine einzelne Funktion sowohl die Sichtbarkeit als auch das Mandat hat, sie durchgängig zu verantworten. Finance besitzt das Hauptbuch, Procurement besitzt die Lieferantenbeziehungen, und IT besitzt das System, in dem die Daten liegen. Klassifizierung und Taxonomie sitzen in der Lücke dazwischen, ohne Eigentümer, bis jemand einer Person oder Rolle explizit die Verantwortung dafür überträgt.
+
+Auf dieser Seite: [Finance besitzt das Hauptbuch, nicht die Taxonomie](#finance-owns-the-ledger-not-the-taxonomy) · [Procurement besitzt den Deal, nicht die Daten](#procurement-owns-the-deal-not-the-data) · [IT besitzt das System, nicht die Struktur](#it-owns-the-system-not-the-structure) · [Wer die Klassifizierung stattdessen besitzen sollte](#who-should-own-classification-instead) · [FAQ](#frequently-asked-questions)
+
+Fragen Sie einen Head of Procurement, wem sein Datenqualitätsproblem gehört, und die meisten zeigen nach oben, zu Finance, zu wem auch immer das Budget freigibt. Das ist eine vernünftige erste Vermutung. Finance sieht das gesamte Spend-Bild, oder glaubt es zu tun. Aber der CFO besitzt nicht die Klassifizierung unter den Zahlen, und standardmäßig auch sonst niemand. Drei Funktionen halten jeweils ein echtes Stück des Problems, und jede hat einen legitimen Grund, nicht das Ganze zu halten.
+
+## Finance besitzt das Hauptbuch, nicht die Taxonomie
+
+Finance' Aufgabe ist, dass das Hauptbuch zum Monatsende stimmt. Ein Hauptbuchcode wie „reaktive Instandhaltung“ deckt eine Anfahrtspauschale, einen Ersatzkompressor und drei Stunden Subunternehmer-Arbeit ab, alle identisch codiert, weil das Hauptbuch nur die Summe gegen diesen Code korrekt braucht. Ob die darunterliegende Zeile beschreibt, was tatsächlich gekauft wurde, ist eine andere Frage, und nicht die, an der Finance gemessen wird.
+
+Das ist der legitime Grund, warum Finance das nicht durchgängig übernehmen wird. Ihr Anreiz endet dort, wo die Summe stimmt. Sie für Konsistenz auf Kategorieebene verantwortlich zu machen, hieße, jemanden für eine Entscheidung verantwortlich zu machen, die er nie treffen sollte, mit einem Detailgrad, den das eigene Reporting nicht verlangt.
+
+## Procurement besitzt den Deal, nicht die Daten
+
+Procurements Aufgabe ist die nächste Verhandlung, nicht die dahinterliegende Historie. Zwei Standorte können dieselben Arbeitshandschuhe vom selben Distributor kaufen und sie unter zwei verschiedenen Kategorien ablegen, die eine unter PSA, die andere unter Verbrauchsmaterial, weil zwei verschiedene Einkäufer die Bestellung erfasst haben und keiner von beiden an diesem Tag innerhalb seiner eigenen Aufgabe falschlag.
+
+Kategoriemanagement ist eine vorausschauende Disziplin. Es vergleicht den Preis des nächsten Jahres mit dem dieses Jahres und konsolidiert Lieferanten für die Zukunft. Drei Jahre inkonsistent getaggter Historie nachträglich zu bereinigen, konkurriert direkt mit laufenden Verhandlungen um dieselbe Einkäuferzeit, und die Verhandlung gewinnt, weil daran Procurement gemessen wird. Die Taxonomie zu reparieren ist echte Arbeit ohne angehängten Deal, deshalb verliert sie immer wieder gegen Arbeit, die zum Abschluss führt.
+
+## IT besitzt das System, nicht die Struktur
+
+IT hält die ERP- oder CAFM-Plattform am Laufen, migriert sie, wenn das Unternehmen sie überwächst, und verbindet sie mit allem anderen, das mit ihr sprechen muss. Ein UNSPSC- oder Kategoriefeld sitzt oft bereits innerhalb dieses Systems, im Schema vorhanden, leer oder gefüllt mit dem, was der Implementierungsanbieter bei Go-live standardmäßig eingetragen hat. IT kann das Feld bauen. Zu entscheiden, was hineingehört, braucht jemanden, der den Unterschied zwischen einem Stellantrieb und einer Klappe kennt, und das ist nicht IT.
+
+IT wird an Uptime, erfolgreichen Migrationen und Systemen gemessen, die miteinander sprechen. IT zu bitten, zu entscheiden, ob eine Fensterbank-Lieferung unter Baumaterialien oder Gebäudeinstandhaltung gehört, heißt, die falsche Abteilung um ein Geschäftsurteil zu bitten, für das sie keine Grundlage hat.
+
+## Wer die Klassifizierung stattdessen besitzen sollte
+
+Data Governance kennt hier eine nützliche Unterscheidung: Ein Data Owner ist durchgängig für eine Domäne verantwortlich, meist jemand, der senior genug ist, damit die Kategorieentscheidung systemübergreifend durchgesetzt wird. Ein Data Steward erledigt die laufende Pflegearbeit unter dem Mandat dieses Owners und löst die tatsächlichen Grenzfälle. Ohne benannten Owner hat die Steward-Arbeit niemanden, an den sie berichtet, also geschieht sie inkonsistent oder gar nicht. Das ist kein Personalproblem. Die meisten Unternehmen ab fünfzig Millionen Pfund Umsatz haben keinen Chief Data Officer, und einen einzustellen, nur um eine Taxonomie zu reparieren, wäre eine seltsame Verwendung dieser Rolle. Was fehlt, ist keine Person. Es ist eine explizite Zuweisung: eine Stelle, an der eine Klassifizierungsentscheidung einmal getroffen, dokumentiert und beim nächsten Mal auf dieselbe Weise auf denselben mehrdeutigen Artikel angewendet wird.
+
+Sobald die Klassifizierung einen solchen Owner hat, zeigt sich der Effekt in der Arbeit, die früher jede Vorstandsvorlage oder Ausschreibungsantwort eine Woche gekostet hat. Siebzig bis neunzig Prozent weniger manuelle Datenbereinigung ist die realistische Zahl, sobald diese Eigentümerschaftslücke geschlossen ist, was Procurement- und Finance-Teams sehen, sobald Pearstop die Klassifizierungsschicht für sie übernimmt, statt sie demjenigen zu überlassen, der gerade diese Woche Zeit hat. Eine ERP-Migration bringt nicht mehr in der Woche vor Go-live Jahre unklassifizierten Spend als Überraschung ans Licht, weil die Klassifizierungsarbeit bereits erledigt war. Eine Ausschreibungsantwort stützt sich auf Kostendaten, die standortübergreifend dasselbe bedeuten, statt auf eine Tabelle, die jemand aus dem Gedächtnis neu aufgebaut hat.
+
+Die Frage, die es sich zu stellen lohnt, bevor irgendein Tool auf die Shortlist kommt, ist nicht, welches System das lösen wird. Es ist, wer konkret dafür verantwortlich ist, dass die Taxonomie auch nach Projektende richtig bleibt. Wenn die ehrliche Antwort niemand lautet, ist das das eigentliche Problem, und es wird auch nach der nächsten Systemmigration noch da sein.

@@ -1,0 +1,51 @@
+---
+title: "SAP-Bereitschaft im Bauwesen beginnt Jahre vor der Migration"
+description: "Bauunternehmen warten auf die SAP-Frist, um eine Datenbereinigung zu erzwingen. Hier ist, warum die Klassifizierungsarbeit stattdessen Jahre früher beginnen sollte."
+date: "2026-09-04"
+category: "Construction"
+slug: "sap-migration-readiness-construction"
+author: "stephanie"
+lang: "en"
+---
+
+**Kurzantwort:** Procurement-Daten im Bauwesen werden nicht leichter zu klassifizieren, indem man wartet. Subunternehmer-Rechnungen, Gerätevermietung und Materialien liegen auf jedem laufenden Projekt unter unterschiedlichen Kostenarten, und ein allgemeines KI-Tool wie Copilot kann über dieses Volumen hinweg keine konsistente Kategorie halten. Die Klassifizierungsarbeit Jahre vor einem geplanten SAP-Umzug zu beginnen, statt erst im Vorfeld des Go-live, bedeutet, dass die Taxonomie schon lange vor der erzwingenden Frist bewährt und stabil ist.
+
+Auf dieser Seite: [Bestelldaten im Bauwesen bringen allgemeine KI-Tools zum Scheitern](#construction-po-data-breaks-general-ai-tools) · [Warum überstürzte SAP-Vorbereitung scheitert](#why-rushed-sap-prep-fails) · [Warum sich Bau-Spend gegen eine gemeinsame Taxonomie sperrt](#why-construction-spend-resists-a-shared-taxonomy) · [Was frühe SAP-Bereitschaftsarbeit umfasst](#what-early-sap-readiness-work-involves) · [FAQ](#frequently-asked-questions)
+
+## Bestelldaten im Bauwesen bringen allgemeine KI-Tools zum Scheitern
+
+Ein Bauunternehmen, mit dem wir dieses Jahr gesprochen haben, hatte Bestellzeilen, die gleichzeitig über ein Dutzend laufende Projekte verteilt waren: Subunternehmer-Rechnungen, Gerätevermietung, Materialien, jeweils bepreist und codiert gegen eine Kostenartenstruktur, die ein anderer Projektleiter für einen anderen Auftrag aufgesetzt hatte. Niemand hatte je versucht, diese Kostenarten miteinander in Einklang zu bringen, weil das niemand musste, bis ein SAP-Umzug als reale Möglichkeit aufkam.
+
+Das Team probierte zuerst Microsoft Copilot. Es war bereits lizenziert, bereits auf jedem Laptop im Büro geöffnet, und es sah wie der naheliegende Weg aus, einen ersten Durchgang zur Klassifizierung des Rückstaus zu bekommen, bevor irgendwer Geld für etwas anderes ausgab. Es erzeugte Kategorien. Es erzeugte auch eine andere Kategorie für dieselbe Zeilenbeschreibung, je nachdem, aus welchem Projekt die Zeile stammte, und gelegentlich erfand es eine Kategorie, die nirgendwo in der eigenen Kostenstruktur des Unternehmens existierte.
+
+Der Grund ist einfach: Copilot ist darauf gebaut, eine Frage zu dem gerade vorliegenden Dokument zu beantworten, nicht darauf, eine konsistente Regel über Hunderttausende Bestellzeilen hinweg zu halten, verteilt über ein Dutzend Projekte, die ständig ihre Form ändern, wenn neue Aufträge starten und alte abgeschlossen werden. Ein allgemeines Modell hat kein Gedächtnis für die Entscheidung, die es eine Stunde zuvor bei einer ähnlichen Zeile getroffen hat, und nichts zwingt es, seine Antwort gegen eine feste Liste von Kategorien zu prüfen, die das Unternehmen tatsächlich verwendet. Jeder Durchlauf beginnt bei null.
+
+Das war der Moment, in dem das Team aufhörte, dies als Problem eines KI-Prompts zu behandeln, und anfing, es als Datenstrukturproblem zu behandeln, was es schon immer war.
+
+## Warum überstürzte SAP-Vorbereitung scheitert
+
+SAP hat den 31. Dezember 2027 als Ende der Standardwartung für ECC festgelegt, und eine vollständige Migration von ECC zu S/4HANA dauert für ein Unternehmen jeder Größe typischerweise 18 bis 36 Monate. Rechnet man diesen Zeitplan von der Frist rückwärts, bleibt sehr wenig Puffer für den Teil des Projekts, den niemand übernehmen will: sicherzustellen, dass die in das neue System einfließenden Daten tatsächlich konsistent sind.
+
+Branchenforschung zu ERP-Datenmigrationen ist ungewöhnlich unverblümt darin, wo diese schiefgehen. Die Mehrheit der Migrationsprojekte verfehlt entweder ihre Ziele oder überschreitet Budget und Zeitplan, und mangelnde Datenqualität wird durchgängig als Hauptursache genannt. Das Muster ist dasselbe, das Bauteams von innen beschreiben: Das Problem taucht nicht während der Planungsworkshops auf, es taucht während des User-Acceptance-Testings auf, wenn jemand versucht, einen Bericht nach Kostenkategorie zu erstellen, und feststellt, dass drei verschiedene Projekte dieselbe Sache drei verschiedene Namen genannt haben.
+
+Die Bereinigung in den sechs Monaten vor Go-live zu beginnen bedeutet, sie zum denkbar schlechtesten Zeitpunkt zu machen. Das Team ist bereits ausgelastet mit dem Testen des neuen Systems, dem Schulen von Nutzern und dem Abgleichen von Eröffnungssalden. Klassifizierungsentscheidungen, die den Input von jemandem brauchen, der tatsächlich weiß, was „Miete“ bei einem Erdarbeiten-Vertrag bedeutet, werden in Eile getroffen, von wem auch immer gerade verfügbar ist, und sie werden nicht noch einmal überprüft.
+
+Jahre früher zu beginnen ändert, was für eine Art von Entscheidung das ist. Das aktuelle System ist noch stabil. Die Leute, die die ursprünglichen Kostenarten aufgesetzt haben, sind meist noch da, um zu erklären, was sie damit meinten. Und eine Taxonomie, die zwei oder drei Jahre lang gegen laufende Bestellungen aufgebaut und getestet wurde, hat die Grenzfälle, die ein neues Projekt aufwirft, bereits überstanden, statt ihnen zum ersten Mal während eines Go-live-Wochenendes zu begegnen.
+
+## Warum sich Bau-Spend gegen eine gemeinsame Taxonomie sperrt
+
+Die Fertigung hat einen Materialstamm, der weitgehend stillhält. Ein in diesem Quartal gekauftes Teil ist im nächsten Quartal meist noch dasselbe Teil, im selben Werk hergestellt, von derselben Liste bestellt. Das Bauwesen funktioniert nicht so. Jedes Projekt ist eine neue juristische Person im Miniaturformat, mit eigenem Budget, eigenem Projektleiter und einer eigenen Kostenartenliste, aufgebaut aus welcher Vorlage auch immer diese Person beim letzten Mal zufällig verwendet hat.
+
+Das Ergebnis ist eine bestimmte Art von Durcheinander. Eine Zeile, die einfach mit „Miete“ gekennzeichnet ist, könnte ein für sechs Wochen gebuchter Turmkran oder ein für zwei Tage gebuchter Generator sein, und nichts in der Beschreibung verrät, welches von beiden, ohne Lieferant und Projekt zu prüfen. Derselbe Erdarbeiten-Subunternehmer kann drei Regionalbüros unter drei verschiedenen Handelsnamen in Rechnung stellen, von denen keiner offensichtlich übereinstimmt, weil niemand im Procurement einen Grund hatte, das zu bemerken, bis Spend projektübergreifend verglichen werden musste. Materialien werden auf welche Zeile auch immer codiert, die die Person, die die Bestellung angelegt hat, an diesem Tag gerade geöffnet hatte, was selten die Zeile ist, die ein Kostenanalyst sechs Monate später wählen würde.
+
+Nichts davon ist ein Fehler bei der Dateneingabe. Alle Beteiligten haben ihr eigenes Projekt für ihre eigenen Zwecke korrekt codiert. Das Problem ist, dass „korrekt für dieses Projekt“ und „konsistent über jedes vom Unternehmen geführte Projekt hinweg“ nie dieselbe Anforderung waren, und nichts in einem Standard-Bau-ERP zwingt sie von allein dazu, dieselbe Anforderung zu werden.
+
+## Was frühe SAP-Bereitschaftsarbeit umfasst
+
+Der erste Schritt ist, Lieferanten- und Subunternehmer-Identität projektübergreifend aufzulösen, bevor auch nur eine einzige Kategorie angefasst wird. Hier macht ein Bauunternehmen meist seinen ersten echten Fund: derselbe Subunternehmer bietet unter zwei Namen an, oder zwei Lieferanten sind nach einer Fusion tatsächlich ein Unternehmen, für die niemand die Datensätze aktualisiert hat.
+
+Der zweite Schritt ist, eine Taxonomie anzuwenden, die fest ist, nicht pro Projekt erfunden. Eine Kostenart kann auf Baustelle A nicht etwas anderes bedeuten als auf Baustelle B. Gerätevermietung, Subunternehmer-Arbeit und Materialien brauchen Kategorien, die ihre Bedeutung behalten, egal aus welchem Projekt die Zeile stammt, zurückgeführt auf die Kostenartenstruktur, gegen die das Unternehmen tatsächlich berichtet.
+
+Der dritte Schritt ist, kontinuierlich zu klassifizieren, nicht als einmalige Übung. Jedes Quartal starten neue Projekte mit neuen Kostenarten und neuen Subunternehmern, sodass die Klassifizierungsarbeit gegen laufende Bestellungen laufen muss, sobald diese eintreffen, nicht nur gegen einen fixen historischen Rückstau. Auch hier zahlt sich das frühe Beginnen aus: Eine Taxonomie, die zwei oder drei Jahre lang gegen alle paar Monate neu startende Projekte getestet wurde, musste bereits die Gewerkekategorien, Mietvereinbarungen und Benennungseigenheiten bewältigen, die eine Migration sonst alle auf einmal, mitten im Go-live-Testing, ans Licht bringen würde.
+
+Laufende monatliche Klassifizierung von SAP-Bestellungen im Livebetrieb, Jahre bevor überhaupt ein Migrationsdatum bestätigt ist, ist das, was Pearstop derzeit für einen großen Infrastruktur-Auftragnehmer tut: Lieferantenidentität auflösen und Procurement-Zeilen aus SAP klassifizieren als laufenden Prozess statt als einmalige Rückstau-Übung, sodass die Kategorien für Bau- und Infrastrukturteams schon lange stabil sind, bevor ein Systemwechsel die Frage erzwingt.

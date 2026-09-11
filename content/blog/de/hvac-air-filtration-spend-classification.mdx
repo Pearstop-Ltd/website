@@ -1,0 +1,47 @@
+---
+title: "Klassifizierung von Luftfilter-Spend innerhalb der HLK-Wartung"
+description: "Filterwechsel sind ein planbarer Verbrauchskostenpunkt, doch die meisten HLK-Codes vermischen sie mit reaktivem Teilespend. Hier ist, warum eine Trennung wichtig ist."
+date: "2026-09-10"
+category: "Data Quality"
+slug: "hvac-air-filtration-spend-classification"
+author: "rae"
+lang: "en"
+---
+
+**Kurzantwort:** Der Austausch von Luftfiltern ist ein planbarer, taktgetriebener Verbrauchskostenpunkt, keine einmalige Reparatur, doch die meisten FM-Spend-Daten bündeln ihn in einem einzigen generischen HLK-Wartungscode zusammen mit reaktivem Teilespend wie Lüftermotoren, Kompressoren und Wärmetauschern. Filterspend unter einer eigenen Warengruppenklassifizierung herauszulösen, ist erst das, was Filterbudgetierung, Lieferantenvergleiche und Taxonomie-Aggregation überhaupt ermöglicht.
+
+Auf dieser Seite: [Luftfilter versinken im HLK-Spend](#air-filters-get-buried-in-hvac-spend) · [Filterwechsel ist ein Verbrauchszyklus](#filter-replacement-is-a-consumable-cycle) · [Was ein vermischter HLK-Code verbirgt](#what-one-blended-hvac-code-hides) · [Filterspend von reaktivem Teilespend trennen](#splitting-filter-spend-from-reactive-parts) · [FAQ](#frequently-asked-questions)
+
+## Luftfilter versinken im HLK-Spend
+
+Ich habe vor ein paar Monaten die Hard-FM-Kostenbasis eines Kunden kartiert und eine einfache Frage gestellt: Wie viel geben Sie jährlich für Filtermedien aus? Niemand konnte sie beantworten. Nicht weil die Zahl nicht existiert, sondern weil sie in einer einzigen Zeile namens HLK-Wartung steckt, neben einem Kompressoraustausch, einem Lüftermotorwechsel und einer Kanalreparatur wegen einer geplatzten Dichtung.
+
+Das ist das Muster bei den meisten Standorten, die ich mir ansehe. Ein Dienstleister wechselt bei einem geplanten Besuch die Filter, bemerkt, dass etwas anderes Aufmerksamkeit braucht, und behebt es beim selben Einsatz. Beides wird demselben Vertrag in Rechnung gestellt, derselben GL-Zeile zugeordnet und als eine Zahl ausgewiesen: HLK-Wartungsspend. Der Filterwechsel und die Kompressorreparatur werden als dieselbe Art von Kosten behandelt, obwohl sie sich in nichts ähneln.
+
+## Filterwechsel ist ein Verbrauchszyklus
+
+Ein Filter ist keine Reparatur. Es ist ein geplanter Austausch in einem bekannten Takt, dieselbe Spend-Form wie jeder andere Verbrauchsartikel. Gewerbliche Büros wechseln Standardfilter typischerweise alle zwei bis drei Monate; MERV-13-Medien und höher, die sich schneller zusetzen, werden oft alle 60 bis 90 Tage gewechselt; im Gesundheitswesen und in der Industrie ist häufig ein monatlicher Zyklus üblich. Manche Standorte gehen stattdessen zu zustandsbasiertem Austausch über und tauschen den Filter, wenn ein Drucksensor zeigt, dass sich der Differenzdruck gegenüber dem sauberen Ausgangswert verdoppelt hat, statt an einem festen Kalenderdatum. So oder so ist der Auslöser im Voraus bekannt. Niemand wartet, bis der Filter versagt, bevor der nächste bestellt wird.
+
+Genau so behandelt Pearstops Content andere Verbrauchskategorien anderswo im Hard FM: wiederkehrend, taktgetrieben, nachverfolgbar im Preis pro Einheit, ein Jahr im Voraus planbar. Ein Lüftermotor oder ein Kompressor ist das Gegenteil. Man weiß nicht, dass er ausfällt, bis er es tut, und die Kosten sind das, was die Reparatur eben erfordert. Einen planbaren Verbrauchsartikel und eine nicht planbare Reparatur unter einem Label zusammenzufassen, löscht genau die eine Unterscheidung aus, die für ein gutes Management von beidem wirklich zählt.
+
+## Was ein vermischter HLK-Code verbirgt
+
+Sobald Filterspend und reaktiver Teilespend in derselben Zahl „HLK-Wartung“ liegen, werden drei Dinge unmöglich, und ich sehe alle drei bei Kunden mit einem Multi-Site-Portfolio auftauchen.
+
+Budgetierung ist das Erste. Filterspend sollte eine der besser prognostizierbaren Zeilen in einem FM-Budget sein: Man kennt die Anzahl der Einheiten, den vorgesehenen Takt und den Stückpreis, sodass die Zahl für nächstes Jahr fast reine Arithmetik ist. Vermischt mit einer Kategorie, die auch einen unvorhersehbaren Kompressorausfall trägt, verschwindet diese Prognostizierbarkeit. Die Zahl schwankt mit dem, was letztes Jahr kaputtging, nicht mit dem, was tatsächlich planbar ist.
+
+Lieferantenvergleiche sind das Zweite. Wenn Filtermedien innerhalb eines vermischten HLK-Einsatzes abgerechnet werden, kann man nicht vergleichen, was ein Dienstleister pro Filter berechnet gegenüber einem anderen, oder prüfen, ob sich der Filterstückpreis eines Standorts über die Jahre schleichend erhöht hat. Der Stückpreis steckt irgendwo darin, vermischt in einer Zeilensumme mit Arbeitszeit und Teilen, die nichts damit zu tun haben.
+
+Warengruppenklassifizierung ist das Dritte, und sie zeigt sich am deutlichsten, wenn ein Kunde einem UNSPSC- oder Taxonomie-Mandat unterliegt. Luftfilter tragen ihren eigenen UNSPSC-Warengruppencode, 40161505, innerhalb der Filterklasse im Segment Verteilungs- und Klimatisierungssysteme. Dieser Code bedeutet nur etwas, wenn er auf Transaktionsebene angewendet wird. Ein GL-Code, der bei „HLK-Wartung“ endet, kommt nie so weit, sodass eine Filterzeile und eine Wärmetauscher-Reparaturzeile in jeder Warengruppen-Aggregation identisch ausgewiesen werden, und die Taxonomie-Übung, die ein Head of Procurement liefern sollte, erzeugt eine Kategorie, die technisch befüllt und praktisch nutzlos ist.
+
+Hinter dem verpassten Takt stecken auch reale Kosten. Ein verschmutzter, überfälliger Filter wird vielfach als Grund dafür genannt, dass der Energieverbrauch eines HLK-Systems um bis zu 15 Prozent steigt, weil eingeschränkter Luftstrom das System länger laufen lässt, um denselben Sollwert zu erreichen. Man kann nicht erkennen, ob dieser Takt tatsächlich eingehalten wird oder Standort für Standort still und leise verrutscht, wenn Filterspend nicht überhaupt erst als eigene Zeile sichtbar ist, gegen die man den Zeitplan prüfen kann.
+
+Pearstop trennt Filtermedien automatisch von reaktiven HLK-Teilen und -Reparaturen und ordnet sie einer eigenen UNSPSC-Warengruppenzeile zu, für Hard-FM-Teams mit einem Taxonomie- oder ERP-Migrationsprogramm über ein Multi-Site-HLK-Portfolio hinweg.
+
+## Filterspend von reaktivem Teilespend trennen
+
+Sobald diese Trennung existiert, ändert sich die Form der Fragen, die mir in Reviews gestellt werden. Statt „warum hat HLK dieses Quartal mehr gekostet“ wird daraus „warum lag der Filterspend an diesem Standort über der Prognose“, eine Frage, die die Daten tatsächlich beantworten können, weil Filterspend einen bekannten Takt hat, gegen den man prüfen kann.
+
+Es ändert auch, was ein Taxonomie- oder ERP-Migrationsprojekt liefert. Ein konsistent auf Filtertransaktionen angewendeter Warengruppencode bedeutet, dass sich die Luftfiltration sauber unter ihrer eigenen UNSPSC-Zeile aggregiert, statt in einer generischen Wartungskategorie zu verschwinden, was in der Regel genau die Lücke ist, die ein neuer Head of Procurement zuerst findet, wenn er eine Taxonomie erbt, die nie auf Transaktionsebene geprüft wurde.
+
+Nichts davon erfordert eine neue Wartungsstrategie oder einen neuen Vertrag. Es erfordert, dass die Spend-Daten unter dem bestehenden Vertrag die Unterscheidung tragen, die operativ immer schon da war, Filterwechsel versus reaktive Teile, bis hin zur Kategorie, gegen die sie ausgewiesen wird. Das ist eine Datenqualitätskorrektur, keine Procurement-Korrektur, und in der Regel die günstigere von beiden.
