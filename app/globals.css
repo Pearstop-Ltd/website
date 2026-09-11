@@ -1350,6 +1350,12 @@ section {
   height: 100%;
 }
 
+.ind-card-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
 .ind-card-link,
 .blog-read,
 .cg-link,

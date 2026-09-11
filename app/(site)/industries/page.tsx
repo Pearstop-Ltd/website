@@ -403,9 +403,19 @@ export default function IndustriesPage() {
                 <div className="ind-card-icon">●</div>
                 <h3>{card.title}</h3>
                 <p>{card.copy}</p>
-                <Link className="ind-card-link" href={card.href}>
-                  Learn more →
-                </Link>
+                {card.links ? (
+                  <div className="ind-card-links">
+                    {card.links.map((link) => (
+                      <Link key={link.href} className="ind-card-link" href={link.href}>
+                        {link.label} →
+                      </Link>
+                    ))}
+                  </div>
+                ) : (
+                  <Link className="ind-card-link" href={card.href}>
+                    Learn more →
+                  </Link>
+                )}
               </article>
             ))}
           </div>
