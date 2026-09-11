@@ -318,6 +318,50 @@
       "lead": "Boek een ontdekkingsgesprek van 7 minuten. We identificeren precies welk dataprobleem u het meeste kost — en laten u zien hoe u het kunt oplossen.",
       "bookDiscovery": "Boek een ontdekkingsgesprek van 7 minuten",
       "viewIndustries": "Bekijk sectoren"
+    },
+    "meta": {
+      "title": "Data Quality Oplossingen voor Hard Services en Infrastructuur",
+      "description": "Zeven data quality oplossingen voor technische sectoren - van extractie van invoice data en UNSPSC procurement classificatie tot asset data management en Microsoft Fabric gereedheid."
+    },
+    "hero": {
+      "eyebrow": "Oplossingen",
+      "title": "Verander rommelige data in beslissingen",
+      "lead": "Pearstop levert zeven data-integriteitsoplossingen voor technische sectoren. Elk richt zich op een specifiek dataprobleem en elk is gebouwd om uw marges te beschermen."
+    },
+    "cards": {
+      "title": "Zeven Oplossingen. Eén Doel.",
+      "lead": "Pearstop levert zeven data quality oplossingen voor technische sectoren. Elk richt zich op een specifiek operationeel dataprobleem, gebouwd voor hard services, bouw en productie.",
+      "exploreLink": "Ontdek oplossing →",
+      "items": [
+        {
+          "title": "Invoice & Document Extractie",
+          "copy": "Verander ongelezen PDF invoices, scans en leveringsbonnen automatisch in gestructureerde data. De voorwaarde voor classificatie, spend analysis en alles wat daarna komt."
+        },
+        {
+          "title": "Procurement",
+          "copy": "Bouw een echte spend baseline op basis van rommelige invoice en supplier data, uitgesplitst per servicelijn en entiteit, zodat een onderhandeling, tender of framework review begint met een cijfer in plaats van een schatting."
+        },
+        {
+          "title": "Data Quality",
+          "copy": "Verander vijf servicelijnen en vijf verschillende dataformaten in één gestructureerde dataset, zodat kosten en prestaties op contractniveau iets zijn dat u kunt zien, niet handmatig hoeft af te stemmen."
+        },
+        {
+          "title": "UNSPSC",
+          "copy": "Classificeer automatisch jaren aan vrije tekst purchase order data met behulp van UNSPSC, inclusief het traceren van hard services onderdelen naar de echte fabrikantcode. Tot 95% van de spend lijnen automatisch geclassificeerd."
+        },
+        {
+          "title": "Asset Management",
+          "copy": "Verander spend en onderhoudsdata die u ontvangt maar niet genereert in een onafhankelijk, geclassificeerd record dat u kunt vergelijken tussen providers, locaties en jaren."
+        },
+        {
+          "title": "Fabric Ready",
+          "copy": "Bereid uw operationele data voor op Microsoft Fabric, zodat de migratie bedrijfbrede inzichten oplevert, en niet weer een dataproject dat na go-live moet worden herwerkt."
+        },
+        {
+          "title": "AI Readiness",
+          "copy": "Bouw de schone, gestructureerde, beheerde datafundering die elke AI tool veronderstelt dat er al is, van Copilot tot aangepaste modellen."
+        }
+      ]
     }
   },
   "DataQuality": {
