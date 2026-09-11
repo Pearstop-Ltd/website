@@ -41,16 +41,16 @@ Respond ONLY with valid JSON — no markdown, no explanation outside the JSON:
 
 If the description is completely unclassifiable, return: { "error": "Could not classify: [reason]" }`;
 
-async function verifyTurnstile(token: string | undefined, ip: string): Promise<boolean> {
-  const secret = process.env.TURNSTILE_SECRET_KEY;
+async function verifyRecaptcha(token: string | undefined, ip: string): Promise<boolean> {
+  const secret = process.env.RECAPTCHA_SECRET_KEY;
   if (!secret) {
-    console.warn("[unspsc-lookup] TURNSTILE_SECRET_KEY not set — bot check is disabled (fail-open).");
+    console.warn("[unspsc-lookup] RECAPTCHA_SECRET_KEY not set — bot check is disabled (fail-open).");
     return true;
   }
   if (!token) return false;
 
   try {
-    const res = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
+    const res = await fetch("https://www.google.com/recaptcha/api/siteverify", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams({ secret, response: token, remoteip: ip }),
@@ -64,7 +64,7 @@ async function verifyTurnstile(token: string | undefined, ip: string): Promise<b
 
 export async function POST(req: NextRequest) {
   const body = await req.json();
-  const { description, supplier, industry, turnstileToken } = body ?? {};
+  const { description, supplier, industry, recaptchaToken } = body ?? {};
 
   if (!description || typeof description !== "string" || description.trim().length < 2) {
     return NextResponse.json({ error: "Please provide a description of at least 2 characters." }, { status: 400 });
@@ -79,7 +79,7 @@ export async function POST(req: NextRequest) {
 
   const ip = getClientIp(req.headers);
 
-  const captchaOk = await verifyTurnstile(turnstileToken, ip);
+  const captchaOk = await verifyRecaptcha(recaptchaToken, ip);
   if (!captchaOk) {
     return NextResponse.json({ error: "Bot check failed. Please refresh the page and try again." }, { status: 403 });
   }

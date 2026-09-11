@@ -1,6 +1,6 @@
 "use client";
 import { CalendlyButton } from "@/components/calendly-button";
-import { TurnstileWidget } from "@/components/turnstile-widget";
+import { RecaptchaWidget } from "@/components/recaptcha-widget";
 import { INDUSTRIES, type IndustryKey } from "@/lib/unspsc-industries";
 
 import { useState, useEffect } from "react";
@@ -63,8 +63,8 @@ export function UnspscLookupTool({
   const [description, setDescription] = useState("");
   const [supplier, setSupplier] = useState("");
   const [industry, setIndustry] = useState<IndustryKey | "">("");
-  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
-  const [turnstileReset, setTurnstileReset] = useState(0);
+  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
+  const [recaptchaReset, setRecaptchaReset] = useState(0);
   const [result, setResult] = useState<LookupResult | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -79,7 +79,7 @@ export function UnspscLookupTool({
     e.preventDefault();
     if (!description.trim()) return;
     if (usesLeft <= 0) return;
-    if (!turnstileToken) {
+    if (!recaptchaToken) {
       setError("Please complete the verification check above.");
       return;
     }
@@ -95,13 +95,13 @@ export function UnspscLookupTool({
           description,
           supplier: supplier.trim() || undefined,
           industry: industry || undefined,
-          turnstileToken,
+          recaptchaToken,
         }),
       });
       const data: LookupResult = await res.json();
       // Each token is single-use — always get a fresh one for the next submit.
-      setTurnstileToken(null);
-      setTurnstileReset((n) => n + 1);
+      setRecaptchaToken(null);
+      setRecaptchaReset((n) => n + 1);
 
       if (data.rateLimited) {
         setError(data.error ?? "You've reached today's free limit.");
@@ -126,8 +126,8 @@ export function UnspscLookupTool({
       }
     } catch {
       setError("Something went wrong. Please try again.");
-      setTurnstileToken(null);
-      setTurnstileReset((n) => n + 1);
+      setRecaptchaToken(null);
+      setRecaptchaReset((n) => n + 1);
     } finally {
       setLoading(false);
     }
@@ -219,7 +219,7 @@ export function UnspscLookupTool({
             }}
           />
 
-          <TurnstileWidget onToken={setTurnstileToken} reset={turnstileReset} />
+          <RecaptchaWidget onToken={setRecaptchaToken} reset={recaptchaReset} />
 
           <div style={{ display: "flex", alignItems: "center", gap: "1rem", flexWrap: "wrap" }}>
             <button
