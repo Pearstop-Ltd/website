@@ -58,12 +58,12 @@ export type NavLink = {
 
 export const solutionLinks: NavLink[] = [
   { label: "Invoice & Document Extraction", href: "/invoice-data-extraction", description: "Turn unread PDFs and scans into structured data." },
-  { label: "Procurement data quality", href: "/procurement-data-quality", description: "Category management and spend visibility." },
-  { label: "Asset Data Management", href: "/asset-data-management", description: "Reliable asset registers for FM and maintenance." },
-  { label: "Data Quality", href: "/data-quality", description: "Clean, standardise, and enrich operational data." },
+  { label: "Procurement data quality", href: "/procurement-data-quality", description: "A real spend baseline to negotiate, tender, and check framework compliance from." },
+  { label: "Asset Data Management", href: "/asset-data-management", description: "An independent, classified view of spend and maintenance data you don't generate yourself." },
+  { label: "Data Quality", href: "/data-quality", description: "Unify service-line data into one structured, comparable dataset." },
   { label: "Fabric Ready", href: "/fabric", description: "Prepare for Microsoft Fabric migration." },
   { label: "AI Readiness", href: "/ai-readiness", description: "Build a trustworthy AI data foundation." },
-  { label: "UNSPSC Classification", href: "/unspsc", description: "Automated procurement classification at scale." },
+  { label: "UNSPSC Classification", href: "/unspsc", description: "Automated classification, including tracing parts to the real manufacturer code." },
   { label: "Free UNSPSC Lookup", href: "/unspsc-code-lookup", description: "Find the right 8-digit code instantly." },
   { label: "UNSPSC Taxonomy Tree", href: "/unspsc-classification-demo", description: "Explore the hierarchy interactively." }
 ];

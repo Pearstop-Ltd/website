@@ -292,46 +292,6 @@
     }
   },
   "Solutions": {
-    "meta": {
-      "title": "Datakwaliteitsoplossingen voor hard services en infrastructuur",
-      "description": "Zes datakwaliteitsoplossingen voor technische sectoren — van UNSPSC-inkoopclassificatie tot assetdatabeheer en Microsoft Fabric-gereedheid."
-    },
-    "hero": {
-      "eyebrow": "Oplossingen",
-      "title": "Zet rommelige data om in beslissingen",
-      "lead": "Pearstop levert zes data-integriteitsoplossingen voor technische sectoren. Elke oplossing richt zich op een specifiek dataprobleem en is gebouwd om uw marges te beschermen."
-    },
-    "cards": {
-      "title": "Zes oplossingen. Één doel.",
-      "lead": "Pearstop levert zes datakwaliteitsoplossingen voor technische sectoren. Elke oplossing richt zich op een specifiek operationeel dataprobleem, gebouwd voor hard services, bouw en productie.",
-      "exploreLink": "Oplossing verkennen →",
-      "items": [
-        {
-          "title": "Datakwaliteit",
-          "copy": "Reinig en standaardiseer uw data automatisch op schaal. Elimineer inconsistenties, vul hiaten op en bouw één betrouwbare bron die uw team kan vertrouwen."
-        },
-        {
-          "title": "Inkoop",
-          "copy": "Maak een geloofwaardige bestedingsbasis van rommelige factuur- en leveranciersdatabases. Geautomatiseerde categorisering elimineert onvolledige data met 95% minder handmatig werk."
-        },
-        {
-          "title": "UNSPSC",
-          "copy": "Wijs automatisch tot 95% van bestedingsdata toe met de United Nations Standard Products and Services Code. Industriestandaard classificatie zonder handmatig labelen."
-        },
-        {
-          "title": "Assetbeheer",
-          "copy": "Transformeer gefragmenteerde assetregisters naar vertrouwde, analyseerbare datasets. Verminder ad-hoc onderhoud en schakel datagestuurde risicobeheer in."
-        },
-        {
-          "title": "Fabric-ready",
-          "copy": "Bereid uw operationele data voor op Microsoft Fabric-migratie. Schone, gestructureerde data die vanaf dag één goed landt. Geen herstelwerk na migratie."
-        },
-        {
-          "title": "AI-gereedheid",
-          "copy": "Bouw de datafundamentatie die uw AI-initiatieven nodig hebben. Organisaties met beheerde, gestructureerde data behalen tweemaal vaker meetbare AI-ROI binnen 12 maanden."
-        }
-      ]
-    },
     "approach": {
       "label": "De Pearstop-aanpak",
       "title": "Één motor. Elk dataprobleem.",

@@ -28,7 +28,7 @@ export default async function SolutionsPage({ params }: { params: Promise<{ loca
       eyebrow: "01",
       title: t("cards.items.0.title"),
       copy: t("cards.items.0.copy"),
-      href: `${prefix}/data-quality`
+      href: `${prefix}/invoice-data-extraction`
     },
     {
       eyebrow: "02",
@@ -40,24 +40,30 @@ export default async function SolutionsPage({ params }: { params: Promise<{ loca
       eyebrow: "03",
       title: t("cards.items.2.title"),
       copy: t("cards.items.2.copy"),
-      href: `${prefix}/unspsc`
+      href: `${prefix}/data-quality`
     },
     {
       eyebrow: "04",
       title: t("cards.items.3.title"),
       copy: t("cards.items.3.copy"),
-      href: `${prefix}/asset-data-management`
+      href: `${prefix}/unspsc`
     },
     {
       eyebrow: "05",
       title: t("cards.items.4.title"),
       copy: t("cards.items.4.copy"),
-      href: `${prefix}/fabric`
+      href: `${prefix}/asset-data-management`
     },
     {
       eyebrow: "06",
       title: t("cards.items.5.title"),
       copy: t("cards.items.5.copy"),
+      href: `${prefix}/fabric`
+    },
+    {
+      eyebrow: "07",
+      title: t("cards.items.6.title"),
+      copy: t("cards.items.6.copy"),
       href: `${prefix}/ai-readiness`
     }
   ];

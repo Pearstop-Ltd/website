@@ -23,37 +23,37 @@ export default function SolutionsPage() {
     {
       eyebrow: "02",
       title: "Procurement",
-      copy: "Create a credible spend baseline from messy invoice and supplier databases. Automated categorisation eliminates incomplete data with 95% less manual effort.",
+      copy: "Build a real spend baseline from messy invoice and supplier data, broken out by service line and entity, so a negotiation, tender, or framework review starts from a number instead of a guess.",
       href: "/procurement-data-quality"
     },
     {
       eyebrow: "03",
       title: "Data Quality",
-      copy: "Automatically clean and standardise your data at scale. Eliminate inconsistencies, fill gaps, and build a single source of truth your team can trust.",
+      copy: "Turn five service lines and five different data formats into one structured dataset, so contract-level cost and performance is something you can see, not reconcile by hand.",
       href: "/data-quality"
     },
     {
       eyebrow: "04",
       title: "UNSPSC",
-      copy: "Auto-assign up to 95% of spend data using the United Nations Standard Products and Services Code. Industry-standard classification with zero manual tagging.",
+      copy: "Auto-classify years of free-text purchase order data using UNSPSC, including tracing hard services parts back to the real manufacturer code. Up to 95% of spend lines classified automatically.",
       href: "/unspsc"
     },
     {
       eyebrow: "05",
       title: "Asset Management",
-      copy: "Transform fragmented asset registers into trusted, analysable datasets. Reduce ad-hoc maintenance and enable data-driven risk management.",
+      copy: "Turn spend and maintenance data you receive but do not generate into an independent, classified record you can compare across providers, sites, and years.",
       href: "/asset-data-management"
     },
     {
       eyebrow: "06",
       title: "Fabric Ready",
-      copy: "Prepare your operational data for Microsoft Fabric migration. Clean, structured data that lands cleanly from day one. No rework after migration.",
+      copy: "Prepare your operational data for Microsoft Fabric so the migration delivers company-wide insight, not another data project reworked after go-live.",
       href: "/fabric"
     },
     {
       eyebrow: "07",
       title: "AI Readiness",
-      copy: "Build the data foundation your AI initiatives need. Organisations with governed, structured data are twice as likely to achieve measurable AI ROI within 12 months.",
+      copy: "Build the clean, structured, governed data foundation every AI tool assumes is already there, from Copilot to custom models.",
       href: "/ai-readiness"
     }
   ];
