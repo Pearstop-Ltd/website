@@ -1551,5 +1551,37 @@
         }
       ]
     }
+  },
+  "Privacy": {
+    "meta": {
+      "title": "Datenschutzerklärung",
+      "description": "Datenschutzerklärung für Pearstop."
+    },
+    "hero": {
+      "eyebrow": "Rechtliches",
+      "title": "Datenschutzerklärung",
+      "lead": "Wir verwenden nur die Daten, die wir benötigen, um auf Ihre Anfrage zu antworten, die Website zu verbessern und unsere Services zu unterstützen."
+    },
+    "collect": {
+      "title": "Was wir erfassen",
+      "p1": "Wenn Sie uns kontaktieren, erfassen wir gegebenenfalls Ihren Namen, Ihre E-Mail-Adresse, Ihr Unternehmen und Ihre Nachricht, damit wir antworten können. Wenn Sie sich für Updates anmelden, speichern wir die Angaben, die Sie über den von uns genutzten Formularanbieter übermitteln. Wir erfassen zudem gegebenenfalls grundlegende Analysedaten, um zu verstehen, wie die Website genutzt wird.",
+      "p2": "Wir verkaufen Ihre personenbezogenen Daten nicht. Wenn Sie möchten, dass wir Ihre Kontaktdaten entfernen, schreiben Sie uns eine E-Mail, und wir kümmern uns zeitnah darum."
+    }
+  },
+  "Terms": {
+    "meta": {
+      "title": "Allgemeine Geschäftsbedingungen",
+      "description": "Allgemeine Geschäftsbedingungen für die Nutzung der Pearstop-Website."
+    },
+    "hero": {
+      "eyebrow": "Rechtliches",
+      "title": "Allgemeine Geschäftsbedingungen",
+      "lead": "Eine kurze, verständliche Fassung davon, wie Sie die Pearstop-Website nutzen können."
+    },
+    "usingSite": {
+      "title": "Nutzung dieser Website",
+      "p1": "Die Inhalte dieser Website dienen ausschließlich der allgemeinen Information. Sie stellen keine Rechts-, Finanz- oder Beschaffungsberatung dar. Wir bemühen uns, die Informationen korrekt und aktuell zu halten, garantieren jedoch nicht, dass jede Seite jederzeit vollständig ist.",
+      "p2": "Wenn Sie Inhalte, Markenmaterial oder Screenshots weiterverwenden möchten, fragen Sie uns bitte vorher. Bei Fragen zu diesen Bedingungen kontaktieren Sie uns."
+    }
   }
 }
