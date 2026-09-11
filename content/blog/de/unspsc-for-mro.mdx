@@ -1,0 +1,112 @@
+---
+title: "UNSPSC für MRO: Klassifizierung von Instandhaltungs-, Reparatur- und Betriebs-Spend"
+description: "MRO-Procurement ist die am schwersten konsistent zu klassifizierende Kategorie. Hier ist, warum UNSPSC für Instandhaltungs-Spend funktioniert, und was es braucht, um saubere MRO-Daten aus einem System wie SAP oder Maximo zu bekommen."
+publishedAt: "2026-05-05"
+author: "richard"
+category: "Procurement"
+tags: ["UNSPSC", "MRO", "Procurement Data", "Asset Management"]
+readingTime: "7 min"
+---
+
+## Warum MRO-Spend am schwersten zu klassifizieren ist
+
+Jede Procurement-Kategorie hat Klassifizierungsherausforderungen. MRO-Spend, die Teile, Materialien, Werkzeuge und Dienstleistungen, die Anlagen und Vermögenswerte am Laufen halten, hat mehr davon als die meisten.
+
+Hier ist, was MRO-Klassifizierung schwierig macht:
+
+**Teilebeschreibungen sind für Ingenieure geschrieben, nicht für Category Manager.** „Dichtungssatz 47mm AD – Pumpenlagergehäuse" ist präzise genug für den Instandhaltungsingenieur, der es bestellt hat. Es sagt einem Klassifizierungssystem sehr wenig darüber, ob dies unter Industriemaschinen (Segment 23), Industrieausrüstung (Segment 24) oder elektronische Komponenten (Segment 32) fällt.
+
+**Dasselbe Teil hat Dutzende Beschreibungen.** Verschiedene Standorte, verschiedene Ingenieure, verschiedene Lieferantenkataloge, eine einzige physische Komponente erscheint unter vielen verschiedenen Zeichenketten in der Einkaufshistorie desselben Unternehmens.
+
+**Teilenummern ohne Beschreibungen sind häufig.** Der Einkäufer tippt „47234-B" in die Bestellung. Das System braucht Lieferantenkontext, GL-Konto und historische Muster, um dies auf Warengruppenebene zu klassifizieren.
+
+**MRO-Spend ist dezentralisiert.** In Fertigungs- und FM-Umgebungen haben Instandhaltungseinkäufer oft erhebliche lokale Autonomie. Kategoriemanagement in der Zentrale sieht die Spend-Details möglicherweise erst Monate später.
+
+Das Ergebnis ist eine MRO-Spend-Datei, in der 30–50 % der Zeilen entweder unklassifiziert, inkonsistent klassifiziert oder in Sammelkategorien geparkt sind, die Analyse unmöglich machen.
+
+---
+
+## Welche UNSPSC-Segmente MRO-Spend abdecken
+
+Der meiste MRO-Spend für Fertigungs-, FM- und Infrastrukturunternehmen fällt auf diese UNSPSC-Segmente:
+
+| Segment | Beschreibung | Typischer MRO-Spend |
+|---|---|---|
+| 23 | Industriemaschinen und -ausrüstung | Pumpen, Kompressoren, Motoren, Förderanlagen |
+| 24 | Stromerzeugung und -verteilung | Elektrische Komponenten, Schaltanlagen, Kabel |
+| 26 | Elektronische Komponenten und Zubehör | Sensoren, Steuerungen, Relais |
+| 31 | Fertigungskomponenten und -zubehör | Verbindungselemente, Dichtungen, Dichtringe, Lager |
+| 47 | Reinigungs- und Hausmeisterbedarf | Instandhaltungs-Reinigungsprodukte |
+| 72 | Bau- und Instandhaltungsdienstleistungen | Arbeits- und Auftragnehmerdienstleistungen |
+| 73 | Industrielle Produktion und Fertigung | Fertigung und Spezialarbeiten |
+
+Klassifizierung auf Warengruppenebene, 8 Ziffern, innerhalb dieser Segmente korrekt hinzubekommen, erfordert entweder umfangreiche manuelle Nachschlagearbeit gegen den UNSPSC-Codesatz oder eine automatisierte Engine, die auf MRO-spezifischen Daten trainiert ist.
+
+---
+
+## Das Argument für UNSPSC gegenüber Herstellerteilenummern
+
+Manche Procurement-Teams argumentieren, dass Herstellerteilenummern (MPNs) eine bessere Methode sind, MRO-Spend zu verfolgen, als UNSPSC-Codes. MPNs sind präzise und ermöglichen exakte Dubletten-Identifikation. Aber sie haben erhebliche Einschränkungen:
+
+- **MPNs sind lieferantenspezifisch.** Dieselbe Komponente von einem anderen Hersteller hat eine andere MPN, was lieferantenübergreifende Analyse unmöglich macht.
+- **MPNs veralten.** Wenn ein Hersteller ein Produkt einstellt, verschwindet seine MPN. UNSPSC-Warengruppencodes bleiben über Lieferantenwechsel hinweg stabil.
+- **MPNs ermöglichen keine Aggregation auf Kategorieebene.** Sie können die Frage „Wie viel haben wir letztes Jahr für Lager ausgegeben?" nicht allein aus MPN-Daten beantworten. UNSPSC ermöglicht genau das.
+
+Die Antwort für die meisten Unternehmen ist beides: Reichern Sie Ihre Spend-Daten wo möglich mit MPNs an, und wenden Sie UNSPSC-Codes für Spend-Analyse auf Kategorieebene an. Das sind ergänzende, keine konkurrierenden Ansätze.
+
+---
+
+## Wie automatisierte MRO-Klassifizierung in der Praxis funktioniert
+
+Eine gute automatisierte Klassifizierungs-Engine für MRO-Spend nutzt mehrere Signale über die Positionsbeschreibung hinaus:
+
+**Lieferantenkontext.** Wenn ein Lieferant bekanntermaßen nur Lager und Dichtungen liefert (aus historischen Einkaufsmustern), löst selbst eine nackte Teilenummer eine Klassifizierung mit hoher Konfidenz im richtigen Warengruppenbereich aus.
+
+**GL-Konto-Routing.** Instandhaltungs-Spend, kodiert auf GL-Konto 6400 (oder dessen Äquivalent), signalisiert eine andere Wahrscheinlichkeitsverteilung über UNSPSC-Segmente als Investitionsausgaben, kodiert auf GL 0700.
+
+**Historische Priors.** Wenn dieselbe Teilebeschreibung in den letzten zwölf Monaten 95 Mal als 31161500 (Gleitlager) klassifiziert wurde, wird das 96. Vorkommen automatisch mit hoher Konfidenz klassifiziert.
+
+**LLM-Erweiterung.** Bei wirklich mehrdeutigen Beschreibungen bringt ein Large Language Model breites Produktwissen ein. „Dichtungssatz 47mm AD – Pumpenlagergehäuse" löst sich zum korrekten Warengruppencode auf, weil das Modell versteht, was ein Dichtungssatz für ein Pumpenlagergehäuse ist, selbst wenn es diese exakte Zeichenkette noch nie gesehen hat.
+
+---
+
+## Anreicherung bis zur Herstellerteilenummer-Ebene
+
+Für MRO-Kategorien, bei denen Teilenummerpräzision wichtig ist, typischerweise für Unternehmen, die direkt zum Hersteller gehen und die Distributor-Marge umgehen wollen, ist UNSPSC-Klassifizierung der erste Schritt, nicht der letzte.
+
+Sobald Spend auf Warengruppenebene klassifiziert ist, ist der nächste Schritt die **Teilenummer-Anreicherung**: Positionen mit dem offiziellen Katalog eines Herstellers abzugleichen, um das exakte OEM-Teil, den Direktpreis des Herstellers und alternative Sourcing-Optionen zu identifizieren.
+
+Das ist der Ansatz, der in Pearstops MRO-Arbeit verwendet wird. Klassifizierung gibt Ihnen die Kategoriesicht. Teilenummer-Anreicherung gibt Ihnen den kommerziellen Hebel, das Wissen, dass das Lager, das Sie mit Marge von einem Distributor kaufen, direkt vom Hersteller zu 30 % weniger verfügbar ist.
+
+Die Kombination aus UNSPSC-Klassifizierung und Teilenummer-Anreicherung ist es, was die „Direkt-zum-Hersteller"-Strategie operativ im großen Maßstab machbar macht.
+
+---
+
+## Erste Schritte mit MRO-Klassifizierung
+
+Der schnellste Weg zu sauberen MRO-Spend-Daten ist eine Data Stability Baseline:
+
+1. **Exportieren Sie Ihre Spend-Daten** aus SAP, Maximo oder Ihrem Procurement-System, typischerweise 12–24 Monate Kaufhistorie
+2. **Pearstop klassifiziert den Export** mit der Vier-Schichten-Engine und liefert UNSPSC-Codes auf Warengruppenebene
+3. **Ihr Team prüft** die markierten Positionen, typischerweise 5–10 % der Zeilen, über eine Prüfoberfläche
+4. **Der klassifizierte Datensatz** wird Ihre Spend-Baseline für Kategorieanalyse und Verhandlung
+
+Von dieser Baseline aus läuft die laufende Klassifizierung neuer MRO-Käufe jeden Monat automatisch.
+
+---
+
+## Der nachgelagerte Wert sauberer MRO-Daten
+
+Ein klassifizierter MRO-Spend-Datensatz erschließt mehrere kommerzielle Entscheidungen, die mit unklassifizierten Freitextdaten unmöglich waren:
+
+**Lieferantenkonsolidierung.** Sie können sehen, wie viele Lieferanten Sie in jeder Warengruppenkategorie nutzen, und ob eine Konsolidierung auf weniger bevorzugte Lieferanten bessere Preise oder Servicekonditionen erzeugen würde.
+
+**Preisbenchmarking.** Mit konsistenten Kategoriecodes können Sie den Preis vergleichen, den Sie für dieselbe UNSPSC-Warengruppe über Lieferanten, Standorte und Zeiträume hinweg zahlen.
+
+**Spend-Baseline für Vertragsverhandlungen.** Eine klassifizierte Spend-Baseline ist das Fundament für jede sinnvolle Verhandlung. Ohne sie wissen Lieferanten mehr über Ihren Spend als Sie selbst.
+
+**Identifizierung der Direkt-vom-Hersteller-Chance.** Teilenummer-Anreicherung auf Basis von UNSPSC-Klassifizierung identifiziert, welche MRO-Warengruppen die größte verfügbare Marge durch Direktbezug bieten.
+
+---
+
+*Verwandte Beiträge: [UNSPSC-Klassifizierungsgenauigkeit – Was 90–95 % tatsächlich bedeuten](/blog/unspsc-classification-accuracy) | [Wie man UNSPSC-Klassifizierung in SAP implementiert](/blog/unspsc-classification-sap) | [Anlagenregister-Probleme, die intelligente Instandhaltung verhindern](/blog/asset-register-problems)*

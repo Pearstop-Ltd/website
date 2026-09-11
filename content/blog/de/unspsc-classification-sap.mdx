@@ -1,0 +1,106 @@
+---
+title: "Wie man UNSPSC-Klassifizierung in SAP implementiert"
+description: "Ein praktischer Leitfaden zur Automatisierung der UNSPSC-Kodierung in SAP-basierten Procurement-Umgebungen, was funktioniert, was nicht, und wie man von unordentlichen Spend-Daten zu einer sauberen Kategorie-Baseline gelangt."
+publishedAt: "2026-04-14"
+author: "sjoerd"
+category: "Procurement"
+tags: ["UNSPSC", "SAP", "Procurement Data"]
+readingTime: "8 min"
+---
+
+## Das SAP-Problem, über das niemand spricht
+
+SAP ist das führende System für Procurement bei Hunderten von Infrastruktur-, Fertigungs- und Facility-Management-Unternehmen in ganz Europa. Es erfasst Bestellungen, Wareneingänge und Rechnungen mit beeindruckender Verlässlichkeit. Was es nicht gut kann, und wofür es nie konzipiert wurde, ist, zu klassifizieren, was gekauft wurde.
+
+SAP speichert Positionen als Freitextbeschreibungen, die von Ingenieuren, Einkäufern oder Lieferanten eingegeben werden. Dieselbe Schraube erscheint als „M8 Schraube verzinkt", „verz. Schraube M8", „Schraube M8 HDG" und „bolzen M8 verzinkt" über verschiedene Standorte und Lieferanten hinweg. Ein Instandhaltungsauftrag könnte „elektra werkzaamheden", „Elektroarbeiten" oder schlicht „Arbeiten Q3" lauten. Ohne konsistente Klassifizierung sind keine dieser Daten vergleichbar oder aggregierbar.
+
+UNSPSC löst das, indem es eine standardisierte vierstufige Hierarchie bereitstellt, Segment, Familie, Klasse, Warengruppe, die diese Freitextbeschreibungen in konsistente Kategorien verwandelt. Aber UNSPSC-Codes in SAP zu bekommen, ist der Punkt, an dem die meisten Procurement-Teams stecken bleiben.
+
+---
+
+## Drei Ansätze für UNSPSC in SAP
+
+### Option 1: Manuelle Kodierung in SAP-Stammdaten
+
+Manche Procurement-Teams versuchen, UNSPSC-Klassifizierung am Erfassungspunkt durchzusetzen, indem sie Einkäufer verpflichten, einen UNSPSC-Code beim Anlegen einer Bestellung oder eines Materialstammsatzes auszuwählen.
+
+Das klingt in der Theorie sauber. In der Praxis scheitert es aus drei Gründen:
+
+- **Einkäufer wählen den falschen Code.** Die UNSPSC-Hierarchie hat über 55.000 Warengruppencodes. Ohne tiefes Kategoriewissen greifen Einkäufer standardmäßig zu dem Code, der am nächsten liegt oder bereits im Dropdown steht. Konsistenz verschwindet schnell.
+- **Es deckt nur neue Daten ab.** Bestehende Kaufhistorie, oft Jahre an Spend, hat überhaupt keine Klassifizierung.
+- **Es erzeugt administrativen Mehraufwand.** In hochvolumigen Procurement-Umgebungen verlangsamt ein verpflichtendes Feld bei jeder Transaktion die Personen, die am wichtigsten sind.
+
+### Option 2: Klassifizierung über ein Drittanbieter-Tool, integriert mit SAP
+
+Mehrere Procurement-Plattformen bieten UNSPSC-Module an, die direkt mit SAP über API oder Middleware integriert werden können. Diese Tools klassifizieren Spend automatisch auf Basis von Materialbeschreibungen, Lieferantencodes und Einkaufskategorien.
+
+Die Herausforderung ist, dass die meisten dieser Tools regelbasiert sind: Sie funktionieren gut für Standardmaterialien (MRO-Teile, gängiges Verbrauchsmaterial), scheitern aber an ungewöhnlicher, mehrdeutiger oder branchenspezifischer Terminologie, die einen großen Anteil des FM- und Infrastruktur-Spends ausmacht.
+
+Ein Regelwerk allein erreicht typischerweise 60–70 % Abdeckung. Der Rest bleibt unklassifiziert oder wird einer Sammelkategorie zugeordnet, die den Zweck untergräbt.
+
+### Option 3: Automatisierte Klassifizierung außerhalb von SAP, mit saubere Daten zurückgeführt
+
+Der praktischste Ansatz für SAP-Nutzer ist, Spend-Daten zu exportieren, Bestellungen, Rechnungen oder eine Kombination, und sie durch eine Klassifizierungs-Engine laufen zu lassen, die Regeln, Machine Learning und LLM-Schichten kombiniert. Klassifizierte Daten werden dann im ursprünglichen Format zurückgegeben und als Materialattribut oder Spend-Analytics-Feld in SAP zurückgeladen.
+
+Dieser Ansatz erfordert keine SAP-Konfigurationsänderungen. Er funktioniert sowohl mit historischen Daten als auch mit laufenden Transaktionen. Und er behandelt die Grenzfälle, die regelbasierte Tools verpassen.
+
+---
+
+## Welche Daten aus SAP exportiert werden sollten
+
+Für UNSPSC-Klassifizierung benötigen Sie mindestens:
+
+- Positionsbeschreibung (das Freitextfeld, üblicherweise MAKTX oder der Bestelltext)
+- Lieferantenname oder Lieferanten-ID
+- Bestellwert
+- GL-Konto oder Kostenelement (nützlich für Routing-Boost, Instandhaltungskosten vs. Investitionsausgaben)
+- Bestehende Materialgruppe oder Warengruppencode, falls verfügbar (wird von der ML-Schicht als Prior genutzt)
+
+Der Export kann über SAP-Transaktion ME2M oder ME2N für Bestellungen erfolgen, oder FB03 für Rechnungen. Die meisten Teams exportieren nach CSV und teilen über sicheren Dateitransfer.
+
+---
+
+## Wie gute UNSPSC-Klassifizierung in SAP-Output aussieht
+
+Ein gut klassifizierter SAP-Spend-Datensatz sollte erreichen:
+
+- **90–95 % Klassifizierung auf Warengruppenebene**, nicht nur Segment oder Familie, sondern der vierstellige Warengruppencode
+- **Konsistente Kodierung über Standorte und Lieferanten hinweg**, derselbe physische Artikel erhält denselben Code, unabhängig davon, wie er in der Bestellung beschrieben wurde
+- **Minimale „Sammel"-Codes**, Codes wie 95121500 (Papiermaterialien) oder 80101500 (Managementberatungsdienstleistungen) sollten nur wirklich mehrdeutige Positionen abdecken
+
+Einmal klassifiziert, werden die Daten typischerweise als benutzerdefiniertes Feld auf Bestellung oder Materialstamm in SAP geladen, oder in eine BI-Schicht (SAP Analytics Cloud, Power BI oder Tableau) für Spend-Analyse eingespeist.
+
+---
+
+## Die Prüfwarteschlange, und warum sie wichtig ist
+
+Selbst die besten automatisierten Klassifizierungs-Engines lassen manche Positionen unter dem Konfidenzschwellenwert. Diese Positionen werden zur menschlichen Prüfung markiert, typischerweise 5–10 % des Datensatzes.
+
+Entscheidend ist, was nach der Prüfung passiert. Jede menschliche Entscheidung sollte in das Klassifizierungsmodell zurückfließen, sodass derselbe Positionstyp beim nächsten Mal automatisch korrekt klassifiziert wird. Über sechs bis zwölf Monate kontinuierlichen Betriebs schrumpft die Prüfwarteschlange auf nahezu null, während das Modell aus den Entscheidungen Ihres Teams lernt.
+
+Das ist der Unterschied zwischen einem Tool, das Ihren Spend einmal klassifiziert, und einem System, das umso besser wird, je länger Sie es nutzen.
+
+---
+
+## Timing: wie lange dauert es?
+
+Ein typisches SAP-Spend-Klassifizierungsprojekt für ein mittelgroßes Infrastruktur- oder FM-Unternehmen:
+
+| Phase | Dauer |
+|---|---|
+| Datenexport und -vorbereitung | 1 Woche |
+| Erste Klassifizierungs-Baseline (Data Stability Baseline) | 2–3 Wochen |
+| Prüfung markierter Positionen | 1 Woche |
+| Finaler klassifizierter Datensatz zurückgeliefert | 4–6 Wochen insgesamt |
+
+Laufende monatliche Klassifizierung neuer Rechnungsdaten läuft automatisch, ohne zusätzlichen Input vom Kundenteam.
+
+---
+
+## Nächste Schritte
+
+Wenn Ihre SAP-Spend-Daten unklassifiziert daliegen, oder über Standorte hinweg inkonsistent klassifiziert sind, ist der schnellste Weg zu einer Spend-Baseline ein Data-Stability-Baseline-Engagement. Sie exportieren Ihre Spend-Daten, Pearstop klassifiziert sie und liefert innerhalb von vier bis sechs Wochen einen sauberen, UNSPSC-kodierten Datensatz zurück. Diese Baseline wird zum Fundament für Kategoriemanagement, Lieferantenkonsolidierung und genaue Margenkalkulation.
+
+[Buchen Sie einen 7-minütigen Discovery Call](/contact), um zu sehen, wie die Klassifizierungs-Engine mit Ihren SAP-Daten funktionieren würde. Um zuerst selbst eine einzelne Position zu prüfen, probieren Sie das kostenlose [UNSPSC-Code-Lookup-Tool](/unspsc-code-lookup).
+
+*Verwandte Beiträge: [Was ist UNSPSC – und warum Hard-Services-Unternehmen sich darum kümmern sollten](/blog/what-is-unspsc) | [UNSPSC vs. eClass vs. CPV](/blog/unspsc-vs-eclass-vs-cpv)*
