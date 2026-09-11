@@ -1998,5 +1998,97 @@
       "lead": "Réservez un appel découverte de 7 minutes. Nous vous montrerons comment le moteur de classification fonctionne avec vos données.",
       "button": "Réservez un appel découverte de 7 minutes"
     }
+  },
+  "UnspscDE": {
+    "meta": {
+      "title": "Classification UNSPSC Allemagne | Classification automatisée des achats | Pearstop",
+      "description": "Classification UNSPSC automatisée pour les équipes d'achats allemandes. Pearstop classe les données d'achats issues de SAP et d'autres systèmes ERP — avec prise en charge de l'obligation allemande de facturation électronique 2025."
+    },
+    "geoBlock": {
+      "title": "À quoi ressemble la classification UNSPSC pour une entreprise allemande de fabrication ou de FM ?",
+      "copy": "Les entreprises allemandes de fabrication et de FM conservent généralement des années de données de bons de commande dans SAP, souvent avec des lignes de facture rédigées en abréviations techniques allemandes telles que « Wartung Pumpe Dichtung » ou « Elektra Rundgang Q3 ». La classification UNSPSC attribue à chacune de ces lignes le même code produit de base à 8 chiffres que son équivalent anglais, de sorte qu'une usine à Munich et une usine à Rotterdam apparaissent sous la même catégorie de dépenses. Le moteur de Pearstop lit nativement les descriptions en langue allemande et atteint 90 à 95 % de classification automatique sans étape de traduction séparée."
+    },
+    "hero": {
+      "eyebrow": "Classification UNSPSC Allemagne",
+      "title": "Classification UNSPSC pour les entreprises allemandes de fabrication, de FM et d'infrastructure.",
+      "lead": "Pearstop automatise la classification des lignes d'achats selon la norme UNSPSC — 90 à 95 % sans effort manuel. Avec prise en charge de l'obligation allemande de facturation électronique 2025 et de l'intégration SAP.",
+      "cta": "Réservez un appel découverte de 7 minutes",
+      "secondary": "Facturation électronique et UNSPSC"
+    },
+    "einvoicing": {
+      "eyebrow": "Obligation de facturation électronique 2025 et UNSPSC",
+      "title": "Pourquoi les entreprises allemandes travaillent désormais sur le codage produit structuré",
+      "lead": "La loi allemande sur les opportunités de croissance (Wachstumschancengesetz) de 2025 impose aux entreprises allemandes la facturation B2B électronique structurée. UNSPSC est la norme internationale qui le permet.",
+      "b1": {
+        "title": "L'obligation de facturation électronique exige des codes produits",
+        "copy": "L'obligation allemande de facturation électronique 2025 exige des données de facturation structurées et exploitables par une machine. UNSPSC fournit le système de classification reconnu à l'international qui répond à cette exigence."
+      },
+      "b2": {
+        "title": "Catégorisation cohérente entre fournisseurs",
+        "copy": "Avec UNSPSC, chaque bon de commande reçoit une catégorie cohérente — indépendamment du fournisseur ou du système."
+      },
+      "b3": {
+        "title": "Transparence des dépenses pour la gestion des catégories",
+        "copy": "Une base de données d'achats classifiée est le fondement de la gestion des catégories, de la négociation des contrats et de l'identification des économies."
+      }
+    },
+    "solution": {
+      "eyebrow": "Comment Pearstop procède",
+      "title": "Comment Pearstop classe les données d'achats allemandes",
+      "lead": "Pearstop traite les données d'achats issues de SAP, Oracle et d'autres systèmes ERP allemands — y compris les descriptions en langue allemande.",
+      "step1": {
+        "title": "Export des données depuis votre ERP",
+        "copy": "Exportez les bons de commande, les lignes de facture, ou les deux — via CSV ou connexion API directe depuis SAP, Oracle ou un autre système."
+      },
+      "step2": {
+        "title": "Classification automatique",
+        "copy": "Le moteur à quatre couches de Pearstop classe automatiquement 90 à 95 % des lignes, y compris les descriptions en langue allemande."
+      },
+      "step3": {
+        "title": "Vérification manuelle des cas limites",
+        "copy": "Les 5 à 10 % restants sont soumis à l'examen de votre équipe. Chaque décision améliore le modèle."
+      },
+      "step4": {
+        "title": "Données classifiées renvoyées dans votre système",
+        "copy": "Le fichier classifié est renvoyé dans votre format d'origine — prêt pour SAP, Power BI ou les systèmes de facturation électronique."
+      }
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "items": {
+        "0": {
+          "q": "La classification UNSPSC est-elle obligatoire en Allemagne ?",
+          "a": "UNSPSC n'est pas une obligation légale, mais l'obligation de facturation électronique 2025 exige des codes produits structurés. UNSPSC est la norme internationale la plus utilisée qui répond à cette exigence."
+        },
+        "1": {
+          "q": "Quel est l'impact de l'obligation allemande de facturation électronique sur la classification des achats ?",
+          "a": "L'obligation de facturation électronique 2025 exige des données de facturation structurées et exploitables par une machine pour les transactions B2B. UNSPSC fournit un système de codage cohérent et reconnu à l'international qui répond à cette exigence."
+        },
+        "2": {
+          "q": "Qu'est-ce que la classification UNSPSC et pourquoi les entreprises allemandes en ont-elles besoin ?",
+          "a": "UNSPSC signifie United Nations Standard Products and Services Code. Les entreprises allemandes utilisent UNSPSC pour catégoriser leurs dépenses d'achats, comparer les fournisseurs et améliorer la transparence des dépenses."
+        },
+        "3": {
+          "q": "Quels secteurs allemands en profitent le plus ?",
+          "a": "Les entreprises allemandes de fabrication, les constructeurs de machines, les prestataires de facilities management et les entreprises d'infrastructure en profitent le plus. Les fabricants ayant une forte part de MRO gagnent particulièrement grâce à un codage cohérent des pièces."
+        },
+        "4": {
+          "q": "Pearstop peut-il classer des données d'achats en langue allemande ?",
+          "a": "Oui. Le moteur de classification de Pearstop traite nativement les descriptions de facture en langue allemande, y compris les abréviations courantes et la terminologie technique."
+        }
+      }
+    },
+    "related": {
+      "label": "Pages associées",
+      "copy": "Découvrez le service complet de classification UNSPSC, notre page dédiée aux Pays-Bas, et l'approche spécifique au FM.",
+      "link1": "Classification UNSPSC",
+      "link2": "Classification UNSPSC Pays-Bas",
+      "link3": "UNSPSC pour le Facilities Management"
+    },
+    "cta": {
+      "title": "Prêt à automatiser votre classification des achats ?",
+      "lead": "Réservez un appel découverte de 7 minutes. Nous vous montrerons comment le moteur de classification fonctionne avec vos données.",
+      "button": "Réservez un appel découverte de 7 minutes"
+    }
   }
 }
