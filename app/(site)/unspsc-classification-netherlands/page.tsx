@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import Link from "next/link";
-import { CTABand, PageHero, QuoteBox, SectionTitle } from "@/components/content";
+import { CTABand, GeoBlock, PageHero, QuoteBox, SectionTitle } from "@/components/content";
 import { UnspscLookupCta } from "@/components/unspsc-lookup-cta";
 import { siteConfig } from "@/lib/site";
 
@@ -9,6 +9,12 @@ export const metadata: Metadata = {
   title: "UNSPSC Classificatie Nederland | Geautomatiseerde Inkoopclassificatie | Pearstop",
   description:
     "Geautomatiseerde UNSPSC classificatie voor Nederlandse inkoop- en procurement teams. Pearstop classificeert inkoopdata vanuit SAP, AFAS, en andere ERP-systemen — inclusief Peppol-ondersteuning.",
+  keywords: [
+    "UNSPSC classificatie Nederland",
+    "procurement classification Netherlands",
+    "inkoopclassificatie",
+    "UNSPSC Peppol",
+  ],
   alternates: {
     canonical: `${siteConfig.url}/unspsc-classification-netherlands`
   },
@@ -206,6 +212,19 @@ export default function UnspscNLPage() {
       </section>
 
       <UnspscLookupCta />
+
+      <section className="section-tight">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-8 col-md-offset-2">
+              <GeoBlock
+                title="What does UNSPSC classification look like for a Dutch infrastructure or FM company?"
+                copy="Dutch infrastructure and FM companies typically run purchasing through SAP or AFAS, with invoice lines written by field teams rather than buyers, for example 'elektra werkzaamheden Q3' or 'pompafdichting vervangen'. UNSPSC classification assigns each of those lines a consistent 8-digit commodity code, which is what makes a Peppol-compliant invoice machine-readable rather than just structured. Strukton, a Dutch infrastructure contractor, processes 35,000 procurement lines a month this way through Pearstop's SAP integration, with 90 to 95% classified automatically."
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className="section-soft" id="faq">
         <div className="container">

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import Link from "next/link";
-import { CTABand, PageHero, QuoteBox, SectionTitle } from "@/components/content";
+import { CTABand, GeoBlock, PageHero, QuoteBox, SectionTitle } from "@/components/content";
 import { UnspscLookupCta } from "@/components/unspsc-lookup-cta";
 import { siteConfig } from "@/lib/site";
 
@@ -9,6 +9,12 @@ export const metadata: Metadata = {
   title: "UNSPSC Classification for Facilities Management | Pearstop",
   description:
     "Automated UNSPSC classification for hard services and FM companies. Classify maintenance, MRO, and subcontractor spend across multi-site operations without manual effort.",
+  keywords: [
+    "UNSPSC classification facilities management",
+    "procurement classification FM",
+    "UNSPSC for facilities management",
+    "MRO spend classification",
+  ],
   alternates: {
     canonical: `${siteConfig.url}/unspsc-classification-facilities-management`
   },
@@ -225,6 +231,19 @@ export default function UnspscFMPage() {
                 quote="Our asset lists worked for mechanics on-site, but did not allow us to plan smart maintenance or manage bid risk in a data-driven way."
                 author="Asset Manager"
                 role="Facilities Management, Europe"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-tight">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-8 col-md-offset-2">
+              <GeoBlock
+                title="What does UNSPSC classification for facilities management actually involve?"
+                copy="A facilities management company typically buys from 500 to 3,000 suppliers across every site it services, and each one invoices differently. UNSPSC classification assigns the same 8-digit commodity code to the same underlying work, whether an invoice line reads 'elektra werkzaamheden Q3' or 'electrical maintenance callout', so procurement and finance can compare spend across suppliers and sites instead of reading free text one line at a time. Pearstop's engine does this automatically for FM companies processing 5,000 to 35,000 invoice lines a month, classifying 90 to 95% of them without a person touching the line."
               />
             </div>
           </div>

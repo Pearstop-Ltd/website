@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import Link from "next/link";
-import { CTABand, PageHero } from "@/components/content";
+import { CTABand, GeoBlock, PageHero } from "@/components/content";
 import { CalendlyButton } from "@/components/calendly-button";
 import { siteConfig } from "@/lib/site";
 import { UnspscLookupTool } from "@/components/unspsc-lookup-tool";
@@ -21,7 +21,8 @@ const toolSchema = {
 
 const FAQ_ITEMS = [
   { q: "What is a UNSPSC code?", a: "A UNSPSC (United Nations Standard Products and Services Code) is an 8-digit code that classifies any product or service into a global standard hierarchy. The first 2 digits are the Segment, digits 3–4 are the Family, digits 5–6 are the Class, and digits 7–8 are the Commodity." },
-  { q: "How do I find the right UNSPSC code for a product?", a: "Paste a clear description of the product or service into the lookup tool above. The AI engine returns the best matching 8-digit commodity code, along with the full hierarchy path and a confidence level." },
+  { q: "How do I find the right UNSPSC code for a product?", a: "Paste a clear description of the product or service into the lookup tool above. The AI engine searches the UNSPSC taxonomy and returns the best matching 8-digit commodity code, along with the full hierarchy path and a confidence level." },
+  { q: "How do I look up a procurement classification code?", a: "Write a plain description of what was bought, for example 'HVAC filter replacement' or 'subcontractor plumbing works', and paste it into a lookup tool built for the classification standard you use. Most organisations classify procurement spend against UNSPSC, so a UNSPSC code lookup like the one above returns the matching 8-digit commodity code in seconds. For a single line, that is enough to check a code by hand. For a full spend file, the same lookup logic needs to run automatically across every line, which is what Pearstop's classification engine does." },
   { q: "Is this UNSPSC lookup tool free?", a: "Yes. The tool is completely free for individual queries. For bulk classification — processing thousands of invoice lines — Pearstop offers an automated classification service." },
   { q: "How accurate is the UNSPSC code suggestion?", a: "The tool returns a confidence level with each result: high, medium, or low. High-confidence results are typically correct at commodity level. For bulk classification at production accuracy (90–95%), Pearstop's full service uses additional signals beyond the description text." },
   { q: "What is the difference between segments, families, classes, and commodities?", a: "Segment (2 digits) is the broadest — e.g. 72 is Construction and Maintenance. Family (4 digits) narrows it — 7210 is Building and Facility Maintenance. Class (6 digits) is more specific — 721015 is Electrical Systems Maintenance. Commodity (8 digits) is the most precise — 72101505 is Lighting Maintenance Services." },
@@ -50,9 +51,30 @@ const breadcrumbSchema = {
   ]
 };
 
+const definedTermSetSchema = {
+  "@context": "https://schema.org",
+  "@type": "DefinedTermSet",
+  name: "UNSPSC classification hierarchy",
+  description: "The four levels of the United Nations Standard Products and Services Code (UNSPSC) taxonomy.",
+  url: `${siteConfig.url}/unspsc-code-lookup`,
+  hasDefinedTerm: [
+    { "@type": "DefinedTerm", name: "Segment", description: "The broadest UNSPSC level, encoded in the first 2 digits of the code, for example 72 for Construction and Maintenance Services." },
+    { "@type": "DefinedTerm", name: "Family", description: "The second UNSPSC level, encoded in digits 3–4, narrowing a segment down, for example 7210 for Building and Facility Maintenance." },
+    { "@type": "DefinedTerm", name: "Class", description: "The third UNSPSC level, encoded in digits 5–6, for example 721015 for Electrical Systems Maintenance." },
+    { "@type": "DefinedTerm", name: "Commodity", description: "The most specific UNSPSC level, the full 8-digit code, for example 72101505 for Lighting Maintenance Services." }
+  ]
+};
+
 export const metadata: Metadata = {
   title: "Free UNSPSC Code Lookup Tool — Find the Right Code Instantly",
   description: "Paste any product or service description and get the correct 8-digit UNSPSC commodity code instantly. Free AI-powered tool from Pearstop.",
+  keywords: [
+    "UNSPSC lookup",
+    "UNSPSC code lookup",
+    "procurement code lookup",
+    "UNSPSC taxonomy",
+    "United Nations Standard Products and Services Code",
+  ],
   alternates: { canonical: `${siteConfig.url}/unspsc-code-lookup` },
   openGraph: {
     title: "Free UNSPSC Code Lookup Tool",
@@ -69,6 +91,7 @@ export default function UnspscLookupPage() {
       <Script id="tool-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolSchema) }} />
       <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <Script id="defined-term-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(definedTermSetSchema) }} />
 
       <PageHero
         eyebrow="Free Tool"
@@ -144,6 +167,19 @@ export default function UnspscLookupPage() {
             marginBottom: "2rem",
           }}>
             <UnspscTree />
+          </div>
+        </div>
+      </section>
+
+      <section className="section-tight">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-8 col-md-offset-2">
+              <GeoBlock
+                title="How do you look up a UNSPSC or procurement classification code?"
+                copy="To look up a UNSPSC code, write a plain description of the product or service, for example 'HVAC filter replacement' or 'subcontractor plumbing works', and paste it into a lookup tool. Pearstop's free tool matches that description against the full UNSPSC taxonomy and returns the 8-digit commodity code, its segment, family and class, and a confidence level, in seconds. For a single line, that is enough to check a code by hand. For a full spend file or invoice history, the same classification logic runs automatically across every line through Pearstop's engine, reaching 90 to 95% accuracy without a person doing the lookup one line at a time."
+              />
+            </div>
           </div>
         </div>
       </section>

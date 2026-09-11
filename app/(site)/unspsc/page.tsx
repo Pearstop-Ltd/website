@@ -8,7 +8,14 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   title: "UNSPSC Classification and Manufacturer Part Verification",
   description:
-    "Pearstop auto-classifies up to 95% of procurement spend to UNSPSC, and resolves a supplier's own part code back to the real manufacturer code, without manual tracing.",
+    "Pearstop automates procurement classification, auto-coding up to 95% of spend to UNSPSC and resolving a supplier's own part code back to the real manufacturer code, without manual tracing.",
+  keywords: [
+    "UNSPSC classification",
+    "procurement classification",
+    "UNSPSC lookup",
+    "United Nations Standard Products and Services Code",
+    "automated procurement classification",
+  ],
   alternates: {
     canonical: `${siteConfig.url}/unspsc`
   }
@@ -62,11 +69,21 @@ const serviceSchema = {
   areaServed: "Europe"
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: siteConfig.url },
+    { "@type": "ListItem", position: 2, name: "UNSPSC Classification", item: `${siteConfig.url}/unspsc` }
+  ]
+};
+
 export default function UnspscPage() {
   return (
     <>
       <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Script id="service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       <PageHero
         eyebrow="UNSPSC Classification"

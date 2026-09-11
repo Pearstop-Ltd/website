@@ -43,6 +43,10 @@ const FAQ_ITEMS = [
     a: `Yes. Every segment, family, class and commodity code and title shown here is taken directly from the official UNSPSC standard, last verified against the codeset on ${unspscDataSource.verifiedDate} via ${unspscDataSource.sourceName}. All ${treeStats.segments} official segments, ${treeStats.families} families, ${treeStats.classes} classes and ${treeStats.commodities.toLocaleString()} commodity-level codes are represented in full, grouped into the ${treeStats.groups} category groups UNGM itself uses for browsing (that grouping is a browsing convenience, not one of the standard's 4 official levels). ${treeStats.curated} commodities — those most relevant to facilities management, procurement and professional services — additionally carry a written description and example items; every other commodity still shows its real official code and title.`,
   },
   {
+    q: "What is the UNSPSC classification tree?",
+    a: "The UNSPSC classification tree is the standard's four-level hierarchy laid out so you can browse it, from a broad segment down to a single 8-digit commodity code. This demo shows the full official tree: every segment, family, class and commodity in the current release, structured the same way whether you are checking one procurement code or classifying a full spend file against it.",
+  },
+  {
     q: "What are the four levels of the UNSPSC hierarchy?",
     a: "UNSPSC has four levels, encoded in a single 8-digit code: Segment (the first 2 digits, the broadest category), Family (4 digits), Class (6 digits), and Commodity (all 8 digits, the most specific level). For example, code 72101506 breaks down as segment 72 (Building and Facility Construction and Maintenance Services), family 7210 (Building and facility maintenance and repair services), class 721015 (Building maintenance and repair services), and commodity 72101506 (Elevator maintenance services).",
   },

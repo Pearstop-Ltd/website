@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { getTranslations , setRequestLocale } from "next-intl/server";
 import Link from "next/link";
-import { CTABand, PageHero, QuoteBox, SectionTitle } from "@/components/content";
+import { CTABand, GeoBlock, PageHero, QuoteBox, SectionTitle } from "@/components/content";
 import { UnspscLookupCta } from "@/components/unspsc-lookup-cta";
 import { siteConfig } from "@/lib/site";
 
@@ -13,6 +13,12 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return {
     title: t("meta.title"),
     description: t("meta.description"),
+    keywords: [
+      "UNSPSC Klassifizierung Deutschland",
+      "procurement classification Germany",
+      "Beschaffungsklassifizierung",
+      "UNSPSC E-Rechnung",
+    ],
     alternates: {
       canonical: `${siteConfig.url}/unspsc-classification-germany`
     },
@@ -209,6 +215,19 @@ export default async function UnspscDEPage({ params }: { params: Promise<{ local
       </section>
 
       <UnspscLookupCta prefix={prefix} />
+
+      <section className="section-tight">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-8 col-md-offset-2">
+              <GeoBlock
+                title={t("geoBlock.title")}
+                copy={t("geoBlock.copy")}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className="section-soft" id="faq">
         <div className="container">

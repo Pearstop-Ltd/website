@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import Link from "next/link";
-import { CTABand, PageHero, QuoteBox, SectionTitle } from "@/components/content";
+import { CTABand, GeoBlock, PageHero, QuoteBox, SectionTitle } from "@/components/content";
 import { UnspscLookupCta } from "@/components/unspsc-lookup-cta";
 import { siteConfig } from "@/lib/site";
 
@@ -9,6 +9,12 @@ export const metadata: Metadata = {
   title: "UNSPSC Klassifizierung Deutschland | Automatisierte Beschaffungsklassifizierung | Pearstop",
   description:
     "Automatisierte UNSPSC-Klassifizierung für deutsche Beschaffungsteams. Pearstop klassifiziert Einkaufsdaten aus SAP und anderen ERP-Systemen — mit Unterstützung für die deutsche E-Rechnungspflicht 2025.",
+  keywords: [
+    "UNSPSC Klassifizierung Deutschland",
+    "procurement classification Germany",
+    "Beschaffungsklassifizierung",
+    "UNSPSC E-Rechnung",
+  ],
   alternates: {
     canonical: `${siteConfig.url}/unspsc-classification-germany`
   },
@@ -206,6 +212,19 @@ export default function UnspscDEPage() {
       </section>
 
       <UnspscLookupCta />
+
+      <section className="section-tight">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-8 col-md-offset-2">
+              <GeoBlock
+                title="What does UNSPSC classification look like for a German manufacturing or FM company?"
+                copy="German manufacturing and FM companies typically hold years of purchase order data in SAP, often with invoice lines written in German technical shorthand such as 'Wartung Pumpe Dichtung' or 'Elektra Rundgang Q3'. UNSPSC classification assigns each of those lines the same 8-digit commodity code as its English equivalent, so a plant in Munich and a plant in Rotterdam show up as the same category of spend. Pearstop's engine reads German-language descriptions natively and reaches 90 to 95% automatic classification without translation as a separate step."
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className="section-soft" id="faq">
         <div className="container">

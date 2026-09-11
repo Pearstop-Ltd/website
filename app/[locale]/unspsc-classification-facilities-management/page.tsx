@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { getTranslations , setRequestLocale } from "next-intl/server";
 import Link from "next/link";
-import { CTABand, PageHero, QuoteBox, SectionTitle } from "@/components/content";
+import { CTABand, GeoBlock, PageHero, QuoteBox, SectionTitle } from "@/components/content";
 import { UnspscLookupCta } from "@/components/unspsc-lookup-cta";
 import { siteConfig } from "@/lib/site";
 
@@ -13,6 +13,12 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return {
     title: t("meta.title"),
     description: t("meta.description"),
+    keywords: [
+      "UNSPSC classification facilities management",
+      "procurement classification FM",
+      "UNSPSC for facilities management",
+      "MRO spend classification",
+    ],
     alternates: {
       canonical: `${siteConfig.url}/unspsc-classification-facilities-management`
     },
@@ -228,6 +234,19 @@ export default async function UnspscFMPage({ params }: { params: Promise<{ local
                 quote="Our asset lists worked for mechanics on-site, but did not allow us to plan smart maintenance or manage bid risk in a data-driven way."
                 author="Asset Manager"
                 role="Facilities Management, Europe"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-tight">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-8 col-md-offset-2">
+              <GeoBlock
+                title={t("geoBlock.title")}
+                copy={t("geoBlock.copy")}
               />
             </div>
           </div>

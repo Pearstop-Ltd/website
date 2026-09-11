@@ -727,7 +727,7 @@
   "Unspsc": {
     "meta": {
       "title": "UNSPSC Classification and Manufacturer Part Verification",
-      "description": "Pearstop auto-classifies up to 95% of procurement spend to UNSPSC, and resolves a supplier's own part code back to the real manufacturer code, without manual tracing."
+      "description": "Pearstop automates procurement classification, auto-coding up to 95% of spend to UNSPSC and resolving a supplier's own part code back to the real manufacturer code, without manual tracing."
     },
     "hero": {
       "eyebrow": "UNSPSC Classification",
@@ -1657,6 +1657,10 @@
       "title": "UNSPSC Classification for Facilities Management | Pearstop",
       "description": "Automated UNSPSC classification for hard services and FM companies. Classify maintenance, MRO, and subcontractor spend across multi-site operations without manual effort."
     },
+    "geoBlock": {
+      "title": "What does UNSPSC classification for facilities management actually involve?",
+      "copy": "A facilities management company typically buys from 500 to 3,000 suppliers across every site it services, and each one invoices differently. UNSPSC classification assigns the same 8-digit commodity code to the same underlying work, whether an invoice line reads 'elektra werkzaamheden Q3' or 'electrical maintenance callout', so procurement and finance can compare spend across suppliers and sites instead of reading free text one line at a time. Pearstop's engine does this automatically for FM companies processing 5,000 to 35,000 invoice lines a month, classifying 90 to 95% of them without a person touching the line."
+    },
     "hero": {
       "eyebrow": "UNSPSC for Facilities Management",
       "title": "FM procurement data is the hardest to classify. Here is how to fix it.",
@@ -1760,6 +1764,10 @@
       "title": "UNSPSC Classificatie Nederland | Geautomatiseerde Inkoopclassificatie | Pearstop",
       "description": "Geautomatiseerde UNSPSC classificatie voor Nederlandse inkoop- en procurement teams. Pearstop classificeert inkoopdata vanuit SAP, AFAS, en andere ERP-systemen — inclusief Peppol-ondersteuning."
     },
+    "geoBlock": {
+      "title": "What does UNSPSC classification look like for a Dutch infrastructure or FM company?",
+      "copy": "Dutch infrastructure and FM companies typically run purchasing through SAP or AFAS, with invoice lines written by field teams rather than buyers, for example 'elektra werkzaamheden Q3' or 'pompafdichting vervangen'. UNSPSC classification assigns each of those lines a consistent 8-digit commodity code, which is what makes a Peppol-compliant invoice machine-readable rather than just structured. Strukton, a Dutch infrastructure contractor, processes 35,000 procurement lines a month this way through Pearstop's SAP integration, with 90 to 95% classified automatically."
+    },
     "hero": {
       "eyebrow": "UNSPSC Classificatie Nederland",
       "title": "UNSPSC classificatie voor Nederlandse infrastructuur-, FM-, en bouwbedrijven.",
@@ -1850,6 +1858,10 @@
       "title": "UNSPSC Klassifizierung Deutschland | Automatisierte Beschaffungsklassifizierung | Pearstop",
       "description": "Automatisierte UNSPSC-Klassifizierung für deutsche Beschaffungsteams. Pearstop klassifiziert Einkaufsdaten aus SAP und anderen ERP-Systemen — mit Unterstützung für die deutsche E-Rechnungspflicht 2025."
     },
+    "geoBlock": {
+      "title": "What does UNSPSC classification look like for a German manufacturing or FM company?",
+      "copy": "German manufacturing and FM companies typically hold years of purchase order data in SAP, often with invoice lines written in German technical shorthand such as 'Wartung Pumpe Dichtung' or 'Elektra Rundgang Q3'. UNSPSC classification assigns each of those lines the same 8-digit commodity code as its English equivalent, so a plant in Munich and a plant in Rotterdam show up as the same category of spend. Pearstop's engine reads German-language descriptions natively and reaches 90 to 95% automatic classification without translation as a separate step."
+    },
     "hero": {
       "eyebrow": "UNSPSC Klassifizierung Deutschland",
       "title": "UNSPSC-Klassifizierung für deutsche Fertigungs-, FM- und Infrastrukturunternehmen.",
@@ -1938,6 +1950,10 @@
       "title": "Free UNSPSC Code Lookup Tool | Find UNSPSC Codes Instantly | Pearstop",
       "description": "Free AI-powered UNSPSC code lookup. Paste any product or service description and get the correct 8-digit UNSPSC commodity code with full hierarchy path in seconds."
     },
+    "geoBlock": {
+      "title": "How do you look up a UNSPSC or procurement classification code?",
+      "copy": "To look up a UNSPSC code, write a plain description of the product or service, for example 'HVAC filter replacement' or 'subcontractor plumbing works', and paste it into a lookup tool. Pearstop's free tool matches that description against the full UNSPSC taxonomy and returns the 8-digit commodity code, its segment, family and class, and a confidence level, in seconds. For a single line, that is enough to check a code by hand. For a full spend file or invoice history, the same classification logic runs automatically across every line through Pearstop's engine, reaching 90 to 95% accuracy without a person doing the lookup one line at a time."
+    },
     "hero": {
       "eyebrow": "Free Tool",
       "title": "Find the right UNSPSC code in seconds.",
@@ -1976,6 +1992,10 @@
         {
           "q": "How do I find the right UNSPSC code for a product?",
           "a": "Paste a clear description of the product or service into the lookup tool above. The AI engine searches the UNSPSC taxonomy and returns the best matching 8-digit commodity code, along with the full hierarchy path and a confidence level. For ambiguous descriptions, the tool also flags nearby codes that might apply."
+        },
+        {
+          "q": "How do I look up a procurement classification code?",
+          "a": "Write a plain description of what was bought, for example 'HVAC filter replacement' or 'subcontractor plumbing works', and paste it into a lookup tool built for the classification standard you use. Most organisations classify procurement spend against UNSPSC, so a UNSPSC code lookup like the one above returns the matching 8-digit commodity code in seconds. For a single line, that is enough to check a code by hand. For a full spend file, the same lookup logic needs to run automatically across every line, which is what Pearstop's classification engine does."
         },
         {
           "q": "Is this UNSPSC lookup tool free?",

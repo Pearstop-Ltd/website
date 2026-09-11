@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { getTranslations , setRequestLocale } from "next-intl/server";
 import Link from "next/link";
-import { CTABand, PageHero } from "@/components/content";
+import { CTABand, GeoBlock, PageHero } from "@/components/content";
 import { CalendlyButton } from "@/components/calendly-button";
 import { siteConfig } from "@/lib/site";
 import { UnspscLookupTool } from "@/components/unspsc-lookup-tool";
@@ -46,6 +46,14 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text: "Paste a clear description of the product or service into the lookup tool above. The AI engine searches the UNSPSC taxonomy and returns the best matching 8-digit commodity code, along with the full hierarchy path (Segment, Family, Class, Commodity) and a confidence level. For ambiguous descriptions, the tool also suggests which nearby codes might apply."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "How do I look up a procurement classification code?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Write a plain description of what was bought, for example 'HVAC filter replacement' or 'subcontractor plumbing works', and paste it into a lookup tool built for the classification standard you use. Most organisations classify procurement spend against UNSPSC, so a UNSPSC code lookup like the one above returns the matching 8-digit commodity code in seconds. For a single line, that is enough to check a code by hand. For a full spend file, the same lookup logic needs to run automatically across every line, which is what Pearstop's classification engine does."
       }
     },
     {
@@ -109,6 +117,20 @@ const breadcrumbSchema = {
   ]
 };
 
+const definedTermSetSchema = {
+  "@context": "https://schema.org",
+  "@type": "DefinedTermSet",
+  name: "UNSPSC classification hierarchy",
+  description: "The four levels of the United Nations Standard Products and Services Code (UNSPSC) taxonomy.",
+  url: `${siteConfig.url}/unspsc-code-lookup`,
+  hasDefinedTerm: [
+    { "@type": "DefinedTerm", name: "Segment", description: "The broadest UNSPSC level, encoded in the first 2 digits of the code, for example 72 for Construction and Maintenance Services." },
+    { "@type": "DefinedTerm", name: "Family", description: "The second UNSPSC level, encoded in digits 3–4, narrowing a segment down, for example 7210 for Building and Facility Maintenance." },
+    { "@type": "DefinedTerm", name: "Class", description: "The third UNSPSC level, encoded in digits 5–6, for example 721015 for Electrical Systems Maintenance." },
+    { "@type": "DefinedTerm", name: "Commodity", description: "The most specific UNSPSC level, the full 8-digit code, for example 72101505 for Lighting Maintenance Services." }
+  ]
+};
+
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   setRequestLocale(locale);
@@ -116,6 +138,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return {
     title: t("meta.title"),
     description: t("meta.description"),
+    keywords: [
+      "UNSPSC lookup",
+      "UNSPSC code lookup",
+      "procurement code lookup",
+      "UNSPSC taxonomy",
+      "United Nations Standard Products and Services Code",
+    ],
     alternates: { canonical: `${siteConfig.url}/unspsc-code-lookup` },
     openGraph: {
       title: t("meta.title"),
@@ -138,6 +167,7 @@ export default async function UnspscLookupPage({ params }: { params: Promise<{ l
       <Script id="tool-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolSchema) }} />
       <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <Script id="defined-term-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(definedTermSetSchema) }} />
 
       <PageHero
         eyebrow={t("hero.eyebrow")}
@@ -213,6 +243,19 @@ export default async function UnspscLookupPage({ params }: { params: Promise<{ l
             marginBottom: "2rem",
           }}>
             <UnspscTree />
+          </div>
+        </div>
+      </section>
+
+      <section className="section-tight">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-8 col-md-offset-2">
+              <GeoBlock
+                title={t("geoBlock.title")}
+                copy={t("geoBlock.copy")}
+              />
+            </div>
           </div>
         </div>
       </section>
