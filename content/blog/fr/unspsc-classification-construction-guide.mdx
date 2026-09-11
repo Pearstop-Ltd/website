@@ -1,0 +1,79 @@
+---
+title: "La classification UNSPSC en construction : un guide pratique"
+description: "Comment les équipes construction et ingénierie appliquent l'UNSPSC aux données achats, qui possède les décisions, comment gérer les cas particuliers, et où l'IA trouve réellement sa place."
+date: "2026-08-25"
+category: "Procurement"
+slug: "unspsc-classification-construction-guide"
+author: "stephanie"
+lang: "fr"
+---
+
+**Réponse rapide :** L'UNSPSC est le United Nations Standard Products and Services Code, un système de classification à quatre niveaux utilisé pour structurer les données achats. Les entreprises de construction l'utilisent pour voir les dépenses par catégorie, fournisseur et projet plutôt que par description en texte libre. Bien le faire dépend de trois choses : un propriétaire unique pour les décisions, des règles écrites pour les cas particuliers, et une boucle de révision qui mesure si les libellés restent cohérents dans le temps.
+
+Sur cette page : [L'UNSPSC expliqué en quatre niveaux](#unspsc-explained-in-four-levels) · [Qui possède les décisions de classification UNSPSC](#who-owns-unspsc-classification-decisions) · [Comment gérer les cas particuliers UNSPSC](#how-to-handle-unspsc-edge-cases) · [Utiliser l'IA pour la classification UNSPSC](#using-ai-for-unspsc-classification) · [Questions fréquentes](#frequently-asked-questions)
+
+La plupart des entreprises de construction à qui je parle font face à une variante du même problème. Elles ont une idée générale de ce qu'elles achètent. Elles veulent prendre de meilleures décisions avec cette information. Et quand elles cherchent, les données sont techniquement là, mais elles ne sont pas organisées d'une façon qui montre la conséquence d'une décision qu'elles pourraient prendre.
+
+La prise de décision s'améliore quand on peut prédire le résultat. Si nous investissons, nous évaluons d'abord comment l'entreprise ou l'action est susceptible de se comporter. Si nous planifions un trajet vers l'aéroport, nous tenons compte des retards possibles. Quand nous négocions avec un fournisseur, nous nous préparons du mieux possible.
+
+Les achats en construction fonctionnent généralement sur l'expérience à la place. La finance a une vue partielle de là où va l'argent. La raison est simple : chaque projet porte ses propres particularités, si bien qu'il est impossible de savoir des mois ou des années à l'avance exactement quels biens et services seront nécessaires pour le livrer.
+
+Cela ne signifie pas que rien n'est prévisible. Les projets individuels sont uniques. Les schémas d'achat ne le sont pas. Une fois que chaque ligne est classifiée en détail, les tendances apparaissent immédiatement : dépense par produit dans le temps, évolution du prix par fournisseur, et les anomalies. Dix-huit fournisseurs pour des rebords de fenêtre. Un chef de projet qui achète systématiquement en dehors des contrats-cadres. Rien de tout cela n'est visible dans un champ de description en texte libre.
+
+Classifier correctement les dépenses soulève trois nouvelles questions. Quelles catégories utiliser. Qui est responsable de s'assurer que chaque ligne porte la bonne. Et comment décider quand la réponse est réellement ambiguë. Le reste de cet article traite chacune d'elles.
+
+## L'UNSPSC expliqué en quatre niveaux
+
+UNSPSC signifie United Nations Standard Products and Services Code. Il a été conçu par l'ONU comme norme unique pour les achats, et il a deux propriétés qui comptent ici.
+
+La première est qu'il est universel. Il est utilisé mondialement et dans tous les secteurs, si bien que certains de vos fournisseurs et clients l'utilisent déjà. Cela rend possible une comparaison externe qu'une taxonomie interne ne permet jamais.
+
+La deuxième est la profondeur. L'UNSPSC descend sur quatre niveaux, d'un segment large jusqu'à une marchandise individuelle : matériaux de construction, puis éléments structurels, puis profilés en I aluminium. Cette amplitude permet de poser les deux types de question à partir du même jeu de données. Comment les dépenses sous-traitance ont-elles évolué l'an dernier, en haut. Comment se comparent nos fournisseurs de béton en prix, volume, délais et conditions de paiement, en bas.
+
+La taille de la norme rebute les gens. Elle compte plus de 150 000 marchandises. En pratique, on en écarte la plupart dès le premier jour. Si vous êtes un installateur CVC, l'agriculture n'arrivera jamais. L'ensemble de travail est généralement une poignée de segments et une longue traîne qui apparaît quelques fois par an.
+
+Une décision qui mérite d'être prise tôt : jusqu'où vous devez réellement descendre. La profondeur coûte de l'argent et du temps de révision. Classifiez au niveau famille ou classe pour le reporting, et descendez au niveau marchandise seulement dans les catégories que vous comptez négocier.
+
+## Qui possède les décisions de classification UNSPSC
+
+Une seule personne devrait la posséder.
+
+Diviser la propriété crée un échec spécifique. Toute ligne comportant une ambiguïté est résolue différemment selon les personnes, et l'incohérence est invisible jusqu'à ce que quelqu'un essaie d'exécuter un rapport et que les chiffres ne se recoupent plus. À ce stade, vous ne pouvez plus dire si les dépenses ont bougé ou si deux acheteurs étaient en désaccord.
+
+L'IA peut faire le travail de classification, et la section ci-dessous explique comment. Mais la question de propriété ne disparaît pas quand on automatise. Elle change de forme. Quelqu'un doit encore décider ce que l'entreprise entend par une catégorie et approuver les lignes dont le système n'est pas sûr.
+
+La façon la plus fiable de gérer cela est de traiter l'IA comme un membre junior de l'équipe. Elle a un nom, elle fait le travail de volume, elle produit un résultat qu'une personne révise, et le retour est réinjecté. Ce cadrage fait mieux fonctionner le processus, plus souvent que de la traiter comme un outil qui marche ou ne marche pas.
+
+Il y a une deuxième raison de nommer un propriétaire, et elle s'applique à toute entreprise se dirigeant vers une migration ERP. Si personne ne possède la classification, la migration hérite du désordre. Si quelqu'un le fait, les nouveaux bons de commande commencent à être codés correctement dès la saisie, et au moment où le nouveau système entre en service, il y a déjà deux ans d'historique propre derrière lui.
+
+## Comment gérer les cas particuliers UNSPSC
+
+Deux règles. Faire de l'objectif métier le facteur décisif. Puis écrire la règle et l'appliquer de façon cohérente.
+
+Le blocage le plus courant est qu'une équipe passe à l'UNSPSC sans que personne en interne ne connaisse l'UNSPSC. Ce n'est pas un écart de compétence qui vaille la peine d'être comblé par un recrutement, et ce n'est pas une raison de repousser. C'est un atelier.
+
+Mettez dans une pièce quelqu'un avec une vraie connaissance des achats et quelqu'un qui connaît les codes. L'acheteur explique, en langage clair, ce qui compte pour l'entreprise et ce que les catégories sont censées soutenir. Le côté UNSPSC fait remonter les cas particuliers qui se cachent là-dedans. Puis l'équipe tranche chaque cas particulier en une seule séance, et chaque décision est consignée par écrit.
+
+Comparez cela à l'alternative. Quand personne ne connaît la norme, l'équipe recherche les cas particuliers indéfiniment, essayant de déterminer quels codes pourraient éventuellement s'appliquer à un produit. Au mieux, quelqu'un documente le résultat et cela devient une règle que tout le monde suit. Au pire, chaque membre de l'équipe fait sa propre recherche, ce qui ralentit encore le processus et produit exactement l'incohérence que l'exercice était censé supprimer.
+
+Les cas particuliers sont généralement banals et propres à l'entreprise. Une ligne indiquant « heures » signifie-t-elle main-d'œuvre sous-traitée ou location de matériel. Un registre est-il classifié comme composant ou comme partie d'un ensemble. Que la réponse soit juste dans l'abstrait compte bien moins que si c'est la même réponse à chaque fois.
+
+Deux catégories qu'on saute et qu'il ne faut pas : les lignes qui ne sont pas du tout des produits, comme les frais de transport, les surcharges carburant et les pénalités de retard de paiement, et les avoirs. Les laisser non classifiées fausse discrètement chaque total de catégorie situé au-dessus.
+
+## Utiliser l'IA pour la classification UNSPSC
+
+Nous avons essayé et testé la plupart des façons dont cela tourne mal, pour que vous n'ayez pas à le faire.
+
+**Charger correctement la taxonomie d'abord.** Les modèles de langage inventent des catégories. Un code qui n'existe pas dans la norme anéantit tout l'objectif, qui est la reproductibilité. La taxonomie doit être chargée comme une référence contrainte dans laquelle le modèle sélectionne, pas comme un contexte dans lequel il puise.
+
+**Équilibrer les trois signaux.** Une description de ligne seule ne suffit pas. « Gants » peut être des gants médicaux, des gants de nettoyage, des gants de travail ou des gants d'hiver. Le fournisseur et la nature de l'activité le résolvent : un grossiste en électricité et plomberie ne vend pas de gants chirurgicaux. Pondérer l'identité du fournisseur face à la description face à vos propres schémas d'achat est d'où vient l'essentiel de la précision.
+
+**Encoder les règles propres à l'entreprise.** Chaque entreprise a des catégories que la norme n'anticipe pas proprement, et les règles issues de l'atelier sur les cas particuliers ont leur place dans le pipeline plutôt que dans un document que personne n'ouvre.
+
+**Noter la confiance et acheminer les lignes faibles vers un humain.** Un chatbot généraliste vous donne une réponse sans aucune indication de sa fiabilité. Une ligne qui ne contient qu'un numéro de pièce dans la description devrait être signalée automatiquement, pas devinée. Les corrections sont ensuite réinjectées, si bien que la même ligne ambiguë n'est pas décidée deux fois.
+
+Pearstop exécute cela comme un pipeline géré : taxonomie contrainte, contexte fournisseur pondéré, règles de l'entreprise appliquées, lignes à faible confiance acheminées en révision, et corrections apprises.
+
+La raison pratique d'utiliser un pipeline plutôt qu'un chatbot est le coût, et ce n'est pas le coût auquel les gens s'attendent. Les équipes qui essaient cela en interne arrivent généralement après avoir déjà dépensé un montant significatif en jetons et plusieurs semaines du temps d'un acheteur, avec un résultat auquel elles ne font pas confiance. La dépense n'a pas été gaspillée sur la classification. Elle a été dépensée à découvrir les garde-fous.
+
+L'autre comparaison qui vaut la peine d'être faite est celle du recrutement. Classifier un large arriéré à la main est un rôle d'analyste à temps plein, et cela ne se termine jamais, parce que de nouvelles lignes arrivent chaque mois. La question n'est pas de savoir si une personne ou une machine est plus précise sur une seule ligne. C'est de savoir si vous voulez qu'un acheteur passe sa semaine à coder des données ou à négocier avec les fournisseurs que ces données désignent.
