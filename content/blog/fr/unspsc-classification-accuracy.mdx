@@ -1,0 +1,107 @@
+---
+title: "Précision de la classification UNSPSC : ce que signifient réellement 90-95 %"
+description: "Que signifie en pratique une précision de classification UNSPSC automatisée de 90 à 95 % ? Comment la mesure-t-on, à quoi ressemblent les 5 à 10 % restants, et comment la précision s'améliore-t-elle dans le temps ?"
+publishedAt: "2026-04-28"
+author: "sjoerd"
+category: "Procurement"
+tags: ["UNSPSC", "Procurement Data", "Data Quality"]
+readingTime: "6 min"
+---
+
+## Le chiffre que vous voyez partout
+
+Si vous vous êtes renseigné sur la classification UNSPSC automatisée, vous avez probablement rencontré une affirmation autour de 90 à 95 % de classification automatique. Pearstop publie ce chiffre. Plusieurs concurrents aussi.
+
+Mais que signifie-t-il réellement ? Comment est-il mesuré ? Et qu'advient-il des 5 à 10 % restants ?
+
+Ce sont les questions que se posent les équipes achats avant de s'engager dans un système de classification automatisé. Cet article y répond clairement.
+
+---
+
+## Comment la précision est définie
+
+« 90 à 95 % de classification automatique » signifie que 90 à 95 % des lignes d'achats d'un jeu de données donné se voient attribuer un code marchandise UNSPSC par le moteur automatisé, sans nécessiter aucune intervention humaine.
+
+Les 5 à 10 % restants sont des articles pour lesquels la confiance du moteur tombe sous un seuil défini. Ces articles sont signalés pour révision humaine, un acheteur ou un category manager examine chacun d'eux et confirme ou corrige le code suggéré.
+
+La précision est généralement mesurée au **niveau marchandise**, le niveau le plus précis de la hiérarchie UNSPSC (un code à 8 chiffres). Une mesure au niveau segment ou famille produirait des chiffres plus impressionnants mais une classification bien moins utile.
+
+---
+
+## Qu'est-ce qui rend un article difficile à classifier automatiquement ?
+
+Les articles qui tombent dans la file de révision ont tendance à partager quelques caractéristiques :
+
+**Descriptions fortement abrégées.** « WK elec H3 Q2-26 » est compréhensible pour l'ingénieur qui l'a écrit, mais n'en dit que très peu à un algorithme. Sans le contexte du fournisseur, de l'élément de coût et du site, une classification fiable n'est pas possible.
+
+**Noms de marque et références sans description.** « Wago 221-412 » est un connecteur de bornier spécifique, mais sans la description du produit, le moteur ne s'appuie que sur le contexte fournisseur et compte comptable. Si ces signaux sont faibles, la confiance chute.
+
+**Dépenses réellement ambiguës.** Certaines lignes d'achats se situent à la frontière entre deux catégories UNSPSC. Une intervention de maintenance incluant à la fois main-d'œuvre et matériaux peut relever du segment 72 (services de maintenance) ou du segment 78 (transport et stockage), selon la façon dont le travail a été facturé.
+
+**Fournisseurs inédits.** La couche de machine learning apprend à partir des schémas présents dans votre base de fournisseurs. Un fournisseur totalement nouveau, sans historique d'achats, produit des scores de confiance plus faibles jusqu'à ce que le moteur ait vu suffisamment d'exemples pour établir des schémas.
+
+---
+
+## La précision selon les étapes
+
+Un bon système de classification automatisé ne reste pas au même niveau de précision dans le temps. Il s'améliore.
+
+| Étape | Taux d'auto-classification |
+|---|---|
+| Référence initiale (première exécution) | 80–90 % |
+| Après 3 mois d'exploitation | 90–95 % |
+| Après 12 mois d'exploitation | 95 %+ |
+
+Cette amélioration vient de la boucle de rétroaction. Chaque article classifié par un réviseur humain réalimente le modèle de ML. La prochaine fois qu'une description similaire apparaît, du même fournisseur ou d'un autre, le moteur la classifie automatiquement avec un haut niveau de confiance.
+
+C'est pourquoi la file de révision est importante. Ce n'est pas un échec du système ; c'est le système en train d'apprendre.
+
+---
+
+## Comment le moteur à quatre couches de Pearstop y parvient
+
+**Couche 1 — Moteur de règles.** Les règles définies par l'utilisateur et les schémas chargés automatiquement traitent immédiatement les classifications à haute confiance. Si vous avez indiqué au système que tous les achats du fournisseur X sur le compte comptable 6400 relèvent du segment 72, classe 721010, chaque ligne correspondante est classifiée sans aucun calcul.
+
+**Couche 2 — Machine learning.** Une couche de ML propriétaire est entraînée sur vos données de dépenses historiques et sur un vaste corpus de transactions d'achats tous secteurs confondus. Elle reproduit la logique de classification que vos category managers les plus expérimentés appliqueraient, en traitant automatiquement les cas courants.
+
+**Couche 3 — Couche LLM.** Les lignes ambiguës ou inhabituelles sont traitées par un grand modèle de langage doté d'une large connaissance des produits et des secteurs. Le LLM traite les descriptions que la couche de ML n'a jamais rencontrées, y compris les descriptions en langue étrangère et la terminologie hautement technique.
+
+**Couche 4 — Révision humaine.** Les articles sous le seuil de confiance sont présentés à votre équipe dans une interface de révision. Chaque décision réalimente les couches 1 à 3. Avec le temps, les couches de règles et de ML s'étendent pour couvrir des articles qui nécessitaient initialement une intervention humaine.
+
+---
+
+## Qu'advient-il des articles non classifiés
+
+Certaines équipes achats s'inquiètent des 5 à 10 % qui partent en révision. Voici la réalité :
+
+- Le premier mois, une équipe peut réviser 500 à 1 000 articles sur un jeu de données de 10 000 lignes
+- Au troisième mois, le même volume de nouvelles factures produit 200 à 300 articles à réviser
+- Au douzième mois, c'est souvent moins de 100
+
+L'interface de révision est conçue pour la rapidité, un category manager peut traiter 100 articles en 20 à 30 minutes grâce à des codes suggérés clairs et des indicateurs de confiance. C'est une charge de travail fondamentalement différente de la classification manuelle de l'ensemble du jeu de données.
+
+---
+
+## Une remarque sur la façon dont les concurrents mesurent la précision
+
+Toutes les affirmations de précision ne se valent pas. Soyez attentif à :
+
+- **Précision au niveau segment vs. niveau marchandise.** La classification au niveau segment (les 2 premiers chiffres du code UNSPSC) est bien plus facile qu'au niveau marchandise (les 8 chiffres complets). Un outil qui atteint 95 % au niveau segment peut ne réaliser que 60 % au niveau marchandise.
+- **Précision sur données propres vs. données réelles.** Certains éditeurs testent sur des jeux de données où les descriptions sont déjà standardisées. Les données d'achats réelles issues de SAP ou d'Oracle sont plus désordonnées, et les chiffres de précision devraient en tenir compte.
+- **File de révision vs. non classifié.** Un système qui signale des articles pour révision est différent d'un système qui les laisse non classifiés. Les articles signalés finissent par être classifiés. Les articles non classifiés restent non classifiés.
+
+Les chiffres de Pearstop sont mesurés au niveau marchandise sur de vrais jeux de données clients, notamment des dépenses d'infrastructure et de FM néerlandaises, où les descriptions mélangent néerlandais et anglais et varient fortement d'un site à l'autre.
+
+---
+
+## Ce que la précision vous apporte réellement
+
+Un taux d'auto-classification de 90 à 95 % signifie qu'une équipe achats traitant 10 000 lignes de facture par mois réduit son effort de classification manuelle de 10 000 décisions à 500-1 000, soit une réduction de 90 à 95 %.
+
+Cette réduction ne fait pas que gagner du temps. Elle rend l'analyse des dépenses possible en premier lieu. Un jeu de données classifié manuellement, où une seule personne traite 10 000 lignes, accuse toujours des semaines ou des mois de retard. Un système automatisé produit un jeu de données classifié en quelques jours après l'arrivée des données de facturation.
+
+Pour la gestion par catégorie, le benchmarking fournisseurs et l'analyse des marges, la rapidité compte autant que la précision. Une référence de dépenses vieille de trois mois est bien moins utile qu'une référence qui reflète les achats du mois dernier.
+
+---
+
+*Lecture connexe : [Comment implémenter la classification UNSPSC dans SAP](/blog/unspsc-classification-sap) | [Qu'est-ce que l'UNSPSC, et pourquoi les entreprises de hard services devraient s'y intéresser](/blog/what-is-unspsc)*
