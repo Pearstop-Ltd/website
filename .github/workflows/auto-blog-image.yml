@@ -9,9 +9,15 @@ on:
   workflow_dispatch: {}
 
 concurrency:
-  # Shared across both content workflows: they push to main and both touch
-  # lib/blog-posts.ts, so concurrent runs rebase-conflict and lose work.
-  group: main-content-push
+  # Own group per workflow: this one only ever commits public/images/blog,
+  # lib/blog-posts.ts and content/blog/image-prompts.json, which auto-translate
+  # never touches, so the two workflows don't need to share a lane — sharing
+  # one previously let a translate run's queued slot get bumped by an image
+  # run (or vice versa), so the bumped workflow never ran at all for that
+  # push. Runs of *this* workflow still queue behind each other rather than
+  # overlap, since two of them touching the same generated files concurrently
+  # is the actual conflict risk.
+  group: blog-image-push
   cancel-in-progress: false
 
 jobs:
@@ -28,6 +34,14 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+
+      - name: Sync to the latest main
+        # If this run was queued behind an earlier one (or another push
+        # landed between trigger and start), pull that in first so the
+        # generation step below sees the true current state — otherwise it
+        # can regenerate something another run already produced, or miss
+        # something a concurrent commit just added.
+        run: git pull origin main
 
       - name: Generate blog hero images
         env:
