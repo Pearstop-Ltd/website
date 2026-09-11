@@ -1,0 +1,55 @@
+---
+title: "Procurement-Daten in der Fertigung: das SAP-Problem, das Hard FM bereits gelöst hat"
+description: "95 % des Fertigungs-Spend automatisch klassifiziert, ohne die zugrunde liegende SAP-Struktur anzufassen."
+date: "2026-08-27"
+category: "Procurement"
+slug: "manufacturing-procurement-sap-data-quality"
+author: "stephanie"
+lang: "en"
+---
+
+**Kurzantwort:** Ein Hersteller mit jahrelanger Historie in SAP hat meist alle Daten, die er braucht, und keine Möglichkeit, sie zu nutzen. Artikelbeschreibungen variieren je nachdem, wer die Bestellung erfasst hat. Lieferantennamen driften zwischen Werken auseinander. Kategorien wurden vor Jahren lokal von wem auch immer eingerichtet, der das ERP konfiguriert hat. Das ist kein Problem fehlender Daten. Es ist ein Strukturproblem, und es ist dasselbe, das Hard FM mit Rechnungen hat, nur mit Teilen und Lieferantencodes statt dessen. Die Lösung sind in beiden Fällen dieselben drei Schritte: die Lieferantenliste auflösen, eine Taxonomie anwenden, die keine eigenen Kategorien erfinden kann, und dann jede Zeile klassifizieren.
+
+Auf dieser Seite: [Warum Hersteller das für ein Datenproblem halten](#why-manufacturers-assume-this-is-a-data-problem) · [Was kostet unklassifizierter Spend tatsächlich?](#what-does-unclassified-spend-actually-cost) · [Wer ist dafür verantwortlich, es zu beheben?](#who-is-responsible-for-fixing-it) · [Wie das an einem echten SAP-Export aussieht](#what-this-looks-like-on-a-real-sap-export) · [Warum nicht einfach ein allgemeines KI-Tool auf den Export ansetzen?](#why-not-just-point-a-general-ai-tool-at-the-export) · [Wie der erste Schritt tatsächlich aussieht](#what-the-first-step-actually-looks-like) · [FAQ](#frequently-asked-questions)
+
+## Warum Hersteller das für ein Datenproblem halten
+
+Wenn wir investieren, prüfen wir, wie sich das Unternehmen bisher entwickelt hat, bevor wir uns festlegen. Wenn wir eine Route zu einem wichtigen Termin planen, berücksichtigen wir den Verkehr. Die meisten Entscheidungen, denen wir vertrauen, sind Entscheidungen, die wir bereits strukturiert haben, auch wenn wir es nicht so nennen würden. Bei Procurement-Spend ist es nicht anders. Ein Hersteller mit einem Jahrzehnt SAP-Historie hat mehr Transaktionen, als er je brauchen wird. Was er nicht hat, ist eine konsistente Kategorie bei jeder einzelnen, ein pro Entität aufgelöster Lieferant, oder eine Taxonomie, die den Kontakt mit einem zweiten Werk übersteht.
+
+Deshalb sind „wir haben alle Daten“ und „wir können eine Grundfrage dazu nicht beantworten“ gleichzeitig wahr. Die Transaktionen existieren. Niemand hat die Struktur gebaut, die es jemandem erlauben würde, sie abzufragen.
+
+## Was kostet unklassifizierter Spend tatsächlich?
+
+Legacy-Klassifizierungstools landen bei strukturiertem Spend im Allgemeinen bei 75 bis 85 Prozent Genauigkeit. Die verbleibenden 15 bis 25 Prozent sind meist Tail Spend, Dienstleistungen und P-Card-Transaktionen, genau dort, wo Lieferantenkonsolidierung und Preisvergleiche den größten Nutzen bringen würden. Alles über etwa 10 Prozent unklassifiziert ist es wert, als aktive Lücke behandelt zu werden, nicht als Hintergrundrauschen.
+
+Schlechte Stammdaten kosten Organisationen im Durchschnitt 12,9 Millionen Dollar pro Jahr. Für einen Hersteller, der Materialstammdaten über mehrere Werke und ERP-Instanzen hinweg führt, steigt diese Zahl, weil dasselbe Teil oft unter drei verschiedenen Materialnummern existiert, eine pro Standort, der es unabhängig eingerichtet hat. Das erzeugt doppelte Bestellungen, redundanten Bestand, der in zwei Lagern unter zwei Teilenummern liegt, und ein Instandhaltungsteam, das nach einem Teil sucht, das technisch im System existiert, nur eben nicht unter dem Code, nach dem gesucht wird.
+
+## Wer ist dafür verantwortlich, es zu beheben?
+
+Meist niemand. Finance besitzt das Hauptbuch. Procurement besitzt die Verhandlung. Keiner besitzt die Taxonomie, also verfällt sie still, bis jemand eine Sicht auf Kategorieebene braucht und feststellt, dass es keine gibt.
+
+Die Lösung ist kein neues System. Es ist dieselbe dreistufige Methode, die bei jedem Procurement-Datensatz ohne Struktur funktioniert.
+
+Der erste Schritt: die Lieferantenliste auflösen. Lieferantenidentität ist eines der stärksten Signale, um eine Zeile korrekt zu klassifizieren, und die Liste zu deduplizieren ist meist der Moment, in dem ein Unternehmen zum ersten Mal entdeckt, dass zwei Werke beim selben Distributor unter unterschiedlichen Namen zu unterschiedlichen Preisen eingekauft haben.
+
+Der zweite Schritt: eine eingeschränkte Taxonomie anwenden. Einem Teil kann keine Kategorie zugewiesen werden, die im Standard nicht existiert. Das ist der Schritt, der das System davon abhält, eigene Codes zu erfinden.
+
+Der dritte Schritt: jede Zeile klassifizieren und die unsicheren an eine Person weiterleiten. Konfidenzbewertung macht das wiederholbar. Eine Beschreibung, die nur aus einer Teilenummer besteht, oder ein Artikel, der in zwei Familien passen könnte, geht zur Prüfung, statt geraten zu werden.
+
+## Wie das an einem echten SAP-Export aussieht
+
+Wir haben das an den SAP-Daten eines mittelgroßen Herstellers durchgeführt: Jahre an Procurement-Historie ohne konsistente Kategorisierung, keine Transparenz darüber, ob dasselbe Teil an verschiedenen Standorten zu unterschiedlichen Preisen gekauft wurde, keine Möglichkeit zu erkennen, welche Lieferanten konsolidiert werden könnten. Wir haben die Lieferantenliste aufgelöst, eine eingeschränkte Taxonomie angewendet, die Kategorisierungsregeln kodiert, die das Procurement-Team tatsächlich verwendete, und den Rückstau klassifiziert. 95 Prozent der Zeilen wurden direkt gegen die bestehende SAP-Struktur automatisch klassifiziert. Das ist es, was aus „wir haben die Daten irgendwo“ eine Sicht auf Kategorieebene machte, aus der das Team verhandeln konnte.
+
+Dasselbe Problem unstrukturierter Daten zeigt sich auch außerhalb von Spend. Ein Luftfiltrationshersteller, mit dem wir arbeiten, erhielt Standortbesuchsberichte in jedem denkbaren Format: handschriftliche Notizen, inkonsistente Layouts, falsch geschriebene Teilenamen, die von Hand in ein Angebotsdokument übertragen werden mussten, dem das Unternehmen vertrauen konnte. Andere Daten. Dasselbe Versagen: Informationen, die existierten, aber nie zu etwas Nutzbarem organisiert wurden.
+
+## Warum nicht einfach ein allgemeines KI-Tool auf den Export ansetzen?
+
+Es wird eine Antwort erzeugen. Es wird keine wiederholbare erzeugen. Ein Allzweckmodell erfindet Kategoriecodes, die in Ihrer Taxonomie nicht existieren, klassifiziert dieselbe Beschreibung je nach Durchlauf unterschiedlich, und gibt kein Signal, welchen seiner Antworten zu vertrauen ist. Bei einer einmaligen Stichprobe von ein paar hundert Zeilen ist das tolerierbar. Bei einem laufenden SAP-Feed, der genau bleiben muss, während jeden Tag neue Bestellungen eintreffen, ist es das nicht, weil der ganze Punkt ist, dass die Antwort auch nächstes Quartal noch korrekt sein muss.
+
+Eine Pipeline unterscheidet sich in einem Punkt von einer Klassifizierungsübung: Sie hält die Taxonomie konstant und löst die Lieferantenidentität auf, bevor sie eine Kategorie rät, statt jedes Mal bei null zu beginnen. Neue Bestellungen werden auf dieselbe Weise klassifiziert wie der Rückstau. Diese Konsistenz ist der einzige Grund, warum eine 95-Prozent-Zahl auch sechs Monate später noch hält, statt in einen unklassifizierten Haufen zurückzudriften, sobald niemand mehr hinschaut.
+
+Wir haben das nicht an jeder ERP-Konfiguration getestet, die ein Hersteller betreiben könnte. Was wir sagen können, ist, was die Methode erfordert: eine Lieferantenliste, die aufgelöst wird, bevor die Klassifizierung beginnt, eine Taxonomie, von der das System nicht abweichen kann, und ein Prüfschritt für die Zeilen, bei denen es sich wirklich unsicher ist.
+
+## Wie der erste Schritt tatsächlich aussieht
+
+Beginnen Sie mit der Lieferantenliste, bevor Sie auch nur eine Kategorie anfassen. Wenn sich herausstellt, dass zwei Standorte beim selben Distributor unter verschiedenen Namen einkaufen, ist das meist der erste Fund. Entscheiden Sie dann, wie tief die Taxonomie gehen muss. Die meisten Hersteller brauchen nicht überall Detailtiefe auf Warengruppenebene. Sie brauchen sie dort, wo tatsächlich verhandelt wird, und Familien- oder Klassenebene überall sonst. Halten Sie die Grenzfälle mit den Menschen fest, die tatsächlich einkaufen: was als MRO gegenüber Investitionsspend zählt, wie Subunternehmer-Arbeit codiert wird, was mit Fracht- und Zuschlagszeilen passiert, die eigentlich gar kein Produkt sind. Klassifizieren Sie dann, bewerten Sie die Konfidenz, und leiten Sie das, bei dem sich das System unsicher ist, an eine Person weiter, denn dort werden die Regeln festgehalten, die verhindern, dass dieselbe Mehrdeutigkeit erneut auftritt.
