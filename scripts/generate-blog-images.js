@@ -257,8 +257,12 @@ async function main() {
 
   const pending = blocks.filter((b) => {
     if (b.hidden) return false;
+    // The file on disk is the source of truth, not the `image:` field —
+    // an `image:` entry can exist while the actual file never made it into
+    // a commit (e.g. a run whose push lost a race with another workflow),
+    // which would otherwise make this check skip it forever.
     const imagePath = path.join(IMAGES_DIR, `${b.slug}.jpg`);
-    return !b.hasImage && !fs.existsSync(imagePath);
+    return !fs.existsSync(imagePath);
   });
 
   if (pending.length === 0) {
@@ -294,10 +298,14 @@ async function main() {
     console.log(`    ✓  wrote public/images/blog/${post.slug}.jpg (${(imageBuffer.length / 1024).toFixed(0)}KB)`);
 
     // Re-find this post's current slugLineEnd against the latest source,
-    // since earlier insertions in this loop shift offsets.
-    const freshBlocks = findPostBlocks(source);
-    const freshPost = freshBlocks.find((b) => b.slug === post.slug);
-    source = insertImageField(source, freshPost.slugLineEnd, `/images/blog/${post.slug}.jpg`);
+    // since earlier insertions in this loop shift offsets. Only add the
+    // `image:` field if it isn't already there — it can pre-exist if a past
+    // run generated the field but lost the race to commit the file itself.
+    if (!post.hasImage) {
+      const freshBlocks = findPostBlocks(source);
+      const freshPost = freshBlocks.find((b) => b.slug === post.slug);
+      source = insertImageField(source, freshPost.slugLineEnd, `/images/blog/${post.slug}.jpg`);
+    }
 
     manifest[post.slug] = { sector, includePeople, scene, prompt: fullPrompt, seed };
 
