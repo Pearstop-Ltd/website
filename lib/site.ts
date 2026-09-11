@@ -375,7 +375,8 @@ export const industryCards = [
     copy: "Integrated FM, hard services, and soft services, each with its own data problem and its own fix.",
     links: [
       { label: "Integrated FM", href: "#integrated-fm" },
-      { label: "Hard Services & Soft Services", href: "#facilities-management" }
+      { label: "Hard Services", href: "#hard-services" },
+      { label: "Soft Services", href: "#soft-services" }
     ]
   },
   {
