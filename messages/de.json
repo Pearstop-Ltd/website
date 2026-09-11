@@ -1904,5 +1904,191 @@
       "lead": "Buchen Sie eine 7-minütige Erstberatung. Wir zeigen Ihnen genau, wie die Engine mit Ihren Ausgabendaten arbeitet.",
       "button": "7-minütige Erstberatung buchen"
     }
+  },
+  "UnspscNL": {
+    "meta": {
+      "title": "UNSPSC-Klassifizierung Niederlande | Automatisierte Beschaffungsklassifizierung | Pearstop",
+      "description": "Automatisierte UNSPSC-Klassifizierung für niederländische Einkaufs- und Beschaffungsteams. Pearstop klassifiziert Einkaufsdaten aus SAP, AFAS und anderen ERP-Systemen — einschließlich Peppol-Unterstützung."
+    },
+    "geoBlock": {
+      "title": "Wie sieht UNSPSC-Klassifizierung für ein niederländisches Infrastruktur- oder FM-Unternehmen aus?",
+      "copy": "Niederländische Infrastruktur- und FM-Unternehmen wickeln den Einkauf typischerweise über SAP oder AFAS ab, mit Rechnungszeilen, die von Servicetechnikern statt von Einkäufern verfasst werden, zum Beispiel „elektra werkzaamheden Q3“ oder „pompafdichting vervangen“. UNSPSC-Klassifizierung ordnet jeder dieser Zeilen einen konsistenten 8-stelligen Commodity-Code zu, wodurch eine Peppol-konforme Rechnung erst maschinenlesbar wird und nicht nur strukturiert. Strukton, ein niederländischer Infrastrukturauftragnehmer, verarbeitet auf diese Weise 35.000 Beschaffungszeilen pro Monat über die SAP-Integration von Pearstop, wobei 90 bis 95 % automatisch klassifiziert werden."
+    },
+    "hero": {
+      "eyebrow": "UNSPSC-Klassifizierung Niederlande",
+      "title": "UNSPSC-Klassifizierung für niederländische Infrastruktur-, FM- und Bauunternehmen.",
+      "lead": "Pearstop automatisiert die Klassifizierung von Einkaufszeilen nach UNSPSC-Standard — 90–95 % ohne manuellen Aufwand. Mit Unterstützung für Peppol-E-Rechnungen und niederländische ERP-Systeme.",
+      "cta": "7-minütige Erstberatung buchen",
+      "secondary": "Peppol und UNSPSC"
+    },
+    "peppol": {
+      "eyebrow": "Peppol und UNSPSC in den Niederlanden",
+      "title": "Warum niederländische Unternehmen jetzt an UNSPSC-Klassifizierung arbeiten",
+      "lead": "Peppol-E-Rechnungen sind für die öffentliche Beschaffung in den Niederlanden verpflichtend. UNSPSC ist der internationale Standard, der sich daran anschließt.",
+      "b1": {
+        "title": "Peppol erfordert strukturierte Produktcodes",
+        "copy": "Das Peppol-Netzwerk erfordert strukturierte, maschinenlesbare Rechnungsdaten. UNSPSC ist der meistgenutzte internationale Klassifizierungsstandard, der dies erfüllt."
+      },
+      "b2": {
+        "title": "Konsistente Kategorisierung über Lieferanten hinweg",
+        "copy": "Mit UNSPSC erhält jede Bestellung eine konsistente Kategorie — unabhängig von Lieferant oder System."
+      },
+      "b3": {
+        "title": "Ausgabentransparenz für das Kategoriemanagement",
+        "copy": "Eine klassifizierte Einkaufsdatenbasis ist die Grundlage für Kategoriemanagement, Vertragsverhandlungen und die Identifikation von Einsparpotenzialen."
+      }
+    },
+    "challenge": {
+      "eyebrow": "Der Ansatz",
+      "title": "Wie Pearstop niederländische Einkaufsdaten klassifiziert",
+      "lead": "Pearstop verarbeitet Einkaufsdaten aus SAP, AFAS, Oracle und anderen Systemen — einschließlich niederländischsprachiger Beschreibungen."
+    },
+    "solution": {
+      "step1": {
+        "title": "Datenexport aus Ihrem ERP",
+        "copy": "Exportieren Sie Bestellungen, Rechnungszeilen oder beides — per CSV oder direkter API-Verbindung aus SAP, AFAS oder einem anderen System."
+      },
+      "step2": {
+        "title": "Automatische Klassifizierung",
+        "copy": "Pearstops vierschichtige Engine klassifiziert 90–95 % der Zeilen automatisch, einschließlich niederländischsprachiger Beschreibungen."
+      },
+      "step3": {
+        "title": "Menschliche Prüfung von Zweifelsfällen",
+        "copy": "Die verbleibenden 5–10 % werden Ihrem Team zur Beurteilung vorgelegt. Jede Entscheidung verbessert das Modell."
+      },
+      "step4": {
+        "title": "Klassifizierte Daten zurück in Ihr System",
+        "copy": "Die klassifizierte Datei wird in Ihrem Originalformat zurückgegeben — bereit für SAP, Power BI oder Peppol-Rechnungsstellung."
+      }
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "items": {
+        "0": {
+          "q": "Ist UNSPSC-Klassifizierung in den Niederlanden Pflicht?",
+          "a": "UNSPSC ist in den Niederlanden keine gesetzliche Pflicht, wird aber zunehmend als Best-Practice-Standard genutzt. Peppol-E-Rechnungen, verpflichtend für die öffentliche Beschaffung, erfordern strukturierte Produktcodes, wobei UNSPSC der meistgenutzte internationale Standard ist."
+        },
+        "1": {
+          "q": "Was ist Peppol, und wie verhält es sich zu UNSPSC?",
+          "a": "Peppol ist das E-Rechnungsnetzwerk, das für die öffentliche Beschaffung in den Niederlanden verpflichtend ist. Peppol erfordert strukturierte Rechnungsdaten einschließlich Produkt- und Dienstleistungscodes. UNSPSC ist der meistgenutzte Klassifizierungsstandard, der sich daran anschließt."
+        },
+        "2": {
+          "q": "Was ist UNSPSC-Klassifizierung, und warum ist sie wichtig?",
+          "a": "UNSPSC steht für United Nations Standard Products and Services Code. Ohne UNSPSC sind Einkaufsdaten schwer zu analysieren — mit UNSPSC erhält jede Bestellung eine konsistente Kategorie, wodurch Ausgabenanalyse, Lieferantenkonsolidierung und Kategoriemanagement möglich werden."
+        },
+        "3": {
+          "q": "Welche niederländischen Unternehmen brauchen UNSPSC-Klassifizierung am meisten?",
+          "a": "Niederländische Infrastrukturauftragnehmer, Facility-Dienstleister und Bauunternehmen haben in der Regel den größten Bedarf an UNSPSC-Klassifizierung."
+        },
+        "4": {
+          "q": "Wie klassifiziert Pearstop niederländische Einkaufsdaten?",
+          "a": "Pearstop empfängt Einkaufsdaten per CSV oder direkter API-Verbindung aus niederländischen ERP-Systemen einschließlich SAP, Oracle und AFAS. Die vierschichtige Klassifizierungs-Engine verarbeitet auch niederländischsprachige Rechnungsbeschreibungen."
+        }
+      }
+    },
+    "related": {
+      "label": "Verwandte Themen",
+      "copy": "Entdecken Sie den vollständigen UNSPSC-Klassifizierungsservice, niederländische Fallstudien und den FM-spezifischen Ansatz.",
+      "link1": "UNSPSC-Klassifizierung",
+      "link2": "Fallstudien",
+      "link3": "UNSPSC für Facility Management"
+    },
+    "cta": {
+      "title": "Bereit, Ihre Beschaffungsklassifizierung zu automatisieren?",
+      "lead": "Buchen Sie eine 7-minütige Erstberatung. Wir zeigen Ihnen, wie die Klassifizierungs-Engine mit Ihren Daten arbeitet.",
+      "button": "7-minütige Erstberatung buchen"
+    }
+  },
+  "UnspscDE": {
+    "meta": {
+      "title": "UNSPSC Klassifizierung Deutschland | Automatisierte Beschaffungsklassifizierung | Pearstop",
+      "description": "Automatisierte UNSPSC-Klassifizierung für deutsche Beschaffungsteams. Pearstop klassifiziert Einkaufsdaten aus SAP und anderen ERP-Systemen — mit Unterstützung für die deutsche E-Rechnungspflicht 2025."
+    },
+    "geoBlock": {
+      "title": "Wie sieht UNSPSC-Klassifizierung für ein deutsches Fertigungs- oder FM-Unternehmen aus?",
+      "copy": "Deutsche Fertigungs- und FM-Unternehmen verfügen typischerweise über Jahre an Bestelldaten in SAP, häufig mit Rechnungszeilen in deutschem technischem Jargon wie „Wartung Pumpe Dichtung“ oder „Elektra Rundgang Q3“. UNSPSC-Klassifizierung ordnet jeder dieser Zeilen denselben 8-stelligen Commodity-Code zu wie ihrem englischen Äquivalent, sodass ein Werk in München und ein Werk in Rotterdam als dieselbe Ausgabenkategorie erscheinen. Die Engine von Pearstop liest deutschsprachige Beschreibungen nativ und erreicht 90 bis 95 % automatische Klassifizierung, ohne Übersetzung als separaten Schritt."
+    },
+    "hero": {
+      "eyebrow": "UNSPSC Klassifizierung Deutschland",
+      "title": "UNSPSC-Klassifizierung für deutsche Fertigungs-, FM- und Infrastrukturunternehmen.",
+      "lead": "Pearstop automatisiert die Klassifizierung von Einkaufszeilen nach UNSPSC-Standard — 90–95% ohne manuellen Aufwand. Mit Unterstützung für die deutsche E-Rechnungspflicht 2025 und SAP-Integration.",
+      "cta": "7-minütige Discovery buchen",
+      "secondary": "E-Rechnung und UNSPSC"
+    },
+    "einvoicing": {
+      "eyebrow": "E-Rechnungspflicht 2025 und UNSPSC",
+      "title": "Warum deutsche Unternehmen jetzt an strukturierter Produktcodierung arbeiten",
+      "lead": "Das Wachstumschancengesetz 2025 verpflichtet deutsche Unternehmen zur strukturierten B2B-E-Rechnung. UNSPSC ist der internationale Standard, der dies ermöglicht.",
+      "b1": {
+        "title": "E-Rechnungspflicht erfordert Produktcodes",
+        "copy": "Die deutsche E-Rechnungspflicht 2025 erfordert strukturierte, maschinenlesbare Rechnungsdaten. UNSPSC bietet das international anerkannte Klassifizierungssystem, das diese Anforderung erfüllt."
+      },
+      "b2": {
+        "title": "Konsistente Kategorisierung über Lieferanten hinweg",
+        "copy": "Mit UNSPSC erhält jede Bestellung eine konsistente Kategorie — unabhängig von Lieferant oder System."
+      },
+      "b3": {
+        "title": "Ausgabentransparenz für das Kategoriemanagement",
+        "copy": "Eine klassifizierte Einkaufsdatenbasis ist die Grundlage für Kategoriemanagement, Vertragsverhandlungen und Einsparidentifikation."
+      }
+    },
+    "solution": {
+      "eyebrow": "Wie Pearstop vorgeht",
+      "title": "Wie Pearstop deutsche Einkaufsdaten klassifiziert",
+      "lead": "Pearstop verarbeitet Einkaufsdaten aus SAP, Oracle und anderen deutschen ERP-Systemen — einschließlich deutschsprachiger Beschreibungen.",
+      "step1": {
+        "title": "Datenexport aus Ihrem ERP",
+        "copy": "Exportieren Sie Bestellungen, Rechnungszeilen oder beides — per CSV oder direkter API-Verbindung aus SAP, Oracle oder einem anderen System."
+      },
+      "step2": {
+        "title": "Automatische Klassifizierung",
+        "copy": "Pearstops vier-schichtige Engine klassifiziert 90–95% der Zeilen automatisch, einschließlich deutschsprachiger Beschreibungen."
+      },
+      "step3": {
+        "title": "Manuelle Überprüfung von Grenzfällen",
+        "copy": "Die verbleibenden 5–10% werden Ihrem Team zur Überprüfung vorgelegt. Jede Entscheidung verbessert das Modell."
+      },
+      "step4": {
+        "title": "Klassifizierte Daten zurück in Ihr System",
+        "copy": "Die klassifizierte Datei wird in Ihrem Originalformat zurückgegeben — bereit für SAP, Power BI oder E-Rechnungssysteme."
+      }
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "items": {
+        "0": {
+          "q": "Ist UNSPSC-Klassifizierung in Deutschland Pflicht?",
+          "a": "UNSPSC ist keine gesetzliche Pflicht, aber die E-Rechnungspflicht 2025 erfordert strukturierte Produktcodes. UNSPSC ist der meistgenutzte internationale Standard, der diese Anforderung erfüllt."
+        },
+        "1": {
+          "q": "Wie wirkt sich die deutsche E-Rechnungspflicht auf die Beschaffungsklassifizierung aus?",
+          "a": "Die E-Rechnungspflicht 2025 erfordert strukturierte, maschinenlesbare Rechnungsdaten für B2B-Transaktionen. UNSPSC bietet ein konsistentes, international anerkanntes Codierungssystem, das diese Anforderung erfüllt."
+        },
+        "2": {
+          "q": "Was ist UNSPSC-Klassifizierung und warum brauchen deutsche Unternehmen sie?",
+          "a": "UNSPSC steht für United Nations Standard Products and Services Code. Deutsche Unternehmen nutzen UNSPSC, um Einkaufsausgaben zu kategorisieren, Lieferanten zu vergleichen und die Ausgabentransparenz zu verbessern."
+        },
+        "3": {
+          "q": "Welche deutschen Branchen profitieren am meisten?",
+          "a": "Deutsche Fertigungsunternehmen, Maschinenbauunternehmen, Facility-Management-Unternehmen und Infrastrukturunternehmen profitieren am meisten. Fertigungsunternehmen mit großem MRO-Anteil gewinnen besonders durch konsistente Teilecodierung."
+        },
+        "4": {
+          "q": "Kann Pearstop deutschsprachige Einkaufsdaten klassifizieren?",
+          "a": "Ja. Pearstops Klassifizierungs-Engine verarbeitet deutschsprachige Rechnungsbeschreibungen nativ, einschließlich gängiger Abkürzungen und technischer Terminologie."
+        }
+      }
+    },
+    "related": {
+      "label": "Verwandte Seiten",
+      "copy": "Entdecken Sie den vollständigen UNSPSC-Klassifizierungsservice, unsere Niederlande-Seite und den FM-spezifischen Ansatz.",
+      "link1": "UNSPSC Klassifizierung",
+      "link2": "UNSPSC Klassifizierung Niederlande",
+      "link3": "UNSPSC für Facility Management"
+    },
+    "cta": {
+      "title": "Bereit, Ihre Beschaffungsklassifizierung zu automatisieren?",
+      "lead": "Buchen Sie eine 7-minütige Discovery. Wir zeigen Ihnen, wie die Klassifizierungs-Engine mit Ihren Daten funktioniert.",
+      "button": "7-minütige Discovery buchen"
+    }
   }
 }
