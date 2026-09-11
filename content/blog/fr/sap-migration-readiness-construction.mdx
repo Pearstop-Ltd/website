@@ -1,0 +1,51 @@
+---
+title: "La préparation SAP en construction commence des années avant la migration"
+description: "Les entreprises de construction attendent l'échéance SAP pour forcer un nettoyage des données. Voici pourquoi le travail de classification devrait commencer des années plus tôt."
+date: "2026-09-04"
+category: "Construction"
+slug: "sap-migration-readiness-construction"
+author: "stephanie"
+lang: "fr"
+---
+
+**Réponse rapide :** Les données achats en construction ne deviennent pas plus faciles à classifier en attendant. Les factures de sous-traitants, la location de matériel et les matériaux se trouvent sous des codes de coût différents sur chaque projet en cours, et un outil d'IA généraliste comme Copilot ne peut pas maintenir une catégorie cohérente sur ce volume. Commencer le travail de classification des années avant une migration SAP planifiée, plutôt que dans les mois précédant la mise en service, signifie que la taxonomie est déjà éprouvée et stable bien avant que l'échéance ne force la question.
+
+Sur cette page : [Les données de bons de commande en construction cassent les outils d'IA généralistes](#construction-po-data-breaks-general-ai-tools) · [Pourquoi une préparation SAP précipitée échoue](#why-rushed-sap-prep-fails) · [Pourquoi les dépenses de construction résistent à une taxonomie partagée](#why-construction-spend-resists-a-shared-taxonomy) · [Ce qu'implique un travail de préparation SAP précoce](#what-early-sap-readiness-work-involves) · [FAQ](#frequently-asked-questions)
+
+## Les données de bons de commande en construction cassent les outils d'IA généralistes
+
+Une entreprise de construction que nous avons rencontrée cette année avait des lignes de bons de commande réparties sur une douzaine de projets en cours simultanément : factures de sous-traitants, location de matériel, matériaux, chacune tarifée et codée selon une structure de codes de coût qu'un chef de projet différent avait mise en place pour un chantier différent. Personne n'avait jamais essayé de faire concorder ces codes de coût entre eux, parce que personne n'en avait eu besoin jusqu'à ce qu'un passage à SAP soit évoqué comme une possibilité réelle.
+
+L'équipe a d'abord essayé Microsoft Copilot. Il était déjà sous licence, déjà ouvert sur chaque ordinateur du bureau, et cela semblait être le moyen évident d'obtenir une première passe de classification de l'arriéré avant de dépenser de l'argent ailleurs. Il a produit des catégories. Il a aussi produit une catégorie différente pour la même description de ligne selon le projet dont provenait la ligne, et il a parfois inventé une catégorie qui n'existait nulle part dans la propre structure de coûts de l'entreprise.
+
+La raison est simple : Copilot est conçu pour répondre à une question sur le document qu'il a sous les yeux, pas pour maintenir une règle cohérente sur des centaines de milliers de lignes de bons de commande réparties sur une douzaine de projets qui changent constamment de forme à mesure que de nouveaux chantiers s'ouvrent et que d'anciens se clôturent. Un modèle généraliste n'a aucune mémoire de la décision qu'il a prise sur une ligne similaire une heure plus tôt, et rien ne l'oblige à vérifier sa réponse par rapport à une liste fixe de catégories que l'entreprise utilise réellement. Chaque exécution repart de zéro.
+
+C'est le moment où l'équipe a cessé de traiter cela comme un problème de prompt IA et a commencé à le traiter comme un problème de structure de données, ce qu'il a toujours été.
+
+## Pourquoi une préparation SAP précipitée échoue
+
+SAP a fixé au 31 décembre 2027 la fin de la maintenance standard d'ECC, et une migration complète d'ECC vers S/4HANA dure généralement de 18 à 36 mois pour une entreprise de toute taille. En remontant ce calendrier depuis l'échéance, il reste très peu de marge pour la partie du projet que personne ne veut porter : s'assurer que les données entrant dans le nouveau système sont réellement cohérentes.
+
+Les études sectorielles sur les migrations de données ERP sont étonnamment directes sur les points de défaillance. La majorité des projets de migration manquent leurs objectifs ou dépassent leur budget et leur calendrier, et une mauvaise qualité des données est constamment citée comme cause principale. Le schéma est le même que celui décrit de l'intérieur par les équipes de construction : le problème ne se manifeste pas pendant les ateliers de planification, il se manifeste pendant les tests d'acceptation utilisateur, quand quelqu'un essaie d'exécuter un rapport par catégorie de coût et découvre que trois projets différents ont appelé la même chose de trois façons différentes.
+
+Commencer le nettoyage dans les six mois précédant la mise en service revient à le faire au pire moment possible. L'équipe est déjà surchargée à tester le nouveau système, former les utilisateurs et réconcilier les soldes d'ouverture. Les décisions de classification qui nécessitent l'avis de quelqu'un qui sait réellement ce que signifie « location » sur un contrat de terrassement sont prises dans la précipitation, par qui est disponible, et elles ne sont jamais revues.
+
+Commencer des années plus tôt change la nature de cette décision. Le système actuel est encore stable. Les personnes qui ont mis en place les codes de coût d'origine sont généralement encore là pour expliquer ce qu'elles voulaient dire. Et une taxonomie construite et testée sur des bons de commande réels pendant deux ou trois ans a déjà survécu aux cas particuliers qu'un nouveau projet lui soumet, plutôt que de les rencontrer pour la première fois pendant un week-end de mise en service.
+
+## Pourquoi les dépenses de construction résistent à une taxonomie partagée
+
+L'industrie manufacturière a un référentiel matières qui bouge peu. Une pièce achetée ce trimestre est généralement encore la même pièce le trimestre prochain, fabriquée dans la même usine, commandée depuis la même liste. La construction ne fonctionne pas ainsi. Chaque projet est une nouvelle entité juridique en miniature, avec son propre budget, son propre chef de projet, et sa propre liste de codes de coût construite à partir du modèle que cette personne a utilisé la dernière fois.
+
+Le résultat est un désordre spécifique. Une ligne simplement marquée « location » pourrait être une grue à tour réservée pour six semaines ou un groupe électrogène réservé pour deux jours, et rien dans la description ne permet de le savoir sans vérifier le fournisseur et le projet. Le même sous-traitant en terrassement peut facturer trois bureaux régionaux sous trois noms commerciaux différents, dont aucun ne correspond de façon évidente, parce que personne aux achats n'avait de raison de le remarquer avant qu'il ne faille comparer les dépenses entre projets. Les matériaux sont codés sur la ligne que la personne créant le bon de commande avait ouverte ce jour-là, ce qui est rarement la ligne qu'un analyste de coûts choisirait six mois plus tard.
+
+Rien de tout cela n'est une erreur de saisie. Chacun a codé correctement son propre projet pour ses propres besoins. Le problème est que « correct pour ce projet » et « cohérent sur tous les projets que gère l'entreprise » n'ont jamais été la même exigence, et rien dans un ERP construction standard ne les force à le devenir de lui-même.
+
+## Ce qu'implique un travail de préparation SAP précoce
+
+La première étape consiste à résoudre l'identité des fournisseurs et sous-traitants entre les projets, avant de toucher la moindre catégorie. C'est généralement là qu'une entreprise de construction fait sa première véritable découverte : le même sous-traitant soumissionnant sous deux noms, ou deux fournisseurs qui sont en réalité une seule entreprise après une fusion dont personne n'a mis à jour les registres.
+
+La deuxième étape consiste à appliquer une taxonomie fixe, pas inventée projet par projet. Un code de coût ne peut pas signifier une chose sur le site A et autre chose sur le site B. La location de matériel, la main-d'œuvre sous-traitée et les matériaux ont besoin de catégories qui conservent leur signification quel que soit le projet d'où provient la ligne, cartographiées sur la structure de codes de coût sur laquelle l'entreprise établit réellement ses rapports.
+
+La troisième étape consiste à classifier en continu, pas comme un exercice ponctuel. De nouveaux projets s'ouvrent chaque trimestre avec de nouveaux codes de coût et de nouveaux sous-traitants, si bien que le travail de classification doit s'exécuter sur les bons de commande en direct à mesure qu'ils arrivent, pas seulement sur un arriéré historique figé. C'est aussi là que commencer des années à l'avance porte ses fruits : une taxonomie testée sur un nouveau projet s'ouvrant tous les quelques mois, pendant deux ou trois ans, a déjà été contrainte de gérer les catégories de métiers, les modalités de location et les particularités de nommage qu'une migration ferait autrement surgir toutes à la fois, en pleine période de tests de mise en service.
+
+La classification mensuelle continue des bons de commande SAP en direct, exécutée des années avant même la confirmation d'une date de migration, est ce que Pearstop réalise actuellement pour un grand entrepreneur d'infrastructure : résoudre l'identité des fournisseurs et classifier les lignes d'achats issues de SAP comme un processus continu plutôt qu'un exercice ponctuel sur un arriéré, si bien que les catégories sont déjà stables pour les équipes de construction et d'infrastructure bien avant qu'un changement de système ne force la question.

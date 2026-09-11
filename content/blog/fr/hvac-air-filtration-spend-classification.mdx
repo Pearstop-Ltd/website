@@ -1,0 +1,47 @@
+---
+title: "Classifier les dépenses de filtration d'air au sein de la maintenance CVC"
+description: "Le changement de filtre est un coût de consommable prévisible, mais la plupart des codes CVC le mélangent avec les dépenses réactives de pièces. Voici pourquoi les séparer compte."
+date: "2026-09-10"
+category: "Data Quality"
+slug: "hvac-air-filtration-spend-classification"
+author: "rae"
+lang: "fr"
+---
+
+**Réponse rapide :** Le remplacement des filtres à air est un coût de consommable prévisible et cadencé, pas une réparation ponctuelle, mais la plupart des données de dépenses FM le regroupent dans un code générique unique de maintenance CVC aux côtés de pièces réactives comme les moteurs de ventilateur, les compresseurs et les batteries. Séparer les dépenses de filtres sous leur propre classification marchandise est ce qui rend possible, en premier lieu, la budgétisation des filtres, le benchmarking fournisseurs et l'agrégation par taxonomie.
+
+Sur cette page : [Les filtres à air enfouis dans les dépenses CVC](#air-filters-get-buried-in-hvac-spend) · [Le remplacement des filtres est un cycle de consommable](#filter-replacement-is-a-consumable-cycle) · [Ce qu'un code CVC unique dissimule](#what-one-blended-hvac-code-hides) · [Séparer les dépenses de filtres des pièces réactives](#splitting-filter-spend-from-reactive-parts) · [FAQ](#frequently-asked-questions)
+
+## Les filtres à air enfouis dans les dépenses CVC
+
+Je cartographiais il y a quelques mois la base de coûts hard FM d'un client et j'ai posé une question simple : combien dépensez-vous par an en médias filtrants ? Personne ne pouvait répondre. Non parce que le chiffre n'existe pas, mais parce qu'il se trouve à l'intérieur d'une seule ligne appelée maintenance CVC, à côté d'un remplacement de compresseur, d'un changement de moteur de ventilateur et d'une réparation de gaine suite à une fuite de joint.
+
+C'est le schéma que je retrouve sur la plupart des sites que j'examine. Un prestataire change les filtres lors d'une visite planifiée, remarque qu'autre chose nécessite une intervention, et le répare lors du même passage. Les deux sont facturés sur le même contrat, codés sur la même ligne comptable, et rapportés comme un seul chiffre : dépenses de maintenance CVC. Le changement de filtre et la réparation du compresseur sont traités comme le même type de coût, alors qu'ils ne se comportent absolument pas de la même façon.
+
+## Le remplacement des filtres est un cycle de consommable
+
+Un filtre n'est pas une réparation. C'est un remplacement planifié selon une cadence connue, la même forme de dépense que n'importe quel autre consommable. Les bureaux commerciaux remplacent généralement les filtres standards tous les deux à trois mois ; les médias MERV 13 et supérieurs, qui se colmatent plus vite, sont souvent changés tous les 60 à 90 jours ; les environnements de santé et industriels appliquent fréquemment un cycle mensuel. Certains sites passent plutôt à un remplacement conditionnel, changeant le filtre lorsqu'un capteur de pression indique que le différentiel a doublé par rapport à sa référence à l'état propre, plutôt qu'à une date calendaire fixe. Dans tous les cas, le déclencheur est connu à l'avance. Personne n'attend que le filtre tombe en panne avant d'en commander un nouveau.
+
+C'est exactement la façon dont le contenu de Pearstop traite d'autres catégories de consommables ailleurs dans le hard FM : récurrentes, cadencées, traçables au prix par unité, planifiables un an à l'avance. Un moteur de ventilateur ou un compresseur, c'est l'inverse. On ne sait pas qu'il tombe en panne avant que ce soit le cas, et le coût est ce que la réparation s'avère exiger. Regrouper un consommable planifiable et une réparation imprévisible sous une seule étiquette efface la seule distinction qui compte réellement pour bien gérer l'un comme l'autre.
+
+## Ce qu'un code CVC unique dissimule
+
+Une fois que les dépenses de filtres et les dépenses de pièces réactives se trouvent dans le même chiffre de « maintenance CVC », trois choses deviennent impossibles, et je vois les trois se manifester chez des clients gérant un parc multi-sites.
+
+La budgétisation est la première. Les dépenses de filtres devraient être l'une des lignes les plus prévisibles d'un budget FM : vous connaissez le nombre d'unités, la cadence prévue et le prix unitaire, si bien que le chiffre de l'an prochain relève presque de l'arithmétique. Mélangé à une catégorie qui porte aussi une panne de compresseur imprévisible, cette prévisibilité disparaît. Le chiffre varie selon ce qui a cassé l'an dernier, pas selon ce qui est réellement planifiable.
+
+Le benchmarking fournisseurs est le deuxième. Si les médias filtrants sont facturés à l'intérieur d'une visite CVC mélangée, vous ne pouvez pas comparer ce qu'un prestataire facture par filtre par rapport à un autre, ni vérifier si le coût unitaire du filtre sur un site a dérivé d'année en année. Le prix unitaire est là, quelque part, noyé dans un total de ligne avec de la main-d'œuvre et des pièces qui n'ont rien à voir.
+
+La classification marchandise est la troisième, et c'est celle qui se manifeste le plus durement lorsqu'un client est soumis à un mandat UNSPSC ou de taxonomie. Les filtres à air portent leur propre code marchandise UNSPSC, 40161505, situé dans la classe des filtres au sein du segment des systèmes de distribution et de conditionnement. Ce code ne signifie quelque chose que s'il est appliqué au niveau de la transaction. Un code comptable qui s'arrête à « maintenance CVC » n'y parvient jamais, si bien qu'une ligne de filtre et une ligne de réparation de batterie se rapportent de façon identique dans toute agrégation par marchandise, et l'exercice de taxonomie qu'un directeur achats était mandaté de livrer produit une catégorie techniquement peuplée et pratiquement inutile.
+
+Il y a aussi un coût réel derrière la cadence manquée. Un filtre sale et en retard est largement cité comme augmentant la consommation énergétique d'un système CVC jusqu'à 15 %, car un flux d'air restreint force le système à fonctionner plus longtemps pour atteindre la même consigne. Vous ne pouvez pas voir si cette cadence est réellement respectée, ou si elle glisse discrètement site par site, si les dépenses de filtres ne sont pas visibles comme leur propre ligne à comparer au calendrier en premier lieu.
+
+Pearstop sépare automatiquement les médias filtrants des pièces et réparations CVC réactives et les code sur leur propre ligne marchandise UNSPSC, pour les équipes hard FM menant un programme de taxonomie ou de migration ERP sur un parc CVC multi-sites.
+
+## Séparer les dépenses de filtres des pièces réactives
+
+Une fois la séparation en place, les questions qu'on me pose en revue de compte changent de forme. Au lieu de « pourquoi le CVC a-t-il coûté plus cher ce trimestre », cela devient « pourquoi les dépenses de filtres sur ce site ont-elles dépassé la prévision », une question à laquelle les données peuvent réellement répondre, parce que les dépenses de filtres ont une cadence connue à laquelle les comparer.
+
+Cela change aussi ce que livre un projet de taxonomie ou de migration ERP. Un code marchandise appliqué de façon cohérente aux transactions de filtres signifie que la filtration d'air s'agrège proprement sous sa propre ligne UNSPSC plutôt que de disparaître dans une catégorie de maintenance générique, ce qui est généralement l'écart précis qu'un nouveau directeur achats découvre en premier lorsqu'il hérite d'une taxonomie qui n'a jamais été vérifiée au niveau de la transaction.
+
+Rien de tout cela ne nécessite une nouvelle stratégie de maintenance ni un nouveau contrat. Cela nécessite que les données de dépenses sous-jacentes au contrat existant portent la distinction qui a toujours existé opérationnellement, changement de filtre contre pièces réactives, jusqu'à la catégorie sur laquelle elle est rapportée. C'est une correction de qualité des données, pas une correction achats, et c'est généralement la moins coûteuse des deux à réaliser.

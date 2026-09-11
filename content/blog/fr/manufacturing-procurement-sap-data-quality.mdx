@@ -1,0 +1,55 @@
+---
+title: "Données achats industrielles : le problème SAP que le hard FM a déjà résolu"
+description: "95 % des dépenses industrielles auto-classifiées, sans toucher à la structure SAP sous-jacente."
+date: "2026-08-27"
+category: "Procurement"
+slug: "manufacturing-procurement-sap-data-quality"
+author: "stephanie"
+lang: "fr"
+---
+
+**Réponse rapide :** Un industriel avec des années d'historique dans SAP dispose généralement de toutes les données dont il a besoin, sans aucun moyen de les utiliser. Les descriptions d'articles varient selon qui a saisi le bon de commande. Les noms de fournisseurs dérivent d'une usine à l'autre. Les catégories ont été mises en place localement par qui a configuré l'ERP il y a des années. Ce n'est pas un problème de données manquantes. C'est un problème de structure, et c'est le même que celui du hard FM avec les factures, simplement avec des pièces et des codes fournisseurs à la place. La solution est la même en trois étapes dans les deux cas : résoudre la liste des fournisseurs, appliquer une taxonomie qui ne peut pas inventer ses propres catégories, puis classifier chaque ligne.
+
+Sur cette page : [Pourquoi les industriels supposent que c'est un problème de données](#why-manufacturers-assume-this-is-a-data-problem) · [Que coûtent réellement les dépenses non classifiées ?](#what-does-unclassified-spend-actually-cost) · [Qui est responsable d'y remédier ?](#who-is-responsible-for-fixing-it) · [À quoi cela ressemble sur un véritable export SAP](#what-this-looks-like-on-a-real-sap-export) · [Pourquoi ne pas simplement pointer un outil d'IA généraliste sur l'export ?](#why-not-just-point-a-general-ai-tool-at-the-export) · [À quoi ressemble réellement la première étape](#what-the-first-step-actually-looks-like) · [FAQ](#frequently-asked-questions)
+
+## Pourquoi les industriels supposent que c'est un problème de données
+
+Si nous investissons, nous vérifions comment l'entreprise s'est comportée avant de nous engager. Si nous planifions un trajet vers une réunion importante, nous tenons compte du trafic. La plupart des décisions auxquelles nous faisons confiance sont des décisions que nous avons déjà structurées, même si nous n'y pensons pas en ces termes. Les dépenses achats ne font pas exception. Un industriel avec une décennie d'historique SAP a plus de transactions qu'il n'en aura jamais besoin. Ce qu'il n'a pas, c'est une catégorie cohérente sur chacune, un fournisseur unique résolu par entité, ou une taxonomie qui survit au contact d'une deuxième usine.
+
+C'est pourquoi « nous avons toutes les données » et « nous ne pouvons pas répondre à une question basique à leur sujet » sont vrais en même temps. Les transactions existent. Personne n'a construit la structure qui permettrait à quiconque de les interroger.
+
+## Que coûtent réellement les dépenses non classifiées ?
+
+Les outils de classification historiques atteignent généralement 75 à 85 % de précision sur des dépenses structurées. Les 15 à 25 % restants concernent généralement les dépenses résiduelles (tail spend), les services et les transactions par carte d'achat, ce qui est précisément là où la consolidation des fournisseurs et le benchmarking des prix apporteraient le plus de valeur. Tout ce qui dépasse environ 10 % de non classifié mérite d'être traité comme un écart actif, pas comme du bruit de fond.
+
+De mauvaises données de référence coûtent en moyenne 12,9 millions de dollars par an aux organisations. Pour un industriel gérant des fiches d'articles à travers plusieurs usines et instances ERP, ce chiffre grimpe, car la même pièce existe souvent sous trois numéros d'article différents, un par site l'ayant créée indépendamment. Cela produit des bons de commande en double, des stocks redondants dormant dans deux entrepôts sous deux numéros de pièce, et une équipe de maintenance cherchant une pièce qui existe techniquement dans le système, juste pas sous le code qu'elle recherche.
+
+## Qui est responsable d'y remédier ?
+
+Personne, généralement. La finance possède le grand livre. Les achats possèdent la négociation. Aucun des deux ne possède la taxonomie, si bien qu'elle se dégrade silencieusement jusqu'à ce que quelqu'un ait besoin d'une vue au niveau catégorie et découvre qu'il n'y en a pas.
+
+La solution n'est pas un nouveau système. C'est la même méthode en trois étapes qui fonctionne sur n'importe quel jeu de données achats sans structure.
+
+La première étape : résoudre la liste des fournisseurs. L'identité du fournisseur est l'un des signaux les plus forts pour classifier correctement une ligne, et dédupliquer la liste est généralement la façon dont une entreprise découvre pour la première fois que deux usines achètent auprès du même distributeur sous des noms différents, à des prix différents.
+
+La deuxième étape : appliquer une taxonomie contrainte. Une pièce ne peut pas se voir attribuer une catégorie qui n'existe pas dans la norme. C'est l'étape qui empêche le système d'inventer ses propres codes.
+
+La troisième étape : classifier chaque ligne et acheminer les cas incertains vers une personne. Le score de confiance est ce qui rend cela reproductible. Une description qui n'est qu'un numéro de pièce, ou un article qui pourrait appartenir à deux familles, part en révision plutôt que d'être deviné.
+
+## À quoi cela ressemble sur un véritable export SAP
+
+Nous avons appliqué cela aux données SAP d'un industriel de taille moyenne : des années d'historique achats sans catégorisation cohérente, aucune visibilité sur le fait que la même pièce était achetée à des prix différents selon les sites, aucun moyen de voir quels fournisseurs pouvaient être consolidés. Nous avons résolu la liste des fournisseurs, appliqué une taxonomie contrainte, encodé les règles de catégorisation que l'équipe achats utilisait réellement, et classifié l'arriéré. 95 % des lignes ont été auto-classifiées directement selon la structure SAP existante. C'est ce qui a transformé « nous avons les données quelque part » en une vue au niveau catégorie à partir de laquelle l'équipe pouvait négocier.
+
+Le même problème de données non structurées apparaît aussi en dehors des dépenses. Un fabricant de filtration d'air avec qui nous travaillons recevait des rapports de visite de site dans tous les formats imaginables : notes manuscrites, mises en page incohérentes, noms de pièces mal orthographiés, qui devaient être ressaisis à la main dans un document de proposition auquel l'entreprise pouvait faire confiance. Des données différentes. Le même échec : une information qui existait mais n'a jamais été organisée en quelque chose d'exploitable.
+
+## Pourquoi ne pas simplement pointer un outil d'IA généraliste sur l'export ?
+
+Il produira une réponse. Il n'en produira pas une reproductible. Un modèle généraliste invente des codes de catégorie qui n'existent pas dans votre taxonomie, classifie la même description différemment selon l'exécution, et ne donne aucun signal sur laquelle de ses réponses croire. Sur un échantillon ponctuel de quelques centaines de lignes, c'est tolérable. Sur un flux SAP en direct qui doit rester exact à mesure que de nouveaux bons de commande arrivent chaque jour, ce ne l'est pas, parce que tout l'enjeu est que la réponse doit encore être correcte le trimestre prochain.
+
+Un pipeline diffère d'un exercice de classification sur un point : il maintient la taxonomie constante et résout l'identité des fournisseurs avant de deviner une catégorie, au lieu de repartir de zéro à chaque fois. Les nouveaux bons de commande sont classifiés de la même façon que l'a été l'arriéré. Cette cohérence est la seule raison pour laquelle un chiffre de 95 % tient encore six mois plus tard au lieu de redériver vers un tas non classifié dès que plus personne ne le surveille.
+
+Nous n'avons pas testé cela sur chaque configuration ERP qu'un industriel pourrait utiliser. Ce que nous pouvons dire, c'est ce que la méthode exige : une liste de fournisseurs résolue avant que la classification ne commence, une taxonomie dont le système ne peut pas s'écarter, et une étape de révision pour les lignes dont il n'est réellement pas sûr.
+
+## À quoi ressemble réellement la première étape
+
+Commencez par la liste des fournisseurs, avant de toucher la moindre catégorie. S'il s'avère que deux sites achètent auprès du même distributeur sous des noms différents, c'est généralement la première découverte. Décidez ensuite jusqu'où la taxonomie doit descendre en détail. La plupart des industriels n'ont pas besoin d'un niveau de détail marchandise partout. Ils en ont besoin là où ils négocient réellement, et d'un niveau famille ou classe partout ailleurs. Consignez les cas particuliers avec les personnes qui achètent réellement : ce qui compte comme MRO par rapport aux dépenses d'investissement, comment la main-d'œuvre sous-traitée est codée, ce qui arrive aux lignes de fret et de surcharge qui ne sont pas vraiment un produit du tout. Puis classifiez, notez la confiance, et acheminez ce dont le système n'est pas sûr vers une personne, car c'est là que sont consignées les règles qui empêchent la même ambiguïté de se reproduire.

@@ -1,0 +1,41 @@
+---
+title: "Qui possède réellement votre problème de données achats"
+description: "La finance possède le grand livre, les achats possèdent la relation commerciale, et l'IT possède le système. Personne ne possède la taxonomie en dessous, et cet écart est le vrai problème."
+date: "2026-09-05"
+category: "Data Quality"
+slug: "who-owns-your-procurement-data-problem"
+author: "stephanie"
+lang: "fr"
+---
+
+**Réponse rapide :** Personne ne possède la qualité des données achats par défaut, parce qu'aucune fonction unique n'a à la fois la visibilité et le mandat pour la posséder de bout en bout. La finance possède le grand livre, les achats possèdent les relations fournisseurs, et l'IT possède le système où vivent les données. La classification et la taxonomie se situent dans l'écart entre les trois, sans propriétaire, jusqu'à ce que quelqu'un confie à une personne ou à un rôle une responsabilité explicite sur le sujet.
+
+Sur cette page : [La finance possède le grand livre, pas la taxonomie](#finance-owns-the-ledger-not-the-taxonomy) · [Les achats possèdent la relation commerciale, pas les données](#procurement-owns-the-deal-not-the-data) · [L'IT possède le système, pas la structure](#it-owns-the-system-not-the-structure) · [Qui devrait posséder la classification à la place](#who-should-own-classification-instead) · [FAQ](#frequently-asked-questions)
+
+Demandez à un directeur achats qui possède son problème de qualité des données, et la plupart pointent vers le haut, vers la finance, vers celui qui valide le budget. C'est une première hypothèse raisonnable. La finance voit l'ensemble du tableau des dépenses, ou pense le voir. Mais le directeur financier ne possède pas la classification sous les chiffres, et personne d'autre non plus par défaut. Trois fonctions détiennent chacune une part réelle du problème, et chacune a une raison légitime de ne pas le détenir en entier.
+
+## La finance possède le grand livre, pas la taxonomie
+
+Le travail de la finance, c'est le grand livre qui se réconcilie en fin de mois. Un code de grand livre comme « maintenance réactive » couvre des frais de déplacement, un compresseur de remplacement et trois heures de main-d'œuvre sous-traitée, tous codés à l'identique, parce que le grand livre n'a besoin que du total sur ce code pour être correct. Que la ligne en dessous décrive ce qui a réellement été acheté est une autre question, et ce n'est pas celle sur laquelle la finance est évaluée.
+
+C'est la raison légitime pour laquelle la finance ne prendra pas ceci en charge de bout en bout. Son incitation s'arrête à la réconciliation du total. La tenir responsable de la cohérence au niveau catégorie revient à tenir quelqu'un responsable d'une décision qu'on ne lui a jamais demandé de prendre, avec un niveau de détail que son propre reporting n'exige pas.
+
+## Les achats possèdent la relation commerciale, pas les données
+
+Le travail des achats, c'est la prochaine négociation, pas l'historique qui se trouve derrière. Deux sites peuvent acheter les mêmes gants de travail chez le même distributeur et les classer sous deux catégories différentes, l'une en EPI, l'autre en consommables, parce que deux acheteurs différents ont saisi le bon de commande et qu'aucun des deux n'avait tort dans le cadre de son travail ce jour-là.
+
+La gestion par catégorie est une discipline tournée vers l'avenir. Elle compare le tarif de l'an prochain à celui de cette année, et consolide les fournisseurs pour l'avenir. Rattraper trois ans d'historique étiqueté de façon incohérente entre directement en concurrence avec les négociations en cours pour le temps du même acheteur, et c'est la négociation qui gagne, parce que c'est sur cela que les achats sont évalués. Corriger la taxonomie est un vrai travail sans aucune affaire qui y soit rattachée, si bien qu'il continue de perdre face au travail qui se conclut.
+
+## L'IT possède le système, pas la structure
+
+L'IT maintient la plateforme ERP ou GMAO en fonctionnement, la migre quand l'entreprise la dépasse, et la connecte à tout ce qui doit communiquer avec elle. Un champ UNSPSC ou catégorie se trouve souvent déjà à l'intérieur de ce système, présent dans le schéma, vide ou rempli de ce que le prestataire d'implémentation y a mis par défaut à la mise en service. L'IT peut construire le champ. Décider de ce qui doit s'y trouver nécessite quelqu'un qui connaît la différence entre un actionneur et un registre, et l'IT n'est pas cette personne.
+
+L'IT est évaluée sur la disponibilité, les migrations réussies et les systèmes qui communiquent entre eux. Demander à l'IT d'arbitrer si une livraison de rebord de fenêtre relève des matériaux de construction ou de la maintenance des installations revient à demander au mauvais département de porter un jugement métier qu'il n'a aucune base pour formuler.
+
+## Qui devrait posséder la classification à la place
+
+La gouvernance des données offre ici une distinction utile : un propriétaire de données (data owner) est responsable d'un domaine de bout en bout, généralement quelqu'un d'assez senior pour faire tenir la décision de catégorie à travers les systèmes. Un intendant de données (data steward) effectue le travail de maintenance quotidien sous le mandat de ce propriétaire, en résolvant les cas particuliers concrets. Sans propriétaire nommé, le travail de l'intendant n'a personne à qui rendre compte, si bien qu'il se fait de façon incohérente ou pas du tout. Ce n'est pas un problème d'effectif. La plupart des entreprises à cinquante millions de livres de chiffre d'affaires ou plus n'ont pas de directeur des données, et en recruter un uniquement pour corriger une taxonomie serait un usage étrange de ce rôle. Ce qui manque n'est pas une personne. C'est une attribution explicite : un endroit unique où une décision de classification est prise une fois, consignée par écrit, et appliquée de la même façon la prochaine fois que le même article ambigu se présente.
+
+Une fois que la classification a ce type de propriétaire, l'effet se manifeste dans le travail qui dévorait auparavant une semaine avant chaque comité de direction ou réponse d'appel d'offres. Soixante-dix à quatre-vingt-dix pour cent de nettoyage manuel des données en moins est le chiffre réaliste une fois cet écart de propriété comblé, ce que voient les équipes achats et finance une fois que Pearstop prend en charge la couche de classification à leur place plutôt que de la laisser à qui a du temps cette semaine-là. Une migration ERP cesse de révéler des années de dépenses non classifiées comme une surprise la semaine précédant la mise en service, parce que le travail de classification était déjà fait. Une réponse d'appel d'offres s'appuie sur des données de coût qui signifient la même chose sur chaque site, au lieu d'un tableur que quelqu'un a reconstruit de mémoire.
+
+La question qui vaut la peine d'être posée avant qu'un outil ne soit présélectionné n'est pas quel système va corriger cela. C'est qui, précisément, est responsable du maintien de la taxonomie une fois le projet terminé. Si la réponse honnête est personne, c'est là le vrai problème, et il sera encore présent après la prochaine migration de système aussi.
