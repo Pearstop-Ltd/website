@@ -1904,5 +1904,99 @@
       "lead": "Réservez un appel découverte de 7 minutes. Nous vous montrerons exactement comment le moteur fonctionne avec vos données de dépenses.",
       "button": "Réservez un appel découverte de 7 minutes"
     }
+  },
+  "UnspscNL": {
+    "meta": {
+      "title": "Classification UNSPSC Pays-Bas | Classification automatisée des achats | Pearstop",
+      "description": "Classification UNSPSC automatisée pour les équipes d'achats néerlandaises. Pearstop classe les données d'achats issues de SAP, AFAS et d'autres systèmes ERP — avec prise en charge de Peppol."
+    },
+    "geoBlock": {
+      "title": "À quoi ressemble la classification UNSPSC pour une entreprise néerlandaise d'infrastructure ou de FM ?",
+      "copy": "Les entreprises néerlandaises d'infrastructure et de FM gèrent généralement leurs achats via SAP ou AFAS, avec des lignes de facture rédigées par les équipes de terrain plutôt que par des acheteurs, par exemple « elektra werkzaamheden Q3 » ou « pompafdichting vervangen ». La classification UNSPSC attribue à chacune de ces lignes un code produit de base cohérent à 8 chiffres, ce qui est précisément ce qui rend une facture conforme à Peppol exploitable par une machine, et non simplement structurée. Strukton, un entrepreneur d'infrastructure néerlandais, traite ainsi 35 000 lignes d'achats par mois via l'intégration SAP de Pearstop, avec 90 à 95 % classées automatiquement."
+    },
+    "hero": {
+      "eyebrow": "Classification UNSPSC Pays-Bas",
+      "title": "Classification UNSPSC pour les entreprises néerlandaises d'infrastructure, de FM et de construction.",
+      "lead": "Pearstop automatise la classification des lignes d'achats selon la norme UNSPSC — 90 à 95 % sans effort manuel. Avec prise en charge de la facturation électronique Peppol et des systèmes ERP néerlandais.",
+      "cta": "Réservez un appel découverte de 7 minutes",
+      "secondary": "Peppol et UNSPSC"
+    },
+    "peppol": {
+      "eyebrow": "Peppol et UNSPSC aux Pays-Bas",
+      "title": "Pourquoi les entreprises néerlandaises travaillent désormais sur la classification UNSPSC",
+      "lead": "La facturation électronique Peppol est obligatoire pour les marchés publics aux Pays-Bas. UNSPSC est la norme internationale qui s'y intègre.",
+      "b1": {
+        "title": "Peppol exige des codes produits structurés",
+        "copy": "Le réseau Peppol exige des données de facturation structurées et exploitables par une machine. UNSPSC est la norme de classification internationale la plus utilisée qui répond à cette exigence."
+      },
+      "b2": {
+        "title": "Catégorisation cohérente entre fournisseurs",
+        "copy": "Avec UNSPSC, chaque bon de commande reçoit une catégorie cohérente — quels que soient le fournisseur ou le système."
+      },
+      "b3": {
+        "title": "Visibilité des dépenses pour la gestion des catégories",
+        "copy": "Un fichier d'achats classifié constitue la base de la gestion des catégories, de la négociation des contrats et de l'identification des opportunités d'économies."
+      }
+    },
+    "challenge": {
+      "eyebrow": "L'approche",
+      "title": "Comment Pearstop classe les données d'achats néerlandaises",
+      "lead": "Pearstop traite les données d'achats issues de SAP, AFAS, Oracle et d'autres systèmes — y compris les descriptions en langue néerlandaise."
+    },
+    "solution": {
+      "step1": {
+        "title": "Export des données depuis votre ERP",
+        "copy": "Exportez les bons de commande, les lignes de facture, ou les deux — via CSV ou connexion API directe depuis SAP, AFAS ou un autre système."
+      },
+      "step2": {
+        "title": "Classification automatique",
+        "copy": "Le moteur à quatre couches de Pearstop classe automatiquement 90 à 95 % des lignes, y compris les descriptions en langue néerlandaise."
+      },
+      "step3": {
+        "title": "Vérification humaine des cas incertains",
+        "copy": "Les 5 à 10 % restants sont soumis à l'examen de votre équipe. Chaque décision améliore le modèle."
+      },
+      "step4": {
+        "title": "Données classifiées renvoyées dans votre système",
+        "copy": "Le fichier classifié est renvoyé dans votre format d'origine — prêt pour SAP, Power BI ou la facturation Peppol."
+      }
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "items": {
+        "0": {
+          "q": "La classification UNSPSC est-elle obligatoire aux Pays-Bas ?",
+          "a": "UNSPSC n'est pas une obligation légale aux Pays-Bas, mais son usage se généralise comme norme de bonne pratique. La facturation électronique Peppol, obligatoire pour les marchés publics, exige des codes produits structurés, et UNSPSC est la norme internationale la plus utilisée à cet effet."
+        },
+        "1": {
+          "q": "Qu'est-ce que Peppol et quel est son rapport avec UNSPSC ?",
+          "a": "Peppol est le réseau de facturation électronique obligatoire pour les marchés publics aux Pays-Bas. Peppol exige des données de facturation structurées, y compris des codes produits et services. UNSPSC est la norme de classification la plus utilisée qui s'y intègre."
+        },
+        "2": {
+          "q": "Qu'est-ce que la classification UNSPSC et pourquoi est-elle importante ?",
+          "a": "UNSPSC signifie United Nations Standard Products and Services Code. Sans UNSPSC, les données d'achats sont difficiles à analyser — avec UNSPSC, chaque bon de commande reçoit une catégorie cohérente, ce qui rend possibles l'analyse des dépenses, la consolidation des fournisseurs et la gestion des catégories."
+        },
+        "3": {
+          "q": "Quelles entreprises néerlandaises ont le plus besoin de la classification UNSPSC ?",
+          "a": "Les entrepreneurs d'infrastructure néerlandais, les prestataires de facilities management et les entreprises de construction ont généralement le plus besoin de la classification UNSPSC."
+        },
+        "4": {
+          "q": "Comment Pearstop classe-t-il les données d'achats néerlandaises ?",
+          "a": "Pearstop reçoit les données d'achats via CSV ou connexion API directe depuis les systèmes ERP néerlandais, y compris SAP, Oracle et AFAS. Le moteur de classification à quatre couches traite aussi les descriptions de facture en langue néerlandaise."
+        }
+      }
+    },
+    "related": {
+      "label": "À voir aussi",
+      "copy": "Découvrez le service complet de classification UNSPSC, des cas néerlandais, et l'approche spécifique au FM.",
+      "link1": "Classification UNSPSC",
+      "link2": "Études de cas",
+      "link3": "UNSPSC pour les services de Facilities Management"
+    },
+    "cta": {
+      "title": "Prêt à automatiser votre classification des achats ?",
+      "lead": "Réservez un appel découverte de 7 minutes. Nous vous montrerons comment le moteur de classification fonctionne avec vos données.",
+      "button": "Réservez un appel découverte de 7 minutes"
+    }
   }
 }
