@@ -41,6 +41,12 @@ Respond ONLY with valid JSON — no markdown, no explanation outside the JSON:
 
 If the description is completely unclassifiable, return: { "error": "Could not classify: [reason]" }`;
 
+// The reCAPTCHA key in use is registered as v3 (score-based, not a
+// checkbox), so siteverify returns a 0.0-1.0 score and the action name
+// alongside success — both need checking, not just success.
+const RECAPTCHA_SCORE_THRESHOLD = 0.5;
+const RECAPTCHA_ACTION = "unspsc_lookup";
+
 async function verifyRecaptcha(token: string | undefined, ip: string): Promise<boolean> {
   const secret = process.env.RECAPTCHA_SECRET_KEY;
   if (!secret) {
@@ -56,7 +62,10 @@ async function verifyRecaptcha(token: string | undefined, ip: string): Promise<b
       body: new URLSearchParams({ secret, response: token, remoteip: ip }),
     });
     const data = await res.json();
-    return data.success === true;
+    if (data.success !== true) return false;
+    if (typeof data.score === "number" && data.score < RECAPTCHA_SCORE_THRESHOLD) return false;
+    if (typeof data.action === "string" && data.action !== RECAPTCHA_ACTION) return false;
+    return true;
   } catch {
     return false;
   }

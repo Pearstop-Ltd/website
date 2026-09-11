@@ -1,6 +1,6 @@
 "use client";
 import { CalendlyButton } from "@/components/calendly-button";
-import { RecaptchaWidget } from "@/components/recaptcha-widget";
+import { RecaptchaNotice, RecaptchaScript, useRecaptchaV3 } from "@/components/recaptcha-widget";
 import { INDUSTRIES, type IndustryKey } from "@/lib/unspsc-industries";
 
 import { useState, useEffect } from "react";
@@ -63,8 +63,7 @@ export function UnspscLookupTool({
   const [description, setDescription] = useState("");
   const [supplier, setSupplier] = useState("");
   const [industry, setIndustry] = useState<IndustryKey | "">("");
-  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
-  const [recaptchaReset, setRecaptchaReset] = useState(0);
+  const { getToken, configured } = useRecaptchaV3();
   const [result, setResult] = useState<LookupResult | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -79,13 +78,22 @@ export function UnspscLookupTool({
     e.preventDefault();
     if (!description.trim()) return;
     if (usesLeft <= 0) return;
-    if (!recaptchaToken) {
-      setError("Please complete the verification check above.");
+    if (!configured) {
+      setError("Bot protection isn't configured yet. Please try again later.");
       return;
     }
     setLoading(true);
     setResult(null);
     setError(null);
+
+    // v3 tokens are short-lived and single-use, so fetch a fresh one right
+    // before every submit rather than reusing one generated earlier.
+    const recaptchaToken = await getToken("unspsc_lookup");
+    if (!recaptchaToken) {
+      setError("Verification failed. Please refresh the page and try again.");
+      setLoading(false);
+      return;
+    }
 
     try {
       const res = await fetch("/api/unspsc-lookup", {
@@ -99,9 +107,6 @@ export function UnspscLookupTool({
         }),
       });
       const data: LookupResult = await res.json();
-      // Each token is single-use — always get a fresh one for the next submit.
-      setRecaptchaToken(null);
-      setRecaptchaReset((n) => n + 1);
 
       if (data.rateLimited) {
         setError(data.error ?? "You've reached today's free limit.");
@@ -126,8 +131,6 @@ export function UnspscLookupTool({
       }
     } catch {
       setError("Something went wrong. Please try again.");
-      setRecaptchaToken(null);
-      setRecaptchaReset((n) => n + 1);
     } finally {
       setLoading(false);
     }
@@ -219,7 +222,8 @@ export function UnspscLookupTool({
             }}
           />
 
-          <RecaptchaWidget onToken={setRecaptchaToken} reset={recaptchaReset} />
+          <RecaptchaScript />
+          <RecaptchaNotice />
 
           <div style={{ display: "flex", alignItems: "center", gap: "1rem", flexWrap: "wrap" }}>
             <button

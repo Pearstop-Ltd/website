@@ -1,78 +1,63 @@
 "use client";
 
-import { useEffect, useId, useRef } from "react";
+import { useCallback } from "react";
 import Script from "next/script";
 
 declare global {
   interface Window {
     grecaptcha?: {
-      render: (container: string | HTMLElement, options: Record<string, unknown>) => number;
-      reset: (widgetId?: number) => void;
       ready: (cb: () => void) => void;
+      execute: (siteKey: string, options: { action: string }) => Promise<string>;
     };
   }
 }
 
+const SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+
 /**
- * Google reCAPTCHA v2 (checkbox) widget. Renders nothing (and never calls
- * onToken) if NEXT_PUBLIC_RECAPTCHA_SITE_KEY isn't set, so local dev without
- * a site key doesn't crash — the form's own submit handler blocks sending
- * without a token either way, so an unconfigured widget just means the tool
- * can't be submitted until it is configured, not a broken request.
- *
- * If the key you have is actually a v3 (invisible, score-based) key rather
- * than a v2 checkbox key, this needs a different render call
- * (grecaptcha.execute with an action, no visible widget) — check which type
- * before wiring in a real key.
+ * reCAPTCHA v3 (score-based, invisible) — the key in use is registered as
+ * v3, not v2 checkbox, so this must load the v3 script (?render=SITE_KEY)
+ * and get a fresh token per submit via execute(), not render a widget.
+ * v3 tokens expire after ~2 minutes, so always fetch one right before
+ * submitting rather than caching it in state ahead of time.
  */
-export function RecaptchaWidget({ onToken, reset }: { onToken: (token: string | null) => void; reset?: number }) {
-  const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
-  const containerId = useId().replace(/[:]/g, "");
-  const widgetId = useRef<number | null>(null);
-
-  useEffect(() => {
-    if (!siteKey) return;
-    let cancelled = false;
-    const tryRender = () => {
-      if (cancelled || !window.grecaptcha || widgetId.current !== null) return;
-      widgetId.current = window.grecaptcha.render(containerId, {
-        sitekey: siteKey,
-        callback: (token: string) => onToken(token),
-        "expired-callback": () => onToken(null),
-        "error-callback": () => onToken(null),
+export function useRecaptchaV3() {
+  const getToken = useCallback(async (action: string): Promise<string | null> => {
+    if (!SITE_KEY || typeof window === "undefined" || !window.grecaptcha) return null;
+    return new Promise((resolve) => {
+      window.grecaptcha!.ready(() => {
+        window
+          .grecaptcha!.execute(SITE_KEY, { action })
+          .then((token) => resolve(token))
+          .catch(() => resolve(null));
       });
-    };
-    if (window.grecaptcha) window.grecaptcha.ready(tryRender);
-    else {
-      const interval = setInterval(() => {
-        if (window.grecaptcha) {
-          clearInterval(interval);
-          window.grecaptcha.ready(tryRender);
-        }
-      }, 200);
-      return () => { cancelled = true; clearInterval(interval); };
-    }
-    return () => { cancelled = true; };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [siteKey]);
+    });
+  }, []);
 
-  useEffect(() => {
-    if (reset === undefined || widgetId.current === null) return;
-    window.grecaptcha?.reset(widgetId.current);
-  }, [reset]);
+  return { getToken, configured: Boolean(SITE_KEY) };
+}
 
-  if (!siteKey) {
+export function RecaptchaScript() {
+  if (!SITE_KEY) return null;
+  return <Script src={`https://www.google.com/recaptcha/api.js?render=${SITE_KEY}`} strategy="afterInteractive" />;
+}
+
+/** Google requires this disclosure wherever the default v3 badge is hidden; shown here regardless since it's small and standard practice. */
+export function RecaptchaNotice() {
+  if (!SITE_KEY) {
     return (
       <p style={{ fontSize: "0.78rem", color: "#b45309", background: "#fffbeb", border: "1px solid #fde68a", borderRadius: 8, padding: "0.6rem 0.85rem" }}>
         Bot protection isn&apos;t configured yet (missing NEXT_PUBLIC_RECAPTCHA_SITE_KEY) — lookups will be rejected until it is.
       </p>
     );
   }
-
   return (
-    <>
-      <Script src="https://www.google.com/recaptcha/api.js" strategy="afterInteractive" />
-      <div id={containerId} />
-    </>
+    <p style={{ fontSize: "0.72rem", color: "#888" }}>
+      This site is protected by reCAPTCHA and the Google{" "}
+      <a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer">Privacy Policy</a>{" "}
+      and{" "}
+      <a href="https://policies.google.com/terms" target="_blank" rel="noreferrer">Terms of Service</a>{" "}
+      apply.
+    </p>
   );
 }
