@@ -53,7 +53,9 @@ if (!OPENAI_API_KEY) {
 // ---------------------------------------------------------------------------
 
 const STYLE_SUFFIX =
-  "photorealistic photograph, natural daylight, cool blue-grey colour grading, " +
+  "photorealistic photograph, warm natural daylight or warm interior work-light, " +
+  "true-to-life saturated colour, vivid but realistic tones, rich contrast, " +
+  "NOT desaturated, NOT monochrome, NOT a cool blue-grey colour grade, " +
   "shallow depth of field, documentary photography style, no text, no logos, " +
   "no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, " +
   "sharp focus, high detail";
