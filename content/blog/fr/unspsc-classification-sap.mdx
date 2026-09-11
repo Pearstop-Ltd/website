@@ -1,0 +1,106 @@
+---
+title: "Comment implémenter la classification UNSPSC dans SAP"
+description: "Un guide pratique pour automatiser le codage UNSPSC dans les environnements d'achats basés sur SAP, ce qui fonctionne, ce qui ne fonctionne pas, et comment passer de données de dépenses désordonnées à une référence de catégorie propre."
+publishedAt: "2026-04-14"
+author: "sjoerd"
+category: "Procurement"
+tags: ["UNSPSC", "SAP", "Procurement Data"]
+readingTime: "8 min"
+---
+
+## Le problème SAP dont personne ne parle
+
+SAP est le système de référence pour les achats de centaines d'entreprises d'infrastructure, de fabrication et de facility management à travers l'Europe. Il capture les bons de commande, les réceptions de marchandises et les factures avec une fiabilité impressionnante. Ce qu'il ne fait pas bien, et n'a jamais été conçu pour faire, c'est classifier ce qui a été acheté.
+
+SAP stocke les lignes d'articles sous forme de descriptions en texte libre saisies par des ingénieurs, des acheteurs ou des fournisseurs. Le même boulon apparaît sous « M8 bolt galvanised », « galv bolt M8 », « bolt M8 HDG », et « bolzen M8 verzinkt » selon les sites et les fournisseurs. Une intervention de maintenance peut être notée « elektra werkzaamheden », « electrical works », ou simplement « works Q3 ». Sans classification cohérente, aucune de ces données n'est comparable ni agrégeable.
+
+L'UNSPSC résout ce problème en fournissant une hiérarchie standard à quatre niveaux, segment, famille, classe, marchandise, qui transforme ces descriptions en texte libre en catégories cohérentes. Mais faire entrer les codes UNSPSC dans SAP est là où la plupart des équipes achats se retrouvent bloquées.
+
+---
+
+## Trois approches de l'UNSPSC dans SAP
+
+### Option 1 : codage manuel dans les données de référence SAP
+
+Certaines équipes achats tentent d'imposer la classification UNSPSC au moment de la saisie, en exigeant des acheteurs qu'ils sélectionnent un code UNSPSC lors de la création d'un bon de commande ou d'une fiche article.
+
+Cela paraît propre en théorie. En pratique, cela échoue pour trois raisons :
+
+- **Les acheteurs choisissent le mauvais code.** La hiérarchie UNSPSC compte plus de 55 000 codes marchandise. Sans connaissance approfondie des catégories, les acheteurs se rabattent sur le code le plus proche ou déjà présent dans le menu déroulant. La cohérence disparaît rapidement.
+- **Cela ne couvre que les nouvelles données.** L'historique d'achats existant, souvent des années de dépenses, n'a aucune classification.
+- **Cela crée une charge administrative.** Dans les environnements d'achats à fort volume, ajouter un champ obligatoire à chaque transaction ralentit les personnes qui comptent le plus.
+
+### Option 2 : classification via un outil tiers intégré à SAP
+
+Plusieurs plateformes d'achats proposent des modules UNSPSC qui peuvent être intégrés directement à SAP via API ou middleware. Ces outils classifient automatiquement les dépenses en se basant sur les descriptions d'articles, les codes fournisseurs et les catégories d'achats.
+
+Le défi est que la plupart de ces outils reposent sur des règles : ils fonctionnent bien pour les matériaux standard (pièces MRO, consommables courants) mais échouent sur ce qui est inhabituel, ambigu, ou sur la terminologie spécifique au secteur qui représente une large part des dépenses FM et infrastructure.
+
+Un moteur de règles seul atteint généralement 60 à 70 % de couverture. Le reste reste non classifié ou est affecté à une catégorie fourre-tout qui va à l'encontre de l'objectif.
+
+### Option 3 : classification automatisée hors SAP, avec des données propres renvoyées
+
+L'approche la plus pratique pour les utilisateurs de SAP consiste à exporter les données de dépenses, bons de commande, factures, ou une combinaison des deux, et à les faire passer par un moteur de classification combinant règles, machine learning et couches LLM. Les données classifiées sont ensuite renvoyées dans le format d'origine et rechargées dans SAP comme attribut article ou champ d'analytique des dépenses.
+
+Cette approche ne nécessite aucun changement de configuration SAP. Elle fonctionne aussi bien sur les données historiques que sur les transactions en cours. Et elle gère les cas particuliers que les outils basés sur des règles manquent.
+
+---
+
+## Quelles données exporter de SAP
+
+Pour la classification UNSPSC, vous avez besoin au minimum de :
+
+- la description de la ligne d'article (le champ texte libre, généralement MAKTX ou le texte de poste du bon de commande)
+- le nom ou l'identifiant du fournisseur
+- la valeur du bon de commande
+- le compte comptable ou l'élément de coût (utile pour renforcer l'orientation, coûts de maintenance vs. dépenses d'investissement)
+- le groupe de marchandises ou le code marchandise existant, si disponible (utilisé comme a priori par la couche de ML)
+
+L'export peut se faire via la transaction SAP ME2M ou ME2N pour les bons de commande, ou FB03 pour les factures. La plupart des équipes exportent en CSV et partagent via un transfert de fichiers sécurisé.
+
+---
+
+## À quoi ressemble une bonne classification UNSPSC dans la sortie SAP
+
+Un jeu de données de dépenses SAP bien classifié devrait atteindre :
+
+- **90 à 95 % de classification au niveau marchandise** — pas seulement segment ou famille, mais le code marchandise à quatre chiffres
+- **un codage cohérent entre sites et fournisseurs** — le même article physique reçoit le même code, quelle que soit la façon dont il a été décrit dans le bon de commande
+- **un minimum de codes « fourre-tout »** — des codes comme 95121500 (matériaux papier) ou 80101500 (services de conseil en gestion) ne devraient couvrir que les articles réellement ambigus
+
+Une fois classifiées, les données sont généralement chargées dans SAP comme champ personnalisé sur le bon de commande ou la fiche article, ou alimentent une couche BI (SAP Analytics Cloud, Power BI, ou Tableau) pour l'analyse des dépenses.
+
+---
+
+## La file de révision — et pourquoi elle compte
+
+Même les meilleurs moteurs de classification automatisée laissent certains articles sous le seuil de confiance. Ces articles sont signalés pour révision humaine, généralement 5 à 10 % du jeu de données.
+
+Ce qui est essentiel, c'est ce qui se passe après la révision. Chaque décision humaine devrait réalimenter le modèle de classification, de sorte que le même type d'article soit automatiquement classifié correctement la fois suivante. Sur six à douze mois d'exploitation continue, la file de révision se réduit à presque zéro à mesure que le modèle apprend des décisions de votre équipe.
+
+C'est la différence entre un outil qui classifie vos dépenses une fois et un système qui s'améliore plus vous l'utilisez.
+
+---
+
+## Délais : combien de temps cela prend-il ?
+
+Une intervention type de classification des dépenses SAP pour une entreprise d'infrastructure ou de FM de taille moyenne :
+
+| Phase | Durée |
+|---|---|
+| Export et préparation des données | 1 semaine |
+| Référence de classification initiale (Data Stability Baseline) | 2–3 semaines |
+| Révision des articles signalés | 1 semaine |
+| Jeu de données classifié final livré | 4–6 semaines au total |
+
+La classification mensuelle continue des nouvelles données de facture s'exécute automatiquement, sans intervention supplémentaire de l'équipe cliente.
+
+---
+
+## Prochaines étapes
+
+Si vos données de dépenses SAP restent non classifiées, ou classifiées de façon incohérente d'un site à l'autre, la voie la plus rapide pour obtenir une référence de dépenses est une intervention Data Stability Baseline. Vous exportez vos données de dépenses, Pearstop les classifie et vous renvoie un jeu de données propre, codé UNSPSC, en quatre à six semaines. Cette référence devient le socle pour la gestion par catégorie, la consolidation des fournisseurs, et une estimation précise des marges.
+
+[Réservez un appel découverte de 7 minutes](/contact) pour voir comment le moteur de classification fonctionnerait avec vos données SAP. Pour vérifier une seule ligne vous-même d'abord, essayez l'outil gratuit de [recherche de code UNSPSC](/unspsc-code-lookup).
+
+*Lecture connexe : [Qu'est-ce que l'UNSPSC, et pourquoi les entreprises de hard services devraient s'y intéresser](/blog/what-is-unspsc) | [UNSPSC vs. eClass vs. CPV](/blog/unspsc-vs-eclass-vs-cpv)*
