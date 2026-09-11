@@ -1797,5 +1797,112 @@
       "lead": "Réservez un appel découverte de 7 minutes et nous vous montrerons exactement comment le moteur de classification fonctionne avec vos données.",
       "button": "Réservez un appel découverte de 7 minutes"
     }
+  },
+  "UnspscFM": {
+    "meta": {
+      "title": "Classification UNSPSC pour le Facilities Management | Pearstop",
+      "description": "Classification UNSPSC automatisée pour les entreprises de services techniques et de FM. Classez les dépenses de maintenance, MRO et de sous-traitance sur des opérations multi-sites sans effort manuel."
+    },
+    "geoBlock": {
+      "title": "Qu'implique réellement la classification UNSPSC pour le facilities management ?",
+      "copy": "Une entreprise de facilities management achète généralement auprès de 500 à 3 000 fournisseurs sur chacun des sites qu'elle dessert, et chacun facture différemment. La classification UNSPSC attribue le même code produit de base à 8 chiffres au même travail sous-jacent, qu'une ligne de facture indique « elektra werkzaamheden Q3 » ou « electrical maintenance callout », afin que les achats et la finance puissent comparer les dépenses entre fournisseurs et sites au lieu de lire du texte libre ligne par ligne. Le moteur de Pearstop fait cela automatiquement pour les entreprises de FM traitant de 5 000 à 35 000 lignes de facture par mois, en classant 90 à 95 % d'entre elles sans qu'une personne ne touche à la ligne."
+    },
+    "hero": {
+      "eyebrow": "UNSPSC pour le Facilities Management",
+      "title": "Les données d'achats FM sont les plus difficiles à classifier. Voici comment y remédier.",
+      "lead": "Les entreprises de services techniques et de FM gèrent des milliers de lignes de facture réparties sur des centaines de fournisseurs et de sites. Pearstop classe automatiquement l'ensemble — 90 à 95 % sans intervention humaine — afin que votre équipe puisse se concentrer sur la gestion des catégories plutôt que sur la saisie de données.",
+      "cta": "Réservez un appel découverte de 7 minutes",
+      "secondary": "Comment ça marche"
+    },
+    "challenge": {
+      "eyebrow": "Le problème",
+      "title": "Pourquoi les dépenses FM sont particulièrement difficiles à classifier",
+      "lead": "Les entreprises de FM sont confrontées à trois problèmes de données d'achats pour lesquels la plupart des outils ne sont pas conçus.",
+      "p1": {
+        "title": "Des descriptions rédigées par des techniciens, pas par des acheteurs",
+        "copy": "Des lignes de facture comme « elektra werkzaamheden Q3 » ou « pump seal replacement unit 4B » ont un sens sur le terrain, mais sont impossibles à classifier de manière cohérente à grande échelle. Le même travail physique apparaît sous des dizaines de libellés différents selon les sites."
+      },
+      "p2": {
+        "title": "Des milliers de fournisseurs, aucune cohérence",
+        "copy": "Une grande opération FM peut acheter auprès de 500 à 3 000 fournisseurs. Chacun facture différemment. Sans couche de classification cohérente, les données de dépenses ne peuvent être agrégées ni comparées — ce qui transforme la gestion des catégories en devinette."
+      },
+      "p3": {
+        "title": "La classification manuelle ne peut pas suivre le rythme",
+        "copy": "Avec 5 000 à 35 000 lignes de facture par mois, la classification UNSPSC manuelle nécessite un ou deux collaborateurs dédiés travaillant en continu simplement pour rester à jour."
+      }
+    },
+    "solution": {
+      "eyebrow": "Comment fonctionne Pearstop",
+      "title": "Quatre couches de classification. Un seul jeu de données de dépenses propre.",
+      "lead": "Le moteur de Pearstop traite automatiquement 90 à 95 % des lignes de dépenses FM — et s'améliore plus vous l'utilisez.",
+      "step1": {
+        "title": "Moteur de règles",
+        "copy": "Des règles spécifiques aux fournisseurs et au grand livre traitent immédiatement les classifications à fort volume et à haute confiance."
+      },
+      "step2": {
+        "title": "Machine Learning",
+        "copy": "Une couche de ML entraînée sur votre historique de dépenses reproduit la logique de classification appliquée par vos meilleurs gestionnaires de catégories."
+      },
+      "step3": {
+        "title": "Couche LLM",
+        "copy": "Les descriptions ambiguës, les lignes en langue étrangère et les cas limites sont résolus par un grand modèle de langage doté d'une connaissance approfondie des produits et du secteur."
+      },
+      "step4": {
+        "title": "Vérification humaine",
+        "copy": "Les éléments en dessous du seuil de confiance sont signalés à votre équipe. Chaque décision alimente le moteur en retour."
+      }
+    },
+    "stats": {
+      "title": "Ce que les clients constatent en pratique",
+      "s1": {
+        "title": "Taux de classification automatique",
+        "copy": "90 à 95 % des lignes de facture classées sans intervention humaine après la période d'apprentissage initiale."
+      },
+      "s2": {
+        "title": "Lignes par mois — Strukton",
+        "copy": "Traitement de 35 000 lignes d'achats par mois pour un important entrepreneur d'infrastructure néerlandais."
+      },
+      "s3": {
+        "title": "Réduction de l'effort manuel",
+        "copy": "Les équipes FM réduisent généralement le travail manuel sur les données de 70 à 90 %, libérant les acheteurs pour la stratégie de catégorie."
+      }
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "items": {
+        "0": {
+          "q": "Quels segments UNSPSC s'appliquent au facilities management ?",
+          "a": "Les segments les plus courants pour le FM sont le Segment 72 (Services de construction et de maintenance), le Segment 76 (Services de nettoyage industriel), le Segment 80 (Services de gestion et d'administration) et le Segment 73 (Production industrielle). Les entreprises de FM en services techniques constatent généralement le plus gros volume de dépenses dans le Segment 72, couvrant l'électricité, le CVC, la plomberie et la maintenance du bâti."
+        },
+        "1": {
+          "q": "Pourquoi la classification UNSPSC est-elle difficile pour les entreprises de FM ?",
+          "a": "Les entreprises de FM achètent auprès de centaines de fournisseurs répartis sur des sites décentralisés. Les lignes de facture sont souvent des descriptions en texte libre rédigées par des techniciens de terrain, et non par les équipes achats. La classification manuelle à cette échelle nécessite un ou deux collaborateurs dédiés travaillant en continu simplement pour suivre le rythme."
+        },
+        "2": {
+          "q": "Combien de temps prend la classification UNSPSC pour une entreprise de FM ?",
+          "a": "Une classification initiale d'un jeu de données de dépenses complet se termine généralement en quatre à six semaines, incluant un Data Stability Baseline pour valider la précision. La classification mensuelle continue s'exécute ensuite automatiquement."
+        },
+        "3": {
+          "q": "Pearstop s'intègre-t-il avec des systèmes spécifiques au FM comme Maximo ou ServiceNow ?",
+          "a": "Pearstop reçoit les données via un export CSV ou une connexion API directe, et renvoie les données classifiées dans le même format, compatible avec tout système CAFM ou GMAO, y compris IBM Maximo, ServiceNow, Planon et SAP PM."
+        },
+        "4": {
+          "q": "Quel taux de précision les entreprises de FM peuvent-elles attendre ?",
+          "a": "Le moteur à quatre couches de Pearstop atteint 90 à 95 % de classification automatique sur des jeux de données de dépenses FM typiques. Les 5 à 10 % restants sont signalés pour vérification humaine, et chaque décision vérifiée alimente le moteur en retour."
+        }
+      }
+    },
+    "related": {
+      "label": "Ressources associées",
+      "copy": "Découvrez le service complet de classification UNSPSC, des études de cas FM réelles, et l'offre plus large de qualité des données d'achats.",
+      "link1": "Classification UNSPSC",
+      "link2": "Études de cas",
+      "link3": "Qualité des données d'achats"
+    },
+    "cta": {
+      "title": "Prêt à automatiser la classification des achats FM ?",
+      "lead": "Réservez un appel découverte de 7 minutes. Nous vous montrerons exactement comment le moteur fonctionne avec vos données de dépenses.",
+      "button": "Réservez un appel découverte de 7 minutes"
+    }
   }
 }
