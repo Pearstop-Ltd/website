@@ -1583,5 +1583,47 @@
       "p1": "Die Inhalte dieser Website dienen ausschließlich der allgemeinen Information. Sie stellen keine Rechts-, Finanz- oder Beschaffungsberatung dar. Wir bemühen uns, die Informationen korrekt und aktuell zu halten, garantieren jedoch nicht, dass jede Seite jederzeit vollständig ist.",
       "p2": "Wenn Sie Inhalte, Markenmaterial oder Screenshots weiterverwenden möchten, fragen Sie uns bitte vorher. Bei Fragen zu diesen Bedingungen kontaktieren Sie uns."
     }
+  },
+  "Whitepaper": {
+    "meta": {
+      "title": "Whitepaper",
+      "description": "Wie Hard-Services-Unternehmen Ausgabendaten nutzen, um bessere Verträge zu verhandeln."
+    },
+    "hero": {
+      "eyebrow": "Kostenloses Whitepaper",
+      "title": "Wie Hard-Services-Unternehmen Ausgabendaten nutzen, um bessere Verträge zu verhandeln",
+      "lead": "Ein praxisnaher Leitfaden zum Aufbau einer Ausgabenbasis, auf der Ihr Einkaufsteam handeln kann."
+    },
+    "whatYouGet": {
+      "title": "Was Sie erhalten",
+      "lead": "Eine unverbindliche Ressource für alle, die interessiert sind, aber noch nicht bereit für ein Gespräch.",
+      "b1": {
+        "icon": "✓",
+        "title": "Wie eine gute Ausgabenbasis aussieht",
+        "copy": "Nutzen Sie das Whitepaper, um die Struktur zu verstehen, die Ihre Daten brauchen, bevor Sie gut verhandeln können."
+      },
+      "b2": {
+        "icon": "↗",
+        "title": "Wie Hard-Services-Teams sie nutzen",
+        "copy": "Sehen Sie, wie Einkaufsteams unübersichtliche Ausgaben in Kategoriemanagement und Verhandlungsstärke gegenüber Lieferanten verwandeln."
+      },
+      "b3": {
+        "icon": "⚡",
+        "title": "Wo Pearstop ansetzt",
+        "copy": "Erfahren Sie, wo Automatisierung die manuelle Arbeit abnimmt und wo Ihr Team die Kontrolle behält."
+      }
+    },
+    "request": {
+      "label": "Leitfaden anfordern",
+      "lead": "Wenn Sie das Whitepaper möchten, schreiben Sie uns kurz, und wir verweisen Sie auf die richtige Ressource. Ein einfacher, unkomplizierter Schritt für alle, die noch nicht bereit sind, ein Gespräch zu vereinbaren.",
+      "emailButton": "Per E-Mail anfordern",
+      "contactButton": "Kontaktieren Sie uns"
+    },
+    "cta": {
+      "title": "Lieber ein Gespräch?",
+      "lead": "Wir können Ihnen dieselben Überlegungen auch in einem kurzen Telefonat erläutern.",
+      "bookDiscovery": "7-minütige Erstberatung buchen",
+      "backHome": "Zurück zur Startseite"
+    }
   }
 }
