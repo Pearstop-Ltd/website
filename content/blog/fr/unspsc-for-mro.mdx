@@ -1,0 +1,112 @@
+---
+title: "UNSPSC pour le MRO : classifier les dépenses de maintenance, réparation et opérations"
+description: "Les achats MRO constituent la catégorie la plus difficile à classifier de façon cohérente. Voici pourquoi l'UNSPSC fonctionne pour les dépenses de maintenance, et ce qu'il faut pour obtenir des données MRO propres à partir d'un système comme SAP ou Maximo."
+publishedAt: "2026-05-05"
+author: "richard"
+category: "Procurement"
+tags: ["UNSPSC", "MRO", "Procurement Data", "Asset Management"]
+readingTime: "7 min"
+---
+
+## Pourquoi les dépenses MRO sont les plus difficiles à classifier
+
+Chaque catégorie d'achats présente des défis de classification. Les dépenses MRO, les pièces, matériaux, outils et services qui maintiennent les installations et les actifs en fonctionnement, en présentent plus que la plupart.
+
+Voici ce qui rend la classification MRO difficile :
+
+**Les descriptions de pièces sont écrites pour des ingénieurs, pas pour des category managers.** « Kit de joint 47mm OD — logement de roulement de pompe » est suffisamment précis pour l'ingénieur de maintenance qui l'a commandé. Cela n'en dit que très peu à un système de classification sur la question de savoir si cela relève des machines industrielles (segment 23), des équipements industriels (segment 24), ou des composants électroniques (segment 32).
+
+**La même pièce a des dizaines de descriptions.** Sites différents, ingénieurs différents, catalogues fournisseurs différents, un seul composant physique apparaît sous de nombreuses chaînes différentes au sein de l'historique d'achats d'une même entreprise.
+
+**Les références sans description sont courantes.** L'acheteur saisit « 47234-B » dans le bon de commande. Le système a besoin du contexte fournisseur, du compte comptable, et des schémas historiques pour classifier cela au niveau marchandise.
+
+**Les dépenses MRO sont décentralisées.** Dans les environnements de fabrication et de FM, les acheteurs de maintenance disposent souvent d'une autonomie locale importante. La gestion par catégorie au siège peut ne voir le détail des dépenses que des mois plus tard.
+
+Le résultat est un fichier de dépenses MRO où 30 à 50 % des lignes sont soit non classifiées, soit classifiées de façon incohérente, soit reléguées dans des catégories fourre-tout qui rendent toute analyse impossible.
+
+---
+
+## Quels segments UNSPSC couvrent les dépenses MRO
+
+La plupart des dépenses MRO des entreprises de fabrication, de FM et d'infrastructure se répartissent sur ces segments UNSPSC :
+
+| Segment | Description | Dépenses MRO typiques |
+|---|---|---|
+| 23 | Machines et équipements industriels | Pompes, compresseurs, moteurs, convoyeurs |
+| 24 | Production et distribution d'énergie | Composants électriques, appareillage de commutation, câbles |
+| 26 | Composants et fournitures électroniques | Capteurs, contrôleurs, relais |
+| 31 | Composants et fournitures de fabrication | Fixations, joints, garnitures, roulements |
+| 47 | Fournitures de nettoyage et d'entretien | Produits de nettoyage de maintenance |
+| 72 | Services de construction et de maintenance | Main-d'œuvre et services de sous-traitance |
+| 73 | Production industrielle et fabrication | Fabrication et travaux spécialisés |
+
+Obtenir une classification correcte au niveau marchandise, 8 chiffres, au sein de ces segments exige soit une recherche manuelle exhaustive dans le référentiel de codes UNSPSC, soit un moteur automatisé entraîné sur des données spécifiques au MRO.
+
+---
+
+## Pourquoi privilégier l'UNSPSC aux références fabricant
+
+Certaines équipes achats estiment que les références fabricant (MPN) constituent un meilleur moyen de suivre les dépenses MRO que les codes UNSPSC. Les MPN sont précises et permettent l'identification exacte des doublons. Mais elles présentent des limites importantes :
+
+- **Les MPN sont propres à chaque fournisseur.** Le même composant provenant d'un fabricant différent a une MPN différente, ce qui rend impossible l'analyse inter-fournisseurs.
+- **Les MPN deviennent obsolètes.** Lorsqu'un fabricant retire un produit, sa MPN disparaît. Les codes marchandise UNSPSC restent stables malgré les changements de fournisseur.
+- **Les MPN ne permettent pas l'agrégation au niveau catégorie.** Vous ne pouvez pas demander « combien avons-nous dépensé en roulements l'an dernier ? » à partir des seules données MPN. L'UNSPSC le permet précisément.
+
+La réponse pour la plupart des entreprises consiste à combiner les deux : enrichir vos données de dépenses avec des MPN lorsque c'est possible, et appliquer des codes UNSPSC pour l'analyse des dépenses au niveau catégorie. Ce sont des approches complémentaires, non concurrentes.
+
+---
+
+## Comment fonctionne la classification MRO automatisée en pratique
+
+Un bon moteur de classification automatisée pour les dépenses MRO utilise plusieurs signaux au-delà de la description de la ligne d'article :
+
+**Le contexte fournisseur.** Si un fournisseur est connu pour ne livrer que des roulements et des joints (d'après les schémas d'achat historiques), même une référence brute déclenche une classification à haute confiance dans le bon domaine marchandise.
+
+**L'orientation par compte comptable.** Une dépense de maintenance codée sur le compte comptable 6400 (ou son équivalent) indique une distribution de probabilité différente entre segments UNSPSC qu'une dépense d'investissement codée sur le compte 0700.
+
+**Les a priori historiques.** Si la même description de pièce a été classifiée comme 31161500 (roulements lisses) 95 fois au cours des douze derniers mois, la 96e occurrence est classifiée automatiquement avec une confiance élevée.
+
+**L'augmentation par LLM.** Pour les descriptions réellement ambiguës, un grand modèle de langage apporte une large connaissance des produits. « Kit de joint 47mm OD — logement de roulement de pompe » se résout au bon code marchandise parce que le modèle comprend ce qu'est un kit de joint de logement de roulement de pompe, même s'il n'a jamais rencontré cette chaîne exacte auparavant.
+
+---
+
+## Enrichir jusqu'au niveau référence fabricant
+
+Pour les catégories MRO où la précision de la référence compte, typiquement pour les entreprises qui veulent aller directement au fabricant et supprimer la marge du distributeur, la classification UNSPSC est la première étape, pas la dernière.
+
+Une fois les dépenses classifiées au niveau marchandise, l'étape suivante est l'**enrichissement par référence** : faire correspondre les lignes d'articles au catalogue officiel d'un fabricant pour identifier la pièce OEM exacte, le prix direct du fabricant, et les options d'approvisionnement alternatives.
+
+C'est l'approche utilisée dans le travail MRO de Pearstop. La classification vous donne la vue par catégorie. L'enrichissement par référence vous donne le levier commercial, savoir que le roulement que vous achetez à un distributeur avec marge est disponible directement auprès du fabricant à 30 % moins cher.
+
+La combinaison de la classification UNSPSC et de l'enrichissement par référence rend la stratégie « aller directement au fabricant » opérationnellement réalisable à grande échelle.
+
+---
+
+## Démarrer avec la classification MRO
+
+La voie la plus rapide vers des données de dépenses MRO propres est une Data Stability Baseline :
+
+1. **Exportez vos données de dépenses** depuis SAP, Maximo, ou votre système d'achats, généralement 12 à 24 mois d'historique d'achats
+2. **Pearstop classifie l'export** en utilisant le moteur à quatre couches, en renvoyant des codes UNSPSC au niveau marchandise
+3. **Votre équipe révise** les articles signalés, généralement 5 à 10 % des lignes, via une interface de révision
+4. **Le jeu de données classifié** devient votre référence de dépenses pour l'analyse par catégorie et la négociation
+
+À partir de cette référence, la classification continue des nouveaux achats MRO s'exécute automatiquement chaque mois.
+
+---
+
+## La valeur en aval de données MRO propres
+
+Un jeu de données MRO classifié débloque plusieurs décisions commerciales impossibles avec des données en texte libre non classifiées :
+
+**Consolidation des fournisseurs.** Vous pouvez voir combien de fournisseurs vous utilisez dans chaque catégorie marchandise, et si consolider vers un nombre réduit de fournisseurs privilégiés produirait de meilleurs prix ou conditions de service.
+
+**Benchmarking des prix.** Avec des codes de catégorie cohérents, vous pouvez comparer le prix que vous payez pour la même marchandise UNSPSC entre fournisseurs, sites, et périodes.
+
+**Référence de dépenses pour la négociation contractuelle.** Une référence de dépenses classifiée est le fondement de toute négociation significative. Sans elle, les fournisseurs en savent plus sur vos dépenses que vous.
+
+**Identifier l'opportunité d'achat direct au fabricant.** L'enrichissement par référence en complément de la classification UNSPSC identifie quelles marchandises MRO offrent la plus grande marge disponible en passant en direct.
+
+---
+
+*Lecture connexe : [Précision de la classification UNSPSC : ce que signifient réellement 90-95 %](/blog/unspsc-classification-accuracy) | [Comment implémenter la classification UNSPSC dans SAP](/blog/unspsc-classification-sap) | [La vraie raison pour laquelle votre registre d'actifs ne fonctionne pas](/blog/asset-register-problems)*
