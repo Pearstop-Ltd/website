@@ -1,0 +1,107 @@
+---
+title: "UNSPSC-Klassifizierungsgenauigkeit: Was 90–95 % tatsächlich bedeuten"
+description: "Was bedeutet 90–95 % automatisierte UNSPSC-Klassifizierungsgenauigkeit in der Praxis? Wie wird sie gemessen, wie sehen die verbleibenden 5–10 % aus, und wie verbessert sich die Genauigkeit über die Zeit?"
+publishedAt: "2026-04-28"
+author: "sjoerd"
+category: "Procurement"
+tags: ["UNSPSC", "Procurement Data", "Data Quality"]
+readingTime: "6 min"
+---
+
+## Die Zahl, die Ihnen immer wieder begegnet
+
+Wenn Sie zu automatisierter UNSPSC-Klassifizierung recherchiert haben, sind Sie wahrscheinlich auf eine Behauptung von rund 90–95 % automatischer Klassifizierung gestoßen. Pearstop veröffentlicht diese Zahl. Ebenso mehrere Wettbewerber.
+
+Aber was bedeutet das tatsächlich? Wie wird es gemessen? Und was passiert mit den verbleibenden 5–10 %?
+
+Das sind die Fragen, die Procurement-Teams stellen, bevor sie sich auf ein automatisiertes Klassifizierungssystem festlegen. Dieser Artikel beantwortet sie unumwunden.
+
+---
+
+## Wie Genauigkeit definiert wird
+
+„90–95 % automatische Klassifizierung" bedeutet, dass 90–95 % der Procurement-Positionen in einem gegebenen Datensatz vom automatisierten Engine einen UNSPSC-Warengruppencode zugewiesen bekommen, ohne dass menschlicher Input erforderlich ist.
+
+Die verbleibenden 5–10 % sind Positionen, bei denen die Konfidenz des Engines unter einen definierten Schwellenwert fällt. Diese Positionen werden zur menschlichen Prüfung markiert, ein Einkäufer oder Category Manager sieht sich jede an und bestätigt oder korrigiert den vorgeschlagenen Code.
+
+Genauigkeit wird typischerweise auf **Warengruppenebene** gemessen, der spezifischsten Ebene der UNSPSC-Hierarchie (ein 8-stelliger Code). Eine Messung auf Segment- oder Familienebene würde höher klingende Zahlen erzeugen, aber eine deutlich weniger nützliche Klassifizierung.
+
+---
+
+## Was macht eine Position schwer automatisch klassifizierbar?
+
+Die Positionen, die in die Prüfwarteschlange fallen, teilen tendenziell einige Merkmale:
+
+**Stark abgekürzte Beschreibungen.** „WK elek H3 Q2-26" ist für den Ingenieur, der es geschrieben hat, aussagekräftig, sagt einem Algorithmus aber sehr wenig. Ohne Kontext von Lieferant, Kostenelement und Standort ist eine sichere Klassifizierung nicht möglich.
+
+**Markennamen und Teilenummern ohne Beschreibungen.** „Wago 221-412" ist ein spezifischer Reihenklemmenverbinder, aber ohne Produktbeschreibung verlässt sich der Engine allein auf Lieferanten- und GL-Kontext. Wenn diese Signale schwach sind, sinkt die Konfidenz.
+
+**Wirklich mehrdeutiger Spend.** Manche Procurement-Positionen liegen an der Grenze zwischen zwei UNSPSC-Kategorien. Ein Instandhaltungsbesuch, der sowohl Arbeit als auch Material umfasst, könnte Segment 72 (Instandhaltungsdienstleistungen) oder Segment 78 (Transport und Lagerung) sein, je nachdem, wie die Arbeit fakturiert wurde.
+
+**Erstmalige Lieferanten.** Die ML-Schicht lernt aus Mustern über Ihre Lieferantenbasis hinweg. Ein brandneuer Lieferant ohne Kaufhistorie erzeugt niedrigere Konfidenzwerte, bis der Engine genug Beispiele gesehen hat, um Muster zu etablieren.
+
+---
+
+## Genauigkeit in verschiedenen Phasen
+
+Ein gutes automatisiertes Klassifizierungssystem bleibt nicht über die Zeit auf demselben Genauigkeitsniveau. Es verbessert sich.
+
+| Phase | Auto-Klassifizierungsrate |
+|---|---|
+| Anfängliche Baseline (erster Durchlauf) | 80–90 % |
+| Nach 3 Monaten Betrieb | 90–95 % |
+| Nach 12 Monaten Betrieb | 95 %+ |
+
+Die Verbesserung kommt aus der Feedback-Schleife. Jede Position, die ein menschlicher Prüfer klassifiziert, fließt zurück in das ML-Modell. Beim nächsten Mal, wenn eine ähnliche Beschreibung auftaucht, vom selben oder einem anderen Lieferanten, klassifiziert der Engine sie automatisch mit hoher Konfidenz.
+
+Deshalb ist die Prüfwarteschlange wichtig. Sie ist kein Versagen des Systems; sie ist das System beim Lernen.
+
+---
+
+## Wie Pearstops Vier-Schichten-Engine das erreicht
+
+**Schicht 1 – Regelwerk.** Nutzerdefinierte Regeln und automatisch geladene Muster übernehmen Klassifizierungen mit hoher Konfidenz sofort. Wenn Sie dem System mitgeteilt haben, dass alle Käufe von Lieferant X unter GL-Konto 6400 Segment 72 Klasse 721010 sind, wird jede passende Position ohne jede Berechnung klassifiziert.
+
+**Schicht 2 – Machine Learning.** Eine proprietäre ML-Schicht wird auf Ihren historischen Spend-Daten und einem breiten Korpus von Procurement-Transaktionen über Branchen hinweg trainiert. Sie repliziert die Klassifizierungslogik, die Ihre erfahrensten Category Manager anwenden würden, und übernimmt die häufigen Fälle automatisch.
+
+**Schicht 3 – LLM-Schicht.** Mehrdeutige oder ungewöhnliche Positionen werden von einem Large Language Model verarbeitet, das breites Produkt- und Branchenwissen einbringt. Das LLM verarbeitet Beschreibungen, die die ML-Schicht noch nie gesehen hat, einschließlich fremdsprachiger Beschreibungen und hochtechnischer Terminologie.
+
+**Schicht 4 – Menschliche Prüfung.** Positionen unter dem Konfidenzschwellenwert werden Ihrem Team in einer Prüfoberfläche vorgelegt. Jede Entscheidung fließt zurück in die Schichten 1–3. Über die Zeit erweitern sich die Regel- und ML-Schichten, um Positionen abzudecken, die anfänglich menschlichen Input erforderten.
+
+---
+
+## Was mit unklassifizierten Positionen passiert
+
+Manche Procurement-Teams sorgen sich um die 5–10 %, die zur Prüfung gehen. Das realistische Bild:
+
+- Im ersten Monat könnte ein Team 500–1.000 Positionen aus einem Datensatz von 10.000 Zeilen prüfen
+- Bis Monat drei erzeugt dasselbe Volumen an neuen Rechnungen 200–300 Positionen zur Prüfung
+- Bis Monat zwölf sind es oft weniger als 100
+
+Die Prüfoberfläche ist auf Geschwindigkeit ausgelegt, ein Category Manager kann 100 Positionen in 20–30 Minuten verarbeiten, mit klaren Vorschlagscodes und Konfidenzindikatoren. Das ist eine grundlegend andere Arbeitslast als die manuelle Klassifizierung des gesamten Datensatzes.
+
+---
+
+## Ein Hinweis dazu, wie Wettbewerber Genauigkeit messen
+
+Nicht alle Genauigkeitsbehauptungen sind gleichwertig. Achten Sie auf:
+
+- **Genauigkeit auf Segment- vs. Warengruppenebene.** Klassifizierung auf Segmentebene (die ersten 2 Ziffern des UNSPSC-Codes) ist deutlich einfacher als auf Warengruppenebene (alle 8 Ziffern). Ein Tool, das 95 % auf Segmentebene erreicht, erreicht auf Warengruppenebene vielleicht nur 60 %.
+- **Genauigkeit auf sauberen Daten vs. Realdaten.** Manche Anbieter testen gegen Datensätze, in denen Beschreibungen bereits standardisiert sind. Reale Procurement-Daten aus SAP oder Oracle sind unordentlicher, und Genauigkeitszahlen sollten das widerspiegeln.
+- **Prüfwarteschlange vs. unklassifiziert.** Ein System, das Positionen zur Prüfung markiert, unterscheidet sich von einem, das sie unklassifiziert lässt. Markierte Positionen werden klassifiziert, irgendwann. Unklassifizierte Positionen bleiben unklassifiziert.
+
+Pearstops Zahlen werden auf Warengruppenebene an realen Kundendatensätzen gemessen, einschließlich niederländischer Infrastruktur- und FM-Spend-Daten, bei denen Beschreibungen in gemischtem Niederländisch und Englisch vorliegen und stark über Standorte hinweg variieren.
+
+---
+
+## Was Genauigkeit tatsächlich bringt
+
+Eine Auto-Klassifizierungsrate von 90–95 % bedeutet, dass ein Procurement-Team, das 10.000 Rechnungspositionen pro Monat bearbeitet, seinen manuellen Klassifizierungsaufwand von 10.000 Entscheidungen auf 500–1.000 reduziert, eine Reduktion von 90–95 %.
+
+Diese Reduktion spart nicht nur Zeit. Sie macht Spend-Analyse überhaupt erst möglich. Ein manuell klassifizierter Datensatz, bei dem eine Person 10.000 Zeilen durcharbeitet, hinkt immer Wochen oder Monate hinterher. Ein automatisiertes System liefert einen klassifizierten Datensatz innerhalb weniger Tage, nachdem die Rechnungsdaten eingetroffen sind.
+
+Für Kategoriemanagement, Lieferantenbenchmarking und Margenanalyse zählt Aktualität ebenso viel wie Genauigkeit. Eine Spend-Baseline, die drei Monate alt ist, ist deutlich weniger nützlich als eine, die die Käufe des letzten Monats widerspiegelt.
+
+---
+
+*Verwandte Beiträge: [Wie man UNSPSC-Klassifizierung in SAP implementiert](/blog/unspsc-classification-sap) | [Was ist UNSPSC – und warum Hard-Services-Unternehmen sich darum kümmern sollten](/blog/what-is-unspsc)*
