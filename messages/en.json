@@ -294,16 +294,16 @@
   "Solutions": {
     "meta": {
       "title": "Data Quality Solutions for Hard Services and Infrastructure",
-      "description": "Seven data quality solutions for technical industries - from invoice data extraction and UNSPSC procurement classification to asset data management and Microsoft Fabric readiness."
+      "description": "Five data quality solutions for technical industries - from invoice data extraction and UNSPSC procurement classification to asset data management and unified data quality."
     },
     "hero": {
       "eyebrow": "Solutions",
       "title": "Turn messy data into decisions",
-      "lead": "Pearstop delivers seven data integrity solutions for technical industries. Each one targets a specific data problem and every one is built to protect your margins."
+      "lead": "Pearstop delivers five data integrity solutions for technical industries. Each one targets a specific data problem and every one is built to protect your margins."
     },
     "cards": {
-      "title": "Seven Solutions. One Goal.",
-      "lead": "Pearstop delivers seven data quality solutions for technical industries. Each one targets a specific operational data problem, built for hard services, construction, and manufacturing.",
+      "title": "Five Solutions. One Goal.",
+      "lead": "Pearstop delivers five data quality solutions for technical industries. Each one targets a specific operational data problem, built for hard services, construction, and manufacturing.",
       "exploreLink": "Explore solution →",
       "items": [
         {
@@ -311,28 +311,20 @@
           "copy": "Turn unread PDF invoices, scans, and delivery notes into structured data automatically. The precondition for classification, spend analysis, and everything after it."
         },
         {
-          "title": "Procurement",
+          "title": "UNSPSC Classification",
+          "copy": "Auto-classify years of free-text purchase order data using UNSPSC, including tracing hard services parts back to the real manufacturer code. Up to 95% of spend lines classified automatically."
+        },
+        {
+          "title": "Procurement Data Quality",
           "copy": "Build a real spend baseline from messy invoice and supplier data, broken out by service line and entity, so a negotiation, tender, or framework review starts from a number instead of a guess."
         },
         {
           "title": "Data Quality",
-          "copy": "Turn five service lines and five different data formats into one structured dataset, so contract-level cost and performance is something you can see, not reconcile by hand."
+          "copy": "An ERP migration, a Microsoft Fabric rollout, and an AI initiative all assume the data underneath them is already clean and structured. When it is not, each one just carries the mess into a new system. Pearstop fixes the data first."
         },
         {
-          "title": "UNSPSC",
-          "copy": "Auto-classify years of free-text purchase order data using UNSPSC, including tracing hard services parts back to the real manufacturer code. Up to 95% of spend lines classified automatically."
-        },
-        {
-          "title": "Asset Management",
+          "title": "Asset Data Management",
           "copy": "Turn spend and maintenance data you receive but do not generate into an independent, classified record you can compare across providers, sites, and years."
-        },
-        {
-          "title": "Fabric Ready",
-          "copy": "Prepare your operational data for Microsoft Fabric so the migration delivers company-wide insight, not another data project reworked after go-live."
-        },
-        {
-          "title": "AI Readiness",
-          "copy": "Build the clean, structured, governed data foundation every AI tool assumes is already there, from Copilot to custom models."
         }
       ]
     },
@@ -366,39 +358,39 @@
   },
   "DataQuality": {
     "meta": {
-      "title": "Data Quality for Multi-Service Facilities Management",
-      "description": "Pearstop unifies reference, cost, and asset data from every service line in an FM contract into one structured dataset, so contract-level cost and performance is visible instead of five separate reports."
+      "title": "Data Quality: The Precondition for ERP, Fabric, and AI Projects",
+      "description": "Pearstop cleans and structures operational data so an ERP migration, a Microsoft Fabric rollout, or an AI initiative delivers what it promised instead of moving the same mess into a new system."
     },
     "hero": {
       "eyebrow": "Data Quality",
-      "title": "One contract, five service lines, five data formats.",
-      "lead": "Cleaning, hard services, security, and catering all report differently under the same contract. Pearstop turns those service-line silos into one structured dataset, so contract-level cost and performance is something you can actually see, not five things you have to reconcile by hand."
+      "title": "An ERP migration, a Fabric rollout, or an AI project inherits every mistake already in your data.",
+      "lead": "None of these projects fix bad data on their own. They move it, or build on top of it. Pearstop cleans and structures the reference data first, whether the project is an ERP migration, a Microsoft Fabric rollout, an AI initiative, or unifying every service line on one multi-year FM contract."
     },
     "problem": {
       "eyebrow": "The Problem",
       "title": "The reference data arrived wrong. Nobody caught it for years.",
-      "copy": "A service line's reference data is not neutral. It carries the mistakes of whoever entered it, multiplied across every site and year since. A wrong manufacturer part number, a name spelled two different ways depending on which system a technician used that day. None of it shows up until someone tries to compare cleaning costs against hard services costs on the same contract, and finds the two datasets do not actually describe the same thing.",
+      "copy": "Reference data is not neutral. It carries the mistakes of whoever entered it, multiplied across every site and year since. A wrong manufacturer part number, a name spelled two different ways depending on which system someone used that day. None of it shows up until you try to build on top of it: migrate it into Microsoft Fabric, connect it to an AI model, or compare cleaning costs against hard services costs on the same integrated FM contract. All three fail for the same reason. The data underneath was never actually the same data twice.",
       "quote": {
         "text": "We are basically happy with what we have seen, but maybe we expected a little bit more from the beginning of what was possible with the data.",
         "attribution": "Project Manager, integrated facilities management provider"
       },
       "bullets": [
-        "Reference data supplied at contract start already wrong, compounding across sites and years before anyone catches it",
-        "Each service line reports in its own format, so no single view of contract-level cost or performance exists",
-        "A first data pass delivers less than expected, because the underlying reference data was flawed before it reached any system",
-        "Reconciling service lines by hand happens every reporting cycle, and starts from zero again next time"
+        "Reference data is wrong before it reaches any new system, compounding across sites and years before anyone catches it",
+        "Each service line, or each source system, reports in its own format, so no single structured dataset exists to migrate, model, or analyse",
+        "An ERP migration, a Fabric rollout, or an AI pilot delivers less than expected, because the underlying reference data was flawed before the project started",
+        "Reconciling it by hand happens every reporting cycle or every project kickoff, and starts from zero again next time"
       ]
     },
     "howItWorks": {
-      "title": "From five service-line silos to one dataset",
-      "lead": "The system checks, cleans, and standardises your data across service lines, and gets better over time as your team uses it.",
+      "title": "From scattered source systems to one dataset",
+      "lead": "The system checks, cleans, and standardises your data across every source feeding it, and gets better over time as your team uses it.",
       "step1": {
-        "title": "Ingest, by service line",
-        "copy": "Cleaning, hard services, security, catering: connect each service line's data via API or CSV, in whatever format it already arrives."
+        "title": "Ingest, by source",
+        "copy": "Connect each system's data via API or CSV, in whatever format it already arrives, whether that is an ERP module, an asset register, or a facilities contract's service lines (cleaning, hard services, security, catering)."
       },
       "step2": {
         "title": "Standardise and reconcile",
-        "copy": "Naming, coding, and reference data are corrected and standardised across every service line, so the same equipment or supplier looks the same everywhere."
+        "copy": "Naming, coding, and reference data are corrected and standardised across every source, so the same equipment or supplier looks the same everywhere."
       },
       "step3": {
         "title": "Flag and review",
@@ -416,13 +408,30 @@
         "copy": "Cost and performance visible across every service line on one dataset, without the manual reconciliation that currently happens every month before the numbers go out."
       },
       "b3": {
-        "title": "AI and Fabric initiatives that work",
-        "copy": "AI tools, Copilot, and Microsoft Fabric all require clean, structured data. Fixing data quality is not a nice-to-have for these initiatives, it is the prerequisite."
+        "title": "ERP, Fabric, and AI initiatives that work",
+        "copy": "An ERP migration, Copilot, Microsoft Fabric, and AI tools all require clean, structured data underneath them. Fixing data quality is not a nice-to-have for these initiatives, it is the prerequisite."
       }
     },
+    "relatedCapabilities": {
+      "eyebrow": "Two Places This Shows Up",
+      "title": "The same clean-data foundation is what makes Fabric and AI initiatives possible.",
+      "lead": "A Microsoft Fabric migration and an AI initiative both assume the same thing about your data: that it is already clean, structured, and consistent. It rarely is. The work below is the same work described above, applied to two projects most technical businesses are already planning.",
+      "items": [
+        {
+          "title": "Fabric Ready",
+          "copy": "A Fabric migration reproduces whatever is already in your source systems. If the reference data is inconsistent going in, the migration just moves the inconsistency into a new platform, at greater cost to fix afterward. Pearstop cleans and structures the data before it moves, so the reports built on Fabric work from day one.",
+          "linkLabel": "See what Fabric readiness means"
+        },
+        {
+          "title": "AI Readiness",
+          "copy": "An AI tool or a Copilot deployment is only as good as the data it is trained on or connected to. Most teams find that out after the rollout, when the model's answers reflect the same inconsistencies the underlying data already had. Pearstop builds the clean, governed data foundation an AI initiative assumes is already there.",
+          "linkLabel": "See what AI readiness means"
+        }
+      ]
+    },
     "geoBlock": {
-      "title": "What is data quality automation and how does it work for multi-service FM contracts?",
-      "copy": "Data quality automation uses rules, machine learning, and large language models to identify and resolve errors in operational datasets without manual intervention. For integrated FM providers, the most common problem is not any single service line's data, it is that cleaning, hard services, security, and catering each arrive in a different format, with reference data that was often wrong from the start. Pearstop has corrected supplier and equipment reference data for FM providers including SPIE, standardising naming across service lines and sites so contract-level cost and performance is visible on one dataset instead of five."
+      "title": "What is data quality automation and why does it matter before an ERP migration, a Fabric rollout, or an AI initiative?",
+      "copy": "Data quality automation uses rules, machine learning, and large language models to identify and resolve errors in operational datasets without manual intervention. An ERP migration moves data as it is. A Fabric rollout or an AI initiative assumes the data underneath it is already structured. Neither one fixes what was wrong to begin with. For hard services and FM providers running multiple service lines, cleaning, hard services, security, and catering each arrive in a different format, with reference data that was often wrong from the start. Pearstop has corrected supplier and equipment reference data for FM providers including SPIE, standardising naming across service lines and sites so the same clean dataset can support a migration, an AI model, or a single contract-level report instead of five separate ones."
     },
     "quote": {
       "text": "You feel a bit siloed, don't you?",
@@ -440,8 +449,8 @@
       }
     ],
     "cta": {
-      "title": "Ready to unify your FM data?",
-      "lead": "Book a 7-minute discovery call. We will show you exactly where your service lines stop agreeing with each other.",
+      "title": "Ready to fix the data underneath your next project?",
+      "lead": "Book a 7-minute discovery call. We will show you exactly where your data would break an ERP migration, a Fabric rollout, or an AI initiative today.",
       "button": "Book a 7-minute discovery"
     }
   },

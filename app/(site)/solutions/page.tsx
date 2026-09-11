@@ -6,7 +6,7 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Data Quality Solutions for Hard Services and Infrastructure",
   description:
-    "Seven data quality solutions for technical industries - from invoice data extraction and UNSPSC procurement classification to asset data management and Microsoft Fabric readiness.",
+    "Five data quality solutions for technical industries - from invoice data extraction and UNSPSC procurement classification to asset data management and unified data quality.",
   alternates: {
     canonical: `${siteConfig.url}/solutions`
   }
@@ -22,39 +22,27 @@ export default function SolutionsPage() {
     },
     {
       eyebrow: "02",
-      title: "Procurement",
-      copy: "Build a real spend baseline from messy invoice and supplier data, broken out by service line and entity, so a negotiation, tender, or framework review starts from a number instead of a guess.",
-      href: "/procurement-data-quality"
-    },
-    {
-      eyebrow: "03",
-      title: "Data Quality",
-      copy: "Turn five service lines and five different data formats into one structured dataset, so contract-level cost and performance is something you can see, not reconcile by hand.",
-      href: "/data-quality"
-    },
-    {
-      eyebrow: "04",
-      title: "UNSPSC",
+      title: "UNSPSC Classification",
       copy: "Auto-classify years of free-text purchase order data using UNSPSC, including tracing hard services parts back to the real manufacturer code. Up to 95% of spend lines classified automatically.",
       href: "/unspsc"
     },
     {
+      eyebrow: "03",
+      title: "Procurement Data Quality",
+      copy: "Build a real spend baseline from messy invoice and supplier data, broken out by service line and entity, so a negotiation, tender, or framework review starts from a number instead of a guess.",
+      href: "/procurement-data-quality"
+    },
+    {
+      eyebrow: "04",
+      title: "Data Quality",
+      copy: "An ERP migration, a Microsoft Fabric rollout, and an AI initiative all assume the data underneath them is already clean and structured. When it is not, each one just carries the mess into a new system. Pearstop fixes the data first.",
+      href: "/data-quality"
+    },
+    {
       eyebrow: "05",
-      title: "Asset Management",
+      title: "Asset Data Management",
       copy: "Turn spend and maintenance data you receive but do not generate into an independent, classified record you can compare across providers, sites, and years.",
       href: "/asset-data-management"
-    },
-    {
-      eyebrow: "06",
-      title: "Fabric Ready",
-      copy: "Prepare your operational data for Microsoft Fabric so the migration delivers company-wide insight, not another data project reworked after go-live.",
-      href: "/fabric"
-    },
-    {
-      eyebrow: "07",
-      title: "AI Readiness",
-      copy: "Build the clean, structured, governed data foundation every AI tool assumes is already there, from Copilot to custom models.",
-      href: "/ai-readiness"
     }
   ];
 
@@ -63,14 +51,14 @@ export default function SolutionsPage() {
       <PageHero
         eyebrow="Solutions"
         title="Turn messy data into decisions"
-        lead="Pearstop delivers seven data integrity solutions for technical industries. Each one targets a specific data problem and every one is built to protect your margins."
+        lead="Pearstop delivers five data integrity solutions for technical industries. Each one targets a specific data problem and every one is built to protect your margins."
       />
 
       <section className="section-soft">
         <div className="container">
           <SectionTitle
-            title="Seven Solutions. One Goal."
-            lead="Pearstop delivers seven data quality solutions for technical industries. Each one targets a specific operational data problem, built for hard services, construction, and manufacturing."
+            title="Five Solutions. One Goal."
+            lead="Pearstop delivers five data quality solutions for technical industries. Each one targets a specific operational data problem, built for hard services, construction, and manufacturing."
           />
 
           <div className="bene-cards">

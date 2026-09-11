@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Script from "next/script";
 import { getTranslations , setRequestLocale } from "next-intl/server";
 import { CTABand, GeoBlock, PageHero, QuoteBox, SectionTitle } from "@/components/content";
@@ -19,11 +20,15 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
+type RelatedCapabilityItem = { title: string; copy: string; linkLabel: string };
+
 export default async function DataQualityPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const prefix = locale === "en" ? "" : `/${locale}`;
   const t = await getTranslations("DataQuality");
   const faqItems = t.raw("faq") as FaqItem[];
+  const relatedItems = t.raw("relatedCapabilities.items") as RelatedCapabilityItem[];
 
   const faqSchema = {
     "@context": "https://schema.org",
@@ -136,6 +141,36 @@ export default async function DataQualityPage({ params }: { params: Promise<{ lo
               <h3>{t("whatMakesPossible.b3.title")}</h3>
               <p>{t("whatMakesPossible.b3.copy")}</p>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-soft">
+        <div className="container">
+          <SectionTitle
+            eyebrow={t("relatedCapabilities.eyebrow")}
+            title={t("relatedCapabilities.title")}
+            lead={t("relatedCapabilities.lead")}
+          />
+          <div className="row" style={{ gap: "2rem", flexWrap: "wrap" }}>
+            <div className="col-md-6">
+              <div className="quote-card" style={{ height: "100%" }}>
+                <div className="story-label">{relatedItems[0].title}</div>
+                <p className="light-copy">{relatedItems[0].copy}</p>
+                <Link className="bene-link" href={`${prefix}/fabric`}>
+                  {relatedItems[0].linkLabel} →
+                </Link>
+              </div>
+            </div>
+            <div className="col-md-6">
+              <div className="quote-card" style={{ height: "100%" }}>
+                <div className="story-label">{relatedItems[1].title}</div>
+                <p className="light-copy">{relatedItems[1].copy}</p>
+                <Link className="bene-link" href={`${prefix}/ai-readiness`}>
+                  {relatedItems[1].linkLabel} →
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>

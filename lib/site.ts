@@ -58,14 +58,10 @@ export type NavLink = {
 
 export const solutionLinks: NavLink[] = [
   { label: "Invoice & Document Extraction", href: "/invoice-data-extraction", description: "Turn unread PDFs and scans into structured data." },
-  { label: "Procurement data quality", href: "/procurement-data-quality", description: "A real spend baseline to negotiate, tender, and check framework compliance from." },
-  { label: "Data Quality", href: "/data-quality", description: "Unify service-line data into one structured, comparable dataset." },
   { label: "UNSPSC Classification", href: "/unspsc", description: "Automated classification, including tracing parts to the real manufacturer code." },
-  { label: "Asset Data Management", href: "/asset-data-management", description: "An independent, classified view of spend and maintenance data you don't generate yourself." },
-  { label: "Fabric Ready", href: "/fabric", description: "Prepare for Microsoft Fabric migration." },
-  { label: "AI Readiness", href: "/ai-readiness", description: "Build a trustworthy AI data foundation." },
-  { label: "Free UNSPSC Lookup", href: "/unspsc-code-lookup", description: "Find the right 8-digit code instantly." },
-  { label: "UNSPSC Taxonomy Tree", href: "/unspsc-classification-demo", description: "Explore the hierarchy interactively." }
+  { label: "Procurement data quality", href: "/procurement-data-quality", description: "A real spend baseline to negotiate, tender, and check framework compliance from." },
+  { label: "Data Quality", href: "/data-quality", description: "The clean, structured data an ERP migration, Microsoft Fabric, or an AI initiative all depend on." },
+  { label: "Asset Data Management", href: "/asset-data-management", description: "An independent, classified view of spend and maintenance data you don't generate yourself." }
 ];
 
 export const mainNavLinks: NavLink[] = [

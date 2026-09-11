@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Script from "next/script";
 import { CTABand, GeoBlock, PageHero, QuoteBox, SectionTitle } from "@/components/content";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Data Quality for Multi-Service Facilities Management",
+  title: "Data Quality: The Precondition for ERP, Fabric, and AI Projects",
   description:
-    "Pearstop unifies reference, cost, and asset data from every service line in an FM contract into one structured dataset, so contract-level cost and performance is visible instead of five separate reports.",
+    "Pearstop cleans and structures operational data so an ERP migration, a Microsoft Fabric rollout, or an AI initiative delivers what it promised instead of moving the same mess into a new system.",
   alternates: {
     canonical: `${siteConfig.url}/data-quality`
   }
@@ -40,8 +41,8 @@ export default function DataQualityPage() {
 
       <PageHero
         eyebrow="Data Quality"
-        title="One contract, five service lines, five data formats."
-        lead="Cleaning, hard services, security, and catering all report differently under the same contract. Pearstop turns those service-line silos into one structured dataset, so contract-level cost and performance is something you can actually see, not five things you have to reconcile by hand."
+        title="An ERP migration, a Fabric rollout, or an AI project inherits every mistake already in your data."
+        lead="None of these projects fix bad data on their own. They move it, or build on top of it. Pearstop cleans and structures the reference data first, whether the project is an ERP migration, a Microsoft Fabric rollout, an AI initiative, or unifying every service line on one multi-year FM contract."
         actions={[
           { label: "Book a 7-minute discovery", href: siteConfig.calendly, variant: "primary", external: true },
           { label: "See how it works", href: "#how-it-works", variant: "secondary" }
@@ -55,7 +56,7 @@ export default function DataQualityPage() {
               <div className="benefit-eyebrow">The Problem</div>
               <h2>The reference data arrived wrong. Nobody caught it for years.</h2>
               <p className="light-copy">
-                A service line&rsquo;s reference data is not neutral. It carries the mistakes of whoever entered it, multiplied across every site and year since. A wrong manufacturer part number, a name spelled two different ways depending on which system a technician used that day. None of it shows up until someone tries to compare cleaning costs against hard services costs on the same contract, and finds the two datasets do not actually describe the same thing.
+                Reference data is not neutral. It carries the mistakes of whoever entered it, multiplied across every site and year since. A wrong manufacturer part number, a name spelled two different ways depending on which system someone used that day. None of it shows up until you try to build on top of it: migrate it into Microsoft Fabric, connect it to an AI model, or compare cleaning costs against hard services costs on the same integrated FM contract. All three fail for the same reason. The data underneath was never actually the same data twice.
               </p>
               <blockquote className="quote-card" style={{ fontStyle: "italic", marginBottom: "1.5rem" }}>
                 <p style={{ margin: 0 }}>
@@ -68,19 +69,19 @@ export default function DataQualityPage() {
               <ul className="ind-pains">
                 <li>
                   <span className="ind-ok">×</span>
-                  <div>Reference data supplied at contract start already wrong, compounding across sites and years before anyone catches it</div>
+                  <div>Reference data is wrong before it reaches any new system, compounding across sites and years before anyone catches it</div>
                 </li>
                 <li>
                   <span className="ind-ok">×</span>
-                  <div>Each service line reports in its own format, so no single view of contract-level cost or performance exists</div>
+                  <div>Each service line, or each source system, reports in its own format, so no single structured dataset exists to migrate, model, or analyse</div>
                 </li>
                 <li>
                   <span className="ind-ok">×</span>
-                  <div>A first data pass delivers less than expected, because the underlying reference data was flawed before it reached any system</div>
+                  <div>An ERP migration, a Fabric rollout, or an AI pilot delivers less than expected, because the underlying reference data was flawed before the project started</div>
                 </li>
                 <li>
                   <span className="ind-ok">×</span>
-                  <div>Reconciling service lines by hand happens every reporting cycle, and starts from zero again next time</div>
+                  <div>Reconciling it by hand happens every reporting cycle or every project kickoff, and starts from zero again next time</div>
                 </li>
               </ul>
             </div>
@@ -97,17 +98,17 @@ export default function DataQualityPage() {
 
       <section id="how-it-works" className="section-soft">
         <div className="container">
-          <SectionTitle eyebrow="The Problem" title="From five service-line silos to one dataset" lead="The system checks, cleans, and standardises your data across service lines, and gets better over time as your team uses it." />
+          <SectionTitle eyebrow="The Problem" title="From scattered source systems to one dataset" lead="The system checks, cleans, and standardises your data across every source feeding it, and gets better over time as your team uses it." />
           <div className="hiw-grid">
             <article className="hiw-card">
               <div className="hiw-badge">1</div>
-              <h3>Ingest, by service line</h3>
-              <p>Cleaning, hard services, security, catering: connect each service line&rsquo;s data via API or CSV, in whatever format it already arrives.</p>
+              <h3>Ingest, by source</h3>
+              <p>Connect each system&rsquo;s data via API or CSV, in whatever format it already arrives, whether that is an ERP module, an asset register, or a facilities contract&rsquo;s service lines (cleaning, hard services, security, catering).</p>
             </article>
             <article className="hiw-card featured">
               <div className="hiw-badge">2</div>
               <h3>Standardise and reconcile</h3>
-              <p>Naming, coding, and reference data are corrected and standardised across every service line, so the same equipment or supplier looks the same everywhere.</p>
+              <p>Naming, coding, and reference data are corrected and standardised across every source, so the same equipment or supplier looks the same everywhere.</p>
             </article>
             <article className="hiw-card">
               <div className="hiw-badge">3</div>
@@ -134,9 +135,43 @@ export default function DataQualityPage() {
             </article>
             <article className="ben-card">
               <div className="ben-icon">⚡</div>
-              <h3>AI and Fabric initiatives that work</h3>
-              <p>AI tools, Copilot, and Microsoft Fabric all require clean, structured data. Fixing data quality is not a nice-to-have for these initiatives, it is the prerequisite.</p>
+              <h3>ERP, Fabric, and AI initiatives that work</h3>
+              <p>An ERP migration, Copilot, Microsoft Fabric, and AI tools all require clean, structured data underneath them. Fixing data quality is not a nice-to-have for these initiatives, it is the prerequisite.</p>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-soft">
+        <div className="container">
+          <SectionTitle
+            eyebrow="Two Places This Shows Up"
+            title="The same clean-data foundation is what makes Fabric and AI initiatives possible."
+            lead="A Microsoft Fabric migration and an AI initiative both assume the same thing about your data: that it is already clean, structured, and consistent. It rarely is. The work below is the same work described above, applied to two projects most technical businesses are already planning."
+          />
+          <div className="row" style={{ gap: "2rem", flexWrap: "wrap" }}>
+            <div className="col-md-6">
+              <div className="quote-card" style={{ height: "100%" }}>
+                <div className="story-label">Fabric Ready</div>
+                <p className="light-copy">
+                  A Fabric migration reproduces whatever is already in your source systems. If the reference data is inconsistent going in, the migration just moves the inconsistency into a new platform, at greater cost to fix afterward. Pearstop cleans and structures the data before it moves, so the reports built on Fabric work from day one.
+                </p>
+                <Link className="bene-link" href="/fabric">
+                  See what Fabric readiness means →
+                </Link>
+              </div>
+            </div>
+            <div className="col-md-6">
+              <div className="quote-card" style={{ height: "100%" }}>
+                <div className="story-label">AI Readiness</div>
+                <p className="light-copy">
+                  An AI tool or a Copilot deployment is only as good as the data it is trained on or connected to. Most teams find that out after the rollout, when the model&rsquo;s answers reflect the same inconsistencies the underlying data already had. Pearstop builds the clean, governed data foundation an AI initiative assumes is already there.
+                </p>
+                <Link className="bene-link" href="/ai-readiness">
+                  See what AI readiness means →
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -146,8 +181,8 @@ export default function DataQualityPage() {
           <div className="row">
             <div className="col-md-8 col-md-offset-2">
               <GeoBlock
-                title="What is data quality automation and how does it work for multi-service FM contracts?"
-                copy="Data quality automation uses rules, machine learning, and large language models to identify and resolve errors in operational datasets without manual intervention. For integrated FM providers, the most common problem is not any single service line's data, it is that cleaning, hard services, security, and catering each arrive in a different format, with reference data that was often wrong from the start. Pearstop has corrected supplier and equipment reference data for FM providers including SPIE, standardising naming across service lines and sites so contract-level cost and performance is visible on one dataset instead of five."
+                title="What is data quality automation and why does it matter before an ERP migration, a Fabric rollout, or an AI initiative?"
+                copy="Data quality automation uses rules, machine learning, and large language models to identify and resolve errors in operational datasets without manual intervention. An ERP migration moves data as it is. A Fabric rollout or an AI initiative assumes the data underneath it is already structured. Neither one fixes what was wrong to begin with. For hard services and FM providers running multiple service lines, cleaning, hard services, security, and catering each arrive in a different format, with reference data that was often wrong from the start. Pearstop has corrected supplier and equipment reference data for FM providers including SPIE, standardising naming across service lines and sites so the same clean dataset can support a migration, an AI model, or a single contract-level report instead of five separate ones."
               />
             </div>
           </div>
@@ -187,8 +222,8 @@ export default function DataQualityPage() {
       </section>
 
       <CTABand
-        title="Ready to unify your FM data?"
-        lead="Book a 7-minute discovery call. We will show you exactly where your service lines stop agreeing with each other."
+        title="Ready to fix the data underneath your next project?"
+        lead="Book a 7-minute discovery call. We will show you exactly where your data would break an ERP migration, a Fabric rollout, or an AI initiative today."
         actions={[{ label: "Book a 7-minute discovery", href: siteConfig.calendly, variant: "primary", external: true }]}
       />
     </>

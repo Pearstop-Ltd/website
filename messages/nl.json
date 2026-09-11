@@ -318,120 +318,15 @@
       "lead": "Boek een ontdekkingsgesprek van 7 minuten. We identificeren precies welk dataprobleem u het meeste kost — en laten u zien hoe u het kunt oplossen.",
       "bookDiscovery": "Boek een ontdekkingsgesprek van 7 minuten",
       "viewIndustries": "Bekijk sectoren"
-    },
-    "meta": {
-      "title": "Data Quality Oplossingen voor Hard Services en Infrastructuur",
-      "description": "Zeven data quality oplossingen voor technische sectoren - van extractie van invoice data en UNSPSC procurement classificatie tot asset data management en Microsoft Fabric gereedheid."
-    },
-    "hero": {
-      "eyebrow": "Oplossingen",
-      "title": "Verander rommelige data in beslissingen",
-      "lead": "Pearstop levert zeven data-integriteitsoplossingen voor technische sectoren. Elk richt zich op een specifiek dataprobleem en elk is gebouwd om uw marges te beschermen."
-    },
-    "cards": {
-      "title": "Zeven Oplossingen. Eén Doel.",
-      "lead": "Pearstop levert zeven data quality oplossingen voor technische sectoren. Elk richt zich op een specifiek operationeel dataprobleem, gebouwd voor hard services, bouw en productie.",
-      "exploreLink": "Ontdek oplossing →",
-      "items": [
-        {
-          "title": "Invoice & Document Extractie",
-          "copy": "Verander ongelezen PDF invoices, scans en leveringsbonnen automatisch in gestructureerde data. De voorwaarde voor classificatie, spend analysis en alles wat daarna komt."
-        },
-        {
-          "title": "Procurement",
-          "copy": "Bouw een echte spend baseline op basis van rommelige invoice en supplier data, uitgesplitst per servicelijn en entiteit, zodat een onderhandeling, tender of framework review begint met een cijfer in plaats van een schatting."
-        },
-        {
-          "title": "Data Quality",
-          "copy": "Verander vijf servicelijnen en vijf verschillende dataformaten in één gestructureerde dataset, zodat kosten en prestaties op contractniveau iets zijn dat u kunt zien, niet handmatig hoeft af te stemmen."
-        },
-        {
-          "title": "UNSPSC",
-          "copy": "Classificeer automatisch jaren aan vrije tekst purchase order data met behulp van UNSPSC, inclusief het traceren van hard services onderdelen naar de echte fabrikantcode. Tot 95% van de spend lijnen automatisch geclassificeerd."
-        },
-        {
-          "title": "Asset Management",
-          "copy": "Verander spend en onderhoudsdata die u ontvangt maar niet genereert in een onafhankelijk, geclassificeerd record dat u kunt vergelijken tussen providers, locaties en jaren."
-        },
-        {
-          "title": "Fabric Ready",
-          "copy": "Bereid uw operationele data voor op Microsoft Fabric, zodat de migratie bedrijfbrede inzichten oplevert, en niet weer een dataproject dat na go-live moet worden herwerkt."
-        },
-        {
-          "title": "AI Readiness",
-          "copy": "Bouw de schone, gestructureerde, beheerde datafundering die elke AI tool veronderstelt dat er al is, van Copilot tot aangepaste modellen."
-        }
-      ]
     }
   },
   "DataQuality": {
-    "meta": {
-      "title": "Datakwaliteitsautomatisering voor technische sectoren",
-      "description": "Pearstop reinigt, standaardiseert en verrijkt automatisch operationele data voor hard services-, bouw- en productiebedrijven."
-    },
-    "hero": {
-      "eyebrow": "Datakwaliteit",
-      "title": "Schone data is de basis van elke goede beslissing.",
-      "lead": "Pearstop reinigt, standaardiseert en verrijkt uw operationele data automatisch zodat uw teams, systemen en partners allemaal werken vanuit dezelfde betrouwbare bron in plaats van hun eigen versie van de waarheid."
-    },
-    "problem": {
-      "eyebrow": "Het probleem",
-      "title": "Uw data is er technisch gezien. Maar het is niet bruikbaar.",
-      "copy": "De meeste technische bedrijven hebben veel data. Het probleem is dat het inconsistent, gefragmenteerd en onvolledig is. Dezelfde leverancier staat op zes verschillende manieren geregistreerd. Assetnamen variëren per locatie. Categorieën worden anders toegepast door verschillende teams. En het resultaat is dat niemand de data vertrouwt, dus niemand handelt ernaar.",
-      "bullets": [
-        "Inconsistente naamgeving maakt het onmogelijk om data samen te voegen over locaties, teams of periodes",
-        "Ontbrekende waarden in kritieke velden blokkeren geautomatiseerde verwerking en rapportage",
-        "Dubbele records blazen tellingen op, vertekenen analyses en ondermijnen vertrouwen in rapporten",
-        "Handmatig dataopruimen is duur, traag en creëert nieuwe fouten terwijl het oude oplost"
-      ],
-      "quote": {
-        "text": "We zijn in principe tevreden met wat we hebben gezien, maar misschien hadden we vanaf het begin iets meer verwacht van wat er mogelijk was met de data.",
-        "attribution": "Project Manager, geïntegreerde facilities management provider"
-      }
-    },
-    "howItWorks": {
-      "title": "Geautomatiseerde kwaliteitscontrole op schaal",
-      "lead": "Het systeem controleert, reinigt en verbetert uw data automatisch — en wordt beter naarmate uw team het gebruikt.",
-      "step1": {
-        "title": "Inlezen",
-        "copy": "Verbind uw databronnen via API of CSV. Elk formaat, elk systeem — van SAP en Oracle tot Excel-exports en legacy-databases."
-      },
-      "step2": {
-        "title": "Automatisch reinigen",
-        "copy": "De motor lost automatisch 95% van fouten op — spelfouten, verkeerde veldplaatsing, dubbele records, ontbrekende waarden — zonder menselijke tussenkomst."
-      },
-      "step3": {
-        "title": "Markeren en beoordelen",
-        "copy": "Items buiten betrouwbare drempelwaarden worden gemarkeerd voor uw team. Uw beslissingen worden direct teruggekoppeld aan de motor — waardoor de wachtrij in de loop der tijd krimpt."
-      }
-    },
-    "whatMakesPossible": {
-      "title": "Wat schone data mogelijk maakt",
-      "b1": {
-        "title": "Beslissingen die u kunt verdedigen",
-        "copy": "Wanneer uw data schoon en consistent is, zijn de inzichten die eruitkomen betrouwbaar genoeg om op te handelen — en aan een CFO uit te leggen."
-      },
-      "b2": {
-        "title": "Rapportage die daadwerkelijk werkt",
-        "copy": "Bedrijfsbrede financiële en operationele rapportage zonder de handmatige afstemming die momenteel elke maand plaatsvindt voordat de cijfers eruit gaan."
-      },
-      "b3": {
-        "title": "AI- en Fabric-initiatieven die werken",
-        "copy": "AI-tools, Copilot en Microsoft Fabric vereisen allemaal schone, gestructureerde data. Datakwaliteit verbeteren is geen luxe voor deze initiatieven — het is de voorwaarde."
-      }
-    },
-    "geoBlock": {
-      "title": "Wat is datakwaliteitsautomatisering en hoe werkt het in de praktijk?",
-      "copy": "Datakwaliteitsautomatisering gebruikt regels, machine learning en grote taalmodellen om fouten in operationele datasets te identificeren en op te lossen zonder handmatige tussenkomst. Voor hard services-, bouw- en productiebedrijven zijn de meest voorkomende datakwaliteitsproblemen inconsistente naamgevingsconventies, ontbrekende waarden in kritieke velden, dubbele records in systemen en bestedingsdata die nooit is gecategoriseerd volgens een standaard zoals UNSPSC. Pearstop's vier-laagse motor verwerkt 95% van deze problemen automatisch en markeert alleen de items waarbij menselijke beoordeling echte waarde toevoegt — en leert van elke beslissing die uw team neemt om die beoordelingswachtrij in de loop der tijd te verkleinen."
-    },
     "quote": {
       "text": "Onze assetdata werkte voor de monteurs op locatie. Het werkte niet voor iemand die onderhoud probeerde te plannen of er analyses op probeerde uit te voeren. Pearstop heeft dat opgelost.",
       "author": "Assetmanager",
       "role": "Facility Management"
     },
     "cta": {
-      "title": "Klaar om uw datakwaliteitsprobleem op te lossen?",
-      "lead": "Boek een ontdekkingsgesprek van 7 minuten. We laten u precies zien waar uw data u tijd en marge kost.",
       "button": "Boek een ontdekkingsgesprek van 7 minuten"
     },
     "faq": [
