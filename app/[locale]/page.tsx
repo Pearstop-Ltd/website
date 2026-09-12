@@ -94,7 +94,11 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         lead={t("hero.lead")}
         actions={[
           { label: t("hero.bookDiscovery"), href: siteConfig.calendly, variant: "primary", external: true },
-          { label: t("hero.seeHowItWorks"), href: "#how-it-works", variant: "secondary" },
+          // TODO(stephanie): temporary - links to the UNSPSC AI classification guide
+          // as a concrete "how it works" example. Revisit once there's a dedicated,
+          // general "how Pearstop works" page covering the full product, not just
+          // the UNSPSC classification flow.
+          { label: t("hero.seeHowItWorks"), href: `${prefix}/unspsc-ai-classification-guide`, variant: "secondary" },
         ]}
       />
 

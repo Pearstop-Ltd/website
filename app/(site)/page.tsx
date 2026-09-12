@@ -96,7 +96,11 @@ export default function HomePage() {
         lead="Pearstop cleans and classifies procurement and asset data for hard services companies so you can better negotiate contracts and plan maintenance. We automate, so that you don't have to do it manually - Category management that works."
         actions={[
           { label: "Book a 7-minute discovery", href: siteConfig.calendly, variant: "primary", external: true },
-          { label: "See how it works", href: "#how-it-works", variant: "secondary" }
+          // TODO(stephanie): temporary - links to the UNSPSC AI classification guide
+          // as a concrete "how it works" example. Revisit once there's a dedicated,
+          // general "how Pearstop works" page covering the full product, not just
+          // the UNSPSC classification flow.
+          { label: "See how it works", href: "/unspsc-ai-classification-guide", variant: "secondary" }
         ]}
       />
 
