@@ -3,7 +3,7 @@ import Link from "next/link";
 import Script from "next/script";
 import { CTABand, GeoBlock, PageHero, SectionTitle } from "@/components/content";
 import { UnspscLookupCta } from "@/components/unspsc-lookup-cta";
-import { siteConfig } from "@/lib/site";
+import { alternateLanguages, siteConfig } from "@/lib/site";
 
 const PAGE_URL = `${siteConfig.url}/unspsc-ai-classification-guide`;
 
@@ -19,7 +19,8 @@ export const metadata: Metadata = {
     "UNSPSC classification software",
   ],
   alternates: {
-    canonical: PAGE_URL
+    canonical: PAGE_URL,
+    languages: alternateLanguages("/unspsc-ai-classification-guide")
   },
   openGraph: {
     title: "AI UNSPSC Classification: The Practical Guide",

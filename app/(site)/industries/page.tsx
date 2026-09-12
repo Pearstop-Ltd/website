@@ -4,7 +4,7 @@ import { Fragment } from "react";
 import Link from "next/link";
 import Script from "next/script";
 import { GeoBlock, PageHero, SectionTitle } from "@/components/content";
-import { industryCards, siteConfig } from "@/lib/site";
+import { alternateLanguages, industryCards, siteConfig } from "@/lib/site";
 
 const PAGE_URL = `${siteConfig.url}/industries`;
 
@@ -13,7 +13,8 @@ export const metadata: Metadata = {
   description:
     "Pearstop works with infrastructure, facilities management, cleaning, construction, manufacturing, and asset owner organisations. Each industry has a different data problem - see how we solve it.",
   alternates: {
-    canonical: PAGE_URL
+    canonical: PAGE_URL,
+    languages: alternateLanguages("/industries")
   }
 };
 

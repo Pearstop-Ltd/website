@@ -3,13 +3,14 @@ import Link from "next/link";
 import Script from "next/script";
 import { ContactMailtoForm } from "@/components/contact-mailto-form";
 import { CTABand, PageHero, SectionTitle } from "@/components/content";
-import { siteConfig } from "@/lib/site";
+import { alternateLanguages, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contact Pearstop",
   description: "See what Pearstop can do. Get to know the team or schedule a demo.",
   alternates: {
-    canonical: `${siteConfig.url}/contact`
+    canonical: `${siteConfig.url}/contact`,
+    languages: alternateLanguages("/contact")
   }
 };
 

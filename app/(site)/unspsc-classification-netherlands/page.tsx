@@ -3,7 +3,7 @@ import Script from "next/script";
 import Link from "next/link";
 import { CTABand, GeoBlock, PageHero, QuoteBox, SectionTitle } from "@/components/content";
 import { UnspscLookupCta } from "@/components/unspsc-lookup-cta";
-import { siteConfig } from "@/lib/site";
+import { alternateLanguages, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "UNSPSC Classificatie Nederland | Geautomatiseerde Inkoopclassificatie | Pearstop",
@@ -16,7 +16,8 @@ export const metadata: Metadata = {
     "UNSPSC Peppol",
   ],
   alternates: {
-    canonical: `${siteConfig.url}/unspsc-classification-netherlands`
+    canonical: `${siteConfig.url}/unspsc-classification-netherlands`,
+    languages: alternateLanguages("/unspsc-classification-netherlands")
   },
   openGraph: {
     title: "UNSPSC Classificatie Nederland | Geautomatiseerde Inkoopclassificatie | Pearstop",

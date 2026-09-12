@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { UnderConstructionPage } from "@/components/under-construction-page";
-import { siteConfig } from "@/lib/site";
+import { alternateLanguages, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Under construction",
@@ -10,7 +10,8 @@ export const metadata: Metadata = {
     follow: true
   },
   alternates: {
-    canonical: `${siteConfig.url}/under-construction`
+    canonical: `${siteConfig.url}/under-construction`,
+    languages: alternateLanguages("/under-construction")
   }
 };
 

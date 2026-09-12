@@ -3,7 +3,7 @@ import Script from "next/script";
 import Link from "next/link";
 import { CTABand, GeoBlock, PageHero, QuoteBox, SectionTitle } from "@/components/content";
 import { UnspscLookupCta } from "@/components/unspsc-lookup-cta";
-import { siteConfig } from "@/lib/site";
+import { alternateLanguages, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "UNSPSC Classification for Facilities Management | Pearstop",
@@ -16,7 +16,8 @@ export const metadata: Metadata = {
     "MRO spend classification",
   ],
   alternates: {
-    canonical: `${siteConfig.url}/unspsc-classification-facilities-management`
+    canonical: `${siteConfig.url}/unspsc-classification-facilities-management`,
+    languages: alternateLanguages("/unspsc-classification-facilities-management")
   },
   openGraph: {
     title: "UNSPSC Classification for Facilities Management | Pearstop",

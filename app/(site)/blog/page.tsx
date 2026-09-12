@@ -4,7 +4,7 @@ import { existsSync, readFileSync } from "fs";
 import path from "path";
 import { PageHero, SectionTitle } from "@/components/content";
 import { BlogCardPattern } from "@/components/blog-card-pattern";
-import { siteConfig } from "@/lib/site";
+import { alternateLanguages, siteConfig } from "@/lib/site";
 import { blogPosts } from "@/lib/blog-posts";
 
 function getMdxFrontmatter(slug: string): { title?: string; description?: string } {
@@ -27,7 +27,8 @@ export const metadata: Metadata = {
   title: "Blog | Pearstop",
   description: "Insights on procurement data quality, UNSPSC classification, asset management, and category management for hard services, construction, and infrastructure.",
   alternates: {
-    canonical: `${siteConfig.url}/blog`
+    canonical: `${siteConfig.url}/blog`,
+    languages: alternateLanguages("/blog")
   }
 };
 

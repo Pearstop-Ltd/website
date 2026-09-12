@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import { CTABand, GeoBlock, PageHero, QuoteBox, SectionTitle, StatsGrid } from "@/components/content";
-import { siteConfig } from "@/lib/site";
+import { alternateLanguages, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "FARO Case Study",
   description:
     "Pearstop classified thousands of product lines for FARO, linked them to sales data, and made margin visible before the purchase was committed.",
   alternates: {
-    canonical: `${siteConfig.url}/cases/faro`
+    canonical: `${siteConfig.url}/cases/faro`,
+    languages: alternateLanguages("/cases/faro")
   }
 };
 

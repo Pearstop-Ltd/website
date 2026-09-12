@@ -3,7 +3,7 @@ import Script from "next/script";
 import Link from "next/link";
 import { CTABand, GeoBlock, PageHero, QuoteBox, SectionTitle } from "@/components/content";
 import { UnspscLookupCta } from "@/components/unspsc-lookup-cta";
-import { siteConfig } from "@/lib/site";
+import { alternateLanguages, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "UNSPSC Klassifizierung Deutschland | Automatisierte Beschaffungsklassifizierung | Pearstop",
@@ -16,7 +16,8 @@ export const metadata: Metadata = {
     "UNSPSC E-Rechnung",
   ],
   alternates: {
-    canonical: `${siteConfig.url}/unspsc-classification-germany`
+    canonical: `${siteConfig.url}/unspsc-classification-germany`,
+    languages: alternateLanguages("/unspsc-classification-germany")
   },
   openGraph: {
     title: "UNSPSC Klassifizierung Deutschland | Automatisierte Beschaffungsklassifizierung | Pearstop",

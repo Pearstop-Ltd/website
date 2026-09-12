@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import { CTABand, GeoBlock, PageHero, QuoteBox, SectionTitle, StatsGrid } from "@/components/content";
-import { siteConfig } from "@/lib/site";
+import { alternateLanguages, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "AI Readiness for Hard Services and Infrastructure",
   description:
     "AI tools only work when the data behind them is clean. Pearstop prepares procurement data, asset registers, and operational records for AI and Copilot so initiatives deliver results rather than confusion.",
   alternates: {
-    canonical: `${siteConfig.url}/ai-readiness`
+    canonical: `${siteConfig.url}/ai-readiness`,
+    languages: alternateLanguages("/ai-readiness")
   }
 };
 

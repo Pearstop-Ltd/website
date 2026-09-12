@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import { CTABand, GeoBlock, PageHero, QuoteBox, SectionTitle, StatsGrid } from "@/components/content";
-import { siteConfig } from "@/lib/site";
+import { alternateLanguages, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Microsoft Fabric Data Readiness for Asset-Intensive Industries",
   description:
     "Migrating to Microsoft Fabric? Pearstop cleans and structures your operational data before migration so your reports work from day one and the project stays on track.",
   alternates: {
-    canonical: `${siteConfig.url}/fabric`
+    canonical: `${siteConfig.url}/fabric`,
+    languages: alternateLanguages("/fabric")
   }
 };
 

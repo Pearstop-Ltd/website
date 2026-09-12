@@ -3,14 +3,15 @@ import Script from "next/script";
 import Link from "next/link";
 import { CTABand, PageHero } from "@/components/content";
 import { CalendlyButton } from "@/components/calendly-button";
-import { siteConfig } from "@/lib/site";
+import { alternateLanguages, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Frequently Asked Questions | Pearstop",
   description:
     "Answers to the most common questions about Pearstop's UNSPSC classification, procurement data quality, asset data management, and how the service works.",
   alternates: {
-    canonical: `${siteConfig.url}/faq`
+    canonical: `${siteConfig.url}/faq`,
+    languages: alternateLanguages("/faq")
   },
   openGraph: {
     title: "Frequently Asked Questions | Pearstop",

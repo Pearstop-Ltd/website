@@ -5,7 +5,7 @@ import { UnspscTree } from "@/components/unspsc-tree";
 import { CalendlyButton } from "@/components/calendly-button";
 import { GeoBlock } from "@/components/content";
 import { demoData, unspscDataSource, treeStats } from "@/lib/unspsc-demo-data";
-import { siteConfig } from "@/lib/site";
+import { alternateLanguages, siteConfig } from "@/lib/site";
 
 const PAGE_URL = `${siteConfig.url}/unspsc-classification-demo`;
 
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     "UNSPSC segment family class commodity",
     "UNSPSC hierarchy demo",
   ],
-  alternates: { canonical: PAGE_URL },
+  alternates: { canonical: PAGE_URL, languages: alternateLanguages("/unspsc-classification-demo") },
   openGraph: {
     title: "UNSPSC Classification Tree — Interactive Demo",
     description: "Explore the official UNSPSC taxonomy interactively, from segment down to 8-digit commodity code.",

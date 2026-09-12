@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { CTABand, GeoBlock, PageHero, SectionTitle } from "@/components/content";
-import { siteConfig } from "@/lib/site";
+import { alternateLanguages, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Data Quality Solutions for Hard Services and Infrastructure",
   description:
     "Five data quality solutions for technical industries - from invoice data extraction and UNSPSC procurement classification to asset data management and unified data quality.",
   alternates: {
-    canonical: `${siteConfig.url}/solutions`
+    canonical: `${siteConfig.url}/solutions`,
+    languages: alternateLanguages("/solutions")
   }
 };
 

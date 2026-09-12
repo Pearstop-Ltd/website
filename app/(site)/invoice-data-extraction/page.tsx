@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import { CTABand, GeoBlock, PageHero, QuoteBox, SectionTitle, StatsGrid } from "@/components/content";
-import { siteConfig } from "@/lib/site";
+import { alternateLanguages, siteConfig } from "@/lib/site";
 
 const PAGE_URL = `${siteConfig.url}/invoice-data-extraction`;
 
@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "Invoice and Document Data Extraction (OCR) for FM and Construction",
   description:
     "Turn unread PDF invoices, scanned delivery notes, and paper records into structured, usable data. Automated OCR and AI extraction for facilities management, construction, and manufacturing procurement teams.",
-  alternates: { canonical: PAGE_URL },
+  alternates: { canonical: PAGE_URL, languages: alternateLanguages("/invoice-data-extraction") },
   openGraph: {
     title: "Invoice and Document Data Extraction (OCR) for FM and Construction | Pearstop",
     description:

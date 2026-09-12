@@ -2,14 +2,15 @@ import { CalendlyButton } from "@/components/calendly-button";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { GeoBlock, PageHero, QuoteBox, SectionTitle } from "@/components/content";
-import { homeBenefits, siteConfig } from "@/lib/site";
+import { alternateLanguages, homeBenefits, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Pearstop - Data Quality Solutions for Hard Services",
   description:
     "Pearstop cleans and classifies procurement and asset data for hard services companies. We process 35,000 procurement lines a month, automatically.",
   alternates: {
-    canonical: siteConfig.url
+    canonical: siteConfig.url,
+    languages: alternateLanguages("")
   },
   openGraph: {
     title: "Pearstop - Data Quality Solutions for Hard Services",

@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { CTABand, PageHero, SectionTitle } from "@/components/content";
-import { caseStudies, siteConfig } from "@/lib/site";
+import { alternateLanguages, caseStudies, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Client Results",
   description:
     "Real results from hard services, infrastructure, manufacturing, and FM companies that used Pearstop to clean their data, cut manual work, and protect their margins.",
   alternates: {
-    canonical: `${siteConfig.url}/cases`
+    canonical: `${siteConfig.url}/cases`,
+    languages: alternateLanguages("/cases")
   }
 };
 

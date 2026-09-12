@@ -3,7 +3,7 @@ import Link from "next/link";
 import Script from "next/script";
 import { CTABand, GeoBlock, PageHero, QuoteBox, SectionTitle } from "@/components/content";
 import { UnspscLookupCta } from "@/components/unspsc-lookup-cta";
-import { siteConfig } from "@/lib/site";
+import { alternateLanguages, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "UNSPSC Classification and Manufacturer Part Verification",
@@ -17,7 +17,8 @@ export const metadata: Metadata = {
     "automated procurement classification",
   ],
   alternates: {
-    canonical: `${siteConfig.url}/unspsc`
+    canonical: `${siteConfig.url}/unspsc`,
+    languages: alternateLanguages("/unspsc")
   }
 };
 

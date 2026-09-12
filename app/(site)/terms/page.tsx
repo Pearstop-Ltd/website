@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import { PageHero, SectionTitle } from "@/components/content";
-import { siteConfig } from "@/lib/site";
+import { alternateLanguages, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Terms and Conditions",
   description: "Terms and conditions for using the Pearstop website.",
   alternates: {
-    canonical: `${siteConfig.url}/terms-and-conditions`
+    canonical: `${siteConfig.url}/terms-and-conditions`,
+    languages: alternateLanguages("/terms-and-conditions")
   }
 };
 

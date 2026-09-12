@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import { CTABand, GeoBlock, PageHero, SectionTitle } from "@/components/content";
-import { siteConfig } from "@/lib/site";
+import { alternateLanguages, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "About Pearstop",
   description:
     "Pearstop is a data quality company for hard services, construction, and infrastructure. We clean and classify procurement and asset data so technical businesses can manage costs, plan maintenance, and make decisions they can trust.",
   alternates: {
-    canonical: `${siteConfig.url}/about-us`
+    canonical: `${siteConfig.url}/about-us`,
+    languages: alternateLanguages("/about-us")
   }
 };
 

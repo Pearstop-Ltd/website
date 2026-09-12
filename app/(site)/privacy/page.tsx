@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import { PageHero, SectionTitle } from "@/components/content";
-import { siteConfig } from "@/lib/site";
+import { alternateLanguages, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description: "Privacy policy for Pearstop.",
   alternates: {
-    canonical: `${siteConfig.url}/privacy`
+    canonical: `${siteConfig.url}/privacy`,
+    languages: alternateLanguages("/privacy")
   }
 };
 

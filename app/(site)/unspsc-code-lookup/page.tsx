@@ -3,7 +3,7 @@ import Script from "next/script";
 import Link from "next/link";
 import { CTABand, GeoBlock, PageHero } from "@/components/content";
 import { CalendlyButton } from "@/components/calendly-button";
-import { siteConfig } from "@/lib/site";
+import { alternateLanguages, siteConfig } from "@/lib/site";
 import { UnspscLookupTool } from "@/components/unspsc-lookup-tool";
 import { UnspscTree } from "@/components/unspsc-tree";
 
@@ -75,7 +75,7 @@ export const metadata: Metadata = {
     "UNSPSC taxonomy",
     "United Nations Standard Products and Services Code",
   ],
-  alternates: { canonical: `${siteConfig.url}/unspsc-code-lookup` },
+  alternates: { canonical: `${siteConfig.url}/unspsc-code-lookup`, languages: alternateLanguages("/unspsc-code-lookup") },
   openGraph: {
     title: "Free UNSPSC Code Lookup Tool",
     description: "Find the correct UNSPSC commodity code for any product or service description.",

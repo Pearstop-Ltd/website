@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import { CTABand, GeoBlock, PageHero, QuoteBox, SectionTitle, StatsGrid } from "@/components/content";
-import { siteConfig } from "@/lib/site";
+import { alternateLanguages, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Asset Data Management for Asset Owners and FM Operators",
   description:
     "Turn the asset and cost data your FM provider hands you into an independent, classified record you can benchmark and defend, not just a file you received from them.",
   alternates: {
-    canonical: `${siteConfig.url}/asset-data-management`
+    canonical: `${siteConfig.url}/asset-data-management`,
+    languages: alternateLanguages("/asset-data-management")
   },
   openGraph: {
     title: "Asset Data Management for Asset Owners and FM Operators | Pearstop",

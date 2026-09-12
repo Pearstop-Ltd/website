@@ -2,14 +2,15 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Script from "next/script";
 import { CTABand, GeoBlock, PageHero, QuoteBox, SectionTitle } from "@/components/content";
-import { siteConfig } from "@/lib/site";
+import { alternateLanguages, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Data Quality: The Precondition for ERP, Fabric, and AI Projects",
   description:
     "Pearstop cleans and structures operational data so an ERP migration, a Microsoft Fabric rollout, or an AI initiative delivers what it promised instead of moving the same mess into a new system.",
   alternates: {
-    canonical: `${siteConfig.url}/data-quality`
+    canonical: `${siteConfig.url}/data-quality`,
+    languages: alternateLanguages("/data-quality")
   }
 };
 

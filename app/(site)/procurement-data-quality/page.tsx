@@ -2,14 +2,15 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { CTABand, GeoBlock, PageHero, QuoteBox, SectionTitle } from "@/components/content";
 import { CalendlyButton } from "@/components/calendly-button";
-import { siteConfig } from "@/lib/site";
+import { alternateLanguages, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Procurement Data Quality for Infrastructure, Construction, and FM",
   description:
     "Pearstop builds a real spend baseline across sites and entities: bundled contracts broken into service lines, framework agreements checked against live buying, and group-wide spend visible in one place.",
   alternates: {
-    canonical: `${siteConfig.url}/procurement-data-quality`
+    canonical: `${siteConfig.url}/procurement-data-quality`,
+    languages: alternateLanguages("/procurement-data-quality")
   }
 };
 

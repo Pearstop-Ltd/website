@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 import { CTABand, PageHero, SectionTitle } from "@/components/content";
 import { CalendlyButton } from "@/components/calendly-button";
-import { siteConfig } from "@/lib/site";
+import { alternateLanguages, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Download the Case Studies",
   description:
     "Download Pearstop's case studies to see how technical businesses clean data, protect margins, and reduce manual work.",
   alternates: {
-    canonical: `${siteConfig.url}/case-studies`
+    canonical: `${siteConfig.url}/case-studies`,
+    languages: alternateLanguages("/case-studies")
   },
   openGraph: {
     title: "Download the Pearstop Case Studies",
