@@ -105,7 +105,9 @@ export function SiteHeader() {
   const t = useTranslations("Header");
   const [menuOpen, setMenuOpen] = useState(false);
   const [solutionsOpen, setSolutionsOpen] = useState(false);
+  const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
   const solutionsCloseTimer = useRef<number | null>(null);
+  const submenuCloseTimer = useRef<number | null>(null);
 
   const prefix = locale === "en" ? "" : `/${locale}`;
 
@@ -119,10 +121,11 @@ export function SiteHeader() {
   useEffect(() => {
     setMenuOpen(false);
     setSolutionsOpen(false);
+    setOpenSubmenu(null);
   }, [pathname]);
 
   useEffect(() => {
-    return () => { clearSolutionsCloseTimer(); };
+    return () => { clearSolutionsCloseTimer(); clearSubmenuCloseTimer(); };
   }, []);
 
   useEffect(() => {
@@ -134,8 +137,10 @@ export function SiteHeader() {
 
   const closeMenus = () => {
     clearSolutionsCloseTimer();
+    clearSubmenuCloseTimer();
     setMenuOpen(false);
     setSolutionsOpen(false);
+    setOpenSubmenu(null);
   };
 
   const openSolutionsMenu = () => {
@@ -153,6 +158,31 @@ export function SiteHeader() {
     solutionsCloseTimer.current = window.setTimeout(() => {
       setSolutionsOpen(false);
       solutionsCloseTimer.current = null;
+    }, 140);
+  };
+
+  const clearSubmenuCloseTimer = () => {
+    if (submenuCloseTimer.current !== null) {
+      window.clearTimeout(submenuCloseTimer.current);
+      submenuCloseTimer.current = null;
+    }
+  };
+
+  const openSubmenuFor = (href: string) => {
+    clearSubmenuCloseTimer();
+    setOpenSubmenu(href);
+  };
+
+  const toggleSubmenuFor = (href: string) => {
+    clearSubmenuCloseTimer();
+    setOpenSubmenu((current) => (current === href ? null : href));
+  };
+
+  const scheduleSubmenuClose = () => {
+    clearSubmenuCloseTimer();
+    submenuCloseTimer.current = window.setTimeout(() => {
+      setOpenSubmenu(null);
+      submenuCloseTimer.current = null;
     }, 140);
   };
 
@@ -194,13 +224,46 @@ export function SiteHeader() {
                     {t("allSolutions")}
                   </Link>
                 </li>
-                {solutionLinks.map((link) => (
-                  <li key={link.href}>
-                    <Link href={`${prefix}${link.href}`} onClick={closeMenus}>
-                      {SOLUTION_NAV_KEYS[link.href] ? t(`nav.${SOLUTION_NAV_KEYS[link.href]}`) : link.label}
-                    </Link>
-                  </li>
-                ))}
+                {solutionLinks.map((link) =>
+                  link.children && link.children.length > 0 ? (
+                    <li
+                      key={link.href}
+                      className={`nav-subitem-wrap ${openSubmenu === link.href ? "open" : ""}`}
+                      onPointerEnter={() => openSubmenuFor(link.href)}
+                      onPointerLeave={scheduleSubmenuClose}
+                    >
+                      <div className="nav-subitem-row">
+                        <Link href={`${prefix}${link.href}`} onClick={closeMenus}>
+                          {SOLUTION_NAV_KEYS[link.href] ? t(`nav.${SOLUTION_NAV_KEYS[link.href]}`) : link.label}
+                        </Link>
+                        <button
+                          type="button"
+                          className="nav-subitem-toggle"
+                          onClick={() => toggleSubmenuFor(link.href)}
+                          aria-label={`${openSubmenu === link.href ? t("closeMenu") : t("openMenu")}: ${link.label}`}
+                          aria-expanded={openSubmenu === link.href}
+                        >
+                          <span aria-hidden="true">›</span>
+                        </button>
+                      </div>
+                      <ul className="nav-submenu">
+                        {link.children.map((child) => (
+                          <li key={child.href}>
+                            <Link href={`${prefix}${child.href}`} onClick={closeMenus}>
+                              {child.label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </li>
+                  ) : (
+                    <li key={link.href}>
+                      <Link href={`${prefix}${link.href}`} onClick={closeMenus}>
+                        {SOLUTION_NAV_KEYS[link.href] ? t(`nav.${SOLUTION_NAV_KEYS[link.href]}`) : link.label}
+                      </Link>
+                    </li>
+                  )
+                )}
               </ul>
             </li>
 
