@@ -5,7 +5,7 @@ import { existsSync, readFileSync } from "fs";
 import path from "path";
 import { PageHero, SectionTitle } from "@/components/content";
 import { BlogCardPattern } from "@/components/blog-card-pattern";
-import { siteConfig } from "@/lib/site";
+import { alternateLanguages, siteConfig } from "@/lib/site";
 import { blogPosts } from "@/lib/blog-posts";
 
 function getMdxFrontmatter(locale: string, slug: string): { title?: string; description?: string } {
@@ -37,7 +37,8 @@ export async function generateMetadata({
     title: t("meta.title"),
     description: t("meta.description"),
     alternates: {
-      canonical: `${siteConfig.url}/blog`
+      canonical: `${siteConfig.url}/blog`,
+      languages: alternateLanguages("/blog")
     }
   };
 }

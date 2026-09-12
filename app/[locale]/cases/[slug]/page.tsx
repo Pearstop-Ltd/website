@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { CTABand, GeoBlock, PageHero, QuoteBox, SectionTitle, StatsGrid } from "@/components/content";
-import { caseStudyDetails, siteConfig } from "@/lib/site";
+import { alternateLanguages, caseStudyDetails, siteConfig } from "@/lib/site";
 
 function titleFromSlug(slug: string) {
   return slug
@@ -16,7 +16,8 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
     title: entry?.title ?? titleFromSlug(params.slug),
     description: entry?.lead ?? "Pearstop client case study.",
     alternates: {
-      canonical: `${siteConfig.url}/cases/${params.slug}`
+      canonical: `${siteConfig.url}/cases/${params.slug}`,
+      languages: alternateLanguages(`/cases/${params.slug}`)
     }
   };
 }

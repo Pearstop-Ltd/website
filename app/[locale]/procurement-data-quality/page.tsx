@@ -3,7 +3,7 @@ import Script from "next/script";
 import { getTranslations , setRequestLocale } from "next-intl/server";
 import { CTABand, GeoBlock, PageHero, QuoteBox, SectionTitle } from "@/components/content";
 import { CalendlyButton } from "@/components/calendly-button";
-import { siteConfig } from "@/lib/site";
+import { alternateLanguages, siteConfig } from "@/lib/site";
 
 type FaqItem = { question: string; answer: string };
 
@@ -15,7 +15,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     title: t("meta.title"),
     description: t("meta.description"),
     alternates: {
-      canonical: `${siteConfig.url}/procurement-data-quality`
+      canonical: `${siteConfig.url}/procurement-data-quality`,
+      languages: alternateLanguages("/procurement-data-quality")
     }
   };
 }

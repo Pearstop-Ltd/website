@@ -4,7 +4,7 @@ import Script from "next/script";
 import Link from "next/link";
 import { getTranslations , setRequestLocale } from "next-intl/server";
 import { GeoBlock, PageHero, QuoteBox, SectionTitle } from "@/components/content";
-import { homeBenefits, siteConfig } from "@/lib/site";
+import { alternateLanguages, homeBenefits, siteConfig } from "@/lib/site";
 import { blogPosts } from "@/lib/blog-posts";
 
 const organizationSchema = {
@@ -34,7 +34,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: t("title"),
     description: t("description"),
-    alternates: { canonical: siteConfig.url },
+    alternates: { canonical: siteConfig.url, languages: alternateLanguages("") },
     openGraph: {
       title: t("title"),
       description: t("description"),

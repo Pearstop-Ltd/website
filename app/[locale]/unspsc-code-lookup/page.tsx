@@ -4,7 +4,7 @@ import { getTranslations , setRequestLocale } from "next-intl/server";
 import Link from "next/link";
 import { CTABand, GeoBlock, PageHero } from "@/components/content";
 import { CalendlyButton } from "@/components/calendly-button";
-import { siteConfig } from "@/lib/site";
+import { alternateLanguages, siteConfig } from "@/lib/site";
 import { UnspscLookupTool } from "@/components/unspsc-lookup-tool";
 import { UnspscTree } from "@/components/unspsc-tree";
 
@@ -145,7 +145,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       "UNSPSC taxonomy",
       "United Nations Standard Products and Services Code",
     ],
-    alternates: { canonical: `${siteConfig.url}/unspsc-code-lookup` },
+    alternates: { canonical: `${siteConfig.url}/unspsc-code-lookup`, languages: alternateLanguages("/unspsc-code-lookup") },
     openGraph: {
       title: t("meta.title"),
       description: t("meta.description"),

@@ -3,7 +3,7 @@ import Script from "next/script";
 import { getTranslations , setRequestLocale } from "next-intl/server";
 import { CTABand, GeoBlock, PageHero, QuoteBox, SectionTitle } from "@/components/content";
 import { UnspscLookupCta } from "@/components/unspsc-lookup-cta";
-import { siteConfig } from "@/lib/site";
+import { alternateLanguages, siteConfig } from "@/lib/site";
 
 type FaqItem = { question: string; answer: string };
 
@@ -37,7 +37,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       "automated procurement classification",
     ],
     alternates: {
-      canonical: `${siteConfig.url}/unspsc`
+      canonical: `${siteConfig.url}/unspsc`,
+      languages: alternateLanguages("/unspsc")
     }
   };
 }

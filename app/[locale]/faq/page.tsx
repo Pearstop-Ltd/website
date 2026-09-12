@@ -4,7 +4,7 @@ import { getTranslations , setRequestLocale } from "next-intl/server";
 import Link from "next/link";
 import { CTABand, PageHero } from "@/components/content";
 import { CalendlyButton } from "@/components/calendly-button";
-import { siteConfig } from "@/lib/site";
+import { alternateLanguages, siteConfig } from "@/lib/site";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -14,7 +14,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     title: t("meta.title"),
     description: t("meta.description"),
     alternates: {
-      canonical: `${siteConfig.url}/faq`
+      canonical: `${siteConfig.url}/faq`,
+      languages: alternateLanguages("/faq")
     },
     openGraph: {
       title: t("meta.title"),

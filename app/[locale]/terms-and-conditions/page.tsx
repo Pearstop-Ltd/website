@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations , setRequestLocale } from "next-intl/server";
 import { PageHero, SectionTitle } from "@/components/content";
-import { siteConfig } from "@/lib/site";
+import { alternateLanguages, siteConfig } from "@/lib/site";
 
 export async function generateMetadata({
   params
@@ -15,7 +15,8 @@ export async function generateMetadata({
     title: t("meta.title"),
     description: t("meta.description"),
     alternates: {
-      canonical: `${siteConfig.url}/terms-and-conditions`
+      canonical: `${siteConfig.url}/terms-and-conditions`,
+      languages: alternateLanguages("/terms-and-conditions")
     }
   };
 }

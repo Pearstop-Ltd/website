@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 import { getTranslations , setRequestLocale } from "next-intl/server";
 import { CTABand, GeoBlock, PageHero, SectionTitle } from "@/components/content";
-import { siteConfig } from "@/lib/site";
+import { alternateLanguages, siteConfig } from "@/lib/site";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("About.meta");
   return {
     title: t("title"),
     description: t("description"),
-    alternates: { canonical: `${siteConfig.url}/about-us` },
+    alternates: { canonical: `${siteConfig.url}/about-us`, languages: alternateLanguages("/about-us") },
   };
 }
 

@@ -1,3 +1,21 @@
+import { routing } from "@/i18n/routing";
+
+/**
+ * Builds the hreflang alternate-language map for a given locale-neutral path
+ * (e.g. "/solutions", "" for the homepage). Next.js replaces (not merges) a
+ * route's `alternates` object when a page defines its own, so every page's
+ * `generateMetadata` must spread this in itself - defining it once here
+ * only, at the root layout, silently produces zero hreflang tags on every
+ * page that sets its own canonical (which is every real page on this site).
+ */
+export function alternateLanguages(path: string): Record<string, string> {
+  const entries = routing.locales.map((locale) => [
+    locale,
+    locale === routing.defaultLocale ? `${siteConfig.url}${path}` : `${siteConfig.url}/${locale}${path}`
+  ]);
+  return { ...Object.fromEntries(entries), "x-default": `${siteConfig.url}${path}` };
+}
+
 export const siteConfig = {
   name: "Pearstop",
   url: "https://www.pearstop.com",

@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Fragment } from "react";
 import Script from "next/script";
 import { GeoBlock, PageHero, SectionTitle } from "@/components/content";
-import { industryCards, siteConfig } from "@/lib/site";
+import { alternateLanguages, industryCards, siteConfig } from "@/lib/site";
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
@@ -28,7 +28,8 @@ export async function generateMetadata({
     title: t("meta.title"),
     description: t("meta.description"),
     alternates: {
-      canonical: `${siteConfig.url}/industries`
+      canonical: `${siteConfig.url}/industries`,
+      languages: alternateLanguages("/industries")
     }
   };
 }

@@ -8,7 +8,7 @@ import rehypeSlug from "rehype-slug";
 import remarkGfm from "remark-gfm";
 import { getBlogPost, blogPosts } from "@/lib/blog-posts";
 import { ArticleSchema, FaqSchema, Faq, BlogLayout, BlogQuote, SoftCta, ComparisonCards, ChecklistSection, KraljicMatrix, AUTHORS, isAuthorKey, type AuthorKey } from "@/components/blog";
-import { siteConfig } from "@/lib/site";
+import { alternateLanguages, siteConfig } from "@/lib/site";
 import ProcurementDataCost from "@/components/blog-posts/procurement-data-cost";
 import WhatIsUnspsc from "@/components/blog-posts/what-is-unspsc";
 import AssetRegisterProblems from "@/components/blog-posts/asset-register-problems";
@@ -96,7 +96,7 @@ export async function generateMetadata({
   return {
     title,
     description,
-    alternates: { canonical: `${siteConfig.url}${prefix}/blog/${slug}` },
+    alternates: { canonical: `${siteConfig.url}${prefix}/blog/${slug}`, languages: alternateLanguages(`/blog/${slug}`) },
     openGraph: {
       title,
       description,

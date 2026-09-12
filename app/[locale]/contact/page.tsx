@@ -4,14 +4,14 @@ import Script from "next/script";
 import { getTranslations , setRequestLocale } from "next-intl/server";
 import { ContactMailtoForm } from "@/components/contact-mailto-form";
 import { CTABand, PageHero, SectionTitle } from "@/components/content";
-import { siteConfig } from "@/lib/site";
+import { alternateLanguages, siteConfig } from "@/lib/site";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("Contact.meta");
   return {
     title: t("title"),
     description: t("description"),
-    alternates: { canonical: `${siteConfig.url}/contact` },
+    alternates: { canonical: `${siteConfig.url}/contact`, languages: alternateLanguages("/contact") },
   };
 }
 

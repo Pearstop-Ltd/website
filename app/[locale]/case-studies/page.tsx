@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations , setRequestLocale } from "next-intl/server";
 import { CTABand, PageHero, SectionTitle } from "@/components/content";
 import { CalendlyButton } from "@/components/calendly-button";
-import { siteConfig } from "@/lib/site";
+import { alternateLanguages, siteConfig } from "@/lib/site";
 
 export async function generateMetadata({
   params
@@ -16,7 +16,8 @@ export async function generateMetadata({
     title: t("meta.title"),
     description: t("meta.description"),
     alternates: {
-      canonical: `${siteConfig.url}/case-studies`
+      canonical: `${siteConfig.url}/case-studies`,
+      languages: alternateLanguages("/case-studies")
     },
     openGraph: {
       title: t("meta.ogTitle"),

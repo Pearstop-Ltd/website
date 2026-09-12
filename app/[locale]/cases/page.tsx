@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations , setRequestLocale } from "next-intl/server";
 import Link from "next/link";
 import { CTABand, PageHero, SectionTitle } from "@/components/content";
-import { caseStudies, siteConfig } from "@/lib/site";
+import { alternateLanguages, caseStudies, siteConfig } from "@/lib/site";
 
 export async function generateMetadata({
   params
@@ -16,7 +16,8 @@ export async function generateMetadata({
     title: t("meta.title"),
     description: t("meta.description"),
     alternates: {
-      canonical: `${siteConfig.url}/cases`
+      canonical: `${siteConfig.url}/cases`,
+      languages: alternateLanguages("/cases")
     }
   };
 }

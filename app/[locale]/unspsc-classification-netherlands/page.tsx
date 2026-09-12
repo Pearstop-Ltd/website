@@ -4,7 +4,7 @@ import { getTranslations , setRequestLocale } from "next-intl/server";
 import Link from "next/link";
 import { CTABand, GeoBlock, PageHero, QuoteBox, SectionTitle } from "@/components/content";
 import { UnspscLookupCta } from "@/components/unspsc-lookup-cta";
-import { siteConfig } from "@/lib/site";
+import { alternateLanguages, siteConfig } from "@/lib/site";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -20,7 +20,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       "UNSPSC Peppol",
     ],
     alternates: {
-      canonical: `${siteConfig.url}/unspsc-classification-netherlands`
+      canonical: `${siteConfig.url}/unspsc-classification-netherlands`,
+      languages: alternateLanguages("/unspsc-classification-netherlands")
     },
     openGraph: {
       title: t("meta.title"),
