@@ -9,14 +9,14 @@ npm run dev      # start dev server (Next.js)
 npm run build    # production build (runs prebuild translate script first)
 npm run start    # run production build
 npm run lint     # eslint .
-npm run translate # node scripts/translate.js — requires GROQ_API_KEY
+npm run translate # node scripts/translate.js — requires GEMINI_API_KEY
 ```
 
 There is no test suite configured in this repo.
 
 ## Architecture
 
-This is a Next.js (App Router) marketing site for Pearstop, a procurement/asset data quality company. Content is bilingual (English/Dutch).
+This is a Next.js (App Router) marketing site for Pearstop, a procurement/asset data quality company. Content is served in four locales: English, Dutch, French, and German.
 
 ### Two parallel route trees
 
@@ -29,27 +29,29 @@ When adding or editing a page, check whether the equivalent file exists in both 
 
 ### i18n routing
 
-- `i18n/routing.ts` defines locales (`en`, `nl`), default locale `en`, and `localePrefix: "as-needed"` (English has no `/en` prefix, Dutch is served under `/nl`).
+- `i18n/routing.ts` defines locales (`en`, `nl`, `fr`, `de`), default locale `en`, and `localePrefix: "as-needed"` (English has no locale prefix; Dutch, French, and German are served under `/nl`, `/fr`, `/de`).
 - `proxy.ts` is the Next.js middleware entry (`createMiddleware(routing)` from `next-intl`), matching all paths except `api`, `_next`, `_vercel`, and files with extensions.
-- `i18n/request.ts` loads `messages/{locale}.json` and **deep-merges Dutch over English** so any key missing a Dutch translation silently falls back to the English string (`onError` swallows `MISSING_MESSAGE`).
-- UI strings live in `messages/en.json` / `messages/nl.json`. Never hand-translate — `messages/nl.json` is machine-generated (see Auto-translation below).
+- `i18n/request.ts` loads `messages/{locale}.json` and **deep-merges each non-English locale over English** so any key missing a translation silently falls back to the English string (`onError` swallows `MISSING_MESSAGE`).
+- UI strings live in `messages/en.json` / `messages/nl.json` / `messages/fr.json` / `messages/de.json`. Never hand-translate the non-English files — they're machine-generated (see Auto-translation below).
 
 ### Blog content — two sources of truth
 
 Blog metadata is split across two places that must stay consistent for a post to render/link correctly:
 
-1. `content/blog/{en,nl}/<slug>.mdx` — the actual MDX content + frontmatter (`title`, `description`, `date`, `category`, `slug`, `author`).
-2. `lib/blog-posts.ts` — a hand-maintained array (`_allBlogPosts`) with additional metadata used by the site (tags, `readingTime`, `tocItems`/`tocItemsNl` for the table of contents, `softCta` variant, optional `faqItems`, `image`, `hidden`). This is not derived from the MDX files — adding an MDX post also requires adding an entry here.
+1. `content/blog/{en,nl,fr,de}/<slug>.mdx` — the actual MDX content + frontmatter (`title`, `description`, `date`, `category`, `slug`, `author`).
+2. `lib/blog-posts.ts` — a hand-maintained array (`_allBlogPosts`) with additional metadata used by the site (tags, `readingTime`, `tocItems`/`tocItemsNl` for the table of contents, `softCta` variant, optional `faqItems`, `image`, `hidden`). This is not derived from the MDX files — adding an MDX post also requires adding an entry here. Both `faqItems` and `tocItems` are English-only fields and stay the single source of truth for that content — don't hand-edit their translations:
+   - `faqItems` — localized versions live in `content/blog-faq/{nl,fr,de}.json` (machine-generated, see Auto-translation below), read via `lib/blog-faq-i18n.ts`.
+   - `tocItems` labels — nl has a hand-maintained override (`tocItemsNl`, written by whoever authors the post, id values copied verbatim from `tocItems`); fr/de labels are machine-generated into `content/blog-toc/{fr,de}.json`, read via `lib/blog-toc-i18n.ts`. `id` values are anchor targets (`href="#id"` in `components/blog-toc.tsx`) and are never translated in any locale — only `label` is.
 
 **Author is sourced from MDX frontmatter only** (`author: "<key>"`, e.g. `"stephanie"`), read via `getMdxFrontmatter`/`getMdxAuthor` in the `[slug]/page.tsx` files — `lib/blog-posts.ts` intentionally has no `author` field, to avoid the two sources drifting. The canonical author registry (display name, role, bio, LinkedIn, avatar) lives in `components/blog.tsx` as `AUTHORS`/`AuthorKey`/`isAuthorKey`, imported wherever an author needs to be resolved or validated. `BlogLayout` automatically renders the matching `AuthorBlock` under every article body — never hand-write an author bio card inside MDX content.
 
 ### Auto-translation pipeline
 
-`scripts/translate.js` (invoked via `npm run prebuild` and in CI) reads `messages/en.json` as the source of truth and translates any keys missing from `messages/nl.json` using the Groq API (`GROQ_API_KEY`, despite some comments in the script referencing Gemini — it currently calls Groq's `llama-3.3-70b-versatile`). It also translates new/changed MDX files from `content/blog/en/` into `content/blog/nl/`, leaving frontmatter keys, headings, and JSX untouched.
+`scripts/translate.js` (invoked via `npm run prebuild` and in CI) reads `messages/en.json` as the source of truth and translates any keys missing from `messages/{nl,fr,de}.json` using the Gemini API (`GEMINI_API_KEY`, Gemini 2.5 Flash). It also translates new/changed MDX files from `content/blog/en/` into `content/blog/{nl,fr,de}/`, leaving frontmatter keys, headings, and JSX untouched; translates blog post `faqItems` (read from `lib/blog-posts.ts`, read-only) into `content/blog-faq/{nl,fr,de}.json`; and translates `tocItems` labels (same read-only source) into `content/blog-toc/{fr,de}.json` — nl is skipped there since it's hand-maintained via `tocItemsNl`.
 
-`.github/workflows/auto-translate.yml` runs this script on pushes to `main` that touch `messages/en.json` or `content/blog/en/**`, and commits the resulting `messages/nl.json` / `content/blog/nl/**` changes back to `main` directly.
+`.github/workflows/auto-translate.yml` runs this script on pushes to `main` that touch `messages/en.json`, `content/blog/en/**`, or `lib/blog-posts.ts`, and commits the resulting `messages/{nl,fr,de}.json` / `content/blog/{nl,fr,de}/**` / `content/blog-faq/{nl,fr,de}.json` / `content/blog-toc/{fr,de}.json` changes back to `main` directly.
 
-Implication: don't hand-edit `messages/nl.json` or `content/blog/nl/*.mdx` for content that has an English source — edits will be overwritten by the next translation run. Edit the English source instead.
+Implication: don't hand-edit `messages/{nl,fr,de}.json`, `content/blog/{nl,fr,de}/*.mdx`, `content/blog-faq/{nl,fr,de}.json`, or `content/blog-toc/{fr,de}.json` for content that has an English source — edits will be overwritten by the next translation run. Edit the English source (or `tocItemsNl` by hand, for Dutch TOC labels) instead.
 
 ### Shared config and content
 

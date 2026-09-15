@@ -9,6 +9,8 @@ import remarkGfm from "remark-gfm";
 import { getBlogPost, blogPosts } from "@/lib/blog-posts";
 import { ArticleSchema, FaqSchema, Faq, BlogLayout, BlogQuote, SoftCta, ComparisonCards, ChecklistSection, KraljicMatrix, AUTHORS, isAuthorKey, type AuthorKey } from "@/components/blog";
 import { alternateLanguages, siteConfig } from "@/lib/site";
+import { getLocalizedFaqItems, FAQ_HEADINGS } from "@/lib/blog-faq-i18n";
+import { getLocalizedTocItems } from "@/lib/blog-toc-i18n";
 import ProcurementDataCost from "@/components/blog-posts/procurement-data-cost";
 import WhatIsUnspsc from "@/components/blog-posts/what-is-unspsc";
 import AssetRegisterProblems from "@/components/blog-posts/asset-register-problems";
@@ -120,8 +122,11 @@ export default async function BlogPostPage({
   const title = fm.title ?? post.title;
   const description = fm.description ?? post.description;
   const author = fm.author ?? "team";
-  const tocItems = locale === "nl" && post.tocItemsNl ? post.tocItemsNl : post.tocItems;
-  const tocHeading = locale === "nl" ? "In dit artikel" : "In this article";
+  const tocItems = locale === "nl" && post.tocItemsNl ? post.tocItemsNl : getLocalizedTocItems(slug, locale, post.tocItems);
+  const TOC_HEADINGS: Record<string, string> = { en: "In this article", nl: "In dit artikel", fr: "Dans cet article", de: "In diesem Artikel" };
+  const tocHeading = TOC_HEADINGS[locale] ?? TOC_HEADINGS.en;
+  const faqItems = getLocalizedFaqItems(slug, locale, post.faqItems);
+  const faqHeading = FAQ_HEADINGS[locale] ?? FAQ_HEADINGS.en;
 
   // Try MDX (translated if available, fallback to EN MDX, then TSX)
   const mdxContent = getMdxContent(locale, slug);
@@ -135,7 +140,7 @@ export default async function BlogPostPage({
         publishedAt={post.publishedAt}
         authorName={AUTHORS[author].name}
       />
-      {post.faqItems && <FaqSchema items={post.faqItems} slug={post.slug} />}
+      {faqItems && <FaqSchema items={faqItems} slug={post.slug} />}
       <header
         className="page-hero dark"
         style={{ minHeight: "auto", paddingTop: "5rem", paddingBottom: "3.5rem" }}
@@ -175,7 +180,7 @@ export default async function BlogPostPage({
             return <PostContent />;
           })()
         )}
-        {post.faqItems && post.faqItems.length > 0 && <Faq items={post.faqItems} />}
+        {faqItems && faqItems.length > 0 && <Faq items={faqItems} heading={faqHeading} />}
       </BlogLayout>
     </>
   );

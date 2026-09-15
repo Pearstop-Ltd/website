@@ -55,11 +55,11 @@ export function FaqSchema({ items, slug }: { items: { q: string; a: string }[]; 
 // source of truth for the questions and answers; MDX post bodies no longer
 // carry their own "## Frequently asked questions" prose section, so changing
 // this component is the one place to change to restyle every post's FAQ.
-export function Faq({ items }: { items: { q: string; a: string }[] }) {
+export function Faq({ items, heading = "Frequently asked questions" }: { items: { q: string; a: string }[]; heading?: string }) {
   if (!items || items.length === 0) return null;
   return (
     <section>
-      <h2 id="frequently-asked-questions">Frequently asked questions</h2>
+      <h2 id="frequently-asked-questions">{heading}</h2>
       <div className="faq-list">
         {items.map((item, i) => (
           <details key={i} className="faq-item">

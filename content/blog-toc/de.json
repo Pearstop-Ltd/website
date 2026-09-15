@@ -1,0 +1,980 @@
+{
+  "procurement-data-cost": [
+    {
+      "id": "the-problem",
+      "label": "Das Problem mit procurement-Daten"
+    },
+    {
+      "id": "where-cost-hides",
+      "label": "Wo sich die Kosten verstecken"
+    },
+    {
+      "id": "what-clean-data-enables",
+      "label": "Was saubere Daten ermöglichen"
+    },
+    {
+      "id": "the-process",
+      "label": "Wie die Lösung funktioniert"
+    }
+  ],
+  "what-is-unspsc": [
+    {
+      "id": "what-is-unspsc",
+      "label": "Was UNSPSC ist"
+    },
+    {
+      "id": "why-it-matters",
+      "label": "Warum es in der Praxis wichtig ist"
+    },
+    {
+      "id": "erp-problem",
+      "label": "Warum ERP-Systeme dies nicht lösen"
+    },
+    {
+      "id": "what-it-unlocks",
+      "label": "Was Klassifizierung ermöglicht"
+    },
+    {
+      "id": "maintaining",
+      "label": "Klassifizierung pflegen"
+    }
+  ],
+  "asset-register-problems": [
+    {
+      "id": "what-bad-looks-like",
+      "label": "Wie ein fehlerhaftes Register aussieht"
+    },
+    {
+      "id": "financial-cost",
+      "label": "Die finanziellen Kosten"
+    },
+    {
+      "id": "what-it-enables",
+      "label": "Was Genauigkeit ermöglicht"
+    },
+    {
+      "id": "missing-data",
+      "label": "Was typischerweise fehlt"
+    },
+    {
+      "id": "ongoing-maintenance",
+      "label": "Laufende Pflege"
+    }
+  ],
+  "category-management-kraljic-hard-fm": [
+    {
+      "id": "kraljic",
+      "label": "Die Kraljic-Matrix erklärt"
+    },
+    {
+      "id": "data-problem",
+      "label": "Warum Daten die Blockade sind"
+    },
+    {
+      "id": "five-scenarios",
+      "label": "5 category-Szenarien"
+    },
+    {
+      "id": "data-as-fuel",
+      "label": "Daten als Treibstoff für category management"
+    }
+  ],
+  "ai-readiness-data-quality": [
+    {
+      "id": "what-ai-requires",
+      "label": "Was AI-Tools benötigen"
+    },
+    {
+      "id": "fabric-reality",
+      "label": "Die Microsoft-Fabric-Realität"
+    },
+    {
+      "id": "checklist",
+      "label": "AI-readiness-Checkliste"
+    },
+    {
+      "id": "preparation",
+      "label": "Wie Vorbereitung aussieht"
+    }
+  ],
+  "fm-tender-win-rate": [
+    {
+      "id": "pricing-problem",
+      "label": "Das Problem des Preisvertrauens"
+    },
+    {
+      "id": "two-scenarios",
+      "label": "Szenario A vs. B"
+    },
+    {
+      "id": "what-slows",
+      "label": "Was Angebotsteams ausbremst"
+    },
+    {
+      "id": "what-changes",
+      "label": "Was sich mit sauberen Daten ändert"
+    },
+    {
+      "id": "compounding",
+      "label": "Der kumulative Effekt"
+    }
+  ],
+  "excel-heroics-hard-services": [
+    {
+      "id": "visible-cost",
+      "label": "Sichtbare vs. tatsächliche Kosten"
+    },
+    {
+      "id": "diagnostic",
+      "label": "Befinden Sie sich im Excel-Heldentum?"
+    },
+    {
+      "id": "migration",
+      "label": "Wie die Migration aussieht"
+    },
+    {
+      "id": "other-side",
+      "label": "Wie die andere Seite aussieht"
+    }
+  ],
+  "construction-procurement-material-costs": [
+    {
+      "id": "structural-problem",
+      "label": "Warum Baudaten anders sind"
+    },
+    {
+      "id": "steel-case-study",
+      "label": "Stahl: eine Fallstudie"
+    },
+    {
+      "id": "spec-standardisation",
+      "label": "Spezifikationsstandardisierung"
+    },
+    {
+      "id": "software-integration",
+      "label": "Integration mit Bausoftware"
+    }
+  ],
+  "what-clean-data-enables": [
+    {
+      "id": "supplier-consolidation",
+      "label": "1. Lieferantenkonsolidierung"
+    },
+    {
+      "id": "predictive-maintenance",
+      "label": "2. Vorausschauende Instandhaltung"
+    },
+    {
+      "id": "tender-pricing",
+      "label": "3. Präzise tender-Preisgestaltung"
+    },
+    {
+      "id": "ai-tools",
+      "label": "4. AI-Tools, die liefern"
+    },
+    {
+      "id": "strategic-procurement",
+      "label": "5. Strategisches procurement"
+    }
+  ],
+  "unspsc-vs-eclass-vs-cpv": [
+    {
+      "id": "unspsc",
+      "label": "UNSPSC"
+    },
+    {
+      "id": "eclass",
+      "label": "eClass"
+    },
+    {
+      "id": "cpv",
+      "label": "CPV"
+    },
+    {
+      "id": "which-to-use",
+      "label": "Welcher Standard passt"
+    },
+    {
+      "id": "implementation",
+      "label": "Umsetzungsrealität"
+    }
+  ],
+  "unspsc-classification-sap": [
+    {
+      "id": "sap-problem",
+      "label": "Das SAP-Problem, über das niemand spricht"
+    },
+    {
+      "id": "three-approaches",
+      "label": "Drei Ansätze für UNSPSC in SAP"
+    },
+    {
+      "id": "what-to-export",
+      "label": "Welche Daten aus SAP exportiert werden sollten"
+    },
+    {
+      "id": "good-classification",
+      "label": "Wie gute Klassifizierung aussieht"
+    },
+    {
+      "id": "review-queue",
+      "label": "Die Review-Warteschlange"
+    },
+    {
+      "id": "timing",
+      "label": "Timing"
+    }
+  ],
+  "unspsc-classification-accuracy": [
+    {
+      "id": "the-number",
+      "label": "Die Zahl, die Sie immer wieder sehen"
+    },
+    {
+      "id": "how-measured",
+      "label": "Wie Genauigkeit definiert wird"
+    },
+    {
+      "id": "hard-items",
+      "label": "Was einen Artikel schwer klassifizierbar macht"
+    },
+    {
+      "id": "accuracy-stages",
+      "label": "Genauigkeit in verschiedenen Phasen"
+    },
+    {
+      "id": "four-layer",
+      "label": "Wie die Vier-Schichten-Engine funktioniert"
+    },
+    {
+      "id": "downstream",
+      "label": "Was Genauigkeit Ihnen tatsächlich bringt"
+    }
+  ],
+  "unspsc-for-mro": [
+    {
+      "id": "why-hard",
+      "label": "Warum MRO-spend am schwersten zu klassifizieren ist"
+    },
+    {
+      "id": "segments",
+      "label": "UNSPSC-Segmente für MRO"
+    },
+    {
+      "id": "vs-mpn",
+      "label": "UNSPSC vs. Herstellerteilenummern"
+    },
+    {
+      "id": "how-it-works",
+      "label": "Wie automatisierte MRO-Klassifizierung funktioniert"
+    },
+    {
+      "id": "enrichment",
+      "label": "Anreicherung auf Teilenummernebene"
+    },
+    {
+      "id": "downstream",
+      "label": "Der nachgelagerte Nutzen"
+    }
+  ],
+  "unspsc-category-management": [
+    {
+      "id": "the-category-management-problem",
+      "label": "Das category-management-Problem"
+    },
+    {
+      "id": "what-unspsc-makes-possible",
+      "label": "Was UNSPSC ermöglicht"
+    },
+    {
+      "id": "before-after",
+      "label": "Vorher und nachher: ein echtes Beispiel"
+    },
+    {
+      "id": "where-to-start",
+      "label": "Wo man anfängt"
+    }
+  ],
+  "maverick-spend-unspsc": [
+    {
+      "id": "maverick-spend-is-not-a-discipline-problem",
+      "label": "Kein Disziplinproblem"
+    },
+    {
+      "id": "what-gets-exposed",
+      "label": "Was sichtbar wird"
+    },
+    {
+      "id": "the-golden-500",
+      "label": "Der Golden-500-SKU-Ansatz"
+    },
+    {
+      "id": "the-mro-case",
+      "label": "Der MRO-Fall"
+    }
+  ],
+  "win-ai-race-procurement-data-quality": [
+    {
+      "id": "the-problem-is-not-lack-of-data",
+      "label": "Das Problem ist nicht fehlender Datenmangel"
+    },
+    {
+      "id": "ai-readiness-is-a-procurement-issue",
+      "label": "AI-readiness ist ein procurement-Thema"
+    },
+    {
+      "id": "what-pearstop-does",
+      "label": "Was Pearstop tut"
+    },
+    {
+      "id": "why-classification-matters",
+      "label": "Warum Klassifizierung wichtig ist"
+    },
+    {
+      "id": "human-in-control-automation",
+      "label": "Automatisierung mit menschlicher Kontrolle"
+    },
+    {
+      "id": "how-to-win-the-ai-race",
+      "label": "Wie man das AI-Rennen gewinnt"
+    }
+  ],
+  "procurement-data-readiness-ai": [
+    {
+      "id": "why-procurement-data-is-often-difficult-to-use",
+      "label": "Warum procurement-Daten schwer nutzbar sind"
+    },
+    {
+      "id": "what-does-clean-procurement-data-look-like",
+      "label": "Wie saubere procurement-Daten aussehen"
+    },
+    {
+      "id": "how-pearstop-supports-procurement-data-readiness",
+      "label": "Wie Pearstop data readiness unterstützt"
+    },
+    {
+      "id": "why-ai-in-procurement-depends-on-data-quality",
+      "label": "Warum AI von Datenqualität abhängt"
+    },
+    {
+      "id": "how-organisations-can-win-the-ai-race-in-procurement",
+      "label": "Wie man das AI-Rennen gewinnt"
+    },
+    {
+      "id": "the-future-of-procurement-is-ai-ready-data",
+      "label": "Die Zukunft von procurement"
+    }
+  ],
+  "fm-oil-price-procurement-margins": [
+    {
+      "id": "why-are-oil-prices-affecting-procurement-companies",
+      "label": "Warum Ölpreise procurement beeinflussen"
+    },
+    {
+      "id": "how-fuel-surcharges-reduce-margins-in-facilities-management",
+      "label": "Wie Kraftstoffzuschläge Margen verringern"
+    },
+    {
+      "id": "how-procurement-tools-help-companies-avoid-unnecessary-fuel-surcharges",
+      "label": "Wie procurement-Tools helfen"
+    },
+    {
+      "id": "increasing-margins-through-better-supplier-data",
+      "label": "Margen steigern mit besseren Daten"
+    },
+    {
+      "id": "pearstop-smarter-data-management-for-procurement-teams",
+      "label": "Pearstop: intelligenteres Datenmanagement"
+    },
+    {
+      "id": "the-future-of-procurement-is-data-led-margin-protection",
+      "label": "Die Zukunft von procurement"
+    }
+  ],
+  "cleaning-invoices-dont-match-contract": [
+    {
+      "id": "the-pattern-we-see-over-and-over",
+      "label": "Das Muster, das wir immer wieder sehen"
+    },
+    {
+      "id": "why-cleaning-spend-is-uniquely-hard-to-clean",
+      "label": "Warum cleaning-spend besonders schwer zu bereinigen ist"
+    },
+    {
+      "id": "what-good-cleaning-spend-data-actually-looks-like",
+      "label": "Wie gute cleaning-spend-Daten aussehen"
+    }
+  ],
+  "consumables-creep-cleaning-spend": [
+    {
+      "id": "why-nobody-catches-it",
+      "label": "Warum es niemandem auffällt"
+    },
+    {
+      "id": "the-classification-problem-underneath-it",
+      "label": "Das Klassifizierungsproblem dahinter"
+    },
+    {
+      "id": "what-tracking-it-properly-reveals",
+      "label": "Was richtiges Tracking zeigt"
+    }
+  ],
+  "security-spend-data-quality": [
+    {
+      "id": "the-base-contract-is-the-easy-part",
+      "label": "Der Basisvertrag ist der einfache Teil"
+    },
+    {
+      "id": "why-overtime-and-callouts-hide-in-plain-sight",
+      "label": "Warum Überstunden und Callouts unbemerkt bleiben"
+    },
+    {
+      "id": "what-happens-once-its-classified-properly",
+      "label": "Was passiert, sobald es richtig klassifiziert ist"
+    }
+  ],
+  "catering-vending-spend-classification": [
+    {
+      "id": "one-supplier-four-different-cost-types",
+      "label": "Ein Lieferant, vier verschiedene Kostenarten"
+    },
+    {
+      "id": "why-vending-is-worse-not-better",
+      "label": "Warum Automatenverkauf schlechter ist, nicht besser"
+    },
+    {
+      "id": "what-separating-these-categories-actually-enables",
+      "label": "Was die Trennung dieser Kategorien wirklich ermöglicht"
+    }
+  ],
+  "hvac-maintenance-invoice-reconciliation": [
+    {
+      "id": "one-visit-three-cost-types",
+      "label": "Ein Einsatz, drei Kostenarten"
+    },
+    {
+      "id": "why-this-split-actually-matters-financially",
+      "label": "Warum diese Trennung finanziell wichtig ist"
+    },
+    {
+      "id": "what-clean-hvac-data-lets-you-do",
+      "label": "Was saubere HVAC-Daten ermöglichen"
+    }
+  ],
+  "ppm-mande-spend-visibility": [
+    {
+      "id": "the-assumption-everyone-makes",
+      "label": "Die Annahme, die jeder trifft"
+    },
+    {
+      "id": "why-the-invoices-dont-help-you-check",
+      "label": "Warum die Rechnungen bei der Kontrolle nicht helfen"
+    },
+    {
+      "id": "what-happens-once-you-can-actually-see-the-split",
+      "label": "Was passiert, sobald Sie die Trennung wirklich sehen können"
+    }
+  ],
+  "reactive-maintenance-callout-spend": [
+    {
+      "id": "why-callouts-get-approved-without-much-scrutiny",
+      "label": "Warum Callouts ohne viel Prüfung genehmigt werden"
+    },
+    {
+      "id": "why-nobody-sees-the-total-until-its-classified",
+      "label": "Warum niemand die Gesamtsumme sieht, bis sie klassifiziert ist"
+    },
+    {
+      "id": "what-the-total-usually-reveals",
+      "label": "Was die Gesamtsumme meist zeigt"
+    }
+  ],
+  "subcontractor-invoice-data-quality": [
+    {
+      "id": "why-subcontractor-invoices-vary-so-much",
+      "label": "Warum Subunternehmerrechnungen so stark variieren"
+    },
+    {
+      "id": "what-this-inconsistency-actually-costs-you",
+      "label": "Was diese Inkonsistenz Sie wirklich kostet"
+    },
+    {
+      "id": "the-fix-isnt-asking-subcontractors-to-change",
+      "label": "Die Lösung liegt nicht darin, Subunternehmer zu ändern"
+    }
+  ],
+  "construction-procurement-data-benchmarking": [
+    {
+      "id": "every-project-starts-from-zero",
+      "label": "Jedes Projekt beginnt bei null"
+    },
+    {
+      "id": "why-this-makes-benchmarking-pointless-without-classification",
+      "label": "Warum das Benchmarking ohne Klassifizierung sinnlos macht"
+    },
+    {
+      "id": "what-real-benchmarking-unlocks",
+      "label": "Was echtes Benchmarking ermöglicht"
+    }
+  ],
+  "fuel-plant-hire-surcharges-construction": [
+    {
+      "id": "why-surcharges-go-unchecked",
+      "label": "Warum Zuschläge ungeprüft bleiben"
+    },
+    {
+      "id": "why-they-compound-into-real-money",
+      "label": "Warum sie sich zu echtem Geld summieren"
+    },
+    {
+      "id": "what-extraction-and-classification-reveals",
+      "label": "Was Extraktion und Klassifizierung zeigen"
+    }
+  ],
+  "infrastructure-procurement-data-portability": [
+    {
+      "id": "why-the-data-stays-trapped",
+      "label": "Warum die Daten gefangen bleiben"
+    },
+    {
+      "id": "the-cost-of-starting-from-zero-every-time",
+      "label": "Die Kosten, jedes Mal bei null zu beginnen"
+    },
+    {
+      "id": "what-portability-actually-requires",
+      "label": "Was Portabilität wirklich erfordert"
+    }
+  ],
+  "multi-site-infrastructure-classification": [
+    {
+      "id": "why-fragmentation-is-the-default-state",
+      "label": "Warum Fragmentierung der Normalzustand ist"
+    },
+    {
+      "id": "why-site-level-reporting-isnt-enough",
+      "label": "Warum Reporting auf Standortebene nicht ausreicht"
+    },
+    {
+      "id": "what-programme-level-classification-actually-enables",
+      "label": "Was Klassifizierung auf Programmebene wirklich ermöglicht"
+    }
+  ],
+  "infrastructure-contract-spend-visibility": [
+    {
+      "id": "why-visibility-usually-arrives-too-late",
+      "label": "Warum Transparenz meist zu spät kommt"
+    },
+    {
+      "id": "what-continuous-classification-changes",
+      "label": "Was kontinuierliche Klassifizierung verändert"
+    },
+    {
+      "id": "what-this-actually-looks-like-in-practice",
+      "label": "Wie das in der Praxis aussieht"
+    }
+  ],
+  "mro-spend-classification": [
+    {
+      "id": "why-mro-gets-ignored",
+      "label": "Warum MRO ignoriert wird"
+    },
+    {
+      "id": "why-low-value-doesnt-mean-low-impact",
+      "label": "Warum niedriger Wert nicht geringe Wirkung bedeutet"
+    },
+    {
+      "id": "what-classification-unlocks-even-at-this-scale",
+      "label": "Was Klassifizierung auch in diesem Umfang ermöglicht"
+    }
+  ],
+  "mro-parts-vs-invoice-data-mismatch": [
+    {
+      "id": "two-systems-two-versions-of-the-truth",
+      "label": "Zwei Systeme, zwei Versionen der Wahrheit"
+    },
+    {
+      "id": "why-this-gap-matters-more-than-it-seems",
+      "label": "Warum diese Lücke wichtiger ist, als es scheint"
+    },
+    {
+      "id": "what-matching-them-actually-requires",
+      "label": "Was der Abgleich wirklich erfordert"
+    }
+  ],
+  "asset-data-vs-spend-data-mismatch": [
+    {
+      "id": "two-datasets-built-by-two-different-worlds",
+      "label": "Zwei Datensätze, aus zwei verschiedenen Welten"
+    },
+    {
+      "id": "what-happens-when-they-disagree",
+      "label": "Was passiert, wenn sie nicht übereinstimmen"
+    },
+    {
+      "id": "why-reconciling-them-changes-decisions",
+      "label": "Warum der Abgleich Entscheidungen verändert"
+    }
+  ],
+  "emergency-mro-purchases-spend-control": [
+    {
+      "id": "why-the-exception-has-to-exist",
+      "label": "Warum die Ausnahme existieren muss"
+    },
+    {
+      "id": "why-the-exception-becomes-a-blind-spot",
+      "label": "Warum die Ausnahme zum blinden Fleck wird"
+    },
+    {
+      "id": "what-reviewing-it-after-the-fact-reveals",
+      "label": "Was die nachträgliche Prüfung zeigt"
+    }
+  ],
+  "ai-procurement-data-classification-reality": [
+    {
+      "id": "what-ai-genuinely-does-well",
+      "label": "Was AI wirklich gut kann"
+    },
+    {
+      "id": "where-it-still-struggles",
+      "label": "Wo es noch schwierig ist"
+    },
+    {
+      "id": "how-to-tell-if-a-vendors-claim-is-real",
+      "label": "Wie man erkennt, ob die Aussage eines Anbieters stimmt"
+    }
+  ],
+  "commercial-fm-contract-billing-mismatch": [
+    {
+      "id": "the-moment-the-contract-and-reality-start-to-diverge",
+      "label": "Der Moment, in dem Vertrag und Realität auseinandergehen"
+    },
+    {
+      "id": "why-nobody-notices-until-its-a-big-number",
+      "label": "Warum es niemandem auffällt, bis es eine große Zahl ist"
+    },
+    {
+      "id": "what-checking-billed-reality-against-contracted-scope-requires",
+      "label": "Was der Abgleich von Rechnungsrealität mit vertraglichem Umfang erfordert"
+    }
+  ],
+  "datore-vs-pearstop": [
+    {
+      "id": "what-datore-does",
+      "label": "Was Datore tut"
+    },
+    {
+      "id": "what-pearstop-does",
+      "label": "Was Pearstop tut"
+    },
+    {
+      "id": "datores-strength-is-breadth",
+      "label": "Datores Stärke ist die Breite"
+    },
+    {
+      "id": "pearstops-strength-is-depth",
+      "label": "Pearstops Stärke ist die Tiefe"
+    },
+    {
+      "id": "where-they-sit-in-the-data-value-chain",
+      "label": "Wo sie in der Datenwertschöpfungskette stehen"
+    },
+    {
+      "id": "how-to-choose",
+      "label": "Wie man wählt"
+    },
+    {
+      "id": "two-complementary-layers-of-the-same-journey",
+      "label": "Zwei sich ergänzende Ebenen"
+    }
+  ],
+  "eu-ai-act-compliance-data-quality": [
+    {
+      "id": "what-just-happened-the-eu-ai-act-context",
+      "label": "Was gerade passiert ist"
+    },
+    {
+      "id": "consequences-of-non-compliance",
+      "label": "Folgen bei Nichteinhaltung"
+    },
+    {
+      "id": "enter-pearstop-compliance-isnt-one-feature-its-the-whole-platform",
+      "label": "Wie Pearstop die Pflichten abdeckt"
+    },
+    {
+      "id": "the-pearstop-value-proposition",
+      "label": "Das Nutzenversprechen"
+    },
+    {
+      "id": "frequently-asked-questions",
+      "label": "FAQ"
+    }
+  ],
+  "how-to-build-a-spend-cube-with-ai": [
+    {
+      "id": "what-a-spend-cube-actually-is",
+      "label": "Was ein spend cube wirklich ist"
+    },
+    {
+      "id": "building-a-spend-cube-step-by-step",
+      "label": "Einen spend cube Schritt für Schritt aufbauen"
+    },
+    {
+      "id": "when-to-use-a-procurement-consultant",
+      "label": "Wann ein procurement-Berater sinnvoll ist"
+    },
+    {
+      "id": "when-to-use-an-ai-pipeline",
+      "label": "Wann eine AI-Pipeline sinnvoll ist"
+    },
+    {
+      "id": "frequently-asked-questions",
+      "label": "FAQ"
+    }
+  ],
+  "unspsc-classification-construction-guide": [
+    {
+      "id": "unspsc-explained-in-four-levels",
+      "label": "UNSPSC in vier Ebenen erklärt"
+    },
+    {
+      "id": "who-owns-unspsc-classification-decisions",
+      "label": "Wer UNSPSC-Klassifizierungsentscheidungen verantwortet"
+    },
+    {
+      "id": "how-to-handle-unspsc-edge-cases",
+      "label": "Wie man mit UNSPSC-Grenzfällen umgeht"
+    },
+    {
+      "id": "using-ai-for-unspsc-classification",
+      "label": "AI für UNSPSC-Klassifizierung nutzen"
+    },
+    {
+      "id": "frequently-asked-questions",
+      "label": "FAQ"
+    }
+  ],
+  "manufacturing-procurement-sap-data-quality": [
+    {
+      "id": "why-manufacturers-assume-this-is-a-data-problem",
+      "label": "Warum dies wie ein Datenproblem aussieht"
+    },
+    {
+      "id": "what-does-unclassified-spend-actually-cost",
+      "label": "Was unklassifizierter spend kostet"
+    },
+    {
+      "id": "who-is-responsible-for-fixing-it",
+      "label": "Wer dafür verantwortlich ist"
+    },
+    {
+      "id": "what-this-looks-like-on-a-real-sap-export",
+      "label": "Wie das bei einem echten SAP-Export aussieht"
+    },
+    {
+      "id": "why-not-just-point-a-general-ai-tool-at-the-export",
+      "label": "Warum kein allgemeines AI-Tool"
+    },
+    {
+      "id": "what-the-first-step-actually-looks-like",
+      "label": "Wie der erste Schritt aussieht"
+    }
+  ],
+  "new-head-of-procurement-week-one": [
+    {
+      "id": "the-baseline-gap-new-procurement-leaders-inherit",
+      "label": "Die Baseline-Lücke, die Sie erben"
+    },
+    {
+      "id": "why-ai-is-the-wrong-first-move",
+      "label": "Warum AI der falsche erste Schritt ist"
+    },
+    {
+      "id": "what-to-actually-do-in-week-one",
+      "label": "Was in Woche eins wirklich zu tun ist"
+    },
+    {
+      "id": "why-data-quality-needs-a-single-owner",
+      "label": "Warum Datenqualität einen Verantwortlichen braucht"
+    }
+  ],
+  "procurement-finance-sign-off-gap": [
+    {
+      "id": "two-different-conversations",
+      "label": "Zwei unterschiedliche Gespräche"
+    },
+    {
+      "id": "what-finance-actually-needs-to-see",
+      "label": "Was Finance wirklich sehen muss"
+    },
+    {
+      "id": "why-procurement-cannot-supply-it-alone",
+      "label": "Warum procurement dies nicht allein liefern kann"
+    }
+  ],
+  "credit-notes-classification-edge-case": [
+    {
+      "id": "why-credit-notes-confuse-classifiers",
+      "label": "Warum Gutschriften Klassifizierer verwirren"
+    },
+    {
+      "id": "the-hidden-context-classification-cannot-see",
+      "label": "Der verborgene Kontext, den Klassifizierung nicht sieht"
+    },
+    {
+      "id": "why-guessing-is-worse-than-flagging",
+      "label": "Warum Raten schlechter ist als Markieren"
+    },
+    {
+      "id": "how-the-review-queue-actually-works",
+      "label": "Wie die Review-Warteschlange wirklich funktioniert"
+    }
+  ],
+  "fm-classification-engagement-pricing": [
+    {
+      "id": "fm-spend-volume-swings-by-design",
+      "label": "FM-spend-Volumen schwankt konstruktionsbedingt"
+    },
+    {
+      "id": "flat-fees-assume-spend-that-never-moves",
+      "label": "Pauschalpreise setzen unveränderlichen spend voraus"
+    },
+    {
+      "id": "why-usage-based-pricing-fits-fm",
+      "label": "Warum nutzungsbasierte Preisgestaltung zu FM passt"
+    },
+    {
+      "id": "what-a-volume-flexible-engagement-looks-like",
+      "label": "Wie ein volumenflexibles Engagement aussieht"
+    }
+  ],
+  "spend-cube-ai-for-procurement-consultancies": [
+    {
+      "id": "why-manual-cube-building-limits-a-consultancy",
+      "label": "Warum manueller Cube-Aufbau eine Beratung einschränkt"
+    },
+    {
+      "id": "taxonomy-guardrails-against-hallucinated-categories",
+      "label": "Taxonomie-Leitplanken gegen halluzinierte Kategorien"
+    },
+    {
+      "id": "a-fixed-fee-or-token-cost-model",
+      "label": "Ein Festpreis- oder Token-Kostenmodell"
+    },
+    {
+      "id": "what-this-changes-for-client-delivery",
+      "label": "Was sich für die Kundenlieferung ändert"
+    }
+  ],
+  "sap-migration-readiness-construction": [
+    {
+      "id": "construction-po-data-breaks-general-ai-tools",
+      "label": "Bau-Bestelldaten überfordern allgemeine AI-Tools"
+    },
+    {
+      "id": "why-rushed-sap-prep-fails",
+      "label": "Warum überstürzte SAP-Vorbereitung scheitert"
+    },
+    {
+      "id": "why-construction-spend-resists-a-shared-taxonomy",
+      "label": "Warum sich Bau-spend einer gemeinsamen Taxonomie widersetzt"
+    },
+    {
+      "id": "what-early-sap-readiness-work-involves",
+      "label": "Was frühe SAP-readiness-Arbeit umfasst"
+    }
+  ],
+  "who-owns-your-procurement-data-problem": [
+    {
+      "id": "finance-owns-the-ledger-not-the-taxonomy",
+      "label": "Finance besitzt das Hauptbuch, nicht die Taxonomie"
+    },
+    {
+      "id": "procurement-owns-the-deal-not-the-data",
+      "label": "Procurement besitzt den Deal, nicht die Daten"
+    },
+    {
+      "id": "it-owns-the-system-not-the-structure",
+      "label": "IT besitzt das System, nicht die Struktur"
+    },
+    {
+      "id": "who-should-own-classification-instead",
+      "label": "Wer Klassifizierung stattdessen verantworten sollte"
+    }
+  ],
+  "hvac-air-filtration-spend-classification": [
+    {
+      "id": "air-filters-get-buried-in-hvac-spend",
+      "label": "Luftfilter versteckt im HVAC-spend"
+    },
+    {
+      "id": "filter-replacement-is-a-consumable-cycle",
+      "label": "Filterwechsel als Verbrauchszyklus"
+    },
+    {
+      "id": "what-one-blended-hvac-code-hides",
+      "label": "Was ein vermischter Code verbirgt"
+    },
+    {
+      "id": "splitting-filter-spend-from-reactive-parts",
+      "label": "Filter-spend von reaktivem spend trennen"
+    }
+  ],
+  "unspsc-classification-tools-compared": [
+    {
+      "id": "unspsc-classification-rigor-explained",
+      "label": "UNSPSC-Klassifizierungsrigorosität erklärt"
+    },
+    {
+      "id": "unspsc-classification-tools-compared-at-a-glance",
+      "label": "Tools im Überblick verglichen"
+    },
+    {
+      "id": "unspsc-inside-procurement-suites",
+      "label": "UNSPSC in procurement-Suiten"
+    },
+    {
+      "id": "unspsc-classification-and-mdm-specialists",
+      "label": "UNSPSC-Klassifizierung und MDM-Spezialisten"
+    },
+    {
+      "id": "unspsc-tool-selection-by-use-case",
+      "label": "UNSPSC-Toolauswahl nach Anwendungsfall"
+    }
+  ],
+  "spend-cube-execution-framework": [
+    {
+      "id": "spend-cube-dimensions-in-strategic-sourcing",
+      "label": "Spend-cube-Dimensionen"
+    },
+    {
+      "id": "spend-cube-decay-after-a-consulting-engagement",
+      "label": "Warum spend cubes veralten"
+    },
+    {
+      "id": "spend-cube-execution-with-an-ai-pipeline",
+      "label": "Umsetzung mit einer AI-Pipeline"
+    },
+    {
+      "id": "spend-cube-ownership-after-the-pipeline-launches",
+      "label": "Verantwortung nach dem Start"
+    }
+  ],
+  "spend-classification-tools-compared-2026": [
+    {
+      "id": "spend-classification-options-compared-at-a-glance",
+      "label": "Optionen im Überblick verglichen"
+    },
+    {
+      "id": "cost-models-behind-each-classification-approach",
+      "label": "Kostenmodelle im Vergleich"
+    },
+    {
+      "id": "speed-from-raw-spend-to-usable-data",
+      "label": "Geschwindigkeit bis zu nutzbaren Daten"
+    },
+    {
+      "id": "industry-depth-versus-generic-spend-platforms",
+      "label": "Branchentiefe vs. generische Plattformen"
+    }
+  ]
+}

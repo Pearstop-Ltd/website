@@ -26,6 +26,13 @@ const https = require("https");
 const ROOT = path.join(__dirname, "..");
 const MESSAGES_DIR = path.join(ROOT, "messages");
 const BLOG_EN_DIR = path.join(ROOT, "content", "blog", "en");
+const BLOG_POSTS_SOURCE = path.join(ROOT, "lib", "blog-posts.ts");
+const BLOG_FAQ_DIR = path.join(ROOT, "content", "blog-faq");
+const BLOG_TOC_DIR = path.join(ROOT, "content", "blog-toc");
+// nl already has a hand-maintained `tocItemsNl` field directly on each post in
+// lib/blog-posts.ts (written by whoever authors the post) — this pipeline
+// only fills the locales nobody hand-translates.
+const TOC_TARGET_LOCALES = ["fr", "de"];
 const TARGET_LOCALES = ["nl", "fr", "de"];
 
 const LOCALE_NAMES = { nl: "Dutch", fr: "French", de: "German" };
@@ -385,6 +392,187 @@ async function translateMdxContent(content, targetLang) {
 }
 
 // ---------------------------------------------------------------------------
+// Blog post FAQ translation
+// ---------------------------------------------------------------------------
+//
+// `faqItems` in lib/blog-posts.ts (English) is the single source of truth —
+// see the comment on the `Faq` component in components/blog.tsx. This never
+// writes to that file. It only extracts the EN q/a pairs from it (read-only)
+// and translates whatever is missing from content/blog-faq/{locale}.json,
+// which lib/blog-faq-i18n.ts reads at render time to localize blog FAQs.
+
+function extractBlogFaqItems() {
+  if (!fs.existsSync(BLOG_POSTS_SOURCE)) return {};
+  const src = fs.readFileSync(BLOG_POSTS_SOURCE, "utf-8");
+  const result = {};
+  // Top-level post objects are formatted as `  {\n    slug: "...", ...\n  },`
+  // (2-space brace, 4-space fields) — a stable split point because Prettier
+  // formats this array consistently and no nested field closes at that
+  // exact indentation.
+  const blocks = src.split(/\n(?=  \{\n {4}slug:)/);
+  for (const block of blocks) {
+    const slugMatch = block.match(/^\s*\{\n\s*slug:\s*"([^"]+)"/);
+    if (!slugMatch) continue;
+    const faqMatch = block.match(/\n {4}faqItems:\s*\[\n([\s\S]*?)\n {4}\],\n/);
+    if (!faqMatch) continue;
+    // q/a entries may be written single-line or spread across lines, so pull
+    // every `q:`/`a:` string token in document order and pair them up rather
+    // than matching a whole `{ q: ..., a: ... }` object in one shot.
+    const tokenRe = /\b(q|a):\s*"((?:[^"\\]|\\.)*)"/g;
+    const tokens = [];
+    let m;
+    while ((m = tokenRe.exec(faqMatch[1]))) tokens.push({ key: m[1], val: JSON.parse(`"${m[2]}"`) });
+    const items = [];
+    for (let i = 0; i < tokens.length; i += 2) {
+      if (tokens[i]?.key === "q" && tokens[i + 1]?.key === "a") {
+        items.push({ q: tokens[i].val, a: tokens[i + 1].val });
+      } else {
+        console.warn(`⚠  Could not parse faqItems for "${slugMatch[1]}" — skipping (check formatting).`);
+        items.length = 0;
+        break;
+      }
+    }
+    if (items.length > 0) result[slugMatch[1]] = items;
+  }
+  return result;
+}
+
+async function translateBlogFaqItems() {
+  const enFaq = extractBlogFaqItems();
+  const slugs = Object.keys(enFaq);
+  if (slugs.length === 0) {
+    console.log("\n❓  No blog post faqItems found in lib/blog-posts.ts, skipping.");
+    return;
+  }
+
+  fs.mkdirSync(BLOG_FAQ_DIR, { recursive: true });
+
+  for (const locale of TARGET_LOCALES) {
+    const localePath = path.join(BLOG_FAQ_DIR, `${locale}.json`);
+    const localeData = fs.existsSync(localePath) ? JSON.parse(fs.readFileSync(localePath, "utf-8")) : {};
+
+    // Flatten to "<slug>.<index>.q" / "<slug>.<index>.a" so the existing
+    // batched-translate + missing-key diff logic (used for messages/*.json)
+    // works unchanged, and stale slugs/entries removed from blog-posts.ts
+    // are naturally dropped by only ever rebuilding from enFaq.
+    const enFlat = flattenObject(enFaq);
+    const localeFlat = flattenObject(localeData);
+    const missing = Object.entries(enFlat).filter(([key, value]) => value && typeof value === "string" && !localeFlat[key]);
+
+    if (missing.length === 0) {
+      console.log(`✓  blog-faq/${locale}.json is already up to date (${slugs.length} posts)`);
+      continue;
+    }
+
+    console.log(`\n🌍  Translating ${missing.length} blog FAQ strings to ${LOCALE_NAMES[locale]}...`);
+    const texts = missing.map(([, v]) => v);
+    const translatedTexts = await translateBatched(texts, locale);
+
+    const merged = {};
+    // Rebuild from enFaq so removed/renamed slugs don't linger, keeping
+    // already-translated strings and filling in the newly translated ones.
+    for (const slug of slugs) {
+      merged[slug] = enFaq[slug].map((item, i) => ({
+        q: getNestedValue(localeData, `${slug}.${i}.q`) || item.q,
+        a: getNestedValue(localeData, `${slug}.${i}.a`) || item.a,
+      }));
+    }
+    missing.forEach(([key], index) => setNestedValue(merged, key, translatedTexts[index]));
+
+    fs.writeFileSync(localePath, JSON.stringify(merged, null, 2), "utf-8");
+    console.log(`✓  Wrote blog-faq/${locale}.json (${missing.length} new translations)`);
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Blog post TOC label translation
+// ---------------------------------------------------------------------------
+//
+// `tocItems` in lib/blog-posts.ts (English) is read-only here, same as
+// faqItems above. `id` values are anchor targets (`href="#id"` +
+// `document.getElementById(id)` in components/blog-toc.tsx) and are never
+// translated — only `label` is. nl already has a hand-maintained
+// `tocItemsNl` field per post, written by whoever authors it, so this only
+// covers fr/de via content/blog-toc/{fr,de}.json, read by lib/blog-toc-i18n.ts.
+
+function extractBlogTocItems() {
+  if (!fs.existsSync(BLOG_POSTS_SOURCE)) return {};
+  const src = fs.readFileSync(BLOG_POSTS_SOURCE, "utf-8");
+  const result = {};
+  const blocks = src.split(/\n(?=  \{\n {4}slug:)/);
+  for (const block of blocks) {
+    const slugMatch = block.match(/^\s*\{\n\s*slug:\s*"([^"]+)"/);
+    if (!slugMatch) continue;
+    const tocMatch = block.match(/\n {4}tocItems:\s*\[\n([\s\S]*?)\n {4}\],\n/);
+    if (!tocMatch) continue;
+    const tokenRe = /\b(id|label):\s*"((?:[^"\\]|\\.)*)"/g;
+    const tokens = [];
+    let m;
+    while ((m = tokenRe.exec(tocMatch[1]))) tokens.push({ key: m[1], val: JSON.parse(`"${m[2]}"`) });
+    const items = [];
+    for (let i = 0; i < tokens.length; i += 2) {
+      if (tokens[i]?.key === "id" && tokens[i + 1]?.key === "label") {
+        items.push({ id: tokens[i].val, label: tokens[i + 1].val });
+      } else {
+        console.warn(`⚠  Could not parse tocItems for "${slugMatch[1]}" — skipping (check formatting).`);
+        items.length = 0;
+        break;
+      }
+    }
+    if (items.length > 0) result[slugMatch[1]] = items;
+  }
+  return result;
+}
+
+async function translateBlogTocLabels() {
+  const enToc = extractBlogTocItems();
+  const slugs = Object.keys(enToc);
+  if (slugs.length === 0) {
+    console.log("\n🧭  No blog post tocItems found in lib/blog-posts.ts, skipping.");
+    return;
+  }
+
+  fs.mkdirSync(BLOG_TOC_DIR, { recursive: true });
+
+  for (const locale of TOC_TARGET_LOCALES) {
+    const localePath = path.join(BLOG_TOC_DIR, `${locale}.json`);
+    const localeData = fs.existsSync(localePath) ? JSON.parse(fs.readFileSync(localePath, "utf-8")) : {};
+
+    const enLabelFlat = {};
+    for (const slug of slugs) enToc[slug].forEach((item, i) => { enLabelFlat[`${slug}.${i}`] = item.label; });
+    const localeLabelFlat = {};
+    for (const [slug, items] of Object.entries(localeData)) {
+      (items || []).forEach((item, i) => { if (item?.label) localeLabelFlat[`${slug}.${i}`] = item.label; });
+    }
+
+    const missing = Object.entries(enLabelFlat).filter(([key, value]) => value && !localeLabelFlat[key]);
+
+    if (missing.length === 0) {
+      console.log(`✓  blog-toc/${locale}.json is already up to date (${slugs.length} posts)`);
+      continue;
+    }
+
+    console.log(`\n🌍  Translating ${missing.length} blog TOC labels to ${LOCALE_NAMES[locale]}...`);
+    const texts = missing.map(([, v]) => v);
+    const translatedTexts = await translateBatched(texts, locale);
+    const translatedByKey = {};
+    missing.forEach(([key], index) => { translatedByKey[key] = translatedTexts[index]; });
+
+    const merged = {};
+    for (const slug of slugs) {
+      merged[slug] = enToc[slug].map((item, i) => {
+        const key = `${slug}.${i}`;
+        const label = translatedByKey[key] ?? localeLabelFlat[key] ?? item.label;
+        return { id: item.id, label };
+      });
+    }
+
+    fs.writeFileSync(localePath, JSON.stringify(merged, null, 2), "utf-8");
+    console.log(`✓  Wrote blog-toc/${locale}.json (${missing.length} new translations)`);
+  }
+}
+
+// ---------------------------------------------------------------------------
 // Main
 // ---------------------------------------------------------------------------
 
@@ -397,6 +585,10 @@ async function main() {
     await translateMessages();
     console.log("");
     await translateBlogPosts();
+    console.log("");
+    await translateBlogFaqItems();
+    console.log("");
+    await translateBlogTocLabels();
     console.log("\n✅  Translation complete.");
   } catch (err) {
     console.error("\n❌  Translation failed:", err.message);
