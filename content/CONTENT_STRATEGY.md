@@ -38,13 +38,13 @@ restricted to the standard writers list.
 
 ## Voice profiles
 
-Before drafting for a writer, check `content/voice-profiles/<AUTHORS-key>.md`.
+Before drafting for a writer, check Notion for the voice profiles of the writers + the Pearstop Customer language voice. A fallback is `content/voice-profiles/<AUTHORS-key>.md`.
 If one exists, it is the authoritative voice reference — follow its rules
 exactly, especially any "hard constraints" / never-use list. If no profile
 exists for that writer yet, fall back to reading 2-3 of their own existing
 published articles in `content/blog/en/` as a style reference instead.
 
-Profiles available: `stephanie`. Not yet available: `rae`, `neharika` — use
+Profiles available: `stephanie`. Not yet available: `rae`, — use
 the fallback for these until a profile is added.
 
 ---
@@ -58,13 +58,13 @@ most recent signal (client calls, team check-ins), not the archived plans.
 ## What Pearstop does
 
 Go-to data quality and data integrity player for asset-heavy companies.
-Wedge: hard facilities management first, then construction, infrastructure,
-manufacturing. Same shape of messy data across these industries means
+Wedge: (hard) facilities management first, then cleaning, construction, infrastructure,
+manufacturing, soft services. Same shape of messy data across these industries means
 repeatable patterns and faster delivery.
 
 ## The problem we write about
 
-Client spend and asset data is inconsistent, messy, context-dependent. They
+Client spend data is inconsistent, messy, context-dependent. They
 can't trust their own reports or asset lists. Humans are stitching data
 together by hand, and it never gets fixed because that's not their actual
 job. What they want isn't "clean data" as an abstraction — it's trusting
@@ -138,6 +138,7 @@ carry it to the actual decision-maker, not the CEO directly.
 - Categories (use exactly): Procurement, AI & Digital, Data Quality, Data
   Management, Asset Management, Construction, Commercial FM.
 - Don't list geographies by default.
+- When a section uses multiple examples to illustrate a point (e.g., one example per sub-case), open with a one-line frame that tells the reader what axis or dimension the examples differ along, before the first example appears. Each example should then be introduced with a short clause naming what it specifically illustrates, not just "an example from X." Test before finalizing: could a reader tell why the examples are being shown before they hit the first one? If the section reads as a list of separate facts rather than points on one line, add the frame.
 
 ## Lead magnets
 
