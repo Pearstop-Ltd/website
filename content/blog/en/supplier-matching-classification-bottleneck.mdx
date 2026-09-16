@@ -1,0 +1,63 @@
+---
+title: "The real bottleneck in a spend cleanup is supplier matching"
+description: "Line classification reaches high accuracy fast. Supplier matching is the real bottleneck, and closing the last gap takes a short manual review."
+date: "2026-09-16"
+category: "Data Quality"
+slug: "supplier-matching-classification-bottleneck"
+author: "rae"
+lang: "en"
+---
+
+**Quick answer:** Line classification is not the hard part of a spend cleanup. Modern classification pipelines reach a high automated match rate within the first pass. What determines how long a cleanup actually takes is supplier matching: resolving the same supplier appearing under a dozen name variants to a single record. Closing that last gap takes a short, targeted manual review of the toughest unmatched suppliers, not more automation.
+
+On this page: [Classification hits its ceiling fast](#classification-hits-its-ceiling-fast) · [Supplier matching is the harder problem](#supplier-matching-is-the-harder-problem) · [The manual review that actually moves it](#the-manual-review-that-actually-moves-it) · [What good supplier resolution looks like](#what-good-supplier-resolution-looks-like) · [FAQ](#frequently-asked-questions)
+
+## Classification hits its ceiling fast
+
+I run delivery on most of our projects, so I am usually the person watching a cleanup move through its first week. The pattern that surprises clients almost every time is how fast line classification gets good. Point a constrained taxonomy and a rules layer at a spend file and the bulk of lines land in a correct category within the first automated pass, with the genuinely ambiguous ones flagged for review rather than guessed at. That part of the work behaves the way people expect AI to behave: fast, consistent, and it keeps improving as review decisions feed back into the model.
+
+Supplier data does not behave that way, and it is not because the underlying matching technology is weaker. It is because the problem itself is structurally different. A line description is messy but self-contained: an M8 bolt is describable from the text in front of you. A supplier name is not self-contained in the same way, because the same real-world company shows up under however many names its own invoicing and onboarding history has produced.
+
+## Supplier matching is the harder problem
+
+Across the FM and construction spend files I have worked through, the same supplier routinely appears three or four different ways: the legal entity name on one invoice, a trading name on another, a regional subsidiary spelled with and without punctuation, a name a buyer typed from memory at 5pm on a Friday. None of those variants is wrong on its own. A rules engine matching on exact string comparison sees four different suppliers. A category manager trying to answer "how much did we spend with this supplier last year" gets four different, all-partial answers.
+
+Fuzzy matching on name, address, and tax ID closes most of that gap automatically, and it closes it fast, the same way classification does. But fuzzy matching has a property line classification does not: a false match is worse than a missed one. Merging two genuinely different suppliers into one record corrupts every report built on top of it going forward, quietly, because nothing about the merged record announces that it is wrong. That asymmetry is why an automated supplier match, correctly built, deliberately leaves a tail unresolved rather than forcing a match on anything below a strict confidence threshold. The tail is where the actual bottleneck sits, and it is small in absolute size but large in the time it costs to close by hand, one ambiguous pair at a time.
+
+## The manual review that actually moves it
+
+On a cleanup I ran recently, the automated pass matched the large majority of supplier names to a clean reference record within days. What remained was a short list of genuinely hard cases: near-identical names for different regional branches of the same group, a subsidiary that had been acquired and renamed mid-contract, two suppliers whose addresses differed by one digit that turned out to be a data entry error rather than two locations. None of those resolve safely without a person who knows the account looking at the pair directly.
+
+That review is not a failure of the matching engine, and treating it as one is the mistake I see clients make most often. Trying to squeeze that last percentage point out through more rules or a bigger training set spends effort in the wrong place, because the remaining cases are exactly the ones that need judgement the automation was built to avoid guessing at. The right move is the opposite: let the automated match do everything it can do confidently, then put someone with real knowledge of the supplier base in front of the short list that is left. That review takes hours, not weeks, precisely because the list is short.
+
+## What good supplier resolution looks like
+
+Pearstop resolves a client's unmatched-supplier tail to under 10 percent of total supplier records after the first review cycle, for procurement and finance teams that need a category report to close on time rather than wait for supplier data to settle on its own. The mechanism is the same constrained, confidence-scored approach used for line classification: automated matching does the volume, a person resolves the flagged pairs, and every resolved pair gets fed back so the same supplier variant does not have to be resolved twice.
+
+The practical implication for anyone planning a cleanup is about sequencing, not tooling. Budget the bulk of the calendar time for automated classification and matching to run, because that part genuinely is fast. Budget a separate, smaller block of time, with the right person available, for the supplier review that follows it. Trying to compress that second block by throwing more automation at it does not work, because the problem left in that tail was never really an automation problem to begin with.
+
+## Frequently asked questions
+
+**Why does supplier matching take longer than line classification in a spend cleanup?**
+
+Line classification works from a self-contained description that a rules engine or model can read directly. Supplier matching has to reconcile several different spellings of the same real-world company, and a wrong merge is worse than a missed one, so an automated match deliberately leaves ambiguous pairs unresolved rather than guessing. That unresolved tail takes the extra time, not the bulk of straightforward matches, which resolve quickly.
+
+**What causes the same supplier to appear under multiple names in a spend file?**
+
+Legal entity names, trading names, regional subsidiary naming, mergers and acquisitions, and manual entry by different buyers all produce different text strings for the same underlying company. None of these individually is a data entry mistake. The problem only becomes visible once someone tries to total spend by supplier and finds the total is split across several records instead of one.
+
+**How much manual review does supplier matching actually need?**
+
+In practice, a well-built automated match resolves the large majority of supplier records on its own, leaving a small remaining set of genuinely ambiguous pairs, typically under 10 percent of total records, for a person to review directly. That review is short because the ambiguous set is short, not because the review itself is quick per pair.
+
+**Is more automation the answer to closing the last unmatched suppliers?**
+
+No. The suppliers left unresolved after an automated pass are left unresolved because they require judgement the automation was deliberately built not to guess at, such as confirming whether two similarly named entities are actually the same company. Adding more rules or a larger model does not remove that judgement call, it just delays where the judgement call has to happen.
+
+**How does Pearstop handle supplier matching during a spend cleanup?**
+
+Pearstop runs automated supplier resolution against a reference database first, matching on name, address, and tax ID with a confidence threshold that avoids false merges, then routes the unresolved tail, typically under 10 percent of supplier records, to a person with account knowledge for direct review. Resolved matches feed back into the reference data so the same variant is not flagged again on the next spend cycle.
+
+**Does poor supplier matching affect anything beyond spend reporting?**
+
+Yes. Duplicate supplier records also increase the risk of duplicate payments, since most payment controls only check for duplicate invoice numbers within a single vendor record, not across two records for the same real supplier. Resolving supplier identity is therefore a payment control question as well as a reporting question.

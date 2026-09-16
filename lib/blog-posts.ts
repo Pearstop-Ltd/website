@@ -1353,6 +1353,30 @@ const _allBlogPosts: BlogPost[] = [
       { q: "Is manual classification ever the right choice?", a: "Manual classification can work for a very small spend base or a one-off project where the volume does not justify setting up a pipeline. Beyond that, the analyst hours required to maintain 60 to 75 percent accuracy month after month typically cost more than a classification platform, without the accuracy or consistency a platform provides." },
     ],
   },
+  {
+    slug: "supplier-matching-classification-bottleneck",
+    title: "The real bottleneck in a spend cleanup is supplier matching",
+    description: "Line classification reaches high accuracy fast. Supplier matching is the real bottleneck, and closing the last gap takes a short manual review.",
+    publishedAt: "2026-09-16",
+    category: "Data Quality",
+    tags: ["supplier data matching", "spend data cleanup", "data quality", "fuzzy matching", "master data management"],
+    readingTime: 7,
+    tocItems: [
+      { id: "classification-hits-its-ceiling-fast", label: "Classification hits its ceiling fast" },
+      { id: "supplier-matching-is-the-harder-problem", label: "Supplier matching is the harder problem" },
+      { id: "the-manual-review-that-actually-moves-it", label: "The manual review that actually moves it" },
+      { id: "what-good-supplier-resolution-looks-like", label: "What good supplier resolution looks like" },
+    ],
+    softCta: "discovery",
+    faqItems: [
+      { q: "Why does supplier matching take longer than line classification in a spend cleanup?", a: "Line classification works from a self-contained description that a rules engine or model can read directly. Supplier matching has to reconcile several different spellings of the same real-world company, and a wrong merge is worse than a missed one, so an automated match deliberately leaves ambiguous pairs unresolved rather than guessing. That unresolved tail takes the extra time, not the bulk of straightforward matches, which resolve quickly." },
+      { q: "What causes the same supplier to appear under multiple names in a spend file?", a: "Legal entity names, trading names, regional subsidiary naming, mergers and acquisitions, and manual entry by different buyers all produce different text strings for the same underlying company. None of these individually is a data entry mistake. The problem only becomes visible once someone tries to total spend by supplier and finds the total is split across several records instead of one." },
+      { q: "How much manual review does supplier matching actually need?", a: "In practice, a well-built automated match resolves the large majority of supplier records on its own, leaving a small remaining set of genuinely ambiguous pairs, typically under 10 percent of total records, for a person to review directly. That review is short because the ambiguous set is short, not because the review itself is quick per pair." },
+      { q: "Is more automation the answer to closing the last unmatched suppliers?", a: "No. The suppliers left unresolved after an automated pass are left unresolved because they require judgement the automation was deliberately built not to guess at, such as confirming whether two similarly named entities are actually the same company. Adding more rules or a larger model does not remove that judgement call, it just delays where the judgement call has to happen." },
+      { q: "How does Pearstop handle supplier matching during a spend cleanup?", a: "Pearstop runs automated supplier resolution against a reference database first, matching on name, address, and tax ID with a confidence threshold that avoids false merges, then routes the unresolved tail, typically under 10 percent of supplier records, to a person with account knowledge for direct review. Resolved matches feed back into the reference data so the same variant is not flagged again on the next spend cycle." },
+      { q: "Does poor supplier matching affect anything beyond spend reporting?", a: "Yes. Duplicate supplier records also increase the risk of duplicate payments, since most payment controls only check for duplicate invoice numbers within a single vendor record, not across two records for the same real supplier. Resolving supplier identity is therefore a payment control question as well as a reporting question." },
+    ],
+  },
 ];
 
 export const blogPosts: BlogPost[] = _allBlogPosts.filter((p) => !p.hidden);
