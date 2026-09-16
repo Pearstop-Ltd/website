@@ -1377,6 +1377,30 @@ const _allBlogPosts: BlogPost[] = [
       { q: "Does poor supplier matching affect anything beyond spend reporting?", a: "Yes. Duplicate supplier records also increase the risk of duplicate payments, since most payment controls only check for duplicate invoice numbers within a single vendor record, not across two records for the same real supplier. Resolving supplier identity is therefore a payment control question as well as a reporting question." },
     ],
   },
+  {
+    slug: "general-purpose-ai-classification-dead-end",
+    title: "The general-purpose AI dead end in spend classification",
+    description: "A general-purpose assistant looks like the fast way to classify spend. At volume it invents categories and loses consistency, and the failure is predictable.",
+    publishedAt: "2026-09-16",
+    category: "AI & Digital",
+    tags: ["AI classification", "spend classification", "procurement AI", "taxonomy", "data quality"],
+    readingTime: 7,
+    tocItems: [
+      { id: "why-the-first-attempt-looks-promising", label: "Why the first attempt looks promising" },
+      { id: "where-consistency-breaks-down", label: "Where consistency breaks down" },
+      { id: "why-a-better-prompt-does-not-fix-it", label: "Why a better prompt does not fix it" },
+      { id: "what-a-constrained-system-does-differently", label: "What a constrained system does differently" },
+    ],
+    softCta: "discovery",
+    faqItems: [
+      { q: "Why does a general-purpose AI assistant work on a small sample of spend data but fail at volume?", a: "A small sample never exercises the two failure points that only appear at scale: staying inside a fixed set of categories across thousands of lines, and staying consistent with earlier classification decisions made in the same file. A general-purpose assistant has no structural mechanism enforcing either, so a short test looks successful while a full spend file exposes both problems." },
+      { q: "Does a more detailed prompt fix inconsistent classification results?", a: "A more detailed prompt improves individual responses but does not fix the underlying issue, because a prompt is an instruction for one response rather than a persistent constraint applied across an entire multi-thousand-line task. Long classification runs tend to drift back toward plausible-sounding but incorrect categories regardless of how carefully the initial prompt is written." },
+      { q: "What does it mean for a classification system to stay inside a fixed taxonomy?", a: "It means every line is only ever assigned to a category that exists in the company's own reporting structure, with no ability to invent a plausible-sounding category that is not actually part of that structure. This is enforced structurally by the classification system rather than requested through instructions, which is the main difference from a general-purpose assistant given the same taxonomy as a prompt." },
+      { q: "How do I know if my classification results are trustworthy before building a report on them?", a: "Check whether every category in the output actually exists in your reporting structure, and spot-check whether the same item or supplier is classified the same way in multiple places in the file. If either check fails on a small sample, the same problems are almost certainly present at scale, and the dataset needs a confidence-scored, taxonomy-constrained pass before it is safe to report from." },
+      { q: "How does Pearstop avoid the inconsistency problems of a general-purpose AI assistant?", a: "Pearstop's classification pipeline restricts every line to a fixed taxonomy the client already reports against, assigns a confidence score to each classification, and routes anything below that confidence threshold to a person instead of guessing. Every human review decision feeds back into the system, so consistency improves with use rather than degrading as volume increases." },
+      { q: "Is a general-purpose AI assistant ever good enough for procurement classification?", a: "It can work for a genuinely small, one-off batch where a person can realistically review every line afterward. It becomes unreliable once volume or recurrence makes full manual review impractical, which is the point at which most procurement teams are trying to use AI for classification in the first place." },
+    ],
+  },
 ];
 
 export const blogPosts: BlogPost[] = _allBlogPosts.filter((p) => !p.hidden);

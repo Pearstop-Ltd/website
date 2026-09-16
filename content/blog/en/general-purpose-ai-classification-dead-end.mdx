@@ -1,0 +1,65 @@
+---
+title: "The general-purpose AI dead end in spend classification"
+description: "A general-purpose assistant looks like the fast way to classify spend. At volume it invents categories and loses consistency, and the failure is predictable."
+date: "2026-09-16"
+category: "AI & Digital"
+slug: "general-purpose-ai-classification-dead-end"
+author: "rae"
+lang: "en"
+---
+
+**Quick answer:** Pointing a general-purpose AI assistant at a spend file works for the first few dozen lines and breaks down at volume, because the model has no fixed taxonomy to stay inside and no memory of earlier decisions in the same file. It invents categories that do not exist in your reporting structure and classifies the same item differently a few thousand rows apart. The fix is a system built to stay inside a fixed taxonomy, not a better prompt.
+
+On this page: [Why the first attempt looks promising](#why-the-first-attempt-looks-promising) · [Where consistency breaks down](#where-consistency-breaks-down) · [Why a better prompt does not fix it](#why-a-better-prompt-does-not-fix-it) · [What a constrained system does differently](#what-a-constrained-system-does-differently) · [FAQ](#frequently-asked-questions)
+
+## Why the first attempt looks promising
+
+Teams reach for a general-purpose AI assistant on a classification problem for a reasonable reason: it is already licensed, already open in another tab, and it clearly understands language well enough to read a line description and suggest a category. Paste in twenty or thirty lines and the output looks credible. The categories sound plausible, the reasoning in the response sounds sensible, and the whole exercise takes minutes instead of the days a manual pass would take.
+
+That early success is exactly what makes the eventual failure surprising rather than expected. Nothing about the first test run signals that the same approach falls apart once real volume hits it, because a small sample never exercises the two things that actually break: staying inside a fixed taxonomy across thousands of rows, and staying consistent with a decision made earlier in the same file.
+
+## Where consistency breaks down
+
+A general-purpose assistant has no fixed list of categories it is required to choose from unless one is supplied and enforced, and even when a taxonomy is pasted into the prompt, nothing stops the model from drifting outside it once the conversation runs long enough. The practical result: a line for warehouse work gloves gets classified into a category that sounds reasonable but does not actually exist anywhere in the company's reporting structure, and nobody notices until a report tries to total spend against that category and finds it empty.
+
+Consistency across a file is a separate failure, and it shows up even when every individual category the model picks is technically valid. The same supplier, the same item, described slightly differently on two different lines two thousand rows apart, can land in two different categories, because a general-purpose assistant has no persistent memory of how it classified the first occurrence by the time it reaches the second. A spend analyst reviewing the output has no way to tell, line by line, which classification decisions are consistent with earlier ones and which are not, short of manually cross-checking the whole file, which defeats the point of using AI to speed the work up.
+
+This is the exact "we tried the obvious thing and it did not work" moment that shows up in early conversations with procurement teams: someone tries a general-purpose assistant on the classification problem first, because it is the obvious thing to try, and the failure mode is not a crash or an error message. It is a spend file that looks classified and is not reliable enough to build a report on.
+
+## Why a better prompt does not fix it
+
+The instinct once the first attempt fails is to write a longer, more detailed prompt: paste in the full taxonomy, add examples, specify the exact category names allowed. That improves the first response measurably. It does not solve the underlying problem, because a prompt is a set of instructions for a single response, not a persistent constraint the model is structurally required to obey across a long, multi-thousand-line task. Long enough into any bulk classification run, the model's own generative tendency to produce plausible-sounding text reasserts itself over the literal instruction it was given at the start of the conversation.
+
+The same is true of splitting the file into smaller batches and running each one separately. That reduces drift within a single batch, but introduces exactly the cross-batch inconsistency problem described above, because nothing carries a classification decision from one batch to the next. Neither fix addresses the structural gap: a general-purpose assistant is built to generate a plausible answer to whatever it is asked, not to enforce a fixed, auditable category structure across an entire dataset.
+
+## What a constrained system does differently
+
+A classification pipeline built for this problem inverts the relationship: the taxonomy is not a suggestion inside a prompt, it is the boundary the system is not permitted to classify outside of. Every line is scored for confidence against that fixed set of categories, and any line the system is not confident about is routed to a person rather than assigned a plausible-sounding guess. That confidence flag is the piece a general-purpose assistant has no equivalent for, because a chat response does not come with a reliability score attached to it.
+
+Pearstop's classification engine holds every line to a fixed taxonomy the client actually reports against, flags anything it is not confident about for human review, and learns from every review decision so the same ambiguous item is resolved faster the next time it appears, for procurement teams that need a spend file they can build a board report on the same week it is classified. The difference is not that the underlying AI is smarter than a general-purpose assistant. It is that the system around the AI is built to make consistency and taxonomy adherence structural properties of the output, rather than something the user has to hope a good prompt produced.
+
+## Frequently asked questions
+
+**Why does a general-purpose AI assistant work on a small sample of spend data but fail at volume?**
+
+A small sample never exercises the two failure points that only appear at scale: staying inside a fixed set of categories across thousands of lines, and staying consistent with earlier classification decisions made in the same file. A general-purpose assistant has no structural mechanism enforcing either, so a short test looks successful while a full spend file exposes both problems.
+
+**Does a more detailed prompt fix inconsistent classification results?**
+
+A more detailed prompt improves individual responses but does not fix the underlying issue, because a prompt is an instruction for one response rather than a persistent constraint applied across an entire multi-thousand-line task. Long classification runs tend to drift back toward plausible-sounding but incorrect categories regardless of how carefully the initial prompt is written.
+
+**What does it mean for a classification system to stay inside a fixed taxonomy?**
+
+It means every line is only ever assigned to a category that exists in the company's own reporting structure, with no ability to invent a plausible-sounding category that is not actually part of that structure. This is enforced structurally by the classification system rather than requested through instructions, which is the main difference from a general-purpose assistant given the same taxonomy as a prompt.
+
+**How do I know if my classification results are trustworthy before building a report on them?**
+
+Check whether every category in the output actually exists in your reporting structure, and spot-check whether the same item or supplier is classified the same way in multiple places in the file. If either check fails on a small sample, the same problems are almost certainly present at scale, and the dataset needs a confidence-scored, taxonomy-constrained pass before it is safe to report from.
+
+**How does Pearstop avoid the inconsistency problems of a general-purpose AI assistant?**
+
+Pearstop's classification pipeline restricts every line to a fixed taxonomy the client already reports against, assigns a confidence score to each classification, and routes anything below that confidence threshold to a person instead of guessing. Every human review decision feeds back into the system, so consistency improves with use rather than degrading as volume increases.
+
+**Is a general-purpose AI assistant ever good enough for procurement classification?**
+
+It can work for a genuinely small, one-off batch where a person can realistically review every line afterward. It becomes unreliable once volume or recurrence makes full manual review impractical, which is the point at which most procurement teams are trying to use AI for classification in the first place.
