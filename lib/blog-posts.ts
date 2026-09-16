@@ -1355,6 +1355,7 @@ const _allBlogPosts: BlogPost[] = [
   },
   {
     slug: "supplier-matching-classification-bottleneck",
+    image: "/images/blog/supplier-matching-classification-bottleneck.jpg",
     title: "The real bottleneck in a spend cleanup is supplier matching",
     description: "Line classification reaches high accuracy fast. Supplier matching is the real bottleneck, and closing the last gap takes a short manual review.",
     publishedAt: "2026-09-16",
@@ -1379,6 +1380,7 @@ const _allBlogPosts: BlogPost[] = [
   },
   {
     slug: "general-purpose-ai-classification-dead-end",
+    image: "/images/blog/general-purpose-ai-classification-dead-end.jpg",
     title: "The general-purpose AI dead end in spend classification",
     description: "A general-purpose assistant looks like the fast way to classify spend. At volume it invents categories and loses consistency, and the failure is predictable.",
     publishedAt: "2026-09-16",
