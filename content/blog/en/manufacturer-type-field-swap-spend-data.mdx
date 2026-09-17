@@ -1,0 +1,63 @@
+---
+title: "When manufacturer and type fields swap in your spend data"
+description: "A silent field swap between manufacturer and type corrupts classification without a single error message. Here is how it happens and how it gets caught."
+date: "2026-09-17"
+category: "Data Quality"
+slug: "manufacturer-type-field-swap-spend-data"
+author: "rae"
+lang: "en"
+---
+
+**Quick answer:** Manufacturer and type fields swap when an upstream export, a manual entry template, or a system migration maps two adjacent columns incorrectly, putting the manufacturer name where the product type belongs and vice versa. Nothing about the swap throws an error, because both fields still contain valid-looking text. It only surfaces once classification results stop matching what buyers know to be true, and an automated consistency pass across the whole file is what actually catches it.
+
+On this page: [How the swap actually happens](#how-the-swap-actually-happens) · [Why nobody notices immediately](#why-nobody-notices-immediately) · [How an automated pass catches it](#how-an-automated-pass-catches-it) · [What to check once it is found](#what-to-check-once-it-is-found) · [FAQ](#frequently-asked-questions)
+
+## How the swap actually happens
+
+Every spend file has a manufacturer field and a type or category field sitting next to each other in some form, whether that is a native ERP structure or a spreadsheet template built by a buyer years ago. The swap I am describing is not a typo inside one field. It is the two fields trading places entirely: "Bosch" appearing where the type description should be, "power drill" appearing where the manufacturer name should be, consistently, across an entire batch of rows.
+
+It happens for a small number of predictable reasons. A column mapping in a data export or an ETL job gets set up once, correctly, and then a system upgrade or a template change shifts the column order without anyone updating the mapping to match. A manual entry template gets duplicated from an older version with fields in a different sequence, and whoever is entering data pastes values in without checking that the headers still line up. A migration between systems maps fields by position instead of by name, which works fine until the source and target systems do not order their columns the same way. In every case, the person or system doing the mapping was working correctly against what they believed the structure to be. The structure had already changed underneath them.
+
+## Why nobody notices immediately
+
+The reason this kind of error survives so long is that both fields still contain plausible, real values. A manufacturer field is free text, and so is a type field in most systems, so there is no validation rule that would reject "power drill" from a field labelled manufacturer or "Bosch" from a field labelled type. Nothing crashes, nothing throws a warning, and a person scanning the file quickly for obviously broken data sees two columns full of recognisable words and moves on.
+
+The swap only becomes visible once someone tries to use the data for something that depends on the fields meaning what their headers say. A manufacturer spend report that shows "power drill" and "impact driver" as top manufacturers is obviously wrong to a human looking directly at that report. But most classification pipelines and most people working from a downstream extract never look at the raw manufacturer field directly. They see the category the classifier assigned, and if the classifier was fed the swapped data, it produces categories built on the wrong signal without any obvious sign of where the error originated. A batch classified from swapped fields can look complete and confident while being systematically wrong in a way that only an experienced buyer, looking at specific lines, would catch by instinct.
+
+## How an automated pass catches it
+
+The pattern that actually catches this is a consistency check run across the whole batch rather than a validation rule on a single field. A manufacturer field is expected to contain a small, recurring set of values, brand names repeating across many rows, because most spend runs through a manageable number of manufacturers. A type field is expected to show far more variety, because the range of things bought is naturally wider than the range of brands they come from. When those two statistical shapes are reversed across a batch, a field-level distribution check flags it immediately, before a single line reaches classification.
+
+That check is only possible because it looks at the batch as a whole rather than one row at a time. A row-by-row validation rule cannot catch this error, because any individual swapped row still contains two valid-looking text values; the error only becomes visible in the pattern across many rows. This is the same reason the error is invisible to a person scanning a spreadsheet quickly: humans are also better at spotting patterns across a whole column than catching an individual cell that is technically valid but semantically wrong.
+
+## What to check once it is found
+
+Once a field swap is identified, the fix itself is usually mechanical: swap the two columns back for the affected batch and re-run classification, because the underlying text was never actually wrong, only mislabelled. The more important step is tracing the swap back to its source, whether that is an export job, a template, or a migration mapping, and correcting it there, because a batch-level fix does not stop the same export from producing the same error again next month.
+
+Pearstop's classification pipeline runs a field-level consistency check across every batch before classification begins, catching a manufacturer or type field swap before it reaches a report, for procurement and finance teams that need to trust a classified spend file the first time it is produced rather than after someone notices a manufacturer report full of product names. The check does not need to know in advance that a swap happened. It only needs the statistical shape of a correct manufacturer field to differ from the statistical shape of a correct type field, which holds true across essentially every spend dataset regardless of industry.
+
+## Frequently asked questions
+
+**What causes manufacturer and type fields to swap in spend data?**
+
+A column mapping error is the usual cause: an export job, a manual entry template, or a system migration maps two adjacent fields incorrectly, so the manufacturer name lands where the type description should be and the type description lands where the manufacturer name should be. This typically happens after a system upgrade, a template change, or a migration that maps fields by position rather than by name.
+
+**Why does a manufacturer and type field swap go unnoticed for so long?**
+
+Both fields are usually free text, so both still contain plausible, valid-looking values after the swap. No validation rule rejects the data, and a person scanning the file for obviously broken entries sees two columns of recognisable words rather than an error. The problem only becomes visible once someone relies on the fields meaning what their headers claim.
+
+**How do you detect a manufacturer and type field swap automatically?**
+
+A batch-level statistical check rather than a row-by-row rule. A correct manufacturer field shows a small, repeating set of values across many rows, while a correct type field shows much wider variety, because far fewer brands supply far more kinds of product. When that pattern reverses across a batch, the swap is detectable before any line reaches classification.
+
+**Does this kind of field swap affect classification accuracy?**
+
+Yes, significantly. Classification built on the wrong signal, treating a manufacturer name as a type description or vice versa, produces categories that look complete and confident while being systematically wrong, because the underlying signal the classifier relied on described the wrong thing.
+
+**How does Pearstop catch manufacturer and type field swaps before classification?**
+
+Pearstop runs a field-level consistency check across the whole batch before classification starts, comparing the statistical shape of each field against what a correctly labelled manufacturer or type field should look like. A swap is flagged and corrected before it can distort category results, rather than being discovered later in a downstream report.
+
+**What should we check after fixing a field swap in our spend data?**
+
+Trace the swap back to its source rather than only correcting the affected batch. Check the export job, entry template, or migration mapping that produced the file, because a batch-level correction does not prevent the same upstream error from reproducing the swap in the next export cycle.

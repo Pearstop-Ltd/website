@@ -236,5 +236,33 @@
     "scene": "A panoramic view of a bustling construction site with towering steel scaffolding, piles of raw concrete blocks, and a network of exposed ductwork and rebar framing the skeleton of a new high-rise building.",
     "prompt": "A panoramic view of a bustling construction site with towering steel scaffolding, piles of raw concrete blocks, and a network of exposed ductwork and rebar framing the skeleton of a new high-rise building., photorealistic photograph, warm natural daylight or warm interior work-light, true-to-life saturated colour, vivid but realistic tones, rich contrast, NOT desaturated, NOT monochrome, NOT a cool blue-grey colour grade, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
     "seed": 3190570033
+  },
+  "supplier-matching-classification-bottleneck": {
+    "sector": "hard-fm",
+    "includePeople": false,
+    "scene": "A sprawling mechanical room filled with rows of identical steel pipe bundles, each bearing mismatched metal tags and barcode stickers scattered on the floor, highlighting the chaos of unaligned supplier identifiers.",
+    "prompt": "A sprawling mechanical room filled with rows of identical steel pipe bundles, each bearing mismatched metal tags and barcode stickers scattered on the floor, highlighting the chaos of unaligned supplier identifiers., photorealistic photograph, warm natural daylight or warm interior work-light, true-to-life saturated colour, vivid but realistic tones, rich contrast, NOT desaturated, NOT monochrome, NOT a cool blue-grey colour grade, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
+    "seed": 3109937438
+  },
+  "general-purpose-ai-classification-dead-end": {
+    "sector": "hard-fm",
+    "includePeople": false,
+    "scene": "A close-up view of a sprawling mechanical room filled with exposed steel pipework, copper tubing, and a bank of industrial-grade pressure gauges mounted on a concrete wall, illuminated by the harsh overhead fluorescence.",
+    "prompt": "A close-up view of a sprawling mechanical room filled with exposed steel pipework, copper tubing, and a bank of industrial-grade pressure gauges mounted on a concrete wall, illuminated by the harsh overhead fluorescence., photorealistic photograph, warm natural daylight or warm interior work-light, true-to-life saturated colour, vivid but realistic tones, rich contrast, NOT desaturated, NOT monochrome, NOT a cool blue-grey colour grade, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
+    "seed": 2471334613
+  },
+  "manufacturer-type-field-swap-spend-data": {
+    "sector": "hard-fm",
+    "includePeople": false,
+    "scene": "A dimly lit mechanical plant room filled with rows of identical air handling units, exposed copper piping, and a wall-mounted rack of labeled valve assemblies, all captured from a low angle showing the organized yet complex infrastructure.",
+    "prompt": "A dimly lit mechanical plant room filled with rows of identical air handling units, exposed copper piping, and a wall-mounted rack of labeled valve assemblies, all captured from a low angle showing the organized yet complex infrastructure., photorealistic photograph, warm natural daylight or warm interior work-light, true-to-life saturated colour, vivid but realistic tones, rich contrast, NOT desaturated, NOT monochrome, NOT a cool blue-grey colour grade, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
+    "seed": 4279714476
+  },
+  "unspsc-best-in-class-by-industry": {
+    "sector": "hard-fm",
+    "includePeople": false,
+    "scene": "A spacious building mechanical room filled with rows of stainless-steel HVAC units, exposed copper piping, and labeled conduit trays bathed in natural light from a high ceiling skylight.",
+    "prompt": "A spacious building mechanical room filled with rows of stainless-steel HVAC units, exposed copper piping, and labeled conduit trays bathed in natural light from a high ceiling skylight., photorealistic photograph, warm natural daylight or warm interior work-light, true-to-life saturated colour, vivid but realistic tones, rich contrast, NOT desaturated, NOT monochrome, NOT a cool blue-grey colour grade, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
+    "seed": 3242344328
   }
 }
