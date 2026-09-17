@@ -9,6 +9,11 @@
   --blue-soft: #dce1f8;
   --bg: #ffffff;
   --bg-soft: #f8f9fa;
+  /* Shared light-band tint for the homepage's alternating light sections
+     (lead magnet, trusted-by strip, how-it-works) - change this one value
+     to retint all of them together; a section that should stay a different
+     shade just doesn't reference it. */
+  --band-tint: #faf8fd;
   --border: #e5e7eb;
   --text: #333333;
   --muted: #555555;
@@ -190,6 +195,7 @@ strong {
   padding: 0 1.5rem;
   border-radius: 6px;
   border: 2px solid transparent;
+  font: inherit;
   font-weight: 700;
   cursor: pointer;
   transition: transform 0.18s ease, background-color 0.18s ease, border-color 0.18s ease, color 0.18s ease;
@@ -543,6 +549,14 @@ section {
   background: var(--bg-soft);
 }
 
+/* Overrides .section-soft's background for this one homepage section only
+   (higher specificity via the ID), so it shares --band-tint with the lead
+   magnet and trusted-by strip without changing .section-soft anywhere
+   else on the site. */
+#how-it-works {
+  background: var(--band-tint);
+}
+
 .hero-copy {
   position: relative;
   z-index: 1;
@@ -605,9 +619,9 @@ section {
 
 .clients-strip {
   padding: 2.75rem 0;
-  background: linear-gradient(135deg, #f4efff 0%, #e7dcff 100%);
-  border-top: 1px solid rgba(75, 44, 163, 0.12);
-  border-bottom: 1px solid rgba(75, 44, 163, 0.12);
+  background: linear-gradient(135deg, var(--navy), #25347d);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .clients-label,
@@ -632,7 +646,7 @@ section {
 
 .clients-label {
   text-align: center;
-  color: #5d4b8f;
+  color: rgba(255, 255, 255, 0.6);
   font-size: 0.72rem;
   font-weight: 700;
   margin-bottom: 1.75rem;
@@ -648,10 +662,22 @@ section {
 }
 
 .clients-logos img {
-  max-height: 32px;
+  /* height (not just max-height) is required here: lemtech.svg has no
+     width/height attributes on its root <svg>, only a viewBox, and some
+     browsers collapse an <img> of such an SVG to 0x0 in a flex row unless
+     an explicit height gives it something to size from. */
+  height: 32px;
   width: auto;
-  opacity: 0.88;
-  filter: grayscale(100%) brightness(0.7);
+  opacity: 0.92;
+  filter: brightness(0) invert(1);
+}
+
+/* SPIE's mark sits well above its wordmark, so at a shared height it
+   reads lower than the other (wordmark-only) logos in the strip - nudge it
+   up to line the wordmarks up visually. */
+.clients-logos img[alt="SPIE"] {
+  height: 40px;
+  margin-top: -8px;
 }
 
 .benefit-block,
@@ -962,8 +988,10 @@ section {
 }
 
 .lm-band {
-  background: linear-gradient(135deg, var(--navy), #25347d);
-  color: #fff;
+  background: var(--band-tint);
+  color: var(--text);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 
 .lm-inner {
@@ -976,7 +1004,7 @@ section {
   height: 180px;
   border-radius: 999px;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--bg-soft);
 }
 
 .lm-img-wrap img {
@@ -986,11 +1014,11 @@ section {
 }
 
 .lm-text h2 {
-  color: #fff;
+  color: var(--navy);
 }
 
 .lm-text p {
-  color: rgba(255, 255, 255, 0.82);
+  color: var(--muted);
 }
 
 .case-studies-layout {
@@ -1503,6 +1531,7 @@ section {
 }
 
 .contact-form input,
+.contact-form select,
 .contact-form textarea {
   width: 100%;
   border-radius: 10px;
@@ -2112,3 +2141,373 @@ section {
   text-decoration: underline;
 }
 .calendly-inline-link:hover { color: var(--primary-dark); }
+
+/* Homepage v2: hero objection line, counter strip, problem quotes,
+   before/after table, product screenshot frame, who-it-is-for grid,
+   objection block */
+
+/* Highlighter mark behind the objection line: a solid light-purple block
+   with navy text, matching Pearstop's existing highlight treatment from
+   the "A Quarter of Our Spend? Uncoded." podcast thumbnail (not a
+   hand-drawn stroke - that read too rough at this size). */
+.hero-objection {
+  padding: 0.05em 0.35em;
+  background: #cdbbfc;
+  border-radius: 3px;
+  color: var(--navy);
+  font-weight: 700;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.counter-strip {
+  background: linear-gradient(135deg, var(--navy), #25347d);
+  padding: 3rem 0;
+}
+
+.counter-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.counter-num {
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1;
+}
+
+.counter-label {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.82rem;
+  margin-top: 0.5rem;
+}
+
+.problem-quotes {
+  padding: 4.5rem 0;
+}
+
+.problem-quote-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2.25rem;
+}
+
+.problem-quote {
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+.problem-quote-source {
+  display: block;
+  margin-top: 1rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+.before-after-wrap {
+  margin-top: 2.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--card-radius);
+  overflow: auto;
+}
+
+.before-after-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  background: #fff;
+}
+
+.before-after-table th,
+.before-after-table td {
+  padding: 0.6rem 0.85rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.before-after-table thead tr:first-child th {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  border-bottom: none;
+  padding-bottom: 0.3rem;
+}
+
+.before-after-table thead tr:nth-child(2) th {
+  font-weight: 700;
+  color: var(--text);
+  padding-top: 0.3rem;
+}
+
+.before-after-table td:nth-child(1),
+.before-after-table td:nth-child(2) {
+  color: var(--muted);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.before-after-table th:nth-child(2),
+.before-after-table td:nth-child(2) {
+  border-right: 2px solid var(--border);
+}
+
+.before-after-table th:nth-child(3),
+.before-after-table th:nth-child(4),
+.before-after-table th:nth-child(5),
+.before-after-table th:nth-child(6),
+.before-after-table td:nth-child(3),
+.before-after-table td:nth-child(4),
+.before-after-table td:nth-child(5),
+.before-after-table td:nth-child(6) {
+  background: var(--purple-soft);
+}
+
+.before-after-caption {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 0.75rem;
+}
+
+.before-after-footnote {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-top: 0.35rem;
+}
+
+.confidence-pill {
+  display: inline-block;
+  padding: 0.2em 0.65em;
+  border-radius: 999px;
+  font-size: 0.82em;
+  font-weight: 700;
+}
+
+.confidence-high .confidence-pill {
+  background: #dcf5e3;
+  color: #1e7d3c;
+}
+
+.confidence-medium .confidence-pill {
+  background: #fdf0c8;
+  color: #92650a;
+}
+
+.screenshot-frame {
+  border: 1px solid var(--border);
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+}
+
+.screenshot-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.screenshot-caption {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.88rem;
+  margin-top: 1rem;
+}
+
+.who-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.objection-block {
+  background: var(--bg-soft);
+  border-radius: var(--card-radius);
+  padding: 2.5rem;
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.objections-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.objections-grid .objection-block {
+  max-width: none;
+  margin: 0;
+  text-align: left;
+}
+
+@media (max-width: 860px) {
+  .counter-grid,
+  .problem-quote-grid,
+  .who-grid,
+  .objections-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sample-modal {
+  width: min(92vw, 480px);
+  border: none;
+  border-radius: var(--card-radius);
+  padding: 2.25rem;
+  box-shadow: var(--card-shadow-hover);
+  position: relative;
+}
+
+.sample-modal::backdrop {
+  background: rgba(15, 23, 42, 0.55);
+}
+
+.sample-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--muted);
+  cursor: pointer;
+  padding: 0.25rem;
+}
+
+.sample-modal-close:hover {
+  color: var(--text);
+}
+
+.sample-modal h2 {
+  margin-bottom: 0.75rem;
+  padding-right: 1.5rem;
+}
+
+/* The modal is a DOM descendant of header.page-hero.dark (it's rendered
+   from inside the hero's leadingAction slot), so the .dark h2/.dark p
+   white-text rules would otherwise apply here too and make the heading and
+   lead paragraph invisible against the modal's white background. */
+.sample-modal h2,
+.sample-modal p {
+  color: var(--text);
+}
+
+.sample-modal .sample-modal-lead,
+.sample-modal .contact-form-note {
+  color: var(--muted);
+}
+
+.sample-modal .sample-modal-lead {
+  font-size: 0.95rem;
+  margin-bottom: 1.25rem;
+}
+
+.sample-modal-file-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-top: 0.25rem;
+}
+
+.sample-modal input[type="file"] {
+  font-size: 0.9rem;
+}
+
+.sample-modal-error {
+  color: #c0392b;
+  font-size: 0.88rem;
+  margin: 0;
+}
+
+.sample-modal-legal {
+  font-size: 0.72rem;
+  color: #888;
+  margin: 0;
+}
+
+.sample-modal-legal a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.proof-quote {
+  margin-top: 1rem;
+  padding-left: 0.9rem;
+  border-left: 3px solid var(--purple);
+  font-style: italic;
+  font-size: 0.88rem;
+  color: var(--text);
+}
+
+.proof-quote-role {
+  display: block;
+  margin-top: 0.35rem;
+  font-style: normal;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+/* Homepage hero: left-aligned, oversized headline with a short rule below
+   it, after the newsec.com hero pattern (huge left-aligned title instead of
+   the site's usual centered hero). Scoped to hero-left so every other page
+   keeps the centered PageHero default.
+
+   .page-hero .hero-copy sets width:100% (two-class selector, beats
+   .container's own width rule), which is invisible on a centered hero but
+   left text flush against the viewport edge here - so this variant needs
+   its own left inset instead of relying on .container's gutter. */
+.page-hero.hero-left .hero-copy,
+.page-hero.hero-left .text-center {
+  text-align: left;
+}
+
+.page-hero.hero-left .hero-copy {
+  padding-left: max(24px, 5vw);
+  padding-right: 24px;
+}
+
+.page-hero.hero-left .hero-title {
+  max-width: 68vw;
+  font-size: clamp(2.75rem, 6vw, 5.5rem);
+  line-height: 1.05;
+}
+
+.page-hero.hero-left .hero-title::after {
+  content: "";
+  display: block;
+  width: 96px;
+  height: 4px;
+  margin-top: 1.5rem;
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.page-hero.hero-left .hero-lead {
+  max-width: 640px;
+  margin: 1.5rem 0 0;
+  text-align: left;
+  font-size: 1.4rem;
+}
+
+.page-hero.hero-left .hero-actions {
+  justify-content: flex-start;
+}
+
+@media (max-width: 768px) {
+  .page-hero.hero-left .hero-title {
+    max-width: 100%;
+  }
+}

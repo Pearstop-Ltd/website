@@ -58,127 +58,175 @@
   },
   "Home": {
     "meta": {
-      "title": "Pearstop - Data Quality Solutions for Hard Services",
-      "description": "Pearstop cleans and classifies procurement and asset data for hard services companies. We process 35,000 procurement lines a month, automatically."
+      "title": "Pearstop - Know What You Buy, From Whom, At What Price",
+      "description": "Pearstop turns your invoices into spend data you can use. Send us 200 lines and we'll send them back labelled - no clean-up required first."
     },
     "hero": {
-      "eyebrow": "Data Quality Solutions",
-      "title": "We classify 35,000 procurement lines a month. Automatically.",
-      "lead": "Pearstop cleans and classifies procurement and asset data for hard services companies so you can better negotiate contracts and plan maintenance. We automate, so that you don't have to do it manually - Category management that works.",
-      "bookDiscovery": "Book a 7-minute discovery",
-      "seeHowItWorks": "See how it works"
+      "title": "Know what you buy, from whom, at what price.",
+      "leadLine1": "Your invoice data is full of answers. Pearstop makes them usable.",
+      "objection": "Your data doesn’t need to be cleaned first.",
+      "sendSample": "Send us 200 lines",
+      "bookDiscovery": "Talk to sales",
+      "objectionTrailer": "That’s the work we do."
     },
     "caseStudiesBand": {
-      "title": "Download the case studies",
-      "description": "See how Strukton, FARO, SPIE, and FMO use Pearstop to clean data, protect margin, and reduce manual work.",
-      "getCaseStudies": "Get the case studies",
-      "viewInBrowser": "View in browser"
+      "title": "See it work on your own data",
+      "description": "Send a representative sample of your invoice lines – up to 200 lines, or a handful of invoices (max 10) – and we'll classify them and send them back labelled. No cost, no setup, nothing to install. It's the fastest way to see exactly what Pearstop does before you commit to anything.",
+      "viewInBrowser": "See case studies first"
+    },
+    "counters": {
+      "items": [
+        {
+          "value": "35,000+",
+          "label": "Procurement lines classified every month"
+        },
+        {
+          "value": "95%",
+          "label": "Classified automatically, before human review"
+        },
+        {
+          "value": "100,000+",
+          "label": "Assets cleaned for a single client"
+        }
+      ]
     },
     "clients": {
       "label": "Trusted by leading organisations"
     },
-    "benefits": {
-      "eyebrows": [
-        "Procurement",
-        "Asset Management",
-        "Operations"
-      ],
-      "links": [
-        "See how UNSPSC classification works →",
-        "See how asset data management works →",
-        "See how data quality works →"
-      ],
-      "quotes": [
-        "We used to have two full-time staff working on category assignment. Now the system does this for us - which has unlocked margin estimations further down the line too. It's more reliable at a fraction of the cost.",
-        "Our asset lists worked for mechanics on-site, but did not allow us to plan smart maintenance or manage bid risk in a data-driven way.",
-        "It would have taken five engineers and a full year to clean this up. So we decided to look for a better solution."
-      ],
-      "quoteAuthors": [
-        "Head of Procurement",
-        "Asset Manager",
-        "Head of Operations"
-      ],
-      "quoteRoles": [
-        "Infrastructure Contractor",
-        "Facilities Management",
-        "Technical Services"
-      ],
-      "titles": [
-        "Maximize Spend Control",
-        "Your Asset List Should Work For You, Not Against You",
-        "Scale With Confidence, Not Headcount"
-      ],
-      "copy": [
-        "Automatically classify every procurement line, at scale. 35,000 lines a month, no manual work. Turn incoherent ledger lines into a single source of truth so your procurement team can see exactly where money is going, activate competition across suppliers, and negotiate better contracts.",
-        "If your asset list needs human interpretation, it is not usable. We clean spelling errors, fix field mismatches, and structure your asset data so systems - and people - can actually work with it. Ready for maintenance planning, lifecycle analysis, and smarter bidding.",
-        "End the Excel heroics. Reduce manual data clean-up by 70-90%, freeing up your best buyers, engineers, analysts, and project managers for work that actually moves the needle."
+    "problemQuotes": {
+      "title": "What buyers tell us",
+      "items": [
+        {
+          "quote": "Most companies are flying blind, and only find out when someone asks a question they cannot answer.",
+          "source": "Procurement Lead, Infrastructure"
+        },
+        {
+          "quote": "You cannot negotiate what you cannot see.",
+          "source": "Head of Procurement, Facilities Management"
+        },
+        {
+          "quote": "If you cannot defend your cost baseline, you are bidding on a feeling.",
+          "source": "Commercial Director, Construction"
+        }
       ]
     },
     "howItWorks": {
-      "eyebrow": "How It Works",
-      "title": "From messy data to a foundation you can act on",
-      "lead": "From messy data to a foundation you can act on — in three stages.",
+      "title": "How it works",
       "stage1": {
         "label": "Stage 1",
-        "title": "Data Stability Baseline",
-        "copy": "We start with the data you already have. We assess its structure, identify gaps, and deliver one cleaned dataset that is yours to keep - plus a clear report on what needs to happen next. No commitment beyond this step."
+        "title": "Send us what you have",
+        "copy": "PDFs, ERP exports, portal downloads, spreadsheets. API connectors are available for most ERPs."
       },
       "stage2": {
         "label": "Stage 2",
-        "title": "Automated Quality Control",
-        "copy": "The system automatically cleans up to 95% of errors and inconsistencies. Items that fall outside confident thresholds get flagged for your team to review — so you stay in control without doing the grunt work. Every human decision feeds directly back into the system, improving accuracy over time."
+        "title": "We clean, enrich, and classify every line",
+        "copy": "We extract everything we can find on the line, fill in what’s missing using supplier and purchasing history, and classify it to UNSPSC – down to the granularity that actually answers your questions, not just a top-level category."
       },
       "stage3": {
         "label": "Stage 3",
-        "title": "Ongoing Data Integrity",
-        "copy": "The system learns from your data and your team's input over time. The more it runs, the less manual review is needed. Your data stays clean, structured, and ready to use - without a dedicated team to maintain it."
+        "title": "Your spend stays classified",
+        "copy": "As new invoices arrive, they're classified the same way - no re-cleaning project every year."
       },
-      "cta": "Start with a Data Quality Baseline →"
+      "beforeAfterCaption": "Illustrative example: six invoice lines from three suppliers. The original description and supplier are kept exactly as they arrived – Pearstop only adds the columns on the right."
     },
-    "demoBand": {
-      "title": "Schedule a Personal Demo",
-      "description": "In 30 minutes we'll show you where your data is costing you margin and exactly what a fix looks like. No slides. Just your industry, your numbers, your data.",
-      "bookDemo": "Book your demo",
-      "emailUs": "Email us instead"
+    "screenshot": {
+      "alt": "Pearstop dashboard showing classified line-level spend data with human review",
+      "caption": "Classified line-level spend data, with the human review step visible."
     },
-    "solutions": {
-      "eyebrow": "Our Solutions",
-      "title": "What Pearstop does for your business",
-      "lead": "Four core capabilities that give you control over your data, your costs, and your margins.",
+    "who": {
+      "title": "Who it's for",
+      "tiles": [
+        {
+          "title": "Facilities Management",
+          "copy": "Your data arrives from every service line in a different format.",
+          "href": "/industries#facilities-management"
+        },
+        {
+          "title": "Construction",
+          "copy": "You're estimating bids from memory because nobody can retrieve historical actuals.",
+          "href": "/industries#construction"
+        },
+        {
+          "title": "Infrastructure",
+          "copy": "A savings target has been named and the data can't show where it sits.",
+          "href": "/industries#infrastructure"
+        },
+        {
+          "title": "Manufacturing",
+          "copy": "One entity already runs UNSPSC and another needs to align to it.",
+          "href": "/industries#manufacturing"
+        }
+      ],
+      "linkText": "See how it applies →"
+    },
+    "objection": {
+      "dataTitle": "“Our data isn’t clean enough for this.”",
+      "dataCopy": "That's the most common thing we hear – and it's the reason to start now rather than wait. Cleaning the data is the first thing Pearstop does, not a prerequisite for working with us.",
+      "inHouseTitle": "“Won’t it be cheaper to build this ourselves?”",
+      "inHouseCopy": "In-house gives you complete control, but expect to dedicate two data or AI specialists to build it properly and keep maintaining it as your data changes. We've seen an internal build start as an IT team's side project, ship without procurement involved, and turn into a spreadsheet nobody owns within months. Pearstop is that system already built – with a team whose only job is to keep developing it."
+    },
+    "proof": {
+      "title": "Cases",
+      "linkText": "Read the case →",
       "cards": [
         {
-          "title": "Data Quality & Categorisation",
-          "copy": "Clean, structured, consistently categorised data, automatically. The foundation everything else is built on.",
-          "linkText": "UNSPSC → How we clean data →"
+          "title": "Infrastructure Contractor",
+          "stat": "A named savings target",
+          "detail": "The data couldn't locate it. Pearstop made it visible.",
+          "href": "/cases",
+          "quote": "We used to have two full-time staff working on category assignment. Now the system does this for us – which has unlocked margin estimations further down the line too. It's more reliable at a fraction of the cost.",
+          "quoteRole": "Head of Procurement, Infrastructure"
         },
         {
-          "title": "Asset Management Optimisation",
-          "copy": "Structured asset data that enables predictive maintenance, smarter lifecycle decisions, and reliable bidding.",
-          "linkText": "Value out of asset data ->"
+          "title": "Facilities Management Provider",
+          "stat": "100,000+ assets cleaned and resolved",
+          "detail": "93% automated. The remaining 7% routed to domain experts.",
+          "href": "/cases",
+          "quote": "Our asset lists worked for mechanics on-site, but did not allow us to plan smart maintenance or manage bid risk in a data-driven way.",
+          "quoteRole": "Asset Manager, Facilities Management"
         },
         {
-          "title": "Procurement & Tenders",
-          "copy": "Know exactly what you are buying, from whom, and at what cost, so you can negotiate better contracts and price tenders with confidence.",
-          "linkText": "Improve your spend visibility →"
+          "title": "Cleaning Services Company",
+          "stat": "Extraction accuracy: 70% → 99%",
+          "detail": "Moved from manual review to an ongoing subscription.",
+          "href": "/cases",
+          "quote": "It would have taken five engineers and a full year to clean this up. So we decided to look for a better solution.",
+          "quoteRole": "Head of Operations, Cleaning Services"
+        }
+      ]
+    },
+    "closingCta": {
+      "title": "Send us 200 lines. We will send them back labelled.",
+      "action": "Send your sample"
+    },
+    "faq": {
+      "heading": "Frequently asked questions",
+      "items": [
+        {
+          "q": "What is UNSPSC classification?",
+          "a": "UNSPSC is a global standard for categorising products and services into a consistent hierarchy. It lets you compare spend across suppliers, sites, and time periods using the same categories, instead of whatever free-text description each invoice happened to use."
         },
         {
-          "title": "AI & Reporting Readiness",
-          "copy": "Your data, ready for Microsoft Fabric, dashboards, and AI tools, without the clean-up project that usually comes first.",
-          "linkText": "Get AI ready →"
+          "q": "How do you classify spend data that isn't clean?",
+          "a": "Your data doesn't need to be clean first - that's the work we do. We take invoices, ERP exports, portal downloads, or spreadsheets in whatever state they're in, and extract and classify every line automatically."
+        },
+        {
+          "q": "Can you extract data from PDF invoices?",
+          "a": "Yes. Pearstop reads PDF invoices, scanned documents, and portal exports directly, so you don't need a clean digital export to get started."
+        },
+        {
+          "q": "How accurate is automated spend classification?",
+          "a": "Around 95% of lines are classified automatically. The rest are flagged and routed to a human reviewer, so accuracy stays high without every line needing manual checking."
+        },
+        {
+          "q": "How long does spend classification take?",
+          "a": "A first sample of 200 lines is typically turned around within a few working days. Ongoing classification runs continuously as new invoices arrive."
         }
       ]
     },
     "geoBlock": {
       "title": "What does Pearstop do?",
-      "copy": "Pearstop helps facilities management, infrastructure, and hard services companies clean procurement and asset data so teams can see what they are buying, plan maintenance more reliably, and feed trustworthy data into AI and reporting tools. If you need one plain answer for search or AI tools, it is this: we turn messy operational data into something your business can actually use."
-    },
-    "blog": {
-      "eyebrow": "From the Blog",
-      "title": "Latest Insights",
-      "lead": "Practical guides, industry analysis, and data quality thinking for technical businesses.",
-      "readArticle": "Read article",
-      "viewAll": "View all articles",
-      "faq": "Browse the FAQ"
+      "copy": "Pearstop helps facilities management, infrastructure, and hard services companies clean procurement and asset data so teams can see what they are buying, plan maintenance more reliably, and feed trustworthy data into AI and reporting tools. If you need one plain answer, it is this: we turn messy operational data into something your business can actually use."
     }
   },
   "About": {
@@ -1555,34 +1603,205 @@
   "Privacy": {
     "meta": {
       "title": "Privacy Policy",
-      "description": "Privacy policy for Pearstop."
+      "description": "How Pearstop collects, uses, and protects your personal data, and your rights under GDPR."
     },
     "hero": {
       "eyebrow": "Legal",
       "title": "Privacy Policy",
-      "lead": "We only use the data we need to respond to your enquiry, improve the site, and support our services."
+      "lead": "How we collect, use, and protect your data, and the rights you have over it."
     },
-    "collect": {
-      "title": "What we collect",
-      "p1": "If you contact us, we may collect your name, email address, company, and message so we can respond. If you sign up for updates, we store the details you submit through the form provider we use. We may also collect basic analytics to understand how the site is used.",
-      "p2": "We do not sell your personal information. If you want us to remove your contact details, email us and we will handle it promptly."
-    }
+    "lastUpdated": "Last updated: 17 September 2026",
+    "sections": [
+      {
+        "title": "1. Who we are",
+        "paragraphs": [
+          "Pearstop (“Pearstop,” “we,” “us,” “our”) provides software and services that clean, extract, and classify procurement and asset data. We are based at Dogpatch Labs, CHQ Building, Custom House Quay, D01 Y6H7 Dublin, Ireland, and we are the data controller for the personal data described in this policy.",
+          "We operate under the laws of Ireland and the European Union, including the General Data Protection Regulation (GDPR). This policy is written to meet those requirements and applies to every visitor, regardless of where you access the site from."
+        ]
+      },
+      {
+        "title": "2. What we collect",
+        "paragraphs": [
+          "We collect personal data only when you choose to give it to us:"
+        ],
+        "list": [
+          "Contact form: your name, email address, company, and the content of your message.",
+          "Newsletter sign-up: your email address and, if provided, your name.",
+          "Sample classification requests: your name, email address, company name, an approximate spend range, a free-text description of what you're hoping to achieve, and any invoice files or line items you choose to upload.",
+          "Case study downloads: your name, email address, and company.",
+          "Site usage: aggregate, privacy-respecting analytics on how the site is used (pages viewed, general location, device type). We do not use this data to identify you personally."
+        ]
+      },
+      {
+        "title": "3. Why we collect it",
+        "paragraphs": [
+          "We only process personal data where we have a valid legal basis to do so:"
+        ],
+        "list": [
+          "To respond to your enquiry or prepare a demo – legitimate interest, or performance of a contract you've asked us to prepare.",
+          "To classify a sample you send us – legitimate interest in delivering the service you requested, or your consent.",
+          "To send you the newsletter or case studies – your consent, which you can withdraw at any time.",
+          "To understand and improve the site – our legitimate interest in running it well."
+        ]
+      },
+      {
+        "title": "4. Who we share it with",
+        "paragraphs": [
+          "We do not sell your personal data, ever. We share it only with the following categories of service provider, and only so far as needed to run the site and deliver what you asked for:"
+        ],
+        "list": [
+          "Hosting and infrastructure providers that run the website and store any files you upload.",
+          "Email and workflow tools we use to route enquiries to the right person on our team.",
+          "The AI/ML systems we use to classify submitted invoice data, run on EU-hosted or equivalently safeguarded infrastructure."
+        ],
+        "paragraphsAfter": [
+          "Each of these providers is bound by contract to protect your data and use it only for the purpose we specify."
+        ]
+      },
+      {
+        "title": "5. How long we keep it",
+        "paragraphs": [],
+        "list": [
+          "Sample invoice files and the data submitted alongside them: kept only as long as needed to complete and follow up on the classification you requested, then deleted – unless you ask us to keep them for an ongoing engagement.",
+          "Contact form and newsletter data: kept until you unsubscribe or ask us to delete it, or for as long as we have a legitimate reason to stay in touch, whichever is shorter.",
+          "Aggregate analytics: retained only in anonymised or aggregated form and cannot be used to identify you."
+        ]
+      },
+      {
+        "title": "6. How we protect it",
+        "paragraphs": [
+          "We handle every piece of data you give us securely: encrypted in transit, access limited to the people who need it to do their job, and stored with providers that meet recognised security standards. No system is perfectly secure, but we treat your data the way we'd want our own treated."
+        ]
+      },
+      {
+        "title": "7. Your rights",
+        "paragraphs": [
+          "Because we operate under GDPR, you have the right to:"
+        ],
+        "list": [
+          "Ask what data we hold about you and get a copy of it (access).",
+          "Correct anything that's wrong (rectification).",
+          "Ask us to delete your data at any time (erasure) – email us and we'll handle it promptly.",
+          "Ask us to restrict, or object to, how we use your data.",
+          "Move your data to another provider (portability).",
+          "Withdraw consent at any point, with no effect on anything we did before you withdrew it.",
+          "Lodge a complaint with the Irish Data Protection Commission (dataprotection.ie) or your local supervisory authority."
+        ],
+        "paragraphsAfter": [
+          "To exercise any of these rights, email inquiries@pearstop.com. We'll respond within a reasonable time and, in any case, within the timeframes GDPR requires."
+        ]
+      },
+      {
+        "title": "8. Cookies and analytics",
+        "paragraphs": [
+          "We use privacy-respecting analytics to understand how the site is used in aggregate. We don't use third-party advertising trackers, and we don't sell or share analytics data with anyone outside Pearstop."
+        ]
+      },
+      {
+        "title": "9. Children",
+        "paragraphs": [
+          "This site isn't directed at children, and we don't knowingly collect personal data from anyone under 16."
+        ]
+      },
+      {
+        "title": "10. Changes to this policy",
+        "paragraphs": [
+          "We may update this policy as the business or the law changes. We'll update the date at the top when we do."
+        ]
+      },
+      {
+        "title": "11. Contact us",
+        "paragraphs": [
+          "Questions about this policy or your data: inquiries@pearstop.com, or write to us at Dogpatch Labs, CHQ Building, Custom House Quay, D01 Y6H7 Dublin, Ireland."
+        ]
+      }
+    ]
   },
   "Terms": {
     "meta": {
       "title": "Terms and Conditions",
-      "description": "Terms and conditions for using the Pearstop website."
+      "description": "The terms that govern your use of the Pearstop website and sample classification requests."
     },
     "hero": {
       "eyebrow": "Legal",
       "title": "Terms and Conditions",
-      "lead": "A short, plain-English version of how you can use the Pearstop website."
+      "lead": "The terms that govern your use of this site."
     },
-    "usingSite": {
-      "title": "Using this site",
-      "p1": "The content on this site is provided for general information only. It is not legal, financial, or procurement advice. We try to keep the information accurate and current, but we do not guarantee that every page will always be complete.",
-      "p2": "If you reuse the content, brand assets, or screenshots, please ask first. For questions about these terms, contact us."
-    }
+    "lastUpdated": "Last updated: 17 September 2026",
+    "sections": [
+      {
+        "title": "1. Acceptance of these terms",
+        "paragraphs": [
+          "By using pearstop.com (the “Site”), you agree to these terms. If you don't agree, please don't use the Site."
+        ]
+      },
+      {
+        "title": "2. What Pearstop does",
+        "paragraphs": [
+          "Pearstop provides software and services that clean, extract, and classify procurement and asset data, including UNSPSC classification. Content on the Site describes these services for general informational purposes and does not itself constitute a binding offer of services; any paid engagement is governed by a separate agreement between Pearstop and the client."
+        ]
+      },
+      {
+        "title": "3. Sample classification requests",
+        "paragraphs": [
+          "If you send us a sample of invoice lines through the Site, we will classify it and return the result as a demonstration of our service, free of charge and without obligation on either side. Sample results are provided “as is” to illustrate what Pearstop can do, and should not be relied on as a final, audited dataset. Submitting a sample does not create a contract for ongoing services; that requires a separate agreement."
+        ]
+      },
+      {
+        "title": "4. Using the Site",
+        "paragraphs": [
+          "You agree not to:"
+        ],
+        "list": [
+          "Use the Site for anything unlawful, or to infringe anyone else's rights.",
+          "Attempt to gain unauthorised access to the Site or any connected systems.",
+          "Scrape, copy, or republish the Site's content, brand assets, or code without permission.",
+          "Upload anything you don't have the right to share with us."
+        ]
+      },
+      {
+        "title": "5. Intellectual property",
+        "paragraphs": [
+          "Everything on the Site – text, design, logos, and the Pearstop name – belongs to Pearstop or our licensors. You may not use it without our written permission."
+        ]
+      },
+      {
+        "title": "6. No warranty",
+        "paragraphs": [
+          "The Site and its content are provided “as is.” We keep information as accurate and current as we reasonably can, but we don't guarantee it's complete, error-free, or fit for a particular purpose. Nothing on the Site is legal, financial, or procurement advice."
+        ]
+      },
+      {
+        "title": "7. Limitation of liability",
+        "paragraphs": [
+          "To the extent permitted by law, Pearstop is not liable for any indirect, incidental, or consequential loss arising from your use of the Site. Nothing in these terms limits liability that cannot be limited under Irish or EU law."
+        ]
+      },
+      {
+        "title": "8. Third-party links",
+        "paragraphs": [
+          "The Site may link to third-party sites. We don't control them and aren't responsible for their content or practices."
+        ]
+      },
+      {
+        "title": "9. Governing law",
+        "paragraphs": [
+          "These terms are governed by the laws of Ireland. Any dispute will be handled by the Irish courts."
+        ]
+      },
+      {
+        "title": "10. Changes to these terms",
+        "paragraphs": [
+          "We may update these terms from time to time. We'll update the date at the top when we do; continuing to use the Site after a change means you accept the update."
+        ]
+      },
+      {
+        "title": "11. Contact us",
+        "paragraphs": [
+          "Questions about these terms: inquiries@pearstop.com."
+        ]
+      }
+    ]
   },
   "Whitepaper": {
     "meta": {

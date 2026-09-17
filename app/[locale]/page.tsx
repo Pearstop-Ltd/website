@@ -1,11 +1,11 @@
-import { CalendlyButton } from "@/components/calendly-button";
 import type { Metadata } from "next";
 import Script from "next/script";
 import Link from "next/link";
-import { getTranslations , setRequestLocale } from "next-intl/server";
-import { GeoBlock, PageHero, QuoteBox, SectionTitle } from "@/components/content";
-import { alternateLanguages, homeBenefits, siteConfig } from "@/lib/site";
-import { blogPosts } from "@/lib/blog-posts";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { GeoBlock, PageHero } from "@/components/content";
+import { Faq, FaqSchema } from "@/components/blog";
+import { SampleRequestModal } from "@/components/sample-request-modal";
+import { alternateLanguages, siteConfig } from "@/lib/site";
 
 const organizationSchema = {
   "@context": "https://schema.org",
@@ -59,7 +59,19 @@ const clientLogos = [
   { href: "https://www.lemtech.nl/", src: siteConfig.assets.clients.lemtech, alt: "LemTech", external: true },
 ];
 
-const solutionHrefs = ["/unspsc", "/asset-data-management", "/procurement-data-quality", "/ai-readiness"];
+const beforeAfterRows = [
+  { description: "PMP FLTR 20X24 CS/6", supplier: "AAF INTL", unspsc: "40161505", category: "Air filters", unifiedSupplier: "AAF International", confidence: "High" },
+  { description: "FILTER,AIR,20X24,MERV8", supplier: "AAF FLANDERS", unspsc: "40161505", category: "Air filters", unifiedSupplier: "AAF International", confidence: "High" },
+  { description: "Air Flt 20x24x2 (6/box)", supplier: "AAF", unspsc: "40161505", category: "Air filters", unifiedSupplier: "AAF International", confidence: "High" },
+  { description: "GEN PURP CLNR 5L", supplier: "ISS FACILITY", unspsc: "47131805", category: "General purpose cleaners", unifiedSupplier: "ISS Facility Services", confidence: "High" },
+  { description: "Multi-surface cleaner 5ltr", supplier: "ISS", unspsc: "47131805", category: "General purpose cleaners", unifiedSupplier: "ISS Facility Services", confidence: "High" },
+  { description: "Additional hours", supplier: "M&P CONTRACTING", unspsc: "80111613", category: "Temporary manual labour", unifiedSupplier: "M&P Contracting Ltd", confidence: "Medium", inferred: true }
+];
+
+type ProblemQuote = { quote: string; source: string };
+type WhoTile = { title: string; copy: string; href: string };
+type ProofCard = { title: string; stat: string; detail: string; href: string; quote: string; quoteRole: string };
+type FaqItem = { q: string; a: string };
 
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -67,12 +79,10 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   const prefix = locale === "en" ? "" : `/${locale}`;
   const t = await getTranslations("Home");
 
-  const blogCards = blogPosts.slice(0, 3).map((post) => ({
-    tag: post.category,
-    title: post.title,
-    summary: post.description,
-    href: `${prefix}/blog/${post.slug}`,
-  }));
+  const problemQuotes = t.raw("problemQuotes.items") as ProblemQuote[];
+  const whoTiles = t.raw("who.tiles") as WhoTile[];
+  const proofCards = t.raw("proof.cards") as ProofCard[];
+  const faqItems = t.raw("faq.items") as FaqItem[];
 
   return (
     <>
@@ -81,48 +91,24 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
       />
+      <FaqSchema items={faqItems} slug="home" />
+
       <PageHero
-        className="hero-tall"
-        eyebrow={t("hero.eyebrow")}
-        title={
-          <>
-            {t("hero.title")}
-          </>
-        }
+        className="hero-tall hero-left"
+        title={<>{t("hero.title")}</>}
         videoUrl={siteConfig.assets.heroVideo}
         videoPoster={siteConfig.assets.heroVideoPoster}
-        lead={t("hero.lead")}
+        lead={
+          <>
+            {t("hero.leadLine1")}{" "}
+            <span className="hero-objection">{t("hero.objection")}</span> {t("hero.objectionTrailer")}
+          </>
+        }
+        leadingAction={<SampleRequestModal label={t("hero.sendSample")} className="btn btn-primary" />}
         actions={[
-          { label: t("hero.bookDiscovery"), href: siteConfig.calendly, variant: "primary", external: true },
-          // TODO(stephanie): temporary - links to the UNSPSC AI classification guide
-          // as a concrete "how it works" example. Revisit once there's a dedicated,
-          // general "how Pearstop works" page covering the full product, not just
-          // the UNSPSC classification flow.
-          { label: t("hero.seeHowItWorks"), href: `${prefix}/unspsc-ai-classification-guide`, variant: "secondary" },
+          { label: t("hero.bookDiscovery"), href: siteConfig.calendly, variant: "secondary", external: true },
         ]}
       />
-
-      <section className="lm-band" aria-label="Case studies download">
-        <div className="container">
-          <div className="lm-inner">
-            <div className="lm-img-wrap">
-              <img src={siteConfig.assets.leadMagnet} alt="Pearstop case studies" />
-            </div>
-            <div className="lm-text">
-              <h2>{t("caseStudiesBand.title")}</h2>
-              <p>{t("caseStudiesBand.description")}</p>
-              <div className="hero-actions" style={{ justifyContent: "flex-start", marginTop: "1rem" }}>
-                <Link href={`${prefix}/case-studies`} className="btn btn-primary">
-                  {t("caseStudiesBand.getCaseStudies")}
-                </Link>
-                <a href={siteConfig.downloads.caseStudiesView} className="btn btn-secondary" target="_blank" rel="noopener noreferrer">
-                  {t("caseStudiesBand.viewInBrowser")}
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <section className="clients-strip" aria-label="Trusted by">
         <div className="container">
@@ -143,47 +129,44 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         </div>
       </section>
 
-      <section aria-label="How Pearstop helps">
+      <section className="lm-band" aria-label="Free sample classification">
         <div className="container">
-          {homeBenefits.map((benefit, index) => (
-            <div className={`benefit-block ${index % 2 === 1 ? "reverse" : ""}`} key={benefit.href}>
-              <div className="benefit-block-text">
-                <div className="benefit-eyebrow">{t(`benefits.eyebrows.${index}`)}</div>
-                <h2>{t(`benefits.titles.${index}`)}</h2>
-                <p className="benefit-lead">
-                  {t(`benefits.copy.${index}`)}
-                </p>
-                <p>
-                  <Link href={`${prefix}${benefit.href}`}>{t(`benefits.links.${index}`)}</Link>
-                </p>
-                <QuoteBox
-                  quote={t(`benefits.quotes.${index}`)}
-                />
-              </div>
-              <div className="benefit-block-image">
-                <img
-                  src={
-                    index === 0
-                      ? siteConfig.assets.home.spendControl
-                      : index === 1
-                        ? siteConfig.assets.home.assetManagement
-                        : siteConfig.assets.home.scaleConfidence
-                  }
-                  alt={benefit.title}
-                />
+          <div className="lm-inner">
+            <div className="lm-img-wrap">
+              <img src={siteConfig.assets.leadMagnet} alt="Pearstop sample classification" />
+            </div>
+            <div className="lm-text">
+              <h2>{t("caseStudiesBand.title")}</h2>
+              <p>{t("caseStudiesBand.description")}</p>
+              <div className="hero-actions" style={{ justifyContent: "flex-start", marginTop: "1rem" }}>
+                <SampleRequestModal label={t("hero.sendSample")} className="btn btn-primary" />
+                <Link href={`${prefix}/case-studies`} className="btn btn-outline">
+                  {t("caseStudiesBand.viewInBrowser")}
+                </Link>
               </div>
             </div>
-          ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="problem-quotes" aria-label={t("problemQuotes.title")}>
+        <div className="container">
+          <div className="problem-quote-grid">
+            {problemQuotes.map((item) => (
+              <div key={item.quote}>
+                <p className="problem-quote">&ldquo;{item.quote}&rdquo;</p>
+                <span className="problem-quote-source">{item.source}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       <section id="how-it-works" className="section-soft" aria-labelledby="hiw-heading">
         <div className="container">
-          <SectionTitle
-            eyebrow={t("howItWorks.eyebrow")}
-            title={t("howItWorks.title")}
-            lead={t("howItWorks.lead")}
-          />
+          <div className="text-center" style={{ marginBottom: "2.75rem" }}>
+            <h2 id="hiw-heading">{t("howItWorks.title")}</h2>
+          </div>
           <div className="hiw-grid">
             <article className="hiw-card">
               <div className="hiw-badge">1</div>
@@ -204,49 +187,118 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
               <p>{t("howItWorks.stage3.copy")}</p>
             </article>
           </div>
-          <div className="text-center" style={{ marginTop: "2.2rem" }}>
-            <Link href={`${prefix}/contact`} className="btn btn-primary">
-              {t("howItWorks.cta")}
-            </Link>
+
+          <div className="before-after-wrap">
+            <table className="before-after-table">
+              <thead>
+                <tr>
+                  <th colSpan={2}>As it arrives</th>
+                  <th colSpan={4}>What Pearstop adds</th>
+                </tr>
+                <tr>
+                  <th>Invoice description</th>
+                  <th>Supplier</th>
+                  <th>UNSPSC</th>
+                  <th>Category</th>
+                  <th>Unified supplier</th>
+                  <th>Confidence</th>
+                </tr>
+              </thead>
+              <tbody>
+                {beforeAfterRows.map((row, i) => (
+                  <tr key={i}>
+                    <td>{row.description}</td>
+                    <td>{row.supplier}</td>
+                    <td>{row.unspsc}</td>
+                    <td>{row.category}{row.inferred ? <sup>*</sup> : null}</td>
+                    <td>{row.unifiedSupplier}</td>
+                    <td className={row.confidence === "Medium" ? "confidence-medium" : "confidence-high"}>
+                      <span className="confidence-pill">{row.confidence}</span>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="before-after-caption">{t("howItWorks.beforeAfterCaption")}</p>
+          <p className="before-after-footnote">
+            * Category inferred from additional data (purchase history and contract context), not stated directly on
+            the invoice &mdash; flagged at medium confidence rather than high.
+          </p>
+        </div>
+      </section>
+
+      <section className="section-soft" aria-labelledby="who-heading">
+        <div className="container">
+          <div className="text-center" style={{ marginBottom: "2.75rem" }}>
+            <h2 id="who-heading">{t("who.title")}</h2>
+          </div>
+          <div className="who-grid">
+            {whoTiles.map((tile) => (
+              <article className="ind-card quote-card" key={tile.title}>
+                <h3>{tile.title}</h3>
+                <p>{tile.copy}</p>
+                <Link className="ind-card-link" href={`${prefix}${tile.href}`}>
+                  {t("who.linkText")}
+                </Link>
+              </article>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="lm-band" aria-label="Book a demo">
+      <section aria-label="Common objections">
         <div className="container">
-          <div className="lm-inner">
-            <div className="lm-text">
-              <h2>{t("demoBand.title")}</h2>
-              <p>{t("demoBand.description")}</p>
-              <div className="hero-actions" style={{ justifyContent: "flex-start", marginTop: "1.25rem" }}>
-            <CalendlyButton label={t("demoBand.bookDemo")} className="btn btn-primary" />
-                <Link href={`${prefix}/contact`} className="btn btn-secondary">
-                  {t("demoBand.emailUs")}
-                </Link>
-              </div>
+          <div className="objections-grid">
+            <div className="objection-block">
+              <h2>{t("objection.dataTitle")}</h2>
+              <p>{t("objection.dataCopy")}</p>
+            </div>
+            <div className="objection-block">
+              <h2>{t("objection.inHouseTitle")}</h2>
+              <p>{t("objection.inHouseCopy")}</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="section-soft" aria-labelledby="solutions-heading">
+      <section className="section-soft" aria-labelledby="proof-heading">
         <div className="container">
-          <SectionTitle
-            eyebrow={t("solutions.eyebrow")}
-            title={t("solutions.title")}
-            lead={t("solutions.lead")}
-          />
+          <div className="text-center" style={{ marginBottom: "2.75rem" }}>
+            <h2 id="proof-heading">{t("proof.title")}</h2>
+          </div>
           <div className="bene-cards">
-            {solutionHrefs.map((href, index) => (
-              <article className="bene-card" key={href}>
-                <h3>{t(`solutions.cards.${index}.title`)}</h3>
-                <p>{t(`solutions.cards.${index}.copy`)}</p>
-                <Link className="bene-link" href={`${prefix}${href}`}>
-                  {t(`solutions.cards.${index}.linkText`)}
+            {proofCards.map((card) => (
+              <article className="bene-card" key={card.title}>
+                <h3>{card.title}</h3>
+                <p><strong>{card.stat}.</strong> {card.detail}</p>
+                <p className="proof-quote">
+                  &ldquo;{card.quote}&rdquo;
+                  <span className="proof-quote-role">{card.quoteRole}</span>
+                </p>
+                <Link className="bene-link" href={`${prefix}${card.href}`}>
+                  {t("proof.linkText")}
                 </Link>
               </article>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="dark ccta-dark">
+        <div className="container">
+          <div className="text-center">
+            <h2>{t("closingCta.title")}</h2>
+            <div className="ccta-btns">
+              <SampleRequestModal label={t("closingCta.action")} className="btn btn-primary" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-soft" aria-labelledby="home-faq-heading">
+        <div className="container">
+          <Faq items={faqItems} heading={t("faq.heading")} />
         </div>
       </section>
 
@@ -259,7 +311,6 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           </div>
         </div>
       </section>
-
     </>
   );
 }

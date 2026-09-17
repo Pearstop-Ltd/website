@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { getTranslations , setRequestLocale } from "next-intl/server";
-import { PageHero, SectionTitle } from "@/components/content";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { PageHero } from "@/components/content";
 import { alternateLanguages, siteConfig } from "@/lib/site";
 
 export async function generateMetadata({
@@ -21,6 +21,8 @@ export async function generateMetadata({
   };
 }
 
+type Section = { title: string; paragraphs?: string[]; list?: string[]; paragraphsAfter?: string[] };
+
 export default async function PrivacyPage({
   params
 }: {
@@ -29,6 +31,7 @@ export default async function PrivacyPage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "Privacy" });
+  const sections = t.raw("sections") as Section[];
 
   return (
     <>
@@ -39,14 +42,27 @@ export default async function PrivacyPage({
       />
       <section>
         <div className="container">
-          <SectionTitle title={t("collect.title")} />
           <div className="row">
             <div className="col-md-8 col-md-offset-2">
-              <p className="light-copy">{t("collect.p1")}</p>
-              <p className="light-copy">
-                {t("collect.p2")}{" "}
-                <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>.
-              </p>
+              <p className="light-copy" style={{ fontSize: "0.85rem", marginBottom: "2.5rem" }}>{t("lastUpdated")}</p>
+              {sections.map((section) => (
+                <div key={section.title} style={{ marginBottom: "2.25rem" }}>
+                  <h2>{section.title}</h2>
+                  {section.paragraphs?.map((p) => (
+                    <p className="light-copy" key={p}>{p}</p>
+                  ))}
+                  {section.list ? (
+                    <ul className="light-copy">
+                      {section.list.map((item) => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </ul>
+                  ) : null}
+                  {section.paragraphsAfter?.map((p) => (
+                    <p className="light-copy" key={p}>{p}</p>
+                  ))}
+                </div>
+              ))}
             </div>
           </div>
         </div>

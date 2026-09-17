@@ -1,267 +1,401 @@
-import { CalendlyButton } from "@/components/calendly-button";
 import type { Metadata } from "next";
 import Link from "next/link";
-import { GeoBlock, PageHero, QuoteBox, SectionTitle } from "@/components/content";
-import { alternateLanguages, homeBenefits, siteConfig } from "@/lib/site";
+import Script from "next/script";
+import { GeoBlock, PageHero } from "@/components/content";
+import { Faq, FaqSchema } from "@/components/blog";
+import { SampleRequestModal } from "@/components/sample-request-modal";
+import { alternateLanguages, siteConfig } from "@/lib/site";
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Pearstop",
+  url: siteConfig.url,
+  logo: `${siteConfig.url}/brand/logo-dark.webp`,
+  description: siteConfig.description,
+  email: siteConfig.email,
+  areaServed: "Europe",
+  sameAs: [
+    siteConfig.socials.linkedin,
+    siteConfig.socials.youtube,
+    siteConfig.socials.instagram
+  ],
+  knowsAbout: [
+    "UNSPSC Classification",
+    "Procurement Data Quality",
+    "Asset Data Management",
+    "Spend Analysis",
+    "Facilities Management Procurement"
+  ]
+};
 
 export const metadata: Metadata = {
-  title: "Pearstop - Data Quality Solutions for Hard Services",
+  title: "Pearstop - Know What You Buy, From Whom, At What Price",
   description:
-    "Pearstop cleans and classifies procurement and asset data for hard services companies. We process 35,000 procurement lines a month, automatically.",
+    "Pearstop turns your invoices into spend data you can use. Send us 200 lines and we'll send them back labelled - no clean-up required first.",
   alternates: {
     canonical: siteConfig.url,
     languages: alternateLanguages("")
   },
   openGraph: {
-    title: "Pearstop - Data Quality Solutions for Hard Services",
+    title: "Pearstop - Know What You Buy, From Whom, At What Price",
     description:
-      "Pearstop cleans and classifies procurement and asset data for hard services companies. We process 35,000 procurement lines a month, automatically.",
+      "Pearstop turns your invoices into spend data you can use. Send us 200 lines and we'll send them back labelled - no clean-up required first.",
     url: siteConfig.url,
     images: ["/opengraph-image"]
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pearstop - Data Quality Solutions for Hard Services",
+    title: "Pearstop - Know What You Buy, From Whom, At What Price",
     description:
-      "Pearstop cleans and classifies procurement and asset data for hard services companies. We process 35,000 procurement lines a month, automatically.",
+      "Pearstop turns your invoices into spend data you can use. Send us 200 lines and we'll send them back labelled - no clean-up required first.",
     images: ["/opengraph-image"]
   }
 };
 
 const clientLogos = [
+  { href: "/cases#strukton", src: siteConfig.assets.clients.strukton, alt: "Strukton" },
+  { href: "/cases#fmo", src: siteConfig.assets.clients.fmo, alt: "FMO" },
+  { href: "/cases#faro", src: siteConfig.assets.clients.faro, alt: "FARO" },
+  { href: "/cases", src: siteConfig.assets.clients.kelpBlue, alt: "Kelp" },
+  { href: "/cases/spie", src: siteConfig.assets.clients.spie, alt: "SPIE" },
+  { href: "https://www.lemtech.nl/", src: siteConfig.assets.clients.lemtech, alt: "LemTech", external: true }
+];
+
+const problemQuotes = [
   {
-    href: "/cases#strukton",
-    src: siteConfig.assets.clients.strukton,
-    alt: "Strukton"
+    quote: "Most companies are flying blind, and only find out when someone asks a question they cannot answer.",
+    source: "Procurement Lead, Infrastructure"
   },
   {
-    href: "/cases#fmo",
-    src: siteConfig.assets.clients.fmo,
-    alt: "FMO"
+    quote: "You cannot negotiate what you cannot see.",
+    source: "Head of Procurement, Facilities Management"
   },
   {
-    href: "/cases#faro",
-    src: siteConfig.assets.clients.faro,
-    alt: "FARO"
+    quote: "If you cannot defend your cost baseline, you are bidding on a feeling.",
+    source: "Commercial Director, Construction"
+  }
+];
+
+const beforeAfterRows = [
+  { description: "PMP FLTR 20X24 CS/6", supplier: "AAF INTL", unspsc: "40161505", category: "Air filters", unifiedSupplier: "AAF International", confidence: "High" },
+  { description: "FILTER,AIR,20X24,MERV8", supplier: "AAF FLANDERS", unspsc: "40161505", category: "Air filters", unifiedSupplier: "AAF International", confidence: "High" },
+  { description: "Air Flt 20x24x2 (6/box)", supplier: "AAF", unspsc: "40161505", category: "Air filters", unifiedSupplier: "AAF International", confidence: "High" },
+  { description: "GEN PURP CLNR 5L", supplier: "ISS FACILITY", unspsc: "47131805", category: "General purpose cleaners", unifiedSupplier: "ISS Facility Services", confidence: "High" },
+  { description: "Multi-surface cleaner 5ltr", supplier: "ISS", unspsc: "47131805", category: "General purpose cleaners", unifiedSupplier: "ISS Facility Services", confidence: "High" },
+  { description: "Additional hours", supplier: "M&P CONTRACTING", unspsc: "80111613", category: "Temporary manual labour", unifiedSupplier: "M&P Contracting Ltd", confidence: "Medium", inferred: true }
+];
+
+const whoTiles = [
+  {
+    title: "Facilities Management",
+    copy: "Your data arrives from every service line in a different format.",
+    href: "/industries#facilities-management"
   },
   {
+    title: "Construction",
+    copy: "You're estimating bids from memory because nobody can retrieve historical actuals.",
+    href: "/industries#construction"
+  },
+  {
+    title: "Infrastructure",
+    copy: "A savings target has been named and the data can't show where it sits.",
+    href: "/industries#infrastructure"
+  },
+  {
+    title: "Manufacturing",
+    copy: "One entity already runs UNSPSC and another needs to align to it.",
+    href: "/industries#manufacturing"
+  }
+];
+
+const proofCards = [
+  {
+    title: "Infrastructure Contractor",
+    stat: "A named savings target",
+    detail: "The data couldn't locate it. Pearstop made it visible.",
     href: "/cases",
-    src: siteConfig.assets.clients.kelpBlue,
-    alt: "Kelp"
+    quote: "We used to have two full-time staff working on category assignment. Now the system does this for us – which has unlocked margin estimations further down the line too. It's more reliable at a fraction of the cost.",
+    quoteRole: "Head of Procurement, Infrastructure"
+  },
+  {
+    title: "Facilities Management Provider",
+    stat: "100,000+ assets cleaned and resolved",
+    detail: "93% automated. The remaining 7% routed to domain experts.",
+    href: "/cases",
+    quote: "Our asset lists worked for mechanics on-site, but did not allow us to plan smart maintenance or manage bid risk in a data-driven way.",
+    quoteRole: "Asset Manager, Facilities Management"
+  },
+  {
+    title: "Cleaning Services Company",
+    stat: "Extraction accuracy: 70% → 99%",
+    detail: "Moved from manual review to an ongoing subscription.",
+    href: "/cases",
+    quote: "It would have taken five engineers and a full year to clean this up. So we decided to look for a better solution.",
+    quoteRole: "Head of Operations, Cleaning Services"
   }
 ];
 
-const solutionCards = [
+const faqItems = [
   {
-    title: "Data Quality & Categorisation",
-    copy: "Clean, structured, consistently categorised data, automatically. The foundation everything else is built on.",
-    href: "/unspsc",
-    linkText: "UNSPSC → How we clean data →"
+    q: "What is UNSPSC classification?",
+    a: "UNSPSC is a global standard for categorising products and services into a consistent hierarchy. It lets you compare spend across suppliers, sites, and time periods using the same categories, instead of whatever free-text description each invoice happened to use."
   },
   {
-    title: "Asset Management Optimisation",
-    copy: "Structured asset data that enables predictive maintenance, smarter lifecycle decisions, and reliable bidding.",
-    href: "/asset-data-management",
-    linkText: "Value out of asset data ->"
+    q: "How do you classify spend data that isn't clean?",
+    a: "Your data doesn't need to be clean first - that's the work we do. We take invoices, ERP exports, portal downloads, or spreadsheets in whatever state they're in, and extract and classify every line automatically."
   },
   {
-    title: "Procurement & Tenders",
-    copy: "Know exactly what you are buying, from whom, and at what cost, so you can negotiate better contracts and price tenders with confidence.",
-    href: "/procurement-data-quality",
-    linkText: "Improve your spend visibility →"
+    q: "Can you extract data from PDF invoices?",
+    a: "Yes. Pearstop reads PDF invoices, scanned documents, and portal exports directly, so you don't need a clean digital export to get started."
   },
   {
-    title: "AI & Reporting Readiness",
-    copy: "Your data, ready for Microsoft Fabric, dashboards, and AI tools, without the clean-up project that usually comes first.",
-    href: "/ai-readiness",
-    linkText: "Get AI ready →"
+    q: "How accurate is automated spend classification?",
+    a: "Around 95% of lines are classified automatically. The rest are flagged and routed to a human reviewer, so accuracy stays high without every line needing manual checking."
+  },
+  {
+    q: "How long does spend classification take?",
+    a: "A first sample of 200 lines is typically turned around within a few working days. Ongoing classification runs continuously as new invoices arrive."
   }
 ];
-
 
 export default function HomePage() {
   return (
     <>
+      <Script
+        id="org-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <FaqSchema items={faqItems} slug="home" />
+
       <PageHero
-        className="hero-tall"
-        eyebrow="Data Quality Solutions"
-        title={
-          <>
-            We classify 35,000 procurement lines a month.
-            <br />
-            Automatically.
-          </>
-        }
+        className="hero-tall hero-left"
+        title={<>Know what you buy, from whom, at what price.</>}
         videoUrl={siteConfig.assets.heroVideo}
         videoPoster={siteConfig.assets.heroVideoPoster}
-        lead="Pearstop cleans and classifies procurement and asset data for hard services companies so you can better negotiate contracts and plan maintenance. We automate, so that you don't have to do it manually - Category management that works."
+        lead={
+          <>
+            Your invoice data is full of answers. Pearstop makes them usable.{" "}
+            <span className="hero-objection">Your data doesn&rsquo;t need to be cleaned first.</span> That&rsquo;s the
+            work we do.
+          </>
+        }
+        leadingAction={<SampleRequestModal label="Send us 200 lines" className="btn btn-primary" />}
         actions={[
-          { label: "Book a 7-minute discovery", href: siteConfig.calendly, variant: "primary", external: true },
-          // TODO(stephanie): temporary - links to the UNSPSC AI classification guide
-          // as a concrete "how it works" example. Revisit once there's a dedicated,
-          // general "how Pearstop works" page covering the full product, not just
-          // the UNSPSC classification flow.
-          { label: "See how it works", href: "/unspsc-ai-classification-guide", variant: "secondary" }
+          { label: "Talk to sales", href: siteConfig.calendly, variant: "secondary", external: true }
         ]}
       />
-
-      <section className="lm-band" aria-label="Case studies download">
-        <div className="container">
-          <div className="lm-inner">
-            <div className="lm-img-wrap">
-              <img
-                src={siteConfig.assets.leadMagnet}
-                alt="Pearstop case studies"
-              />
-            </div>
-            <div className="lm-text">
-              <h2>Download the case studies</h2>
-              <p>See how Strukton, FARO, SPIE, and FMO use Pearstop to clean data, protect margin, and reduce manual work.</p>
-              <div className="hero-actions" style={{ justifyContent: "flex-start", marginTop: "1rem" }}>
-                <Link href="/case-studies" className="btn btn-primary">
-                  Get the case studies
-                </Link>
-                <a href={siteConfig.downloads.caseStudiesView} className="btn btn-secondary" target="_blank" rel="noopener noreferrer">
-                  View in browser
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <section className="clients-strip" aria-label="Trusted by">
         <div className="container">
           <p className="clients-label">Trusted by leading organisations</p>
           <div className="clients-logos">
             {clientLogos.map((logo) => (
-              <Link key={logo.alt} href={logo.href} aria-label={`${logo.alt} case study`}>
-                <img src={logo.src} alt={logo.alt} />
-              </Link>
+              logo.external ? (
+                <a key={logo.alt} href={logo.href} target="_blank" rel="noopener noreferrer" aria-label={`${logo.alt} website`}>
+                  <img src={logo.src} alt={logo.alt} />
+                </a>
+              ) : (
+                <Link key={logo.alt} href={logo.href} aria-label={`${logo.alt} case study`}>
+                  <img src={logo.src} alt={logo.alt} />
+                </Link>
+              )
             ))}
           </div>
         </div>
       </section>
 
-      <section aria-label="How Pearstop helps">
+      <section className="lm-band" aria-label="Free sample classification">
         <div className="container">
-          {homeBenefits.map((benefit, index) => (
-            <div className={`benefit-block ${index % 2 === 1 ? "reverse" : ""}`} key={benefit.title}>
-              <div className="benefit-block-text">
-                <div className="benefit-eyebrow">
-                  {index === 0 ? "Procurement" : index === 1 ? "Asset Management" : "Operations"}
-                </div>
-                <h2>{benefit.title}</h2>
-                <p className="benefit-lead">
-                  <strong>{benefit.copy.split(". ")[0]}.</strong> {benefit.copy.split(". ").slice(1).join(". ")}
-                </p>
-                <p>
-                  <Link href={benefit.href}>
-                    {index === 0
-                      ? "See how UNSPSC classification works →"
-                      : index === 1
-                        ? "See how asset data management works →"
-                        : "See how data quality works →"}
-                  </Link>
-                </p>
-                <QuoteBox
-                  quote={
-                    index === 0
-                      ? "We used to have two full-time staff working on category assignment. Now the system does this for us - which has unlocked margin estimations further down the line too. It's more reliable at a fraction of the cost."
-                      : index === 1
-                        ? "Our asset lists worked for mechanics on-site, but did not allow us to plan smart maintenance or manage bid risk in a data-driven way."
-                        : "It would have taken five engineers and a full year to clean this up. So we decided to look for a better solution."
-                  }
-                />
-              </div>
-              <div className="benefit-block-image">
-                <img
-                  src={
-                    index === 0
-                      ? siteConfig.assets.home.spendControl
-                      : index === 1
-                        ? siteConfig.assets.home.assetManagement
-                        : siteConfig.assets.home.scaleConfidence
-                  }
-                  alt={benefit.title}
-                />
+          <div className="lm-inner">
+            <div className="lm-img-wrap">
+              <img src={siteConfig.assets.leadMagnet} alt="Pearstop sample classification" />
+            </div>
+            <div className="lm-text">
+              <h2>See it work on your own data</h2>
+              <p>
+                Send a representative sample of your invoice lines &mdash; up to 200 lines, or a handful of invoices (max
+                10) &mdash; and we&rsquo;ll classify them and send them back labelled. No cost, no setup, nothing to
+                install. It&rsquo;s the fastest way to see exactly what Pearstop does before you commit to anything.
+              </p>
+              <div className="hero-actions" style={{ justifyContent: "flex-start", marginTop: "1rem" }}>
+                <SampleRequestModal label="Send us 200 lines" className="btn btn-primary" />
+                <Link href="/case-studies" className="btn btn-outline">
+                  See case studies first
+                </Link>
               </div>
             </div>
-          ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="problem-quotes" aria-label="What buyers tell us">
+        <div className="container">
+          <div className="problem-quote-grid">
+            {problemQuotes.map((item) => (
+              <div key={item.quote}>
+                <p className="problem-quote">&ldquo;{item.quote}&rdquo;</p>
+                <span className="problem-quote-source">{item.source}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       <section id="how-it-works" className="section-soft" aria-labelledby="hiw-heading">
         <div className="container">
-          <SectionTitle
-            eyebrow="How It Works"
-            title="From messy data to a foundation you can act on"
-            lead="From messy data to a foundation you can act on — in three stages."
-          />
+          <div className="text-center" style={{ marginBottom: "2.75rem" }}>
+            <h2 id="hiw-heading">How it works</h2>
+          </div>
           <div className="hiw-grid">
             <article className="hiw-card">
               <div className="hiw-badge">1</div>
               <div className="hiw-stage-label">Stage 1</div>
-              <h3>Data Stability Baseline</h3>
-              <p>We start with the data you already have. We assess its structure, identify gaps, and deliver one cleaned dataset that is yours to keep - plus a clear report on what needs to happen next. No commitment beyond this step.</p>
+              <h3>Send us what you have</h3>
+              <p>PDFs, ERP exports, portal downloads, spreadsheets. API connectors are available for most ERPs.</p>
             </article>
             <article className="hiw-card featured">
               <div className="hiw-badge">2</div>
               <div className="hiw-stage-label">Stage 2</div>
-              <h3>Automated Quality Control</h3>
-              <p>The system automatically cleans up to 95% of errors and inconsistencies. Items that fall outside confident thresholds get flagged for your team to review — so you stay in control without doing the grunt work. Every human decision feeds directly back into the system, improving accuracy over time.</p>
+              <h3>We clean, enrich, and classify every line</h3>
+              <p>
+                We extract everything we can find on the line, fill in what&rsquo;s missing using supplier and
+                purchasing history, and classify it to UNSPSC &mdash; down to the granularity that actually answers
+                your questions, not just a top-level category.
+              </p>
             </article>
             <article className="hiw-card">
               <div className="hiw-badge">3</div>
               <div className="hiw-stage-label">Stage 3</div>
-              <h3>Ongoing Data Integrity</h3>
-              <p>The system learns from your data and your team's input over time. The more it runs, the less manual review is needed. Your data stays clean, structured, and ready to use - without a dedicated team to maintain it.</p>
+              <h3>Your spend stays classified</h3>
+              <p>As new invoices arrive, they're classified the same way - no re-cleaning project every year.</p>
             </article>
           </div>
-          <div className="text-center" style={{ marginTop: "2.2rem" }}>
-            <Link href="/contact" className="btn btn-primary">
-              Start with a Data Quality Baseline →
-            </Link>
+
+          <div className="before-after-wrap">
+            <table className="before-after-table">
+              <thead>
+                <tr>
+                  <th colSpan={2}>As it arrives</th>
+                  <th colSpan={4}>What Pearstop adds</th>
+                </tr>
+                <tr>
+                  <th>Invoice description</th>
+                  <th>Supplier</th>
+                  <th>UNSPSC</th>
+                  <th>Category</th>
+                  <th>Unified supplier</th>
+                  <th>Confidence</th>
+                </tr>
+              </thead>
+              <tbody>
+                {beforeAfterRows.map((row, i) => (
+                  <tr key={i}>
+                    <td>{row.description}</td>
+                    <td>{row.supplier}</td>
+                    <td>{row.unspsc}</td>
+                    <td>{row.category}{row.inferred ? <sup>*</sup> : null}</td>
+                    <td>{row.unifiedSupplier}</td>
+                    <td className={row.confidence === "Medium" ? "confidence-medium" : "confidence-high"}>
+                      <span className="confidence-pill">{row.confidence}</span>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="before-after-caption">
+            Illustrative example: six invoice lines from three suppliers. The original description and supplier are
+            kept exactly as they arrived &mdash; Pearstop only adds the columns on the right.
+          </p>
+          <p className="before-after-footnote">
+            * Category inferred from additional data (purchase history and contract context), not stated directly on
+            the invoice &mdash; flagged at medium confidence rather than high.
+          </p>
+        </div>
+      </section>
+
+      <section className="section-soft" aria-labelledby="who-heading">
+        <div className="container">
+          <div className="text-center" style={{ marginBottom: "2.75rem" }}>
+            <h2 id="who-heading">Who it's for</h2>
+          </div>
+          <div className="who-grid">
+            {whoTiles.map((tile) => (
+              <article className="ind-card quote-card" key={tile.title}>
+                <h3>{tile.title}</h3>
+                <p>{tile.copy}</p>
+                <Link className="ind-card-link" href={tile.href}>
+                  See how it applies →
+                </Link>
+              </article>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="lm-band" aria-label="Book a demo">
+      <section aria-label="Common objections">
         <div className="container">
-          <div className="lm-inner">
-            <div className="lm-text">
-              <h2>Schedule a Personal Demo</h2>
-              <p>In 30 minutes we'll show you where your data is costing you margin and exactly what a fix looks like. No slides. Just your industry, your numbers, your data.</p>
-              <div className="hero-actions" style={{ justifyContent: "flex-start", marginTop: "1.25rem" }}>
-            <CalendlyButton label="Book your demo" className="btn btn-primary" />
-                <Link href="/contact" className="btn btn-secondary">
-                  Email us instead
-                </Link>
-              </div>
+          <div className="objections-grid">
+            <div className="objection-block">
+              <h2>&ldquo;Our data isn&rsquo;t clean enough for this.&rdquo;</h2>
+              <p>
+                That's the most common thing we hear &mdash; and it's the reason to start now rather than wait. Cleaning
+                the data is the first thing Pearstop does, not a prerequisite for working with us.
+              </p>
+            </div>
+            <div className="objection-block">
+              <h2>&ldquo;Won&rsquo;t it be cheaper to build this ourselves?&rdquo;</h2>
+              <p>
+                In-house gives you complete control, but expect to dedicate two data or AI specialists to build it
+                properly and keep maintaining it as your data changes. We've seen an internal build start as an IT
+                team's side project, ship without procurement involved, and turn into a spreadsheet nobody owns within
+                months. Pearstop is that system already built &mdash; with a team whose only job is to keep developing
+                it.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="section-soft" aria-labelledby="solutions-heading">
+      <section className="section-soft" aria-labelledby="proof-heading">
         <div className="container">
-          <SectionTitle
-            eyebrow="Our Solutions"
-            title="What Pearstop does for your business"
-            lead="Four core capabilities that give you control over your data, your costs, and your margins."
-          />
-
+          <div className="text-center" style={{ marginBottom: "2.75rem" }}>
+            <h2 id="proof-heading">Cases</h2>
+          </div>
           <div className="bene-cards">
-            {solutionCards.map((card) => (
+            {proofCards.map((card) => (
               <article className="bene-card" key={card.title}>
                 <h3>{card.title}</h3>
-                <p>{card.copy}</p>
+                <p><strong>{card.stat}.</strong> {card.detail}</p>
+                <p className="proof-quote">
+                  &ldquo;{card.quote}&rdquo;
+                  <span className="proof-quote-role">{card.quoteRole}</span>
+                </p>
                 <Link className="bene-link" href={card.href}>
-                  {card.linkText}
+                  Read the case →
                 </Link>
               </article>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="dark ccta-dark">
+        <div className="container">
+          <div className="text-center">
+            <h2>Send us 200 lines. We will send them back labelled.</h2>
+            <div className="ccta-btns">
+              <SampleRequestModal label="Send your sample" className="btn btn-primary" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-soft" aria-labelledby="home-faq-heading">
+        <div className="container">
+          <Faq items={faqItems} heading="Frequently asked questions" />
         </div>
       </section>
 
@@ -271,13 +405,12 @@ export default function HomePage() {
             <div className="col-md-8 col-md-offset-2">
               <GeoBlock
                 title="What does Pearstop do?"
-                copy="Pearstop helps facilities management, infrastructure, and hard services companies clean procurement and asset data so teams can see what they are buying, plan maintenance more reliably, and feed trustworthy data into AI and reporting tools. If you need one plain answer for search or AI tools, it is this: we turn messy operational data into something your business can actually use."
+                copy="Pearstop helps facilities management, infrastructure, and hard services companies clean procurement and asset data so teams can see what they are buying, plan maintenance more reliably, and feed trustworthy data into AI and reporting tools. If you need one plain answer, it is this: we turn messy operational data into something your business can actually use."
               />
             </div>
           </div>
         </div>
       </section>
-
     </>
   );
 }

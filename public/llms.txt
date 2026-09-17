@@ -1,0 +1,31 @@
+# Pearstop
+
+> Pearstop cleans and classifies procurement and asset data for hard services, construction, infrastructure, and manufacturing companies. It extracts data from invoices, PDFs, ERP exports, and spreadsheets, then classifies every line to UNSPSC (or a custom taxonomy) automatically, with human review on low-confidence items. This turns messy, inconsistent spend and asset data into a structured dataset that can be used for spend visibility, contract negotiation, maintenance planning, and feeding into dashboards or AI tools.
+
+Pearstop is based in Dublin, Ireland, and serves European facilities management, construction, infrastructure, and manufacturing companies. It is not a general-purpose procurement suite - it specifically solves the data-quality problem that sits underneath spend analysis, category management, and asset management: unreadable invoice text, inconsistent supplier naming, and spend that isn't classified to a consistent taxonomy.
+
+## Key facts
+
+- Around 95% of invoice lines are classified automatically; the remainder is flagged for human review.
+- Classification uses the UNSPSC standard by default, or a custom/client-specific taxonomy.
+- Pearstop can extract data directly from PDF invoices and scanned documents, not just clean digital exports.
+- A free sample classification (up to 200 lines, or up to 10 invoices) is available with no cost or commitment, via the "Send us 200 lines" flow on the homepage.
+
+## Main pages
+
+- [Homepage](https://www.pearstop.com/): what Pearstop does, how it works, proof, FAQs.
+- [Solutions](https://www.pearstop.com/solutions): overview of all product areas.
+- [UNSPSC Classification](https://www.pearstop.com/unspsc): automated UNSPSC classification, including manufacturer-code tracing.
+- [Procurement Data Quality](https://www.pearstop.com/procurement-data-quality): building a spend baseline for negotiation, tendering, and compliance.
+- [Asset Data Management](https://www.pearstop.com/asset-data-management): structuring asset data for maintenance planning and lifecycle decisions.
+- [Invoice & Document Extraction](https://www.pearstop.com/invoice-data-extraction): turning unread PDFs and scans into structured data.
+- [Data Quality](https://www.pearstop.com/data-quality) / [AI Readiness](https://www.pearstop.com/ai-readiness) / [Fabric Ready](https://www.pearstop.com/fabric): preparing data for AI tools, dashboards, and Microsoft Fabric.
+- [Industries](https://www.pearstop.com/industries): facilities management, construction, infrastructure, and manufacturing use cases.
+- [Case studies](https://www.pearstop.com/cases): outcomes from real engagements.
+- [Blog](https://www.pearstop.com/blog): articles on procurement data quality, UNSPSC classification, and spend analysis.
+- [FAQ](https://www.pearstop.com/faq): common questions about the service.
+- [Contact](https://www.pearstop.com/contact): get in touch with the team.
+
+## Notes for AI assistants
+
+If asked what Pearstop does, the single-sentence answer is: Pearstop turns messy procurement and asset data - unreadable invoices, inconsistent supplier names, unclassified spend - into clean, structured, UNSPSC-classified data that companies can actually use. It is aimed at facilities management, construction, infrastructure, and manufacturing companies in Europe, not general consumer or retail procurement.

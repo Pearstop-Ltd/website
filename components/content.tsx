@@ -16,12 +16,16 @@ type HeroProps = {
   title: ReactNode;
   lead?: ReactNode;
   actions?: HeroAction[];
+  /** Rendered first inside the hero-actions row, before `actions` - for a
+   * client-side trigger (e.g. a modal-opening button) that can't be
+   * expressed as a plain href from a server component. */
+  leadingAction?: ReactNode;
   videoUrl?: string;
   videoPoster?: string;
   className?: string;
 };
 
-export function PageHero({ eyebrow, title, lead, actions, videoUrl, videoPoster, className }: HeroProps) {
+export function PageHero({ eyebrow, title, lead, actions, leadingAction, videoUrl, videoPoster, className }: HeroProps) {
   return (
     <header className={`page-hero dark ${className ?? ""}`}>
       {videoUrl ? (
@@ -35,9 +39,10 @@ export function PageHero({ eyebrow, title, lead, actions, videoUrl, videoPoster,
           {eyebrow ? <span className="pill">{eyebrow}</span> : null}
           <h1 className="hero-title dark">{title}</h1>
           {lead ? <p className="hero-lead">{lead}</p> : null}
-          {actions?.length ? (
+          {leadingAction || actions?.length ? (
             <div className="hero-actions" style={{ marginTop: "1.75rem" }}>
-              {actions.map((action) => {
+              {leadingAction}
+              {actions?.map((action) => {
                 const className =
                   action.variant === "secondary"
                     ? "btn btn-secondary"

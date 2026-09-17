@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { buildIndustryContext, getValidationIndex, isIndustryKey, type IndustryKey } from "@/lib/unspsc-industries";
 import { checkRateLimit, getClientIp } from "@/lib/rate-limit";
+import { verifyRecaptcha } from "@/lib/recaptcha";
 
 const BASE_SYSTEM_PROMPT = `You are a UNSPSC classification expert. Your job is to find the single most accurate 8-digit UNSPSC commodity code for a product or service description.
 
@@ -41,35 +42,7 @@ Respond ONLY with valid JSON — no markdown, no explanation outside the JSON:
 
 If the description is completely unclassifiable, return: { "error": "Could not classify: [reason]" }`;
 
-// The reCAPTCHA key in use is registered as v3 (score-based, not a
-// checkbox), so siteverify returns a 0.0-1.0 score and the action name
-// alongside success — both need checking, not just success.
-const RECAPTCHA_SCORE_THRESHOLD = 0.5;
 const RECAPTCHA_ACTION = "unspsc_lookup";
-
-async function verifyRecaptcha(token: string | undefined, ip: string): Promise<boolean> {
-  const secret = process.env.RECAPTCHA_SECRET_KEY;
-  if (!secret) {
-    console.warn("[unspsc-lookup] RECAPTCHA_SECRET_KEY not set — bot check is disabled (fail-open).");
-    return true;
-  }
-  if (!token) return false;
-
-  try {
-    const res = await fetch("https://www.google.com/recaptcha/api/siteverify", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams({ secret, response: token, remoteip: ip }),
-    });
-    const data = await res.json();
-    if (data.success !== true) return false;
-    if (typeof data.score === "number" && data.score < RECAPTCHA_SCORE_THRESHOLD) return false;
-    if (typeof data.action === "string" && data.action !== RECAPTCHA_ACTION) return false;
-    return true;
-  } catch {
-    return false;
-  }
-}
 
 export async function POST(req: NextRequest) {
   const body = await req.json();
@@ -88,7 +61,7 @@ export async function POST(req: NextRequest) {
 
   const ip = getClientIp(req.headers);
 
-  const captchaOk = await verifyRecaptcha(recaptchaToken, ip);
+  const captchaOk = await verifyRecaptcha(recaptchaToken, ip, RECAPTCHA_ACTION);
   if (!captchaOk) {
     return NextResponse.json({ error: "Bot check failed. Please refresh the page and try again." }, { status: 403 });
   }

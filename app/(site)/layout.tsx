@@ -5,9 +5,11 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { LatestBlogPosts } from "@/components/latest-blog-posts";
 import enMessages from "../../messages/en.json";
+import { siteConfig } from "@/lib/site";
 import "../globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteConfig.url),
   icons: {
     icon: "/favicon.png",
     shortcut: "/favicon.png",
