@@ -1428,6 +1428,31 @@ const _allBlogPosts: BlogPost[] = [
       { q: "What should we check after fixing a field swap in our spend data?", a: "Trace the swap back to its source rather than only correcting the affected batch. Check the export job, entry template, or migration mapping that produced the file, because a batch-level correction does not prevent the same upstream error from reproducing the swap in the next export cycle." },
     ],
   },
+  {
+    slug: "unspsc-best-in-class-by-industry",
+    image: "/images/blog/unspsc-best-in-class-by-industry.jpg",
+    title: "UNSPSC, best in class: what it means and why you should care",
+    description: "UNSPSC accuracy means something different in hard FM, cleaning, and construction. Trustworthy confidence scoring matters more than a single percentage.",
+    publishedAt: "2026-09-17",
+    category: "Procurement",
+    tags: ["UNSPSC", "classification accuracy", "confidence scoring", "procurement data quality"],
+    readingTime: 7,
+    tocItems: [
+      { id: "why-one-accuracy-number-is-not-the-point", label: "Why one accuracy number isn't the point" },
+      { id: "an-example-from-a-construction-supplier", label: "An example from construction" },
+      { id: "what-high-confidence-should-actually-mean", label: "What high confidence should mean" },
+      { id: "hard-fm-cleaning-and-construction-differ", label: "Hard FM, cleaning, and construction differ" },
+    ],
+    softCta: "discovery",
+    faqItems: [
+      { q: "What does best in class UNSPSC classification actually mean?", a: "It means every high confidence result is genuinely reliable, every medium or low confidence line is honestly flagged rather than hidden inside an aggregate accuracy figure, and the categories that matter for negotiation and budgeting get the review attention. A single accuracy percentage applied across an entire dataset does not tell you this, because it treats a one off purchase the same as a regularly negotiated category." },
+      { q: "Why does classification sometimes look wrong even when it's technically correct?", a: "A classification can follow category definitions exactly and still be unhelpful. Event ribbons handed out at a personnel event, for instance, are closer to jewelry than to any standard category by strict definition, so a classifier calling it jewelry isn't wrong. It's just irrelevant, because the purchase was a one off with no supplier relationship or budget line attached, which is exactly the kind of case where technical accuracy doesn't matter to any decision." },
+      { q: "Should a one off purchase get the same classification scrutiny as a regular purchase?", a: "No. A one off purchase only needs to land somewhere reasonable and avoid cluttering the categories procurement actually manages. A regular, negotiated purchase needs consistent, trustworthy classification because it feeds contract negotiation and category level reporting. Treating both the same way wastes review time on cases that do not change any decision." },
+      { q: "How does UNSPSC best practice differ between Hard FM and Soft FM, cleaning, and construction?", a: "Hard FM depends on consistent commodity level classification for regularly negotiated categories such as HVAC parts. Cleaning depends on separating recurring consumables from one off equipment purchases so spend trends are visible over time. Construction depends on classifying the same material the same way across different projects, since project to project variation is what makes benchmarking difficult otherwise." },
+      { q: "How does Pearstop make classification confidence trustworthy rather than just reporting an accuracy number?", a: "Pearstop scores every line for confidence rather than publishing a single blended accuracy figure, and routes lines below a set confidence threshold to a person for review instead of leaving that judgement inside an opaque model. This lets a team trust the high confidence bucket specifically, and focus limited review time on the regular, negotiated categories where a wrong classification actually changes a decision." },
+      { q: "Where can I compare UNSPSC classification against other approaches to see how accuracy is typically measured?", a: "A comparison of the main classification tools and approaches, including how each measures and reports accuracy, is covered in UNSPSC classification tools compared. That comparison focuses on how different vendors define and report an accuracy figure, which is a useful companion to the confidence-level approach described here, since the two questions, which tool to use and how to trust its output, are related but not the same one." },
+    ],
+  },
 ];
 
 export const blogPosts: BlogPost[] = _allBlogPosts.filter((p) => !p.hidden);
