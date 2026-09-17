@@ -1403,6 +1403,31 @@ const _allBlogPosts: BlogPost[] = [
       { q: "Is a general-purpose AI assistant ever good enough for procurement classification?", a: "It can work for a genuinely small, one-off batch where a person can realistically review every line afterward. It becomes unreliable once volume or recurrence makes full manual review impractical, which is the point at which most procurement teams are trying to use AI for classification in the first place." },
     ],
   },
+  {
+    slug: "manufacturer-type-field-swap-spend-data",
+    image: "/images/blog/manufacturer-type-field-swap-spend-data.jpg",
+    title: "When manufacturer and type fields swap in your spend data",
+    description: "A silent field swap between manufacturer and type corrupts classification without a single error message. Here is how it happens and how it gets caught.",
+    publishedAt: "2026-09-17",
+    category: "Data Quality",
+    tags: ["data quality", "spend classification", "data cleaning", "field mapping errors", "master data management"],
+    readingTime: 7,
+    tocItems: [
+      { id: "how-the-swap-actually-happens", label: "How the swap actually happens" },
+      { id: "why-nobody-notices-immediately", label: "Why nobody notices immediately" },
+      { id: "how-an-automated-pass-catches-it", label: "How an automated pass catches it" },
+      { id: "what-to-check-once-it-is-found", label: "What to check once it is found" },
+    ],
+    softCta: "discovery",
+    faqItems: [
+      { q: "What causes manufacturer and type fields to swap in spend data?", a: "A column mapping error is the usual cause: an export job, a manual entry template, or a system migration maps two adjacent fields incorrectly, so the manufacturer name lands where the type description should be and the type description lands where the manufacturer name should be. This typically happens after a system upgrade, a template change, or a migration that maps fields by position rather than by name." },
+      { q: "Why does a manufacturer and type field swap go unnoticed for so long?", a: "Both fields are usually free text, so both still contain plausible, valid-looking values after the swap. No validation rule rejects the data, and a person scanning the file for obviously broken entries sees two columns of recognisable words rather than an error. The problem only becomes visible once someone relies on the fields meaning what their headers claim." },
+      { q: "How do you detect a manufacturer and type field swap automatically?", a: "A batch-level statistical check rather than a row-by-row rule. A correct manufacturer field shows a small, repeating set of values across many rows, while a correct type field shows much wider variety, because far fewer brands supply far more kinds of product. When that pattern reverses across a batch, the swap is detectable before any line reaches classification." },
+      { q: "Does this kind of field swap affect classification accuracy?", a: "Yes, significantly. Classification built on the wrong signal, treating a manufacturer name as a type description or vice versa, produces categories that look complete and confident while being systematically wrong, because the underlying signal the classifier relied on described the wrong thing." },
+      { q: "How does Pearstop catch manufacturer and type field swaps before classification?", a: "Pearstop runs a field-level consistency check across the whole batch before classification starts, comparing the statistical shape of each field against what a correctly labelled manufacturer or type field should look like. A swap is flagged and corrected before it can distort category results, rather than being discovered later in a downstream report." },
+      { q: "What should we check after fixing a field swap in our spend data?", a: "Trace the swap back to its source rather than only correcting the affected batch. Check the export job, entry template, or migration mapping that produced the file, because a batch-level correction does not prevent the same upstream error from reproducing the swap in the next export cycle." },
+    ],
+  },
 ];
 
 export const blogPosts: BlogPost[] = _allBlogPosts.filter((p) => !p.hidden);
