@@ -253,14 +253,29 @@ main {
   padding-top: 68px;
 }
 
+/* backdrop-filter lives on ::before, not #site-nav itself, on purpose:
+   backdrop-filter (like transform/filter) establishes a new containing
+   block for position:fixed descendants. On #site-nav directly, that
+   silently trapped the mobile menu overlay (.nav-menu.open) and the
+   "Request a Demo"/language-switcher group (.nav-right.open) inside
+   #site-nav's own ~69px-tall box instead of the real viewport - the menu
+   collapsed to a sliver showing only its first couple of items, and the
+   bottom-anchored button/switcher rendered up near the logo instead. */
 #site-nav {
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
+  border-bottom: 1px solid var(--border);
+}
+
+#site-nav::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
   background: rgba(248, 249, 250, 0.96);
   backdrop-filter: saturate(180%) blur(16px);
-  border-bottom: 1px solid var(--border);
 }
 
 .nav-inner {
