@@ -161,9 +161,10 @@ export default function AssistantsHomePage() {
 
         <div className="anchor">
           A good VA costs <strong>&euro;20,000 to &euro;30,000 a year</strong>, depending on
-          hours. A full-time executive assistant in Ireland is closer to{" "}
-          <strong>&euro;50,000 a year</strong>. You make this back inside a month, and what you
-          buy is the evening back with your family.
+          hours. An executive assistant to a CEO is closer to{" "}
+          <strong>&euro;50,000 a year</strong>, and general EA roles in major cities like Dublin
+          run <strong>&euro;36,000 to &euro;58,000</strong>. You make this back inside a month,
+          and what you buy is the evening back with your family.
         </div>
 
         <CalendlyButton label="Book a 20 minute call" className="cta" url={CALENDLY_URL} />
