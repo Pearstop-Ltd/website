@@ -48,25 +48,88 @@ if (!OPENAI_API_KEY) {
 }
 
 // ---------------------------------------------------------------------------
-// Brand style — the fixed suffix every generated image shares, for a
-// consistent look across the whole blog.
+// Brand style — the fixed suffix every generated image shares (camera/
+// quality/format only). Lighting and colour mood are deliberately NOT in
+// here — they used to be a fixed clause ("warm natural daylight...") baked
+// into every prompt, which is exactly why every image came out the same
+// palette. LIGHTING_MOODS below supplies that per-post instead.
 // ---------------------------------------------------------------------------
 
 const STYLE_SUFFIX =
-  "photorealistic photograph, warm natural daylight or warm interior work-light, " +
-  "true-to-life saturated colour, vivid but realistic tones, rich contrast, " +
-  "NOT desaturated, NOT monochrome, NOT a cool blue-grey colour grade, " +
-  "shallow depth of field, documentary photography style, no text, no logos, " +
-  "no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, " +
-  "sharp focus, high detail";
+  "photorealistic photograph, true-to-life colour rendering for whatever light " +
+  "is described, NOT desaturated, NOT a flat monochrome grade, shallow depth " +
+  "of field, documentary photography style, no text, no logos, no watermark, " +
+  "16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, " +
+  "high detail";
 
-const SECTORS = [
-  "hard-fm",         // building maintenance: M&E plant rooms, lifts, electrical panels, façade work
-  "soft-fm-cleaning", // commercial cleaning, sanitation, soft services in offices/facilities
-  "construction",     // active building sites, structural steel, site engineers
-  "hvac-filtration",  // rooftop AHUs, ductwork, filter/HVAC servicing
-  "buildings-cities",  // skylines, business parks, architecture, generic built-environment
+// Distinct lighting/colour moods, each a reliable, well-rendered photographic
+// condition (lighting is one of the things image models render most
+// consistently well — unlike e.g. precise hand/tool interactions). One is
+// picked deterministically per post (hashed from the slug, like includePeople
+// below) so the same post always regenerates the same way, but different
+// posts land on visibly different palettes instead of one house style.
+const LIGHTING_MOODS = [
+  "warm late-afternoon sunlight raking low through windows or open doors, long soft shadows, golden warm tones",
+  "bright overcast daylight, soft even shadows, clean neutral-to-cool colour",
+  "cool early-morning blue-hour light outside with warm interior lamps glowing through windows, mixed colour temperature",
+  "crisp midday sun, high-key exposure, vivid saturated colour, hard-edged shadows",
+  "moody low-key interior lighting with warm sodium work-lights, deep shadows, dramatic contrast",
+  "soft diffused daylight through skylights or overcast glazing, gentle even colour, low contrast",
+  "golden-hour exterior light with long shadows and a warm-to-cool gradient across the scene",
+  "overcast winter daylight, muted cool tones, flat soft shadows, quiet documentary feel",
 ];
+
+// Per-sector example settings, fed into the Groq prompt as concrete anchors
+// so its freeform scene-writing has specific real-world places to draw on
+// rather than defaulting to generic offices/skylines. Each is a pool, not a
+// single fixed shot, so repeat visits to the same sector still vary.
+const SECTOR_SUBJECTS = {
+  "hard-fm": [
+    "an M&E plant room with pipework, valves and gauges",
+    "a rooftop chiller or AHU installation",
+    "an electrical switchgear or BMS control panel room",
+    "a lift/elevator machine room",
+    "a building façade maintenance cradle or window-cleaning rig",
+    "a boiler room or plant room walkway",
+  ],
+  "soft-fm-cleaning": [
+    "an office reception or foyer being cleaned before opening hours",
+    "an industrial floor-scrubber machine working a warehouse or retail aisle",
+    "a cleaning cart being restocked in a washroom or restroom corridor",
+    "a commercial kitchen or breakroom being cleaned",
+    "window cleaning viewed from inside a commercial building",
+    "a waste and recycling room being managed in a commercial building",
+    "a cleaning supplies and equipment storage room",
+  ],
+  construction: [
+    "structural steel erection on an active building site",
+    "a concrete pour with rebar visible",
+    "a site engineer reviewing plans on-site in PPE",
+    "groundworks or excavation on a construction site",
+    "scaffolding on a building exterior mid-construction",
+    "a site materials and logistics yard",
+  ],
+  "hvac-filtration": [
+    "a close-up of rooftop AHU ductwork and filter housings",
+    "a technician's-eye view of filter replacement in a mechanical room",
+    "a rooftop HVAC unit being serviced",
+    "ductwork inspection in a ceiling void",
+  ],
+  "integrated-fm": [
+    "a modern office building foyer or lobby with a reception desk",
+    "the street-level exterior of a mixed-use commercial building",
+    "a multi-service site combining a loading dock and a building entrance",
+    "a business park entrance plaza",
+  ],
+  "buildings-cities": [
+    "a city skyline with a mix of commercial buildings",
+    "a business park exterior",
+    "the exterior of a modern office building",
+    "an architectural detail of a commercial building's facade",
+  ],
+};
+
+const SECTORS = Object.keys(SECTOR_SUBJECTS);
 
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -124,14 +187,20 @@ async function groqRequest(prompt, retries = 5) {
 }
 
 async function pickScene({ title, description, category, includePeople }) {
-  const prompt = `You are art-directing hero photography for a B2B website's blog. The company (Pearstop) sells procurement and asset data quality software to companies in hard facilities management (building M&E maintenance), soft FM (cleaning/soft services), construction, and HVAC/air filtration — buildings and city skylines are also on-brand.
+  const sectorList = SECTORS.map(
+    (s) => `- ${s}: e.g. ${SECTOR_SUBJECTS[s].join("; ")}`
+  ).join("\n");
+
+  const prompt = `You are art-directing hero photography for a B2B website's blog. The company (Pearstop) sells procurement and asset data quality software to companies across hard facilities management, soft FM (cleaning/soft services), construction, HVAC/air filtration, and integrated FM (a mix of hard + soft services in one contract) — buildings and city skylines are also on-brand.
 
 Article title: "${title}"
 Article description: "${description}"
 Article category: "${category}"
 
-Pick the ONE sector below that this article's key takeaway is most concretely about (not the abstract data/software topic — the real-world industry scene behind it):
-${SECTORS.map((s) => `- ${s}`).join("\n")}
+Pick the ONE sector below that this article's key takeaway is most concretely about (not the abstract data/software topic — the real-world industry scene behind it). Each sector lists example settings only as inspiration — feel free to pick a different but equally concrete setting in that sector:
+${sectorList}
+
+Do not default to hard-fm or buildings-cities just because they feel like a safe generic choice — actively consider soft-fm-cleaning and integrated-fm whenever the article's spend/data/service scope plausibly touches cleaning or multi-service contracts (which is often, since Pearstop's customers frequently run integrated contracts). Across many articles, these sectors should come up roughly as often as the others, not rarely.
 
 Then write ONE single sentence describing a concrete, literal, real-world photographic scene in that sector that a photographer could actually shoot. ${
     includePeople
@@ -282,14 +351,18 @@ async function main() {
 
     const seed = hash(post.slug);
     const includePeople = seed % 10 < 3; // ~30%, deterministic per slug
+    // Separate hash (distinct salt) so lighting choice doesn't correlate
+    // with the people/no-people decision above.
+    const lightingMood = LIGHTING_MOODS[hash(`${post.slug}|lighting`) % LIGHTING_MOODS.length];
 
     console.log(`🎨  ${post.slug}`);
     console.log(`    sector selection + scene (people: ${includePeople})...`);
 
     const { sector, scene } = await pickScene({ title, description, category, includePeople });
-    const fullPrompt = `${scene}, ${STYLE_SUFFIX}`;
+    const fullPrompt = `${scene}, ${lightingMood}, ${STYLE_SUFFIX}`;
 
     console.log(`    sector: ${sector}`);
+    console.log(`    lighting: ${lightingMood}`);
     console.log(`    prompt: ${fullPrompt}`);
 
     const imageBuffer = await renderImage(fullPrompt);
@@ -307,7 +380,7 @@ async function main() {
       source = insertImageField(source, freshPost.slugLineEnd, `/images/blog/${post.slug}.jpg`);
     }
 
-    manifest[post.slug] = { sector, includePeople, scene, prompt: fullPrompt, seed };
+    manifest[post.slug] = { sector, includePeople, lightingMood, scene, prompt: fullPrompt, seed };
 
     fs.writeFileSync(BLOG_POSTS_PATH, source, "utf-8");
     fs.writeFileSync(PROMPTS_MANIFEST_PATH, JSON.stringify(manifest, null, 2) + "\n", "utf-8");
