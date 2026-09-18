@@ -2,9 +2,10 @@
 
 import { useRef, useState, type FormEvent } from "react";
 import { RecaptchaNotice, RecaptchaScript, useRecaptchaV3 } from "@/components/recaptcha-widget";
+import { siteConfig } from "@/lib/site";
 
-type Step = "email" | "details" | "success";
-type Status = "idle" | "submitting" | "error";
+type Step = "email" | "details" | "fallback" | "success";
+type Status = "idle" | "submitting";
 
 export function SampleRequestModal({ label = "Send us 200 lines", className = "btn btn-primary" }: { label?: string; className?: string }) {
   const dialogRef = useRef<HTMLDialogElement>(null);
@@ -17,6 +18,7 @@ export function SampleRequestModal({ label = "Send us 200 lines", className = "b
   const [email, setEmail] = useState("");
   const [company, setCompany] = useState("");
   const [leadId, setLeadId] = useState("");
+  const [fallbackMailto, setFallbackMailto] = useState("");
 
   const openModal = () => dialogRef.current?.showModal();
 
@@ -27,7 +29,29 @@ export function SampleRequestModal({ label = "Send us 200 lines", className = "b
     setEmail("");
     setCompany("");
     setLeadId("");
+    setFallbackMailto("");
     detailsFormRef.current?.reset();
+  };
+
+  const buildFallbackMailto = (companyName: string, contactEmail: string, spend: string, goal: string) => {
+    const subject = encodeURIComponent(`Sample lines for classification (upload failed) – ${companyName}`);
+    const body = encodeURIComponent(
+      [
+        "Hi Pearstop,",
+        "",
+        "The automatic upload on the website failed, so I'm sending this by email instead.",
+        "",
+        `Company: ${companyName}`,
+        `Approximate procurement spend: ${spend || "Not provided"}`,
+        `What I'm hoping to get out of this: ${goal || "Not provided"}`,
+        `Email: ${contactEmail}`,
+        "",
+        "I've attached up to 200 lines / a handful of invoices (max 10) to this email.",
+        "",
+        "Thanks,"
+      ].join("\n")
+    );
+    return `mailto:${siteConfig.email}?subject=${subject}&body=${body}`;
   };
 
   const closeModal = () => {
@@ -78,6 +102,16 @@ export function SampleRequestModal({ label = "Send us 200 lines", className = "b
     setErrorMessage("");
 
     const formData = new FormData(event.currentTarget);
+    const spend = String(formData.get("spend") || "");
+    const goal = String(formData.get("goal") || "");
+
+    const fallToEmail = () => {
+      const mailto = buildFallbackMailto(company, email, spend, goal);
+      setFallbackMailto(mailto);
+      setStatus("idle");
+      setStep("fallback");
+      window.location.href = mailto;
+    };
 
     try {
       const recaptchaToken = await getToken("sample_request_complete");
@@ -90,17 +124,14 @@ export function SampleRequestModal({ label = "Send us 200 lines", className = "b
       const response = await fetch("/api/sample-request", { method: "POST", body: formData });
 
       if (!response.ok) {
-        const data = await response.json().catch(() => ({}));
-        setErrorMessage(data.error || "Something went wrong — please try again.");
-        setStatus("idle");
+        fallToEmail();
         return;
       }
 
       setStatus("idle");
       setStep("success");
     } catch {
-      setErrorMessage("Something went wrong — please try again.");
-      setStatus("idle");
+      fallToEmail();
     }
   };
 
@@ -147,6 +178,18 @@ export function SampleRequestModal({ label = "Send us 200 lines", className = "b
               </p>
             </form>
           </>
+        ) : step === "fallback" ? (
+          <>
+            <h2 id="sample-modal-title">Let&rsquo;s send it by email instead</h2>
+            <p className="sample-modal-lead">
+              The automatic upload didn&rsquo;t go through, so we&rsquo;ve opened an email to {siteConfig.email} with
+              your details pre-filled. Attach your invoice files and hit send &mdash; that reaches us just as well.
+            </p>
+            <div className="hero-actions" style={{ justifyContent: "flex-start" }}>
+              <a href={fallbackMailto} className="btn btn-primary">Open email</a>
+              <button type="button" className="btn btn-outline" onClick={closeModal}>Close</button>
+            </div>
+          </>
         ) : (
           <>
             <h2 id="sample-modal-title">Almost there</h2>
@@ -168,7 +211,6 @@ export function SampleRequestModal({ label = "Send us 200 lines", className = "b
                 Invoice files (up to 10, PDF/Excel/CSV/images)
               </label>
               <input id="sample-files" type="file" name="files" multiple aria-label="Invoice files" />
-              {errorMessage ? <p className="sample-modal-error">{errorMessage}</p> : null}
               <button type="submit" className="btn btn-primary" disabled={status === "submitting"}>
                 {status === "submitting" ? "Sending…" : "Send sample"}
               </button>

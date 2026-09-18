@@ -73,13 +73,16 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Each file must be under 15MB." }, { status: 400 });
   }
 
-  const uploaded: { name: string; url: string }[] = [];
+  // Invoice data can be sensitive, so these are stored as private blobs -
+  // the URL isn't publicly fetchable, it requires the store's own token
+  // (i.e. access via the Vercel dashboard/API, not a bare link).
+  const uploaded: { name: string; url: string; downloadUrl: string }[] = [];
   for (const file of files) {
     const blob = await put(`sample-requests/${leadId}/${file.name}`, file, {
-      access: "public",
+      access: "private",
       addRandomSuffix: true
     });
-    uploaded.push({ name: file.name, url: blob.url });
+    uploaded.push({ name: file.name, url: blob.url, downloadUrl: blob.downloadUrl });
   }
 
   notify({ leadId, email, company, spend, goal, files: uploaded, contactType: "Sample request - completed" });
