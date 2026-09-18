@@ -16,13 +16,40 @@ function isValidEmail(email: string): boolean {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
-function notify(payload: Record<string, unknown>) {
+type NotifyPayload = {
+  leadId: string;
+  contactType: string;
+  company: string;
+  email: string;
+  spend?: string;
+  goal?: string;
+  files?: { name: string; url: string; downloadUrl: string }[];
+};
+
+// Posts to a Slack incoming webhook (SAMPLE_REQUEST_WEBHOOK_URL) - set one up
+// at api.slack.com/apps -> Incoming Webhooks -> Add New Webhook to Workspace,
+// pointed at #sales. SAMPLE_REQUEST_SLACK_MENTION is optional - once the
+// Claude Slack app is installed in the workspace, set it to that bot's
+// mention (e.g. "<@U0123ABCDEF>") to tag it on every notification.
+function notify(payload: NotifyPayload) {
   const webhookUrl = process.env.SAMPLE_REQUEST_WEBHOOK_URL;
   if (!webhookUrl) return;
+
+  const mention = process.env.SAMPLE_REQUEST_SLACK_MENTION;
+  const lines = [
+    `*${payload.contactType}*`,
+    `*Company:* ${payload.company}`,
+    `*Email:* ${payload.email}`
+  ];
+  if (payload.spend) lines.push(`*Spend:* ${payload.spend}`);
+  if (payload.goal) lines.push(`*Goal:* ${payload.goal}`);
+  if (payload.files?.length) lines.push(`*Files:* ${payload.files.map((f) => f.name).join(", ")}`);
+  if (mention) lines.push(mention);
+
   fetch(webhookUrl, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ timestamp: new Date().toISOString(), ...payload })
+    body: JSON.stringify({ text: lines.join("\n") })
   }).catch(() => {});
 }
 
