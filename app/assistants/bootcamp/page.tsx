@@ -129,7 +129,9 @@ export default function AssistantsBootcampPage() {
         </div>
         <div className="anchor">
           A good VA costs <strong>&euro;20,000 to &euro;30,000 a year</strong>, depending on
-          hours. An executive assistant in London is closer to &euro;60,000.
+          hours. An executive assistant to a CEO is closer to <strong>&euro;50,000 a year</strong>,
+          and general EA roles in major cities like Dublin run{" "}
+          <strong>&euro;36,000 to &euro;58,000</strong>.
         </div>
         <a className="cta" href="mailto:stephanie@pearstop.com?subject=Bootcamp">
           Ask about the next group
