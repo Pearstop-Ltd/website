@@ -15,6 +15,7 @@ export function SampleRequestModal({ label = "Send us 200 lines", className = "b
   const [step, setStep] = useState<Step>("email");
   const [status, setStatus] = useState<Status>("idle");
   const [errorMessage, setErrorMessage] = useState("");
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [company, setCompany] = useState("");
   const [leadId, setLeadId] = useState("");
@@ -26,6 +27,7 @@ export function SampleRequestModal({ label = "Send us 200 lines", className = "b
     setStep("email");
     setStatus("idle");
     setErrorMessage("");
+    setName("");
     setEmail("");
     setCompany("");
     setLeadId("");
@@ -65,6 +67,7 @@ export function SampleRequestModal({ label = "Send us 200 lines", className = "b
     setErrorMessage("");
 
     const formData = new FormData(event.currentTarget);
+    const submittedName = String(formData.get("name") || "").trim();
     const submittedEmail = String(formData.get("email") || "").trim();
     const submittedCompany = String(formData.get("company") || "").trim();
 
@@ -72,6 +75,7 @@ export function SampleRequestModal({ label = "Send us 200 lines", className = "b
       const recaptchaToken = await getToken("sample_request_start");
       const body = new FormData();
       body.set("stage", "start");
+      body.set("name", submittedName);
       body.set("email", submittedEmail);
       body.set("company", submittedCompany);
       if (recaptchaToken) body.set("recaptchaToken", recaptchaToken);
@@ -85,6 +89,7 @@ export function SampleRequestModal({ label = "Send us 200 lines", className = "b
         return;
       }
 
+      setName(submittedName);
       setEmail(submittedEmail);
       setCompany(submittedCompany);
       setLeadId(data.leadId || "");
@@ -116,6 +121,7 @@ export function SampleRequestModal({ label = "Send us 200 lines", className = "b
     try {
       const recaptchaToken = await getToken("sample_request_complete");
       formData.set("stage", "complete");
+      formData.set("name", name);
       formData.set("email", email);
       formData.set("company", company);
       formData.set("leadId", leadId);
@@ -165,6 +171,7 @@ export function SampleRequestModal({ label = "Send us 200 lines", className = "b
               (max 10) &mdash; and we&rsquo;ll classify them to show you exactly how it works. No cost, no commitment.
             </p>
             <form className="contact-form" onSubmit={handleEmailStep}>
+              <input type="text" name="name" placeholder="Your name" autoComplete="name" required aria-label="Your name" />
               <input type="text" name="company" placeholder="Company name" autoComplete="organization" required aria-label="Company name" />
               <input type="email" name="email" placeholder="Your email" autoComplete="email" required aria-label="Your email" />
               {errorMessage ? <p className="sample-modal-error">{errorMessage}</p> : null}

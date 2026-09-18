@@ -23,13 +23,20 @@ function doPost(e) {
     const sheets = spreadsheet.getSheets();
     const sheet = sheets.find(s => s.getSheetId() === SHEET_GID) || sheets[0];
 
+    // Columns 7-10 (contactType/spend/goal/files) are only populated by the
+    // sample-request flow - the case-studies download form doesn't send
+    // them, so they'll just be blank on those rows.
     sheet.appendRow([
       data.timestamp || new Date().toISOString(),
       data.name || "",
       data.email || "",
       data.company || "",
       data.phone || "",
-      data.leadId || ""
+      data.leadId || "",
+      data.contactType || "",
+      data.spend || "",
+      data.goal || "",
+      data.files || ""
     ]);
 
     return ContentService
@@ -52,7 +59,11 @@ function testAppend() {
         email: "test@example.com",
         company: "Test Co",
         phone: "",
-        leadId: "test-lead-001"
+        leadId: "test-lead-001",
+        contactType: "Sample request - completed",
+        spend: "€5M–€50M",
+        goal: "See if UNSPSC classification works on our data",
+        files: "invoice1.pdf, invoice2.pdf"
       })
     }
   });

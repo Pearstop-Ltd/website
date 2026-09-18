@@ -19,6 +19,7 @@ function isValidEmail(email: string): boolean {
 type NotifyPayload = {
   leadId: string;
   contactType: string;
+  name: string;
   company: string;
   email: string;
   spend?: string;
@@ -26,31 +27,68 @@ type NotifyPayload = {
   files?: { name: string; url: string; downloadUrl: string }[];
 };
 
+// Slack default mention: Stephanie, until the Claude Slack app is installed
+// in the workspace and SAMPLE_REQUEST_SLACK_MENTION is set to its bot ID
+// (e.g. "<@U0123ABCDEF>"), at which point that env var overrides this.
+const DEFAULT_SLACK_MENTION = "<@U09MBG8SZ7G>";
+
 // Posts to a Slack incoming webhook (SAMPLE_REQUEST_WEBHOOK_URL) - set one up
 // at api.slack.com/apps -> Incoming Webhooks -> Add New Webhook to Workspace,
-// pointed at #sales. SAMPLE_REQUEST_SLACK_MENTION is optional - once the
-// Claude Slack app is installed in the workspace, set it to that bot's
-// mention (e.g. "<@U0123ABCDEF>") to tag it on every notification.
-function notify(payload: NotifyPayload) {
+// pointed at #sales.
+function notifySlack(payload: NotifyPayload) {
   const webhookUrl = process.env.SAMPLE_REQUEST_WEBHOOK_URL;
   if (!webhookUrl) return;
 
-  const mention = process.env.SAMPLE_REQUEST_SLACK_MENTION;
+  const mention = process.env.SAMPLE_REQUEST_SLACK_MENTION || DEFAULT_SLACK_MENTION;
   const lines = [
     `*${payload.contactType}*`,
+    `*Name:* ${payload.name || "Not provided"}`,
     `*Company:* ${payload.company}`,
     `*Email:* ${payload.email}`
   ];
   if (payload.spend) lines.push(`*Spend:* ${payload.spend}`);
   if (payload.goal) lines.push(`*Goal:* ${payload.goal}`);
   if (payload.files?.length) lines.push(`*Files:* ${payload.files.map((f) => f.name).join(", ")}`);
-  if (mention) lines.push(mention);
+  lines.push(mention);
 
   fetch(webhookUrl, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ text: lines.join("\n") })
   }).catch(() => {});
+}
+
+// Reuses the same Google Sheets webhook as the case-studies download form.
+// That automation only knows how to append a row, not look one up and
+// update it - so the "start" and "complete" stages of one lead land as two
+// separate rows sharing the same leadId, not one row filled in over time.
+// If you want them merged into a single row, the Zap/Make scenario itself
+// needs a "find row by leadId, then update" step added on its end.
+function notifySheet(payload: NotifyPayload) {
+  const webhookUrl = process.env.GOOGLE_SHEETS_WEBHOOK_URL;
+  if (!webhookUrl) return;
+
+  fetch(webhookUrl, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      timestamp: new Date().toISOString(),
+      name: payload.name,
+      email: payload.email,
+      company: payload.company,
+      phone: "",
+      leadId: payload.leadId,
+      contactType: payload.contactType,
+      spend: payload.spend || "",
+      goal: payload.goal || "",
+      files: payload.files?.map((f) => f.name).join(", ") || ""
+    })
+  }).catch(() => {});
+}
+
+function notify(payload: NotifyPayload) {
+  notifySlack(payload);
+  notifySheet(payload);
 }
 
 // Two-stage submission so the email is captured (stage "start") before the
@@ -63,6 +101,7 @@ export async function POST(req: NextRequest) {
   const recaptchaToken = (formData.get("recaptchaToken") as string) || undefined;
   const email = ((formData.get("email") as string) || "").trim();
   const company = ((formData.get("company") as string) || "").trim();
+  const name = ((formData.get("name") as string) || "").trim();
 
   if (!email || !isValidEmail(email)) {
     return NextResponse.json({ error: "Please enter a valid email address." }, { status: 400 });
@@ -78,7 +117,7 @@ export async function POST(req: NextRequest) {
     }
 
     const leadId = randomUUID();
-    notify({ leadId, email, company, contactType: "Sample request - started" });
+    notify({ leadId, name, email, company, contactType: "Sample request - started" });
 
     return NextResponse.json({ ok: true, leadId });
   }
@@ -112,7 +151,7 @@ export async function POST(req: NextRequest) {
     uploaded.push({ name: file.name, url: blob.url, downloadUrl: blob.downloadUrl });
   }
 
-  notify({ leadId, email, company, spend, goal, files: uploaded, contactType: "Sample request - completed" });
+  notify({ leadId, name, email, company, spend, goal, files: uploaded, contactType: "Sample request - completed" });
 
   return NextResponse.json({ ok: true, filesReceived: uploaded.length });
 }
