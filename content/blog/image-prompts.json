@@ -63,10 +63,11 @@
     "seed": 2695890635
   },
   "who-owns-your-procurement-data-problem": {
-    "sector": "hard-fm",
+    "sector": "integrated-fm",
     "includePeople": false,
-    "scene": "A sprawling mechanical room filled with exposed steel pipework, valve manifolds, and a wall of labeled conduit trays running alongside a humming air handling unit under fluorescent lighting.",
-    "prompt": "A sprawling mechanical room filled with exposed steel pipework, valve manifolds, and a wall of labeled conduit trays running alongside a humming air handling unit under fluorescent lighting., photorealistic photograph, natural daylight, cool blue-grey colour grading, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
+    "lightingMood": "crisp midday sun, high-key exposure, vivid saturated colour, hard-edged shadows",
+    "scene": "A spacious, glass-walled office building lobby showing a sleek reception desk, polished marble flooring, and a row of empty service carts beside a decorative plant, with natural light flooding the area.",
+    "prompt": "A spacious, glass-walled office building lobby showing a sleek reception desk, polished marble flooring, and a row of empty service carts beside a decorative plant, with natural light flooding the area., crisp midday sun, high-key exposure, vivid saturated colour, hard-edged shadows, photorealistic photograph, true-to-life colour rendering for whatever light is described, NOT desaturated, NOT a flat monochrome grade, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
     "seed": 2249920873
   },
   "hvac-air-filtration-spend-classification": {
@@ -259,10 +260,11 @@
     "seed": 4279714476
   },
   "unspsc-best-in-class-by-industry": {
-    "sector": "hard-fm",
+    "sector": "soft-fm-cleaning",
     "includePeople": false,
-    "scene": "A spacious building mechanical room filled with rows of stainless-steel HVAC units, exposed copper piping, and labeled conduit trays bathed in natural light from a high ceiling skylight.",
-    "prompt": "A spacious building mechanical room filled with rows of stainless-steel HVAC units, exposed copper piping, and labeled conduit trays bathed in natural light from a high ceiling skylight., photorealistic photograph, warm natural daylight or warm interior work-light, true-to-life saturated colour, vivid but realistic tones, rich contrast, NOT desaturated, NOT monochrome, NOT a cool blue-grey colour grade, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
+    "lightingMood": "cool early-morning blue-hour light outside with warm interior lamps glowing through windows, mixed colour temperature",
+    "scene": "A commercial kitchen stainless‑steel prep area with rows of hanging pot racks, a floor‑standing industrial scrubber parked beside a mop bucket, and spotless tiled floors reflecting the overhead lights.",
+    "prompt": "A commercial kitchen stainless‑steel prep area with rows of hanging pot racks, a floor‑standing industrial scrubber parked beside a mop bucket, and spotless tiled floors reflecting the overhead lights., cool early-morning blue-hour light outside with warm interior lamps glowing through windows, mixed colour temperature, photorealistic photograph, true-to-life colour rendering for whatever light is described, NOT desaturated, NOT a flat monochrome grade, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
     "seed": 3242344328
   },
   "unspsc-vs-eclass-erp-reporting": {
@@ -273,10 +275,11 @@
     "seed": 3273050794
   },
   "data-cleaning-ai-project-manager": {
-    "sector": "hard-fm",
+    "sector": "integrated-fm",
     "includePeople": false,
-    "scene": "A spacious mechanical room filled with exposed steel ductwork, conduit trays, and wall-mounted electrical switchgear panels illuminated by overhead industrial lighting",
-    "prompt": "A spacious mechanical room filled with exposed steel ductwork, conduit trays, and wall-mounted electrical switchgear panels illuminated by overhead industrial lighting, photorealistic photograph, warm natural daylight or warm interior work-light, true-to-life saturated colour, vivid but realistic tones, rich contrast, NOT desaturated, NOT monochrome, NOT a cool blue-grey colour grade, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
+    "lightingMood": "moody low-key interior lighting with warm sodium work-lights, deep shadows, dramatic contrast",
+    "scene": "A wide-angle view of a modern office building entrance plaza showing a loading dock with stacked pallets, a service hallway with exposed conduit and pipework, and a nearby cleaning supplies cabinet beside a building façade with glass and metal panels.",
+    "prompt": "A wide-angle view of a modern office building entrance plaza showing a loading dock with stacked pallets, a service hallway with exposed conduit and pipework, and a nearby cleaning supplies cabinet beside a building façade with glass and metal panels., moody low-key interior lighting with warm sodium work-lights, deep shadows, dramatic contrast, photorealistic photograph, true-to-life colour rendering for whatever light is described, NOT desaturated, NOT a flat monochrome grade, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
     "seed": 2012673534
   }
 }
