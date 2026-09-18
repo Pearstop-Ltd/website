@@ -143,7 +143,18 @@ export function SiteHeader() {
     setOpenSubmenu(null);
   };
 
+  // Hover-intent opening is a desktop-only affordance (mobile relies on the
+  // explicit toggle buttons below). Gating on window width, not
+  // PointerEvent.pointerType, matters here: a real mouse still fires real
+  // "mouse" pointer events at a narrow window width (e.g. someone testing
+  // mobile by just resizing their desktop browser, not an actual
+  // touchscreen), so pointerType alone can't tell the two cases apart -
+  // only the viewport width can, matching the CSS breakpoint below.
+  const isDesktopViewport = () =>
+    typeof window !== "undefined" && window.matchMedia("(min-width: 992px)").matches;
+
   const openSolutionsMenu = () => {
+    if (!isDesktopViewport()) return;
     clearSolutionsCloseTimer();
     setSolutionsOpen(true);
   };
@@ -169,6 +180,7 @@ export function SiteHeader() {
   };
 
   const openSubmenuFor = (href: string) => {
+    if (!isDesktopViewport()) return;
     clearSubmenuCloseTimer();
     setOpenSubmenu(href);
   };

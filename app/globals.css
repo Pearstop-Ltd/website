@@ -381,9 +381,14 @@ main {
   box-shadow: var(--shadow);
 }
 
-.nav-dropdown:hover .nav-dropdown-menu,
-.nav-dropdown.open .nav-dropdown-menu,
-.nav-dropdown:focus-within .nav-dropdown-menu {
+/* Only .open (the click-driven state) controls visibility here - :hover and
+   :focus-within opening it too is a desktop-only affordance, added back in
+   the min-width:992px block below. Without that split, hovering the item
+   with a real mouse (e.g. testing a resized desktop window, not an actual
+   touchscreen) forces this open/stuck regardless of the tap-driven mobile
+   menu's .open class, since a bare :hover/:focus-within selector isn't
+   scoped to any viewport width. */
+.nav-dropdown.open .nav-dropdown-menu {
   display: block;
 }
 
@@ -445,9 +450,9 @@ main {
   box-shadow: var(--shadow);
 }
 
-.nav-subitem-wrap:hover .nav-submenu,
-.nav-subitem-wrap.open .nav-submenu,
-.nav-subitem-wrap:focus-within .nav-submenu {
+/* Same split as .nav-dropdown-menu above - .open only here, hover/focus
+   moved to the min-width:992px block. */
+.nav-subitem-wrap.open .nav-submenu {
   display: block;
 }
 
@@ -2010,6 +2015,19 @@ section {
 
   .page-hero.hero-tall .hero-bg-video video {
     object-position: center 40%;
+  }
+
+  /* Hover/focus-intent opening for the nav dropdown and its submenus -
+     desktop-only. See the .nav-dropdown.open / .nav-subitem-wrap.open rules
+     for why this is split out rather than combined with those. */
+  .nav-dropdown:hover .nav-dropdown-menu,
+  .nav-dropdown:focus-within .nav-dropdown-menu {
+    display: block;
+  }
+
+  .nav-subitem-wrap:hover .nav-submenu,
+  .nav-subitem-wrap:focus-within .nav-submenu {
+    display: block;
   }
 }
 
