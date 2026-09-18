@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { CalendlyButton } from "@/components/calendly-button";
 import { CALENDLY_URL } from "./styles";
 
 export const metadata: Metadata = {
@@ -17,9 +18,7 @@ export default function AssistantsHomePage() {
           We set up AI assistants that work the way you work and sound the way you sound. You
           keep every decision. The repetitive part goes.
         </p>
-        <a className="cta" href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
-          Book a 20 minute call
-        </a>
+        <CalendlyButton label="Book a 20 minute call" className="cta" url={CALENDLY_URL} />
       </header>
 
       <section className="first">
@@ -131,17 +130,6 @@ export default function AssistantsHomePage() {
 
         <div className="price lead">
           <div className="tag">Start here</div>
-          <h3>One to one</h3>
-          <p>
-            A full day together, in person. We go through everything you run, then I build the
-            whole thing for you. Two follow-up sessions once you have lived with it.
-          </p>
-          <div className="amount">&euro;2,000</div>
-          <div className="fineprint">One off. Travel and accommodation included.</div>
-        </div>
-
-        <div className="price">
-          <div className="tag grey">Or join the next one</div>
           <h3>
             <Link
               href="/assistants/bootcamp"
@@ -159,15 +147,26 @@ export default function AssistantsHomePage() {
           <div className="fineprint">One off, per person. Small groups.</div>
         </div>
 
-        <div className="anchor">
-          A good VA costs <strong>&euro;20,000 to &euro;30,000 a year</strong>, depending on
-          hours. An executive assistant in London is closer to &euro;60,000. You make this back
-          inside a month, and what you buy is the evening back with your family.
+        <div className="price">
+          <div className="tag grey">Or, if you&apos;d rather do it in one go</div>
+          <h3>One to one</h3>
+          <p>
+            A full day together, in person &mdash; I travel to you. We go through everything you
+            run, then I build the whole thing for you. Two follow-up sessions after that, online,
+            once you have lived with it.
+          </p>
+          <div className="amount">&euro;2,000</div>
+          <div className="fineprint">One off. Travel and accommodation included.</div>
         </div>
 
-        <a className="cta" href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
-          Book a 20 minute call
-        </a>
+        <div className="anchor">
+          A good VA costs <strong>&euro;20,000 to &euro;30,000 a year</strong>, depending on
+          hours. A full-time executive assistant in Ireland is closer to{" "}
+          <strong>&euro;50,000 a year</strong>. You make this back inside a month, and what you
+          buy is the evening back with your family.
+        </div>
+
+        <CalendlyButton label="Book a 20 minute call" className="cta" url={CALENDLY_URL} />
       </section>
     </>
   );

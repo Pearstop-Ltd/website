@@ -13,7 +13,17 @@ declare global {
 
 const CALENDLY_URL = "https://calendly.com/stephanie-pearstop/7-min-discovery";
 
-export function CalendlyButton({ label, className, style }: { label: string; className?: string; style?: React.CSSProperties }) {
+export function CalendlyButton({
+  label,
+  className,
+  style,
+  url = CALENDLY_URL,
+}: {
+  label: string;
+  className?: string;
+  style?: React.CSSProperties;
+  url?: string;
+}) {
   useEffect(() => {
     if (document.getElementById("calendly-widget-css")) return;
     const link = document.createElement("link");
@@ -35,7 +45,7 @@ export function CalendlyButton({ label, className, style }: { label: string; cla
       type="button"
       className={className}
       style={style}
-      onClick={() => window.Calendly?.initPopupWidget({ url: CALENDLY_URL })}
+      onClick={() => window.Calendly?.initPopupWidget({ url })}
     >
       {label}
     </button>

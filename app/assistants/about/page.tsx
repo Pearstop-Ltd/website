@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/lib/site";
+import { CalendlyButton } from "@/components/calendly-button";
 import { CALENDLY_URL } from "../styles";
 
 export const metadata: Metadata = {
@@ -80,6 +81,11 @@ export default function AssistantsAboutPage() {
             structured person you will meet, and that shows up in how the programme runs.
           </p>
           <p>
+            She is genuinely passionate about learning new things, and growth, hers and yours,
+            is what she cares about most. It shows: she picked all of this up from nothing in
+            under a year, and now she is the one making sure it actually lands for you.
+          </p>
+          <p>
             She is also the reason this works for people who are not technical. Rae started
             learning all of this recently, from nothing. She can tell you what it actually gave
             her, and she can tell you how easy it was to pick up with no background in it. When
@@ -98,9 +104,7 @@ export default function AssistantsAboutPage() {
           Every decision stays with you. We are careful about that line. The assistants do the
           repeating, the sorting and the drafting. You do the thinking.
         </p>
-        <a className="cta" href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
-          Book a 20 minute call
-        </a>
+        <CalendlyButton label="Book a 20 minute call" className="cta" url={CALENDLY_URL} />
       </section>
     </>
   );
