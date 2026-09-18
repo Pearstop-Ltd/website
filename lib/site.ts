@@ -28,7 +28,7 @@ export const siteConfig = {
     logoInverse: "/brand/logo-light.webp",
     heroVideo: "/video/section.mp4",
     heroVideoPoster: "/images/home/spend-control.webp",
-    leadMagnet: "/images/lead-magnet/whitepaper-cover.jpg",
+    leadMagnet: "/images/lead-magnet/solar-panels.png",
     blogPodcast: "/images/blog/podcast.webp",
     clients: {
       strukton: "/images/clients/strukton.png",
