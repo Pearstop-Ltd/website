@@ -28,6 +28,8 @@ export const siteConfig = {
     logoInverse: "/brand/logo-light.webp",
     heroVideo: "/video/section.mp4",
     heroVideoPoster: "/images/home/spend-control.webp",
+    productDemoVideo: "/video/product-demo.mp4",
+    productDemoVideoPoster: "/images/home/product-demo-poster.webp",
     leadMagnet: "/images/lead-magnet/solar-panels.png",
     blogPodcast: "/images/blog/podcast.webp",
     clients: {

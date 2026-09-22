@@ -316,6 +316,22 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="section-soft" aria-labelledby="demo-heading">
+        <div className="container">
+          <div className="text-center" style={{ marginBottom: "2.75rem" }}>
+            <h2 id="demo-heading">See it in action</h2>
+          </div>
+          <div className="screenshot-frame screenshot-frame--compact">
+            <video autoPlay muted loop playsInline preload="none" poster={siteConfig.assets.productDemoVideoPoster}>
+              <source src={siteConfig.assets.productDemoVideo} type="video/mp4" />
+            </video>
+          </div>
+          <p className="screenshot-caption">
+            How Pearstop extracts, classifies, and normalizes supplier and spend data.
+          </p>
+        </div>
+      </section>
+
       <section className="section-soft" aria-labelledby="who-heading">
         <div className="container">
           <div className="text-center" style={{ marginBottom: "2.75rem" }}>

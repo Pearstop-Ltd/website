@@ -133,6 +133,10 @@
       "alt": "Pearstop dashboard showing classified line-level spend data with human review",
       "caption": "Classified line-level spend data, with the human review step visible."
     },
+    "productDemoVideo": {
+      "title": "See it in action",
+      "caption": "How Pearstop extracts, classifies, and normalizes supplier and spend data."
+    },
     "who": {
       "title": "Who it's for",
       "tiles": [

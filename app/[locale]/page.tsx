@@ -228,6 +228,20 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         </div>
       </section>
 
+      <section className="section-soft" aria-labelledby="demo-heading">
+        <div className="container">
+          <div className="text-center" style={{ marginBottom: "2.75rem" }}>
+            <h2 id="demo-heading">{t("productDemoVideo.title")}</h2>
+          </div>
+          <div className="screenshot-frame screenshot-frame--compact">
+            <video autoPlay muted loop playsInline preload="none" poster={siteConfig.assets.productDemoVideoPoster}>
+              <source src={siteConfig.assets.productDemoVideo} type="video/mp4" />
+            </video>
+          </div>
+          <p className="screenshot-caption">{t("productDemoVideo.caption")}</p>
+        </div>
+      </section>
+
       <section className="section-soft" aria-labelledby="who-heading">
         <div className="container">
           <div className="text-center" style={{ marginBottom: "2.75rem" }}>
