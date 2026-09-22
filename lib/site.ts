@@ -208,15 +208,15 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "spie",
-    title: "Cleaning 100,000 assets as the foundation for smarter maintenance",
+    title: "From fragmented asset data to a reliable baseline: cleaning 200,000+ records for SPIE Building Solutions",
     category: "Hard Services FM · Europe",
     excerpt:
-      "SPIE's asset database had grown organically across sites and systems. Pearstop cleaned and structured the full register, creating a reliable foundation for maintenance planning and lifecycle analysis.",
-    tags: ["Asset Management", "Data Quality"],
-    statPrimary: "100k+",
-    statPrimaryLabel: "Assets cleaned",
-    statSecondary: "95%",
-    statSecondaryLabel: "Structured",
+      "SPIE's asset register had grown messy across systems and contractors. Pearstop applied its procurement-data classification pipeline to consolidate 9,175 supplier name variants into 1,493 canonical suppliers across 204,029 records — the same engine that cleans spend data, proven on a different kind of messy dataset.",
+    tags: ["Data Quality", "Supplier Matching"],
+    statPrimary: "204k",
+    statPrimaryLabel: "Records cleaned",
+    statSecondary: "73.1%",
+    statSecondaryLabel: "Confirmed match rate",
     tone: "from-green"
   },
   {
@@ -300,30 +300,6 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
       "This work sits squarely in the procurement data quality and UNSPSC lane - exactly where hard services companies feel the pain first.",
     ctaLabel: "Follow our LinkedIn for updates",
     ctaHref: siteConfig.socials.linkedin
-  },
-  "spie": {
-    slug: "spie",
-    eyebrow: "Hard Services FM · Europe",
-    title: "Cleaning 100,000 assets as the foundation for smarter maintenance",
-    lead:
-      "SPIE's asset database had grown organically across sites and systems. Pearstop cleaned and structured the full register, creating a reliable foundation for maintenance planning and lifecycle analysis.",
-    challenge:
-      "Asset records were spread across spreadsheets and legacy systems, with spelling errors, field mismatches, and duplicate records making analysis unreliable.",
-    solution:
-      "Pearstop consolidated the asset data, standardised the structure, and created a clean register that could support maintenance decisions and analysis.",
-    wins: [
-      { value: "100k+", label: "assets cleaned" },
-      { value: "Structured", label: "analysis-ready" },
-      { value: "FM", label: "use case" }
-    ],
-    quote:
-      "Our asset lists worked for mechanics on-site, but did not allow us to plan smart maintenance or manage bid risk in a data-driven way.",
-    author: "Asset Manager",
-    role: "Facilities Management",
-    geo:
-      "This is the same asset data problem that shows up across hard services, FM, and infrastructure teams whenever records were built for operations rather than analysis.",
-    ctaLabel: "Book a 7-minute discovery",
-    ctaHref: "/contact"
   },
   "lemtech": {
     slug: "lemtech",
