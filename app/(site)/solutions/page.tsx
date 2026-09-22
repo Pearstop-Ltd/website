@@ -79,6 +79,42 @@ export default function SolutionsPage() {
 
       <section>
         <div className="container">
+          <SectionTitle
+            title="More ways to work with Pearstop"
+            lead="Three more places the same classification engine shows up, for specific teams and specific outcomes."
+          />
+          <div className="bene-cards">
+            {[
+              {
+                title: "Spend Visibility",
+                copy: "A real cost baseline by category, supplier, and site, so a negotiation or tender starts from a number instead of a guess.",
+                href: "/spend-visibility"
+              },
+              {
+                title: "For Procurement Consultancies",
+                copy: "White-labelled spend classification under your own taxonomy, so engagement margin goes to analysis, not manual cleanup.",
+                href: "/procurement-consultancies"
+              },
+              {
+                title: "Spend Cube & Dashboards",
+                copy: "Spend structured by category, supplier, and time, ready to feed Power BI, Microsoft Fabric, or your own dashboard.",
+                href: "/spend-cube"
+              }
+            ].map((solution) => (
+              <article className="bene-card" key={solution.href}>
+                <h3>{solution.title}</h3>
+                <p>{solution.copy}</p>
+                <Link className="bene-link" href={solution.href}>
+                  Explore solution →
+                </Link>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-soft">
+        <div className="container">
           <div className="row" style={{ alignItems: "center", gap: "2rem", flexWrap: "wrap" }}>
             <div className="col-md-5">
               <div className="story-label">The Pearstop Approach</div>
