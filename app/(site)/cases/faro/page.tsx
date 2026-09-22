@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { CTABand, GeoBlock, PageHero, QuoteBox, SectionTitle, StatsGrid } from "@/components/content";
 import { alternateLanguages, siteConfig } from "@/lib/site";
 
@@ -12,9 +13,36 @@ export const metadata: Metadata = {
   }
 };
 
+const FAQ_ITEMS = [
+  {
+    q: "How does linking classification to sales data make margin visible before a purchase?",
+    a: "Once every product line is classified consistently, it can be joined against historical sales performance for that same category. That gives a margin estimate at the point of the buying decision, instead of after the container has landed and been sold through."
+  },
+  {
+    q: "Does this require replacing an existing ERP or sales system?",
+    a: "No. Classification runs on top of whatever systems already hold the product and sales data, and the structured output is delivered in a format that plugs into the existing sales database rather than requiring a new platform."
+  },
+  {
+    q: "What happens to product lines the system can't classify confidently?",
+    a: "Anything below a confidence threshold is flagged for human review rather than guessed at, the same approach used across every Pearstop classification pipeline."
+  }
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: { "@type": "Answer", text: item.a }
+  }))
+};
+
 export default function FaroCaseStudyPage() {
   return (
     <>
+      <Script id="faro-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+
       <PageHero
         eyebrow="Case Study"
         title="Accurate margin estimates on every container purchase, automatically"
@@ -89,6 +117,24 @@ export default function FaroCaseStudyPage() {
                 title="What changed for FARO?"
                 copy="The team moved from manual categorisation to an automated flow that could keep up with buying decisions. That made margin visible earlier, reduced the operational drag on the procurement team, and gave the business a more reliable basis for planning and analysis."
               />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-soft">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-8 col-md-offset-2">
+              <h2 style={{ marginBottom: "1.5rem" }}>Frequently asked questions</h2>
+              <div className="faq-list">
+                {FAQ_ITEMS.map((item, i) => (
+                  <details key={i} className="faq-item">
+                    <summary className="faq-q">{item.q}</summary>
+                    <p className="faq-a">{item.a}</p>
+                  </details>
+                ))}
+              </div>
             </div>
           </div>
         </div>

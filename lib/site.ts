@@ -280,9 +280,9 @@ export type CaseStudyDetail = {
   challenge: string;
   solution: string;
   wins: { value: string; label: string }[];
-  quote: string;
-  author: string;
-  role: string;
+  quote?: string;
+  author?: string;
+  role?: string;
   geo: string;
   ctaLabel: string;
   ctaHref: string;
@@ -294,11 +294,11 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
     eyebrow: "Infrastructure · Netherlands",
     title: "Classifying 35,000 procurement lines a month into UNSPSC",
     lead:
-      "We are currently working with Strukton, a major Dutch infrastructure contractor, on automated UNSPSC classification at scale.",
+      "Strukton is a major Dutch infrastructure contractor running automated UNSPSC classification at scale with Pearstop. The engagement is still in progress, so this page describes the shape of the work rather than a finished result.",
     challenge:
-      "The team needed a reliable way to turn large volumes of procurement lines into structured categories without adding headcount or creating another manual burden.",
+      "Infrastructure contractors typically run procurement through SAP with purchasing spread across many projects and cost centres. At Strukton's volume, roughly 35,000 procurement lines a month, turning that into structured, comparable categories by hand isn't something a team can keep up with alongside its normal workload, and every category left unclassified is spend nobody can benchmark, consolidate, or negotiate against with real numbers.",
     solution:
-      "Pearstop provides automated classification and review so the team can keep their focus on category management and supplier decisions while the system handles the repetitive work.",
+      "Pearstop classifies procurement lines against UNSPSC as they arrive from Strukton's SAP environment, so category-level structure builds up continuously rather than depending on a periodic manual clean-up project. The pipeline runs the classification and confidence scoring; Strukton's team stays focused on the category management and supplier decisions that classification exists to support in the first place.",
     wins: [
       { value: "35k", label: "lines a month" },
       { value: "SAP", label: "system of record" },
@@ -309,7 +309,7 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
     author: "Pearstop client",
     role: "Infrastructure contractor",
     geo:
-      "This work sits squarely in the procurement data quality and UNSPSC lane - exactly where hard services companies feel the pain first.",
+      "This work sits squarely in the procurement data quality and UNSPSC lane - exactly where infrastructure and hard services companies feel the pain first, since procurement volume at this scale makes manual classification a losing race against incoming spend.",
     ctaLabel: "Follow our LinkedIn for updates",
     ctaHref: siteConfig.socials.linkedin
   },
@@ -366,22 +366,42 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
     eyebrow: "Manufacturing · Europe",
     title: "Uncovering procurement inefficiencies hidden in unclassified spend",
     lead:
-      "A mid-sized manufacturer had years of procurement data in SAP with no consistent categorisation. Without spend visibility, identifying supplier consolidation opportunities or benchmarking costs across sites was impossible.",
+      "A mid-sized manufacturer had years of procurement data in SAP with no consistent categorisation. Without spend visibility, identifying supplier consolidation opportunities or benchmarking costs across sites was impossible. This is a composite, anonymized example built from a pattern Pearstop sees repeatedly across industrial and manufacturing clients, not a single named engagement.",
     challenge:
-      "The procurement team needed to turn messy spend into a category-level view that leadership could actually use.",
+      "Years of purchase orders sat in SAP with no consistent category structure, spread across sites that had never been reconciled against each other. Leadership could see total spend, but not which categories it broke down into, which suppliers were being paid for functionally the same thing under different names, or where a framework agreement had quietly stopped reflecting what was actually being bought.",
     solution:
-      "Pearstop cleaned and classified the full spend dataset, surfacing inefficiencies that were immediately actionable for the procurement team.",
+      "Pearstop classified the full historical spend dataset directly from SAP, consolidating supplier name variants and building a category-level view leadership could actually query, instead of a one-off spreadsheet exercise that goes stale the next reporting cycle.",
     wins: [
       { value: "Full", label: "spend baseline" },
       { value: "SAP", label: "direct integration" },
       { value: "95%", label: "auto-classified" }
     ],
     quote:
-      "The team needed a clean baseline before it could negotiate better contracts and consolidate suppliers.",
-    author: "Procurement Lead",
-    role: "Manufacturing client",
+      "You could run Excel-type analysis, which we can all do, and it's great, but if we don't use that information to actually drive something, that's when it becomes a bit of a waste.",
+    author: "Commercial lead",
+    role: "Industrial operations & real estate",
     geo:
-      "This is a strong example of procurement data quality work in manufacturing, where SAP data often needs a lot of help before it becomes usable.",
+      "This is a strong example of procurement data quality work in manufacturing, where SAP data often needs a lot of help before it becomes usable - the same underlying problem Pearstop hears across industrial, real estate, and integrated FM operators: the data to act on is already sitting there, unused, because nobody has structured it enough to query.",
+    ctaLabel: "Explore procurement",
+    ctaHref: "/procurement-data-quality"
+  },
+  "mro-confidential": {
+    slug: "mro-confidential",
+    eyebrow: "Manufacturing / MRO",
+    title: "Part number enrichment to go direct to manufacturer",
+    lead:
+      "Details of this engagement are confidential, so this page describes the shape of the problem and the approach rather than naming the client. It reflects a pattern Pearstop sees repeatedly in MRO and component sourcing.",
+    challenge:
+      "A component's purchase order often carries only the code assigned by whichever intermediary supplied it - not the code the manufacturer actually uses. The intermediary has no reason to share that mapping, since it's the reason the buyer keeps paying their markup instead of sourcing direct. When a part record is missing or unclear, resolving it usually means a manual round trip: someone in procurement goes back to whoever originally requisitioned the part and asks for a clearer description, then tries again.",
+    solution:
+      "Pearstop matches part records against manufacturer reference data to recover the real manufacturer part number and code, flagging anything it can't resolve with confidence for review rather than guessing - the same guardrail that matters on any supplier-matching engagement with a defined reference list to match against.",
+    wins: [
+      { value: "Direct", label: "to manufacturer" },
+      { value: "MRO", label: "part enrichment" },
+      { value: "Confidential", label: "full case study" }
+    ],
+    geo:
+      "This is the same pattern behind Pearstop's supplier and manufacturer matching work generally: a buyer overpays an intermediary by default until the real manufacturer reference exists to buy direct against instead.",
     ctaLabel: "Explore procurement",
     ctaHref: "/procurement-data-quality"
   }

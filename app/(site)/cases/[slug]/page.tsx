@@ -50,15 +50,17 @@ export default async function CaseDetailPage({ params }: { params: Promise<{ slu
         </div>
       </section>
 
-      <section className="section-soft">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-8 col-md-offset-2">
-              <QuoteBox quote={entry.quote} author={entry.author} role={entry.role} />
+      {entry.quote ? (
+        <section className="section-soft">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-8 col-md-offset-2">
+                <QuoteBox quote={entry.quote} author={entry.author} role={entry.role} />
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      ) : null}
 
       <section className="section-tight">
         <div className="container">
