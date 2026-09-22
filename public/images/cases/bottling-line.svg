@@ -1,0 +1,20 @@
+<svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration of a bottling production line">
+  <line x1="10" y1="60" x2="78" y2="60" stroke="rgba(255,255,255,0.85)" stroke-width="2.5" stroke-linecap="round"/>
+  <g stroke="rgba(255,255,255,0.8)" stroke-width="2.2">
+    <rect x="20" y="42" width="8" height="18" rx="1.5"/>
+    <path d="M22.5 42V37C22.5 36.4477 22.9477 36 23.5 36H24.5C25.0523 36 25.5 36.4477 25.5 37V42"/>
+    <rect x="34" y="38" width="8" height="22" rx="1.5"/>
+    <path d="M36.5 38V33C36.5 32.4477 36.9477 32 37.5 32H38.5C39.0523 32 39.5 32.4477 39.5 33V38"/>
+    <rect x="48" y="46" width="8" height="14" rx="1.5"/>
+    <path d="M50.5 46V41C50.5 40.4477 50.9477 40 51.5 40H52.5C53.0523 40 53.5 40.4477 53.5 41V46"/>
+  </g>
+  <g stroke="rgba(255,255,255,0.5)" stroke-width="1.8" stroke-linecap="round">
+    <line x1="15" y1="66" x2="15" y2="70"/>
+    <line x1="24" y1="66" x2="24" y2="70"/>
+    <line x1="33" y1="66" x2="33" y2="70"/>
+    <line x1="42" y1="66" x2="42" y2="70"/>
+    <line x1="51" y1="66" x2="51" y2="70"/>
+    <line x1="60" y1="66" x2="60" y2="70"/>
+  </g>
+  <path d="M62 52L70 48" stroke="rgba(255,255,255,0.55)" stroke-width="2" stroke-linecap="round"/>
+</svg>

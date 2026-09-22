@@ -144,7 +144,15 @@ export default async function CasesPage({
             {others.map((story) => (
               <article key={story.slug} className="cg-card" id={story.slug}>
                 <div className={`cg-img ${story.tone}`} style={{ display: "flex", alignItems: "center", justifyContent: "center", color: "rgba(255,255,255,0.5)", fontSize: "2rem", background: story.tone === "from-blue" ? "linear-gradient(135deg,#1F2A68,#353FFF)" : story.tone === "from-slate" ? "linear-gradient(135deg,#0f172a,#1e3a5f)" : story.tone === "from-green" ? "linear-gradient(135deg,#1a4731,#2d7a4f)" : story.tone === "from-amber" ? "linear-gradient(135deg,#7c2d12,#c2410c)" : story.tone === "from-indigo" ? "linear-gradient(135deg,#312e81,#5847a0)" : "linear-gradient(135deg,#1e3a5f,#2563eb)" }}>
-                  ✦
+                  {story.image ? (
+                    story.imageFit === "contain" ? (
+                      <img src={story.image} alt={`${story.title} logo`} style={{ maxHeight: 40, maxWidth: 160, display: "block" }} />
+                    ) : (
+                      <img src={story.image} alt="" aria-hidden="true" style={{ width: 72, height: 72 }} />
+                    )
+                  ) : (
+                    "✦"
+                  )}
                 </div>
                 <div className="cg-body">
                   <div className="cg-ind">{story.category}</div>

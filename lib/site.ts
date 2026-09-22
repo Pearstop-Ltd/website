@@ -177,6 +177,8 @@ export type CaseStudy = {
   statSecondary: string;
   statSecondaryLabel: string;
   tone: string;
+  image?: string;
+  imageFit?: "contain" | "cover";
 };
 
 export const caseStudies: CaseStudy[] = [
@@ -204,7 +206,9 @@ export const caseStudies: CaseStudy[] = [
     statPrimaryLabel: "Lines / decision",
     statSecondary: "1 wk",
     statSecondaryLabel: "Classification time",
-    tone: "from-slate"
+    tone: "from-slate",
+    image: siteConfig.assets.clients.faro,
+    imageFit: "contain"
   },
   {
     slug: "spie",
@@ -217,7 +221,9 @@ export const caseStudies: CaseStudy[] = [
     statPrimaryLabel: "Records cleaned",
     statSecondary: "73.1%",
     statSecondaryLabel: "Confirmed match rate",
-    tone: "from-green"
+    tone: "from-green",
+    image: siteConfig.assets.clients.spie,
+    imageFit: "contain"
   },
   {
     slug: "manufacturing-spend",
@@ -230,7 +236,9 @@ export const caseStudies: CaseStudy[] = [
     statPrimaryLabel: "Direct integration",
     statSecondary: "95%",
     statSecondaryLabel: "Auto-classified",
-    tone: "from-amber"
+    tone: "from-amber",
+    image: "/images/cases/manufacturing-machine.svg",
+    imageFit: "cover"
   },
   {
     slug: "lemtech",
@@ -243,7 +251,9 @@ export const caseStudies: CaseStudy[] = [
     statPrimaryLabel: "Saved per proposal",
     statSecondary: "~0",
     statSecondaryLabel: "Manual re-entry",
-    tone: "from-indigo"
+    tone: "from-indigo",
+    image: "/images/cases/windmills.svg",
+    imageFit: "cover"
   },
   {
     slug: "mro-confidential",
@@ -256,7 +266,9 @@ export const caseStudies: CaseStudy[] = [
     statPrimaryLabel: "To manufacturer",
     statSecondary: "MRO",
     statSecondaryLabel: "Part enrichment",
-    tone: "from-cobalt"
+    tone: "from-cobalt",
+    image: "/images/cases/bottling-line.svg",
+    imageFit: "cover"
   }
 ];
 
