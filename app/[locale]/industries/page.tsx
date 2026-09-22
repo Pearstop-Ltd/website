@@ -64,7 +64,7 @@ const trustedCompanies = [
   { name: "FARO", href: "/cases#faro", src: siteConfig.assets.clients.faro },
   { name: "Kelp", href: "/cases", src: siteConfig.assets.clients.kelpBlue },
   { name: "SnapFix", href: "/contact" },
-  { name: "Manufacturing | Air Filtration Units", href: "/contact" }
+  { name: "Manufacturing", href: "/contact" }
 ];
 
 const technicalBlocks = [

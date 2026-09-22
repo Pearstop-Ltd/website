@@ -112,7 +112,7 @@ export default function CasesPage() {
                 <img src="/images/clients/vince-headshot.jpg" alt="Vince Out" className="cq-avatar" style={{ borderRadius: "50%", objectFit: "cover" }} />
                 <div>
                   <span className="cq-name">Vince Out</span>
-                  <span className="cq-role">Commercial Manager · Manufacturing | Air Filtration Units</span>
+                  <span className="cq-role">Commercial Manager · Manufacturing</span>
                 </div>
               </div>
             </article>

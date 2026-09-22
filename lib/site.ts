@@ -243,7 +243,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "lemtech",
     title: "Turning site visit reports into clean proposal documents, automatically",
-    category: "Manufacturing · Air Filtration",
+    category: "Manufacturing",
     excerpt:
       "Site visit reports arrived in every format imaginable. Pearstop built a system that reads incoming reports and automatically outputs a clean, accurate proposal document.",
     tags: ["Asset Management", "Data Quality"],
@@ -315,7 +315,7 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
   },
   "lemtech": {
     slug: "lemtech",
-    eyebrow: "Manufacturing · Air Filtration",
+    eyebrow: "Manufacturing",
     title: "Turning site visit reports into clean proposal documents, automatically",
     lead:
       "Site visit reports arrived in every format imaginable - handwritten notes, spelling mistakes, varying layouts. Pearstop built a system that reads incoming reports and automatically outputs a clean, accurate proposal document.",
@@ -331,7 +331,7 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
     quote:
       "Pearstop built a system that automatically pulls the right items from our visiting reports into a clean proposal document. It saves our team a lot of time by eliminating the repetitive tasks of combining the correct items.",
     author: "Vince Out",
-    role: "Commercial Manager · Lemtech | Air Filtration Units",
+    role: "Commercial Manager · Lemtech",
     geo:
       "This is a manufacturing example of the same core problem: operational data is messy, inconsistent, and expensive to handle by hand.",
     ctaLabel: "Explore AI readiness",

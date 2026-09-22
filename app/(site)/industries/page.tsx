@@ -357,7 +357,7 @@ const trustedCompanies = [
     href: "/contact"
   },
   {
-    name: "Manufacturing | Air Filtration Units",
+    name: "Manufacturing",
     href: "/contact"
   }
 ];
