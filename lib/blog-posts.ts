@@ -3,6 +3,7 @@ export type BlogPost = {
   title: string;
   description: string;
   publishedAt: string;
+  updatedAt?: string;
   category: string;
   tags: string[];
   readingTime: number;
