@@ -549,21 +549,51 @@
     "howItWorks": {
       "eyebrow": "How It Works",
       "title": "From unread document to structured line item",
-      "step1": { "title": "Ingest, in any format", "copy": "PDF invoices, scanned paper, email attachments, EDI feeds. No fixed template per supplier, and no requirement that a supplier changes how they send anything." },
-      "step2": { "title": "OCR and AI extraction", "copy": "Line items, quantities, unit costs, cost codes, and supplier references are read and structured automatically. Anything below a confidence threshold is flagged rather than guessed at, and each correction feeds back into the pipeline so the same supplier and format is read more accurately next time." },
-      "step3": { "title": "Delivered into what you already run", "copy": "Structured output lands in the format your ERP, P2P platform, or BI tool expects, ready for classification, reporting, or direct reload." }
+      "step1": {
+        "title": "Ingest, in any format",
+        "copy": "PDF invoices, scanned paper, email attachments, EDI feeds. No fixed template per supplier, and no requirement that a supplier changes how they send anything."
+      },
+      "step2": {
+        "title": "OCR and AI extraction",
+        "copy": "Line items, quantities, unit costs, cost codes, and supplier references are read and structured automatically. Anything below a confidence threshold is flagged rather than guessed at, and each correction feeds back into the pipeline so the same supplier and format is read more accurately next time."
+      },
+      "step3": {
+        "title": "Delivered into what you already run",
+        "copy": "Structured output lands in the format your ERP, P2P platform, or BI tool expects, ready for classification, reporting, or direct reload."
+      }
     },
     "whatMakesPossible": {
       "title": "What becomes possible once the invoice is actually read",
-      "b1": { "title": "Spend visible the same week, not the same quarter", "copy": "Data is structured as invoices arrive, not weeks later when someone finally gets through the backlog." },
-      "b2": { "title": "A category to actually classify", "copy": "Extraction is the precondition for classification. Nothing can be categorised, benchmarked, or compared until it exists as structured data." },
-      "b3": { "title": "Fewer hours lost to keying and correcting", "copy": "The manual entry step that absorbs procurement and finance admin time is removed, not just made faster." }
+      "b1": {
+        "title": "Spend visible the same week, not the same quarter",
+        "copy": "Data is structured as invoices arrive, not weeks later when someone finally gets through the backlog."
+      },
+      "b2": {
+        "title": "A category to actually classify",
+        "copy": "Extraction is the precondition for classification. Nothing can be categorised, benchmarked, or compared until it exists as structured data."
+      },
+      "b3": {
+        "title": "Fewer hours lost to keying and correcting",
+        "copy": "The manual entry step that absorbs procurement and finance admin time is removed, not just made faster."
+      }
     },
     "stats": {
       "title": "What changes with Pearstop",
-      "s1": { "value": "~70% → 99%", "label": "first-pass extraction accuracy", "copy": "On one FM client's live invoice stream, as the pipeline learned their supplier base" },
-      "s2": { "value": "Any format", "label": "PDF, scan, photo, or EDI", "copy": "No fixed template required per supplier" },
-      "s3": { "value": "Days", "label": "typical time to first structured output", "copy": "Not a lengthy integration project" }
+      "s1": {
+        "value": "~70% → 99%",
+        "label": "first-pass extraction accuracy",
+        "copy": "On one FM client's live invoice stream, as the pipeline learned their supplier base"
+      },
+      "s2": {
+        "value": "Any format",
+        "label": "PDF, scan, photo, or EDI",
+        "copy": "No fixed template required per supplier"
+      },
+      "s3": {
+        "value": "Days",
+        "label": "typical time to first structured output",
+        "copy": "Not a lengthy integration project"
+      }
     },
     "quote": {
       "text": "Doing that manually absolutely has its own risks. It might be borderline impossible at this stage while keeping operations going.",
@@ -2699,6 +2729,45 @@
       "title": "Need to classify thousands of lines?",
       "lead": "Book a 7-minute discovery and we will show you how the full classification engine works with your actual procurement data.",
       "button": "Book a 7-minute discovery"
+    }
+  },
+  "BookDemo": {
+    "meta": {
+      "title": "Book a Demo",
+      "description": "A 30-minute call to map your invoice and spend data blockers, your goals, and whether Pearstop gets you there."
+    },
+    "hero": {
+      "eyebrow": "Book a Demo",
+      "title": "Here's exactly what we'll cover in 30 minutes",
+      "lead": "No generic pitch. We spend the call on your data, your blockers, and whether Pearstop actually gets you where you want to go.",
+      "cta": "See available times"
+    },
+    "steps": [
+      {
+        "title": "Your current blockers",
+        "copy": "We start with where things actually break down. Is it invoice extraction? Where do your invoices even live today - in an ERP system, sitting in inboxes, or still arriving on paper? We'll walk through the options and find out exactly where yours get stuck."
+      },
+      {
+        "title": "Your process, mapped",
+        "copy": "Once invoices are processed, what happens next? We'll quickly map your process end to end, so we're working from how things actually flow today, not how they're supposed to."
+      },
+      {
+        "title": "Your goals",
+        "copy": "What do you actually want out of your invoice and spend data? We'll do a deep dive into what you're trying to achieve, not just what's broken."
+      },
+      {
+        "title": "The platform, walked through",
+        "copy": "We'll show you the parts of Pearstop that map directly to your goals, so you leave the call with a clear answer: will this get you where you want to be?"
+      }
+    ],
+    "book": {
+      "title": "Pick a time",
+      "lead": "Choose a slot below - no back-and-forth, no popup."
+    },
+    "cta": {
+      "title": "Not ready to book yet?",
+      "lead": "Send us a sample of your invoices and we'll show you what comes back, no call required.",
+      "action": "See how it works"
     }
   }
 }

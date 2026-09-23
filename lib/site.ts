@@ -23,6 +23,7 @@ export const siteConfig = {
     "Pearstop cleans and classifies procurement and asset data for hard services, construction, infrastructure, and manufacturing companies.",
   email: "inquiries@pearstop.com",
   calendly: "https://calendly.com/stephanie-pearstop/7-min-discovery",
+  demoCalendly: "https://calendly.com/stephanie-pearstop/demo-call",
   assets: {
     logo: "/brand/logo-dark.webp",
     logoInverse: "/brand/logo-light.webp",
