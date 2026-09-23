@@ -176,9 +176,7 @@ export default async function CasesPage({
                         </span>
                       ))}
                     </div>
-                    <span className="cg-link">
-                      {story.slug === "strukton" ? t("moreStories.readComingSoon") : t("moreStories.readCase")}
-                    </span>
+                    <span className="cg-link">{t("moreStories.readCase")}</span>
                   </div>
                 </Link>
               </article>

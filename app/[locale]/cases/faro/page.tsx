@@ -59,7 +59,10 @@ export default function FaroCaseStudyPage() {
                 For each container purchase, FARO needed a reliable cost picture before committing capital. That meant classifying thousands of product lines, linking them to sales outcomes, and keeping the process fast enough to support the buying decision itself.
               </p>
               <p className="light-copy">
-                Without automation, the work was repetitive, slow, and hard to scale. With Pearstop, the team got a structured process that could support margin estimation before the purchase was made.
+                Before Pearstop, this was two people&rsquo;s job: flagging every incoming product line by hand, and mapping each one to a category by hand. Without automation, the work was repetitive, slow, and hard to scale. With Pearstop, the team got a structured process that could support margin estimation before the purchase was made.
+              </p>
+              <p className="light-copy">
+                This project predates general-purpose LLMs becoming viable for this kind of work. Pearstop built the classification system for FARO using machine learning and its own purpose-built technology, not a large language model - proof the underlying approach holds up without leaning on the newest tooling.
               </p>
             </div>
             <div className="col-md-5" style={{ marginLeft: "auto" }}>

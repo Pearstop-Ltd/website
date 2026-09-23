@@ -175,9 +175,7 @@ export default function CasesPage() {
                         </span>
                       ))}
                     </div>
-                    <span className="cg-link">
-                      {story.slug === "strukton" ? "Read the coming soon case →" : "Read the case study →"}
-                    </span>
+                    <span className="cg-link">Read the case study →</span>
                   </div>
                 </Link>
               </article>

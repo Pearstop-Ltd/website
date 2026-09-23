@@ -194,15 +194,15 @@ export type CaseStudy = {
 export const caseStudies: CaseStudy[] = [
   {
     slug: "strukton",
-    title: "Strukton (project in progress) — Classifying 35,000 procurement lines a month into UNSPSC",
+    title: "Classifying 35,000 to 50,000 procurement lines a month into UNSPSC, from zero classification history",
     category: "Infrastructure · Netherlands",
     excerpt:
-      "We are currently working with a major Dutch infrastructure contractor on automated UNSPSC classification at scale. Case study coming soon.",
+      "Strukton had identified a real cost-saving opportunity in procurement but needed higher granularity to act on it. Pearstop built an AI classification system with their procurement team: automated UNSPSC classification to all four hierarchy levels, a human-in-the-loop review step, and a weekly feedback loop with their buyers.",
     tags: ["Procurement", "UNSPSC"],
-    statPrimary: "35k",
+    statPrimary: "35k–50k",
     statPrimaryLabel: "Lines / month",
-    statSecondary: "SAP",
-    statSecondaryLabel: "Source system",
+    statSecondary: "4",
+    statSecondaryLabel: "UNSPSC levels",
     tone: "from-blue"
   },
   {
@@ -299,30 +299,6 @@ export type CaseStudyDetail = {
 };
 
 export const caseStudyDetails: Record<string, CaseStudyDetail> = {
-  "strukton": {
-    slug: "strukton",
-    eyebrow: "Infrastructure · Netherlands",
-    title: "Classifying 35,000 procurement lines a month into UNSPSC",
-    lead:
-      "Strukton is a major Dutch infrastructure contractor running automated UNSPSC classification at scale with Pearstop. The engagement is still in progress, so this page describes the shape of the work rather than a finished result.",
-    challenge:
-      "Infrastructure contractors typically run procurement through SAP with purchasing spread across many projects and cost centres. At Strukton's volume, roughly 35,000 procurement lines a month, turning that into structured, comparable categories by hand isn't something a team can keep up with alongside its normal workload, and every category left unclassified is spend nobody can benchmark, consolidate, or negotiate against with real numbers.",
-    solution:
-      "Pearstop classifies procurement lines against UNSPSC as they arrive from Strukton's SAP environment, so category-level structure builds up continuously rather than depending on a periodic manual clean-up project. The pipeline runs the classification and confidence scoring; Strukton's team stays focused on the category management and supplier decisions that classification exists to support in the first place.",
-    wins: [
-      { value: "35k", label: "lines a month" },
-      { value: "SAP", label: "system of record" },
-      { value: "Coming soon", label: "full case study" }
-    ],
-    quote:
-      "We are working through the classification problem at scale so procurement can focus on the decisions that matter.",
-    author: "Pearstop client",
-    role: "Infrastructure contractor",
-    geo:
-      "This work sits squarely in the procurement data quality and UNSPSC lane - exactly where infrastructure and hard services companies feel the pain first, since procurement volume at this scale makes manual classification a losing race against incoming spend.",
-    ctaLabel: "Follow our LinkedIn for updates",
-    ctaHref: siteConfig.socials.linkedin
-  },
   "lemtech": {
     slug: "lemtech",
     eyebrow: "Manufacturing",
