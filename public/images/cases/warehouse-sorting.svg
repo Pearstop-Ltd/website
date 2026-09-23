@@ -1,0 +1,22 @@
+<svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration of warehouse workers sorting items at a table">
+  <line x1="10" y1="58" x2="78" y2="58" stroke="rgba(255,255,255,0.85)" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="16" y1="58" x2="16" y2="68" stroke="rgba(255,255,255,0.6)" stroke-width="2" stroke-linecap="round"/>
+  <line x1="72" y1="58" x2="72" y2="68" stroke="rgba(255,255,255,0.6)" stroke-width="2" stroke-linecap="round"/>
+  <g stroke="rgba(255,255,255,0.75)" stroke-width="2" stroke-linejoin="round">
+    <rect x="22" y="42" width="12" height="9" rx="2"/>
+    <rect x="39" y="40" width="10" height="12" rx="1.5"/>
+    <rect x="54" y="43" width="11" height="8" rx="2"/>
+  </g>
+  <g stroke="rgba(255,255,255,0.5)" stroke-width="1.8" stroke-linecap="round">
+    <circle cx="27" cy="24" r="5"/>
+    <path d="M27 29V38"/>
+    <path d="M22 33L27 38L32 33"/>
+  </g>
+  <g stroke="rgba(255,255,255,0.5)" stroke-width="1.8" stroke-linecap="round">
+    <circle cx="60" cy="24" r="5"/>
+    <path d="M60 29V38"/>
+    <path d="M55 33L60 38L65 33"/>
+  </g>
+  <path d="M34 51L38 42" stroke="rgba(255,255,255,0.4)" stroke-width="1.6" stroke-dasharray="2 2"/>
+  <path d="M54 51L50 42" stroke="rgba(255,255,255,0.4)" stroke-width="1.6" stroke-dasharray="2 2"/>
+</svg>

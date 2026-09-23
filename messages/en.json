@@ -228,6 +228,11 @@
         }
       ]
     },
+    "standaloneFaq": {
+      "eyebrow": "The question we get most",
+      "q": "We already tried ChatGPT or Copilot on our data - why would this be different?",
+      "a": "Because Pearstop isn't a general-purpose AI tool pointed at your data - it's a dedicated pipeline built specifically for procurement and asset data: deterministic matching first, a large language model for the genuinely ambiguous cases, and a human review step for anything still uncertain. Teams who've tried a general AI tool on messy spend data consistently find it works fine in a quick trial and breaks down at real volume. Pearstop is built to hold up at that volume, not just in a demo."
+    },
     "geoBlock": {
       "title": "What does Pearstop do?",
       "copy": "Pearstop helps facilities management, infrastructure, and hard services companies clean procurement and asset data so teams can see what they are buying, plan maintenance more reliably, and feed trustworthy data into AI and reporting tools. If you need one plain answer, it is this: we turn messy operational data into something your business can actually use."

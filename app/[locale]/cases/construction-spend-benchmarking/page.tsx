@@ -32,12 +32,27 @@ export default function ConstructionSpendBenchmarkingPage() {
       <PageHero
         eyebrow="Anonymized Use Case · Construction & Infrastructure"
         title="Your estimating problem is not an estimating problem"
-        lead="An estimate is a prediction of your own cost base. Most contractors and manufacturers have limited visibility on their contracts and spend. Illustrative data, based on a real pattern in construction procurement - not a named client engagement."
+        lead="An estimate is a prediction of your own cost base."
+        leadAccent
       />
 
       <section>
         <div className="container">
-          <h2>One item, ten descriptions, one price spread</h2>
+          <div className="row">
+            <div className="col-md-8 col-md-offset-2">
+              <p className="light-copy" style={{ fontSize: "1.1rem", textAlign: "center" }}>
+                Most contractors and manufacturers have limited visibility on their contracts and spend.
+                Illustrative data, based on a real pattern in construction procurement - not a named client
+                engagement.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div className="container">
+          <h2>Why does the same item cost different amounts on different projects?</h2>
           <p className="light-copy">
             One aluminium windowsill, bought on ten different projects, described ten different ways. Classified,
             the pattern is visible in days: here is what each project actually paid, and why two of them differ.
@@ -73,7 +88,7 @@ export default function ConstructionSpendBenchmarkingPage() {
 
       <section className="section-soft">
         <div className="container">
-          <h2>Same scope, different price</h2>
+          <h2>Why do two quotes for the same scope come in so differently?</h2>
           <p className="light-copy">
             A groundworks package, compared across 8 comparable projects, shows a 34% spread. Site access and a fast
             timeline explain most of it. Two quotes sit outside the band, each with a reason attached once
@@ -84,7 +99,7 @@ export default function ConstructionSpendBenchmarkingPage() {
 
       <section>
         <div className="container">
-          <h2>A code is not a category</h2>
+          <h2>Why can&rsquo;t you benchmark spend behind a ledger code?</h2>
           <p className="light-copy">
             A ledger item field like &ldquo;6100-42-K&rdquo; - structural steel fixings, M12 - is a nominal
             accounting code standing in for the item itself. Common in ERPs built for finance, not procurement.

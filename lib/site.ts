@@ -204,7 +204,9 @@ export const caseStudies: CaseStudy[] = [
     statPrimaryLabel: "Lines / month",
     statSecondary: "4",
     statSecondaryLabel: "UNSPSC levels",
-    tone: "from-blue"
+    tone: "from-blue",
+    image: siteConfig.assets.clients.strukton,
+    imageFit: "contain"
   },
   {
     slug: "faro",
@@ -320,7 +322,7 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
     lead:
       "Site visit reports arrived in every format imaginable - handwritten notes, spelling mistakes, varying layouts. Pearstop built a system that reads incoming reports and automatically outputs a clean, accurate proposal document.",
     challenge:
-      "The commercial team was spending too much time retyping and reconciling site-visit notes into a proposal format that the business could trust.",
+      "Why was the commercial team retyping every site-visit note by hand?",
     solution:
       "Pearstop interpreted the incoming notes, pulled the right products and specifications, and returned a cleaner proposal workflow with much less manual re-entry.",
     wins: [
@@ -368,9 +370,9 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
     lead:
       "This is an anonymized use case, not a named client story - it reflects a pattern Pearstop sees repeatedly in MRO and component sourcing, built to show clearly what the product actually does.",
     challenge:
-      "Buying MRO parts direct from the manufacturer, instead of through a reseller, usually starts with research: finding the real manufacturer part number behind whatever code a reseller or an old purchase order used. That research is typically outsourced to offshore research bureaus, commonly in India, working by hand. It works, but it is slow.",
+      "Why is buying MRO parts direct from the manufacturer so slow?",
     solution:
-      "AI can do this research faster. It can also get it wrong in a specific way: general-purpose AI models hallucinate part numbers and don't check their own work. That is exactly where a specialized provider matters - one with real experience running AI projects that verify what they produce rather than guessing. Pearstop matches part records against manufacturer reference data, flags anything it can't confirm with confidence for human review, and replaces a slow offshore research cycle with a fast, checked one.",
+      "It usually starts with research: finding the real manufacturer part number behind whatever code a reseller or an old purchase order used. That research is typically outsourced to offshore research bureaus, commonly in India, working by hand - it works, but it is slow. AI can do this research faster. It can also get it wrong in a specific way: general-purpose AI models hallucinate part numbers and don't check their own work. That is exactly where a specialized provider matters - one with real experience running AI projects that verify what they produce rather than guessing. Pearstop matches part records against manufacturer reference data, flags anything it can't confirm with confidence for human review, and replaces a slow offshore research cycle with a fast, checked one.",
     wins: [
       { value: "Direct", label: "to manufacturer" },
       { value: "Checked", label: "not guessed" },

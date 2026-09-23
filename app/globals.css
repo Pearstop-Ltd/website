@@ -615,6 +615,15 @@ section {
   text-shadow: 0 2px 14px rgba(31, 42, 104, 0.16);
 }
 
+.hero-lead-accent {
+  text-align: left;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+  border-left: 3px solid rgba(255, 255, 255, 0.5);
+  padding-left: 1.25rem;
+}
+
 .light-copy,
 .story-text,
 .cf-body,

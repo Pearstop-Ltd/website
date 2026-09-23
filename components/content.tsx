@@ -23,9 +23,12 @@ type HeroProps = {
   videoUrl?: string;
   videoPoster?: string;
   className?: string;
+  /** Renders `lead` as a left-aligned block with a left accent border,
+   * instead of the default centered hero-lead paragraph. */
+  leadAccent?: boolean;
 };
 
-export function PageHero({ eyebrow, title, lead, actions, leadingAction, videoUrl, videoPoster, className }: HeroProps) {
+export function PageHero({ eyebrow, title, lead, actions, leadingAction, videoUrl, videoPoster, className, leadAccent }: HeroProps) {
   return (
     <header className={`page-hero dark ${className ?? ""}`}>
       {videoUrl ? (
@@ -38,7 +41,7 @@ export function PageHero({ eyebrow, title, lead, actions, leadingAction, videoUr
         <div className="text-center">
           {eyebrow ? <span className="pill">{eyebrow}</span> : null}
           <h1 className="hero-title dark">{title}</h1>
-          {lead ? <p className="hero-lead">{lead}</p> : null}
+          {lead ? <p className={`hero-lead ${leadAccent ? "hero-lead-accent" : ""}`}>{lead}</p> : null}
           {leadingAction || actions?.length ? (
             <div className="hero-actions" style={{ marginTop: "1.75rem" }}>
               {leadingAction}

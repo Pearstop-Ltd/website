@@ -31,7 +31,7 @@ export default function CaseDetailPage({ params }: { params: { slug: string } })
 
   return (
     <>
-      <PageHero eyebrow={entry.eyebrow} title={entry.title} lead={entry.lead} />
+      <PageHero eyebrow={entry.eyebrow} title={entry.title} lead={entry.lead} leadAccent />
 
       <section>
         <div className="container">
@@ -71,8 +71,8 @@ export default function CaseDetailPage({ params }: { params: { slug: string } })
       </section>
 
       <CTABand
-        title={entry.slug === "strukton" ? "Want updates on the Strukton work?" : "Want a case study built around your data?"}
-        lead={entry.slug === "strukton" ? "This page stays live while the full case study is being finalised." : "We can show you what the same approach would look like for your procurement or asset data."}
+        title="Want a case study built around your data?"
+        lead="We can show you what the same approach would look like for your procurement or asset data."
         actions={[
           { label: entry.ctaLabel, href: entry.ctaHref, variant: "primary", external: entry.ctaHref.startsWith("http") },
           { label: "Back to cases", href: "/cases", variant: "secondary" }

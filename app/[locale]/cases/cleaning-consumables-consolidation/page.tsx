@@ -38,12 +38,25 @@ export default function CleaningConsumablesConsolidationPage() {
       <PageHero
         eyebrow="Anonymized Use Case · Cleaning & Soft FM"
         title="Nobody chose 30 toilet paper suppliers. They just couldn't see them."
-        lead="In one cleaning business, 30 different suppliers invoiced for toilet paper within twelve months. Illustrative data, based on a real pattern in soft FM procurement - not a named client engagement."
+        lead="In one cleaning business, 30 different suppliers invoiced for toilet paper within twelve months."
+        leadAccent
       />
 
       <section>
         <div className="container">
-          <h2>The decision, once it's visible</h2>
+          <div className="row">
+            <div className="col-md-8 col-md-offset-2">
+              <p className="light-copy" style={{ fontSize: "1.1rem", textAlign: "center" }}>
+                Illustrative data, based on a real pattern in soft FM procurement - not a named client engagement.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div className="container">
+          <h2>How do you find the three toilet paper suppliers worth keeping?</h2>
           <p className="light-copy">
             Every line classified, the pattern was visible in days: here they are, cost, quality, and brand side by
             side, and the three worth keeping.
@@ -75,7 +88,7 @@ export default function CleaningConsumablesConsolidationPage() {
 
       <section className="section-soft">
         <div className="container">
-          <h2>Off-contract buying</h2>
+          <h2>How much does off-contract buying actually cost?</h2>
           <p className="light-copy">
             Contracted price, through Bunzl: £19.20 for a case of 36 rolls. Actually paid, through Amazon: £26.80 for
             the same case - 40% more. A cost risk and a compliance risk: client contracts specify products and
@@ -86,7 +99,7 @@ export default function CleaningConsumablesConsolidationPage() {
 
       <section>
         <div className="container">
-          <h2>Same roll, five prices</h2>
+          <h2>Why does the same product have five different prices?</h2>
           <p className="light-copy">
             The same product, Tork Advanced T4, priced per roll across five suppliers:
           </p>

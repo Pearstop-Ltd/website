@@ -19,13 +19,27 @@ export default function StruktonCaseStudyPage() {
       <PageHero
         eyebrow="Case Study"
         title="Classifying 35,000 to 50,000 procurement lines a month into UNSPSC, from zero classification history"
-        lead="Strukton is a major Dutch infrastructure contractor. Pearstop built this system together with their procurement department. It classifies every line of spend into UNSPSC, automatically, every month."
+        lead="How Pearstop and Strukton built an AI classification system from zero UNSPSC history."
+        leadAccent
       />
 
       <section>
         <div className="container">
+          <div className="row">
+            <div className="col-md-8 col-md-offset-2">
+              <p className="light-copy" style={{ fontSize: "1.1rem", textAlign: "center" }}>
+                Strukton is a major Dutch infrastructure contractor. Pearstop built this system together with their
+                procurement department. It classifies every line of spend into UNSPSC, automatically, every month.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-soft">
+        <div className="container">
           <div className="cases-eyebrow">Infrastructure · Netherlands</div>
-          <h2>Why this started</h2>
+          <h2>Why did Strukton need higher granularity in their spend data?</h2>
           <p className="light-copy">
             Strukton had identified a real cost-saving opportunity in procurement. To act on it, they needed higher
             granularity in their spend data. Their spend was already well organized. What they didn&rsquo;t have was
@@ -36,7 +50,7 @@ export default function StruktonCaseStudyPage() {
 
       <section className="section-soft">
         <div className="container">
-          <h2>What we built</h2>
+          <h2>How does Strukton&rsquo;s AI classification system work?</h2>
           <p className="light-copy">
             Pearstop and Strukton&rsquo;s procurement team built a system with three layers. AI classifies each line
             automatically. A machine learning pipeline learns from the team&rsquo;s own input and context, not just
@@ -53,7 +67,7 @@ export default function StruktonCaseStudyPage() {
 
       <section>
         <div className="container">
-          <h2>Four levels, every month</h2>
+          <h2>Why do all four UNSPSC levels matter, not just the top one?</h2>
           <p className="light-copy">
             Every month, a new batch of spend comes in. Pearstop processes all of it. Each line gets four levels of
             UNSPSC classification: segment, family, class, and commodity.
@@ -76,7 +90,7 @@ export default function StruktonCaseStudyPage() {
 
       <section className="section-soft">
         <div className="container">
-          <h2>The weekly feedback loop</h2>
+          <h2>How does the system get more accurate every month?</h2>
           <p className="light-copy">
             Strukton&rsquo;s buyers review what the AI classified. They flag what&rsquo;s right and what isn&rsquo;t.
             Every correction feeds back into the system. Pearstop and Strukton&rsquo;s team meet weekly. The team
@@ -104,7 +118,7 @@ export default function StruktonCaseStudyPage() {
         <div className="container">
           <div className="row">
             <div className="col-md-8 col-md-offset-2">
-              <h2>What changed</h2>
+              <h2>What changed for Strukton&rsquo;s procurement team?</h2>
               <p className="light-copy">
                 Before this project, Strukton had no UNSPSC classification at all. Now, 35,000 to 50,000 lines of
                 spend are classified automatically every month, to all four UNSPSC levels. The cost-saving

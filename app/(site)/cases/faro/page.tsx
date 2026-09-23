@@ -45,16 +45,32 @@ export default function FaroCaseStudyPage() {
 
       <PageHero
         eyebrow="Case Study"
-        title="Accurate margin estimates on every container purchase, automatically"
-        lead="For every purchasing decision, FARO needed to categorise around 30,000 product lines per five containers to estimate margin, sale price, and stock time. Manual categorisation made this slow and inconsistent. Pearstop automated the classification using their own category system and linked it directly to their sales database."
+        title="Accurate Margin, Automatically"
+        lead="How Pearstop made margin visible before FARO committed to a container purchase."
+        leadAccent
       />
 
       <section>
         <div className="container">
+          <div className="row">
+            <div className="col-md-8 col-md-offset-2">
+              <p className="light-copy" style={{ fontSize: "1.1rem", textAlign: "center" }}>
+                For every purchasing decision, FARO needed to categorise around 30,000 product lines per five
+                containers to estimate margin, sale price, and stock time. Manual categorisation made this slow and
+                inconsistent. Pearstop automated the classification using their own category system and linked it
+                directly to their sales database.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-soft">
+        <div className="container">
           <div className="row" style={{ alignItems: "center", gap: "3rem", flexWrap: "wrap" }}>
             <div className="col-md-6">
               <div className="cases-eyebrow">Retail · South Africa</div>
-              <h2>The challenge</h2>
+              <h2>Why is margin invisible until after the purchase?</h2>
               <p className="light-copy">
                 For each container purchase, FARO needed a reliable cost picture before committing capital. That meant classifying thousands of product lines, linking them to sales outcomes, and keeping the process fast enough to support the buying decision itself.
               </p>
@@ -79,9 +95,28 @@ export default function FaroCaseStudyPage() {
         </div>
       </section>
 
+      <section>
+        <div className="container">
+          <div className="row">
+            <div className="col-md-8 col-md-offset-2">
+              <div className="screenshot-frame screenshot-frame--compact">
+                <img
+                  src="/images/cases/warehouse-sorting.svg"
+                  alt="Illustration of workers sorting incoming product lines at a warehouse table"
+                  style={{ background: "linear-gradient(135deg,#0f172a,#1e3a5f)", padding: "2.5rem" }}
+                />
+              </div>
+              <p className="screenshot-caption">
+                Before automation: every incoming product line flagged and mapped to a category by hand.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="section-soft">
         <div className="container">
-          <SectionTitle title="What Pearstop delivered" />
+          <SectionTitle title="How does Pearstop estimate margin before the purchase?" />
           <div className="bene-cards">
             <article className="ben-card">
               <div className="ben-icon">✓</div>
@@ -117,7 +152,7 @@ export default function FaroCaseStudyPage() {
           <div className="row">
             <div className="col-md-8 col-md-offset-2">
               <GeoBlock
-                title="What changed for FARO?"
+                title="What changed for FARO's buying team after automating classification?"
                 copy="The team moved from manual categorisation to an automated flow that could keep up with buying decisions. That made margin visible earlier, reduced the operational drag on the procurement team, and gave the business a more reliable basis for planning and analysis."
               />
             </div>
