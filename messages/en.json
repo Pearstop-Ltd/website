@@ -524,6 +524,80 @@
       "button": "Book a 7-minute discovery"
     }
   },
+  "InvoiceExtraction": {
+    "meta": {
+      "title": "Invoice and Document Data Extraction (OCR) for FM and Construction",
+      "description": "Turn unread PDF invoices, scanned delivery notes, and paper records into structured, usable data. Automated OCR and AI extraction for facilities management, construction, and manufacturing procurement teams."
+    },
+    "hero": {
+      "eyebrow": "Data Extraction",
+      "title": "If nobody reads the invoice, the data inside it does not exist.",
+      "lead": "Most procurement teams do not have a classification problem yet. They have an invoice problem: PDFs, scans, and delivery notes arriving faster than anyone can read them, let alone enter them into a system. Pearstop turns that paperwork into structured data automatically, so there is something to classify in the first place."
+    },
+    "problem": {
+      "eyebrow": "The Problem",
+      "title": "Why does spend data stay unusable months after the invoice arrives?",
+      "quote": {
+        "text": "Our internal systems are lacking. I'd say we're at ground level. Somewhere underground.",
+        "attribution": "Procurement lead, multi-site cleaning services contractor"
+      },
+      "copy1": "This is not a data literacy problem. It is a volume and format problem. Every supplier lays out an invoice differently, the same supplier often changes layout month to month, and a fair number still arrive as a scanned PDF or a photo of a paper delivery note. Someone has to read each one, work out what was actually bought, and type it into a system before any of it can be categorised, compared, or reported on.",
+      "copy2": "At volume, that step does not get skipped occasionally. It becomes the permanent bottleneck.",
+      "bullets": [
+        "Invoices sit unread in an inbox because no one has time to open them, let alone key them in",
+        "The same supplier sends a different layout depending on which depot or system generated it",
+        "Manual entry backlogs push classification and reporting a full cycle behind actual spend",
+        "By the time a line is typed in, checked, and corrected, the number it produces is already stale"
+      ]
+    },
+    "howItWorks": {
+      "eyebrow": "How It Works",
+      "title": "From unread document to structured line item",
+      "step1": { "title": "Ingest, in any format", "copy": "PDF invoices, scanned paper, email attachments, EDI feeds. No fixed template per supplier, and no requirement that a supplier changes how they send anything." },
+      "step2": { "title": "OCR and AI extraction", "copy": "Line items, quantities, unit costs, cost codes, and supplier references are read and structured automatically. Anything below a confidence threshold is flagged rather than guessed at, and each correction feeds back into the pipeline so the same supplier and format is read more accurately next time." },
+      "step3": { "title": "Delivered into what you already run", "copy": "Structured output lands in the format your ERP, P2P platform, or BI tool expects, ready for classification, reporting, or direct reload." }
+    },
+    "whatMakesPossible": {
+      "title": "What becomes possible once the invoice is actually read",
+      "b1": { "title": "Spend visible the same week, not the same quarter", "copy": "Data is structured as invoices arrive, not weeks later when someone finally gets through the backlog." },
+      "b2": { "title": "A category to actually classify", "copy": "Extraction is the precondition for classification. Nothing can be categorised, benchmarked, or compared until it exists as structured data." },
+      "b3": { "title": "Fewer hours lost to keying and correcting", "copy": "The manual entry step that absorbs procurement and finance admin time is removed, not just made faster." }
+    },
+    "stats": {
+      "title": "What changes with Pearstop",
+      "s1": { "value": "~70% → 99%", "label": "first-pass extraction accuracy", "copy": "On one FM client's live invoice stream, as the pipeline learned their supplier base" },
+      "s2": { "value": "Any format", "label": "PDF, scan, photo, or EDI", "copy": "No fixed template required per supplier" },
+      "s3": { "value": "Days", "label": "typical time to first structured output", "copy": "Not a lengthy integration project" }
+    },
+    "quote": {
+      "text": "Doing that manually absolutely has its own risks. It might be borderline impossible at this stage while keeping operations going.",
+      "author": "Procurement lead",
+      "role": "Multi-site cleaning services contractor"
+    },
+    "geoBlock": {
+      "title": "What is invoice data extraction and why does it matter for procurement data quality?",
+      "copy": "Invoice and document data extraction is the process of automatically reading PDF invoices, scanned paper records, and delivery notes, then converting them into structured line-item data. For facilities management, construction, and manufacturing procurement teams, this is the step that has to happen before classification, spend analysis, or UNSPSC coding is even possible. Manual data entry cannot keep pace with invoice volume across multiple sites and suppliers, which is why unread invoices and stale spend data are one of the most common blockers to category management and AI-driven spend analysis. Pearstop combines OCR with an AI extraction layer and a human review step for low-confidence lines, so the output is structured data ready for classification, not another manual bottleneck."
+    },
+    "faq": [
+      {
+        "question": "Can Pearstop extract data from scanned paper invoices, not just digital PDFs?",
+        "answer": "Yes. The extraction layer handles digital PDFs, scanned paper documents, photographed delivery notes, and email attachments. It does not require a fixed template per supplier, which matters because most procurement teams receive the same information laid out differently by every supplier, and often differently by the same supplier month to month."
+      },
+      {
+        "question": "How accurate is automated invoice data extraction?",
+        "answer": "First-pass accuracy depends on document quality and supplier variability, but improves over time. On one facilities management client's invoice stream, first-pass extraction accuracy rose from roughly 70% to 99% as the pipeline learned that supplier base's formats and edge cases. Anything below a set confidence threshold is flagged for human review rather than guessed at."
+      },
+      {
+        "question": "Does extraction replace our ERP, or feed it?",
+        "answer": "It feeds it. Pearstop extracts and structures the data, then delivers it in the format your ERP, P2P platform, or BI tool already expects, so it plugs into what you run today (SAP, Oracle, Business Central, and others) rather than requiring a new system."
+      }
+    ],
+    "cta": {
+      "title": "Still keying invoices in by hand?",
+      "lead": "Book a 7-minute discovery call and see what your own invoice stream looks like once it is actually read.",
+      "button": "Book a 7-minute discovery"
+    }
+  },
   "SpendVisibility": {
     "meta": {
       "title": "Spend Visibility: A Real Cost Baseline for Procurement Teams",
