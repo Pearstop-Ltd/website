@@ -382,7 +382,7 @@
     },
     "moreCards": {
       "title": "More ways to work with Pearstop",
-      "lead": "Two more places the same classification engine shows up, for specific teams and specific outcomes.",
+      "lead": "Three more places the same classification engine shows up, for specific teams and specific outcomes.",
       "items": [
         {
           "title": "Spend Cube & Dashboards",
@@ -391,6 +391,10 @@
         {
           "title": "For Procurement Consultancies",
           "copy": "White-labelled spend classification under your own taxonomy, so engagement margin goes to analysis, not manual cleanup."
+        },
+        {
+          "title": "ERP Migration Data Cleansing",
+          "copy": "Clean, classified reference data before it moves into a new ERP, so the migration doesn't just carry the mess into a new system."
         }
       ]
     },
@@ -621,6 +625,283 @@
     "cta": {
       "title": "Still keying invoices in by hand?",
       "lead": "Book a 7-minute discovery call and see what your own invoice stream looks like once it is actually read.",
+      "button": "Book a 7-minute discovery"
+    }
+  },
+  "InvoiceExtractionConstruction": {
+    "meta": {
+      "title": "Invoice & Delivery Note Extraction for Construction",
+      "description": "Turn subcontractor invoices, delivery notes, and PO paperwork from every project and cost code into structured, classified spend data automatically."
+    },
+    "hero": {
+      "eyebrow": "Invoice Extraction · Construction",
+      "title": "Every project has its own paperwork. None of it reads itself.",
+      "lead": "Construction procurement runs on subcontractor invoices, delivery notes, and purchase orders spread across every project and cost code. Pearstop reads all of it automatically, so spend is structured before anyone has to chase a project manager for a clearer description."
+    },
+    "problem": {
+      "eyebrow": "The Problem",
+      "title": "Estimating from memory because the actuals were never readable",
+      "quote": {
+        "text": "Everything was captured in Rands and the total spend over three years, every single month for 36 different contractors. I have to translate that spend into a quantity, then split it up by road section, then by contractor.",
+        "attribution": "Commercial decision-maker, civil/structural engineering consultancy"
+      },
+      "copy1": "Every project runs its own budget codes, and subcontractor invoices rarely follow the same format twice. A delivery note might be handwritten, a PO might reference a cost code that means nothing outside that one project, and by the time someone has typed it all in, the numbers going into cost reporting are already a cycle behind the actual spend.",
+      "copy2": "At the volume a multi-project contractor runs, that gap doesn't close on its own. It compounds project to project.",
+      "bullets": [
+        "Subcontractor invoices and delivery notes arrive in whatever format each supplier uses, project to project",
+        "The same cost code means something different depending on which project generated it",
+        "Estimating teams price new bids from memory or unreliable ERP exports, not clean historical actuals",
+        "Actual project costs lag real spend by a full reporting cycle, because someone still has to type it in first"
+      ]
+    },
+    "howItWorks": {
+      "eyebrow": "How It Works",
+      "title": "From unread paperwork to structured, comparable cost",
+      "step1": { "title": "Ingest, project by project", "copy": "PDF invoices, delivery notes, POs, and site paperwork - digital or scanned - regardless of which project or subcontractor they came from." },
+      "step2": { "title": "OCR and AI extraction", "copy": "Line items, quantities, cost codes, and subcontractor references are read and structured automatically, mapped consistently even when the same cost code means different things project to project." },
+      "step3": { "title": "Delivered into what you already run", "copy": "Structured output lands in the format your ERP or reporting tool expects, ready for classification and project-level cost tracking." }
+    },
+    "whatMakesPossible": {
+      "title": "What becomes possible once the paperwork is read",
+      "b1": { "title": "Actuals ready for the next bid", "copy": "Estimating teams price the next tender from real historical costs, not memory or a rough ERP export." },
+      "b2": { "title": "Cost codes that mean the same thing everywhere", "copy": "A cost code from one project maps consistently, so costs are comparable across projects, not just within one." },
+      "b3": { "title": "Fewer hours lost chasing paperwork", "copy": "The manual admin time spent typing in and chasing unclear delivery notes goes away, not just gets faster." }
+    },
+    "stats": {
+      "title": "What changes with Pearstop",
+      "s1": { "value": "~70% → 99%", "label": "first-pass extraction accuracy", "copy": "On one FM client's live invoice stream, as the pipeline learned their supplier base" },
+      "s2": { "value": "Any format", "label": "PDF, scan, photo, or EDI", "copy": "No fixed template required per subcontractor" },
+      "s3": { "value": "Days", "label": "typical time to first structured output", "copy": "Not a lengthy integration project" }
+    },
+    "geoBlock": {
+      "title": "What is invoice and delivery note extraction for construction, and why does it matter?",
+      "copy": "Invoice and delivery note extraction is the process of automatically reading PDF invoices, scanned paper records, and delivery notes from every project and subcontractor, then converting them into structured, comparable line-item data. In construction, this matters because spend is inherently fragmented: every project has its own budget codes, and the same cost code can mean different things depending on which project generated it. Without extraction, that fragmentation is invisible - estimating teams price the next bid from memory rather than clean historical actuals, and cost reporting always lags real spend by however long manual entry takes. Pearstop combines OCR with an AI extraction layer and a human review step for low-confidence lines, so project cost data is structured and comparable as it arrives, not reconstructed after the fact."
+    },
+    "faq": [
+      {
+        "question": "Can this handle invoices and delivery notes from many small subcontractors, not just a few large suppliers?",
+        "answer": "Yes. There is no fixed template per supplier or subcontractor, and no requirement that anyone changes how they send paperwork. Handwritten delivery notes, photographed site paperwork, and PDF invoices are all handled the same way."
+      },
+      {
+        "question": "Do cost codes need to be standardised across projects before this works?",
+        "answer": "No. Extraction and classification map cost codes to a consistent structure automatically, even when the same code is used differently project to project. Standardising happens as part of the output, not as a precondition for starting."
+      },
+      {
+        "question": "Does this replace our ERP or project cost reporting?",
+        "answer": "No, it feeds it. Structured output is delivered in the format your ERP or reporting tool already expects, ready for classification, tender pricing, or project-level cost tracking."
+      }
+    ],
+    "cta": {
+      "title": "Still chasing paperwork project to project?",
+      "lead": "Book a 7-minute discovery call and see what your own project spend looks like once it is actually read.",
+      "button": "Book a 7-minute discovery"
+    }
+  },
+  "InvoiceExtractionCleaning": {
+    "meta": {
+      "title": "Invoice Data Extraction for Cleaning & Soft FM",
+      "description": "Turn high volumes of small consumables, subcontractor, and site invoices into structured, classified spend data automatically - built for cleaning and soft FM contractors."
+    },
+    "hero": {
+      "eyebrow": "Invoice Extraction · Cleaning",
+      "title": "Every supplier invoices differently. None of it should mean typing it in by hand.",
+      "lead": "Cleaning contracts run on high volumes of small invoices from consumables suppliers, subcontractors, and site teams, each in their own format. Pearstop reads all of it automatically, so spend is structured before anyone has to key a line in by hand."
+    },
+    "problem": {
+      "eyebrow": "The Problem",
+      "title": "Ground level, and everyone already knows it",
+      "quote": {
+        "text": "Our data, our ERP master data is so poor. This is where all the sort of automatic flow stops.",
+        "attribution": "Procurement lead, multi-site cleaning services contractor"
+      },
+      "copy1": "Cleaning contracts generate a high volume of small invoices: consumables, equipment, subcontracted specialist cleans, site-level purchases. Every supplier lays it out differently, and a fair number still arrive as a scanned PDF or a photo from a site manager's phone. Someone has to read each one before spend can be checked against the contract at all.",
+      "copy2": "Roughly four in five cleaning-contract invoices do not match the terms that were agreed. That gap stays invisible until someone actually reads every line and compares it, which does not happen at volume.",
+      "bullets": [
+        "High volumes of small-value invoices from consumables and subcontractor suppliers, every one laid out differently",
+        "A fair share of invoices arrive as a scanned PDF or a phone photo from site, not a clean digital format",
+        "Spend cannot be checked against agreed contract terms until someone has actually read the invoice",
+        "ERP master data too poor for any automatic flow to even start from"
+      ]
+    },
+    "howItWorks": {
+      "eyebrow": "How It Works",
+      "title": "From unread invoice to spend checked against the contract",
+      "step1": { "title": "Ingest, in any format", "copy": "PDF invoices, scanned paper, phone photos from site, email attachments. No fixed template per supplier." },
+      "step2": { "title": "OCR and AI extraction", "copy": "Line items, quantities, unit costs, and supplier references are read and structured automatically, then checked against agreed contract terms." },
+      "step3": { "title": "Delivered into what you already run", "copy": "Structured output lands in the format your ERP or reporting tool expects, ready for classification and contract compliance checks." }
+    },
+    "whatMakesPossible": {
+      "title": "What becomes possible once the invoice is actually read",
+      "b1": { "title": "Spend checked against the contract, not just filed", "copy": "Off-contract buying and price drift show up as they happen, not at the next audit." },
+      "b2": { "title": "A category to actually classify", "copy": "Extraction is the precondition for classification. Nothing can be categorised or benchmarked until it exists as structured data." },
+      "b3": { "title": "Fewer hours lost to keying and correcting", "copy": "The manual entry step that absorbs site and procurement admin time is removed, not just made faster." }
+    },
+    "stats": {
+      "title": "What changes with Pearstop",
+      "s1": { "value": "~70% → 99%", "label": "first-pass extraction accuracy", "copy": "On one FM client's live invoice stream, as the pipeline learned their supplier base" },
+      "s2": { "value": "~80%", "label": "of cleaning-contract invoices don't match agreed terms", "copy": "Invisible until every line is read and checked" },
+      "s3": { "value": "Days", "label": "typical time to first structured output", "copy": "Not a lengthy integration project" }
+    },
+    "geoBlock": {
+      "title": "What is invoice data extraction for cleaning contractors, and why does it matter?",
+      "copy": "Invoice data extraction is the process of automatically reading PDF invoices, scanned paper records, and site photos of delivery notes, then converting them into structured, checkable line-item data. For cleaning and soft FM contractors, this matters because spend is spread across a high volume of small invoices from consumables suppliers, subcontractors, and site-level purchases, each arriving in a different format. Manual data entry cannot keep pace, which is why off-contract buying and price drift against agreed terms stay invisible until an audit catches them, often too late to matter. Pearstop combines OCR with an AI extraction layer and a human review step for low-confidence lines, so spend is structured and checkable against the contract as it arrives."
+    },
+    "faq": [
+      {
+        "question": "Can Pearstop handle invoices photographed on a phone from site, not just digital PDFs?",
+        "answer": "Yes. The extraction layer handles digital PDFs, scanned paper documents, and photographed delivery notes or invoices, which matters in cleaning because a meaningful share of site-level purchases never arrive as a clean digital file."
+      },
+      {
+        "question": "Can this check spend against our agreed contract terms, not just classify it?",
+        "answer": "Yes. Once a line is extracted and classified, it can be checked against agreed contract terms and pricing, so off-contract buying or price drift shows up as it happens rather than at the next audit."
+      },
+      {
+        "question": "Does extraction replace our ERP, or feed it?",
+        "answer": "It feeds it. Pearstop extracts and structures the data, then delivers it in the format your ERP or reporting tool already expects, so it plugs into what you run today rather than requiring a new system."
+      }
+    ],
+    "cta": {
+      "title": "Still keying invoices in by hand?",
+      "lead": "Book a 7-minute discovery call and see what your own invoice stream looks like once it is actually read.",
+      "button": "Book a 7-minute discovery"
+    }
+  },
+  "InvoiceExtractionFM": {
+    "meta": {
+      "title": "Invoice Data Extraction for Facilities Management",
+      "description": "Turn invoices from every service line of an integrated FM contract into one structured, comparable dataset automatically - cleaning, hard services, security, and catering."
+    },
+    "hero": {
+      "eyebrow": "Invoice Extraction · Facilities Management",
+      "title": "One contract, five service lines, five invoice formats.",
+      "lead": "Integrated FM contracts bundle cleaning, hard services, security, and catering under one price. The invoices behind each service line rarely arrive in the same format, or even the same system. Pearstop reads all of it automatically, so contract-level cost is visible service line by service line."
+    },
+    "problem": {
+      "eyebrow": "The Problem",
+      "title": "One blended price. No way to break out what each line actually costs.",
+      "quote": {
+        "text": "Not historic appreciation for data.",
+        "attribution": "Group CIO, integrated FM operator"
+      },
+      "copy1": "A single FM contract can bundle cleaning, hard services, security, and catering under one blended price, each service line reporting through its own system in its own format. Reconciling that into one contract-level cost picture means someone manually pulling every service line's invoices apart and putting them back together by hand.",
+      "copy2": "Ask a contract manager to break out what one service line actually costs, separate from the blended price, and the honest answer is often a guess dressed up as a number.",
+      "bullets": [
+        "Each service line - cleaning, hard services, security, catering - reports through its own system, in its own format",
+        "One blended contract price, with no reliable way to break out what each service line actually costs",
+        "Manufacturer and equipment reference data supplied at contract start is sometimes simply wrong",
+        "A first data pass often delivers less than expected, because the underlying reference data was flawed before it reached any system"
+      ]
+    },
+    "howItWorks": {
+      "eyebrow": "How It Works",
+      "title": "From five service-line silos to one structured dataset",
+      "step1": { "title": "Ingest, by service line", "copy": "Connect each service line's invoices via API, CSV, PDF, or scan, in whatever format they already arrive from cleaning, hard services, security, or catering." },
+      "step2": { "title": "OCR and AI extraction", "copy": "Line items, costs, and references are read and structured automatically, so the same equipment or supplier looks the same across every service line." },
+      "step3": { "title": "One contract-level view", "copy": "Structured output lands in the format your ERP or reporting tool expects, so contract-level cost is visible without manual reconciliation." }
+    },
+    "whatMakesPossible": {
+      "title": "What becomes possible once every service line reads the same way",
+      "b1": { "title": "One contract-level report, not five silos", "copy": "Cost visible across every service line on one dataset, without the manual reconciliation that currently happens before the numbers go out." },
+      "b2": { "title": "Reference data corrected, not just collected", "copy": "Manufacturer and equipment reference data standardised across every service line and site, not taken on faith from contract start." },
+      "b3": { "title": "Fewer hours lost reconciling by hand", "copy": "The manual step of pulling five service lines apart and back together is removed, not just made faster." }
+    },
+    "stats": {
+      "title": "What changes with Pearstop",
+      "s1": { "value": "~70% → 99%", "label": "first-pass extraction accuracy", "copy": "On one FM client's live invoice stream, as the pipeline learned their supplier base" },
+      "s2": { "value": "5 → 1", "label": "service-line silos to one dataset", "copy": "Cleaning, hard services, security, and catering reconciled automatically" },
+      "s3": { "value": "Days", "label": "typical time to first structured output", "copy": "Not a lengthy integration project" }
+    },
+    "geoBlock": {
+      "title": "What is invoice data extraction for facilities management, and why does it matter?",
+      "copy": "Invoice data extraction is the process of automatically reading PDF invoices, scanned paper records, and delivery notes from every service line of an FM contract, then converting them into one structured, comparable dataset. For integrated FM providers, this matters because a single contract typically bundles cleaning, hard services, security, and catering under one blended price, with each service line reporting through its own system in its own format. Without extraction, breaking out what any one service line actually costs means manual reconciliation, redone every reporting cycle. Pearstop combines OCR with an AI extraction layer and a human review step for low-confidence lines, so contract-level cost is visible service line by service line, not reconstructed by hand."
+    },
+    "faq": [
+      {
+        "question": "Can this handle invoices from every service line, even if each one uses a different system?",
+        "answer": "Yes. Each service line's data is ingested from wherever it already lives - API, CSV, PDF, or scan - in whatever format it already arrives. Standardisation happens after ingestion, not as a precondition for starting."
+      },
+      {
+        "question": "Can we see cost broken out by service line, not just the blended contract total?",
+        "answer": "Yes. Once every service line's invoices are extracted and classified on a consistent basis, contract-level cost can be broken out service line by service line, not just reported as one blended figure."
+      },
+      {
+        "question": "Does this fix reference data that was wrong from the start of the contract?",
+        "answer": "Yes. Manufacturer and equipment reference data is corrected and standardised as part of extraction and classification, not just passed through as-supplied."
+      }
+    ],
+    "cta": {
+      "title": "Still reconciling five service lines by hand?",
+      "lead": "Book a 7-minute discovery call and see what one contract-level view of your own data looks like.",
+      "button": "Book a 7-minute discovery"
+    }
+  },
+  "ErpMigration": {
+    "meta": {
+      "title": "ERP Migration Data Cleansing: SAP and Beyond",
+      "description": "Clean and classify procurement and asset data before it moves into a new ERP, so the migration doesn't just carry the mess into a new system. Deepest experience with SAP; also supports Oracle, Microsoft Dynamics, and other major platforms."
+    },
+    "hero": {
+      "eyebrow": "ERP Migration",
+      "title": "An ERP migration moves your data exactly as it is. Mistakes included.",
+      "lead": "A migration project doesn't fix bad procurement or asset data - it gives it a new home. Pearstop cleans and classifies the data before it moves, so the new system starts with something usable instead of the same mess in a different place."
+    },
+    "problem": {
+      "eyebrow": "The Problem",
+      "title": "The deadline arrives. The data was never actually ready.",
+      "copy1": "Most ERP migration timelines are set by the go-live date, not by how long the underlying data actually needs. Reference data - supplier names, cost codes, item and asset descriptions - carries years of inconsistency into the new system, because cleaning it was never scoped as part of the project in the first place.",
+      "copy2": "By the time anyone notices, the new system is live, and the same manual reconciliation work is happening on a more expensive platform.",
+      "bullets": [
+        "Reference data carries years of inconsistency into the new system unless someone actually cleans it first",
+        "A go-live deadline drives the migration timeline, not how long the data actually needs to be ready",
+        "Construction and manufacturing procurement data breaks general-purpose AI tools before it ever reaches the new system",
+        "Classification work started years before a migration performs far better than a rushed pre-go-live scramble"
+      ]
+    },
+    "howItWorks": {
+      "eyebrow": "How It Works",
+      "title": "Migration-ready data, not a cleanup project after go-live",
+      "step1": { "title": "Ingest from your current system", "copy": "Connect to SAP, Oracle, Microsoft Dynamics, or whatever ERP you're migrating from, in whatever format the data already exists." },
+      "step2": { "title": "Classify and standardise before it moves", "copy": "Supplier names, cost codes, and item or asset descriptions are matched, deduplicated, and classified - rules and machine learning first, an LLM for the edge cases, human review for anything still uncertain." },
+      "step3": { "title": "Deliver migration-ready data", "copy": "Structured, classified output ready to load into the new system, so the migration starts clean instead of carrying the old mess forward." }
+    },
+    "whatMakesPossible": {
+      "title": "What changes when the data is ready before go-live",
+      "b1": { "title": "A new system that starts clean", "copy": "The migration reproduces a clean, classified dataset instead of moving the same inconsistency into a new platform, at greater cost to fix afterward." },
+      "b2": { "title": "No repeat cleanup project in five years", "copy": "Reference data cleaned once, structured for the new system, instead of a fresh manual project every time the underlying mess resurfaces." },
+      "b3": { "title": "The migration timeline stops hiding behind bad data", "copy": "Data readiness stops being the hidden risk that surfaces two months before go-live." }
+    },
+    "sap": {
+      "eyebrow": "Deepest Experience With SAP",
+      "title": "Most of this work has been SAP",
+      "copy": "SAP is the most common system running procurement and asset data in hard services, construction, and manufacturing, and it's where Pearstop has the most direct migration and readiness experience. On one manufacturing client's SAP environment, Pearstop auto-classified 95% of spend without touching the underlying SAP structure. Separately, Pearstop's own view - covered in more detail below - is that construction firms get better results starting classification work years before a SAP migration deadline, not in the rushed weeks before go-live.",
+      "linkLabel1": "Read: the SAP problem hard FM already solved",
+      "linkLabel2": "Read: why SAP readiness starts years before migration"
+    },
+    "otherErps": {
+      "title": "Also supports Oracle, Microsoft Dynamics, and other major ERPs",
+      "copy": "The classification and cleansing approach is the same regardless of source or destination system. Pearstop also works with Oracle, Microsoft Dynamics, NetSuite, and other major ERP platforms - if you're migrating between two of these, or from a legacy system into one of them, get in touch about your specific setup."
+    },
+    "geoBlock": {
+      "title": "What is ERP migration data cleansing, and why does it matter?",
+      "copy": "ERP migration data cleansing is the process of correcting, standardising, and classifying procurement and asset reference data before it moves into a new ERP system, rather than during or after the migration itself. It matters because a migration project moves data exactly as it is - it does not fix inconsistent supplier names, mismatched cost codes, or unclear item descriptions, it just gives them a new, more expensive home. Manual data cleanup scoped into a migration timeline usually loses to the go-live deadline, which is why data readiness is best started well before a migration is scheduled, not squeezed into the weeks before it. Pearstop classifies and standardises reference data continuously, so by the time a migration is scheduled, the data is already migration-ready."
+    },
+    "faq": [
+      {
+        "question": "Does this work specifically with SAP, or other ERPs too?",
+        "answer": "SAP is where Pearstop has the deepest, most evidenced experience - including auto-classifying 95% of spend on one manufacturing client's SAP environment without touching the underlying structure. Pearstop also supports Oracle, Microsoft Dynamics, NetSuite, and other major ERP platforms; get in touch about your specific setup."
+      },
+      {
+        "question": "Should we wait until the migration is scheduled to start cleaning our data?",
+        "answer": "No. Data readiness started years before a migration deadline consistently performs better than a rushed cleanup in the weeks before go-live, because there's time to catch edge cases and get team feedback into the system rather than rushing a one-off pass."
+      },
+      {
+        "question": "Does this replace our migration partner or systems integrator?",
+        "answer": "No. Pearstop cleans and classifies the reference data itself, then delivers it in the format your migration partner or systems integrator expects to load into the new system - it's the data-readiness layer underneath the migration project, not a replacement for it."
+      }
+    ],
+    "cta": {
+      "title": "Migration on the calendar, data not ready yet?",
+      "lead": "Book a 7-minute discovery call. We will show you exactly where your data would break the migration today - and how long readiness actually takes.",
       "button": "Book a 7-minute discovery"
     }
   },
