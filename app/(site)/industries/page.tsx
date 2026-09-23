@@ -66,6 +66,7 @@ type IndustryDetail = {
   changes: string[];
   href: string;
   linkLabel: string;
+  quote?: { text: string; author: string; role: string };
 };
 
 const FACILITIES_MANAGEMENT = {
@@ -110,7 +111,12 @@ const details: IndustryDetail[] = [
       "Buyer review speed improved by an order of magnitude as classification becomes familiar, not a marginal gain"
     ],
     href: "/procurement-data-quality",
-    linkLabel: "See how Pearstop builds a real spend baseline"
+    linkLabel: "See how Pearstop builds a real spend baseline",
+    quote: {
+      text: "When you say you can clean up the data, would you be able to now correlate the spend into a quantity using trends and all of that?",
+      author: "Commercial decision-maker",
+      role: "Civil/structural engineering consultancy, South Africa"
+    }
   },
   {
     id: "integrated-fm",
@@ -141,7 +147,12 @@ const details: IndustryDetail[] = [
       "A realistic view of what the data can support, set from a corrected baseline, not the state it arrived in"
     ],
     href: "/data-quality",
-    linkLabel: "See how Pearstop unifies FM data"
+    linkLabel: "See how Pearstop unifies FM data",
+    quote: {
+      text: "If we want a bot that knows everything about our contract, we need to make sure the governance data in the contract is properly agreed first.",
+      author: "Data strategy lead",
+      role: "Integrated facilities management provider"
+    }
   },
   {
     id: "hard-services",
@@ -172,7 +183,12 @@ const details: IndustryDetail[] = [
       "Every match traceable back to a real part number, so your team can verify it rather than trust it"
     ],
     href: "/unspsc",
-    linkLabel: "See how Pearstop classifies hard services spend"
+    linkLabel: "See how Pearstop classifies hard services spend",
+    quote: {
+      text: "Energy services, engineering - margins are paper thin.",
+      author: "Group CIO",
+      role: "Integrated FM operator"
+    }
   },
   {
     id: "soft-services",
@@ -234,7 +250,12 @@ const details: IndustryDetail[] = [
       "A real cost baseline to defend pricing under client challenge, not a feeling"
     ],
     href: "/invoice-data-extraction",
-    linkLabel: "See how Pearstop reads the invoice first"
+    linkLabel: "See how Pearstop reads the invoice first",
+    quote: {
+      text: "I'd say we're at ground level. Most probably Sean here would beg to differ and say that we're somewhere underground.",
+      author: "Procurement lead",
+      role: "Multi-site cleaning services contractor"
+    }
   },
   {
     id: "construction",
@@ -327,7 +348,12 @@ const details: IndustryDetail[] = [
       "Assurance you can bring to a provider review, not just a file you received from one"
     ],
     href: "/asset-data-management",
-    linkLabel: "See how Pearstop gives asset owners assurance"
+    linkLabel: "See how Pearstop gives asset owners assurance",
+    quote: {
+      text: "We want to control the story, the narrative, from our side.",
+      author: "Commercial/strategy lead",
+      role: "Real estate investor, FM outsourced"
+    }
   }
 ];
 
@@ -488,6 +514,14 @@ export default function IndustriesPage() {
                       ))}
                     </ul>
                   </div>
+                  {detail.quote ? (
+                    <div className="quote-card" style={{ marginTop: "1.25rem" }}>
+                      <p style={{ fontStyle: "italic", margin: 0 }}>&ldquo;{detail.quote.text}&rdquo;</p>
+                      <p style={{ margin: "0.6rem 0 0", fontSize: "0.85rem", color: "var(--muted)" }}>
+                        {detail.quote.author}, {detail.quote.role}
+                      </p>
+                    </div>
+                  ) : null}
                 </div>
               </div>
             </div>
