@@ -1553,8 +1553,8 @@
       "p1": "SPIE Building Solutions' asset register had been fed by different maintenance systems, contractors, and manual entry over many years. The same manufacturer could appear under a dozen different spellings, and equipment types were often missing or recorded incorrectly.",
       "p2": "Pearstop applied its procurement-data classification pipeline to consolidate 9,175 supplier name variants into 1,493 canonical suppliers across 204,029 asset records — the same engine that cleans spend data, proven on a different kind of messy dataset.",
       "quote": "The confidence scoring meant our team knew where to spend their review time first, instead of starting from scratch on 200,000 rows.",
-      "quoteAuthor": "Martijn van Balkom",
-      "quoteRole": "Project Manager, SPIE Building Solutions",
+      "quoteAuthor": "Bart van Peij",
+      "quoteRole": "Head of Master Data Management, SPIE Building Solutions",
       "readFull": "Read the full case study →",
       "statsHeader": "Results at a glance",
       "stats": [
@@ -1572,7 +1572,7 @@
         },
         {
           "num": "107,081",
-          "label": "Lines enhanced with a Global Location Number"
+          "label": "Lines enhanced"
         }
       ]
     },
@@ -1581,8 +1581,8 @@
       "lead": "From procurement teams to operations directors - the impact shows up in the numbers.",
       "t1": {
         "text": "The confidence scoring meant our team knew where to spend their review time first, instead of starting from scratch on 200,000 rows.",
-        "name": "Martijn van Balkom",
-        "role": "Project Manager · SPIE Building Solutions"
+        "name": "Bart van Peij",
+        "role": "Head of Master Data Management · SPIE Building Solutions"
       },
       "t2": {
         "text": "Our site visit reports come in every format imaginable - handwritten notes, spelling mistakes, scribbles. Pearstop built a system that automatically pulls them into a clean proposal document. It saves our team hours on every job.",

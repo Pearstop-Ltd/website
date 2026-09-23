@@ -48,10 +48,10 @@ export default function CasesPage() {
               <div className="cf-quote-block">
                 <p className="cf-quote">The confidence scoring meant our team knew where to spend their review time first, instead of starting from scratch on 200,000 rows.</p>
                 <div className="cf-attr">
-                  <div className="cf-avatar" />
+                  <img src="/images/clients/bart-headshot.jpg" alt="Bart van Peij" className="cf-avatar" style={{ borderRadius: "50%", objectFit: "cover" }} />
                   <div>
-                    <strong>Martijn van Balkom</strong>
-                    <span className="cf-role">Project Manager, SPIE Building Solutions</span>
+                    <strong>Bart van Peij</strong>
+                    <span className="cf-role">Head of Master Data Management, SPIE Building Solutions</span>
                   </div>
                 </div>
               </div>
@@ -76,7 +76,7 @@ export default function CasesPage() {
                 </div>
                 <div className="cf-stat-row">
                   <div className="cf-stat-num">107,081</div>
-                  <div className="cf-stat-lbl">Lines enhanced with a Global Location Number</div>
+                  <div className="cf-stat-lbl">Lines enhanced</div>
                 </div>
                 <div className="cf-tags">
                   <span className="cf-tag">Hard Services FM</span>
@@ -101,8 +101,8 @@ export default function CasesPage() {
               <div className="cq-attr">
                 <div className="cq-avatar" />
                 <div>
-                  <span className="cq-name">Martijn van Balkom</span>
-                  <span className="cq-role">Project Manager · SPIE Building Solutions</span>
+                  <span className="cq-name">Bart van Peij</span>
+                  <span className="cq-role">Head of Master Data Management · SPIE Building Solutions</span>
                 </div>
               </div>
             </article>

@@ -65,7 +65,7 @@ export default async function CasesPage({
               <div className="cf-quote-block">
                 <p className="cf-quote">{t("featured.quote")}</p>
                 <div className="cf-attr">
-                  <div className="cf-avatar" />
+                  <img src="/images/clients/bart-headshot.jpg" alt={t("featured.quoteAuthor")} className="cf-avatar" style={{ borderRadius: "50%", objectFit: "cover" }} />
                   <div>
                     <strong>{t("featured.quoteAuthor")}</strong>
                     <span className="cf-role">{t("featured.quoteRole")}</span>

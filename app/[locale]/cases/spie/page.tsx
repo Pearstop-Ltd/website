@@ -93,8 +93,8 @@ export default function SpieCaseStudyPage() {
           <div style={{ display: "grid", gap: "1.5rem" }}>
             <QuoteBox
               quote="The confidence scoring meant our team knew where to spend their review time first, instead of starting from scratch on 200,000 rows."
-              author="Martijn van Balkom"
-              role="Project Manager, SPIE Building Solutions"
+              author="Bart van Peij"
+              role="Head of Master Data Management, SPIE Building Solutions"
             />
             <QuoteBox
               quote="Pearstop’s manufacturer matching gave us the right starting point to load data back into the ERP. This project taught us a lot about data cleaning with AI."
