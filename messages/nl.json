@@ -948,42 +948,11 @@
       "title": "Echt werk. Echte marges.",
       "lead": "Hoe technische bedrijven in FM, bouw, productie en infrastructuur Pearstop gebruiken om hun data te reinigen en marges te beschermen."
     },
-    "featured": {
-      "pill": "Uitgelichte casestudie",
-      "p1": "Een grote Nederlandse aannemer had twee toegewijde medewerkers die handmatig categorieën toewezen aan leveranciersfacturen — een traag, foutgevoelig proces dat bestedingsanalyse onbetrouwbaar maakte en inkoopbenchmarking onmogelijk.",
-      "p2": "Pearstop automatiseerde category management over 140.000+ regelitems, elimineerde dubbele leveranciersrecords en leverde een schone inkoopdataset die direct wordt gevoed in hun SAP-systeem en rapportagetools.",
-      "quote": "We hadden vroeger twee fulltimemedewerkers voor category management. Nu doet het systeem dit voor ons — wat ook margeschattingen verder in de keten heeft ontsloten. Het is betrouwbaarder tegen een fractie van de kosten.",
-      "quoteAuthor": "Hoofd Inkoop",
-      "quoteRole": "Infrastructuuraannemer, Nederland",
-      "comingSoon": "Volledige casestudie binnenkort beschikbaar.",
-      "followLinkedIn": "Volg ons LinkedIn voor updates →",
-      "statsHeader": "Resultaten in een oogopslag",
-      "stats": [
-        {
-          "num": "75%",
-          "label": "Vermindering in handmatige category managementstijd"
-        },
-        {
-          "num": "140k+",
-          "label": "Leveranciersfactuurregels gereinigd en geclassificeerd"
-        },
-        {
-          "num": "2 fte",
-          "label": "Herplaatst naar waardetoevoegende inkoopwerkzaamheden"
-        },
-        {
-          "num": "SAP",
-          "label": "Één schone dataset die direct ERP en BI voedt"
-        }
-      ]
-    },
     "testimonials": {
       "title": "Wat onze klanten zeggen",
       "lead": "Van inkoopteams tot operationeel directeuren — de impact is zichtbaar in de cijfers.",
       "t1": {
-        "text": "Onze assetdata was verspreid over spreadsheets en gevoed vanuit legacy-systemen van klanten. Niets was consistent genoeg om iets analytisch mee te doen. Pearstop consolideerde en structureerde het en plotseling hadden we iets waarop we daadwerkelijk konden voortbouwen.",
-        "name": "Klant",
-        "role": "Assetmanager · SPIE"
+        "text": "Onze assetdata was verspreid over spreadsheets en gevoed vanuit legacy-systemen van klanten. Niets was consistent genoeg om iets analytisch mee te doen. Pearstop consolideerde en structureerde het en plotseling hadden we iets waarop we daadwerkelijk konden voortbouwen."
       },
       "t2": {
         "text": "Onze locatiebezoekrepporten komen in elk voorstelbaar formaat — handgeschreven aantekeningen, spelfouten, krabbels. Pearstop bouwde een systeem dat ze automatisch in een schoon ofertedocument verwerkt. Het bespaart ons team uren bij elke opdracht.",

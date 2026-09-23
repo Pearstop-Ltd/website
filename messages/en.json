@@ -1550,30 +1550,29 @@
     },
     "featured": {
       "pill": "Featured Case Study",
-      "p1": "A major Dutch contractor had two dedicated staff manually assigning categories to supplier invoices - a slow, error-prone process that made spend analysis unreliable and procurement benchmarking impossible.",
-      "p2": "Pearstop automated category assignment across 140,000+ line items, eliminated duplicate supplier records, and delivered a clean procurement dataset that feeds directly into their SAP system and reporting tools.",
-      "quote": "We used to have two full-time staff working on category assignment. Now the system does this for us - which has unlocked margin estimations further down the line too. It is more reliable at a fraction of the cost.",
-      "quoteAuthor": "Head of Procurement",
-      "quoteRole": "Infrastructure Contractor, Netherlands",
-      "comingSoon": "Full case study coming soon.",
-      "followLinkedIn": "Follow our LinkedIn for updates →",
+      "p1": "SPIE Building Solutions' asset register had been fed by different maintenance systems, contractors, and manual entry over many years. The same manufacturer could appear under a dozen different spellings, and equipment types were often missing or recorded incorrectly.",
+      "p2": "Pearstop applied its procurement-data classification pipeline to consolidate 9,175 supplier name variants into 1,493 canonical suppliers across 204,029 asset records — the same engine that cleans spend data, proven on a different kind of messy dataset.",
+      "quote": "The confidence scoring meant our team knew where to spend their review time first, instead of starting from scratch on 200,000 rows.",
+      "quoteAuthor": "Martijn van Balkom",
+      "quoteRole": "Project Manager, SPIE Building Solutions",
+      "readFull": "Read the full case study →",
       "statsHeader": "Results at a glance",
       "stats": [
         {
-          "num": "75%",
-          "label": "Reduction in manual category assignment time"
+          "num": "204,029",
+          "label": "Asset records processed"
         },
         {
-          "num": "140k+",
-          "label": "Supplier invoice lines cleaned and classified"
+          "num": "9,175 → 1,493",
+          "label": "Supplier variants consolidated"
         },
         {
-          "num": "2 FTE",
-          "label": "Redeployed to value-adding procurement work"
+          "num": "73.1%",
+          "label": "Confirmed match rate"
         },
         {
-          "num": "SAP",
-          "label": "Single clean dataset feeding ERP and BI directly"
+          "num": "107,081",
+          "label": "Lines enhanced with a Global Location Number"
         }
       ]
     },
@@ -1582,8 +1581,8 @@
       "lead": "From procurement teams to operations directors - the impact shows up in the numbers.",
       "t1": {
         "text": "The confidence scoring meant our team knew where to spend their review time first, instead of starting from scratch on 200,000 rows.",
-        "name": "Bart van Peij",
-        "role": "Head of Master Data Management · SPIE Building Solutions"
+        "name": "Martijn van Balkom",
+        "role": "Project Manager · SPIE Building Solutions"
       },
       "t2": {
         "text": "Our site visit reports come in every format imaginable - handwritten notes, spelling mistakes, scribbles. Pearstop built a system that automatically pulls them into a clean proposal document. It saves our team hours on every job.",

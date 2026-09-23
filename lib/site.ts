@@ -212,7 +212,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "spie",
-    title: "From fragmented asset data to a reliable baseline: cleaning 200,000+ records for SPIE Building Solutions",
+    title: "Cleaning the Asset Records of SPIE Building Solutions",
     category: "Hard Services FM · Europe",
     excerpt:
       "SPIE's asset register had grown messy across systems and contractors. Pearstop applied its procurement-data classification pipeline to consolidate 9,175 supplier name variants into 1,493 canonical suppliers across 204,029 records — the same engine that cleans spend data, proven on a different kind of messy dataset.",

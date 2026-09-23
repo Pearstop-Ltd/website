@@ -32,8 +32,8 @@ export default async function CasesPage({
   const prefix = locale === "en" ? "" : `/${locale}`;
   const t = await getTranslations({ locale, namespace: "Cases" });
 
-  const featured = caseStudies[0];
-  const others = caseStudies.slice(1);
+  const featured = caseStudies.find((c) => c.slug === "spie") ?? caseStudies[0];
+  const others = caseStudies.filter((c) => c.slug !== featured.slug);
 
   return (
     <>
@@ -55,6 +55,9 @@ export default async function CasesPage({
           </div>
           <div className="row" style={{ alignItems: "flex-start", gap: "2.5rem", flexWrap: "wrap" }}>
             <div className="col-md-6" id={featured.slug}>
+              <div style={{ background: "var(--navy)", borderRadius: 10, padding: "0.85rem 1.25rem", display: "inline-block", marginBottom: "1rem" }}>
+                <img src={siteConfig.assets.clients.spie} alt="SPIE" style={{ height: 32, width: "auto", display: "block" }} />
+              </div>
               <div className="cf-industry">{featured.category}</div>
               <h2>{featured.title}</h2>
               <p className="cf-body">{t("featured.p1")}</p>
@@ -70,10 +73,7 @@ export default async function CasesPage({
                 </div>
               </div>
               <p className="light-copy">
-                {t("featured.comingSoon")}{" "}
-                <a href={siteConfig.socials.linkedin} target="_blank" rel="noopener noreferrer">
-                  {t("featured.followLinkedIn")}
-                </a>
+                <Link href={`${prefix}/cases/${featured.slug}`}>{t("featured.readFull")}</Link>
               </p>
             </div>
             <div className="col-md-5">
@@ -86,9 +86,9 @@ export default async function CasesPage({
                   </div>
                 ))}
                 <div className="cf-tags">
-                  <span className="cf-tag">Infrastructure</span>
-                  <span className="cf-tag">UNSPSC</span>
-                  <span className="cf-tag">Procurement</span>
+                  <span className="cf-tag">Hard Services FM</span>
+                  <span className="cf-tag">Data Quality</span>
+                  <span className="cf-tag">Supplier Matching</span>
                 </div>
               </div>
             </div>
@@ -143,42 +143,44 @@ export default async function CasesPage({
           <div className="article-grid">
             {others.map((story) => (
               <article key={story.slug} className="cg-card" id={story.slug}>
-                <div className={`cg-img ${story.tone}`} style={{ display: "flex", alignItems: "center", justifyContent: "center", color: "rgba(255,255,255,0.5)", fontSize: "2rem", background: story.tone === "from-blue" ? "linear-gradient(135deg,#1F2A68,#353FFF)" : story.tone === "from-slate" ? "linear-gradient(135deg,#0f172a,#1e3a5f)" : story.tone === "from-green" ? "linear-gradient(135deg,#1a4731,#2d7a4f)" : story.tone === "from-amber" ? "linear-gradient(135deg,#7c2d12,#c2410c)" : story.tone === "from-indigo" ? "linear-gradient(135deg,#312e81,#5847a0)" : "linear-gradient(135deg,#1e3a5f,#2563eb)" }}>
-                  {story.image ? (
-                    story.imageFit === "contain" ? (
-                      <img src={story.image} alt={`${story.title} logo`} style={{ maxHeight: 40, maxWidth: 160, display: "block" }} />
+                <Link className="cg-card-link" href={`${prefix}/cases/${story.slug}`}>
+                  <div className={`cg-img ${story.tone}`} style={{ display: "flex", alignItems: "center", justifyContent: "center", color: "rgba(255,255,255,0.5)", fontSize: "2rem", background: story.tone === "from-blue" ? "linear-gradient(135deg,#1F2A68,#353FFF)" : story.tone === "from-slate" ? "linear-gradient(135deg,#0f172a,#1e3a5f)" : story.tone === "from-green" ? "linear-gradient(135deg,#1a4731,#2d7a4f)" : story.tone === "from-amber" ? "linear-gradient(135deg,#7c2d12,#c2410c)" : story.tone === "from-indigo" ? "linear-gradient(135deg,#312e81,#5847a0)" : "linear-gradient(135deg,#1e3a5f,#2563eb)" }}>
+                    {story.image ? (
+                      story.imageFit === "contain" ? (
+                        <img src={story.image} alt={`${story.title} logo`} style={{ maxHeight: 56, maxWidth: 200, display: "block" }} />
+                      ) : (
+                        <img src={story.image} alt="" aria-hidden="true" style={{ width: 72, height: 72 }} />
+                      )
                     ) : (
-                      <img src={story.image} alt="" aria-hidden="true" style={{ width: 72, height: 72 }} />
-                    )
-                  ) : (
-                    "✦"
-                  )}
-                </div>
-                <div className="cg-body">
-                  <div className="cg-ind">{story.category}</div>
-                  <h3>{story.title}</h3>
-                  <p className="cg-excerpt">{story.excerpt}</p>
-                  <div className="cg-results">
-                    <div>
-                      <span className="cg-result-num">{story.statPrimary}</span>
-                      <span className="cg-result-lbl">{story.statPrimaryLabel}</span>
-                    </div>
-                    <div>
-                      <span className="cg-result-num">{story.statSecondary}</span>
-                      <span className="cg-result-lbl">{story.statSecondaryLabel}</span>
-                    </div>
+                      "✦"
+                    )}
                   </div>
-                  <div className="cg-tags">
-                    {story.tags.map((tag) => (
-                      <span key={tag} className="cg-tag">
-                        {tag}
-                      </span>
-                    ))}
+                  <div className="cg-body">
+                    <div className="cg-ind">{story.category}</div>
+                    <h3>{story.title}</h3>
+                    <p className="cg-excerpt">{story.excerpt}</p>
+                    <div className="cg-results">
+                      <div>
+                        <span className="cg-result-num">{story.statPrimary}</span>
+                        <span className="cg-result-lbl">{story.statPrimaryLabel}</span>
+                      </div>
+                      <div>
+                        <span className="cg-result-num">{story.statSecondary}</span>
+                        <span className="cg-result-lbl">{story.statSecondaryLabel}</span>
+                      </div>
+                    </div>
+                    <div className="cg-tags">
+                      {story.tags.map((tag) => (
+                        <span key={tag} className="cg-tag">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <span className="cg-link">
+                      {story.slug === "strukton" ? t("moreStories.readComingSoon") : t("moreStories.readCase")}
+                    </span>
                   </div>
-                  <Link className="cg-link" href={`${prefix}/cases/${story.slug}`}>
-                    {story.slug === "strukton" ? t("moreStories.readComingSoon") : t("moreStories.readCase")}
-                  </Link>
-                </div>
+                </Link>
               </article>
             ))}
           </div>

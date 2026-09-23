@@ -17,14 +17,20 @@ export default function SpieCaseStudyPage() {
     <>
       <PageHero
         eyebrow="Case Study"
-        title="From fragmented asset data to a reliable baseline: cleaning 200,000+ records for SPIE Building Solutions"
-        lead="SPIE Building Solutions manages a large portfolio of building assets across many sites. Its asset register had been fed by different maintenance systems, contractors, and manual entry over many years. The same manufacturer could appear under a dozen different spellings, and equipment types were often missing or recorded incorrectly."
+        title="Cleaning the Asset Records of SPIE Building Solutions"
+        lead="How Pearstop cleaned and standardised 200,000+ asset records for SPIE Building Solutions."
       />
 
       <section>
         <div className="container">
           <div className="row">
             <div className="col-md-8 col-md-offset-2">
+              <p className="light-copy" style={{ fontSize: "1.1rem", textAlign: "center" }}>
+                SPIE Building Solutions manages a large portfolio of building assets across many sites. Its asset
+                register had been fed by different maintenance systems, contractors, and manual entry over many
+                years. The same manufacturer could appear under a dozen different spellings, and equipment types
+                were often missing or recorded incorrectly.
+              </p>
               <p className="light-copy" style={{ fontSize: "1.1rem", textAlign: "center" }}>
                 Pearstop’s core product classifies procurement data. The same underlying problem shows up just as
                 often in a physical asset register: messy supplier and manufacturer names that need matching,
@@ -88,8 +94,8 @@ export default function SpieCaseStudyPage() {
           <div style={{ display: "grid", gap: "1.5rem" }}>
             <QuoteBox
               quote="The confidence scoring meant our team knew where to spend their review time first, instead of starting from scratch on 200,000 rows."
-              author="Bart van Peij"
-              role="Head of Master Data Management, SPIE Building Solutions"
+              author="Martijn van Balkom"
+              role="Project Manager, SPIE Building Solutions"
             />
             <QuoteBox
               quote="Pearstop’s manufacturer matching gave us the right starting point to load data back into the ERP. This project taught us a lot about data cleaning with AI."
