@@ -236,19 +236,32 @@ export const caseStudies: CaseStudy[] = [
     imageFit: "contain"
   },
   {
-    slug: "manufacturing-spend",
-    title: "Uncovering procurement inefficiencies hidden in unclassified spend",
-    category: "Manufacturing · Europe",
+    slug: "construction-spend-benchmarking",
+    title: "Your estimating problem is not an estimating problem",
+    category: "Construction & Infrastructure · Anonymized use case",
     excerpt:
-      "A mid-sized manufacturer had years of procurement data in SAP with no consistent categorisation. Pearstop cleaned and classified the full spend dataset, surfacing immediately actionable inefficiencies.",
+      "One aluminium windowsill, bought on ten projects, described ten different ways - a 45% price spread, invisible until classified. An illustrative use case based on a real pattern in construction and infrastructure procurement.",
     tags: ["Procurement", "UNSPSC"],
-    statPrimary: "SAP",
-    statPrimaryLabel: "Direct integration",
-    statSecondary: "95%",
-    statSecondaryLabel: "Auto-classified",
+    statPrimary: "45%",
+    statPrimaryLabel: "Price spread, one item",
+    statSecondary: "8-15%",
+    statSecondaryLabel: "Typical savings",
     tone: "from-amber",
     image: "/images/cases/manufacturing-machine.svg",
     imageFit: "cover"
+  },
+  {
+    slug: "cleaning-consumables-consolidation",
+    title: "Nobody chose 30 toilet paper suppliers. They just couldn't see them.",
+    category: "Cleaning & Soft FM · Anonymized use case",
+    excerpt:
+      "30 different suppliers invoiced one cleaning business for toilet paper in twelve months. Classified, the pattern - and the three suppliers worth keeping - was visible in days. An illustrative use case based on a real pattern in soft FM procurement.",
+    tags: ["Procurement", "Data Quality"],
+    statPrimary: "68%",
+    statPrimaryLabel: "Price spread, same product",
+    statSecondary: "10-20%",
+    statSecondaryLabel: "Typical savings",
+    tone: "from-slate"
   },
   {
     slug: "lemtech",
@@ -267,15 +280,15 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "mro-confidential",
-    title: "MRO (Confidential) — Part number enrichment to go direct to manufacturer",
-    category: "Manufacturing / MRO",
+    title: "Going direct to the manufacturer on MRO parts",
+    category: "Manufacturing / MRO · Anonymized use case",
     excerpt:
-      "Part number enrichment to go direct to manufacturer. Full case study confidential.",
+      "Buying MRO parts direct from the manufacturer usually means researching the real part number by hand, typically outsourced to an offshore research bureau. AI can do that research faster, but general models hallucinate part numbers and don't check their own work - which is exactly where a specialized, checked AI pipeline matters.",
     tags: ["Procurement", "Data Quality"],
     statPrimary: "Direct",
     statPrimaryLabel: "To manufacturer",
-    statSecondary: "MRO",
-    statSecondaryLabel: "Part enrichment",
+    statSecondary: "Checked",
+    statSecondaryLabel: "Not guessed",
     tone: "from-cobalt",
     image: "/images/cases/bottling-line.svg",
     imageFit: "cover"
@@ -347,47 +360,23 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
     ctaLabel: "View more cases",
     ctaHref: "/cases"
   },
-  "manufacturing-spend": {
-    slug: "manufacturing-spend",
-    eyebrow: "Manufacturing · Europe",
-    title: "Uncovering procurement inefficiencies hidden in unclassified spend",
-    lead:
-      "A mid-sized manufacturer had years of procurement data in SAP with no consistent categorisation. Without spend visibility, identifying supplier consolidation opportunities or benchmarking costs across sites was impossible. This is a composite, anonymized example built from a pattern Pearstop sees repeatedly across industrial and manufacturing clients, not a single named engagement.",
-    challenge:
-      "Years of purchase orders sat in SAP with no consistent category structure, spread across sites that had never been reconciled against each other. Leadership could see total spend, but not which categories it broke down into, which suppliers were being paid for functionally the same thing under different names, or where a framework agreement had quietly stopped reflecting what was actually being bought.",
-    solution:
-      "Pearstop classified the full historical spend dataset directly from SAP, consolidating supplier name variants and building a category-level view leadership could actually query, instead of a one-off spreadsheet exercise that goes stale the next reporting cycle.",
-    wins: [
-      { value: "Full", label: "spend baseline" },
-      { value: "SAP", label: "direct integration" },
-      { value: "95%", label: "auto-classified" }
-    ],
-    quote:
-      "You could run Excel-type analysis, which we can all do, and it's great, but if we don't use that information to actually drive something, that's when it becomes a bit of a waste.",
-    author: "Commercial lead",
-    role: "Industrial operations & real estate",
-    geo:
-      "This is a strong example of procurement data quality work in manufacturing, where SAP data often needs a lot of help before it becomes usable - the same underlying problem Pearstop hears across industrial, real estate, and integrated FM operators: the data to act on is already sitting there, unused, because nobody has structured it enough to query.",
-    ctaLabel: "Explore procurement",
-    ctaHref: "/procurement-data-quality"
-  },
   "mro-confidential": {
     slug: "mro-confidential",
-    eyebrow: "Manufacturing / MRO",
-    title: "Part number enrichment to go direct to manufacturer",
+    eyebrow: "Manufacturing / MRO · Anonymized use case",
+    title: "Going direct to the manufacturer on MRO parts",
     lead:
-      "Details of this engagement are confidential, so this page describes the shape of the problem and the approach rather than naming the client. It reflects a pattern Pearstop sees repeatedly in MRO and component sourcing.",
+      "This is an anonymized use case, not a named client story - it reflects a pattern Pearstop sees repeatedly in MRO and component sourcing, built to show clearly what the product actually does.",
     challenge:
-      "A component's purchase order often carries only the code assigned by whichever intermediary supplied it - not the code the manufacturer actually uses. The intermediary has no reason to share that mapping, since it's the reason the buyer keeps paying their markup instead of sourcing direct. When a part record is missing or unclear, resolving it usually means a manual round trip: someone in procurement goes back to whoever originally requisitioned the part and asks for a clearer description, then tries again.",
+      "Buying MRO parts direct from the manufacturer, instead of through a reseller, usually starts with research: finding the real manufacturer part number behind whatever code a reseller or an old purchase order used. That research is typically outsourced to offshore research bureaus, commonly in India, working by hand. It works, but it is slow.",
     solution:
-      "Pearstop matches part records against manufacturer reference data to recover the real manufacturer part number and code, flagging anything it can't resolve with confidence for review rather than guessing - the same guardrail that matters on any supplier-matching engagement with a defined reference list to match against.",
+      "AI can do this research faster. It can also get it wrong in a specific way: general-purpose AI models hallucinate part numbers and don't check their own work. That is exactly where a specialized provider matters - one with real experience running AI projects that verify what they produce rather than guessing. Pearstop matches part records against manufacturer reference data, flags anything it can't confirm with confidence for human review, and replaces a slow offshore research cycle with a fast, checked one.",
     wins: [
       { value: "Direct", label: "to manufacturer" },
-      { value: "MRO", label: "part enrichment" },
-      { value: "Confidential", label: "full case study" }
+      { value: "Checked", label: "not guessed" },
+      { value: "Fast", label: "vs. offshore research" }
     ],
     geo:
-      "This is the same pattern behind Pearstop's supplier and manufacturer matching work generally: a buyer overpays an intermediary by default until the real manufacturer reference exists to buy direct against instead.",
+      "This is the same pattern behind Pearstop's supplier and manufacturer matching work generally: a buyer overpays a reseller, or waits on slow offshore research, until a real, checked manufacturer reference exists to buy direct against instead.",
     ctaLabel: "Explore procurement",
     ctaHref: "/procurement-data-quality"
   }
