@@ -8,8 +8,8 @@ import { BlogNewsletterWidget } from "@/components/blog-newsletter-widget";
 import { CalendlyButton } from "@/components/calendly-button";
 import { blogPosts, type BlogPost } from "@/lib/blog-posts";
 
-export function ArticleSchema({ title, description, slug, publishedAt, authorName }: {
-  title: string; description: string; slug: string; publishedAt: string; authorName: string;
+export function ArticleSchema({ title, description, slug, publishedAt, updatedAt, authorName }: {
+  title: string; description: string; slug: string; publishedAt: string; updatedAt?: string; authorName: string;
 }) {
   const schema = {
     "@context": "https://schema.org",
@@ -17,7 +17,7 @@ export function ArticleSchema({ title, description, slug, publishedAt, authorNam
     headline: title,
     description,
     datePublished: publishedAt,
-    dateModified: publishedAt,
+    dateModified: updatedAt ?? publishedAt,
     url: `${siteConfig.url}/blog/${slug}`,
     author: {
       "@type": "Person",

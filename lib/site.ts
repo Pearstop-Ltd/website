@@ -92,9 +92,16 @@ export const solutionLinks: NavLink[] = [
       { label: "UNSPSC Germany", href: "/unspsc-classification-germany" }
     ]
   },
-  { label: "Procurement data quality", href: "/procurement-data-quality", description: "A real spend baseline to negotiate, tender, and check framework compliance from." },
   {
-    label: "Data Quality",
+    label: "Spend Visibility",
+    href: "/procurement-data-quality",
+    description: "A real spend baseline to negotiate, tender, and check framework compliance from.",
+    children: [
+      { label: "Spend Cube & Dashboards", href: "/spend-cube" }
+    ]
+  },
+  {
+    label: "Data Readiness",
     href: "/data-quality",
     description: "The clean, structured data an ERP migration, Microsoft Fabric, or an AI initiative all depend on.",
     children: [
@@ -102,7 +109,8 @@ export const solutionLinks: NavLink[] = [
       { label: "AI Readiness", href: "/ai-readiness" }
     ]
   },
-  { label: "Asset Data Management", href: "/asset-data-management", description: "An independent, classified view of spend and maintenance data you don't generate yourself." }
+  { label: "Asset Data Management", href: "/asset-data-management", description: "An independent, classified view of spend and maintenance data you don't generate yourself." },
+  { label: "For Procurement Consultancies", href: "/procurement-consultancies", description: "White-labelled spend classification under your own taxonomy, delivered as your engagement's data layer." }
 ];
 
 export const mainNavLinks: NavLink[] = [
@@ -125,9 +133,11 @@ export const footerCompanyLinks: NavLink[] = [
 
 export const footerSolutionLinks: NavLink[] = [
   { label: "Invoice & Document Extraction", href: "/invoice-data-extraction" },
-  { label: "Data Quality", href: "/data-quality" },
-  { label: "Procurement", href: "/procurement-data-quality" },
+  { label: "Data Readiness", href: "/data-quality" },
+  { label: "Spend Visibility", href: "/procurement-data-quality" },
+  { label: "Spend Cube & Dashboards", href: "/spend-cube" },
   { label: "Asset Data Management", href: "/asset-data-management" },
+  { label: "For Procurement Consultancies", href: "/procurement-consultancies" },
   { label: "UNSPSC Classification", href: "/unspsc" },
   { label: "AI UNSPSC Classification Guide", href: "/unspsc-ai-classification-guide" },
   { label: "Free UNSPSC Lookup", href: "/unspsc-code-lookup" },
@@ -177,20 +187,22 @@ export type CaseStudy = {
   statSecondary: string;
   statSecondaryLabel: string;
   tone: string;
+  image?: string;
+  imageFit?: "contain" | "cover";
 };
 
 export const caseStudies: CaseStudy[] = [
   {
     slug: "strukton",
-    title: "Strukton (project in progress) — Classifying 35,000 procurement lines a month into UNSPSC",
+    title: "Classifying 35,000 to 50,000 procurement lines a month into UNSPSC, from zero classification history",
     category: "Infrastructure · Netherlands",
     excerpt:
-      "We are currently working with a major Dutch infrastructure contractor on automated UNSPSC classification at scale. Case study coming soon.",
+      "Strukton had identified a real cost-saving opportunity in procurement but needed higher granularity to act on it. Pearstop built an AI classification system with their procurement team: automated UNSPSC classification to all four hierarchy levels, a human-in-the-loop review step, and a weekly feedback loop with their buyers.",
     tags: ["Procurement", "UNSPSC"],
-    statPrimary: "35k",
+    statPrimary: "35k–50k",
     statPrimaryLabel: "Lines / month",
-    statSecondary: "SAP",
-    statSecondaryLabel: "Source system",
+    statSecondary: "4",
+    statSecondaryLabel: "UNSPSC levels",
     tone: "from-blue"
   },
   {
@@ -204,38 +216,57 @@ export const caseStudies: CaseStudy[] = [
     statPrimaryLabel: "Lines / decision",
     statSecondary: "1 wk",
     statSecondaryLabel: "Classification time",
-    tone: "from-slate"
+    tone: "from-slate",
+    image: siteConfig.assets.clients.faro,
+    imageFit: "contain"
   },
   {
     slug: "spie",
-    title: "Cleaning 100,000 assets as the foundation for smarter maintenance",
+    title: "Cleaning the Asset Records of SPIE Building Solutions",
     category: "Hard Services FM · Europe",
     excerpt:
-      "SPIE's asset database had grown organically across sites and systems. Pearstop cleaned and structured the full register, creating a reliable foundation for maintenance planning and lifecycle analysis.",
-    tags: ["Asset Management", "Data Quality"],
-    statPrimary: "100k+",
-    statPrimaryLabel: "Assets cleaned",
-    statSecondary: "95%",
-    statSecondaryLabel: "Structured",
-    tone: "from-green"
+      "SPIE's asset register had grown messy across systems and contractors. Pearstop applied its procurement-data classification pipeline to consolidate 9,175 supplier name variants into 1,493 canonical suppliers across 204,029 records — the same engine that cleans spend data, proven on a different kind of messy dataset.",
+    tags: ["Data Quality", "Supplier Matching"],
+    statPrimary: "204k",
+    statPrimaryLabel: "Records cleaned",
+    statSecondary: "73.1%",
+    statSecondaryLabel: "Confirmed match rate",
+    tone: "from-green",
+    image: siteConfig.assets.clients.spie,
+    imageFit: "contain"
   },
   {
-    slug: "manufacturing-spend",
-    title: "Uncovering procurement inefficiencies hidden in unclassified spend",
-    category: "Manufacturing · Europe",
+    slug: "construction-spend-benchmarking",
+    title: "Your estimating problem is not an estimating problem",
+    category: "Construction & Infrastructure · Anonymized use case",
     excerpt:
-      "A mid-sized manufacturer had years of procurement data in SAP with no consistent categorisation. Pearstop cleaned and classified the full spend dataset, surfacing immediately actionable inefficiencies.",
+      "One aluminium windowsill, bought on ten projects, described ten different ways - a 45% price spread, invisible until classified. An illustrative use case based on a real pattern in construction and infrastructure procurement.",
     tags: ["Procurement", "UNSPSC"],
-    statPrimary: "SAP",
-    statPrimaryLabel: "Direct integration",
-    statSecondary: "95%",
-    statSecondaryLabel: "Auto-classified",
-    tone: "from-amber"
+    statPrimary: "45%",
+    statPrimaryLabel: "Price spread, one item",
+    statSecondary: "8-15%",
+    statSecondaryLabel: "Typical savings",
+    tone: "from-amber",
+    image: "/images/cases/manufacturing-machine.svg",
+    imageFit: "cover"
+  },
+  {
+    slug: "cleaning-consumables-consolidation",
+    title: "Nobody chose 30 toilet paper suppliers. They just couldn't see them.",
+    category: "Cleaning & Soft FM · Anonymized use case",
+    excerpt:
+      "30 different suppliers invoiced one cleaning business for toilet paper in twelve months. Classified, the pattern - and the three suppliers worth keeping - was visible in days. An illustrative use case based on a real pattern in soft FM procurement.",
+    tags: ["Procurement", "Data Quality"],
+    statPrimary: "68%",
+    statPrimaryLabel: "Price spread, same product",
+    statSecondary: "10-20%",
+    statSecondaryLabel: "Typical savings",
+    tone: "from-slate"
   },
   {
     slug: "lemtech",
     title: "Turning site visit reports into clean proposal documents, automatically",
-    category: "Manufacturing · Air Filtration",
+    category: "Manufacturing",
     excerpt:
       "Site visit reports arrived in every format imaginable. Pearstop built a system that reads incoming reports and automatically outputs a clean, accurate proposal document.",
     tags: ["Asset Management", "Data Quality"],
@@ -243,20 +274,24 @@ export const caseStudies: CaseStudy[] = [
     statPrimaryLabel: "Saved per proposal",
     statSecondary: "~0",
     statSecondaryLabel: "Manual re-entry",
-    tone: "from-indigo"
+    tone: "from-indigo",
+    image: "/images/cases/windmills.svg",
+    imageFit: "cover"
   },
   {
     slug: "mro-confidential",
-    title: "MRO (Confidential) — Part number enrichment to go direct to manufacturer",
-    category: "Manufacturing / MRO",
+    title: "Going direct to the manufacturer on MRO parts",
+    category: "Manufacturing / MRO · Anonymized use case",
     excerpt:
-      "Part number enrichment to go direct to manufacturer. Full case study confidential.",
+      "Buying MRO parts direct from the manufacturer usually means researching the real part number by hand, typically outsourced to an offshore research bureau. AI can do that research faster, but general models hallucinate part numbers and don't check their own work - which is exactly where a specialized, checked AI pipeline matters.",
     tags: ["Procurement", "Data Quality"],
     statPrimary: "Direct",
     statPrimaryLabel: "To manufacturer",
-    statSecondary: "MRO",
-    statSecondaryLabel: "Part enrichment",
-    tone: "from-cobalt"
+    statSecondary: "Checked",
+    statSecondaryLabel: "Not guessed",
+    tone: "from-cobalt",
+    image: "/images/cases/bottling-line.svg",
+    imageFit: "cover"
   }
 ];
 
@@ -268,66 +303,18 @@ export type CaseStudyDetail = {
   challenge: string;
   solution: string;
   wins: { value: string; label: string }[];
-  quote: string;
-  author: string;
-  role: string;
+  quote?: string;
+  author?: string;
+  role?: string;
   geo: string;
   ctaLabel: string;
   ctaHref: string;
 };
 
 export const caseStudyDetails: Record<string, CaseStudyDetail> = {
-  "strukton": {
-    slug: "strukton",
-    eyebrow: "Infrastructure · Netherlands",
-    title: "Classifying 35,000 procurement lines a month into UNSPSC",
-    lead:
-      "We are currently working with Strukton, a major Dutch infrastructure contractor, on automated UNSPSC classification at scale.",
-    challenge:
-      "The team needed a reliable way to turn large volumes of procurement lines into structured categories without adding headcount or creating another manual burden.",
-    solution:
-      "Pearstop provides automated classification and review so the team can keep their focus on category management and supplier decisions while the system handles the repetitive work.",
-    wins: [
-      { value: "35k", label: "lines a month" },
-      { value: "SAP", label: "system of record" },
-      { value: "Coming soon", label: "full case study" }
-    ],
-    quote:
-      "We are working through the classification problem at scale so procurement can focus on the decisions that matter.",
-    author: "Pearstop client",
-    role: "Infrastructure contractor",
-    geo:
-      "This work sits squarely in the procurement data quality and UNSPSC lane - exactly where hard services companies feel the pain first.",
-    ctaLabel: "Follow our LinkedIn for updates",
-    ctaHref: siteConfig.socials.linkedin
-  },
-  "spie": {
-    slug: "spie",
-    eyebrow: "Hard Services FM · Europe",
-    title: "Cleaning 100,000 assets as the foundation for smarter maintenance",
-    lead:
-      "SPIE's asset database had grown organically across sites and systems. Pearstop cleaned and structured the full register, creating a reliable foundation for maintenance planning and lifecycle analysis.",
-    challenge:
-      "Asset records were spread across spreadsheets and legacy systems, with spelling errors, field mismatches, and duplicate records making analysis unreliable.",
-    solution:
-      "Pearstop consolidated the asset data, standardised the structure, and created a clean register that could support maintenance decisions and analysis.",
-    wins: [
-      { value: "100k+", label: "assets cleaned" },
-      { value: "Structured", label: "analysis-ready" },
-      { value: "FM", label: "use case" }
-    ],
-    quote:
-      "Our asset lists worked for mechanics on-site, but did not allow us to plan smart maintenance or manage bid risk in a data-driven way.",
-    author: "Asset Manager",
-    role: "Facilities Management",
-    geo:
-      "This is the same asset data problem that shows up across hard services, FM, and infrastructure teams whenever records were built for operations rather than analysis.",
-    ctaLabel: "Book a 7-minute discovery",
-    ctaHref: "/contact"
-  },
   "lemtech": {
     slug: "lemtech",
-    eyebrow: "Manufacturing · Air Filtration",
+    eyebrow: "Manufacturing",
     title: "Turning site visit reports into clean proposal documents, automatically",
     lead:
       "Site visit reports arrived in every format imaginable - handwritten notes, spelling mistakes, varying layouts. Pearstop built a system that reads incoming reports and automatically outputs a clean, accurate proposal document.",
@@ -343,7 +330,7 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
     quote:
       "Pearstop built a system that automatically pulls the right items from our visiting reports into a clean proposal document. It saves our team a lot of time by eliminating the repetitive tasks of combining the correct items.",
     author: "Vince Out",
-    role: "Commercial Manager · Lemtech | Air Filtration Units",
+    role: "Commercial Manager · Lemtech",
     geo:
       "This is a manufacturing example of the same core problem: operational data is messy, inconsistent, and expensive to handle by hand.",
     ctaLabel: "Explore AI readiness",
@@ -373,27 +360,23 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
     ctaLabel: "View more cases",
     ctaHref: "/cases"
   },
-  "manufacturing-spend": {
-    slug: "manufacturing-spend",
-    eyebrow: "Manufacturing · Europe",
-    title: "Uncovering procurement inefficiencies hidden in unclassified spend",
+  "mro-confidential": {
+    slug: "mro-confidential",
+    eyebrow: "Manufacturing / MRO · Anonymized use case",
+    title: "Going direct to the manufacturer on MRO parts",
     lead:
-      "A mid-sized manufacturer had years of procurement data in SAP with no consistent categorisation. Without spend visibility, identifying supplier consolidation opportunities or benchmarking costs across sites was impossible.",
+      "This is an anonymized use case, not a named client story - it reflects a pattern Pearstop sees repeatedly in MRO and component sourcing, built to show clearly what the product actually does.",
     challenge:
-      "The procurement team needed to turn messy spend into a category-level view that leadership could actually use.",
+      "Buying MRO parts direct from the manufacturer, instead of through a reseller, usually starts with research: finding the real manufacturer part number behind whatever code a reseller or an old purchase order used. That research is typically outsourced to offshore research bureaus, commonly in India, working by hand. It works, but it is slow.",
     solution:
-      "Pearstop cleaned and classified the full spend dataset, surfacing inefficiencies that were immediately actionable for the procurement team.",
+      "AI can do this research faster. It can also get it wrong in a specific way: general-purpose AI models hallucinate part numbers and don't check their own work. That is exactly where a specialized provider matters - one with real experience running AI projects that verify what they produce rather than guessing. Pearstop matches part records against manufacturer reference data, flags anything it can't confirm with confidence for human review, and replaces a slow offshore research cycle with a fast, checked one.",
     wins: [
-      { value: "Full", label: "spend baseline" },
-      { value: "SAP", label: "direct integration" },
-      { value: "95%", label: "auto-classified" }
+      { value: "Direct", label: "to manufacturer" },
+      { value: "Checked", label: "not guessed" },
+      { value: "Fast", label: "vs. offshore research" }
     ],
-    quote:
-      "The team needed a clean baseline before it could negotiate better contracts and consolidate suppliers.",
-    author: "Procurement Lead",
-    role: "Manufacturing client",
     geo:
-      "This is a strong example of procurement data quality work in manufacturing, where SAP data often needs a lot of help before it becomes usable.",
+      "This is the same pattern behind Pearstop's supplier and manufacturer matching work generally: a buyer overpays a reseller, or waits on slow offshore research, until a real, checked manufacturer reference exists to buy direct against instead.",
     ctaLabel: "Explore procurement",
     ctaHref: "/procurement-data-quality"
   }

@@ -138,6 +138,7 @@ export default async function BlogPostPage({
         description={description}
         slug={post.slug}
         publishedAt={post.publishedAt}
+        updatedAt={post.updatedAt}
         authorName={AUTHORS[author].name}
       />
       {faqItems && <FaqSchema items={faqItems} slug={post.slug} />}

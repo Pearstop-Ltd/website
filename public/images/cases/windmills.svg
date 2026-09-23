@@ -1,0 +1,17 @@
+<svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration of wind turbines in a field">
+  <g stroke="rgba(255,255,255,0.85)" stroke-width="2.2" stroke-linecap="round">
+    <line x1="26" y1="70" x2="26" y2="26"/>
+    <path d="M26 26L38 16"/>
+    <path d="M26 26L16 34"/>
+    <path d="M26 26L32 40"/>
+  </g>
+  <circle cx="26" cy="26" r="2.4" fill="rgba(255,255,255,0.9)"/>
+  <g stroke="rgba(255,255,255,0.55)" stroke-width="1.8" stroke-linecap="round">
+    <line x1="58" y1="70" x2="58" y2="38"/>
+    <path d="M58 38L67 30"/>
+    <path d="M58 38L50 44"/>
+    <path d="M58 38L62 49"/>
+  </g>
+  <circle cx="58" cy="38" r="1.8" fill="rgba(255,255,255,0.7)"/>
+  <line x1="8" y1="70" x2="80" y2="70" stroke="rgba(255,255,255,0.4)" stroke-width="2" stroke-linecap="round"/>
+</svg>

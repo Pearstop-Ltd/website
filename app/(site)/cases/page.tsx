@@ -14,8 +14,8 @@ export const metadata: Metadata = {
 };
 
 export default function CasesPage() {
-  const featured = caseStudies[0];
-  const others = caseStudies.slice(1);
+  const featured = caseStudies.find((c) => c.slug === "spie") ?? caseStudies[0];
+  const others = caseStudies.filter((c) => c.slug !== featured.slug);
 
   return (
     <>
@@ -34,51 +34,54 @@ export default function CasesPage() {
           </div>
           <div className="row" style={{ alignItems: "flex-start", gap: "2.5rem", flexWrap: "wrap" }}>
             <div className="col-md-6" id={featured.slug}>
+              <div style={{ background: "var(--navy)", borderRadius: 10, padding: "0.85rem 1.25rem", display: "inline-block", marginBottom: "1rem" }}>
+                <img src={siteConfig.assets.clients.spie} alt="SPIE" style={{ height: 32, width: "auto", display: "block" }} />
+              </div>
               <div className="cf-industry">{featured.category}</div>
               <h2>{featured.title}</h2>
               <p className="cf-body">
-                A major Dutch contractor had two dedicated staff manually assigning categories to supplier invoices - a slow, error-prone process that made spend analysis unreliable and procurement benchmarking impossible.
+                SPIE Building Solutions&apos; asset register had been fed by different maintenance systems, contractors, and manual entry over many years. The same manufacturer could appear under a dozen different spellings, and equipment types were often missing or recorded incorrectly.
               </p>
               <p className="cf-body">
-                Pearstop automated category assignment across 140,000+ line items, eliminated duplicate supplier records, and delivered a clean procurement dataset that feeds directly into their SAP system and reporting tools.
+                Pearstop applied its procurement-data classification pipeline to consolidate 9,175 supplier name variants into 1,493 canonical suppliers across 204,029 asset records — the same engine that cleans spend data, proven on a different kind of messy dataset.
               </p>
               <div className="cf-quote-block">
-                <p className="cf-quote">We used to have two full-time staff working on category assignment. Now the system does this for us - which has unlocked margin estimations further down the line too. It is more reliable at a fraction of the cost.</p>
+                <p className="cf-quote">The confidence scoring meant our team knew where to spend their review time first, instead of starting from scratch on 200,000 rows.</p>
                 <div className="cf-attr">
-                  <div className="cf-avatar" />
+                  <img src="/images/clients/bart-headshot.jpg" alt="Bart van Peij" className="cf-avatar" style={{ borderRadius: "50%", objectFit: "cover" }} />
                   <div>
-                    <strong>Head of Procurement</strong>
-                    <span className="cf-role">Infrastructure Contractor, Netherlands</span>
+                    <strong>Bart van Peij</strong>
+                    <span className="cf-role">Head of Master Data Management, SPIE Building Solutions</span>
                   </div>
                 </div>
               </div>
               <p className="light-copy">
-                Full case study coming soon. <a href={siteConfig.socials.linkedin} target="_blank" rel="noopener noreferrer">Follow our LinkedIn for updates →</a>
+                <Link href="/cases/spie">Read the full case study →</Link>
               </p>
             </div>
             <div className="col-md-5">
               <div className="cf-stats-box">
                 <div className="cf-stats-header">Results at a glance</div>
                 <div className="cf-stat-row">
-                  <div className="cf-stat-num">75%</div>
-                  <div className="cf-stat-lbl">Reduction in manual category assignment time</div>
+                  <div className="cf-stat-num">204,029</div>
+                  <div className="cf-stat-lbl">Asset records processed</div>
                 </div>
                 <div className="cf-stat-row">
-                  <div className="cf-stat-num">140k+</div>
-                  <div className="cf-stat-lbl">Supplier invoice lines cleaned and classified</div>
+                  <div className="cf-stat-num">9,175 → 1,493</div>
+                  <div className="cf-stat-lbl">Supplier variants consolidated</div>
                 </div>
                 <div className="cf-stat-row">
-                  <div className="cf-stat-num">2 FTE</div>
-                  <div className="cf-stat-lbl">Redeployed to value-adding procurement work</div>
+                  <div className="cf-stat-num">73.1%</div>
+                  <div className="cf-stat-lbl">Confirmed match rate</div>
                 </div>
                 <div className="cf-stat-row">
-                  <div className="cf-stat-num">SAP</div>
-                  <div className="cf-stat-lbl">Single clean dataset feeding ERP and BI directly</div>
+                  <div className="cf-stat-num">107,081</div>
+                  <div className="cf-stat-lbl">Lines enhanced</div>
                 </div>
                 <div className="cf-tags">
-                  <span className="cf-tag">Infrastructure</span>
-                  <span className="cf-tag">UNSPSC</span>
-                  <span className="cf-tag">Procurement</span>
+                  <span className="cf-tag">Hard Services FM</span>
+                  <span className="cf-tag">Data Quality</span>
+                  <span className="cf-tag">Supplier Matching</span>
                 </div>
               </div>
             </div>
@@ -93,13 +96,13 @@ export default function CasesPage() {
             <article className="cq-card">
               <div className="cq-stars">★★★★★</div>
               <p className="cq-text">
-                Our asset data was spread across spreadsheets and feeding from clients' legacy systems. None of it was consistent enough to do anything analytical with. Pearstop consolidated and structured it and suddenly we had something we could actually build on.
+                The confidence scoring meant our team knew where to spend their review time first, instead of starting from scratch on 200,000 rows.
               </p>
               <div className="cq-attr">
                 <div className="cq-avatar" />
                 <div>
-                  <span className="cq-name">Client</span>
-                  <span className="cq-role">Asset Manager · SPIE</span>
+                  <span className="cq-name">Bart van Peij</span>
+                  <span className="cq-role">Head of Master Data Management · SPIE Building Solutions</span>
                 </div>
               </div>
             </article>
@@ -112,7 +115,7 @@ export default function CasesPage() {
                 <img src="/images/clients/vince-headshot.jpg" alt="Vince Out" className="cq-avatar" style={{ borderRadius: "50%", objectFit: "cover" }} />
                 <div>
                   <span className="cq-name">Vince Out</span>
-                  <span className="cq-role">Commercial Manager · Manufacturing | Air Filtration Units</span>
+                  <span className="cq-role">Commercial Manager · Manufacturing</span>
                 </div>
               </div>
             </article>
@@ -139,34 +142,42 @@ export default function CasesPage() {
           <div className="article-grid">
             {others.map((story) => (
               <article key={story.slug} className="cg-card" id={story.slug}>
-                <div className={`cg-img ${story.tone}`} style={{ display: "flex", alignItems: "center", justifyContent: "center", color: "rgba(255,255,255,0.5)", fontSize: "2rem", background: story.tone === "from-blue" ? "linear-gradient(135deg,#1F2A68,#353FFF)" : story.tone === "from-slate" ? "linear-gradient(135deg,#0f172a,#1e3a5f)" : story.tone === "from-green" ? "linear-gradient(135deg,#1a4731,#2d7a4f)" : story.tone === "from-amber" ? "linear-gradient(135deg,#7c2d12,#c2410c)" : story.tone === "from-indigo" ? "linear-gradient(135deg,#312e81,#5847a0)" : "linear-gradient(135deg,#1e3a5f,#2563eb)" }}>
-                  ✦
-                </div>
-                <div className="cg-body">
-                  <div className="cg-ind">{story.category}</div>
-                  <h3>{story.title}</h3>
-                  <p className="cg-excerpt">{story.excerpt}</p>
-                  <div className="cg-results">
-                    <div>
-                      <span className="cg-result-num">{story.statPrimary}</span>
-                      <span className="cg-result-lbl">{story.statPrimaryLabel}</span>
-                    </div>
-                    <div>
-                      <span className="cg-result-num">{story.statSecondary}</span>
-                      <span className="cg-result-lbl">{story.statSecondaryLabel}</span>
-                    </div>
+                <Link className="cg-card-link" href={`/cases/${story.slug}`}>
+                  <div className={`cg-img ${story.tone}`} style={{ display: "flex", alignItems: "center", justifyContent: "center", color: "rgba(255,255,255,0.5)", fontSize: "2rem", background: story.tone === "from-blue" ? "linear-gradient(135deg,#1F2A68,#353FFF)" : story.tone === "from-slate" ? "linear-gradient(135deg,#0f172a,#1e3a5f)" : story.tone === "from-green" ? "linear-gradient(135deg,#1a4731,#2d7a4f)" : story.tone === "from-amber" ? "linear-gradient(135deg,#7c2d12,#c2410c)" : story.tone === "from-indigo" ? "linear-gradient(135deg,#312e81,#5847a0)" : "linear-gradient(135deg,#1e3a5f,#2563eb)" }}>
+                    {story.image ? (
+                      story.imageFit === "contain" ? (
+                        <img src={story.image} alt={`${story.title} logo`} style={{ maxHeight: 56, maxWidth: 200, display: "block" }} />
+                      ) : (
+                        <img src={story.image} alt="" aria-hidden="true" style={{ width: 72, height: 72 }} />
+                      )
+                    ) : (
+                      "✦"
+                    )}
                   </div>
-                  <div className="cg-tags">
-                    {story.tags.map((tag) => (
-                      <span key={tag} className="cg-tag">
-                        {tag}
-                      </span>
-                    ))}
+                  <div className="cg-body">
+                    <div className="cg-ind">{story.category}</div>
+                    <h3>{story.title}</h3>
+                    <p className="cg-excerpt">{story.excerpt}</p>
+                    <div className="cg-results">
+                      <div>
+                        <span className="cg-result-num">{story.statPrimary}</span>
+                        <span className="cg-result-lbl">{story.statPrimaryLabel}</span>
+                      </div>
+                      <div>
+                        <span className="cg-result-num">{story.statSecondary}</span>
+                        <span className="cg-result-lbl">{story.statSecondaryLabel}</span>
+                      </div>
+                    </div>
+                    <div className="cg-tags">
+                      {story.tags.map((tag) => (
+                        <span key={tag} className="cg-tag">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <span className="cg-link">Read the case study →</span>
                   </div>
-                  <Link className="cg-link" href={`/cases/${story.slug}`}>
-                    {story.slug === "strukton" ? "Read the coming soon case →" : "Read the case study →"}
-                  </Link>
-                </div>
+                </Link>
               </article>
             ))}
           </div>

@@ -24,6 +24,8 @@ const nextConfig = {
       { source: "/contact.html", destination: "/contact", permanent: true },
       { source: "/data-quality.html", destination: "/data-quality", permanent: true },
       { source: "/procurement-data-quality.html", destination: "/procurement-data-quality", permanent: true },
+      { source: "/spend-visibility", destination: "/procurement-data-quality", permanent: true },
+      { source: "/cases/manufacturing-spend", destination: "/cases", permanent: true },
       { source: "/asset-data-management.html", destination: "/asset-data-management", permanent: true },
       { source: "/fabric.html", destination: "/fabric", permanent: true },
       { source: "/ai-readiness.html", destination: "/ai-readiness", permanent: true },

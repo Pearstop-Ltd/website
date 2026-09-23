@@ -89,6 +89,26 @@ export default async function SolutionsPage({ params }: { params: Promise<{ loca
 
       <section>
         <div className="container">
+          <SectionTitle title={t("moreCards.title")} lead={t("moreCards.lead")} />
+          <div className="bene-cards">
+            {[
+              { title: t("moreCards.items.0.title"), copy: t("moreCards.items.0.copy"), href: `${prefix}/spend-cube` },
+              { title: t("moreCards.items.1.title"), copy: t("moreCards.items.1.copy"), href: `${prefix}/procurement-consultancies` }
+            ].map((solution) => (
+              <article className="bene-card" key={solution.href}>
+                <h3>{solution.title}</h3>
+                <p>{solution.copy}</p>
+                <Link className="bene-link" href={solution.href}>
+                  {t("cards.exploreLink")}
+                </Link>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-soft">
+        <div className="container">
           <div className="row" style={{ alignItems: "center", gap: "2rem", flexWrap: "wrap" }}>
             <div className="col-md-5">
               <div className="story-label">{t("approach.label")}</div>

@@ -40,7 +40,7 @@ export default function AiReadinessDataQuality() {
       <BlogQuote
         quote="Pearstop built a system that automatically pulls the right items from our visiting reports into a clean proposal document. It saves our team a lot of time by eliminating the repetitive tasks of combining the correct items."
         author="Vince Out"
-        role="Lemtech · Manufacturing &amp; Air Filtration"
+        role="Lemtech · Manufacturing"
       />
 
       <SoftCta

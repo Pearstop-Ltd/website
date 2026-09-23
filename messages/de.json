@@ -1077,47 +1077,15 @@
       "title": "Echte Arbeit. Echte Margen.",
       "lead": "Wie technische Unternehmen in FM, Bau, Fertigung und Infrastruktur Pearstop nutzen, um ihre Daten zu bereinigen und ihre Margen zu schützen."
     },
-    "featured": {
-      "pill": "Ausgewählte Fallstudie",
-      "p1": "Ein großer niederländischer Bauunternehmer hatte zwei fest zugeordnete Mitarbeitende, die Lieferantenrechnungen manuell Kategorien zuordneten - ein langsamer, fehleranfälliger Prozess, der die Ausgabenanalyse unzuverlässig und das Beschaffungs-Benchmarking unmöglich machte.",
-      "p2": "Pearstop automatisierte die Kategoriezuordnung über mehr als 140.000 Positionen, eliminierte doppelte Lieferantendatensätze und lieferte einen sauberen Beschaffungsdatensatz, der direkt in ihr SAP-System und ihre Reporting-Tools einfließt.",
-      "quote": "Früher hatten wir zwei Vollzeitkräfte für die Kategoriezuordnung. Jetzt übernimmt das System das für uns - was auch Margenschätzungen weiter unten in der Kette ermöglicht hat. Es ist zuverlässiger, und das zu einem Bruchteil der Kosten.",
-      "quoteAuthor": "Leiter Einkauf",
-      "quoteRole": "Infrastruktur-Bauunternehmen, Niederlande",
-      "comingSoon": "Vollständige Fallstudie folgt in Kürze.",
-      "followLinkedIn": "Folgen Sie unserem LinkedIn für Updates →",
-      "statsHeader": "Ergebnisse auf einen Blick",
-      "stats": [
-        {
-          "num": "75%",
-          "label": "Reduzierung der Zeit für manuelle Kategoriezuordnung"
-        },
-        {
-          "num": "140k+",
-          "label": "Bereinigte und klassifizierte Lieferantenrechnungspositionen"
-        },
-        {
-          "num": "2 FTE",
-          "label": "Umgesetzt in wertschöpfende Beschaffungsarbeit"
-        },
-        {
-          "num": "SAP",
-          "label": "Ein einziger sauberer Datensatz, der direkt in ERP und BI einfließt"
-        }
-      ]
-    },
     "testimonials": {
       "title": "Was unsere Kunden sagen",
       "lead": "Von Einkaufsteams bis zu Betriebsleitern - die Wirkung zeigt sich in den Zahlen.",
       "t1": {
-        "text": "Unsere Anlagendaten waren über Tabellenkalkulationen verstreut und speisten sich aus den Altsystemen unserer Kunden. Nichts davon war konsistent genug, um analytisch etwas damit anzufangen. Pearstop konsolidierte und strukturierte es, und plötzlich hatten wir etwas, worauf wir tatsächlich aufbauen konnten.",
-        "name": "Kunde",
-        "role": "Asset Manager · SPIE"
+        "text": "Unsere Anlagendaten waren über Tabellenkalkulationen verstreut und speisten sich aus den Altsystemen unserer Kunden. Nichts davon war konsistent genug, um analytisch etwas damit anzufangen. Pearstop konsolidierte und strukturierte es, und plötzlich hatten wir etwas, worauf wir tatsächlich aufbauen konnten."
       },
       "t2": {
         "text": "Unsere Standortbesuchsberichte kommen in jedem erdenklichen Format - handschriftliche Notizen, Rechtschreibfehler, Kritzeleien. Pearstop hat ein System gebaut, das sie automatisch in ein sauberes Angebotsdokument überführt. Das spart unserem Team bei jedem Auftrag Stunden.",
-        "name": "Vince Out",
-        "role": "Commercial Manager · Fertigung | Luftfiltereinheiten"
+        "name": "Vince Out"
       },
       "t3": {
         "text": "Wir hatten Tausende von Produktpositionen, die klassifiziert werden mussten, bevor wir überhaupt anfangen konnten, unsere Kosten zu verstehen. Pearstop klassifizierte sie in weniger als einer Woche. Das hätte unser Team sechs Monate gekostet und wäre immer noch nicht so genau gewesen.",

@@ -1077,47 +1077,15 @@
       "title": "Du travail concret. Des marges concrètes.",
       "lead": "Comment les entreprises techniques du FM, de la construction, de la fabrication et de l'infrastructure utilisent Pearstop pour nettoyer leurs données et protéger leurs marges."
     },
-    "featured": {
-      "pill": "Étude de cas à la une",
-      "p1": "Un important entrepreneur néerlandais employait deux collaborateurs dédiés à l'attribution manuelle des catégories aux factures fournisseurs - un processus lent et sujet aux erreurs qui rendait l'analyse des dépenses peu fiable et le benchmarking des achats impossible.",
-      "p2": "Pearstop a automatisé l'attribution des catégories sur plus de 140 000 lignes, éliminé les doublons de fiches fournisseurs, et livré un jeu de données d'achats propre qui alimente directement leur système SAP et leurs outils de reporting.",
-      "quote": "Nous avions autrefois deux collaborateurs à temps plein dédiés à l'attribution des catégories. Aujourd'hui, le système s'en charge pour nous - ce qui a aussi permis de débloquer des estimations de marge en aval. C'est plus fiable, pour une fraction du coût.",
-      "quoteAuthor": "Responsable Achats",
-      "quoteRole": "Entrepreneur en infrastructure, Pays-Bas",
-      "comingSoon": "Étude de cas complète bientôt disponible.",
-      "followLinkedIn": "Suivez notre LinkedIn pour les actualités →",
-      "statsHeader": "Résultats en un coup d'œil",
-      "stats": [
-        {
-          "num": "75%",
-          "label": "Réduction du temps d'attribution manuelle des catégories"
-        },
-        {
-          "num": "140k+",
-          "label": "Lignes de factures fournisseurs nettoyées et classifiées"
-        },
-        {
-          "num": "2 ETP",
-          "label": "Redéployés vers des tâches d'achats à plus forte valeur ajoutée"
-        },
-        {
-          "num": "SAP",
-          "label": "Un seul jeu de données propre alimentant directement l'ERP et la BI"
-        }
-      ]
-    },
     "testimonials": {
       "title": "Ce que disent nos clients",
       "lead": "Des équipes achats aux directeurs des opérations - l'impact se voit dans les chiffres.",
       "t1": {
-        "text": "Nos données d'actifs étaient éparpillées entre des tableurs et alimentées par les anciens systèmes des clients. Rien n'était assez cohérent pour en tirer une quelconque analyse. Pearstop les a consolidées et structurées, et soudain nous avions quelque chose sur lequel construire.",
-        "name": "Client",
-        "role": "Gestionnaire d'actifs · SPIE"
+        "text": "Nos données d'actifs étaient éparpillées entre des tableurs et alimentées par les anciens systèmes des clients. Rien n'était assez cohérent pour en tirer une quelconque analyse. Pearstop les a consolidées et structurées, et soudain nous avions quelque chose sur lequel construire."
       },
       "t2": {
         "text": "Nos rapports de visite de site arrivent sous tous les formats imaginables - notes manuscrites, fautes d'orthographe, gribouillages. Pearstop a conçu un système qui les intègre automatiquement dans un document de proposition propre. Cela fait gagner des heures à notre équipe sur chaque mission.",
-        "name": "Vince Out",
-        "role": "Directeur Commercial · Fabrication | Unités de filtration d'air"
+        "name": "Vince Out"
       },
       "t3": {
         "text": "Nous avions des milliers de lignes de produits qui devaient être catégorisées avant même de pouvoir commencer à comprendre nos coûts. Pearstop les a classées en moins d'une semaine. Cela aurait pris six mois à notre équipe, et le résultat n'aurait toujours pas été aussi précis.",

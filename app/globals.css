@@ -1622,6 +1622,41 @@ section {
   padding: 1.4rem;
 }
 
+.cg-body h3 {
+  font-size: 1.15rem;
+  line-height: 1.35;
+  margin-bottom: 0.5rem;
+}
+
+.cg-excerpt {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.cg-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.cg-card-link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.cg-card-link:hover h3 {
+  color: var(--primary);
+}
+
+.cg-card-link:hover .cg-link {
+  text-decoration: underline;
+}
+
 .cg-results {
   display: flex;
   gap: 1.2rem;

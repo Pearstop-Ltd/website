@@ -48,6 +48,7 @@ type IndustryDetail = {
   changes: string[];
   href: string;
   linkLabel: string;
+  quote?: { text: string; author: string; role: string };
 };
 
 type FaqItem = { q: string; a: string };
@@ -64,7 +65,7 @@ const trustedCompanies = [
   { name: "FARO", href: "/cases#faro", src: siteConfig.assets.clients.faro },
   { name: "Kelp", href: "/cases", src: siteConfig.assets.clients.kelpBlue },
   { name: "SnapFix", href: "/contact" },
-  { name: "Manufacturing | Air Filtration Units", href: "/contact" }
+  { name: "Manufacturing", href: "/contact" }
 ];
 
 const technicalBlocks = [
@@ -214,6 +215,14 @@ export default async function IndustriesPage({
                       ))}
                     </ul>
                   </div>
+                  {detail.quote ? (
+                    <div className="quote-card" style={{ marginTop: "1.25rem" }}>
+                      <p style={{ fontStyle: "italic", margin: 0 }}>&ldquo;{detail.quote.text}&rdquo;</p>
+                      <p style={{ margin: "0.6rem 0 0", fontSize: "0.85rem", color: "var(--muted)" }}>
+                        {detail.quote.author}, {detail.quote.role}
+                      </p>
+                    </div>
+                  ) : null}
                 </div>
               </div>
             </div>

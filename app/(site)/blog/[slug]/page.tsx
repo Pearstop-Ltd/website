@@ -99,7 +99,14 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   return (
     <>
-      <ArticleSchema title={post.title} description={post.description} slug={post.slug} publishedAt={post.publishedAt} authorName={AUTHORS[author].name} />
+      <ArticleSchema
+        title={post.title}
+        description={post.description}
+        slug={post.slug}
+        publishedAt={post.publishedAt}
+        updatedAt={post.updatedAt}
+        authorName={AUTHORS[author].name}
+      />
       {post.faqItems && <FaqSchema items={post.faqItems} slug={post.slug} />}
       <header className="page-hero dark" style={{ minHeight: "auto", paddingTop: "5rem", paddingBottom: "3.5rem" }}>
         <div className="hero-bg" aria-hidden="true" />

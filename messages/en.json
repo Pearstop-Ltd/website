@@ -367,16 +367,30 @@
           "copy": "Auto-classify years of free-text purchase order data using UNSPSC, including tracing hard services parts back to the real manufacturer code. Up to 95% of spend lines classified automatically."
         },
         {
-          "title": "Procurement Data Quality",
+          "title": "Spend Visibility",
           "copy": "Build a real spend baseline from messy invoice and supplier data, broken out by service line and entity, so a negotiation, tender, or framework review starts from a number instead of a guess."
         },
         {
-          "title": "Data Quality",
+          "title": "Data Readiness",
           "copy": "An ERP migration, a Microsoft Fabric rollout, and an AI initiative all assume the data underneath them is already clean and structured. When it is not, each one just carries the mess into a new system. Pearstop fixes the data first."
         },
         {
           "title": "Asset Data Management",
           "copy": "Turn spend and maintenance data you receive but do not generate into an independent, classified record you can compare across providers, sites, and years."
+        }
+      ]
+    },
+    "moreCards": {
+      "title": "More ways to work with Pearstop",
+      "lead": "Two more places the same classification engine shows up, for specific teams and specific outcomes.",
+      "items": [
+        {
+          "title": "Spend Cube & Dashboards",
+          "copy": "Spend structured by category, supplier, and time, ready to feed Power BI, Microsoft Fabric, or your own dashboard."
+        },
+        {
+          "title": "For Procurement Consultancies",
+          "copy": "White-labelled spend classification under your own taxonomy, so engagement margin goes to analysis, not manual cleanup."
         }
       ]
     },
@@ -503,6 +517,271 @@
     "cta": {
       "title": "Ready to fix the data underneath your next project?",
       "lead": "Book a 7-minute discovery call. We will show you exactly where your data would break an ERP migration, a Fabric rollout, or an AI initiative today.",
+      "button": "Book a 7-minute discovery"
+    }
+  },
+  "InvoiceExtraction": {
+    "meta": {
+      "title": "Invoice and Document Data Extraction (OCR) for FM and Construction",
+      "description": "Turn unread PDF invoices, scanned delivery notes, and paper records into structured, usable data. Automated OCR and AI extraction for facilities management, construction, and manufacturing procurement teams."
+    },
+    "hero": {
+      "eyebrow": "Data Extraction",
+      "title": "If nobody reads the invoice, the data inside it does not exist.",
+      "lead": "Most procurement teams do not have a classification problem yet. They have an invoice problem: PDFs, scans, and delivery notes arriving faster than anyone can read them, let alone enter them into a system. Pearstop turns that paperwork into structured data automatically, so there is something to classify in the first place."
+    },
+    "problem": {
+      "eyebrow": "The Problem",
+      "title": "Why does spend data stay unusable months after the invoice arrives?",
+      "quote": {
+        "text": "Our internal systems are lacking. I'd say we're at ground level. Somewhere underground.",
+        "attribution": "Procurement lead, multi-site cleaning services contractor"
+      },
+      "copy1": "This is not a data literacy problem. It is a volume and format problem. Every supplier lays out an invoice differently, the same supplier often changes layout month to month, and a fair number still arrive as a scanned PDF or a photo of a paper delivery note. Someone has to read each one, work out what was actually bought, and type it into a system before any of it can be categorised, compared, or reported on.",
+      "copy2": "At volume, that step does not get skipped occasionally. It becomes the permanent bottleneck.",
+      "bullets": [
+        "Invoices sit unread in an inbox because no one has time to open them, let alone key them in",
+        "The same supplier sends a different layout depending on which depot or system generated it",
+        "Manual entry backlogs push classification and reporting a full cycle behind actual spend",
+        "By the time a line is typed in, checked, and corrected, the number it produces is already stale"
+      ]
+    },
+    "howItWorks": {
+      "eyebrow": "How It Works",
+      "title": "From unread document to structured line item",
+      "step1": { "title": "Ingest, in any format", "copy": "PDF invoices, scanned paper, email attachments, EDI feeds. No fixed template per supplier, and no requirement that a supplier changes how they send anything." },
+      "step2": { "title": "OCR and AI extraction", "copy": "Line items, quantities, unit costs, cost codes, and supplier references are read and structured automatically. Anything below a confidence threshold is flagged rather than guessed at, and each correction feeds back into the pipeline so the same supplier and format is read more accurately next time." },
+      "step3": { "title": "Delivered into what you already run", "copy": "Structured output lands in the format your ERP, P2P platform, or BI tool expects, ready for classification, reporting, or direct reload." }
+    },
+    "whatMakesPossible": {
+      "title": "What becomes possible once the invoice is actually read",
+      "b1": { "title": "Spend visible the same week, not the same quarter", "copy": "Data is structured as invoices arrive, not weeks later when someone finally gets through the backlog." },
+      "b2": { "title": "A category to actually classify", "copy": "Extraction is the precondition for classification. Nothing can be categorised, benchmarked, or compared until it exists as structured data." },
+      "b3": { "title": "Fewer hours lost to keying and correcting", "copy": "The manual entry step that absorbs procurement and finance admin time is removed, not just made faster." }
+    },
+    "stats": {
+      "title": "What changes with Pearstop",
+      "s1": { "value": "~70% → 99%", "label": "first-pass extraction accuracy", "copy": "On one FM client's live invoice stream, as the pipeline learned their supplier base" },
+      "s2": { "value": "Any format", "label": "PDF, scan, photo, or EDI", "copy": "No fixed template required per supplier" },
+      "s3": { "value": "Days", "label": "typical time to first structured output", "copy": "Not a lengthy integration project" }
+    },
+    "quote": {
+      "text": "Doing that manually absolutely has its own risks. It might be borderline impossible at this stage while keeping operations going.",
+      "author": "Procurement lead",
+      "role": "Multi-site cleaning services contractor"
+    },
+    "geoBlock": {
+      "title": "What is invoice data extraction and why does it matter for procurement data quality?",
+      "copy": "Invoice and document data extraction is the process of automatically reading PDF invoices, scanned paper records, and delivery notes, then converting them into structured line-item data. For facilities management, construction, and manufacturing procurement teams, this is the step that has to happen before classification, spend analysis, or UNSPSC coding is even possible. Manual data entry cannot keep pace with invoice volume across multiple sites and suppliers, which is why unread invoices and stale spend data are one of the most common blockers to category management and AI-driven spend analysis. Pearstop combines OCR with an AI extraction layer and a human review step for low-confidence lines, so the output is structured data ready for classification, not another manual bottleneck."
+    },
+    "faq": [
+      {
+        "question": "Can Pearstop extract data from scanned paper invoices, not just digital PDFs?",
+        "answer": "Yes. The extraction layer handles digital PDFs, scanned paper documents, photographed delivery notes, and email attachments. It does not require a fixed template per supplier, which matters because most procurement teams receive the same information laid out differently by every supplier, and often differently by the same supplier month to month."
+      },
+      {
+        "question": "How accurate is automated invoice data extraction?",
+        "answer": "First-pass accuracy depends on document quality and supplier variability, but improves over time. On one facilities management client's invoice stream, first-pass extraction accuracy rose from roughly 70% to 99% as the pipeline learned that supplier base's formats and edge cases. Anything below a set confidence threshold is flagged for human review rather than guessed at."
+      },
+      {
+        "question": "Does extraction replace our ERP, or feed it?",
+        "answer": "It feeds it. Pearstop extracts and structures the data, then delivers it in the format your ERP, P2P platform, or BI tool already expects, so it plugs into what you run today (SAP, Oracle, Business Central, and others) rather than requiring a new system."
+      }
+    ],
+    "cta": {
+      "title": "Still keying invoices in by hand?",
+      "lead": "Book a 7-minute discovery call and see what your own invoice stream looks like once it is actually read.",
+      "button": "Book a 7-minute discovery"
+    }
+  },
+  "ProcurementConsultancies": {
+    "meta": {
+      "title": "Spend Classification for Procurement Consultancies",
+      "description": "Deliver spend cube, category management, and sourcing-savings engagements without burning analyst hours on manual classification. White-labelled, your taxonomy, predictable pricing."
+    },
+    "hero": {
+      "eyebrow": "For Procurement Consultancies",
+      "title": "Deliver the spend classification, keep the engagement margin",
+      "lead": "Category management, sourcing-savings, and spend-cube engagements all start with the same manual bottleneck: classifying a client's messy spend data. Pearstop does that layer, white-labelled under your own taxonomy, so your team spends its hours on the analysis and recommendations clients actually pay for."
+    },
+    "problem": {
+      "eyebrow": "The Problem",
+      "title": "Analyst hours are going to data cleanup, not client value",
+      "copy": "Every new engagement starts the same way: a client hands over years of messy spend data, and someone on your team spends the first weeks just getting it into a usable shape before any real analysis can start. That time comes straight out of engagement margin, and it's the least differentiated part of the work you're being paid for.",
+      "bullets": [
+        "Junior analyst or offshore hours spent on manual classification eat directly into engagement margin",
+        "Client deadlines don't move just because the underlying data is a mess",
+        "Every engagement re-solves the same classification problem from scratch, with nothing reusable carried forward",
+        "A general AI tool guesses at supplier matches and invents things that aren't there, creating rework instead of saving time"
+      ]
+    },
+    "howItWorks": {
+      "title": "Your taxonomy, our pipeline",
+      "lead": "Pearstop plugs into your delivery model as the classification layer underneath it, not a replacement for your team's analysis.",
+      "step1": {
+        "title": "Bring your own taxonomy",
+        "copy": "Most consultancies sell their own category framework as part of their IP. Pearstop classifies against your taxonomy, or UNSPSC if you prefer, not the other way around."
+      },
+      "step2": {
+        "title": "Classify with guardrails",
+        "copy": "Deterministic matching first, cross-checked with an LLM, with every uncertain match flagged for review rather than guessed at, so the output can go straight into a client deliverable."
+      },
+      "step3": {
+        "title": "Deliver under your name",
+        "copy": "Output is white-labelled. Your client sees your firm's deliverable, not a third-party tool."
+      }
+    },
+    "whatMakesPossible": {
+      "title": "What this changes for a consultancy",
+      "b1": {
+        "title": "Protect engagement margin",
+        "copy": "Classification happens in days, not the weeks of analyst time it currently absorbs, so more of the fee lands as margin instead of labour cost."
+      },
+      "b2": {
+        "title": "Take on more engagements without more headcount",
+        "copy": "Delivery capacity stops being bottlenecked by how many analysts you can put on manual classification at once."
+      },
+      "b3": {
+        "title": "A predictable cost line",
+        "copy": "Classification cost per engagement is known upfront, instead of an open-ended analyst-hours estimate that can run over."
+      }
+    },
+    "relatedCapabilities": {
+      "eyebrow": "Further Reading",
+      "title": "More on spend cube delivery for consultancies",
+      "lead": "A closer look at what changes when the classification layer is automated.",
+      "items": [
+        {
+          "title": "Spend cube delivery for procurement consultancies",
+          "copy": "How consultancies can replace manual spend cube builds with an AI pipeline, guardrails against hallucination, and a fixed-fee pricing model.",
+          "linkLabel": "Read the article"
+        },
+        {
+          "title": "How to build a spend cube with AI",
+          "copy": "The five steps to building a spend cube, what data you need, and when a consultant is still the better choice than an AI classification pipeline.",
+          "linkLabel": "Read the article"
+        }
+      ]
+    },
+    "geoBlock": {
+      "title": "How does an AI classification pipeline change a procurement consultancy's delivery model?",
+      "copy": "Spend classification is the slowest, least differentiated part of most category-management, sourcing-savings, and spend-cube engagements, and it's typically done by junior analysts or an offshore team working through a client's spend data line by line. An AI classification pipeline takes over that layer: matching and standardising supplier names, classifying line items against a taxonomy, whether that's UNSPSC or the consultancy's own proprietary framework, and flagging anything uncertain for human review rather than guessing. The output is white-labelled, so it slots into an existing delivery model as the data layer underneath it, freeing analyst time for the sourcing strategy and recommendations clients are actually paying the consultancy for."
+    },
+    "faq": [
+      {
+        "question": "Can the output use our own taxonomy instead of UNSPSC?",
+        "answer": "Yes. Pearstop classifies against whatever taxonomy you specify, including a proprietary framework you sell as part of your own IP. UNSPSC is available if you'd rather use a standard one."
+      },
+      {
+        "question": "Is this white-labelled?",
+        "answer": "Yes. The deliverable is built to sit inside your own engagement output, not branded as a third-party tool."
+      },
+      {
+        "question": "How does pricing work across multiple client engagements?",
+        "answer": "Pricing is structured around volume and engagement cadence rather than a single flat fee, so it can be built into how you price your own client work upfront."
+      }
+    ],
+    "cta": {
+      "title": "Want to see it on a real client dataset?",
+      "lead": "Book a 7-minute discovery call and we'll show you what your next engagement's spend data looks like after a first pass.",
+      "button": "Book a 7-minute discovery"
+    }
+  },
+  "SpendCube": {
+    "meta": {
+      "title": "AI-Built Spend Cubes & Procurement Dashboards",
+      "description": "A spend cube classified and structured by category, supplier, and time, ready to feed Power BI, Microsoft Fabric, or your own dashboard, built in days instead of a manual quarter-long project."
+    },
+    "hero": {
+      "eyebrow": "Spend Cube & Dashboards",
+      "title": "A spend cube built in days, not a manual quarter-long project",
+      "lead": "A spend cube is only useful if it's built on classified, consistent data and stays current. Pearstop classifies your spend once and keeps classifying it as new invoices and purchase orders arrive, so the cube, and whatever dashboard sits on top of it, doesn't go stale the week after it's delivered."
+    },
+    "problem": {
+      "eyebrow": "The Problem",
+      "title": "The dashboard is only as good as what's underneath it",
+      "copy": "Building a spend cube by hand means classifying years of invoice lines and purchase orders into consistent categories and suppliers before any dashboard can be built on top. Most teams either never finish it, or finish it once and watch it go stale the moment new spend arrives in the old, unclassified format.",
+      "bullets": [
+        "Manual spend-cube builds take a quarter or more, and are out of date again within weeks",
+        "Dashboarding tools show whatever's underneath them; if the categories aren't consistent, the chart just displays the mess faster",
+        "New spend keeps arriving in whatever format the source system produces, so the cube needs constant manual upkeep to stay current",
+        "Multi-site or multi-entity spend rarely shares the same category logic, so cross-site comparison breaks down"
+      ]
+    },
+    "howItWorks": {
+      "title": "From classified spend to a live cube",
+      "lead": "The classification pipeline structures your spend along the dimensions a cube actually needs, then keeps it current.",
+      "step1": {
+        "title": "Classify by category and supplier",
+        "copy": "Every line is matched to a consistent category (UNSPSC or your own taxonomy) and a canonical supplier name, the two dimensions most spend cubes break on first."
+      },
+      "step2": {
+        "title": "Structure the cube",
+        "copy": "Classified spend is structured across category, supplier, site or entity, and time, ready to load into a BI tool or dashboard."
+      },
+      "step3": {
+        "title": "Feed your existing tools",
+        "copy": "Output lands in the format Power BI, Microsoft Fabric, or your own BI stack already expects, so the dashboard you build on it works from day one."
+      }
+    },
+    "whatMakesPossible": {
+      "title": "What a live cube makes possible",
+      "b1": {
+        "title": "Drill down by category, not just total spend",
+        "copy": "See what's actually driving a number, down to the category and supplier, instead of a single top-line figure."
+      },
+      "b2": {
+        "title": "Compare across sites or entities",
+        "copy": "The same category means the same thing everywhere, so a cross-site or cross-entity comparison is actually comparing like with like."
+      },
+      "b3": {
+        "title": "A dashboard that doesn't go stale",
+        "copy": "New spend is classified the same way as it arrives, so the cube, and any dashboard built on it, updates instead of drifting out of date."
+      }
+    },
+    "relatedCapabilities": {
+      "eyebrow": "Further Reading",
+      "title": "More on building a spend cube",
+      "lead": "A closer look at the framework this page's pipeline is built on.",
+      "items": [
+        {
+          "title": "The spend cube framework, executed with AI",
+          "copy": "The classic three-dimension spend cube, adapted for an AI classification pipeline: what changes in speed, cost, and staying power after delivery day.",
+          "linkLabel": "Read the article"
+        },
+        {
+          "title": "How to build a spend cube with AI",
+          "copy": "The five steps to building a spend cube, what data you need, and when a consultant is still the better choice than an AI classification pipeline.",
+          "linkLabel": "Read the article"
+        }
+      ]
+    },
+    "geoBlock": {
+      "title": "What is a spend cube and how is it different from a spend report?",
+      "copy": "A spend cube is spend data structured across three or more dimensions, typically category, supplier, and time or site, so it can be sliced and compared rather than read as a single static report. A spend report answers one question at a time; a spend cube supports drilling from a total down to the category, supplier, or site driving it. Building one manually means classifying every invoice line and purchase order into consistent categories and suppliers first, which is where most manual spend-cube projects stall or go stale. Pearstop classifies spend continuously, so the cube it feeds into Power BI, Microsoft Fabric, or another BI tool stays current as new spend arrives, instead of being a one-off snapshot."
+    },
+    "quote": {
+      "text": "We've got all this information, but what are we using it for?",
+      "author": "Commercial lead",
+      "role": "Real estate & integrated FM"
+    },
+    "faq": [
+      {
+        "question": "What is a spend cube?",
+        "answer": "A spend cube is spend data structured across multiple dimensions, typically category, supplier, and time or site, so you can drill from a total figure down into what's actually driving it. It's the structure most procurement dashboards are built on top of."
+      },
+      {
+        "question": "Can this feed Power BI or Microsoft Fabric?",
+        "answer": "Yes. Output is delivered in the structure your existing BI tool already expects, so it plugs into a Power BI or Fabric dashboard rather than requiring a new platform."
+      },
+      {
+        "question": "How often is the data refreshed?",
+        "answer": "New spend is classified the same way as it arrives, so the cube stays current continuously rather than being rebuilt as a one-off project."
+      }
+    ],
+    "cta": {
+      "title": "Ready to see your own spend cube?",
+      "lead": "Book a 7-minute discovery call and we'll show you what your spend data looks like structured into a cube, ready for your dashboard.",
       "button": "Book a 7-minute discovery"
     }
   },
@@ -1256,30 +1535,29 @@
     },
     "featured": {
       "pill": "Featured Case Study",
-      "p1": "A major Dutch contractor had two dedicated staff manually assigning categories to supplier invoices - a slow, error-prone process that made spend analysis unreliable and procurement benchmarking impossible.",
-      "p2": "Pearstop automated category assignment across 140,000+ line items, eliminated duplicate supplier records, and delivered a clean procurement dataset that feeds directly into their SAP system and reporting tools.",
-      "quote": "We used to have two full-time staff working on category assignment. Now the system does this for us - which has unlocked margin estimations further down the line too. It is more reliable at a fraction of the cost.",
-      "quoteAuthor": "Head of Procurement",
-      "quoteRole": "Infrastructure Contractor, Netherlands",
-      "comingSoon": "Full case study coming soon.",
-      "followLinkedIn": "Follow our LinkedIn for updates →",
+      "p1": "SPIE Building Solutions' asset register had been fed by different maintenance systems, contractors, and manual entry over many years. The same manufacturer could appear under a dozen different spellings, and equipment types were often missing or recorded incorrectly.",
+      "p2": "Pearstop applied its procurement-data classification pipeline to consolidate 9,175 supplier name variants into 1,493 canonical suppliers across 204,029 asset records — the same engine that cleans spend data, proven on a different kind of messy dataset.",
+      "quote": "The confidence scoring meant our team knew where to spend their review time first, instead of starting from scratch on 200,000 rows.",
+      "quoteAuthor": "Bart van Peij",
+      "quoteRole": "Head of Master Data Management, SPIE Building Solutions",
+      "readFull": "Read the full case study →",
       "statsHeader": "Results at a glance",
       "stats": [
         {
-          "num": "75%",
-          "label": "Reduction in manual category assignment time"
+          "num": "204,029",
+          "label": "Asset records processed"
         },
         {
-          "num": "140k+",
-          "label": "Supplier invoice lines cleaned and classified"
+          "num": "9,175 → 1,493",
+          "label": "Supplier variants consolidated"
         },
         {
-          "num": "2 FTE",
-          "label": "Redeployed to value-adding procurement work"
+          "num": "73.1%",
+          "label": "Confirmed match rate"
         },
         {
-          "num": "SAP",
-          "label": "Single clean dataset feeding ERP and BI directly"
+          "num": "107,081",
+          "label": "Lines enhanced"
         }
       ]
     },
@@ -1287,14 +1565,14 @@
       "title": "What our clients say",
       "lead": "From procurement teams to operations directors - the impact shows up in the numbers.",
       "t1": {
-        "text": "Our asset data was spread across spreadsheets and feeding from clients' legacy systems. None of it was consistent enough to do anything analytical with. Pearstop consolidated and structured it and suddenly we had something we could actually build on.",
-        "name": "Client",
-        "role": "Asset Manager · SPIE"
+        "text": "The confidence scoring meant our team knew where to spend their review time first, instead of starting from scratch on 200,000 rows.",
+        "name": "Bart van Peij",
+        "role": "Head of Master Data Management · SPIE Building Solutions"
       },
       "t2": {
         "text": "Our site visit reports come in every format imaginable - handwritten notes, spelling mistakes, scribbles. Pearstop built a system that automatically pulls them into a clean proposal document. It saves our team hours on every job.",
         "name": "Vince Out",
-        "role": "Commercial Manager · Manufacturing | Air Filtration Units"
+        "role": "Commercial Manager · Manufacturing"
       },
       "t3": {
         "text": "We had thousands of product lines that needed to be categorised before we could even begin to understand our costs. Pearstop classified them in under a week. That would have taken our team six months and still would not have been this accurate.",
@@ -1395,7 +1673,12 @@
           "Buyer review speed improved by an order of magnitude as classification becomes familiar, not a marginal gain"
         ],
         "href": "/procurement-data-quality",
-        "linkLabel": "See how Pearstop builds a real spend baseline"
+        "linkLabel": "See how Pearstop builds a real spend baseline",
+        "quote": {
+          "text": "When you say you can clean up the data, would you be able to now correlate the spend into a quantity using trends and all of that?",
+          "author": "Commercial decision-maker",
+          "role": "Civil/structural engineering consultancy, South Africa"
+        }
       },
       {
         "id": "integrated-fm",
@@ -1422,7 +1705,12 @@
           "A realistic view of what the data can support, set from a corrected baseline, not the state it arrived in"
         ],
         "href": "/data-quality",
-        "linkLabel": "See how Pearstop unifies FM data"
+        "linkLabel": "See how Pearstop unifies FM data",
+        "quote": {
+          "text": "If we want a bot that knows everything about our contract, we need to make sure the governance data in the contract is properly agreed first.",
+          "author": "Data strategy lead",
+          "role": "Integrated facilities management provider"
+        }
       },
       {
         "id": "hard-services",
@@ -1449,7 +1737,12 @@
           "Every match traceable back to a real part number, so your team can verify it rather than trust it"
         ],
         "href": "/unspsc",
-        "linkLabel": "See how Pearstop classifies hard services spend"
+        "linkLabel": "See how Pearstop classifies hard services spend",
+        "quote": {
+          "text": "Energy services, engineering - margins are paper thin.",
+          "author": "Group CIO",
+          "role": "Integrated FM operator"
+        }
       },
       {
         "id": "soft-services",
@@ -1503,7 +1796,12 @@
           "A real cost baseline to defend pricing under client challenge, not a feeling"
         ],
         "href": "/invoice-data-extraction",
-        "linkLabel": "See how Pearstop reads the invoice first"
+        "linkLabel": "See how Pearstop reads the invoice first",
+        "quote": {
+          "text": "I'd say we're at ground level. Most probably Sean here would beg to differ and say that we're somewhere underground.",
+          "author": "Procurement lead",
+          "role": "Multi-site cleaning services contractor"
+        }
       },
       {
         "id": "construction",
@@ -1584,7 +1882,12 @@
           "Assurance you can bring to a provider review, not just a file you received from one"
         ],
         "href": "/asset-data-management",
-        "linkLabel": "See how Pearstop gives asset owners assurance"
+        "linkLabel": "See how Pearstop gives asset owners assurance",
+        "quote": {
+          "text": "We want to control the story, the narrative, from our side.",
+          "author": "Commercial/strategy lead",
+          "role": "Real estate investor, FM outsourced"
+        }
       }
     ],
     "faq": {
