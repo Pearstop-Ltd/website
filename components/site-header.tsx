@@ -294,7 +294,7 @@ export function SiteHeader() {
 
           <div className={`nav-right ${menuOpen ? "open" : ""}`} id="nav-right">
             <LanguageSwitcher />
-            <Link className="btn-pearstop-nav" href={`${prefix}/contact`} onClick={closeMenus}>
+            <Link className="btn-pearstop-nav" href={`${prefix}/book-a-demo`} onClick={closeMenus}>
               {t("requestDemo")}
             </Link>
           </div>
