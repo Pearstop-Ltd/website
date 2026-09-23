@@ -21,6 +21,7 @@ export default function StruktonCaseStudyPage() {
         title="Classifying 35,000 to 50,000 procurement lines a month into UNSPSC, from zero classification history"
         lead="How Pearstop and Strukton built an AI classification system from zero UNSPSC history."
         leadAccent
+        titleSize="sm"
       />
 
       <section>

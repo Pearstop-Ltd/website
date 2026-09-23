@@ -37,8 +37,8 @@ export default function CleaningConsumablesConsolidationPage() {
     <>
       <PageHero
         eyebrow="Anonymized Use Case · Cleaning & Soft FM"
-        title="Nobody chose 30 toilet paper suppliers. They just couldn't see them."
-        lead="In one cleaning business, 30 different suppliers invoiced for toilet paper within twelve months."
+        title="Nobody Chose 30 Toilet Paper Suppliers"
+        lead="They just couldn't see them - until 30 suppliers turned up invoicing for the same product."
         leadAccent
       />
 
@@ -47,6 +47,7 @@ export default function CleaningConsumablesConsolidationPage() {
           <div className="row">
             <div className="col-md-8 col-md-offset-2">
               <p className="light-copy" style={{ fontSize: "1.1rem", textAlign: "center" }}>
+                In one cleaning business, 30 different suppliers invoiced for toilet paper within twelve months.
                 Illustrative data, based on a real pattern in soft FM procurement - not a named client engagement.
               </p>
             </div>

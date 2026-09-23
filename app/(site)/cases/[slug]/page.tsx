@@ -35,7 +35,21 @@ export default async function CaseDetailPage({ params }: { params: Promise<{ slu
     <>
       <PageHero eyebrow={entry.eyebrow} title={entry.title} lead={entry.lead} leadAccent />
 
-      <section>
+      {entry.intro ? (
+        <section>
+          <div className="container">
+            <div className="row">
+              <div className="col-md-8 col-md-offset-2">
+                <p className="light-copy" style={{ fontSize: "1.1rem", textAlign: "center" }}>
+                  {entry.intro}
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      ) : null}
+
+      <section className={entry.intro ? "section-soft" : ""}>
         <div className="container">
           <div className="row" style={{ alignItems: "center", gap: "3rem", flexWrap: "wrap" }}>
             <div className="col-md-6">

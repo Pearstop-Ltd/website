@@ -602,6 +602,10 @@ section {
   text-shadow: 0 3px 24px rgba(31, 42, 104, 0.22);
 }
 
+.hero-title-sm {
+  font-size: clamp(1.6rem, 2.8vw, 2.5rem);
+}
+
 .hero-lead,
 .solution-tagline,
 .ind-intro,

@@ -26,9 +26,13 @@ type HeroProps = {
   /** Renders `lead` as a left-aligned block with a left accent border,
    * instead of the default centered hero-lead paragraph. */
   leadAccent?: boolean;
+  /** Use a smaller title clamp for titles that can't be shortened (e.g. a
+   * client-dictated title still being finalized) so a long title doesn't
+   * wrap to 3+ lines at full hero size. */
+  titleSize?: "default" | "sm";
 };
 
-export function PageHero({ eyebrow, title, lead, actions, leadingAction, videoUrl, videoPoster, className, leadAccent }: HeroProps) {
+export function PageHero({ eyebrow, title, lead, actions, leadingAction, videoUrl, videoPoster, className, leadAccent, titleSize }: HeroProps) {
   return (
     <header className={`page-hero dark ${className ?? ""}`}>
       {videoUrl ? (
@@ -40,7 +44,7 @@ export function PageHero({ eyebrow, title, lead, actions, leadingAction, videoUr
       <div className="container hero-copy">
         <div className="text-center">
           {eyebrow ? <span className="pill">{eyebrow}</span> : null}
-          <h1 className="hero-title dark">{title}</h1>
+          <h1 className={`hero-title dark ${titleSize === "sm" ? "hero-title-sm" : ""}`}>{title}</h1>
           {lead ? <p className={`hero-lead ${leadAccent ? "hero-lead-accent" : ""}`}>{lead}</p> : null}
           {leadingAction || actions?.length ? (
             <div className="hero-actions" style={{ marginTop: "1.75rem" }}>

@@ -303,6 +303,10 @@ export type CaseStudyDetail = {
   eyebrow: string;
   title: string;
   lead: string;
+  /** Optional longer context paragraph, rendered in a dedicated section
+   * right below the hero (kept out of the hero itself so the hero title/lead
+   * can stay short). */
+  intro?: string;
   challenge: string;
   solution: string;
   wins: { value: string; label: string }[];
@@ -318,8 +322,9 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
   "lemtech": {
     slug: "lemtech",
     eyebrow: "Manufacturing",
-    title: "Turning site visit reports into clean proposal documents, automatically",
-    lead:
+    title: "Turning Messy Notes Into Proposals",
+    lead: "How Pearstop turns messy site-visit reports into clean, ready proposal documents.",
+    intro:
       "Site visit reports arrived in every format imaginable - handwritten notes, spelling mistakes, varying layouts. Pearstop built a system that reads incoming reports and automatically outputs a clean, accurate proposal document.",
     challenge:
       "Why was the commercial team retyping every site-visit note by hand?",
@@ -366,8 +371,9 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
   "mro-confidential": {
     slug: "mro-confidential",
     eyebrow: "Manufacturing / MRO · Anonymized use case",
-    title: "Going direct to the manufacturer on MRO parts",
-    lead:
+    title: "Going Direct to the Manufacturer",
+    lead: "How Pearstop replaces slow, error-prone offshore MRO part research with a fast, checked one.",
+    intro:
       "This is an anonymized use case, not a named client story - it reflects a pattern Pearstop sees repeatedly in MRO and component sourcing, built to show clearly what the product actually does.",
     challenge:
       "Why is buying MRO parts direct from the manufacturer so slow?",
