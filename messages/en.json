@@ -367,11 +367,11 @@
           "copy": "Auto-classify years of free-text purchase order data using UNSPSC, including tracing hard services parts back to the real manufacturer code. Up to 95% of spend lines classified automatically."
         },
         {
-          "title": "Procurement Data Quality",
+          "title": "Spend Visibility",
           "copy": "Build a real spend baseline from messy invoice and supplier data, broken out by service line and entity, so a negotiation, tender, or framework review starts from a number instead of a guess."
         },
         {
-          "title": "Data Quality",
+          "title": "Data Readiness",
           "copy": "An ERP migration, a Microsoft Fabric rollout, and an AI initiative all assume the data underneath them is already clean and structured. When it is not, each one just carries the mess into a new system. Pearstop fixes the data first."
         },
         {
@@ -382,19 +382,15 @@
     },
     "moreCards": {
       "title": "More ways to work with Pearstop",
-      "lead": "Three more places the same classification engine shows up, for specific teams and specific outcomes.",
+      "lead": "Two more places the same classification engine shows up, for specific teams and specific outcomes.",
       "items": [
         {
-          "title": "Spend Visibility",
-          "copy": "A real cost baseline by category, supplier, and site, so a negotiation or tender starts from a number instead of a guess."
+          "title": "Spend Cube & Dashboards",
+          "copy": "Spend structured by category, supplier, and time, ready to feed Power BI, Microsoft Fabric, or your own dashboard."
         },
         {
           "title": "For Procurement Consultancies",
           "copy": "White-labelled spend classification under your own taxonomy, so engagement margin goes to analysis, not manual cleanup."
-        },
-        {
-          "title": "Spend Cube & Dashboards",
-          "copy": "Spend structured by category, supplier, and time, ready to feed Power BI, Microsoft Fabric, or your own dashboard."
         }
       ]
     },
@@ -595,91 +591,6 @@
     "cta": {
       "title": "Still keying invoices in by hand?",
       "lead": "Book a 7-minute discovery call and see what your own invoice stream looks like once it is actually read.",
-      "button": "Book a 7-minute discovery"
-    }
-  },
-  "SpendVisibility": {
-    "meta": {
-      "title": "Spend Visibility: A Real Cost Baseline for Procurement Teams",
-      "description": "See what you actually spend, by category, supplier, and site, so you can negotiate, tender, and catch contract deviation with real numbers instead of estimates."
-    },
-    "hero": {
-      "eyebrow": "Spend Visibility",
-      "title": "Negotiate and tender with a real cost baseline, not a guess",
-      "lead": "Most procurement and finance teams can't answer a simple question: what do we actually spend on this category, across every site and supplier? Pearstop classifies your spend data so the answer is a query, not a quarter-long exercise."
-    },
-    "problem": {
-      "eyebrow": "The Problem",
-      "title": "Nobody can put a number on it until someone builds it by hand",
-      "copy": "Spend is spread across sites, entities, and source systems, with the same supplier appearing under a dozen different names. Every time someone needs a real answer, the same manual exercise starts again: export, reconcile, hope nothing was missed. By the time it's done, the number is already out of date.",
-      "quote": {
-        "text": "We say, well how much is this going to be? And we go, it feels like it should be 3% of the contract value. But in real terms that could be six or that could be two. We don't know.",
-        "attribution": "Head of Commercial, multi-site FM contractor"
-      },
-      "bullets": [
-        "Spend is spread across entities and suppliers with no single, consolidated, coded view of who's buying what",
-        "Framework agreements exist on paper, but nobody can tell if actual buying still matches them",
-        "A category manager can see the handful of agreements in their own patch; the other fifty-plus categories have no visibility at all",
-        "Every tender or negotiation starts from an estimate, because the real baseline doesn't exist yet"
-      ]
-    },
-    "howItWorks": {
-      "title": "From scattered spend to a live cost baseline",
-      "lead": "The same classification pipeline that cleans your spend data turns it into a baseline you can actually negotiate against.",
-      "step1": {
-        "title": "Classify every line",
-        "copy": "Every invoice line and PO is matched to a consistent category (UNSPSC or your own taxonomy) and a canonical supplier, regardless of how it originally arrived."
-      },
-      "step2": {
-        "title": "Build the baseline",
-        "copy": "Classified spend rolls up into a real baseline by category, supplier, site, and time period, benchmarked against your own historical data."
-      },
-      "step3": {
-        "title": "Catch deviation as it happens",
-        "copy": "New spend is classified the same way as it arrives, so drift from an agreed framework or contract shows up immediately instead of at the next audit."
-      }
-    },
-    "whatMakesPossible": {
-      "title": "What a real baseline makes possible",
-      "b1": {
-        "title": "Negotiate from data, not a feeling",
-        "copy": "Walk into a supplier negotiation or a tender knowing exactly what you spend today, by category, instead of a percentage that feels about right."
-      },
-      "b2": {
-        "title": "Catch contract deviation early",
-        "copy": "See where actual buying has drifted from an agreed framework or rate card, before it costs a full budget cycle."
-      },
-      "b3": {
-        "title": "One number everyone trusts",
-        "copy": "Procurement, finance, and commercial teams work from the same classified baseline, instead of three different spreadsheets with three different answers."
-      }
-    },
-    "geoBlock": {
-      "title": "What is a procurement cost baseline, and why don't most teams have one?",
-      "copy": "A cost baseline is a reliable, category-level view of what an organisation actually spends, built from classified spend data rather than an estimate. Most procurement and finance teams don't have one because spend is spread across sites, entities, and source systems, with the same supplier recorded under different names in each. Building a baseline by hand means exporting, reconciling, and correcting that data every time someone needs an answer, which is why the exercise gets redone from scratch instead of maintained. Pearstop classifies spend data continuously, so the baseline stays current as new invoices and purchase orders arrive, and negotiation, tendering, and framework-compliance checks can run against real numbers instead of an estimate."
-    },
-    "quote": {
-      "text": "No one's ever really looked at it before and gone, how good is this and could we be improving on it.",
-      "author": "Commercial lead",
-      "role": "Real estate & integrated FM"
-    },
-    "faq": [
-      {
-        "question": "What is a procurement cost baseline?",
-        "answer": "A cost baseline is a category-level, up-to-date picture of what you actually spend across every site, entity, and supplier, built from classified spend data rather than a percentage estimate. It's what you negotiate a supplier against, price a tender with, or check a framework agreement's compliance against."
-      },
-      {
-        "question": "We have spend data in three different systems and none of them agree. Can you still build a baseline?",
-        "answer": "Yes. Each system's data is ingested in whatever format it already arrives, then classified and reconciled into one consistent view. You don't need to unify your systems first."
-      },
-      {
-        "question": "How current does the baseline stay?",
-        "answer": "New spend is classified the same way as it arrives, so the baseline updates continuously rather than being a one-off exercise that goes stale the moment it's finished."
-      }
-    ],
-    "cta": {
-      "title": "Ready to see your own spend baseline?",
-      "lead": "Book a 7-minute discovery call and see what a real cost baseline looks like for your own spend data.",
       "button": "Book a 7-minute discovery"
     }
   },

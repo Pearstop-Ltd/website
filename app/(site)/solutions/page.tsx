@@ -29,13 +29,13 @@ export default function SolutionsPage() {
     },
     {
       eyebrow: "03",
-      title: "Procurement Data Quality",
+      title: "Spend Visibility",
       copy: "Build a real spend baseline from messy invoice and supplier data, broken out by service line and entity, so a negotiation, tender, or framework review starts from a number instead of a guess.",
       href: "/procurement-data-quality"
     },
     {
       eyebrow: "04",
-      title: "Data Quality",
+      title: "Data Readiness",
       copy: "An ERP migration, a Microsoft Fabric rollout, and an AI initiative all assume the data underneath them is already clean and structured. When it is not, each one just carries the mess into a new system. Pearstop fixes the data first.",
       href: "/data-quality"
     },
@@ -81,24 +81,19 @@ export default function SolutionsPage() {
         <div className="container">
           <SectionTitle
             title="More ways to work with Pearstop"
-            lead="Three more places the same classification engine shows up, for specific teams and specific outcomes."
+            lead="Two more places the same classification engine shows up, for specific teams and specific outcomes."
           />
           <div className="bene-cards">
             {[
               {
-                title: "Spend Visibility",
-                copy: "A real cost baseline by category, supplier, and site, so a negotiation or tender starts from a number instead of a guess.",
-                href: "/spend-visibility"
+                title: "Spend Cube & Dashboards",
+                copy: "Spend structured by category, supplier, and time, ready to feed Power BI, Microsoft Fabric, or your own dashboard.",
+                href: "/spend-cube"
               },
               {
                 title: "For Procurement Consultancies",
                 copy: "White-labelled spend classification under your own taxonomy, so engagement margin goes to analysis, not manual cleanup.",
                 href: "/procurement-consultancies"
-              },
-              {
-                title: "Spend Cube & Dashboards",
-                copy: "Spend structured by category, supplier, and time, ready to feed Power BI, Microsoft Fabric, or your own dashboard.",
-                href: "/spend-cube"
               }
             ].map((solution) => (
               <article className="bene-card" key={solution.href}>

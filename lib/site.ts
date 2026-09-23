@@ -92,9 +92,16 @@ export const solutionLinks: NavLink[] = [
       { label: "UNSPSC Germany", href: "/unspsc-classification-germany" }
     ]
   },
-  { label: "Procurement data quality", href: "/procurement-data-quality", description: "A real spend baseline to negotiate, tender, and check framework compliance from." },
   {
-    label: "Data Quality",
+    label: "Spend Visibility",
+    href: "/procurement-data-quality",
+    description: "A real spend baseline to negotiate, tender, and check framework compliance from.",
+    children: [
+      { label: "Spend Cube & Dashboards", href: "/spend-cube" }
+    ]
+  },
+  {
+    label: "Data Readiness",
     href: "/data-quality",
     description: "The clean, structured data an ERP migration, Microsoft Fabric, or an AI initiative all depend on.",
     children: [
@@ -102,7 +109,8 @@ export const solutionLinks: NavLink[] = [
       { label: "AI Readiness", href: "/ai-readiness" }
     ]
   },
-  { label: "Asset Data Management", href: "/asset-data-management", description: "An independent, classified view of spend and maintenance data you don't generate yourself." }
+  { label: "Asset Data Management", href: "/asset-data-management", description: "An independent, classified view of spend and maintenance data you don't generate yourself." },
+  { label: "For Procurement Consultancies", href: "/procurement-consultancies", description: "White-labelled spend classification under your own taxonomy, delivered as your engagement's data layer." }
 ];
 
 export const mainNavLinks: NavLink[] = [
@@ -125,9 +133,11 @@ export const footerCompanyLinks: NavLink[] = [
 
 export const footerSolutionLinks: NavLink[] = [
   { label: "Invoice & Document Extraction", href: "/invoice-data-extraction" },
-  { label: "Data Quality", href: "/data-quality" },
-  { label: "Procurement", href: "/procurement-data-quality" },
+  { label: "Data Readiness", href: "/data-quality" },
+  { label: "Spend Visibility", href: "/procurement-data-quality" },
+  { label: "Spend Cube & Dashboards", href: "/spend-cube" },
   { label: "Asset Data Management", href: "/asset-data-management" },
+  { label: "For Procurement Consultancies", href: "/procurement-consultancies" },
   { label: "UNSPSC Classification", href: "/unspsc" },
   { label: "AI UNSPSC Classification Guide", href: "/unspsc-ai-classification-guide" },
   { label: "Free UNSPSC Lookup", href: "/unspsc-code-lookup" },
