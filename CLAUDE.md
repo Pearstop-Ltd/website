@@ -60,6 +60,15 @@ Implication: don't hand-edit `messages/{nl,fr,de}.json`, `content/blog/{nl,fr,de
 - `app/api/unspsc-lookup/route.ts` — LLM-backed UNSPSC code classification endpoint (system prompt embedded in the route).
 - `app/api/newsletter/route.ts` and `app/api/download/case-studies/route.ts` — form submission endpoints that forward to external webhooks (`NEWSLETTER_WEBHOOK_URL`, `GOOGLE_SHEETS_WEBHOOK_URL`) rather than a database.
 
+### Site migration rules
+
+Migrating a page means re-skinning its existing content into the `components/site/` templates (see `DESIGN.md`). Keep the route, meta title, meta description, JSON-LD, H1 wording and body copy unless the prompt supplies new copy.
+
+- Never write or rewrite marketing copy. New copy comes from the prompt or a design ref.
+- Tables are real HTML table elements with `thead` and `th`, never div grids.
+- Work only in the files the prompt names. Do not explore the rest of the repo.
+- Do not run screenshot or browser loops to check visuals. Run lint and build, then stop. The user reviews visually.
+
 ### Redirects
 
 Legacy `.html` URLs and old paths are permanently redirected in `next.config.mjs` (`redirects()`). Add new legacy-URL redirects there rather than in middleware.
