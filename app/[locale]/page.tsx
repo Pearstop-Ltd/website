@@ -310,6 +310,22 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         </div>
       </section>
 
+      <section aria-labelledby="home-standalone-faq-heading">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-8 col-md-offset-2">
+              <div className="text-center" style={{ marginBottom: "0.75rem" }}>
+                <span className="pill">{t("standaloneFaq.eyebrow")}</span>
+              </div>
+              <div className="quote-card" style={{ textAlign: "center" }}>
+                <h2 id="home-standalone-faq-heading" style={{ marginBottom: "0.75rem" }}>{t("standaloneFaq.q")}</h2>
+                <p className="light-copy">{t("standaloneFaq.a")}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="section-soft" aria-labelledby="home-faq-heading">
         <div className="container">
           <Faq items={faqItems} heading={t("faq.heading")} />

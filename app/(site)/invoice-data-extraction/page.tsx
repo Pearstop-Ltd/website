@@ -83,7 +83,7 @@ export default function InvoiceDataExtractionPage() {
         title="If nobody reads the invoice, the data inside it does not exist."
         lead="Most procurement teams do not have a classification problem yet. They have an invoice problem: PDFs, scans, and delivery notes arriving faster than anyone can read them, let alone enter them into a system. Pearstop turns that paperwork into structured data automatically, so there is something to classify in the first place."
         actions={[
-          { label: "Book a 7-minute discovery", href: siteConfig.calendly, variant: "primary", external: true },
+          { label: "Talk to sales", href: siteConfig.calendly, variant: "primary", external: true },
           { label: "See how it works", href: "#how-it-works", variant: "secondary" }
         ]}
       />
@@ -240,8 +240,8 @@ export default function InvoiceDataExtractionPage() {
 
       <CTABand
         title="Still keying invoices in by hand?"
-        lead="Book a 7-minute discovery call and see what your own invoice stream looks like once it is actually read."
-        actions={[{ label: "Book a 7-minute discovery", href: siteConfig.calendly, variant: "primary", external: true }]}
+        lead="Talk to sales call and see what your own invoice stream looks like once it is actually read."
+        actions={[{ label: "Talk to sales", href: siteConfig.calendly, variant: "primary", external: true }]}
       />
     </>
   );

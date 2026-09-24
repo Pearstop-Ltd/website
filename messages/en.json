@@ -41,7 +41,7 @@
     "instagram": "Instagram"
   },
   "Common": {
-    "bookDiscovery": "Book a 7-minute discovery",
+    "bookDiscovery": "Talk to sales",
     "seeHowItWorks": "See how it works",
     "howItWorks": "How it works",
     "exploreSolution": "Explore solution →",
@@ -228,6 +228,11 @@
         }
       ]
     },
+    "standaloneFaq": {
+      "eyebrow": "The question we get most",
+      "q": "We already tried ChatGPT or Copilot on our data - why would this be different?",
+      "a": "Because Pearstop isn't a general-purpose AI tool pointed at your data - it's a dedicated pipeline built specifically for procurement and asset data: deterministic matching first, a large language model for the genuinely ambiguous cases, and a human review step for anything still uncertain. Teams who've tried a general AI tool on messy spend data consistently find it works fine in a quick trial and breaks down at real volume. Pearstop is built to hold up at that volume, not just in a demo."
+    },
     "geoBlock": {
       "title": "What does Pearstop do?",
       "copy": "Pearstop helps facilities management, infrastructure, and hard services companies clean procurement and asset data so teams can see what they are buying, plan maintenance more reliably, and feed trustworthy data into AI and reporting tools. If you need one plain answer, it is this: we turn messy operational data into something your business can actually use."
@@ -288,7 +293,7 @@
       "title": "Let's talk.",
       "lead": "Got a data problem worth solving? We would love to hear about it.",
       "getInTouch": "Get in touch",
-      "bookDiscovery": "Book a 7-minute discovery"
+      "bookDiscovery": "Talk to sales"
     },
     "leaders": [
       {
@@ -339,7 +344,7 @@
     "cta": {
       "title": "Not sure if Pearstop is for you?",
       "lead": "Let's talk. You're smart - let's work out your solution.",
-      "bookDiscovery": "Book a 7-minute discovery",
+      "bookDiscovery": "Talk to sales",
       "findOut": "Find out what's possible (send email)"
     }
   },
@@ -418,7 +423,7 @@
     "cta": {
       "title": "Not sure which solution you need?",
       "lead": "Book a 7-minute discovery call. We will identify exactly which data problem is costing you the most - and show you how to fix it.",
-      "bookDiscovery": "Book a 7-minute discovery",
+      "bookDiscovery": "Talk to sales",
       "viewIndustries": "View Industries"
     }
   },
@@ -517,7 +522,7 @@
     "cta": {
       "title": "Ready to fix the data underneath your next project?",
       "lead": "Book a 7-minute discovery call. We will show you exactly where your data would break an ERP migration, a Fabric rollout, or an AI initiative today.",
-      "button": "Book a 7-minute discovery"
+      "button": "Talk to sales"
     }
   },
   "InvoiceExtraction": {
@@ -549,21 +554,51 @@
     "howItWorks": {
       "eyebrow": "How It Works",
       "title": "From unread document to structured line item",
-      "step1": { "title": "Ingest, in any format", "copy": "PDF invoices, scanned paper, email attachments, EDI feeds. No fixed template per supplier, and no requirement that a supplier changes how they send anything." },
-      "step2": { "title": "OCR and AI extraction", "copy": "Line items, quantities, unit costs, cost codes, and supplier references are read and structured automatically. Anything below a confidence threshold is flagged rather than guessed at, and each correction feeds back into the pipeline so the same supplier and format is read more accurately next time." },
-      "step3": { "title": "Delivered into what you already run", "copy": "Structured output lands in the format your ERP, P2P platform, or BI tool expects, ready for classification, reporting, or direct reload." }
+      "step1": {
+        "title": "Ingest, in any format",
+        "copy": "PDF invoices, scanned paper, email attachments, EDI feeds. No fixed template per supplier, and no requirement that a supplier changes how they send anything."
+      },
+      "step2": {
+        "title": "OCR and AI extraction",
+        "copy": "Line items, quantities, unit costs, cost codes, and supplier references are read and structured automatically. Anything below a confidence threshold is flagged rather than guessed at, and each correction feeds back into the pipeline so the same supplier and format is read more accurately next time."
+      },
+      "step3": {
+        "title": "Delivered into what you already run",
+        "copy": "Structured output lands in the format your ERP, P2P platform, or BI tool expects, ready for classification, reporting, or direct reload."
+      }
     },
     "whatMakesPossible": {
       "title": "What becomes possible once the invoice is actually read",
-      "b1": { "title": "Spend visible the same week, not the same quarter", "copy": "Data is structured as invoices arrive, not weeks later when someone finally gets through the backlog." },
-      "b2": { "title": "A category to actually classify", "copy": "Extraction is the precondition for classification. Nothing can be categorised, benchmarked, or compared until it exists as structured data." },
-      "b3": { "title": "Fewer hours lost to keying and correcting", "copy": "The manual entry step that absorbs procurement and finance admin time is removed, not just made faster." }
+      "b1": {
+        "title": "Spend visible the same week, not the same quarter",
+        "copy": "Data is structured as invoices arrive, not weeks later when someone finally gets through the backlog."
+      },
+      "b2": {
+        "title": "A category to actually classify",
+        "copy": "Extraction is the precondition for classification. Nothing can be categorised, benchmarked, or compared until it exists as structured data."
+      },
+      "b3": {
+        "title": "Fewer hours lost to keying and correcting",
+        "copy": "The manual entry step that absorbs procurement and finance admin time is removed, not just made faster."
+      }
     },
     "stats": {
       "title": "What changes with Pearstop",
-      "s1": { "value": "~70% → 99%", "label": "first-pass extraction accuracy", "copy": "On one FM client's live invoice stream, as the pipeline learned their supplier base" },
-      "s2": { "value": "Any format", "label": "PDF, scan, photo, or EDI", "copy": "No fixed template required per supplier" },
-      "s3": { "value": "Days", "label": "typical time to first structured output", "copy": "Not a lengthy integration project" }
+      "s1": {
+        "value": "~70% → 99%",
+        "label": "first-pass extraction accuracy",
+        "copy": "On one FM client's live invoice stream, as the pipeline learned their supplier base"
+      },
+      "s2": {
+        "value": "Any format",
+        "label": "PDF, scan, photo, or EDI",
+        "copy": "No fixed template required per supplier"
+      },
+      "s3": {
+        "value": "Days",
+        "label": "typical time to first structured output",
+        "copy": "Not a lengthy integration project"
+      }
     },
     "quote": {
       "text": "Doing that manually absolutely has its own risks. It might be borderline impossible at this stage while keeping operations going.",
@@ -591,7 +626,7 @@
     "cta": {
       "title": "Still keying invoices in by hand?",
       "lead": "Book a 7-minute discovery call and see what your own invoice stream looks like once it is actually read.",
-      "button": "Book a 7-minute discovery"
+      "button": "Talk to sales"
     }
   },
   "ProcurementConsultancies": {
@@ -684,7 +719,7 @@
     "cta": {
       "title": "Want to see it on a real client dataset?",
       "lead": "Book a 7-minute discovery call and we'll show you what your next engagement's spend data looks like after a first pass.",
-      "button": "Book a 7-minute discovery"
+      "button": "Talk to sales"
     }
   },
   "SpendCube": {
@@ -782,7 +817,7 @@
     "cta": {
       "title": "Ready to see your own spend cube?",
       "lead": "Book a 7-minute discovery call and we'll show you what your spend data looks like structured into a cube, ready for your dashboard.",
-      "button": "Book a 7-minute discovery"
+      "button": "Talk to sales"
     }
   },
   "Procurement": {
@@ -797,17 +832,17 @@
     },
     "problem": {
       "eyebrow": "The Problem",
-      "title": "One price at tender. No way to prove it later.",
-      "copy": "Ask a head of commercial to defend what a bundled contract costs, service line by service line, and the honest answer is often a guess dressed up as a number. The same gap shows up a level higher. A construction group turning over hundreds of millions across a dozen entities can state its revenue to the euro and still not know, with any precision, what it spent last year or on what, because spend sits in different systems, coded differently, entity by entity.",
+      "title": "One number at the top. No detail underneath.",
+      "copy": "Ask a head of procurement what they spent last year and they can usually give you a number to the euro. Ask what it was actually spent on - category by category, site by site, supplier by supplier - and the answer gets vague fast. The same gap shows up a level higher. A construction group turning over hundreds of millions across a dozen entities can state its revenue to the euro and still not have real granularity on what it bought or from whom, because spend sits in different systems, coded differently, entity by entity.",
       "quote": {
-        "text": "We say, well how much is this going to be. And we go, it feels like it should be three percent of the contract value. But in real terms that could be six or that could be two. We don't know.",
-        "attribution": "Head of Commercial, multi-site cleaning services contractor"
+        "text": "Most companies are flying blind, and only find out when someone asks a question they cannot answer.",
+        "attribution": "Procurement Lead, Infrastructure"
       },
       "bullets": [
-        "One blended contract price, no way to break out what each service line actually costs",
+        "Total spend known at a high level, but not broken down by category, site, or supplier with enough granularity to act on",
         "Framework agreements signed years ago, with no live comparison against what is actually being bought today",
         "Group-wide spend spread across entities and systems, so nobody can add it up precisely",
-        "No real baseline to negotiate a supplier or price a tender against, only last year's guess"
+        "High-level totals that look fine in a board pack but cannot answer a specific question about one category or one site"
       ]
     },
     "howItWorks": {
@@ -849,7 +884,7 @@
     },
     "geoBlock": {
       "title": "What is procurement data quality and why does it matter?",
-      "copy": "Procurement data quality is whether spend data, across invoices, purchase orders, and supplier records, is accurate and consistent enough to add up. For infrastructure, construction, and FM organisations buying across many sites, entities, and bundled contracts, poor data quality means nobody can state a real baseline to negotiate or tender from. Pearstop automates the cleaning and classification of procurement data for companies like Strukton, processing over 35,000 lines a month, so spend is visible by category, framework compliance is checked against live buying, and group-wide spend adds up to one number instead of several conflicting ones."
+      "copy": "Procurement data quality is whether spend data, across invoices, purchase orders, and supplier records, is accurate and consistent enough to add up. For infrastructure, construction, and FM organisations buying across many sites, entities, and bundled contracts, poor data quality means nobody can state a real baseline to negotiate or tender from. Pearstop automates the cleaning and classification of procurement data at any scale, from a few hundred lines a month to hundreds of thousands, so spend is visible by category, framework compliance is checked against live buying, and group-wide spend adds up to one number instead of several conflicting ones."
     },
     "faq": [
       {
@@ -868,7 +903,7 @@
     "cta": {
       "title": "Ready to build a real spend baseline?",
       "lead": "Book a 7-minute discovery call. We will show you exactly where your spend data is hiding the number you need.",
-      "button": "Book a 7-minute discovery"
+      "button": "Talk to sales"
     }
   },
   "AssetManagement": {
@@ -965,7 +1000,7 @@
     "cta": {
       "title": "Ready to hold an independent view of your own?",
       "lead": "Book a 7-minute discovery call and see exactly how Pearstop turns the data you already receive into something you can verify.",
-      "button": "Book a 7-minute discovery"
+      "button": "Talk to sales"
     }
   },
   "AiReadiness": {
@@ -1060,7 +1095,7 @@
     "cta": {
       "title": "Is your data ready for AI?",
       "lead": "Book a 7-minute call and we will tell you exactly what needs to happen before your AI initiatives can deliver results.",
-      "button": "Book a 7-minute discovery",
+      "button": "Talk to sales",
       "fabricLink": "See Fabric readiness too"
     }
   },
@@ -1072,7 +1107,7 @@
     "hero": {
       "eyebrow": "UNSPSC Classification",
       "title": "Your procurement data contains the answers. You just cannot read it yet.",
-      "lead": "Most hard services and FM companies have years of purchase order data in SAP or Oracle. Without UNSPSC classification, it is a pile of free-text line items. With it, you can see exactly what you spend by category, benchmark suppliers, and build tenders from actual cost data. Pearstop classifies 35,000 lines a month automatically."
+      "lead": "Most FM and construction companies have years of purchase order data in SAP or Oracle. Without UNSPSC classification, it is a pile of free-text line items. With it, you can see exactly what you spend by category, benchmark suppliers, and build tenders from actual cost data. Pearstop classifies invoices at any scale, from a pilot of a few hundred lines to full production volume - it scales with you."
     },
     "standard": {
       "eyebrow": "What is UNSPSC?",
@@ -1127,7 +1162,7 @@
     },
     "geoBlock": {
       "title": "How does UNSPSC classification work for hard services and FM companies?",
-      "copy": "Hard services FM companies typically buy from 500 to 3,000 suppliers across multiple sites. Invoice descriptions are written by field engineers, not buyers, which means the same work appears under hundreds of different strings. Manual UNSPSC classification at 5,000 to 35,000 lines per month requires one or two dedicated staff working continuously just to stay current. Pearstop's automated engine classifies 90-95% of those lines without human input, with the remainder flagged for review. The review queue shrinks each month as the engine learns from your team's decisions. Strukton currently processes 35,000 lines per month this way via SAP integration."
+      "copy": "Hard services FM companies typically buy from 500 to 3,000 suppliers across multiple sites. Invoice descriptions are written by field engineers, not buyers, which means the same work appears under hundreds of different strings. Manual UNSPSC classification at 5,000 to 35,000 lines per month requires one or two dedicated staff working continuously just to stay current. Pearstop's automated engine classifies 90-95% of those lines without human input, with the remainder flagged for review. The review queue shrinks each month as the engine learns from your team's decisions."
     },
     "noDataFaq": {
       "label": "What if we have never classified before?",
@@ -1135,8 +1170,8 @@
     },
     "stats": {
       "s1": {
-        "title": "Lines per month (Strukton)",
-        "copy": "A major Dutch infrastructure contractor processes 35,000 procurement lines per month through Pearstop via SAP integration."
+        "title": "Invoices a month, scales with you",
+        "copy": "Our human-in-the-loop review process was built with input from Strukton's buyer team. Pearstop scales from a pilot to full production volume - a hundred lines a month or a hundred thousand."
       },
       "s2": {
         "title": "Auto-classification rate",
@@ -1176,12 +1211,13 @@
       "fm": "UNSPSC for FM and Hard Services",
       "nl": "UNSPSC in the Netherlands",
       "de": "UNSPSC in Germany",
-      "faq": "Full FAQ"
+      "faq": "Full FAQ",
+      "tree": "Explore the UNSPSC Tree"
     },
     "cta": {
       "title": "Ready to automate your procurement classification?",
       "lead": "Book a 7-minute discovery. We will show you exactly how the classification engine would work with your data.",
-      "button": "Book a 7-minute discovery"
+      "button": "Talk to sales"
     }
   },
   "UnspscAiGuide": {
@@ -1193,7 +1229,7 @@
       "eyebrow": "AI UNSPSC Classification Guide",
       "title": "You have a large Excel catalog. You want AI to classify it into UNSPSC.",
       "lead": "That is the request we hear most often, sometimes as a spend file that has never carried a code, sometimes as a stack of PDF invoices that has not even become a spend file yet. This guide describes the actual process: how Pearstop turns either starting point into a UNSPSC-coded dataset, what a pilot measures before you commit to the full file, and why the classification does not come from simply asking a model what a code should be.",
-      "ctaPrimary": "Book a 7-minute discovery",
+      "ctaPrimary": "Talk to sales",
       "ctaSecondary": "See the process"
     },
     "paths": {
@@ -1316,7 +1352,7 @@
     "cta": {
       "title": "Ready to see this run against your own data?",
       "lead": "Book a 7-minute discovery, or test a single description on the free lookup tool first.",
-      "button": "Book a 7-minute discovery",
+      "button": "Talk to sales",
       "secondaryButton": "Try the free lookup"
     }
   },
@@ -1397,7 +1433,7 @@
     "cta": {
       "title": "Planning a Fabric migration?",
       "lead": "Talk to us before the migration starts. A 30-minute call now can save months of rework later.",
-      "button": "Book a 7-minute discovery",
+      "button": "Talk to sales",
       "aiLink": "See AI readiness too"
     }
   },
@@ -1520,7 +1556,7 @@
       "title": "Want to talk it through?",
       "lead": "If you'd rather discuss your data problem directly, we're happy to help.",
       "followLinkedIn": "Follow Pearstop on LinkedIn for updates",
-      "bookDiscovery": "Book a 7-minute discovery"
+      "bookDiscovery": "Talk to sales"
     }
   },
   "Cases": {
@@ -2148,7 +2184,7 @@
     "cta": {
       "title": "Prefer a conversation?",
       "lead": "We can also walk you through the same thinking on a quick call.",
-      "bookDiscovery": "Book a 7-minute discovery",
+      "bookDiscovery": "Talk to sales",
       "backHome": "Back to home"
     }
   },
@@ -2161,7 +2197,7 @@
       "eyebrow": "FAQ",
       "title": "Questions we get asked most often.",
       "lead": "Everything you need to know about how Pearstop works, what it costs, and whether it is right for your organisation.",
-      "cta": "Book a 7-minute discovery",
+      "cta": "Talk to sales",
       "secondary": "Jump to questions"
     },
     "sections": {
@@ -2315,13 +2351,13 @@
     "stillHaveQuestions": {
       "label": "Still have a question?",
       "copy": "If your question is not answered here, the fastest way to get an answer is a 7-minute discovery call. There is no sales pressure — it is a direct conversation about your data situation.",
-      "cta": "Book a 7-minute discovery",
+      "cta": "Talk to sales",
       "email": "Send us a message"
     },
     "cta": {
       "title": "Ready to see it in action?",
       "lead": "Book a 7-minute discovery and we will show you exactly how the classification engine works with your data.",
-      "button": "Book a 7-minute discovery"
+      "button": "Talk to sales"
     }
   },
   "UnspscFM": {
@@ -2337,7 +2373,7 @@
       "eyebrow": "UNSPSC for Facilities Management",
       "title": "FM procurement data is the hardest to classify. Here is how to fix it.",
       "lead": "Hard services and FM companies manage thousands of invoice lines across hundreds of suppliers and sites. Pearstop classifies all of it automatically — 90–95% without human input — so your team can focus on category management, not data entry.",
-      "cta": "Book a 7-minute discovery",
+      "cta": "Talk to sales",
       "secondary": "How it works"
     },
     "challenge": {
@@ -2428,7 +2464,7 @@
     "cta": {
       "title": "Ready to automate FM procurement classification?",
       "lead": "Book a 7-minute discovery. We will show you exactly how the engine works with your spend data.",
-      "button": "Book a 7-minute discovery"
+      "button": "Talk to sales"
     }
   },
   "UnspscNL": {
@@ -2651,7 +2687,7 @@
     "bulk": {
       "label": "Need to classify thousands of lines?",
       "copy": "This tool handles single lookups. Pearstop’s automated classification engine processes 35,000 procurement lines per month — with 90-95% auto-classification and full SAP integration. Book a 7-minute discovery to see it with your data.",
-      "cta": "Book a 7-minute discovery",
+      "cta": "Talk to sales",
       "learnMore": "See how it works"
     },
     "faq": {
@@ -2698,7 +2734,46 @@
     "cta": {
       "title": "Need to classify thousands of lines?",
       "lead": "Book a 7-minute discovery and we will show you how the full classification engine works with your actual procurement data.",
-      "button": "Book a 7-minute discovery"
+      "button": "Talk to sales"
+    }
+  },
+  "BookDemo": {
+    "meta": {
+      "title": "Book a Demo",
+      "description": "A 30-minute call to map your invoice and spend data blockers, your goals, and whether Pearstop gets you there."
+    },
+    "hero": {
+      "eyebrow": "Book a Demo",
+      "title": "Here's exactly what we'll cover in 30 minutes",
+      "lead": "No generic pitch. We spend the call on your data, your blockers, and whether Pearstop actually gets you where you want to go.",
+      "cta": "See available times"
+    },
+    "steps": [
+      {
+        "title": "Your current blockers",
+        "copy": "We start with where things actually break down. Is it invoice extraction? Where do your invoices even live today - in an ERP system, sitting in inboxes, or still arriving on paper? We'll walk through the options and find out exactly where yours get stuck."
+      },
+      {
+        "title": "Your process, mapped",
+        "copy": "Once invoices are processed, what happens next? We'll quickly map your process end to end, so we're working from how things actually flow today, not how they're supposed to."
+      },
+      {
+        "title": "Your goals",
+        "copy": "What do you actually want out of your invoice and spend data? We'll do a deep dive into what you're trying to achieve, not just what's broken."
+      },
+      {
+        "title": "The platform, walked through",
+        "copy": "We'll show you the parts of Pearstop that map directly to your goals, so you leave the call with a clear answer: will this get you where you want to be?"
+      }
+    ],
+    "book": {
+      "title": "Pick a time",
+      "lead": "Choose a slot below - no back-and-forth, no popup."
+    },
+    "cta": {
+      "title": "Not ready to book yet?",
+      "lead": "Send us a sample of your invoices and we'll show you what comes back, no call required.",
+      "action": "See how it works"
     }
   }
 }

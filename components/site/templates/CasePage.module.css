@@ -1,0 +1,184 @@
+.root {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+  gap: 72px;
+  align-items: start;
+}
+
+.heroMain {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.heroMeta {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.badge {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+
+.badgeClient {
+  color: #ffffff;
+  background: var(--blue);
+}
+
+.badgePattern {
+  color: var(--navy-deep);
+  background: var(--tint-purple);
+}
+
+.metaLine {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.title {
+  margin: 0;
+  font-size: 54px;
+  line-height: 1.08;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  color: var(--navy);
+}
+
+.lead {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.6;
+  font-weight: 300;
+  color: var(--text);
+}
+
+.heroVisual {
+  background: var(--bg-soft);
+  border-radius: 20px;
+  padding: 28px 30px;
+}
+
+.disclaimer {
+  background: var(--tint-purple);
+  padding: 18px var(--inset);
+  font-size: 14px;
+  color: var(--navy-deep);
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.stepsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.twoColumn {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 80px;
+  align-items: start;
+}
+
+.twoColumnMain {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.body {
+  font-size: 17px;
+  line-height: 1.7;
+  font-weight: 300;
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sidebar {
+  background: var(--bg-soft);
+  border-radius: 20px;
+  padding: 32px;
+}
+
+.confidence {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 72px;
+  align-items: center;
+}
+
+.confidenceMain {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.twoCards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+}
+
+.relatedTitle {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.relatedGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+@media (max-width: 767px) {
+  .heroGrid,
+  .twoColumn,
+  .confidence,
+  .twoCards,
+  .relatedGrid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .stepsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .lead {
+    font-size: 18px;
+  }
+
+  .disclaimer {
+    padding: 16px 20px;
+  }
+}

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { CTABand, GeoBlock, PageHero, QuoteBox, SectionTitle, StatsGrid } from "@/components/content";
+import { CTABand, PageHero, QuoteBox, StatsGrid } from "@/components/content";
 import { alternateLanguages, caseStudyDetails, siteConfig } from "@/lib/site";
 
 function titleFromSlug(slug: string) {
@@ -33,14 +33,29 @@ export default async function CaseDetailPage({ params }: { params: Promise<{ slu
 
   return (
     <>
-      <PageHero eyebrow={entry.eyebrow} title={entry.title} lead={entry.lead} />
+      <PageHero eyebrow={entry.eyebrow} title={entry.title} lead={entry.lead} leadAccent />
 
-      <section>
+      {entry.intro ? (
+        <section>
+          <div className="container">
+            <div className="row">
+              <div className="col-md-8 col-md-offset-2">
+                <p className="light-copy" style={{ fontSize: "1.1rem", textAlign: "center" }}>
+                  {entry.intro}
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      ) : null}
+
+      <section className={entry.intro ? "section-soft" : ""}>
         <div className="container">
           <div className="row" style={{ alignItems: "center", gap: "3rem", flexWrap: "wrap" }}>
             <div className="col-md-6">
               <div className="benefit-eyebrow">The challenge</div>
-              <h2>{entry.challenge}</h2>
+              <h2 className="case-wayfinder">The problem</h2>
+              <h3 className="case-question">{entry.challenge}</h3>
               <p className="light-copy">{entry.solution}</p>
             </div>
             <div className="col-md-5" style={{ marginLeft: "auto" }}>
@@ -66,15 +81,17 @@ export default async function CaseDetailPage({ params }: { params: Promise<{ slu
         <div className="container">
           <div className="row">
             <div className="col-md-8 col-md-offset-2">
-              <GeoBlock title="What changed?" copy={entry.geo} />
+              <h2 className="case-wayfinder">The result</h2>
+              <h3 className="case-question">What changed?</h3>
+              <p className="light-copy">{entry.geo}</p>
             </div>
           </div>
         </div>
       </section>
 
       <CTABand
-        title={entry.slug === "strukton" ? "Want updates on the Strukton work?" : "Want a case study built around your data?"}
-        lead={entry.slug === "strukton" ? "This page stays live while the full case study is being finalised." : "We can show you what the same approach would look like for your procurement or asset data."}
+        title="Want a case study built around your data?"
+        lead="We can show you what the same approach would look like for your procurement or asset data."
         actions={[
           { label: entry.ctaLabel, href: entry.ctaHref, variant: "primary", external: entry.ctaHref.startsWith("http") },
           { label: "Back to cases", href: "/cases", variant: "secondary" }

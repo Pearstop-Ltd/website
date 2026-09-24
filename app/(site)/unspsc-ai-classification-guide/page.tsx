@@ -94,7 +94,7 @@ export default function UnspscAiGuidePage() {
         title="You have a large Excel catalog. You want AI to classify it into UNSPSC."
         lead="That is the request we hear most often, sometimes as a spend file that has never carried a code, sometimes as a stack of PDF invoices that has not even become a spend file yet. This guide describes the actual process: how Pearstop turns either starting point into a UNSPSC-coded dataset, what a pilot measures before you commit to the full file, and why the classification does not come from simply asking a model what a code should be."
         actions={[
-          { label: "Book a 7-minute discovery", href: siteConfig.calendly, variant: "primary", external: true },
+          { label: "Talk to sales", href: siteConfig.calendly, variant: "primary", external: true },
           { label: "See the process", href: "#process", variant: "secondary" }
         ]}
       />
@@ -327,9 +327,9 @@ export default function UnspscAiGuidePage() {
 
       <CTABand
         title="Ready to see this run against your own data?"
-        lead="Book a 7-minute discovery, or test a single description on the free lookup tool first."
+        lead="Talk to sales, or test a single description on the free lookup tool first."
         actions={[
-          { label: "Book a 7-minute discovery", href: siteConfig.calendly, variant: "primary", external: true },
+          { label: "Talk to sales", href: siteConfig.calendly, variant: "primary", external: true },
           { label: "Try the free lookup", href: "/unspsc-code-lookup", variant: "secondary" }
         ]}
       />

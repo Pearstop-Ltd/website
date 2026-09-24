@@ -98,7 +98,7 @@ export default function CaseStudiesPage() {
               <p className="case-studies-note">
                 Prefer to just view it? <a href={siteConfig.downloads.caseStudiesView} target="_blank" rel="noopener noreferrer">Open the Google Slides deck</a>.
                 <br />
-                Prefer to talk first? <CalendlyButton label="Book a 7-minute discovery call" className="calendly-inline-link" /> instead.
+                Prefer to talk first? <CalendlyButton label="Talk to sales call" className="calendly-inline-link" /> instead.
               </p>
             </div>
           </div>
@@ -136,7 +136,7 @@ export default function CaseStudiesPage() {
         lead="If you’d rather discuss your data problem directly, we’re happy to help."
         actions={[
           { label: "Follow Stephanie on LinkedIn", href: siteConfig.socials.linkedin, variant: "secondary", external: true },
-          { label: "Book a 7-minute discovery", href: siteConfig.calendly, variant: "primary", external: true }
+          { label: "Talk to sales", href: siteConfig.calendly, variant: "primary", external: true }
         ]}
       />
     </>

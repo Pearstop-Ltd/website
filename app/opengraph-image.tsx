@@ -16,7 +16,7 @@ export default function OpenGraphImage() {
           padding: 64,
           background: "linear-gradient(135deg, #1f2a68 0%, #353fff 60%, #a383ff 100%)",
           color: "#fff",
-          fontFamily: '"Plus Jakarta Sans", sans-serif'
+          fontFamily: '"Inter", sans-serif'
         }}
       >
         <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>

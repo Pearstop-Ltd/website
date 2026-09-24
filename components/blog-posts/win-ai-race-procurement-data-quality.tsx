@@ -63,7 +63,7 @@ export default function WinAiRaceProcurementDataQuality() {
         type="discovery"
         title="See how data-ready your procurement is"
         description="In a 7-minute call we will show you what clean, classified procurement data looks like in practice — and what it unlocks for your AI and analytics roadmap."
-        ctaLabel="Book a 7-minute discovery"
+        ctaLabel="Talk to sales"
         ctaHref="/contact"
       />
     </>

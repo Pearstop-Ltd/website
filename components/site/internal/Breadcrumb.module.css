@@ -1,0 +1,15 @@
+.root {
+  font-size: 14px;
+  color: var(--muted);
+  display: flex;
+  gap: 8px;
+}
+
+.link {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.current {
+  color: var(--navy-deep);
+}

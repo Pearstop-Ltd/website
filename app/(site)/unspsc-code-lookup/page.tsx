@@ -125,7 +125,7 @@ export default function UnspscLookupPage() {
                 <div className="story-label">Need bulk classification?</div>
                 <p>This tool handles individual lookups. For bulk classification — processing thousands of invoice lines automatically — Pearstop's engine handles up to 35,000 lines per month at 90–95% accuracy.</p>
                 <div style={{ marginTop: "1rem", display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-            <CalendlyButton label="Book a 7-minute discovery" className="btn btn-primary" />
+            <CalendlyButton label="Talk to sales" className="btn btn-primary" />
                   <Link href="/unspsc" className="btn btn-secondary">
                     Learn about bulk classification
                   </Link>
@@ -204,8 +204,8 @@ export default function UnspscLookupPage() {
 
       <CTABand
         title="Need to classify thousands of lines?"
-        lead="Book a 7-minute discovery. We'll show you how the classification engine works with your data."
-        actions={[{ label: "Book a 7-minute discovery", href: siteConfig.calendly, variant: "primary", external: true }]}
+        lead="Talk to sales. We'll show you how the classification engine works with your data."
+        actions={[{ label: "Talk to sales", href: siteConfig.calendly, variant: "primary", external: true }]}
       />
     </>
   );

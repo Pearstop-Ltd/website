@@ -1,0 +1,36 @@
+/*
+  Scoped DESIGN.md token set. These custom properties intentionally reuse
+  names that already exist in app/globals.css (e.g. --navy) with different
+  values. Because they're only ever set on this .root class rather than
+  :root, they only take effect inside components/site/ trees and never
+  leak onto a live page. See DESIGN.md "Brand mapping" / "Migration".
+*/
+.root {
+  --navy: #2a3990;
+  --navy-deep: #1f2a68;
+  --blue: #353fff;
+  --purple: #a383ff;
+  --purple-text: #7a5cd6;
+  --green: #8bc34a;
+  --green-text: #4e7d22;
+  --light-blue: #7a8be6;
+  --bg-soft: #f8f9fa;
+  --tint-blue: #dce1f8;
+  --tint-purple: #e8e0fc;
+  --tint-green: #f1f8e9;
+  --border: #eceef3;
+  --text: #333333;
+  --muted: #666666;
+
+  --inset: 160px;
+  --section-pad: 100px;
+
+  color: var(--text);
+}
+
+@media (max-width: 767px) {
+  .root {
+    --inset: 20px;
+    --section-pad: 56px;
+  }
+}

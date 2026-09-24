@@ -134,7 +134,7 @@ export default function UnspscFMPage() {
         title="FM procurement data is the hardest to classify. Here is how to fix it."
         lead="Hard services and FM companies manage thousands of invoice lines across hundreds of suppliers and sites. Pearstop classifies all of it automatically — 90–95% without human input — so your team can focus on category management, not data entry."
         actions={[
-          { label: "Book a 7-minute discovery", href: siteConfig.calendly, variant: "primary", external: true },
+          { label: "Talk to sales", href: siteConfig.calendly, variant: "primary", external: true },
           { label: "How it works", href: "#how-it-works", variant: "secondary" }
         ]}
       />
@@ -311,8 +311,8 @@ export default function UnspscFMPage() {
 
       <CTABand
         title="Ready to automate FM procurement classification?"
-        lead="Book a 7-minute discovery. We will show you exactly how the engine works with your spend data."
-        actions={[{ label: "Book a 7-minute discovery", href: siteConfig.calendly, variant: "primary", external: true }]}
+        lead="Talk to sales. We will show you exactly how the engine works with your spend data."
+        actions={[{ label: "Talk to sales", href: siteConfig.calendly, variant: "primary", external: true }]}
       />
     </>
   );

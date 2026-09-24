@@ -1,164 +1,235 @@
 import type { Metadata } from "next";
-import type { CSSProperties } from "react";
-import { CTABand, PageHero, QuoteBox } from "@/components/content";
+import {
+  CaseBreadcrumb, CaseTypeBadge, CaseSectionLabel, CaseH2, CaseBodyP, CaseProcessDiagram, CaseQuoteCard,
+  CaseMoreLinks, CaseClosingCTA
+} from "@/components/case-design";
 import { alternateLanguages, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Cleaning Business Supplier Consolidation (Anonymized Use Case)",
+  title: "Cleaning Consumables Consolidation (Anonymized Use Case)",
   description:
-    "30 different suppliers invoiced one cleaning business for toilet paper in twelve months. Classified, the pattern was visible in days. An anonymized, illustrative use case for cleaning and soft FM procurement.",
+    "Nobody chose 30 toilet paper suppliers. Classified, the pattern was visible in days. An anonymized, illustrative use case for cleaning and soft FM procurement.",
   alternates: {
     canonical: `${siteConfig.url}/cases/cleaning-consumables-consolidation`,
     languages: alternateLanguages("/cases/cleaning-consumables-consolidation")
   }
 };
 
-const decisionRows = [
-  { supplier: "Gompels", price: "£0.31", why: "Bulk price leader" },
-  { supplier: "Bunzl CHS", price: "£0.33", why: "Contracted, Tork & Katrin" },
-  { supplier: "Pattersons", price: "£0.38", why: "Regional next-day cover" },
-  { supplier: "Amazon", price: "£0.41", why: "Spot buys, no terms" }
+const tileColors = Array.from({ length: 30 }, (_, i) => ([4, 15, 25].includes(i) ? "var(--success)" : "var(--border)"));
+
+const suppliers = [
+  { name: "Gompels", price: "£0.31", terms: "Account, 30 days", delivery: "National, 2 to 3 days" },
+  { name: "Bunzl CHS", price: "£0.33", terms: "Contracted, one invoice", delivery: "National, scheduled" },
+  { name: "Pattersons", price: "£0.38", terms: "Account, 30 days", delivery: "Regional, next day" },
+  { name: "Amazon Business", price: "£0.41", terms: "Spot, no terms", delivery: "Next day, per parcel" }
 ];
 
-const priceRows = [
-  { supplier: "Supplier A", price: "£0.31" },
-  { supplier: "Supplier B", price: "£0.36" },
-  { supplier: "Supplier C", price: "£0.41" },
-  { supplier: "Supplier D", price: "£0.47" },
-  { supplier: "Supplier E", price: "£0.52" }
-];
+const bars = [0.31, 0.36, 0.41, 0.47, 0.52].map((p, i) => ({
+  label: "Supplier " + "ABCDE"[i],
+  price: "£" + p.toFixed(2),
+  w: Math.round((p / 0.52) * 100) + "%",
+  color: i === 4 ? "var(--purple)" : "var(--primary)"
+}));
 
-const tableStyle: CSSProperties = { width: "100%", borderCollapse: "collapse", marginTop: "1.5rem" };
-const thStyle: CSSProperties = { textAlign: "left", padding: "0.6rem 0.75rem", borderBottom: "2px solid var(--border)", fontSize: "0.82rem", color: "var(--muted)" };
-const tdStyle: CSSProperties = { padding: "0.6rem 0.75rem", borderBottom: "1px solid var(--border)", fontSize: "0.94rem" };
-
-export default function CleaningConsumablesConsolidationPage() {
+export default function CleaningCaseStudyPage() {
   return (
     <>
-      <PageHero
-        eyebrow="Anonymized Use Case · Cleaning & Soft FM"
-        title="Nobody chose 30 toilet paper suppliers. They just couldn't see them."
-        lead="In one cleaning business, 30 different suppliers invoiced for toilet paper within twelve months. Illustrative data, based on a real pattern in soft FM procurement - not a named client engagement."
-      />
-
-      <section>
-        <div className="container">
-          <h2>The decision, once it's visible</h2>
-          <p className="light-copy">
-            Every line classified, the pattern was visible in days: here they are, cost, quality, and brand side by
-            side, and the three worth keeping.
-          </p>
-          <table style={tableStyle}>
-            <thead>
-              <tr>
-                <th style={thStyle}>Supplier</th>
-                <th style={thStyle}>£/roll</th>
-                <th style={thStyle}>Why</th>
-              </tr>
-            </thead>
-            <tbody>
-              {decisionRows.map((row) => (
-                <tr key={row.supplier}>
-                  <td style={tdStyle}>{row.supplier}</td>
-                  <td style={tdStyle}>{row.price}</td>
-                  <td style={tdStyle}>{row.why}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-          <p className="light-copy" style={{ marginTop: "1rem" }}>
-            30 suppliers found across twelve months. Three worth keeping, once the spend was classified and put side
-            by side - yours to make, the table makes it obvious.
-          </p>
-        </div>
-      </section>
-
-      <section className="section-soft">
-        <div className="container">
-          <h2>Off-contract buying</h2>
-          <p className="light-copy">
-            Contracted price, through Bunzl: £19.20 for a case of 36 rolls. Actually paid, through Amazon: £26.80 for
-            the same case - 40% more. A cost risk and a compliance risk: client contracts specify products and
-            suppliers, and every off-contract line weakens your position at renegotiation.
-          </p>
-        </div>
-      </section>
-
-      <section>
-        <div className="container">
-          <h2>Same roll, five prices</h2>
-          <p className="light-copy">
-            The same product, Tork Advanced T4, priced per roll across five suppliers:
-          </p>
-          <table style={tableStyle}>
-            <thead>
-              <tr>
-                <th style={thStyle}>Supplier</th>
-                <th style={thStyle}>Price paid per roll</th>
-              </tr>
-            </thead>
-            <tbody>
-              {priceRows.map((row) => (
-                <tr key={row.supplier}>
-                  <td style={tdStyle}>{row.supplier}</td>
-                  <td style={tdStyle}>{row.price}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-          <p className="light-copy" style={{ marginTop: "1rem" }}>
-            A 68% spread on the same product - invisible, line by line, until classified.
-          </p>
-        </div>
-      </section>
-
-      <section className="section-soft">
-        <div className="container">
-          <div className="bene-cards">
-            <article className="ben-card">
-              <div className="ben-icon">✓</div>
-              <h3>Your data doesn&rsquo;t need to be clean</h3>
-              <p>Messy data is the starting point. Cleaning and classifying it is the product.</p>
-            </article>
-            <article className="ben-card">
-              <div className="ben-icon">↗</div>
-              <h3>AI-first, human reviewed</h3>
-              <p>Every label checked. Classification holds up as new suppliers and invoices arrive.</p>
-            </article>
-            <article className="ben-card">
-              <div className="ben-icon">⚡</div>
-              <h3>Usage-based pricing</h3>
-              <p>You pay for the lines processed. No heavy annual subscription.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div className="container">
-          <div className="row">
-            <div className="col-md-8 col-md-offset-2">
-              <QuoteBox
-                quote="They classified thousands of product lines in under a week. That would have taken our team six months."
-                author="David Torr"
-                role="CEO, FARO"
-              />
-              <p className="light-copy" style={{ textAlign: "center", marginTop: "1.5rem" }}>
-                Typical result in soft FM: 10-20% savings on addressable spend. The findings above are where it comes
-                from.
+      <section style={{ background: "#fff", padding: "56px 0 88px" }}>
+        <div className="container" style={{ display: "flex", flexDirection: "column", gap: 40 }}>
+          <CaseBreadcrumb current="Cleaning & soft FM" />
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(2, minmax(0, 1fr))", gap: 72, alignItems: "center" }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: 22 }}>
+              <div style={{ display: "flex", gap: 10, alignItems: "center", flexWrap: "wrap" }}>
+                <CaseTypeBadge type="pattern" />
+                <span style={{ fontSize: 13, color: "var(--muted)" }}>Cleaning & soft FM · Illustrative data</span>
+              </div>
+              <h1 style={{ margin: 0, fontSize: "clamp(2.2rem, 4.2vw, 3.6rem)", lineHeight: 1.06, fontWeight: 600, letterSpacing: "-0.025em", color: "var(--primary-dark)" }}>
+                Nobody chose 30 toilet paper suppliers.
+              </h1>
+              <p style={{ margin: 0, fontSize: 22, lineHeight: 1.5, fontWeight: 300, color: "var(--text)" }}>
+                They just couldn&rsquo;t see them. One cleaning business, twelve months of invoices, and a simple question nobody could answer: what do we spend on toilet paper?
               </p>
+            </div>
+            <div style={{ background: "var(--bg-soft)", borderRadius: 24, padding: 40, display: "flex", flexDirection: "column", gap: 18 }}>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(6, minmax(0, 1fr))", gap: 8 }}>
+                {tileColors.map((bg, i) => <div key={i} style={{ height: 52, borderRadius: 8, background: bg }} />)}
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between", fontSize: 13, color: "var(--muted)", flexWrap: "wrap", gap: 8 }}>
+                <span>Each tile is a supplier that invoiced for toilet paper</span>
+                <span style={{ display: "flex", gap: 6, alignItems: "center" }}>
+                  <span style={{ width: 10, height: 10, borderRadius: 3, background: "var(--success)" }} />the three worth keeping
+                </span>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <CTABand
-        title="Want to see this on your own spend?"
-        lead="Send a sample of your own invoice data and we'll show you the same kind of pattern in your own numbers."
-        actions={[
-          { label: "Book a 7-minute discovery", href: siteConfig.calendly, variant: "primary", external: true },
-          { label: "Explore cases", href: "/cases", variant: "secondary" }
+      <section style={{ background: "var(--purple-soft)", padding: "18px 0", fontSize: 14, color: "var(--navy)" }}>
+        <div className="container">
+          <strong style={{ fontWeight: 600 }}>Illustrative data.</strong> Based on a pattern we see again and again in soft FM procurement. Not a named client engagement.
+        </div>
+      </section>
+
+      <section style={{ background: "#fff", padding: "104px 0" }}>
+        <div className="container" style={{ display: "flex", flexDirection: "column", gap: 44 }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: 16, maxWidth: 760 }}>
+            <CaseSectionLabel>Before</CaseSectionLabel>
+            <CaseH2>The spend is there. The picture isn&rsquo;t.</CaseH2>
+            <CaseBodyP>What we hear from cleaning businesses, before any data changes hands.</CaseBodyP>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, minmax(0, 1fr))", gap: 20 }}>
+            {[
+              { t: "Invoices arrive as PDFs", c: "Line detail sits inside documents nobody re-reads. The ERP holds supplier totals, not what was bought.", dot: "var(--primary)" },
+              { t: "Every site orders its own way", c: "Site managers buy consumables locally. One product enters the books under twenty descriptions.", dot: "var(--primary)" },
+              { t: "One person runs procurement", c: "There is time to keep sites supplied. There is no time to benchmark prices or question what comes in.", dot: "var(--primary)" },
+              { t: "Client reports built by hand", c: "Each month, numbers pulled from an audit tool, a supplier portal, and email. Every client wants a different cut.", dot: "var(--purple)" }
+            ].map((b) => (
+              <div key={b.t} style={{ background: "var(--bg-soft)", borderRadius: 18, padding: 28, display: "flex", flexDirection: "column", gap: 12 }}>
+                <span style={{ width: 10, height: 10, borderRadius: "50%", background: b.dot }} />
+                <h3 style={{ margin: 0, fontSize: 18, fontWeight: 600, color: "var(--primary-dark)" }}>{b.t}</h3>
+                <p style={{ margin: 0, fontSize: 15, lineHeight: 1.6, fontWeight: 300, color: "var(--text)" }}>{b.c}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section style={{ background: "var(--bg-soft)", padding: "104px 0" }}>
+        <div className="container" style={{ display: "grid", gridTemplateColumns: "minmax(0, 1fr) minmax(0, 1.25fr)", gap: 64, alignItems: "start" }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
+            <CaseSectionLabel>Once every line is classified</CaseSectionLabel>
+            <CaseH2>One product. 30 suppliers. Now side by side.</CaseH2>
+            <CaseBodyP>Classified, the pattern was visible in days: every supplier, what each charged per roll, and on what terms. Which three to keep is your call. The table makes it an easy one.</CaseBodyP>
+            <div style={{ background: "#F1F8E9", border: "1.5px solid var(--success)", borderRadius: 16, padding: "22px 24px", display: "flex", flexDirection: "column", gap: 10 }}>
+              <span style={{ fontSize: 13, fontWeight: 600, color: "#4E7D22", textTransform: "uppercase", letterSpacing: "0.08em" }}>The decision</span>
+              <span style={{ fontSize: 15, color: "var(--navy)" }}><strong style={{ fontWeight: 600 }}>Bunzl CHS</strong> · contracted core supply</span>
+              <span style={{ fontSize: 15, color: "var(--navy)" }}><strong style={{ fontWeight: 600 }}>Gompels</strong> · bulk price leader</span>
+              <span style={{ fontSize: 15, color: "var(--navy)" }}><strong style={{ fontWeight: 600 }}>Pattersons</strong> · regional next-day cover</span>
+            </div>
+          </div>
+          <div style={{ background: "#fff", borderRadius: 20, overflow: "hidden" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "1.3fr 0.8fr 1.6fr 1.3fr", background: "var(--primary-dark)", padding: "16px 24px", fontSize: 12, fontWeight: 600, letterSpacing: "0.06em", textTransform: "uppercase", color: "#fff" }}>
+              <span>Supplier</span><span>£ / roll</span><span>Terms</span><span>Delivery</span>
+            </div>
+            {suppliers.map((s) => (
+              <div key={s.name} style={{ display: "grid", gridTemplateColumns: "1.3fr 0.8fr 1.6fr 1.3fr", padding: "16px 24px", borderTop: "1px solid var(--border)", fontSize: 15, alignItems: "center" }}>
+                <span style={{ fontWeight: 600, color: "var(--navy)" }}>{s.name}</span>
+                <span style={{ color: "var(--navy)", fontWeight: 500 }}>{s.price}</span>
+                <span style={{ color: "var(--text)", fontWeight: 300 }}>{s.terms}</span>
+                <span style={{ color: "var(--text)", fontWeight: 300 }}>{s.delivery}</span>
+              </div>
+            ))}
+            <div style={{ padding: "14px 24px", borderTop: "1px solid var(--border)", fontSize: 13, color: "var(--muted)" }}>4 of 30 shown · Standard 2-ply</div>
+          </div>
+        </div>
+      </section>
+
+      <section style={{ background: "#fff", padding: "104px 0" }}>
+        <div className="container" style={{ display: "flex", flexDirection: "column", gap: 44 }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: 16, maxWidth: 760 }}>
+            <CaseSectionLabel>And then</CaseSectionLabel>
+            <CaseH2>What else shows up when every line is classified</CaseH2>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, minmax(0, 1fr))", gap: 24 }}>
+            <div style={{ border: "1px solid var(--border)", borderRadius: 20, padding: 32, display: "flex", flexDirection: "column", gap: 18 }}>
+              <h3 style={{ margin: 0, fontSize: 20, fontWeight: 600, color: "var(--primary-dark)" }}>Off-contract buying</h3>
+              <div style={{ border: "1px solid var(--blue-soft)", borderRadius: 12, padding: "14px 16px", display: "flex", flexDirection: "column", gap: 4 }}>
+                <span style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--muted)" }}>Contracted · Bunzl</span>
+                <span style={{ fontSize: 26, fontWeight: 600, color: "var(--primary)" }}>£19.20 <span style={{ fontSize: 13, fontWeight: 400, color: "var(--muted)" }}>case of 36 rolls</span></span>
+              </div>
+              <div style={{ border: "1.5px solid var(--purple)", borderRadius: 12, padding: "14px 16px", display: "flex", flexDirection: "column", gap: 4, background: "#FAF8FF" }}>
+                <span style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--muted)" }}>Actually paid · Amazon</span>
+                <span style={{ fontSize: 26, fontWeight: 600, color: "var(--primary-dark)" }}>£26.80 <span style={{ fontSize: 13, fontWeight: 400, color: "var(--muted)" }}>same case, +40%</span></span>
+              </div>
+              <p style={{ margin: 0, fontSize: 15, lineHeight: 1.6, fontWeight: 300, color: "var(--text)" }}>A cost risk and a compliance risk. Client contracts specify products and suppliers, and every off-contract line weakens your position at renegotiation.</p>
+            </div>
+            <div style={{ border: "1px solid var(--border)", borderRadius: 20, padding: 32, display: "flex", flexDirection: "column", gap: 18 }}>
+              <h3 style={{ margin: 0, fontSize: 20, fontWeight: 600, color: "var(--primary-dark)" }}>Same roll, five prices</h3>
+              <span style={{ fontSize: 13, color: "var(--muted)", marginTop: -8 }}>Tork Advanced T4, price paid per roll</span>
+              <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+                {bars.map((b) => (
+                  <div key={b.label} style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                    <span style={{ fontSize: 13, color: "var(--muted)", width: 76, flexShrink: 0 }}>{b.label}</span>
+                    <div style={{ height: 18, borderRadius: 4, background: b.color, width: b.w }} />
+                    <span style={{ fontSize: 13, fontWeight: 600, color: "var(--navy)" }}>{b.price}</span>
+                  </div>
+                ))}
+              </div>
+              <p style={{ margin: 0, fontSize: 15, lineHeight: 1.6, fontWeight: 300, color: "var(--text)" }}><strong style={{ fontSize: 22, fontWeight: 600, color: "var(--navy)" }}>68%</strong> spread on one product. Each price sits on a different invoice under a different description.</p>
+            </div>
+            <div style={{ border: "1px solid var(--border)", borderRadius: 20, padding: 32, display: "flex", flexDirection: "column", gap: 18 }}>
+              <h3 style={{ margin: 0, fontSize: 20, fontWeight: 600, color: "var(--primary-dark)" }}>Spend you can&rsquo;t see</h3>
+              <div style={{ display: "flex", justifyContent: "center", padding: "6px 0" }}>
+                <svg width="120" height="120" viewBox="0 0 100 100" aria-hidden="true">
+                  <circle cx="50" cy="50" r="38" fill="none" stroke="var(--primary)" strokeWidth="16" />
+                  <circle cx="50" cy="50" r="38" fill="none" stroke="#C9CDD8" strokeWidth="16" strokeDasharray="57.3 238.8" transform="rotate(-90 50 50)" />
+                </svg>
+              </div>
+              <p style={{ margin: 0, fontSize: 15, lineHeight: 1.6, fontWeight: 300, color: "var(--text)" }}><strong style={{ fontSize: 22, fontWeight: 600, color: "var(--navy)" }}>24%</strong> of spend uncategorised. You can&rsquo;t benchmark it, negotiate it, or report on it until it has a label.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section style={{ background: "var(--bg-soft)", padding: "96px 0" }}>
+        <div className="container" style={{ display: "flex", flexDirection: "column", gap: 40 }}>
+          <CaseH2>From invoices in any format to a table you can act on</CaseH2>
+          <CaseProcessDiagram
+            inputs={["PDF invoices", "ERP exports", "Ordering portals", "Excel sheets"]}
+            steps={["Clean", "Classify", "Enrich"]}
+            outputs={[
+              { text: "What you spend, per product", bg: "var(--blue-soft)" },
+              { text: "Off-contract and outlier lines", bg: "var(--purple-soft)" },
+              { text: "Suppliers per category, side by side", bg: "#F1F8E9" }
+            ]}
+          />
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, minmax(0, 1fr))", gap: 20 }}>
+            {[
+              { t: "Your data doesn't need to be clean", c: "Messy data is the starting point. Cleaning and classifying it is the product." },
+              { t: "AI-first, human reviewed", c: "Every label checked. Classification holds up as new suppliers and invoices arrive." },
+              { t: "Usage-based pricing", c: "You pay for the lines processed. No heavy annual subscription." }
+            ].map((f) => (
+              <div key={f.t} style={{ background: "#fff", borderRadius: 16, padding: 24, display: "flex", flexDirection: "column", gap: 8 }}>
+                <h3 style={{ margin: 0, fontSize: 17, fontWeight: 600, color: "var(--primary-dark)" }}>{f.t}</h3>
+                <p style={{ margin: 0, fontSize: 15, lineHeight: 1.6, fontWeight: 300, color: "var(--text)" }}>{f.c}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section style={{ background: "#fff", padding: "96px 0" }}>
+        <div className="container" style={{ display: "grid", gridTemplateColumns: "repeat(2, minmax(0, 1fr))", gap: 32 }}>
+          <div style={{ background: "#F1F8E9", borderRadius: 24, padding: 44, display: "flex", flexDirection: "column", gap: 14, justifyContent: "center" }}>
+            <span style={{ fontSize: 13, fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "#4E7D22" }}>Typical result in soft FM</span>
+            <span style={{ fontSize: 64, lineHeight: 1, fontWeight: 600, letterSpacing: "-0.03em", color: "var(--navy)" }}>10&ndash;20%</span>
+            <p style={{ margin: 0, fontSize: 17, lineHeight: 1.6, fontWeight: 300, color: "var(--navy)" }}>savings on addressable spend. The findings above are where it comes from.</p>
+          </div>
+          <CaseQuoteCard
+            quote="It would have taken five engineers and a full year to clean this up. So we decided to look for a better solution."
+            initials="HO"
+            name="Head of Operations"
+            role="Cleaning services company"
+          />
+        </div>
+      </section>
+
+      <CaseMoreLinks
+        prefix=""
+        items={[
+          { href: "/cases/spie", label: "Client case · Hard Services FM", title: "9,175 supplier spellings brought back to 1,493 for SPIE" },
+          { href: "/cases/construction-spend-benchmarking", label: "Pattern · Construction", title: "A 45% price spread on one aluminium windowsill, bought on ten projects" },
+          { href: "/cases/mro-confidential", label: "Pattern · Manufacturing & MRO", title: "The real manufacturer part number behind every reseller code" }
         ]}
+      />
+
+      <CaseClosingCTA
+        title="See this on your own invoices"
+        lead="Send up to 200 invoice lines or ten invoices. We send them back labelled, so you can see the same kind of pattern in your own numbers."
+        ctaLabel="Send your sample"
+        ctaHref={siteConfig.calendly}
+        external
       />
     </>
   );

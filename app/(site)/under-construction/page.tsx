@@ -21,7 +21,7 @@ export default function UnderConstructionRoute() {
       eyebrow="Under construction"
       title="A few pages are still being finished."
       lead="The main site is ready, and any missing pages now land on a branded placeholder instead of a dead end."
-      ctaLabel="Book a 7-minute discovery"
+      ctaLabel="Talk to sales"
     />
   );
 }

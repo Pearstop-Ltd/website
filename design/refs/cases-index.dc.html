@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Pearstop cases index</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:Inter,"Helvetica Neue",Arial,sans-serif;background:#1F2A68;color:#333333}
+a{color:#353FFF;text-decoration:none}a:hover{color:#2A3990}
+</style>
+</helmet>
+<div style="width: 1440px; display: flex; flex-direction: column; background: #1F2A68; font-family: Inter, 'Helvetica Neue', Arial, sans-serif">
+
+<!-- Header -->
+<header style="background: #FFFFFF; height: 80px; padding: 0 160px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #ECEEF3">
+<a href="Main.dc.html" style="display: flex; align-items: flex-end; gap: 3px; color: #1F2A68">
+<svg width="18" height="24" viewBox="0 0 18 24" fill="none" aria-hidden="true"><path d="M9 2 C10 1 11.5 0.6 13 1" stroke="#1F2A68" stroke-width="1.6" stroke-linecap="round"></path><path d="M9 4 C6.5 4 5.8 6.6 5.2 8.4 C4.4 10.6 1.5 11.8 1.5 16 C1.5 20.2 4.8 23 9 23 C13.2 23 16.5 20.2 16.5 16 C16.5 11.8 13.6 10.6 12.8 8.4 C12.2 6.6 11.5 4 9 4 Z" fill="#1F2A68"></path></svg>
+<span style="font-size: 24px; font-weight: 600; letter-spacing: -0.02em; line-height: 1">pearstop.</span>
+</a>
+<nav style="display: flex; gap: 36px; font-size: 15px; font-weight: 500">
+<a href="#" style="color: #333333">Solutions</a>
+<a href="#" style="color: #333333">Industries</a>
+<a href="#" style="color: #333333">About</a>
+<a href="#" style="color: #333333">Blog</a>
+<a href="Main.dc.html" style="color: #2A3990; font-weight: 600">Cases</a>
+</nav>
+<a href="#" style="background: #353FFF; color: #FFFFFF; font-size: 15px; font-weight: 600; padding: 13px 22px; border-radius: 10px">Book a demo</a>
+</header>
+
+<!-- Hero -->
+<section style="background: #FFFFFF; padding: 88px 160px 56px; display: flex; justify-content: space-between; align-items: flex-end; gap: 80px">
+<div style="display: flex; flex-direction: column; gap: 20px; max-width: 720px">
+<div style="font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #353FFF">Cases</div>
+<h1 style="margin: 0; font-size: 60px; line-height: 1.06; font-weight: 600; letter-spacing: -0.025em; color: #2A3990">Real work. Real margins.</h1>
+<p style="margin: 0; font-size: 20px; line-height: 1.6; font-weight: 300; color: #333333">How project-based businesses in FM, construction, infrastructure and manufacturing turn messy procurement and asset data into something they can act on.</p>
+</div>
+<div style="width: 320px; flex-shrink: 0; display: flex; flex-direction: column; gap: 14px; padding: 22px 24px; background: #F8F9FA; border-radius: 16px">
+<div style="display: flex; gap: 12px; align-items: flex-start">
+<span style="width: 10px; height: 10px; border-radius: 50%; background: #353FFF; margin-top: 6px; flex-shrink: 0"></span>
+<div style="font-size: 14px; line-height: 1.5; color: #333333"><strong style="font-weight: 600; color: #1F2A68">Client cases</strong> are work we delivered, with results from the real data.</div>
+</div>
+<div style="display: flex; gap: 12px; align-items: flex-start">
+<span style="width: 10px; height: 10px; border-radius: 50%; background: #A383FF; margin-top: 6px; flex-shrink: 0"></span>
+<div style="font-size: 14px; line-height: 1.5; color: #333333"><strong style="font-weight: 600; color: #1F2A68">Patterns</strong> use illustrative data, based on what we see again and again across clients.</div>
+</div>
+</div>
+</section>
+
+<!-- Filters -->
+<section style="background: #FFFFFF; padding: 0 160px 48px; display: flex; gap: 10px">
+<button type="button" style="font-family: inherit; font-size: 14px; font-weight: 600; padding: 12px 20px; border-radius: 999px; border: 1px solid #2A3990; background: #2A3990; color: #FFFFFF; cursor: pointer">All</button>
+<button type="button" style="font-family: inherit; font-size: 14px; font-weight: 500; padding: 12px 20px; border-radius: 999px; border: 1px solid #DCE1F8; background: #FFFFFF; color: #2A3990; cursor: pointer">Client cases</button>
+<button type="button" style="font-family: inherit; font-size: 14px; font-weight: 500; padding: 12px 20px; border-radius: 999px; border: 1px solid #DCE1F8; background: #FFFFFF; color: #2A3990; cursor: pointer">Patterns</button>
+<span style="width: 1px; background: #DCE1F8; margin: 0 8px"></span>
+<button type="button" style="font-family: inherit; font-size: 14px; font-weight: 500; padding: 12px 20px; border-radius: 999px; border: 1px solid #DCE1F8; background: #FFFFFF; color: #2A3990; cursor: pointer">Procurement data</button>
+<button type="button" style="font-family: inherit; font-size: 14px; font-weight: 500; padding: 12px 20px; border-radius: 999px; border: 1px solid #DCE1F8; background: #FFFFFF; color: #2A3990; cursor: pointer">Asset data</button>
+</section>
+
+<!-- Featured -->
+<section style="background: #FFFFFF; padding: 0 160px 96px">
+<div style="background: #F8F9FA; border-radius: 24px; padding: 56px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 56px; align-items: center">
+<div style="display: flex; flex-direction: column; gap: 22px">
+<div style="display: flex; gap: 10px; align-items: center">
+<span style="font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #353FFF">Featured client case</span>
+<span style="font-size: 12px; color: #666666">Hard services FM · Asset data</span>
+</div>
+<h2 style="margin: 0; font-size: 38px; line-height: 1.15; font-weight: 600; letter-spacing: -0.02em; color: #2A3990">9,175 supplier spellings brought back to 1,493 for SPIE Building Solutions</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.65; font-weight: 300; color: #333333">Every asset matched against SPIE's own approved supplier list, scored for confidence, and ranked so the team knew exactly where to review first.</p>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; padding-top: 6px">
+<div style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 30px; font-weight: 600; color: #1F2A68; letter-spacing: -0.02em">73.1%</span><span style="font-size: 13px; color: #666666; line-height: 1.4">matches confirmed</span></div>
+<div style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 30px; font-weight: 600; color: #1F2A68; letter-spacing: -0.02em">107,081</span><span style="font-size: 13px; color: #666666; line-height: 1.4">lines enhanced</span></div>
+<div style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 30px; font-weight: 600; color: #1F2A68; letter-spacing: -0.02em">204,029</span><span style="font-size: 13px; color: #666666; line-height: 1.4">asset records</span></div>
+</div>
+<a href="CaseSPIE.dc.html" style="align-self: flex-start; font-size: 15px; font-weight: 600; color: #353FFF; padding: 12px 0">Read the case →</a>
+</div>
+<!-- Merge visual -->
+<div style="background: #FFFFFF; border-radius: 18px; padding: 36px 32px; display: flex; align-items: center; gap: 18px; box-shadow: 0 1px 2px rgba(31,42,104,0.06)">
+<div style="display: flex; flex-direction: column; gap: 10px; flex-shrink: 0">
+<span style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #666666">As it arrived</span>
+<span style="font-family: 'SF Mono', Menlo, monospace; font-size: 13px; padding: 9px 12px; border-radius: 8px; background: #F8F9FA; color: #333333">NORDPUMP</span>
+<span style="font-family: 'SF Mono', Menlo, monospace; font-size: 13px; padding: 9px 12px; border-radius: 8px; background: #F8F9FA; color: #333333">Nordpump B.V.</span>
+<span style="font-family: 'SF Mono', Menlo, monospace; font-size: 13px; padding: 9px 12px; border-radius: 8px; background: #F8F9FA; color: #333333">Nordpmp</span>
+<span style="font-family: 'SF Mono', Menlo, monospace; font-size: 13px; padding: 9px 12px; border-radius: 8px; background: #F8F9FA; color: #333333">NORDPUMP NL</span>
+<span style="font-family: 'SF Mono', Menlo, monospace; font-size: 13px; padding: 9px 12px; border-radius: 8px; background: #F8F9FA; color: #333333">Nordpump Pompen</span>
+</div>
+<svg width="30" height="230" viewBox="0 0 30 230" fill="none" aria-hidden="true" style="flex-shrink: 0; margin-top: 26px"><path d="M2 2 Q14 2 14 22 L14 100 Q14 115 28 115 Q14 115 14 130 L14 208 Q14 228 2 228" stroke="#2A3990" stroke-width="1.6"></path></svg>
+<svg width="40" height="12" viewBox="0 0 40 12" fill="none" aria-hidden="true" style="flex-shrink: 0; margin-top: 26px"><path d="M0 6 H34" stroke="#2A3990" stroke-width="1.6"></path><path d="M32 1 L39 6 L32 11 Z" fill="#2A3990"></path></svg>
+<div style="display: flex; flex-direction: column; gap: 10px; margin-top: 26px; flex-grow: 1">
+<span style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #4E7D22">Canonical supplier</span>
+<span style="font-size: 16px; font-weight: 600; padding: 14px 16px; border-radius: 10px; background: #F1F8E9; border: 1.5px solid #8BC34A; color: #1F2A68">Nordpump</span>
+<span style="font-size: 12px; color: #666666; line-height: 1.5">Names changed. Same shape as the real register.</span>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Client cases -->
+<section style="background: #FFFFFF; padding: 0 160px 96px; display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; align-items: baseline; justify-content: space-between">
+<h2 style="margin: 0; font-size: 32px; font-weight: 600; letter-spacing: -0.02em; color: #2A3990">Client cases</h2>
+<span style="font-size: 14px; color: #666666">Named work, real data</span>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px">
+
+<!-- Strukton -->
+<article style="display: flex; border: 1px solid #ECEEF3; border-radius: 20px; overflow: hidden; background: #FFFFFF">
+<div style="width: 200px; flex-shrink: 0; background: #DCE1F8; padding: 28px 22px; display: flex; flex-direction: column; justify-content: center; gap: 8px">
+<div style="height: 18px; width: 100%; border-radius: 4px; background: #2A3990"></div>
+<div style="height: 18px; width: 80%; border-radius: 4px; background: #353FFF"></div>
+<div style="height: 18px; width: 60%; border-radius: 4px; background: #7A8BE6"></div>
+<div style="height: 18px; width: 40%; border-radius: 4px; background: #A383FF"></div>
+<span style="font-size: 11px; color: #1F2A68; margin-top: 6px; line-height: 1.4">Segment → Family → Class → Commodity</span>
+</div>
+<div style="padding: 28px; display: flex; flex-direction: column; gap: 12px; flex-grow: 1">
+<span style="font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #353FFF">Infrastructure · Procurement</span>
+<h3 style="margin: 0; font-size: 21px; line-height: 1.3; font-weight: 600; color: #2A3990">35,000 to 50,000 spend lines a month classified to UNSPSC commodity level for Strukton</h3>
+<div style="display: flex; gap: 28px; padding-top: 4px">
+<div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 22px; font-weight: 600; color: #1F2A68">0</span><span style="font-size: 12px; color: #666666">classification history at start</span></div>
+<div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 22px; font-weight: 600; color: #1F2A68">Weekly</span><span style="font-size: 12px; color: #666666">buyer feedback loop</span></div>
+</div>
+<a href="#" style="font-size: 14px; font-weight: 600; color: #353FFF; margin-top: auto; padding-top: 8px">Read the case →</a>
+</div>
+</article>
+
+<!-- FARO -->
+<article style="display: flex; border: 1px solid #ECEEF3; border-radius: 20px; overflow: hidden; background: #FFFFFF">
+<div style="width: 200px; flex-shrink: 0; background: #E8E0FC; padding: 28px 22px; display: flex; flex-direction: column; justify-content: center; gap: 10px">
+<div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 5px">
+<div style="height: 44px; border-radius: 4px; background: #FFFFFF"></div>
+<div style="height: 44px; border-radius: 4px; background: #FFFFFF"></div>
+<div style="height: 44px; border-radius: 4px; background: #2A3990"></div>
+<div style="height: 44px; border-radius: 4px; background: #FFFFFF"></div>
+<div style="height: 44px; border-radius: 4px; background: #FFFFFF"></div>
+</div>
+<span style="font-size: 11px; color: #1F2A68; line-height: 1.4">Margin estimate before each container is bought</span>
+</div>
+<div style="padding: 28px; display: flex; flex-direction: column; gap: 12px; flex-grow: 1">
+<span style="font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #353FFF">Retail · Procurement</span>
+<h3 style="margin: 0; font-size: 21px; line-height: 1.3; font-weight: 600; color: #2A3990">Margin visible before the purchase is committed, for FARO</h3>
+<div style="display: flex; gap: 28px; padding-top: 4px">
+<div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 22px; font-weight: 600; color: #1F2A68">95%</span><span style="font-size: 12px; color: #666666">classified automatically</span></div>
+<div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 22px; font-weight: 600; color: #1F2A68">1 week</span><span style="font-size: 12px; color: #666666">vs six months by hand</span></div>
+</div>
+<a href="#" style="font-size: 14px; font-weight: 600; color: #353FFF; margin-top: auto; padding-top: 8px">Read the case →</a>
+</div>
+</article>
+
+<!-- Cleaning client -->
+<article style="display: flex; border: 1px solid #ECEEF3; border-radius: 20px; overflow: hidden; background: #FFFFFF">
+<div style="width: 200px; flex-shrink: 0; background: #F1F8E9; padding: 28px 22px; display: flex; flex-direction: column; justify-content: center; gap: 12px">
+<div style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 11px; color: #1F2A68">Before</span><div style="height: 12px; border-radius: 6px; background: #FFFFFF"><div style="height: 12px; width: 70%; border-radius: 6px; background: #7A8BE6"></div></div></div>
+<div style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 11px; color: #1F2A68">After</span><div style="height: 12px; border-radius: 6px; background: #FFFFFF"><div style="height: 12px; width: 99%; border-radius: 6px; background: #8BC34A"></div></div></div>
+<span style="font-size: 11px; color: #1F2A68; line-height: 1.4">Invoice extraction accuracy</span>
+</div>
+<div style="padding: 28px; display: flex; flex-direction: column; gap: 12px; flex-grow: 1">
+<span style="font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #353FFF">Cleaning services · Invoices</span>
+<h3 style="margin: 0; font-size: 21px; line-height: 1.3; font-weight: 600; color: #2A3990">Invoice extraction accuracy from 70% to 99% for a cleaning services company</h3>
+<div style="display: flex; gap: 28px; padding-top: 4px">
+<div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 22px; font-weight: 600; color: #1F2A68">[X]</span><span style="font-size: 12px; color: #666666">invoices a month</span></div>
+<div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 22px; font-weight: 600; color: #1F2A68">Pilot → live</span><span style="font-size: 12px; color: #666666">now on subscription</span></div>
+</div>
+<a href="#" style="font-size: 14px; font-weight: 600; color: #353FFF; margin-top: auto; padding-top: 8px">Read the case →</a>
+</div>
+</article>
+
+<!-- Lemtech -->
+<article style="display: flex; border: 1px solid #ECEEF3; border-radius: 20px; overflow: hidden; background: #FFFFFF">
+<div style="width: 200px; flex-shrink: 0; background: #F8F9FA; padding: 28px 22px; display: flex; align-items: center; gap: 10px">
+<div style="display: flex; flex-direction: column; gap: 6px; width: 64px">
+<div style="height: 5px; width: 90%; background: #A383FF; border-radius: 3px; transform: rotate(-3deg)"></div>
+<div style="height: 5px; width: 60%; background: #A383FF; border-radius: 3px; transform: rotate(2deg)"></div>
+<div style="height: 5px; width: 80%; background: #A383FF; border-radius: 3px; transform: rotate(-1deg)"></div>
+<div style="height: 5px; width: 50%; background: #A383FF; border-radius: 3px; transform: rotate(4deg)"></div>
+</div>
+<svg width="22" height="12" viewBox="0 0 22 12" fill="none" aria-hidden="true"><path d="M0 6 H16" stroke="#2A3990" stroke-width="1.6"></path><path d="M15 1 L21 6 L15 11 Z" fill="#2A3990"></path></svg>
+<div style="background: #FFFFFF; border-radius: 6px; padding: 10px; display: flex; flex-direction: column; gap: 6px; width: 64px; box-shadow: 0 1px 2px rgba(31,42,104,0.08)">
+<div style="height: 5px; width: 100%; background: #2A3990; border-radius: 3px"></div>
+<div style="height: 5px; width: 100%; background: #DCE1F8; border-radius: 3px"></div>
+<div style="height: 5px; width: 100%; background: #DCE1F8; border-radius: 3px"></div>
+<div style="height: 5px; width: 70%; background: #DCE1F8; border-radius: 3px"></div>
+</div>
+</div>
+<div style="padding: 28px; display: flex; flex-direction: column; gap: 12px; flex-grow: 1">
+<span style="font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #353FFF">Manufacturing · Documents</span>
+<h3 style="margin: 0; font-size: 21px; line-height: 1.3; font-weight: 600; color: #2A3990">Handwritten site visit notes turned into proposal documents for Lemtech</h3>
+<div style="display: flex; gap: 28px; padding-top: 4px">
+<div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 22px; font-weight: 600; color: #1F2A68">~0</span><span style="font-size: 12px; color: #666666">manual re-entry</span></div>
+<div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 22px; font-weight: 600; color: #1F2A68">[X] hrs</span><span style="font-size: 12px; color: #666666">saved per proposal</span></div>
+</div>
+<a href="#" style="font-size: 14px; font-weight: 600; color: #353FFF; margin-top: auto; padding-top: 8px">Read the case →</a>
+</div>
+</article>
+
+</div>
+</section>
+
+<!-- Patterns -->
+<section style="background: #F8F9FA; padding: 88px 160px 96px; display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; align-items: baseline; justify-content: space-between">
+<h2 style="margin: 0; font-size: 32px; font-weight: 600; letter-spacing: -0.02em; color: #2A3990">Patterns we see</h2>
+<span style="font-size: 14px; color: #666666">Illustrative data, based on real client patterns</span>
+</div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px">
+
+<article style="background: #FFFFFF; border-radius: 20px; overflow: hidden; display: flex; flex-direction: column">
+<div style="height: 150px; background: #FFFFFF; padding: 28px 28px 0; display: flex; flex-direction: column; justify-content: center; gap: 10px; border-bottom: 1px solid #ECEEF3">
+<div style="position: relative; height: 22px">
+<div style="position: absolute; left: 0; right: 0; top: 10px; height: 2px; background: #DCE1F8"></div>
+<span style="position: absolute; left: 0%; top: 5px; width: 12px; height: 12px; border-radius: 50%; background: #353FFF"></span>
+<span style="position: absolute; left: 14%; top: 5px; width: 12px; height: 12px; border-radius: 50%; background: #353FFF"></span>
+<span style="position: absolute; left: 30%; top: 5px; width: 12px; height: 12px; border-radius: 50%; background: #353FFF"></span>
+<span style="position: absolute; left: 38%; top: 5px; width: 12px; height: 12px; border-radius: 50%; background: #353FFF"></span>
+<span style="position: absolute; left: 47%; top: 5px; width: 12px; height: 12px; border-radius: 50%; background: #353FFF"></span>
+<span style="position: absolute; left: 58%; top: 5px; width: 12px; height: 12px; border-radius: 50%; background: #353FFF"></span>
+<span style="position: absolute; left: 66%; top: 5px; width: 12px; height: 12px; border-radius: 50%; background: #353FFF"></span>
+<span style="position: absolute; left: 88%; top: 5px; width: 12px; height: 12px; border-radius: 50%; background: #A383FF"></span>
+<span style="position: absolute; left: 95%; top: 5px; width: 12px; height: 12px; border-radius: 50%; background: #A383FF"></span>
+</div>
+<div style="display: flex; justify-content: space-between; font-size: 12px; color: #666666"><span>£36.75</span><span>£53.40</span></div>
+</div>
+<div style="padding: 26px 28px 28px; display: flex; flex-direction: column; gap: 12px; flex-grow: 1">
+<span style="font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #7A5CD6">Pattern · Construction</span>
+<h3 style="margin: 0; font-size: 20px; line-height: 1.3; font-weight: 600; color: #2A3990">A 45% price spread on one aluminium windowsill, bought on ten projects</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; font-weight: 300; color: #333333">Ten descriptions, one item. Invisible until classified.</p>
+<a href="#" style="font-size: 14px; font-weight: 600; color: #353FFF; margin-top: auto; padding-top: 8px">See the pattern →</a>
+</div>
+</article>
+
+<article style="background: #FFFFFF; border-radius: 20px; overflow: hidden; display: flex; flex-direction: column">
+<div style="height: 150px; padding: 28px; display: flex; align-items: center; border-bottom: 1px solid #ECEEF3">
+<div style="display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); gap: 5px; width: 100%">
+<sc-for list="{{tiles}}" as="t" hint-placeholder-count="30">
+<div style="height: 22px; border-radius: 4px; background: {{t.bg}}"></div>
+</sc-for>
+</div>
+</div>
+<div style="padding: 26px 28px 28px; display: flex; flex-direction: column; gap: 12px; flex-grow: 1">
+<span style="font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #7A5CD6">Pattern · Cleaning &amp; soft FM</span>
+<h3 style="margin: 0; font-size: 20px; line-height: 1.3; font-weight: 600; color: #2A3990">30 toilet paper suppliers in twelve months, and nobody chose them</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; font-weight: 300; color: #333333">Same roll, five prices. A 68% spread on one product.</p>
+<a href="CaseCleaning.dc.html" style="font-size: 14px; font-weight: 600; color: #353FFF; margin-top: auto; padding-top: 8px">See the pattern →</a>
+</div>
+</article>
+
+<article style="background: #FFFFFF; border-radius: 20px; overflow: hidden; display: flex; flex-direction: column">
+<div style="height: 150px; padding: 28px; display: flex; flex-direction: column; justify-content: center; gap: 10px; border-bottom: 1px solid #ECEEF3">
+<div style="display: flex; align-items: center; gap: 10px">
+<span style="font-family: 'SF Mono', Menlo, monospace; font-size: 13px; padding: 8px 10px; border-radius: 6px; background: #F8F9FA; color: #666666; text-decoration: line-through">RS-448120</span>
+<svg width="22" height="12" viewBox="0 0 22 12" fill="none" aria-hidden="true"><path d="M0 6 H16" stroke="#2A3990" stroke-width="1.6"></path><path d="M15 1 L21 6 L15 11 Z" fill="#2A3990"></path></svg>
+<span style="font-family: 'SF Mono', Menlo, monospace; font-size: 13px; padding: 8px 10px; border-radius: 6px; background: #F1F8E9; border: 1px solid #8BC34A; color: #1F2A68">MFR 6205-2RS</span>
+</div>
+<span style="font-size: 12px; color: #4E7D22; font-weight: 500">Checked against manufacturer data</span>
+</div>
+<div style="padding: 26px 28px 28px; display: flex; flex-direction: column; gap: 12px; flex-grow: 1">
+<span style="font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #7A5CD6">Pattern · Manufacturing &amp; MRO</span>
+<h3 style="margin: 0; font-size: 20px; line-height: 1.3; font-weight: 600; color: #2A3990">The real manufacturer part number behind every reseller code</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; font-weight: 300; color: #333333">Checked matches replace slow offshore research, so you can buy direct.</p>
+<a href="#" style="font-size: 14px; font-weight: 600; color: #353FFF; margin-top: auto; padding-top: 8px">See the pattern →</a>
+</div>
+</article>
+
+</div>
+</section>
+
+<!-- Quotes -->
+
+
+<!-- Closing -->
+<section style="background: #FFFFFF; padding: 96px 160px; display: flex; flex-direction: column; gap: 40px">
+<h2 style="margin: 0; font-size: 32px; font-weight: 600; letter-spacing: -0.02em; color: #2A3990">In their words</h2>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px">
+<figure style="margin: 0; padding: 32px; border-radius: 20px; background: #F8F9FA; display: flex; flex-direction: column; gap: 24px">
+<blockquote style="margin: 0; font-size: 18px; line-height: 1.55; font-weight: 400; color: #1F2A68">“The confidence scoring meant our team knew where to spend their review time first, instead of starting from scratch on 200,000 rows.”</blockquote>
+<figcaption style="display: flex; gap: 12px; align-items: center; margin-top: auto">
+<span style="width: 44px; height: 44px; border-radius: 50%; background: #2A3990; color: #FFFFFF; font-size: 14px; font-weight: 600; display: flex; align-items: center; justify-content: center">BP</span>
+<span style="display: flex; flex-direction: column; gap: 2px"><strong style="font-size: 14px; font-weight: 600; color: #1F2A68">Bart van Peij</strong><span style="font-size: 13px; color: #666666">Head of Master Data Management, SPIE</span></span>
+</figcaption>
+</figure>
+<figure style="margin: 0; padding: 32px; border-radius: 20px; background: #F8F9FA; display: flex; flex-direction: column; gap: 24px">
+<blockquote style="margin: 0; font-size: 18px; line-height: 1.55; font-weight: 400; color: #1F2A68">“We had thousands of product lines that needed to be categorised before we could even begin to understand our costs. Pearstop classified them in under a week.”</blockquote>
+<figcaption style="display: flex; gap: 12px; align-items: center; margin-top: auto">
+<span style="width: 44px; height: 44px; border-radius: 50%; background: #353FFF; color: #FFFFFF; font-size: 14px; font-weight: 600; display: flex; align-items: center; justify-content: center">DT</span>
+<span style="display: flex; flex-direction: column; gap: 2px"><strong style="font-size: 14px; font-weight: 600; color: #1F2A68">David Torr</strong><span style="font-size: 13px; color: #666666">CEO, FARO</span></span>
+</figcaption>
+</figure>
+<figure style="margin: 0; padding: 32px; border-radius: 20px; background: #F8F9FA; display: flex; flex-direction: column; gap: 24px">
+<blockquote style="margin: 0; font-size: 18px; line-height: 1.55; font-weight: 400; color: #1F2A68">“It saves our team a lot of time by eliminating the repetitive tasks of combining the correct items.”</blockquote>
+<figcaption style="display: flex; gap: 12px; align-items: center; margin-top: auto">
+<span style="width: 44px; height: 44px; border-radius: 50%; background: #7A5CD6; color: #FFFFFF; font-size: 14px; font-weight: 600; display: flex; align-items: center; justify-content: center">VO</span>
+<span style="display: flex; flex-direction: column; gap: 2px"><strong style="font-size: 14px; font-weight: 600; color: #1F2A68">Vince Out</strong><span style="font-size: 13px; color: #666666">Commercial Manager, Lemtech</span></span>
+</figcaption>
+</figure>
+</div>
+</section><section style="background: #1F2A68; padding: 96px 160px 72px; flex-grow: 1; display: flex; flex-direction: column; gap: 56px">
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 64px">
+<div style="display: flex; flex-direction: column; gap: 18px; max-width: 640px">
+<h2 style="margin: 0; font-size: 44px; line-height: 1.1; font-weight: 600; letter-spacing: -0.02em; color: #FFFFFF">Send us 200 lines. We send them back labelled.</h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.6; font-weight: 300; color: #DCE1F8">No clean-up first, no cost, nothing to install. The fastest way to see what your own data looks like classified.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 14px; align-items: flex-end"><a href="#" style="background: rgb(255, 255, 255); color: rgb(31, 42, 104); font-size: 16px; font-weight: 600; padding: 16px 28px; border-radius: 12px">Send your sample</a><a href="#" style="color: rgb(163, 131, 255); font-size: 15px; font-weight: 500">Or talk to Sales →</a></div>
+</div>
+<div style="border-top: 1px solid rgba(220,225,248,0.2); padding-top: 28px; display: flex; justify-content: space-between; font-size: 13px; color: #7A8BE6">
+<span style="font-weight: 600; color: #FFFFFF; font-size: 18px">pearstop.</span>
+<span>© 2026 Pearstop · Privacy · Terms</span>
+</div>
+</section>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":3120}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const keep = [7, 13, 22];
+    const tiles = [];
+    for (let i = 0; i < 30; i++) {
+      tiles.push({ bg: keep.indexOf(i) >= 0 ? '#8BC34A' : '#E4E7F0' });
+    }
+    return { tiles };
+  }
+}
+</script>
+</body>
+</html>

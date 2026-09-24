@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
-
 :root {
   --primary: #353fff;
   --primary-dark: #2a3990;
@@ -43,7 +41,7 @@ body {
   color: var(--text);
   background: var(--bg);
   line-height: 1.65;
-  font-family: "Plus Jakarta Sans", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  font-family: var(--font-inter), "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -602,6 +600,10 @@ section {
   text-shadow: 0 3px 24px rgba(31, 42, 104, 0.22);
 }
 
+.hero-title-sm {
+  font-size: clamp(1.6rem, 2.8vw, 2.5rem);
+}
+
 .hero-lead,
 .solution-tagline,
 .ind-intro,
@@ -613,6 +615,15 @@ section {
   font-size: 1.15rem;
   color: rgba(255, 255, 255, 0.85);
   text-shadow: 0 2px 14px rgba(31, 42, 104, 0.16);
+}
+
+.hero-lead-accent {
+  text-align: left;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+  border-left: 3px solid rgba(255, 255, 255, 0.5);
+  padding-left: 1.25rem;
 }
 
 .light-copy,
@@ -2583,5 +2594,100 @@ section {
 @media (max-width: 768px) {
   .page-hero.hero-left .hero-title {
     max-width: 100%;
+  }
+}
+
+/* Case study pages: a two-tier heading system distinct from the rest of the
+   site. `.case-wayfinder` marks the few big structural sections a reader
+   scans to navigate the page ("The problem", "What we built", "The
+   result"). `.case-question` is the actual SEO/AEO-targeted question inside
+   a section - sized closer to emphasized body text than a heading, so a
+   page carrying several of them doesn't read as a wall of giant headers. */
+.case-wayfinder {
+  font-size: clamp(1.9rem, 3.2vw, 2.6rem);
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1.15;
+  margin: 0 0 1.25rem;
+}
+
+.case-question {
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.4;
+  margin: 0 0 0.6rem;
+}
+
+/* Brand-colored callouts and stat cards, matching the one-pager decks:
+   green for the answer/outcome, the card system's existing tokens for
+   data/process context - not a new ad-hoc palette. */
+.case-callout {
+  border: 1px solid #cfe8b0;
+  background: #f1f8e6;
+  border-radius: var(--card-radius);
+  padding: 1rem 1.25rem;
+}
+
+.case-callout-label {
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  font-weight: 700;
+  color: #5a8f1f;
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.case-callout strong {
+  color: var(--navy);
+  font-size: 1.05rem;
+}
+
+.case-result-banner {
+  background: #f1f8e6;
+  border: 1px solid #cfe8b0;
+  border-radius: var(--card-radius);
+  padding: 1.1rem 1.5rem;
+  text-align: center;
+  font-size: 1.02rem;
+}
+
+.case-result-banner strong {
+  color: #5a8f1f;
+}
+
+.case-stat-card {
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--card-radius);
+  padding: 1.5rem;
+  height: 100%;
+}
+
+.case-stat-card h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 0 0 1rem;
+}
+
+.case-stat-big {
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1;
+}
+
+.case-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+@media (max-width: 720px) {
+  .case-grid-2 {
+    grid-template-columns: 1fr;
   }
 }

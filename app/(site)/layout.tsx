@@ -6,6 +6,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { LatestBlogPosts } from "@/components/latest-blog-posts";
 import enMessages from "../../messages/en.json";
 import { siteConfig } from "@/lib/site";
+import { inter } from "@/lib/fonts";
 import "../globals.css";
 
 export const metadata: Metadata = {
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
 
 export default function SiteLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className={inter.variable}>
       <body>
         <NextIntlClientProvider locale="en" messages={enMessages as Record<string, unknown>}>
           <SiteHeader />

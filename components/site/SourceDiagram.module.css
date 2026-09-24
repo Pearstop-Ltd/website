@@ -1,0 +1,86 @@
+.root {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 44px 48px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.stack,
+.outputStack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+  min-width: 0;
+}
+
+.inputBox {
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px solid #e4e7f0;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.processBox {
+  background: var(--blue);
+  border-radius: 14px;
+  padding: 22px 24px;
+  flex-shrink: 0;
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.processLines {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #ffffff;
+}
+
+.outputBox {
+  padding: 14px 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--navy-deep);
+}
+
+.tint-blue {
+  background: var(--tint-blue);
+}
+
+.tint-purple {
+  background: var(--tint-purple);
+}
+
+.tint-green {
+  background: var(--tint-green);
+}
+
+.arrow {
+  flex-shrink: 0;
+}
+
+@media (max-width: 767px) {
+  .root {
+    flex-direction: column;
+    padding: 28px 24px;
+  }
+
+  .stack,
+  .outputStack,
+  .processBox {
+    width: 100%;
+  }
+
+  .arrow {
+    transform: rotate(90deg);
+  }
+}

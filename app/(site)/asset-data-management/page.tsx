@@ -59,7 +59,7 @@ export default function AssetDataManagementPage() {
         title="You do not touch the invoices. You still need to know what they say."
         lead="Asset owners who outsource facilities management do not generate their own spend and maintenance data. They receive it, filtered through whichever provider delivers the contract. Pearstop gives you an independent, classified version of that same data, structured well enough to compare providers, sites, and years on the same basis."
         actions={[
-          { label: "Book a 7-minute discovery", href: siteConfig.calendly, variant: "primary", external: true },
+          { label: "Talk to sales", href: siteConfig.calendly, variant: "primary", external: true },
           { label: "See how it works", href: "#how-it-works", variant: "secondary" }
         ]}
       />
@@ -220,8 +220,8 @@ export default function AssetDataManagementPage() {
 
       <CTABand
         title="Ready to hold an independent view of your own?"
-        lead="Book a 7-minute discovery call and see exactly how Pearstop turns the data you already receive into something you can verify."
-        actions={[{ label: "Book a 7-minute discovery", href: siteConfig.calendly, variant: "primary", external: true }]}
+        lead="Talk to sales call and see exactly how Pearstop turns the data you already receive into something you can verify."
+        actions={[{ label: "Talk to sales", href: siteConfig.calendly, variant: "primary", external: true }]}
       />
     </>
   );

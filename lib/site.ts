@@ -23,6 +23,7 @@ export const siteConfig = {
     "Pearstop cleans and classifies procurement and asset data for hard services, construction, infrastructure, and manufacturing companies.",
   email: "inquiries@pearstop.com",
   calendly: "https://calendly.com/stephanie-pearstop/7-min-discovery",
+  demoCalendly: "https://calendly.com/stephanie-pearstop/demo-call",
   assets: {
     logo: "/brand/logo-dark.webp",
     logoInverse: "/brand/logo-light.webp",
@@ -189,11 +190,13 @@ export type CaseStudy = {
   tone: string;
   image?: string;
   imageFit?: "contain" | "cover";
+  type: "client" | "pattern";
 };
 
 export const caseStudies: CaseStudy[] = [
   {
     slug: "strukton",
+    type: "client",
     title: "Classifying 35,000 to 50,000 procurement lines a month into UNSPSC, from zero classification history",
     category: "Infrastructure · Netherlands",
     excerpt:
@@ -203,10 +206,13 @@ export const caseStudies: CaseStudy[] = [
     statPrimaryLabel: "Lines / month",
     statSecondary: "4",
     statSecondaryLabel: "UNSPSC levels",
-    tone: "from-blue"
+    tone: "from-blue",
+    image: siteConfig.assets.clients.strukton,
+    imageFit: "contain"
   },
   {
     slug: "faro",
+    type: "client",
     title: "Accurate margin estimates on every container purchase, automatically",
     category: "Retail · South Africa",
     excerpt:
@@ -222,6 +228,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "spie",
+    type: "client",
     title: "Cleaning the Asset Records of SPIE Building Solutions",
     category: "Hard Services FM · Europe",
     excerpt:
@@ -237,6 +244,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "construction-spend-benchmarking",
+    type: "pattern",
     title: "Your estimating problem is not an estimating problem",
     category: "Construction & Infrastructure · Anonymized use case",
     excerpt:
@@ -252,6 +260,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "cleaning-consumables-consolidation",
+    type: "pattern",
     title: "Nobody chose 30 toilet paper suppliers. They just couldn't see them.",
     category: "Cleaning & Soft FM · Anonymized use case",
     excerpt:
@@ -265,6 +274,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "lemtech",
+    type: "client",
     title: "Turning site visit reports into clean proposal documents, automatically",
     category: "Manufacturing",
     excerpt:
@@ -280,6 +290,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "mro-confidential",
+    type: "pattern",
     title: "Going direct to the manufacturer on MRO parts",
     category: "Manufacturing / MRO · Anonymized use case",
     excerpt:
@@ -300,6 +311,10 @@ export type CaseStudyDetail = {
   eyebrow: string;
   title: string;
   lead: string;
+  /** Optional longer context paragraph, rendered in a dedicated section
+   * right below the hero (kept out of the hero itself so the hero title/lead
+   * can stay short). */
+  intro?: string;
   challenge: string;
   solution: string;
   wins: { value: string; label: string }[];
@@ -312,30 +327,6 @@ export type CaseStudyDetail = {
 };
 
 export const caseStudyDetails: Record<string, CaseStudyDetail> = {
-  "lemtech": {
-    slug: "lemtech",
-    eyebrow: "Manufacturing",
-    title: "Turning site visit reports into clean proposal documents, automatically",
-    lead:
-      "Site visit reports arrived in every format imaginable - handwritten notes, spelling mistakes, varying layouts. Pearstop built a system that reads incoming reports and automatically outputs a clean, accurate proposal document.",
-    challenge:
-      "The commercial team was spending too much time retyping and reconciling site-visit notes into a proposal format that the business could trust.",
-    solution:
-      "Pearstop interpreted the incoming notes, pulled the right products and specifications, and returned a cleaner proposal workflow with much less manual re-entry.",
-    wins: [
-      { value: "Hours", label: "saved per proposal" },
-      { value: "~0", label: "manual re-entry" },
-      { value: "Accurate", label: "specification capture" }
-    ],
-    quote:
-      "Pearstop built a system that automatically pulls the right items from our visiting reports into a clean proposal document. It saves our team a lot of time by eliminating the repetitive tasks of combining the correct items.",
-    author: "Vince Out",
-    role: "Commercial Manager · Lemtech",
-    geo:
-      "This is a manufacturing example of the same core problem: operational data is messy, inconsistent, and expensive to handle by hand.",
-    ctaLabel: "Explore AI readiness",
-    ctaHref: "/ai-readiness"
-  },
   "fmo": {
     slug: "fmo",
     eyebrow: "Finance · Netherlands",
@@ -359,26 +350,6 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
       "This is the kind of data quality problem that shows up in reporting-heavy organisations when source data was never designed for strategic use.",
     ctaLabel: "View more cases",
     ctaHref: "/cases"
-  },
-  "mro-confidential": {
-    slug: "mro-confidential",
-    eyebrow: "Manufacturing / MRO · Anonymized use case",
-    title: "Going direct to the manufacturer on MRO parts",
-    lead:
-      "This is an anonymized use case, not a named client story - it reflects a pattern Pearstop sees repeatedly in MRO and component sourcing, built to show clearly what the product actually does.",
-    challenge:
-      "Buying MRO parts direct from the manufacturer, instead of through a reseller, usually starts with research: finding the real manufacturer part number behind whatever code a reseller or an old purchase order used. That research is typically outsourced to offshore research bureaus, commonly in India, working by hand. It works, but it is slow.",
-    solution:
-      "AI can do this research faster. It can also get it wrong in a specific way: general-purpose AI models hallucinate part numbers and don't check their own work. That is exactly where a specialized provider matters - one with real experience running AI projects that verify what they produce rather than guessing. Pearstop matches part records against manufacturer reference data, flags anything it can't confirm with confidence for human review, and replaces a slow offshore research cycle with a fast, checked one.",
-    wins: [
-      { value: "Direct", label: "to manufacturer" },
-      { value: "Checked", label: "not guessed" },
-      { value: "Fast", label: "vs. offshore research" }
-    ],
-    geo:
-      "This is the same pattern behind Pearstop's supplier and manufacturer matching work generally: a buyer overpays a reseller, or waits on slow offshore research, until a real, checked manufacturer reference exists to buy direct against instead.",
-    ctaLabel: "Explore procurement",
-    ctaHref: "/procurement-data-quality"
   }
 };
 
