@@ -87,6 +87,7 @@ export default async function UnspscPage({ params }: { params: Promise<{ locale:
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <PageHero
+        className="hero-left"
         eyebrow={t("hero.eyebrow")}
         title={t("hero.title")}
         lead={t("hero.lead")}
@@ -178,7 +179,7 @@ export default async function UnspscPage({ params }: { params: Promise<{ locale:
         <div className="container">
           <div className="bene-cards">
             <article className="ben-card">
-              <div className="ben-icon" style={{ fontSize: "2rem", fontWeight: 700 }}>35k</div>
+              <div className="ben-icon" style={{ fontSize: "2rem", fontWeight: 700 }}>100-100k</div>
               <h3>{t("stats.s1.title")}</h3>
               <p>{t("stats.s1.copy")}</p>
             </article>
@@ -287,6 +288,12 @@ export default async function UnspscPage({ params }: { params: Promise<{ locale:
             <div className="col-md-8 col-md-offset-2">
               <div className="story-label" style={{ marginBottom: "1rem" }}>{t("related.label")}</div>
               <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
+                <a href={`${prefix}/unspsc-code-lookup`} className="btn btn-secondary">
+                  {t("related.tool")}
+                </a>
+                <a href={`${prefix}/unspsc-classification-demo`} className="btn btn-secondary">
+                  {t("related.tree")}
+                </a>
                 <a href={`${prefix}/unspsc-ai-classification-guide`} className="btn btn-secondary">
                   {t("related.guide")}
                 </a>

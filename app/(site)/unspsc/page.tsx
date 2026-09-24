@@ -87,9 +87,10 @@ export default function UnspscPage() {
       <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       <PageHero
+        className="hero-left"
         eyebrow="UNSPSC Classification"
         title="Your procurement data contains the answers. You just cannot read it yet."
-        lead="Most hard services and FM companies have years of purchase order data in SAP or Oracle. Without UNSPSC classification, it is a pile of free-text line items. With it, you can see exactly what you spend by category, benchmark suppliers, and build tenders from actual cost data. Pearstop classifies 35,000 lines a month automatically."
+        lead="Most FM and construction companies have years of purchase order data in SAP or Oracle. Without UNSPSC classification, it is a pile of free-text line items. With it, you can see exactly what you spend by category, benchmark suppliers, and build tenders from actual cost data. Pearstop classifies invoices at any scale, from a pilot of a few hundred lines to full production volume - it scales with you."
         actions={[
           { label: "Book a 7-minute discovery", href: siteConfig.calendly, variant: "primary", external: true },
           { label: "What is UNSPSC?", href: "#what-is-unspsc", variant: "secondary" }
@@ -184,9 +185,9 @@ export default function UnspscPage() {
         <div className="container">
           <div className="bene-cards">
             <article className="ben-card">
-              <div className="ben-icon" style={{ fontSize: "2rem", fontWeight: 700 }}>35k</div>
-              <h3>Lines per month (Strukton)</h3>
-              <p>A major Dutch infrastructure contractor processes 35,000 procurement lines per month through Pearstop via SAP integration.</p>
+              <div className="ben-icon" style={{ fontSize: "2rem", fontWeight: 700 }}>100-100k</div>
+              <h3>Invoices a month, scales with you</h3>
+              <p>Our human-in-the-loop review process was built with input from Strukton&rsquo;s buyer team. Pearstop scales from a pilot to full production volume - a hundred lines a month or a hundred thousand.</p>
             </article>
             <article className="ben-card">
               <div className="ben-icon" style={{ fontSize: "2rem", fontWeight: 700 }}>90-95%</div>
@@ -247,7 +248,7 @@ export default function UnspscPage() {
             <div className="col-md-8 col-md-offset-2">
               <GeoBlock
                 title="How does UNSPSC classification work for hard services and FM companies?"
-                copy="Hard services FM companies typically buy from 500 to 3,000 suppliers across multiple sites. Invoice descriptions are written by field engineers, not buyers, which means the same work appears under hundreds of different strings. Manual UNSPSC classification at 5,000 to 35,000 lines per month requires one or two dedicated staff working continuously just to stay current. Pearstop's automated engine classifies 90-95% of those lines without human input, with the remainder flagged for review. The review queue shrinks each month as the engine learns from your team's decisions. Strukton currently processes 35,000 lines per month this way via SAP integration."
+                copy="Hard services FM companies typically buy from 500 to 3,000 suppliers across multiple sites. Invoice descriptions are written by field engineers, not buyers, which means the same work appears under hundreds of different strings. Manual UNSPSC classification at 5,000 to 35,000 lines per month requires one or two dedicated staff working continuously just to stay current. Pearstop's automated engine classifies 90-95% of those lines without human input, with the remainder flagged for review. The review queue shrinks each month as the engine learns from your team's decisions."
               />
             </div>
           </div>
@@ -293,6 +294,12 @@ export default function UnspscPage() {
             <div className="col-md-8 col-md-offset-2">
               <div className="story-label" style={{ marginBottom: "1rem" }}>More UNSPSC resources</div>
               <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
+                <Link href="/unspsc-code-lookup" className="btn btn-secondary">
+                  Free UNSPSC Code Lookup
+                </Link>
+                <Link href="/unspsc-classification-demo" className="btn btn-secondary">
+                  Explore the UNSPSC Tree
+                </Link>
                 <Link href="/unspsc-ai-classification-guide" className="btn btn-secondary">
                   How AI Classification Actually Works
                 </Link>

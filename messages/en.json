@@ -1107,7 +1107,7 @@
     "hero": {
       "eyebrow": "UNSPSC Classification",
       "title": "Your procurement data contains the answers. You just cannot read it yet.",
-      "lead": "Most hard services and FM companies have years of purchase order data in SAP or Oracle. Without UNSPSC classification, it is a pile of free-text line items. With it, you can see exactly what you spend by category, benchmark suppliers, and build tenders from actual cost data. Pearstop classifies 35,000 lines a month automatically."
+      "lead": "Most FM and construction companies have years of purchase order data in SAP or Oracle. Without UNSPSC classification, it is a pile of free-text line items. With it, you can see exactly what you spend by category, benchmark suppliers, and build tenders from actual cost data. Pearstop classifies invoices at any scale, from a pilot of a few hundred lines to full production volume - it scales with you."
     },
     "standard": {
       "eyebrow": "What is UNSPSC?",
@@ -1162,7 +1162,7 @@
     },
     "geoBlock": {
       "title": "How does UNSPSC classification work for hard services and FM companies?",
-      "copy": "Hard services FM companies typically buy from 500 to 3,000 suppliers across multiple sites. Invoice descriptions are written by field engineers, not buyers, which means the same work appears under hundreds of different strings. Manual UNSPSC classification at 5,000 to 35,000 lines per month requires one or two dedicated staff working continuously just to stay current. Pearstop's automated engine classifies 90-95% of those lines without human input, with the remainder flagged for review. The review queue shrinks each month as the engine learns from your team's decisions. Strukton currently processes 35,000 lines per month this way via SAP integration."
+      "copy": "Hard services FM companies typically buy from 500 to 3,000 suppliers across multiple sites. Invoice descriptions are written by field engineers, not buyers, which means the same work appears under hundreds of different strings. Manual UNSPSC classification at 5,000 to 35,000 lines per month requires one or two dedicated staff working continuously just to stay current. Pearstop's automated engine classifies 90-95% of those lines without human input, with the remainder flagged for review. The review queue shrinks each month as the engine learns from your team's decisions."
     },
     "noDataFaq": {
       "label": "What if we have never classified before?",
@@ -1170,8 +1170,8 @@
     },
     "stats": {
       "s1": {
-        "title": "Lines per month (Strukton)",
-        "copy": "A major Dutch infrastructure contractor processes 35,000 procurement lines per month through Pearstop via SAP integration."
+        "title": "Invoices a month, scales with you",
+        "copy": "Our human-in-the-loop review process was built with input from Strukton's buyer team. Pearstop scales from a pilot to full production volume - a hundred lines a month or a hundred thousand."
       },
       "s2": {
         "title": "Auto-classification rate",
@@ -1211,7 +1211,8 @@
       "fm": "UNSPSC for FM and Hard Services",
       "nl": "UNSPSC in the Netherlands",
       "de": "UNSPSC in Germany",
-      "faq": "Full FAQ"
+      "faq": "Full FAQ",
+      "tree": "Explore the UNSPSC Tree"
     },
     "cta": {
       "title": "Ready to automate your procurement classification?",

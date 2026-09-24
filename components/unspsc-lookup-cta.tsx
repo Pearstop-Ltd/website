@@ -5,7 +5,7 @@ export function UnspscLookupCta({ prefix = "" }: { prefix?: string }) {
     <section style={{ background: "linear-gradient(135deg, #0d1b4b 0%, #1a2f6b 100%)", padding: "4rem 0", margin: "3rem 0" }}>
       <div className="container">
         <div style={{ textAlign: "center", maxWidth: 660, margin: "0 auto" }}>
-          <span style={{ color: "#39d353", fontWeight: 700, fontSize: "0.85rem", textTransform: "uppercase", letterSpacing: "0.08em" }}>Free Tools</span>
+          <span style={{ color: "var(--success)", fontWeight: 700, fontSize: "0.85rem", textTransform: "uppercase", letterSpacing: "0.08em" }}>Free Tools</span>
           <h3 style={{ color: "#fff", fontWeight: 700, fontSize: "clamp(1.4rem, 2.5vw, 1.9rem)", margin: "0.6rem 0 0.75rem", lineHeight: 1.25 }}>
             Not sure which UNSPSC code to use?
           </h3>
@@ -19,7 +19,7 @@ export function UnspscLookupCta({ prefix = "" }: { prefix?: string }) {
                 display: "inline-flex",
                 alignItems: "center",
                 gap: "0.5rem",
-                background: "#39d353",
+                background: "var(--success)",
                 color: "#0d1b4b",
                 fontWeight: 700,
                 fontSize: "1rem",
@@ -56,7 +56,7 @@ export function UnspscLookupCta({ prefix = "" }: { prefix?: string }) {
         </div>
       </div>
       <style>{`
-        .unspsc-cta-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(57,211,83,0.4); }
+        .unspsc-cta-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(139,195,74,0.4); }
         .unspsc-demo-btn:hover { background: rgba(255,255,255,0.16) !important; }
       `}</style>
     </section>
