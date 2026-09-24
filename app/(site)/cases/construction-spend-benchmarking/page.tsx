@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
+import type { CSSProperties } from "react";
 import {
-  CaseBreadcrumb, CaseTypeBadge, CaseSectionLabel, CaseH2, CaseBodyP, CaseProcessDiagram, CaseQuoteCard,
+  CaseBreadcrumb, CaseHeadlineAccent, CaseTypeBadge, CaseSectionLabel, CaseH2, CaseBodyP, CaseProcessDiagram, CaseQuoteCard,
   CaseMoreLinks, CaseClosingCTA
 } from "@/components/case-design";
 import { alternateLanguages, siteConfig } from "@/lib/site";
+import styles from "@/components/case-design.module.css";
 
 export const metadata: Metadata = {
   title: "Construction Spend Benchmarking (Anonymized Use Case)",
@@ -38,6 +40,7 @@ export default function ConstructionSpendBenchmarkingPage() {
             <h1 style={{ margin: 0, fontSize: "clamp(2.2rem, 4vw, 3.2rem)", lineHeight: 1.08, fontWeight: 600, letterSpacing: "-0.025em", color: "var(--primary-dark)" }}>
               Construction Spend Benchmarking
             </h1>
+            <CaseHeadlineAccent />
             <p style={{ margin: 0, fontSize: 20, lineHeight: 1.5, fontWeight: 300, color: "var(--text)" }}>
               Your estimating problem is not an estimating problem. An estimate is a prediction of your own cost base.
             </p>
@@ -58,17 +61,19 @@ export default function ConstructionSpendBenchmarkingPage() {
             <CaseH2>Why does the same item cost different amounts on different projects?</CaseH2>
             <CaseBodyP>One aluminium windowsill, bought on ten different projects, described ten different ways. Classified, the pattern is visible in days: here is what each project actually paid, and why two of them differ.</CaseBodyP>
           </div>
-          <div style={{ border: "1px solid var(--border)", borderRadius: 20, overflow: "hidden" }}>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", background: "var(--bg-soft)", padding: "14px 28px", fontSize: 12, fontWeight: 600, letterSpacing: "0.06em", textTransform: "uppercase", color: "var(--muted)" }}>
-              <span>Item (6 of 10 shown)</span><span>Supplier</span><span>Price</span>
-            </div>
-            {windowsillRows.map((row) => (
-              <div key={row[0]} style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", padding: "16px 28px", borderTop: "1px solid var(--border)", fontSize: 15, alignItems: "center" }}>
-                <span style={{ fontFamily: "'SF Mono', Menlo, monospace", fontSize: 14 }}>{row[0]}</span>
-                <span>{row[1]}</span>
-                <span style={{ fontWeight: 600, color: "var(--navy)" }}>{row[2]}</span>
+          <div className={styles.microTableScroll}>
+            <div style={{ border: "1px solid var(--border)", borderRadius: 20, overflow: "hidden" }}>
+              <div className={styles.dataTableGrid} style={{ "--cols": 3, background: "var(--bg-soft)", padding: "14px 28px", fontSize: 12, fontWeight: 600, letterSpacing: "0.06em", textTransform: "uppercase", color: "var(--muted)" } as CSSProperties}>
+                <span>Item (6 of 10 shown)</span><span>Supplier</span><span>Price</span>
               </div>
-            ))}
+              {windowsillRows.map((row) => (
+                <div key={row[0]} className={styles.dataTableGrid} style={{ "--cols": 3, padding: "16px 28px", borderTop: "1px solid var(--border)", fontSize: 15, alignItems: "center" } as CSSProperties}>
+                  <span style={{ fontFamily: "'SF Mono', Menlo, monospace", fontSize: 14 }}>{row[0]}</span>
+                  <span>{row[1]}</span>
+                  <span style={{ fontWeight: 600, color: "var(--navy)" }}>{row[2]}</span>
+                </div>
+              ))}
+            </div>
           </div>
           <div style={{ background: "#F1F8E9", border: "1.5px solid var(--success)", borderRadius: 16, padding: "22px 24px" }}>
             <span style={{ fontSize: 12, fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: "#4E7D22", display: "block", marginBottom: 6 }}>Classified as</span>
@@ -94,7 +99,7 @@ export default function ConstructionSpendBenchmarkingPage() {
             <CaseH2>Why can&rsquo;t you benchmark spend behind a ledger code?</CaseH2>
             <CaseBodyP>A ledger item field like &ldquo;6100-42-K&rdquo; is a nominal accounting code standing in for the item itself. Common in ERPs built for finance, not procurement. Nobody can benchmark spend they can&rsquo;t see behind a code like that.</CaseBodyP>
           </div>
-          <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 20, flexWrap: "wrap" }}>
             <span style={{ fontFamily: "'SF Mono', Menlo, monospace", fontSize: 15, padding: "10px 14px", borderRadius: 8, background: "var(--bg-soft)", color: "var(--text)" }}>6100-42-K</span>
             <svg width="30" height="14" viewBox="0 0 30 14" fill="none" aria-hidden="true"><path d="M0 7 H24" stroke="var(--navy)" strokeWidth="1.6" /><path d="M22 2 L29 7 L22 12 Z" fill="var(--navy)" /></svg>
             <span style={{ fontSize: 16, fontWeight: 600, padding: "10px 14px", borderRadius: 8, background: "#F1F8E9", border: "1px solid var(--success)", color: "var(--navy)" }}>Structural steel fixings, M12</span>
@@ -115,7 +120,7 @@ export default function ConstructionSpendBenchmarkingPage() {
               { text: "Supplier consolidation", bg: "#F1F8E9" }
             ]}
           />
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, minmax(0, 1fr))", gap: 20 }}>
+          <div className={styles.grid3} style={{ "--cols": 3, gap: 20 } as CSSProperties}>
             {[
               { t: "Your data doesn't need to be clean", c: "Free-text descriptions and accounting codes are the starting point, not a blocker." },
               { t: "AI-first, human reviewed", c: "Every label checked. Classification holds up as new invoices and projects arrive." },
@@ -131,17 +136,15 @@ export default function ConstructionSpendBenchmarkingPage() {
       </section>
 
       <section style={{ background: "#fff", padding: "96px 0" }}>
-        <div className="container" style={{ display: "grid", gridTemplateColumns: "repeat(2, minmax(0, 1fr))", gap: 32 }}>
+        <div className={`container ${styles.twoPanel}`}>
           <div style={{ background: "#F1F8E9", borderRadius: 24, padding: 44, display: "flex", flexDirection: "column", gap: 14, justifyContent: "center" }}>
             <span style={{ fontSize: 13, fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "#4E7D22" }}>Typical result in specialised construction</span>
             <span style={{ fontSize: 64, lineHeight: 1, fontWeight: 600, letterSpacing: "-0.03em", color: "var(--navy)" }}>8&ndash;15%</span>
             <p style={{ margin: 0, fontSize: 17, lineHeight: 1.6, fontWeight: 300, color: "var(--navy)" }}>savings on addressable spend. The findings above are where it comes from.</p>
           </div>
           <CaseQuoteCard
-            quote="Built and proven with a major Dutch infrastructure contractor, starting from zero classification history."
-            initials="ST"
-            name="Strukton"
-            role="Infrastructure, Netherlands"
+            quote="If you cannot defend your cost baseline, you are bidding on a feeling."
+            role="Commercial Director, Construction"
           />
         </div>
       </section>
@@ -158,9 +161,8 @@ export default function ConstructionSpendBenchmarkingPage() {
       <CaseClosingCTA
         title="Want to see this on your own spend?"
         lead="Send a sample of your own procurement data and we'll show you the same kind of pattern in your own numbers."
-        ctaLabel="Talk to sales"
-        ctaHref={siteConfig.calendly}
-        external
+        ctaLabel="Send us a sample"
+        sample
       />
     </>
   );

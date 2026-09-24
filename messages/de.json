@@ -162,7 +162,6 @@
     "cta": {
       "title": "Nicht sicher, ob Pearstop das Richtige für Sie ist?",
       "lead": "Lassen Sie uns sprechen. Sie sind clever - lassen Sie uns Ihre Lösung erarbeiten.",
-      "bookDiscovery": "7-minütige Discovery buchen",
       "findOut": "Finden Sie heraus, was möglich ist (E-Mail senden)"
     }
   },
@@ -226,8 +225,6 @@
     },
     "cta": {
       "title": "Nicht sicher, welche Lösung Sie brauchen?",
-      "lead": "Buchen Sie eine 7-minütige Discovery. Wir identifizieren genau, welches Datenproblem Sie am meisten kostet - und zeigen Ihnen, wie Sie es lösen können.",
-      "bookDiscovery": "7-minütige Discovery buchen",
       "viewIndustries": "Branchen ansehen"
     }
   },
@@ -325,7 +322,6 @@
     ],
     "cta": {
       "title": "Bereit, die Daten unter Ihrem nächsten Projekt zu reparieren?",
-      "lead": "Buchen Sie eine 7-minütige Discovery. Wir zeigen Ihnen genau, wo Ihre Daten heute eine ERP-Migration, einen Fabric-Rollout oder eine KI-Initiative zum Scheitern bringen würden.",
       "button": "7-minütige Discovery buchen"
     }
   },
@@ -368,8 +364,7 @@
       "step3": {
         "title": "Menschliche Prüfung, dann merkt es sich das",
         "copy": "Alles, was noch unter einem Konfidenzschwellenwert liegt, wird für Ihr Team markiert - typischerweise etwa eine Stunde pro Woche. Jede Entscheidung fließt zurück in die Engine."
-      },
-      "cta": "Live erleben, 7-minütigen Call buchen"
+      }
     },
     "outcome": {
       "title": "Was eine echte Spend Baseline möglich macht",
@@ -411,7 +406,6 @@
     ],
     "cta": {
       "title": "Bereit, eine echte Spend Baseline aufzubauen?",
-      "lead": "Buchen Sie eine 7-minütige Discovery. Wir zeigen Ihnen genau, wo Ihre Ausgabendaten die Zahl verbergen, die Sie brauchen.",
       "button": "7-minütige Discovery buchen"
     }
   },
@@ -508,7 +502,6 @@
     ],
     "cta": {
       "title": "Bereit, eine eigene unabhängige Sicht zu haben?",
-      "lead": "Buchen Sie eine 7-minütige Discovery und sehen Sie genau, wie Pearstop die Daten, die Sie bereits erhalten, in etwas Überprüfbares verwandelt.",
       "button": "7-minütige Discovery buchen"
     }
   },
@@ -603,7 +596,6 @@
     ],
     "cta": {
       "title": "Sind Ihre Daten bereit für KI?",
-      "lead": "Buchen Sie einen 7-minütigen Call, und wir sagen Ihnen genau, was passieren muss, bevor Ihre KI-Initiativen Ergebnisse liefern können.",
       "button": "7-minütige Discovery buchen",
       "fabricLink": "Auch Fabric-Bereitschaft ansehen"
     }
@@ -724,7 +716,6 @@
     },
     "cta": {
       "title": "Bereit, Ihre Beschaffungsklassifizierung zu automatisieren?",
-      "lead": "Buchen Sie eine 7-minütige Discovery. Wir zeigen Ihnen genau, wie die Klassifizierungs-Engine mit Ihren Daten funktionieren würde.",
       "button": "7-minütige Discovery buchen"
     }
   },
@@ -859,7 +850,6 @@
     },
     "cta": {
       "title": "Bereit, das an Ihren eigenen Daten zu sehen?",
-      "lead": "Buchen Sie eine 7-minütige Erstberatung oder testen Sie zunächst eine einzelne Beschreibung im kostenlosen Nachschlagetool.",
       "button": "7-minütige Erstberatung buchen",
       "secondaryButton": "Kostenloses Nachschlagetool testen"
     }
@@ -1038,8 +1028,7 @@
       "emailPlaceholder": "Ihre E-Mail-Adresse",
       "companyPlaceholder": "Unternehmen (optional)",
       "submitButton": "Fallstudien herunterladen",
-      "talkNote": "Lieber erst sprechen?",
-      "talkLinkText": "7-minütige Discovery buchen"
+      "talkNote": "Lieber erst sprechen?"
     },
     "whyDownload": {
       "title": "Warum Menschen es herunterladen",
@@ -1063,8 +1052,7 @@
     "cta": {
       "title": "Möchten Sie es durchsprechen?",
       "lead": "Wenn Sie Ihr Datenproblem lieber direkt besprechen möchten, helfen wir gerne.",
-      "followLinkedIn": "Folgen Sie Pearstop auf LinkedIn für Updates",
-      "bookDiscovery": "7-minütige Discovery buchen"
+      "followLinkedIn": "Folgen Sie Pearstop auf LinkedIn für Updates"
     }
   },
   "Cases": {
@@ -1124,8 +1112,7 @@
     },
     "otherIndustries": {
       "title": "Arbeiten Sie in einer anderen Branche?",
-      "copy": "Datenqualitätsprobleme sind nicht auf die oben genannten Branchen beschränkt. Wenn Ihre Teams komplexe operative Daten verwalten, mit uneinheitlichen Lieferantendaten zu tun haben oder sich auf eine digitale Transformation vorbereiten, können wir wahrscheinlich helfen. Lassen Sie es uns herausfinden.",
-      "bookDiscovery": "7-minütige Erstberatung buchen →"
+      "copy": "Datenqualitätsprobleme sind nicht auf die oben genannten Branchen beschränkt. Wenn Ihre Teams komplexe operative Daten verwalten, mit uneinheitlichen Lieferantendaten zu tun haben oder sich auf eine digitale Transformation vorbereiten, können wir wahrscheinlich helfen. Lassen Sie es uns herausfinden."
     },
     "whatChanges": "Was sich mit Pearstop ändert",
     "trusted": {
@@ -1133,8 +1120,7 @@
     },
     "readyBanner": {
       "title": "Bereit, Ihre Daten zu bereinigen?",
-      "copy": "Wir haben genau dieses Problem in Infrastruktur, Facility Management, Reinigung, Bau und Fertigung gelöst. Wenn Sie in einer anderen Branche mit derselben Art von Daten arbeiten, erzählen Sie uns davon.",
-      "bookDiscovery": "7-minütige Erstberatung buchen"
+      "copy": "Wir haben genau dieses Problem in Infrastruktur, Facility Management, Reinigung, Bau und Fertigung gelöst. Wenn Sie in einer anderen Branche mit derselben Art von Daten arbeiten, erzählen Sie uns davon."
     },
     "technical": {
       "eyebrow": "Technische Branchen",
@@ -1631,13 +1617,11 @@
     },
     "stillHaveQuestions": {
       "label": "Noch eine Frage?",
-      "copy": "Wenn Ihre Frage hier nicht beantwortet wurde, ist eine 7-minütige Erstberatung der schnellste Weg zu einer Antwort. Es gibt keinen Verkaufsdruck — es ist ein direktes Gespräch über Ihre Datensituation.",
       "cta": "7-minütige Erstberatung buchen",
       "email": "Schreiben Sie uns"
     },
     "cta": {
       "title": "Bereit, es in Aktion zu sehen?",
-      "lead": "Buchen Sie eine 7-minütige Erstberatung, und wir zeigen Ihnen genau, wie die Klassifizierungs-Engine mit Ihren Daten arbeitet.",
       "button": "7-minütige Erstberatung buchen"
     }
   },
@@ -1744,7 +1728,6 @@
     },
     "cta": {
       "title": "Bereit, die FM-Beschaffungsklassifizierung zu automatisieren?",
-      "lead": "Buchen Sie eine 7-minütige Erstberatung. Wir zeigen Ihnen genau, wie die Engine mit Ihren Ausgabendaten arbeitet.",
       "button": "7-minütige Erstberatung buchen"
     }
   },
@@ -1855,7 +1838,7 @@
       "eyebrow": "UNSPSC Klassifizierung Deutschland",
       "title": "UNSPSC-Klassifizierung für deutsche Fertigungs-, FM- und Infrastrukturunternehmen.",
       "lead": "Pearstop automatisiert die Klassifizierung von Einkaufszeilen nach UNSPSC-Standard — 90–95% ohne manuellen Aufwand. Mit Unterstützung für die deutsche E-Rechnungspflicht 2025 und SAP-Integration.",
-      "cta": "7-minütige Discovery buchen",
+      "cta": "Mit Vertrieb sprechen",
       "secondary": "E-Rechnung und UNSPSC"
     },
     "einvoicing": {
@@ -1930,8 +1913,8 @@
     },
     "cta": {
       "title": "Bereit, Ihre Beschaffungsklassifizierung zu automatisieren?",
-      "lead": "Buchen Sie eine 7-minütige Discovery. Wir zeigen Ihnen, wie die Klassifizierungs-Engine mit Ihren Daten funktioniert.",
-      "button": "7-minütige Discovery buchen"
+      "lead": "Sprechen Sie mit unserem Vertrieb. Wir zeigen Ihnen, wie die Klassifizierungs-Engine mit Ihren Daten funktioniert.",
+      "button": "Mit Vertrieb sprechen"
     }
   },
   "UnspscLookup": {
@@ -1967,7 +1950,6 @@
     },
     "bulk": {
       "label": "Müssen Sie Tausende von Zeilen klassifizieren?",
-      "copy": "Dieses Tool ist für einzelne Abfragen gedacht. Pearstops automatisierte Klassifizierungs-Engine verarbeitet 35.000 Beschaffungszeilen pro Monat — mit 90–95 % automatischer Klassifizierung und vollständiger SAP-Integration. Buchen Sie eine 7-minütige Erstberatung, um es mit Ihren Daten zu sehen.",
       "cta": "7-minütige Erstberatung buchen",
       "learnMore": "So funktioniert es"
     },
@@ -2003,8 +1985,7 @@
           "a": "UNSPSC, eCl@ss und CPV sind allesamt Beschaffungsklassifizierungsstandards, dienen aber unterschiedlichen Zwecken. UNSPSC ist der am weitesten verbreitete Standard für Ausgabenanalyse und Category Management. eCl@ss fügt detaillierte technische Attribute pro Produkt hinzu und ist in der deutschen Fertigung verbreitet. CPV wird speziell für EU-Vergabeverfahren im öffentlichen Sektor genutzt. Die meisten Organisationen brauchen nur einen Standard, gewählt nach ERP-System und Berichtsanforderungen — Pearstop arbeitet mit UNSPSC als dem gängigsten Standard für Ausgabenanalysen."
         },
         {
-          "q": "Kann ich eine gesamte Spend-Datei oder einen Lieferantenkatalog auf einmal klassifizieren?",
-          "a": "Das obige kostenlose Tool ist für jeweils eine Beschreibung gedacht. Für eine vollständige Spend-Datei, Rechnungshistorie oder einen Lieferantenkatalog — Hunderte bis Millionen Zeilen — verarbeitet die automatisierte Klassifizierungs-Engine von Pearstop den gesamten Datensatz auf einmal und erreicht 90–95 % automatische Klassifizierung, wobei der Rest zur menschlichen Prüfung markiert wird. Buchen Sie ein 7-minütiges Gespräch, um es an einer Stichprobe Ihrer eigenen Daten zu sehen."
+          "q": "Kann ich eine gesamte Spend-Datei oder einen Lieferantenkatalog auf einmal klassifizieren?"
         },
         {
           "q": "Sollte ich einem KI-generierten UNSPSC-Code ungeprüft vertrauen?",
@@ -2014,7 +1995,6 @@
     },
     "cta": {
       "title": "Müssen Sie Tausende von Zeilen klassifizieren?",
-      "lead": "Buchen Sie eine 7-minütige Erstberatung, und wir zeigen Ihnen, wie die vollständige Klassifizierungs-Engine mit Ihren echten Beschaffungsdaten arbeitet.",
       "button": "7-minütige Erstberatung buchen"
     }
   }

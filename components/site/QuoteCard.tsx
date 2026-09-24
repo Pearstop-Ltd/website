@@ -1,16 +1,18 @@
 import type { ReactNode } from "react";
+import Image from "next/image";
 import { dsRoot } from "./tokens";
+import { getPerson, initialsOf, type PersonId } from "@/lib/people";
 import styles from "./QuoteCard.module.css";
 
-export interface QuoteCardProps {
+export type QuoteCardProps = {
   quote: ReactNode;
-  name: ReactNode;
-  role: ReactNode;
-  /** Initials shown in the avatar circle, e.g. "BP". */
-  initials: string;
   variant?: "panel" | "inline";
   className?: string;
-}
+} & (
+  | { personId: PersonId; role?: never }
+  /** Anonymous quote — role only, never a name or a photo. */
+  | { personId?: never; role: ReactNode }
+);
 
 const QuoteMark = () => (
   <svg width="36" height="28" viewBox="0 0 36 28" fill="none" aria-hidden="true">
@@ -22,16 +24,41 @@ const QuoteMark = () => (
 );
 
 /** panel: navy background, purple quote mark, large white quote (case study
- * pull-quotes). inline: bordered row with a circular initials avatar. */
-export function QuoteCard({ quote, name, role, initials, variant = "panel", className }: QuoteCardProps) {
+ * pull-quotes). inline: bordered row with a circular initials avatar.
+ *
+ * Named quotes (`personId`) resolve name, role, company and headshot from
+ * lib/people.ts, so a named person shows the same photo everywhere they're
+ * quoted. Anonymous quotes (`role` only) never show a name or a photo. */
+export function QuoteCard({ quote, variant = "panel", className, ...attribution }: QuoteCardProps) {
+  const person = attribution.personId ? getPerson(attribution.personId) : undefined;
+  const displayRole = person ? `${person.role}, ${person.company}` : attribution.role;
+
+  const inlineAvatar = person ? (
+    person.headshot ? (
+      <Image src={person.headshot} alt={person.name} width={72} height={72} className={styles.inlineAvatarPhoto} />
+    ) : (
+      <span className={styles.inlineAvatar}>{initialsOf(person.name)}</span>
+    )
+  ) : null;
+
+  const panelAvatar = person ? (
+    person.headshot ? (
+      <Image src={person.headshot} alt={person.name} width={48} height={48} className={styles.panelAvatarPhoto} />
+    ) : (
+      <span className={styles.panelAvatar}>{initialsOf(person.name)}</span>
+    )
+  ) : null;
+
   if (variant === "inline") {
     return (
       <figure className={dsRoot(styles.inlineRoot, className)}>
-        <span className={styles.inlineAvatar}>{initials}</span>
+        {inlineAvatar}
         <div className={styles.inlineBody}>
           <blockquote className={styles.inlineQuote}>&ldquo;{quote}&rdquo;</blockquote>
           <figcaption className={styles.inlineCaption}>
-            <strong className={styles.inlineName}>{name}</strong> · {role}
+            {person ? <strong className={styles.inlineName}>{person.name}</strong> : null}
+            {person ? " · " : null}
+            {displayRole}
           </figcaption>
         </div>
       </figure>
@@ -43,10 +70,10 @@ export function QuoteCard({ quote, name, role, initials, variant = "panel", clas
       <QuoteMark />
       <blockquote className={styles.panelQuote}>{quote}</blockquote>
       <figcaption className={styles.panelCaption}>
-        <span className={styles.panelAvatar}>{initials}</span>
+        {panelAvatar}
         <span className={styles.panelPerson}>
-          <strong className={styles.panelName}>{name}</strong>
-          <span className={styles.panelRole}>{role}</span>
+          {person ? <strong className={styles.panelName}>{person.name}</strong> : null}
+          <span className={styles.panelRole}>{displayRole}</span>
         </span>
       </figcaption>
     </figure>

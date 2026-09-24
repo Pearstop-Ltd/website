@@ -28,10 +28,10 @@ export const siteConfig = {
     logo: "/brand/logo-dark.webp",
     logoInverse: "/brand/logo-light.webp",
     heroVideo: "/video/section.mp4",
-    heroVideoPoster: "/images/home/spend-control.webp",
+    heroVideoPoster: "/images/photos/construction-planner-woman-1.png",
     productDemoVideo: "/video/product-demo.mp4",
     productDemoVideoPoster: "/images/home/product-demo-poster.webp",
-    leadMagnet: "/images/lead-magnet/solar-panels.png",
+    leadMagnet: "/images/photos/construction-planner-woman-1.png",
     blogPodcast: "/images/blog/podcast.webp",
     clients: {
       strukton: "/images/clients/strukton.png",
@@ -54,9 +54,9 @@ export const siteConfig = {
       david: "/images/clients/david-headshot.jpg",
     },
     home: {
-      spendControl: "/images/home/spend-control.webp",
-      assetManagement: "/images/home/asset-management.webp",
-      scaleConfidence: "/images/home/scale-confidence.webp",
+      spendControl: "/images/photos/office-desk-woman-1.png",
+      assetManagement: "/images/photos/the-city-2.png",
+      scaleConfidence: "/images/photos/office-worker-1.png",
       demo: "/images/home/demo.webp"
     }
   },
@@ -197,7 +197,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "strukton",
     type: "client",
-    title: "Classifying 35,000 to 50,000 procurement lines a month into UNSPSC, from zero classification history",
+    title: "Classified 35,000 to 50,000 procurement lines a month into UNSPSC, from zero classification history",
     category: "Infrastructure · Netherlands",
     excerpt:
       "Strukton had identified a real cost-saving opportunity in procurement but needed higher granularity to act on it. Pearstop built an AI classification system with their procurement team: automated UNSPSC classification to all four hierarchy levels, a human-in-the-loop review step, and a weekly feedback loop with their buyers.",
@@ -270,7 +270,9 @@ export const caseStudies: CaseStudy[] = [
     statPrimaryLabel: "Price spread, same product",
     statSecondary: "10-20%",
     statSecondaryLabel: "Typical savings",
-    tone: "from-slate"
+    tone: "from-slate",
+    image: "/images/cases/warehouse-sorting.svg",
+    imageFit: "cover"
   },
   {
     slug: "lemtech",
@@ -280,7 +282,7 @@ export const caseStudies: CaseStudy[] = [
     excerpt:
       "Site visit reports arrived in every format imaginable. Pearstop built a system that reads incoming reports and automatically outputs a clean, accurate proposal document.",
     tags: ["Asset Management", "Data Quality"],
-    statPrimary: "Hours",
+    statPrimary: "1–3 hrs",
     statPrimaryLabel: "Saved per proposal",
     statSecondary: "~0",
     statSecondaryLabel: "Manual re-entry",

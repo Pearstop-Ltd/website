@@ -54,8 +54,8 @@ export default function WhatIsUnspsc() {
       <SoftCta
         type="template"
         title="Not sure where your UNSPSC classification gaps are?"
-        description="Talk to sales call and we will show you exactly what automated UNSPSC classification looks like on your data — before you commit to anything."
-        ctaLabel="Book a discovery call →"
+        description="Talk to sales and we will show you exactly what automated UNSPSC classification looks like on your data — before you commit to anything."
+        ctaLabel="Talk to sales"
         ctaHref={siteConfig.calendly}
         external={true}
       />

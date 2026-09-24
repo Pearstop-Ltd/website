@@ -361,7 +361,7 @@ export default function UnspscDemoPage() {
             Ready to classify your own spend data?
           </h2>
           <p style={{ color: "rgba(255,255,255,0.62)", fontSize: "0.97rem", lineHeight: 1.65, marginBottom: "2rem" }}>
-            Pearstop helps procurement and FM teams reach commodity-level accuracy — automatically. Book a 7-minute call to see how.
+            Pearstop helps procurement and FM teams reach commodity-level accuracy — automatically. Talk to sales to see how.
           </p>
           <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
             <Link href="/unspsc-code-lookup" style={{
@@ -374,7 +374,7 @@ export default function UnspscDemoPage() {
               Try the free lookup →
             </Link>
             <CalendlyButton
-              label="Book a 7-min call"
+              label="Talk to sales"
               style={{
                 background: "rgba(255,255,255,0.08)",
                 color: "rgba(255,255,255,0.9)",

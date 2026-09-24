@@ -96,15 +96,11 @@ export default function DesignTestPage() {
           <div style={{ padding: "0 40px", display: "grid", gridTemplateColumns: "repeat(2, minmax(0, 1fr))", gap: 24 }}>
             <QuoteCard
               variant="panel"
-              initials="AB"
-              name="Alex B."
-              role="Head of Master Data, Example Co"
+              personId="bartVanPeij"
               quote="The confidence scoring meant our team knew where to spend their review time first."
             />
             <QuoteCard
               variant="inline"
-              initials="JD"
-              name="Jamie D."
               role="Project Manager, Example Co"
               quote="This project taught us a lot about data cleaning with AI."
             />
@@ -150,6 +146,7 @@ export default function DesignTestPage() {
               stats={[{ value: "0", label: "history at start" }, { value: "Weekly", label: "feedback loop" }]}
               href="#"
               linkLabel="Read the case"
+              logo={{ src: "/images/clients/strukton.png", alt: "Strukton" }}
             />
             <CaseCard
               variant="pattern"
@@ -197,6 +194,7 @@ export default function DesignTestPage() {
               breadcrumbCurrent: "Example Co",
               badgeLabel: "Client case",
               metaLine: "Hard services FM · Asset data",
+              logo: { src: "/images/clients/spie.webp", alt: "SPIE" },
               title: "9,175 supplier spellings brought back to 1,493 for Example Co",
               lead: "Example Co's asset register had been fed by maintenance systems, contractors and manual entry for years.",
               visual: (
@@ -262,7 +260,7 @@ export default function DesignTestPage() {
                 eyebrow: "The problem",
                 title: "Why spend data stays unusable months after the invoice arrives",
                 body: <p>Every supplier lays out an invoice differently.</p>,
-                quote: { variant: "panel", initials: "PL", name: "Procurement lead", role: "Multi-site cleaning contractor", quote: "Our internal systems are lacking." },
+                quote: { variant: "panel", role: "Procurement lead, multi-site cleaning contractor", quote: "Our internal systems are lacking." },
               },
               {
                 type: "painCards",

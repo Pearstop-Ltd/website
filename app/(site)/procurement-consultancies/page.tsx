@@ -199,7 +199,7 @@ export default function ProcurementConsultanciesPage() {
 
       <CTABand
         title="Want to see it on a real client dataset?"
-        lead="Talk to sales call and we'll show you what your next engagement's spend data looks like after a first pass."
+        lead="Talk to sales and we'll show you what your next engagement's spend data looks like after a first pass."
         actions={[{ label: "Talk to sales", href: siteConfig.calendly, variant: "primary", external: true }]}
       />
     </>

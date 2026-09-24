@@ -162,7 +162,6 @@
     "cta": {
       "title": "Vous ne savez pas si Pearstop est fait pour vous ?",
       "lead": "Parlons-en. Vous êtes malin - trouvons ensemble votre solution.",
-      "bookDiscovery": "Réservez un appel découverte de 7 minutes",
       "findOut": "Découvrez ce qui est possible (envoyer un e-mail)"
     }
   },
@@ -226,8 +225,6 @@
     },
     "cta": {
       "title": "Vous ne savez pas quelle solution vous convient ?",
-      "lead": "Réservez un appel découverte de 7 minutes. Nous identifierons précisément le problème de données qui vous coûte le plus - et vous montrerons comment le résoudre.",
-      "bookDiscovery": "Réservez un appel découverte de 7 minutes",
       "viewIndustries": "Voir les secteurs"
     }
   },
@@ -325,7 +322,6 @@
     ],
     "cta": {
       "title": "Prêt à corriger les données à la base de votre prochain projet ?",
-      "lead": "Réservez un appel découverte de 7 minutes. Nous vous montrerons exactement où vos données feraient échouer aujourd'hui une migration ERP, un déploiement Fabric ou une initiative IA.",
       "button": "Réservez un appel découverte de 7 minutes"
     }
   },
@@ -368,8 +364,7 @@
       "step3": {
         "title": "Vérification humaine, puis mémorisation",
         "copy": "Tout ce qui reste sous un seuil de confiance est signalé à votre équipe, généralement une heure environ par semaine. Chaque décision alimente le moteur en retour."
-      },
-      "cta": "Voyez-le en action, réservez un appel de 7 minutes"
+      }
     },
     "outcome": {
       "title": "Ce qu'une véritable base de référence des dépenses rend possible",
@@ -411,7 +406,6 @@
     ],
     "cta": {
       "title": "Prêt à construire une véritable base de référence des dépenses ?",
-      "lead": "Réservez un appel découverte de 7 minutes. Nous vous montrerons exactement où vos données de dépenses cachent le chiffre dont vous avez besoin.",
       "button": "Réservez un appel découverte de 7 minutes"
     }
   },
@@ -508,7 +502,6 @@
     ],
     "cta": {
       "title": "Prêt à disposer de votre propre vision indépendante ?",
-      "lead": "Réservez un appel découverte de 7 minutes et découvrez exactement comment Pearstop transforme les données que vous recevez déjà en quelque chose que vous pouvez vérifier.",
       "button": "Réservez un appel découverte de 7 minutes"
     }
   },
@@ -603,7 +596,6 @@
     ],
     "cta": {
       "title": "Vos données sont-elles prêtes pour l'IA ?",
-      "lead": "Réservez un appel de 7 minutes et nous vous dirons exactement ce qui doit se passer avant que vos initiatives IA puissent produire des résultats.",
       "button": "Réservez un appel découverte de 7 minutes",
       "fabricLink": "Découvrez aussi votre préparation pour Fabric"
     }
@@ -724,7 +716,6 @@
     },
     "cta": {
       "title": "Prêt à automatiser votre classification des achats ?",
-      "lead": "Réservez un appel découverte de 7 minutes. Nous vous montrerons exactement comment le moteur de classification fonctionnerait avec vos données.",
       "button": "Réservez un appel découverte de 7 minutes"
     }
   },
@@ -859,7 +850,6 @@
     },
     "cta": {
       "title": "Prêt à voir cela fonctionner sur vos propres données ?",
-      "lead": "Réservez un appel découverte de 7 minutes, ou testez d'abord une seule description sur l'outil de recherche gratuit.",
       "button": "Réservez un appel découverte de 7 minutes",
       "secondaryButton": "Essayer la recherche gratuite"
     }
@@ -1038,8 +1028,7 @@
       "emailPlaceholder": "Votre e-mail",
       "companyPlaceholder": "Entreprise (facultatif)",
       "submitButton": "Télécharger les études de cas",
-      "talkNote": "Vous préférez d'abord en parler ?",
-      "talkLinkText": "Réservez un appel découverte de 7 minutes"
+      "talkNote": "Vous préférez d'abord en parler ?"
     },
     "whyDownload": {
       "title": "Pourquoi les gens le téléchargent",
@@ -1063,8 +1052,7 @@
     "cta": {
       "title": "Vous voulez en discuter ?",
       "lead": "Si vous préférez discuter directement de votre problème de données, nous serons ravis de vous aider.",
-      "followLinkedIn": "Suivez Pearstop sur LinkedIn pour les actualités",
-      "bookDiscovery": "Réservez un appel découverte de 7 minutes"
+      "followLinkedIn": "Suivez Pearstop sur LinkedIn pour les actualités"
     }
   },
   "Cases": {
@@ -1124,8 +1112,7 @@
     },
     "otherIndustries": {
       "title": "Vous travaillez dans un autre secteur ?",
-      "copy": "Les problèmes de qualité des données ne sont pas propres aux secteurs ci-dessus. Si vos équipes gèrent des données opérationnelles complexes, font face à des fiches fournisseurs incohérentes, ou se préparent à une transformation numérique, il y a de fortes chances que nous puissions vous aider. Voyons cela ensemble.",
-      "bookDiscovery": "Réservez un appel découverte de 7 minutes →"
+      "copy": "Les problèmes de qualité des données ne sont pas propres aux secteurs ci-dessus. Si vos équipes gèrent des données opérationnelles complexes, font face à des fiches fournisseurs incohérentes, ou se préparent à une transformation numérique, il y a de fortes chances que nous puissions vous aider. Voyons cela ensemble."
     },
     "whatChanges": "Ce qui change avec Pearstop",
     "trusted": {
@@ -1133,8 +1120,7 @@
     },
     "readyBanner": {
       "title": "Prêt à nettoyer vos données ?",
-      "copy": "Nous avons résolu exactement ce problème dans l'infrastructure, le facilities management, le nettoyage, la construction et la fabrication. Si votre secteur est différent mais rencontre le même type de données, parlez-nous-en.",
-      "bookDiscovery": "Réservez un appel découverte de 7 minutes"
+      "copy": "Nous avons résolu exactement ce problème dans l'infrastructure, le facilities management, le nettoyage, la construction et la fabrication. Si votre secteur est différent mais rencontre le même type de données, parlez-nous-en."
     },
     "technical": {
       "eyebrow": "Secteurs techniques",
@@ -1631,13 +1617,11 @@
     },
     "stillHaveQuestions": {
       "label": "Encore une question ?",
-      "copy": "Si votre question n'a pas de réponse ici, le moyen le plus rapide d'obtenir une réponse est un appel découverte de 7 minutes. Aucune pression commerciale — c'est une conversation directe sur votre situation en matière de données.",
       "cta": "Réservez un appel découverte de 7 minutes",
       "email": "Envoyez-nous un message"
     },
     "cta": {
       "title": "Prêt à le voir en action ?",
-      "lead": "Réservez un appel découverte de 7 minutes et nous vous montrerons exactement comment le moteur de classification fonctionne avec vos données.",
       "button": "Réservez un appel découverte de 7 minutes"
     }
   },
@@ -1744,7 +1728,6 @@
     },
     "cta": {
       "title": "Prêt à automatiser la classification des achats FM ?",
-      "lead": "Réservez un appel découverte de 7 minutes. Nous vous montrerons exactement comment le moteur fonctionne avec vos données de dépenses.",
       "button": "Réservez un appel découverte de 7 minutes"
     }
   },
@@ -1967,7 +1950,6 @@
     },
     "bulk": {
       "label": "Besoin de classer des milliers de lignes ?",
-      "copy": "Cet outil traite les recherches individuelles. Le moteur de classification automatisé de Pearstop traite 35 000 lignes d'achats par mois — avec 90 à 95 % de classification automatique et une intégration SAP complète. Réservez un appel découverte de 7 minutes pour le voir fonctionner avec vos données.",
       "cta": "Réservez un appel découverte de 7 minutes",
       "learnMore": "Découvrez comment ça marche"
     },
@@ -2003,8 +1985,7 @@
           "a": "UNSPSC, eCl@ss et le CPV sont tous des normes de classification des achats, mais ils répondent à des besoins différents. UNSPSC est le plus utilisé pour l'analyse des dépenses et la gestion des catégories. eCl@ss ajoute des attributs techniques détaillés par produit, courant dans l'industrie manufacturière allemande. Le CPV est utilisé spécifiquement pour les appels d'offres publics de l'UE. La plupart des organisations n'en ont besoin que d'une seule, choisie selon leur système ERP et leurs besoins de reporting — Pearstop travaille avec UNSPSC comme norme la plus courante pour l'analyse des dépenses."
         },
         {
-          "q": "Puis-je classer un fichier de dépenses entier ou un catalogue fournisseur en une seule fois ?",
-          "a": "L'outil gratuit ci-dessus est conçu pour une description à la fois. Pour un fichier de dépenses complet, un historique de factures ou un catalogue fournisseur — de quelques centaines à plusieurs millions de lignes — le moteur de classification automatisé de Pearstop traite l'ensemble du jeu de données en une fois, atteignant 90 à 95 % de classification automatique, le reste étant signalé pour vérification humaine. Réservez un appel de 7 minutes pour le voir fonctionner sur un échantillon de vos propres données."
+          "q": "Puis-je classer un fichier de dépenses entier ou un catalogue fournisseur en une seule fois ?"
         },
         {
           "q": "Dois-je faire confiance à un code UNSPSC généré par IA sans le vérifier ?",
@@ -2014,7 +1995,6 @@
     },
     "cta": {
       "title": "Besoin de classer des milliers de lignes ?",
-      "lead": "Réservez un appel découverte de 7 minutes et nous vous montrerons comment le moteur de classification complet fonctionne avec vos données d'achats réelles.",
       "button": "Réservez un appel découverte de 7 minutes"
     }
   }

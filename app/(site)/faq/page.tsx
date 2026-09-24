@@ -245,7 +245,7 @@ export default function FaqPage() {
 
               <div className="quote-card" style={{ marginTop: "3rem" }}>
                 <div className="story-label">Still have a question?</div>
-                <p>If your question is not answered here, the fastest way to get an answer is a 7-minute discovery call. There is no sales pressure — it is a direct conversation about your data situation.</p>
+                <p>If your question is not answered here, the fastest way to get an answer is to talk to sales. There is no sales pressure — it is a direct conversation about your data situation.</p>
                 <div style={{ marginTop: "1rem", display: "flex", gap: "1rem", flexWrap: "wrap" }}>
             <CalendlyButton label="Talk to sales" className="btn btn-primary" />
                   <Link href="/contact" className="btn btn-secondary">

@@ -51,6 +51,7 @@ Never use a heading tag for a paragraph. If text is longer than one line of a he
 - Radius: cards 16-20px, large panels 24px, buttons 10-12px, chips 999px.
 - Gaps: 20-24px between cards, 40-48px between a section header and its content.
 - Cards: white on `--bg-soft` sections, or `--bg-soft` / `1px --border` on white sections. No shadows except the subtle one on visual mockups.
+- Every page H1 (in a template hero) gets a `HeadlineAccent` directly under it: a 72x4px, 2px-radius dash, blue on light backgrounds and tint-blue on dark backgrounds, aria-hidden.
 
 ## Components (build once in `components/site/`, reuse everywhere)
 
@@ -59,10 +60,10 @@ Never use a heading tag for a paragraph. If text is longer than one line of a he
 - `Card` — title + body; variants: plain, tinted (blue / purple / green tint backgrounds, navy-deep text).
 - `NumberedStep` — navy circle with number, H3, body.
 - `SourceDiagram` — input boxes → right-brace SVG → arrow → blue "pearstop." box with pear icon → arrow → tinted output boxes. Never four separate arrows into the box.
-- `QuoteCard` — navy panel, purple quote mark, 24-26px white quote, name + role. Inline variant: bordered row with avatar.
+- `QuoteCard` — navy panel, purple quote mark, 24-26px white quote, name + role. Inline variant: bordered row with avatar. Named quotes pass a `personId`, resolved against `lib/people.ts` (name, role, company, optional headshot) so the same person shows the same attribution and photo everywhere; anonymous quotes pass `role` only and never show a name or a photo.
 - `DataTable` — navy header row (12px uppercase white), rows with 1px border, status chips (green tint = done, purple tint = to review).
 - `ClosingCTA` — navy-deep full-width block, 44px white H2, tint-blue body, white button + purple text link, footer line.
-- `CaseCard` — mini visual panel + eyebrow + title + 2 stats + link. Client cases eyebrow blue, patterns eyebrow purple-text.
+- `CaseCard` — mini visual panel + eyebrow + title + 2 stats + link. Client cases eyebrow blue, patterns eyebrow purple-text. `CaseCard` and the `CasePage` hero both take an optional client `logo` from `/images/clients/`; anonymised pattern cases never get one.
 
 ## Rules
 

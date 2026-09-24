@@ -133,7 +133,7 @@ export default function UnspscDEPage() {
         title="UNSPSC-Klassifizierung für deutsche Fertigungs-, FM- und Infrastrukturunternehmen."
         lead="Pearstop automatisiert die Klassifizierung von Einkaufszeilen nach UNSPSC-Standard — 90–95% ohne manuellen Aufwand. Mit Unterstützung für die deutsche E-Rechnungspflicht 2025 und SAP-Integration."
         actions={[
-          { label: "7-minütige Discovery buchen", href: siteConfig.calendly, variant: "primary", external: true },
+          { label: "Mit Vertrieb sprechen", href: siteConfig.calendly, variant: "primary", external: true },
           { label: "E-Rechnung und UNSPSC", href: "#einvoicing", variant: "secondary" }
         ]}
       />
@@ -287,8 +287,8 @@ export default function UnspscDEPage() {
 
       <CTABand
         title="Bereit, Ihre Beschaffungsklassifizierung zu automatisieren?"
-        lead="Buchen Sie eine 7-minütige Discovery. Wir zeigen Ihnen, wie die Klassifizierungs-Engine mit Ihren Daten funktioniert."
-        actions={[{ label: "7-minütige Discovery buchen", href: siteConfig.calendly, variant: "primary", external: true }]}
+        lead="Sprechen Sie mit unserem Vertrieb. Wir zeigen Ihnen, wie die Klassifizierungs-Engine mit Ihren Daten funktioniert."
+        actions={[{ label: "Mit Vertrieb sprechen", href: siteConfig.calendly, variant: "primary", external: true }]}
       />
     </>
   );

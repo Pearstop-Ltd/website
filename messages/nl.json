@@ -162,7 +162,6 @@
     "cta": {
       "title": "Niet zeker of Pearstop iets voor u is?",
       "lead": "Laten we praten. U bent slim — laten we uw oplossing uitwerken.",
-      "bookDiscovery": "Boek een ontdekkingsgesprek van 7 minuten",
       "findOut": "Ontdek wat mogelijk is (stuur e-mail)"
     }
   },
@@ -190,8 +189,6 @@
     },
     "cta": {
       "title": "Niet zeker welke oplossing u nodig heeft?",
-      "lead": "Boek een ontdekkingsgesprek van 7 minuten. We identificeren precies welk dataprobleem u het meeste kost — en laten u zien hoe u het kunt oplossen.",
-      "bookDiscovery": "Boek een ontdekkingsgesprek van 7 minuten",
       "viewIndustries": "Bekijk sectoren"
     },
     "meta": {
@@ -239,8 +236,7 @@
     },
     "cta": {
       "button": "Boek een ontdekkingsgesprek van 7 minuten",
-      "title": "Klaar om de data onder uw volgende project te herstellen?",
-      "lead": "Boek een discovery call van 7 minuten. We laten u precies zien waar uw data vandaag een ERP-migratie, een Fabric-uitrol of een AI-initiatief zou belemmeren."
+      "title": "Klaar om de data onder uw volgende project te herstellen?"
     },
     "faq": [
       {
@@ -372,8 +368,7 @@
       "step4": {
         "title": "Menselijke beoordeling",
         "copy": "Items buiten betrouwbare drempelwaarden worden automatisch gemarkeerd voor uw team. Elke beslissing wordt teruggekoppeld aan de motor — waardoor de beoordelingswachtrij in de loop der tijd naar nul daalt."
-      },
-      "cta": "Zie het in actie — boek een gesprek van 7 minuten"
+      }
     },
     "outcome": {
       "title": "Met 95%+ datakwaliteit kan uw inkoopteam daadwerkelijk hun werk doen.",
@@ -415,7 +410,6 @@
     ],
     "cta": {
       "title": "Klaar om uw inkoopdata te herstellen?",
-      "lead": "Boek een ontdekkingsgesprek van 7 minuten. We laten u precies zien waar uw bestedingsdata problemen veroorzaakt en hoe lang het duurt om het te herstellen.",
       "button": "Boek een ontdekkingsgesprek van 7 minuten"
     }
   },
@@ -502,7 +496,6 @@
     },
     "cta": {
       "title": "Klaar om uw assetdata om te zetten in een strategisch asset?",
-      "lead": "Boek een ontdekkingsgesprek van 7 minuten en zie precies hoe Pearstop uw specifieke data-uitdaging oplost.",
       "button": "Boek een ontdekkingsgesprek van 7 minuten"
     },
     "faq": [
@@ -597,7 +590,6 @@
     },
     "cta": {
       "title": "Is uw data klaar voor AI?",
-      "lead": "Boek een gesprek van 7 minuten en we vertellen u precies wat er moet gebeuren voordat uw AI-initiatieven resultaten kunnen leveren.",
       "button": "Boek een ontdekkingsgesprek van 7 minuten",
       "fabricLink": "Bekijk ook Fabric-gereedheid"
     },
@@ -679,7 +671,6 @@
     },
     "cta": {
       "title": "Klaar om uw inkoopclassificatie te automatiseren?",
-      "lead": "Boek een ontdekkingsgesprek van 7 minuten. We laten u precies zien hoe de classificatiemotor zou werken met uw data.",
       "button": "Boek een ontdekkingsgesprek van 7 minuten"
     },
     "stats": {
@@ -909,8 +900,7 @@
       "emailPlaceholder": "Uw e-mailadres",
       "companyPlaceholder": "Bedrijf (optioneel)",
       "submitButton": "Download de casestudies",
-      "talkNote": "Liever eerst praten?",
-      "talkLinkText": "Boek een ontdekkingsgesprek van 7 minuten"
+      "talkNote": "Liever eerst praten?"
     },
     "whyDownload": {
       "title": "Waarom mensen het downloaden",
@@ -934,8 +924,7 @@
     "cta": {
       "title": "Wilt u het bespreken?",
       "lead": "Als u liever direct uw dataprobleem bespreekt, helpen we u graag.",
-      "followLinkedIn": "Volg Pearstop op LinkedIn voor updates",
-      "bookDiscovery": "Boek een ontdekkingsgesprek van 7 minuten"
+      "followLinkedIn": "Volg Pearstop op LinkedIn voor updates"
     }
   },
   "Cases": {
@@ -995,8 +984,7 @@
     },
     "otherIndustries": {
       "title": "Actief in een andere sector?",
-      "copy": "Datakwaliteitsproblemen zijn niet uniek voor de bovenstaande sectoren. Als uw teams complexe operationele data beheren, te maken hebben met inconsistente leveranciersrecords of zich voorbereiden op een digitale transformatie, is de kans groot dat we kunnen helpen. Laten we erachter komen.",
-      "bookDiscovery": "Boek een ontdekkingsgesprek van 7 minuten →"
+      "copy": "Datakwaliteitsproblemen zijn niet uniek voor de bovenstaande sectoren. Als uw teams complexe operationele data beheren, te maken hebben met inconsistente leveranciersrecords of zich voorbereiden op een digitale transformatie, is de kans groot dat we kunnen helpen. Laten we erachter komen."
     },
     "whatChanges": "Wat verandert er met Pearstop",
     "trusted": {
@@ -1004,8 +992,7 @@
     },
     "readyBanner": {
       "title": "Klaar om uw data te reinigen?",
-      "copy": "In welke sector u ook actief bent, Pearstop heeft uw dataprobleem al eerder opgelost. Laten we praten over uw specifieke situatie.",
-      "bookDiscovery": "Boek een ontdekkingsgesprek van 7 minuten"
+      "copy": "In welke sector u ook actief bent, Pearstop heeft uw dataprobleem al eerder opgelost. Laten we praten over uw specifieke situatie."
     },
     "technical": {
       "eyebrow": "Technische sectoren",
@@ -1530,13 +1517,11 @@
     },
     "stillHaveQuestions": {
       "label": "Nog een vraag?",
-      "copy": "Als uw vraag hier niet wordt beantwoord, is de snelste manier om een antwoord te krijgen een discovery call van 7 minuten. Er is geen verkoopdruk — het is een direct gesprek over uw datasituatie.",
       "cta": "Boek een discovery van 7 minuten",
       "email": "Stuur ons een bericht"
     },
     "cta": {
       "title": "Klaar om het in actie te zien?",
-      "lead": "Boek een discovery van 7 minuten en we laten u precies zien hoe de classificatie-engine werkt met uw data.",
       "button": "Boek een discovery van 7 minuten"
     }
   },
@@ -1639,7 +1624,6 @@
     },
     "cta": {
       "title": "Ready to automate FM procurement classification?",
-      "lead": "Book a 7-minute discovery. We will show you exactly how the engine works with your spend data.",
       "button": "Book a 7-minute discovery"
     },
     "geoBlock": {
@@ -1656,7 +1640,7 @@
       "eyebrow": "UNSPSC Classificatie Nederland",
       "title": "UNSPSC classificatie voor Nederlandse infrastructuur-, FM-, en bouwbedrijven.",
       "lead": "Pearstop automatiseert de classificatie van inkoopregels naar UNSPSC-standaard — 90–95% zonder handmatige inspanning. Inclusief ondersteuning voor Peppol e-facturatie en Nederlandse ERP-systemen.",
-      "cta": "Boek een 7-minuten discovery",
+      "cta": "Praat met sales",
       "secondary": "Peppol en UNSPSC"
     },
     "peppol": {
@@ -1733,8 +1717,8 @@
     },
     "cta": {
       "title": "Klaar om uw inkoopclassificatie te automatiseren?",
-      "lead": "Boek een 7-minuten discovery. We laten u zien hoe de classificatie-engine met uw data werkt.",
-      "button": "Boek een 7-minuten discovery"
+      "lead": "Praat met sales. We laten u zien hoe de classificatie-engine met uw data werkt.",
+      "button": "Praat met sales"
     },
     "geoBlock": {
       "title": "Hoe ziet UNSPSC-classificatie eruit voor een Nederlands infrastructuur- of FM-bedrijf?",
@@ -1862,7 +1846,6 @@
     },
     "bulk": {
       "label": "Moet u duizenden regels classificeren?",
-      "copy": "Deze tool behandelt enkele opzoeken. Pearstops geautomatiseerde classificatie-engine verwerkt 35.000 inkoopregels per maand — met 90-95% automatische classificatie en volledige SAP-integratie. Boek een 7-minuten ontdekking om het met uw gegevens te zien.",
       "cta": "Boek een 7-minuten ontdekking",
       "learnMore": "Bekijk hoe het werkt"
     },
@@ -1898,8 +1881,7 @@
           "a": "De gratis tool hierboven is gebouwd voor één beschrijving tegelijk. Voor een volledig spend-bestand, invoice history of supplier catalog — honderden tot miljoenen regels — verwerkt Pearstop's geautomatiseerde classificatie-engine de hele dataset in één keer, waarbij 90-95% automatische classificatie wordt bereikt en de rest wordt gemarkeerd voor menselijke beoordeling. Boek een gesprek van 7 minuten om het te zien werken op een voorbeeld van uw eigen data."
         },
         {
-          "q": "Moet ik een door AI gegenereerde UNSPSC-code vertrouwen zonder deze te controleren?",
-          "a": "Voor een enkele, laagdrempelige lookup is een AI-resultaat met hoge confidence meestal betrouwbaar genoeg om direct te gebruiken. Voor contract-kritische, audit-relevante of bulkclassificatie adviseren wij een verificatielaag — en dat is precies waarom Pearstop's classificatie-engine regels, machine learning en een LLM combineert met een menselijke beoordelingsstap voor resultaten met lagere confidence, in plaats van blindelings te vertrouwen op AI-output."
+          "q": "Moet ik een door AI gegenereerde UNSPSC-code vertrouwen zonder deze te controleren?"
         },
         {
           "q": "Moet ik een AI-gegenereerde UNSPSC code vertrouwen zonder deze te controleren?",
@@ -1909,7 +1891,6 @@
     },
     "cta": {
       "title": "Moet u duizenden regels classificeren?",
-      "lead": "Boek een 7-minuten ontdekking en wij zullen u laten zien hoe de volledige classificatiemotor werkt met uw eigen procurement-gegevens.",
       "button": "Boek een 7-minuten ontdekking"
     },
     "geoBlock": {

@@ -43,7 +43,7 @@ const FAQ_ITEMS = [
   },
   {
     q: "How accurate is automated invoice data extraction?",
-    a: "First-pass accuracy depends on document quality and supplier variability, but improves over time. On one facilities management client's invoice stream, first-pass extraction accuracy rose from roughly 70% to 99% as the pipeline learned that supplier base's formats and edge cases. Anything below a set confidence threshold is flagged for human review rather than guessed at."
+    a: "First-pass accuracy depends on document quality and supplier variability, but improves over time. On one cleaning services client's invoice stream, first-pass extraction accuracy rose from roughly 70% to 99% as the pipeline learned that supplier base's formats and edge cases. Anything below a set confidence threshold is flagged for human review rather than guessed at."
   },
   {
     q: "Does extraction replace our ERP, or feed it?",
@@ -185,7 +185,7 @@ export default function InvoiceDataExtractionPage() {
           <SectionTitle title="What changes with Pearstop" />
           <StatsGrid
             stats={[
-              { value: "~70% → 99%", label: "first-pass extraction accuracy", copy: "On one FM client's live invoice stream, as the pipeline learned their supplier base" },
+              { value: "~70% → 99%", label: "first-pass extraction accuracy", copy: "On one cleaning services client's live invoice stream, as the pipeline learned their supplier base" },
               { value: "Any format", label: "PDF, scan, photo, or EDI", copy: "No fixed template required per supplier" },
               { value: "Days", label: "typical time to first structured output", copy: "Not a lengthy integration project" }
             ]}
@@ -240,7 +240,7 @@ export default function InvoiceDataExtractionPage() {
 
       <CTABand
         title="Still keying invoices in by hand?"
-        lead="Talk to sales call and see what your own invoice stream looks like once it is actually read."
+        lead="Talk to sales and see what your own invoice stream looks like once it is actually read."
         actions={[{ label: "Talk to sales", href: siteConfig.calendly, variant: "primary", external: true }]}
       />
     </>

@@ -47,8 +47,8 @@ export default function ExcelHeroics() {
       <SoftCta
         type="template"
         title="Curious what automated data management would look like for your team?"
-        description="Talk to sales call and we will walk through your current data flow and show you specifically where automation would eliminate the most manual work."
-        ctaLabel="Book a discovery call"
+        description="Talk to sales and we will walk through your current data flow and show you specifically where automation would eliminate the most manual work."
+        ctaLabel="Talk to sales"
         ctaHref={siteConfig.calendly}
         external={true}
       />

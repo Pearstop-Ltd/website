@@ -1,0 +1,11 @@
+.root {
+  display: block;
+  width: 72px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--blue);
+}
+
+.dark {
+  background: var(--tint-blue);
+}

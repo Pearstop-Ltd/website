@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
+import type { CSSProperties } from "react";
 import {
-  CaseBreadcrumb, CaseTypeBadge, CaseSectionLabel, CaseH2, CaseBodyP, CaseProcessDiagram, CaseQuoteCard,
+  CaseBreadcrumb, CaseHero, CaseHeadlineAccent, CaseTypeBadge, CaseSectionLabel, CaseH2, CaseBodyP, CaseProcessDiagram, CaseQuoteCard,
   CaseMoreLinks, CaseClosingCTA
 } from "@/components/case-design";
 import { alternateLanguages, siteConfig } from "@/lib/site";
+import styles from "@/components/case-design.module.css";
 
 export const metadata: Metadata = {
   title: "Cleaning Consumables Consolidation (Anonymized Use Case)",
@@ -37,31 +39,34 @@ export default function CleaningCaseStudyPage() {
       <section style={{ background: "#fff", padding: "56px 0 88px" }}>
         <div className="container" style={{ display: "flex", flexDirection: "column", gap: 40 }}>
           <CaseBreadcrumb current="Cleaning & soft FM" />
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(2, minmax(0, 1fr))", gap: 72, alignItems: "center" }}>
-            <div style={{ display: "flex", flexDirection: "column", gap: 22 }}>
-              <div style={{ display: "flex", gap: 10, alignItems: "center", flexWrap: "wrap" }}>
-                <CaseTypeBadge type="pattern" />
-                <span style={{ fontSize: 13, color: "var(--muted)" }}>Cleaning & soft FM · Illustrative data</span>
+          <CaseHero
+            equal
+            aside={
+              <div style={{ background: "var(--bg-soft)", borderRadius: 24, padding: 40, display: "flex", flexDirection: "column", gap: 18 }}>
+                <div className={styles.grid6} style={{ gap: 8 } as CSSProperties}>
+                  {tileColors.map((bg, i) => <div key={i} style={{ height: 52, borderRadius: 8, background: bg }} />)}
+                </div>
+                <div style={{ display: "flex", justifyContent: "space-between", fontSize: 13, color: "var(--muted)", flexWrap: "wrap", gap: 8 }}>
+                  <span>Each tile is a supplier that invoiced for toilet paper</span>
+                  <span style={{ display: "flex", gap: 6, alignItems: "center" }}>
+                    <span style={{ width: 10, height: 10, borderRadius: 3, background: "var(--success)" }} />the three worth keeping
+                  </span>
+                </div>
               </div>
-              <h1 style={{ margin: 0, fontSize: "clamp(2.2rem, 4.2vw, 3.6rem)", lineHeight: 1.06, fontWeight: 600, letterSpacing: "-0.025em", color: "var(--primary-dark)" }}>
-                Nobody chose 30 toilet paper suppliers.
-              </h1>
-              <p style={{ margin: 0, fontSize: 22, lineHeight: 1.5, fontWeight: 300, color: "var(--text)" }}>
-                They just couldn&rsquo;t see them. One cleaning business, twelve months of invoices, and a simple question nobody could answer: what do we spend on toilet paper?
-              </p>
+            }
+          >
+            <div style={{ display: "flex", gap: 10, alignItems: "center", flexWrap: "wrap" }}>
+              <CaseTypeBadge type="pattern" />
+              <span style={{ fontSize: 13, color: "var(--muted)" }}>Cleaning & soft FM · Illustrative data</span>
             </div>
-            <div style={{ background: "var(--bg-soft)", borderRadius: 24, padding: 40, display: "flex", flexDirection: "column", gap: 18 }}>
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(6, minmax(0, 1fr))", gap: 8 }}>
-                {tileColors.map((bg, i) => <div key={i} style={{ height: 52, borderRadius: 8, background: bg }} />)}
-              </div>
-              <div style={{ display: "flex", justifyContent: "space-between", fontSize: 13, color: "var(--muted)", flexWrap: "wrap", gap: 8 }}>
-                <span>Each tile is a supplier that invoiced for toilet paper</span>
-                <span style={{ display: "flex", gap: 6, alignItems: "center" }}>
-                  <span style={{ width: 10, height: 10, borderRadius: 3, background: "var(--success)" }} />the three worth keeping
-                </span>
-              </div>
-            </div>
-          </div>
+            <h1 style={{ margin: 0, fontSize: "clamp(2.2rem, 4.2vw, 3.6rem)", lineHeight: 1.06, fontWeight: 600, letterSpacing: "-0.025em", color: "var(--primary-dark)" }}>
+              Nobody chose 30 toilet paper suppliers.
+            </h1>
+            <CaseHeadlineAccent />
+            <p style={{ margin: 0, fontSize: 22, lineHeight: 1.5, fontWeight: 300, color: "var(--text)" }}>
+              They just couldn&rsquo;t see them. One cleaning business, twelve months of invoices, and a simple question nobody could answer: what do we spend on toilet paper?
+            </p>
+          </CaseHero>
         </div>
       </section>
 
@@ -78,7 +83,7 @@ export default function CleaningCaseStudyPage() {
             <CaseH2>The spend is there. The picture isn&rsquo;t.</CaseH2>
             <CaseBodyP>What we hear from cleaning businesses, before any data changes hands.</CaseBodyP>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, minmax(0, 1fr))", gap: 20 }}>
+          <div className={styles.grid4} style={{ "--cols": 4, gap: 20 } as CSSProperties}>
             {[
               { t: "Invoices arrive as PDFs", c: "Line detail sits inside documents nobody re-reads. The ERP holds supplier totals, not what was bought.", dot: "var(--primary)" },
               { t: "Every site orders its own way", c: "Site managers buy consumables locally. One product enters the books under twenty descriptions.", dot: "var(--primary)" },
@@ -96,7 +101,7 @@ export default function CleaningCaseStudyPage() {
       </section>
 
       <section style={{ background: "var(--bg-soft)", padding: "104px 0" }}>
-        <div className="container" style={{ display: "grid", gridTemplateColumns: "minmax(0, 1fr) minmax(0, 1.25fr)", gap: 64, alignItems: "start" }}>
+        <div className={`container ${styles.twoColWide}`}>
           <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
             <CaseSectionLabel>Once every line is classified</CaseSectionLabel>
             <CaseH2>One product. 30 suppliers. Now side by side.</CaseH2>
@@ -108,19 +113,21 @@ export default function CleaningCaseStudyPage() {
               <span style={{ fontSize: 15, color: "var(--navy)" }}><strong style={{ fontWeight: 600 }}>Pattersons</strong> · regional next-day cover</span>
             </div>
           </div>
-          <div style={{ background: "#fff", borderRadius: 20, overflow: "hidden" }}>
-            <div style={{ display: "grid", gridTemplateColumns: "1.3fr 0.8fr 1.6fr 1.3fr", background: "var(--primary-dark)", padding: "16px 24px", fontSize: 12, fontWeight: 600, letterSpacing: "0.06em", textTransform: "uppercase", color: "#fff" }}>
-              <span>Supplier</span><span>£ / roll</span><span>Terms</span><span>Delivery</span>
-            </div>
-            {suppliers.map((s) => (
-              <div key={s.name} style={{ display: "grid", gridTemplateColumns: "1.3fr 0.8fr 1.6fr 1.3fr", padding: "16px 24px", borderTop: "1px solid var(--border)", fontSize: 15, alignItems: "center" }}>
-                <span style={{ fontWeight: 600, color: "var(--navy)" }}>{s.name}</span>
-                <span style={{ color: "var(--navy)", fontWeight: 500 }}>{s.price}</span>
-                <span style={{ color: "var(--text)", fontWeight: 300 }}>{s.terms}</span>
-                <span style={{ color: "var(--text)", fontWeight: 300 }}>{s.delivery}</span>
+          <div className={styles.microTableScroll}>
+            <div style={{ background: "#fff", borderRadius: 20, overflow: "hidden" }}>
+              <div style={{ display: "grid", gridTemplateColumns: "1.3fr 0.8fr 1.6fr 1.3fr", background: "var(--primary-dark)", padding: "16px 24px", fontSize: 12, fontWeight: 600, letterSpacing: "0.06em", textTransform: "uppercase", color: "#fff" }}>
+                <span>Supplier</span><span>£ / roll</span><span>Terms</span><span>Delivery</span>
               </div>
-            ))}
-            <div style={{ padding: "14px 24px", borderTop: "1px solid var(--border)", fontSize: 13, color: "var(--muted)" }}>4 of 30 shown · Standard 2-ply</div>
+              {suppliers.map((s) => (
+                <div key={s.name} style={{ display: "grid", gridTemplateColumns: "1.3fr 0.8fr 1.6fr 1.3fr", padding: "16px 24px", borderTop: "1px solid var(--border)", fontSize: 15, alignItems: "center" }}>
+                  <span style={{ fontWeight: 600, color: "var(--navy)" }}>{s.name}</span>
+                  <span style={{ color: "var(--navy)", fontWeight: 500 }}>{s.price}</span>
+                  <span style={{ color: "var(--text)", fontWeight: 300 }}>{s.terms}</span>
+                  <span style={{ color: "var(--text)", fontWeight: 300 }}>{s.delivery}</span>
+                </div>
+              ))}
+              <div style={{ padding: "14px 24px", borderTop: "1px solid var(--border)", fontSize: 13, color: "var(--muted)" }}>4 of 30 shown · Standard 2-ply</div>
+            </div>
           </div>
         </div>
       </section>
@@ -131,7 +138,7 @@ export default function CleaningCaseStudyPage() {
             <CaseSectionLabel>And then</CaseSectionLabel>
             <CaseH2>What else shows up when every line is classified</CaseH2>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, minmax(0, 1fr))", gap: 24 }}>
+          <div className={styles.grid3} style={{ "--cols": 3, gap: 24 } as CSSProperties}>
             <div style={{ border: "1px solid var(--border)", borderRadius: 20, padding: 32, display: "flex", flexDirection: "column", gap: 18 }}>
               <h3 style={{ margin: 0, fontSize: 20, fontWeight: 600, color: "var(--primary-dark)" }}>Off-contract buying</h3>
               <div style={{ border: "1px solid var(--blue-soft)", borderRadius: 12, padding: "14px 16px", display: "flex", flexDirection: "column", gap: 4 }}>
@@ -184,7 +191,7 @@ export default function CleaningCaseStudyPage() {
               { text: "Suppliers per category, side by side", bg: "#F1F8E9" }
             ]}
           />
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, minmax(0, 1fr))", gap: 20 }}>
+          <div className={styles.grid3} style={{ "--cols": 3, gap: 20 } as CSSProperties}>
             {[
               { t: "Your data doesn't need to be clean", c: "Messy data is the starting point. Cleaning and classifying it is the product." },
               { t: "AI-first, human reviewed", c: "Every label checked. Classification holds up as new suppliers and invoices arrive." },
@@ -200,7 +207,7 @@ export default function CleaningCaseStudyPage() {
       </section>
 
       <section style={{ background: "#fff", padding: "96px 0" }}>
-        <div className="container" style={{ display: "grid", gridTemplateColumns: "repeat(2, minmax(0, 1fr))", gap: 32 }}>
+        <div className={`container ${styles.twoPanel}`}>
           <div style={{ background: "#F1F8E9", borderRadius: 24, padding: 44, display: "flex", flexDirection: "column", gap: 14, justifyContent: "center" }}>
             <span style={{ fontSize: 13, fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "#4E7D22" }}>Typical result in soft FM</span>
             <span style={{ fontSize: 64, lineHeight: 1, fontWeight: 600, letterSpacing: "-0.03em", color: "var(--navy)" }}>10&ndash;20%</span>
@@ -208,9 +215,7 @@ export default function CleaningCaseStudyPage() {
           </div>
           <CaseQuoteCard
             quote="It would have taken five engineers and a full year to clean this up. So we decided to look for a better solution."
-            initials="HO"
-            name="Head of Operations"
-            role="Cleaning services company"
+            role="Head of Operations, Cleaning services company"
           />
         </div>
       </section>
@@ -228,8 +233,7 @@ export default function CleaningCaseStudyPage() {
         title="See this on your own invoices"
         lead="Send up to 200 invoice lines or ten invoices. We send them back labelled, so you can see the same kind of pattern in your own numbers."
         ctaLabel="Send your sample"
-        ctaHref={siteConfig.calendly}
-        external
+        sample
       />
     </>
   );

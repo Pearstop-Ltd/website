@@ -1,4 +1,5 @@
 import { SoftCta } from "@/components/blog";
+import { siteConfig } from "@/lib/site";
 
 export default function WinAiRaceProcurementDataQuality() {
   return (
@@ -62,9 +63,10 @@ export default function WinAiRaceProcurementDataQuality() {
       <SoftCta
         type="discovery"
         title="See how data-ready your procurement is"
-        description="In a 7-minute call we will show you what clean, classified procurement data looks like in practice — and what it unlocks for your AI and analytics roadmap."
+        description="In a 15-minute call we will show you what clean, classified procurement data looks like in practice — and what it unlocks for your AI and analytics roadmap."
         ctaLabel="Talk to sales"
-        ctaHref="/contact"
+        ctaHref={siteConfig.calendly}
+        external={true}
       />
     </>
   );

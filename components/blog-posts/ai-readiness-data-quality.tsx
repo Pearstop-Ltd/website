@@ -47,7 +47,7 @@ export default function AiReadinessDataQuality() {
         type="checklist"
         title="Download: AI Data Readiness Checklist"
         description="A one-page checklist you can run against your current ERP and asset data today. Identify exactly where your data readiness gaps are before your next AI or Fabric project."
-        ctaLabel="Talk to sales call"
+        ctaLabel="Talk to sales"
         ctaHref={siteConfig.calendly}
         external={true}
       />

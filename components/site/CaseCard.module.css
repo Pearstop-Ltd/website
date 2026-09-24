@@ -36,6 +36,17 @@
   min-width: 0;
 }
 
+.logo {
+  line-height: 0;
+}
+
+.logoImage {
+  height: 24px;
+  width: auto;
+  object-fit: contain;
+  object-position: left center;
+}
+
 .eyebrow {
   font-size: 12px;
   font-weight: 600;
@@ -104,5 +115,10 @@
 
   .body {
     padding: 22px;
+  }
+
+  .stats {
+    flex-wrap: wrap;
+    row-gap: 12px;
   }
 }

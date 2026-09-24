@@ -124,7 +124,7 @@ export default function ProcurementPage() {
             </article>
           </div>
           <div className="text-center" style={{ marginTop: "2rem" }}>
-            <CalendlyButton label="See it in action, book a 7-minute call" className="btn btn-primary" />
+            <CalendlyButton label="Talk to sales" className="btn btn-primary" />
           </div>
         </div>
       </section>
@@ -201,7 +201,7 @@ export default function ProcurementPage() {
 
       <CTABand
         title="Ready to build a real spend baseline?"
-        lead="Talk to sales call. We will show you exactly where your spend data is hiding the number you need."
+        lead="Talk to sales. We will show you exactly where your spend data is hiding the number you need."
         actions={[{ label: "Talk to sales", href: siteConfig.calendly, variant: "primary", external: true }]}
       />
     </>

@@ -17,7 +17,7 @@ const livePages = [
   {
     eyebrow: "Live now",
     title: "Book a call",
-    copy: "Jump straight to Stephanie's 7-minute discovery link or use the contact page if you prefer email.",
+    copy: "Jump straight to a 15-minute call or use the contact page if you prefer email.",
     href: "/contact"
   }
 ];

@@ -224,7 +224,7 @@ export default function DataQualityPage() {
 
       <CTABand
         title="Ready to fix the data underneath your next project?"
-        lead="Talk to sales call. We will show you exactly where your data would break an ERP migration, a Fabric rollout, or an AI initiative today."
+        lead="Talk to sales. We will show you exactly where your data would break an ERP migration, a Fabric rollout, or an AI initiative today."
         actions={[{ label: "Talk to sales", href: siteConfig.calendly, variant: "primary", external: true }]}
       />
     </>
