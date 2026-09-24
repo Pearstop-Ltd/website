@@ -190,11 +190,13 @@ export type CaseStudy = {
   tone: string;
   image?: string;
   imageFit?: "contain" | "cover";
+  type: "client" | "pattern";
 };
 
 export const caseStudies: CaseStudy[] = [
   {
     slug: "strukton",
+    type: "client",
     title: "Classifying 35,000 to 50,000 procurement lines a month into UNSPSC, from zero classification history",
     category: "Infrastructure · Netherlands",
     excerpt:
@@ -210,6 +212,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "faro",
+    type: "client",
     title: "Accurate margin estimates on every container purchase, automatically",
     category: "Retail · South Africa",
     excerpt:
@@ -225,6 +228,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "spie",
+    type: "client",
     title: "Cleaning the Asset Records of SPIE Building Solutions",
     category: "Hard Services FM · Europe",
     excerpt:
@@ -240,6 +244,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "construction-spend-benchmarking",
+    type: "pattern",
     title: "Your estimating problem is not an estimating problem",
     category: "Construction & Infrastructure · Anonymized use case",
     excerpt:
@@ -255,6 +260,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "cleaning-consumables-consolidation",
+    type: "pattern",
     title: "Nobody chose 30 toilet paper suppliers. They just couldn't see them.",
     category: "Cleaning & Soft FM · Anonymized use case",
     excerpt:
@@ -268,6 +274,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "lemtech",
+    type: "client",
     title: "Turning site visit reports into clean proposal documents, automatically",
     category: "Manufacturing",
     excerpt:
@@ -283,6 +290,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "mro-confidential",
+    type: "pattern",
     title: "Going direct to the manufacturer on MRO parts",
     category: "Manufacturing / MRO · Anonymized use case",
     excerpt:
@@ -319,31 +327,6 @@ export type CaseStudyDetail = {
 };
 
 export const caseStudyDetails: Record<string, CaseStudyDetail> = {
-  "lemtech": {
-    slug: "lemtech",
-    eyebrow: "Manufacturing",
-    title: "Turning Messy Notes Into Proposals",
-    lead: "How Pearstop turns messy site-visit reports into clean, ready proposal documents.",
-    intro:
-      "Site visit reports arrived in every format imaginable - handwritten notes, spelling mistakes, varying layouts. Pearstop built a system that reads incoming reports and automatically outputs a clean, accurate proposal document.",
-    challenge:
-      "Why was the commercial team retyping every site-visit note by hand?",
-    solution:
-      "Pearstop interpreted the incoming notes, pulled the right products and specifications, and returned a cleaner proposal workflow with much less manual re-entry.",
-    wins: [
-      { value: "Hours", label: "saved per proposal" },
-      { value: "~0", label: "manual re-entry" },
-      { value: "Accurate", label: "specification capture" }
-    ],
-    quote:
-      "Pearstop built a system that automatically pulls the right items from our visiting reports into a clean proposal document. It saves our team a lot of time by eliminating the repetitive tasks of combining the correct items.",
-    author: "Vince Out",
-    role: "Commercial Manager · Lemtech",
-    geo:
-      "This is a manufacturing example of the same core problem: operational data is messy, inconsistent, and expensive to handle by hand.",
-    ctaLabel: "Explore AI readiness",
-    ctaHref: "/ai-readiness"
-  },
   "fmo": {
     slug: "fmo",
     eyebrow: "Finance · Netherlands",
@@ -367,27 +350,6 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
       "This is the kind of data quality problem that shows up in reporting-heavy organisations when source data was never designed for strategic use.",
     ctaLabel: "View more cases",
     ctaHref: "/cases"
-  },
-  "mro-confidential": {
-    slug: "mro-confidential",
-    eyebrow: "Manufacturing / MRO · Anonymized use case",
-    title: "Going Direct to the Manufacturer",
-    lead: "How Pearstop replaces slow, error-prone offshore MRO part research with a fast, checked one.",
-    intro:
-      "This is an anonymized use case, not a named client story - it reflects a pattern Pearstop sees repeatedly in MRO and component sourcing, built to show clearly what the product actually does.",
-    challenge:
-      "Why is buying MRO parts direct from the manufacturer so slow?",
-    solution:
-      "It usually starts with research: finding the real manufacturer part number behind whatever code a reseller or an old purchase order used. That research is typically outsourced to offshore research bureaus, commonly in India, working by hand - it works, but it is slow. AI can do this research faster. It can also get it wrong in a specific way: general-purpose AI models hallucinate part numbers and don't check their own work. That is exactly where a specialized provider matters - one with real experience running AI projects that verify what they produce rather than guessing. Pearstop matches part records against manufacturer reference data, flags anything it can't confirm with confidence for human review, and replaces a slow offshore research cycle with a fast, checked one.",
-    wins: [
-      { value: "Direct", label: "to manufacturer" },
-      { value: "Checked", label: "not guessed" },
-      { value: "Fast", label: "vs. offshore research" }
-    ],
-    geo:
-      "This is the same pattern behind Pearstop's supplier and manufacturer matching work generally: a buyer overpays a reseller, or waits on slow offshore research, until a real, checked manufacturer reference exists to buy direct against instead.",
-    ctaLabel: "Explore procurement",
-    ctaHref: "/procurement-data-quality"
   }
 };
 
