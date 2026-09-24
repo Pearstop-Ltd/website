@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { CTABand, GeoBlock, PageHero, QuoteBox, SectionTitle, StatsGrid } from "@/components/content";
+import { CTABand, PageHero, QuoteBox, StatsGrid } from "@/components/content";
 import { alternateLanguages, caseStudyDetails, siteConfig } from "@/lib/site";
 
 function titleFromSlug(slug: string) {
@@ -52,7 +52,8 @@ export default function CaseDetailPage({ params }: { params: { slug: string } })
           <div className="row" style={{ alignItems: "center", gap: "3rem", flexWrap: "wrap" }}>
             <div className="col-md-6">
               <div className="benefit-eyebrow">The challenge</div>
-              <h2>{entry.challenge}</h2>
+              <h2 className="case-wayfinder">The problem</h2>
+              <h3 className="case-question">{entry.challenge}</h3>
               <p className="light-copy">{entry.solution}</p>
             </div>
             <div className="col-md-5" style={{ marginLeft: "auto" }}>
@@ -78,7 +79,9 @@ export default function CaseDetailPage({ params }: { params: { slug: string } })
         <div className="container">
           <div className="row">
             <div className="col-md-8 col-md-offset-2">
-              <GeoBlock title="What changed?" copy={entry.geo} />
+              <h2 className="case-wayfinder">The result</h2>
+              <h3 className="case-question">What changed?</h3>
+              <p className="light-copy">{entry.geo}</p>
             </div>
           </div>
         </div>

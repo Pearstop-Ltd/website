@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { CTABand, GeoBlock, PageHero, QuoteBox, SectionTitle, StatsGrid } from "@/components/content";
+import { CTABand, PageHero, QuoteBox, StatsGrid } from "@/components/content";
 import { alternateLanguages, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -70,7 +70,8 @@ export default function FaroCaseStudyPage() {
           <div className="row" style={{ alignItems: "center", gap: "3rem", flexWrap: "wrap" }}>
             <div className="col-md-6">
               <div className="cases-eyebrow">Retail · South Africa</div>
-              <h2>Why is margin invisible until after the purchase?</h2>
+              <h2 className="case-wayfinder">The problem</h2>
+              <h3 className="case-question">Why is margin invisible until after the purchase?</h3>
               <p className="light-copy">
                 For each container purchase, FARO needed a reliable cost picture before committing capital. That meant classifying thousands of product lines, linking them to sales outcomes, and keeping the process fast enough to support the buying decision itself.
               </p>
@@ -115,7 +116,10 @@ export default function FaroCaseStudyPage() {
 
       <section className="section-soft">
         <div className="container">
-          <SectionTitle title="How does Pearstop estimate margin before the purchase?" />
+          <div className="text-center" style={{ marginBottom: "2.75rem" }}>
+            <h2 className="case-wayfinder">The approach</h2>
+            <h3 className="case-question">How does Pearstop estimate margin before the purchase?</h3>
+          </div>
           <div className="bene-cards">
             <article className="ben-card">
               <div className="ben-icon">✓</div>
@@ -150,10 +154,11 @@ export default function FaroCaseStudyPage() {
         <div className="container">
           <div className="row">
             <div className="col-md-8 col-md-offset-2">
-              <GeoBlock
-                title="What changed for FARO's buying team after automating classification?"
-                copy="The team moved from manual categorisation to an automated flow that could keep up with buying decisions. That made margin visible earlier, reduced the operational drag on the procurement team, and gave the business a more reliable basis for planning and analysis."
-              />
+              <h2 className="case-wayfinder">The result</h2>
+              <h3 className="case-question">What changes once buying decisions are automated?</h3>
+              <p className="light-copy">
+                The team moved from manual categorisation to an automated flow that could keep up with buying decisions. That made margin visible earlier, reduced the operational drag on the procurement team, and gave the business a more reliable basis for planning and analysis.
+              </p>
             </div>
           </div>
         </div>

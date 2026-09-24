@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { CSSProperties } from "react";
 import { CTABand, PageHero, QuoteBox } from "@/components/content";
+import { CaseSpreadChart } from "@/components/case-spread-chart";
 import { alternateLanguages, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -57,7 +58,8 @@ export default function CleaningConsumablesConsolidationPage() {
 
       <section>
         <div className="container">
-          <h2>How do you find the three toilet paper suppliers worth keeping?</h2>
+          <h2 className="case-wayfinder">The problem</h2>
+          <h3 className="case-question">How do you find the three toilet paper suppliers worth keeping?</h3>
           <p className="light-copy">
             Every line classified, the pattern was visible in days: here they are, cost, quality, and brand side by
             side, and the three worth keeping.
@@ -80,27 +82,33 @@ export default function CleaningConsumablesConsolidationPage() {
               ))}
             </tbody>
           </table>
-          <p className="light-copy" style={{ marginTop: "1rem" }}>
-            30 suppliers found across twelve months. Three worth keeping, once the spend was classified and put side
-            by side - yours to make, the table makes it obvious.
-          </p>
+          <div className="case-callout" style={{ marginTop: "1.25rem" }}>
+            <span className="case-callout-label">30 suppliers found, three worth keeping</span>
+            <strong>Gompels · Bunzl CHS · Pattersons</strong>
+            <span className="light-copy" style={{ display: "block", marginTop: "0.2rem" }}>
+              Once the spend was classified and put side by side, the table made it obvious.
+            </span>
+          </div>
         </div>
       </section>
 
       <section className="section-soft">
         <div className="container">
-          <h2>How much does off-contract buying actually cost?</h2>
+          <h2 className="case-wayfinder">The pattern</h2>
+          <h3 className="case-question">How much does off-contract buying actually cost?</h3>
           <p className="light-copy">
             Contracted price, through Bunzl: £19.20 for a case of 36 rolls. Actually paid, through Amazon: £26.80 for
             the same case - 40% more. A cost risk and a compliance risk: client contracts specify products and
             suppliers, and every off-contract line weakens your position at renegotiation.
           </p>
-        </div>
-      </section>
+          <div className="case-callout" style={{ margin: "1rem 0" }}>
+            <span className="case-callout-label">Contracted (Bunzl) vs. actually paid (Amazon)</span>
+            <strong>£19.20 → £26.80, same case of 36 rolls</strong>
+          </div>
 
-      <section>
-        <div className="container">
-          <h2>Why does the same product have five different prices?</h2>
+          <h3 className="case-question" style={{ marginTop: "2rem" }}>
+            Why does the same product have five different prices?
+          </h3>
           <p className="light-copy">
             The same product, Tork Advanced T4, priced per roll across five suppliers:
           </p>
@@ -120,14 +128,22 @@ export default function CleaningConsumablesConsolidationPage() {
               ))}
             </tbody>
           </table>
-          <p className="light-copy" style={{ marginTop: "1rem" }}>
-            A 68% spread on the same product - invisible, line by line, until classified.
-          </p>
+          <div style={{ marginTop: "1.5rem", maxWidth: "420px" }}>
+            <CaseSpreadChart
+              title="Same product, five prices"
+              points={[0.31, 0.36, 0.41, 0.47, 0.52]}
+              minLabel="£0.31"
+              maxLabel="£0.52"
+              percent="68%"
+              percentLabel="Spread on the same product - invisible, line by line, until classified."
+            />
+          </div>
         </div>
       </section>
 
-      <section className="section-soft">
+      <section>
         <div className="container">
+          <h2 className="case-wayfinder">The result</h2>
           <div className="bene-cards">
             <article className="ben-card">
               <div className="ben-icon">✓</div>
@@ -145,22 +161,18 @@ export default function CleaningConsumablesConsolidationPage() {
               <p>You pay for the lines processed. No heavy annual subscription.</p>
             </article>
           </div>
-        </div>
-      </section>
 
-      <section>
-        <div className="container">
-          <div className="row">
+          <div className="row" style={{ marginTop: "2rem" }}>
             <div className="col-md-8 col-md-offset-2">
               <QuoteBox
                 quote="They classified thousands of product lines in under a week. That would have taken our team six months."
                 author="David Torr"
                 role="CEO, FARO"
               />
-              <p className="light-copy" style={{ textAlign: "center", marginTop: "1.5rem" }}>
-                Typical result in soft FM: 10-20% savings on addressable spend. The findings above are where it comes
-                from.
-              </p>
+              <div className="case-result-banner" style={{ marginTop: "1.5rem" }}>
+                Typical result in soft FM: <strong>10-20% savings on addressable spend.</strong> The findings above
+                are where it comes from.
+              </div>
             </div>
           </div>
         </div>
