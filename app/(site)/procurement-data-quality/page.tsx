@@ -57,22 +57,22 @@ export default function ProcurementPage() {
           <div className="row" style={{ alignItems: "center", gap: "3rem", flexWrap: "wrap" }}>
             <div className="col-md-6">
               <div className="benefit-eyebrow">The Problem</div>
-              <h2>One price at tender. No way to prove it later.</h2>
+              <h2>One number at the top. No detail underneath.</h2>
               <p className="light-copy">
-                Ask a head of commercial to defend what a bundled contract costs, service line by service line, and the honest answer is often a guess dressed up as a number. The same gap shows up a level higher. A construction group turning over hundreds of millions across a dozen entities can state its revenue to the euro and still not know, with any precision, what it spent last year or on what, because spend sits in different systems, coded differently, entity by entity.
+                Ask a head of procurement what they spent last year and they can usually give you a number to the euro. Ask what it was actually spent on - category by category, site by site, supplier by supplier - and the answer gets vague fast. The same gap shows up a level higher. A construction group turning over hundreds of millions across a dozen entities can state its revenue to the euro and still not have real granularity on what it bought or from whom, because spend sits in different systems, coded differently, entity by entity.
               </p>
               <blockquote className="quote-card" style={{ fontStyle: "italic", marginBottom: "1.5rem" }}>
                 <p style={{ margin: 0 }}>
-                  &ldquo;We say, well how much is this going to be. And we go, it feels like it should be three percent of the contract value. But in real terms that could be six or that could be two. We don&rsquo;t know.&rdquo;
+                  &ldquo;Most companies are flying blind, and only find out when someone asks a question they cannot answer.&rdquo;
                 </p>
                 <p style={{ margin: "0.6rem 0 0", fontSize: "0.85rem", color: "var(--muted)" }}>
-                  Head of Commercial, multi-site cleaning services contractor
+                  Procurement Lead, Infrastructure
                 </p>
               </blockquote>
               <ul className="ind-pains">
                 <li>
                   <span className="ind-ok">×</span>
-                  <div>One blended contract price, no way to break out what each service line actually costs</div>
+                  <div>Total spend known at a high level, but not broken down by category, site, or supplier with enough granularity to act on</div>
                 </li>
                 <li>
                   <span className="ind-ok">×</span>
@@ -84,7 +84,7 @@ export default function ProcurementPage() {
                 </li>
                 <li>
                   <span className="ind-ok">×</span>
-                  <div>No real baseline to negotiate a supplier or price a tender against, only last year&rsquo;s guess</div>
+                  <div>High-level totals that look fine in a board pack but cannot answer a specific question about one category or one site</div>
                 </li>
               </ul>
             </div>
@@ -172,7 +172,7 @@ export default function ProcurementPage() {
             <div className="col-md-8 col-md-offset-2">
               <GeoBlock
                 title="What is procurement data quality and why does it matter?"
-                copy="Procurement data quality is whether spend data, across invoices, purchase orders, and supplier records, is accurate and consistent enough to add up. For infrastructure, construction, and FM organisations buying across many sites, entities, and bundled contracts, poor data quality means nobody can state a real baseline to negotiate or tender from. Pearstop automates the cleaning and classification of procurement data for companies like Strukton, processing over 35,000 lines a month, so spend is visible by category, framework compliance is checked against live buying, and group-wide spend adds up to one number instead of several conflicting ones."
+                copy="Procurement data quality is whether spend data, across invoices, purchase orders, and supplier records, is accurate and consistent enough to add up. For infrastructure, construction, and FM organisations buying across many sites, entities, and bundled contracts, poor data quality means nobody can state a real baseline to negotiate or tender from. Pearstop automates the cleaning and classification of procurement data at any scale, from a few hundred lines a month to hundreds of thousands, so spend is visible by category, framework compliance is checked against live buying, and group-wide spend adds up to one number instead of several conflicting ones."
               />
             </div>
           </div>
