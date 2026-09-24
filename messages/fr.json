@@ -162,7 +162,8 @@
     "cta": {
       "title": "Vous ne savez pas si Pearstop est fait pour vous ?",
       "lead": "Parlons-en. Vous êtes malin - trouvons ensemble votre solution.",
-      "findOut": "Découvrez ce qui est possible (envoyer un e-mail)"
+      "findOut": "Découvrez ce qui est possible (envoyer un e-mail)",
+      "bookDiscovery": "Parler à un commercial"
     }
   },
   "Solutions": {
@@ -225,7 +226,23 @@
     },
     "cta": {
       "title": "Vous ne savez pas quelle solution vous convient ?",
-      "viewIndustries": "Voir les secteurs"
+      "viewIndustries": "Voir les secteurs",
+      "lead": "Parlez à un commercial. Nous identifierons précisément quel problème de données vous coûte le plus - et vous montrerons comment le résoudre.",
+      "bookDiscovery": "Parler à un commercial"
+    },
+    "moreCards": {
+      "title": "D'autres façons de travailler avec Pearstop",
+      "lead": "Deux autres endroits où le même moteur de classification apparaît, pour des équipes et des résultats spécifiques.",
+      "items": [
+        {
+          "title": "Spend Cube & tableaux de bord",
+          "copy": "Dépenses structurées par catégorie, fournisseur et période, prêtes à alimenter Power BI, Microsoft Fabric ou votre propre tableau de bord."
+        },
+        {
+          "title": "Pour les cabinets de conseil en achats",
+          "copy": "Classification des dépenses en marque blanche sous votre propre taxonomie, afin que la marge de mission aille à l'analyse, pas au nettoyage manuel."
+        }
+      ]
     }
   },
   "DataQuality": {
@@ -322,7 +339,8 @@
     ],
     "cta": {
       "title": "Prêt à corriger les données à la base de votre prochain projet ?",
-      "button": "Réservez un appel découverte de 7 minutes"
+      "button": "Réservez un appel découverte de 7 minutes",
+      "lead": "Parlez à un commercial. Nous vous montrerons exactement où vos données feraient échouer aujourd'hui une migration ERP, un déploiement Fabric ou une initiative IA."
     }
   },
   "Procurement": {
@@ -364,7 +382,8 @@
       "step3": {
         "title": "Vérification humaine, puis mémorisation",
         "copy": "Tout ce qui reste sous un seuil de confiance est signalé à votre équipe, généralement une heure environ par semaine. Chaque décision alimente le moteur en retour."
-      }
+      },
+      "cta": "Parler à un commercial"
     },
     "outcome": {
       "title": "Ce qu'une véritable base de référence des dépenses rend possible",
@@ -406,7 +425,8 @@
     ],
     "cta": {
       "title": "Prêt à construire une véritable base de référence des dépenses ?",
-      "button": "Réservez un appel découverte de 7 minutes"
+      "button": "Réservez un appel découverte de 7 minutes",
+      "lead": "Parlez à un commercial. Nous vous montrerons exactement où vos données de dépenses cachent le chiffre dont vous avez besoin."
     }
   },
   "AssetManagement": {
@@ -502,7 +522,8 @@
     ],
     "cta": {
       "title": "Prêt à disposer de votre propre vision indépendante ?",
-      "button": "Réservez un appel découverte de 7 minutes"
+      "button": "Réservez un appel découverte de 7 minutes",
+      "lead": "Parlez à un commercial et voyez exactement comment Pearstop transforme les données que vous recevez déjà en quelque chose de vérifiable."
     }
   },
   "AiReadiness": {
@@ -597,7 +618,8 @@
     "cta": {
       "title": "Vos données sont-elles prêtes pour l'IA ?",
       "button": "Réservez un appel découverte de 7 minutes",
-      "fabricLink": "Découvrez aussi votre préparation pour Fabric"
+      "fabricLink": "Découvrez aussi votre préparation pour Fabric",
+      "lead": "Parlez à un commercial et nous vous dirons exactement ce qui doit se passer avant que vos initiatives IA puissent produire des résultats."
     }
   },
   "Unspsc": {
@@ -712,11 +734,13 @@
       "fm": "UNSPSC pour le FM et les services techniques",
       "nl": "UNSPSC aux Pays-Bas",
       "de": "UNSPSC en Allemagne",
-      "faq": "FAQ complète"
+      "faq": "FAQ complète",
+      "tree": "Explorer l'arborescence UNSPSC"
     },
     "cta": {
       "title": "Prêt à automatiser votre classification des achats ?",
-      "button": "Réservez un appel découverte de 7 minutes"
+      "button": "Réservez un appel découverte de 7 minutes",
+      "lead": "Parlez à un commercial. Nous vous montrerons exactement comment le moteur de classification fonctionnerait avec vos données."
     }
   },
   "UnspscAiGuide": {
@@ -851,7 +875,8 @@
     "cta": {
       "title": "Prêt à voir cela fonctionner sur vos propres données ?",
       "button": "Réservez un appel découverte de 7 minutes",
-      "secondaryButton": "Essayer la recherche gratuite"
+      "secondaryButton": "Essayer la recherche gratuite",
+      "lead": "Parlez à un commercial, ou testez d'abord une description sur l'outil de recherche gratuit."
     }
   },
   "Fabric": {
@@ -1028,7 +1053,8 @@
       "emailPlaceholder": "Votre e-mail",
       "companyPlaceholder": "Entreprise (facultatif)",
       "submitButton": "Télécharger les études de cas",
-      "talkNote": "Vous préférez d'abord en parler ?"
+      "talkNote": "Vous préférez d'abord en parler ?",
+      "talkLinkText": "Parler à un commercial"
     },
     "whyDownload": {
       "title": "Pourquoi les gens le téléchargent",
@@ -1052,7 +1078,8 @@
     "cta": {
       "title": "Vous voulez en discuter ?",
       "lead": "Si vous préférez discuter directement de votre problème de données, nous serons ravis de vous aider.",
-      "followLinkedIn": "Suivez Pearstop sur LinkedIn pour les actualités"
+      "followLinkedIn": "Suivez Pearstop sur LinkedIn pour les actualités",
+      "bookDiscovery": "Parler à un commercial"
     }
   },
   "Cases": {
@@ -1728,7 +1755,8 @@
     },
     "cta": {
       "title": "Prêt à automatiser la classification des achats FM ?",
-      "button": "Réservez un appel découverte de 7 minutes"
+      "button": "Réservez un appel découverte de 7 minutes",
+      "lead": "Parlez à un commercial. Nous vous montrerons exactement comment le moteur fonctionne avec vos données de dépenses."
     }
   },
   "UnspscNL": {
@@ -1951,7 +1979,8 @@
     "bulk": {
       "label": "Besoin de classer des milliers de lignes ?",
       "cta": "Réservez un appel découverte de 7 minutes",
-      "learnMore": "Découvrez comment ça marche"
+      "learnMore": "Découvrez comment ça marche",
+      "copy": "Cet outil gère les recherches unitaires. Le moteur de classification automatisé de Pearstop traite 35 000 lignes d'achats par mois - avec 90 à 95 % de classification automatique et une intégration SAP complète. Parlez à un commercial pour le voir avec vos données."
     },
     "faq": {
       "title": "Comment fonctionnent les codes UNSPSC",
@@ -1985,7 +2014,8 @@
           "a": "UNSPSC, eCl@ss et le CPV sont tous des normes de classification des achats, mais ils répondent à des besoins différents. UNSPSC est le plus utilisé pour l'analyse des dépenses et la gestion des catégories. eCl@ss ajoute des attributs techniques détaillés par produit, courant dans l'industrie manufacturière allemande. Le CPV est utilisé spécifiquement pour les appels d'offres publics de l'UE. La plupart des organisations n'en ont besoin que d'une seule, choisie selon leur système ERP et leurs besoins de reporting — Pearstop travaille avec UNSPSC comme norme la plus courante pour l'analyse des dépenses."
         },
         {
-          "q": "Puis-je classer un fichier de dépenses entier ou un catalogue fournisseur en une seule fois ?"
+          "q": "Puis-je classer un fichier de dépenses entier ou un catalogue fournisseur en une seule fois ?",
+          "a": "L'outil gratuit ci-dessus est conçu pour une description à la fois. Pour un fichier de dépenses complet, un historique de factures ou un catalogue fournisseurs - de centaines à des millions de lignes - le moteur de classification automatisé de Pearstop traite l'ensemble du jeu de données en une seule fois, atteignant 90 à 95 % de classification automatique, le reste étant signalé pour revue humaine. Parlez à un commercial pour le voir fonctionner sur un échantillon de vos propres données."
         },
         {
           "q": "Dois-je faire confiance à un code UNSPSC généré par IA sans le vérifier ?",
@@ -1995,7 +2025,8 @@
     },
     "cta": {
       "title": "Besoin de classer des milliers de lignes ?",
-      "button": "Réservez un appel découverte de 7 minutes"
+      "button": "Réservez un appel découverte de 7 minutes",
+      "lead": "Parlez à un commercial et nous vous montrerons comment le moteur de classification complet fonctionne avec vos données d'achats réelles."
     }
   },
   "Home": {
@@ -2311,6 +2342,236 @@
       "lead": "Envoyez-nous jusqu'à dix factures, quel que soit leur état. Nous vous les renvoyons sous forme de lignes structurées, pour que vous voyiez votre propre flux de factures lu.",
       "primaryLabel": "Envoyez vos factures",
       "secondaryLabel": "Ou parlez à un commercial →"
+    }
+  },
+  "ProcurementConsultancies": {
+    "meta": {
+      "title": "Classification des dépenses pour cabinets de conseil en achats",
+      "description": "Réalisez vos missions de spend cube, category management et économies sourcing sans consommer d'heures d'analyste sur la classification manuelle. En marque blanche, votre taxonomie, tarification prévisible."
+    },
+    "hero": {
+      "eyebrow": "Pour les cabinets de conseil en achats",
+      "title": "Livrez la classification des dépenses, conservez la marge de mission",
+      "lead": "Les missions de category management, d'économies sourcing et de spend cube commencent toutes par le même goulot d'étranglement manuel : classifier les données de dépenses désordonnées d'un client. Pearstop prend en charge cette couche, en marque blanche sous votre propre taxonomie, afin que votre équipe consacre ses heures à l'analyse et aux recommandations que les clients paient réellement."
+    },
+    "problem": {
+      "eyebrow": "Le problème",
+      "title": "Les heures d'analyste partent dans le nettoyage de données, pas dans la valeur client",
+      "copy": "Chaque nouvelle mission commence de la même façon : un client remet des années de données de dépenses désordonnées, et quelqu'un dans votre équipe passe les premières semaines à simplement les rendre exploitables avant que la véritable analyse puisse commencer. Ce temps sort directement de la marge de mission, et c'est la partie la moins différenciante du travail pour lequel vous êtes payé.",
+      "bullets": [
+        "Les heures d'analyste junior ou offshore consacrées à la classification manuelle grignotent directement la marge de mission",
+        "Les délais client ne bougent pas simplement parce que les données sous-jacentes sont désordonnées",
+        "Chaque mission résout à nouveau le même problème de classification depuis zéro, sans rien de réutilisable",
+        "Un outil IA généraliste devine les correspondances fournisseurs et invente des choses qui n'existent pas, créant du retravail au lieu de faire gagner du temps"
+      ]
+    },
+    "howItWorks": {
+      "title": "Votre taxonomie, notre pipeline",
+      "lead": "Pearstop s'intègre à votre modèle de délivrance comme couche de classification sous-jacente, pas comme un remplacement de l'analyse de votre équipe.",
+      "step1": {
+        "title": "Apportez votre propre taxonomie",
+        "copy": "La plupart des cabinets de conseil vendent leur propre référentiel de catégories dans le cadre de leur propriété intellectuelle. Pearstop classifie selon votre taxonomie, ou UNSPSC si vous préférez, pas l'inverse."
+      },
+      "step2": {
+        "title": "Classifier avec des garde-fous",
+        "copy": "Matching déterministe d'abord, vérifié par un LLM, chaque correspondance incertaine étant signalée pour revue plutôt que devinée, afin que la sortie puisse aller directement dans un livrable client."
+      },
+      "step3": {
+        "title": "Livré sous votre nom",
+        "copy": "La sortie est en marque blanche. Votre client voit le livrable de votre cabinet, pas un outil tiers."
+      }
+    },
+    "whatMakesPossible": {
+      "title": "Ce que cela change pour un cabinet de conseil",
+      "b1": {
+        "title": "Protéger la marge de mission",
+        "copy": "La classification se fait en quelques jours, pas les semaines de temps d'analyste qu'elle absorbe actuellement, de sorte qu'une plus grande part des honoraires devient de la marge plutôt que du coût de main-d'œuvre."
+      },
+      "b2": {
+        "title": "Prendre plus de missions sans plus d'effectifs",
+        "copy": "La capacité de délivrance n'est plus limitée par le nombre d'analystes que vous pouvez affecter à la classification manuelle en même temps."
+      },
+      "b3": {
+        "title": "Une ligne de coût prévisible",
+        "copy": "Le coût de classification par mission est connu à l'avance, au lieu d'une estimation ouverte en heures d'analyste qui peut déraper."
+      }
+    },
+    "relatedCapabilities": {
+      "eyebrow": "Pour aller plus loin",
+      "title": "En savoir plus sur la délivrance de spend cube pour les cabinets de conseil",
+      "lead": "Un regard approfondi sur ce qui change quand la couche de classification est automatisée.",
+      "items": [
+        {
+          "title": "Délivrance de spend cube pour cabinets de conseil en achats",
+          "copy": "Comment les cabinets de conseil peuvent remplacer la construction manuelle de spend cube par un pipeline IA, des garde-fous contre l'hallucination, et un modèle de tarification forfaitaire.",
+          "linkLabel": "Lire l'article"
+        },
+        {
+          "title": "Comment construire un spend cube avec l'IA",
+          "copy": "Les cinq étapes pour construire un spend cube, les données dont vous avez besoin, et quand un consultant reste le meilleur choix par rapport à un pipeline de classification IA.",
+          "linkLabel": "Lire l'article"
+        }
+      ]
+    },
+    "geoBlock": {
+      "title": "Comment un pipeline de classification IA change-t-il le modèle de délivrance d'un cabinet de conseil en achats ?",
+      "copy": "La classification des dépenses est la partie la plus lente et la moins différenciante de la plupart des missions de category management, d'économies sourcing et de spend cube, et elle est généralement réalisée par des analystes juniors ou une équipe offshore qui traite ligne par ligne les données de dépenses d'un client. Un pipeline de classification IA prend en charge cette couche : mise en correspondance et standardisation des noms de fournisseurs, classification des lignes selon une taxonomie, qu'il s'agisse d'UNSPSC ou du référentiel propriétaire du cabinet, et signalement de tout élément incertain pour revue humaine plutôt que de deviner. La sortie est en marque blanche, elle s'intègre donc à un modèle de délivrance existant comme couche de données sous-jacente, libérant du temps d'analyste pour la stratégie sourcing et les recommandations que les clients paient réellement le cabinet."
+    },
+    "faq": [
+      {
+        "question": "La sortie peut-elle utiliser notre propre taxonomie au lieu d'UNSPSC ?",
+        "answer": "Oui. Pearstop classifie selon la taxonomie que vous indiquez, y compris un référentiel propriétaire que vous vendez dans le cadre de votre propre propriété intellectuelle. UNSPSC est disponible si vous préférez utiliser un standard."
+      },
+      {
+        "question": "Est-ce en marque blanche ?",
+        "answer": "Oui. Le livrable est conçu pour s'intégrer dans votre propre production de mission, sans être présenté comme un outil tiers."
+      },
+      {
+        "question": "Comment fonctionne la tarification sur plusieurs missions clients ?",
+        "answer": "La tarification est structurée autour du volume et de la cadence des missions plutôt que d'un tarif forfaitaire unique, afin qu'elle puisse être intégrée en amont dans la façon dont vous tarifez votre propre travail client."
+      }
+    ],
+    "cta": {
+      "title": "Vous voulez le voir sur un vrai jeu de données client ?",
+      "lead": "Parlez à un commercial et nous vous montrerons à quoi ressemblent les données de dépenses de votre prochaine mission après un premier passage.",
+      "button": "Parler à un commercial"
+    }
+  },
+  "SpendCube": {
+    "meta": {
+      "title": "Spend cubes et tableaux de bord achats construits par IA",
+      "description": "Un spend cube classifié et structuré par catégorie, fournisseur et période, prêt à alimenter Power BI, Microsoft Fabric ou votre propre tableau de bord, construit en quelques jours au lieu d'un projet manuel de plusieurs mois."
+    },
+    "hero": {
+      "eyebrow": "Spend cube & tableaux de bord",
+      "title": "Un spend cube construit en quelques jours, pas un projet manuel d'un trimestre",
+      "lead": "Un spend cube n'est utile que s'il est construit sur des données classifiées et cohérentes, et qu'il reste à jour. Pearstop classifie vos dépenses une fois et continue de les classifier à mesure que factures et bons de commande arrivent, afin que le cube, et tout tableau de bord construit dessus, ne devienne pas obsolète la semaine suivant sa livraison."
+    },
+    "problem": {
+      "eyebrow": "Le problème",
+      "title": "Le tableau de bord ne vaut que ce qu'il y a en dessous",
+      "copy": "Construire un spend cube à la main signifie classifier des années de lignes de factures et de bons de commande en catégories et fournisseurs cohérents avant de pouvoir construire un tableau de bord par-dessus. La plupart des équipes ne le terminent jamais, ou le terminent une fois et le voient devenir obsolète dès que de nouvelles dépenses arrivent dans l'ancien format non classifié.",
+      "bullets": [
+        "Les constructions manuelles de spend cube prennent un trimestre ou plus, et sont à nouveau périmées en quelques semaines",
+        "Les outils de tableau de bord affichent ce qu'il y a en dessous ; si les catégories ne sont pas cohérentes, le graphique affiche simplement le désordre plus vite",
+        "Les nouvelles dépenses continuent d'arriver dans le format produit par le système source, donc le cube nécessite une maintenance manuelle constante pour rester à jour",
+        "Les dépenses multi-sites ou multi-entités partagent rarement la même logique de catégorisation, ce qui casse la comparaison entre sites"
+      ]
+    },
+    "howItWorks": {
+      "title": "Des dépenses classifiées à un cube en direct",
+      "lead": "Le pipeline de classification structure vos dépenses selon les dimensions dont un cube a réellement besoin, puis le maintient à jour.",
+      "step1": {
+        "title": "Classifier par catégorie et fournisseur",
+        "copy": "Chaque ligne est associée à une catégorie cohérente (UNSPSC ou votre propre taxonomie) et à un nom de fournisseur canonique, les deux dimensions sur lesquelles la plupart des spend cubes échouent en premier."
+      },
+      "step2": {
+        "title": "Structurer le cube",
+        "copy": "Les dépenses classifiées sont structurées par catégorie, fournisseur, site ou entité, et période, prêtes à charger dans un outil BI ou un tableau de bord."
+      },
+      "step3": {
+        "title": "Alimenter vos outils existants",
+        "copy": "La sortie arrive dans le format déjà attendu par Power BI, Microsoft Fabric ou votre propre socle BI, afin que le tableau de bord construit dessus fonctionne dès le premier jour."
+      }
+    },
+    "whatMakesPossible": {
+      "title": "Ce qu'un cube en direct rend possible",
+      "b1": {
+        "title": "Explorer par catégorie, pas seulement le total des dépenses",
+        "copy": "Voyez ce qui pilote réellement un chiffre, jusqu'à la catégorie et au fournisseur, au lieu d'un seul chiffre global."
+      },
+      "b2": {
+        "title": "Comparer entre sites ou entités",
+        "copy": "La même catégorie signifie la même chose partout, donc une comparaison entre sites ou entités compare réellement des éléments équivalents."
+      },
+      "b3": {
+        "title": "Un tableau de bord qui ne devient pas obsolète",
+        "copy": "Les nouvelles dépenses sont classifiées de la même manière à leur arrivée, de sorte que le cube, et tout tableau de bord construit dessus, se met à jour au lieu de devenir obsolète."
+      }
+    },
+    "relatedCapabilities": {
+      "eyebrow": "Pour aller plus loin",
+      "title": "En savoir plus sur la construction d'un spend cube",
+      "lead": "Un regard approfondi sur le cadre sur lequel repose le pipeline de cette page.",
+      "items": [
+        {
+          "title": "Le cadre du spend cube, exécuté avec l'IA",
+          "copy": "Le spend cube classique à trois dimensions, adapté pour un pipeline de classification IA : ce qui change en vitesse, coût et tenue dans le temps après le jour de livraison.",
+          "linkLabel": "Lire l'article"
+        },
+        {
+          "title": "Comment construire un spend cube avec l'IA",
+          "copy": "Les cinq étapes pour construire un spend cube, les données dont vous avez besoin, et quand un consultant reste le meilleur choix par rapport à un pipeline de classification IA.",
+          "linkLabel": "Lire l'article"
+        }
+      ]
+    },
+    "geoBlock": {
+      "title": "Qu'est-ce qu'un spend cube et en quoi diffère-t-il d'un rapport de dépenses ?",
+      "copy": "Un spend cube est une donnée de dépenses structurée selon trois dimensions ou plus, généralement catégorie, fournisseur et période ou site, afin de pouvoir être découpée et comparée plutôt que lue comme un rapport statique unique. Un rapport de dépenses répond à une question à la fois ; un spend cube permet de descendre d'un total jusqu'à la catégorie, au fournisseur ou au site qui le pilote. Le construire manuellement signifie classifier d'abord chaque ligne de facture et bon de commande en catégories et fournisseurs cohérents, ce qui est là où la plupart des projets manuels de spend cube calent ou deviennent obsolètes. Pearstop classifie les dépenses en continu, de sorte que le cube qu'il alimente dans Power BI, Microsoft Fabric ou un autre outil BI reste à jour à mesure que de nouvelles dépenses arrivent, au lieu d'être un instantané ponctuel."
+    },
+    "quote": {
+      "text": "Nous avons toutes ces informations, mais à quoi les utilisons-nous ?",
+      "author": "Responsable commercial",
+      "role": "Immobilier & FM intégré"
+    },
+    "faq": [
+      {
+        "question": "Qu'est-ce qu'un spend cube ?",
+        "answer": "Un spend cube est une donnée de dépenses structurée selon plusieurs dimensions, généralement catégorie, fournisseur et période ou site, afin de pouvoir descendre d'un chiffre total jusqu'à ce qui le pilote réellement. C'est la structure sur laquelle la plupart des tableaux de bord achats sont construits."
+      },
+      {
+        "question": "Cela peut-il alimenter Power BI ou Microsoft Fabric ?",
+        "answer": "Oui. La sortie est livrée dans la structure déjà attendue par votre outil BI existant, afin de s'intégrer à un tableau de bord Power BI ou Fabric plutôt que d'exiger une nouvelle plateforme."
+      },
+      {
+        "question": "À quelle fréquence les données sont-elles actualisées ?",
+        "answer": "Les nouvelles dépenses sont classifiées de la même manière à leur arrivée, de sorte que le cube reste à jour en continu plutôt que d'être reconstruit comme un projet ponctuel."
+      }
+    ],
+    "cta": {
+      "title": "Prêt à voir votre propre spend cube ?",
+      "lead": "Parlez à un commercial et nous vous montrerons à quoi ressemblent vos données de dépenses structurées en cube, prêtes pour votre tableau de bord.",
+      "button": "Parler à un commercial"
+    }
+  },
+  "BookDemo": {
+    "meta": {
+      "title": "Réserver une démo",
+      "description": "Un appel de 30 minutes pour cartographier vos blocages sur les factures et données de dépenses, vos objectifs, et si Pearstop vous y mène."
+    },
+    "hero": {
+      "eyebrow": "Réserver une démo",
+      "title": "Voici exactement ce que nous aborderons en 30 minutes",
+      "lead": "Pas de discours générique. Nous consacrons l'appel à vos données, vos blocages, et à la question de savoir si Pearstop vous mène là où vous voulez aller.",
+      "cta": "Voir les créneaux disponibles"
+    },
+    "steps": [
+      {
+        "title": "Vos blocages actuels",
+        "copy": "Nous commençons par où ça coince vraiment. Est-ce l'extraction des factures ? Où se trouvent vos factures aujourd'hui - dans un système ERP, dans des boîtes mail, ou encore sur papier ? Nous passerons en revue les options pour identifier précisément où les vôtres bloquent."
+      },
+      {
+        "title": "Votre processus, cartographié",
+        "copy": "Une fois les factures traitées, que se passe-t-il ensuite ? Nous cartographierons rapidement votre processus de bout en bout, pour partir de la façon dont les choses se passent réellement aujourd'hui, pas de la façon dont elles sont censées se passer."
+      },
+      {
+        "title": "Vos objectifs",
+        "copy": "Que voulez-vous vraiment tirer de vos données de factures et de dépenses ? Nous explorerons en profondeur ce que vous cherchez à accomplir, pas seulement ce qui ne fonctionne pas."
+      },
+      {
+        "title": "La plateforme, présentée",
+        "copy": "Nous vous montrerons les parties de Pearstop qui répondent directement à vos objectifs, afin que vous terminiez l'appel avec une réponse claire : est-ce que cela vous mène là où vous voulez être ?"
+      }
+    ],
+    "book": {
+      "title": "Choisissez un créneau",
+      "lead": "Choisissez un créneau ci-dessous - pas d'aller-retour, pas de pop-up."
+    },
+    "cta": {
+      "title": "Pas encore prêt à réserver ?",
+      "lead": "Envoyez-nous un échantillon de vos factures et nous vous montrerons ce qui en ressort, sans appel nécessaire.",
+      "action": "Voir comment ça marche"
     }
   }
 }

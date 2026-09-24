@@ -162,7 +162,8 @@
     "cta": {
       "title": "Niet zeker of Pearstop iets voor u is?",
       "lead": "Laten we praten. U bent slim — laten we uw oplossing uitwerken.",
-      "findOut": "Ontdek wat mogelijk is (stuur e-mail)"
+      "findOut": "Ontdek wat mogelijk is (stuur e-mail)",
+      "bookDiscovery": "Praat met sales"
     }
   },
   "Solutions": {
@@ -189,7 +190,9 @@
     },
     "cta": {
       "title": "Niet zeker welke oplossing u nodig heeft?",
-      "viewIndustries": "Bekijk sectoren"
+      "viewIndustries": "Bekijk sectoren",
+      "lead": "Praat met sales. Wij identificeren precies welk dataprobleem u het meeste kost - en laten zien hoe u het oplost.",
+      "bookDiscovery": "Praat met sales"
     },
     "meta": {
       "title": "Data Quality Oplossingen voor Hard Services en Infrastructuur",
@@ -226,6 +229,20 @@
           "copy": "Zet spend en onderhoudsdata die u ontvangt maar niet genereert om in een onafhankelijk, geclassificeerd record dat u kunt vergelijken tussen providers, sites en jaren."
         }
       ]
+    },
+    "moreCards": {
+      "title": "Meer manieren om met Pearstop te werken",
+      "lead": "Twee andere plekken waar dezelfde classificatie-engine opduikt, voor specifieke teams en specifieke resultaten.",
+      "items": [
+        {
+          "title": "Spend Cube & Dashboards",
+          "copy": "Spend gestructureerd naar categorie, leverancier en tijd, klaar om Power BI, Microsoft Fabric of uw eigen dashboard te voeden."
+        },
+        {
+          "title": "Voor procurement-consultancies",
+          "copy": "White-labeled spend-classificatie onder uw eigen taxonomie, zodat de engagementmarge naar analyse gaat, niet naar handmatige opschoning."
+        }
+      ]
     }
   },
   "DataQuality": {
@@ -236,7 +253,8 @@
     },
     "cta": {
       "button": "Boek een ontdekkingsgesprek van 7 minuten",
-      "title": "Klaar om de data onder uw volgende project te herstellen?"
+      "title": "Klaar om de data onder uw volgende project te herstellen?",
+      "lead": "Praat met sales. Wij laten precies zien waar uw data vandaag een ERP-migratie, een Fabric-uitrol of een AI-initiatief zou breken."
     },
     "faq": [
       {
@@ -368,7 +386,8 @@
       "step4": {
         "title": "Menselijke beoordeling",
         "copy": "Items buiten betrouwbare drempelwaarden worden automatisch gemarkeerd voor uw team. Elke beslissing wordt teruggekoppeld aan de motor — waardoor de beoordelingswachtrij in de loop der tijd naar nul daalt."
-      }
+      },
+      "cta": "Praat met sales"
     },
     "outcome": {
       "title": "Met 95%+ datakwaliteit kan uw inkoopteam daadwerkelijk hun werk doen.",
@@ -410,7 +429,8 @@
     ],
     "cta": {
       "title": "Klaar om uw inkoopdata te herstellen?",
-      "button": "Boek een ontdekkingsgesprek van 7 minuten"
+      "button": "Boek een ontdekkingsgesprek van 7 minuten",
+      "lead": "Praat met sales. Wij laten precies zien waar uw spend-data het cijfer verbergt dat u nodig heeft."
     }
   },
   "AssetManagement": {
@@ -496,7 +516,8 @@
     },
     "cta": {
       "title": "Klaar om uw assetdata om te zetten in een strategisch asset?",
-      "button": "Boek een ontdekkingsgesprek van 7 minuten"
+      "button": "Boek een ontdekkingsgesprek van 7 minuten",
+      "lead": "Praat met sales en zie precies hoe Pearstop de data die u al ontvangt omzet in iets dat u kunt verifiëren."
     },
     "faq": [
       {
@@ -591,7 +612,8 @@
     "cta": {
       "title": "Is uw data klaar voor AI?",
       "button": "Boek een ontdekkingsgesprek van 7 minuten",
-      "fabricLink": "Bekijk ook Fabric-gereedheid"
+      "fabricLink": "Bekijk ook Fabric-gereedheid",
+      "lead": "Praat met sales en wij vertellen precies wat er moet gebeuren voordat uw AI-initiatieven resultaten kunnen leveren."
     },
     "faq": [
       {
@@ -671,7 +693,8 @@
     },
     "cta": {
       "title": "Klaar om uw inkoopclassificatie te automatiseren?",
-      "button": "Boek een ontdekkingsgesprek van 7 minuten"
+      "button": "Boek een ontdekkingsgesprek van 7 minuten",
+      "lead": "Praat met sales. Wij laten precies zien hoe de classificatie-engine met uw data zou werken."
     },
     "stats": {
       "s1": {
@@ -693,7 +716,9 @@
       "nl": "UNSPSC in Nederland",
       "de": "UNSPSC in Duitsland",
       "faq": "Volledige FAQ",
-      "tool": "Gratis UNSPSC Code Opzoeken"
+      "tool": "Gratis UNSPSC Code Opzoeken",
+      "guide": "Hoe AI-classificatie daadwerkelijk werkt",
+      "tree": "Verken de UNSPSC-boom"
     },
     "manufacturerCode": {
       "eyebrow": "Fabrikantverificatie",
@@ -900,7 +925,8 @@
       "emailPlaceholder": "Uw e-mailadres",
       "companyPlaceholder": "Bedrijf (optioneel)",
       "submitButton": "Download de casestudies",
-      "talkNote": "Liever eerst praten?"
+      "talkNote": "Liever eerst praten?",
+      "talkLinkText": "Praat met sales"
     },
     "whyDownload": {
       "title": "Waarom mensen het downloaden",
@@ -924,7 +950,8 @@
     "cta": {
       "title": "Wilt u het bespreken?",
       "lead": "Als u liever direct uw dataprobleem bespreekt, helpen we u graag.",
-      "followLinkedIn": "Volg Pearstop op LinkedIn voor updates"
+      "followLinkedIn": "Volg Pearstop op LinkedIn voor updates",
+      "bookDiscovery": "Praat met sales"
     }
   },
   "Cases": {
@@ -1624,7 +1651,8 @@
     },
     "cta": {
       "title": "Ready to automate FM procurement classification?",
-      "button": "Book a 7-minute discovery"
+      "button": "Book a 7-minute discovery",
+      "lead": "Praat met sales. Wij laten precies zien hoe de engine werkt met uw spend-data."
     },
     "geoBlock": {
       "title": "Wat houdt UNSPSC-classificatie voor facilities management precies in?",
@@ -1847,7 +1875,8 @@
     "bulk": {
       "label": "Moet u duizenden regels classificeren?",
       "cta": "Boek een 7-minuten ontdekking",
-      "learnMore": "Bekijk hoe het werkt"
+      "learnMore": "Bekijk hoe het werkt",
+      "copy": "Deze tool verwerkt losse opzoekingen. Pearstops geautomatiseerde classificatie-engine verwerkt 35.000 procurement-regels per maand - met 90-95% automatische classificatie en volledige SAP-integratie. Praat met sales om het met uw data te zien."
     },
     "faq": {
       "title": "Hoe UNSPSC-codes werken",
@@ -1881,7 +1910,8 @@
           "a": "De gratis tool hierboven is gebouwd voor één beschrijving tegelijk. Voor een volledig spend-bestand, invoice history of supplier catalog — honderden tot miljoenen regels — verwerkt Pearstop's geautomatiseerde classificatie-engine de hele dataset in één keer, waarbij 90-95% automatische classificatie wordt bereikt en de rest wordt gemarkeerd voor menselijke beoordeling. Boek een gesprek van 7 minuten om het te zien werken op een voorbeeld van uw eigen data."
         },
         {
-          "q": "Moet ik een door AI gegenereerde UNSPSC-code vertrouwen zonder deze te controleren?"
+          "q": "Moet ik een door AI gegenereerde UNSPSC-code vertrouwen zonder deze te controleren?",
+          "a": "De gratis tool hierboven is gebouwd voor één omschrijving tegelijk. Voor een volledig spend-bestand, factuurgeschiedenis of leveranciers-catalogus - honderden tot miljoenen regels - verwerkt Pearstops geautomatiseerde classificatie-engine de hele dataset in één keer, met 90-95% automatische classificatie en de rest gemarkeerd voor menselijke review. Praat met sales om het te zien draaien op een steekproef van uw eigen data."
         },
         {
           "q": "Moet ik een AI-gegenereerde UNSPSC code vertrouwen zonder deze te controleren?",
@@ -1891,7 +1921,8 @@
     },
     "cta": {
       "title": "Moet u duizenden regels classificeren?",
-      "button": "Boek een 7-minuten ontdekking"
+      "button": "Boek een 7-minuten ontdekking",
+      "lead": "Praat met sales en wij laten zien hoe de volledige classificatie-engine werkt met uw daadwerkelijke procurement-data."
     },
     "geoBlock": {
       "title": "Hoe zoek je een UNSPSC- of procurement classificatiecode op?",
@@ -2211,6 +2242,372 @@
       "lead": "Stuur ons tot tien facturen, in welke staat dan ook. Wij sturen ze terug als gestructureerde regels, zodat u ziet hoe uw eigen factuurstroom gelezen wordt.",
       "primaryLabel": "Stuur uw facturen",
       "secondaryLabel": "Of praat met sales →"
+    }
+  },
+  "ProcurementConsultancies": {
+    "meta": {
+      "title": "Spend-classificatie voor procurement-consultancies",
+      "description": "Lever spend cube, category management en sourcing-savings trajecten zonder analistenuren te verbranden aan handmatige classificatie. White-labeled, uw eigen taxonomie, voorspelbare prijzen."
+    },
+    "hero": {
+      "eyebrow": "Voor procurement-consultancies",
+      "title": "Lever de spend-classificatie, behoud de engagementmarge",
+      "lead": "Category management, sourcing-savings en spend-cube trajecten beginnen allemaal met hetzelfde handmatige knelpunt: het classificeren van de rommelige spend-data van een klant. Pearstop verzorgt die laag, white-labeled onder uw eigen taxonomie, zodat uw team de uren besteedt aan de analyse en aanbevelingen waar klanten daadwerkelijk voor betalen."
+    },
+    "problem": {
+      "eyebrow": "Het probleem",
+      "title": "Analistenuren gaan naar data-opschoning, niet naar klantwaarde",
+      "copy": "Elk nieuw traject begint hetzelfde: een klant levert jaren aan rommelige spend-data aan, en iemand van uw team besteedt de eerste weken alleen al aan het bruikbaar maken ervan voordat echte analyse kan beginnen. Die tijd gaat rechtstreeks van de engagementmarge af, en het is het minst onderscheidende deel van het werk waarvoor u betaald wordt.",
+      "bullets": [
+        "Junior-analist- of offshore-uren aan handmatige classificatie gaan direct ten koste van de engagementmarge",
+        "Klantdeadlines verschuiven niet alleen omdat de onderliggende data een puinhoop is",
+        "Elk traject lost hetzelfde classificatieprobleem opnieuw op, zonder iets herbruikbaars mee te nemen",
+        "Een generieke AI-tool raadt naar leveranciersmatches en verzint dingen die er niet zijn, wat extra werk oplevert in plaats van tijd te besparen"
+      ]
+    },
+    "howItWorks": {
+      "title": "Uw taxonomie, onze pijplijn",
+      "lead": "Pearstop sluit aan op uw deliverymodel als de classificatielaag eronder, niet als vervanging van de analyse van uw team.",
+      "step1": {
+        "title": "Breng uw eigen taxonomie mee",
+        "copy": "De meeste consultancies verkopen hun eigen categorie-framework als onderdeel van hun IP. Pearstop classificeert tegen uw taxonomie, of UNSPSC als u dat liever heeft, niet andersom."
+      },
+      "step2": {
+        "title": "Classificeren met waarborgen",
+        "copy": "Eerst deterministische matching, gecontroleerd met een LLM, waarbij elke onzekere match wordt gemarkeerd voor review in plaats van geraden, zodat de output direct in een klantdeliverable kan."
+      },
+      "step3": {
+        "title": "Leveren onder uw naam",
+        "copy": "Output is white-labeled. Uw klant ziet de deliverable van uw bureau, geen tool van een derde partij."
+      }
+    },
+    "whatMakesPossible": {
+      "title": "Wat dit verandert voor een consultancy",
+      "b1": {
+        "title": "Bescherm de engagementmarge",
+        "copy": "Classificatie gebeurt in dagen, niet de weken analistentijd die het nu opslokt, zodat meer van het honorarium als marge landt in plaats van als arbeidskosten."
+      },
+      "b2": {
+        "title": "Meer trajecten aannemen zonder meer capaciteit",
+        "copy": "Deliverycapaciteit wordt niet langer beperkt door hoeveel analisten u tegelijk op handmatige classificatie kunt zetten."
+      },
+      "b3": {
+        "title": "Een voorspelbare kostenpost",
+        "copy": "Classificatiekosten per traject zijn vooraf bekend, in plaats van een open-eind schatting in analistenuren die kan uitlopen."
+      }
+    },
+    "relatedCapabilities": {
+      "eyebrow": "Verder lezen",
+      "title": "Meer over spend cube-levering voor consultancies",
+      "lead": "Een nadere blik op wat er verandert wanneer de classificatielaag geautomatiseerd wordt.",
+      "items": [
+        {
+          "title": "Spend cube-levering voor procurement-consultancies",
+          "copy": "Hoe consultancies handmatige spend cube-bouw kunnen vervangen door een AI-pijplijn, waarborgen tegen hallucinatie, en een vastprijs-model.",
+          "linkLabel": "Lees het artikel"
+        },
+        {
+          "title": "Hoe bouw je een spend cube met AI",
+          "copy": "De vijf stappen om een spend cube te bouwen, welke data u nodig heeft, en wanneer een consultant nog steeds de betere keuze is dan een AI-classificatiepijplijn.",
+          "linkLabel": "Lees het artikel"
+        }
+      ]
+    },
+    "geoBlock": {
+      "title": "Hoe verandert een AI-classificatiepijplijn het deliverymodel van een procurement-consultancy?",
+      "copy": "Spend-classificatie is het traagste, minst onderscheidende deel van de meeste category management-, sourcing-savings- en spend-cube trajecten, en wordt doorgaans uitgevoerd door junior-analisten of een offshore-team dat de spend-data van een klant regel voor regel doorwerkt. Een AI-classificatiepijplijn neemt die laag over: leveranciersnamen matchen en standaardiseren, regels classificeren tegen een taxonomie - of dat nu UNSPSC is of het eigen proprietary framework van de consultancy - en alles wat onzeker is markeren voor menselijke review in plaats van raden. De output is white-labeled, zodat deze naadloos in een bestaand deliverymodel past als de onderliggende datalaag, waardoor analistentijd vrijkomt voor de sourcingstrategie en aanbevelingen waar klanten de consultancy daadwerkelijk voor betalen."
+    },
+    "faq": [
+      {
+        "question": "Kan de output onze eigen taxonomie gebruiken in plaats van UNSPSC?",
+        "answer": "Ja. Pearstop classificeert tegen elke taxonomie die u opgeeft, inclusief een proprietary framework dat u als onderdeel van uw eigen IP verkoopt. UNSPSC is beschikbaar als u liever een standaard gebruikt."
+      },
+      {
+        "question": "Is dit white-labeled?",
+        "answer": "Ja. De deliverable is gebouwd om binnen uw eigen trajectoutput te passen, niet gebrand als tool van een derde partij."
+      },
+      {
+        "question": "Hoe werkt de prijsstelling over meerdere klanttrajecten?",
+        "answer": "Prijsstelling is gestructureerd rond volume en trajectcadans in plaats van een enkel vast tarief, zodat het vooraf kan worden ingebouwd in hoe u uw eigen klantwerk prijst."
+      }
+    ],
+    "cta": {
+      "title": "Wilt u het zien op een echte klantdataset?",
+      "lead": "Praat met sales en wij laten zien hoe de spend-data van uw volgende traject eruitziet na een eerste doorloop.",
+      "button": "Praat met sales"
+    }
+  },
+  "SpendCube": {
+    "meta": {
+      "title": "AI-gebouwde spend cubes & procurement dashboards",
+      "description": "Een spend cube geclassificeerd en gestructureerd naar categorie, leverancier en tijd, klaar om Power BI, Microsoft Fabric of uw eigen dashboard te voeden, gebouwd in dagen in plaats van een handmatig kwartaalproject."
+    },
+    "hero": {
+      "eyebrow": "Spend cube & dashboards",
+      "title": "Een spend cube gebouwd in dagen, geen handmatig kwartaalproject",
+      "lead": "Een spend cube is alleen bruikbaar als hij gebouwd is op geclassificeerde, consistente data en actueel blijft. Pearstop classificeert uw spend één keer en blijft classificeren naarmate nieuwe facturen en inkooporders binnenkomen, zodat de cube - en elk dashboard erbovenop - niet al verouderd is in de week na oplevering."
+    },
+    "problem": {
+      "eyebrow": "Het probleem",
+      "title": "Het dashboard is maar zo goed als wat eronder zit",
+      "copy": "Een spend cube handmatig bouwen betekent jaren aan factuurregels en inkooporders classificeren in consistente categorieën en leveranciers voordat er een dashboard bovenop gebouwd kan worden. De meeste teams maken het nooit af, of maken het één keer af en zien het verouderen zodra nieuwe spend binnenkomt in het oude, ongeclassificeerde formaat.",
+      "bullets": [
+        "Handmatige spend-cube bouw duurt een kwartaal of langer, en is binnen weken alweer verouderd",
+        "Dashboardtools tonen wat eronder zit; als de categorieën niet consistent zijn, toont de grafiek gewoon sneller de puinhoop",
+        "Nieuwe spend blijft binnenkomen in welk formaat het bronsysteem ook produceert, dus de cube heeft constant handmatig onderhoud nodig om actueel te blijven",
+        "Spend over meerdere locaties of entiteiten deelt zelden dezelfde categorielogica, waardoor vergelijking tussen locaties spaak loopt"
+      ]
+    },
+    "howItWorks": {
+      "title": "Van geclassificeerde spend naar een live cube",
+      "lead": "De classificatiepijplijn structureert uw spend langs de dimensies die een cube daadwerkelijk nodig heeft, en houdt hem vervolgens actueel.",
+      "step1": {
+        "title": "Classificeer per categorie en leverancier",
+        "copy": "Elke regel wordt gematcht met een consistente categorie (UNSPSC of uw eigen taxonomie) en een canonieke leveranciersnaam, de twee dimensies waarop de meeste spend cubes als eerste vastlopen."
+      },
+      "step2": {
+        "title": "Structureer de cube",
+        "copy": "Geclassificeerde spend wordt gestructureerd langs categorie, leverancier, locatie of entiteit, en tijd, klaar om te laden in een BI-tool of dashboard."
+      },
+      "step3": {
+        "title": "Voed uw bestaande tools",
+        "copy": "Output komt in het formaat dat Power BI, Microsoft Fabric of uw eigen BI-stack al verwacht, zodat het dashboard dat u erop bouwt vanaf dag één werkt."
+      }
+    },
+    "whatMakesPossible": {
+      "title": "Wat een live cube mogelijk maakt",
+      "b1": {
+        "title": "Drill down per categorie, niet alleen totale spend",
+        "copy": "Zie wat een cijfer daadwerkelijk drijft, tot op categorie- en leveranciersniveau, in plaats van één totaalcijfer."
+      },
+      "b2": {
+        "title": "Vergelijk tussen locaties of entiteiten",
+        "copy": "Dezelfde categorie betekent overal hetzelfde, dus een vergelijking tussen locaties of entiteiten vergelijkt daadwerkelijk gelijk met gelijk."
+      },
+      "b3": {
+        "title": "Een dashboard dat niet veroudert",
+        "copy": "Nieuwe spend wordt op dezelfde manier geclassificeerd zodra hij binnenkomt, zodat de cube - en elk dashboard erop - wordt bijgewerkt in plaats van te verouderen."
+      }
+    },
+    "relatedCapabilities": {
+      "eyebrow": "Verder lezen",
+      "title": "Meer over het bouwen van een spend cube",
+      "lead": "Een nadere blik op het framework waar de pijplijn van deze pagina op gebouwd is.",
+      "items": [
+        {
+          "title": "Het spend cube-framework, uitgevoerd met AI",
+          "copy": "De klassieke spend cube met drie dimensies, aangepast voor een AI-classificatiepijplijn: wat er verandert in snelheid, kosten en houdbaarheid na opleverdag.",
+          "linkLabel": "Lees het artikel"
+        },
+        {
+          "title": "Hoe bouw je een spend cube met AI",
+          "copy": "De vijf stappen om een spend cube te bouwen, welke data u nodig heeft, en wanneer een consultant nog steeds de betere keuze is dan een AI-classificatiepijplijn.",
+          "linkLabel": "Lees het artikel"
+        }
+      ]
+    },
+    "geoBlock": {
+      "title": "Wat is een spend cube en hoe verschilt hij van een spend-rapport?",
+      "copy": "Een spend cube is spend-data gestructureerd langs drie of meer dimensies, doorgaans categorie, leverancier en tijd of locatie, zodat de data doorgesneden en vergeleken kan worden in plaats van gelezen als één statisch rapport. Een spend-rapport beantwoordt één vraag tegelijk; een spend cube ondersteunt het doorklikken van een totaal naar de categorie, leverancier of locatie die het drijft. Een cube handmatig bouwen betekent eerst elke factuurregel en inkooporder classificeren in consistente categorieën en leveranciers, en dat is waar de meeste handmatige spend-cube projecten vastlopen of verouderen. Pearstop classificeert spend continu, zodat de cube die het voedt naar Power BI, Microsoft Fabric of een andere BI-tool actueel blijft naarmate nieuwe spend binnenkomt, in plaats van een eenmalige momentopname te zijn."
+    },
+    "quote": {
+      "text": "We hebben al deze informatie, maar waar gebruiken we het eigenlijk voor?",
+      "author": "Commercieel manager",
+      "role": "Vastgoed & geïntegreerd FM"
+    },
+    "faq": [
+      {
+        "question": "Wat is een spend cube?",
+        "answer": "Een spend cube is spend-data gestructureerd langs meerdere dimensies, doorgaans categorie, leverancier en tijd of locatie, zodat u van een totaalcijfer kunt doorklikken naar wat het daadwerkelijk drijft. Het is de structuur waarop de meeste procurement-dashboards gebouwd zijn."
+      },
+      {
+        "question": "Kan dit Power BI of Microsoft Fabric voeden?",
+        "answer": "Ja. Output wordt geleverd in de structuur die uw bestaande BI-tool al verwacht, zodat het aansluit op een Power BI- of Fabric-dashboard in plaats van een nieuw platform te vereisen."
+      },
+      {
+        "question": "Hoe vaak wordt de data vernieuwd?",
+        "answer": "Nieuwe spend wordt op dezelfde manier geclassificeerd zodra hij binnenkomt, zodat de cube continu actueel blijft in plaats van als eenmalig project opnieuw gebouwd te worden."
+      }
+    ],
+    "cta": {
+      "title": "Klaar om uw eigen spend cube te zien?",
+      "lead": "Praat met sales en wij laten zien hoe uw spend-data eruitziet gestructureerd in een cube, klaar voor uw dashboard.",
+      "button": "Praat met sales"
+    }
+  },
+  "BookDemo": {
+    "meta": {
+      "title": "Boek een demo",
+      "description": "Een gesprek van 30 minuten om uw blokkades rond factuur- en spend-data, uw doelen, en of Pearstop u daar brengt, in kaart te brengen."
+    },
+    "hero": {
+      "eyebrow": "Boek een demo",
+      "title": "Dit bespreken we precies in 30 minuten",
+      "lead": "Geen generieke pitch. We besteden het gesprek aan uw data, uw blokkades, en of Pearstop u daadwerkelijk brengt waar u wilt komen.",
+      "cta": "Bekijk beschikbare tijden"
+    },
+    "steps": [
+      {
+        "title": "Uw huidige blokkades",
+        "copy": "We beginnen bij waar het daadwerkelijk misgaat. Is het factuurextractie? Waar bevinden uw facturen zich vandaag eigenlijk - in een ERP-systeem, in inboxen, of komen ze nog op papier binnen? We lopen de opties door en ontdekken precies waar de uwe vastlopen."
+      },
+      {
+        "title": "Uw proces, in kaart gebracht",
+        "copy": "Zodra facturen verwerkt zijn, wat gebeurt er dan? We brengen snel uw proces van begin tot eind in kaart, zodat we uitgaan van hoe dingen vandaag daadwerkelijk verlopen, niet hoe ze zouden moeten verlopen."
+      },
+      {
+        "title": "Uw doelen",
+        "copy": "Wat wilt u daadwerkelijk uit uw factuur- en spend-data halen? We duiken diep in wat u probeert te bereiken, niet alleen wat er kapot is."
+      },
+      {
+        "title": "Het platform, doorgenomen",
+        "copy": "We laten u de onderdelen van Pearstop zien die direct aansluiten bij uw doelen, zodat u het gesprek verlaat met een duidelijk antwoord: brengt dit u waar u wilt zijn?"
+      }
+    ],
+    "book": {
+      "title": "Kies een tijdstip",
+      "lead": "Kies hieronder een moment - geen heen-en-weer, geen pop-up."
+    },
+    "cta": {
+      "title": "Nog niet klaar om te boeken?",
+      "lead": "Stuur ons een steekproef van uw facturen en wij laten zien wat eruit komt, zonder gesprek nodig.",
+      "action": "Zie hoe het werkt"
+    }
+  },
+  "UnspscAiGuide": {
+    "meta": {
+      "title": "AI UNSPSC-classificatie: de praktische gids",
+      "description": "Hoe Pearstop een grote Excel- of CSV procurement-catalogus classificeert naar UNSPSC met AI: PDF-factuurextractie, een gratis pilot van 500 regels, leveranciersspecifiek geheugen, en volledige 8-cijferige commodity-codes voor uw ERP."
+    },
+    "hero": {
+      "eyebrow": "AI UNSPSC-classificatiegids",
+      "title": "U heeft een grote Excel-catalogus. U wilt dat AI deze classificeert naar UNSPSC.",
+      "lead": "Dat is het verzoek dat we het vaakst horen, soms als een spend-bestand dat nog nooit een code heeft gehad, soms als een stapel PDF-facturen die nog niet eens een spend-bestand is geworden. Deze gids beschrijft het daadwerkelijke proces: hoe Pearstop beide startpunten omzet in een UNSPSC-gecodeerde dataset, wat een pilot meet voordat u zich vastlegt op het volledige bestand, en waarom de classificatie niet voortkomt uit simpelweg een model vragen wat een code zou moeten zijn.",
+      "ctaPrimary": "Praat met sales",
+      "ctaSecondary": "Bekijk het proces"
+    },
+    "paths": {
+      "eyebrow": "Waar u begint",
+      "title": "Waar begint uw data vandaag?",
+      "lead": "Twee verschillende situaties komen binnen. Pearstop dekt beide, en vraagt u niet meer te doen dan de stap die u daadwerkelijk nodig heeft.",
+      "path1": {
+        "title": "Startpunt één: PDF-facturen, nog niet gestructureerd",
+        "copy": "Sommige klanten hebben jaren aan inkoopgeschiedenis als gescande of geëxporteerde PDF-facturen en verder niets. Voordat een UNSPSC-code mogelijk is, moet die data eerst regels worden: leverancier, omschrijving, hoeveelheid, stukprijs, datum. Pearstop haalt de velden op die voor facturen in uw sector zijn gespecificeerd rechtstreeks uit de PDF's, zodat de output landt als een normaal spend-bestand in plaats van een map documenten die niemand kan bevragen."
+      },
+      "path2": {
+        "title": "Startpunt twee: al een CSV- of Excel-bestand",
+        "copy": "Andere klanten hebben al een gestructureerd spend-bestand, geëxporteerd uit SAP, Oracle, of een P2P-systeem, of handmatig bijgehouden. Als dat uw situatie is, wordt de PDF-extractiestap volledig overgeslagen en start classificatie direct op het bestand dat u al heeft."
+      },
+      "note": "Dit zijn twee aparte workflows, geen één alles-of-niets pijplijn. Als u alleen de classificatiestap nodig heeft, is dat wat u krijgt. Als u beide nodig heeft, draait eerst PDF-extractie en classificatie loopt op wat daaruit komt."
+    },
+    "process": {
+      "eyebrow": "Het proces",
+      "title": "Wat gebeurt er zodra uw data gestructureerd is?",
+      "lead": "Vanaf hier is het proces hetzelfde, ongeacht van welk startpunt u kwam.",
+      "step1": {
+        "title": "Bouw een taxonomie verankerd aan UNSPSC",
+        "copy": "We genereren een vierlaags procurement-taxonomie voor uw spend en verankeren deze aan de officiële UNSPSC-hiërarchie, en aan NACE waar uw sector daarom vraagt. Deze taxonomie is waar elke regel uiteindelijk onder valt, niet alleen een code per regel."
+      },
+      "step2": {
+        "title": "Classificeer een gratis steekproef van circa 500 regels",
+        "copy": "We voeren een representatieve steekproef van ongeveer 500 regels als pilot door de engine, kosteloos. Dat is klein genoeg om handmatig te controleren en groot genoeg om echte nauwkeurigheid te tonen, niet een handvol makkelijke voorbeelden."
+      },
+      "step3": {
+        "title": "U controleert en corrigeert",
+        "copy": "Uw team controleert de steekproef tegen wat u weet over uw eigen data en corrigeert wat fout is. Deze stap levert het echte signaal op: niet of de engine een code kan produceren, maar of uw eigen inkoopmensen het ermee eens zijn."
+      },
+      "step4": {
+        "title": "Correcties worden leveranciersspecifiek geheugen",
+        "copy": "Elke correctie wordt opgeslagen tegen de leverancier en het omschrijvingspatroon dat deze veroorzaakte. Het systeem onthoudt bijvoorbeeld dat de regel 'handschoenen' van deze leverancier altijd schoonmaakhandschoenen zijn, geen medische handschoenen, zonder dat dit opnieuw hoeft te worden uitgelegd."
+      },
+      "step5": {
+        "title": "De volledige dataset wordt met dat geheugen geclassificeerd",
+        "copy": "Met de gecorrigeerde pilot en het geheugen op zijn plek, voeren we classificatie uit over het volledige bestand. Regels die overeenkomen met een bekend leverancierspatroon gaan door met het geheugen al toegepast. Nieuwe patronen doorlopen nog steeds dezelfde regels, trefwoordcontroles en LLM-laag als de pilot."
+      },
+      "step6": {
+        "title": "Exporteer naar Excel, of koppel direct met uw ERP",
+        "copy": "Resultaten komen terug als Excel-bestand, of via een directe API-koppeling met uw ERP, zodat de geclassificeerde data landt waar uw team al werkt in plaats van in een apart hulpmiddel."
+      },
+      "hierarchyNote": "Elke regel krijgt de volledige hiërarchie, geen kale code: segment, familie, klasse, en de daadwerkelijke 8-cijferige UNSPSC commodity-code, elk met de titel in gewone taal, zodat een reviewer kan zien wat een code betekent zonder dit apart op te zoeken."
+    },
+    "whyNotLlm": {
+      "eyebrow": "Waarom dit betrouwbaar is",
+      "title": "Waarom niet gewoon ChatGPT om de code vragen?",
+      "p1": "Plak een omschrijving in een algemeen model en vraag om een UNSPSC-code, en u krijgt er een. U krijgt er ook een wanneer geen enkele echte code goed past, omdat een taalmodel de gestelde vraag beantwoordt in plaats van toe te geven dat het het niet weet. Dat is een gehallucineerde code: zelfverzekerd, specifiek, en lastig te herkennen op een spreadsheet vol ervan.",
+      "p2": "Pearstop vraagt een model niet om een code en neemt het antwoord niet zomaar over. De omschrijving doorloopt een AI- en LLM-classificatielaag, maar de code die deze laag voorstelt wordt vervolgens gecontroleerd tegen de echte UNSPSC-dataset zelf, elk segment, elke familie, klasse en commodity, voordat deze wordt geaccepteerd. Als een voorgestelde code niet bestaat in de daadwerkelijke standaard, wordt deze afgewezen in plaats van getoond als resultaat.",
+      "p3": "Naast die controle vangen deterministische trefwoordregels de patronen op die helemaal geen model nodig hebben. Een leveranciersspecifieke database vernauwt het veld voordat classificatie begint, net zoals weten dat een leverancier elektrische componenten verkoopt irrigatieonderdelen uitsluit. Leveranciersspecifiek geheugen, opgebouwd uit uw eigen gecontroleerde correcties, betekent dat een patroon de tweede keer dat het verschijnt niet opnieuw vanaf nul hoeft te worden doordacht. En waar uw eigen data al enige categoriestructuur bevat, inkoopgroepen, GL-codes, bestaande labels, wordt die structuur gebruikt om het resultaat te vernauwen en te controleren, in plaats van vanaf nul te beginnen alsof het bestand geen geschiedenis had.",
+      "p4": "Wat overblijft na regels, de leveranciersdatabase, geheugen en validatie krijgt nog steeds een betrouwbaarheidscontrole. Alles met lage betrouwbaarheid wordt gemarkeerd voor een persoon, niet teruggegeven als feit."
+    },
+    "pilotMetrics": {
+      "eyebrow": "Een pilot uitvoeren",
+      "title": "Wat moet u eigenlijk controleren in een pilot?",
+      "lead": "Als u dit test, zouden we altijd aanraden drie dingen te meten, niet alleen of het 'werkte'.",
+      "m1": {
+        "title": "UNSPSC-nauwkeurigheidspercentage",
+        "copy": "Het aandeel bemonsterde regels waarbij de teruggegeven code overeenkomt met wat uw eigen reviewers zouden hebben gekozen."
+      },
+      "m2": {
+        "title": "Automatisch geclassificeerd vs. gemarkeerd voor review",
+        "copy": "De verdeling tussen regels waar de engine zelfstandig zeker genoeg van was en regels die gemarkeerd werden voor een persoon. Een pilot die alles automatisch classificeert zonder iets te markeren is niet nauwkeuriger. Die controleert zichzelf gewoon niet."
+      },
+      "m3": {
+        "title": "Bereikte diepte in de hiërarchie",
+        "copy": "Of het resultaat uitkomt op segment-, familie-, klasse- of het volledige 8-cijferige commodity-niveau. Een code die alleen segment bereikt vertelt u dat dit een onderhoudsdienst was. Een code die commodity bereikt vertelt u dat het specifiek liftonderhoud was, het niveau dat u nodig heeft om leveranciers te benchmarken of een ERP-veld te voeden dat een echte commodity-code verwacht."
+      }
+    },
+    "economics": {
+      "eyebrow": "Economie",
+      "title": "Waarom daalt de kostprijs per record naarmate het volume stijgt?",
+      "p1": "Elke regel die door een nieuwe LLM-aanroep gaat kost tokens, en tokengebruik bepaalt de kosten van AI-classificatie. Vroeg in een dataset zijn de meeste regels nieuw: nieuwe leveranciers, nieuwe onderdeelomschrijvingen, nog niets in het geheugen om de redenering af te korten.",
+      "p2": "Dat verandert naarmate het volume groeit. Leveranciersspecifiek geheugen betekent dat een omschrijvingspatroon slechts één keer een volledige LLM-doorloop nodig heeft. Nadat die correctie is opgeslagen, worden terugkerende patronen van dezelfde leverancier gematcht tegen het geheugen in plaats van opnieuw doordacht. Bij klein volume herhaalt bijna niets zich, dus kost bijna elke regel de volle prijs. Bij groot volume komen dezelfde leveranciers en dezelfde onderdeelomschrijvingen constant terug, dus heeft een krimpend aandeel regels überhaupt een nieuwe modelaanroep nodig. De kostprijs per record daalt omdat het systeem minder nieuwe redenering per record verricht, niet vanwege een lagere prijs per token."
+    },
+    "forYouIf": {
+      "title": "Is dit wat u daadwerkelijk nodig heeft?",
+      "case1": "U heeft 100.000 inkooptransacties nodig omgezet in één consistente taxonomie afgestemd op UNSPSC. Daar is dit precies voor gebouwd.",
+      "case2": "U heeft elke SKU of regel nodig met een daadwerkelijke 8-cijferige UNSPSC-code die u in uw ERP kunt laden. Ook daar is dit precies voor gebouwd."
+    },
+    "faq": [
+      {
+        "question": "Wat als ik nog geen schone factuurdata heb?",
+        "answer": "Dat is het eerste startpunt dat deze gids behandelt. Als uw inkoopgeschiedenis alleen bestaat als PDF-facturen, haalt Pearstop eerst de velden op die voor facturen in uw sector zijn gespecificeerd rechtstreeks uit die PDF's, zodat u een gestructureerd spend-bestand heeft voordat classificatie begint."
+      },
+      {
+        "question": "Hoe nauwkeurig is alleen-AI classificatie vergeleken met Pearstops aanpak?",
+        "answer": "Een algemeen model dat direct om een UNSPSC-code wordt gevraagd, antwoordt zelfs wanneer geen enkele code goed past, omdat het gebouwd is om een antwoord te produceren, niet om onzekerheid toe te geven. Pearstop controleert elke voorgestelde code tegen de echte UNSPSC-dataset voordat deze wordt geaccepteerd, combineert dat met regels, een leveranciersdatabase en leveranciersspecifiek geheugen, en markeert nog steeds regels met lage betrouwbaarheid voor menselijke review. Op typische procurement-datasets komt dit uit op 90 tot 95% automatische classificatie, waarbij de rest door een persoon wordt beoordeeld in plaats van geraden."
+      },
+      {
+        "question": "Kan dit koppelen met ons ERP?",
+        "answer": "Ja. Geclassificeerde data exporteert naar Excel, of koppelt rechtstreeks via API met SAP, Oracle en andere ERP- of P2P-platforms. Veel klanten beginnen met een Excel- of CSV-export en gaan over op een directe koppeling zodra de classificatie bewezen is."
+      },
+      {
+        "question": "Wat houdt de gratis pilot precies in?",
+        "answer": "We classificeren kosteloos een representatieve steekproef van ongeveer 500 regels uit uw data. Uw team controleert en corrigeert die steekproef, en die correcties worden het leveranciersspecifieke geheugen dat de volledige dataset-run vervolgens gebruikt."
+      },
+      {
+        "question": "Hoe verschilt dit van gewoon ChatGPT of Copilot gebruiken op ons spend-bestand?",
+        "answer": "Dat kunt u zelf doen, en voor een handvol regels is het een redelijke manier om een eerste antwoord te krijgen. Het schaalt niet, en het controleert zijn eigen werk niet: er is geen validatie tegen de echte UNSPSC-codeset, geen leveranciersgeheugen dat verbetert met volume, en geen ingebouwde reviewstap voor de regels die fout gingen. Pearstop is gebouwd om dat allemaal te doen op een volledig bestand, niet op één regel."
+      },
+      {
+        "question": "Leert het systeem, of begint elk bestand vanaf nul?",
+        "answer": "Het leert. Correcties uit de pilot worden opgeslagen als leveranciersspecifiek geheugen, zodat een onderdeelomschrijvingspatroon dat al is beoordeeld voor een bepaalde leverancier niet opnieuw door de LLM hoeft te worden doordacht de volgende keer dat het verschijnt."
+      },
+      {
+        "question": "Wat is NACE, en waarom zou het onderdeel zijn van de taxonomie?",
+        "answer": "NACE is de Europese statistische classificatie van economische activiteiten. Waar de rapportage of sectorbenchmarking van een klant naast UNSPSC ook op NACE draait, verankeren we de taxonomie die we bouwen aan beide, niet alleen aan UNSPSC op zichzelf."
+      }
+    ],
+    "related": {
+      "label": "Meer UNSPSC-bronnen",
+      "main": "UNSPSC-classificatie",
+      "lookup": "Gratis UNSPSC-codeopzoeker",
+      "tree": "UNSPSC-taxonomieboom",
+      "faq": "Volledige FAQ"
+    },
+    "cta": {
+      "title": "Klaar om dit op uw eigen data te zien draaien?",
+      "lead": "Praat met sales, of test eerst een enkele omschrijving op de gratis opzoektool.",
+      "button": "Praat met sales",
+      "secondaryButton": "Probeer de gratis opzoektool"
     }
   }
 }

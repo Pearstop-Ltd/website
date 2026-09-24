@@ -162,7 +162,8 @@
     "cta": {
       "title": "Nicht sicher, ob Pearstop das Richtige für Sie ist?",
       "lead": "Lassen Sie uns sprechen. Sie sind clever - lassen Sie uns Ihre Lösung erarbeiten.",
-      "findOut": "Finden Sie heraus, was möglich ist (E-Mail senden)"
+      "findOut": "Finden Sie heraus, was möglich ist (E-Mail senden)",
+      "bookDiscovery": "Mit Vertrieb sprechen"
     }
   },
   "Solutions": {
@@ -225,7 +226,23 @@
     },
     "cta": {
       "title": "Nicht sicher, welche Lösung Sie brauchen?",
-      "viewIndustries": "Branchen ansehen"
+      "viewIndustries": "Branchen ansehen",
+      "lead": "Sprechen Sie mit Vertrieb. Wir identifizieren genau, welches Datenproblem Sie am meisten kostet - und zeigen Ihnen, wie Sie es lösen.",
+      "bookDiscovery": "Mit Vertrieb sprechen"
+    },
+    "moreCards": {
+      "title": "Weitere Möglichkeiten, mit Pearstop zu arbeiten",
+      "lead": "Zwei weitere Stellen, an denen dieselbe Klassifizierungs-Engine zum Einsatz kommt, für bestimmte Teams und bestimmte Ergebnisse.",
+      "items": [
+        {
+          "title": "Spend Cube & Dashboards",
+          "copy": "Spend strukturiert nach Kategorie, Lieferant und Zeit, bereit für Power BI, Microsoft Fabric oder Ihr eigenes Dashboard."
+        },
+        {
+          "title": "Für Procurement-Beratungen",
+          "copy": "White-Label-Spend-Klassifizierung unter Ihrer eigenen Taxonomie, sodass die Mandatsmarge in die Analyse fließt, nicht in manuelle Bereinigung."
+        }
+      ]
     }
   },
   "DataQuality": {
@@ -322,7 +339,8 @@
     ],
     "cta": {
       "title": "Bereit, die Daten unter Ihrem nächsten Projekt zu reparieren?",
-      "button": "7-minütige Discovery buchen"
+      "button": "7-minütige Discovery buchen",
+      "lead": "Sprechen Sie mit Vertrieb. Wir zeigen Ihnen genau, wo Ihre Daten heute eine ERP-Migration, einen Fabric-Rollout oder eine KI-Initiative zum Scheitern bringen würden."
     }
   },
   "Procurement": {
@@ -364,7 +382,8 @@
       "step3": {
         "title": "Menschliche Prüfung, dann merkt es sich das",
         "copy": "Alles, was noch unter einem Konfidenzschwellenwert liegt, wird für Ihr Team markiert - typischerweise etwa eine Stunde pro Woche. Jede Entscheidung fließt zurück in die Engine."
-      }
+      },
+      "cta": "Mit Vertrieb sprechen"
     },
     "outcome": {
       "title": "Was eine echte Spend Baseline möglich macht",
@@ -406,7 +425,8 @@
     ],
     "cta": {
       "title": "Bereit, eine echte Spend Baseline aufzubauen?",
-      "button": "7-minütige Discovery buchen"
+      "button": "7-minütige Discovery buchen",
+      "lead": "Sprechen Sie mit Vertrieb. Wir zeigen Ihnen genau, wo Ihre Spend-Daten die Zahl verstecken, die Sie brauchen."
     }
   },
   "AssetManagement": {
@@ -502,7 +522,8 @@
     ],
     "cta": {
       "title": "Bereit, eine eigene unabhängige Sicht zu haben?",
-      "button": "7-minütige Discovery buchen"
+      "button": "7-minütige Discovery buchen",
+      "lead": "Sprechen Sie mit Vertrieb und sehen Sie genau, wie Pearstop die Daten, die Sie bereits erhalten, in etwas Verifizierbares verwandelt."
     }
   },
   "AiReadiness": {
@@ -597,7 +618,8 @@
     "cta": {
       "title": "Sind Ihre Daten bereit für KI?",
       "button": "7-minütige Discovery buchen",
-      "fabricLink": "Auch Fabric-Bereitschaft ansehen"
+      "fabricLink": "Auch Fabric-Bereitschaft ansehen",
+      "lead": "Sprechen Sie mit Vertrieb, und wir sagen Ihnen genau, was passieren muss, bevor Ihre KI-Initiativen Ergebnisse liefern können."
     }
   },
   "Unspsc": {
@@ -708,15 +730,17 @@
     "related": {
       "label": "Weitere UNSPSC-Ressourcen",
       "tool": "Kostenloses UNSPSC-Code-Nachschlagetool",
-      "guide": "Wie KI-Klassifizierung wirklich funktioniert",
+      "guide": "Wie KI-Klassifizierung tatsächlich funktioniert",
       "fm": "UNSPSC für FM und Hard Services",
       "nl": "UNSPSC in den Niederlanden",
       "de": "UNSPSC in Deutschland",
-      "faq": "Vollständige FAQ"
+      "faq": "Vollständige FAQ",
+      "tree": "UNSPSC-Baum erkunden"
     },
     "cta": {
       "title": "Bereit, Ihre Beschaffungsklassifizierung zu automatisieren?",
-      "button": "7-minütige Discovery buchen"
+      "button": "7-minütige Discovery buchen",
+      "lead": "Sprechen Sie mit Vertrieb. Wir zeigen Ihnen genau, wie die Klassifizierungs-Engine mit Ihren Daten arbeiten würde."
     }
   },
   "UnspscAiGuide": {
@@ -851,7 +875,8 @@
     "cta": {
       "title": "Bereit, das an Ihren eigenen Daten zu sehen?",
       "button": "7-minütige Erstberatung buchen",
-      "secondaryButton": "Kostenloses Nachschlagetool testen"
+      "secondaryButton": "Kostenloses Nachschlagetool testen",
+      "lead": "Sprechen Sie mit Vertrieb, oder testen Sie zuerst eine einzelne Beschreibung im kostenlosen Lookup-Tool."
     }
   },
   "Fabric": {
@@ -1028,7 +1053,8 @@
       "emailPlaceholder": "Ihre E-Mail-Adresse",
       "companyPlaceholder": "Unternehmen (optional)",
       "submitButton": "Fallstudien herunterladen",
-      "talkNote": "Lieber erst sprechen?"
+      "talkNote": "Lieber erst sprechen?",
+      "talkLinkText": "Mit Vertrieb sprechen"
     },
     "whyDownload": {
       "title": "Warum Menschen es herunterladen",
@@ -1052,7 +1078,8 @@
     "cta": {
       "title": "Möchten Sie es durchsprechen?",
       "lead": "Wenn Sie Ihr Datenproblem lieber direkt besprechen möchten, helfen wir gerne.",
-      "followLinkedIn": "Folgen Sie Pearstop auf LinkedIn für Updates"
+      "followLinkedIn": "Folgen Sie Pearstop auf LinkedIn für Updates",
+      "bookDiscovery": "Mit Vertrieb sprechen"
     }
   },
   "Cases": {
@@ -1728,7 +1755,8 @@
     },
     "cta": {
       "title": "Bereit, die FM-Beschaffungsklassifizierung zu automatisieren?",
-      "button": "7-minütige Erstberatung buchen"
+      "button": "7-minütige Erstberatung buchen",
+      "lead": "Sprechen Sie mit Vertrieb. Wir zeigen Ihnen genau, wie die Engine mit Ihren Spend-Daten arbeitet."
     }
   },
   "UnspscNL": {
@@ -1951,7 +1979,8 @@
     "bulk": {
       "label": "Müssen Sie Tausende von Zeilen klassifizieren?",
       "cta": "7-minütige Erstberatung buchen",
-      "learnMore": "So funktioniert es"
+      "learnMore": "So funktioniert es",
+      "copy": "Dieses Tool verarbeitet Einzelabfragen. Pearstops automatisierte Klassifizierungs-Engine verarbeitet 35.000 Procurement-Zeilen pro Monat - mit 90-95 % automatischer Klassifizierung und vollständiger SAP-Integration. Sprechen Sie mit Vertrieb, um es mit Ihren Daten zu sehen."
     },
     "faq": {
       "title": "Wie UNSPSC-Codes funktionieren",
@@ -1985,7 +2014,8 @@
           "a": "UNSPSC, eCl@ss und CPV sind allesamt Beschaffungsklassifizierungsstandards, dienen aber unterschiedlichen Zwecken. UNSPSC ist der am weitesten verbreitete Standard für Ausgabenanalyse und Category Management. eCl@ss fügt detaillierte technische Attribute pro Produkt hinzu und ist in der deutschen Fertigung verbreitet. CPV wird speziell für EU-Vergabeverfahren im öffentlichen Sektor genutzt. Die meisten Organisationen brauchen nur einen Standard, gewählt nach ERP-System und Berichtsanforderungen — Pearstop arbeitet mit UNSPSC als dem gängigsten Standard für Ausgabenanalysen."
         },
         {
-          "q": "Kann ich eine gesamte Spend-Datei oder einen Lieferantenkatalog auf einmal klassifizieren?"
+          "q": "Kann ich eine gesamte Spend-Datei oder einen Lieferantenkatalog auf einmal klassifizieren?",
+          "a": "Das kostenlose Tool oben ist für jeweils eine Beschreibung gebaut. Für eine vollständige Spend-Datei, Rechnungshistorie oder Lieferantenkatalog - Hunderte bis Millionen Zeilen - verarbeitet Pearstops automatisierte Klassifizierungs-Engine den gesamten Datensatz auf einmal und erreicht 90-95 % automatische Klassifizierung, wobei der Rest für menschliche Prüfung markiert wird. Sprechen Sie mit Vertrieb, um es an einer Stichprobe Ihrer eigenen Daten zu sehen."
         },
         {
           "q": "Sollte ich einem KI-generierten UNSPSC-Code ungeprüft vertrauen?",
@@ -1995,7 +2025,8 @@
     },
     "cta": {
       "title": "Müssen Sie Tausende von Zeilen klassifizieren?",
-      "button": "7-minütige Erstberatung buchen"
+      "button": "7-minütige Erstberatung buchen",
+      "lead": "Sprechen Sie mit Vertrieb, und wir zeigen Ihnen, wie die vollständige Klassifizierungs-Engine mit Ihren tatsächlichen Procurement-Daten arbeitet."
     }
   },
   "Home": {
@@ -2311,6 +2342,236 @@
       "lead": "Senden Sie uns bis zu zehn Rechnungen, in welchem Zustand auch immer. Wir schicken sie als strukturierte Positionen zurück, damit Sie sehen, wie Ihr eigener Rechnungsstream gelesen wird.",
       "primaryLabel": "Senden Sie Ihre Rechnungen",
       "secondaryLabel": "Oder mit Vertrieb sprechen →"
+    }
+  },
+  "ProcurementConsultancies": {
+    "meta": {
+      "title": "Spend-Klassifizierung für Procurement-Beratungen",
+      "description": "Liefern Sie Spend-Cube-, Category-Management- und Sourcing-Savings-Mandate, ohne Analystenstunden für manuelle Klassifizierung zu verbrennen. White-Label, Ihre Taxonomie, planbare Preise."
+    },
+    "hero": {
+      "eyebrow": "Für Procurement-Beratungen",
+      "title": "Liefern Sie die Spend-Klassifizierung, behalten Sie die Mandatsmarge",
+      "lead": "Category-Management-, Sourcing-Savings- und Spend-Cube-Mandate beginnen alle mit demselben manuellen Engpass: die unaufgeräumten Spend-Daten eines Kunden zu klassifizieren. Pearstop übernimmt diese Schicht, White-Label unter Ihrer eigenen Taxonomie, damit Ihr Team seine Stunden in die Analyse und Empfehlungen investiert, für die Kunden tatsächlich bezahlen."
+    },
+    "problem": {
+      "eyebrow": "Das Problem",
+      "title": "Analystenstunden fließen in die Datenbereinigung, nicht in den Kundenwert",
+      "copy": "Jedes neue Mandat beginnt gleich: Ein Kunde übergibt Jahre an unaufgeräumten Spend-Daten, und jemand aus Ihrem Team verbringt die ersten Wochen nur damit, sie in eine nutzbare Form zu bringen, bevor überhaupt echte Analyse beginnen kann. Diese Zeit geht direkt von der Mandatsmarge ab - und es ist der am wenigsten differenzierte Teil der Arbeit, für die Sie bezahlt werden.",
+      "bullets": [
+        "Junior-Analysten- oder Offshore-Stunden für manuelle Klassifizierung gehen direkt zulasten der Mandatsmarge",
+        "Kundentermine verschieben sich nicht nur, weil die zugrunde liegenden Daten unaufgeräumt sind",
+        "Jedes Mandat löst dasselbe Klassifizierungsproblem erneut von Grund auf, ohne dass etwas Wiederverwendbares übrig bleibt",
+        "Ein allgemeines KI-Tool rät bei Lieferanten-Matches und erfindet Dinge, die nicht existieren, was Nacharbeit statt Zeitersparnis schafft"
+      ]
+    },
+    "howItWorks": {
+      "title": "Ihre Taxonomie, unsere Pipeline",
+      "lead": "Pearstop fügt sich als Klassifizierungsschicht darunter in Ihr Delivery-Modell ein - kein Ersatz für die Analyse Ihres Teams.",
+      "step1": {
+        "title": "Bringen Sie Ihre eigene Taxonomie mit",
+        "copy": "Die meisten Beratungen verkaufen ihr eigenes Kategorie-Framework als Teil ihres geistigen Eigentums. Pearstop klassifiziert nach Ihrer Taxonomie, oder nach UNSPSC, wenn Sie das bevorzugen - nicht umgekehrt."
+      },
+      "step2": {
+        "title": "Klassifizieren mit Leitplanken",
+        "copy": "Zuerst deterministisches Matching, gegengeprüft mit einem LLM, wobei jede unsichere Zuordnung für die Prüfung markiert statt geraten wird, sodass die Ausgabe direkt in ein Kunden-Deliverable einfließen kann."
+      },
+      "step3": {
+        "title": "Liefern unter Ihrem Namen",
+        "copy": "Die Ausgabe ist White-Label. Ihr Kunde sieht das Deliverable Ihrer Firma, kein Tool eines Drittanbieters."
+      }
+    },
+    "whatMakesPossible": {
+      "title": "Was sich für eine Beratung dadurch ändert",
+      "b1": {
+        "title": "Mandatsmarge schützen",
+        "copy": "Klassifizierung geschieht in Tagen statt in den Wochen an Analystenzeit, die sie derzeit bindet, sodass mehr vom Honorar als Marge statt als Personalkosten anfällt."
+      },
+      "b2": {
+        "title": "Mehr Mandate ohne mehr Personal übernehmen",
+        "copy": "Die Liefer-Kapazität wird nicht mehr dadurch begrenzt, wie viele Analysten Sie gleichzeitig auf manuelle Klassifizierung ansetzen können."
+      },
+      "b3": {
+        "title": "Eine planbare Kostenposition",
+        "copy": "Die Klassifizierungskosten pro Mandat stehen im Voraus fest, statt einer offenen Schätzung in Analystenstunden, die aus dem Ruder laufen kann."
+      }
+    },
+    "relatedCapabilities": {
+      "eyebrow": "Weiterlesen",
+      "title": "Mehr zur Spend-Cube-Lieferung für Beratungen",
+      "lead": "Ein genauerer Blick darauf, was sich ändert, wenn die Klassifizierungsschicht automatisiert wird.",
+      "items": [
+        {
+          "title": "Spend-Cube-Lieferung für Procurement-Beratungen",
+          "copy": "Wie Beratungen manuellen Spend-Cube-Aufbau durch eine KI-Pipeline ersetzen können, mit Leitplanken gegen Halluzinationen und einem Festpreismodell.",
+          "linkLabel": "Artikel lesen"
+        },
+        {
+          "title": "Wie man einen Spend Cube mit KI baut",
+          "copy": "Die fünf Schritte zum Aufbau eines Spend Cubes, welche Daten Sie benötigen, und wann ein Berater immer noch die bessere Wahl ist als eine KI-Klassifizierungspipeline.",
+          "linkLabel": "Artikel lesen"
+        }
+      ]
+    },
+    "geoBlock": {
+      "title": "Wie verändert eine KI-Klassifizierungspipeline das Delivery-Modell einer Procurement-Beratung?",
+      "copy": "Spend-Klassifizierung ist der langsamste, am wenigsten differenzierte Teil der meisten Category-Management-, Sourcing-Savings- und Spend-Cube-Mandate und wird meist von Junior-Analysten oder einem Offshore-Team erledigt, das die Spend-Daten eines Kunden Zeile für Zeile durcharbeitet. Eine KI-Klassifizierungspipeline übernimmt diese Schicht: Lieferantennamen abgleichen und standardisieren, Positionen gegen eine Taxonomie klassifizieren - ob UNSPSC oder das eigene proprietäre Framework der Beratung - und alles Unsichere für menschliche Prüfung markieren, statt zu raten. Die Ausgabe ist White-Label und fügt sich so als zugrunde liegende Datenschicht in ein bestehendes Delivery-Modell ein, wodurch Analystenzeit für die Sourcing-Strategie und die Empfehlungen frei wird, für die Kunden die Beratung tatsächlich bezahlen."
+    },
+    "faq": [
+      {
+        "question": "Kann die Ausgabe unsere eigene Taxonomie statt UNSPSC verwenden?",
+        "answer": "Ja. Pearstop klassifiziert nach jeder von Ihnen angegebenen Taxonomie, einschließlich eines proprietären Frameworks, das Sie als Teil Ihres eigenen geistigen Eigentums verkaufen. UNSPSC steht zur Verfügung, falls Sie lieber einen Standard nutzen möchten."
+      },
+      {
+        "question": "Ist das White-Label?",
+        "answer": "Ja. Das Deliverable ist so gebaut, dass es sich in Ihre eigene Mandatsleistung einfügt, statt als Tool eines Drittanbieters gebrandet zu sein."
+      },
+      {
+        "question": "Wie funktioniert die Preisgestaltung über mehrere Kundenmandate hinweg?",
+        "answer": "Die Preisgestaltung ist an Volumen und Mandatstakt ausgerichtet statt an einer einzelnen Pauschale, sodass sie sich vorab in Ihre eigene Preisgestaltung für Kundenarbeit einbauen lässt."
+      }
+    ],
+    "cta": {
+      "title": "Wollen Sie es an einem echten Kundendatensatz sehen?",
+      "lead": "Sprechen Sie mit Vertrieb, und wir zeigen Ihnen, wie die Spend-Daten Ihres nächsten Mandats nach einem ersten Durchlauf aussehen.",
+      "button": "Mit Vertrieb sprechen"
+    }
+  },
+  "SpendCube": {
+    "meta": {
+      "title": "KI-gebaute Spend Cubes & Procurement-Dashboards",
+      "description": "Ein Spend Cube, klassifiziert und strukturiert nach Kategorie, Lieferant und Zeit, bereit für Power BI, Microsoft Fabric oder Ihr eigenes Dashboard - gebaut in Tagen statt in einem manuellen Quartalsprojekt."
+    },
+    "hero": {
+      "eyebrow": "Spend Cube & Dashboards",
+      "title": "Ein Spend Cube, gebaut in Tagen, kein manuelles Quartalsprojekt",
+      "lead": "Ein Spend Cube ist nur nützlich, wenn er auf klassifizierten, konsistenten Daten aufbaut und aktuell bleibt. Pearstop klassifiziert Ihren Spend einmal und klassifiziert weiter, sobald neue Rechnungen und Bestellungen eintreffen, sodass der Cube - und jedes Dashboard darauf - nicht schon in der Woche nach der Lieferung veraltet ist."
+    },
+    "problem": {
+      "eyebrow": "Das Problem",
+      "title": "Das Dashboard ist nur so gut wie das, was darunterliegt",
+      "copy": "Einen Spend Cube von Hand zu bauen bedeutet, jahrelange Rechnungszeilen und Bestellungen in konsistente Kategorien und Lieferanten zu klassifizieren, bevor überhaupt ein Dashboard darauf aufgebaut werden kann. Die meisten Teams werden nie fertig, oder werden einmal fertig und sehen zu, wie er veraltet, sobald neuer Spend im alten, unklassifizierten Format eintrifft.",
+      "bullets": [
+        "Manueller Spend-Cube-Aufbau dauert ein Quartal oder länger und ist innerhalb von Wochen erneut veraltet",
+        "Dashboard-Tools zeigen, was darunterliegt; sind die Kategorien nicht konsistent, zeigt das Diagramm einfach schneller das Durcheinander",
+        "Neuer Spend trifft weiterhin in dem Format ein, das das Quellsystem produziert, sodass der Cube ständige manuelle Pflege braucht, um aktuell zu bleiben",
+        "Spend über mehrere Standorte oder Einheiten teilt selten dieselbe Kategorielogik, wodurch der standortübergreifende Vergleich zusammenbricht"
+      ]
+    },
+    "howItWorks": {
+      "title": "Von klassifiziertem Spend zu einem lebenden Cube",
+      "lead": "Die Klassifizierungspipeline strukturiert Ihren Spend entlang der Dimensionen, die ein Cube tatsächlich braucht, und hält ihn dann aktuell.",
+      "step1": {
+        "title": "Nach Kategorie und Lieferant klassifizieren",
+        "copy": "Jede Zeile wird einer konsistenten Kategorie (UNSPSC oder Ihrer eigenen Taxonomie) und einem kanonischen Lieferantennamen zugeordnet - den beiden Dimensionen, an denen die meisten Spend Cubes zuerst scheitern."
+      },
+      "step2": {
+        "title": "Den Cube strukturieren",
+        "copy": "Klassifizierter Spend wird nach Kategorie, Lieferant, Standort oder Einheit und Zeit strukturiert, bereit zum Laden in ein BI-Tool oder Dashboard."
+      },
+      "step3": {
+        "title": "Ihre bestehenden Tools speisen",
+        "copy": "Die Ausgabe erfolgt in dem Format, das Power BI, Microsoft Fabric oder Ihr eigener BI-Stack bereits erwartet, sodass das darauf aufgebaute Dashboard vom ersten Tag an funktioniert."
+      }
+    },
+    "whatMakesPossible": {
+      "title": "Was ein lebender Cube möglich macht",
+      "b1": {
+        "title": "Nach Kategorie aufschlüsseln, nicht nur nach Gesamt-Spend",
+        "copy": "Sehen Sie, was eine Zahl tatsächlich treibt, bis hinunter zu Kategorie und Lieferant, statt einer einzelnen Gesamtzahl."
+      },
+      "b2": {
+        "title": "Standort- oder einheitsübergreifend vergleichen",
+        "copy": "Dieselbe Kategorie bedeutet überall dasselbe, sodass ein standort- oder einheitsübergreifender Vergleich tatsächlich Gleiches mit Gleichem vergleicht."
+      },
+      "b3": {
+        "title": "Ein Dashboard, das nicht veraltet",
+        "copy": "Neuer Spend wird bei Eingang auf dieselbe Weise klassifiziert, sodass der Cube - und jedes darauf aufgebaute Dashboard - aktualisiert wird, statt zu veralten."
+      }
+    },
+    "relatedCapabilities": {
+      "eyebrow": "Weiterlesen",
+      "title": "Mehr zum Bau eines Spend Cubes",
+      "lead": "Ein genauerer Blick auf das Framework, auf dem die Pipeline dieser Seite aufbaut.",
+      "items": [
+        {
+          "title": "Das Spend-Cube-Framework, ausgeführt mit KI",
+          "copy": "Der klassische dreidimensionale Spend Cube, angepasst für eine KI-Klassifizierungspipeline: was sich bei Geschwindigkeit, Kosten und Haltbarkeit nach dem Liefertag ändert.",
+          "linkLabel": "Artikel lesen"
+        },
+        {
+          "title": "Wie man einen Spend Cube mit KI baut",
+          "copy": "Die fünf Schritte zum Aufbau eines Spend Cubes, welche Daten Sie benötigen, und wann ein Berater immer noch die bessere Wahl ist als eine KI-Klassifizierungspipeline.",
+          "linkLabel": "Artikel lesen"
+        }
+      ]
+    },
+    "geoBlock": {
+      "title": "Was ist ein Spend Cube und wie unterscheidet er sich von einem Spend-Report?",
+      "copy": "Ein Spend Cube ist Spend-Daten, strukturiert entlang drei oder mehr Dimensionen, typischerweise Kategorie, Lieferant und Zeit oder Standort, sodass sie aufgeschlüsselt und verglichen statt als einzelner statischer Report gelesen werden können. Ein Spend-Report beantwortet jeweils eine Frage; ein Spend Cube ermöglicht das Aufschlüsseln von einer Gesamtsumme bis hinunter zur Kategorie, zum Lieferanten oder zum Standort, der sie treibt. Ihn manuell zu bauen bedeutet, zuerst jede Rechnungszeile und Bestellung in konsistente Kategorien und Lieferanten zu klassifizieren - genau dort scheitern oder veralten die meisten manuellen Spend-Cube-Projekte. Pearstop klassifiziert Spend fortlaufend, sodass der Cube, den es in Power BI, Microsoft Fabric oder ein anderes BI-Tool einspeist, aktuell bleibt, sobald neuer Spend eintrifft, statt eine einmalige Momentaufnahme zu sein."
+    },
+    "quote": {
+      "text": "Wir haben all diese Informationen, aber wofür nutzen wir sie eigentlich?",
+      "author": "Kaufmännischer Leiter",
+      "role": "Immobilien & integriertes FM"
+    },
+    "faq": [
+      {
+        "question": "Was ist ein Spend Cube?",
+        "answer": "Ein Spend Cube ist Spend-Daten, strukturiert entlang mehrerer Dimensionen, typischerweise Kategorie, Lieferant und Zeit oder Standort, sodass Sie von einer Gesamtzahl bis zu dem aufschlüsseln können, was sie tatsächlich treibt. Es ist die Struktur, auf der die meisten Procurement-Dashboards aufbauen."
+      },
+      {
+        "question": "Kann das Power BI oder Microsoft Fabric speisen?",
+        "answer": "Ja. Die Ausgabe wird in der Struktur geliefert, die Ihr bestehendes BI-Tool bereits erwartet, sodass sie sich in ein Power-BI- oder Fabric-Dashboard einfügt, statt eine neue Plattform zu erfordern."
+      },
+      {
+        "question": "Wie oft werden die Daten aktualisiert?",
+        "answer": "Neuer Spend wird bei Eingang auf dieselbe Weise klassifiziert, sodass der Cube fortlaufend aktuell bleibt, statt als einmaliges Projekt neu gebaut zu werden."
+      }
+    ],
+    "cta": {
+      "title": "Bereit, Ihren eigenen Spend Cube zu sehen?",
+      "lead": "Sprechen Sie mit Vertrieb, und wir zeigen Ihnen, wie Ihre Spend-Daten strukturiert in einem Cube aussehen, bereit für Ihr Dashboard.",
+      "button": "Mit Vertrieb sprechen"
+    }
+  },
+  "BookDemo": {
+    "meta": {
+      "title": "Demo buchen",
+      "description": "Ein 30-minütiges Gespräch, um Ihre Blockaden bei Rechnungs- und Spend-Daten, Ihre Ziele und ob Pearstop Sie dorthin bringt, zu klären."
+    },
+    "hero": {
+      "eyebrow": "Demo buchen",
+      "title": "Das besprechen wir genau in 30 Minuten",
+      "lead": "Kein generischer Pitch. Wir verbringen das Gespräch mit Ihren Daten, Ihren Blockaden und der Frage, ob Pearstop Sie tatsächlich dorthin bringt, wo Sie hinwollen.",
+      "cta": "Verfügbare Termine ansehen"
+    },
+    "steps": [
+      {
+        "title": "Ihre aktuellen Blockaden",
+        "copy": "Wir beginnen dort, wo es tatsächlich hakt. Ist es die Rechnungsextraktion? Wo liegen Ihre Rechnungen heute eigentlich - in einem ERP-System, in Posteingängen, oder kommen sie noch auf Papier an? Wir gehen die Optionen durch und finden genau heraus, wo Ihre hängen bleiben."
+      },
+      {
+        "title": "Ihr Prozess, kartiert",
+        "copy": "Sobald Rechnungen verarbeitet sind, was passiert dann? Wir kartieren Ihren Prozess schnell von Anfang bis Ende, damit wir von dem ausgehen, wie Dinge heute tatsächlich ablaufen - nicht, wie sie ablaufen sollten."
+      },
+      {
+        "title": "Ihre Ziele",
+        "copy": "Was wollen Sie eigentlich aus Ihren Rechnungs- und Spend-Daten herausholen? Wir gehen tief darauf ein, was Sie erreichen wollen, nicht nur, was gerade nicht funktioniert."
+      },
+      {
+        "title": "Die Plattform, durchgegangen",
+        "copy": "Wir zeigen Ihnen die Teile von Pearstop, die direkt zu Ihren Zielen passen, damit Sie das Gespräch mit einer klaren Antwort verlassen: Bringt Sie das dorthin, wo Sie hinwollen?"
+      }
+    ],
+    "book": {
+      "title": "Wählen Sie einen Termin",
+      "lead": "Wählen Sie unten einen Termin - kein Hin und Her, kein Pop-up."
+    },
+    "cta": {
+      "title": "Noch nicht bereit zu buchen?",
+      "lead": "Senden Sie uns eine Stichprobe Ihrer Rechnungen, und wir zeigen Ihnen, was dabei herauskommt - ohne Gespräch.",
+      "action": "So funktioniert es"
     }
   }
 }
