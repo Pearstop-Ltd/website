@@ -9,6 +9,7 @@ import { SiteHeader } from "@/components/site-header";
 import { LatestBlogPosts } from "@/components/latest-blog-posts";
 import { routing } from "@/i18n/routing";
 import { siteConfig } from "@/lib/site";
+import { inter } from "@/lib/fonts";
 import "../globals.css";
 
 const googleSiteVerification = "C8qp78nVUWNoce0nCLL3e3n0PQ92mP9y_n6MdgSdvRs";
@@ -119,7 +120,7 @@ export default async function LocaleLayout({
   };
 
   return (
-    <html lang={locale}>
+    <html lang={locale} className={inter.variable}>
       <body>
         <NextIntlClientProvider messages={messages}>
           <SiteHeader />

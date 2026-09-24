@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
-
 :root {
   --primary: #353fff;
   --primary-dark: #2a3990;
@@ -43,7 +41,7 @@ body {
   color: var(--text);
   background: var(--bg);
   line-height: 1.65;
-  font-family: "Plus Jakarta Sans", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  font-family: var(--font-inter), "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
