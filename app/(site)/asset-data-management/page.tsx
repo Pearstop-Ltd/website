@@ -220,7 +220,7 @@ export default function AssetDataManagementPage() {
 
       <CTABand
         title="Ready to hold an independent view of your own?"
-        lead="Talk to sales call and see exactly how Pearstop turns the data you already receive into something you can verify."
+        lead="Talk to sales and see exactly how Pearstop turns the data you already receive into something you can verify."
         actions={[{ label: "Talk to sales", href: siteConfig.calendly, variant: "primary", external: true }]}
       />
     </>

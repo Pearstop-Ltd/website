@@ -98,7 +98,7 @@ export default function CaseStudiesPage() {
               <p className="case-studies-note">
                 Prefer to just view it? <a href={siteConfig.downloads.caseStudiesView} target="_blank" rel="noopener noreferrer">Open the Google Slides deck</a>.
                 <br />
-                Prefer to talk first? <CalendlyButton label="Talk to sales call" className="calendly-inline-link" /> instead.
+                Prefer to talk first? <CalendlyButton label="Talk to sales" className="calendly-inline-link" /> instead.
               </p>
             </div>
           </div>

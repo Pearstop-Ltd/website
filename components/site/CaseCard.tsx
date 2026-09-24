@@ -23,10 +23,13 @@ export interface CaseCardProps {
    * (colour bars, tile grids, before/after bars). */
   visual?: ReactNode;
   image?: CardImage;
+  /** Client logo badge, from an existing file in /images/clients/. Omit
+   * for anonymised pattern cases — there's no client to credit. */
+  logo?: { src: string; alt: string };
   className?: string;
 }
 
-export function CaseCard({ variant, eyebrow, title, stats, href, linkLabel, visual, image, className }: CaseCardProps) {
+export function CaseCard({ variant, eyebrow, title, stats, href, linkLabel, visual, image, logo, className }: CaseCardProps) {
   return (
     <article className={dsRoot(styles.root, className)}>
       {image ? (
@@ -37,6 +40,11 @@ export function CaseCard({ variant, eyebrow, title, stats, href, linkLabel, visu
         <div className={styles.visual}>{visual}</div>
       ) : null}
       <div className={styles.body}>
+        {logo ? (
+          <div className={styles.logo}>
+            <Image src={logo.src} alt={logo.alt} width={96} height={28} className={styles.logoImage} />
+          </div>
+        ) : null}
         <span className={dsRoot(styles.eyebrow, variant === "pattern" ? styles.eyebrowPattern : styles.eyebrowClient)}>
           {eyebrow}
         </span>

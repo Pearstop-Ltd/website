@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import {
-  CaseBreadcrumb, CaseTypeBadge, CaseFactSheet, CaseResultsBand, CaseSectionLabel, CaseH2, CaseBodyP,
+  CaseBreadcrumb, CaseHero, CaseHeadlineAccent, CaseTypeBadge, CaseFactSheet, CaseResultsBand, CaseSectionLabel, CaseH2, CaseBodyP,
   CaseStepCards, CaseQuoteBig, CaseTwoPanel, CaseMoreLinks, CaseClosingCTA
 } from "@/components/case-design";
 import { alternateLanguages, siteConfig } from "@/lib/site";
@@ -36,28 +36,30 @@ export default function FaroCaseStudyPage() {
       <section style={{ background: "#fff", padding: "56px 0 72px" }}>
         <div className="container" style={{ display: "flex", flexDirection: "column", gap: 40 }}>
           <CaseBreadcrumb current="FARO" />
-          <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 1.55fr) minmax(0, 1fr)", gap: 72, alignItems: "start" }}>
-            <div style={{ display: "flex", flexDirection: "column", gap: 22 }}>
-              <div style={{ display: "flex", gap: 10, alignItems: "center", flexWrap: "wrap" }}>
-                <CaseTypeBadge type="client" />
-                <span style={{ fontSize: 13, color: "var(--muted)" }}>Retail · South Africa</span>
-              </div>
-              <h1 style={{ margin: 0, fontSize: "clamp(2.2rem, 4vw, 3.2rem)", lineHeight: 1.08, fontWeight: 600, letterSpacing: "-0.025em", color: "var(--primary-dark)" }}>
-                30,000 product lines classified per buying decision, in a week, for FARO
-              </h1>
-              <p style={{ margin: 0, fontSize: 20, lineHeight: 1.6, fontWeight: 300, color: "var(--text)" }}>
-                For every container purchase, FARO needed to categorise around 30,000 product lines to estimate margin, sale price, and stock time before committing capital. Pearstop automated the classification and linked it directly to FARO&rsquo;s sales database.
-              </p>
+          <CaseHero
+            aside={
+              <CaseFactSheet
+                rows={[
+                  { label: "Client", value: "FARO" },
+                  { label: "Data", value: "Incoming product lines, per container" },
+                  { label: "Scope", value: "~30,000 lines per buying decision" },
+                  { label: "Approach", value: "Machine learning, pre-LLM (own built technology)" }
+                ]}
+              />
+            }
+          >
+            <div style={{ display: "flex", gap: 10, alignItems: "center", flexWrap: "wrap" }}>
+              <CaseTypeBadge type="client" />
+              <span style={{ fontSize: 13, color: "var(--muted)" }}>Retail · South Africa</span>
             </div>
-            <CaseFactSheet
-              rows={[
-                { label: "Client", value: "FARO" },
-                { label: "Data", value: "Incoming product lines, per container" },
-                { label: "Scope", value: "~30,000 lines per buying decision" },
-                { label: "Approach", value: "Machine learning, pre-LLM (own built technology)" }
-              ]}
-            />
-          </div>
+            <h1 style={{ margin: 0, fontSize: "clamp(2.2rem, 4vw, 3.2rem)", lineHeight: 1.08, fontWeight: 600, letterSpacing: "-0.025em", color: "var(--primary-dark)" }}>
+              30,000 product lines classified per buying decision, in a week, for FARO
+            </h1>
+            <CaseHeadlineAccent />
+            <p style={{ margin: 0, fontSize: 20, lineHeight: 1.6, fontWeight: 300, color: "var(--text)" }}>
+              For every container purchase, FARO needed to categorise around 30,000 product lines to estimate margin, sale price, and stock time before committing capital. Pearstop automated the classification and linked it directly to FARO&rsquo;s sales database.
+            </p>
+          </CaseHero>
         </div>
       </section>
 
@@ -66,7 +68,7 @@ export default function FaroCaseStudyPage() {
           { value: "30k", label: "lines classified per buying decision" },
           { value: "95%", label: "classified automatically" },
           { value: "1 week", label: "classification time, was six months by hand" },
-          { value: "Sales", label: "database linked for margin visibility" }
+          { value: "Up to 7%", label: "higher sell-through, from linking sales data to buying decisions" }
         ]}
       />
 
@@ -100,9 +102,7 @@ export default function FaroCaseStudyPage() {
         <div className="container">
           <CaseQuoteBig
             quote="We had thousands of product lines that needed to be categorised before we could even begin to understand our costs. Pearstop classified them in under a week. That would have taken our team six months and still would not have been this accurate."
-            initials="DT"
-            name="David Torr"
-            role="CEO, FARO"
+            personId="davidTorr"
           />
         </div>
       </section>
@@ -142,9 +142,8 @@ export default function FaroCaseStudyPage() {
       <CaseClosingCTA
         title="Want a case study built around your data?"
         lead="We can show you what the same approach would look like for your procurement or asset data."
-        ctaLabel="Talk to sales"
-        ctaHref={siteConfig.calendly}
-        external
+        ctaLabel="Send us a sample"
+        sample
       />
     </>
   );

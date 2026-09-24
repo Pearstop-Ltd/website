@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import {
-  CaseBreadcrumb, CaseTypeBadge, CaseSectionLabel, CaseH2, CaseBodyP, CaseProcessDiagram, CaseTwoPanel,
+  CaseBreadcrumb, CaseHeadlineAccent, CaseTypeBadge, CaseSectionLabel, CaseH2, CaseBodyP, CaseProcessDiagram, CaseTwoPanel,
   CaseMoreLinks, CaseClosingCTA
 } from "@/components/case-design";
 import { alternateLanguages, siteConfig } from "@/lib/site";
@@ -29,6 +29,7 @@ export default function MroCaseStudyPage() {
             <h1 style={{ margin: 0, fontSize: "clamp(2.2rem, 4vw, 3.2rem)", lineHeight: 1.08, fontWeight: 600, letterSpacing: "-0.025em", color: "var(--primary-dark)" }}>
               Going direct to the manufacturer
             </h1>
+            <CaseHeadlineAccent />
             <p style={{ margin: 0, fontSize: 20, lineHeight: 1.6, fontWeight: 300, color: "var(--text)" }}>
               How Pearstop replaces slow, error-prone offshore MRO part research with a fast, checked one.
             </p>
@@ -66,7 +67,7 @@ export default function MroCaseStudyPage() {
               { text: "Confidence score per match", bg: "var(--purple-soft)" }
             ]}
           />
-          <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
             <span style={{ fontFamily: "'SF Mono', Menlo, monospace", fontSize: 13, padding: "8px 10px", borderRadius: 6, background: "#fff", color: "var(--muted)", textDecoration: "line-through" }}>RS-448120</span>
             <svg width="22" height="12" viewBox="0 0 22 12" fill="none" aria-hidden="true"><path d="M0 6 H16" stroke="var(--navy)" strokeWidth="1.6" /><path d="M15 1 L21 6 L15 11 Z" fill="var(--navy)" /></svg>
             <span style={{ fontFamily: "'SF Mono', Menlo, monospace", fontSize: 13, padding: "8px 10px", borderRadius: 6, background: "#F1F8E9", border: "1px solid var(--success)", color: "var(--navy)" }}>MFR 6205-2RS</span>
@@ -110,9 +111,8 @@ export default function MroCaseStudyPage() {
       <CaseClosingCTA
         title="Same problem with your MRO data?"
         lead="Send us a sample of your part records and we'll show you what a checked match against manufacturer data looks like on your own numbers."
-        ctaLabel="Talk to sales"
-        ctaHref={siteConfig.calendly}
-        external
+        ctaLabel="Send us a sample"
+        sample
       />
     </>
   );

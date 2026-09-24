@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import {
-  CaseBreadcrumb, CaseTypeBadge, CaseFactSheet, CaseResultsBand, CaseSectionLabel, CaseH2, CaseBodyP,
+  CaseBreadcrumb, CaseHero, CaseHeadlineAccent, CaseTypeBadge, CaseFactSheet, CaseResultsBand, CaseSectionLabel, CaseH2, CaseBodyP,
   CaseProcessDiagram, CaseQuoteCard, CaseTwoPanel, CaseMoreLinks, CaseClosingCTA
 } from "@/components/case-design";
 import { alternateLanguages, siteConfig } from "@/lib/site";
@@ -22,28 +22,30 @@ export default function StruktonCaseStudyPage() {
       <section style={{ background: "#fff", padding: "56px 0 72px" }}>
         <div className="container" style={{ display: "flex", flexDirection: "column", gap: 40 }}>
           <CaseBreadcrumb current="Strukton" />
-          <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 1.55fr) minmax(0, 1fr)", gap: 72, alignItems: "start" }}>
-            <div style={{ display: "flex", flexDirection: "column", gap: 22 }}>
-              <div style={{ display: "flex", gap: 10, alignItems: "center", flexWrap: "wrap" }}>
-                <CaseTypeBadge type="client" />
-                <span style={{ fontSize: 13, color: "var(--muted)" }}>Infrastructure · Netherlands</span>
-              </div>
-              <h1 style={{ margin: 0, fontSize: "clamp(2rem, 3.6vw, 2.9rem)", lineHeight: 1.1, fontWeight: 600, letterSpacing: "-0.025em", color: "var(--primary-dark)" }}>
-                35,000 to 50,000 procurement lines a month classified to UNSPSC, from zero, for Strukton
-              </h1>
-              <p style={{ margin: 0, fontSize: 20, lineHeight: 1.6, fontWeight: 300, color: "var(--text)" }}>
-                Strukton is a major Dutch infrastructure contractor. Pearstop built this system together with their procurement department. It classifies every line of spend into UNSPSC, automatically, every month.
-              </p>
+          <CaseHero
+            aside={
+              <CaseFactSheet
+                rows={[
+                  { label: "Client", value: "Strukton" },
+                  { label: "Data", value: "Procurement spend, via SAP" },
+                  { label: "Scope", value: "35,000 to 50,000 lines a month" },
+                  { label: "Approach", value: "AI + ML pipeline + human-in-the-loop" }
+                ]}
+              />
+            }
+          >
+            <div style={{ display: "flex", gap: 10, alignItems: "center", flexWrap: "wrap" }}>
+              <CaseTypeBadge type="client" />
+              <span style={{ fontSize: 13, color: "var(--muted)" }}>Infrastructure · Netherlands</span>
             </div>
-            <CaseFactSheet
-              rows={[
-                { label: "Client", value: "Strukton" },
-                { label: "Data", value: "Procurement spend, via SAP" },
-                { label: "Scope", value: "35,000 to 50,000 lines a month" },
-                { label: "Approach", value: "AI + ML pipeline + human-in-the-loop" }
-              ]}
-            />
-          </div>
+            <h1 style={{ margin: 0, fontSize: "clamp(2rem, 3.6vw, 2.9rem)", lineHeight: 1.1, fontWeight: 600, letterSpacing: "-0.025em", color: "var(--primary-dark)" }}>
+              35,000 to 50,000 procurement lines a month classified to UNSPSC, from zero, for Strukton
+            </h1>
+            <CaseHeadlineAccent />
+            <p style={{ margin: 0, fontSize: 20, lineHeight: 1.6, fontWeight: 300, color: "var(--text)" }}>
+              Strukton is a major Dutch infrastructure contractor. Pearstop built this system together with their procurement department. It classified every line of spend into UNSPSC, automatically, every month.
+            </p>
+          </CaseHero>
         </div>
       </section>
 
@@ -52,7 +54,8 @@ export default function StruktonCaseStudyPage() {
           { value: "35k–50k", label: "spend lines a month" },
           { value: "0", label: "classification history at the start" },
           { value: "4", label: "UNSPSC levels per line" },
-          { value: "Weekly", label: "buyer feedback cadence" }
+          { value: "Weekly", label: "buyer feedback cadence" },
+          { value: "+20 pts", label: "classification accuracy gained by adding human review, compared with AI alone and without context" }
         ]}
       />
 
@@ -73,7 +76,7 @@ export default function StruktonCaseStudyPage() {
           </div>
           <CaseProcessDiagram
             inputs={["SAP purchase orders", "Supplier invoices", "Prior buyer decisions"]}
-            steps={["AI classifies each line", "ML pipeline learns from context", "Human-in-the-loop for the rest"]}
+            steps={["AI classified each line", "ML pipeline learned from context", "Human-in-the-loop for the rest"]}
             outputs={[
               { text: "Segment → Family → Class → Commodity", bg: "var(--blue-soft)" },
               { text: "Confidence score per line", bg: "var(--purple-soft)" },
@@ -87,7 +90,7 @@ export default function StruktonCaseStudyPage() {
         <div className="container" style={{ display: "flex", flexDirection: "column", gap: 20, maxWidth: 900 }}>
           <CaseSectionLabel>Why granularity matters</CaseSectionLabel>
           <CaseH2>Why do all four UNSPSC levels matter, not just the top one?</CaseH2>
-          <CaseBodyP>Every month, a new batch of spend comes in. Pearstop processes all of it. Each line gets four levels of UNSPSC classification: segment, family, class, and commodity.</CaseBodyP>
+          <CaseBodyP>Every month, a new batch of spend came in. Pearstop processed all of it. Each line got four levels of UNSPSC classification: segment, family, class, and commodity.</CaseBodyP>
           <div style={{ background: "var(--bg-soft)", borderRadius: 16, padding: "22px 24px", display: "flex", flexDirection: "column", gap: 6 }}>
             <span style={{ fontSize: 12, fontWeight: 600, letterSpacing: "0.06em", textTransform: "uppercase", color: "var(--muted)" }}>Four levels, broadest to most specific</span>
             <strong style={{ fontSize: 18, color: "var(--navy)" }}>Segment → Family → Class → Commodity</strong>
@@ -103,9 +106,7 @@ export default function StruktonCaseStudyPage() {
         <div className="container">
           <CaseQuoteCard
             quote="Built and proven with a major Dutch infrastructure contractor, starting from zero classification history."
-            initials="ST"
-            name="Strukton"
-            role="Infrastructure, Netherlands"
+            personId="strukton"
           />
         </div>
       </section>
@@ -119,14 +120,14 @@ export default function StruktonCaseStudyPage() {
                 labelColor: "var(--primary)",
                 bg: "var(--bg-soft)",
                 title: "More accurate every month, not just more used",
-                copy: "Strukton's buyers review what the AI classified, flag what's right and what isn't, and every correction feeds back into the system. Pearstop and Strukton's team meet weekly to go over what's working and what isn't."
+                copy: "Strukton's buyers reviewed what the AI classified, flagged what was right and what wasn't, and every correction fed back into the system. Pearstop and Strukton's team met weekly to go over what was working and what wasn't."
               },
               {
                 label: "The result",
                 labelColor: "#5A3FC0",
                 bg: "var(--purple-soft)",
                 title: "From zero classification to full granularity",
-                copy: "Before this project, Strukton had no UNSPSC classification at all. Now, 35,000 to 50,000 lines of spend are classified automatically every month, to all four UNSPSC levels &mdash; the granularity the original cost-saving opportunity needed to actually be acted on."
+                copy: "Before this project, Strukton had no UNSPSC classification at all. By the end of the engagement, 35,000 to 50,000 lines of spend were classified automatically every month, to all four UNSPSC levels &mdash; the granularity the original cost-saving opportunity needed to actually be acted on."
               }
             ]}
           />
@@ -145,9 +146,8 @@ export default function StruktonCaseStudyPage() {
       <CaseClosingCTA
         title="Want a case study built around your data?"
         lead="We can show you what the same approach would look like for your procurement or asset data."
-        ctaLabel="Talk to sales"
-        ctaHref={siteConfig.calendly}
-        external
+        ctaLabel="Send us a sample"
+        sample
       />
     </>
   );

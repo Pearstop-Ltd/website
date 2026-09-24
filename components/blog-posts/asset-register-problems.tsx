@@ -1,4 +1,5 @@
 import { BlogQuote, SoftCta } from "@/components/blog";
+import { siteConfig } from "@/lib/site";
 
 export default function AssetRegisterProblems() {
   return (
@@ -48,9 +49,10 @@ export default function AssetRegisterProblems() {
       <SoftCta
         type="discovery"
         title="Find out what your asset register is actually missing"
-        description="In a 7-minute call we will walk through your current asset data structure and show you exactly where the gaps are and what filling them would mean for maintenance costs and bid accuracy."
-        ctaLabel="Book a discovery call →"
-        ctaHref="/contact"
+        description="In a 15-minute call we will walk through your current asset data structure and show you exactly where the gaps are and what filling them would mean for maintenance costs and bid accuracy."
+        ctaLabel="Talk to sales"
+        ctaHref={siteConfig.calendly}
+        external={true}
       />
     </>
   );

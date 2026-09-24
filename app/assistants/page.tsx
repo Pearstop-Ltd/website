@@ -151,20 +151,18 @@ export default function AssistantsHomePage() {
           <div className="tag grey">Or, if you&apos;d rather do it in one go</div>
           <h3>One to one</h3>
           <p>
-            A full day together, in person &mdash; I travel to you. We go through everything you
-            run, then I build the whole thing for you. Two follow-up sessions after that, online,
-            once you have lived with it.
+            A full day together, online or in person. We go through everything you run, then I
+            build the whole thing for you. Two follow-up sessions after that, online, once you
+            have lived with it.
           </p>
           <div className="amount">&euro;2,000</div>
-          <div className="fineprint">One off. Travel and accommodation included.</div>
+          <div className="fineprint">One off. Travel and accommodation included if in person.</div>
         </div>
 
         <div className="anchor">
-          A good VA costs <strong>&euro;20,000 to &euro;30,000 a year</strong>, depending on
-          hours. An executive assistant to a CEO is closer to{" "}
-          <strong>&euro;50,000 a year</strong>, and general EA roles in major cities like Dublin
-          run <strong>&euro;36,000 to &euro;58,000</strong>. You make this back inside a month,
-          and what you buy is the evening back with your family.
+          A good VA costs <strong>&euro;20,000 to &euro;30,000 a year</strong>. A full-time
+          executive assistant is closer to <strong>&euro;50,000 a year</strong>. You make this
+          back inside a month, and what you buy is the evening back with your family.
         </div>
 
         <CalendlyButton label="Book a 20 minute call" className="cta" url={CALENDLY_URL} />

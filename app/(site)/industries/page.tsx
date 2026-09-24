@@ -557,7 +557,7 @@ export default function IndustriesPage() {
           <div className="ind-wide-banner">
             <h3>Ready to Clean Your Data?</h3>
             <p>We have solved this exact problem in infrastructure, facilities management, cleaning, construction, and manufacturing. If yours is a different industry with the same kind of data, tell us about it.</p>
-            <CalendlyButton label="Book a 7-Minute Discovery" className="btn btn-primary" />
+            <CalendlyButton label="Talk to sales" className="btn btn-primary" />
           </div>
         </div>
       </section>

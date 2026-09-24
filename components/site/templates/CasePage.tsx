@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import Image from "next/image";
 import { dsRoot } from "../tokens";
 import { Section } from "../internal/Section";
 import { Breadcrumb } from "../internal/Breadcrumb";
@@ -11,6 +12,7 @@ import { QuoteCard, type QuoteCardProps } from "../QuoteCard";
 import { Card, type CardProps } from "../Card";
 import { CaseCard, type CaseCardProps } from "../CaseCard";
 import { ClosingCTA, type ClosingCTAProps } from "../ClosingCTA";
+import { HeadlineAccent } from "../HeadlineAccent";
 import styles from "./CasePage.module.css";
 
 export interface CasePageHero {
@@ -19,6 +21,9 @@ export interface CasePageHero {
   breadcrumbCurrent: string;
   badgeLabel: ReactNode;
   metaLine?: ReactNode;
+  /** Client logo, from an existing file in /images/clients/. Omit for
+   * anonymised pattern cases — there's no client to credit. */
+  logo?: { src: string; alt: string };
   /** The page's single H1. */
   title: ReactNode;
   lead: ReactNode;
@@ -197,8 +202,12 @@ export function CasePage({ variant, hero, sections, closingCTA, className }: Cas
                   {hero.badgeLabel}
                 </span>
                 {hero.metaLine ? <span className={styles.metaLine}>{hero.metaLine}</span> : null}
+                {hero.logo ? (
+                  <Image src={hero.logo.src} alt={hero.logo.alt} width={120} height={32} className={styles.logo} />
+                ) : null}
               </div>
               <h1 className={styles.title}>{hero.title}</h1>
+              <HeadlineAccent />
               <p className={styles.lead}>{hero.lead}</p>
             </div>
             {hero.visual ? <div className={styles.heroVisual}>{hero.visual}</div> : null}

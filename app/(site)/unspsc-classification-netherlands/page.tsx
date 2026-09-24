@@ -133,7 +133,7 @@ export default function UnspscNLPage() {
         title="UNSPSC classificatie voor Nederlandse infrastructuur-, FM-, en bouwbedrijven."
         lead="Pearstop automatiseert de classificatie van inkoopregels naar UNSPSC-standaard — 90–95% zonder handmatige inspanning. Inclusief ondersteuning voor Peppol e-facturatie en Nederlandse ERP-systemen."
         actions={[
-          { label: "Boek een 7-minuten discovery", href: siteConfig.calendly, variant: "primary", external: true },
+          { label: "Praat met sales", href: siteConfig.calendly, variant: "primary", external: true },
           { label: "Peppol en UNSPSC", href: "#peppol", variant: "secondary" }
         ]}
       />
@@ -220,7 +220,7 @@ export default function UnspscNLPage() {
             <div className="col-md-8 col-md-offset-2">
               <GeoBlock
                 title="What does UNSPSC classification look like for a Dutch infrastructure or FM company?"
-                copy="Dutch infrastructure and FM companies typically run purchasing through SAP or AFAS, with invoice lines written by field teams rather than buyers, for example 'elektra werkzaamheden Q3' or 'pompafdichting vervangen'. UNSPSC classification assigns each of those lines a consistent 8-digit commodity code, which is what makes a Peppol-compliant invoice machine-readable rather than just structured. Strukton, a Dutch infrastructure contractor, processes 35,000 procurement lines a month this way through Pearstop's SAP integration, with 90 to 95% classified automatically."
+                copy="Dutch infrastructure and FM companies typically run purchasing through SAP or AFAS, with invoice lines written by field teams rather than buyers, for example 'elektra werkzaamheden Q3' or 'pompafdichting vervangen'. UNSPSC classification assigns each of those lines a consistent 8-digit commodity code, which is what makes a Peppol-compliant invoice machine-readable rather than just structured. Strukton, a Dutch infrastructure contractor, processed 35,000 procurement lines a month this way through Pearstop's SAP integration."
               />
             </div>
           </div>
@@ -287,8 +287,8 @@ export default function UnspscNLPage() {
 
       <CTABand
         title="Klaar om uw inkoopclassificatie te automatiseren?"
-        lead="Boek een 7-minuten discovery. We laten u zien hoe de classificatie-engine met uw data werkt."
-        actions={[{ label: "Boek een 7-minuten discovery", href: siteConfig.calendly, variant: "primary", external: true }]}
+        lead="Praat met sales. We laten u zien hoe de classificatie-engine met uw data werkt."
+        actions={[{ label: "Praat met sales", href: siteConfig.calendly, variant: "primary", external: true }]}
       />
     </>
   );

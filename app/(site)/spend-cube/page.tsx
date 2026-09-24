@@ -213,7 +213,7 @@ export default function SpendCubePage() {
 
       <CTABand
         title="Ready to see your own spend cube?"
-        lead="Talk to sales call and we'll show you what your spend data looks like structured into a cube, ready for your dashboard."
+        lead="Talk to sales and we'll show you what your spend data looks like structured into a cube, ready for your dashboard."
         actions={[{ label: "Talk to sales", href: siteConfig.calendly, variant: "primary", external: true }]}
       />
     </>

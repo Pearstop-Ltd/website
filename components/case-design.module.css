@@ -1,0 +1,311 @@
+/* Layout for components/case-design.tsx. Dynamic column counts (results
+   band, step cards, data table) are passed in as CSS custom properties from
+   the component, never as an inline grid-template-columns — that way these
+   media queries can always win the cascade, no !important needed. */
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+  gap: 72px;
+  align-items: start;
+}
+
+.accent {
+  display: block;
+  width: 72px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--primary);
+  margin-top: 2px;
+}
+
+.twoCol {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 80px;
+  align-items: start;
+}
+
+.twoColCenter {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 72px;
+  align-items: center;
+}
+
+.twoColWide {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
+  gap: 64px;
+  align-items: start;
+}
+
+.resultsBand {
+  display: grid;
+  grid-template-columns: repeat(var(--cols, 4), minmax(0, 1fr));
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--primary-dark);
+}
+
+.resultsCell {
+  padding: 32px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+  border-right: 1px solid rgba(220, 225, 248, 0.18);
+}
+
+.resultsCell:last-child {
+  border-right: 0;
+}
+
+.resultsValue {
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #fff;
+  overflow-wrap: break-word;
+}
+
+.resultsLabel {
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--blue-soft);
+}
+
+.processDiagram {
+  background: #fff;
+  border-radius: 20px;
+  padding: 44px 48px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.processInputs {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 210px;
+  flex-shrink: 0;
+}
+
+.processBox {
+  background: var(--primary);
+  border-radius: 14px;
+  padding: 22px 24px;
+  width: 250px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.processOutputs {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-grow: 1;
+  min-width: 200px;
+}
+
+.arrow {
+  flex-shrink: 0;
+}
+
+.stepCards {
+  display: grid;
+  grid-template-columns: repeat(var(--cols, 3), minmax(0, 1fr));
+  gap: 24px;
+}
+
+.dataTableScroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.dataTableGrid {
+  display: grid;
+  grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
+  min-width: calc(var(--cols) * 140px);
+}
+
+.twoPanel {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+}
+
+.moreLinksGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.closingTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 64px;
+  flex-wrap: wrap;
+}
+
+.closingActions {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: flex-end;
+}
+
+.quoteCard {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  padding: 40px 48px;
+  flex-wrap: wrap;
+}
+
+.quoteBig {
+  padding: 44px;
+}
+
+.heroEqual {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 72px;
+  align-items: center;
+}
+
+/* Generic column-count utilities for the one-off content grids that sit
+   directly in a case page (tile grids, ad hoc step/stat rows) rather than
+   going through a shared component. */
+.grid3,
+.grid4 {
+  display: grid;
+  grid-template-columns: repeat(var(--cols, 3), minmax(0, 1fr));
+}
+
+.grid6 {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+/* A hand-rolled data-table look-alike (fixed fr-ratio header + rows) that
+   doesn't go through CaseDataTable — scrolls horizontally instead of
+   squashing illegibly, same treatment CaseDataTable gets. */
+.microTableScroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.microTableScroll > * {
+  min-width: 640px;
+}
+
+@media (max-width: 767px) {
+  .hero,
+  .heroEqual,
+  .twoCol,
+  .twoColCenter,
+  .twoColWide,
+  .twoPanel {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .grid3,
+  .grid4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .grid6 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .resultsBand {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .resultsCell {
+    padding: 20px 16px;
+  }
+
+  .resultsCell:nth-child(2n) {
+    border-right: 0;
+  }
+
+  .resultsCell:nth-child(n + 3) {
+    border-top: 1px solid rgba(220, 225, 248, 0.18);
+  }
+
+  .resultsValue {
+    font-size: 26px;
+  }
+
+  .processDiagram {
+    flex-direction: column;
+    padding: 28px 24px;
+  }
+
+  .processInputs,
+  .processBox,
+  .processOutputs {
+    width: 100%;
+  }
+
+  .arrow {
+    transform: rotate(90deg);
+  }
+
+  .stepCards,
+  .moreLinksGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .closingTop {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .closingActions {
+    align-items: flex-start;
+  }
+
+  .quoteCard {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 28px;
+  }
+
+  .quoteBig {
+    padding: 28px;
+  }
+}
+
+@media (max-width: 420px) {
+  .resultsBand {
+    grid-template-columns: 1fr;
+  }
+
+  .resultsCell {
+    border-right: 0;
+  }
+
+  .resultsCell:not(:first-child) {
+    border-top: 1px solid rgba(220, 225, 248, 0.18);
+  }
+
+  .resultsValue {
+    font-size: 24px;
+  }
+
+  .grid3,
+  .grid4,
+  .grid6 {
+    grid-template-columns: 1fr;
+  }
+}

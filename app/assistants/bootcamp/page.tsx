@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { CalendlyButton } from "@/components/calendly-button";
+import { CALENDLY_URL } from "../styles";
 
 export const metadata: Metadata = {
   title: "The bootcamp | Pearstop",
@@ -29,8 +31,8 @@ export default function AssistantsBootcampPage() {
           <li>
             <span className="dot" />
             <span>
-              <strong>A short piece of teaching.</strong> Enough to do the week&apos;s build,
-              nothing more.
+              <strong>A live training session.</strong> You&apos;ll learn the tools to work
+              through the course material, and build more on your own after.
             </span>
           </li>
           <li>
@@ -128,14 +130,10 @@ export default function AssistantsBootcampPage() {
           <div className="fineprint">One off, per person.</div>
         </div>
         <div className="anchor">
-          A good VA costs <strong>&euro;20,000 to &euro;30,000 a year</strong>, depending on
-          hours. An executive assistant to a CEO is closer to <strong>&euro;50,000 a year</strong>,
-          and general EA roles in major cities like Dublin run{" "}
-          <strong>&euro;36,000 to &euro;58,000</strong>.
+          A good VA costs <strong>&euro;20,000 to &euro;30,000 a year</strong>. A full-time
+          executive assistant is closer to <strong>&euro;50,000 a year</strong>.
         </div>
-        <a className="cta" href="mailto:stephanie@pearstop.com?subject=Bootcamp">
-          Ask about the next group
-        </a>
+        <CalendlyButton label="Ask about the next group" className="cta" url={CALENDLY_URL} />
       </section>
     </>
   );

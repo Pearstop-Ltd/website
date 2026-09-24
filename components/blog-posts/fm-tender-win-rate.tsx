@@ -51,7 +51,7 @@ export default function FmTenderWinRate() {
       <SoftCta
         type="discovery"
         title="See what your bid data could look like"
-        description="In a 7-minute call we will show you how other FM companies have cut bid prep time from days to hours, and what that means for pricing accuracy and win rate."
+        description="In a 15-minute call we will show you how other FM companies have cut bid prep time from days to hours, and what that means for pricing accuracy and win rate."
         ctaLabel="Talk to sales"
         ctaHref={siteConfig.calendly}
         external={true}

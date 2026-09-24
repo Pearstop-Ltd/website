@@ -120,16 +120,16 @@ const proofCards = [
   },
   {
     title: "Facilities Management Provider",
-    stat: "100,000+ assets cleaned and resolved",
-    detail: "93% automated. The remaining 7% routed to domain experts.",
+    stat: "9,175 → 1,493 supplier variants consolidated across 204,029 asset records",
+    detail: "73.1% confirmed matches.",
     href: "/cases",
     quote: "Our asset lists worked for mechanics on-site, but did not allow us to plan smart maintenance or manage bid risk in a data-driven way.",
     quoteRole: "Asset Manager, Facilities Management"
   },
   {
     title: "Cleaning Services Company",
-    stat: "Extraction accuracy: 70% → 99%",
-    detail: "Moved from manual review to an ongoing subscription.",
+    stat: "~300",
+    detail: "invoices a month",
     href: "/cases",
     quote: "It would have taken five engineers and a full year to clean this up. So we decided to look for a better solution.",
     quoteRole: "Head of Operations, Cleaning Services"

@@ -36,7 +36,7 @@ export function PageHero({ eyebrow, title, lead, actions, leadingAction, videoUr
   return (
     <header className={`page-hero dark ${className ?? ""}`}>
       {videoUrl ? (
-        <HeroBackgroundVideo src={videoUrl} poster={videoPoster ?? "/images/home/spend-control.webp"} />
+        <HeroBackgroundVideo src={videoUrl} poster={videoPoster ?? "/images/photos/construction-planner-woman-1.png"} />
       ) : (
         <div className="hero-bg" aria-hidden="true" />
       )}

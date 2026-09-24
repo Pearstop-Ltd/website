@@ -53,6 +53,12 @@
   color: var(--muted);
 }
 
+.logo {
+  height: 32px;
+  width: auto;
+  object-fit: contain;
+}
+
 .title {
   margin: 0;
   font-size: 54px;

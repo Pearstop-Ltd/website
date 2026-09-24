@@ -93,7 +93,7 @@ const faqSchema = {
       name: "Can I classify an entire spend file or supplier catalog at once?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The free tool above is built for one description at a time. For a full spend file, invoice history, or supplier catalog — hundreds to millions of lines — Pearstop's automated classification engine processes the whole dataset at once, reaching 90-95% automatic classification with the remainder flagged for human review. Book a 7-minute call to see it run on a sample of your own data."
+        text: "The free tool above is built for one description at a time. For a full spend file, invoice history, or supplier catalog — hundreds to millions of lines — Pearstop's automated classification engine processes the whole dataset at once, reaching 90-95% automatic classification with the remainder flagged for human review. Talk to sales to see it run on a sample of your own data."
       }
     },
     {

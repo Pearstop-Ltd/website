@@ -2,6 +2,7 @@
 import type React from "react";
 
 import { useEffect } from "react";
+import { siteConfig } from "@/lib/site";
 
 declare global {
   interface Window {
@@ -11,13 +12,11 @@ declare global {
   }
 }
 
-const CALENDLY_URL = "https://calendly.com/stephanie-pearstop/7-min-discovery";
-
 export function CalendlyButton({
   label,
   className,
   style,
-  url = CALENDLY_URL,
+  url = siteConfig.calendly,
 }: {
   label: string;
   className?: string;

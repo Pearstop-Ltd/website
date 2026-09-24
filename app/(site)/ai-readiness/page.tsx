@@ -204,7 +204,7 @@ export default function AiReadinessPage() {
 
       <CTABand
         title="Is your data ready for AI?"
-        lead="Book a 7-minute call and we will tell you exactly what needs to happen before your AI initiatives can deliver results."
+        lead="Talk to sales and we will tell you exactly what needs to happen before your AI initiatives can deliver results."
         actions={[
           { label: "Talk to sales", href: siteConfig.calendly, variant: "primary", external: true },
           { label: "See Fabric readiness too", href: "/fabric", variant: "secondary" }

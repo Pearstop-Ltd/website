@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import {
-  CaseBreadcrumb, CaseTypeBadge, CaseFactSheet, CaseResultsBand, CaseSectionLabel, CaseH2, CaseBodyP,
+  CaseBreadcrumb, CaseHero, CaseHeadlineAccent, CaseTypeBadge, CaseFactSheet, CaseResultsBand, CaseSectionLabel, CaseH2, CaseBodyP,
   CaseProcessDiagram, CaseStepCards, CaseDataTable, CaseStatBar, CaseQuoteBig, CaseQuoteCard, CaseTwoPanel,
   CaseMoreLinks, CaseClosingCTA
 } from "@/components/case-design";
 import { alternateLanguages, siteConfig } from "@/lib/site";
+import styles from "@/components/case-design.module.css";
 
 export const metadata: Metadata = {
   title: "SPIE Case Study",
@@ -30,28 +31,30 @@ export default function SpieCaseStudyPage() {
       <section style={{ background: "#fff", padding: "56px 0 72px" }}>
         <div className="container" style={{ display: "flex", flexDirection: "column", gap: 40 }}>
           <CaseBreadcrumb current="SPIE Building Solutions" />
-          <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 1.55fr) minmax(0, 1fr)", gap: 72, alignItems: "start" }}>
-            <div style={{ display: "flex", flexDirection: "column", gap: 22 }}>
-              <div style={{ display: "flex", gap: 10, alignItems: "center", flexWrap: "wrap" }}>
-                <CaseTypeBadge type="client" />
-                <span style={{ fontSize: 13, color: "var(--muted)" }}>Hard Services FM · Asset data</span>
-              </div>
-              <h1 style={{ margin: 0, fontSize: "clamp(2.2rem, 4vw, 3.4rem)", lineHeight: 1.08, fontWeight: 600, letterSpacing: "-0.025em", color: "var(--primary-dark)" }}>
-                9,175 supplier spellings brought back to 1,493 for SPIE Building Solutions
-              </h1>
-              <p style={{ margin: 0, fontSize: 20, lineHeight: 1.6, fontWeight: 300, color: "var(--text)" }}>
-                SPIE&rsquo;s asset register had been fed by maintenance systems, contractors, and manual entry for years. Pearstop matched every manufacturer against SPIE&rsquo;s own approved list, scored each record for confidence, and gave the team a ranked list of where to review first.
-              </p>
+          <CaseHero
+            aside={
+              <CaseFactSheet
+                rows={[
+                  { label: "Client", value: "SPIE Building Solutions BV" },
+                  { label: "Data", value: "Asset register: manufacturer and equipment type" },
+                  { label: "Scope", value: "204,029 asset records" },
+                  { label: "Approach", value: "Rules + LLM cross-check + human review" }
+                ]}
+              />
+            }
+          >
+            <div style={{ display: "flex", gap: 10, alignItems: "center", flexWrap: "wrap" }}>
+              <CaseTypeBadge type="client" />
+              <span style={{ fontSize: 13, color: "var(--muted)" }}>Hard Services FM · Asset data</span>
             </div>
-            <CaseFactSheet
-              rows={[
-                { label: "Client", value: "SPIE Building Solutions BV" },
-                { label: "Data", value: "Asset register: manufacturer and equipment type" },
-                { label: "Scope", value: "204,029 asset records" },
-                { label: "Approach", value: "Rules + LLM cross-check + human review" }
-              ]}
-            />
-          </div>
+            <h1 style={{ margin: 0, fontSize: "clamp(2.2rem, 4vw, 3.4rem)", lineHeight: 1.08, fontWeight: 600, letterSpacing: "-0.025em", color: "var(--primary-dark)" }}>
+              9,175 supplier spellings brought back to 1,493 for SPIE Building Solutions
+            </h1>
+            <CaseHeadlineAccent />
+            <p style={{ margin: 0, fontSize: 20, lineHeight: 1.6, fontWeight: 300, color: "var(--text)" }}>
+              SPIE&rsquo;s asset register had been fed by maintenance systems, contractors, and manual entry for years. Pearstop matched every manufacturer against SPIE&rsquo;s own approved list, scored each record for confidence, and gave the team a ranked list of where to review first.
+            </p>
+          </CaseHero>
         </div>
       </section>
 
@@ -65,7 +68,7 @@ export default function SpieCaseStudyPage() {
       />
 
       <section style={{ background: "#fff", padding: "0 0 104px" }}>
-        <div className="container" style={{ display: "grid", gridTemplateColumns: "repeat(2, minmax(0, 1fr))", gap: 80, alignItems: "start" }}>
+        <div className={`container ${styles.twoCol}`}>
           <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
             <CaseSectionLabel>The situation</CaseSectionLabel>
             <CaseH2>One manufacturer, a dozen spellings</CaseH2>
@@ -137,7 +140,7 @@ export default function SpieCaseStudyPage() {
       </section>
 
       <section style={{ background: "var(--bg-soft)", padding: "104px 0" }}>
-        <div className="container" style={{ display: "grid", gridTemplateColumns: "minmax(0, 1.2fr) minmax(0, 1fr)", gap: 72, alignItems: "center" }}>
+        <div className={`container ${styles.twoColCenter}`}>
           <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
             <CaseSectionLabel>Where to look first</CaseSectionLabel>
             <CaseH2>A ranked review list instead of a wall of rows</CaseH2>
@@ -146,15 +149,13 @@ export default function SpieCaseStudyPage() {
               percent="73.1%"
               segments={[
                 { width: "73.1%", bg: "var(--success)", label: "confirmed", color: "var(--navy)" },
-                { width: "auto", bg: "var(--purple)", label: "Queued for review, highest priority first", color: "var(--navy)" }
+                { width: "auto", bg: "var(--purple)", label: "For review", legendLabel: "Queued for review, highest priority first", color: "var(--navy)" }
               ]}
             />
           </div>
           <CaseQuoteBig
             quote="The confidence scoring meant our team knew where to spend their review time first, instead of starting from scratch on 200,000 rows."
-            initials="BP"
-            name="Bart van Peij"
-            role="Head of Master Data Management, SPIE Building Solutions"
+            personId="bartVanPeij"
           />
         </div>
       </section>
@@ -187,9 +188,7 @@ export default function SpieCaseStudyPage() {
         <div className="container">
           <CaseQuoteCard
             quote="Pearstop's manufacturer matching gave us the right starting point to load data back into the ERP. This project taught us a lot about data cleaning with AI."
-            initials="MB"
-            name="Martijn van Balkom"
-            role="Project Manager, SPIE Building Solutions"
+            personId="martijnVanBalkom"
           />
         </div>
       </section>
@@ -207,8 +206,7 @@ export default function SpieCaseStudyPage() {
         title="Same problem in your asset register?"
         lead="Send us a sample of your asset or equipment data. We match it against your own reference list and send it back scored, so you see a first pass on your own records."
         ctaLabel="Send a sample"
-        ctaHref={siteConfig.calendly}
-        external
+        sample
       />
     </>
   );

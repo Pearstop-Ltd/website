@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import {
-  CaseBreadcrumb, CaseTypeBadge, CaseFactSheet, CaseResultsBand, CaseSectionLabel, CaseH2, CaseBodyP,
+  CaseBreadcrumb, CaseHero, CaseHeadlineAccent, CaseTypeBadge, CaseFactSheet, CaseResultsBand, CaseSectionLabel, CaseH2, CaseBodyP,
   CaseProcessDiagram, CaseQuoteCard, CaseMoreLinks, CaseClosingCTA
 } from "@/components/case-design";
 import { alternateLanguages, siteConfig } from "@/lib/site";
@@ -21,34 +21,36 @@ export default function LemtechCaseStudyPage() {
       <section style={{ background: "#fff", padding: "56px 0 72px" }}>
         <div className="container" style={{ display: "flex", flexDirection: "column", gap: 40 }}>
           <CaseBreadcrumb current="Lemtech" />
-          <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 1.55fr) minmax(0, 1fr)", gap: 72, alignItems: "start" }}>
-            <div style={{ display: "flex", flexDirection: "column", gap: 22 }}>
-              <div style={{ display: "flex", gap: 10, alignItems: "center", flexWrap: "wrap" }}>
-                <CaseTypeBadge type="client" />
-                <span style={{ fontSize: 13, color: "var(--muted)" }}>Manufacturing · Documents</span>
-              </div>
-              <h1 style={{ margin: 0, fontSize: "clamp(2.2rem, 4vw, 3.2rem)", lineHeight: 1.08, fontWeight: 600, letterSpacing: "-0.025em", color: "var(--primary-dark)" }}>
-                Turning messy site-visit notes into clean proposals for Lemtech
-              </h1>
-              <p style={{ margin: 0, fontSize: 20, lineHeight: 1.6, fontWeight: 300, color: "var(--text)" }}>
-                Site visit reports arrived in every format imaginable &mdash; handwritten notes, spelling mistakes, varying layouts. Pearstop built a system that reads incoming reports and automatically outputs a clean, accurate proposal document.
-              </p>
+          <CaseHero
+            aside={
+              <CaseFactSheet
+                rows={[
+                  { label: "Client", value: "Lemtech" },
+                  { label: "Data", value: "Handwritten and free-form site-visit reports" },
+                  { label: "Output", value: "Ready-to-send proposal documents" },
+                  { label: "Approach", value: "AI extraction + specification matching" }
+                ]}
+              />
+            }
+          >
+            <div style={{ display: "flex", gap: 10, alignItems: "center", flexWrap: "wrap" }}>
+              <CaseTypeBadge type="client" />
+              <span style={{ fontSize: 13, color: "var(--muted)" }}>Manufacturing · Documents</span>
             </div>
-            <CaseFactSheet
-              rows={[
-                { label: "Client", value: "Lemtech" },
-                { label: "Data", value: "Handwritten and free-form site-visit reports" },
-                { label: "Output", value: "Ready-to-send proposal documents" },
-                { label: "Approach", value: "AI extraction + specification matching" }
-              ]}
-            />
-          </div>
+            <h1 style={{ margin: 0, fontSize: "clamp(2.2rem, 4vw, 3.2rem)", lineHeight: 1.08, fontWeight: 600, letterSpacing: "-0.025em", color: "var(--primary-dark)" }}>
+              Turning messy site-visit notes into clean proposals for Lemtech
+            </h1>
+            <CaseHeadlineAccent />
+            <p style={{ margin: 0, fontSize: 20, lineHeight: 1.6, fontWeight: 300, color: "var(--text)" }}>
+              Site visit reports arrived in every format imaginable &mdash; handwritten notes, spelling mistakes, varying layouts. Pearstop built a system that reads incoming reports and automatically outputs a clean, accurate proposal document.
+            </p>
+          </CaseHero>
         </div>
       </section>
 
       <CaseResultsBand
         stats={[
-          { value: "Hours", label: "saved per proposal" },
+          { value: "1–3 hrs", label: "saved per proposal" },
           { value: "~0", label: "manual re-entry" },
           { value: "Accurate", label: "specification capture" }
         ]}
@@ -84,9 +86,7 @@ export default function LemtechCaseStudyPage() {
         <div className="container">
           <CaseQuoteCard
             quote="Pearstop built a system that automatically pulls the right items from our visiting reports into a clean proposal document. It saves our team a lot of time by eliminating the repetitive tasks of combining the correct items."
-            initials="VO"
-            name="Vince Out"
-            role="Commercial Manager, Lemtech"
+            personId="vinceOut"
           />
         </div>
       </section>
@@ -111,9 +111,8 @@ export default function LemtechCaseStudyPage() {
       <CaseClosingCTA
         title="Same problem with your own documents?"
         lead="Send us a sample of what comes in - messy notes, PDFs, or free text - and we'll show you what comes back structured."
-        ctaLabel="Talk to sales"
-        ctaHref={siteConfig.calendly}
-        external
+        ctaLabel="Send us a sample"
+        sample
       />
     </>
   );

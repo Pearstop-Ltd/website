@@ -183,16 +183,16 @@
         },
         {
           "title": "Facilities Management Provider",
-          "stat": "100,000+ assets cleaned and resolved",
-          "detail": "93% automated. The remaining 7% routed to domain experts.",
+          "stat": "9,175 → 1,493 supplier variants consolidated across 204,029 asset records",
+          "detail": "73.1% confirmed matches.",
           "href": "/cases",
           "quote": "Our asset lists worked for mechanics on-site, but did not allow us to plan smart maintenance or manage bid risk in a data-driven way.",
           "quoteRole": "Asset Manager, Facilities Management"
         },
         {
           "title": "Cleaning Services Company",
-          "stat": "Extraction accuracy: 70% → 99%",
-          "detail": "Moved from manual review to an ongoing subscription.",
+          "stat": "~300",
+          "detail": "invoices a month",
           "href": "/cases",
           "quote": "It would have taken five engineers and a full year to clean this up. So we decided to look for a better solution.",
           "quoteRole": "Head of Operations, Cleaning Services"
@@ -422,7 +422,7 @@
     },
     "cta": {
       "title": "Not sure which solution you need?",
-      "lead": "Book a 7-minute discovery call. We will identify exactly which data problem is costing you the most - and show you how to fix it.",
+      "lead": "Talk to sales. We will identify exactly which data problem is costing you the most - and show you how to fix it.",
       "bookDiscovery": "Talk to sales",
       "viewIndustries": "View Industries"
     }
@@ -521,7 +521,7 @@
     ],
     "cta": {
       "title": "Ready to fix the data underneath your next project?",
-      "lead": "Book a 7-minute discovery call. We will show you exactly where your data would break an ERP migration, a Fabric rollout, or an AI initiative today.",
+      "lead": "Talk to sales. We will show you exactly where your data would break an ERP migration, a Fabric rollout, or an AI initiative today.",
       "button": "Talk to sales"
     }
   },
@@ -587,7 +587,7 @@
       "s1": {
         "value": "~70% → 99%",
         "label": "first-pass extraction accuracy",
-        "copy": "On one FM client's live invoice stream, as the pipeline learned their supplier base"
+        "copy": "On one cleaning services client's live invoice stream, as the pipeline learned their supplier base"
       },
       "s2": {
         "value": "Any format",
@@ -616,7 +616,7 @@
       },
       {
         "question": "How accurate is automated invoice data extraction?",
-        "answer": "First-pass accuracy depends on document quality and supplier variability, but improves over time. On one facilities management client's invoice stream, first-pass extraction accuracy rose from roughly 70% to 99% as the pipeline learned that supplier base's formats and edge cases. Anything below a set confidence threshold is flagged for human review rather than guessed at."
+        "answer": "First-pass accuracy depends on document quality and supplier variability, but improves over time. On one cleaning services client's invoice stream, first-pass extraction accuracy rose from roughly 70% to 99% as the pipeline learned that supplier base's formats and edge cases. Anything below a set confidence threshold is flagged for human review rather than guessed at."
       },
       {
         "question": "Does extraction replace our ERP, or feed it?",
@@ -625,7 +625,7 @@
     ],
     "cta": {
       "title": "Still keying invoices in by hand?",
-      "lead": "Book a 7-minute discovery call and see what your own invoice stream looks like once it is actually read.",
+      "lead": "Talk to sales and see what your own invoice stream looks like once it is actually read.",
       "button": "Talk to sales"
     }
   },
@@ -718,7 +718,7 @@
     ],
     "cta": {
       "title": "Want to see it on a real client dataset?",
-      "lead": "Book a 7-minute discovery call and we'll show you what your next engagement's spend data looks like after a first pass.",
+      "lead": "Talk to sales and we'll show you what your next engagement's spend data looks like after a first pass.",
       "button": "Talk to sales"
     }
   },
@@ -816,7 +816,7 @@
     ],
     "cta": {
       "title": "Ready to see your own spend cube?",
-      "lead": "Book a 7-minute discovery call and we'll show you what your spend data looks like structured into a cube, ready for your dashboard.",
+      "lead": "Talk to sales and we'll show you what your spend data looks like structured into a cube, ready for your dashboard.",
       "button": "Talk to sales"
     }
   },
@@ -860,7 +860,7 @@
         "title": "Human review, then it remembers",
         "copy": "Anything still below a confidence threshold is flagged for your team, typically an hour or so a week. Every decision feeds back into the engine."
       },
-      "cta": "See it in action, book a 7-minute call"
+      "cta": "Talk to sales"
     },
     "outcome": {
       "title": "What a real spend baseline makes possible",
@@ -902,7 +902,7 @@
     ],
     "cta": {
       "title": "Ready to build a real spend baseline?",
-      "lead": "Book a 7-minute discovery call. We will show you exactly where your spend data is hiding the number you need.",
+      "lead": "Talk to sales. We will show you exactly where your spend data is hiding the number you need.",
       "button": "Talk to sales"
     }
   },
@@ -999,7 +999,7 @@
     ],
     "cta": {
       "title": "Ready to hold an independent view of your own?",
-      "lead": "Book a 7-minute discovery call and see exactly how Pearstop turns the data you already receive into something you can verify.",
+      "lead": "Talk to sales and see exactly how Pearstop turns the data you already receive into something you can verify.",
       "button": "Talk to sales"
     }
   },
@@ -1094,7 +1094,7 @@
     ],
     "cta": {
       "title": "Is your data ready for AI?",
-      "lead": "Book a 7-minute call and we will tell you exactly what needs to happen before your AI initiatives can deliver results.",
+      "lead": "Talk to sales and we will tell you exactly what needs to happen before your AI initiatives can deliver results.",
       "button": "Talk to sales",
       "fabricLink": "See Fabric readiness too"
     }
@@ -1216,7 +1216,7 @@
     },
     "cta": {
       "title": "Ready to automate your procurement classification?",
-      "lead": "Book a 7-minute discovery. We will show you exactly how the classification engine would work with your data.",
+      "lead": "Talk to sales. We will show you exactly how the classification engine would work with your data.",
       "button": "Talk to sales"
     }
   },
@@ -1351,7 +1351,7 @@
     },
     "cta": {
       "title": "Ready to see this run against your own data?",
-      "lead": "Book a 7-minute discovery, or test a single description on the free lookup tool first.",
+      "lead": "Talk to sales, or test a single description on the free lookup tool first.",
       "button": "Talk to sales",
       "secondaryButton": "Try the free lookup"
     }
@@ -1504,7 +1504,7 @@
     },
     "highlights": [
       {
-        "title": "Strukton (project in progress)",
+        "title": "Strukton",
         "copy": "Automated UNSPSC classification at scale for infrastructure procurement."
       },
       {
@@ -1531,7 +1531,7 @@
       "companyPlaceholder": "Company (optional)",
       "submitButton": "Download the case studies",
       "talkNote": "Prefer to talk first?",
-      "talkLinkText": "Book a 7-minute discovery call"
+      "talkLinkText": "Talk to sales"
     },
     "whyDownload": {
       "title": "Why people download it",
@@ -1648,7 +1648,7 @@
     "otherIndustries": {
       "title": "Working in a different industry?",
       "copy": "Data quality problems are not unique to the industries above. If your teams are managing complex operational data, dealing with inconsistent supplier records, or preparing for a digital transformation, the chances are we can help. Let's find out.",
-      "bookDiscovery": "Book a 7-minute discovery →"
+      "bookDiscovery": "Talk to sales"
     },
     "whatChanges": "What changes with Pearstop",
     "trusted": {
@@ -1657,7 +1657,7 @@
     "readyBanner": {
       "title": "Ready to Clean Your Data?",
       "copy": "We have solved this exact problem in infrastructure, facilities management, cleaning, construction, and manufacturing. If yours is a different industry with the same kind of data, tell us about it.",
-      "bookDiscovery": "Book a 7-Minute Discovery"
+      "bookDiscovery": "Talk to sales"
     },
     "technical": {
       "eyebrow": "Technical Industries",
@@ -2350,13 +2350,13 @@
     },
     "stillHaveQuestions": {
       "label": "Still have a question?",
-      "copy": "If your question is not answered here, the fastest way to get an answer is a 7-minute discovery call. There is no sales pressure — it is a direct conversation about your data situation.",
+      "copy": "If your question is not answered here, the fastest way to get an answer is to talk to sales. There is no sales pressure — it is a direct conversation about your data situation.",
       "cta": "Talk to sales",
       "email": "Send us a message"
     },
     "cta": {
       "title": "Ready to see it in action?",
-      "lead": "Book a 7-minute discovery and we will show you exactly how the classification engine works with your data.",
+      "lead": "Talk to sales and we will show you exactly how the classification engine works with your data.",
       "button": "Talk to sales"
     }
   },
@@ -2463,7 +2463,7 @@
     },
     "cta": {
       "title": "Ready to automate FM procurement classification?",
-      "lead": "Book a 7-minute discovery. We will show you exactly how the engine works with your spend data.",
+      "lead": "Talk to sales. We will show you exactly how the engine works with your spend data.",
       "button": "Talk to sales"
     }
   },
@@ -2474,13 +2474,13 @@
     },
     "geoBlock": {
       "title": "What does UNSPSC classification look like for a Dutch infrastructure or FM company?",
-      "copy": "Dutch infrastructure and FM companies typically run purchasing through SAP or AFAS, with invoice lines written by field teams rather than buyers, for example 'elektra werkzaamheden Q3' or 'pompafdichting vervangen'. UNSPSC classification assigns each of those lines a consistent 8-digit commodity code, which is what makes a Peppol-compliant invoice machine-readable rather than just structured. Strukton, a Dutch infrastructure contractor, processes 35,000 procurement lines a month this way through Pearstop's SAP integration, with 90 to 95% classified automatically."
+      "copy": "Dutch infrastructure and FM companies typically run purchasing through SAP or AFAS, with invoice lines written by field teams rather than buyers, for example 'elektra werkzaamheden Q3' or 'pompafdichting vervangen'. UNSPSC classification assigns each of those lines a consistent 8-digit commodity code, which is what makes a Peppol-compliant invoice machine-readable rather than just structured. Strukton, a Dutch infrastructure contractor, processed 35,000 procurement lines a month this way through Pearstop's SAP integration."
     },
     "hero": {
       "eyebrow": "UNSPSC Classificatie Nederland",
       "title": "UNSPSC classificatie voor Nederlandse infrastructuur-, FM-, en bouwbedrijven.",
       "lead": "Pearstop automatiseert de classificatie van inkoopregels naar UNSPSC-standaard — 90–95% zonder handmatige inspanning. Inclusief ondersteuning voor Peppol e-facturatie en Nederlandse ERP-systemen.",
-      "cta": "Boek een 7-minuten discovery",
+      "cta": "Praat met sales",
       "secondary": "Peppol en UNSPSC"
     },
     "peppol": {
@@ -2557,8 +2557,8 @@
     },
     "cta": {
       "title": "Klaar om uw inkoopclassificatie te automatiseren?",
-      "lead": "Boek een 7-minuten discovery. We laten u zien hoe de classificatie-engine met uw data werkt.",
-      "button": "Boek een 7-minuten discovery"
+      "lead": "Praat met sales. We laten u zien hoe de classificatie-engine met uw data werkt.",
+      "button": "Praat met sales"
     }
   },
   "UnspscDE": {
@@ -2574,7 +2574,7 @@
       "eyebrow": "UNSPSC Klassifizierung Deutschland",
       "title": "UNSPSC-Klassifizierung für deutsche Fertigungs-, FM- und Infrastrukturunternehmen.",
       "lead": "Pearstop automatisiert die Klassifizierung von Einkaufszeilen nach UNSPSC-Standard — 90–95% ohne manuellen Aufwand. Mit Unterstützung für die deutsche E-Rechnungspflicht 2025 und SAP-Integration.",
-      "cta": "7-minütige Discovery buchen",
+      "cta": "Mit Vertrieb sprechen",
       "secondary": "E-Rechnung und UNSPSC"
     },
     "einvoicing": {
@@ -2649,8 +2649,8 @@
     },
     "cta": {
       "title": "Bereit, Ihre Beschaffungsklassifizierung zu automatisieren?",
-      "lead": "Buchen Sie eine 7-minütige Discovery. Wir zeigen Ihnen, wie die Klassifizierungs-Engine mit Ihren Daten funktioniert.",
-      "button": "7-minütige Discovery buchen"
+      "lead": "Sprechen Sie mit unserem Vertrieb. Wir zeigen Ihnen, wie die Klassifizierungs-Engine mit Ihren Daten funktioniert.",
+      "button": "Mit Vertrieb sprechen"
     }
   },
   "UnspscLookup": {
@@ -2686,7 +2686,7 @@
     },
     "bulk": {
       "label": "Need to classify thousands of lines?",
-      "copy": "This tool handles single lookups. Pearstop’s automated classification engine processes 35,000 procurement lines per month — with 90-95% auto-classification and full SAP integration. Book a 7-minute discovery to see it with your data.",
+      "copy": "This tool handles single lookups. Pearstop’s automated classification engine processes 35,000 procurement lines per month — with 90-95% auto-classification and full SAP integration. Talk to sales to see it with your data.",
       "cta": "Talk to sales",
       "learnMore": "See how it works"
     },
@@ -2723,7 +2723,7 @@
         },
         {
           "q": "Can I classify an entire spend file or supplier catalog at once?",
-          "a": "The free tool above is built for one description at a time. For a full spend file, invoice history, or supplier catalog — hundreds to millions of lines — Pearstop's automated classification engine processes the whole dataset at once, reaching 90-95% automatic classification with the remainder flagged for human review. Book a 7-minute call to see it run on a sample of your own data."
+          "a": "The free tool above is built for one description at a time. For a full spend file, invoice history, or supplier catalog — hundreds to millions of lines — Pearstop's automated classification engine processes the whole dataset at once, reaching 90-95% automatic classification with the remainder flagged for human review. Talk to sales to see it run on a sample of your own data."
         },
         {
           "q": "Should I trust an AI-generated UNSPSC code without checking it?",
@@ -2733,7 +2733,7 @@
     },
     "cta": {
       "title": "Need to classify thousands of lines?",
-      "lead": "Book a 7-minute discovery and we will show you how the full classification engine works with your actual procurement data.",
+      "lead": "Talk to sales and we will show you how the full classification engine works with your actual procurement data.",
       "button": "Talk to sales"
     }
   },

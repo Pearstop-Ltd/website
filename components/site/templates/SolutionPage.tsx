@@ -11,6 +11,7 @@ import { DataTable, type DataTableProps } from "../DataTable";
 import { QuoteCard, type QuoteCardProps } from "../QuoteCard";
 import { Faq, type FaqItem } from "../Faq";
 import { ClosingCTA, type ClosingCTAProps } from "../ClosingCTA";
+import { HeadlineAccent } from "../HeadlineAccent";
 import styles from "./SolutionPage.module.css";
 
 export interface SolutionPageHero {
@@ -210,6 +211,7 @@ export function SolutionPage({ hero, sections, closingCTA, className }: Solution
           <div className={styles.heroMain}>
             <span className={styles.eyebrow}>{hero.eyebrow}</span>
             <h1 className={styles.title}>{hero.title}</h1>
+            <HeadlineAccent />
             <p className={styles.lead}>{hero.lead}</p>
             <div className={styles.heroActions}>
               <a href={hero.primaryHref} className={styles.primary}>
