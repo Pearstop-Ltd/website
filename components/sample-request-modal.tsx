@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState, type FormEvent } from "react";
+import { useId, useRef, useState, type FormEvent } from "react";
 import { RecaptchaNotice, RecaptchaScript, useRecaptchaV3 } from "@/components/recaptcha-widget";
 import { siteConfig } from "@/lib/site";
 
@@ -8,6 +8,7 @@ type Step = "email" | "details" | "fallback" | "success";
 type Status = "idle" | "submitting";
 
 export function SampleRequestModal({ label = "Send us 200 lines", className = "btn btn-primary" }: { label?: string; className?: string }) {
+  const titleId = useId();
   const dialogRef = useRef<HTMLDialogElement>(null);
   const detailsFormRef = useRef<HTMLFormElement>(null);
   const { getToken } = useRecaptchaV3();
@@ -147,14 +148,14 @@ export function SampleRequestModal({ label = "Send us 200 lines", className = "b
       <button type="button" className={className} onClick={openModal}>
         {label}
       </button>
-      <dialog ref={dialogRef} className="sample-modal" aria-labelledby="sample-modal-title">
+      <dialog ref={dialogRef} className="sample-modal" aria-labelledby={titleId}>
         <button type="button" className="sample-modal-close" onClick={closeModal} aria-label="Close">
           &times;
         </button>
 
         {step === "success" ? (
           <>
-            <h2 id="sample-modal-title">Sample received</h2>
+            <h2 id={titleId}>Sample received</h2>
             <p className="sample-modal-lead">
               Thanks &mdash; we&rsquo;ve got your files and details. We&rsquo;ll come back to you at {email} once your
               sample is classified.
@@ -165,7 +166,7 @@ export function SampleRequestModal({ label = "Send us 200 lines", className = "b
           </>
         ) : step === "email" ? (
           <>
-            <h2 id="sample-modal-title">Send us a sample</h2>
+            <h2 id={titleId}>Send us a sample</h2>
             <p className="sample-modal-lead">
               Send a representative sample of your invoice lines &mdash; up to 200 lines, or a handful of invoices
               (max 10) &mdash; and we&rsquo;ll classify them to show you exactly how it works. No cost, no commitment.
@@ -187,7 +188,7 @@ export function SampleRequestModal({ label = "Send us 200 lines", className = "b
           </>
         ) : step === "fallback" ? (
           <>
-            <h2 id="sample-modal-title">Let&rsquo;s send it by email instead</h2>
+            <h2 id={titleId}>Let&rsquo;s send it by email instead</h2>
             <p className="sample-modal-lead">
               The automatic upload didn&rsquo;t go through, so we&rsquo;ve opened an email to {siteConfig.email} with
               your details pre-filled. Attach your invoice files and hit send &mdash; that reaches us just as well.
@@ -199,7 +200,7 @@ export function SampleRequestModal({ label = "Send us 200 lines", className = "b
           </>
         ) : (
           <>
-            <h2 id="sample-modal-title">Almost there</h2>
+            <h2 id={titleId}>Almost there</h2>
             <p className="sample-modal-lead">
               A couple more details, then attach your files &mdash; up to 200 lines, or a handful of invoices (max
               10).

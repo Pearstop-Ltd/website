@@ -20,9 +20,15 @@ export interface SolutionPageHero {
   title: ReactNode;
   lead: ReactNode;
   primaryLabel: string;
-  primaryHref: string;
+  primaryHref?: string;
+  /** Render prop for a non-link primary action (e.g. a modal trigger like
+   * SampleRequestModal) instead of a plain link. Receives the primary
+   * button's className so the action matches the standard button styling.
+   * Takes precedence over primaryHref when both are set. */
+  primaryAction?: (className: string) => ReactNode;
   secondaryLabel?: string;
   secondaryHref?: string;
+  secondaryAction?: (className: string) => ReactNode;
   visual?: ReactNode;
 }
 
@@ -70,6 +76,11 @@ export interface SolutionPageProps {
   /** Ordered — every section between the hero and the closing CTA. */
   sections: SolutionSection[];
   closingCTA: ClosingCTAProps;
+  /** Set to false when the page route already renders its own FAQPage
+   * JSON-LD (e.g. to keep a pre-existing schema byte-for-byte during a
+   * migration) — otherwise this would double-emit FAQPage schema. Defaults
+   * to true. */
+  emitFaqSchema?: boolean;
   className?: string;
 }
 
@@ -180,11 +191,11 @@ function renderSection(section: SolutionSection) {
   }
 }
 
-export function SolutionPage({ hero, sections, closingCTA, className }: SolutionPageProps) {
+export function SolutionPage({ hero, sections, closingCTA, emitFaqSchema = true, className }: SolutionPageProps) {
   const faqItems = sections.filter((s): s is Extract<SolutionSection, { type: "faq" }> => s.type === "faq").flatMap((s) => s.items);
 
   const faqSchema =
-    faqItems.length > 0
+    emitFaqSchema && faqItems.length > 0
       ? {
           "@context": "https://schema.org",
           "@type": "FAQPage",
@@ -214,14 +225,20 @@ export function SolutionPage({ hero, sections, closingCTA, className }: Solution
             <HeadlineAccent />
             <p className={styles.lead}>{hero.lead}</p>
             <div className={styles.heroActions}>
-              <a href={hero.primaryHref} className={styles.primary}>
-                {hero.primaryLabel}
-              </a>
-              {hero.secondaryLabel && hero.secondaryHref ? (
-                <a href={hero.secondaryHref} className={styles.secondary}>
-                  {hero.secondaryLabel}
+              {hero.primaryAction ? (
+                hero.primaryAction(styles.primary)
+              ) : (
+                <a href={hero.primaryHref} className={styles.primary}>
+                  {hero.primaryLabel}
                 </a>
-              ) : null}
+              )}
+              {hero.secondaryAction
+                ? hero.secondaryAction(styles.secondary)
+                : hero.secondaryLabel && hero.secondaryHref ? (
+                    <a href={hero.secondaryHref} className={styles.secondary}>
+                      {hero.secondaryLabel}
+                    </a>
+                  ) : null}
             </div>
           </div>
           {hero.visual ? <div className={styles.heroVisual}>{hero.visual}</div> : null}

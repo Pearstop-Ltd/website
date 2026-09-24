@@ -52,14 +52,22 @@
   font-weight: 600;
   padding: 16px 28px;
   border-radius: 12px;
+  border: 0;
   text-decoration: none;
+  cursor: pointer;
+  font-family: inherit;
 }
 
 .secondary {
   color: var(--purple);
   font-size: 15px;
   font-weight: 500;
+  border: 0;
+  background: none;
+  padding: 0;
   text-decoration: none;
+  cursor: pointer;
+  font-family: inherit;
 }
 
 .footer {

@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import { dsRoot } from "./tokens";
-import { PearstopMark } from "./internal/PearstopMark";
+import { PearstopLogo } from "./internal/PearstopLogo";
 import styles from "./SourceDiagram.module.css";
 
 export interface SourceDiagramProps {
@@ -37,7 +37,7 @@ export function SourceDiagram({ inputs, processLines, outputs, className }: Sour
       <Arrow className={styles.arrow} />
 
       <div className={styles.processBox}>
-        <PearstopMark color="#ffffff" size={14} wordmarkSize={18} />
+        <PearstopLogo height={19} />
         <div className={styles.processLines}>
           {processLines.map((line, i) => (
             <span key={i}>

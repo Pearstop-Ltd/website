@@ -68,6 +68,9 @@ Migrating a page means re-skinning its existing content into the `components/sit
 - Tables are real HTML table elements with `thead` and `th`, never div grids.
 - Work only in the files the prompt names. Do not explore the rest of the repo.
 - Do not run screenshot or browser loops to check visuals. Run lint and build, then stop. The user reviews visually.
+- Each migrated page's markup and copy-shaped sections live once, in a shared component under `components/site/pages/` (e.g. `InvoiceDataExtraction.tsx`), taking a single `copy` prop typed to match the page's `messages/en.json` namespace. Both `app/[locale]/<page>/page.tsx` and `app/(site)/<page>/page.tsx` become thin wrappers: each keeps its own metadata, canonical, hreflang and JSON-LD exactly as before, and just supplies `copy` — the `[locale]` route via `getMessages()`/`getTranslations()`, the `(site)` route via a direct `messages/en.json` import — then renders the shared component. If the page's `SolutionPage`/`CasePage` sections include a `faq` section, pass `emitFaqSchema={false}` and keep emitting the route's own pre-existing `FAQPage` JSON-LD script, to avoid double-emitting schema.
+- A brand mark on a dark/blue background is always the real `/brand/logo-light.webp` white wordmark (via the shared `PearstopLogo` internal component), never a redrawn pear icon or plain text.
+- CTA routing convention: a "send us / send your ..." sample-shaped CTA opens `SampleRequestModal` (pass it into `primaryAction`/`secondaryAction` on `SolutionPageHero`/`ClosingCTAProps` — these render-prop slots exist so a CTA can be a modal trigger instead of a link, styled with the button's own className). A "talk to sales" CTA links to `siteConfig.calendly`. A "request a demo" CTA links to `/book-a-demo`, not directly to `siteConfig.demoCalendly`.
 
 ### Redirects
 
