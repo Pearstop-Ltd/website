@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Script from "next/script";
-import { CTABand, GeoBlock, PageHero, QuoteBox, SectionTitle } from "@/components/content";
+import { CTABand, GeoBlock, QuoteBox, SectionTitle } from "@/components/content";
 import { UnspscLookupCta } from "@/components/unspsc-lookup-cta";
+import { HeroBand } from "@/components/site/HeroBand";
+import { SampleRequestModal } from "@/components/sample-request-modal";
 import { alternateLanguages, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -86,15 +88,15 @@ export default function UnspscPage() {
       <Script id="service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
-      <PageHero
-        className="hero-left"
+      <HeroBand
         eyebrow="UNSPSC Classification"
         title="Your procurement data contains the answers. You just cannot read it yet."
         lead="Most FM and construction companies have years of purchase order data in SAP or Oracle. Without UNSPSC classification, it is a pile of free-text line items. With it, you can see exactly what you spend by category, benchmark suppliers, and build tenders from actual cost data. Pearstop classifies invoices at any scale, from a pilot of a few hundred lines to full production volume - it scales with you."
-        actions={[
-          { label: "Talk to sales", href: siteConfig.calendly, variant: "primary", external: true },
-          { label: "What is UNSPSC?", href: "#what-is-unspsc", variant: "secondary" }
-        ]}
+        primaryLabel="Send us 200 lines"
+        primaryAction={(className) => <SampleRequestModal label="Send us 200 lines" className={className} />}
+        secondaryLabel="Talk to sales"
+        secondaryHref="/book-a-demo"
+        image={{ src: "/images/photos/office-worker-1.png", alt: "Procurement team member reviewing classified spend data", width: 1536, height: 1024 }}
       />
 
       <section id="what-is-unspsc">

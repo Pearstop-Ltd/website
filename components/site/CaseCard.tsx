@@ -26,12 +26,15 @@ export interface CaseCardProps {
   /** Client logo badge, from an existing file in /images/clients/. Omit
    * for anonymised pattern cases — there's no client to credit. */
   logo?: { src: string; alt: string };
+  /** Anchor target, e.g. so an external link like /cases#strukton lands on
+   * this card. */
+  id?: string;
   className?: string;
 }
 
-export function CaseCard({ variant, eyebrow, title, stats, href, linkLabel, visual, image, logo, className }: CaseCardProps) {
+export function CaseCard({ variant, eyebrow, title, stats, href, linkLabel, visual, image, logo, id, className }: CaseCardProps) {
   return (
-    <article className={dsRoot(styles.root, className)}>
+    <article id={id} className={dsRoot(styles.root, className)}>
       {image ? (
         <div className={styles.imageWrap}>
           <Image src={image.src} alt={image.alt} width={image.width} height={image.height} className={styles.image} />

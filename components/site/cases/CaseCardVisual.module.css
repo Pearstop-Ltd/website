@@ -1,0 +1,335 @@
+.root {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.noShrink {
+  flex-shrink: 0;
+}
+
+/* --- supplierMerge (featured SPIE) --- */
+
+.merge {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 36px 32px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  box-shadow: 0 1px 2px rgba(31, 42, 104, 0.06);
+}
+
+.mergeCol {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.mergeLabel {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.mergeLabelGreen {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--green-text);
+}
+
+.mergePill {
+  font-family: "SF Mono", Menlo, monospace;
+  font-size: 13px;
+  padding: 9px 12px;
+  border-radius: 8px;
+  background: var(--bg-soft);
+  color: var(--text);
+}
+
+.mergeResult {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 14px 16px;
+  border-radius: 10px;
+  background: var(--tint-green);
+  border: 1.5px solid var(--green);
+  color: var(--navy-deep);
+}
+
+.mergeCaption {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.mergeOutCol {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-grow: 1;
+}
+
+/* --- taxonomyBars (Strukton) --- */
+
+.taxonomy {
+  background: var(--tint-blue);
+  padding: 28px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  height: 100%;
+}
+
+.taxonomyBar {
+  height: 18px;
+  border-radius: 4px;
+}
+
+.taxonomyCaption {
+  font-size: 11px;
+  color: var(--navy-deep);
+  margin-top: 6px;
+  line-height: 1.4;
+}
+
+/* --- marginBars (FARO) --- */
+
+.margin {
+  background: var(--tint-purple);
+  padding: 28px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  height: 100%;
+}
+
+.marginGrid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 5px;
+}
+
+.marginCell {
+  height: 44px;
+  border-radius: 4px;
+  background: #ffffff;
+}
+
+.marginCellActive {
+  background: var(--navy);
+}
+
+.marginCaption {
+  font-size: 11px;
+  color: var(--navy-deep);
+  line-height: 1.4;
+}
+
+/* --- accuracyBars (cleaning client) --- */
+
+.accuracy {
+  background: var(--tint-green);
+  padding: 28px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  height: 100%;
+}
+
+.accuracyRow {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.accuracyRowLabel {
+  font-size: 11px;
+  color: var(--navy-deep);
+}
+
+.accuracyTrack {
+  height: 12px;
+  border-radius: 6px;
+  background: #ffffff;
+}
+
+.accuracyFill {
+  height: 12px;
+  border-radius: 6px;
+}
+
+.accuracyCaption {
+  font-size: 11px;
+  color: var(--navy-deep);
+  line-height: 1.4;
+}
+
+/* --- docToDoc (Lemtech) --- */
+
+.docToDoc {
+  background: var(--bg-soft);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 100%;
+}
+
+.docMessy {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 64px;
+  flex-shrink: 0;
+}
+
+.docMessyLine {
+  height: 5px;
+  background: var(--purple);
+  border-radius: 3px;
+}
+
+.docClean {
+  background: #ffffff;
+  border-radius: 6px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 64px;
+  flex-shrink: 0;
+  box-shadow: 0 1px 2px rgba(31, 42, 104, 0.08);
+}
+
+.docCleanLine {
+  height: 5px;
+  border-radius: 3px;
+}
+
+.docCleanLineStrong {
+  background: var(--navy);
+}
+
+.docCleanLineSoft {
+  background: var(--tint-blue);
+}
+
+/* --- priceSpread (construction pattern) --- */
+
+.priceSpread {
+  padding: 28px 28px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  height: 100%;
+}
+
+.priceTrack {
+  position: relative;
+  height: 22px;
+}
+
+.priceLine {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 10px;
+  height: 2px;
+  background: var(--tint-blue);
+}
+
+.priceDot {
+  position: absolute;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.priceLabels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* --- supplierTiles (cleaning pattern) --- */
+
+.supplierTiles {
+  padding: 28px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.tileGrid {
+  display: grid;
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+  gap: 5px;
+  width: 100%;
+}
+
+.tile {
+  height: 22px;
+  border-radius: 4px;
+  background: var(--border);
+}
+
+.tileKeep {
+  background: var(--green);
+}
+
+/* --- partNumber (MRO pattern) --- */
+
+.partNumber {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  height: 100%;
+}
+
+.partRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.partOld {
+  font-family: "SF Mono", Menlo, monospace;
+  font-size: 13px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  background: var(--bg-soft);
+  color: var(--muted);
+  text-decoration: line-through;
+}
+
+.partNew {
+  font-family: "SF Mono", Menlo, monospace;
+  font-size: 13px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  background: var(--tint-green);
+  border: 1px solid var(--green);
+  color: var(--navy-deep);
+}
+
+.partCaption {
+  font-size: 12px;
+  color: var(--green-text);
+  font-weight: 500;
+}

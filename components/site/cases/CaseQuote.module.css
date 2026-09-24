@@ -1,0 +1,63 @@
+.root {
+  margin: 0;
+  padding: 32px;
+  border-radius: 20px;
+  background: var(--bg-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.quote {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.55;
+  font-weight: 400;
+  color: var(--navy-deep);
+}
+
+.caption {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: auto;
+}
+
+.avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.avatarPhoto {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.person {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--navy-deep);
+}
+
+.role {
+  font-size: 13px;
+  color: var(--muted);
+}

@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import { getTranslations , setRequestLocale } from "next-intl/server";
-import { CTABand, GeoBlock, PageHero, QuoteBox, SectionTitle } from "@/components/content";
+import { CTABand, GeoBlock, QuoteBox, SectionTitle } from "@/components/content";
 import { CalendlyButton } from "@/components/calendly-button";
+import { HeroBand } from "@/components/site/HeroBand";
+import { SampleRequestModal } from "@/components/sample-request-modal";
 import { alternateLanguages, siteConfig } from "@/lib/site";
 
 type FaqItem = { question: string; answer: string };
@@ -39,14 +41,15 @@ export default async function ProcurementPage({ params }: { params: Promise<{ lo
 
   return (
     <>
-      <PageHero
+      <HeroBand
         eyebrow={t("hero.eyebrow")}
         title={t("hero.title")}
         lead={t("hero.lead")}
-        actions={[
-          { label: t("cta.button"), href: siteConfig.calendly, variant: "primary", external: true },
-          { label: t("howItWorks.title"), href: "#how-it-works", variant: "secondary" }
-        ]}
+        primaryLabel="Send us 200 lines"
+        primaryAction={(className) => <SampleRequestModal label="Send us 200 lines" className={className} />}
+        secondaryLabel="Talk to sales"
+        secondaryHref="/book-a-demo"
+        image={{ src: "/images/photos/office-worker-2.png", alt: "Procurement analyst reviewing spend data on screen", width: 1536, height: 1024 }}
       />
 
       <section>

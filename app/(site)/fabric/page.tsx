@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { CTABand, GeoBlock, PageHero, QuoteBox, SectionTitle, StatsGrid } from "@/components/content";
+import { CTABand, GeoBlock, QuoteBox, SectionTitle, StatsGrid } from "@/components/content";
+import { HeroBand } from "@/components/site/HeroBand";
+import { SampleRequestModal } from "@/components/sample-request-modal";
 import { alternateLanguages, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -39,14 +41,15 @@ export default function FabricPage() {
     <>
       <Script id="fabric-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <PageHero
+      <HeroBand
         eyebrow="Fabric Ready"
         title="Your Microsoft Fabric migration will only deliver if your data is ready first."
         lead="Microsoft Fabric promises company-wide insight. Pearstop makes sure the data feeding it is clean, structured, and reliable so your migration delivers what leadership is expecting."
-        actions={[
-          { label: "Talk to sales", href: siteConfig.calendly, variant: "primary", external: true },
-          { label: "How it works", href: "#how-it-works", variant: "secondary" }
-        ]}
+        primaryLabel="Send us 200 lines"
+        primaryAction={(className) => <SampleRequestModal label="Send us 200 lines" className={className} />}
+        secondaryLabel="Talk to sales"
+        secondaryHref="/book-a-demo"
+        image={{ src: "/images/photos/office-desk-woman-1.png", alt: "Data specialist preparing reference data for a Microsoft Fabric rollout", width: 1536, height: 1024 }}
       />
 
       <section>

@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Script from "next/script";
-import { CTABand, GeoBlock, PageHero, QuoteBox, SectionTitle } from "@/components/content";
+import { CTABand, GeoBlock, QuoteBox, SectionTitle } from "@/components/content";
+import { HeroBand } from "@/components/site/HeroBand";
+import { SampleRequestModal } from "@/components/sample-request-modal";
 import { alternateLanguages, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -40,14 +42,15 @@ export default function DataQualityPage() {
     <>
       <Script id="dataquality-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <PageHero
+      <HeroBand
         eyebrow="Data Quality"
         title="An ERP migration, a Fabric rollout, or an AI project inherits every mistake already in your data."
         lead="None of these projects fix bad data on their own. They move it, or build on top of it. Pearstop cleans and structures the reference data first, whether the project is an ERP migration, a Microsoft Fabric rollout, an AI initiative, or unifying every service line on one multi-year FM contract."
-        actions={[
-          { label: "Talk to sales", href: siteConfig.calendly, variant: "primary", external: true },
-          { label: "See how it works", href: "#how-it-works", variant: "secondary" }
-        ]}
+        primaryLabel="Send us 200 lines"
+        primaryAction={(className) => <SampleRequestModal label="Send us 200 lines" className={className} />}
+        secondaryLabel="Talk to sales"
+        secondaryHref="/book-a-demo"
+        image={{ src: "/images/photos/office-worker-4.png", alt: "Data specialist reviewing reference data quality", width: 1536, height: 1024 }}
       />
 
       <section>

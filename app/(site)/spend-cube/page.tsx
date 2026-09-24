@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Script from "next/script";
-import { CTABand, GeoBlock, PageHero, QuoteBox, SectionTitle } from "@/components/content";
+import { CTABand, GeoBlock, QuoteBox, SectionTitle } from "@/components/content";
+import { HeroBand } from "@/components/site/HeroBand";
+import { SampleRequestModal } from "@/components/sample-request-modal";
 import { alternateLanguages, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -44,14 +46,15 @@ export default function SpendCubePage() {
     <>
       <Script id="spendcube-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <PageHero
+      <HeroBand
         eyebrow="Spend Cube & Dashboards"
         title="A spend cube built in days, not a manual quarter-long project"
         lead="A spend cube is only useful if it's built on classified, consistent data and stays current. Pearstop classifies your spend once and keeps classifying it as new invoices and purchase orders arrive, so the cube, and whatever dashboard sits on top of it, doesn't go stale the week after it's delivered."
-        actions={[
-          { label: "Talk to sales", href: siteConfig.calendly, variant: "primary", external: true },
-          { label: "See how it works", href: "#how-it-works", variant: "secondary" }
-        ]}
+        primaryLabel="Send us 200 lines"
+        primaryAction={(className) => <SampleRequestModal label="Send us 200 lines" className={className} />}
+        secondaryLabel="Talk to sales"
+        secondaryHref="/book-a-demo"
+        image={{ src: "/images/photos/office-worker-3.png", alt: "Analyst building a spend dashboard from classified data", width: 1536, height: 1024 }}
       />
 
       <section>

@@ -4,7 +4,9 @@ import { getTranslations , setRequestLocale } from "next-intl/server";
 import Link from "next/link";
 import { Fragment } from "react";
 import Script from "next/script";
-import { GeoBlock, PageHero, SectionTitle } from "@/components/content";
+import { GeoBlock, SectionTitle } from "@/components/content";
+import { HeroBand } from "@/components/site/HeroBand";
+import { SampleRequestModal } from "@/components/sample-request-modal";
 import { alternateLanguages, industryCards, siteConfig } from "@/lib/site";
 
 const breadcrumbSchema = {
@@ -115,10 +117,15 @@ export default async function IndustriesPage({
       <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
-      <PageHero
+      <HeroBand
         eyebrow={t("hero.eyebrow")}
         title={t("hero.title")}
         lead={t("hero.lead")}
+        primaryLabel="Send us 200 lines"
+        primaryAction={(className) => <SampleRequestModal label="Send us 200 lines" className={className} />}
+        secondaryLabel="Talk to sales"
+        secondaryHref="/book-a-demo"
+        image={{ src: "/images/photos/the-city-1.png", alt: "City skyline representing the range of industries Pearstop serves", width: 1402, height: 1122 }}
       />
 
       <section>

@@ -4,6 +4,7 @@ import {
   CaseBreadcrumb, CaseHero, CaseHeadlineAccent, CaseTypeBadge, CaseSectionLabel, CaseH2, CaseBodyP, CaseProcessDiagram, CaseQuoteCard,
   CaseMoreLinks, CaseClosingCTA
 } from "@/components/case-design";
+import { CaseTileGrid, CasePriceBars, CaseSpendDonut } from "@/components/case-design-charts";
 import { alternateLanguages, siteConfig } from "@/lib/site";
 import styles from "@/components/case-design.module.css";
 
@@ -16,8 +17,6 @@ export const metadata: Metadata = {
     languages: alternateLanguages("/cases/cleaning-consumables-consolidation")
   }
 };
-
-const tileColors = Array.from({ length: 30 }, (_, i) => ([4, 15, 25].includes(i) ? "var(--success)" : "var(--border)"));
 
 const suppliers = [
   { name: "Gompels", price: "£0.31", terms: "Account, 30 days", delivery: "National, 2 to 3 days" },
@@ -43,9 +42,8 @@ export default function CleaningCaseStudyPage() {
             equal
             aside={
               <div style={{ background: "var(--bg-soft)", borderRadius: 24, padding: 40, display: "flex", flexDirection: "column", gap: 18 }}>
-                <div className={styles.grid6} style={{ gap: 8 } as CSSProperties}>
-                  {tileColors.map((bg, i) => <div key={i} style={{ height: 52, borderRadius: 8, background: bg }} />)}
-                </div>
+                <CaseTileGrid total={30} finalIndices={[4, 15, 25]} />
+
                 <div style={{ display: "flex", justifyContent: "space-between", fontSize: 13, color: "var(--muted)", flexWrap: "wrap", gap: 8 }}>
                   <span>Each tile is a supplier that invoiced for toilet paper</span>
                   <span style={{ display: "flex", gap: 6, alignItems: "center" }}>
@@ -72,7 +70,7 @@ export default function CleaningCaseStudyPage() {
 
       <section style={{ background: "var(--purple-soft)", padding: "18px 0", fontSize: 14, color: "var(--navy)" }}>
         <div className="container">
-          <strong style={{ fontWeight: 600 }}>Illustrative data.</strong> Based on a pattern we see again and again in soft FM procurement. Not a named client engagement.
+          This case is built on a pattern we see again and again in soft FM procurement.
         </div>
       </section>
 
@@ -154,25 +152,12 @@ export default function CleaningCaseStudyPage() {
             <div style={{ border: "1px solid var(--border)", borderRadius: 20, padding: 32, display: "flex", flexDirection: "column", gap: 18 }}>
               <h3 style={{ margin: 0, fontSize: 20, fontWeight: 600, color: "var(--primary-dark)" }}>Same roll, five prices</h3>
               <span style={{ fontSize: 13, color: "var(--muted)", marginTop: -8 }}>Tork Advanced T4, price paid per roll</span>
-              <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-                {bars.map((b) => (
-                  <div key={b.label} style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                    <span style={{ fontSize: 13, color: "var(--muted)", width: 76, flexShrink: 0 }}>{b.label}</span>
-                    <div style={{ height: 18, borderRadius: 4, background: b.color, width: b.w }} />
-                    <span style={{ fontSize: 13, fontWeight: 600, color: "var(--navy)" }}>{b.price}</span>
-                  </div>
-                ))}
-              </div>
+              <CasePriceBars bars={bars} />
               <p style={{ margin: 0, fontSize: 15, lineHeight: 1.6, fontWeight: 300, color: "var(--text)" }}><strong style={{ fontSize: 22, fontWeight: 600, color: "var(--navy)" }}>68%</strong> spread on one product. Each price sits on a different invoice under a different description.</p>
             </div>
             <div style={{ border: "1px solid var(--border)", borderRadius: 20, padding: 32, display: "flex", flexDirection: "column", gap: 18 }}>
               <h3 style={{ margin: 0, fontSize: 20, fontWeight: 600, color: "var(--primary-dark)" }}>Spend you can&rsquo;t see</h3>
-              <div style={{ display: "flex", justifyContent: "center", padding: "6px 0" }}>
-                <svg width="120" height="120" viewBox="0 0 100 100" aria-hidden="true">
-                  <circle cx="50" cy="50" r="38" fill="none" stroke="var(--primary)" strokeWidth="16" />
-                  <circle cx="50" cy="50" r="38" fill="none" stroke="#C9CDD8" strokeWidth="16" strokeDasharray="57.3 238.8" transform="rotate(-90 50 50)" />
-                </svg>
-              </div>
+              <CaseSpendDonut filledLength={57.3} totalLength={238.8} />
               <p style={{ margin: 0, fontSize: 15, lineHeight: 1.6, fontWeight: 300, color: "var(--text)" }}><strong style={{ fontSize: 22, fontWeight: 600, color: "var(--navy)" }}>24%</strong> of spend uncategorised. You can&rsquo;t benchmark it, negotiate it, or report on it until it has a label.</p>
             </div>
           </div>

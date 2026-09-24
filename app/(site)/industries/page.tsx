@@ -3,7 +3,9 @@ import type { Metadata } from "next";
 import { Fragment } from "react";
 import Link from "next/link";
 import Script from "next/script";
-import { GeoBlock, PageHero, SectionTitle } from "@/components/content";
+import { GeoBlock, SectionTitle } from "@/components/content";
+import { HeroBand } from "@/components/site/HeroBand";
+import { SampleRequestModal } from "@/components/sample-request-modal";
 import { alternateLanguages, industryCards, siteConfig } from "@/lib/site";
 
 const PAGE_URL = `${siteConfig.url}/industries`;
@@ -412,10 +414,15 @@ export default function IndustriesPage() {
       <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
-      <PageHero
+      <HeroBand
         eyebrow="Industries"
         title="Industries We Serve"
         lead="Pearstop cleans and classifies operational data for the industries carrying the heaviest, messiest spend: infrastructure, facilities management, construction, and manufacturing. Find your industry below."
+        primaryLabel="Send us 200 lines"
+        primaryAction={(className) => <SampleRequestModal label="Send us 200 lines" className={className} />}
+        secondaryLabel="Talk to sales"
+        secondaryHref="/book-a-demo"
+        image={{ src: "/images/photos/the-city-1.png", alt: "City skyline representing the range of industries Pearstop serves", width: 1402, height: 1122 }}
       />
 
       <section>

@@ -1897,5 +1897,320 @@
       "title": "Hoe zoek je een UNSPSC- of procurement classificatiecode op?",
       "copy": "Om een UNSPSC code op te zoeken, schrijf je een eenvoudige beschrijving van het product of de dienst, bijvoorbeeld 'HVAC filter replacement' of 'subcontractor plumbing works', en plak je deze in een lookup tool. De gratis tool van Pearstop vergelijkt die beschrijving met de volledige UNSPSC taxonomy en retourneert de 8-cijferige commodity code, het segment, de family en class, en een confidence level, binnen enkele seconden. Voor een enkele regel is dat voldoende om een code handmatig te controleren. Voor een volledig spend file of invoice history wordt dezelfde classificatielogica automatisch toegepast op elke regel via de engine van Pearstop, met een nauwkeurigheid van 90 tot 95% zonder dat een persoon de lookup regel voor regel uitvoert."
     }
+  },
+  "Home": {
+    "meta": {
+      "title": "Pearstop - Weet wat u koopt, bij wie, tegen welke prijs",
+      "description": "Pearstop zet uw facturen om in bruikbare spend-data. Stuur ons 200 regels en wij sturen ze gelabeld terug - geen opschoning vooraf nodig."
+    },
+    "hero": {
+      "title": "Weet wat u koopt, bij wie, tegen welke prijs.",
+      "leadLine1": "Uw factuurdata zit vol antwoorden. Pearstop maakt ze bruikbaar.",
+      "objection": "Uw data hoeft niet eerst te worden opgeschoond.",
+      "sendSample": "Stuur ons 200 regels",
+      "bookDiscovery": "Praat met sales",
+      "objectionTrailer": "Dat is het werk dat wij doen."
+    },
+    "caseStudiesBand": {
+      "title": "Zie het werken op uw eigen data",
+      "description": "Stuur een representatieve steekproef van uw factuurregels - tot 200 regels, of een handvol facturen (max. 10) - en wij classificeren ze en sturen ze gelabeld terug. Geen kosten, geen setup, niets te installeren. Het is de snelste manier om precies te zien wat Pearstop doet voordat u zich ergens aan verbindt.",
+      "viewInBrowser": "Bekijk eerst de cases"
+    },
+    "counters": {
+      "items": [
+        {
+          "value": "35.000+",
+          "label": "Procurement-regels elke maand geclassificeerd"
+        },
+        {
+          "value": "95%",
+          "label": "Automatisch geclassificeerd, vóór menselijke controle"
+        },
+        {
+          "value": "100.000+",
+          "label": "Assets opgeschoond voor één klant"
+        }
+      ]
+    },
+    "clients": {
+      "label": "Vertrouwd door toonaangevende organisaties"
+    },
+    "problemQuotes": {
+      "title": "Wat inkopers ons vertellen",
+      "items": [
+        {
+          "quote": "De meeste bedrijven vliegen blind en komen er pas achter wanneer iemand een vraag stelt die ze niet kunnen beantwoorden.",
+          "source": "Procurement Lead, Infrastructuur"
+        },
+        {
+          "quote": "U kunt niet onderhandelen over wat u niet kunt zien.",
+          "source": "Hoofd Inkoop, Facilities Management"
+        },
+        {
+          "quote": "Als u uw kostenbasis niet kunt onderbouwen, biedt u op een gevoel.",
+          "source": "Commercieel Directeur, Bouw"
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Hoe het werkt",
+      "stage1": {
+        "label": "Fase 1",
+        "title": "Stuur ons wat u heeft",
+        "copy": "PDF's, ERP-exports, portal-downloads, spreadsheets. Voor de meeste ERP's zijn API-connectoren beschikbaar."
+      },
+      "stage2": {
+        "label": "Fase 2",
+        "title": "Wij schonen, verrijken en classificeren elke regel",
+        "copy": "We halen alles uit de regel wat we kunnen vinden, vullen ontbrekende gegevens aan met leveranciers- en inkoophistorie, en classificeren tot op UNSPSC-niveau - tot op het detailniveau dat uw vragen daadwerkelijk beantwoordt, niet slechts een hoofdcategorie."
+      },
+      "stage3": {
+        "label": "Fase 3",
+        "title": "Uw spend blijft geclassificeerd",
+        "copy": "Naarmate nieuwe facturen binnenkomen, worden ze op dezelfde manier geclassificeerd - geen jaarlijks opschoningsproject nodig."
+      },
+      "beforeAfterCaption": "Illustratief voorbeeld: zes factuurregels van drie leveranciers. De originele omschrijving en leverancier blijven exact zoals ontvangen - Pearstop voegt alleen de kolommen rechts toe."
+    },
+    "screenshot": {
+      "alt": "Pearstop-dashboard met geclassificeerde spend-data op regelniveau, inclusief menselijke controle",
+      "caption": "Geclassificeerde spend-data op regelniveau, met de menselijke controlestap zichtbaar."
+    },
+    "productDemoVideo": {
+      "title": "Zie het in actie",
+      "caption": "Hoe Pearstop leveranciers- en spend-data extraheert, classificeert en normaliseert."
+    },
+    "who": {
+      "title": "Voor wie is dit",
+      "tiles": [
+        {
+          "title": "Facilities Management",
+          "copy": "Uw data komt vanuit elke dienstlijn in een ander formaat binnen.",
+          "href": "/industries#facilities-management"
+        },
+        {
+          "title": "Bouw",
+          "copy": "U schat biedingen in uit het hoofd omdat niemand historische werkelijke cijfers kan terugvinden.",
+          "href": "/industries#construction"
+        },
+        {
+          "title": "Infrastructuur",
+          "copy": "Er is een besparingsdoel vastgesteld en de data kan niet laten zien waar dit zit.",
+          "href": "/industries#infrastructure"
+        },
+        {
+          "title": "Productie",
+          "copy": "De ene entiteit werkt al met UNSPSC en een andere moet zich daarop afstemmen.",
+          "href": "/industries#manufacturing"
+        }
+      ],
+      "linkText": "Bekijk hoe dit van toepassing is →"
+    },
+    "objection": {
+      "dataTitle": "“Onze data is hier niet schoon genoeg voor.”",
+      "dataCopy": "Dat horen we het vaakst - en het is juist de reden om nu te beginnen in plaats van te wachten. Het opschonen van de data is het eerste wat Pearstop doet, geen voorwaarde om met ons te werken.",
+      "inHouseTitle": "“Is het niet goedkoper om dit zelf te bouwen?”",
+      "inHouseCopy": "Intern bouwen geeft volledige controle, maar reken op minstens twee data- of AI-specialisten om het goed te bouwen en te blijven onderhouden naarmate uw data verandert. We hebben interne bouwprojecten zien starten als nevenproject van een IT-team, live gaan zonder betrokkenheid van procurement, en binnen enkele maanden veranderen in een spreadsheet die niemand meer beheert. Pearstop is dat systeem al gebouwd - met een team dat als enige taak heeft het te blijven doorontwikkelen."
+    },
+    "proof": {
+      "title": "Cases",
+      "linkText": "Lees de case →",
+      "cards": [
+        {
+          "title": "Infrastructuur-aannemer",
+          "stat": "Een vastgesteld besparingsdoel",
+          "detail": "De data kon het niet lokaliseren. Pearstop maakte het zichtbaar.",
+          "href": "/cases",
+          "quote": "We hadden twee fulltime medewerkers die categorie-toewijzing deden. Nu doet het systeem dit voor ons - wat verderop in het proces ook margeschattingen mogelijk heeft gemaakt. Het is betrouwbaarder tegen een fractie van de kosten.",
+          "quoteRole": "Hoofd Inkoop, Infrastructuur"
+        },
+        {
+          "title": "Facilities Management-aanbieder",
+          "stat": "9.175 → 1.493 leveranciersvarianten geconsolideerd over 204.029 asset-records",
+          "detail": "73,1% bevestigde matches.",
+          "href": "/cases",
+          "quote": "Onze asset-lijsten werkten voor monteurs op locatie, maar stelden ons niet in staat om slim onderhoud te plannen of biedrisico datagedreven te beheren.",
+          "quoteRole": "Asset Manager, Facilities Management"
+        },
+        {
+          "title": "Schoonmaakbedrijf",
+          "stat": "~300",
+          "detail": "facturen per maand",
+          "href": "/cases",
+          "quote": "Het zou vijf engineers en een heel jaar hebben gekost om dit op te schonen. Dus besloten we op zoek te gaan naar een betere oplossing.",
+          "quoteRole": "Head of Operations, Schoonmaakdiensten"
+        }
+      ]
+    },
+    "closingCta": {
+      "title": "Stuur ons 200 regels. Wij sturen ze gelabeld terug.",
+      "action": "Stuur uw steekproef"
+    },
+    "faq": {
+      "heading": "Veelgestelde vragen",
+      "items": [
+        {
+          "q": "Wat is UNSPSC-classificatie?",
+          "a": "UNSPSC is een wereldwijde standaard voor het categoriseren van producten en diensten in een consistente hiërarchie. Hiermee kunt u spend vergelijken tussen leveranciers, locaties en periodes met dezelfde categorieën, in plaats van de vrije tekstomschrijving die elke factuur toevallig gebruikte."
+        },
+        {
+          "q": "Hoe classificeert u spend-data die niet schoon is?",
+          "a": "Uw data hoeft niet eerst schoon te zijn - dat is het werk dat wij doen. We nemen facturen, ERP-exports, portal-downloads of spreadsheets in welke staat dan ook, en extraheren en classificeren elke regel automatisch."
+        },
+        {
+          "q": "Kunt u data uit PDF-facturen extraheren?",
+          "a": "Ja. Pearstop leest PDF-facturen, gescande documenten en portal-exports rechtstreeks, zodat u geen schone digitale export nodig heeft om te beginnen."
+        },
+        {
+          "q": "Hoe nauwkeurig is geautomatiseerde spend-classificatie?",
+          "a": "Ongeveer 95% van de regels wordt automatisch geclassificeerd. De rest wordt gemarkeerd en doorgestuurd naar een menselijke reviewer, zodat de nauwkeurigheid hoog blijft zonder dat elke regel handmatig hoeft te worden gecontroleerd."
+        },
+        {
+          "q": "Hoe lang duurt spend-classificatie?",
+          "a": "Een eerste steekproef van 200 regels wordt doorgaans binnen enkele werkdagen opgeleverd. Doorlopende classificatie loopt continu mee naarmate nieuwe facturen binnenkomen."
+        }
+      ]
+    },
+    "standaloneFaq": {
+      "eyebrow": "De vraag die we het vaakst krijgen",
+      "q": "We hebben ChatGPT of Copilot al op onze data geprobeerd - waarom zou dit anders zijn?",
+      "a": "Omdat Pearstop geen generieke AI-tool is die op uw data wordt losgelaten - het is een dedicated pipeline die specifiek is gebouwd voor procurement- en assetdata: eerst deterministische matching, een large language model voor de echt dubbelzinnige gevallen, en een menselijke controlestap voor alles wat nog onzeker is. Teams die een generieke AI-tool op rommelige spend-data hebben geprobeerd, merken steevast dat deze prima werkt in een korte test en het begeeft bij echte volumes. Pearstop is gebouwd om dat volume aan te kunnen, niet alleen in een demo."
+    },
+    "geoBlock": {
+      "title": "Wat doet Pearstop?",
+      "copy": "Pearstop helpt facilities management-, infrastructuur- en hard services-bedrijven om procurement- en assetdata op te schonen, zodat teams zien wat ze inkopen, onderhoud betrouwbaarder plannen en betrouwbare data kunnen voeden naar AI- en rapportagetools. Als u één simpel antwoord nodig heeft: wij zetten rommelige operationele data om in iets wat uw bedrijf daadwerkelijk kan gebruiken."
+    }
+  },
+  "InvoiceExtraction": {
+    "meta": {
+      "title": "Factuur- en documentgegevensextractie (OCR) voor FM en bouw",
+      "description": "Zet ongelezen PDF-facturen, gescande pakbonnen en papieren documenten om in gestructureerde, bruikbare data. Geautomatiseerde OCR- en AI-extractie voor inkoopteams in facilities management, bouw en manufacturing."
+    },
+    "hero": {
+      "eyebrow": "Factuur- en documentextractie",
+      "title": "Als niemand de factuur leest, bestaat de data erin niet.",
+      "lead": "PDF's, scans en pakbonnen komen sneller binnen dan iemand ze kan lezen. Pearstop zet die papierwinkel automatisch om in gestructureerde regels, zodat er überhaupt iets is om te classificeren.",
+      "primaryLabel": "Stuur ons 10 facturen",
+      "secondaryLabel": "Zie hoe het werkt →"
+    },
+    "problem": {
+      "eyebrow": "Het probleem",
+      "title": "Waarom spend-data maanden na binnenkomst van de factuur onbruikbaar blijft",
+      "body": "Elke leverancier maakt een factuur anders op. Dezelfde leverancier wisselt van indeling afhankelijk van het depot of systeem dat de factuur verstuurde. Een flink deel komt nog binnen als scan of foto van een papieren pakbon. Iemand moet elke factuur lezen voordat er iets gecategoriseerd, vergeleken of gerapporteerd kan worden. Bij volume wordt die stap het permanente knelpunt.",
+      "quote": {
+        "text": "Onze interne systemen schieten tekort. Ik zou zeggen dat we op grondniveau zitten. Ergens ondergronds.",
+        "attribution": "Inkoopmanager, schoonmaakbedrijf met meerdere locaties"
+      }
+    },
+    "painCards": [
+      {
+        "title": "Ongelezen in de inbox",
+        "body": "Niemand heeft tijd om facturen te openen, laat staan in te voeren."
+      },
+      {
+        "title": "Eén leverancier, veel indelingen",
+        "body": "De indeling verandert met welk depot of systeem hem genereerde."
+      },
+      {
+        "title": "Een cyclus achter",
+        "body": "Invoerachterstanden zetten classificatie en rapportage een volledige cyclus achter op de werkelijke spend."
+      },
+      {
+        "title": "Verouderd bij aankomst",
+        "body": "Tegen de tijd dat een regel is getypt, gecontroleerd en gecorrigeerd, is het cijfer alweer verouderd."
+      }
+    ],
+    "howItWorks": {
+      "eyebrow": "Hoe het werkt",
+      "title": "Van ongelezen document naar gestructureerde regel",
+      "inputs": [
+        "PDF-facturen",
+        "Gescand papier",
+        "E-mailbijlagen",
+        "EDI-feeds"
+      ],
+      "processLabel": "lezen · structureren · controleren",
+      "outputs": [
+        "Uw ERP of P2P-platform",
+        "Uw BI-tool",
+        "Classificatie, volgende stap"
+      ],
+      "step1": {
+        "title": "Invoer, in elk formaat",
+        "copy": "Geen vast sjabloon per leverancier, en geen leverancier hoeft iets aan te passen aan hoe ze iets versturen."
+      },
+      "step2": {
+        "title": "Gelezen en gecontroleerd",
+        "copy": "Regels, hoeveelheden, stukskosten, kostencodes en leveranciersreferenties worden automatisch gestructureerd. Alles wat onzeker is wordt gemarkeerd voor een persoon, en elke correctie leert de pijplijn die leverancier beter kennen."
+      },
+      "step3": {
+        "title": "Geleverd in wat u gebruikt",
+        "copy": "Output komt in het formaat dat uw ERP, P2P-platform of BI-tool verwacht, klaar voor classificatie, rapportage of herlaad."
+      }
+    },
+    "stats": {
+      "s1": {
+        "value": "70% → 99%",
+        "caption": "first-pass extractienauwkeurigheid op de live factuurstroom van één klant, naarmate de pijplijn hun leveranciers leerde kennen"
+      },
+      "s2": {
+        "value": "Elk formaat",
+        "caption": "PDF, scan, foto of EDI, zonder vast sjabloon per leverancier"
+      },
+      "s3": {
+        "value": "Dagen",
+        "caption": "tot uw eerste gestructureerde output, zonder eerst een integratieproject"
+      }
+    },
+    "table": {
+      "eyebrow": "Eén factuur, gelezen",
+      "title": "Wat er aan de andere kant uitkomt",
+      "lead": "Elke regel krijgt dezelfde kolommen, ongeacht de indeling van de leverancier. De ene regel die we niet met vertrouwen konden lezen, gaat naar een persoon in plaats van naar uw data.",
+      "caption": "Illustratief voorbeeld"
+    },
+    "whatMakesPossible": {
+      "eyebrow": "Daarna",
+      "title": "Wat mogelijk wordt zodra de factuur gelezen is",
+      "b1": {
+        "title": "Spend zichtbaar in dezelfde week",
+        "copy": "Data wordt gestructureerd zodra facturen binnenkomen, in plaats van weken later wanneer iemand de achterstand wegwerkt."
+      },
+      "b2": {
+        "title": "Iets om te classificeren",
+        "copy": "Niets kan worden gecategoriseerd, benchmarked of vergeleken totdat het bestaat als gestructureerde data. Extractie komt eerst."
+      },
+      "b3": {
+        "title": "Geen invoeren en corrigeren meer",
+        "copy": "De handmatige invoerstap die inkoop- en financiële administratietijd opslokt, verdwijnt."
+      }
+    },
+    "quote": {
+      "text": "Dat handmatig doen heeft absoluut zijn eigen risico's. Het is in dit stadium bijna onmogelijk terwijl je de operatie draaiende houdt.",
+      "author": "Inkoopmanager",
+      "role": "Schoonmaakbedrijf met meerdere locaties"
+    },
+    "geoBlock": {
+      "title": "Wat is factuurgegevensextractie en waarom is het belangrijk voor procurement data quality?",
+      "copy": "Factuur- en documentgegevensextractie is het proces waarbij PDF-facturen, gescande papieren documenten en pakbonnen automatisch worden gelezen en omgezet in gestructureerde regeldata. Voor inkoopteams in facilities management, bouw en manufacturing is dit de stap die moet plaatsvinden vóórdat classificatie, spendanalyse of UNSPSC-codering überhaupt mogelijk is. Handmatige invoer kan het factuurvolume over meerdere locaties en leveranciers niet bijbenen, wat de reden is dat ongelezen facturen en verouderde spend-data een van de meest voorkomende blokkades zijn voor category management en AI-gedreven spendanalyse. Pearstop combineert OCR met een AI-extractielaag en een menselijke controlestap voor regels met lage betrouwbaarheid, zodat de output gestructureerde data is die klaar is voor classificatie, geen nieuw handmatig knelpunt."
+    },
+    "faq": [
+      {
+        "question": "Kan Pearstop data extraheren uit gescande papieren facturen, niet alleen digitale PDF's?",
+        "answer": "Ja. De extractielaag verwerkt digitale PDF's, gescande papieren documenten, gefotografeerde pakbonnen en e-mailbijlagen. Er is geen vast sjabloon per leverancier nodig, wat belangrijk is omdat de meeste inkoopteams dezelfde informatie anders ingedeeld krijgen per leverancier, en vaak ook anders per maand bij dezelfde leverancier."
+      },
+      {
+        "question": "Hoe nauwkeurig is geautomatiseerde factuurgegevensextractie?",
+        "answer": "First-pass nauwkeurigheid hangt af van documentkwaliteit en variatie in leveranciers, maar verbetert na verloop van tijd. Bij de factuurstroom van één schoonmaakklant steeg de first-pass extractienauwkeurigheid van circa 70% naar 99% naarmate de pijplijn de formaten en uitzonderingen van die leveranciersbasis leerde kennen. Alles onder een ingestelde betrouwbaarheidsdrempel wordt gemarkeerd voor menselijke controle in plaats van geraden."
+      },
+      {
+        "question": "Vervangt extractie ons ERP, of voedt het dit?",
+        "answer": "Het voedt het. Pearstop extraheert en structureert de data, en levert deze vervolgens in het formaat dat uw ERP, P2P-platform of BI-tool al verwacht, zodat het aansluit op wat u vandaag gebruikt (SAP, Oracle, Business Central en andere) in plaats van een nieuw systeem te vereisen."
+      }
+    ],
+    "cta": {
+      "title": "Nog steeds facturen handmatig invoeren?",
+      "lead": "Stuur ons tot tien facturen, in welke staat dan ook. Wij sturen ze terug als gestructureerde regels, zodat u ziet hoe uw eigen factuurstroom gelezen wordt.",
+      "primaryLabel": "Stuur uw facturen",
+      "secondaryLabel": "Of praat met sales →"
+    }
   }
 }

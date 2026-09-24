@@ -1997,5 +1997,320 @@
       "title": "Besoin de classer des milliers de lignes ?",
       "button": "Réservez un appel découverte de 7 minutes"
     }
+  },
+  "Home": {
+    "meta": {
+      "title": "Pearstop - Sachez ce que vous achetez, à qui, à quel prix",
+      "description": "Pearstop transforme vos factures en données de dépenses exploitables. Envoyez-nous 200 lignes, nous vous les renvoyons classifiées - aucun nettoyage préalable requis."
+    },
+    "hero": {
+      "title": "Sachez ce que vous achetez, à qui, à quel prix.",
+      "leadLine1": "Vos données de facturation regorgent de réponses. Pearstop les rend exploitables.",
+      "objection": "Vos données n'ont pas besoin d'être nettoyées au préalable.",
+      "sendSample": "Envoyez-nous 200 lignes",
+      "bookDiscovery": "Parler à un commercial",
+      "objectionTrailer": "C'est le travail que nous faisons."
+    },
+    "caseStudiesBand": {
+      "title": "Voyez-le fonctionner sur vos propres données",
+      "description": "Envoyez un échantillon représentatif de vos lignes de facture - jusqu'à 200 lignes, ou une poignée de factures (max. 10) - et nous les classifierons avant de vous les renvoyer étiquetées. Aucun coût, aucune configuration, rien à installer. C'est le moyen le plus rapide de voir exactement ce que fait Pearstop avant de vous engager.",
+      "viewInBrowser": "Voir d'abord les études de cas"
+    },
+    "counters": {
+      "items": [
+        {
+          "value": "35 000+",
+          "label": "Lignes d'achat classifiées chaque mois"
+        },
+        {
+          "value": "95%",
+          "label": "Classifiées automatiquement, avant contrôle humain"
+        },
+        {
+          "value": "100 000+",
+          "label": "Actifs nettoyés pour un seul client"
+        }
+      ]
+    },
+    "clients": {
+      "label": "La confiance d'organisations de premier plan"
+    },
+    "problemQuotes": {
+      "title": "Ce que nous disent les acheteurs",
+      "items": [
+        {
+          "quote": "La plupart des entreprises avancent à l'aveugle et ne s'en rendent compte que lorsqu'on leur pose une question à laquelle elles ne peuvent pas répondre.",
+          "source": "Responsable Achats, Infrastructure"
+        },
+        {
+          "quote": "On ne peut pas négocier ce qu'on ne voit pas.",
+          "source": "Directeur des Achats, Facilities Management"
+        },
+        {
+          "quote": "Si vous ne pouvez pas justifier votre base de coûts, vous soumissionnez sur un ressenti.",
+          "source": "Directeur Commercial, Construction"
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Comment ça marche",
+      "stage1": {
+        "label": "Étape 1",
+        "title": "Envoyez-nous ce que vous avez",
+        "copy": "PDF, exports ERP, téléchargements de portails, tableurs. Des connecteurs API sont disponibles pour la plupart des ERP."
+      },
+      "stage2": {
+        "label": "Étape 2",
+        "title": "Nous nettoyons, enrichissons et classifions chaque ligne",
+        "copy": "Nous extrayons tout ce que nous pouvons trouver sur la ligne, complétons ce qui manque grâce à l'historique fournisseur et achats, et classifions selon UNSPSC - jusqu'au niveau de détail qui répond réellement à vos questions, pas seulement une catégorie générale."
+      },
+      "stage3": {
+        "label": "Étape 3",
+        "title": "Vos dépenses restent classifiées",
+        "copy": "À mesure que de nouvelles factures arrivent, elles sont classifiées de la même manière - plus besoin d'un projet de nettoyage chaque année."
+      },
+      "beforeAfterCaption": "Exemple illustratif : six lignes de facture de trois fournisseurs. La description et le fournisseur d'origine sont conservés exactement tels que reçus - Pearstop ajoute uniquement les colonnes à droite."
+    },
+    "screenshot": {
+      "alt": "Tableau de bord Pearstop montrant des données de dépenses classifiées au niveau de la ligne, avec contrôle humain",
+      "caption": "Données de dépenses classifiées au niveau de la ligne, avec l'étape de contrôle humain visible."
+    },
+    "productDemoVideo": {
+      "title": "Voyez-le en action",
+      "caption": "Comment Pearstop extrait, classifie et normalise les données fournisseurs et de dépenses."
+    },
+    "who": {
+      "title": "Pour qui",
+      "tiles": [
+        {
+          "title": "Facilities Management",
+          "copy": "Vos données arrivent dans un format différent pour chaque ligne de service.",
+          "href": "/industries#facilities-management"
+        },
+        {
+          "title": "Construction",
+          "copy": "Vous estimez vos offres de mémoire car personne ne peut retrouver les chiffres réels historiques.",
+          "href": "/industries#construction"
+        },
+        {
+          "title": "Infrastructure",
+          "copy": "Un objectif d'économies a été fixé et les données ne peuvent pas montrer où il se situe.",
+          "href": "/industries#infrastructure"
+        },
+        {
+          "title": "Industrie",
+          "copy": "Une entité utilise déjà UNSPSC et une autre doit s'y aligner.",
+          "href": "/industries#manufacturing"
+        }
+      ],
+      "linkText": "Voir comment cela s'applique →"
+    },
+    "objection": {
+      "dataTitle": "“Nos données ne sont pas assez propres pour cela.”",
+      "dataCopy": "C'est ce que nous entendons le plus souvent - et c'est justement la raison de commencer maintenant plutôt que d'attendre. Nettoyer les données est la première chose que fait Pearstop, pas un prérequis pour travailler avec nous.",
+      "inHouseTitle": "“Ne serait-il pas moins cher de le construire nous-mêmes ?”",
+      "inHouseCopy": "Le développement en interne vous donne un contrôle total, mais prévoyez de dédier deux spécialistes data ou IA pour le construire correctement et le maintenir à mesure que vos données évoluent. Nous avons vu des projets internes démarrer comme un side-project d'une équipe IT, être déployés sans implication des achats, et se transformer en tableur dont personne n'a la responsabilité en quelques mois. Pearstop est ce système déjà construit - avec une équipe dont le seul métier est de continuer à le développer."
+    },
+    "proof": {
+      "title": "Cas clients",
+      "linkText": "Lire le cas →",
+      "cards": [
+        {
+          "title": "Entreprise d'infrastructure",
+          "stat": "Un objectif d'économies fixé",
+          "detail": "Les données ne pouvaient pas le localiser. Pearstop l'a rendu visible.",
+          "href": "/cases",
+          "quote": "Nous avions deux collaborateurs à temps plein sur l'attribution des catégories. Désormais, le système le fait pour nous - ce qui a aussi débloqué les estimations de marge en aval. C'est plus fiable pour une fraction du coût.",
+          "quoteRole": "Directeur des Achats, Infrastructure"
+        },
+        {
+          "title": "Prestataire Facilities Management",
+          "stat": "9 175 → 1 493 variantes fournisseurs consolidées sur 204 029 fiches d'actifs",
+          "detail": "73,1 % de correspondances confirmées.",
+          "href": "/cases",
+          "quote": "Nos listes d'actifs fonctionnaient pour les techniciens sur site, mais ne nous permettaient pas de planifier une maintenance intelligente ni de gérer le risque des offres de façon pilotée par les données.",
+          "quoteRole": "Asset Manager, Facilities Management"
+        },
+        {
+          "title": "Entreprise de services de nettoyage",
+          "stat": "~300",
+          "detail": "factures par mois",
+          "href": "/cases",
+          "quote": "Il aurait fallu cinq ingénieurs et une année complète pour nettoyer cela. Nous avons donc décidé de chercher une meilleure solution.",
+          "quoteRole": "Directeur des Opérations, Services de nettoyage"
+        }
+      ]
+    },
+    "closingCta": {
+      "title": "Envoyez-nous 200 lignes. Nous vous les renverrons classifiées.",
+      "action": "Envoyer votre échantillon"
+    },
+    "faq": {
+      "heading": "Questions fréquentes",
+      "items": [
+        {
+          "q": "Qu'est-ce que la classification UNSPSC ?",
+          "a": "UNSPSC est une norme mondiale de catégorisation des produits et services selon une hiérarchie cohérente. Elle permet de comparer les dépenses entre fournisseurs, sites et périodes en utilisant les mêmes catégories, plutôt que la description en texte libre utilisée au hasard par chaque facture."
+        },
+        {
+          "q": "Comment classifiez-vous des données de dépenses qui ne sont pas propres ?",
+          "a": "Vos données n'ont pas besoin d'être propres au préalable - c'est le travail que nous faisons. Nous prenons vos factures, exports ERP, téléchargements de portails ou tableurs dans l'état où ils sont, et extrayons et classifions chaque ligne automatiquement."
+        },
+        {
+          "q": "Pouvez-vous extraire des données de factures PDF ?",
+          "a": "Oui. Pearstop lit directement les factures PDF, les documents scannés et les exports de portails, donc vous n'avez pas besoin d'un export numérique propre pour commencer."
+        },
+        {
+          "q": "Quelle est la précision de la classification automatisée des dépenses ?",
+          "a": "Environ 95 % des lignes sont classifiées automatiquement. Le reste est signalé et transmis à un contrôleur humain, afin que la précision reste élevée sans que chaque ligne nécessite une vérification manuelle."
+        },
+        {
+          "q": "Combien de temps prend la classification des dépenses ?",
+          "a": "Un premier échantillon de 200 lignes est généralement traité en quelques jours ouvrés. La classification continue se poursuit en permanence à mesure que de nouvelles factures arrivent."
+        }
+      ]
+    },
+    "standaloneFaq": {
+      "eyebrow": "La question qu'on nous pose le plus",
+      "q": "Nous avons déjà essayé ChatGPT ou Copilot sur nos données - en quoi serait-ce différent ?",
+      "a": "Parce que Pearstop n'est pas un outil IA généraliste appliqué à vos données - c'est un pipeline dédié, conçu spécifiquement pour les données d'achats et d'actifs : d'abord un matching déterministe, un grand modèle de langage pour les cas réellement ambigus, et une étape de contrôle humain pour tout ce qui reste incertain. Les équipes ayant testé un outil IA généraliste sur des données de dépenses désordonnées constatent systématiquement qu'il fonctionne bien lors d'un essai rapide et s'effondre à volume réel. Pearstop est conçu pour tenir à ce volume, pas seulement en démo."
+    },
+    "geoBlock": {
+      "title": "Que fait Pearstop ?",
+      "copy": "Pearstop aide les entreprises de facilities management, d'infrastructure et de hard services à nettoyer leurs données d'achats et d'actifs, afin que les équipes voient ce qu'elles achètent, planifient la maintenance plus fiablement, et alimentent des outils IA et de reporting avec des données fiables. Si vous avez besoin d'une seule réponse simple : nous transformons des données opérationnelles désordonnées en quelque chose que votre entreprise peut réellement utiliser."
+    }
+  },
+  "InvoiceExtraction": {
+    "meta": {
+      "title": "Extraction de données de factures et documents (OCR) pour le FM et la construction",
+      "description": "Transformez les factures PDF non lues, les bons de livraison scannés et les documents papier en données structurées et exploitables. Extraction OCR et IA automatisée pour les équipes achats en facilities management, construction et industrie."
+    },
+    "hero": {
+      "eyebrow": "Extraction de factures et documents",
+      "title": "Si personne ne lit la facture, les données qu'elle contient n'existent pas.",
+      "lead": "Les PDF, scans et bons de livraison arrivent plus vite que quiconque ne peut les lire. Pearstop transforme automatiquement cette paperasse en lignes structurées, pour qu'il y ait déjà quelque chose à classifier.",
+      "primaryLabel": "Envoyez-nous 10 factures",
+      "secondaryLabel": "Voir comment ça marche →"
+    },
+    "problem": {
+      "eyebrow": "Le problème",
+      "title": "Pourquoi les données de dépenses restent inexploitables des mois après l'arrivée de la facture",
+      "body": "Chaque fournisseur présente sa facture différemment. Un même fournisseur change de mise en page selon le dépôt ou le système qui l'a envoyée. Beaucoup arrivent encore sous forme de scan ou de photo d'un bon de livraison papier. Quelqu'un doit lire chacune avant de pouvoir catégoriser, comparer ou rapporter quoi que ce soit. À volume, cette étape devient le goulot d'étranglement permanent.",
+      "quote": {
+        "text": "Nos systèmes internes sont insuffisants. Je dirais qu'on est au niveau du sol. Quelque part sous terre.",
+        "attribution": "Responsable achats, prestataire de nettoyage multi-sites"
+      }
+    },
+    "painCards": [
+      {
+        "title": "Non lue dans la boîte de réception",
+        "body": "Personne n'a le temps d'ouvrir les factures, encore moins de les saisir."
+      },
+      {
+        "title": "Un fournisseur, de multiples mises en page",
+        "body": "La mise en page change selon le dépôt ou le système qui l'a générée."
+      },
+      {
+        "title": "Un cycle de retard",
+        "body": "Les retards de saisie mettent la classification et le reporting un cycle complet derrière les dépenses réelles."
+      },
+      {
+        "title": "Périmée dès l'arrivée",
+        "body": "Le temps qu'une ligne soit saisie, vérifiée et corrigée, son chiffre est déjà obsolète."
+      }
+    ],
+    "howItWorks": {
+      "eyebrow": "Comment ça marche",
+      "title": "Du document non lu à la ligne structurée",
+      "inputs": [
+        "Factures PDF",
+        "Papier scanné",
+        "Pièces jointes e-mail",
+        "Flux EDI"
+      ],
+      "processLabel": "lire · structurer · vérifier",
+      "outputs": [
+        "Votre ERP ou plateforme P2P",
+        "Votre outil BI",
+        "Classification, étape suivante"
+      ],
+      "step1": {
+        "title": "Ingérer, quel que soit le format",
+        "copy": "Aucun modèle fixe par fournisseur, et aucun fournisseur n'a besoin de changer sa façon d'envoyer quoi que ce soit."
+      },
+      "step2": {
+        "title": "Lue et vérifiée",
+        "copy": "Les lignes, quantités, coûts unitaires, codes de coût et références fournisseurs sont structurés automatiquement. Tout élément incertain est signalé à une personne, et chaque correction enseigne au pipeline ce fournisseur."
+      },
+      "step3": {
+        "title": "Livrée dans ce que vous utilisez",
+        "copy": "La sortie arrive dans le format attendu par votre ERP, plateforme P2P ou outil BI, prête pour la classification, le reporting ou le rechargement."
+      }
+    },
+    "stats": {
+      "s1": {
+        "value": "70 % → 99 %",
+        "caption": "précision d'extraction au premier passage sur le flux de factures en direct d'un client, à mesure que le pipeline apprenait ses fournisseurs"
+      },
+      "s2": {
+        "value": "Tout format",
+        "caption": "PDF, scan, photo ou EDI, sans modèle fixe par fournisseur"
+      },
+      "s3": {
+        "value": "Jours",
+        "caption": "avant votre première sortie structurée, sans projet d'intégration préalable"
+      }
+    },
+    "table": {
+      "eyebrow": "Une facture, lue",
+      "title": "Ce qui ressort de l'autre côté",
+      "lead": "Chaque ligne obtient les mêmes colonnes, quelle que soit la mise en page du fournisseur. La seule ligne que nous n'avons pas pu lire avec confiance va à une personne plutôt que dans vos données.",
+      "caption": "Exemple illustratif"
+    },
+    "whatMakesPossible": {
+      "eyebrow": "Ensuite",
+      "title": "Ce qui devient possible une fois la facture lue",
+      "b1": {
+        "title": "Dépenses visibles la même semaine",
+        "copy": "Les données sont structurées dès l'arrivée des factures, au lieu de plusieurs semaines plus tard quand quelqu'un résorbe le retard."
+      },
+      "b2": {
+        "title": "Quelque chose à classifier",
+        "copy": "Rien ne peut être catégorisé, benchmarké ou comparé tant que ça n'existe pas sous forme de données structurées. L'extraction vient en premier."
+      },
+      "b3": {
+        "title": "Fini la saisie et la correction",
+        "copy": "L'étape de saisie manuelle qui consomme le temps administratif des achats et de la finance disparaît."
+      }
+    },
+    "quote": {
+      "text": "Le faire manuellement comporte des risques bien réels. C'est presque impossible à ce stade tout en maintenant les opérations.",
+      "author": "Responsable achats",
+      "role": "Prestataire de nettoyage multi-sites"
+    },
+    "geoBlock": {
+      "title": "Qu'est-ce que l'extraction de données de factures et pourquoi est-ce important pour la qualité des données d'achats ?",
+      "copy": "L'extraction de données de factures et documents est le processus qui consiste à lire automatiquement les factures PDF, documents papier scannés et bons de livraison, puis à les convertir en données de ligne structurées. Pour les équipes achats en facilities management, construction et industrie, c'est l'étape qui doit avoir lieu avant que la classification, l'analyse des dépenses ou le codage UNSPSC ne soient même possibles. La saisie manuelle ne peut pas suivre le volume de factures sur plusieurs sites et fournisseurs, ce qui explique pourquoi les factures non lues et les données de dépenses périmées sont l'un des blocages les plus courants pour le category management et l'analyse des dépenses pilotée par l'IA. Pearstop combine l'OCR avec une couche d'extraction IA et une étape de contrôle humain pour les lignes à faible confiance, afin que la sortie soit une donnée structurée prête pour la classification, pas un nouveau goulot d'étranglement manuel."
+    },
+    "faq": [
+      {
+        "question": "Pearstop peut-il extraire des données de factures papier scannées, pas seulement des PDF numériques ?",
+        "answer": "Oui. La couche d'extraction gère les PDF numériques, les documents papier scannés, les bons de livraison photographiés et les pièces jointes e-mail. Elle ne requiert aucun modèle fixe par fournisseur, ce qui compte car la plupart des équipes achats reçoivent la même information présentée différemment par chaque fournisseur, et souvent différemment d'un mois à l'autre pour le même fournisseur."
+      },
+      {
+        "question": "Quelle est la précision de l'extraction automatisée de données de factures ?",
+        "answer": "La précision au premier passage dépend de la qualité des documents et de la variabilité des fournisseurs, mais s'améliore avec le temps. Sur le flux de factures d'un client du secteur du nettoyage, la précision d'extraction au premier passage est passée d'environ 70 % à 99 % à mesure que le pipeline apprenait les formats et cas particuliers de cette base fournisseurs. Tout ce qui est en dessous d'un seuil de confiance défini est signalé pour contrôle humain plutôt que deviné."
+      },
+      {
+        "question": "L'extraction remplace-t-elle notre ERP, ou l'alimente-t-elle ?",
+        "answer": "Elle l'alimente. Pearstop extrait et structure les données, puis les livre dans le format déjà attendu par votre ERP, plateforme P2P ou outil BI, afin de s'intégrer à ce que vous utilisez aujourd'hui (SAP, Oracle, Business Central et autres) plutôt que d'exiger un nouveau système."
+      }
+    ],
+    "cta": {
+      "title": "Vous saisissez encore vos factures à la main ?",
+      "lead": "Envoyez-nous jusqu'à dix factures, quel que soit leur état. Nous vous les renvoyons sous forme de lignes structurées, pour que vous voyiez votre propre flux de factures lu.",
+      "primaryLabel": "Envoyez vos factures",
+      "secondaryLabel": "Ou parlez à un commercial →"
+    }
   }
 }

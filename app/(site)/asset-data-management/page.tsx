@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { CTABand, GeoBlock, PageHero, QuoteBox, SectionTitle, StatsGrid } from "@/components/content";
+import { CTABand, GeoBlock, QuoteBox, SectionTitle, StatsGrid } from "@/components/content";
+import { HeroBand } from "@/components/site/HeroBand";
+import { SampleRequestModal } from "@/components/sample-request-modal";
 import { alternateLanguages, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -54,14 +56,15 @@ export default function AssetDataManagementPage() {
     <>
       <Script id="assetmanagement-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <PageHero
+      <HeroBand
         eyebrow="Asset Management"
         title="You do not touch the invoices. You still need to know what they say."
         lead="Asset owners who outsource facilities management do not generate their own spend and maintenance data. They receive it, filtered through whichever provider delivers the contract. Pearstop gives you an independent, classified version of that same data, structured well enough to compare providers, sites, and years on the same basis."
-        actions={[
-          { label: "Talk to sales", href: siteConfig.calendly, variant: "primary", external: true },
-          { label: "See how it works", href: "#how-it-works", variant: "secondary" }
-        ]}
+        primaryLabel="Send us 200 lines"
+        primaryAction={(className) => <SampleRequestModal label="Send us 200 lines" className={className} />}
+        secondaryLabel="Talk to sales"
+        secondaryHref="/book-a-demo"
+        image={{ src: "/images/photos/construction-infra-1.png", alt: "Infrastructure asset site whose maintenance and spend data needs an independent classified view", width: 1672, height: 941 }}
       />
 
       <section>

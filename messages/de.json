@@ -1997,5 +1997,320 @@
       "title": "Müssen Sie Tausende von Zeilen klassifizieren?",
       "button": "7-minütige Erstberatung buchen"
     }
+  },
+  "Home": {
+    "meta": {
+      "title": "Pearstop - Wissen, was Sie kaufen, von wem, zu welchem Preis",
+      "description": "Pearstop verwandelt Ihre Rechnungen in nutzbare Spend-Daten. Senden Sie uns 200 Zeilen und wir schicken sie klassifiziert zurück - keine vorherige Bereinigung nötig."
+    },
+    "hero": {
+      "title": "Wissen, was Sie kaufen, von wem, zu welchem Preis.",
+      "leadLine1": "Ihre Rechnungsdaten stecken voller Antworten. Pearstop macht sie nutzbar.",
+      "objection": "Ihre Daten müssen nicht erst bereinigt werden.",
+      "sendSample": "Senden Sie uns 200 Zeilen",
+      "bookDiscovery": "Mit Vertrieb sprechen",
+      "objectionTrailer": "Das ist die Arbeit, die wir übernehmen."
+    },
+    "caseStudiesBand": {
+      "title": "Erleben Sie es an Ihren eigenen Daten",
+      "description": "Senden Sie eine repräsentative Stichprobe Ihrer Rechnungszeilen - bis zu 200 Zeilen oder eine Handvoll Rechnungen (max. 10) - und wir klassifizieren sie und schicken sie beschriftet zurück. Keine Kosten, kein Setup, nichts zu installieren. So sehen Sie am schnellsten, was Pearstop leistet, bevor Sie sich auf irgendetwas festlegen.",
+      "viewInBrowser": "Erst Case Studies ansehen"
+    },
+    "counters": {
+      "items": [
+        {
+          "value": "35.000+",
+          "label": "Procurement-Zeilen jeden Monat klassifiziert"
+        },
+        {
+          "value": "95%",
+          "label": "Automatisch klassifiziert, vor menschlicher Prüfung"
+        },
+        {
+          "value": "100.000+",
+          "label": "Assets für einen einzelnen Kunden bereinigt"
+        }
+      ]
+    },
+    "clients": {
+      "label": "Vertraut von führenden Organisationen"
+    },
+    "problemQuotes": {
+      "title": "Was uns Einkäufer sagen",
+      "items": [
+        {
+          "quote": "Die meisten Unternehmen fliegen blind und merken es erst, wenn jemand eine Frage stellt, die sie nicht beantworten können.",
+          "source": "Procurement Lead, Infrastruktur"
+        },
+        {
+          "quote": "Man kann nicht verhandeln, was man nicht sehen kann.",
+          "source": "Head of Procurement, Facilities Management"
+        },
+        {
+          "quote": "Wenn Sie Ihre Kostenbasis nicht belegen können, bieten Sie nach Gefühl.",
+          "source": "Kaufmännischer Leiter, Bau"
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "So funktioniert es",
+      "stage1": {
+        "label": "Schritt 1",
+        "title": "Senden Sie uns, was Sie haben",
+        "copy": "PDFs, ERP-Exporte, Portal-Downloads, Tabellenkalkulationen. Für die meisten ERPs stehen API-Connectoren zur Verfügung."
+      },
+      "stage2": {
+        "label": "Schritt 2",
+        "title": "Wir bereinigen, reichern an und klassifizieren jede Zeile",
+        "copy": "Wir extrahieren alles, was wir auf der Zeile finden können, ergänzen Fehlendes anhand von Lieferanten- und Einkaufshistorie und klassifizieren nach UNSPSC - bis zu dem Detailgrad, der Ihre Fragen tatsächlich beantwortet, nicht nur eine Oberkategorie."
+      },
+      "stage3": {
+        "label": "Schritt 3",
+        "title": "Ihr Spend bleibt klassifiziert",
+        "copy": "Neue Rechnungen werden auf dieselbe Weise klassifiziert, sobald sie eintreffen - kein jährliches Bereinigungsprojekt mehr."
+      },
+      "beforeAfterCaption": "Illustratives Beispiel: sechs Rechnungszeilen von drei Lieferanten. Die ursprüngliche Beschreibung und der Lieferant bleiben exakt so erhalten, wie sie eingegangen sind - Pearstop fügt nur die Spalten rechts hinzu."
+    },
+    "screenshot": {
+      "alt": "Pearstop-Dashboard mit klassifizierten Spend-Daten auf Zeilenebene inklusive menschlicher Prüfung",
+      "caption": "Klassifizierte Spend-Daten auf Zeilenebene, mit sichtbarem Schritt der menschlichen Prüfung."
+    },
+    "productDemoVideo": {
+      "title": "Live erleben",
+      "caption": "Wie Pearstop Lieferanten- und Spend-Daten extrahiert, klassifiziert und normalisiert."
+    },
+    "who": {
+      "title": "Für wen",
+      "tiles": [
+        {
+          "title": "Facilities Management",
+          "copy": "Ihre Daten kommen aus jeder Servicelinie in einem anderen Format an.",
+          "href": "/industries#facilities-management"
+        },
+        {
+          "title": "Bau",
+          "copy": "Sie schätzen Angebote aus dem Gedächtnis, weil niemand historische Ist-Zahlen abrufen kann.",
+          "href": "/industries#construction"
+        },
+        {
+          "title": "Infrastruktur",
+          "copy": "Ein Einsparziel wurde festgelegt, und die Daten können nicht zeigen, wo es liegt.",
+          "href": "/industries#infrastructure"
+        },
+        {
+          "title": "Fertigung",
+          "copy": "Eine Einheit nutzt bereits UNSPSC, eine andere muss sich daran ausrichten.",
+          "href": "/industries#manufacturing"
+        }
+      ],
+      "linkText": "Sehen Sie, wie das für Sie gilt →"
+    },
+    "objection": {
+      "dataTitle": "„Unsere Daten sind dafür nicht sauber genug.“",
+      "dataCopy": "Das hören wir am häufigsten - und genau deshalb sollte man jetzt anfangen statt zu warten. Die Datenbereinigung ist das Erste, was Pearstop übernimmt, keine Voraussetzung für die Zusammenarbeit mit uns.",
+      "inHouseTitle": "„Wäre es nicht günstiger, das selbst zu bauen?“",
+      "inHouseCopy": "Eine Eigenentwicklung gibt Ihnen volle Kontrolle, aber rechnen Sie mit zwei Data- oder KI-Spezialisten, um sie richtig zu bauen und laufend zu pflegen, wenn sich Ihre Daten ändern. Wir haben erlebt, wie interne Projekte als Nebenprojekt eines IT-Teams starten, ohne Einbindung von Procurement live gehen und sich innerhalb weniger Monate in eine Tabelle verwandeln, die niemandem mehr gehört. Pearstop ist dieses System bereits fertig gebaut - mit einem Team, dessen einzige Aufgabe die Weiterentwicklung ist."
+    },
+    "proof": {
+      "title": "Cases",
+      "linkText": "Case lesen →",
+      "cards": [
+        {
+          "title": "Infrastruktur-Dienstleister",
+          "stat": "Ein festgelegtes Einsparziel",
+          "detail": "Die Daten konnten es nicht lokalisieren. Pearstop machte es sichtbar.",
+          "href": "/cases",
+          "quote": "Früher hatten wir zwei Vollzeitkräfte für die Kategoriezuordnung. Jetzt übernimmt das System das für uns - was auch Margenschätzungen weiter unten im Prozess ermöglicht hat. Es ist zuverlässiger, für einen Bruchteil der Kosten.",
+          "quoteRole": "Head of Procurement, Infrastruktur"
+        },
+        {
+          "title": "Facilities-Management-Anbieter",
+          "stat": "9.175 → 1.493 Lieferantenvarianten über 204.029 Asset-Datensätze konsolidiert",
+          "detail": "73,1 % bestätigte Treffer.",
+          "href": "/cases",
+          "quote": "Unsere Anlagenlisten funktionierten für Techniker vor Ort, erlaubten uns aber nicht, Instandhaltung intelligent zu planen oder Angebotsrisiken datengestützt zu steuern.",
+          "quoteRole": "Asset Manager, Facilities Management"
+        },
+        {
+          "title": "Reinigungsdienstleister",
+          "stat": "~300",
+          "detail": "Rechnungen pro Monat",
+          "href": "/cases",
+          "quote": "Das hätte fünf Ingenieure und ein ganzes Jahr gekostet, um das zu bereinigen. Also haben wir uns entschieden, nach einer besseren Lösung zu suchen.",
+          "quoteRole": "Head of Operations, Reinigungsdienste"
+        }
+      ]
+    },
+    "closingCta": {
+      "title": "Senden Sie uns 200 Zeilen. Wir schicken sie klassifiziert zurück.",
+      "action": "Stichprobe senden"
+    },
+    "faq": {
+      "heading": "Häufig gestellte Fragen",
+      "items": [
+        {
+          "q": "Was ist die UNSPSC-Klassifizierung?",
+          "a": "UNSPSC ist ein weltweiter Standard zur Kategorisierung von Produkten und Dienstleistungen in einer einheitlichen Hierarchie. So lässt sich Spend über Lieferanten, Standorte und Zeiträume hinweg mit denselben Kategorien vergleichen, statt mit der Freitextbeschreibung, die jede Rechnung zufällig verwendet hat."
+        },
+        {
+          "q": "Wie klassifizieren Sie Spend-Daten, die nicht sauber sind?",
+          "a": "Ihre Daten müssen nicht erst sauber sein - das ist die Arbeit, die wir übernehmen. Wir nehmen Rechnungen, ERP-Exporte, Portal-Downloads oder Tabellenkalkulationen in dem Zustand, in dem sie sind, und extrahieren und klassifizieren jede Zeile automatisch."
+        },
+        {
+          "q": "Können Sie Daten aus PDF-Rechnungen extrahieren?",
+          "a": "Ja. Pearstop liest PDF-Rechnungen, gescannte Dokumente und Portal-Exporte direkt, sodass Sie für den Start keinen sauberen digitalen Export benötigen."
+        },
+        {
+          "q": "Wie genau ist die automatisierte Spend-Klassifizierung?",
+          "a": "Rund 95 % der Zeilen werden automatisch klassifiziert. Der Rest wird markiert und an eine menschliche Prüfung weitergeleitet, sodass die Genauigkeit hoch bleibt, ohne dass jede Zeile manuell geprüft werden muss."
+        },
+        {
+          "q": "Wie lange dauert die Spend-Klassifizierung?",
+          "a": "Eine erste Stichprobe von 200 Zeilen wird in der Regel innerhalb weniger Werktage bearbeitet. Die laufende Klassifizierung läuft kontinuierlich, sobald neue Rechnungen eintreffen."
+        }
+      ]
+    },
+    "standaloneFaq": {
+      "eyebrow": "Die Frage, die wir am häufigsten hören",
+      "q": "Wir haben ChatGPT oder Copilot bereits an unseren Daten ausprobiert - warum sollte das hier anders sein?",
+      "a": "Weil Pearstop kein allgemeines KI-Tool ist, das auf Ihre Daten losgelassen wird - sondern eine dedizierte Pipeline, speziell für Procurement- und Asset-Daten gebaut: zuerst deterministisches Matching, ein Large Language Model für die wirklich mehrdeutigen Fälle, und ein menschlicher Prüfschritt für alles, was noch unsicher ist. Teams, die ein allgemeines KI-Tool an unübersichtlichen Spend-Daten getestet haben, stellen durchweg fest, dass es im kurzen Test gut funktioniert und bei echtem Volumen versagt. Pearstop ist darauf ausgelegt, auch bei diesem Volumen standzuhalten - nicht nur in einer Demo."
+    },
+    "geoBlock": {
+      "title": "Was macht Pearstop?",
+      "copy": "Pearstop hilft Facilities-Management-, Infrastruktur- und Hard-Services-Unternehmen, Procurement- und Asset-Daten zu bereinigen, damit Teams sehen, was sie einkaufen, Instandhaltung zuverlässiger planen und vertrauenswürdige Daten in KI- und Reporting-Tools einspeisen können. Falls Sie eine einfache Antwort brauchen: Wir verwandeln unübersichtliche operative Daten in etwas, das Ihr Unternehmen tatsächlich nutzen kann."
+    }
+  },
+  "InvoiceExtraction": {
+    "meta": {
+      "title": "Rechnungs- und Dokumentendatenextraktion (OCR) für FM und Bau",
+      "description": "Verwandeln Sie ungelesene PDF-Rechnungen, gescannte Lieferscheine und Papierunterlagen in strukturierte, nutzbare Daten. Automatisierte OCR- und KI-Extraktion für Einkaufsteams in Facilities Management, Bau und Fertigung."
+    },
+    "hero": {
+      "eyebrow": "Rechnungs- und Dokumentenextraktion",
+      "title": "Wenn niemand die Rechnung liest, existieren die Daten darin nicht.",
+      "lead": "PDFs, Scans und Lieferscheine treffen schneller ein, als jemand sie lesen kann. Pearstop verwandelt diesen Papierkram automatisch in strukturierte Positionen, damit überhaupt etwas zu klassifizieren ist.",
+      "primaryLabel": "Senden Sie uns 10 Rechnungen",
+      "secondaryLabel": "So funktioniert es →"
+    },
+    "problem": {
+      "eyebrow": "Das Problem",
+      "title": "Warum Spend-Daten Monate nach Eingang der Rechnung unbrauchbar bleiben",
+      "body": "Jeder Lieferant gestaltet eine Rechnung anders. Derselbe Lieferant ändert das Layout je nach Standort oder System, das sie versendet hat. Viele kommen noch als Scan oder Foto eines Papier-Lieferscheins an. Jemand muss jede einzelne lesen, bevor überhaupt kategorisiert, verglichen oder berichtet werden kann. Bei hohem Volumen wird dieser Schritt zum dauerhaften Engpass.",
+      "quote": {
+        "text": "Unsere internen Systeme reichen nicht aus. Ich würde sagen, wir sind auf Bodenniveau. Irgendwo unter der Erde.",
+        "attribution": "Einkaufsleiter, Reinigungsdienstleister mit mehreren Standorten"
+      }
+    },
+    "painCards": [
+      {
+        "title": "Ungelesen im Posteingang",
+        "body": "Niemand hat Zeit, Rechnungen zu öffnen, geschweige denn sie zu erfassen."
+      },
+      {
+        "title": "Ein Lieferant, viele Layouts",
+        "body": "Das Layout ändert sich je nachdem, welcher Standort oder welches System es erzeugt hat."
+      },
+      {
+        "title": "Einen Zyklus im Rückstand",
+        "body": "Erfassungsrückstände bringen Klassifizierung und Reporting einen ganzen Zyklus hinter den tatsächlichen Spend zurück."
+      },
+      {
+        "title": "Veraltet bei Ankunft",
+        "body": "Bis eine Zeile eingetippt, geprüft und korrigiert ist, ist ihre Zahl bereits veraltet."
+      }
+    ],
+    "howItWorks": {
+      "eyebrow": "So funktioniert es",
+      "title": "Vom ungelesenen Dokument zur strukturierten Position",
+      "inputs": [
+        "PDF-Rechnungen",
+        "Gescanntes Papier",
+        "E-Mail-Anhänge",
+        "EDI-Feeds"
+      ],
+      "processLabel": "lesen · strukturieren · prüfen",
+      "outputs": [
+        "Ihr ERP oder P2P-System",
+        "Ihr BI-Tool",
+        "Klassifizierung, nächster Schritt"
+      ],
+      "step1": {
+        "title": "Erfassung, in jedem Format",
+        "copy": "Keine feste Vorlage pro Lieferant, und kein Lieferant muss ändern, wie er etwas versendet."
+      },
+      "step2": {
+        "title": "Gelesen und geprüft",
+        "copy": "Positionen, Mengen, Stückkosten, Kostenstellen und Lieferantenreferenzen werden automatisch strukturiert. Alles Unsichere wird für eine Person markiert, und jede Korrektur bringt der Pipeline diesen Lieferanten näher bei."
+      },
+      "step3": {
+        "title": "Geliefert in das, was Sie nutzen",
+        "copy": "Die Ausgabe erfolgt in dem Format, das Ihr ERP, P2P-System oder BI-Tool erwartet - bereit für Klassifizierung, Reporting oder erneutes Laden."
+      }
+    },
+    "stats": {
+      "s1": {
+        "value": "70 % → 99 %",
+        "caption": "First-Pass-Extraktionsgenauigkeit auf dem Live-Rechnungsstream eines Kunden, während die Pipeline dessen Lieferanten kennenlernte"
+      },
+      "s2": {
+        "value": "Jedes Format",
+        "caption": "PDF, Scan, Foto oder EDI, ohne feste Vorlage pro Lieferant"
+      },
+      "s3": {
+        "value": "Tage",
+        "caption": "bis zu Ihrer ersten strukturierten Ausgabe, ohne vorheriges Integrationsprojekt"
+      }
+    },
+    "table": {
+      "eyebrow": "Eine Rechnung, gelesen",
+      "title": "Was auf der anderen Seite herauskommt",
+      "lead": "Jede Zeile erhält dieselben Spalten, unabhängig vom Layout des Lieferanten. Die eine Zeile, die wir nicht sicher lesen konnten, geht an eine Person statt in Ihre Daten.",
+      "caption": "Illustratives Beispiel"
+    },
+    "whatMakesPossible": {
+      "eyebrow": "Danach",
+      "title": "Was möglich wird, sobald die Rechnung gelesen ist",
+      "b1": {
+        "title": "Spend in derselben Woche sichtbar",
+        "copy": "Daten werden strukturiert, sobald Rechnungen eintreffen, statt Wochen später, wenn jemand den Rückstand aufarbeitet."
+      },
+      "b2": {
+        "title": "Etwas zu klassifizieren",
+        "copy": "Nichts kann kategorisiert, gebenchmarkt oder verglichen werden, bevor es als strukturierte Daten existiert. Extraktion kommt zuerst."
+      },
+      "b3": {
+        "title": "Kein Erfassen und Korrigieren mehr",
+        "copy": "Der manuelle Erfassungsschritt, der Einkaufs- und Finanzadministrationszeit auffrisst, entfällt."
+      }
+    },
+    "quote": {
+      "text": "Das manuell zu tun, birgt definitiv eigene Risiken. Es ist in diesem Stadium fast unmöglich, während der laufende Betrieb weitergeht.",
+      "author": "Einkaufsleiter",
+      "role": "Reinigungsdienstleister mit mehreren Standorten"
+    },
+    "geoBlock": {
+      "title": "Was ist Rechnungsdatenextraktion und warum ist sie wichtig für die Procurement-Datenqualität?",
+      "copy": "Rechnungs- und Dokumentendatenextraktion ist der Prozess, bei dem PDF-Rechnungen, gescannte Papierunterlagen und Lieferscheine automatisch gelesen und in strukturierte Positionsdaten umgewandelt werden. Für Einkaufsteams in Facilities Management, Bau und Fertigung ist dies der Schritt, der stattfinden muss, bevor Klassifizierung, Spend-Analyse oder UNSPSC-Codierung überhaupt möglich sind. Manuelle Erfassung kann mit dem Rechnungsvolumen über mehrere Standorte und Lieferanten nicht mithalten, weshalb ungelesene Rechnungen und veraltete Spend-Daten zu den häufigsten Blockaden für Category Management und KI-gestützte Spend-Analyse gehören. Pearstop kombiniert OCR mit einer KI-Extraktionsschicht und einem menschlichen Prüfschritt für Positionen mit geringer Konfidenz, sodass die Ausgabe strukturierte, klassifizierungsbereite Daten sind - kein neuer manueller Engpass."
+    },
+    "faq": [
+      {
+        "question": "Kann Pearstop Daten aus gescannten Papierrechnungen extrahieren, nicht nur aus digitalen PDFs?",
+        "answer": "Ja. Die Extraktionsschicht verarbeitet digitale PDFs, gescannte Papierdokumente, fotografierte Lieferscheine und E-Mail-Anhänge. Sie benötigt keine feste Vorlage pro Lieferant, was wichtig ist, da die meisten Einkaufsteams dieselben Informationen von jedem Lieferanten unterschiedlich dargestellt erhalten - und oft sogar von Monat zu Monat beim selben Lieferanten unterschiedlich."
+      },
+      {
+        "question": "Wie genau ist automatisierte Rechnungsdatenextraktion?",
+        "answer": "Die First-Pass-Genauigkeit hängt von der Dokumentqualität und der Variabilität der Lieferanten ab, verbessert sich aber mit der Zeit. Beim Rechnungsstream eines Reinigungsdienstleisters stieg die First-Pass-Extraktionsgenauigkeit von rund 70 % auf 99 %, während die Pipeline die Formate und Sonderfälle dieser Lieferantenbasis kennenlernte. Alles unter einem festgelegten Konfidenzschwellenwert wird für menschliche Prüfung markiert, statt geraten."
+      },
+      {
+        "question": "Ersetzt Extraktion unser ERP, oder speist sie es?",
+        "answer": "Sie speist es. Pearstop extrahiert und strukturiert die Daten und liefert sie dann in dem Format, das Ihr ERP, P2P-System oder BI-Tool bereits erwartet - passend zu dem, was Sie heute nutzen (SAP, Oracle, Business Central und andere), statt ein neues System zu erfordern."
+      }
+    ],
+    "cta": {
+      "title": "Erfassen Sie Rechnungen noch von Hand?",
+      "lead": "Senden Sie uns bis zu zehn Rechnungen, in welchem Zustand auch immer. Wir schicken sie als strukturierte Positionen zurück, damit Sie sehen, wie Ihr eigener Rechnungsstream gelesen wird.",
+      "primaryLabel": "Senden Sie Ihre Rechnungen",
+      "secondaryLabel": "Oder mit Vertrieb sprechen →"
+    }
   }
 }

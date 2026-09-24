@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { CTABand, GeoBlock, PageHero, QuoteBox, SectionTitle } from "@/components/content";
+import { CTABand, GeoBlock, QuoteBox, SectionTitle } from "@/components/content";
 import { CalendlyButton } from "@/components/calendly-button";
+import { HeroBand } from "@/components/site/HeroBand";
+import { SampleRequestModal } from "@/components/sample-request-modal";
 import { alternateLanguages, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -42,14 +44,15 @@ const faqSchema = {
 export default function ProcurementPage() {
   return (
     <>
-      <PageHero
+      <HeroBand
         eyebrow="Procurement"
         title="You cannot negotiate what you cannot see."
         lead="Most procurement teams can state their turnover to the euro. Few can state what they actually spent it on, category by category, across every site, entity, and bundled contract. Pearstop builds that baseline, so a negotiation, a tender, or a framework review starts from a real number instead of a guess."
-        actions={[
-          { label: "Talk to sales", href: siteConfig.calendly, variant: "primary", external: true },
-          { label: "See how it works", href: "#how-it-works", variant: "secondary" }
-        ]}
+        primaryLabel="Send us 200 lines"
+        primaryAction={(className) => <SampleRequestModal label="Send us 200 lines" className={className} />}
+        secondaryLabel="Talk to sales"
+        secondaryHref="/book-a-demo"
+        image={{ src: "/images/photos/office-worker-2.png", alt: "Procurement analyst reviewing spend data on screen", width: 1536, height: 1024 }}
       />
 
       <section>

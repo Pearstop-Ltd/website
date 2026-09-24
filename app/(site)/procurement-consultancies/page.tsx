@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Script from "next/script";
-import { CTABand, GeoBlock, PageHero, SectionTitle } from "@/components/content";
+import { CTABand, GeoBlock, SectionTitle } from "@/components/content";
+import { HeroBand } from "@/components/site/HeroBand";
+import { SampleRequestModal } from "@/components/sample-request-modal";
 import { alternateLanguages, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -44,14 +46,15 @@ export default function ProcurementConsultanciesPage() {
     <>
       <Script id="procurementconsultancies-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <PageHero
+      <HeroBand
         eyebrow="For Procurement Consultancies"
         title="Deliver the spend classification, keep the engagement margin"
         lead="Category management, sourcing-savings, and spend-cube engagements all start with the same manual bottleneck: classifying a client's messy spend data. Pearstop does that layer, white-labelled under your own taxonomy, so your team spends its hours on the analysis and recommendations clients actually pay for."
-        actions={[
-          { label: "Talk to sales", href: siteConfig.calendly, variant: "primary", external: true },
-          { label: "See how it works", href: "#how-it-works", variant: "secondary" }
-        ]}
+        primaryLabel="Send us 200 lines"
+        primaryAction={(className) => <SampleRequestModal label="Send us 200 lines" className={className} />}
+        secondaryLabel="Talk to sales"
+        secondaryHref="/book-a-demo"
+        image={{ src: "/images/photos/construction-planner-team-1.png", alt: "Consultancy team reviewing a client's classified spend data", width: 1672, height: 941 }}
       />
 
       <section>

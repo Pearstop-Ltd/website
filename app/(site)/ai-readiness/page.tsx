@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { CTABand, GeoBlock, PageHero, QuoteBox, SectionTitle, StatsGrid } from "@/components/content";
+import { CTABand, GeoBlock, QuoteBox, SectionTitle, StatsGrid } from "@/components/content";
+import { HeroBand } from "@/components/site/HeroBand";
+import { SampleRequestModal } from "@/components/sample-request-modal";
 import { alternateLanguages, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -39,14 +41,15 @@ export default function AiReadinessPage() {
     <>
       <Script id="aireadiness-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <PageHero
+      <HeroBand
         eyebrow="AI Ready"
         title="AI is only underdelivering because your data is not ready."
         lead="Every AI tool, from Copilot to custom models, assumes clean, structured, governed data underneath. Pearstop builds that foundation."
-        actions={[
-          { label: "Talk to sales", href: siteConfig.calendly, variant: "primary", external: true },
-          { label: "How it works", href: "#how-it-works", variant: "secondary" }
-        ]}
+        primaryLabel="Send us 200 lines"
+        primaryAction={(className) => <SampleRequestModal label="Send us 200 lines" className={className} />}
+        secondaryLabel="Talk to sales"
+        secondaryHref="/book-a-demo"
+        image={{ src: "/images/photos/the-city-2.png", alt: "City skyline representing enterprise AI initiatives that need clean data", width: 1672, height: 941 }}
       />
 
       <section>
