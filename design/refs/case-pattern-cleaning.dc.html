@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Cleaning pattern case</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:Inter,"Helvetica Neue",Arial,sans-serif;background:#1F2A68;color:#333333}
+a{color:#353FFF;text-decoration:none}a:hover{color:#2A3990}
+</style>
+</helmet>
+<div style="width: 1440px; height: 4700px; display: flex; flex-direction: column; background: #1F2A68; font-family: Inter, 'Helvetica Neue', Arial, sans-serif">
+
+<!-- Header -->
+<header style="background: #FFFFFF; height: 80px; padding: 0 160px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #ECEEF3">
+<a href="Main.dc.html" style="display: flex; align-items: flex-end; gap: 3px; color: #1F2A68">
+<svg width="18" height="24" viewBox="0 0 18 24" fill="none" aria-hidden="true"><path d="M9 2 C10 1 11.5 0.6 13 1" stroke="#1F2A68" stroke-width="1.6" stroke-linecap="round"></path><path d="M9 4 C6.5 4 5.8 6.6 5.2 8.4 C4.4 10.6 1.5 11.8 1.5 16 C1.5 20.2 4.8 23 9 23 C13.2 23 16.5 20.2 16.5 16 C16.5 11.8 13.6 10.6 12.8 8.4 C12.2 6.6 11.5 4 9 4 Z" fill="#1F2A68"></path></svg>
+<span style="font-size: 24px; font-weight: 600; letter-spacing: -0.02em; line-height: 1">pearstop.</span>
+</a>
+<nav style="display: flex; gap: 36px; font-size: 15px; font-weight: 500">
+<a href="#" style="color: #333333">Solutions</a>
+<a href="#" style="color: #333333">Industries</a>
+<a href="#" style="color: #333333">About</a>
+<a href="#" style="color: #333333">Blog</a>
+<a href="Main.dc.html" style="color: #2A3990; font-weight: 600">Cases</a>
+</nav>
+<a href="#" style="background: #353FFF; color: #FFFFFF; font-size: 15px; font-weight: 600; padding: 13px 22px; border-radius: 10px">Send us 200 lines</a>
+</header>
+
+<!-- Hero -->
+<section style="background: #FFFFFF; padding: 56px 160px 88px; display: flex; flex-direction: column; gap: 40px">
+<nav style="font-size: 14px; color: #666666; display: flex; gap: 8px"><a href="Main.dc.html" style="color: #666666">Cases</a><span>/</span><span style="color: #1F2A68">Cleaning &amp; soft FM</span></nav>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 72px; align-items: center">
+<div style="display: flex; flex-direction: column; gap: 22px">
+<div style="display: flex; gap: 10px; align-items: center">
+<span style="font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #1F2A68; background: #E8E0FC; padding: 5px 10px; border-radius: 6px">Pattern</span>
+<span style="font-size: 13px; color: #666666">Cleaning &amp; soft FM · Illustrative data</span>
+</div>
+<h1 style="margin: 0; font-size: 58px; line-height: 1.06; font-weight: 600; letter-spacing: -0.025em; color: #2A3990">Nobody chose 30 toilet paper suppliers.</h1>
+<p style="margin: 0; font-size: 22px; line-height: 1.5; font-weight: 300; color: #333333">They just couldn't see them. One cleaning business, twelve months of invoices, and a simple question nobody could answer: what do we spend on toilet paper?</p>
+</div>
+<div style="background: #F8F9FA; border-radius: 24px; padding: 40px; display: flex; flex-direction: column; gap: 18px">
+<div style="display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 8px">
+<sc-for list="{{tiles}}" as="t" hint-placeholder-count="30">
+<div style="height: 52px; border-radius: 8px; background: {{t.bg}}"></div>
+</sc-for>
+</div>
+<div style="display: flex; justify-content: space-between; font-size: 13px; color: #666666">
+<span>Each tile is a supplier that invoiced for toilet paper</span>
+<span style="display: flex; gap: 6px; align-items: center"><span style="width: 10px; height: 10px; border-radius: 3px; background: #8BC34A"></span>the three worth keeping</span>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Disclaimer strip -->
+<section style="background: #E8E0FC; padding: 18px 160px; font-size: 14px; color: #1F2A68">
+<strong style="font-weight: 600">Illustrative data.</strong> Based on a pattern we see again and again in soft FM procurement. Not a named client engagement.
+</section>
+
+<!-- The spend is there -->
+<section style="background: #FFFFFF; padding: 104px 160px; display: flex; flex-direction: column; gap: 44px">
+<div style="display: flex; flex-direction: column; gap: 16px; max-width: 760px">
+<span style="font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #353FFF">Before</span>
+<h2 style="margin: 0; font-size: 36px; line-height: 1.15; font-weight: 600; letter-spacing: -0.02em; color: #2A3990">The spend is there. The picture isn't.</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.7; font-weight: 300; color: #333333">What we hear from cleaning businesses, before any data changes hands.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px">
+<div style="background: #F8F9FA; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 12px"><span style="width: 10px; height: 10px; border-radius: 50%; background: #353FFF"></span><h3 style="margin: 0; font-size: 18px; font-weight: 600; color: #2A3990">Invoices arrive as PDFs</h3><p style="margin: 0; font-size: 15px; line-height: 1.6; font-weight: 300; color: #333333">Line detail sits inside documents nobody re-reads. The ERP holds supplier totals, not what was bought.</p></div>
+<div style="background: #F8F9FA; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 12px"><span style="width: 10px; height: 10px; border-radius: 50%; background: #353FFF"></span><h3 style="margin: 0; font-size: 18px; font-weight: 600; color: #2A3990">Every site orders its own way</h3><p style="margin: 0; font-size: 15px; line-height: 1.6; font-weight: 300; color: #333333">Site managers buy consumables locally. One product enters the books under twenty descriptions.</p></div>
+<div style="background: #F8F9FA; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 12px"><span style="width: 10px; height: 10px; border-radius: 50%; background: #353FFF"></span><h3 style="margin: 0; font-size: 18px; font-weight: 600; color: #2A3990">One person runs procurement</h3><p style="margin: 0; font-size: 15px; line-height: 1.6; font-weight: 300; color: #333333">There is time to keep sites supplied. There is no time to benchmark prices or question what comes in.</p></div>
+<div style="background: #F8F9FA; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 12px"><span style="width: 10px; height: 10px; border-radius: 50%; background: #A383FF"></span><h3 style="margin: 0; font-size: 18px; font-weight: 600; color: #2A3990">Client reports built by hand</h3><p style="margin: 0; font-size: 15px; line-height: 1.6; font-weight: 300; color: #333333">Each month, numbers pulled from an audit tool, a supplier portal and email. Every client wants a different cut.</p></div>
+</div>
+</section>
+
+<!-- One product, 30 suppliers -->
+<section style="background: #F8F9FA; padding: 104px 160px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); gap: 64px; align-items: start">
+<div style="display: flex; flex-direction: column; gap: 20px">
+<span style="font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #353FFF">Once every line is classified</span>
+<h2 style="margin: 0; font-size: 36px; line-height: 1.15; font-weight: 600; letter-spacing: -0.02em; color: #2A3990">One product. 30 suppliers. Now side by side.</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.7; font-weight: 300; color: #333333">Classified, the pattern was visible in days: every supplier, what each charged per roll, and on what terms. Which three to keep is your call. The table makes it an easy one.</p>
+<div style="background: #F1F8E9; border: 1.5px solid #8BC34A; border-radius: 16px; padding: 22px 24px; display: flex; flex-direction: column; gap: 10px">
+<span style="font-size: 13px; font-weight: 600; color: #4E7D22; text-transform: uppercase; letter-spacing: 0.08em">The decision</span>
+<span style="font-size: 15px; color: #1F2A68"><strong style="font-weight: 600">Bunzl CHS</strong> · contracted core supply</span>
+<span style="font-size: 15px; color: #1F2A68"><strong style="font-weight: 600">Gompels</strong> · bulk price leader</span>
+<span style="font-size: 15px; color: #1F2A68"><strong style="font-weight: 600">Pattersons</strong> · regional next-day cover</span>
+</div>
+</div>
+<div style="background: #FFFFFF; border-radius: 20px; overflow: hidden">
+<div style="display: grid; grid-template-columns: 1.3fr 0.8fr 1.6fr 1.3fr; background: #2A3990; padding: 16px 24px; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #FFFFFF">
+<span>Supplier</span><span>£ / roll</span><span>Terms</span><span>Delivery</span>
+</div>
+<sc-for list="{{suppliers}}" as="s" hint-placeholder-count="4">
+<div style="display: grid; grid-template-columns: 1.3fr 0.8fr 1.6fr 1.3fr; padding: 16px 24px; border-top: 1px solid #ECEEF3; font-size: 15px; align-items: center; background: {{s.bg}}">
+<span style="font-weight: 600; color: #1F2A68">{{s.name}}</span>
+<span style="color: #1F2A68; font-weight: 500">{{s.price}}</span>
+<span style="color: #333333; font-weight: 300">{{s.terms}}</span>
+<span style="color: #333333; font-weight: 300">{{s.delivery}}</span>
+</div>
+</sc-for>
+<div style="padding: 14px 24px; border-top: 1px solid #ECEEF3; font-size: 13px; color: #666666">4 of 30 shown · Standard 2-ply</div>
+</div>
+</section>
+
+<!-- What else shows up -->
+<section style="background: #FFFFFF; padding: 104px 160px; display: flex; flex-direction: column; gap: 44px">
+<div style="display: flex; flex-direction: column; gap: 16px; max-width: 760px">
+<span style="font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #353FFF">And then</span>
+<h2 style="margin: 0; font-size: 36px; line-height: 1.15; font-weight: 600; letter-spacing: -0.02em; color: #2A3990">What else shows up when every line is classified</h2>
+</div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px">
+
+<div style="border: 1px solid #ECEEF3; border-radius: 20px; padding: 32px; display: flex; flex-direction: column; gap: 18px">
+<h3 style="margin: 0; font-size: 20px; font-weight: 600; color: #2A3990">Off-contract buying</h3>
+<div style="border: 1px solid #DCE1F8; border-radius: 12px; padding: 14px 16px; display: flex; flex-direction: column; gap: 4px"><span style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #666666">Contracted · Bunzl</span><span style="font-size: 26px; font-weight: 600; color: #353FFF">£19.20 <span style="font-size: 13px; font-weight: 400; color: #666666">case of 36 rolls</span></span></div>
+<div style="border: 1.5px solid #A383FF; border-radius: 12px; padding: 14px 16px; display: flex; flex-direction: column; gap: 4px; background: #FAF8FF"><span style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #666666">Actually paid · Amazon</span><span style="font-size: 26px; font-weight: 600; color: #2A3990">£26.80 <span style="font-size: 13px; font-weight: 400; color: #666666">same case, +40%</span></span></div>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; font-weight: 300; color: #333333">A cost risk and a compliance risk. Client contracts specify products and suppliers, and every off-contract line weakens your position at renegotiation.</p>
+</div>
+
+<div style="border: 1px solid #ECEEF3; border-radius: 20px; padding: 32px; display: flex; flex-direction: column; gap: 18px">
+<h3 style="margin: 0; font-size: 20px; font-weight: 600; color: #2A3990">Same roll, five prices</h3>
+<span style="font-size: 13px; color: #666666; margin-top: -8px">Tork Advanced T4, price paid per roll</span>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<sc-for list="{{bars}}" as="b" hint-placeholder-count="5">
+<div style="display: flex; align-items: center; gap: 10px">
+<span style="font-size: 13px; color: #666666; width: 76px; flex-shrink: 0">{{b.label}}</span>
+<div style="height: 18px; border-radius: 4px; background: {{b.color}}; width: {{b.w}}"></div>
+<span style="font-size: 13px; font-weight: 600; color: #1F2A68">{{b.price}}</span>
+</div>
+</sc-for>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; font-weight: 300; color: #333333"><strong style="font-size: 22px; font-weight: 600; color: #1F2A68">68%</strong> spread on one product. Each price sits on a different invoice under a different description.</p>
+</div>
+
+<div style="border: 1px solid #ECEEF3; border-radius: 20px; padding: 32px; display: flex; flex-direction: column; gap: 18px">
+<h3 style="margin: 0; font-size: 20px; font-weight: 600; color: #2A3990">Spend you can't see</h3>
+<div style="display: flex; justify-content: center; padding: 6px 0">
+<svg width="150" height="150" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="38" fill="none" stroke="#353FFF" stroke-width="16"></circle><circle cx="50" cy="50" r="38" fill="none" stroke="#C9CDD8" stroke-width="16" stroke-dasharray="57.3 238.8" transform="rotate(-90 50 50)"></circle></svg>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; font-weight: 300; color: #333333"><strong style="font-size: 22px; font-weight: 600; color: #1F2A68">24%</strong> of spend uncategorised. You can't benchmark it, negotiate it or report on it until it has a label.</p>
+</div>
+
+</div>
+</section>
+
+<!-- How -->
+<section style="background: #F8F9FA; padding: 96px 160px; display: flex; flex-direction: column; gap: 40px">
+<h2 style="margin: 0; font-size: 36px; line-height: 1.15; font-weight: 600; letter-spacing: -0.02em; color: #2A3990">From invoices in any format to a table you can act on</h2>
+<div style="background: #FFFFFF; border-radius: 20px; padding: 44px 48px; display: flex; align-items: center; gap: 20px">
+<div style="display: flex; flex-direction: column; gap: 10px; width: 190px; flex-shrink: 0">
+<div style="padding: 12px 16px; border-radius: 10px; border: 1px solid #E4E7F0; font-size: 14px; color: #333333">PDF invoices</div>
+<div style="padding: 12px 16px; border-radius: 10px; border: 1px solid #E4E7F0; font-size: 14px; color: #333333">ERP exports</div>
+<div style="padding: 12px 16px; border-radius: 10px; border: 1px solid #E4E7F0; font-size: 14px; color: #333333">Ordering portals</div>
+<div style="padding: 12px 16px; border-radius: 10px; border: 1px solid #E4E7F0; font-size: 14px; color: #333333">Excel sheets</div>
+</div>
+<svg width="30" height="196" viewBox="0 0 30 196" fill="none" aria-hidden="true" style="flex-shrink: 0"><path d="M2 2 Q14 2 14 20 L14 82 Q14 98 28 98 Q14 98 14 114 L14 176 Q14 194 2 194" stroke="#2A3990" stroke-width="1.6"></path></svg>
+<svg width="36" height="12" viewBox="0 0 36 12" fill="none" aria-hidden="true" style="flex-shrink: 0"><path d="M0 6 H30" stroke="#2A3990" stroke-width="1.6"></path><path d="M28 1 L35 6 L28 11 Z" fill="#2A3990"></path></svg>
+<div style="background: #353FFF; border-radius: 14px; padding: 22px 24px; width: 220px; flex-shrink: 0; display: flex; flex-direction: column; gap: 8px">
+<span style="display: flex; align-items: flex-end; gap: 3px; color: #FFFFFF"><svg width="14" height="19" viewBox="0 0 18 24" fill="none" aria-hidden="true"><path d="M9 2 C10 1 11.5 0.6 13 1" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round"></path><path d="M9 4 C6.5 4 5.8 6.6 5.2 8.4 C4.4 10.6 1.5 11.8 1.5 16 C1.5 20.2 4.8 23 9 23 C13.2 23 16.5 20.2 16.5 16 C16.5 11.8 13.6 10.6 12.8 8.4 C12.2 6.6 11.5 4 9 4 Z" fill="#FFFFFF"></path></svg><span style="font-size: 18px; font-weight: 600; line-height: 1">pearstop.</span></span>
+<span style="font-size: 13px; color: #FFFFFF">clean · classify · enrich</span>
+</div>
+<svg width="36" height="12" viewBox="0 0 36 12" fill="none" aria-hidden="true" style="flex-shrink: 0"><path d="M0 6 H30" stroke="#2A3990" stroke-width="1.6"></path><path d="M28 1 L35 6 L28 11 Z" fill="#2A3990"></path></svg>
+<div style="display: flex; flex-direction: column; gap: 10px; flex-grow: 1">
+<div style="padding: 12px 16px; border-radius: 10px; background: #DCE1F8; font-size: 14px; color: #1F2A68; font-weight: 500">What you spend, per product</div>
+<div style="padding: 12px 16px; border-radius: 10px; background: #E8E0FC; font-size: 14px; color: #1F2A68; font-weight: 500">Off-contract and outlier lines</div>
+<div style="padding: 12px 16px; border-radius: 10px; background: #F1F8E9; font-size: 14px; color: #1F2A68; font-weight: 500">Suppliers per category, side by side</div>
+</div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px">
+<div style="background: #FFFFFF; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 8px"><h3 style="margin: 0; font-size: 17px; font-weight: 600; color: #2A3990">Your data doesn't need to be clean</h3><p style="margin: 0; font-size: 15px; line-height: 1.6; font-weight: 300; color: #333333">Messy data is the starting point. Cleaning and classifying it is the product.</p></div>
+<div style="background: #FFFFFF; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 8px"><h3 style="margin: 0; font-size: 17px; font-weight: 600; color: #2A3990">AI-first, human reviewed</h3><p style="margin: 0; font-size: 15px; line-height: 1.6; font-weight: 300; color: #333333">Every label checked. Classification holds up as new suppliers and invoices arrive.</p></div>
+<div style="background: #FFFFFF; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 8px"><h3 style="margin: 0; font-size: 17px; font-weight: 600; color: #2A3990">Usage-based pricing</h3><p style="margin: 0; font-size: 15px; line-height: 1.6; font-weight: 300; color: #333333">You pay for the lines processed. No heavy annual subscription.</p></div>
+</div>
+</section>
+
+<!-- Result + quote -->
+<section style="background: #FFFFFF; padding: 96px 160px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px">
+<div style="background: #F1F8E9; border-radius: 24px; padding: 44px; display: flex; flex-direction: column; gap: 14px; justify-content: center">
+<span style="font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #4E7D22">Typical result in soft FM</span>
+<span style="font-size: 64px; line-height: 1; font-weight: 600; letter-spacing: -0.03em; color: #1F2A68">10–20%</span>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; font-weight: 300; color: #1F2A68">savings on addressable spend. The findings above are where it comes from.</p>
+</div>
+<figure style="margin: 0; background: #2A3990; border-radius: 24px; padding: 44px; display: flex; flex-direction: column; gap: 24px; justify-content: center">
+<blockquote style="margin: 0; font-size: 24px; line-height: 1.45; font-weight: 400; color: #FFFFFF">“It would have taken five engineers and a full year to clean this up. So we decided to look for a better solution.”</blockquote>
+<figcaption style="font-size: 14px; color: #DCE1F8"><strong style="font-weight: 600; color: #FFFFFF">Head of Operations</strong> · Cleaning services company</figcaption>
+</figure>
+</section>
+
+<!-- Closing -->
+<section style="background: #1F2A68; padding: 96px 160px 72px; flex-grow: 1; display: flex; flex-direction: column; gap: 56px">
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 64px">
+<div style="display: flex; flex-direction: column; gap: 18px; max-width: 660px">
+<h2 style="margin: 0; font-size: 44px; line-height: 1.1; font-weight: 600; letter-spacing: -0.02em; color: #FFFFFF">See this on your own invoices</h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.6; font-weight: 300; color: #DCE1F8">Send up to 200 invoice lines or ten invoices. We send them back labelled, so you can see the same kind of pattern in your own numbers.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 14px; align-items: flex-end"><a href="#" style="background: rgb(255, 255, 255); color: rgb(31, 42, 104); font-size: 16px; font-weight: 600; padding: 16px 28px; border-radius: 12px">Send your sample</a><a href="#" style="color: rgb(163, 131, 255); font-size: 15px; font-weight: 500">Or talk to Sales →</a></div>
+</div>
+<div style="border-top: 1px solid rgba(220,225,248,0.2); padding-top: 28px; display: flex; justify-content: space-between; font-size: 13px; color: #7A8BE6">
+<span style="font-weight: 600; color: #FFFFFF; font-size: 18px">pearstop.</span>
+<span>© 2026 Pearstop · Privacy · Terms</span>
+</div>
+</section>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":4700}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const keep = [4, 15, 25];
+    const tiles = [];
+    for (let i = 0; i < 30; i++) tiles.push({ bg: keep.indexOf(i) >= 0 ? '#8BC34A' : '#E4E7F0' });
+    const prices = [0.31, 0.36, 0.41, 0.47, 0.52];
+    const bars = prices.map((p, i) => ({
+      label: 'Supplier ' + 'ABCDE'[i],
+      price: '£' + p.toFixed(2),
+      w: Math.round((p / 0.52) * 150) + 'px',
+      color: i === 4 ? '#A383FF' : '#353FFF'
+    }));
+    return {
+      tiles,
+      bars,
+      suppliers: [
+        { name: 'Gompels', price: '£0.31', terms: 'Account, 30 days', delivery: 'National, 2 to 3 days', bg: '#F7FBF1' },
+        { name: 'Bunzl CHS', price: '£0.33', terms: 'Contracted, one invoice', delivery: 'National, scheduled', bg: '#F7FBF1' },
+        { name: 'Pattersons', price: '£0.38', terms: 'Account, 30 days', delivery: 'Regional, next day', bg: '#F7FBF1' },
+        { name: 'Amazon Business', price: '£0.41', terms: 'Spot, no terms', delivery: 'Next day, per parcel', bg: '#FFFFFF' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

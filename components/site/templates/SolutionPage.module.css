@@ -1,0 +1,168 @@
+.root {
+  display: flex;
+  flex-direction: column;
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.2fr);
+  gap: 56px;
+  align-items: center;
+}
+
+.heroMain {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.eyebrow {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--blue);
+}
+
+.title {
+  margin: 0;
+  font-size: 54px;
+  line-height: 1.08;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  color: var(--navy);
+}
+
+.lead {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.6;
+  font-weight: 300;
+  color: var(--text);
+}
+
+.heroActions {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding-top: 8px;
+  flex-wrap: wrap;
+}
+
+.primary {
+  background: var(--blue);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 16px 26px;
+  border-radius: 12px;
+  text-decoration: none;
+}
+
+.secondary {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--navy);
+  text-decoration: none;
+}
+
+.heroVisual {
+  background: var(--bg-soft);
+  border-radius: 24px;
+  padding: 36px 32px;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+}
+
+.problemGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 64px;
+  align-items: center;
+}
+
+.body {
+  font-size: 17px;
+  line-height: 1.7;
+  font-weight: 300;
+  color: var(--text);
+}
+
+.plainTitle {
+  margin: 0;
+  font-size: 36px;
+  line-height: 1.15;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--navy);
+}
+
+.cardsGrid3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.cardsGrid4 {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.tableHeaderRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 48px;
+}
+
+.caption {
+  font-size: 13px;
+  color: var(--muted);
+  padding-bottom: 6px;
+  flex-shrink: 0;
+}
+
+.faqGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.4fr);
+  gap: 64px;
+  align-items: start;
+}
+
+@media (max-width: 767px) {
+  .heroGrid,
+  .problemGrid,
+  .cardsGrid3,
+  .tableHeaderRow,
+  .faqGrid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .cardsGrid4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .lead {
+    font-size: 18px;
+  }
+
+  .tableHeaderRow {
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .cardsGrid4 {
+    grid-template-columns: 1fr;
+  }
+}

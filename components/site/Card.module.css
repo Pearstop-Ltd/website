@@ -1,0 +1,75 @@
+.root {
+  border-radius: 18px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.plain {
+  background: #ffffff;
+  border: 1px solid var(--border);
+}
+
+.tinted-blue {
+  background: var(--tint-blue);
+}
+
+.tinted-purple {
+  background: var(--tint-purple);
+}
+
+.tinted-green {
+  background: var(--tint-green);
+}
+
+.tinted-blue .title,
+.tinted-purple .title,
+.tinted-green .title,
+.tinted-blue .body,
+.tinted-purple .body,
+.tinted-green .body {
+  color: var(--navy-deep);
+}
+
+.icon {
+  color: var(--blue);
+  line-height: 0;
+}
+
+.imageWrap {
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 4px;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.title {
+  margin: 0;
+  font-size: 19px;
+  line-height: 1.3;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.body {
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: 300;
+  color: var(--text);
+}
+
+@media (max-width: 767px) {
+  .root {
+    padding: 22px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+}

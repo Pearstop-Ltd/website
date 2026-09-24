@@ -1,0 +1,72 @@
+.root {
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.scroller {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.headerRow {
+  display: grid;
+  column-gap: 12px;
+  background: var(--navy);
+  padding: 14px 28px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.row {
+  display: grid;
+  column-gap: 12px;
+  padding: 16px 28px;
+  border-top: 1px solid var(--border);
+  font-size: 15px;
+  align-items: center;
+}
+
+.footnote {
+  padding: 14px 28px;
+  border-top: 1px solid var(--border);
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.chip {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 999px;
+}
+
+.chip-done {
+  background: var(--tint-green);
+  color: var(--green-text);
+}
+
+.chip-review {
+  background: var(--tint-purple);
+  color: var(--purple-text);
+}
+
+@media (max-width: 767px) {
+  .headerRow,
+  .row {
+    padding: 14px 20px;
+  }
+
+  .root {
+    border-radius: 16px;
+  }
+}
