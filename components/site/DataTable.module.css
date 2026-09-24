@@ -9,14 +9,13 @@
   -webkit-overflow-scrolling: touch;
 }
 
-.inner {
-  display: flex;
-  flex-direction: column;
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
 }
 
-.headerRow {
-  display: grid;
-  column-gap: 12px;
+.th {
   background: var(--navy);
   padding: 14px 28px;
   font-size: 12px;
@@ -26,13 +25,11 @@
   color: #ffffff;
 }
 
-.row {
-  display: grid;
-  column-gap: 12px;
+.td {
   padding: 16px 28px;
   border-top: 1px solid var(--border);
   font-size: 15px;
-  align-items: center;
+  vertical-align: middle;
 }
 
 .footnote {
@@ -40,6 +37,8 @@
   border-top: 1px solid var(--border);
   font-size: 13px;
   color: var(--muted);
+  font-weight: 400;
+  text-align: left;
 }
 
 .chip {
@@ -61,8 +60,9 @@
 }
 
 @media (max-width: 767px) {
-  .headerRow,
-  .row {
+  .th,
+  .td,
+  .footnote {
     padding: 14px 20px;
   }
 

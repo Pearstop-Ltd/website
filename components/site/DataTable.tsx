@@ -5,7 +5,9 @@ import styles from "./DataTable.module.css";
 export interface DataTableColumn {
   key: string;
   label: ReactNode;
-  /** CSS grid track size, e.g. "1.3fr" or "120px". Defaults to "1fr". */
+  /** CSS <col> width, e.g. "18%" or "120px", or a grid-style fraction like
+   * "1.3fr" (fr values are converted to a proportional percentage since
+   * <col> doesn't support fr). Defaults to an even split. */
   width?: string;
   align?: "left" | "right";
 }
@@ -27,34 +29,70 @@ export interface DataTableProps {
   className?: string;
 }
 
-/** Navy header row, 1px row borders, horizontal scroll on narrow viewports
- * so columns never wrap or truncate on mobile. */
+function resolveColWidths(columns: DataTableColumn[]): Array<string | undefined> {
+  const frTotal = columns.reduce((sum, col) => {
+    const match = /^([\d.]+)fr$/.exec((col.width ?? "").trim());
+    return match ? sum + parseFloat(match[1]) : sum;
+  }, 0);
+
+  return columns.map((col) => {
+    const raw = (col.width ?? "").trim();
+    const match = /^([\d.]+)fr$/.exec(raw);
+    if (match) {
+      const fr = parseFloat(match[1]);
+      const total = frTotal || columns.length;
+      return `${((fr / total) * 100).toFixed(2)}%`;
+    }
+    return raw || undefined;
+  });
+}
+
+/** Semantic <table> — real thead/tbody/th/td, never a div grid — with the
+ * same navy header row, 1px row borders and horizontal scroll on narrow
+ * viewports as the refs. */
 export function DataTable({ columns, rows, footnote, className }: DataTableProps) {
-  const gridTemplate = columns.map((c) => c.width ?? "1fr").join(" ");
+  const colWidths = resolveColWidths(columns);
 
   return (
     <div className={dsRoot(styles.root, className)}>
       <div className={styles.scroller}>
-        <div className={styles.inner} style={{ minWidth: columns.length * 140 }}>
-          <div className={styles.headerRow} style={{ gridTemplateColumns: gridTemplate }}>
-            {columns.map((col) => (
-              <span key={col.key} style={{ textAlign: col.align === "right" ? "right" : "left" }}>
-                {col.label}
-              </span>
+        <table className={styles.table} style={{ minWidth: columns.length * 140 }}>
+          <colgroup>
+            {columns.map((col, i) => (
+              <col key={col.key} style={colWidths[i] ? { width: colWidths[i] } : undefined} />
             ))}
-          </div>
-          {rows.map((row, i) => (
-            <div className={styles.row} style={{ gridTemplateColumns: gridTemplate }} key={i}>
+          </colgroup>
+          <thead>
+            <tr>
               {columns.map((col) => (
-                <span key={col.key} style={{ textAlign: col.align === "right" ? "right" : "left" }}>
-                  {row[col.key]}
-                </span>
+                <th key={col.key} scope="col" className={styles.th} style={{ textAlign: col.align === "right" ? "right" : "left" }}>
+                  {col.label}
+                </th>
               ))}
-            </div>
-          ))}
-        </div>
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map((row, i) => (
+              <tr key={i}>
+                {columns.map((col) => (
+                  <td key={col.key} className={styles.td} style={{ textAlign: col.align === "right" ? "right" : "left" }}>
+                    {row[col.key]}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+          {footnote ? (
+            <tfoot>
+              <tr>
+                <td className={styles.footnote} colSpan={columns.length}>
+                  {footnote}
+                </td>
+              </tr>
+            </tfoot>
+          ) : null}
+        </table>
       </div>
-      {footnote ? <div className={styles.footnote}>{footnote}</div> : null}
     </div>
   );
 }
