@@ -4,19 +4,22 @@ on:
   push:
     branches: [main]
     paths:
-      - "messages/en.json"
+      # Blog content only — deliberately excludes messages/en.json. Site UI
+      # copy is never machine-translated; it's translated by hand (or by
+      # Claude on request), so a routine site-copy change can't trigger an
+      # unreviewed Gemini-translated commit to the live UI strings.
       - "content/blog/en/**"
       - "lib/blog-posts.ts"
   workflow_dispatch: {}
 
 concurrency:
-  # Own group per workflow: this one only ever commits messages/{nl,fr,de}.json,
-  # content/blog/{nl,fr,de}, content/blog-faq/{nl,fr,de}.json, and
-  # content/blog-toc/{fr,de}.json, which auto-blog-image never touches, so the
-  # two workflows don't need to share a lane — sharing one previously let a
-  # translate run's queued slot get bumped by an image run (or vice versa),
-  # so the bumped workflow never ran at all for that push. Runs of *this*
-  # workflow still queue behind each other rather than overlap.
+  # Own group per workflow: this one only ever commits content/blog/{nl,fr,de},
+  # content/blog-faq/{nl,fr,de}.json, and content/blog-toc/{fr,de}.json, which
+  # auto-blog-image never touches, so the two workflows don't need to share a
+  # lane — sharing one previously let a translate run's queued slot get bumped
+  # by an image run (or vice versa), so the bumped workflow never ran at all
+  # for that push. Runs of *this* workflow still queue behind each other
+  # rather than overlap.
   group: translate-push
   cancel-in-progress: false
 
@@ -53,7 +56,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add messages/nl.json messages/fr.json messages/de.json content/blog/nl content/blog/fr content/blog/de content/blog-faq content/blog-toc
+          git add content/blog/nl content/blog/fr content/blog/de content/blog-faq content/blog-toc
           if git diff --staged --quiet; then
             echo "No translation changes to commit."
           else

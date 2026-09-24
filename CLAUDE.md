@@ -45,13 +45,15 @@ Blog metadata is split across two places that must stay consistent for a post to
 
 **Author is sourced from MDX frontmatter only** (`author: "<key>"`, e.g. `"stephanie"`), read via `getMdxFrontmatter`/`getMdxAuthor` in the `[slug]/page.tsx` files — `lib/blog-posts.ts` intentionally has no `author` field, to avoid the two sources drifting. The canonical author registry (display name, role, bio, LinkedIn, avatar) lives in `components/blog.tsx` as `AUTHORS`/`AuthorKey`/`isAuthorKey`, imported wherever an author needs to be resolved or validated. `BlogLayout` automatically renders the matching `AuthorBlock` under every article body — never hand-write an author bio card inside MDX content.
 
-### Auto-translation pipeline
+### Auto-translation pipeline (blog content only — never site UI copy)
 
-`scripts/translate.js` (invoked via `npm run prebuild` and in CI) reads `messages/en.json` as the source of truth and translates any keys missing from `messages/{nl,fr,de}.json` using the Gemini API (`GEMINI_API_KEY`, Gemini 2.5 Flash). It also translates new/changed MDX files from `content/blog/en/` into `content/blog/{nl,fr,de}/`, leaving frontmatter keys, headings, and JSX untouched; translates blog post `faqItems` (read from `lib/blog-posts.ts`, read-only) into `content/blog-faq/{nl,fr,de}.json`; and translates `tocItems` labels (same read-only source) into `content/blog-toc/{fr,de}.json` — nl is skipped there since it's hand-maintained via `tocItemsNl`.
+`scripts/translate.js` (invoked via `npm run prebuild` and in CI) uses the Gemini API (`GEMINI_API_KEY`, Gemini 2.5 Flash) for **blog content only**: it translates new/changed MDX files from `content/blog/en/` into `content/blog/{nl,fr,de}/`, leaving frontmatter keys, headings, and JSX untouched; translates blog post `faqItems` (read from `lib/blog-posts.ts`, read-only) into `content/blog-faq/{nl,fr,de}.json`; and translates `tocItems` labels (same read-only source) into `content/blog-toc/{fr,de}.json` — nl is skipped there since it's hand-maintained via `tocItemsNl`.
 
-`.github/workflows/auto-translate.yml` runs this script on pushes to `main` that touch `messages/en.json`, `content/blog/en/**`, or `lib/blog-posts.ts`, and commits the resulting `messages/{nl,fr,de}.json` / `content/blog/{nl,fr,de}/**` / `content/blog-faq/{nl,fr,de}.json` / `content/blog-toc/{fr,de}.json` changes back to `main` directly.
+`.github/workflows/auto-translate.yml` runs this script on pushes to `main` that touch `content/blog/en/**` or `lib/blog-posts.ts`, and commits the resulting `content/blog/{nl,fr,de}/**` / `content/blog-faq/{nl,fr,de}.json` / `content/blog-toc/{fr,de}.json` changes back to `main` directly.
 
-Implication: don't hand-edit `messages/{nl,fr,de}.json`, `content/blog/{nl,fr,de}/*.mdx`, `content/blog-faq/{nl,fr,de}.json`, or `content/blog-toc/{fr,de}.json` for content that has an English source — edits will be overwritten by the next translation run. Edit the English source (or `tocItemsNl` by hand, for Dutch TOC labels) instead.
+Implication: don't hand-edit `content/blog/{nl,fr,de}/*.mdx`, `content/blog-faq/{nl,fr,de}.json`, or `content/blog-toc/{fr,de}.json` for content that has an English source — edits will be overwritten by the next translation run. Edit the English source (or `tocItemsNl` by hand, for Dutch TOC labels) instead.
+
+**`messages/{nl,fr,de}.json` (site UI copy) is deliberately out of this pipeline and is never touched by Gemini.** A missing key falls back to the English string at render time (see i18n routing above) until it's translated. When the user asks for `messages/en.json` copy to be translated, translate it directly by hand into `messages/{nl,fr,de}.json` yourself — do not run `scripts/translate.js` or otherwise route it through Gemini, and do not re-add `messages/en.json` to the auto-translate workflow's trigger paths.
 
 ### Shared config and content
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Auto-translation script for Pearstop website.
+ * Auto-translation script for Pearstop blog content.
  *
  * Usage:
  *   GEMINI_API_KEY=your-key node scripts/translate.js
@@ -8,15 +8,17 @@
  * Uses Google Gemini 2.5 Flash (free tier), with thinking disabled.
  * Translates in batches of up to 50 strings per API call for efficiency.
  *
+ * Scope: blog content only (content/blog/en/**, blog post faqItems/tocItems
+ * from lib/blog-posts.ts). This deliberately does NOT touch messages/*.json —
+ * site UI copy is translated by hand (or by Claude on request), never via
+ * Gemini, so a routine site-copy change can never trigger an unreviewed
+ * machine-translated commit to the live UI strings.
+ *
  * What it does:
- * 1. Reads messages/en.json (source of truth)
- * 2. For each target locale (nl, fr, de):
- *    - Reads the existing locale JSON
- *    - Finds all string values present in EN but missing in the locale
- *    - Calls Gemini to translate them in batches
- *    - Writes the updated locale JSON back to disk
- * 3. If content/blog/en/ exists, translates MDX files to content/blog/nl/, fr/, de/
+ * 1. If content/blog/en/ exists, translates MDX files to content/blog/nl/, fr/, de/
  *    (only translates prose paragraphs, leaves frontmatter/headings/JSX untouched)
+ * 2. Translates blog post faqItems/tocItems (read-only from lib/blog-posts.ts)
+ *    into content/blog-faq/ and content/blog-toc/
  */
 
 const fs = require("fs");
@@ -24,7 +26,6 @@ const path = require("path");
 const https = require("https");
 
 const ROOT = path.join(__dirname, "..");
-const MESSAGES_DIR = path.join(ROOT, "messages");
 const BLOG_EN_DIR = path.join(ROOT, "content", "blog", "en");
 const BLOG_POSTS_SOURCE = path.join(ROOT, "lib", "blog-posts.ts");
 const BLOG_FAQ_DIR = path.join(ROOT, "content", "blog-faq");
@@ -219,52 +220,6 @@ function getNestedValue(obj, pathStr) {
     cur = cur[part];
   }
   return cur;
-}
-
-// ---------------------------------------------------------------------------
-// Messages translation
-// ---------------------------------------------------------------------------
-
-async function translateMessages() {
-  const enPath = path.join(MESSAGES_DIR, "en.json");
-  if (!fs.existsSync(enPath)) {
-    console.log("⚠  messages/en.json not found, skipping message translation.");
-    return;
-  }
-
-  const enData = JSON.parse(fs.readFileSync(enPath, "utf-8"));
-  const enFlat = flattenObject(enData);
-
-  for (const locale of TARGET_LOCALES) {
-    const localePath = path.join(MESSAGES_DIR, `${locale}.json`);
-    const localeData = fs.existsSync(localePath)
-      ? JSON.parse(fs.readFileSync(localePath, "utf-8"))
-      : {};
-
-    const localeFlat = flattenObject(localeData);
-
-    const missing = Object.entries(enFlat).filter(([key, value]) => {
-      return value && typeof value === "string" && !localeFlat[key];
-    });
-
-    if (missing.length === 0) {
-      console.log(`✓  ${locale}.json is already up to date (${Object.keys(enFlat).length} keys)`);
-      continue;
-    }
-
-    console.log(`\n🌍  Translating ${missing.length} missing keys to ${LOCALE_NAMES[locale]}...`);
-
-    const texts = missing.map(([, v]) => v);
-    const translatedTexts = await translateBatched(texts, locale);
-
-    const merged = JSON.parse(JSON.stringify(localeData));
-    missing.forEach(([key], index) => {
-      setNestedValue(merged, key, translatedTexts[index]);
-    });
-
-    fs.writeFileSync(localePath, JSON.stringify(merged, null, 2), "utf-8");
-    console.log(`✓  Wrote ${locale}.json (${missing.length} new translations)`);
-  }
 }
 
 // ---------------------------------------------------------------------------
@@ -582,8 +537,6 @@ async function main() {
   console.log(`   Target locales: ${TARGET_LOCALES.join(", ")}\n`);
 
   try {
-    await translateMessages();
-    console.log("");
     await translateBlogPosts();
     console.log("");
     await translateBlogFaqItems();
