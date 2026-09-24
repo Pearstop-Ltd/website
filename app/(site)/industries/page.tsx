@@ -456,7 +456,7 @@ export default function IndustriesPage() {
             <p>
               Data quality problems are not unique to the industries above. If your teams are managing complex operational data, dealing with inconsistent supplier records, or preparing for a digital transformation, the chances are we can help. Let&apos;s find out.
             </p>
-            <CalendlyButton label="Book a 7-minute discovery →" className="btn btn-primary" />
+            <CalendlyButton label="Talk to sales →" className="btn btn-primary" />
           </div>
         </div>
       </section>

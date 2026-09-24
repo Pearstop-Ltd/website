@@ -26,7 +26,7 @@ export function UnderConstructionPage({
   eyebrow,
   title,
   lead,
-  ctaLabel = "Book a 7-minute discovery",
+  ctaLabel = "Talk to sales",
   ctaHref = siteConfig.calendly
 }: {
   eyebrow: string;
@@ -63,7 +63,7 @@ export function UnderConstructionPage({
         title="If you were sent here by an old link, we can point you to the right page."
         lead="The main site is live, and the remaining gaps are being wrapped up behind the scenes."
         actions={[
-          { label: "Book a 7-minute discovery", href: siteConfig.calendly, variant: "primary", external: true },
+          { label: "Talk to sales", href: siteConfig.calendly, variant: "primary", external: true },
           { label: "Go to contact", href: "/contact", variant: "secondary" }
         ]}
       />

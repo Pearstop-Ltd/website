@@ -92,7 +92,7 @@ export default function UnspscPage() {
         title="Your procurement data contains the answers. You just cannot read it yet."
         lead="Most FM and construction companies have years of purchase order data in SAP or Oracle. Without UNSPSC classification, it is a pile of free-text line items. With it, you can see exactly what you spend by category, benchmark suppliers, and build tenders from actual cost data. Pearstop classifies invoices at any scale, from a pilot of a few hundred lines to full production volume - it scales with you."
         actions={[
-          { label: "Book a 7-minute discovery", href: siteConfig.calendly, variant: "primary", external: true },
+          { label: "Talk to sales", href: siteConfig.calendly, variant: "primary", external: true },
           { label: "What is UNSPSC?", href: "#what-is-unspsc", variant: "secondary" }
         ]}
       />
@@ -324,8 +324,8 @@ export default function UnspscPage() {
 
       <CTABand
         title="Ready to automate your procurement classification?"
-        lead="Book a 7-minute discovery. We will show you exactly how the classification engine would work with your data."
-        actions={[{ label: "Book a 7-minute discovery", href: siteConfig.calendly, variant: "primary", external: true }]}
+        lead="Talk to sales. We will show you exactly how the classification engine would work with your data."
+        actions={[{ label: "Talk to sales", href: siteConfig.calendly, variant: "primary", external: true }]}
       />
     </>
   );

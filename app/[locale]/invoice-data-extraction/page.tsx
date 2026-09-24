@@ -79,7 +79,7 @@ export default async function InvoiceDataExtractionPage({ params }: { params: Pr
         title={t("hero.title")}
         lead={t("hero.lead")}
         actions={[
-          { label: "Book a 7-minute discovery", href: siteConfig.calendly, variant: "primary", external: true },
+          { label: "Talk to sales", href: siteConfig.calendly, variant: "primary", external: true },
           { label: "See how it works", href: "#how-it-works", variant: "secondary" }
         ]}
       />

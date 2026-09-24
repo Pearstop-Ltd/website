@@ -116,7 +116,7 @@ export default function ContactPage() {
         title="Not sure if Pearstop is for you?"
         lead="Let's talk. You're smart - let's work out your solution."
         actions={[
-          { label: "Book a 7-minute discovery", href: siteConfig.calendly, variant: "primary", external: true },
+          { label: "Talk to sales", href: siteConfig.calendly, variant: "primary", external: true },
           { label: "Find out what's possible (send email)", href: `mailto:${siteConfig.email}`, variant: "secondary", external: true }
         ]}
       />

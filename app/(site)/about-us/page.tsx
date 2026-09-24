@@ -216,7 +216,7 @@ export default function AboutPage() {
         lead="Got a data problem worth solving? We would love to hear about it."
         actions={[
           { label: "Get in touch", href: "/contact", variant: "primary" },
-          { label: "Book a 7-minute discovery", href: siteConfig.calendly, variant: "secondary", external: true }
+          { label: "Talk to sales", href: siteConfig.calendly, variant: "secondary", external: true }
         ]}
       />
     </>

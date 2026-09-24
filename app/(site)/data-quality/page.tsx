@@ -45,7 +45,7 @@ export default function DataQualityPage() {
         title="An ERP migration, a Fabric rollout, or an AI project inherits every mistake already in your data."
         lead="None of these projects fix bad data on their own. They move it, or build on top of it. Pearstop cleans and structures the reference data first, whether the project is an ERP migration, a Microsoft Fabric rollout, an AI initiative, or unifying every service line on one multi-year FM contract."
         actions={[
-          { label: "Book a 7-minute discovery", href: siteConfig.calendly, variant: "primary", external: true },
+          { label: "Talk to sales", href: siteConfig.calendly, variant: "primary", external: true },
           { label: "See how it works", href: "#how-it-works", variant: "secondary" }
         ]}
       />
@@ -224,8 +224,8 @@ export default function DataQualityPage() {
 
       <CTABand
         title="Ready to fix the data underneath your next project?"
-        lead="Book a 7-minute discovery call. We will show you exactly where your data would break an ERP migration, a Fabric rollout, or an AI initiative today."
-        actions={[{ label: "Book a 7-minute discovery", href: siteConfig.calendly, variant: "primary", external: true }]}
+        lead="Talk to sales call. We will show you exactly where your data would break an ERP migration, a Fabric rollout, or an AI initiative today."
+        actions={[{ label: "Talk to sales", href: siteConfig.calendly, variant: "primary", external: true }]}
       />
     </>
   );

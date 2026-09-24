@@ -158,7 +158,7 @@ export default function ConstructionSpendBenchmarkingPage() {
       <CaseClosingCTA
         title="Want to see this on your own spend?"
         lead="Send a sample of your own procurement data and we'll show you the same kind of pattern in your own numbers."
-        ctaLabel="Book a 7-minute discovery"
+        ctaLabel="Talk to sales"
         ctaHref={siteConfig.calendly}
         external
       />

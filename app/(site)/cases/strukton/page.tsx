@@ -145,7 +145,7 @@ export default function StruktonCaseStudyPage() {
       <CaseClosingCTA
         title="Want a case study built around your data?"
         lead="We can show you what the same approach would look like for your procurement or asset data."
-        ctaLabel="Book a 7-minute discovery"
+        ctaLabel="Talk to sales"
         ctaHref={siteConfig.calendly}
         external
       />

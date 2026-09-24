@@ -49,7 +49,7 @@ export default async function ProcurementConsultanciesPage({ params }: { params:
         title={t("hero.title")}
         lead={t("hero.lead")}
         actions={[
-          { label: "Book a 7-minute discovery", href: siteConfig.calendly, variant: "primary", external: true },
+          { label: "Talk to sales", href: siteConfig.calendly, variant: "primary", external: true },
           { label: t("howItWorks.title"), href: "#how-it-works", variant: "secondary" }
         ]}
       />

@@ -157,7 +157,7 @@ export function UnspscLookupTool({
         <p style={{ color: "var(--muted)", fontSize: "0.9rem", marginBottom: "1.5rem", lineHeight: 1.6 }}>
           For bulk classification — thousands of invoice lines, automated and accurate — talk to us about the full service.
         </p>
-        <CalendlyButton label="Book a 7-minute discovery call" className="btn btn-primary" />
+        <CalendlyButton label="Talk to sales call" className="btn btn-primary" />
       </div>
     );
   }

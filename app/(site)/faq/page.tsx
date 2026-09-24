@@ -206,7 +206,7 @@ export default function FaqPage() {
         title="Questions we get asked most often."
         lead="Everything you need to know about how Pearstop works, what it costs, and whether it is right for your organisation."
         actions={[
-          { label: "Book a 7-minute discovery", href: siteConfig.calendly, variant: "primary", external: true },
+          { label: "Talk to sales", href: siteConfig.calendly, variant: "primary", external: true },
           { label: "Jump to questions", href: "#faq-general", variant: "secondary" }
         ]}
       />
@@ -247,7 +247,7 @@ export default function FaqPage() {
                 <div className="story-label">Still have a question?</div>
                 <p>If your question is not answered here, the fastest way to get an answer is a 7-minute discovery call. There is no sales pressure — it is a direct conversation about your data situation.</p>
                 <div style={{ marginTop: "1rem", display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-            <CalendlyButton label="Book a 7-minute discovery" className="btn btn-primary" />
+            <CalendlyButton label="Talk to sales" className="btn btn-primary" />
                   <Link href="/contact" className="btn btn-secondary">
                     Send us a message
                   </Link>
@@ -261,9 +261,9 @@ export default function FaqPage() {
 
       <CTABand
         title="Ready to see it in action?"
-        lead="Book a 7-minute discovery and we will show you exactly how the classification engine works with your data."
+        lead="Talk to sales and we will show you exactly how the classification engine works with your data."
         actions={[
-          { label: "Book a 7-minute discovery", href: siteConfig.calendly, variant: "primary", external: true }
+          { label: "Talk to sales", href: siteConfig.calendly, variant: "primary", external: true }
         ]}
       />
     </>

@@ -111,7 +111,7 @@ export default function LemtechCaseStudyPage() {
       <CaseClosingCTA
         title="Same problem with your own documents?"
         lead="Send us a sample of what comes in - messy notes, PDFs, or free text - and we'll show you what comes back structured."
-        ctaLabel="Book a 7-minute discovery"
+        ctaLabel="Talk to sales"
         ctaHref={siteConfig.calendly}
         external
       />

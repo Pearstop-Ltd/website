@@ -49,7 +49,7 @@ export default function SpendCubePage() {
         title="A spend cube built in days, not a manual quarter-long project"
         lead="A spend cube is only useful if it's built on classified, consistent data and stays current. Pearstop classifies your spend once and keeps classifying it as new invoices and purchase orders arrive, so the cube, and whatever dashboard sits on top of it, doesn't go stale the week after it's delivered."
         actions={[
-          { label: "Book a 7-minute discovery", href: siteConfig.calendly, variant: "primary", external: true },
+          { label: "Talk to sales", href: siteConfig.calendly, variant: "primary", external: true },
           { label: "See how it works", href: "#how-it-works", variant: "secondary" }
         ]}
       />
@@ -213,8 +213,8 @@ export default function SpendCubePage() {
 
       <CTABand
         title="Ready to see your own spend cube?"
-        lead="Book a 7-minute discovery call and we'll show you what your spend data looks like structured into a cube, ready for your dashboard."
-        actions={[{ label: "Book a 7-minute discovery", href: siteConfig.calendly, variant: "primary", external: true }]}
+        lead="Talk to sales call and we'll show you what your spend data looks like structured into a cube, ready for your dashboard."
+        actions={[{ label: "Talk to sales", href: siteConfig.calendly, variant: "primary", external: true }]}
       />
     </>
   );

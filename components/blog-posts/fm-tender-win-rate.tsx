@@ -52,7 +52,7 @@ export default function FmTenderWinRate() {
         type="discovery"
         title="See what your bid data could look like"
         description="In a 7-minute call we will show you how other FM companies have cut bid prep time from days to hours, and what that means for pricing accuracy and win rate."
-        ctaLabel="Book a 7-minute discovery"
+        ctaLabel="Talk to sales"
         ctaHref={siteConfig.calendly}
         external={true}
       />

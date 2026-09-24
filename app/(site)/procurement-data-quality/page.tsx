@@ -47,7 +47,7 @@ export default function ProcurementPage() {
         title="You cannot negotiate what you cannot see."
         lead="Most procurement teams can state their turnover to the euro. Few can state what they actually spent it on, category by category, across every site, entity, and bundled contract. Pearstop builds that baseline, so a negotiation, a tender, or a framework review starts from a real number instead of a guess."
         actions={[
-          { label: "Book a 7-minute discovery", href: siteConfig.calendly, variant: "primary", external: true },
+          { label: "Talk to sales", href: siteConfig.calendly, variant: "primary", external: true },
           { label: "See how it works", href: "#how-it-works", variant: "secondary" }
         ]}
       />
@@ -201,8 +201,8 @@ export default function ProcurementPage() {
 
       <CTABand
         title="Ready to build a real spend baseline?"
-        lead="Book a 7-minute discovery call. We will show you exactly where your spend data is hiding the number you need."
-        actions={[{ label: "Book a 7-minute discovery", href: siteConfig.calendly, variant: "primary", external: true }]}
+        lead="Talk to sales call. We will show you exactly where your spend data is hiding the number you need."
+        actions={[{ label: "Talk to sales", href: siteConfig.calendly, variant: "primary", external: true }]}
       />
     </>
   );

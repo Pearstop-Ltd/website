@@ -175,9 +175,9 @@ export default function SolutionsPage() {
 
       <CTABand
         title="Not sure which solution you need?"
-        lead="Book a 7-minute discovery call. We will identify exactly which data problem is costing you the most - and show you how to fix it."
+        lead="Talk to sales call. We will identify exactly which data problem is costing you the most - and show you how to fix it."
         actions={[
-          { label: "Book a 7-minute discovery", href: siteConfig.calendly, variant: "primary", external: true },
+          { label: "Talk to sales", href: siteConfig.calendly, variant: "primary", external: true },
           { label: "View Industries", href: "/industries", variant: "secondary" }
         ]}
       />

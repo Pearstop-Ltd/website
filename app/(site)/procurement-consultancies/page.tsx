@@ -49,7 +49,7 @@ export default function ProcurementConsultanciesPage() {
         title="Deliver the spend classification, keep the engagement margin"
         lead="Category management, sourcing-savings, and spend-cube engagements all start with the same manual bottleneck: classifying a client's messy spend data. Pearstop does that layer, white-labelled under your own taxonomy, so your team spends its hours on the analysis and recommendations clients actually pay for."
         actions={[
-          { label: "Book a 7-minute discovery", href: siteConfig.calendly, variant: "primary", external: true },
+          { label: "Talk to sales", href: siteConfig.calendly, variant: "primary", external: true },
           { label: "See how it works", href: "#how-it-works", variant: "secondary" }
         ]}
       />
@@ -199,8 +199,8 @@ export default function ProcurementConsultanciesPage() {
 
       <CTABand
         title="Want to see it on a real client dataset?"
-        lead="Book a 7-minute discovery call and we'll show you what your next engagement's spend data looks like after a first pass."
-        actions={[{ label: "Book a 7-minute discovery", href: siteConfig.calendly, variant: "primary", external: true }]}
+        lead="Talk to sales call and we'll show you what your next engagement's spend data looks like after a first pass."
+        actions={[{ label: "Talk to sales", href: siteConfig.calendly, variant: "primary", external: true }]}
       />
     </>
   );

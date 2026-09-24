@@ -41,7 +41,7 @@
     "instagram": "Instagram"
   },
   "Common": {
-    "bookDiscovery": "Book a 7-minute discovery",
+    "bookDiscovery": "Talk to sales",
     "seeHowItWorks": "See how it works",
     "howItWorks": "How it works",
     "exploreSolution": "Explore solution →",
@@ -293,7 +293,7 @@
       "title": "Let's talk.",
       "lead": "Got a data problem worth solving? We would love to hear about it.",
       "getInTouch": "Get in touch",
-      "bookDiscovery": "Book a 7-minute discovery"
+      "bookDiscovery": "Talk to sales"
     },
     "leaders": [
       {
@@ -344,7 +344,7 @@
     "cta": {
       "title": "Not sure if Pearstop is for you?",
       "lead": "Let's talk. You're smart - let's work out your solution.",
-      "bookDiscovery": "Book a 7-minute discovery",
+      "bookDiscovery": "Talk to sales",
       "findOut": "Find out what's possible (send email)"
     }
   },
@@ -423,7 +423,7 @@
     "cta": {
       "title": "Not sure which solution you need?",
       "lead": "Book a 7-minute discovery call. We will identify exactly which data problem is costing you the most - and show you how to fix it.",
-      "bookDiscovery": "Book a 7-minute discovery",
+      "bookDiscovery": "Talk to sales",
       "viewIndustries": "View Industries"
     }
   },
@@ -522,7 +522,7 @@
     "cta": {
       "title": "Ready to fix the data underneath your next project?",
       "lead": "Book a 7-minute discovery call. We will show you exactly where your data would break an ERP migration, a Fabric rollout, or an AI initiative today.",
-      "button": "Book a 7-minute discovery"
+      "button": "Talk to sales"
     }
   },
   "InvoiceExtraction": {
@@ -626,7 +626,7 @@
     "cta": {
       "title": "Still keying invoices in by hand?",
       "lead": "Book a 7-minute discovery call and see what your own invoice stream looks like once it is actually read.",
-      "button": "Book a 7-minute discovery"
+      "button": "Talk to sales"
     }
   },
   "ProcurementConsultancies": {
@@ -719,7 +719,7 @@
     "cta": {
       "title": "Want to see it on a real client dataset?",
       "lead": "Book a 7-minute discovery call and we'll show you what your next engagement's spend data looks like after a first pass.",
-      "button": "Book a 7-minute discovery"
+      "button": "Talk to sales"
     }
   },
   "SpendCube": {
@@ -817,7 +817,7 @@
     "cta": {
       "title": "Ready to see your own spend cube?",
       "lead": "Book a 7-minute discovery call and we'll show you what your spend data looks like structured into a cube, ready for your dashboard.",
-      "button": "Book a 7-minute discovery"
+      "button": "Talk to sales"
     }
   },
   "Procurement": {
@@ -903,7 +903,7 @@
     "cta": {
       "title": "Ready to build a real spend baseline?",
       "lead": "Book a 7-minute discovery call. We will show you exactly where your spend data is hiding the number you need.",
-      "button": "Book a 7-minute discovery"
+      "button": "Talk to sales"
     }
   },
   "AssetManagement": {
@@ -1000,7 +1000,7 @@
     "cta": {
       "title": "Ready to hold an independent view of your own?",
       "lead": "Book a 7-minute discovery call and see exactly how Pearstop turns the data you already receive into something you can verify.",
-      "button": "Book a 7-minute discovery"
+      "button": "Talk to sales"
     }
   },
   "AiReadiness": {
@@ -1095,7 +1095,7 @@
     "cta": {
       "title": "Is your data ready for AI?",
       "lead": "Book a 7-minute call and we will tell you exactly what needs to happen before your AI initiatives can deliver results.",
-      "button": "Book a 7-minute discovery",
+      "button": "Talk to sales",
       "fabricLink": "See Fabric readiness too"
     }
   },
@@ -1217,7 +1217,7 @@
     "cta": {
       "title": "Ready to automate your procurement classification?",
       "lead": "Book a 7-minute discovery. We will show you exactly how the classification engine would work with your data.",
-      "button": "Book a 7-minute discovery"
+      "button": "Talk to sales"
     }
   },
   "UnspscAiGuide": {
@@ -1229,7 +1229,7 @@
       "eyebrow": "AI UNSPSC Classification Guide",
       "title": "You have a large Excel catalog. You want AI to classify it into UNSPSC.",
       "lead": "That is the request we hear most often, sometimes as a spend file that has never carried a code, sometimes as a stack of PDF invoices that has not even become a spend file yet. This guide describes the actual process: how Pearstop turns either starting point into a UNSPSC-coded dataset, what a pilot measures before you commit to the full file, and why the classification does not come from simply asking a model what a code should be.",
-      "ctaPrimary": "Book a 7-minute discovery",
+      "ctaPrimary": "Talk to sales",
       "ctaSecondary": "See the process"
     },
     "paths": {
@@ -1352,7 +1352,7 @@
     "cta": {
       "title": "Ready to see this run against your own data?",
       "lead": "Book a 7-minute discovery, or test a single description on the free lookup tool first.",
-      "button": "Book a 7-minute discovery",
+      "button": "Talk to sales",
       "secondaryButton": "Try the free lookup"
     }
   },
@@ -1433,7 +1433,7 @@
     "cta": {
       "title": "Planning a Fabric migration?",
       "lead": "Talk to us before the migration starts. A 30-minute call now can save months of rework later.",
-      "button": "Book a 7-minute discovery",
+      "button": "Talk to sales",
       "aiLink": "See AI readiness too"
     }
   },
@@ -1556,7 +1556,7 @@
       "title": "Want to talk it through?",
       "lead": "If you'd rather discuss your data problem directly, we're happy to help.",
       "followLinkedIn": "Follow Pearstop on LinkedIn for updates",
-      "bookDiscovery": "Book a 7-minute discovery"
+      "bookDiscovery": "Talk to sales"
     }
   },
   "Cases": {
@@ -2184,7 +2184,7 @@
     "cta": {
       "title": "Prefer a conversation?",
       "lead": "We can also walk you through the same thinking on a quick call.",
-      "bookDiscovery": "Book a 7-minute discovery",
+      "bookDiscovery": "Talk to sales",
       "backHome": "Back to home"
     }
   },
@@ -2197,7 +2197,7 @@
       "eyebrow": "FAQ",
       "title": "Questions we get asked most often.",
       "lead": "Everything you need to know about how Pearstop works, what it costs, and whether it is right for your organisation.",
-      "cta": "Book a 7-minute discovery",
+      "cta": "Talk to sales",
       "secondary": "Jump to questions"
     },
     "sections": {
@@ -2351,13 +2351,13 @@
     "stillHaveQuestions": {
       "label": "Still have a question?",
       "copy": "If your question is not answered here, the fastest way to get an answer is a 7-minute discovery call. There is no sales pressure — it is a direct conversation about your data situation.",
-      "cta": "Book a 7-minute discovery",
+      "cta": "Talk to sales",
       "email": "Send us a message"
     },
     "cta": {
       "title": "Ready to see it in action?",
       "lead": "Book a 7-minute discovery and we will show you exactly how the classification engine works with your data.",
-      "button": "Book a 7-minute discovery"
+      "button": "Talk to sales"
     }
   },
   "UnspscFM": {
@@ -2373,7 +2373,7 @@
       "eyebrow": "UNSPSC for Facilities Management",
       "title": "FM procurement data is the hardest to classify. Here is how to fix it.",
       "lead": "Hard services and FM companies manage thousands of invoice lines across hundreds of suppliers and sites. Pearstop classifies all of it automatically — 90–95% without human input — so your team can focus on category management, not data entry.",
-      "cta": "Book a 7-minute discovery",
+      "cta": "Talk to sales",
       "secondary": "How it works"
     },
     "challenge": {
@@ -2464,7 +2464,7 @@
     "cta": {
       "title": "Ready to automate FM procurement classification?",
       "lead": "Book a 7-minute discovery. We will show you exactly how the engine works with your spend data.",
-      "button": "Book a 7-minute discovery"
+      "button": "Talk to sales"
     }
   },
   "UnspscNL": {
@@ -2687,7 +2687,7 @@
     "bulk": {
       "label": "Need to classify thousands of lines?",
       "copy": "This tool handles single lookups. Pearstop’s automated classification engine processes 35,000 procurement lines per month — with 90-95% auto-classification and full SAP integration. Book a 7-minute discovery to see it with your data.",
-      "cta": "Book a 7-minute discovery",
+      "cta": "Talk to sales",
       "learnMore": "See how it works"
     },
     "faq": {
@@ -2734,7 +2734,7 @@
     "cta": {
       "title": "Need to classify thousands of lines?",
       "lead": "Book a 7-minute discovery and we will show you how the full classification engine works with your actual procurement data.",
-      "button": "Book a 7-minute discovery"
+      "button": "Talk to sales"
     }
   },
   "BookDemo": {

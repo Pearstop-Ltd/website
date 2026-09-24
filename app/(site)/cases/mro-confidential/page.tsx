@@ -110,7 +110,7 @@ export default function MroCaseStudyPage() {
       <CaseClosingCTA
         title="Same problem with your MRO data?"
         lead="Send us a sample of your part records and we'll show you what a checked match against manufacturer data looks like on your own numbers."
-        ctaLabel="Book a 7-minute discovery"
+        ctaLabel="Talk to sales"
         ctaHref={siteConfig.calendly}
         external
       />
