@@ -40,7 +40,8 @@ export default function StruktonCaseStudyPage() {
       <section className="section-soft">
         <div className="container">
           <div className="cases-eyebrow">Infrastructure · Netherlands</div>
-          <h2>Why did Strukton need higher granularity in their spend data?</h2>
+          <h2 className="case-wayfinder">The problem</h2>
+          <h3 className="case-question">Why can&rsquo;t you find procurement savings without granular spend data?</h3>
           <p className="light-copy">
             Strukton had identified a real cost-saving opportunity in procurement. To act on it, they needed higher
             granularity in their spend data. Their spend was already well organized. What they didn&rsquo;t have was
@@ -51,7 +52,8 @@ export default function StruktonCaseStudyPage() {
 
       <section className="section-soft">
         <div className="container">
-          <h2>How does Strukton&rsquo;s AI classification system work?</h2>
+          <h2 className="case-wayfinder">How it works</h2>
+          <h3 className="case-question">How does an AI classification system avoid guessing on your data?</h3>
           <p className="light-copy">
             Pearstop and Strukton&rsquo;s procurement team built a system with three layers. AI classifies each line
             automatically. A machine learning pipeline learns from the team&rsquo;s own input and context, not just
@@ -68,11 +70,15 @@ export default function StruktonCaseStudyPage() {
 
       <section>
         <div className="container">
-          <h2>Why do all four UNSPSC levels matter, not just the top one?</h2>
+          <h3 className="case-question">Why do all four UNSPSC levels matter, not just the top one?</h3>
           <p className="light-copy">
             Every month, a new batch of spend comes in. Pearstop processes all of it. Each line gets four levels of
             UNSPSC classification: segment, family, class, and commodity.
           </p>
+          <div className="case-callout" style={{ margin: "1rem 0" }}>
+            <span className="case-callout-label">Four levels, broadest to most specific</span>
+            <strong>Segment → Family → Class → Commodity</strong>
+          </div>
           <p className="light-copy">
             A segment is the broadest category. A commodity is the most specific. Classifying to all four levels, not
             just the top one, is what makes the data usable for real decisions - benchmarking one specific product
@@ -91,7 +97,7 @@ export default function StruktonCaseStudyPage() {
 
       <section className="section-soft">
         <div className="container">
-          <h2>How does the system get more accurate every month?</h2>
+          <h3 className="case-question">How does a classification system get more accurate over time?</h3>
           <p className="light-copy">
             Strukton&rsquo;s buyers review what the AI classified. They flag what&rsquo;s right and what isn&rsquo;t.
             Every correction feeds back into the system. Pearstop and Strukton&rsquo;s team meet weekly. The team
@@ -119,7 +125,8 @@ export default function StruktonCaseStudyPage() {
         <div className="container">
           <div className="row">
             <div className="col-md-8 col-md-offset-2">
-              <h2>What changed for Strukton&rsquo;s procurement team?</h2>
+              <h2 className="case-wayfinder">The result</h2>
+              <h3 className="case-question">What changes once spend is fully classified?</h3>
               <p className="light-copy">
                 Before this project, Strukton had no UNSPSC classification at all. Now, 35,000 to 50,000 lines of
                 spend are classified automatically every month, to all four UNSPSC levels. The cost-saving

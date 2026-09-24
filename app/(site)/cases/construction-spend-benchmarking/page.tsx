@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import type { CSSProperties } from "react";
 import { CTABand, PageHero, QuoteBox } from "@/components/content";
+import { CaseSpreadChart } from "@/components/case-spread-chart";
 import { alternateLanguages, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Construction & Infrastructure Spend Benchmarking (Anonymized Use Case)",
+  title: "Construction Spend Benchmarking (Anonymized Use Case)",
   description:
     "One aluminium windowsill, bought on ten projects, described ten different ways. Classified, the price spread is visible in days. An anonymized, illustrative use case for construction and infrastructure procurement.",
   alternates: {
@@ -31,8 +32,8 @@ export default function ConstructionSpendBenchmarkingPage() {
     <>
       <PageHero
         eyebrow="Anonymized Use Case · Construction & Infrastructure"
-        title="Your estimating problem is not an estimating problem"
-        lead="An estimate is a prediction of your own cost base."
+        title="Construction Spend Benchmarking"
+        lead="Your estimating problem is not an estimating problem."
         leadAccent
       />
 
@@ -41,9 +42,9 @@ export default function ConstructionSpendBenchmarkingPage() {
           <div className="row">
             <div className="col-md-8 col-md-offset-2">
               <p className="light-copy" style={{ fontSize: "1.1rem", textAlign: "center" }}>
-                Most contractors and manufacturers have limited visibility on their contracts and spend.
-                Illustrative data, based on a real pattern in construction procurement - not a named client
-                engagement.
+                An estimate is a prediction of your own cost base. Most contractors and manufacturers have limited
+                visibility on their contracts and spend. Illustrative data, based on a real pattern in construction
+                procurement - not a named client engagement.
               </p>
             </div>
           </div>
@@ -52,7 +53,8 @@ export default function ConstructionSpendBenchmarkingPage() {
 
       <section>
         <div className="container">
-          <h2>Why does the same item cost different amounts on different projects?</h2>
+          <h2 className="case-wayfinder">The problem</h2>
+          <h3 className="case-question">Why does the same item cost different amounts on different projects?</h3>
           <p className="light-copy">
             One aluminium windowsill, bought on ten different projects, described ten different ways. Classified,
             the pattern is visible in days: here is what each project actually paid, and why two of them differ.
@@ -75,45 +77,58 @@ export default function ConstructionSpendBenchmarkingPage() {
               ))}
             </tbody>
           </table>
-          <p className="light-copy" style={{ marginTop: "1rem" }}>
-            Aluminium windowsill, 200mm - UNSPSC 30161801 - 10 suppliers, 10 purchases. Price spread across the ten:
-            £36.75 to £53.40, a 45% spread, on one item.
-          </p>
-          <p className="light-copy">
-            Two purchases sit above the median: one fast-track site with no lead time to shop around, one specified
-            a heavier gauge for a coastal project. Both explainable, both invisible until classified.
-          </p>
+          <div className="case-callout" style={{ marginTop: "1.25rem" }}>
+            <span className="case-callout-label">Classified as</span>
+            <strong>Aluminium windowsill, 200mm</strong>
+            <span className="light-copy" style={{ display: "block", marginTop: "0.2rem" }}>
+              UNSPSC 30161801 · 10 suppliers, 10 purchases
+            </span>
+          </div>
+
+          <div className="case-grid-2" style={{ marginTop: "1.75rem" }}>
+            <CaseSpreadChart
+              title="Price spread across the ten"
+              points={[42.1, 38.5, 51.2, 44.0, 36.75, 47.9]}
+              minLabel="£36.75"
+              maxLabel="£53.40"
+              percent="45%"
+              percentLabel="Spread, one item. Two sit above the median: one fast-track site with no lead time to shop around, one specified a heavier gauge for a coastal project. Both explainable, both invisible until classified."
+            />
+            <CaseSpreadChart
+              title="Same scope, different price"
+              points={[1, 2, 2.2, 2.4, 2.6, 2.8, 3, 3.4]}
+              minLabel="Site access"
+              maxLabel="Fast timeline"
+              percent="34%"
+              percentLabel="Spread, explainable. Two quotes sit outside the band, each with a reason attached once classified. The other six show what the scope should really cost."
+            />
+          </div>
         </div>
       </section>
 
       <section className="section-soft">
         <div className="container">
-          <h2>Why do two quotes for the same scope come in so differently?</h2>
+          <h2 className="case-wayfinder">The blocker</h2>
+          <h3 className="case-question">Why can&rsquo;t you benchmark spend behind a ledger code?</h3>
           <p className="light-copy">
-            A groundworks package, compared across 8 comparable projects, shows a 34% spread. Site access and a fast
-            timeline explain most of it. Two quotes sit outside the band, each with a reason attached once
-            classified. The other six show what the scope should really cost.
+            A ledger item field like &ldquo;6100-42-K&rdquo; is a nominal accounting code standing in for the item
+            itself. Common in ERPs built for finance, not procurement. Nobody can benchmark spend they can&rsquo;t
+            see behind a code like that.
           </p>
-        </div>
-      </section>
-
-      <section>
-        <div className="container">
-          <h2>Why can&rsquo;t you benchmark spend behind a ledger code?</h2>
-          <p className="light-copy">
-            A ledger item field like &ldquo;6100-42-K&rdquo; - structural steel fixings, M12 - is a nominal
-            accounting code standing in for the item itself. Common in ERPs built for finance, not procurement.
-            Nobody can benchmark spend they can&rsquo;t see behind a code like that.
-          </p>
-          <p className="light-copy">
+          <div className="case-callout" style={{ marginTop: "1rem" }}>
+            <span className="case-callout-label">Ledger field 6100-42-K resolves to</span>
+            <strong>Structural steel fixings, M12</strong>
+          </div>
+          <p className="light-copy" style={{ marginTop: "1.25rem" }}>
             Pearstop works from invoices, ERP exports, purchase orders, and Excel - whatever format the data already
             arrives in - for cost-code benchmarking, outlier detection, and supplier consolidation.
           </p>
         </div>
       </section>
 
-      <section className="section-soft">
+      <section>
         <div className="container">
+          <h2 className="case-wayfinder">The result</h2>
           <div className="bene-cards">
             <article className="ben-card">
               <div className="ben-icon">✓</div>
@@ -131,22 +146,18 @@ export default function ConstructionSpendBenchmarkingPage() {
               <p>You pay for the lines processed. No heavy annual subscription.</p>
             </article>
           </div>
-        </div>
-      </section>
 
-      <section>
-        <div className="container">
-          <div className="row">
+          <div className="row" style={{ marginTop: "2rem" }}>
             <div className="col-md-8 col-md-offset-2">
               <QuoteBox
                 quote="Built and proven with a major Dutch infrastructure contractor, starting from zero classification history."
                 author="Strukton"
                 role="Infrastructure, Netherlands"
               />
-              <p className="light-copy" style={{ textAlign: "center", marginTop: "1.5rem" }}>
-                Typical result in specialised construction: 8-15% savings on addressable spend. The findings above
-                are where it comes from.
-              </p>
+              <div className="case-result-banner" style={{ marginTop: "1.5rem" }}>
+                Typical result in specialised construction: <strong>8-15% savings on addressable spend.</strong> The
+                findings above are where it comes from.
+              </div>
             </div>
           </div>
         </div>
