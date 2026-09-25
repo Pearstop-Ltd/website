@@ -218,7 +218,7 @@ export default function UnspscDEPage() {
       <section className="section-tight">
         <div className="container">
           <div className="row">
-            <div className="col-md-8 col-md-offset-2">
+            <div className="col-md-12">
               <GeoBlock
                 title="What does UNSPSC classification look like for a German manufacturing or FM company?"
                 copy="German manufacturing and FM companies typically hold years of purchase order data in SAP, often with invoice lines written in German technical shorthand such as 'Wartung Pumpe Dichtung' or 'Elektra Rundgang Q3'. UNSPSC classification assigns each of those lines the same 8-digit commodity code as its English equivalent, so a plant in Munich and a plant in Rotterdam show up as the same category of spend. Pearstop's engine reads German-language descriptions natively and reaches 90 to 95% automatic classification without translation as a separate step."

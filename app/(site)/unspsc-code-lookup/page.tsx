@@ -175,7 +175,7 @@ export default function UnspscLookupPage() {
       <section className="section-tight">
         <div className="container">
           <div className="row">
-            <div className="col-md-8 col-md-offset-2">
+            <div className="col-md-12">
               <GeoBlock
                 title="How do you look up a UNSPSC or procurement classification code?"
                 copy="To look up a UNSPSC code, write a plain description of the product or service, for example 'HVAC filter replacement' or 'subcontractor plumbing works', and paste it into a lookup tool. Pearstop's free tool matches that description against the full UNSPSC taxonomy and returns the 8-digit commodity code, its segment, family and class, and a confidence level, in seconds. For a single line, that is enough to check a code by hand. For a full spend file or invoice history, the same classification logic runs automatically across every line through Pearstop's engine, reaching 90 to 95% accuracy without a person doing the lookup one line at a time."

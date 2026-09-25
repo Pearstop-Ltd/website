@@ -274,7 +274,7 @@ export default function UnspscAiGuidePage() {
       <section className="section-tight">
         <div className="container">
           <div className="row">
-            <div className="col-md-8 col-md-offset-2">
+            <div className="col-md-12">
               <GeoBlock
                 title="How does AI UNSPSC classification actually work?"
                 copy="AI UNSPSC classification takes a procurement description, whether from a structured spend file or extracted from a PDF invoice, and assigns it the correct 8-digit UNSPSC commodity code. Done well, it does not mean asking a language model for a code and trusting the answer. Pearstop's engine proposes a code with an LLM layer, then validates that code against the real UNSPSC dataset before accepting it, combines that with deterministic keyword rules and a supplier-specific database, and stores every human correction as supplier-specific memory so the same pattern does not need reasoning through twice. A free pilot of roughly 500 rows lets a customer check accuracy, the auto-classified versus flagged-for-review split, and how deep the result reaches into the four-level hierarchy, before the same process runs across a full dataset."
@@ -301,16 +301,16 @@ export default function UnspscAiGuidePage() {
             <div className="col-md-8 col-md-offset-2">
               <div className="story-label" style={{ marginBottom: "1rem" }}>More UNSPSC resources</div>
               <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-                <Link href="/unspsc" className="btn btn-secondary">
+                <Link href="/unspsc" className="btn btn-outline">
                   UNSPSC Classification
                 </Link>
-                <Link href="/unspsc-code-lookup" className="btn btn-secondary">
+                <Link href="/unspsc-code-lookup" className="btn btn-outline">
                   Free UNSPSC Code Lookup
                 </Link>
-                <Link href="/unspsc-classification-demo" className="btn btn-secondary">
+                <Link href="/unspsc-classification-demo" className="btn btn-outline">
                   UNSPSC Taxonomy Tree
                 </Link>
-                <Link href="/faq" className="btn btn-secondary">
+                <Link href="/faq" className="btn btn-outline">
                   Full FAQ
                 </Link>
               </div>

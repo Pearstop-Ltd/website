@@ -218,7 +218,7 @@ export default function UnspscNLPage() {
       <section className="section-tight">
         <div className="container">
           <div className="row">
-            <div className="col-md-8 col-md-offset-2">
+            <div className="col-md-12">
               <GeoBlock
                 title="What does UNSPSC classification look like for a Dutch infrastructure or FM company?"
                 copy="Dutch infrastructure and FM companies typically run purchasing through SAP or AFAS, with invoice lines written by field teams rather than buyers, for example 'elektra werkzaamheden Q3' or 'pompafdichting vervangen'. UNSPSC classification assigns each of those lines a consistent 8-digit commodity code, which is what makes a Peppol-compliant invoice machine-readable rather than just structured. Strukton, a Dutch infrastructure contractor, processed 35,000 procurement lines a month this way through Pearstop's SAP integration."

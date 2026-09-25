@@ -3,6 +3,7 @@ import { CalendlyButton } from "@/components/calendly-button";
 import { siteConfig } from "@/lib/site";
 import type { ReactNode } from "react";
 import { HeroBackgroundVideo } from "@/components/hero-background-video";
+import { HeadlineAccent } from "@/components/site/HeadlineAccent";
 
 type HeroAction = {
   label: string;
@@ -42,12 +43,13 @@ export function PageHero({ eyebrow, title, lead, actions, leadingAction, videoUr
       )}
 
       <div className="container hero-copy">
-        <div className="text-center">
+        <div style={{ textAlign: "left" }}>
           {eyebrow ? <span className="pill">{eyebrow}</span> : null}
           <h1 className={`hero-title dark ${titleSize === "sm" ? "hero-title-sm" : ""}`}>{title}</h1>
+          <HeadlineAccent tone="dark" className="hero-accent" />
           {lead ? <p className={`hero-lead ${leadAccent ? "hero-lead-accent" : ""}`}>{lead}</p> : null}
           {leadingAction || actions?.length ? (
-            <div className="hero-actions" style={{ marginTop: "1.75rem" }}>
+            <div className="hero-actions" style={{ marginTop: "1.75rem", justifyContent: "flex-start" }}>
               {leadingAction}
               {actions?.map((action) => {
                 const className =
@@ -99,10 +101,10 @@ type SectionTitleProps = {
 
 export function SectionTitle({ eyebrow, title, lead, className }: SectionTitleProps) {
   return (
-    <div className={`text-center ${className ?? ""}`} style={{ marginBottom: "2.75rem" }}>
+    <div className={className ?? ""} style={{ textAlign: "left", marginBottom: "2.75rem" }}>
       {eyebrow ? <span className="pill">{eyebrow}</span> : null}
       <h2>{title}</h2>
-      {lead ? <p className="light-copy" style={{ fontSize: "1.05rem", maxWidth: "760px", margin: "0.75rem auto 0" }}>{lead}</p> : null}
+      {lead ? <p className="light-copy" style={{ fontSize: "1.05rem", maxWidth: "760px", margin: "0.75rem 0 0" }}>{lead}</p> : null}
     </div>
   );
 }

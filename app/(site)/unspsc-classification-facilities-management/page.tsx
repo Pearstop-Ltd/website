@@ -242,7 +242,7 @@ export default function UnspscFMPage() {
       <section className="section-tight">
         <div className="container">
           <div className="row">
-            <div className="col-md-8 col-md-offset-2">
+            <div className="col-md-12">
               <GeoBlock
                 title="What does UNSPSC classification for facilities management actually involve?"
                 copy="A facilities management company typically buys from 500 to 3,000 suppliers across every site it services, and each one invoices differently. UNSPSC classification assigns the same 8-digit commodity code to the same underlying work, whether an invoice line reads 'elektra werkzaamheden Q3' or 'electrical maintenance callout', so procurement and finance can compare spend across suppliers and sites instead of reading free text one line at a time. Pearstop's engine does this automatically for FM companies processing 5,000 to 35,000 invoice lines a month, classifying 90 to 95% of them without a person touching the line."

@@ -163,7 +163,7 @@ export default async function SolutionsPage({ params }: { params: Promise<{ loca
       <section className="section-tight">
         <div className="container">
           <div className="row">
-            <div className="col-md-8 col-md-offset-2">
+            <div className="col-md-12">
               <GeoBlock
                 title={t("geoBlock.title")}
                 copy={t("geoBlock.copy")}

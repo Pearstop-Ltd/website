@@ -236,7 +236,7 @@ export default async function UnspscAiGuidePage({ params }: { params: Promise<{ 
       <section className="section-tight">
         <div className="container">
           <div className="row">
-            <div className="col-md-8 col-md-offset-2">
+            <div className="col-md-12">
               <GeoBlock
                 title="How does AI UNSPSC classification actually work?"
                 copy="AI UNSPSC classification takes a procurement description, whether from a structured spend file or extracted from a PDF invoice, and assigns it the correct 8-digit UNSPSC commodity code. Done well, it does not mean asking a language model for a code and trusting the answer. Pearstop's engine proposes a code with an LLM layer, then validates that code against the real UNSPSC dataset before accepting it, combines that with deterministic keyword rules and a supplier-specific database, and stores every human correction as supplier-specific memory so the same pattern does not need reasoning through twice. A free pilot of roughly 500 rows lets a customer check accuracy, the auto-classified versus flagged-for-review split, and how deep the result reaches into the four-level hierarchy, before the same process runs across a full dataset."
@@ -263,16 +263,16 @@ export default async function UnspscAiGuidePage({ params }: { params: Promise<{ 
             <div className="col-md-8 col-md-offset-2">
               <div className="story-label" style={{ marginBottom: "1rem" }}>{t("related.label")}</div>
               <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-                <a href={`${prefix}/unspsc`} className="btn btn-secondary">
+                <a href={`${prefix}/unspsc`} className="btn btn-outline">
                   {t("related.main")}
                 </a>
-                <a href={`${prefix}/unspsc-code-lookup`} className="btn btn-secondary">
+                <a href={`${prefix}/unspsc-code-lookup`} className="btn btn-outline">
                   {t("related.lookup")}
                 </a>
-                <a href={`${prefix}/unspsc-classification-demo`} className="btn btn-secondary">
+                <a href={`${prefix}/unspsc-classification-demo`} className="btn btn-outline">
                   {t("related.tree")}
                 </a>
-                <a href={`${prefix}/faq`} className="btn btn-secondary">
+                <a href={`${prefix}/faq`} className="btn btn-outline">
                   {t("related.faq")}
                 </a>
               </div>

@@ -201,7 +201,7 @@ export default function AboutPage() {
       <section className="section-tight">
         <div className="container">
           <div className="row">
-            <div className="col-md-8 col-md-offset-2">
+            <div className="col-md-12">
               <GeoBlock
                 title="Where We Work"
                 copy="We're a remote-first team based across the UK, Europe, and South Africa. Working in the same few time zones means we can collaborate in real time, wherever each of us is that day. We also value time in the same room, so we travel to our clients and to each other whenever it makes the work better. Headquartered in Dublin, Ireland. inquiries@pearstop.com."

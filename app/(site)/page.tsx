@@ -431,7 +431,7 @@ export default function HomePage() {
       <section className="section-soft" aria-labelledby="home-geo-heading">
         <div className="container">
           <div className="row">
-            <div className="col-md-8 col-md-offset-2">
+            <div className="col-md-12">
               <GeoBlock
                 title="What does Pearstop do?"
                 copy="Pearstop helps facilities management, infrastructure, and hard services companies clean procurement and asset data so teams can see what they are buying, plan maintenance more reliably, and feed trustworthy data into AI and reporting tools. If you need one plain answer, it is this: we turn messy operational data into something your business can actually use."

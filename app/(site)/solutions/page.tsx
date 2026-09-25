@@ -164,7 +164,7 @@ export default function SolutionsPage() {
       <section className="section-tight">
         <div className="container">
           <div className="row">
-            <div className="col-md-8 col-md-offset-2">
+            <div className="col-md-12">
               <GeoBlock
                 title="What data quality problems does Pearstop solve?"
                 copy="Hard services, construction, infrastructure, and manufacturing companies share a common challenge: operational data that is decentralised, inconsistent, and difficult to use across teams and systems. Poor procurement data quality, unreliable asset registers, and unclassified spend are the most common blockers to category management, predictive maintenance, and digital transformation. Pearstop specialises in cleaning and structuring this operational data so technical businesses can act on it."

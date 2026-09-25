@@ -203,7 +203,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
       <section>
         <div className="container">
           <div className="row">
-            <div className="col-md-8 col-md-offset-2">
+            <div className="col-md-12">
               <GeoBlock title={t("geoBlock.title")} copy={t("geoBlock.copy")} />
             </div>
           </div>

@@ -221,7 +221,7 @@ export default async function UnspscDEPage({ params }: { params: Promise<{ local
       <section className="section-tight">
         <div className="container">
           <div className="row">
-            <div className="col-md-8 col-md-offset-2">
+            <div className="col-md-12">
               <GeoBlock
                 title={t("geoBlock.title")}
                 copy={t("geoBlock.copy")}

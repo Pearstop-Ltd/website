@@ -323,7 +323,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       <section className="section-soft" aria-labelledby="home-geo-heading">
         <div className="container">
           <div className="row">
-            <div className="col-md-8 col-md-offset-2">
+            <div className="col-md-12">
               <GeoBlock title={t("geoBlock.title")} copy={t("geoBlock.copy")} />
             </div>
           </div>
