@@ -2,13 +2,14 @@ import { renderOgImage, OG_SIZE } from "@/components/site/og/OgImage";
 
 export const size = OG_SIZE;
 export const contentType = "image/png";
-export const alt = "Know what you buy, from whom, at what price.";
+export const alt = "Procurement data quality";
 
 export default function Image() {
   return renderOgImage({
-    variant: "default",
-    title: "Know what you buy, from whom, at what price.",
-    bottomLine: "No clean-up needed first.",
+    variant: "solution",
+    eyebrow: "Solutions",
+    title: "Procurement data quality",
+    bottomLine: "Send us 200 lines, free.",
     visual: "merge",
   });
 }

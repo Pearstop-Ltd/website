@@ -17,14 +17,12 @@ export const metadata: Metadata = {
     description:
       "Turn unread PDF invoices and paper records into structured, usable data. Automated OCR and AI extraction built for hard services, cleaning, and construction procurement.",
     url: PAGE_URL,
-    siteName: siteConfig.name,
-    images: ["/opengraph-image"]
+    siteName: siteConfig.name
   },
   twitter: {
     card: "summary_large_image",
     title: "Invoice and Document Data Extraction (OCR) for FM and Construction | Pearstop",
-    description: "Turn unread PDF invoices and paper records into structured, usable data.",
-    images: ["/opengraph-image"]
+    description: "Turn unread PDF invoices and paper records into structured, usable data."
   }
 };
 

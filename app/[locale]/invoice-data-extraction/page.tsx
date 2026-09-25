@@ -18,14 +18,12 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       title: `${t("meta.title")} | Pearstop`,
       description: t("meta.description"),
       url: PAGE_URL,
-      siteName: siteConfig.name,
-      images: ["/opengraph-image"]
+      siteName: siteConfig.name
     },
     twitter: {
       card: "summary_large_image",
       title: `${t("meta.title")} | Pearstop`,
-      description: t("meta.description"),
-      images: ["/opengraph-image"]
+      description: t("meta.description")
     }
   };
 }
