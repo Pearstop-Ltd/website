@@ -204,7 +204,7 @@ export default function AboutPage() {
             <div className="col-md-8 col-md-offset-2">
               <GeoBlock
                 title="Where We Work"
-                copy="Headquartered in Dublin, with local hubs in Ireland, the Netherlands, South Africa, and Italy. Dogpatch Labs, CHQ Building, Custom House Quay, Dublin D01 Y6H7, Ireland. inquiries@pearstop.com."
+                copy="We're a remote-first team based across the UK, Europe, and South Africa. Working in the same few time zones means we can collaborate in real time, wherever each of us is that day. We also value time in the same room, so we travel to our clients and to each other whenever it makes the work better. Headquartered in Dublin, Ireland. inquiries@pearstop.com."
               />
             </div>
           </div>
