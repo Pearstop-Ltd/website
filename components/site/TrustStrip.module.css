@@ -1,0 +1,44 @@
+.root {
+  background: var(--navy-deep);
+  padding: 40px var(--inset) 46px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--tint-blue);
+}
+
+.logos {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 28px 48px;
+}
+
+.logo {
+  height: 28px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
+}
+
+.logo[alt="SPIE"] {
+  height: 34px;
+  margin-top: -6px;
+}
+
+@media (max-width: 767px) {
+  .logos {
+    justify-content: center;
+  }
+}

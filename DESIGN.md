@@ -68,7 +68,7 @@ Never use a heading tag for a paragraph. If text is longer than one line of a he
 ## Rules
 
 - Icons: inline stroke SVG (1.6px). No emoji, no ✓ × ⚡ ↗ characters as icons.
-- One primary CTA on every page: "Send us 200 lines" (header) and a sample-shaped closing CTA. No "Book a 7-minute discovery".
+- One primary CTA on every page: "Send us 200 lines" (header) and a sample-shaped closing CTA. Discovery calls are "Book a 15-minute discovery", never "7-minute".
 - Copy: no em dashes, no "it's not X, it's Y" constructions, never the word "quick".
 - Illustrative data is always labelled as illustrative.
 

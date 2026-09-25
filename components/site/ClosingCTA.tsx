@@ -17,8 +17,9 @@ export interface ClosingCTAProps {
   secondaryLabel?: string;
   secondaryHref?: string;
   secondaryAction?: (className: string) => ReactNode;
-  /** e.g. "© 2026 Pearstop · Privacy · Terms" */
-  footerLine: ReactNode;
+  /** e.g. "© 2026 Pearstop · Privacy · Terms". Omit to render the block
+   * without the wordmark/copyright footer row. */
+  footerLine?: ReactNode;
   className?: string;
 }
 
@@ -60,10 +61,12 @@ export function ClosingCTA({
               ) : null}
         </div>
       </div>
-      <div className={styles.footer}>
-        <PearstopLogo height={20} />
-        <span className={styles.footerLine}>{footerLine}</span>
-      </div>
+      {footerLine ? (
+        <div className={styles.footer}>
+          <PearstopLogo height={20} />
+          <span className={styles.footerLine}>{footerLine}</span>
+        </div>
+      ) : null}
     </div>
   );
 }

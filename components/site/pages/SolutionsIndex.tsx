@@ -237,7 +237,6 @@ export function SolutionsIndexPage({ copy }: { copy: SolutionsIndexCopy }) {
             </Link>
           </>
         )}
-        footerLine={`© ${new Date().getFullYear()} Pearstop · Privacy · Terms`}
       />
     </>
   );

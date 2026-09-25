@@ -358,44 +358,6 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
 
 
 
-export const industryCards = [
-  {
-    title: "Infrastructure",
-    href: "#infrastructure",
-    copy: "Know where a named savings target actually sits in the spend, before you try to find it by hand."
-  },
-  {
-    title: "Facilities Management",
-    href: "#facilities-management",
-    copy: "Integrated FM, hard services, and soft services, each with its own data problem and its own fix.",
-    links: [
-      { label: "Integrated FM", href: "#integrated-fm" },
-      { label: "Hard Services", href: "#hard-services" },
-      { label: "Soft Services", href: "#soft-services" }
-    ]
-  },
-  {
-    title: "Cleaning",
-    href: "#cleaning",
-    copy: "Get every invoice read and checked against the contract, instead of taking the total on trust."
-  },
-  {
-    title: "Construction",
-    href: "#construction",
-    copy: "Turn spend spread across entities and projects into one categorised, group-wide view."
-  },
-  {
-    title: "Manufacturers of Building Systems",
-    href: "#manufacturing",
-    copy: "Extend the classification standard one entity already runs to every plant and site."
-  },
-  {
-    title: "Asset Owners",
-    href: "#asset-owners",
-    copy: "Get an independent, comparable view of what is spent on your behalf, not just a provider's report."
-  }
-];
-
 export const faqItems = {
   procurement: [
     {

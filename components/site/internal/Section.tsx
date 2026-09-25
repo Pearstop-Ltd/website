@@ -7,6 +7,7 @@ interface SectionProps {
   /** Overrides the default var(--section-pad) top/bottom padding. */
   paddingTop?: number;
   paddingBottom?: number;
+  id?: string;
   className?: string;
   /** Use the page's own `.container` width (min(1140px, 100% - 48px)),
    * centered, instead of the design system's 160px side inset. For a
@@ -19,7 +20,7 @@ interface SectionProps {
 
 /** Shared section shell: alternating white/soft background, side inset that
  * collapses to 20px below 768px, default vertical rhythm. */
-export function Section({ background = "white", paddingTop, paddingBottom, className, contained, children }: SectionProps) {
+export function Section({ background = "white", paddingTop, paddingBottom, id, className, contained, children }: SectionProps) {
   const style: CSSProperties = {
     background:
       background === "soft"
@@ -33,7 +34,7 @@ export function Section({ background = "white", paddingTop, paddingBottom, class
     paddingBottom: paddingBottom !== undefined ? paddingBottom : "var(--section-pad)",
   };
   return (
-    <section className={dsRoot(contained ? undefined : styles.root, className)} style={style}>
+    <section id={id} className={dsRoot(contained ? undefined : styles.root, className)} style={style}>
       {contained ? <div className={styles.contained}>{children}</div> : children}
     </section>
   );

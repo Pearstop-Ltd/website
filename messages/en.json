@@ -383,14 +383,38 @@
       "secondaryLabel": "Talk to sales",
       "builtForLabel": "Built for",
       "builtFor": [
-        { "id": "facilities-management", "label": "Facilities management" },
-        { "id": "hard-services", "label": "Hard services" },
-        { "id": "cleaning", "label": "Cleaning" },
-        { "id": "construction", "label": "Construction" },
-        { "id": "infrastructure", "label": "Infrastructure" },
-        { "id": "manufacturing", "label": "Manufacturing" },
-        { "id": "asset-owners", "label": "Asset owners" },
-        { "id": "procurement-consultancies", "label": "Procurement consultancies" }
+        {
+          "id": "facilities-management",
+          "label": "Facilities management"
+        },
+        {
+          "id": "hard-services",
+          "label": "Hard services"
+        },
+        {
+          "id": "cleaning",
+          "label": "Cleaning"
+        },
+        {
+          "id": "construction",
+          "label": "Construction"
+        },
+        {
+          "id": "infrastructure",
+          "label": "Infrastructure"
+        },
+        {
+          "id": "manufacturing",
+          "label": "Manufacturing"
+        },
+        {
+          "id": "asset-owners",
+          "label": "Asset owners"
+        },
+        {
+          "id": "procurement-consultancies",
+          "label": "Procurement consultancies"
+        }
       ]
     },
     "problems": {
@@ -398,11 +422,26 @@
       "title": "Pick the problem. We start there.",
       "orderLabel": "Most teams move through these in order:",
       "order": [
-        { "id": "extraction", "label": "Read the invoices" },
-        { "id": "classification", "label": "Label every line" },
-        { "id": "visibility", "label": "See the spend" },
-        { "id": "benchmarking", "label": "Check every price" },
-        { "id": "readiness", "label": "Ready for ERP, Fabric and AI" }
+        {
+          "id": "extraction",
+          "label": "Read the invoices"
+        },
+        {
+          "id": "classification",
+          "label": "Label every line"
+        },
+        {
+          "id": "visibility",
+          "label": "See the spend"
+        },
+        {
+          "id": "benchmarking",
+          "label": "Check every price"
+        },
+        {
+          "id": "readiness",
+          "label": "Ready for ERP, Fabric and AI"
+        }
       ],
       "items": [
         {
@@ -421,9 +460,18 @@
           "title": "UNSPSC Classification",
           "body": "Auto-classify years of free-text purchase order data using UNSPSC, including tracing hard services parts back to the real manufacturer code. Up to 95% of spend lines classified automatically.",
           "related": [
-            { "label": "UNSPSC for FM", "href": "/unspsc-classification-facilities-management" },
-            { "label": "Netherlands", "href": "/unspsc-classification-netherlands" },
-            { "label": "Germany", "href": "/unspsc-classification-germany" }
+            {
+              "label": "UNSPSC for FM",
+              "href": "/unspsc-classification-facilities-management"
+            },
+            {
+              "label": "Netherlands",
+              "href": "/unspsc-classification-netherlands"
+            },
+            {
+              "label": "Germany",
+              "href": "/unspsc-classification-germany"
+            }
           ],
           "href": "/unspsc"
         },
@@ -434,7 +482,10 @@
           "title": "Spend Visibility",
           "body": "Build a real spend baseline from messy invoice and supplier data, broken out by service line and entity, so a negotiation, tender, or framework review starts from a number instead of a guess.",
           "related": [
-            { "label": "Spend Cube & Dashboards", "href": "/spend-cube" }
+            {
+              "label": "Spend Cube & Dashboards",
+              "href": "/spend-cube"
+            }
           ],
           "href": "/procurement-data-quality"
         },
@@ -445,7 +496,10 @@
           "title": "Spend Benchmarking",
           "body": "Every line is labelled and compared with what you normally pay, across suppliers, sites and providers, so you can see straight away whether a price sits in the normal range and approve it without escalating.",
           "related": [
-            { "label": "Spend Cube & Dashboards", "href": "/spend-cube" }
+            {
+              "label": "Spend Cube & Dashboards",
+              "href": "/spend-cube"
+            }
           ],
           "href": "/asset-data-management"
         },
@@ -456,8 +510,14 @@
           "title": "Data Readiness",
           "body": "An ERP migration, a Microsoft Fabric rollout, and an AI initiative all assume the data underneath them is already clean and structured. When it is not, each one just carries the mess into a new system. Pearstop fixes the data first.",
           "related": [
-            { "label": "Fabric Ready", "href": "/fabric" },
-            { "label": "AI Readiness", "href": "/ai-readiness" }
+            {
+              "label": "Fabric Ready",
+              "href": "/fabric"
+            },
+            {
+              "label": "AI Readiness",
+              "href": "/ai-readiness"
+            }
           ],
           "href": "/data-quality",
           "wide": true
@@ -469,23 +529,86 @@
       "eyebrow": "Who it's for",
       "title": "Built for businesses that buy by the project",
       "items": [
-        { "id": "facilities-management", "title": "Facilities management", "pain": "Data arrives from every service line in a different format.", "linkLabel": "See how it applies →", "href": "/industries#facilities-management" },
-        { "id": "hard-services", "title": "Hard services", "pain": "Fixed-price contracts get priced without a cost baseline you can defend.", "linkLabel": "See how it applies →", "href": "/industries#hard-services" },
-        { "id": "cleaning", "title": "Cleaning", "pain": "Invoices pile up unread, and thin margins leave no room for guesses.", "linkLabel": "See how it applies →", "href": "/industries#cleaning" },
-        { "id": "construction", "title": "Construction", "pain": "You're estimating bids from memory because nobody can retrieve historical actuals.", "linkLabel": "See how it applies →", "href": "/industries#construction" },
-        { "id": "infrastructure", "title": "Infrastructure", "pain": "A savings target has been named and the data can't show where it sits.", "linkLabel": "See how it applies →", "href": "/industries#infrastructure" },
-        { "id": "manufacturing", "title": "Manufacturing", "pain": "One entity already runs UNSPSC and another needs to align to it.", "linkLabel": "See how it applies →", "href": "/industries#manufacturing" },
-        { "id": "asset-owners", "title": "Asset owners", "pain": "Your FM provider sends the cost data, and you have no way to check it.", "linkLabel": "Asset Data Management →", "href": "/asset-data-management" },
-        { "id": "procurement-consultancies", "title": "Procurement consultancies", "pain": "Your analysts spend client hours cleaning data before the analysis starts.", "linkLabel": "For Procurement Consultancies →", "href": "/procurement-consultancies" }
+        {
+          "id": "facilities-management",
+          "title": "Facilities management",
+          "pain": "Data arrives from every service line in a different format.",
+          "linkLabel": "See how it applies →",
+          "href": "/industries#facilities-management"
+        },
+        {
+          "id": "hard-services",
+          "title": "Hard services",
+          "pain": "The same supplier shows up under dozens of names, and asset lists never match.",
+          "linkLabel": "See how it applies →",
+          "href": "/industries#hard-services"
+        },
+        {
+          "id": "cleaning",
+          "title": "Cleaning",
+          "pain": "Invoices pile up unread, and thin margins leave no room for guesses.",
+          "linkLabel": "See how it applies →",
+          "href": "/industries#cleaning"
+        },
+        {
+          "id": "construction",
+          "title": "Construction",
+          "pain": "You're estimating bids from memory because nobody can retrieve historical actuals.",
+          "linkLabel": "See how it applies →",
+          "href": "/industries#construction"
+        },
+        {
+          "id": "infrastructure",
+          "title": "Infrastructure",
+          "pain": "A savings target has been named and the data can't show where it sits.",
+          "linkLabel": "See how it applies →",
+          "href": "/industries#infrastructure"
+        },
+        {
+          "id": "manufacturing",
+          "title": "Manufacturing",
+          "pain": "One entity already runs UNSPSC and another needs to align to it.",
+          "linkLabel": "See how it applies →",
+          "href": "/industries#manufacturing"
+        },
+        {
+          "id": "asset-owners",
+          "title": "Asset owners",
+          "pain": "Your FM provider sends the cost data, and you have no way to check it.",
+          "linkLabel": "Asset Data Management →",
+          "href": "/asset-data-management"
+        },
+        {
+          "id": "procurement-consultancies",
+          "title": "Procurement consultancies",
+          "pain": "Your analysts spend client hours cleaning data before the analysis starts.",
+          "linkLabel": "For Procurement Consultancies →",
+          "href": "/procurement-consultancies"
+        }
       ]
     },
     "tools": {
       "eyebrow": "Free UNSPSC tools",
       "title": "Not ready to talk yet? Look something up.",
       "items": [
-        { "title": "Free UNSPSC Lookup", "body": "Find the right code for any product or service.", "linkLabel": "Open →", "href": "/unspsc-code-lookup" },
-        { "title": "UNSPSC Taxonomy Tree", "body": "Browse the full hierarchy, from segment down to commodity.", "linkLabel": "Open →", "href": "/unspsc-classification-demo" },
-        { "title": "AI UNSPSC Classification Guide", "body": "How AI classification works, and where it needs a person.", "linkLabel": "Open →", "href": "/unspsc-ai-classification-guide" }
+        {
+          "title": "Free UNSPSC Lookup",
+          "body": "Find the right code for any product or service.",
+          "linkLabel": "Open →",
+          "href": "/unspsc-code-lookup"
+        },
+        {
+          "title": "UNSPSC Taxonomy Tree",
+          "body": "Browse the full hierarchy, from segment down to commodity.",
+          "linkLabel": "Open →",
+          "href": "/unspsc-classification-demo"
+        },
+        {
+          "title": "AI UNSPSC Classification Guide",
+          "body": "How AI classification works, and where it needs a person.",
+          "linkLabel": "Open →",
+          "href": "/unspsc-ai-classification-guide"
+        }
       ]
     },
     "approach": {
@@ -1794,32 +1917,589 @@
   },
   "Industries": {
     "meta": {
-      "title": "Industries We Serve",
+      "title": "Spend Data by Industry: FM, Construction & Infrastructure",
       "description": "Pearstop works with infrastructure, facilities management, cleaning, construction, manufacturing, and asset owner organisations. Each industry has a different data problem - see how we solve it."
+    },
+    "breadcrumb": {
+      "home": "Home",
+      "current": "Industries"
     },
     "hero": {
       "eyebrow": "Industries",
       "title": "Industries We Serve",
-      "lead": "Pearstop cleans and classifies operational data for the industries carrying the heaviest, messiest spend: infrastructure, facilities management, construction, and manufacturing. Find your industry below."
+      "lead": "Most teams we work with can’t answer a simple question: what did we spend, on what, and with whom? It looks different in every industry. Find yours below.",
+      "primaryLabel": "Send us a data sample. We clean it for free.",
+      "secondaryLabel": "Book a 15-minute discovery"
     },
-    "sixIndustries": {
-      "title": "Where Pearstop Fits",
-      "lead": "Six industries, six different ways the same problem shows up: spend or asset data nobody can act on yet.",
-      "learnMore": "Learn more →"
+    "overview": {
+      "eyebrow": "Where Pearstop fits",
+      "title": "Which one sounds like you?",
+      "cards": [
+        {
+          "id": "infrastructure",
+          "name": "Infrastructure",
+          "pain": "A savings target has been named, and the data can’t show where it sits.",
+          "outcome": "Know where a named savings target actually sits in the spend, before you try to find it by hand.",
+          "linkLabel": "See your industry ↓",
+          "href": "#infrastructure",
+          "photoAlt": "rail or civil works",
+          "photo": "/images/photos/construction-infra-1.png"
+        },
+        {
+          "id": "integrated-fm",
+          "name": "Integrated FM",
+          "pain": "Every service line sends its data in a different format.",
+          "outcome": "Bring five service lines and five data formats into one structured view of a contract.",
+          "linkLabel": "See your industry ↓",
+          "href": "#integrated-fm",
+          "photoAlt": "multi-service FM team on site",
+          "photo": "/images/photos/construction-team-2.png"
+        },
+        {
+          "id": "hard-services",
+          "name": "Hard services",
+          "pain": "The same supplier shows up under dozens of names, and asset lists never match.",
+          "outcome": "Match supplier names and clean asset lists, so spend and maintenance plans rest on data you trust.",
+          "linkLabel": "See your industry ↓",
+          "href": "#hard-services",
+          "photoAlt": "HVAC or plant-room engineer",
+          "photo": "/images/photos/maintenance-cleanroom-woman-1.png"
+        },
+        {
+          "id": "construction",
+          "name": "Construction",
+          "pain": "Turnover is known to the euro. What you actually bought isn’t.",
+          "outcome": "Turn spend spread across entities and projects into one categorised, group-wide view.",
+          "linkLabel": "See your industry ↓",
+          "href": "#construction",
+          "photoAlt": "construction site",
+          "photo": "/images/photos/construction-planner-woman-1.png"
+        },
+        {
+          "id": "soft-services",
+          "name": "Soft services & cleaning",
+          "pain": "Invoices arrive faster than anyone can read them.",
+          "outcome": "Get invoices read and structured automatically, so there is spend data to defend a price with.",
+          "linkLabel": "See your industry ↓",
+          "href": "#soft-services",
+          "photoAlt": "cleaning crew in a commercial building",
+          "photo": "/images/photos/cleaning-office-woman-1.png"
+        },
+        {
+          "id": "manufacturing",
+          "name": "Manufacturers of building systems",
+          "pain": "One entity already runs a standard. The rest of the group doesn’t.",
+          "outcome": "Extend the classification standard one entity already runs to every plant and site.",
+          "linkLabel": "See your industry ↓",
+          "href": "#manufacturing",
+          "photoAlt": "building-systems factory floor",
+          "photo": "/images/photos/hvac-manufacture.jpeg"
+        },
+        {
+          "id": "asset-owners",
+          "name": "Asset owners",
+          "pain": "Your provider reports the numbers, and you have no way to check them.",
+          "outcome": "Get an independent, comparable view of what is spent on your behalf, not just a provider’s report.",
+          "linkLabel": "See your industry ↓",
+          "href": "#asset-owners",
+          "photoAlt": "office or estate building exterior",
+          "photo": "/images/photos/the-city-2.png"
+        },
+        {
+          "id": "mro",
+          "name": "MRO & component sourcing",
+          "pain": "You buy parts through intermediaries, and pay their markup on everything.",
+          "outcome": "Find the original manufacturer part number for every part, so you can buy the high-volume ones direct.",
+          "linkLabel": "See your industry ↓",
+          "href": "#mro",
+          "photoAlt": "spare parts store or workshop",
+          "photo": "/images/photos/construction-planner-team-1.png"
+        },
+        {
+          "id": "procurement-consultancies",
+          "name": "Procurement consultancies",
+          "pain": "Your analysts spend client hours cleaning data before the analysis starts.",
+          "outcome": "White-labelled classification under your own taxonomy, so engagement margin goes to analysis.",
+          "linkLabel": "For Procurement Consultancies →",
+          "href": "/procurement-consultancies",
+          "photoAlt": "person reviewing spend data",
+          "photo": "/images/photos/office-desk-woman-1.png"
+        }
+      ]
     },
-    "otherIndustries": {
+    "sections": [
+      {
+        "id": "infrastructure",
+        "tabLabel": "Infrastructure",
+        "eyebrow": "Infrastructure",
+        "ctaIndustry": "infrastructure",
+        "h2": "You cannot negotiate what you cannot see.",
+        "intro": "A cost-savings target gets named, sometimes running to eight figures, and nobody can point to where in the spend it actually sits. That gap between the target and the data is a recurring pattern in infrastructure and rail: a savings programme identifies tens of millions in potential savings, and the underlying spend data cannot show where to find them. Savings come third. First you see where the money goes, then you see the coverage gaps, then you negotiate.",
+        "photo": "/images/photos/construction-infra-1.png",
+        "photoAlt": "rail or civil works",
+        "dayToDay": {
+          "work": "Rail, utilities, roads and energy networks. Many projects at once, often won through public tenders.",
+          "spend": "Subcontractors, materials, plant hire and specialist services, bought by project teams across regions and entities.",
+          "matters": "Hitting savings targets, staying on framework agreements, and pricing the next tender on real costs."
+        },
+        "pains": [
+          {
+            "title": "A savings target with no data to back it",
+            "body": "A transformation programme names a number. Spend is not classified consistently enough to say which categories the number is hiding in."
+          },
+          {
+            "title": "Framework coverage nobody can see across the business",
+            "body": "One buyer can see the ten framework agreements for their category. The other fifty categories have no equivalent visibility, so the organisation cannot steer spend onto agreements it already has."
+          },
+          {
+            "title": "No baseline to negotiate or tender from",
+            "body": "Negotiating with a supplier, or pricing a new tender, both start from knowing what you already spend. Without that baseline, every negotiation starts from a guess."
+          }
+        ],
+        "solutionLink": {
+          "label": "See how Pearstop builds a real spend baseline",
+          "href": "/procurement-data-quality"
+        },
+        "changes": [
+          "Spend classified consistently enough to show where a named savings target actually sits",
+          "Framework and contract coverage visible across every category, not just the ones already being watched",
+          "A real spend baseline to negotiate suppliers and price tenders against, not an estimate"
+        ],
+        "proof": {
+          "quote": "We used to have two full-time staff working on category assignment. Now the system does this for us – which has unlocked margin estimations further down the line too. It’s more reliable at a fraction of the cost.",
+          "role": "Head of Procurement, Infrastructure",
+          "caseLabel": "Read the case",
+          "caseHref": "/cases/strukton"
+        },
+        "faq": [
+          {
+            "q": "How do infrastructure contractors find where a savings target sits in their spend?",
+            "a": "Classify every spend line to one standard, such as UNSPSC, across all projects and entities. Once spend is grouped by category, you can see which categories are big, spread across many suppliers or off-framework. That is usually where the savings sit. Pearstop does the classification automatically, and a person reviews anything uncertain."
+          },
+          {
+            "q": "How can a rail or infrastructure company check framework agreement coverage?",
+            "a": "Match each spend line to a category and a supplier, then compare it with what your frameworks cover. The gap shows spend going to suppliers outside your agreements. This only works once spend is labelled the same way everywhere."
+          },
+          {
+            "q": "What spend data does an infrastructure contractor need before pricing a tender?",
+            "a": "A cost baseline: what you paid in the past for each category, supplier and project type. Without it, the tender price is an estimate. Pearstop builds that baseline from the invoices and ERP exports you already have."
+          }
+        ]
+      },
+      {
+        "id": "integrated-fm",
+        "tabLabel": "Integrated FM",
+        "eyebrow": "Integrated FM",
+        "ctaIndustry": "integrated FM",
+        "h2": "One contract, five service lines, five data formats.",
+        "intro": "Multi-service FM contracts win on breadth: cleaning, hard services, security, and catering under one roof. The data underneath rarely reflects that unity. Each service line arrives from its own system, in its own format, and asset or cost records that should describe the same thing end up looking like they belong to different companies.",
+        "photo": "/images/photos/construction-team-2.png",
+        "photoAlt": "multi-service FM team on site",
+        "dayToDay": {
+          "work": "Cleaning, maintenance, security and catering delivered together under one contract, often across hundreds of sites and several countries.",
+          "spend": "Consumables, parts, subcontractors and labour, reported from a different system for every service line.",
+          "matters": "Knowing the real cost of each contract, and proving value at renewal."
+        },
+        "pains": [
+          {
+            "title": "Every service line reports its own way",
+            "body": "Cleaning, hard services and security each send data from their own system, in their own format. Nobody sees the full cost of one contract."
+          },
+          {
+            "title": "Grown by acquisition",
+            "body": "Each business you bought still codes spend its own way, often in its own language, so the group can’t compare like with like."
+          },
+          {
+            "title": "Reference data that’s wrong from day one",
+            "body": "Manufacturer and equipment data handed over at contract start is sometimes simply wrong, and the errors multiply across sites and years."
+          }
+        ],
+        "solutionLink": {
+          "label": "See how Pearstop unifies FM data",
+          "href": "/data-quality"
+        },
+        "changes": [
+          "One view of cost across every service line on a contract",
+          "Suppliers and categories coded the same way in every business unit and country",
+          "Manufacturer and equipment data corrected, so the reports built on it hold up"
+        ],
+        "proof": {
+          "quote": "You cannot negotiate what you cannot see.",
+          "role": "Head of Procurement, Facilities Management",
+          "caseLabel": null,
+          "caseHref": null
+        },
+        "faq": [
+          {
+            "q": "How do integrated FM providers see the full cost of a contract across service lines?",
+            "a": "Bring every service line’s spend into one dataset and label it with the same categories and supplier names. Then cost per contract, site or service line can be compared directly. Pearstop does this from the data each service line already produces, in whatever format it arrives."
+          },
+          {
+            "q": "How do FM companies standardise spend data after acquisitions?",
+            "a": "Map every acquired business’s suppliers and categories to one group standard, instead of moving each one onto a new system first. Pearstop classifies spend from each entity to the same taxonomy, in any language."
+          },
+          {
+            "q": "Which spend classification standard works for facilities management?",
+            "a": "UNSPSC is the most common global standard and works well for FM spend. Many FM groups also keep their own category list. Pearstop can label every line with both."
+          }
+        ]
+      },
+      {
+        "id": "hard-services",
+        "tabLabel": "Hard services",
+        "eyebrow": "Hard services",
+        "ctaIndustry": "hard services",
+        "h2": "One supplier, dozens of spellings. An asset list nobody fully trusts.",
+        "intro": "Technical services contractors maintain and install HVAC, electrical, fire and building management systems across hundreds of client sites. A lot of the work is fixed-price, so margin depends on knowing what parts, subcontractors and assets actually cost. The data rarely allows it: the same supplier is spelled a dozen ways, and every client sends its asset list in a different shape.",
+        "photo": "/images/photos/maintenance-cleanroom-woman-1.png",
+        "photoAlt": "HVAC or plant-room engineer",
+        "dayToDay": {
+          "work": "M&E, HVAC, fire, security and BMS maintenance and installation, often on fixed-price service contracts.",
+          "spend": "Parts, subcontractors and equipment, plus an asset list from every client site.",
+          "matters": "Margin on fixed-price work, asset data good enough to plan maintenance, and bids priced on real costs."
+        },
+        "pains": [
+          {
+            "title": "One supplier, dozens of names",
+            "body": "The same supplier appears under different spellings in every system and site, so nobody can add up what you spend with them."
+          },
+          {
+            "title": "Asset lists that work on site, not in the office",
+            "body": "Every client sends its asset list in its own format. Getting one into shape takes a day or two by hand, and it happens again and again through the year."
+          },
+          {
+            "title": "Fixed-price contracts priced on a guess",
+            "body": "Parts and subcontractor costs get estimated, not looked up, so the margin can be gone before the work starts."
+          }
+        ],
+        "solutionLink": {
+          "label": "See how Pearstop cleans supplier and asset data",
+          "href": "/data-quality"
+        },
+        "changes": [
+          "Supplier matching: every spelling linked to one supplier, so spend per supplier is one number",
+          "Asset lists cleaned and matched to one structure, whatever format the client sends",
+          "Manufacturer and equipment data checked against what is actually installed",
+          "A cost history per part and subcontractor to price the next contract from"
+        ],
+        "proof": {
+          "stat": "9,175 supplier spellings brought back to 1,493 across 204,029 asset records",
+          "quote": "Our asset lists worked for mechanics on-site, but did not allow us to plan smart maintenance or manage bid risk in a data-driven way.",
+          "role": "Asset Manager, Facilities Management",
+          "caseLabel": "Read the SPIE case",
+          "caseHref": "/cases/spie"
+        },
+        "faq": [
+          {
+            "q": "How do hard services contractors clean up supplier names in their spend data?",
+            "a": "Group every spelling of the same supplier under one name, using names, addresses and other supplier details where they exist, and have a person check the uncertain matches. In one hard services project, 9,175 supplier spellings came down to 1,493 real suppliers."
+          },
+          {
+            "q": "How can an M&E or HVAC maintenance contractor standardise asset lists from different clients?",
+            "a": "Map each client’s asset list to one structure, with asset type, manufacturer, model and location named and coded the same way every time. Pearstop does the mapping automatically and flags the records it can’t match with confidence."
+          },
+          {
+            "q": "How do technical services contractors price fixed-price maintenance contracts more accurately?",
+            "a": "Start from what parts and subcontractors actually cost on similar contracts, taken from classified past spend. Pearstop builds that cost history from the invoices and ERP data you already have."
+          }
+        ]
+      },
+      {
+        "id": "construction",
+        "tabLabel": "Construction",
+        "eyebrow": "Construction",
+        "ctaIndustry": "construction",
+        "h2": "Turning years of spend into one number should not take years.",
+        "intro": "A construction group doing hundreds of millions in annual spend across more than a dozen entities can state its turnover to the euro and still not know, with any precision, what it actually spent last year, or on what. Framework agreements exist, but they were signed years ago and nobody has checked since whether buying still follows them.",
+        "photo": "/images/photos/construction-planner-woman-1.png",
+        "photoAlt": "construction site",
+        "dayToDay": {
+          "work": "Main contractors and project-based firms running many projects at once, often across a dozen or more entities.",
+          "spend": "Subcontractors, materials and plant, bought project by project.",
+          "matters": "Winning tenders at a margin, knowing group-wide spend, and keeping buying on framework agreements."
+        },
+        "pains": [
+          {
+            "title": "Group-wide spend nobody can add up precisely",
+            "body": "Spend spread across many entities and systems means turnover is known to the euro; what was actually bought rarely is."
+          },
+          {
+            "title": "Framework agreements nobody has checked lately",
+            "body": "Agreements signed years ago keep running on trust, with no live comparison of whether current buying still follows them."
+          },
+          {
+            "title": "Every tender starts with a rebuild",
+            "body": "Before pricing a bid, someone turns years of raw spend into quantities and contractors by hand. Then does it again for the next one."
+          }
+        ],
+        "solutionLink": {
+          "label": "See how Pearstop cleans procurement data at scale",
+          "href": "/procurement-data-quality"
+        },
+        "changes": [
+          "Group-wide spend in one coded view, not a spreadsheet per entity",
+          "Framework agreement compliance checked against live buying, not assumed",
+          "Cost history ready for the next tender, without rebuilding it by hand"
+        ],
+        "proof": {
+          "quote": "If you cannot defend your cost baseline, you are bidding on a feeling.",
+          "role": "Commercial Director, Construction",
+          "caseLabel": null,
+          "caseHref": null
+        },
+        "faq": [
+          {
+            "q": "How can a construction group see spend across all its entities?",
+            "a": "Label every spend line from every entity with the same categories and supplier names, then combine them into one view. Pearstop does this from ERP exports and invoices, without moving every entity onto one system first."
+          },
+          {
+            "q": "How do construction companies check whether buying follows framework agreements?",
+            "a": "Compare classified spend by category and supplier with the frameworks in place. Spend going to suppliers outside agreements shows up straight away."
+          },
+          {
+            "q": "How do construction estimators use historical cost data for tenders?",
+            "a": "They need past spend turned into costs per category, contractor and project type. Once that data is classified, it can be pulled in minutes instead of rebuilt by hand for each bid."
+          }
+        ]
+      },
+      {
+        "id": "soft-services",
+        "tabLabel": "Soft services & cleaning",
+        "eyebrow": "Soft services & cleaning",
+        "ctaIndustry": "soft services and cleaning",
+        "h2": "If the invoice is never read, the spend underneath it does not exist yet.",
+        "intro": "Ask a cleaning contractor’s procurement team how confident they are in their own numbers, and “ground level” is a common, self-deprecating answer. Before spend can be checked against a contract, someone has to actually read the invoice, and separately, roughly eighty percent of invoices on cleaning contracts do not match the terms that were agreed. Two visibility problems, stacked.",
+        "photo": "/images/photos/cleaning-office-woman-1.png",
+        "photoAlt": "cleaning crew in a commercial building",
+        "dayToDay": {
+          "work": "Cleaning and soft services delivered across hundreds of client sites, with thin margins and a lot of labour.",
+          "spend": "Consumables, equipment and subcontractors, often from one or two big suppliers.",
+          "matters": "Defending tender prices, controlling consumables cost, and not depending on a supplier’s own numbers."
+        },
+        "pains": [
+          {
+            "title": "Invoices arriving faster than anyone can read them",
+            "body": "ERP master data described as too poor for the automatic flow to even start, with deadlines that have been missed for years, not months."
+          },
+          {
+            "title": "Spend nobody has checked against the contract",
+            "body": "Asked to defend a tender cost, the honest answer is often: it feels like 3% of the contract, but it could be six, or two. Nobody knows."
+          },
+          {
+            "title": "No justification when a client challenges a price",
+            "body": "Asked to defend a tender cost, the honest answer is often that nobody knows. The margin on the number was a feeling, not a calculation."
+          }
+        ],
+        "solutionLink": {
+          "label": "See how Pearstop reads the invoice first",
+          "href": "/invoice-data-extraction"
+        },
+        "changes": [
+          "Invoices read and structured automatically, in any format, so there is something to check",
+          "Actual spend checked against agreed contract terms as a matter of course, not an audit exercise",
+          "A real cost baseline to defend pricing under client challenge, not a feeling"
+        ],
+        "proof": {
+          "stat": "Invoice extraction accuracy from about 70% to 99% for a cleaning services company",
+          "quote": "It would have taken five engineers and a full year to clean this up. So we decided to look for a better solution.",
+          "role": "Head of Operations, Cleaning services company",
+          "caseLabel": null,
+          "caseHref": null
+        },
+        "faq": [
+          {
+            "q": "How do cleaning companies automate invoice processing?",
+            "a": "Use invoice extraction that reads PDFs, scans and email attachments, turns every line into structured data and labels it. For one cleaning company, first-pass extraction accuracy went from about 70% to 99%."
+          },
+          {
+            "q": "How can a cleaning contractor justify consumables costs in a tender?",
+            "a": "With a cost baseline built from past invoices: what consumables and equipment actually cost per site or contract. Without one, the number in the tender is an estimate."
+          },
+          {
+            "q": "How do cleaning companies check supplier pricing when one supplier dominates?",
+            "a": "Classify your own invoice lines so you can see the price of each item over time, instead of relying on the reports the supplier gives you."
+          }
+        ]
+      },
+      {
+        "id": "manufacturing",
+        "tabLabel": "Manufacturers",
+        "eyebrow": "Manufacturers of building systems",
+        "ctaIndustry": "manufacturing",
+        "h2": "One entity already runs a standard. The rest of the group does not.",
+        "intro": "It is common in multi-entity manufacturers for one part of the business, often the most established or the most recently scrutinised, to already classify spend against a real standard, while sister entities and newer sites still run on inconsistent, free-text supplier and parts data. The gap does not stay contained to one region for long: audits, group reporting, and shared procurement all eventually need the same view everywhere.",
+        "photo": "/images/photos/hvac-manufacture.jpeg",
+        "photoAlt": "building-systems factory floor",
+        "dayToDay": {
+          "work": "Makers of HVAC, M&E and industrial equipment, running several plants or entities, often in several countries.",
+          "spend": "Parts and materials in high volume, described differently in every plant.",
+          "matters": "One classification standard across the group, fast and accurate quotes, and no duplicate stock."
+        },
+        "pains": [
+          {
+            "title": "One entity on a standard, others not",
+            "body": "A group classification standard already exists somewhere in the business. Extending it to every entity by hand is slower than the reason it was requested in the first place."
+          },
+          {
+            "title": "Duplicate and inconsistent parts records across plants",
+            "body": "The same part shows up under different codes and spellings depending on which plant or system entered it, which blocks supplier benchmarking and hides duplicate stock."
+          },
+          {
+            "title": "Slow quoting built on manual lookups",
+            "body": "Re-keying part and site data by hand slows every quote. At one manufacturer it took 1–3 hours per proposal."
+          }
+        ],
+        "solutionLink": {
+          "label": "See how Pearstop aligns every entity to one standard",
+          "href": "/unspsc"
+        },
+        "changes": [
+          "The group’s existing classification standard extended to every entity, not just the one that already had it",
+          "Parts data cleaned up and matched across plants and systems",
+          "Faster quoting on cost and supplier data that does not need re-checking by hand"
+        ],
+        "proof": {
+          "quote": "It saves our team a lot of time by eliminating the repetitive tasks of combining the correct items.",
+          "personId": "vinceOut",
+          "caseLabel": "Read the case",
+          "caseHref": "/cases/lemtech"
+        },
+        "faq": [
+          {
+            "q": "How do manufacturers roll out UNSPSC across multiple plants?",
+            "a": "Take the classification one entity already uses and apply it to every plant’s spend and parts data, mapping local descriptions to the same codes. Pearstop does this automatically, in any language."
+          },
+          {
+            "q": "How do you find duplicate parts across manufacturing sites?",
+            "a": "Standardise part descriptions and codes across plants, then match records that describe the same part. Duplicates and double-held stock become visible."
+          },
+          {
+            "q": "Our US entity uses UNSPSC. How do we align our European entities to it?",
+            "a": "Classify the European entities’ spend and parts data to the same UNSPSC codes, so group reporting compares like with like. You don’t need to replace their ERP first."
+          }
+        ]
+      },
+      {
+        "id": "asset-owners",
+        "tabLabel": "Asset owners",
+        "eyebrow": "Asset owners",
+        "ctaIndustry": "asset owner",
+        "h2": "You do not touch the invoices. You still need to know what they say.",
+        "intro": "Property investors, landlords, and public estate owners who outsource facilities management do not generate their own spend data. They receive it, filtered through whichever provider delivers the contract. The question that follows is not a category strategy question. It is simpler, and harder to dodge: what is actually being spent on our behalf, is it competitive, and how would we know if it was not.",
+        "photo": "/images/photos/the-city-2.png",
+        "photoAlt": "office or estate building exterior",
+        "dayToDay": {
+          "work": "Property investors, landlords and public estate owners who outsource facilities management to a provider.",
+          "spend": "Maintenance and services bought on your behalf and reported back by the provider.",
+          "matters": "Knowing what is spent for you is fair, comparing providers and sites, and approving standard costs fast."
+        },
+        "pains": [
+          {
+            "title": "Cost data you receive but do not control",
+            "body": "A managing agent or FM provider reports the numbers. There is rarely an independent way to check them against what similar sites or portfolios pay."
+          },
+          {
+            "title": "No benchmark across providers or sites",
+            "body": "Without a common, classified view of spend, comparing one provider’s costs to another, or one site to the next, is not possible."
+          },
+          {
+            "title": "Standard costs still go up for sign-off",
+            "body": "Nobody below you knows what a standard job should cost, so it comes back to senior managers, or out to a quantity surveyor, to check."
+          }
+        ],
+        "solutionLink": {
+          "label": "See how Pearstop gives asset owners assurance",
+          "href": "/asset-data-management"
+        },
+        "changes": [
+          "An independent, classified view of spend managed on your behalf, not just the provider’s own report",
+          "Cost benchmarking across providers and sites, on the same basis",
+          "Assurance you can bring to a provider review, not just a file you received from one",
+          "Standard costs approved against a benchmark, without escalating"
+        ],
+        "proof": null,
+        "faq": [
+          {
+            "q": "How can a property owner check the costs their FM provider reports?",
+            "a": "Classify the provider’s cost data yourself, line by line, so you hold an independent record. Then compare it with other sites, other providers and past years."
+          },
+          {
+            "q": "How do asset owners benchmark facilities management costs across providers?",
+            "a": "Label every cost line from every provider with the same standard, so the same job or item is compared like for like. Without a common standard, provider reports can’t be compared."
+          },
+          {
+            "q": "How can asset owners approve standard maintenance costs without escalating?",
+            "a": "Set a benchmark range for each type of job or item from classified past spend. Anything inside the range can be approved straight away; anything outside is flagged."
+          }
+        ]
+      },
+      {
+        "id": "mro",
+        "tabLabel": "MRO",
+        "eyebrow": "MRO & component sourcing",
+        "ctaIndustry": "MRO",
+        "h2": "Stop paying a middleman because nobody can confirm what the part is.",
+        "intro": "Most MRO teams buy parts through intermediaries: an equipment maker or distributor that sells the part under its own code. For the parts you buy in volume, going direct to the original manufacturer is cheaper. To do that, you need the original manufacturer’s part number, and you need it for every part in your data, not just a handful. That research is usually outsourced to an offshore team and paid per line, and a big parts list can take months. Pearstop does it with AI, for every line, in days rather than months, and leaves a field empty when it can’t confirm a match.",
+        "photo": "/images/photos/construction-planner-team-1.png",
+        "photoAlt": "spare parts store or workshop",
+        "dayToDay": {
+          "work": "Keeping equipment running across sites, ordering spare parts and components every day.",
+          "spend": "Thousands of different parts, most bought through intermediaries under their own part codes.",
+          "matters": "Knowing which high-volume parts can be bought direct, and at what price."
+        },
+        "pains": [
+          {
+            "title": "The original manufacturer code is hidden behind a supplier code",
+            "body": "Without it, there is no alternative supplier to buy from, and no way to check the price is fair."
+          },
+          {
+            "title": "Too many parts to research by hand",
+            "body": "Finding the manufacturer’s part number for one part is doable. Doing it for thousands, across every supplier and site, is not."
+          },
+          {
+            "title": "Research outsourced line by line",
+            "body": "The lookup work usually goes to an offshore team, paid per line. One client was paying around 30p a line, and a big parts list took months to come back."
+          }
+        ],
+        "solutionLink": {
+          "label": "See how Pearstop verifies parts and components",
+          "href": "/unspsc"
+        },
+        "changes": [
+          "The original manufacturer part number found for every part in your data, not just the top few",
+          "A clear list of the high-volume parts you can order direct, in bulk",
+          "A parts list back in days, sometimes hours, instead of months",
+          "No made-up part numbers: when a match can’t be confirmed, the field stays empty, so your team knows exactly what still needs checking"
+        ],
+        "proof": {
+          "linkLabel": "See the MRO pattern",
+          "linkHref": "/cases/mro-confidential"
+        },
+        "faq": [
+          {
+            "q": "How do MRO teams find the original manufacturer part number behind a supplier code?",
+            "a": "By matching each part’s supplier code and description against manufacturer data and past purchases until the original part number is confirmed. Pearstop does this with AI for every line in your data and shows the evidence for each match, so your team can check it before ordering."
+          },
+          {
+            "q": "Can you buy spare parts direct from the original manufacturer instead of an intermediary?",
+            "a": "Often, yes, for the parts you buy in volume. Intermediaries resell components under their own codes. Once you know the original manufacturer part number, you can place bulk orders direct and compare prices."
+          },
+          {
+            "q": "Is it cheaper to use AI than an outsourced team to research part numbers?",
+            "a": "For large parts lists, usually yes. Outsourced research is paid per line (one client was paying around 30p a line), and a big list can take months to come back. With AI, the same list comes back in days, sometimes hours, and a person only checks the matches it is unsure about."
+          },
+          {
+            "q": "Can AI find manufacturer part numbers without making them up?",
+            "a": "It depends on how it is built. Pearstop only returns a part number when it finds a confident match, and leaves the field empty when it can’t. You may get fewer answers than from a tool that guesses, but none of them are invented, and you know exactly which parts still need checking."
+          }
+        ]
+      }
+    ],
+    "workingDifferent": {
       "title": "Working in a different industry?",
-      "copy": "Data quality problems are not unique to the industries above. If your teams are managing complex operational data, dealing with inconsistent supplier records, or preparing for a digital transformation, the chances are we can help. Let's find out.",
-      "bookDiscovery": "Talk to sales"
-    },
-    "whatChanges": "What changes with Pearstop",
-    "trusted": {
-      "title": "Trusted by leading companies in technical industries"
-    },
-    "readyBanner": {
-      "title": "Ready to Clean Your Data?",
-      "copy": "We have solved this exact problem in infrastructure, facilities management, cleaning, construction, and manufacturing. If yours is a different industry with the same kind of data, tell us about it.",
-      "bookDiscovery": "Talk to sales"
+      "body": "Data quality problems are not unique to the industries above. If your teams are managing complex operational data, dealing with inconsistent supplier records, or preparing for a digital transformation, the chances are we can help. Let’s find out.",
+      "primaryLabel": "Book a 15-minute discovery",
+      "secondaryLabel": "Or send us a data sample →"
     },
     "technical": {
       "eyebrow": "Technical Industries",
@@ -1840,268 +2520,6 @@
         }
       ]
     },
-    "facilitiesManagement": {
-      "title": "Facilities Management",
-      "intro": "Facilities management is not one problem, it is three. An integrated FM contract has to unify data arriving from every service line in a different format. A hard services contract lives or dies on knowing what a part actually is. A soft services contract is priced once, as one bundle, then has to be defended line by line for years. Each has its own detail below.",
-      "links": [
-        {
-          "label": "Integrated FM",
-          "id": "integrated-fm"
-        },
-        {
-          "label": "Hard Services",
-          "id": "hard-services"
-        },
-        {
-          "label": "Soft Services",
-          "id": "soft-services"
-        }
-      ]
-    },
-    "details": [
-      {
-        "id": "infrastructure",
-        "title": "Infrastructure",
-        "copy": "You cannot negotiate what you cannot see.",
-        "intro": "A cost-savings target gets named, sometimes running to eight figures, and nobody can point to where in the spend it actually sits. That gap between the target and the data is a recurring pattern in infrastructure and rail: a savings programme identifies tens of millions in potential savings, and the underlying spend data cannot show where to find them. Savings come third. First you see where the money goes, then you see the coverage gaps, then you negotiate.",
-        "points": [
-          {
-            "title": "A savings target with no data to back it",
-            "copy": "A transformation programme names a number. Spend is not classified consistently enough to say which categories the number is hiding in."
-          },
-          {
-            "title": "Framework coverage nobody can see across the business",
-            "copy": "One buyer can see the ten framework agreements for their category. The other fifty categories have no equivalent visibility, so the organisation cannot steer spend onto agreements it already has."
-          },
-          {
-            "title": "No baseline to negotiate or tender from",
-            "copy": "Negotiating with a supplier, or pricing a new tender, both start from knowing what you already spend. Without that baseline, every negotiation starts from a guess."
-          }
-        ],
-        "changes": [
-          "Spend classified consistently enough to show where a named savings target actually sits",
-          "Framework and contract coverage visible across every category, not just the ones already being watched",
-          "A real spend baseline to negotiate suppliers and price tenders against, not an estimate",
-          "Buyer review speed improved by an order of magnitude as classification becomes familiar, not a marginal gain"
-        ],
-        "href": "/procurement-data-quality",
-        "linkLabel": "See how Pearstop builds a real spend baseline",
-        "quote": {
-          "text": "When you say you can clean up the data, would you be able to now correlate the spend into a quantity using trends and all of that?",
-          "author": "Commercial decision-maker",
-          "role": "Civil/structural engineering consultancy, South Africa"
-        }
-      },
-      {
-        "id": "integrated-fm",
-        "title": "Integrated FM",
-        "copy": "One contract, five service lines, five data formats.",
-        "intro": "Multi-service FM contracts win on breadth: cleaning, hard services, security, and catering under one roof. The data underneath rarely reflects that unity. Each service line arrives from its own system, in its own format, and asset or cost records that should describe the same thing end up looking like they belong to different companies.",
-        "points": [
-          {
-            "title": "Reference data that does not match what is installed",
-            "copy": "Manufacturer and equipment reference data supplied at contract start is sometimes simply wrong, and spelling, naming, and coding inconsistencies compound across sites and years."
-          },
-          {
-            "title": "Spend and service data siloed by service line",
-            "copy": "Cleaning, hard services, and security each report differently, so nobody sees the full cost or performance picture for a single contract."
-          },
-          {
-            "title": "A first pass that delivers less than expected",
-            "copy": "Expectations set at the start of a project often outpace what a first data pass can support, because the underlying reference data was flawed before it reached any system."
-          }
-        ],
-        "changes": [
-          "Manufacturer and equipment reference data corrected and standardised across every service line and site",
-          "One structured dataset instead of five service-line silos, so real contract-level cost and performance is visible",
-          "A realistic view of what the data can support, set from a corrected baseline, not the state it arrived in"
-        ],
-        "href": "/data-quality",
-        "linkLabel": "See how Pearstop unifies FM data",
-        "quote": {
-          "text": "If we want a bot that knows everything about our contract, we need to make sure the governance data in the contract is properly agreed first.",
-          "author": "Data strategy lead",
-          "role": "Integrated facilities management provider"
-        }
-      },
-      {
-        "id": "hard-services",
-        "title": "Hard Services",
-        "copy": "Stop paying a middleman because nobody can confirm what the part is.",
-        "intro": "When a component arrives with only a supplier's own part code attached, there is no way to buy it from anyone except that supplier. Getting to the original manufacturer code means someone tracing it by hand, and every step of that chain, from the engineer who ordered it to the team who has to ask for a clearer description, costs time most contracts do not budget for.",
-        "points": [
-          {
-            "title": "The original manufacturer code is hidden behind a supplier code",
-            "copy": "Without it, there is no alternative supplier to buy from, and no way to check the price is fair."
-          },
-          {
-            "title": "Vague descriptions create a slow back-and-forth loop",
-            "copy": "An unclear part description sent back to site and back again is the default when descriptions were never captured consistently in the first place."
-          },
-          {
-            "title": "No way to check a match before it is used",
-            "copy": "A classification result is only useful once it can be checked against the real part number, not taken on faith."
-          }
-        ],
-        "changes": [
-          "Original manufacturer codes identified so parts can be bought direct, not through a markup",
-          "Consistent part descriptions captured once, not re-requested site to site",
-          "Every match traceable back to a real part number, so your team can verify it rather than trust it"
-        ],
-        "href": "/unspsc",
-        "linkLabel": "See how Pearstop classifies hard services spend",
-        "quote": {
-          "text": "Energy services, engineering - margins are paper thin.",
-          "author": "Group CIO",
-          "role": "Integrated FM operator"
-        }
-      },
-      {
-        "id": "soft-services",
-        "title": "Soft Services",
-        "copy": "One price covering several service lines. Defending it takes more than that.",
-        "intro": "Soft services rarely means one thing. A single contract can bundle cleaning, security, reception, waste, and landscaping under one price, set once at tender and expected to hold for years. When a client questions that price, or a renewal comes around, the cost of running each line separately is often not something anyone can produce quickly, because spend was never broken apart by service in the first place.",
-        "points": [
-          {
-            "title": "One blended price, no visibility into what each service actually costs",
-            "copy": "Combined pricing at bid stage means nobody can say, line by line, what cleaning costs versus security versus waste, which makes a renewal or a client challenge hard to defend."
-          },
-          {
-            "title": "Services treated as a commodity, with no data to prove otherwise",
-            "copy": "Without a cost and performance record broken out by service, it is difficult to demonstrate value beyond simply turning up."
-          },
-          {
-            "title": "Consolidation opportunities invisible across bundled contracts",
-            "copy": "The same supplier or service type can recur across many bundled contracts without anyone seeing it, because spend is never classified consistently enough to compare."
-          }
-        ],
-        "changes": [
-          "Spend broken out by service line within a bundled contract, not one blended number",
-          "A cost and performance record for each service, to defend value beyond price alone",
-          "Consolidation opportunities visible across bundled contracts and sites"
-        ],
-        "href": "/procurement-data-quality",
-        "linkLabel": "See how Pearstop breaks down bundled contract spend"
-      },
-      {
-        "id": "cleaning",
-        "title": "Cleaning",
-        "copy": "If the invoice is never read, the spend underneath it does not exist yet.",
-        "intro": "Ask a cleaning contractor's procurement team how confident they are in their own numbers, and \"ground level\" is a common, self-deprecating answer. Before spend can be checked against a contract, someone has to actually read the invoice, and separately, roughly eighty percent of invoices on cleaning contracts do not match the terms that were agreed. Two visibility problems, stacked.",
-        "points": [
-          {
-            "title": "Invoices arriving faster than anyone can read them",
-            "copy": "ERP master data described as too poor for the automatic flow to even start, with deadlines that have been missed for years, not months."
-          },
-          {
-            "title": "Spend nobody has checked against the contract",
-            "copy": "Roughly four in five cleaning-contract invoices do not match the agreed terms. That gap stays invisible until someone reads every line and compares it."
-          },
-          {
-            "title": "No justification when a client challenges a price",
-            "copy": "Asked to defend a tender cost, the honest answer is often that nobody knows. The margin on the number was a feeling, not a calculation."
-          }
-        ],
-        "changes": [
-          "Invoices read and structured automatically, in any format, so there is something to check",
-          "Actual spend checked against agreed contract terms as a matter of course, not an audit exercise",
-          "A real cost baseline to defend pricing under client challenge, not a feeling"
-        ],
-        "href": "/invoice-data-extraction",
-        "linkLabel": "See how Pearstop reads the invoice first",
-        "quote": {
-          "text": "I'd say we're at ground level. Most probably Sean here would beg to differ and say that we're somewhere underground.",
-          "author": "Procurement lead",
-          "role": "Multi-site cleaning services contractor"
-        }
-      },
-      {
-        "id": "construction",
-        "title": "Construction",
-        "copy": "Turning years of spend into one number should not take years.",
-        "intro": "A construction group doing hundreds of millions in annual spend across more than a dozen entities can state its turnover to the euro and still not know, with any precision, what it actually spent last year, or on what. Framework agreements exist, but they were signed years ago and nobody has checked since whether buying still follows them.",
-        "points": [
-          {
-            "title": "Group-wide spend nobody can add up precisely",
-            "copy": "Spend spread across many entities and systems means turnover is known to the euro; what was actually bought rarely is."
-          },
-          {
-            "title": "Framework agreements nobody has checked lately",
-            "copy": "Agreements signed years ago keep running on trust, with no live comparison of whether current buying still follows them."
-          },
-          {
-            "title": "Categorising spend by hand, project after project",
-            "copy": "Translating raw spend into quantities, sections, and contractors manually is still how a categorised view gets built, repeated every reporting cycle."
-          }
-        ],
-        "changes": [
-          "Group-wide spend visible in one consolidated, coded view, not per entity",
-          "Framework agreement compliance checked against live buying, not assumed",
-          "Categorisation that happens once per line, not by hand every reporting cycle"
-        ],
-        "href": "/procurement-data-quality",
-        "linkLabel": "See how Pearstop cleans procurement data at scale"
-      },
-      {
-        "id": "manufacturing",
-        "title": "Manufacturers of Building Systems",
-        "copy": "One entity already runs a standard. The rest of the group does not.",
-        "intro": "It is common in multi-entity manufacturers for one part of the business, often the most established or the most recently scrutinised, to already classify spend against a real standard, while sister entities and newer sites still run on inconsistent, free-text supplier and parts data. The gap does not stay contained to one region for long: audits, group reporting, and shared procurement all eventually need the same view everywhere.",
-        "points": [
-          {
-            "title": "One entity on a standard, others not",
-            "copy": "A group classification standard already exists somewhere in the business. Extending it to every entity by hand is slower than the reason it was requested in the first place."
-          },
-          {
-            "title": "Duplicate and inconsistent parts records across plants",
-            "copy": "The same part shows up under different codes and spellings depending on which plant or system entered it, which blocks supplier benchmarking and hides duplicate stock."
-          },
-          {
-            "title": "Slow quoting built on manual lookups",
-            "copy": "Re-keying and re-checking part data by hand slows quoting exactly when speed and accuracy both matter."
-          }
-        ],
-        "changes": [
-          "The group's existing classification standard extended to every entity, not just the one that already had it",
-          "Deduplicated, standardised parts data across plants and systems",
-          "Faster quoting on cost and supplier data that does not need re-checking by hand"
-        ],
-        "href": "/unspsc",
-        "linkLabel": "See how Pearstop aligns every entity to one standard"
-      },
-      {
-        "id": "asset-owners",
-        "title": "Asset Owners",
-        "copy": "You do not touch the invoices. You still need to know what they say.",
-        "intro": "Property investors, landlords, and public estate owners who outsource facilities management do not generate their own spend data. They receive it, filtered through whichever provider delivers the contract. The question that follows is not a category strategy question. It is simpler, and harder to dodge: what is actually being spent on our behalf, is it competitive, and how would we know if it was not.",
-        "points": [
-          {
-            "title": "Cost data you receive but do not control",
-            "copy": "A managing agent or FM provider reports the numbers. There is rarely an independent way to check them against what similar sites or portfolios pay."
-          },
-          {
-            "title": "No benchmark across providers or sites",
-            "copy": "Without a common, classified view of spend, comparing one provider's costs to another, or one site to the next, is not possible."
-          },
-          {
-            "title": "Wanting to hold the narrative, not just receive it",
-            "copy": "Reviewing a provider's own reporting after the fact is not the same as holding an independent, comparable record of your own."
-          }
-        ],
-        "changes": [
-          "An independent, classified view of spend managed on your behalf, not just the provider's own report",
-          "Cost benchmarking across providers and sites, on the same basis",
-          "Assurance you can bring to a provider review, not just a file you received from one"
-        ],
-        "href": "/asset-data-management",
-        "linkLabel": "See how Pearstop gives asset owners assurance",
-        "quote": {
-          "text": "We want to control the story, the narrative, from our side.",
-          "author": "Commercial/strategy lead",
-          "role": "Real estate investor, FM outsourced"
-        }
-      }
-    ],
     "faq": {
       "items": [
         {

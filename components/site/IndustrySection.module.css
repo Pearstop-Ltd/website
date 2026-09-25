@@ -1,0 +1,322 @@
+.root {
+  box-sizing: border-box;
+  background: #ffffff;
+  padding: 72px var(--inset) 72px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.root[inert] {
+  cursor: default;
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: 56px;
+  align-items: center;
+}
+
+.introText {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.eyebrow {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--blue);
+}
+
+.h2 {
+  margin: 0;
+  font-size: 36px;
+  line-height: 1.15;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--navy);
+  scroll-margin-top: 148px;
+}
+
+.body {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.7;
+  font-weight: 300;
+  color: var(--text);
+}
+
+.introPhoto {
+  position: relative;
+  height: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: linear-gradient(160deg, #c9cdd8 0%, var(--light-blue) 100%);
+}
+
+.introPhotoImage {
+  object-fit: cover;
+}
+
+.dayToDay {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.dayToDayItem {
+  border-top: 3px solid var(--blue);
+  padding-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.dayToDayLabel {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--blue);
+}
+
+.dayToDayBody {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--navy-deep);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: 56px;
+  align-items: start;
+}
+
+.painsCol {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.smallLabel {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.painsList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.painItem {
+  display: flex;
+  gap: 14px;
+}
+
+.painDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--purple);
+  flex-shrink: 0;
+  margin-top: 9px;
+}
+
+.painTitle {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--navy-deep);
+}
+
+.painBody {
+  margin: 4px 0 0;
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: 300;
+  color: var(--text);
+}
+
+.solutionLink {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--blue);
+  padding-top: 4px;
+}
+
+.changesCard {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  border: 1px solid var(--border);
+}
+
+.changesList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.changeItem {
+  display: flex;
+  gap: 10px;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--navy-deep);
+}
+
+.changeItem svg {
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.statChip {
+  background: var(--tint-green);
+  border-radius: 12px;
+  padding: 14px 16px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--navy-deep);
+}
+
+.caseLink {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--blue);
+  align-self: flex-start;
+}
+
+.ctaBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  background: var(--navy-deep);
+  border-radius: 16px;
+  padding: 20px 24px;
+}
+
+.ctaBarLabel {
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.ctaBarActions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.ctaPrimary {
+  background: var(--blue);
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: 6px;
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+  text-decoration: none;
+}
+
+.ctaSecondary {
+  border: 1.5px solid #ffffff;
+  color: #ffffff;
+  background: none;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.ctaTertiary {
+  color: var(--purple);
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.faqBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.closingRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--border);
+  padding-top: 22px;
+}
+
+.backLink {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.nextLink {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--blue);
+}
+
+@media (max-width: 900px) {
+  .intro,
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dayToDay {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .root {
+    padding: 48px 20px 48px;
+    gap: 32px;
+  }
+
+  .h2 {
+    font-size: 28px;
+  }
+
+  .ctaBar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .closingRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}

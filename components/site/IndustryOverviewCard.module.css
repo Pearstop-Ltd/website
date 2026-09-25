@@ -1,0 +1,84 @@
+.root {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 250px;
+  text-decoration: none;
+}
+
+.tint-blue {
+  background: var(--tint-blue);
+}
+
+.tint-purple {
+  background: var(--tint-purple);
+}
+
+.tint-green {
+  background: var(--tint-green);
+}
+
+.tint-soft {
+  background: var(--bg-soft);
+}
+
+.circle {
+  position: absolute;
+  top: -36px;
+  right: -36px;
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  background: linear-gradient(200deg, #c9cdd8 0%, var(--light-blue) 100%);
+  border: 4px solid #ffffff;
+  overflow: hidden;
+}
+
+.circleImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 15%;
+}
+
+.body {
+  padding: 26px 26px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-grow: 1;
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--navy);
+  max-width: 110px;
+}
+
+.pain {
+  font-size: 18px;
+  line-height: 1.4;
+  font-weight: 500;
+  color: var(--navy-deep);
+  padding-right: 64px;
+}
+
+.outcome {
+  font-size: 14px;
+  line-height: 1.55;
+  font-weight: 300;
+  color: var(--text);
+}
+
+.link {
+  margin-top: auto;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--blue);
+}
