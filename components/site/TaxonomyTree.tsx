@@ -69,9 +69,9 @@ export function TaxonomyTree({ columns, nodes, edges, className }: TaxonomyTreeP
           observer.disconnect();
         }
       },
-      // Later trigger than a typical scroll-in (needs to be scrolled
-      // further into view first), matching the slower animation below.
-      { threshold: 0.45 }
+      // Only once the whole tree is fully on screen, not just partially
+      // scrolled into view.
+      { threshold: 1 }
     );
     observer.observe(el);
     return () => observer.disconnect();
