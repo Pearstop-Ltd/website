@@ -79,7 +79,16 @@ export type NavLink = {
 };
 
 export const solutionLinks: NavLink[] = [
-  { label: "Invoice & Document Extraction", href: "/invoice-data-extraction", description: "Turn unread PDFs and scans into structured data." },
+  {
+    label: "Invoice & Document Extraction",
+    href: "/invoice-data-extraction",
+    description: "Turn unread PDFs and scans into structured data.",
+    children: [
+      { label: "For Construction", href: "/invoice-extraction-construction" },
+      { label: "For Cleaning", href: "/invoice-extraction-cleaning" },
+      { label: "For Facilities Management", href: "/invoice-extraction-fm" }
+    ]
+  },
   {
     label: "UNSPSC Classification",
     href: "/unspsc",
@@ -106,6 +115,7 @@ export const solutionLinks: NavLink[] = [
     href: "/data-quality",
     description: "The clean, structured data an ERP migration, Microsoft Fabric, or an AI initiative all depend on.",
     children: [
+      { label: "ERP Migration Data Cleansing", href: "/erp-migration-data-cleansing" },
       { label: "Fabric Ready", href: "/fabric" },
       { label: "AI Readiness", href: "/ai-readiness" }
     ]
@@ -134,6 +144,10 @@ export const footerCompanyLinks: NavLink[] = [
 
 export const footerSolutionLinks: NavLink[] = [
   { label: "Invoice & Document Extraction", href: "/invoice-data-extraction" },
+  { label: "Invoice Extraction for Construction", href: "/invoice-extraction-construction" },
+  { label: "Invoice Extraction for Cleaning", href: "/invoice-extraction-cleaning" },
+  { label: "Invoice Extraction for Facilities Management", href: "/invoice-extraction-fm" },
+  { label: "ERP Migration Data Cleansing", href: "/erp-migration-data-cleansing" },
   { label: "Data Readiness", href: "/data-quality" },
   { label: "Spend Visibility", href: "/procurement-data-quality" },
   { label: "Spend Cube & Dashboards", href: "/spend-cube" },

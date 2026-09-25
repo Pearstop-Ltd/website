@@ -93,7 +93,8 @@ export default async function SolutionsPage({ params }: { params: Promise<{ loca
           <div className="bene-cards">
             {[
               { title: t("moreCards.items.0.title"), copy: t("moreCards.items.0.copy"), href: `${prefix}/spend-cube` },
-              { title: t("moreCards.items.1.title"), copy: t("moreCards.items.1.copy"), href: `${prefix}/procurement-consultancies` }
+              { title: t("moreCards.items.1.title"), copy: t("moreCards.items.1.copy"), href: `${prefix}/procurement-consultancies` },
+              { title: t("moreCards.items.2.title"), copy: t("moreCards.items.2.copy"), href: `${prefix}/erp-migration-data-cleansing` }
             ].map((solution) => (
               <article className="bene-card" key={solution.href}>
                 <h3>{solution.title}</h3>

@@ -94,6 +94,11 @@ export default function SolutionsPage() {
                 title: "For Procurement Consultancies",
                 copy: "White-labelled spend classification under your own taxonomy, so engagement margin goes to analysis, not manual cleanup.",
                 href: "/procurement-consultancies"
+              },
+              {
+                title: "ERP Migration Data Cleansing",
+                copy: "Clean, classified reference data before it moves into a new ERP, so the migration doesn't just carry the mess into a new system.",
+                href: "/erp-migration-data-cleansing"
               }
             ].map((solution) => (
               <article className="bene-card" key={solution.href}>
