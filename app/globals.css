@@ -291,18 +291,25 @@ main {
   backdrop-filter: none;
 }
 
-/* /solutions: flat dark purple, not the homepage's navy-to-blue gradient -
-   same dark purple as the mobile nav's own dark overlay. */
+/* Homepage "video" phase and /solutions: flat solid navy - the site's
+   standard dark color (same as the footer) - never the hero video or the
+   strip's logos showing through, just a solid color. */
 #site-nav.header-solid-purple::before {
-  background: #241045;
+  background: var(--navy);
 }
 
-/* Homepage "strip" phase: once #clients-and-quotes has scrolled up to the
-   header line, go transparent so that section's own gradient - scrolling
-   underneath a fixed header - shows straight through, lining up with it
-   perfectly instead of approximating it with a second gradient. */
+/* Homepage "strip" phase: same gradient as #clients-and-quotes, sized to
+   that section's real height (--strip-height) and offset by its live
+   scroll position (--strip-bg-y, both set every scroll frame in
+   site-header.tsx) - so the header always paints exactly the slice of
+   that gradient the real section would show at the header line, moving
+   in lockstep with it as the page scrolls. Solid color only: the actual
+   section content (logos) never shows through. */
 #site-nav.header-strip::before {
-  background: transparent;
+  background-image: linear-gradient(135deg, var(--navy) 0%, #25347d 60%, var(--primary) 100%);
+  background-size: 100% var(--strip-height, 100vh);
+  background-position: 0 var(--strip-bg-y, 0);
+  background-repeat: no-repeat;
 }
 
 #site-nav.header-dark .nav-menu > li > a,
@@ -851,6 +858,7 @@ section {
 .values-card,
 .how-step,
 .hiw-card,
+.bene-card,
 .stat-card {
   border: 1px solid var(--border);
   border-radius: var(--card-radius);
@@ -869,6 +877,7 @@ section {
 .values-card:hover,
 .how-step:hover,
 .hiw-card:hover,
+.bene-card:hover,
 .stat-card:hover {
   transform: translateY(-3px);
   box-shadow: var(--card-shadow-hover);

@@ -69,7 +69,9 @@ export function TaxonomyTree({ columns, nodes, edges, className }: TaxonomyTreeP
           observer.disconnect();
         }
       },
-      { threshold: 0.25 }
+      // Later trigger than a typical scroll-in (needs to be scrolled
+      // further into view first), matching the slower animation below.
+      { threshold: 0.45 }
     );
     observer.observe(el);
     return () => observer.disconnect();
@@ -108,7 +110,7 @@ export function TaxonomyTree({ columns, nodes, edges, className }: TaxonomyTreeP
         </svg>
         {nodes.map((node) => {
           const isSelected = node.variant === "selected";
-          const delay = isSelected ? selectedIndex++ * 90 : 0;
+          const delay = isSelected ? selectedIndex++ * 150 : 0;
           return (
             <div
               key={node.id}

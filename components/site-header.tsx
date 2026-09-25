@@ -116,18 +116,24 @@ export function SiteHeader() {
 
   // Homepage only: three phases as you scroll down.
   // "video"  - over the hero, before #clients-and-quotes reaches the header
-  //            line: the header's own navy-to-blue gradient.
+  //            line: a flat solid dark purple (never shows the real hero
+  //            video/logos through it).
   // "strip"  - once #clients-and-quotes has reached the header line: the
-  //            header goes transparent, so the real .clients-and-quotes
-  //            gradient scrolling underneath shows straight through it -
-  //            guarantees a perfect, pixel-identical continuation instead
-  //            of trying to keep a copy of that gradient in sync.
+  //            header paints the *same* gradient as that section, sized to
+  //            that section's real height and offset by its current
+  //            scroll position (a CSS custom property updated every
+  //            frame) - so the header's gradient is always showing
+  //            exactly the slice that section's own gradient would show
+  //            at that scroll position, "scrolling" in lockstep with it,
+  //            without ever revealing the section's actual content (logos)
+  //            through a transparent header.
   // "light"  - once #lm-band (the first white section) reaches the header
   //            line: back to the normal light chrome.
   // Not one-time triggers - scrolling back up restores earlier phases too.
+  const navRef = useRef<HTMLElement>(null);
   const isHome = pathname === "/" || LOCALES.some(({ code }) => pathname === `/${code}`);
   // /solutions has no hero video to transition off of - it's just always
-  // dark, a flat purple rather than the homepage's navy-to-blue gradient.
+  // the same flat dark purple as the homepage's "video" phase.
   const isAlwaysDark = pathname === "/solutions" || LOCALES.some(({ code }) => pathname === `/${code}/solutions`);
   const [headerPhase, setHeaderPhase] = useState<"video" | "strip" | "light">(isHome || isAlwaysDark ? "video" : "light");
 
@@ -148,10 +154,15 @@ export function SiteHeader() {
     }
     let ticking = false;
     const update = () => {
+      const stripTop = stripStart.getBoundingClientRect().top;
       if (lmBand.getBoundingClientRect().top <= HEADER_HEIGHT) {
         setHeaderPhase("light");
-      } else if (stripStart.getBoundingClientRect().top <= HEADER_HEIGHT) {
+      } else if (stripTop <= HEADER_HEIGHT) {
         setHeaderPhase("strip");
+        // Position and size the header's gradient to exactly match
+        // #clients-and-quotes's own gradient at this scroll position.
+        navRef.current?.style.setProperty("--strip-height", `${stripStart.offsetHeight}px`);
+        navRef.current?.style.setProperty("--strip-bg-y", `${stripTop}px`);
       } else {
         setHeaderPhase("video");
       }
@@ -264,7 +275,8 @@ export function SiteHeader() {
   return (
     <nav
       id="site-nav"
-      className={darkHeader ? `header-dark${isAlwaysDark ? " header-solid-purple" : ""}${headerPhase === "strip" ? " header-strip" : ""}` : ""}
+      ref={navRef}
+      className={darkHeader ? `header-dark${headerPhase === "video" ? " header-solid-purple" : ""}${headerPhase === "strip" ? " header-strip" : ""}` : ""}
       role="navigation"
       aria-label="Main navigation"
     >
