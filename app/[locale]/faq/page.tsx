@@ -4,6 +4,7 @@ import { getTranslations , setRequestLocale } from "next-intl/server";
 import Link from "next/link";
 import { CTABand, PageHero } from "@/components/content";
 import { CalendlyButton } from "@/components/calendly-button";
+import { Faq } from "@/components/site/Faq";
 import { alternateLanguages, siteConfig } from "@/lib/site";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -91,14 +92,7 @@ export default async function FaqPage({ params }: { params: Promise<{ locale: st
                 return (
                   <div key={section} style={{ marginBottom: "3rem" }} id={`faq-${section}`}>
                     <h2 style={{ marginBottom: "1.5rem" }}>{t(`sections.${section}.title`)}</h2>
-                    <div className="faq-list">
-                      {items.map((item, i) => (
-                        <details key={i} className="faq-item">
-                          <summary className="faq-q">{item.q}</summary>
-                          <p className="faq-a">{item.a}</p>
-                        </details>
-                      ))}
-                    </div>
+                    <Faq items={items.map((item) => ({ q: item.q, a: item.a }))} />
                   </div>
                 );
               })}

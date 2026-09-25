@@ -3,6 +3,7 @@ import Script from "next/script";
 import Link from "next/link";
 import { CTABand, PageHero } from "@/components/content";
 import { CalendlyButton } from "@/components/calendly-button";
+import { Faq } from "@/components/site/Faq";
 import { alternateLanguages, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -232,14 +233,7 @@ export default function FaqPage() {
               {SECTIONS.map((section) => (
                 <div key={section.key} style={{ marginBottom: "3rem" }} id={`faq-${section.key}`}>
                   <h2 style={{ marginBottom: "1.5rem" }}>{section.title}</h2>
-                  <div className="faq-list">
-                    {section.items.map((item, i) => (
-                      <details key={i} className="faq-item">
-                        <summary className="faq-q">{item.q}</summary>
-                        <p className="faq-a">{item.a}</p>
-                      </details>
-                    ))}
-                  </div>
+                  <Faq items={section.items} />
                 </div>
               ))}
 

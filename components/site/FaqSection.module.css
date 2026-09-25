@@ -1,0 +1,13 @@
+.faqGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.4fr);
+  gap: 64px;
+  align-items: start;
+}
+
+@media (max-width: 767px) {
+  .faqGrid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}

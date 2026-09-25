@@ -3,6 +3,7 @@ import Script from "next/script";
 import Link from "next/link";
 import { CTABand, GeoBlock, PageHero, QuoteBox, SectionTitle } from "@/components/content";
 import { UnspscLookupCta } from "@/components/unspsc-lookup-cta";
+import { Faq } from "@/components/site/Faq";
 import { alternateLanguages, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -232,8 +233,8 @@ export default function UnspscNLPage() {
           <div className="row">
             <div className="col-md-8 col-md-offset-2">
               <SectionTitle title="Veelgestelde vragen" />
-              <div className="faq-list">
-                {[
+              <Faq
+                items={[
                   {
                     q: "Is UNSPSC classificatie verplicht in Nederland?",
                     a: "UNSPSC is geen wettelijke verplichting in Nederland, maar wordt steeds meer gebruikt als best-practice standaard. Peppol e-facturatie, verplicht voor overheidsinkoop, vereist gestructureerde productcodes waarbij UNSPSC de meest gebruikte internationale standaard is."
@@ -254,13 +255,8 @@ export default function UnspscNLPage() {
                     q: "Hoe classificeert Pearstop Nederlandse inkoopdata?",
                     a: "Pearstop ontvangt inkoopdata via CSV of directe API-verbinding vanuit Nederlandse ERP-systemen inclusief SAP, Oracle, en AFAS. De vier-laags classificatie-engine verwerkt ook Nederlandstalige factuuromschrijvingen."
                   }
-                ].map((item, i) => (
-                  <details key={i} className="faq-item">
-                    <summary className="faq-q">{item.q}</summary>
-                    <p className="faq-a">{item.a}</p>
-                  </details>
-                ))}
-              </div>
+                ]}
+              />
             </div>
           </div>
         </div>

@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getTranslations , setRequestLocale } from "next-intl/server";
-import { CTABand, GeoBlock, PageHero, SectionTitle } from "@/components/content";
+import { CTABand, GeoBlock, SectionTitle } from "@/components/content";
+import { SolutionsHero } from "@/components/site/SolutionsHero";
 import { alternateLanguages, siteConfig } from "@/lib/site";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -59,7 +60,7 @@ export default async function SolutionsPage({ params }: { params: Promise<{ loca
 
   return (
     <>
-      <PageHero
+      <SolutionsHero
         eyebrow={t("hero.eyebrow")}
         title={t("hero.title")}
         lead={t("hero.lead")}

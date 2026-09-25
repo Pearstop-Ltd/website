@@ -56,6 +56,20 @@ export type SolutionSection =
       anchorId?: string;
     }
   | {
+      /** "How it works" as numbered steps only, no source→destination flow
+       * diagram — for pages whose copy has steps but no existing
+       * input/output category labels (inventing new ones would be
+       * rewriting copy). */
+      type: "steps";
+      key?: string;
+      eyebrow: ReactNode;
+      title: ReactNode;
+      lead?: ReactNode;
+      steps: NumberedStepProps[];
+      background?: "white" | "soft";
+      anchorId?: string;
+    }
+  | {
       type: "table";
       key?: string;
       eyebrow: ReactNode;
@@ -135,6 +149,19 @@ function renderSection(section: SolutionSection) {
                 ))}
               </div>
             ) : null}
+          </div>
+        </Section>
+      );
+    case "steps":
+      return (
+        <Section key={section.key ?? "steps"} background={section.background}>
+          <div id={section.anchorId} className={styles.stack}>
+            <SectionHeader eyebrow={section.eyebrow} title={section.title} lead={section.lead} />
+            <div className={styles.cardsGrid3}>
+              {section.steps.map((step, i) => (
+                <NumberedStep {...step} key={i} />
+              ))}
+            </div>
           </div>
         </Section>
       );

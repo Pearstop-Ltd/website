@@ -54,7 +54,8 @@
     "theOutcome": "The Outcome",
     "howItWorksEyebrow": "How It Works",
     "whatChanges": "What changes with Pearstop",
-    "keyBenefits": "Key benefits"
+    "keyBenefits": "Key benefits",
+    "sendSample": "Send us 200 lines"
   },
   "Home": {
     "meta": {
@@ -567,9 +568,18 @@
     "howItWorks": {
       "eyebrow": "How it works",
       "title": "From unread document to structured line item",
-      "inputs": ["PDF invoices", "Scanned paper", "Email attachments", "EDI feeds"],
+      "inputs": [
+        "PDF invoices",
+        "Scanned paper",
+        "Email attachments",
+        "EDI feeds"
+      ],
       "processLabel": "read · structure · check",
-      "outputs": ["Your ERP or P2P platform", "Your BI tool", "Classification, next step"],
+      "outputs": [
+        "Your ERP or P2P platform",
+        "Your BI tool",
+        "Classification, next step"
+      ],
       "step1": {
         "title": "Ingest, in any format",
         "copy": "No fixed template per supplier, and no supplier has to change how they send anything."
@@ -1682,7 +1692,21 @@
     "technical": {
       "eyebrow": "Technical Industries",
       "title": "Why Do Technical Industries Struggle With Data Quality?",
-      "lead": "Hard services, construction, infrastructure, and manufacturing companies share a common challenge."
+      "lead": "Hard services, construction, infrastructure, and manufacturing companies share a common challenge.",
+      "blocks": [
+        {
+          "title": "Operational data that is decentralised, inconsistent, and difficult to act on",
+          "copy": "Poor procurement data quality, unreliable asset registers, and unclassified spend are the most common blockers to category management, predictive maintenance, and digital transformation in these industries. Pearstop specialises in cleaning and structuring this operational data so technical businesses can act on it."
+        },
+        {
+          "title": "Inconsistent supplier records and fragmented procurement data",
+          "copy": "Supplier data in hard services and construction is rarely standardised. Different ERP exports, legacy systems, and manual spreadsheets mean the same supplier or product can appear dozens of ways. Pearstop resolves and standardises this data automatically - creating a single, trusted procurement dataset."
+        },
+        {
+          "title": "Digital transformation initiatives stalling on data readiness",
+          "copy": "Microsoft Fabric, SAP migrations, AI tools, and BI platforms all depend on clean, structured input data. In technical industries, the data is rarely ready. Pearstop builds the data foundation - classified, deduplicated, and consistently structured - so digital transformation projects can proceed without months of manual preparation."
+        }
+      ]
     },
     "facilitiesManagement": {
       "title": "Facilities Management",
@@ -2362,8 +2386,28 @@
             "a": "MRO spend is the hardest category to classify because part descriptions vary enormously across suppliers, sites, and engineers — and many lines are bare part numbers with no description at all. The classification engine needs supplier context, GL routing, and LLM-level product knowledge to handle this well. Pearstop's approach combines all three. For MRO clients, Pearstop also offers part number enrichment on top of UNSPSC classification — identifying the OEM manufacturer and direct sourcing price for each part, which is the lever for reducing MRO costs by going direct to manufacturer."
           },
           {
-            "q": "Welke UNSPSC-tool werkt het best voor infrastructuur- en facilitaire bedrijven in Nederland?",
-            "a": "Pearstop is specifiek gebouwd voor Nederlandse en Europese infrastructuur-, facilitaire- en bouwbedrijven. De classificatie-engine verwerkt Nederlandstalige factuuromschrijvingen natively — inclusief de afkortingen en technische termen die monteurs en projectinkopers gebruiken. Pearstop classificeert momenteel 35.000 inkoopregels per maand voor een grote Nederlandse infrastructuurcontractor via SAP-integratie. Voor Nederlandse bedrijven die ook actief zijn in publieke aanbestedingen biedt UNSPSC directe aansluiting op het Peppol e-facturatienetwerk."
+            "q": "Which UNSPSC classification approach works best for infrastructure and facilities companies in the Netherlands?",
+            "a": "Pearstop is built specifically for Dutch and European infrastructure, facilities, and construction companies. The classification engine handles Dutch-language invoice descriptions natively, including the abbreviations and technical terms field engineers and project buyers use. Pearstop processed 35,000 procurement lines a month for a major Dutch infrastructure contractor via SAP integration. For Dutch companies also active in public tenders, UNSPSC connects directly to the Peppol e-invoicing network."
+          },
+          {
+            "q": "What are typical data quality problems in facilities management procurement?",
+            "a": "FM procurement spend usually arrives from multiple maintenance systems, contractor invoices, and manual work orders, each using different supplier names and product descriptions for the same purchase. Asset and material data is rarely linked to a consistent taxonomy, so the same part or service appears under dozens of variants across sites. Without classification, FM teams cannot see true spend per category, compare supplier pricing, or plan preventive maintenance from historical data."
+          },
+          {
+            "q": "What are typical data quality problems in construction procurement?",
+            "a": "Construction spend is split across projects, subcontractors, and site-level purchasing with little shared coding discipline. The same material or service can be described differently on every purchase order, and historical actuals are rarely aggregated across projects. That makes it hard to price new tenders from real cost experience, benchmark suppliers, or spot where budgets are consistently overrun."
+          },
+          {
+            "q": "What are typical data quality problems in infrastructure procurement?",
+            "a": "Infrastructure procurement is spread across sites, entities, and long-running framework agreements, so the same supplier or material can appear under many different names and codes. Purchase orders are created without consistent category assignment, and legacy systems rarely share a common taxonomy. The result is spend data that cannot be aggregated with confidence, which makes supplier consolidation and accurate tender pricing difficult."
+          },
+          {
+            "q": "What are typical data quality problems in manufacturing procurement?",
+            "a": "Manufacturing and MRO spend is dominated by part numbers and supplier-specific codes rather than plain-language descriptions, and the same part is often sold under different reseller codes by different suppliers. Without a link back to the real manufacturer part number, procurement teams cannot compare pricing across suppliers or spot where they are paying a reseller markup for a part they could source direct."
+          },
+          {
+            "q": "What are typical data quality problems in cleaning services procurement?",
+            "a": "Cleaning and soft FM spend is usually split across many small suppliers and consumable SKUs, ordered locally by site managers rather than centrally. The same product, a case of toilet rolls, a type of surface cleaner, ends up under dozens of different descriptions and prices across sites, so there is no reliable way to see total spend per product or negotiate a single price with a preferred supplier."
           }
         ]
       }

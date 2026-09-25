@@ -3,6 +3,7 @@ import Script from "next/script";
 import { getTranslations , setRequestLocale } from "next-intl/server";
 import Link from "next/link";
 import { CTABand, GeoBlock, PageHero } from "@/components/content";
+import { Faq } from "@/components/site/Faq";
 import { CalendlyButton } from "@/components/calendly-button";
 import { alternateLanguages, siteConfig } from "@/lib/site";
 import { UnspscLookupTool } from "@/components/unspsc-lookup-tool";
@@ -265,14 +266,7 @@ export default async function UnspscLookupPage({ params }: { params: Promise<{ l
           <div className="row">
             <div className="col-md-8 col-md-offset-2">
               <h2 style={{ marginBottom: "1.5rem" }}>{t("faq.title")}</h2>
-              <div className="faq-list">
-                {(t.raw("faq.items") as { q: string; a: string }[]).map((item, i) => (
-                  <details key={i} className="faq-item">
-                    <summary className="faq-q">{item.q}</summary>
-                    <p className="faq-a">{item.a}</p>
-                  </details>
-                ))}
-              </div>
+              <Faq items={t.raw("faq.items") as { q: string; a: string }[]} />
             </div>
           </div>
         </div>

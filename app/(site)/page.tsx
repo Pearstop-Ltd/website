@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Script from "next/script";
 import { GeoBlock, PageHero } from "@/components/content";
-import { Faq, FaqSchema } from "@/components/blog";
+import { FaqSchema } from "@/components/blog";
+import { FaqSection } from "@/components/site/FaqSection";
+import { FaqHighlight } from "@/components/site/FaqHighlight";
 import { SampleRequestModal } from "@/components/sample-request-modal";
 import { alternateLanguages, siteConfig } from "@/lib/site";
 
@@ -409,36 +411,22 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section aria-labelledby="home-standalone-faq-heading">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-8 col-md-offset-2">
-              <div className="text-center" style={{ marginBottom: "0.75rem" }}>
-                <span className="pill">The question we get most</span>
-              </div>
-              <div className="quote-card" style={{ textAlign: "center" }}>
-                <h2 id="home-standalone-faq-heading" style={{ marginBottom: "0.75rem" }}>
-                  We already tried ChatGPT or Copilot on our data - why would this be different?
-                </h2>
-                <p className="light-copy">
-                  Because Pearstop isn&rsquo;t a general-purpose AI tool pointed at your data - it&rsquo;s a
-                  dedicated pipeline built specifically for procurement and asset data: deterministic matching
-                  first, a large language model for the genuinely ambiguous cases, and a human review step for
-                  anything still uncertain. Teams who&rsquo;ve tried a general AI tool on messy spend data
-                  consistently find it works fine in a quick trial and breaks down at real volume. Pearstop is
-                  built to hold up at that volume, not just in a demo.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <FaqHighlight
+        eyebrow="The question we get most"
+        question="We already tried ChatGPT or Copilot on our data - why would this be different?"
+        answer={
+          <>
+            Because Pearstop isn&rsquo;t a general-purpose AI tool pointed at your data - it&rsquo;s a dedicated
+            pipeline built specifically for procurement and asset data: deterministic matching first, a large
+            language model for the genuinely ambiguous cases, and a human review step for anything still
+            uncertain. Teams who&rsquo;ve tried a general AI tool on messy spend data consistently find it works
+            fine in a quick trial and breaks down at real volume. Pearstop is built to hold up at that volume,
+            not just in a demo.
+          </>
+        }
+      />
 
-      <section className="section-soft" aria-labelledby="home-faq-heading">
-        <div className="container">
-          <Faq items={faqItems} heading="Frequently asked questions" />
-        </div>
-      </section>
+      <FaqSection title="Frequently asked questions" items={faqItems} />
 
       <section className="section-soft" aria-labelledby="home-geo-heading">
         <div className="container">

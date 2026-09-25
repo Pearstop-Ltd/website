@@ -3,6 +3,7 @@ import Link from "next/link";
 import Script from "next/script";
 import { CTABand, GeoBlock, PageHero, SectionTitle } from "@/components/content";
 import { UnspscLookupCta } from "@/components/unspsc-lookup-cta";
+import { Faq } from "@/components/site/Faq";
 import { alternateLanguages, siteConfig } from "@/lib/site";
 
 const PAGE_URL = `${siteConfig.url}/unspsc-ai-classification-guide`;
@@ -288,14 +289,7 @@ export default function UnspscAiGuidePage() {
           <div className="row">
             <div className="col-md-8 col-md-offset-2">
               <h2 style={{ marginBottom: "1.5rem" }}>Frequently asked questions</h2>
-              <div className="faq-list">
-                {FAQ_ITEMS.map((item, i) => (
-                  <details key={i} className="faq-item">
-                    <summary className="faq-q">{item.q}</summary>
-                    <p className="faq-a">{item.a}</p>
-                  </details>
-                ))}
-              </div>
+              <Faq items={FAQ_ITEMS} />
             </div>
           </div>
         </div>

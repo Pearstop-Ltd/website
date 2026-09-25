@@ -41,7 +41,7 @@
     "instagram": "Instagram"
   },
   "Common": {
-    "bookDiscovery": "Réservez un appel découverte de 7 minutes",
+    "bookDiscovery": "Parlez à un commercial",
     "seeHowItWorks": "Découvrez comment ça marche",
     "howItWorks": "Comment ça marche",
     "exploreSolution": "Découvrir la solution →",
@@ -54,7 +54,8 @@
     "theOutcome": "Le résultat",
     "howItWorksEyebrow": "Comment ça marche",
     "whatChanges": "Ce qui change avec Pearstop",
-    "keyBenefits": "Principaux avantages"
+    "keyBenefits": "Principaux avantages",
+    "sendSample": "Envoyez-nous un échantillon"
   },
   "About": {
     "meta": {
@@ -205,7 +206,7 @@
     },
     "approach": {
       "label": "L'approche Pearstop",
-      "title": "Un seul moteur. Chaque problème de données.",
+      "title": "Un seul système. Chaque problème de données.",
       "copy": "Qu'il s'agisse des dépenses d'achats, des registres d'actifs ou des données de grand livre, Pearstop standardise, catégorise et enrichit vos données automatiquement. Le résultat s'intègre directement à vos outils existants.",
       "bullets": [
         "Fonctionne avec vos outils BI, ERP et tableaux de bord existants",
@@ -215,7 +216,7 @@
       ],
       "worksWithLabel": "Fonctionne avec vos données",
       "worksCopy": "Factures, registres d'actifs, exports de grand livre, listes de fournisseurs - depuis n'importe quel format, n'importe quel système. SAP, Oracle, exports ERP, tableurs. Si vous pouvez l'exporter, nous pouvons l'exploiter.",
-      "engineLabel": "Moteur Pearstop",
+      "engineLabel": "Système Pearstop",
       "engineCopy": "Nettoyage, standardisation et catégorisation automatisés. Jusqu'à 95 % de précision, sans effort manuel.",
       "outputLabel": "Données propres, prêtes à la décision",
       "outputCopy": "Des données fiables qui s'intègrent à vos outils BI, éclairent vos offres et protègent vos marges."
@@ -1154,7 +1155,21 @@
     "technical": {
       "eyebrow": "Secteurs techniques",
       "title": "Pourquoi les secteurs techniques peinent-ils avec la qualité des données ?",
-      "lead": "Les entreprises de services techniques, de construction, d'infrastructure et de fabrication partagent un défi commun."
+      "lead": "Les entreprises de services techniques, de construction, d'infrastructure et de fabrication partagent un défi commun.",
+      "blocks": [
+        {
+          "title": "Des données opérationnelles décentralisées, incohérentes et difficiles à exploiter",
+          "copy": "Une mauvaise qualité des données d'achats, des registres d'actifs peu fiables et des dépenses non classifiées sont les blocages les plus courants au category management, à la maintenance prédictive et à la transformation numérique dans ces secteurs. Pearstop est spécialisé dans le nettoyage et la structuration de ces données opérationnelles, pour que les entreprises techniques puissent agir dessus."
+        },
+        {
+          "title": "Des données fournisseurs incohérentes et des données d'achats fragmentées",
+          "copy": "Les données fournisseurs dans les hard services et la construction sont rarement standardisées. Des exports ERP différents, des systèmes hérités et des tableurs manuels font qu'un même fournisseur ou produit peut apparaître sous des dizaines de formes. Pearstop résout et standardise ces données automatiquement, créant un jeu de données d'achats unique et fiable."
+        },
+        {
+          "title": "Des initiatives de transformation numérique bloquées par le manque de préparation des données",
+          "copy": "Microsoft Fabric, les migrations SAP, les outils IA et les plateformes BI reposent tous sur des données d'entrée propres et structurées. Dans les secteurs techniques, ces données sont rarement prêtes. Pearstop construit le socle de données - classifié, dédupliqué et structuré de façon cohérente - pour que les projets de transformation numérique puissent avancer sans des mois de préparation manuelle."
+        }
+      ]
     },
     "facilitiesManagement": {
       "title": "Facilities Management",
@@ -2243,7 +2258,7 @@
       "objectionTrailer": "C'est le travail que nous faisons."
     },
     "caseStudiesBand": {
-      "title": "Voyez-le fonctionner sur vos propres données",
+      "title": "Essayez gratuitement",
       "description": "Envoyez un échantillon représentatif de vos lignes de facture - jusqu'à 200 lignes, ou une poignée de factures (max. 10) - et nous les classifierons avant de vous les renvoyer étiquetées. Aucun coût, aucune configuration, rien à installer. C'est le moyen le plus rapide de voir exactement ce que fait Pearstop avant de vous engager.",
       "viewInBrowser": "Voir d'abord les études de cas"
     },
@@ -2270,15 +2285,15 @@
       "title": "Ce que nous disent les acheteurs",
       "items": [
         {
-          "quote": "La plupart des entreprises avancent à l'aveugle et ne s'en rendent compte que lorsqu'on leur pose une question à laquelle elles ne peuvent pas répondre.",
+          "quote": "La plupart des entreprises naviguent à vue, et ne s'en rendent compte que lorsqu'on leur pose une question à laquelle elles ne peuvent pas répondre.",
           "source": "Responsable Achats, Infrastructure"
         },
         {
           "quote": "On ne peut pas négocier ce qu'on ne voit pas.",
-          "source": "Directeur des Achats, Facilities Management"
+          "source": "Directeur des Achats, services techniques"
         },
         {
-          "quote": "Si vous ne pouvez pas justifier votre base de coûts, vous soumissionnez sur un ressenti.",
+          "quote": "Sans base de coûts solide, toute offre relève de l'intuition.",
           "source": "Directeur Commercial, Construction"
         }
       ]
@@ -2314,7 +2329,7 @@
       "title": "Pour qui",
       "tiles": [
         {
-          "title": "Facilities Management",
+          "title": "Services techniques",
           "copy": "Vos données arrivent dans un format différent pour chaque ligne de service.",
           "href": "/industries#facilities-management"
         },
@@ -2355,12 +2370,12 @@
           "quoteRole": "Directeur des Achats, Infrastructure"
         },
         {
-          "title": "Prestataire Facilities Management",
+          "title": "Prestataire de services techniques",
           "stat": "9 175 → 1 493 variantes fournisseurs consolidées sur 204 029 fiches d'actifs",
           "detail": "73,1 % de correspondances confirmées.",
           "href": "/cases",
           "quote": "Nos listes d'actifs fonctionnaient pour les techniciens sur site, mais ne nous permettaient pas de planifier une maintenance intelligente ni de gérer le risque des offres de façon pilotée par les données.",
-          "quoteRole": "Asset Manager, Facilities Management"
+          "quoteRole": "Asset Manager, services techniques"
         },
         {
           "title": "Entreprise de services de nettoyage",

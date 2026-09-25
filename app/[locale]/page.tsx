@@ -3,7 +3,9 @@ import Script from "next/script";
 import Link from "next/link";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { GeoBlock, PageHero } from "@/components/content";
-import { Faq, FaqSchema } from "@/components/blog";
+import { FaqSchema } from "@/components/blog";
+import { FaqSection } from "@/components/site/FaqSection";
+import { FaqHighlight } from "@/components/site/FaqHighlight";
 import { SampleRequestModal } from "@/components/sample-request-modal";
 import { alternateLanguages, siteConfig } from "@/lib/site";
 
@@ -310,27 +312,13 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         </div>
       </section>
 
-      <section aria-labelledby="home-standalone-faq-heading">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-8 col-md-offset-2">
-              <div className="text-center" style={{ marginBottom: "0.75rem" }}>
-                <span className="pill">{t("standaloneFaq.eyebrow")}</span>
-              </div>
-              <div className="quote-card" style={{ textAlign: "center" }}>
-                <h2 id="home-standalone-faq-heading" style={{ marginBottom: "0.75rem" }}>{t("standaloneFaq.q")}</h2>
-                <p className="light-copy">{t("standaloneFaq.a")}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <FaqHighlight
+        eyebrow={t("standaloneFaq.eyebrow")}
+        question={t("standaloneFaq.q")}
+        answer={t("standaloneFaq.a")}
+      />
 
-      <section className="section-soft" aria-labelledby="home-faq-heading">
-        <div className="container">
-          <Faq items={faqItems} heading={t("faq.heading")} />
-        </div>
-      </section>
+      <FaqSection title={t("faq.heading")} items={faqItems} />
 
       <section className="section-soft" aria-labelledby="home-geo-heading">
         <div className="container">

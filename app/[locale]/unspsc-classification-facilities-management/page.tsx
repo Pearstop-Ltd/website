@@ -4,6 +4,7 @@ import { getTranslations , setRequestLocale } from "next-intl/server";
 import Link from "next/link";
 import { CTABand, GeoBlock, PageHero, QuoteBox, SectionTitle } from "@/components/content";
 import { UnspscLookupCta } from "@/components/unspsc-lookup-cta";
+import { Faq } from "@/components/site/Faq";
 import { alternateLanguages, siteConfig } from "@/lib/site";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -259,14 +260,12 @@ export default async function UnspscFMPage({ params }: { params: Promise<{ local
           <div className="row">
             <div className="col-md-8 col-md-offset-2">
               <SectionTitle title={t("faq.title")} />
-              <div className="faq-list">
-                {(["0", "1", "2", "3", "4"] as const).map((i) => (
-                  <details key={i} className="faq-item">
-                    <summary className="faq-q">{t(`faq.items.${i}.q`)}</summary>
-                    <p className="faq-a">{t(`faq.items.${i}.a`)}</p>
-                  </details>
-                ))}
-              </div>
+              <Faq
+                items={(["0", "1", "2", "3", "4"] as const).map((i) => ({
+                  q: t(`faq.items.${i}.q`),
+                  a: t(`faq.items.${i}.a`),
+                }))}
+              />
             </div>
           </div>
         </div>

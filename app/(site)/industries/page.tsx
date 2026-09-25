@@ -5,6 +5,7 @@ import Link from "next/link";
 import Script from "next/script";
 import { GeoBlock, SectionTitle } from "@/components/content";
 import { HeroBand } from "@/components/site/HeroBand";
+import { Faq } from "@/components/site/Faq";
 import { SampleRequestModal } from "@/components/sample-request-modal";
 import { alternateLanguages, industryCards, siteConfig } from "@/lib/site";
 
@@ -382,11 +383,13 @@ const trustedCompanies = [
   },
   {
     name: "SnapFix",
-    href: "/contact"
+    href: "/contact",
+    src: siteConfig.assets.clients.snapfix
   },
   {
-    name: "Manufacturing",
-    href: "/contact"
+    name: "SPIE",
+    href: "/cases/spie",
+    src: siteConfig.assets.clients.spie
   }
 ];
 
@@ -543,15 +546,11 @@ export default function IndustriesPage() {
             {trustedCompanies.map((company) => (
               <article key={company.name} className="quote-card trusted-company-card">
                 <Link href={company.href} aria-label={`${company.name} case study`} style={{ display: "block" }}>
-                  {company.src ? (
-                    <img
-                      src={company.src}
-                      alt={company.name}
-                      style={{ maxWidth: "160px", maxHeight: "64px", objectFit: "contain" }}
-                    />
-                  ) : (
-                    <div className="trusted-company-name">{company.name}</div>
-                  )}
+                  <img
+                    src={company.src}
+                    alt={company.name}
+                    style={{ maxWidth: "160px", maxHeight: "64px", objectFit: "contain" }}
+                  />
                 </Link>
               </article>
             ))}
@@ -591,14 +590,7 @@ export default function IndustriesPage() {
           <div className="row">
             <div className="col-md-8 col-md-offset-2">
               <h2 style={{ marginBottom: "1.5rem" }}>Frequently asked questions</h2>
-              <div className="faq-list">
-                {FAQ_ITEMS.map((item, i) => (
-                  <details key={i} className="faq-item">
-                    <summary className="faq-q">{item.q}</summary>
-                    <p className="faq-a">{item.a}</p>
-                  </details>
-                ))}
-              </div>
+              <Faq items={FAQ_ITEMS} />
             </div>
           </div>
         </div>

@@ -66,26 +66,8 @@ const trustedCompanies = [
   { name: "FMO", href: "/cases#fmo", src: siteConfig.assets.clients.fmo },
   { name: "FARO", href: "/cases#faro", src: siteConfig.assets.clients.faro },
   { name: "Kelp", href: "/cases", src: siteConfig.assets.clients.kelpBlue },
-  { name: "SnapFix", href: "/contact" },
-  { name: "Manufacturing", href: "/contact" }
-];
-
-const technicalBlocks = [
-  {
-    title: "Operational data that is decentralised, inconsistent, and difficult to act on",
-    copy:
-      "Poor procurement data quality, unreliable asset registers, and unclassified spend are the most common blockers to category management, predictive maintenance, and digital transformation in these industries. Pearstop specialises in cleaning and structuring this operational data so technical businesses can act on it."
-  },
-  {
-    title: "Inconsistent supplier records and fragmented procurement data",
-    copy:
-      "Supplier data in hard services and construction is rarely standardised. Different ERP exports, legacy systems, and manual spreadsheets mean the same supplier or product can appear dozens of ways. Pearstop resolves and standardises this data automatically - creating a single, trusted procurement dataset."
-  },
-  {
-    title: "Digital transformation initiatives stalling on data readiness",
-    copy:
-      "Microsoft Fabric, SAP migrations, AI tools, and BI platforms all depend on clean, structured input data. In technical industries, the data is rarely ready. Pearstop builds the data foundation - classified, deduplicated, and consistently structured - so digital transformation projects can proceed without months of manual preparation."
-  }
+  { name: "SnapFix", href: "/contact", src: siteConfig.assets.clients.snapfix },
+  { name: "SPIE", href: "/cases/spie", src: siteConfig.assets.clients.spie }
 ];
 
 export default async function IndustriesPage({
@@ -244,15 +226,11 @@ export default async function IndustriesPage({
             {trustedCompanies.map((company) => (
               <article key={company.name} className="quote-card trusted-company-card">
                 <Link href={`${prefix}${company.href}`} aria-label={`${company.name} case study`} style={{ display: "block" }}>
-                  {company.src ? (
-                    <img
-                      src={company.src}
-                      alt={company.name}
-                      style={{ maxWidth: "160px", maxHeight: "64px", objectFit: "contain" }}
-                    />
-                  ) : (
-                    <div className="trusted-company-name">{company.name}</div>
-                  )}
+                  <img
+                    src={company.src}
+                    alt={company.name}
+                    style={{ maxWidth: "160px", maxHeight: "64px", objectFit: "contain" }}
+                  />
                 </Link>
               </article>
             ))}
@@ -278,7 +256,7 @@ export default async function IndustriesPage({
             lead={t("technical.lead")}
           />
           <div className="row">
-            {technicalBlocks.map((block) => (
+            {(t.raw("technical.blocks") as { title: string; copy: string }[]).map((block) => (
               <div key={block.title} className="col-md-4">
                 <GeoBlock title={block.title} copy={block.copy} />
               </div>

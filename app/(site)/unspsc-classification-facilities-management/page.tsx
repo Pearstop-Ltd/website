@@ -3,6 +3,7 @@ import Script from "next/script";
 import Link from "next/link";
 import { CTABand, GeoBlock, PageHero, QuoteBox, SectionTitle } from "@/components/content";
 import { UnspscLookupCta } from "@/components/unspsc-lookup-cta";
+import { Faq } from "@/components/site/Faq";
 import { alternateLanguages, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -256,8 +257,8 @@ export default function UnspscFMPage() {
           <div className="row">
             <div className="col-md-8 col-md-offset-2">
               <SectionTitle title="Common questions" />
-              <div className="faq-list">
-                {[
+              <Faq
+                items={[
                   {
                     q: "What UNSPSC segments apply to facilities management?",
                     a: "The most common segments for FM are Segment 72 (Construction and Maintenance Services), Segment 76 (Industrial Cleaning Services), Segment 80 (Management and Administrative Services), and Segment 73 (Industrial Production). Hard services FM companies typically see the highest spend volume in Segment 72, covering electrical, HVAC, plumbing, and fabric maintenance."
@@ -278,13 +279,8 @@ export default function UnspscFMPage() {
                     q: "What accuracy rate can FM companies expect?",
                     a: "Pearstop's four-layer engine achieves 90–95% automatic classification on typical FM spend datasets. The remaining 5–10% is flagged for human review, and each reviewed decision feeds back into the engine."
                   }
-                ].map((item, i) => (
-                  <details key={i} className="faq-item">
-                    <summary className="faq-q">{item.q}</summary>
-                    <p className="faq-a">{item.a}</p>
-                  </details>
-                ))}
-              </div>
+                ]}
+              />
             </div>
           </div>
         </div>

@@ -3,6 +3,7 @@ import Script from "next/script";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { CTABand, GeoBlock, PageHero, SectionTitle } from "@/components/content";
 import { UnspscLookupCta } from "@/components/unspsc-lookup-cta";
+import { Faq } from "@/components/site/Faq";
 import { alternateLanguages, siteConfig } from "@/lib/site";
 
 type FaqItem = { question: string; answer: string };
@@ -250,14 +251,7 @@ export default async function UnspscAiGuidePage({ params }: { params: Promise<{ 
           <div className="row">
             <div className="col-md-8 col-md-offset-2">
               <h2 style={{ marginBottom: "1.5rem" }}>Frequently asked questions</h2>
-              <div className="faq-list">
-                {faqItems.map((item, i) => (
-                  <details key={i} className="faq-item">
-                    <summary className="faq-q">{item.question}</summary>
-                    <p className="faq-a">{item.answer}</p>
-                  </details>
-                ))}
-              </div>
+              <Faq items={faqItems.map((item) => ({ q: item.question, a: item.answer }))} />
             </div>
           </div>
         </div>

@@ -39,7 +39,8 @@ export const siteConfig = {
       faro: "/images/clients/faro.png",
       spie: "/images/clients/spie.webp",
       kelpBlue: "/images/clients/kelp-blue.png",
-      lemtech: "/images/clients/lemtech.svg"
+      lemtech: "/images/clients/lemtech.svg",
+      snapfix: "/images/clients/snapfix.png"
     },
     team: {
       stephanie: "/images/clients/stephanie-headshot-team.png",

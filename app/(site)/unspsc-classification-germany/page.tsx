@@ -3,6 +3,7 @@ import Script from "next/script";
 import Link from "next/link";
 import { CTABand, GeoBlock, PageHero, QuoteBox, SectionTitle } from "@/components/content";
 import { UnspscLookupCta } from "@/components/unspsc-lookup-cta";
+import { Faq } from "@/components/site/Faq";
 import { alternateLanguages, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -232,8 +233,8 @@ export default function UnspscDEPage() {
           <div className="row">
             <div className="col-md-8 col-md-offset-2">
               <SectionTitle title="Häufig gestellte Fragen" />
-              <div className="faq-list">
-                {[
+              <Faq
+                items={[
                   {
                     q: "Ist UNSPSC-Klassifizierung in Deutschland Pflicht?",
                     a: "UNSPSC ist keine gesetzliche Pflicht, aber die E-Rechnungspflicht 2025 erfordert strukturierte Produktcodes. UNSPSC ist der meistgenutzte internationale Standard, der diese Anforderung erfüllt."
@@ -254,13 +255,8 @@ export default function UnspscDEPage() {
                     q: "Kann Pearstop deutschsprachige Einkaufsdaten klassifizieren?",
                     a: "Ja. Pearstops Klassifizierungs-Engine verarbeitet deutschsprachige Rechnungsbeschreibungen nativ, einschließlich gängiger Abkürzungen und technischer Terminologie."
                   }
-                ].map((item, i) => (
-                  <details key={i} className="faq-item">
-                    <summary className="faq-q">{item.q}</summary>
-                    <p className="faq-a">{item.a}</p>
-                  </details>
-                ))}
-              </div>
+                ]}
+              />
             </div>
           </div>
         </div>

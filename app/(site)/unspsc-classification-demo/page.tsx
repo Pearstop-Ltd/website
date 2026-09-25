@@ -4,6 +4,7 @@ import Script from "next/script";
 import { UnspscTree } from "@/components/unspsc-tree";
 import { CalendlyButton } from "@/components/calendly-button";
 import { GeoBlock } from "@/components/content";
+import { Faq } from "@/components/site/Faq";
 import { demoData, unspscDataSource, treeStats } from "@/lib/unspsc-demo-data";
 import { alternateLanguages, siteConfig } from "@/lib/site";
 
@@ -329,14 +330,7 @@ export default function UnspscDemoPage() {
           <h2 style={{ fontWeight: 700, fontSize: "1.3rem", color: "#111827", marginBottom: "1.4rem", letterSpacing: "-0.01em" }}>
             Frequently asked questions
           </h2>
-          <div className="faq-list">
-            {FAQ_ITEMS.map((item, i) => (
-              <details key={i} className="faq-item">
-                <summary className="faq-q">{item.q}</summary>
-                <p className="faq-a">{item.a}</p>
-              </details>
-            ))}
-          </div>
+          <Faq items={FAQ_ITEMS} />
         </div>
       </section>
 

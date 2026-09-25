@@ -41,7 +41,7 @@
     "instagram": "Instagram"
   },
   "Common": {
-    "bookDiscovery": "Boek een ontdekkingsgesprek van 7 minuten",
+    "bookDiscovery": "Praat met sales",
     "seeHowItWorks": "Bekijk hoe het werkt",
     "howItWorks": "Hoe het werkt",
     "exploreSolution": "Oplossing verkennen →",
@@ -54,7 +54,8 @@
     "theOutcome": "Het resultaat",
     "howItWorksEyebrow": "Hoe het werkt",
     "whatChanges": "Wat verandert er met Pearstop",
-    "keyBenefits": "Belangrijkste voordelen"
+    "keyBenefits": "Belangrijkste voordelen",
+    "sendSample": "Stuur ons een data sample"
   },
   "About": {
     "meta": {
@@ -169,7 +170,7 @@
   "Solutions": {
     "approach": {
       "label": "De Pearstop-aanpak",
-      "title": "Één motor. Elk dataprobleem.",
+      "title": "Eén systeem. Elk dataprobleem.",
       "copy": "Of het nu gaat om inkoopbestedingen, assetregisters of grootboekdata — Pearstop standaardiseert, categoriseert en verrijkt uw data automatisch. De output sluit direct aan op uw bestaande tools.",
       "bullets": [
         "Werkt met uw bestaande BI-tools, ERP en dashboards",
@@ -179,7 +180,7 @@
       ],
       "worksWithLabel": "Werkt met uw data",
       "worksCopy": "Facturen, assetregisters, grootboekexports, leverancierslijsten — uit elk formaat, elk systeem. SAP, Oracle, ERP-exports, spreadsheets. Als u het kunt exporteren, kunnen wij ermee werken.",
-      "engineLabel": "Pearstop-motor",
+      "engineLabel": "Pearstop-systeem",
       "engineCopy": "Geautomatiseerd reinigen, standaardiseren en categoriseren. Tot 95% nauwkeurigheid, geen handmatig werk.",
       "outputLabel": "Schone, beslissingsklare data",
       "outputCopy": "Vertrouwde data die aansluit op uw BI-tools, uw aanbiedingen informeert en uw marges beschermt."
@@ -1026,7 +1027,21 @@
     "technical": {
       "eyebrow": "Technische sectoren",
       "title": "Waarom hebben technische sectoren moeite met datakwaliteit?",
-      "lead": "Hard services-, bouw-, infrastructuur- en productiebedrijven delen een gemeenschappelijke uitdaging."
+      "lead": "Hard services-, bouw-, infrastructuur- en productiebedrijven delen een gemeenschappelijke uitdaging.",
+      "blocks": [
+        {
+          "title": "Operationele data die gedecentraliseerd, inconsistent en moeilijk te gebruiken is",
+          "copy": "Slechte inkoopdatakwaliteit, onbetrouwbare assetregisters en ongeclassificeerde bestedingen zijn de meest voorkomende blokkades voor categoriemanagement, voorspellend onderhoud en digitale transformatie in deze sectoren. Pearstop is gespecialiseerd in het opschonen en structureren van deze operationele data, zodat technische bedrijven ernaar kunnen handelen."
+        },
+        {
+          "title": "Inconsistente leveranciersgegevens en gefragmenteerde inkoopdata",
+          "copy": "Leveranciersdata in hard services en bouw is zelden gestandaardiseerd. Verschillende ERP-exports, legacysystemen en handmatige spreadsheets zorgen ervoor dat dezelfde leverancier of hetzelfde product op tientallen manieren kan voorkomen. Pearstop herleidt en standaardiseert deze data automatisch - en creëert zo één betrouwbare inkoopdataset."
+        },
+        {
+          "title": "Digitale transformatie-initiatieven die vastlopen op data-gereedheid",
+          "copy": "Microsoft Fabric, SAP-migraties, AI-tools en BI-platformen zijn allemaal afhankelijk van schone, gestructureerde inputdata. In technische sectoren is die data zelden gereed. Pearstop bouwt het datafundament - geclassificeerd, ontdubbeld en consistent gestructureerd - zodat digitale transformatieprojecten kunnen doorgaan zonder maanden aan handmatige voorbereiding."
+        }
+      ]
     },
     "facilitiesManagement": {
       "title": "Facilities Management",
@@ -2135,15 +2150,15 @@
       "description": "Pearstop zet uw facturen om in bruikbare spend-data. Stuur ons 200 regels en wij sturen ze gelabeld terug - geen opschoning vooraf nodig."
     },
     "hero": {
-      "title": "Weet wat u koopt, bij wie, tegen welke prijs.",
-      "leadLine1": "Uw factuurdata zit vol antwoorden. Pearstop maakt ze bruikbaar.",
-      "objection": "Uw data hoeft niet eerst te worden opgeschoond.",
+      "title": "Wat wordt gekocht, bij wie, tegen welke prijs.",
+      "leadLine1": "Factuurdata zit vol antwoorden. Pearstop maakt ze bruikbaar.",
+      "objection": "Data hoeft niet eerst te worden opgeschoond.",
       "sendSample": "Stuur ons 200 regels",
       "bookDiscovery": "Praat met sales",
       "objectionTrailer": "Dat is het werk dat wij doen."
     },
     "caseStudiesBand": {
-      "title": "Zie het werken op uw eigen data",
+      "title": "Probeer het gratis",
       "description": "Stuur een representatieve steekproef van uw factuurregels - tot 200 regels, of een handvol facturen (max. 10) - en wij classificeren ze en sturen ze gelabeld terug. Geen kosten, geen setup, niets te installeren. Het is de snelste manier om precies te zien wat Pearstop doet voordat u zich ergens aan verbindt.",
       "viewInBrowser": "Bekijk eerst de cases"
     },
@@ -2170,15 +2185,15 @@
       "title": "Wat inkopers ons vertellen",
       "items": [
         {
-          "quote": "De meeste bedrijven vliegen blind en komen er pas achter wanneer iemand een vraag stelt die ze niet kunnen beantwoorden.",
+          "quote": "De meeste bedrijven tasten in het duister, en komen daar pas achter als iemand een vraag stelt die ze niet kunnen beantwoorden.",
           "source": "Procurement Lead, Infrastructuur"
         },
         {
-          "quote": "U kunt niet onderhandelen over wat u niet kunt zien.",
-          "source": "Hoofd Inkoop, Facilities Management"
+          "quote": "We kunnen niet onderhandelen over wat we niet weten.",
+          "source": "Hoofd Inkoop, Technische dienstverlening"
         },
         {
-          "quote": "Als u uw kostenbasis niet kunt onderbouwen, biedt u op een gevoel.",
+          "quote": "Zonder een sterk onderbouwde kostenbasis is elk bod toch op gevoel.",
           "source": "Commercieel Directeur, Bouw"
         }
       ]
@@ -2214,7 +2229,7 @@
       "title": "Voor wie is dit",
       "tiles": [
         {
-          "title": "Facilities Management",
+          "title": "Technische dienstverlening",
           "copy": "Uw data komt vanuit elke dienstlijn in een ander formaat binnen.",
           "href": "/industries#facilities-management"
         },
@@ -2255,12 +2270,12 @@
           "quoteRole": "Hoofd Inkoop, Infrastructuur"
         },
         {
-          "title": "Facilities Management-aanbieder",
+          "title": "Technisch dienstverlener",
           "stat": "9.175 → 1.493 leveranciersvarianten geconsolideerd over 204.029 asset-records",
           "detail": "73,1% bevestigde matches.",
           "href": "/cases",
           "quote": "Onze asset-lijsten werkten voor monteurs op locatie, maar stelden ons niet in staat om slim onderhoud te plannen of biedrisico datagedreven te beheren.",
-          "quoteRole": "Asset Manager, Facilities Management"
+          "quoteRole": "Asset Manager, Technische dienstverlening"
         },
         {
           "title": "Schoonmaakbedrijf",

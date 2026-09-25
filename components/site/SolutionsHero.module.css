@@ -1,0 +1,41 @@
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 760px;
+}
+
+.eyebrow {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--purple);
+}
+
+.title {
+  margin: 0;
+  font-size: 54px;
+  line-height: 1.08;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  color: #ffffff;
+}
+
+.lead {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.6;
+  font-weight: 300;
+  color: var(--tint-blue);
+}
+
+@media (max-width: 767px) {
+  .title {
+    font-size: 36px;
+  }
+
+  .lead {
+    font-size: 18px;
+  }
+}

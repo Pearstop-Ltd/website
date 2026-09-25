@@ -41,7 +41,7 @@
     "instagram": "Instagram"
   },
   "Common": {
-    "bookDiscovery": "7-minütige Discovery buchen",
+    "bookDiscovery": "Mit Vertrieb sprechen",
     "seeHowItWorks": "So funktioniert es ansehen",
     "howItWorks": "So funktioniert es",
     "exploreSolution": "Lösung entdecken →",
@@ -54,7 +54,8 @@
     "theOutcome": "Das Ergebnis",
     "howItWorksEyebrow": "So funktioniert es",
     "whatChanges": "Was sich mit Pearstop ändert",
-    "keyBenefits": "Wichtigste Vorteile"
+    "keyBenefits": "Wichtigste Vorteile",
+    "sendSample": "Senden Sie uns eine Datenprobe"
   },
   "About": {
     "meta": {
@@ -1154,7 +1155,21 @@
     "technical": {
       "eyebrow": "Technische Branchen",
       "title": "Warum haben technische Branchen mit Datenqualität zu kämpfen?",
-      "lead": "Hard Services, Bau, Infrastruktur und Fertigungsunternehmen teilen dieselbe Herausforderung."
+      "lead": "Hard Services, Bau, Infrastruktur und Fertigungsunternehmen teilen dieselbe Herausforderung.",
+      "blocks": [
+        {
+          "title": "Operative Daten, die dezentral, inkonsistent und schwer nutzbar sind",
+          "copy": "Schlechte Procurement-Datenqualität, unzuverlässige Anlagenregister und unklassifizierter Spend sind die häufigsten Blockaden für Category Management, vorausschauende Instandhaltung und digitale Transformation in diesen Branchen. Pearstop ist darauf spezialisiert, diese operativen Daten zu bereinigen und zu strukturieren, damit technische Unternehmen darauf handeln können."
+        },
+        {
+          "title": "Inkonsistente Lieferantendaten und fragmentierte Procurement-Daten",
+          "copy": "Lieferantendaten in Hard Services und im Bau sind selten standardisiert. Unterschiedliche ERP-Exporte, Altsysteme und manuelle Tabellenkalkulationen führen dazu, dass derselbe Lieferant oder dasselbe Produkt auf Dutzende Arten auftaucht. Pearstop löst und standardisiert diese Daten automatisch - und schafft so einen einzigen, vertrauenswürdigen Procurement-Datensatz."
+        },
+        {
+          "title": "Digitale Transformationsinitiativen, die an mangelnder Datenreife scheitern",
+          "copy": "Microsoft Fabric, SAP-Migrationen, KI-Tools und BI-Plattformen sind alle auf saubere, strukturierte Eingabedaten angewiesen. In technischen Branchen sind diese Daten selten bereit. Pearstop baut das Datenfundament - klassifiziert, dedupliziert und konsistent strukturiert -, damit digitale Transformationsprojekte ohne monatelange manuelle Vorbereitung fortschreiten können."
+        }
+      ]
     },
     "facilitiesManagement": {
       "title": "Facility Management",
@@ -2243,7 +2258,7 @@
       "objectionTrailer": "Das ist die Arbeit, die wir übernehmen."
     },
     "caseStudiesBand": {
-      "title": "Erleben Sie es an Ihren eigenen Daten",
+      "title": "Kostenlos testen",
       "description": "Senden Sie eine repräsentative Stichprobe Ihrer Rechnungszeilen - bis zu 200 Zeilen oder eine Handvoll Rechnungen (max. 10) - und wir klassifizieren sie und schicken sie beschriftet zurück. Keine Kosten, kein Setup, nichts zu installieren. So sehen Sie am schnellsten, was Pearstop leistet, bevor Sie sich auf irgendetwas festlegen.",
       "viewInBrowser": "Erst Case Studies ansehen"
     },
@@ -2270,15 +2285,15 @@
       "title": "Was uns Einkäufer sagen",
       "items": [
         {
-          "quote": "Die meisten Unternehmen fliegen blind und merken es erst, wenn jemand eine Frage stellt, die sie nicht beantworten können.",
+          "quote": "Die meisten Unternehmen sind im Blindflug unterwegs und merken es erst, wenn jemand eine Frage stellt, die sie nicht beantworten können.",
           "source": "Procurement Lead, Infrastruktur"
         },
         {
-          "quote": "Man kann nicht verhandeln, was man nicht sehen kann.",
+          "quote": "Man kann nicht verhandeln, was man nicht sieht.",
           "source": "Head of Procurement, Facilities Management"
         },
         {
-          "quote": "Wenn Sie Ihre Kostenbasis nicht belegen können, bieten Sie nach Gefühl.",
+          "quote": "Ohne eine solide Kostenbasis ist jedes Angebot reines Bauchgefühl.",
           "source": "Kaufmännischer Leiter, Bau"
         }
       ]

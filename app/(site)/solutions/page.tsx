@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { CTABand, GeoBlock, PageHero, SectionTitle } from "@/components/content";
+import { CTABand, GeoBlock, SectionTitle } from "@/components/content";
+import { SolutionsHero } from "@/components/site/SolutionsHero";
 import { alternateLanguages, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -49,7 +50,7 @@ export default function SolutionsPage() {
 
   return (
     <>
-      <PageHero
+      <SolutionsHero
         eyebrow="Solutions"
         title="Turn messy data into decisions"
         lead="Pearstop delivers five data integrity solutions for technical industries. Each one targets a specific data problem and every one is built to protect your margins."

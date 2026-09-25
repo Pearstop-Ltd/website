@@ -34,29 +34,19 @@ const QUOTES: { personId: PersonId; quote: string }[] = [
 export function CasesIndexPage() {
   return (
     <div className={dsRoot()}>
-      <Section background="white">
+      <Section background="white" paddingBottom={24}>
         <CasesHero
           eyebrow="Cases"
           title="Real work. Real margins."
           lead="How project-based businesses in FM, construction, infrastructure and manufacturing turn messy procurement and asset data into something they can act on."
-          clientLegend={
-            <>
-              <strong>Client cases</strong> are work we delivered, with results from the real data.
-            </>
-          }
-          patternLegend={
-            <>
-              <strong>Patterns</strong> use illustrative data, based on what we see again and again across clients.
-            </>
-          }
           jumpLinks={[
-            { label: "Client cases", href: "#client-cases" },
-            { label: "Patterns", href: "#patterns" },
+            { label: "Client cases", href: "#client-cases", dot: "client" },
+            { label: "Patterns", href: "#patterns", dot: "pattern" },
           ]}
         />
       </Section>
 
-      <Section background="white">
+      <Section background="white" paddingTop={24}>
         <CaseFeatured
           metaLabel="Featured client case"
           tag={featuredCase.tag}
