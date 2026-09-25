@@ -176,33 +176,8 @@ export function CaseDataTable({ columns, rows, footnote }: {
   );
 }
 
-export function CaseStatBar({ percent, segments }: {
-  percent: string;
-  /** `label` is the short text shown inside the bar segment itself (keep it
-   * to a word or two so it never wraps). `legendLabel`, if given, is the
-   * fuller sentence shown in the legend below instead of `label`. */
-  segments: { width: string; bg: string; label: string; legendLabel?: string; color: string }[];
-}) {
-  return (
-    <div style={{ background: "#fff", borderRadius: 16, padding: 24, display: "flex", flexDirection: "column", gap: 14 }}>
-      <div style={{ display: "flex", height: 36, borderRadius: 8, overflow: "hidden" }}>
-        {segments.map((s, i) => (
-          <div key={i} style={{ width: s.width, flexGrow: s.width === "auto" ? 1 : undefined, background: s.bg, display: "flex", alignItems: "center", paddingLeft: 14, fontSize: 14, fontWeight: 600, color: s.color, whiteSpace: "nowrap" }}>
-            {s.width !== "auto" ? percent + " " + s.label : s.label}
-          </div>
-        ))}
-      </div>
-      <div style={{ display: "flex", gap: 20, fontSize: 13, color: "var(--muted)", flexWrap: "wrap" }}>
-        {segments.map((s, i) => (
-          <span key={i} style={{ display: "flex", gap: 8, alignItems: "center" }}>
-            <span style={{ width: 10, height: 10, borderRadius: 3, background: s.bg }} />
-            {s.legendLabel ?? s.label}
-          </span>
-        ))}
-      </div>
-    </div>
-  );
-}
+// CaseStatBar moved to case-design-charts.tsx (needs "use client" for its
+// scroll-in fill animation).
 
 /** A quote is attributed either to a real person (`personId`, resolved from
  * lib/people.ts so the same person shows the same name/role/photo

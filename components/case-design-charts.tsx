@@ -23,7 +23,7 @@ function useInView<T extends HTMLElement>(): [RefObject<T | null>, boolean] {
           observer.disconnect();
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.45 }
     );
     observer.observe(el);
     return () => observer.disconnect();
@@ -74,7 +74,7 @@ export function CaseTileGrid({ total, finalIndices, gap = 8 }: { total: number; 
       timers.push(
         setTimeout(() => {
           if (!cancelled) setActiveIndices(set);
-        }, i * 260)
+        }, i * 380)
       );
     });
 
@@ -127,7 +127,7 @@ export function CasePriceBars({ bars }: { bars: CasePriceBar[] }) {
     }
     // Next tick, so the 0-width state has actually painted before the
     // transition to the target width starts.
-    const t = setTimeout(() => setFilled(true), 30);
+    const t = setTimeout(() => setFilled(true), 180);
     return () => clearTimeout(t);
   }, [inView, reducedMotion]);
 
@@ -142,7 +142,7 @@ export function CasePriceBars({ bars }: { bars: CasePriceBar[] }) {
               borderRadius: 4,
               background: b.color,
               width: filled ? b.w : 0,
-              transition: `width 500ms ease ${i * 70}ms`,
+              transition: `width 750ms ease ${i * 110}ms`,
             }}
           />
           <span style={{ fontSize: 13, fontWeight: 600, color: "var(--navy)" }}>{b.price}</span>
@@ -167,7 +167,7 @@ export function CaseSpendDonut({ filledLength, totalLength, size = 120 }: { fill
       setFilled(true);
       return;
     }
-    const t = setTimeout(() => setFilled(true), 30);
+    const t = setTimeout(() => setFilled(true), 180);
     return () => clearTimeout(t);
   }, [inView, reducedMotion]);
 
@@ -185,10 +185,73 @@ export function CaseSpendDonut({ filledLength, totalLength, size = 120 }: { fill
           transform="rotate(-90 50 50)"
           style={{
             strokeDasharray: `${filled ? filledLength : 0} ${totalLength}`,
-            transition: "stroke-dasharray 700ms ease",
+            transition: "stroke-dasharray 1000ms ease",
           }}
         />
       </svg>
+    </div>
+  );
+}
+
+/** Segmented stat bar (e.g. "confirmed" vs "for review") where each
+ * explicit-width segment fills in from 0 on scroll into view, staggered
+ * per segment. `width: "auto"` segments (flex-grow, filling remaining
+ * space) aren't independently animated - they just naturally fill in as
+ * the explicit-width segments beside them grow. */
+export function CaseStatBar({ percent, segments }: {
+  percent: string;
+  /** `label` is the short text shown inside the bar segment itself (keep it
+   * to a word or two so it never wraps). `legendLabel`, if given, is the
+   * fuller sentence shown in the legend below instead of `label`. */
+  segments: { width: string; bg: string; label: string; legendLabel?: string; color: string }[];
+}) {
+  const [ref, inView] = useInView<HTMLDivElement>();
+  const reducedMotion = usePrefersReducedMotion();
+  const [filled, setFilled] = useState(false);
+
+  useEffect(() => {
+    if (!inView) return;
+    if (reducedMotion) {
+      setFilled(true);
+      return;
+    }
+    const t = setTimeout(() => setFilled(true), 180);
+    return () => clearTimeout(t);
+  }, [inView, reducedMotion]);
+
+  return (
+    <div ref={ref} style={{ background: "#fff", borderRadius: 16, padding: 24, display: "flex", flexDirection: "column", gap: 14 }}>
+      <div style={{ display: "flex", height: 36, borderRadius: 8, overflow: "hidden" }}>
+        {segments.map((s, i) => (
+          <div
+            key={i}
+            style={{
+              width: s.width === "auto" ? undefined : filled ? s.width : 0,
+              flexGrow: s.width === "auto" ? 1 : undefined,
+              background: s.bg,
+              display: "flex",
+              alignItems: "center",
+              paddingLeft: 14,
+              fontSize: 14,
+              fontWeight: 600,
+              color: s.color,
+              whiteSpace: "nowrap",
+              overflow: "hidden",
+              transition: `width 750ms ease ${i * 110}ms`,
+            }}
+          >
+            {s.width !== "auto" ? percent + " " + s.label : s.label}
+          </div>
+        ))}
+      </div>
+      <div style={{ display: "flex", gap: 20, fontSize: 13, color: "var(--muted)", flexWrap: "wrap" }}>
+        {segments.map((s, i) => (
+          <span key={i} style={{ display: "flex", gap: 8, alignItems: "center" }}>
+            <span style={{ width: 10, height: 10, borderRadius: 3, background: s.bg }} />
+            {s.legendLabel ?? s.label}
+          </span>
+        ))}
+      </div>
     </div>
   );
 }

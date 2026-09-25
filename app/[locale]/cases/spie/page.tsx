@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import {
   CaseBreadcrumb, CaseHero, CaseHeadlineAccent, CaseTypeBadge, CaseFactSheet, CaseResultsBand, CaseSectionLabel, CaseH2, CaseBodyP,
-  CaseProcessDiagram, CaseStepCards, CaseDataTable, CaseStatBar, CaseQuoteBig, CaseQuoteCard, CaseTwoPanel,
+  CaseProcessDiagram, CaseStepCards, CaseDataTable, CaseQuoteBig, CaseQuoteCard, CaseTwoPanel,
   CaseMoreLinks, CaseClosingCTA
 } from "@/components/case-design";
+import { CaseStatBar } from "@/components/case-design-charts";
 import { alternateLanguages, siteConfig } from "@/lib/site";
 import styles from "@/components/case-design.module.css";
 
