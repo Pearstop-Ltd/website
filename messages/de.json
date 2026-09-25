@@ -1139,7 +1139,8 @@
     },
     "otherIndustries": {
       "title": "Arbeiten Sie in einer anderen Branche?",
-      "copy": "Datenqualitätsprobleme sind nicht auf die oben genannten Branchen beschränkt. Wenn Ihre Teams komplexe operative Daten verwalten, mit uneinheitlichen Lieferantendaten zu tun haben oder sich auf eine digitale Transformation vorbereiten, können wir wahrscheinlich helfen. Lassen Sie es uns herausfinden."
+      "copy": "Datenqualitätsprobleme sind nicht auf die oben genannten Branchen beschränkt. Wenn Ihre Teams komplexe operative Daten verwalten, mit uneinheitlichen Lieferantendaten zu tun haben oder sich auf eine digitale Transformation vorbereiten, können wir wahrscheinlich helfen. Lassen Sie es uns herausfinden.",
+      "bookDiscovery": "Mit Vertrieb sprechen"
     },
     "whatChanges": "Was sich mit Pearstop ändert",
     "trusted": {
@@ -1147,7 +1148,8 @@
     },
     "readyBanner": {
       "title": "Bereit, Ihre Daten zu bereinigen?",
-      "copy": "Wir haben genau dieses Problem in Infrastruktur, Facility Management, Reinigung, Bau und Fertigung gelöst. Wenn Sie in einer anderen Branche mit derselben Art von Daten arbeiten, erzählen Sie uns davon."
+      "copy": "Wir haben genau dieses Problem in Infrastruktur, Facility Management, Reinigung, Bau und Fertigung gelöst. Wenn Sie in einer anderen Branche mit derselben Art von Daten arbeiten, erzählen Sie uns davon.",
+      "bookDiscovery": "Mit Vertrieb sprechen"
     },
     "technical": {
       "eyebrow": "Technische Branchen",
@@ -1199,7 +1201,12 @@
           "Prüfgeschwindigkeit der Einkäufer um eine Größenordnung verbessert, weil Klassifizierung zur Routine wird statt marginaler Gewinn zu bleiben"
         ],
         "href": "/procurement-data-quality",
-        "linkLabel": "So baut Pearstop eine echte Ausgabenbasis auf"
+        "linkLabel": "So baut Pearstop eine echte Ausgabenbasis auf",
+        "quote": {
+          "text": "Wenn Sie sagen, dass Sie die Daten bereinigen können, könnten Sie dann den Spend mit einer Menge korrelieren, unter Verwendung von Trends und all dem?",
+          "author": "Kaufmännischer Entscheider",
+          "role": "Bauingenieur-/Tragwerksberatung, Südafrika"
+        }
       },
       {
         "id": "integrated-fm",
@@ -1226,7 +1233,12 @@
           "Ein realistisches Bild davon, was die Daten leisten können, ausgehend von einer korrigierten Basis, nicht vom Zustand bei Eingang"
         ],
         "href": "/data-quality",
-        "linkLabel": "So vereinheitlicht Pearstop FM-Daten"
+        "linkLabel": "So vereinheitlicht Pearstop FM-Daten",
+        "quote": {
+          "text": "Wenn wir einen Bot wollen, der alles über unseren Vertrag weiß, müssen wir zuerst sicherstellen, dass die Governance-Daten im Vertrag ordentlich vereinbart sind.",
+          "author": "Leiter Datenstrategie",
+          "role": "Anbieter von integriertem Facilities Management"
+        }
       },
       {
         "id": "hard-services",
@@ -1253,7 +1265,12 @@
           "Jeder Treffer bis zur echten Teilenummer nachvollziehbar, sodass Ihr Team ihn prüfen kann, statt ihm zu vertrauen"
         ],
         "href": "/unspsc",
-        "linkLabel": "So klassifiziert Pearstop Hard-Services-Ausgaben"
+        "linkLabel": "So klassifiziert Pearstop Hard-Services-Ausgaben",
+        "quote": {
+          "text": "Energiedienstleistungen, Engineering - die Margen sind hauchdünn.",
+          "author": "Group CIO",
+          "role": "Integrierter FM-Betreiber"
+        }
       },
       {
         "id": "soft-services",
@@ -1307,7 +1324,12 @@
           "Eine echte Kostenbasis, um Preise bei Kundeneinwänden zu verteidigen, kein Gefühl"
         ],
         "href": "/invoice-data-extraction",
-        "linkLabel": "So liest Pearstop zuerst die Rechnung"
+        "linkLabel": "So liest Pearstop zuerst die Rechnung",
+        "quote": {
+          "text": "Ich würde sagen, wir sind auf Bodenniveau. Sean hier würde höchstwahrscheinlich widersprechen und sagen, dass wir irgendwo unter der Erde sind.",
+          "author": "Einkaufsleiter",
+          "role": "Reinigungsdienstleister mit mehreren Standorten"
+        }
       },
       {
         "id": "construction",
@@ -1388,7 +1410,12 @@
           "Belastbare Grundlage, die Sie in eine Dienstleisterprüfung einbringen können, nicht nur eine Datei, die Sie von einem erhalten haben"
         ],
         "href": "/asset-data-management",
-        "linkLabel": "So verschafft Pearstop Asset Ownern Sicherheit"
+        "linkLabel": "So verschafft Pearstop Asset Ownern Sicherheit",
+        "quote": {
+          "text": "Wir wollen die Geschichte, die Erzählung, von unserer Seite aus kontrollieren.",
+          "author": "Kaufmännischer Leiter/Strategie",
+          "role": "Immobilieninvestor, FM ausgelagert"
+        }
       }
     ],
     "faq": {
@@ -1411,34 +1438,205 @@
   "Privacy": {
     "meta": {
       "title": "Datenschutzerklärung",
-      "description": "Datenschutzerklärung für Pearstop."
+      "description": "Wie Pearstop Ihre personenbezogenen Daten erhebt, nutzt und schützt, und Ihre Rechte nach der DSGVO."
     },
     "hero": {
-      "eyebrow": "Rechtliches",
+      "eyebrow": "Recht",
       "title": "Datenschutzerklärung",
-      "lead": "Wir verwenden nur die Daten, die wir benötigen, um auf Ihre Anfrage zu antworten, die Website zu verbessern und unsere Services zu unterstützen."
+      "lead": "Wie wir Ihre Daten erheben, nutzen und schützen, und welche Rechte Sie darüber haben."
     },
-    "collect": {
-      "title": "Was wir erfassen",
-      "p1": "Wenn Sie uns kontaktieren, erfassen wir gegebenenfalls Ihren Namen, Ihre E-Mail-Adresse, Ihr Unternehmen und Ihre Nachricht, damit wir antworten können. Wenn Sie sich für Updates anmelden, speichern wir die Angaben, die Sie über den von uns genutzten Formularanbieter übermitteln. Wir erfassen zudem gegebenenfalls grundlegende Analysedaten, um zu verstehen, wie die Website genutzt wird.",
-      "p2": "Wir verkaufen Ihre personenbezogenen Daten nicht. Wenn Sie möchten, dass wir Ihre Kontaktdaten entfernen, schreiben Sie uns eine E-Mail, und wir kümmern uns zeitnah darum."
-    }
+    "lastUpdated": "Zuletzt aktualisiert: 17. September 2026",
+    "sections": [
+      {
+        "title": "1. Wer wir sind",
+        "paragraphs": [
+          "Pearstop („Pearstop“, „wir“, „uns“, „unser“) bietet Software und Dienstleistungen, die Procurement- und Asset-Daten bereinigen, extrahieren und klassifizieren. Wir sind bei Dogpatch Labs, CHQ Building, Custom House Quay, D01 Y6H7 Dublin, Irland, ansässig und der Verantwortliche für die in dieser Erklärung beschriebenen personenbezogenen Daten.",
+          "Wir handeln nach den Gesetzen Irlands und der Europäischen Union, einschließlich der Datenschutz-Grundverordnung (DSGVO). Diese Erklärung ist verfasst, um diese Anforderungen zu erfüllen, und gilt für jeden Besucher, unabhängig davon, von wo aus Sie die Website aufrufen."
+        ]
+      },
+      {
+        "title": "2. Was wir erheben",
+        "paragraphs": [
+          "Wir erheben personenbezogene Daten nur, wenn Sie sich entscheiden, sie uns zu geben:"
+        ],
+        "list": [
+          "Kontaktformular: Ihr Name, Ihre E-Mail-Adresse, Ihr Unternehmen und der Inhalt Ihrer Nachricht.",
+          "Newsletter-Anmeldung: Ihre E-Mail-Adresse und, falls angegeben, Ihr Name.",
+          "Anfragen zur Musterklassifizierung: Ihr Name, Ihre E-Mail-Adresse, Ihr Firmenname, eine ungefähre Spend-Größenordnung, eine Freitextbeschreibung dessen, was Sie erreichen möchten, sowie alle Rechnungsdateien oder Positionen, die Sie hochladen möchten.",
+          "Downloads von Case Studies: Ihr Name, Ihre E-Mail-Adresse und Ihr Unternehmen.",
+          "Website-Nutzung: aggregierte, datenschutzfreundliche Analysen dazu, wie die Website genutzt wird (aufgerufene Seiten, ungefährer Standort, Gerätetyp). Wir nutzen diese Daten nicht, um Sie persönlich zu identifizieren."
+        ]
+      },
+      {
+        "title": "3. Warum wir sie erheben",
+        "paragraphs": [
+          "Wir verarbeiten personenbezogene Daten nur, wenn wir dafür eine gültige Rechtsgrundlage haben:"
+        ],
+        "list": [
+          "Um auf Ihre Anfrage zu antworten oder eine Demo vorzubereiten - berechtigtes Interesse, oder Erfüllung eines Vertrags, um dessen Vorbereitung Sie uns gebeten haben.",
+          "Um ein von Ihnen gesendetes Sample zu klassifizieren - berechtigtes Interesse an der Erbringung der von Ihnen angeforderten Leistung, oder Ihre Einwilligung.",
+          "Um Ihnen den Newsletter oder Case Studies zu senden - Ihre Einwilligung, die Sie jederzeit widerrufen können.",
+          "Um die Website zu verstehen und zu verbessern - unser berechtigtes Interesse, sie gut zu betreiben."
+        ]
+      },
+      {
+        "title": "4. Mit wem wir sie teilen",
+        "paragraphs": [
+          "Wir verkaufen Ihre personenbezogenen Daten niemals. Wir teilen sie nur mit den folgenden Kategorien von Dienstleistern, und nur soweit erforderlich, um die Website zu betreiben und das zu liefern, worum Sie gebeten haben:"
+        ],
+        "list": [
+          "Hosting- und Infrastrukturanbieter, die die Website betreiben und von Ihnen hochgeladene Dateien speichern.",
+          "E-Mail- und Workflow-Tools, die wir nutzen, um Anfragen an die richtige Person in unserem Team weiterzuleiten.",
+          "Die KI/ML-Systeme, die wir zur Klassifizierung eingereichter Rechnungsdaten nutzen, betrieben auf EU-gehosteter oder gleichwertig geschützter Infrastruktur."
+        ],
+        "paragraphsAfter": [
+          "Jeder dieser Anbieter ist vertraglich verpflichtet, Ihre Daten zu schützen und nur für den von uns festgelegten Zweck zu verwenden."
+        ]
+      },
+      {
+        "title": "5. Wie lange wir sie aufbewahren",
+        "paragraphs": [],
+        "list": [
+          "Rechnungs-Sample-Dateien und die dazu eingereichten Daten: nur solange aufbewahrt, wie es zur Durchführung und Nachverfolgung der von Ihnen angeforderten Klassifizierung nötig ist, dann gelöscht - außer Sie bitten uns, sie für ein laufendes Mandat aufzubewahren.",
+          "Kontaktformular- und Newsletter-Daten: aufbewahrt, bis Sie sich abmelden oder uns um Löschung bitten, oder solange wir einen berechtigten Grund haben, in Kontakt zu bleiben - je nachdem, was kürzer ist.",
+          "Aggregierte Analysen: nur in anonymisierter oder aggregierter Form aufbewahrt und können nicht zu Ihrer Identifizierung verwendet werden."
+        ]
+      },
+      {
+        "title": "6. Wie wir sie schützen",
+        "paragraphs": [
+          "Wir behandeln jede Information, die Sie uns geben, sicher: verschlüsselt bei der Übertragung, Zugriff beschränkt auf Personen, die ihn für ihre Arbeit benötigen, und gespeichert bei Anbietern, die anerkannte Sicherheitsstandards erfüllen. Kein System ist perfekt sicher, aber wir behandeln Ihre Daten so, wie wir unsere eigenen behandelt wissen wollen."
+        ]
+      },
+      {
+        "title": "7. Ihre Rechte",
+        "paragraphs": [
+          "Da wir unter der DSGVO operieren, haben Sie das Recht:"
+        ],
+        "list": [
+          "Zu erfragen, welche Daten wir über Sie besitzen, und eine Kopie davon zu erhalten (Auskunft).",
+          "Alles zu korrigieren, was falsch ist (Berichtigung).",
+          "Uns jederzeit zu bitten, Ihre Daten zu löschen (Löschung) - schreiben Sie uns eine E-Mail, und wir kümmern uns umgehend darum.",
+          "Uns zu bitten, die Nutzung Ihrer Daten einzuschränken, oder dieser zu widersprechen.",
+          "Ihre Daten zu einem anderen Anbieter zu übertragen (Datenübertragbarkeit).",
+          "Ihre Einwilligung jederzeit zu widerrufen, ohne Auswirkung auf das, was wir vor dem Widerruf getan haben.",
+          "Eine Beschwerde bei der Irish Data Protection Commission (dataprotection.ie) oder Ihrer lokalen Aufsichtsbehörde einzureichen."
+        ],
+        "paragraphsAfter": [
+          "Um eines dieser Rechte auszuüben, senden Sie eine E-Mail an inquiries@pearstop.com. Wir antworten innerhalb einer angemessenen Frist und in jedem Fall innerhalb der von der DSGVO vorgeschriebenen Fristen."
+        ]
+      },
+      {
+        "title": "8. Cookies und Analysen",
+        "paragraphs": [
+          "Wir nutzen datenschutzfreundliche Analysen, um zu verstehen, wie die Website aggregiert genutzt wird. Wir verwenden keine Werbe-Tracker von Drittanbietern und verkaufen oder teilen keine Analysedaten mit jemandem außerhalb von Pearstop."
+        ]
+      },
+      {
+        "title": "9. Kinder",
+        "paragraphs": [
+          "Diese Website richtet sich nicht an Kinder, und wir erheben nicht wissentlich personenbezogene Daten von Personen unter 16 Jahren."
+        ]
+      },
+      {
+        "title": "10. Änderungen dieser Erklärung",
+        "paragraphs": [
+          "Wir können diese Erklärung aktualisieren, wenn sich das Unternehmen oder das Recht ändert. Wir aktualisieren dann das Datum oben."
+        ]
+      },
+      {
+        "title": "11. Kontaktieren Sie uns",
+        "paragraphs": [
+          "Fragen zu dieser Erklärung oder Ihren Daten: inquiries@pearstop.com, oder schreiben Sie uns an Dogpatch Labs, CHQ Building, Custom House Quay, D01 Y6H7 Dublin, Irland."
+        ]
+      }
+    ]
   },
   "Terms": {
     "meta": {
       "title": "Allgemeine Geschäftsbedingungen",
-      "description": "Allgemeine Geschäftsbedingungen für die Nutzung der Pearstop-Website."
+      "description": "Die Bedingungen, die Ihre Nutzung der Pearstop-Website und Anfragen zur Musterklassifizierung regeln."
     },
     "hero": {
-      "eyebrow": "Rechtliches",
+      "eyebrow": "Recht",
       "title": "Allgemeine Geschäftsbedingungen",
-      "lead": "Eine kurze, verständliche Fassung davon, wie Sie die Pearstop-Website nutzen können."
+      "lead": "Die Bedingungen, die Ihre Nutzung dieser Website regeln."
     },
-    "usingSite": {
-      "title": "Nutzung dieser Website",
-      "p1": "Die Inhalte dieser Website dienen ausschließlich der allgemeinen Information. Sie stellen keine Rechts-, Finanz- oder Beschaffungsberatung dar. Wir bemühen uns, die Informationen korrekt und aktuell zu halten, garantieren jedoch nicht, dass jede Seite jederzeit vollständig ist.",
-      "p2": "Wenn Sie Inhalte, Markenmaterial oder Screenshots weiterverwenden möchten, fragen Sie uns bitte vorher. Bei Fragen zu diesen Bedingungen kontaktieren Sie uns."
-    }
+    "lastUpdated": "Zuletzt aktualisiert: 17. September 2026",
+    "sections": [
+      {
+        "title": "1. Annahme dieser Bedingungen",
+        "paragraphs": [
+          "Mit der Nutzung von pearstop.com (die „Website“) stimmen Sie diesen Bedingungen zu. Wenn Sie nicht einverstanden sind, nutzen Sie die Website bitte nicht."
+        ]
+      },
+      {
+        "title": "2. Was Pearstop tut",
+        "paragraphs": [
+          "Pearstop bietet Software und Dienstleistungen, die Procurement- und Asset-Daten bereinigen, extrahieren und klassifizieren, einschließlich UNSPSC-Klassifizierung. Inhalte auf der Website beschreiben diese Leistungen zu allgemeinen Informationszwecken und stellen selbst kein verbindliches Leistungsangebot dar; jedes bezahlte Mandat unterliegt einer separaten Vereinbarung zwischen Pearstop und dem Kunden."
+        ]
+      },
+      {
+        "title": "3. Anfragen zur Musterklassifizierung",
+        "paragraphs": [
+          "Wenn Sie uns über die Website ein Muster von Rechnungspositionen senden, klassifizieren wir es und senden das Ergebnis als Demonstration unserer Leistung zurück, kostenlos und ohne Verpflichtung auf beiden Seiten. Musterergebnisse werden „wie besehen“ bereitgestellt, um zu veranschaulichen, was Pearstop leisten kann, und sollten nicht als endgültiger, geprüfter Datensatz betrachtet werden. Die Einreichung eines Musters begründet keinen Vertrag über fortlaufende Leistungen; dafür ist eine separate Vereinbarung erforderlich."
+        ]
+      },
+      {
+        "title": "4. Nutzung der Website",
+        "paragraphs": [
+          "Sie verpflichten sich, Folgendes zu unterlassen:"
+        ],
+        "list": [
+          "Die Website für rechtswidrige Zwecke zu nutzen oder die Rechte anderer zu verletzen.",
+          "Zu versuchen, unbefugten Zugriff auf die Website oder verbundene Systeme zu erlangen.",
+          "Inhalte, Markenelemente oder Code der Website ohne Genehmigung zu scrapen, zu kopieren oder erneut zu veröffentlichen.",
+          "Etwas hochzuladen, an dem Sie nicht das Recht haben, es mit uns zu teilen."
+        ]
+      },
+      {
+        "title": "5. Geistiges Eigentum",
+        "paragraphs": [
+          "Alles auf der Website - Texte, Design, Logos und der Name Pearstop - gehört Pearstop oder unseren Lizenzgebern. Sie dürfen es nicht ohne unsere schriftliche Genehmigung nutzen."
+        ]
+      },
+      {
+        "title": "6. Keine Gewährleistung",
+        "paragraphs": [
+          "Die Website und ihre Inhalte werden „wie besehen“ bereitgestellt. Wir halten Informationen so genau und aktuell wie angemessen möglich, garantieren aber nicht, dass sie vollständig, fehlerfrei oder für einen bestimmten Zweck geeignet sind. Nichts auf der Website stellt rechtliche, finanzielle oder Procurement-Beratung dar."
+        ]
+      },
+      {
+        "title": "7. Haftungsbeschränkung",
+        "paragraphs": [
+          "Soweit gesetzlich zulässig, haftet Pearstop nicht für indirekte, beiläufige oder Folgeschäden, die aus Ihrer Nutzung der Website entstehen. Nichts in diesen Bedingungen beschränkt eine Haftung, die nach irischem Recht oder EU-Recht nicht beschränkt werden kann."
+        ]
+      },
+      {
+        "title": "8. Links zu Dritten",
+        "paragraphs": [
+          "Die Website kann auf Websites Dritter verlinken. Wir haben keine Kontrolle darüber und sind nicht verantwortlich für deren Inhalte oder Praktiken."
+        ]
+      },
+      {
+        "title": "9. Anwendbares Recht",
+        "paragraphs": [
+          "Diese Bedingungen unterliegen dem Recht Irlands. Jeder Streitfall wird von den irischen Gerichten behandelt."
+        ]
+      },
+      {
+        "title": "10. Änderungen dieser Bedingungen",
+        "paragraphs": [
+          "Wir können diese Bedingungen von Zeit zu Zeit aktualisieren. Wir aktualisieren dann das Datum oben; die weitere Nutzung der Website nach einer Änderung bedeutet, dass Sie die Aktualisierung akzeptieren."
+        ]
+      },
+      {
+        "title": "11. Kontaktieren Sie uns",
+        "paragraphs": [
+          "Fragen zu diesen Bedingungen: inquiries@pearstop.com."
+        ]
+      }
+    ]
   },
   "Whitepaper": {
     "meta": {
@@ -1645,11 +1843,13 @@
     "stillHaveQuestions": {
       "label": "Noch eine Frage?",
       "cta": "7-minütige Erstberatung buchen",
-      "email": "Schreiben Sie uns"
+      "email": "Schreiben Sie uns",
+      "copy": "Wenn Ihre Frage hier nicht beantwortet wird, ist der schnellste Weg zu einer Antwort, mit Vertrieb zu sprechen. Es gibt keinen Verkaufsdruck - es ist ein direktes Gespräch über Ihre Datensituation."
     },
     "cta": {
       "title": "Bereit, es in Aktion zu sehen?",
-      "button": "7-minütige Erstberatung buchen"
+      "button": "7-minütige Erstberatung buchen",
+      "lead": "Sprechen Sie mit Vertrieb, und wir zeigen Ihnen genau, wie die Klassifizierungs-Engine mit Ihren Daten arbeitet."
     }
   },
   "UnspscFM": {

@@ -1011,7 +1011,8 @@
     },
     "otherIndustries": {
       "title": "Actief in een andere sector?",
-      "copy": "Datakwaliteitsproblemen zijn niet uniek voor de bovenstaande sectoren. Als uw teams complexe operationele data beheren, te maken hebben met inconsistente leveranciersrecords of zich voorbereiden op een digitale transformatie, is de kans groot dat we kunnen helpen. Laten we erachter komen."
+      "copy": "Datakwaliteitsproblemen zijn niet uniek voor de bovenstaande sectoren. Als uw teams complexe operationele data beheren, te maken hebben met inconsistente leveranciersrecords of zich voorbereiden op een digitale transformatie, is de kans groot dat we kunnen helpen. Laten we erachter komen.",
+      "bookDiscovery": "Praat met sales"
     },
     "whatChanges": "Wat verandert er met Pearstop",
     "trusted": {
@@ -1019,7 +1020,8 @@
     },
     "readyBanner": {
       "title": "Klaar om uw data te reinigen?",
-      "copy": "In welke sector u ook actief bent, Pearstop heeft uw dataprobleem al eerder opgelost. Laten we praten over uw specifieke situatie."
+      "copy": "In welke sector u ook actief bent, Pearstop heeft uw dataprobleem al eerder opgelost. Laten we praten over uw specifieke situatie.",
+      "bookDiscovery": "Praat met sales"
     },
     "technical": {
       "eyebrow": "Technische sectoren",
@@ -1071,7 +1073,12 @@
           "Buyer review snelheid met een orde van grootte verbeterd naarmate classificatie vertrouwd raakt, geen marginale winst"
         ],
         "href": "/procurement-data-quality",
-        "linkLabel": "Ontdek hoe Pearstop een reële spend basislijn opbouwt"
+        "linkLabel": "Ontdek hoe Pearstop een reële spend basislijn opbouwt",
+        "quote": {
+          "text": "Als u zegt dat u de data kunt opschonen, zou u dan de spend nu kunnen correleren met een hoeveelheid, met trends en dergelijke?",
+          "author": "Commercieel beslisser",
+          "role": "Civiele/constructie-ingenieursadvies, Zuid-Afrika"
+        }
       },
       {
         "id": "geïntegreerd-fm",
@@ -1098,7 +1105,12 @@
           "Een realistisch beeld van wat de data kan ondersteunen, vastgesteld vanuit een gecorrigeerde basislijn, niet de staat waarin het arriveerde"
         ],
         "href": "/data-quality",
-        "linkLabel": "Ontdek hoe Pearstop FM-data verenigt"
+        "linkLabel": "Ontdek hoe Pearstop FM-data verenigt",
+        "quote": {
+          "text": "Als we een bot willen die alles weet over ons contract, moeten we eerst zorgen dat de governance-data in het contract goed is overeengekomen.",
+          "author": "Data-strategieverantwoordelijke",
+          "role": "Aanbieder van geïntegreerd facilities management"
+        }
       },
       {
         "id": "hard-services",
@@ -1125,7 +1137,12 @@
           "Elke match traceerbaar naar een echt onderdeelnummer, zodat uw team het kan verifiëren in plaats van te vertrouwen"
         ],
         "href": "/unspsc",
-        "linkLabel": "Zie hoe Pearstop hard services spend classificeert"
+        "linkLabel": "Zie hoe Pearstop hard services spend classificeert",
+        "quote": {
+          "text": "Energiediensten, engineering - marges zijn flinterdun.",
+          "author": "Group CIO",
+          "role": "Geïntegreerde FM-operator"
+        }
       },
       {
         "id": "soft-services",
@@ -1179,7 +1196,12 @@
           "Een echte kostenbasis om prijzen te verdedigen bij een klantbetwisting, geen gevoel"
         ],
         "href": "/invoice-data-extraction",
-        "linkLabel": "Zie hoe Pearstop de factuur eerst leest"
+        "linkLabel": "Zie hoe Pearstop de factuur eerst leest",
+        "quote": {
+          "text": "Ik zou zeggen dat we op grondniveau zitten. Sean hier zou het hoogstwaarschijnlijk oneens zijn en zeggen dat we ergens ondergronds zitten.",
+          "author": "Inkoopmanager",
+          "role": "Schoonmaakbedrijf met meerdere locaties"
+        }
       },
       {
         "id": "bouw",
@@ -1260,7 +1282,12 @@
           "Zekerheid die u kunt bieden bij een leveranciersbeoordeling, niet alleen een bestand dat u van één leverancier hebt ontvangen"
         ],
         "href": "/asset-data-management",
-        "linkLabel": "Ontdek hoe Pearstop asset owners zekerheid biedt"
+        "linkLabel": "Ontdek hoe Pearstop asset owners zekerheid biedt",
+        "quote": {
+          "text": "We willen het verhaal, het narratief, vanuit onze kant controleren.",
+          "author": "Commercieel/strategieverantwoordelijke",
+          "role": "Vastgoedbelegger, FM uitbesteed"
+        }
       }
     ],
     "faq": {
@@ -1283,34 +1310,205 @@
   "Privacy": {
     "meta": {
       "title": "Privacybeleid",
-      "description": "Privacybeleid voor Pearstop."
+      "description": "Hoe Pearstop uw persoonsgegevens verzamelt, gebruikt en beschermt, en uw rechten onder de AVG."
     },
     "hero": {
       "eyebrow": "Juridisch",
       "title": "Privacybeleid",
-      "lead": "We gebruiken alleen de data die we nodig hebben om op uw vraag te reageren, de site te verbeteren en onze diensten te ondersteunen."
+      "lead": "Hoe we uw gegevens verzamelen, gebruiken en beschermen, en welke rechten u daarover heeft."
     },
-    "collect": {
-      "title": "Wat we verzamelen",
-      "p1": "Als u contact met ons opneemt, kunnen we uw naam, e-mailadres, bedrijf en bericht verzamelen om te reageren. Als u zich aanmeldt voor updates, slaan we de gegevens op die u via onze formulierprovider indient. We kunnen ook basisanalyses verzamelen om te begrijpen hoe de site wordt gebruikt.",
-      "p2": "We verkopen uw persoonlijke informatie niet. Als u wilt dat we uw contactgegevens verwijderen, stuurt u ons een e-mail en handelen we dit snel af."
-    }
+    "lastUpdated": "Laatst bijgewerkt: 17 september 2026",
+    "sections": [
+      {
+        "title": "1. Wie wij zijn",
+        "paragraphs": [
+          "Pearstop (“Pearstop”, “wij”, “ons”, “onze”) levert software en diensten die procurement- en assetdata opschonen, extraheren en classificeren. Wij zijn gevestigd op Dogpatch Labs, CHQ Building, Custom House Quay, D01 Y6H7 Dublin, Ierland, en zijn de verwerkingsverantwoordelijke voor de persoonsgegevens beschreven in dit beleid.",
+          "Wij opereren onder de wetten van Ierland en de Europese Unie, inclusief de Algemene Verordening Gegevensbescherming (AVG/GDPR). Dit beleid is geschreven om aan die vereisten te voldoen en geldt voor elke bezoeker, ongeacht van waar u de site bezoekt."
+        ]
+      },
+      {
+        "title": "2. Wat wij verzamelen",
+        "paragraphs": [
+          "Wij verzamelen persoonsgegevens alleen wanneer u ervoor kiest deze aan ons te geven:"
+        ],
+        "list": [
+          "Contactformulier: uw naam, e-mailadres, bedrijf en de inhoud van uw bericht.",
+          "Nieuwsbriefaanmelding: uw e-mailadres en, indien opgegeven, uw naam.",
+          "Aanvragen voor steekproefclassificatie: uw naam, e-mailadres, bedrijfsnaam, een geschatte spend-range, een vrije tekstomschrijving van wat u hoopt te bereiken, en eventuele factuurbestanden of regels die u kiest te uploaden.",
+          "Downloads van case studies: uw naam, e-mailadres en bedrijf.",
+          "Sitegebruik: geaggregeerde, privacyvriendelijke analyses over hoe de site wordt gebruikt (bekeken pagina's, algemene locatie, apparaattype). Wij gebruiken deze data niet om u persoonlijk te identificeren."
+        ]
+      },
+      {
+        "title": "3. Waarom wij het verzamelen",
+        "paragraphs": [
+          "Wij verwerken persoonsgegevens alleen wanneer wij daar een geldige rechtsgrond voor hebben:"
+        ],
+        "list": [
+          "Om te reageren op uw aanvraag of een demo voor te bereiden - gerechtvaardigd belang, of uitvoering van een overeenkomst die u ons heeft gevraagd voor te bereiden.",
+          "Om een steekproef te classificeren die u ons stuurt - gerechtvaardigd belang bij het leveren van de door u gevraagde dienst, of uw toestemming.",
+          "Om u de nieuwsbrief of case studies te sturen - uw toestemming, die u op elk moment kunt intrekken.",
+          "Om de site te begrijpen en te verbeteren - ons gerechtvaardigd belang bij een goede werking ervan."
+        ]
+      },
+      {
+        "title": "4. Met wie wij het delen",
+        "paragraphs": [
+          "Wij verkopen uw persoonsgegevens nooit. Wij delen deze alleen met de volgende categorieën dienstverleners, en alleen voor zover nodig om de site te laten draaien en te leveren wat u heeft gevraagd:"
+        ],
+        "list": [
+          "Hosting- en infrastructuurleveranciers die de website draaien en eventuele geüploade bestanden opslaan.",
+          "E-mail- en workflowtools die wij gebruiken om aanvragen naar de juiste persoon in ons team te routeren.",
+          "De AI/ML-systemen die wij gebruiken om ingediende factuurdata te classificeren, draaiend op EU-gehoste of gelijkwaardig beveiligde infrastructuur."
+        ],
+        "paragraphsAfter": [
+          "Elk van deze leveranciers is contractueel verplicht uw gegevens te beschermen en alleen te gebruiken voor het door ons opgegeven doel."
+        ]
+      },
+      {
+        "title": "5. Hoe lang wij het bewaren",
+        "paragraphs": [],
+        "list": [
+          "Steekproef-factuurbestanden en de daarbij ingediende data: alleen bewaard zolang nodig om de door u gevraagde classificatie te voltooien en op te volgen, en daarna verwijderd - tenzij u ons vraagt deze te bewaren voor een lopend traject.",
+          "Contactformulier- en nieuwsbriefdata: bewaard totdat u zich afmeldt of ons vraagt deze te verwijderen, of zolang wij een gerechtvaardigde reden hebben om contact te houden, welke van beide korter is.",
+          "Geaggregeerde analyses: alleen bewaard in geanonimiseerde of geaggregeerde vorm en kunnen niet worden gebruikt om u te identificeren."
+        ]
+      },
+      {
+        "title": "6. Hoe wij het beschermen",
+        "paragraphs": [
+          "Wij behandelen elk stukje data dat u ons geeft veilig: versleuteld tijdens verzending, toegang beperkt tot de mensen die het nodig hebben voor hun werk, en opgeslagen bij leveranciers die erkende beveiligingsnormen halen. Geen enkel systeem is perfect veilig, maar wij behandelen uw data zoals we onze eigen data behandeld zouden willen zien."
+        ]
+      },
+      {
+        "title": "7. Uw rechten",
+        "paragraphs": [
+          "Omdat wij onder de AVG opereren, heeft u het recht om:"
+        ],
+        "list": [
+          "Te vragen welke data wij over u hebben en hier een kopie van te krijgen (inzage).",
+          "Alles te corrigeren wat onjuist is (rectificatie).",
+          "Ons op elk moment te vragen uw data te verwijderen (wissing) - mail ons en wij handelen dit snel af.",
+          "Ons te vragen het gebruik van uw data te beperken, of hiertegen bezwaar te maken.",
+          "Uw data naar een andere leverancier over te dragen (overdraagbaarheid).",
+          "Toestemming op elk moment in te trekken, zonder gevolgen voor wat wij deden voordat u deze introk.",
+          "Een klacht in te dienen bij de Irish Data Protection Commission (dataprotection.ie) of uw lokale toezichthoudende autoriteit."
+        ],
+        "paragraphsAfter": [
+          "Om een van deze rechten uit te oefenen, mailt u naar inquiries@pearstop.com. Wij reageren binnen een redelijke termijn en in elk geval binnen de termijnen die de AVG vereist."
+        ]
+      },
+      {
+        "title": "8. Cookies en analyses",
+        "paragraphs": [
+          "Wij gebruiken privacyvriendelijke analyses om geaggregeerd te begrijpen hoe de site wordt gebruikt. Wij gebruiken geen advertentietrackers van derden, en wij verkopen of delen analysedata niet met wie dan ook buiten Pearstop."
+        ]
+      },
+      {
+        "title": "9. Kinderen",
+        "paragraphs": [
+          "Deze site richt zich niet op kinderen, en wij verzamelen niet bewust persoonsgegevens van iemand jonger dan 16 jaar."
+        ]
+      },
+      {
+        "title": "10. Wijzigingen in dit beleid",
+        "paragraphs": [
+          "Wij kunnen dit beleid bijwerken naarmate het bedrijf of de wet verandert. Wij werken dan de datum bovenaan bij."
+        ]
+      },
+      {
+        "title": "11. Contact met ons opnemen",
+        "paragraphs": [
+          "Vragen over dit beleid of uw data: inquiries@pearstop.com, of schrijf ons op Dogpatch Labs, CHQ Building, Custom House Quay, D01 Y6H7 Dublin, Ierland."
+        ]
+      }
+    ]
   },
   "Terms": {
     "meta": {
       "title": "Algemene voorwaarden",
-      "description": "Algemene voorwaarden voor het gebruik van de Pearstop-website."
+      "description": "De voorwaarden die uw gebruik van de Pearstop-website en aanvragen voor steekproefclassificatie regelen."
     },
     "hero": {
       "eyebrow": "Juridisch",
       "title": "Algemene voorwaarden",
-      "lead": "Een korte, begrijpelijke versie van hoe u de Pearstop-website kunt gebruiken."
+      "lead": "De voorwaarden die uw gebruik van deze site regelen."
     },
-    "usingSite": {
-      "title": "Deze site gebruiken",
-      "p1": "De inhoud op deze site is uitsluitend bedoeld voor algemene informatie. Het is geen juridisch, financieel of inkoopadvies. We proberen de informatie nauwkeurig en actueel te houden, maar we garanderen niet dat elke pagina altijd volledig is.",
-      "p2": "Als u de inhoud, merkactiva of screenshots wilt hergebruiken, vraag dan eerst toestemming. Voor vragen over deze voorwaarden kunt u contact met ons opnemen."
-    }
+    "lastUpdated": "Laatst bijgewerkt: 17 september 2026",
+    "sections": [
+      {
+        "title": "1. Aanvaarding van deze voorwaarden",
+        "paragraphs": [
+          "Door pearstop.com (de “Site”) te gebruiken, gaat u akkoord met deze voorwaarden. Als u niet akkoord gaat, gebruik de Site dan niet."
+        ]
+      },
+      {
+        "title": "2. Wat Pearstop doet",
+        "paragraphs": [
+          "Pearstop levert software en diensten die procurement- en assetdata opschonen, extraheren en classificeren, inclusief UNSPSC-classificatie. Inhoud op de Site beschrijft deze diensten voor algemene informatiedoeleinden en vormt op zichzelf geen bindend aanbod van diensten; elk betaald traject wordt geregeld door een aparte overeenkomst tussen Pearstop en de klant."
+        ]
+      },
+      {
+        "title": "3. Aanvragen voor steekproefclassificatie",
+        "paragraphs": [
+          "Als u ons via de Site een steekproef van factuurregels stuurt, classificeren wij deze en sturen wij het resultaat terug als demonstratie van onze dienst, kosteloos en zonder verplichting aan beide zijden. Steekproefresultaten worden “as is” geleverd om te illustreren wat Pearstop kan, en dienen niet te worden beschouwd als een definitieve, geauditeerde dataset. Het indienen van een steekproef creëert geen overeenkomst voor doorlopende diensten; daarvoor is een aparte overeenkomst nodig."
+        ]
+      },
+      {
+        "title": "4. Gebruik van de Site",
+        "paragraphs": [
+          "U gaat ermee akkoord om niet:"
+        ],
+        "list": [
+          "De Site te gebruiken voor iets onwettigs, of om de rechten van anderen te schenden.",
+          "Ongeautoriseerde toegang tot de Site of aangesloten systemen te proberen te verkrijgen.",
+          "De inhoud, merkelementen of code van de Site te scrapen, kopiëren of herpubliceren zonder toestemming.",
+          "Iets te uploaden waar u niet het recht toe heeft om het met ons te delen."
+        ]
+      },
+      {
+        "title": "5. Intellectueel eigendom",
+        "paragraphs": [
+          "Alles op de Site - tekst, ontwerp, logo's en de naam Pearstop - behoort toe aan Pearstop of onze licentiegevers. U mag dit niet gebruiken zonder onze schriftelijke toestemming."
+        ]
+      },
+      {
+        "title": "6. Geen garantie",
+        "paragraphs": [
+          "De Site en de inhoud ervan worden “as is” geleverd. Wij houden informatie zo accuraat en actueel mogelijk, maar garanderen niet dat deze volledig, foutloos of geschikt is voor een specifiek doel. Niets op de Site is juridisch, financieel of procurement-advies."
+        ]
+      },
+      {
+        "title": "7. Beperking van aansprakelijkheid",
+        "paragraphs": [
+          "Voor zover wettelijk toegestaan, is Pearstop niet aansprakelijk voor indirecte, incidentele of gevolgschade voortvloeiend uit uw gebruik van de Site. Niets in deze voorwaarden beperkt aansprakelijkheid die naar Iers of EU-recht niet kan worden beperkt."
+        ]
+      },
+      {
+        "title": "8. Links naar derden",
+        "paragraphs": [
+          "De Site kan linken naar websites van derden. Wij hebben hier geen controle over en zijn niet verantwoordelijk voor hun inhoud of praktijken."
+        ]
+      },
+      {
+        "title": "9. Toepasselijk recht",
+        "paragraphs": [
+          "Deze voorwaarden worden beheerst door de wetten van Ierland. Elk geschil wordt behandeld door de Ierse rechtbanken."
+        ]
+      },
+      {
+        "title": "10. Wijzigingen in deze voorwaarden",
+        "paragraphs": [
+          "Wij kunnen deze voorwaarden van tijd tot tijd bijwerken. Wij werken dan de datum bovenaan bij; doorgaan met het gebruik van de Site na een wijziging betekent dat u de update aanvaardt."
+        ]
+      },
+      {
+        "title": "11. Contact met ons opnemen",
+        "paragraphs": [
+          "Vragen over deze voorwaarden: inquiries@pearstop.com."
+        ]
+      }
+    ]
   },
   "Whitepaper": {
     "meta": {
@@ -1545,11 +1743,13 @@
     "stillHaveQuestions": {
       "label": "Nog een vraag?",
       "cta": "Boek een discovery van 7 minuten",
-      "email": "Stuur ons een bericht"
+      "email": "Stuur ons een bericht",
+      "copy": "Als uw vraag hier niet beantwoord wordt, is de snelste manier om een antwoord te krijgen door met sales te praten. Er is geen verkoopdruk - het is een direct gesprek over uw datasituatie."
     },
     "cta": {
       "title": "Klaar om het in actie te zien?",
-      "button": "Boek een discovery van 7 minuten"
+      "button": "Boek een discovery van 7 minuten",
+      "lead": "Praat met sales en wij laten precies zien hoe de classificatie-engine werkt met uw data."
     }
   },
   "UnspscFM": {
