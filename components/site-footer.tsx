@@ -109,7 +109,7 @@ export function SiteFooter() {
             <span className="ft-sep">·</span>
             <Link href={`${prefix}/terms-and-conditions`}>{t("termsConditions")}</Link>
           </div>
-          <img className="ft-fav" src={siteConfig.assets.logo} alt="" aria-hidden="true" />
+          <img className="ft-fav" src={siteConfig.assets.logoInverse} alt="" aria-hidden="true" />
         </div>
       </div>
     </footer>

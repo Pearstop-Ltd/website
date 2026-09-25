@@ -130,6 +130,19 @@
       },
       "beforeAfterCaption": "Illustrative example: six invoice lines from three suppliers. The original description and supplier are kept exactly as they arrived – Pearstop only adds the columns on the right."
     },
+    "labelledOutput": {
+      "eyebrow": "Every line, labelled",
+      "title": "The same label on every supplier's line",
+      "lead": "Each line gets a UNSPSC label as it is read. Toilet tissue from four suppliers ends up in one place, so you can compare it one-to-one.",
+      "illustrativeLabel": "Illustrative example",
+      "breakdownLabel": "Breakdown",
+      "suppliersLabel": "Suppliers",
+      "lineItemsLabel": "Line items",
+      "columnDescription": "Description",
+      "columnQty": "Qty",
+      "columnUnit": "Unit",
+      "columnTotal": "Total"
+    },
     "screenshot": {
       "alt": "Pearstop dashboard showing classified line-level spend data with human review",
       "caption": "Classified line-level spend data, with the human review step visible."
@@ -207,6 +220,10 @@
     "faq": {
       "heading": "Frequently asked questions",
       "items": [
+        {
+          "q": "What does Pearstop do?",
+          "a": "Pearstop helps facilities management, infrastructure, and hard services companies clean procurement and asset data so teams can see what they are buying, plan maintenance more reliably, and feed trustworthy data into AI and reporting tools. If you need one plain answer, it is this: we turn messy operational data into something your business can actually use."
+        },
         {
           "q": "What is UNSPSC classification?",
           "a": "UNSPSC is a global standard for categorising products and services into a consistent hierarchy. It lets you compare spend across suppliers, sites, and time periods using the same categories, instead of whatever free-text description each invoice happened to use."
@@ -351,81 +368,183 @@
   },
   "Solutions": {
     "meta": {
-      "title": "Data Quality Solutions for Hard Services and Infrastructure",
-      "description": "Five data quality solutions for technical industries - from invoice data extraction and UNSPSC procurement classification to asset data management and unified data quality."
+      "title": "Spend Data Solutions for FM, Construction & Infrastructure",
+      "description": "Invoice extraction, UNSPSC classification, spend visibility, price benchmarking and data readiness for FM, construction, infrastructure and manufacturing."
+    },
+    "breadcrumb": {
+      "home": "Home",
+      "current": "Solutions"
     },
     "hero": {
       "eyebrow": "Solutions",
-      "title": "Turn messy data into decisions",
-      "lead": "Pearstop delivers five data integrity solutions for technical industries. Each one targets a specific data problem and every one is built to protect your margins."
-    },
-    "cards": {
-      "title": "Five Solutions. One Goal.",
-      "lead": "Pearstop delivers five data quality solutions for technical industries. Each one targets a specific operational data problem, built for hard services, construction, and manufacturing.",
-      "exploreLink": "Explore solution →",
-      "items": [
-        {
-          "title": "Invoice & Document Extraction",
-          "copy": "Turn unread PDF invoices, scans, and delivery notes into structured data automatically. The precondition for classification, spend analysis, and everything after it."
-        },
-        {
-          "title": "UNSPSC Classification",
-          "copy": "Auto-classify years of free-text purchase order data using UNSPSC, including tracing hard services parts back to the real manufacturer code. Up to 95% of spend lines classified automatically."
-        },
-        {
-          "title": "Spend Visibility",
-          "copy": "Build a real spend baseline from messy invoice and supplier data, broken out by service line and entity, so a negotiation, tender, or framework review starts from a number instead of a guess."
-        },
-        {
-          "title": "Data Readiness",
-          "copy": "An ERP migration, a Microsoft Fabric rollout, and an AI initiative all assume the data underneath them is already clean and structured. When it is not, each one just carries the mess into a new system. Pearstop fixes the data first."
-        },
-        {
-          "title": "Asset Data Management",
-          "copy": "Turn spend and maintenance data you receive but do not generate into an independent, classified record you can compare across providers, sites, and years."
-        }
+      "title": "Which spend data problem are you solving?",
+      "lead": "Most teams find out their spend data doesn't work when someone asks a question nobody can answer. Start with the problem in front of you. Each one links to how we fix it.",
+      "primaryLabel": "Send us 200 lines",
+      "secondaryLabel": "Talk to sales",
+      "builtForLabel": "Built for",
+      "builtFor": [
+        { "id": "facilities-management", "label": "Facilities management" },
+        { "id": "hard-services", "label": "Hard services" },
+        { "id": "cleaning", "label": "Cleaning" },
+        { "id": "construction", "label": "Construction" },
+        { "id": "infrastructure", "label": "Infrastructure" },
+        { "id": "manufacturing", "label": "Manufacturing" },
+        { "id": "asset-owners", "label": "Asset owners" },
+        { "id": "procurement-consultancies", "label": "Procurement consultancies" }
       ]
     },
-    "moreCards": {
-      "title": "More ways to work with Pearstop",
-      "lead": "Two more places the same classification engine shows up, for specific teams and specific outcomes.",
+    "problems": {
+      "eyebrow": "Start where it hurts",
+      "title": "Pick the problem. We start there.",
+      "orderLabel": "Most teams move through these in order:",
+      "order": [
+        { "id": "extraction", "label": "Read the invoices" },
+        { "id": "classification", "label": "Label every line" },
+        { "id": "visibility", "label": "See the spend" },
+        { "id": "benchmarking", "label": "Check every price" },
+        { "id": "readiness", "label": "Ready for ERP, Fabric and AI" }
+      ],
       "items": [
         {
-          "title": "Spend Cube & Dashboards",
-          "copy": "Spend structured by category, supplier, and time, ready to feed Power BI, Microsoft Fabric, or your own dashboard."
+          "id": "extraction",
+          "badgeLabel": "Read the invoices",
+          "pain": "Invoices sit unread in an inbox, so there is nothing to analyse yet.",
+          "title": "Invoice & Document Extraction",
+          "body": "Turn unread PDF invoices, scans, and delivery notes into structured, labelled line items automatically. The starting point for spend analysis and everything after it.",
+          "related": [],
+          "href": "/invoice-data-extraction"
         },
         {
-          "title": "For Procurement Consultancies",
-          "copy": "White-labelled spend classification under your own taxonomy, so engagement margin goes to analysis, not manual cleanup."
+          "id": "classification",
+          "badgeLabel": "Label every line",
+          "pain": "Spend is coded by hand, differently at every site, or not at all.",
+          "title": "UNSPSC Classification",
+          "body": "Auto-classify years of free-text purchase order data using UNSPSC, including tracing hard services parts back to the real manufacturer code. Up to 95% of spend lines classified automatically.",
+          "related": [
+            { "label": "UNSPSC for FM", "href": "/unspsc-classification-facilities-management" },
+            { "label": "Netherlands", "href": "/unspsc-classification-netherlands" },
+            { "label": "Germany", "href": "/unspsc-classification-germany" }
+          ],
+          "href": "/unspsc"
+        },
+        {
+          "id": "visibility",
+          "badgeLabel": "See the spend",
+          "pain": "A savings target or tender needs a real baseline, and nobody can produce one.",
+          "title": "Spend Visibility",
+          "body": "Build a real spend baseline from messy invoice and supplier data, broken out by service line and entity, so a negotiation, tender, or framework review starts from a number instead of a guess.",
+          "related": [
+            { "label": "Spend Cube & Dashboards", "href": "/spend-cube" }
+          ],
+          "href": "/procurement-data-quality"
+        },
+        {
+          "id": "benchmarking",
+          "badgeLabel": "Check every price",
+          "pain": "Every invoice needs a yes or no, and there is no benchmark to say whether the price is reasonable.",
+          "title": "Spend Benchmarking",
+          "body": "Every line is labelled and compared with what you normally pay, across suppliers, sites and providers, so you can see straight away whether a price sits in the normal range and approve it without escalating.",
+          "related": [
+            { "label": "Spend Cube & Dashboards", "href": "/spend-cube" }
+          ],
+          "href": "/asset-data-management"
+        },
+        {
+          "id": "readiness",
+          "badgeLabel": "Ready for ERP, Fabric and AI",
+          "pain": "An ERP, Fabric or AI project is coming, and the data isn't ready for it.",
+          "title": "Data Readiness",
+          "body": "An ERP migration, a Microsoft Fabric rollout, and an AI initiative all assume the data underneath them is already clean and structured. When it is not, each one just carries the mess into a new system. Pearstop fixes the data first.",
+          "related": [
+            { "label": "Fabric Ready", "href": "/fabric" },
+            { "label": "AI Readiness", "href": "/ai-readiness" }
+          ],
+          "href": "/data-quality",
+          "wide": true
         }
+      ],
+      "exploreLink": "Explore solution →"
+    },
+    "who": {
+      "eyebrow": "Who it's for",
+      "title": "Built for businesses that buy by the project",
+      "items": [
+        { "id": "facilities-management", "title": "Facilities management", "pain": "Data arrives from every service line in a different format.", "linkLabel": "See how it applies →", "href": "/industries#facilities-management" },
+        { "id": "hard-services", "title": "Hard services", "pain": "Fixed-price contracts get priced without a cost baseline you can defend.", "linkLabel": "See how it applies →", "href": "/industries#hard-services" },
+        { "id": "cleaning", "title": "Cleaning", "pain": "Invoices pile up unread, and thin margins leave no room for guesses.", "linkLabel": "See how it applies →", "href": "/industries#cleaning" },
+        { "id": "construction", "title": "Construction", "pain": "You're estimating bids from memory because nobody can retrieve historical actuals.", "linkLabel": "See how it applies →", "href": "/industries#construction" },
+        { "id": "infrastructure", "title": "Infrastructure", "pain": "A savings target has been named and the data can't show where it sits.", "linkLabel": "See how it applies →", "href": "/industries#infrastructure" },
+        { "id": "manufacturing", "title": "Manufacturing", "pain": "One entity already runs UNSPSC and another needs to align to it.", "linkLabel": "See how it applies →", "href": "/industries#manufacturing" },
+        { "id": "asset-owners", "title": "Asset owners", "pain": "Your FM provider sends the cost data, and you have no way to check it.", "linkLabel": "Asset Data Management →", "href": "/asset-data-management" },
+        { "id": "procurement-consultancies", "title": "Procurement consultancies", "pain": "Your analysts spend client hours cleaning data before the analysis starts.", "linkLabel": "For Procurement Consultancies →", "href": "/procurement-consultancies" }
+      ]
+    },
+    "tools": {
+      "eyebrow": "Free UNSPSC tools",
+      "title": "Not ready to talk yet? Look something up.",
+      "items": [
+        { "title": "Free UNSPSC Lookup", "body": "Find the right code for any product or service.", "linkLabel": "Open →", "href": "/unspsc-code-lookup" },
+        { "title": "UNSPSC Taxonomy Tree", "body": "Browse the full hierarchy, from segment down to commodity.", "linkLabel": "Open →", "href": "/unspsc-classification-demo" },
+        { "title": "AI UNSPSC Classification Guide", "body": "How AI classification works, and where it needs a person.", "linkLabel": "Open →", "href": "/unspsc-ai-classification-guide" }
       ]
     },
     "approach": {
-      "label": "The Pearstop Approach",
-      "title": "One engine. Every data problem.",
-      "copy": "Whether it is procurement spend, asset registers, or ledger data, Pearstop standardises, categorises, and enriches your data automatically. The output plugs straight into your existing tools.",
+      "eyebrow": "The Pearstop approach",
+      "title": "One engine behind every solution",
+      "body": "Invoices, ERP exports, spreadsheets or portal downloads go in. Pearstop reads, cleans, labels and enriches every line, and the output plugs straight into the tools you already use.",
       "bullets": [
         "Works with your existing BI tools, ERP, and dashboards",
         "No lengthy implementation - results in days, not months",
-        "Scales from one dataset to your entire data estate",
-        "Built specifically for technical industries and FM"
+        "A person reviews anything uncertain, and every correction is remembered",
+        "Built for FM, construction, infrastructure and manufacturing"
       ],
       "worksWithLabel": "Works with your data",
-      "worksCopy": "Invoices, asset registers, ledger exports, supplier lists - from any format, any system. SAP, Oracle, ERP exports, spreadsheets. If you can export it, we can work with it.",
+      "worksCopy": "Invoices, ledger exports, supplier lists - from any format, any system. SAP, Oracle, ERP exports, spreadsheets. If you can export it, we can work with it.",
       "engineLabel": "Pearstop engine",
-      "engineCopy": "Automated cleaning, standardisation, and categorisation. Up to 95% accuracy, no manual effort.",
+      "engineCopy": "Automated cleaning, standardisation, and categorisation. Around 95% of lines labelled automatically; the rest go to a person.",
       "outputLabel": "Clean, decision-ready data",
       "outputCopy": "Trusted data that plugs into your BI tools, informs your bids, and protects your margins."
     },
-    "geoBlock": {
-      "title": "What data quality problems does Pearstop solve?",
-      "copy": "Hard services, construction, infrastructure, and manufacturing companies share a common challenge: operational data that is decentralised, inconsistent, and difficult to use across teams and systems. Poor procurement data quality, unreliable asset registers, and unclassified spend are the most common blockers to category management, predictive maintenance, and digital transformation. Pearstop specialises in cleaning and structuring this operational data so technical businesses can act on it."
+    "faq": {
+      "eyebrow": "Questions",
+      "title": "Frequently asked",
+      "items": [
+        {
+          "q": "What data quality problems does Pearstop solve?",
+          "a": "Hard services, construction, infrastructure, and manufacturing companies share a common challenge: operational data that is decentralised, inconsistent, and difficult to use across teams and systems. Poor procurement data quality, unreliable asset registers, and unclassified spend are the most common blockers to category management, predictive maintenance, and digital transformation. Pearstop specialises in cleaning and structuring this operational data so technical businesses can act on it."
+        },
+        {
+          "q": "Which solution should I start with?",
+          "a": "Start with the problem in front of you. If invoices sit unread, start with extraction. If spend is coded by hand or not at all, start with UNSPSC classification. If you need a baseline for a tender or savings target, start with spend visibility. Most teams move through these in that order."
+        },
+        {
+          "q": "Does our data need to be clean first?",
+          "a": "No. Cleaning the data is the first thing Pearstop does. Send invoices, ERP exports, portal downloads or spreadsheets in whatever state they are in."
+        },
+        {
+          "q": "Can Pearstop tell us whether a price is reasonable?",
+          "a": "Yes. Every line gets a standard label, so the same item can be compared across suppliers, sites and providers. You can see whether a price sits in the normal range before you approve it. Asset owners use this to check the spend their FM provider manages for them."
+        },
+        {
+          "q": "Which industries does Pearstop work with?",
+          "a": "Facilities management, hard services, cleaning, construction, infrastructure and manufacturing. Also asset owners who outsource FM, and procurement consultancies who run spend analysis for their clients."
+        },
+        {
+          "q": "How accurate is automated spend classification?",
+          "a": "Around 95% of lines are classified automatically. The rest are flagged and routed to a person, so accuracy stays high without every line needing a manual check."
+        },
+        {
+          "q": "How long does it take?",
+          "a": "A first sample of 200 lines usually comes back within a few working days. After that, classification runs continuously as new invoices arrive."
+        }
+      ]
     },
-    "cta": {
+    "closing": {
       "title": "Not sure which solution you need?",
-      "lead": "Talk to sales. We will identify exactly which data problem is costing you the most - and show you how to fix it.",
-      "bookDiscovery": "Talk to sales",
-      "viewIndustries": "View Industries"
+      "body": "Book a 15-minute discovery call. We will identify exactly which data problem is costing you the most - and show you how to fix it.",
+      "primaryLabel": "Book a 15-minute discovery",
+      "secondaryLabel": "Or send us 200 lines →",
+      "tertiaryLabel": "View industries"
     }
   },
   "DataQuality": {
@@ -534,7 +653,7 @@
     "hero": {
       "eyebrow": "Invoice & document extraction",
       "title": "If nobody reads the invoice, the data inside it does not exist.",
-      "lead": "PDFs, scans and delivery notes arrive faster than anyone can read them. Pearstop turns that paperwork into structured line items automatically, so there is something to classify in the first place.",
+      "lead": "PDFs, scans and delivery notes arrive faster than anyone can read them. Pearstop turns that paperwork into structured, labelled line items automatically.",
       "primaryLabel": "Send us 10 invoices",
       "secondaryLabel": "See how it works →"
     },
@@ -567,31 +686,44 @@
     ],
     "howItWorks": {
       "eyebrow": "How it works",
-      "title": "From unread document to structured line item",
+      "title": "From unread document to classified line item",
       "inputs": [
         "PDF invoices",
         "Scanned paper",
         "Email attachments",
         "EDI feeds"
       ],
-      "processLabel": "read · structure · check",
+      "processLabel": "read · structure · label · check",
       "outputs": [
         "Your ERP or P2P platform",
         "Your BI tool",
-        "Classification, next step"
+        "Pearstop dashboards"
       ],
       "step1": {
         "title": "Ingest, in any format",
         "copy": "No fixed template per supplier, and no supplier has to change how they send anything."
       },
       "step2": {
-        "title": "Read and checked",
-        "copy": "Line items, quantities, unit costs, cost codes and supplier references are structured automatically. Anything uncertain is flagged for a person, and every correction teaches the pipeline that supplier."
+        "title": "Read, labelled and checked",
+        "copy": "Line items, quantities and unit costs are structured, and every line gets a standard label (eg. UNSPSC), so the same item compares one-to-one across suppliers. Your own labels can sit alongside. Anything uncertain goes to a person, and each correction teaches the pipeline that supplier."
       },
       "step3": {
-        "title": "Delivered into what you run",
-        "copy": "Output lands in the format your ERP, P2P platform or BI tool expects, ready for classification, reporting or reload."
+        "title": "Structured output, ready to use",
+        "copy": "See it in Pearstop's dashboards, or send it back into SAP or any other ERP, P2P or BI tool, in the format each one expects."
       }
+    },
+    "labelledOutput": {
+      "eyebrow": "Every line, labelled",
+      "title": "The same label on every supplier's line",
+      "lead": "Each line gets a UNSPSC label as it is read. Toilet tissue from four suppliers ends up in one place, so you can compare it one-to-one.",
+      "illustrativeLabel": "Illustrative example",
+      "breakdownLabel": "Breakdown",
+      "suppliersLabel": "Suppliers",
+      "lineItemsLabel": "Line items",
+      "columnDescription": "Description",
+      "columnQty": "Qty",
+      "columnUnit": "Unit",
+      "columnTotal": "Total"
     },
     "stats": {
       "s1": {
@@ -621,8 +753,8 @@
         "copy": "Data is structured as invoices arrive, instead of weeks later when someone clears the backlog."
       },
       "b2": {
-        "title": "Something to classify",
-        "copy": "Nothing can be categorised, benchmarked or compared until it exists as structured data. Extraction comes first."
+        "title": "Ready to compare",
+        "copy": "The same item from different suppliers carries the same label, so it can be benchmarked the moment it is read."
       },
       "b3": {
         "title": "No more keying and correcting",
@@ -636,7 +768,7 @@
     },
     "geoBlock": {
       "title": "What is invoice data extraction and why does it matter for procurement data quality?",
-      "copy": "Invoice and document data extraction is the process of automatically reading PDF invoices, scanned paper records, and delivery notes, then converting them into structured line-item data. For facilities management, construction, and manufacturing procurement teams, this is the step that has to happen before classification, spend analysis, or UNSPSC coding is even possible. Manual data entry cannot keep pace with invoice volume across multiple sites and suppliers, which is why unread invoices and stale spend data are one of the most common blockers to category management and AI-driven spend analysis. Pearstop combines OCR with an AI extraction layer and a human review step for low-confidence lines, so the output is structured data ready for classification, not another manual bottleneck."
+      "copy": "Invoice and document data extraction is the process of automatically reading PDF invoices, scanned paper records, and delivery notes, then converting them into structured, classified line-item data. For facilities management, construction, and manufacturing procurement teams, this is the step that has to happen before spend analysis or reporting is even possible — at Pearstop, classification (UNSPSC or a client's own taxonomy) happens in the same pass as extraction, not as a separate project afterwards. Manual data entry cannot keep pace with invoice volume across multiple sites and suppliers, which is why unread invoices and stale spend data are one of the most common blockers to category management and AI-driven spend analysis. Pearstop combines OCR with an AI extraction layer and a human review step for low-confidence lines, so the output is structured, classified data, not another manual bottleneck."
     },
     "faq": [
       {
@@ -1997,13 +2129,13 @@
       "title": "Privacy Policy",
       "lead": "How we collect, use, and protect your data, and the rights you have over it."
     },
-    "lastUpdated": "Last updated: 17 September 2026",
+    "lastUpdated": "Last updated: 25 September 2026",
     "sections": [
       {
         "title": "1. Who we are",
         "paragraphs": [
           "Pearstop (“Pearstop,” “we,” “us,” “our”) provides software and services that clean, extract, and classify procurement and asset data. We are based at Dogpatch Labs, CHQ Building, Custom House Quay, D01 Y6H7 Dublin, Ireland, and we are the data controller for the personal data described in this policy.",
-          "We operate under the laws of Ireland and the European Union, including the General Data Protection Regulation (GDPR). This policy is written to meet those requirements and applies to every visitor, regardless of where you access the site from."
+          "We operate under the laws of Ireland and the European Union, including the General Data Protection Regulation (GDPR). This policy is written to meet those requirements and applies to every visitor, regardless of where you access the site from. Where we process personal information of South African individuals or companies, we also comply with the Protection of Personal Information Act (POPIA). In this policy, \"personal data\" includes \"personal information\" as defined in POPIA, which also covers information about companies."
         ]
       },
       {
@@ -2039,9 +2171,10 @@
         "list": [
           "Hosting and infrastructure providers that run the website and store any files you upload.",
           "Email and workflow tools we use to route enquiries to the right person on our team.",
-          "The AI/ML systems we use to classify submitted invoice data, run on EU-hosted or equivalently safeguarded infrastructure."
+          "The AI/ML systems we use to classify submitted invoice data, run on EU-hosted infrastructure."
         ],
         "paragraphsAfter": [
+          "All data is stored and processed on servers in the European Union.",
           "Each of these providers is bound by contract to protect your data and use it only for the purpose we specify."
         ]
       },
@@ -2049,7 +2182,7 @@
         "title": "5. How long we keep it",
         "paragraphs": [],
         "list": [
-          "Sample invoice files and the data submitted alongside them: kept only as long as needed to complete and follow up on the classification you requested, then deleted – unless you ask us to keep them for an ongoing engagement.",
+          "Sample invoice files and the data submitted alongside them: deleted automatically after 90 days, or sooner if you ask us to, unless you ask us in writing to keep them for an ongoing engagement.",
           "Contact form and newsletter data: kept until you unsubscribe or ask us to delete it, or for as long as we have a legitimate reason to stay in touch, whichever is shorter.",
           "Aggregate analytics: retained only in anonymised or aggregated form and cannot be used to identify you."
         ]
@@ -2063,7 +2196,7 @@
       {
         "title": "7. Your rights",
         "paragraphs": [
-          "Because we operate under GDPR, you have the right to:"
+          "Under GDPR and POPIA, you have the right to:"
         ],
         "list": [
           "Ask what data we hold about you and get a copy of it (access).",
@@ -2072,7 +2205,7 @@
           "Ask us to restrict, or object to, how we use your data.",
           "Move your data to another provider (portability).",
           "Withdraw consent at any point, with no effect on anything we did before you withdrew it.",
-          "Lodge a complaint with the Irish Data Protection Commission (dataprotection.ie) or your local supervisory authority."
+          "Lodge a complaint with the Irish Data Protection Commission (dataprotection.ie) or your local supervisory authority. If you are in South Africa, you can also lodge a complaint with the Information Regulator (inforegulator.org.za)."
         ],
         "paragraphsAfter": [
           "To exercise any of these rights, email inquiries@pearstop.com. We'll respond within a reasonable time and, in any case, within the timeframes GDPR requires."
@@ -2114,7 +2247,7 @@
       "title": "Terms and Conditions",
       "lead": "The terms that govern your use of this site."
     },
-    "lastUpdated": "Last updated: 17 September 2026",
+    "lastUpdated": "Last updated: 25 September 2026",
     "sections": [
       {
         "title": "1. Acceptance of these terms",
@@ -2131,7 +2264,9 @@
       {
         "title": "3. Sample classification requests",
         "paragraphs": [
-          "If you send us a sample of invoice lines through the Site, we will classify it and return the result as a demonstration of our service, free of charge and without obligation on either side. Sample results are provided “as is” to illustrate what Pearstop can do, and should not be relied on as a final, audited dataset. Submitting a sample does not create a contract for ongoing services; that requires a separate agreement."
+          "If you send us a sample of invoice lines through the Site, we will classify it and return the result as a demonstration of our service, free of charge and without obligation on either side. Sample results are provided “as is” to illustrate what Pearstop can do, and should not be relied on as a final, audited dataset. Submitting a sample does not create a contract for ongoing services; that requires a separate agreement.",
+          "By uploading a sample, you confirm that you are authorised by your organisation to share it with us. Invoice files often contain personal data about people other than you, such as supplier contacts, technicians or staff named on invoices. You are responsible for having a lawful basis under applicable data protection law (GDPR or POPIA) to share that data with us, and we encourage you to remove names, email addresses and bank details that are not needed for classification.",
+          "For any personal data contained in a sample, we act on your organisation's behalf. We use it only to produce and discuss your sample result, keep it confidential, and limit access to the people who need it. Sample files are deleted automatically after 90 days, or sooner if you ask us to, unless you ask us in writing to keep them for an ongoing engagement."
         ]
       },
       {

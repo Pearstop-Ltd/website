@@ -1,0 +1,58 @@
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 48px;
+}
+
+.caption {
+  flex-shrink: 0;
+  font-size: 13px;
+  color: var(--muted);
+  padding-bottom: 6px;
+}
+
+.panel {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 28px;
+  display: flex;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.tree {
+  flex-shrink: 0;
+  max-width: 100%;
+}
+
+@media (max-width: 1023px) {
+  .tree {
+    flex-shrink: 1;
+    min-width: 0;
+  }
+}
+
+.breakdown {
+  flex-grow: 1;
+  min-width: 0;
+}
+
+@media (max-width: 1023px) {
+  .headerRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .panel {
+    flex-direction: column;
+    padding: 20px;
+  }
+}

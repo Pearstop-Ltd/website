@@ -99,6 +99,9 @@ const SOLUTION_NAV_KEYS: Record<string, string> = {
   "/unspsc": "unspsc",
 };
 
+// Header height in px, must match .nav-inner's min-height in globals.css.
+const HEADER_HEIGHT = 68;
+
 export function SiteHeader() {
   const pathname = usePathname();
   const locale = useLocale();
@@ -110,6 +113,66 @@ export function SiteHeader() {
   const submenuCloseTimer = useRef<number | null>(null);
 
   const prefix = locale === "en" ? "" : `/${locale}`;
+
+  // Homepage only: three phases as you scroll down.
+  // "video"  - over the hero, before #clients-and-quotes reaches the header
+  //            line: the header's own navy-to-blue gradient.
+  // "strip"  - once #clients-and-quotes has reached the header line: the
+  //            header goes transparent, so the real .clients-and-quotes
+  //            gradient scrolling underneath shows straight through it -
+  //            guarantees a perfect, pixel-identical continuation instead
+  //            of trying to keep a copy of that gradient in sync.
+  // "light"  - once #lm-band (the first white section) reaches the header
+  //            line: back to the normal light chrome.
+  // Not one-time triggers - scrolling back up restores earlier phases too.
+  const isHome = pathname === "/" || LOCALES.some(({ code }) => pathname === `/${code}`);
+  // /solutions has no hero video to transition off of - it's just always
+  // dark, a flat purple rather than the homepage's navy-to-blue gradient.
+  const isAlwaysDark = pathname === "/solutions" || LOCALES.some(({ code }) => pathname === `/${code}/solutions`);
+  const [headerPhase, setHeaderPhase] = useState<"video" | "strip" | "light">(isHome || isAlwaysDark ? "video" : "light");
+
+  useEffect(() => {
+    if (isAlwaysDark) {
+      setHeaderPhase("video");
+      return;
+    }
+    if (!isHome) {
+      setHeaderPhase("light");
+      return;
+    }
+    const lmBand = document.getElementById("lm-band");
+    const stripStart = document.getElementById("clients-and-quotes");
+    if (!lmBand || !stripStart) {
+      setHeaderPhase("light");
+      return;
+    }
+    let ticking = false;
+    const update = () => {
+      if (lmBand.getBoundingClientRect().top <= HEADER_HEIGHT) {
+        setHeaderPhase("light");
+      } else if (stripStart.getBoundingClientRect().top <= HEADER_HEIGHT) {
+        setHeaderPhase("strip");
+      } else {
+        setHeaderPhase("video");
+      }
+      ticking = false;
+    };
+    const onScroll = () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(update);
+      }
+    };
+    update();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
+  }, [isHome, isAlwaysDark, pathname]);
+
+  const darkHeader = headerPhase !== "light";
 
   const clearSolutionsCloseTimer = () => {
     if (solutionsCloseTimer.current !== null) {
@@ -199,11 +262,22 @@ export function SiteHeader() {
   };
 
   return (
-    <nav id="site-nav" role="navigation" aria-label="Main navigation">
+    <nav
+      id="site-nav"
+      className={darkHeader ? `header-dark${isAlwaysDark ? " header-solid-purple" : ""}${headerPhase === "strip" ? " header-strip" : ""}` : ""}
+      role="navigation"
+      aria-label="Main navigation"
+    >
       <div className="container">
         <div className="nav-inner">
           <Link className="nav-logo" href={`${prefix}/`} aria-label="Pearstop home" onClick={closeMenus}>
-            <img className="nav-logo-image" src={siteConfig.assets.logo} alt={siteConfig.name} width={160} height={48} />
+            <img
+              className="nav-logo-image"
+              src={darkHeader ? siteConfig.assets.logoInverse : siteConfig.assets.logo}
+              alt={siteConfig.name}
+              width={160}
+              height={48}
+            />
           </Link>
 
           <ul className={`nav-menu ${menuOpen ? "open" : ""}`} id="nav-menu">

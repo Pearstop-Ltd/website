@@ -1,12 +1,21 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Script from "next/script";
-import { GeoBlock, PageHero } from "@/components/content";
+import { PageHero } from "@/components/content";
 import { FaqSchema } from "@/components/blog";
 import { FaqSection } from "@/components/site/FaqSection";
 import { FaqHighlight } from "@/components/site/FaqHighlight";
+import { LabelledOutputPanel } from "@/components/site/LabelledOutputPanel";
 import { SampleRequestModal } from "@/components/sample-request-modal";
 import { alternateLanguages, siteConfig } from "@/lib/site";
+import {
+  TAXONOMY_EDGES,
+  taxonomyNodesForCurrency,
+  tissueSuppliersForCurrency,
+  tissueLineItemsForCurrency,
+  tissueDetailForCurrency,
+} from "@/lib/taxonomy-demo-data";
+import { getRequestCurrency } from "@/lib/currency";
 
 const organizationSchema = {
   "@context": "https://schema.org",
@@ -140,6 +149,10 @@ const proofCards = [
 
 const faqItems = [
   {
+    q: "What does Pearstop do?",
+    a: "Pearstop helps facilities management, infrastructure, and hard services companies clean procurement and asset data so teams can see what they are buying, plan maintenance more reliably, and feed trustworthy data into AI and reporting tools. If you need one plain answer, it is this: we turn messy operational data into something your business can actually use."
+  },
+  {
     q: "What is UNSPSC classification?",
     a: "UNSPSC is a global standard for categorising products and services into a consistent hierarchy. It lets you compare spend across suppliers, sites, and time periods using the same categories, instead of whatever free-text description each invoice happened to use."
   },
@@ -161,7 +174,9 @@ const faqItems = [
   }
 ];
 
-export default function HomePage() {
+export default async function HomePage() {
+  const currency = await getRequestCurrency();
+
   return (
     <>
       <Script
@@ -174,8 +189,7 @@ export default function HomePage() {
       <PageHero
         className="hero-tall hero-left"
         title={<>Know what you buy, from whom, at what price.</>}
-        videoUrl={siteConfig.assets.heroVideo}
-        videoPoster={siteConfig.assets.heroVideoPoster}
+        videos={siteConfig.assets.heroVideos}
         lead={
           <>
             Your invoice data is full of answers. Pearstop makes them usable.{" "}
@@ -189,26 +203,41 @@ export default function HomePage() {
         ]}
       />
 
-      <section className="clients-strip" aria-label="Trusted by">
-        <div className="container">
-          <p className="clients-label">Trusted by leading organisations</p>
-          <div className="clients-logos">
-            {clientLogos.map((logo) => (
-              logo.external ? (
-                <a key={logo.alt} href={logo.href} target="_blank" rel="noopener noreferrer" aria-label={`${logo.alt} website`}>
-                  <img src={logo.src} alt={logo.alt} />
-                </a>
-              ) : (
-                <Link key={logo.alt} href={logo.href} aria-label={`${logo.alt} case study`}>
-                  <img src={logo.src} alt={logo.alt} />
-                </Link>
-              )
-            ))}
+      <section id="clients-and-quotes" className="clients-and-quotes dark ccta-dark" aria-label="Trusted by, and what buyers tell us">
+        <div className="clients-strip">
+          <div className="container">
+            <p className="clients-label">Trusted by leading organisations</p>
+            <div className="clients-logos">
+              {clientLogos.map((logo) => (
+                logo.external ? (
+                  <a key={logo.alt} href={logo.href} target="_blank" rel="noopener noreferrer" aria-label={`${logo.alt} website`}>
+                    <img src={logo.src} alt={logo.alt} />
+                  </a>
+                ) : (
+                  <Link key={logo.alt} href={logo.href} aria-label={`${logo.alt} case study`}>
+                    <img src={logo.src} alt={logo.alt} />
+                  </Link>
+                )
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="problem-quotes">
+          <div className="container">
+            <div className="problem-quote-grid">
+              {problemQuotes.map((item) => (
+                <div key={item.quote}>
+                  <p className="problem-quote">&ldquo;{item.quote}&rdquo;</p>
+                  <span className="problem-quote-source">{item.source}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="lm-band" aria-label="Free sample classification">
+      <section id="lm-band" className="lm-band" aria-label="Free sample classification">
         <div className="container">
           <div className="lm-inner">
             <div className="lm-img-wrap">
@@ -232,19 +261,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="problem-quotes" aria-label="What buyers tell us">
-        <div className="container">
-          <div className="problem-quote-grid">
-            {problemQuotes.map((item) => (
-              <div key={item.quote}>
-                <p className="problem-quote">&ldquo;{item.quote}&rdquo;</p>
-                <span className="problem-quote-source">{item.source}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section id="how-it-works" className="section-soft" aria-labelledby="hiw-heading">
         <div className="container">
           <div className="text-center" style={{ marginBottom: "2.75rem" }}>
@@ -257,7 +273,7 @@ export default function HomePage() {
               <h3>Send us what you have</h3>
               <p>PDFs, ERP exports, portal downloads, spreadsheets. API connectors are available for most ERPs.</p>
             </article>
-            <article className="hiw-card featured">
+            <article className="hiw-card">
               <div className="hiw-badge">2</div>
               <div className="hiw-stage-label">Stage 2</div>
               <h3>We clean, enrich, and classify every line</h3>
@@ -317,6 +333,25 @@ export default function HomePage() {
           </p>
         </div>
       </section>
+
+      <LabelledOutputPanel
+        contained
+        background="soft"
+        eyebrow="Every line, labelled"
+        title="The same label on every supplier's line"
+        lead="Each line gets a UNSPSC label as it is read. Toilet tissue from four suppliers ends up in one place, so you can compare it one-to-one."
+        columns={["Segment", "Family", "Class", "Commodity"]}
+        nodes={taxonomyNodesForCurrency(currency)}
+        edges={TAXONOMY_EDGES}
+        breakdownLabel="Breakdown"
+        name="Toilet tissue"
+        detail={tissueDetailForCurrency(currency)}
+        suppliersLabel="Suppliers"
+        suppliers={tissueSuppliersForCurrency(currency)}
+        lineItemsLabel="Line items"
+        columnLabels={{ description: "Description", qty: "Qty", unit: "Unit", total: "Total" }}
+        lineItems={tissueLineItemsForCurrency(currency)}
+      />
 
       <section className="section-soft" aria-labelledby="demo-heading">
         <div className="container">
@@ -385,14 +420,14 @@ export default function HomePage() {
           <div className="bene-cards">
             {proofCards.map((card) => (
               <article className="bene-card" key={card.title}>
-                <h3>{card.title}</h3>
-                <p><strong>{card.stat}.</strong> {card.detail}</p>
-                <p className="proof-quote">
-                  &ldquo;{card.quote}&rdquo;
-                  <span className="proof-quote-role">{card.quoteRole}</span>
-                </p>
-                <Link className="bene-link" href={card.href}>
-                  Read the case →
+                <Link className="bene-card-link" href={card.href}>
+                  <h3>{card.title}</h3>
+                  <p><strong>{card.stat}.</strong> {card.detail}</p>
+                  <p className="proof-quote">
+                    &ldquo;{card.quote}&rdquo;
+                    <span className="proof-quote-role">{card.quoteRole}</span>
+                  </p>
+                  <span className="bene-link">Read the case →</span>
                 </Link>
               </article>
             ))}
@@ -426,20 +461,7 @@ export default function HomePage() {
         }
       />
 
-      <FaqSection title="Frequently asked questions" items={faqItems} />
-
-      <section className="section-soft" aria-labelledby="home-geo-heading">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-12">
-              <GeoBlock
-                title="What does Pearstop do?"
-                copy="Pearstop helps facilities management, infrastructure, and hard services companies clean procurement and asset data so teams can see what they are buying, plan maintenance more reliably, and feed trustworthy data into AI and reporting tools. If you need one plain answer, it is this: we turn messy operational data into something your business can actually use."
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      <FaqSection title="Frequently asked questions" items={faqItems} defaultOpenIndex={0} />
     </>
   );
 }

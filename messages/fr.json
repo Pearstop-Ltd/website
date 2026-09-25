@@ -112,7 +112,7 @@
       "title": "Parlons-en.",
       "lead": "Un problème de données qui mérite d'être résolu ? Nous serions ravis d'en entendre parler.",
       "getInTouch": "Contactez-nous",
-      "bookDiscovery": "Réservez un appel découverte de 7 minutes"
+      "bookDiscovery": "Réservez un appel découverte de 15 minutes"
     },
     "leaders": [
       {
@@ -340,7 +340,7 @@
     ],
     "cta": {
       "title": "Prêt à corriger les données à la base de votre prochain projet ?",
-      "button": "Réservez un appel découverte de 7 minutes",
+      "button": "Réservez un appel découverte de 15 minutes",
       "lead": "Parlez à un commercial. Nous vous montrerons exactement où vos données feraient échouer aujourd'hui une migration ERP, un déploiement Fabric ou une initiative IA."
     }
   },
@@ -426,7 +426,7 @@
     ],
     "cta": {
       "title": "Prêt à construire une véritable base de référence des dépenses ?",
-      "button": "Réservez un appel découverte de 7 minutes",
+      "button": "Réservez un appel découverte de 15 minutes",
       "lead": "Parlez à un commercial. Nous vous montrerons exactement où vos données de dépenses cachent le chiffre dont vous avez besoin."
     }
   },
@@ -523,7 +523,7 @@
     ],
     "cta": {
       "title": "Prêt à disposer de votre propre vision indépendante ?",
-      "button": "Réservez un appel découverte de 7 minutes",
+      "button": "Réservez un appel découverte de 15 minutes",
       "lead": "Parlez à un commercial et voyez exactement comment Pearstop transforme les données que vous recevez déjà en quelque chose de vérifiable."
     }
   },
@@ -618,7 +618,7 @@
     ],
     "cta": {
       "title": "Vos données sont-elles prêtes pour l'IA ?",
-      "button": "Réservez un appel découverte de 7 minutes",
+      "button": "Réservez un appel découverte de 15 minutes",
       "fabricLink": "Découvrez aussi votre préparation pour Fabric",
       "lead": "Parlez à un commercial et nous vous dirons exactement ce qui doit se passer avant que vos initiatives IA puissent produire des résultats."
     }
@@ -740,7 +740,7 @@
     },
     "cta": {
       "title": "Prêt à automatiser votre classification des achats ?",
-      "button": "Réservez un appel découverte de 7 minutes",
+      "button": "Réservez un appel découverte de 15 minutes",
       "lead": "Parlez à un commercial. Nous vous montrerons exactement comment le moteur de classification fonctionnerait avec vos données."
     }
   },
@@ -753,7 +753,7 @@
       "eyebrow": "Guide de classification UNSPSC par IA",
       "title": "Vous avez un grand catalogue Excel. Vous voulez que l'IA le classe en UNSPSC.",
       "lead": "C'est la demande que nous entendons le plus souvent, parfois sous la forme d'un fichier de dépenses qui n'a jamais porté de code, parfois sous la forme d'une pile de factures PDF qui n'est même pas encore devenue un fichier de dépenses. Ce guide décrit le processus réel : comment Pearstop transforme l'un ou l'autre point de départ en un jeu de données codé UNSPSC, ce qu'un pilote mesure avant de vous engager sur le fichier complet, et pourquoi la classification ne provient pas simplement du fait de demander à un modèle quel devrait être un code.",
-      "ctaPrimary": "Réservez un appel découverte de 7 minutes",
+      "ctaPrimary": "Réservez un appel découverte de 15 minutes",
       "ctaSecondary": "Voir le processus"
     },
     "paths": {
@@ -875,7 +875,7 @@
     },
     "cta": {
       "title": "Prêt à voir cela fonctionner sur vos propres données ?",
-      "button": "Réservez un appel découverte de 7 minutes",
+      "button": "Réservez un appel découverte de 15 minutes",
       "secondaryButton": "Essayer la recherche gratuite",
       "lead": "Parlez à un commercial, ou testez d'abord une description sur l'outil de recherche gratuit."
     }
@@ -957,7 +957,7 @@
     "cta": {
       "title": "Vous planifiez une migration Fabric ?",
       "lead": "Parlez-nous avant que la migration ne commence. Un appel de 30 minutes maintenant peut vous économiser des mois de retouches plus tard.",
-      "button": "Réservez un appel découverte de 7 minutes",
+      "button": "Réservez un appel découverte de 15 minutes",
       "aiLink": "Découvrez aussi votre préparation à l'IA"
     }
   },
@@ -1691,7 +1691,7 @@
     "cta": {
       "title": "Vous préférez en discuter ?",
       "lead": "Nous pouvons aussi vous présenter la même réflexion lors d'un appel rapide.",
-      "bookDiscovery": "Réservez un appel découverte de 7 minutes",
+      "bookDiscovery": "Réservez un appel découverte de 15 minutes",
       "backHome": "Retour à l'accueil"
     }
   },
@@ -1704,7 +1704,7 @@
       "eyebrow": "FAQ",
       "title": "Les questions qu'on nous pose le plus souvent.",
       "lead": "Tout ce que vous devez savoir sur le fonctionnement de Pearstop, son coût, et si c'est adapté à votre organisation.",
-      "cta": "Réservez un appel découverte de 7 minutes",
+      "cta": "Réservez un appel découverte de 15 minutes",
       "secondary": "Accéder aux questions"
     },
     "sections": {
@@ -1857,13 +1857,13 @@
     },
     "stillHaveQuestions": {
       "label": "Encore une question ?",
-      "cta": "Réservez un appel découverte de 7 minutes",
+      "cta": "Réservez un appel découverte de 15 minutes",
       "email": "Envoyez-nous un message",
       "copy": "Si votre question n'a pas de réponse ici, le moyen le plus rapide d'en obtenir une est de parler à un commercial. Il n'y a aucune pression commerciale - c'est une conversation directe sur votre situation de données."
     },
     "cta": {
       "title": "Prêt à le voir en action ?",
-      "button": "Réservez un appel découverte de 7 minutes",
+      "button": "Réservez un appel découverte de 15 minutes",
       "lead": "Parlez à un commercial et nous vous montrerons exactement comment le moteur de classification fonctionne avec vos données."
     }
   },
@@ -1880,7 +1880,7 @@
       "eyebrow": "UNSPSC pour le Facilities Management",
       "title": "Les données d'achats FM sont les plus difficiles à classifier. Voici comment y remédier.",
       "lead": "Les entreprises de services techniques et de FM gèrent des milliers de lignes de facture réparties sur des centaines de fournisseurs et de sites. Pearstop classe automatiquement l'ensemble — 90 à 95 % sans intervention humaine — afin que votre équipe puisse se concentrer sur la gestion des catégories plutôt que sur la saisie de données.",
-      "cta": "Réservez un appel découverte de 7 minutes",
+      "cta": "Réservez un appel découverte de 15 minutes",
       "secondary": "Comment ça marche"
     },
     "challenge": {
@@ -1970,7 +1970,7 @@
     },
     "cta": {
       "title": "Prêt à automatiser la classification des achats FM ?",
-      "button": "Réservez un appel découverte de 7 minutes",
+      "button": "Réservez un appel découverte de 15 minutes",
       "lead": "Parlez à un commercial. Nous vous montrerons exactement comment le moteur fonctionne avec vos données de dépenses."
     }
   },
@@ -1987,7 +1987,7 @@
       "eyebrow": "Classification UNSPSC Pays-Bas",
       "title": "Classification UNSPSC pour les entreprises néerlandaises d'infrastructure, de FM et de construction.",
       "lead": "Pearstop automatise la classification des lignes d'achats selon la norme UNSPSC — 90 à 95 % sans effort manuel. Avec prise en charge de la facturation électronique Peppol et des systèmes ERP néerlandais.",
-      "cta": "Réservez un appel découverte de 7 minutes",
+      "cta": "Réservez un appel découverte de 15 minutes",
       "secondary": "Peppol et UNSPSC"
     },
     "peppol": {
@@ -2064,8 +2064,8 @@
     },
     "cta": {
       "title": "Prêt à automatiser votre classification des achats ?",
-      "lead": "Réservez un appel découverte de 7 minutes. Nous vous montrerons comment le moteur de classification fonctionne avec vos données.",
-      "button": "Réservez un appel découverte de 7 minutes"
+      "lead": "Réservez un appel découverte de 15 minutes. Nous vous montrerons comment le moteur de classification fonctionne avec vos données.",
+      "button": "Réservez un appel découverte de 15 minutes"
     }
   },
   "UnspscDE": {
@@ -2081,7 +2081,7 @@
       "eyebrow": "Classification UNSPSC Allemagne",
       "title": "Classification UNSPSC pour les entreprises allemandes de fabrication, de FM et d'infrastructure.",
       "lead": "Pearstop automatise la classification des lignes d'achats selon la norme UNSPSC — 90 à 95 % sans effort manuel. Avec prise en charge de l'obligation allemande de facturation électronique 2025 et de l'intégration SAP.",
-      "cta": "Réservez un appel découverte de 7 minutes",
+      "cta": "Réservez un appel découverte de 15 minutes",
       "secondary": "Facturation électronique et UNSPSC"
     },
     "einvoicing": {
@@ -2156,8 +2156,8 @@
     },
     "cta": {
       "title": "Prêt à automatiser votre classification des achats ?",
-      "lead": "Réservez un appel découverte de 7 minutes. Nous vous montrerons comment le moteur de classification fonctionne avec vos données.",
-      "button": "Réservez un appel découverte de 7 minutes"
+      "lead": "Réservez un appel découverte de 15 minutes. Nous vous montrerons comment le moteur de classification fonctionne avec vos données.",
+      "button": "Réservez un appel découverte de 15 minutes"
     }
   },
   "UnspscLookup": {
@@ -2193,7 +2193,7 @@
     },
     "bulk": {
       "label": "Besoin de classer des milliers de lignes ?",
-      "cta": "Réservez un appel découverte de 7 minutes",
+      "cta": "Réservez un appel découverte de 15 minutes",
       "learnMore": "Découvrez comment ça marche",
       "copy": "Cet outil gère les recherches unitaires. Le moteur de classification automatisé de Pearstop traite 35 000 lignes d'achats par mois - avec 90 à 95 % de classification automatique et une intégration SAP complète. Parlez à un commercial pour le voir avec vos données."
     },
@@ -2240,7 +2240,7 @@
     },
     "cta": {
       "title": "Besoin de classer des milliers de lignes ?",
-      "button": "Réservez un appel découverte de 7 minutes",
+      "button": "Réservez un appel découverte de 15 minutes",
       "lead": "Parlez à un commercial et nous vous montrerons comment le moteur de classification complet fonctionne avec vos données d'achats réelles."
     }
   },
@@ -2316,6 +2316,19 @@
         "copy": "À mesure que de nouvelles factures arrivent, elles sont classifiées de la même manière - plus besoin d'un projet de nettoyage chaque année."
       },
       "beforeAfterCaption": "Exemple illustratif : six lignes de facture de trois fournisseurs. La description et le fournisseur d'origine sont conservés exactement tels que reçus - Pearstop ajoute uniquement les colonnes à droite."
+    },
+    "labelledOutput": {
+      "eyebrow": "Chaque ligne, labellisée",
+      "title": "Le même label sur la ligne de chaque fournisseur",
+      "lead": "Chaque ligne reçoit un label UNSPSC dès sa lecture. Le papier toilette de quatre fournisseurs se retrouve au même endroit, pour une comparaison ligne à ligne.",
+      "illustrativeLabel": "Exemple illustratif",
+      "breakdownLabel": "Répartition",
+      "suppliersLabel": "Fournisseurs",
+      "lineItemsLabel": "Lignes",
+      "columnDescription": "Description",
+      "columnQty": "Qté",
+      "columnUnit": "Unité",
+      "columnTotal": "Total"
     },
     "screenshot": {
       "alt": "Tableau de bord Pearstop montrant des données de dépenses classifiées au niveau de la ligne, avec contrôle humain",
@@ -2395,6 +2408,10 @@
       "heading": "Questions fréquentes",
       "items": [
         {
+          "q": "Que fait Pearstop ?",
+          "a": "Pearstop aide les entreprises de facilities management, d'infrastructure et de hard services à nettoyer leurs données d'achats et d'actifs, afin que les équipes voient ce qu'elles achètent, planifient la maintenance plus fiablement, et alimentent des outils IA et de reporting avec des données fiables. Si vous avez besoin d'une seule réponse simple : nous transformons des données opérationnelles désordonnées en quelque chose que votre entreprise peut réellement utiliser."
+        },
+        {
           "q": "Qu'est-ce que la classification UNSPSC ?",
           "a": "UNSPSC est une norme mondiale de catégorisation des produits et services selon une hiérarchie cohérente. Elle permet de comparer les dépenses entre fournisseurs, sites et périodes en utilisant les mêmes catégories, plutôt que la description en texte libre utilisée au hasard par chaque facture."
         },
@@ -2434,7 +2451,7 @@
     "hero": {
       "eyebrow": "Extraction de factures et documents",
       "title": "Si personne ne lit la facture, les données qu'elle contient n'existent pas.",
-      "lead": "Les PDF, scans et bons de livraison arrivent plus vite que quiconque ne peut les lire. Pearstop transforme automatiquement cette paperasse en lignes structurées, pour qu'il y ait déjà quelque chose à classifier.",
+      "lead": "Les PDF, scans et bons de livraison arrivent plus vite que quiconque ne peut les lire. Pearstop transforme automatiquement cette paperasse en lignes structurées et classifiées.",
       "primaryLabel": "Envoyez-nous 10 factures",
       "secondaryLabel": "Voir comment ça marche →"
     },
@@ -2467,31 +2484,44 @@
     ],
     "howItWorks": {
       "eyebrow": "Comment ça marche",
-      "title": "Du document non lu à la ligne structurée",
+      "title": "Du document non lu à la ligne classifiée",
       "inputs": [
         "Factures PDF",
         "Papier scanné",
         "Pièces jointes e-mail",
         "Flux EDI"
       ],
-      "processLabel": "lire · structurer · vérifier",
+      "processLabel": "lire · structurer · étiqueter · vérifier",
       "outputs": [
         "Votre ERP ou plateforme P2P",
         "Votre outil BI",
-        "Classification, étape suivante"
+        "Tableaux de bord Pearstop"
       ],
       "step1": {
         "title": "Ingérer, quel que soit le format",
         "copy": "Aucun modèle fixe par fournisseur, et aucun fournisseur n'a besoin de changer sa façon d'envoyer quoi que ce soit."
       },
       "step2": {
-        "title": "Lue et vérifiée",
-        "copy": "Les lignes, quantités, coûts unitaires, codes de coût et références fournisseurs sont structurés automatiquement. Tout élément incertain est signalé à une personne, et chaque correction enseigne au pipeline ce fournisseur."
+        "title": "Lue, étiquetée et vérifiée",
+        "copy": "Les lignes et les coûts unitaires sont structurés, et chaque ligne reçoit une étiquette standard (ex. UNSPSC), afin que le même article soit comparable un pour un entre fournisseurs. Vos propres étiquettes peuvent coexister. Tout élément incertain est transmis à une personne, et chaque correction enseigne au pipeline ce fournisseur."
       },
       "step3": {
-        "title": "Livrée dans ce que vous utilisez",
-        "copy": "La sortie arrive dans le format attendu par votre ERP, plateforme P2P ou outil BI, prête pour la classification, le reporting ou le rechargement."
+        "title": "Sortie structurée, prête à l'emploi",
+        "copy": "Consultez-la dans les tableaux de bord de Pearstop, ou renvoyez-la vers SAP ou tout autre ERP, plateforme P2P ou outil BI, dans le format attendu par chacun."
       }
+    },
+    "labelledOutput": {
+      "eyebrow": "Chaque ligne, étiquetée",
+      "title": "La même étiquette sur la ligne de chaque fournisseur",
+      "lead": "Chaque ligne reçoit une étiquette UNSPSC dès sa lecture. Le papier toilette de quatre fournisseurs se retrouve au même endroit, pour une comparaison un pour un.",
+      "illustrativeLabel": "Exemple illustratif",
+      "breakdownLabel": "Répartition",
+      "suppliersLabel": "Fournisseurs",
+      "lineItemsLabel": "Lignes",
+      "columnDescription": "Description",
+      "columnQty": "Qté",
+      "columnUnit": "Unité",
+      "columnTotal": "Total"
     },
     "stats": {
       "s1": {
@@ -2521,8 +2551,8 @@
         "copy": "Les données sont structurées dès l'arrivée des factures, au lieu de plusieurs semaines plus tard quand quelqu'un résorbe le retard."
       },
       "b2": {
-        "title": "Quelque chose à classifier",
-        "copy": "Rien ne peut être catégorisé, benchmarké ou comparé tant que ça n'existe pas sous forme de données structurées. L'extraction vient en premier."
+        "title": "Prêt à comparer",
+        "copy": "Le même article, chez des fournisseurs différents, porte la même étiquette, il peut donc être comparé dès sa lecture."
       },
       "b3": {
         "title": "Fini la saisie et la correction",
@@ -2536,7 +2566,7 @@
     },
     "geoBlock": {
       "title": "Qu'est-ce que l'extraction de données de factures et pourquoi est-ce important pour la qualité des données d'achats ?",
-      "copy": "L'extraction de données de factures et documents est le processus qui consiste à lire automatiquement les factures PDF, documents papier scannés et bons de livraison, puis à les convertir en données de ligne structurées. Pour les équipes achats en facilities management, construction et industrie, c'est l'étape qui doit avoir lieu avant que la classification, l'analyse des dépenses ou le codage UNSPSC ne soient même possibles. La saisie manuelle ne peut pas suivre le volume de factures sur plusieurs sites et fournisseurs, ce qui explique pourquoi les factures non lues et les données de dépenses périmées sont l'un des blocages les plus courants pour le category management et l'analyse des dépenses pilotée par l'IA. Pearstop combine l'OCR avec une couche d'extraction IA et une étape de contrôle humain pour les lignes à faible confiance, afin que la sortie soit une donnée structurée prête pour la classification, pas un nouveau goulot d'étranglement manuel."
+      "copy": "L'extraction de données de factures et documents est le processus qui consiste à lire automatiquement les factures PDF, documents papier scannés et bons de livraison, puis à les convertir en données de ligne structurées et classifiées. Pour les équipes achats en facilities management, construction et industrie, c'est l'étape qui doit avoir lieu avant que l'analyse des dépenses ou le reporting ne soient même possibles — chez Pearstop, la classification (UNSPSC ou la taxonomie propre au client) a lieu dans le même passage que l'extraction, pas comme un projet séparé après coup. La saisie manuelle ne peut pas suivre le volume de factures sur plusieurs sites et fournisseurs, ce qui explique pourquoi les factures non lues et les données de dépenses périmées sont l'un des blocages les plus courants pour le category management et l'analyse des dépenses pilotée par l'IA. Pearstop combine l'OCR avec une couche d'extraction IA et une étape de contrôle humain pour les lignes à faible confiance, afin que la sortie soit une donnée structurée et classifiée, pas un nouveau goulot d'étranglement manuel."
     },
     "faq": [
       {

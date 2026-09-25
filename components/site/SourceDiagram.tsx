@@ -40,9 +40,7 @@ export function SourceDiagram({ inputs, processLines, outputs, className }: Sour
         <PearstopLogo height={19} />
         <div className={styles.processLines}>
           {processLines.map((line, i) => (
-            <span key={i}>
-              {i + 1} · {line}
-            </span>
+            <span key={i}>{processLines.length > 1 ? `${i + 1} · ` : ""}{line}</span>
           ))}
         </div>
       </div>

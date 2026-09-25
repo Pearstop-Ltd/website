@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { getTranslations , setRequestLocale } from "next-intl/server";
-import { CTABand, GeoBlock, SectionTitle } from "@/components/content";
-import { SolutionsHero } from "@/components/site/SolutionsHero";
+import Script from "next/script";
+import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
+import { SolutionsIndexPage, type SolutionsIndexCopy } from "@/components/site/pages/SolutionsIndex";
 import { alternateLanguages, siteConfig } from "@/lib/site";
+
+const PAGE_URL = `${siteConfig.url}/solutions`;
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -12,175 +13,68 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return {
     title: t("meta.title"),
     description: t("meta.description"),
-    alternates: {
-      canonical: `${siteConfig.url}/solutions`,
-      languages: alternateLanguages("/solutions")
+    alternates: { canonical: PAGE_URL, languages: alternateLanguages("/solutions") },
+    openGraph: {
+      title: `${t("meta.title")} | Pearstop`,
+      description: t("meta.description"),
+      url: PAGE_URL,
+      siteName: siteConfig.name
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${t("meta.title")} | Pearstop`,
+      description: t("meta.description")
     }
   };
 }
 
-export default async function SolutionsPage({ params }: { params: Promise<{ locale: string }> }) {
+export default async function SolutionsRoute({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const prefix = locale === "en" ? "" : `/${locale}`;
-  const t = await getTranslations("Solutions");
+  const messages = await getMessages({ locale });
+  const copy = messages.Solutions as unknown as SolutionsIndexCopy;
 
-  const solutionCards = [
-    {
-      eyebrow: "01",
-      title: t("cards.items.0.title"),
-      copy: t("cards.items.0.copy"),
-      href: `${prefix}/invoice-data-extraction`
-    },
-    {
-      eyebrow: "02",
-      title: t("cards.items.1.title"),
-      copy: t("cards.items.1.copy"),
-      href: `${prefix}/unspsc`
-    },
-    {
-      eyebrow: "03",
-      title: t("cards.items.2.title"),
-      copy: t("cards.items.2.copy"),
-      href: `${prefix}/procurement-data-quality`
-    },
-    {
-      eyebrow: "04",
-      title: t("cards.items.3.title"),
-      copy: t("cards.items.3.copy"),
-      href: `${prefix}/data-quality`
-    },
-    {
-      eyebrow: "05",
-      title: t("cards.items.4.title"),
-      copy: t("cards.items.4.copy"),
-      href: `${prefix}/asset-data-management`
-    }
-  ];
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: copy.faq.items.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a }
+    }))
+  };
+
+  const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListElement: copy.problems.items.map((item, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      item: {
+        "@type": "Service",
+        name: item.title,
+        url: `${siteConfig.url}${item.href}`,
+        description: item.body
+      }
+    }))
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: siteConfig.url },
+      { "@type": "ListItem", position: 2, name: "Solutions", item: PAGE_URL }
+    ]
+  };
 
   return (
     <>
-      <SolutionsHero
-        eyebrow={t("hero.eyebrow")}
-        title={t("hero.title")}
-        lead={t("hero.lead")}
-      />
+      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <Script id="itemlist-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
+      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
-      <section className="section-soft">
-        <div className="container">
-          <SectionTitle
-            title={t("cards.title")}
-            lead={t("cards.lead")}
-          />
-
-          <div className="bene-cards">
-            {solutionCards.map((solution) => (
-              <article className={`bene-card ${solution.eyebrow === "02" ? "featured" : ""}`} key={solution.href}>
-                <div className="sol-eyebrow">{solution.eyebrow}</div>
-                <h3>{solution.title}</h3>
-                <p>{solution.copy}</p>
-                <Link className="bene-link" href={solution.href}>
-                  {t("cards.exploreLink")}
-                </Link>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div className="container">
-          <SectionTitle title={t("moreCards.title")} lead={t("moreCards.lead")} />
-          <div className="bene-cards">
-            {[
-              { title: t("moreCards.items.0.title"), copy: t("moreCards.items.0.copy"), href: `${prefix}/spend-cube` },
-              { title: t("moreCards.items.1.title"), copy: t("moreCards.items.1.copy"), href: `${prefix}/procurement-consultancies` }
-            ].map((solution) => (
-              <article className="bene-card" key={solution.href}>
-                <h3>{solution.title}</h3>
-                <p>{solution.copy}</p>
-                <Link className="bene-link" href={solution.href}>
-                  {t("cards.exploreLink")}
-                </Link>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section-soft">
-        <div className="container">
-          <div className="row" style={{ alignItems: "center", gap: "2rem", flexWrap: "wrap" }}>
-            <div className="col-md-5">
-              <div className="story-label">{t("approach.label")}</div>
-              <h2>{t("approach.title")}</h2>
-              <p className="light-copy" style={{ marginBottom: "1.25rem" }}>
-                {t("approach.copy")}
-              </p>
-              <ul className="ind-pains">
-                <li>
-                  <span className="ind-ok">✓</span>
-                  <div>{t("approach.bullets.0")}</div>
-                </li>
-                <li>
-                  <span className="ind-ok">✓</span>
-                  <div>{t("approach.bullets.1")}</div>
-                </li>
-                <li>
-                  <span className="ind-ok">✓</span>
-                  <div>{t("approach.bullets.2")}</div>
-                </li>
-                <li>
-                  <span className="ind-ok">✓</span>
-                  <div>{t("approach.bullets.3")}</div>
-                </li>
-              </ul>
-            </div>
-            <div className="col-md-6" style={{ marginLeft: "auto" }}>
-              <div className="quote-card">
-                <div className="story-label">{t("approach.worksWithLabel")}</div>
-                <p className="light-copy">
-                  {t("approach.worksCopy")}
-                </p>
-                <div style={{ textAlign: "center", color: "var(--purple)", fontSize: "1.4rem", margin: "1rem 0" }}>↓</div>
-                <div className="quote-card" style={{ margin: 0, background: "var(--primary)", borderColor: "var(--primary)", color: "#fff" }}>
-                  <div className="story-label" style={{ color: "rgba(255,255,255,0.8)" }}>{t("approach.engineLabel")}</div>
-                  <p style={{ color: "rgba(255,255,255,0.85)" }}>
-                    {t("approach.engineCopy")}
-                  </p>
-                </div>
-                <div style={{ textAlign: "center", color: "var(--purple)", fontSize: "1.4rem", margin: "1rem 0" }}>↓</div>
-                <div className="quote-card" style={{ margin: 0 }}>
-                  <div className="story-label">{t("approach.outputLabel")}</div>
-                  <p className="light-copy">{t("approach.outputCopy")}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="section-tight">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-12">
-              <GeoBlock
-                title={t("geoBlock.title")}
-                copy={t("geoBlock.copy")}
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <CTABand
-        title={t("cta.title")}
-        lead={t("cta.lead")}
-        actions={[
-          { label: t("cta.bookDiscovery"), href: siteConfig.calendly, variant: "primary", external: true },
-          { label: t("cta.viewIndustries"), href: `${prefix}/industries`, variant: "secondary" }
-        ]}
-      />
+      <SolutionsIndexPage copy={copy} />
     </>
   );
 }

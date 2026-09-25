@@ -23,6 +23,9 @@ type HeroProps = {
   leadingAction?: ReactNode;
   videoUrl?: string;
   videoPoster?: string;
+  /** Two or more clips that alternate in the hero background, each played
+   * once before handing off to the next. Takes precedence over videoUrl. */
+  videos?: readonly { src: string; poster?: string; watermarkCrop?: boolean }[];
   className?: string;
   /** Renders `lead` as a left-aligned block with a left accent border,
    * instead of the default centered hero-lead paragraph. */
@@ -33,10 +36,12 @@ type HeroProps = {
   titleSize?: "default" | "sm";
 };
 
-export function PageHero({ eyebrow, title, lead, actions, leadingAction, videoUrl, videoPoster, className, leadAccent, titleSize }: HeroProps) {
+export function PageHero({ eyebrow, title, lead, actions, leadingAction, videoUrl, videoPoster, videos, className, leadAccent, titleSize }: HeroProps) {
   return (
     <header className={`page-hero dark ${className ?? ""}`}>
-      {videoUrl ? (
+      {videos && videos.length ? (
+        <HeroBackgroundVideo videos={videos} />
+      ) : videoUrl ? (
         <HeroBackgroundVideo src={videoUrl} poster={videoPoster ?? "/images/photos/construction-planner-woman-1.png"} />
       ) : (
         <div className="hero-bg" aria-hidden="true" />

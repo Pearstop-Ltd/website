@@ -2317,6 +2317,19 @@
       },
       "beforeAfterCaption": "Illustratives Beispiel: sechs Rechnungszeilen von drei Lieferanten. Die ursprüngliche Beschreibung und der Lieferant bleiben exakt so erhalten, wie sie eingegangen sind - Pearstop fügt nur die Spalten rechts hinzu."
     },
+    "labelledOutput": {
+      "eyebrow": "Jede Zeile, gelabelt",
+      "title": "Dasselbe Label auf der Zeile jedes Lieferanten",
+      "lead": "Jede Zeile erhält beim Einlesen ein UNSPSC-Label. Toilettenpapier von vier Lieferanten landet so an einem Ort und lässt sich eins zu eins vergleichen.",
+      "illustrativeLabel": "Illustratives Beispiel",
+      "breakdownLabel": "Aufschlüsselung",
+      "suppliersLabel": "Lieferanten",
+      "lineItemsLabel": "Positionen",
+      "columnDescription": "Beschreibung",
+      "columnQty": "Menge",
+      "columnUnit": "Einheit",
+      "columnTotal": "Gesamt"
+    },
     "screenshot": {
       "alt": "Pearstop-Dashboard mit klassifizierten Spend-Daten auf Zeilenebene inklusive menschlicher Prüfung",
       "caption": "Klassifizierte Spend-Daten auf Zeilenebene, mit sichtbarem Schritt der menschlichen Prüfung."
@@ -2395,6 +2408,10 @@
       "heading": "Häufig gestellte Fragen",
       "items": [
         {
+          "q": "Was macht Pearstop?",
+          "a": "Pearstop hilft Facilities-Management-, Infrastruktur- und Hard-Services-Unternehmen, Procurement- und Asset-Daten zu bereinigen, damit Teams sehen, was sie einkaufen, Instandhaltung zuverlässiger planen und vertrauenswürdige Daten in KI- und Reporting-Tools einspeisen können. Falls Sie eine einfache Antwort brauchen: Wir verwandeln unübersichtliche operative Daten in etwas, das Ihr Unternehmen tatsächlich nutzen kann."
+        },
+        {
           "q": "Was ist die UNSPSC-Klassifizierung?",
           "a": "UNSPSC ist ein weltweiter Standard zur Kategorisierung von Produkten und Dienstleistungen in einer einheitlichen Hierarchie. So lässt sich Spend über Lieferanten, Standorte und Zeiträume hinweg mit denselben Kategorien vergleichen, statt mit der Freitextbeschreibung, die jede Rechnung zufällig verwendet hat."
         },
@@ -2434,7 +2451,7 @@
     "hero": {
       "eyebrow": "Rechnungs- und Dokumentenextraktion",
       "title": "Wenn niemand die Rechnung liest, existieren die Daten darin nicht.",
-      "lead": "PDFs, Scans und Lieferscheine treffen schneller ein, als jemand sie lesen kann. Pearstop verwandelt diesen Papierkram automatisch in strukturierte Positionen, damit überhaupt etwas zu klassifizieren ist.",
+      "lead": "PDFs, Scans und Lieferscheine treffen schneller ein, als jemand sie lesen kann. Pearstop verwandelt diesen Papierkram automatisch in strukturierte, klassifizierte Positionen.",
       "primaryLabel": "Senden Sie uns 10 Rechnungen",
       "secondaryLabel": "So funktioniert es →"
     },
@@ -2467,31 +2484,44 @@
     ],
     "howItWorks": {
       "eyebrow": "So funktioniert es",
-      "title": "Vom ungelesenen Dokument zur strukturierten Position",
+      "title": "Vom ungelesenen Dokument zur klassifizierten Position",
       "inputs": [
         "PDF-Rechnungen",
         "Gescanntes Papier",
         "E-Mail-Anhänge",
         "EDI-Feeds"
       ],
-      "processLabel": "lesen · strukturieren · prüfen",
+      "processLabel": "lesen · strukturieren · klassifizieren · prüfen",
       "outputs": [
         "Ihr ERP oder P2P-System",
         "Ihr BI-Tool",
-        "Klassifizierung, nächster Schritt"
+        "Pearstop-Dashboards"
       ],
       "step1": {
         "title": "Erfassung, in jedem Format",
         "copy": "Keine feste Vorlage pro Lieferant, und kein Lieferant muss ändern, wie er etwas versendet."
       },
       "step2": {
-        "title": "Gelesen und geprüft",
-        "copy": "Positionen, Mengen, Stückkosten, Kostenstellen und Lieferantenreferenzen werden automatisch strukturiert. Alles Unsichere wird für eine Person markiert, und jede Korrektur bringt der Pipeline diesen Lieferanten näher bei."
+        "title": "Gelesen, klassifiziert und geprüft",
+        "copy": "Positionen und Stückkosten werden strukturiert, und jede Position erhält ein Standardlabel (z. B. UNSPSC), sodass derselbe Artikel eins-zu-eins zwischen Lieferanten vergleichbar ist. Ihre eigenen Labels können daneben bestehen. Alles Unsichere geht an eine Person, und jede Korrektur bringt der Pipeline diesen Lieferanten näher bei."
       },
       "step3": {
-        "title": "Geliefert in das, was Sie nutzen",
-        "copy": "Die Ausgabe erfolgt in dem Format, das Ihr ERP, P2P-System oder BI-Tool erwartet - bereit für Klassifizierung, Reporting oder erneutes Laden."
+        "title": "Strukturierte Ausgabe, einsatzbereit",
+        "copy": "Sehen Sie sie in den Dashboards von Pearstop, oder schicken Sie sie zurück in SAP oder ein anderes ERP-, P2P- oder BI-System, im Format, das jedes davon erwartet."
       }
+    },
+    "labelledOutput": {
+      "eyebrow": "Jede Position, klassifiziert",
+      "title": "Dasselbe Label auf der Position jedes Lieferanten",
+      "lead": "Jede Position erhält beim Lesen ein UNSPSC-Label. Toilettenpapier von vier Lieferanten landet an einem Ort, sodass Sie es eins-zu-eins vergleichen können.",
+      "illustrativeLabel": "Illustratives Beispiel",
+      "breakdownLabel": "Aufschlüsselung",
+      "suppliersLabel": "Lieferanten",
+      "lineItemsLabel": "Positionen",
+      "columnDescription": "Beschreibung",
+      "columnQty": "Menge",
+      "columnUnit": "Einheit",
+      "columnTotal": "Gesamt"
     },
     "stats": {
       "s1": {
@@ -2521,8 +2551,8 @@
         "copy": "Daten werden strukturiert, sobald Rechnungen eintreffen, statt Wochen später, wenn jemand den Rückstand aufarbeitet."
       },
       "b2": {
-        "title": "Etwas zu klassifizieren",
-        "copy": "Nichts kann kategorisiert, gebenchmarkt oder verglichen werden, bevor es als strukturierte Daten existiert. Extraktion kommt zuerst."
+        "title": "Bereit zum Vergleichen",
+        "copy": "Derselbe Artikel von unterschiedlichen Lieferanten trägt dasselbe Label und kann so sofort beim Lesen verglichen werden."
       },
       "b3": {
         "title": "Kein Erfassen und Korrigieren mehr",
@@ -2536,7 +2566,7 @@
     },
     "geoBlock": {
       "title": "Was ist Rechnungsdatenextraktion und warum ist sie wichtig für die Procurement-Datenqualität?",
-      "copy": "Rechnungs- und Dokumentendatenextraktion ist der Prozess, bei dem PDF-Rechnungen, gescannte Papierunterlagen und Lieferscheine automatisch gelesen und in strukturierte Positionsdaten umgewandelt werden. Für Einkaufsteams in Facilities Management, Bau und Fertigung ist dies der Schritt, der stattfinden muss, bevor Klassifizierung, Spend-Analyse oder UNSPSC-Codierung überhaupt möglich sind. Manuelle Erfassung kann mit dem Rechnungsvolumen über mehrere Standorte und Lieferanten nicht mithalten, weshalb ungelesene Rechnungen und veraltete Spend-Daten zu den häufigsten Blockaden für Category Management und KI-gestützte Spend-Analyse gehören. Pearstop kombiniert OCR mit einer KI-Extraktionsschicht und einem menschlichen Prüfschritt für Positionen mit geringer Konfidenz, sodass die Ausgabe strukturierte, klassifizierungsbereite Daten sind - kein neuer manueller Engpass."
+      "copy": "Rechnungs- und Dokumentendatenextraktion ist der Prozess, bei dem PDF-Rechnungen, gescannte Papierunterlagen und Lieferscheine automatisch gelesen und in strukturierte, klassifizierte Positionsdaten umgewandelt werden. Für Einkaufsteams in Facilities Management, Bau und Fertigung ist dies der Schritt, der stattfinden muss, bevor Spend-Analyse oder Reporting überhaupt möglich sind - bei Pearstop erfolgt die Klassifizierung (UNSPSC oder die eigene Taxonomie des Kunden) im selben Durchgang wie die Extraktion, nicht als separates Projekt im Nachhinein. Manuelle Erfassung kann mit dem Rechnungsvolumen über mehrere Standorte und Lieferanten nicht mithalten, weshalb ungelesene Rechnungen und veraltete Spend-Daten zu den häufigsten Blockaden für Category Management und KI-gestützte Spend-Analyse gehören. Pearstop kombiniert OCR mit einer KI-Extraktionsschicht und einem menschlichen Prüfschritt für Positionen mit geringer Konfidenz, sodass die Ausgabe strukturierte, klassifizierte Daten sind - kein neuer manueller Engpass."
     },
     "faq": [
       {

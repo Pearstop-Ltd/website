@@ -2,12 +2,21 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import Link from "next/link";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { GeoBlock, PageHero } from "@/components/content";
+import { PageHero } from "@/components/content";
 import { FaqSchema } from "@/components/blog";
 import { FaqSection } from "@/components/site/FaqSection";
 import { FaqHighlight } from "@/components/site/FaqHighlight";
+import { LabelledOutputPanel } from "@/components/site/LabelledOutputPanel";
 import { SampleRequestModal } from "@/components/sample-request-modal";
 import { alternateLanguages, siteConfig } from "@/lib/site";
+import {
+  TAXONOMY_EDGES,
+  taxonomyNodesForCurrency,
+  tissueSuppliersForCurrency,
+  tissueLineItemsForCurrency,
+  tissueDetailForCurrency,
+} from "@/lib/taxonomy-demo-data";
+import { getRequestCurrency } from "@/lib/currency";
 
 const organizationSchema = {
   "@context": "https://schema.org",
@@ -80,6 +89,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   setRequestLocale(locale);
   const prefix = locale === "en" ? "" : `/${locale}`;
   const t = await getTranslations("Home");
+  const currency = await getRequestCurrency();
 
   const problemQuotes = t.raw("problemQuotes.items") as ProblemQuote[];
   const whoTiles = t.raw("who.tiles") as WhoTile[];
@@ -98,8 +108,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       <PageHero
         className="hero-tall hero-left"
         title={<>{t("hero.title")}</>}
-        videoUrl={siteConfig.assets.heroVideo}
-        videoPoster={siteConfig.assets.heroVideoPoster}
+        videos={siteConfig.assets.heroVideos}
         lead={
           <>
             {t("hero.leadLine1")}{" "}
@@ -112,26 +121,41 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         ]}
       />
 
-      <section className="clients-strip" aria-label="Trusted by">
-        <div className="container">
-          <p className="clients-label">{t("clients.label")}</p>
-          <div className="clients-logos">
-            {clientLogos.map((logo) => (
-              logo.external ? (
-                <a key={logo.alt} href={logo.href} target="_blank" rel="noopener noreferrer" aria-label={`${logo.alt} website`}>
-                  <img src={logo.src} alt={logo.alt} />
-                </a>
-              ) : (
-                <Link key={logo.alt} href={`${prefix}${logo.href}`} aria-label={`${logo.alt} case study`}>
-                  <img src={logo.src} alt={logo.alt} />
-                </Link>
-              )
-            ))}
+      <section id="clients-and-quotes" className="clients-and-quotes dark ccta-dark" aria-label="Trusted by, and what buyers tell us">
+        <div className="clients-strip">
+          <div className="container">
+            <p className="clients-label">{t("clients.label")}</p>
+            <div className="clients-logos">
+              {clientLogos.map((logo) => (
+                logo.external ? (
+                  <a key={logo.alt} href={logo.href} target="_blank" rel="noopener noreferrer" aria-label={`${logo.alt} website`}>
+                    <img src={logo.src} alt={logo.alt} />
+                  </a>
+                ) : (
+                  <Link key={logo.alt} href={`${prefix}${logo.href}`} aria-label={`${logo.alt} case study`}>
+                    <img src={logo.src} alt={logo.alt} />
+                  </Link>
+                )
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="problem-quotes">
+          <div className="container">
+            <div className="problem-quote-grid">
+              {problemQuotes.map((item) => (
+                <div key={item.quote}>
+                  <p className="problem-quote">&ldquo;{item.quote}&rdquo;</p>
+                  <span className="problem-quote-source">{item.source}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="lm-band" aria-label="Free sample classification">
+      <section id="lm-band" className="lm-band" aria-label="Free sample classification">
         <div className="container">
           <div className="lm-inner">
             <div className="lm-img-wrap">
@@ -151,19 +175,6 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         </div>
       </section>
 
-      <section className="problem-quotes" aria-label={t("problemQuotes.title")}>
-        <div className="container">
-          <div className="problem-quote-grid">
-            {problemQuotes.map((item) => (
-              <div key={item.quote}>
-                <p className="problem-quote">&ldquo;{item.quote}&rdquo;</p>
-                <span className="problem-quote-source">{item.source}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section id="how-it-works" className="section-soft" aria-labelledby="hiw-heading">
         <div className="container">
           <div className="text-center" style={{ marginBottom: "2.75rem" }}>
@@ -176,7 +187,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
               <h3>{t("howItWorks.stage1.title")}</h3>
               <p>{t("howItWorks.stage1.copy")}</p>
             </article>
-            <article className="hiw-card featured">
+            <article className="hiw-card">
               <div className="hiw-badge">2</div>
               <div className="hiw-stage-label">{t("howItWorks.stage2.label")}</div>
               <h3>{t("howItWorks.stage2.title")}</h3>
@@ -229,6 +240,30 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           </p>
         </div>
       </section>
+
+      <LabelledOutputPanel
+        contained
+        background="soft"
+        eyebrow={t("labelledOutput.eyebrow")}
+        title={t("labelledOutput.title")}
+        lead={t("labelledOutput.lead")}
+        columns={["Segment", "Family", "Class", "Commodity"]}
+        nodes={taxonomyNodesForCurrency(currency)}
+        edges={TAXONOMY_EDGES}
+        breakdownLabel={t("labelledOutput.breakdownLabel")}
+        name="Toilet tissue"
+        detail={tissueDetailForCurrency(currency)}
+        suppliersLabel={t("labelledOutput.suppliersLabel")}
+        suppliers={tissueSuppliersForCurrency(currency)}
+        lineItemsLabel={t("labelledOutput.lineItemsLabel")}
+        columnLabels={{
+          description: t("labelledOutput.columnDescription"),
+          qty: t("labelledOutput.columnQty"),
+          unit: t("labelledOutput.columnUnit"),
+          total: t("labelledOutput.columnTotal"),
+        }}
+        lineItems={tissueLineItemsForCurrency(currency)}
+      />
 
       <section className="section-soft" aria-labelledby="demo-heading">
         <div className="container">
@@ -286,14 +321,14 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           <div className="bene-cards">
             {proofCards.map((card) => (
               <article className="bene-card" key={card.title}>
-                <h3>{card.title}</h3>
-                <p><strong>{card.stat}.</strong> {card.detail}</p>
-                <p className="proof-quote">
-                  &ldquo;{card.quote}&rdquo;
-                  <span className="proof-quote-role">{card.quoteRole}</span>
-                </p>
-                <Link className="bene-link" href={`${prefix}${card.href}`}>
-                  {t("proof.linkText")}
+                <Link className="bene-card-link" href={`${prefix}${card.href}`}>
+                  <h3>{card.title}</h3>
+                  <p><strong>{card.stat}.</strong> {card.detail}</p>
+                  <p className="proof-quote">
+                    &ldquo;{card.quote}&rdquo;
+                    <span className="proof-quote-role">{card.quoteRole}</span>
+                  </p>
+                  <span className="bene-link">{t("proof.linkText")}</span>
                 </Link>
               </article>
             ))}
@@ -318,17 +353,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         answer={t("standaloneFaq.a")}
       />
 
-      <FaqSection title={t("faq.heading")} items={faqItems} />
-
-      <section className="section-soft" aria-labelledby="home-geo-heading">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-12">
-              <GeoBlock title={t("geoBlock.title")} copy={t("geoBlock.copy")} />
-            </div>
-          </div>
-        </div>
-      </section>
+      <FaqSection title={t("faq.heading")} items={faqItems} defaultOpenIndex={0} />
     </>
   );
 }

@@ -112,7 +112,7 @@
       "title": "Laten we praten.",
       "lead": "Een dataprobleem dat de moeite waard is om op te lossen? We horen er graag over.",
       "getInTouch": "Neem contact op",
-      "bookDiscovery": "Boek een ontdekkingsgesprek van 7 minuten"
+      "bookDiscovery": "Boek een ontdekkingsgesprek van 15 minuten"
     },
     "leaders": [
       {
@@ -253,7 +253,7 @@
       "role": "Facility Management"
     },
     "cta": {
-      "button": "Boek een ontdekkingsgesprek van 7 minuten",
+      "button": "Boek een ontdekkingsgesprek van 15 minuten",
       "title": "Klaar om de data onder uw volgende project te herstellen?",
       "lead": "Praat met sales. Wij laten precies zien waar uw data vandaag een ERP-migratie, een Fabric-uitrol of een AI-initiatief zou breken."
     },
@@ -430,7 +430,7 @@
     ],
     "cta": {
       "title": "Klaar om uw inkoopdata te herstellen?",
-      "button": "Boek een ontdekkingsgesprek van 7 minuten",
+      "button": "Boek een ontdekkingsgesprek van 15 minuten",
       "lead": "Praat met sales. Wij laten precies zien waar uw spend-data het cijfer verbergt dat u nodig heeft."
     }
   },
@@ -517,7 +517,7 @@
     },
     "cta": {
       "title": "Klaar om uw assetdata om te zetten in een strategisch asset?",
-      "button": "Boek een ontdekkingsgesprek van 7 minuten",
+      "button": "Boek een ontdekkingsgesprek van 15 minuten",
       "lead": "Praat met sales en zie precies hoe Pearstop de data die u al ontvangt omzet in iets dat u kunt verifiëren."
     },
     "faq": [
@@ -612,7 +612,7 @@
     },
     "cta": {
       "title": "Is uw data klaar voor AI?",
-      "button": "Boek een ontdekkingsgesprek van 7 minuten",
+      "button": "Boek een ontdekkingsgesprek van 15 minuten",
       "fabricLink": "Bekijk ook Fabric-gereedheid",
       "lead": "Praat met sales en wij vertellen precies wat er moet gebeuren voordat uw AI-initiatieven resultaten kunnen leveren."
     },
@@ -694,7 +694,7 @@
     },
     "cta": {
       "title": "Klaar om uw inkoopclassificatie te automatiseren?",
-      "button": "Boek een ontdekkingsgesprek van 7 minuten",
+      "button": "Boek een ontdekkingsgesprek van 15 minuten",
       "lead": "Praat met sales. Wij laten precies zien hoe de classificatie-engine met uw data zou werken."
     },
     "stats": {
@@ -819,7 +819,7 @@
     "cta": {
       "title": "Plant u een Fabric-migratie?",
       "lead": "Praat met ons voordat de migratie begint. Een gesprek van 30 minuten nu kan maanden herstelwerk later besparen.",
-      "button": "Boek een ontdekkingsgesprek van 7 minuten",
+      "button": "Boek een ontdekkingsgesprek van 15 minuten",
       "aiLink": "Bekijk ook AI-gereedheid"
     },
     "faq": [
@@ -1563,7 +1563,7 @@
     "cta": {
       "title": "Liever een gesprek?",
       "lead": "We kunnen u ook hetzelfde denken toelichten in een kort gesprek.",
-      "bookDiscovery": "Boek een ontdekkingsgesprek van 7 minuten",
+      "bookDiscovery": "Boek een ontdekkingsgesprek van 15 minuten",
       "backHome": "Terug naar startpagina"
     }
   },
@@ -1576,7 +1576,7 @@
       "eyebrow": "FAQ",
       "title": "Vragen die ons het meest worden gesteld.",
       "lead": "Alles wat u moet weten over hoe Pearstop werkt, wat het kost en of het geschikt is voor uw organisatie.",
-      "cta": "Boek een 7-minuten discovery",
+      "cta": "Boek een 15-minuten discovery",
       "secondary": "Ga naar vragen"
     },
     "sections": {
@@ -1757,13 +1757,13 @@
     },
     "stillHaveQuestions": {
       "label": "Nog een vraag?",
-      "cta": "Boek een discovery van 7 minuten",
+      "cta": "Boek een discovery van 15 minuten",
       "email": "Stuur ons een bericht",
       "copy": "Als uw vraag hier niet beantwoord wordt, is de snelste manier om een antwoord te krijgen door met sales te praten. Er is geen verkoopdruk - het is een direct gesprek over uw datasituatie."
     },
     "cta": {
       "title": "Klaar om het in actie te zien?",
-      "button": "Boek een discovery van 7 minuten",
+      "button": "Boek een discovery van 15 minuten",
       "lead": "Praat met sales en wij laten precies zien hoe de classificatie-engine werkt met uw data."
     }
   },
@@ -1776,7 +1776,7 @@
       "eyebrow": "UNSPSC voor Facilities Management",
       "title": "FM procurement data is het moeilijkst te classificeren. Zo lost u het op.",
       "lead": "Hard services en FM-bedrijven beheren duizenden invoice-regels over honderden suppliers en locaties. Pearstop classificeert dit alles automatisch — 90–95% zonder menselijke input — zodat uw team zich kan richten op category management, niet op data-invoer.",
-      "cta": "Boek een discovery van 7 minuten",
+      "cta": "Boek een discovery van 15 minuten",
       "secondary": "Hoe het werkt"
     },
     "challenge": {
@@ -1866,7 +1866,7 @@
     },
     "cta": {
       "title": "Ready to automate FM procurement classification?",
-      "button": "Book a 7-minute discovery",
+      "button": "Book a 15-minute discovery",
       "lead": "Praat met sales. Wij laten precies zien hoe de engine werkt met uw spend-data."
     },
     "geoBlock": {
@@ -1977,7 +1977,7 @@
       "eyebrow": "UNSPSC Classificatie Duitsland",
       "title": "UNSPSC-classificatie voor Duitse productie-, FM- en infrastructuurbedrijven.",
       "lead": "Pearstop automatiseert de classificatie van inkoopregels volgens UNSPSC-standaard — 90–95% zonder handmatige inspanning. Met ondersteuning voor de Duitse e-facturatieplicht 2025 en SAP-integratie.",
-      "cta": "7-minuten discovery boeken",
+      "cta": "15-minuten discovery boeken",
       "secondary": "E-factuur en UNSPSC"
     },
     "einvoicing": {
@@ -2052,8 +2052,8 @@
     },
     "cta": {
       "title": "Klaar om uw procurement classificatie te automatiseren?",
-      "lead": "Boek een 7-minuten Discovery. We laten u zien hoe de classificatie-engine met uw data werkt.",
-      "button": "Boek een 7-minuten Discovery"
+      "lead": "Boek een 15-minuten Discovery. We laten u zien hoe de classificatie-engine met uw data werkt.",
+      "button": "Boek een 15-minuten Discovery"
     },
     "geoBlock": {
       "title": "Hoe ziet UNSPSC-classificatie eruit voor een Duits productie- of FM-bedrijf?",
@@ -2089,7 +2089,7 @@
     },
     "bulk": {
       "label": "Moet u duizenden regels classificeren?",
-      "cta": "Boek een 7-minuten ontdekking",
+      "cta": "Boek een 15-minuten ontdekking",
       "learnMore": "Bekijk hoe het werkt",
       "copy": "Deze tool verwerkt losse opzoekingen. Pearstops geautomatiseerde classificatie-engine verwerkt 35.000 procurement-regels per maand - met 90-95% automatische classificatie en volledige SAP-integratie. Praat met sales om het met uw data te zien."
     },
@@ -2122,7 +2122,7 @@
         },
         {
           "q": "Kan ik een volledig spend-bestand of supplier catalog in één keer classificeren?",
-          "a": "De gratis tool hierboven is gebouwd voor één beschrijving tegelijk. Voor een volledig spend-bestand, invoice history of supplier catalog — honderden tot miljoenen regels — verwerkt Pearstop's geautomatiseerde classificatie-engine de hele dataset in één keer, waarbij 90-95% automatische classificatie wordt bereikt en de rest wordt gemarkeerd voor menselijke beoordeling. Boek een gesprek van 7 minuten om het te zien werken op een voorbeeld van uw eigen data."
+          "a": "De gratis tool hierboven is gebouwd voor één beschrijving tegelijk. Voor een volledig spend-bestand, invoice history of supplier catalog — honderden tot miljoenen regels — verwerkt Pearstop's geautomatiseerde classificatie-engine de hele dataset in één keer, waarbij 90-95% automatische classificatie wordt bereikt en de rest wordt gemarkeerd voor menselijke beoordeling. Boek een gesprek van 15 minuten om het te zien werken op een voorbeeld van uw eigen data."
         },
         {
           "q": "Moet ik een door AI gegenereerde UNSPSC-code vertrouwen zonder deze te controleren?",
@@ -2136,7 +2136,7 @@
     },
     "cta": {
       "title": "Moet u duizenden regels classificeren?",
-      "button": "Boek een 7-minuten ontdekking",
+      "button": "Boek een 15-minuten ontdekking",
       "lead": "Praat met sales en wij laten zien hoe de volledige classificatie-engine werkt met uw daadwerkelijke procurement-data."
     },
     "geoBlock": {
@@ -2217,6 +2217,19 @@
       },
       "beforeAfterCaption": "Illustratief voorbeeld: zes factuurregels van drie leveranciers. De originele omschrijving en leverancier blijven exact zoals ontvangen - Pearstop voegt alleen de kolommen rechts toe."
     },
+    "labelledOutput": {
+      "eyebrow": "Elke regel, gelabeld",
+      "title": "Hetzelfde label op elke regel, van elke leverancier",
+      "lead": "Elke regel krijgt bij het inlezen een UNSPSC-label. Toiletpapier van vier leveranciers komt zo op één plek terecht, zodat u het één-op-één kunt vergelijken.",
+      "illustrativeLabel": "Illustratief voorbeeld",
+      "breakdownLabel": "Uitsplitsing",
+      "suppliersLabel": "Leveranciers",
+      "lineItemsLabel": "Regelitems",
+      "columnDescription": "Omschrijving",
+      "columnQty": "Aantal",
+      "columnUnit": "Eenheid",
+      "columnTotal": "Totaal"
+    },
     "screenshot": {
       "alt": "Pearstop-dashboard met geclassificeerde spend-data op regelniveau, inclusief menselijke controle",
       "caption": "Geclassificeerde spend-data op regelniveau, met de menselijke controlestap zichtbaar."
@@ -2295,6 +2308,10 @@
       "heading": "Veelgestelde vragen",
       "items": [
         {
+          "q": "Wat doet Pearstop?",
+          "a": "Pearstop helpt facilities management-, infrastructuur- en hard services-bedrijven om procurement- en assetdata op te schonen, zodat teams zien wat ze inkopen, onderhoud betrouwbaarder plannen en betrouwbare data kunnen voeden naar AI- en rapportagetools. Als u één simpel antwoord nodig heeft: wij zetten rommelige operationele data om in iets wat uw bedrijf daadwerkelijk kan gebruiken."
+        },
+        {
           "q": "Wat is UNSPSC-classificatie?",
           "a": "UNSPSC is een wereldwijde standaard voor het categoriseren van producten en diensten in een consistente hiërarchie. Hiermee kunt u spend vergelijken tussen leveranciers, locaties en periodes met dezelfde categorieën, in plaats van de vrije tekstomschrijving die elke factuur toevallig gebruikte."
         },
@@ -2334,7 +2351,7 @@
     "hero": {
       "eyebrow": "Factuur- en documentextractie",
       "title": "Als niemand de factuur leest, bestaat de data erin niet.",
-      "lead": "PDF's, scans en pakbonnen komen sneller binnen dan iemand ze kan lezen. Pearstop zet die papierwinkel automatisch om in gestructureerde regels, zodat er überhaupt iets is om te classificeren.",
+      "lead": "PDF's, scans en pakbonnen komen sneller binnen dan iemand ze kan lezen. Pearstop zet die papierwinkel automatisch om in gestructureerde, gelabelde regels.",
       "primaryLabel": "Stuur ons 10 facturen",
       "secondaryLabel": "Zie hoe het werkt →"
     },
@@ -2367,31 +2384,44 @@
     ],
     "howItWorks": {
       "eyebrow": "Hoe het werkt",
-      "title": "Van ongelezen document naar gestructureerde regel",
+      "title": "Van ongelezen document naar geclassificeerde regel",
       "inputs": [
         "PDF-facturen",
         "Gescand papier",
         "E-mailbijlagen",
         "EDI-feeds"
       ],
-      "processLabel": "lezen · structureren · controleren",
+      "processLabel": "lezen · structureren · labelen · controleren",
       "outputs": [
         "Uw ERP of P2P-platform",
         "Uw BI-tool",
-        "Classificatie, volgende stap"
+        "Pearstop-dashboards"
       ],
       "step1": {
         "title": "Invoer, in elk formaat",
         "copy": "Geen vast sjabloon per leverancier, en geen leverancier hoeft iets aan te passen aan hoe ze iets versturen."
       },
       "step2": {
-        "title": "Gelezen en gecontroleerd",
-        "copy": "Regels, hoeveelheden, stukskosten, kostencodes en leveranciersreferenties worden automatisch gestructureerd. Alles wat onzeker is wordt gemarkeerd voor een persoon, en elke correctie leert de pijplijn die leverancier beter kennen."
+        "title": "Gelezen, gelabeld en gecontroleerd",
+        "copy": "Regels en stukskosten worden gestructureerd, en elke regel krijgt een standaardlabel (bijv. UNSPSC), zodat hetzelfde artikel één-op-één vergelijkbaar is tussen leveranciers. Uw eigen labels kunnen ernaast bestaan. Alles wat onzeker is gaat naar een persoon, en elke correctie leert de pijplijn die leverancier beter kennen."
       },
       "step3": {
-        "title": "Geleverd in wat u gebruikt",
-        "copy": "Output komt in het formaat dat uw ERP, P2P-platform of BI-tool verwacht, klaar voor classificatie, rapportage of herlaad."
+        "title": "Gestructureerde output, klaar voor gebruik",
+        "copy": "Bekijk het in de dashboards van Pearstop, of stuur het terug naar SAP of een ander ERP-, P2P- of BI-systeem, in het formaat dat elk systeem verwacht."
       }
+    },
+    "labelledOutput": {
+      "eyebrow": "Elke regel, gelabeld",
+      "title": "Hetzelfde label op elke regel van elke leverancier",
+      "lead": "Elke regel krijgt een UNSPSC-label zodra deze gelezen wordt. Toiletpapier van vier leveranciers komt op één plek terecht, zodat u het één-op-één kunt vergelijken.",
+      "illustrativeLabel": "Illustratief voorbeeld",
+      "breakdownLabel": "Uitsplitsing",
+      "suppliersLabel": "Leveranciers",
+      "lineItemsLabel": "Regels",
+      "columnDescription": "Omschrijving",
+      "columnQty": "Aantal",
+      "columnUnit": "Eenheid",
+      "columnTotal": "Totaal"
     },
     "stats": {
       "s1": {
@@ -2421,8 +2451,8 @@
         "copy": "Data wordt gestructureerd zodra facturen binnenkomen, in plaats van weken later wanneer iemand de achterstand wegwerkt."
       },
       "b2": {
-        "title": "Iets om te classificeren",
-        "copy": "Niets kan worden gecategoriseerd, benchmarked of vergeleken totdat het bestaat als gestructureerde data. Extractie komt eerst."
+        "title": "Klaar om te vergelijken",
+        "copy": "Hetzelfde artikel van verschillende leveranciers draagt hetzelfde label, zodat het meteen bij het lezen benchmarked kan worden."
       },
       "b3": {
         "title": "Geen invoeren en corrigeren meer",
@@ -2436,7 +2466,7 @@
     },
     "geoBlock": {
       "title": "Wat is factuurgegevensextractie en waarom is het belangrijk voor procurement data quality?",
-      "copy": "Factuur- en documentgegevensextractie is het proces waarbij PDF-facturen, gescande papieren documenten en pakbonnen automatisch worden gelezen en omgezet in gestructureerde regeldata. Voor inkoopteams in facilities management, bouw en manufacturing is dit de stap die moet plaatsvinden vóórdat classificatie, spendanalyse of UNSPSC-codering überhaupt mogelijk is. Handmatige invoer kan het factuurvolume over meerdere locaties en leveranciers niet bijbenen, wat de reden is dat ongelezen facturen en verouderde spend-data een van de meest voorkomende blokkades zijn voor category management en AI-gedreven spendanalyse. Pearstop combineert OCR met een AI-extractielaag en een menselijke controlestap voor regels met lage betrouwbaarheid, zodat de output gestructureerde data is die klaar is voor classificatie, geen nieuw handmatig knelpunt."
+      "copy": "Factuur- en documentgegevensextractie is het proces waarbij PDF-facturen, gescande papieren documenten en pakbonnen automatisch worden gelezen en omgezet in gestructureerde, geclassificeerde regeldata. Voor inkoopteams in facilities management, bouw en manufacturing is dit de stap die moet plaatsvinden vóórdat spendanalyse of rapportage überhaupt mogelijk is — bij Pearstop gebeurt classificatie (UNSPSC of de eigen taxonomie van de klant) in dezelfde stap als extractie, niet als apart project achteraf. Handmatige invoer kan het factuurvolume over meerdere locaties en leveranciers niet bijbenen, wat de reden is dat ongelezen facturen en verouderde spend-data een van de meest voorkomende blokkades zijn voor category management en AI-gedreven spendanalyse. Pearstop combineert OCR met een AI-extractielaag en een menselijke controlestap voor regels met lage betrouwbaarheid, zodat de output gestructureerde, geclassificeerde data is, geen nieuw handmatig knelpunt."
     },
     "faq": [
       {

@@ -3,6 +3,7 @@ import Script from "next/script";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { InvoiceDataExtractionPage, type InvoiceDataExtractionCopy } from "@/components/site/pages/InvoiceDataExtraction";
 import { alternateLanguages, siteConfig } from "@/lib/site";
+import { getRequestCurrency } from "@/lib/currency";
 
 const PAGE_URL = `${siteConfig.url}/invoice-data-extraction`;
 
@@ -53,6 +54,7 @@ export default async function InvoiceDataExtractionRoute({ params }: { params: P
   setRequestLocale(locale);
   const messages = await getMessages({ locale });
   const copy = messages.InvoiceExtraction as unknown as InvoiceDataExtractionCopy;
+  const currency = await getRequestCurrency();
 
   const faqSchema = {
     "@context": "https://schema.org",
@@ -70,7 +72,7 @@ export default async function InvoiceDataExtractionRoute({ params }: { params: P
       <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
-      <InvoiceDataExtractionPage copy={copy} />
+      <InvoiceDataExtractionPage copy={copy} currency={currency} />
     </>
   );
 }

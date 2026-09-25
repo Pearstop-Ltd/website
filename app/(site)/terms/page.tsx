@@ -27,7 +27,9 @@ const sections: Section[] = [
   {
     title: "3. Sample classification requests",
     paragraphs: [
-      "If you send us a sample of invoice lines through the Site, we will classify it and return the result as a demonstration of our service, free of charge and without obligation on either side. Sample results are provided “as is” to illustrate what Pearstop can do, and should not be relied on as a final, audited dataset. Submitting a sample does not create a contract for ongoing services; that requires a separate agreement."
+      "If you send us a sample of invoice lines through the Site, we will classify it and return the result as a demonstration of our service, free of charge and without obligation on either side. Sample results are provided “as is” to illustrate what Pearstop can do, and should not be relied on as a final, audited dataset. Submitting a sample does not create a contract for ongoing services; that requires a separate agreement.",
+      "By uploading a sample, you confirm that you are authorised by your organisation to share it with us. Invoice files often contain personal data about people other than you, such as supplier contacts, technicians or staff named on invoices. You are responsible for having a lawful basis under applicable data protection law (GDPR or POPIA) to share that data with us, and we encourage you to remove names, email addresses and bank details that are not needed for classification.",
+      "For any personal data contained in a sample, we act on your organisation's behalf. We use it only to produce and discuss your sample result, keep it confidential, and limit access to the people who need it. Sample files are deleted automatically after 90 days, or sooner if you ask us to, unless you ask us in writing to keep them for an ongoing engagement."
     ]
   },
   {
@@ -82,7 +84,7 @@ export default function TermsPage() {
         <div className="container">
           <div className="row">
             <div className="col-md-8 col-md-offset-2">
-              <p className="light-copy" style={{ fontSize: "0.85rem", marginBottom: "2.5rem" }}>Last updated: 17 September 2026</p>
+              <p className="light-copy" style={{ fontSize: "0.85rem", marginBottom: "2.5rem" }}>Last updated: 25 September 2026</p>
               {sections.map((section) => (
                 <div key={section.title} style={{ marginBottom: "2.25rem" }}>
                   <h2>{section.title}</h2>

@@ -10,17 +10,19 @@ export interface FaqSectionProps {
   items: FaqItem[];
   background?: "white" | "soft";
   className?: string;
+  /** See Faq's `defaultOpenIndex` — which item (if any) starts expanded. */
+  defaultOpenIndex?: number;
 }
 
 /** FAQ section matching SolutionPage's "faq" section type exactly (eyebrow +
  * H2 + two-column grid with the accordion) — for pages that render a FAQ
  * outside the SolutionPage template. */
-export function FaqSection({ eyebrow, title, items, background = "soft", className }: FaqSectionProps) {
+export function FaqSection({ eyebrow, title, items, background = "soft", className, defaultOpenIndex }: FaqSectionProps) {
   return (
     <Section background={background} className={className}>
       <div className={styles.faqGrid}>
         <SectionHeader eyebrow={eyebrow} title={title} />
-        <Faq items={items} />
+        <Faq items={items} defaultOpenIndex={defaultOpenIndex} />
       </div>
     </Section>
   );

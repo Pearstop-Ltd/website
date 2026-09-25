@@ -18,7 +18,7 @@ const sections: Section[] = [
     title: "1. Who we are",
     paragraphs: [
       "Pearstop (“Pearstop,” “we,” “us,” “our”) provides software and services that clean, extract, and classify procurement and asset data. We are based at Dogpatch Labs, CHQ Building, Custom House Quay, D01 Y6H7 Dublin, Ireland, and we are the data controller for the personal data described in this policy.",
-      "We operate under the laws of Ireland and the European Union, including the General Data Protection Regulation (GDPR). This policy is written to meet those requirements and applies to every visitor, regardless of where you access the site from."
+      "We operate under the laws of Ireland and the European Union, including the General Data Protection Regulation (GDPR). This policy is written to meet those requirements and applies to every visitor, regardless of where you access the site from. Where we process personal information of South African individuals or companies, we also comply with the Protection of Personal Information Act (POPIA). In this policy, \"personal data\" includes \"personal information\" as defined in POPIA, which also covers information about companies."
     ]
   },
   {
@@ -50,14 +50,17 @@ const sections: Section[] = [
     list: [
       "Hosting and infrastructure providers that run the website and store any files you upload.",
       "Email and workflow tools we use to route enquiries to the right person on our team.",
-      "The AI/ML systems we use to classify submitted invoice data, run on EU-hosted or equivalently safeguarded infrastructure."
+      "The AI/ML systems we use to classify submitted invoice data, run on EU-hosted infrastructure."
     ],
-    paragraphsAfter: ["Each of these providers is bound by contract to protect your data and use it only for the purpose we specify."]
+    paragraphsAfter: [
+      "All data is stored and processed on servers in the European Union.",
+      "Each of these providers is bound by contract to protect your data and use it only for the purpose we specify."
+    ]
   },
   {
     title: "5. How long we keep it",
     list: [
-      "Sample invoice files and the data submitted alongside them: kept only as long as needed to complete and follow up on the classification you requested, then deleted – unless you ask us to keep them for an ongoing engagement.",
+      "Sample invoice files and the data submitted alongside them: deleted automatically after 90 days, or sooner if you ask us to, unless you ask us in writing to keep them for an ongoing engagement.",
       "Contact form and newsletter data: kept until you unsubscribe or ask us to delete it, or for as long as we have a legitimate reason to stay in touch, whichever is shorter.",
       "Aggregate analytics: retained only in anonymised or aggregated form and cannot be used to identify you."
     ]
@@ -70,7 +73,7 @@ const sections: Section[] = [
   },
   {
     title: "7. Your rights",
-    paragraphs: ["Because we operate under GDPR, you have the right to:"],
+    paragraphs: ["Under GDPR and POPIA, you have the right to:"],
     list: [
       "Ask what data we hold about you and get a copy of it (access).",
       "Correct anything that's wrong (rectification).",
@@ -78,7 +81,7 @@ const sections: Section[] = [
       "Ask us to restrict, or object to, how we use your data.",
       "Move your data to another provider (portability).",
       "Withdraw consent at any point, with no effect on anything we did before you withdrew it.",
-      "Lodge a complaint with the Irish Data Protection Commission (dataprotection.ie) or your local supervisory authority."
+      "Lodge a complaint with the Irish Data Protection Commission (dataprotection.ie) or your local supervisory authority. If you are in South Africa, you can also lodge a complaint with the Information Regulator (inforegulator.org.za)."
     ],
     paragraphsAfter: ["To exercise any of these rights, email inquiries@pearstop.com. We'll respond within a reasonable time and, in any case, within the timeframes GDPR requires."]
   },
@@ -112,7 +115,7 @@ export default function PrivacyPage() {
         <div className="container">
           <div className="row">
             <div className="col-md-8 col-md-offset-2">
-              <p className="light-copy" style={{ fontSize: "0.85rem", marginBottom: "2.5rem" }}>Last updated: 17 September 2026</p>
+              <p className="light-copy" style={{ fontSize: "0.85rem", marginBottom: "2.5rem" }}>Last updated: 25 September 2026</p>
               {sections.map((section) => (
                 <div key={section.title} style={{ marginBottom: "2.25rem" }}>
                   <h2>{section.title}</h2>

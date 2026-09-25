@@ -274,6 +274,63 @@ main {
   z-index: -1;
   background: rgba(248, 249, 250, 0.96);
   backdrop-filter: saturate(180%) blur(16px);
+  transition: background 0.2s ease;
+}
+
+/* Homepage-only "dark header over the hero" state, toggled by scroll
+   position in site-header.tsx (light again once #lm-band, the first white
+   section, reaches the header line). Only overrides the always-visible top
+   bar chrome - dropdown menus keep their normal light background, since
+   they're not relevant this early on the page. */
+#site-nav.header-dark {
+  border-bottom-color: transparent;
+}
+
+#site-nav.header-dark::before {
+  background: linear-gradient(135deg, var(--navy) 0%, #25347d 60%, var(--primary) 100%);
+  backdrop-filter: none;
+}
+
+/* /solutions: flat dark purple, not the homepage's navy-to-blue gradient -
+   same dark purple as the mobile nav's own dark overlay. */
+#site-nav.header-solid-purple::before {
+  background: #241045;
+}
+
+/* Homepage "strip" phase: once #clients-and-quotes has scrolled up to the
+   header line, go transparent so that section's own gradient - scrolling
+   underneath a fixed header - shows straight through, lining up with it
+   perfectly instead of approximating it with a second gradient. */
+#site-nav.header-strip::before {
+  background: transparent;
+}
+
+#site-nav.header-dark .nav-menu > li > a,
+#site-nav.header-dark .nav-dropdown-toggle,
+#site-nav.header-dark .nav-dropdown-toggle-btn,
+#site-nav.header-dark .lang-switcher-btn {
+  color: #fff;
+}
+
+#site-nav.header-dark .nav-menu > li > a:hover,
+#site-nav.header-dark .nav-menu > li > a.active,
+#site-nav.header-dark .nav-dropdown-toggle:hover,
+#site-nav.header-dark .nav-dropdown-toggle.active,
+#site-nav.header-dark .nav-dropdown-toggle-btn:hover {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+#site-nav.header-dark .nav-hamburger span {
+  background: #fff;
+}
+
+#site-nav.header-dark .btn-pearstop-nav {
+  background: var(--purple-soft);
+  color: var(--primary-dark);
+}
+
+#site-nav.header-dark .btn-pearstop-nav:hover {
+  background: #fff;
 }
 
 .nav-inner {
@@ -537,11 +594,26 @@ header,
   background: linear-gradient(135deg, rgba(31, 42, 104, 0.96) 0%, rgba(42, 57, 144, 0.96) 55%, rgba(53, 63, 255, 0.96) 100%);
 }
 
-.hero-bg-video video {
+.hero-bg-video-el {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.9s ease;
+}
+
+.hero-bg-video-el.is-active {
   opacity: 0.78;
+}
+
+/* Scales the clip up just enough, centered, that its baked-in generator
+   watermark (bottom-right corner) and thin letterbox bands (top/bottom)
+   both fall outside the clipped .hero-bg-video box at every viewport
+   width - a center crop removes an even margin off all four edges. */
+.hero-bg-video-el.hero-bg-video-crop {
+  transform: scale(1.15);
 }
 
 .hero-bg-video::after {
@@ -652,11 +724,20 @@ section {
   color: var(--muted);
 }
 
-.clients-strip {
-  padding: 2.75rem 0;
-  background: linear-gradient(135deg, var(--navy), #25347d);
+/* .clients-strip and .problem-quotes both live inside one
+   .clients-and-quotes wrapper (single continuous background, not two
+   separately-painted sections) - see app/[locale]/page.tsx /
+   app/(site)/page.tsx. Each keeps only its own vertical spacing here. Flat
+   navy, not the .ccta-dark gradient it also carries as a class - overrides
+   it here so the shared .ccta-dark gradient used elsewhere (e.g. the "Send
+   us 200 lines" band) is untouched. */
+.clients-and-quotes {
+  background: linear-gradient(135deg, var(--navy) 0%, #25347d 60%, var(--primary) 100%);
   border-top: 1px solid rgba(255, 255, 255, 0.08);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.clients-strip {
+  padding: 0.25rem 0 1.25rem;
 }
 
 .clients-label,
@@ -681,7 +762,7 @@ section {
 
 .clients-label {
   text-align: center;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(200, 203, 216, 0.75);
   font-size: 0.72rem;
   font-weight: 700;
   margin-bottom: 1.75rem;
@@ -904,6 +985,30 @@ section {
   line-height: 1.7;
 }
 
+/* The whole "Cases" card is a single link (see .bene-card-link below) -
+   swap the default whole-text underline-on-hover for a subtle purple
+   left-edge accent instead. */
+.bene-card {
+  border-left: 3px solid transparent;
+  transition: var(--card-transition), border-left-color 0.2s ease;
+}
+
+.bene-card:hover,
+.bene-card:focus-within {
+  border-left-color: var(--purple);
+}
+
+.bene-card-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.bene-card-link:hover,
+.bene-card-link:focus-visible {
+  text-decoration: none;
+}
+
 .sol-card.featured,
 .how-step.featured,
 .values-card.featured,
@@ -977,6 +1082,13 @@ section {
 .person-linkedin,
 .location-email {
   font-weight: 700;
+}
+
+/* .bene-link is now a <span> (the whole card is the link - see
+   .bene-card-link) so it no longer inherits the global `a { color }`
+   rule; restate it explicitly to keep its original look. */
+.bene-link {
+  color: var(--primary);
 }
 
 
@@ -1865,7 +1977,8 @@ section {
 }
 
 .page-hero .hero-copy {
-  width: 100%;
+  width: min(1140px, calc(100% - 48px));
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -1875,8 +1988,8 @@ section {
 .page-hero .ind-intro,
 .page-hero .team-intro-text {
   max-width: 680px;
-  margin-inline: auto;
-  text-align: center;
+  margin-inline: 0;
+  text-align: left;
 }
 
 @media (max-width: 991px) {
@@ -2096,6 +2209,18 @@ section {
   }
 }
 
+/* Homepage hero only (.hero-tall .hero-left): on desktop the first screen
+   is the hero alone, bottom edge meeting the fold - the header is
+   position:fixed at a known 68px tall (see "main { padding-top: 68px }"
+   above), so 100svh minus that is exactly the space below it. min-height
+   (not height) so the hero still grows instead of clipping its content on
+   a short/zoomed viewport. */
+@media (min-width: 1024px) {
+  .page-hero.hero-tall.hero-left {
+    min-height: calc(100svh - 68px);
+  }
+}
+
 .values-icon,
 .ben-icon,
 .ind-card-icon,
@@ -2116,9 +2241,20 @@ section {
 
 .values-card.featured .values-icon,
 .ben-card.featured .ben-icon,
-.ind-card.featured .ind-card-icon,
-.hiw-card.featured .hiw-badge {
+.ind-card.featured .ind-card-icon {
   background: linear-gradient(135deg, var(--primary) 0%, var(--navy) 100%);
+  color: #fff;
+}
+
+/* "How it works" step badges: lightest to darkest left to right, 1 through
+   3, instead of one flat color. */
+.hiw-grid .hiw-card:nth-of-type(2) .hiw-badge {
+  background: var(--purple);
+  color: #fff;
+}
+
+.hiw-grid .hiw-card:nth-of-type(3) .hiw-badge {
+  background: var(--primary-dark);
   color: #fff;
 }
 
@@ -2269,13 +2405,13 @@ section {
 }
 
 .problem-quotes {
-  padding: 4.5rem 0;
+  padding: 1.25rem 0 0.25rem;
 }
 
 .problem-quote-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 2.25rem;
+  gap: 1.5rem;
 }
 
 .problem-quote {
@@ -2293,6 +2429,10 @@ section {
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: var(--muted);
+}
+
+.clients-and-quotes .problem-quote-source {
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .before-after-wrap {
@@ -2416,6 +2556,26 @@ section {
   gap: 1rem;
 }
 
+/* Same values as the components/site/ tint tokens (--tint-blue,
+   --tint-purple, --tint-green in tokens.module.css) - hardcoded here since
+   those custom properties are intentionally scoped to components/site/
+   trees and never leak into globals.css. */
+.who-grid .ind-card:nth-of-type(1) {
+  background: #dce1f8;
+}
+
+.who-grid .ind-card:nth-of-type(2) {
+  background: #e8e0fc;
+}
+
+.who-grid .ind-card:nth-of-type(3) {
+  background: #f1f8e9;
+}
+
+.who-grid .ind-card:nth-of-type(4) {
+  background: #ffffff;
+}
+
 .objection-block {
   background: var(--bg-soft);
   border-radius: var(--card-radius);
@@ -2429,8 +2589,6 @@ section {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.5rem;
-  max-width: 1040px;
-  margin: 0 auto;
 }
 
 .objections-grid .objection-block {
@@ -2553,18 +2711,18 @@ section {
 /* Homepage hero: left-aligned, oversized headline with a short rule below
    it, after the newsec.com hero pattern (huge left-aligned title instead of
    the site's usual centered hero). Scoped to hero-left so every other page
-   keeps the centered PageHero default.
-
-   .page-hero .hero-copy sets width:100% (two-class selector, beats
-   .container's own width rule), which is invisible on a centered hero but
-   left text flush against the viewport edge here - so this variant needs
-   its own left inset instead of relying on .container's gutter. */
+   keeps the centered PageHero default (see .page-hero .hero-copy above -
+   this variant explicitly resets that default's width/margin cap back to
+   full-bleed, then applies its own left inset instead of the .container
+   gutter). */
 .page-hero.hero-left .hero-copy,
 .page-hero.hero-left .text-center {
   text-align: left;
 }
 
 .page-hero.hero-left .hero-copy {
+  width: 100%;
+  margin: 0;
   padding-left: max(24px, 5vw);
   padding-right: 24px;
 }
@@ -2573,15 +2731,6 @@ section {
   max-width: 68vw;
   font-size: clamp(2.75rem, 6vw, 5.5rem);
   line-height: 1.05;
-}
-
-.page-hero.hero-left .hero-title::after {
-  content: "";
-  display: block;
-  width: 96px;
-  height: 4px;
-  margin-top: 1.5rem;
-  background: rgba(255, 255, 255, 0.85);
 }
 
 .page-hero.hero-left .hero-lead {

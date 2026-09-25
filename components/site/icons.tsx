@@ -48,3 +48,12 @@ export function XMarkIcon({ color = "var(--purple)" }: { color?: string }) {
     </svg>
   );
 }
+
+/** Small marker replacing the "✓" glyph in checklist items. */
+export function CheckIcon({ color = "var(--blue)" }: { color?: string }) {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M5 12 L10 17 L19 7" />
+    </svg>
+  );
+}

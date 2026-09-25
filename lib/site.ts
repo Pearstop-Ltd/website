@@ -22,13 +22,14 @@ export const siteConfig = {
   description:
     "Pearstop cleans and classifies procurement and asset data for hard services, construction, infrastructure, and manufacturing companies.",
   email: "inquiries@pearstop.com",
-  calendly: "https://calendly.com/stephanie-pearstop/7-min-discovery",
+  calendly: "https://calendly.com/stephanie-pearstop/15-min-discovery",
   demoCalendly: "https://calendly.com/stephanie-pearstop/demo-call",
   assets: {
     logo: "/brand/logo-dark.webp",
     logoInverse: "/brand/logo-light.webp",
-    heroVideo: "/video/section.mp4",
-    heroVideoPoster: "/images/photos/construction-planner-woman-1.png",
+    heroVideos: [
+      { src: "/video/section.mp4", poster: "/images/photos/construction-planner-woman-1.png", watermarkCrop: true },
+    ],
     productDemoVideo: "/video/product-demo.mp4",
     productDemoVideoPoster: "/images/home/product-demo-poster.webp",
     leadMagnet: "/images/photos/construction-planner-woman-1.png",
@@ -57,8 +58,7 @@ export const siteConfig = {
     home: {
       spendControl: "/images/photos/office-desk-woman-1.png",
       assetManagement: "/images/photos/the-city-2.png",
-      scaleConfidence: "/images/photos/office-worker-1.png",
-      demo: "/images/home/demo.webp"
+      scaleConfidence: "/images/photos/office-worker-1.png"
     }
   },
   downloads: {
