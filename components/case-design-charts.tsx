@@ -9,7 +9,7 @@ import styles from "./case-design.module.css";
    on the server / with JS disabled, and only animates once, the first time
    it scrolls into view (including if it's already in view on landing). */
 
-function useInView<T extends HTMLElement>(): [RefObject<T | null>, boolean] {
+function useInView<T extends HTMLElement>(threshold = 0.45): [RefObject<T | null>, boolean] {
   const ref = useRef<T | null>(null);
   const [inView, setInView] = useState(false);
 
@@ -23,11 +23,11 @@ function useInView<T extends HTMLElement>(): [RefObject<T | null>, boolean] {
           observer.disconnect();
         }
       },
-      { threshold: 0.45 }
+      { threshold }
     );
     observer.observe(el);
     return () => observer.disconnect();
-  }, []);
+  }, [threshold]);
 
   return [ref, inView];
 }
@@ -155,9 +155,11 @@ export function CasePriceBars({ bars }: { bars: CasePriceBar[] }) {
 /** Donut ring where the "uncategorised" arc draws in from 0 to its target
  * length on scroll into view. `filledLength`/`totalLength` are the same
  * stroke-dasharray numbers the static version used (dash length / path
- * circumference for r=38), so the final state is pixel-identical. */
+ * circumference for r=38), so the final state is pixel-identical. Waits
+ * until the donut is fully on screen (not just partially scrolled into
+ * view) before starting. */
 export function CaseSpendDonut({ filledLength, totalLength, size = 120 }: { filledLength: number; totalLength: number; size?: number }) {
-  const [ref, inView] = useInView<HTMLDivElement>();
+  const [ref, inView] = useInView<HTMLDivElement>(1);
   const reducedMotion = usePrefersReducedMotion();
   const [filled, setFilled] = useState(false);
 
