@@ -27,7 +27,7 @@ export default function StruktonCaseStudyPage() {
               <CaseFactSheet
                 rows={[
                   { label: "Client", value: "Strukton" },
-                  { label: "Data", value: "Procurement spend, via SAP" },
+                  { label: "Data", value: "Procurement spend, via SAP & procurement system" },
                   { label: "Scope", value: "35,000 to 50,000 lines a month" },
                   { label: "Approach", value: "AI + ML pipeline + human-in-the-loop" }
                 ]}
@@ -55,7 +55,7 @@ export default function StruktonCaseStudyPage() {
           { value: "0", label: "classification history at the start" },
           { value: "4", label: "UNSPSC levels per line" },
           { value: "Weekly", label: "buyer feedback cadence" },
-          { value: "+20 pts", label: "classification accuracy gained by adding human review, compared with AI alone and without context" }
+          { value: "+20%", label: "classification accuracy gained by adding human review, compared with AI alone and without context" }
         ]}
       />
 
@@ -127,7 +127,7 @@ export default function StruktonCaseStudyPage() {
                 labelColor: "#5A3FC0",
                 bg: "var(--purple-soft)",
                 title: "From zero classification to full granularity",
-                copy: "Before this project, Strukton had no UNSPSC classification at all. By the end of the engagement, 35,000 to 50,000 lines of spend were classified automatically every month, to all four UNSPSC levels &mdash; the granularity the original cost-saving opportunity needed to actually be acted on."
+                copy: "Before this project, Strukton had no UNSPSC classification at all. By the end of the engagement, 35,000 to 50,000 lines of spend were classified automatically every month, to all four UNSPSC levels. That is the granularity the original cost-saving opportunity needed to actually be acted on."
               }
             ]}
           />

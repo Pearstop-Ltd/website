@@ -57,7 +57,7 @@ export const cases: CaseEntry[] = [
     headline: "Spend classified to UNSPSC commodity level from zero classification history, for Strukton",
     stats: [
       { value: "0", label: "classification history at start" },
-      { value: "+20 pts", label: "accuracy gained by adding human review" },
+      { value: "+20%", label: "accuracy gained by adding human review" },
     ],
     visual: "taxonomyBars",
     href: "/cases/strukton",

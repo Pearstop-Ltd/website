@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import Image from "next/image";
 import { dsRoot } from "./tokens";
-import { getPerson, initialsOf, type PersonId } from "@/lib/people";
+import { getPerson, type PersonId } from "@/lib/people";
 import styles from "./QuoteCard.module.css";
 
 export type QuoteCardProps = {
@@ -37,7 +37,9 @@ export function QuoteCard({ quote, variant = "panel", className, ...attribution 
     person.headshot ? (
       <Image src={person.headshot} alt={person.name} width={72} height={72} className={styles.inlineAvatarPhoto} />
     ) : (
-      <span className={styles.inlineAvatar}>{initialsOf(person.name)}</span>
+      <span className={styles.inlineAvatar} aria-hidden="true">
+        <span className={styles.inlineAvatarDot} />
+      </span>
     )
   ) : null;
 
@@ -45,7 +47,9 @@ export function QuoteCard({ quote, variant = "panel", className, ...attribution 
     person.headshot ? (
       <Image src={person.headshot} alt={person.name} width={48} height={48} className={styles.panelAvatarPhoto} />
     ) : (
-      <span className={styles.panelAvatar}>{initialsOf(person.name)}</span>
+      <span className={styles.panelAvatar} aria-hidden="true">
+        <span className={styles.panelAvatarDot} />
+      </span>
     )
   ) : null;
 

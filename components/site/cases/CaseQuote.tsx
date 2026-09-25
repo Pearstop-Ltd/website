@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { dsRoot } from "../tokens";
-import { getPerson, initialsOf, type PersonId } from "@/lib/people";
+import { getPerson, type PersonId } from "@/lib/people";
 import styles from "./CaseQuote.module.css";
 
 export interface CaseQuoteProps {
@@ -10,8 +10,8 @@ export interface CaseQuoteProps {
 }
 
 /** Small testimonial card for the /cases index "In their words" grid —
- * bg-soft panel, quote, 44px avatar (photo or initials) + name/role. No
- * star ratings. */
+ * bg-soft panel, quote, 44px avatar (photo, or a plain dot when there's no
+ * headshot — never initials/letters) + name/role. No star ratings. */
 export function CaseQuote({ personId, quote, className }: CaseQuoteProps) {
   const person = getPerson(personId);
 
@@ -22,7 +22,9 @@ export function CaseQuote({ personId, quote, className }: CaseQuoteProps) {
         {person.headshot ? (
           <Image src={person.headshot} alt={person.name} width={44} height={44} className={styles.avatarPhoto} />
         ) : (
-          <span className={styles.avatar}>{initialsOf(person.name)}</span>
+          <span className={styles.avatar} aria-hidden="true">
+            <span className={styles.avatarDot} />
+          </span>
         )}
         <span className={styles.person}>
           <strong className={styles.name}>{person.name}</strong>

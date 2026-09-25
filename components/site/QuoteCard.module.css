@@ -27,13 +27,17 @@
   height: 48px;
   border-radius: 50%;
   background: var(--tint-blue);
-  color: var(--navy-deep);
-  font-size: 15px;
-  font-weight: 600;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+}
+
+.panelAvatarDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--navy-deep);
 }
 
 .panelAvatarPhoto {
@@ -76,13 +80,17 @@
   height: 72px;
   border-radius: 50%;
   background: var(--navy);
-  color: #ffffff;
-  font-size: 20px;
-  font-weight: 600;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+}
+
+.inlineAvatarDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--tint-blue);
 }
 
 .inlineAvatarPhoto {

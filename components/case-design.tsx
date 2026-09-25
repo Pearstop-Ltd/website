@@ -3,7 +3,7 @@ import Link from "next/link";
 import { CalendlyButton } from "@/components/calendly-button";
 import { SampleRequestModal } from "@/components/sample-request-modal";
 import { siteConfig } from "@/lib/site";
-import { getPerson, initialsOf, type PersonId } from "@/lib/people";
+import { getPerson, type PersonId } from "@/lib/people";
 import styles from "./case-design.module.css";
 
 /* Shared visual language for the redesigned /cases pages, translated from
@@ -223,7 +223,9 @@ export function CaseQuoteBig({ quote, ...attribution }: { quote: string } & Quot
         {person?.headshot ? (
           <img src={person.headshot} alt={person.name} style={{ width: 48, height: 48, borderRadius: "50%", objectFit: "cover", flexShrink: 0 }} />
         ) : person ? (
-          <span style={{ width: 48, height: 48, borderRadius: "50%", background: "var(--blue-soft)", color: "var(--navy)", fontSize: 15, fontWeight: 600, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>{initialsOf(person.name)}</span>
+          <span aria-hidden="true" style={{ width: 48, height: 48, borderRadius: "50%", background: "var(--blue-soft)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+            <span style={{ width: 8, height: 8, borderRadius: "50%", background: "var(--navy)" }} />
+          </span>
         ) : null}
         <span style={{ display: "flex", flexDirection: "column", gap: 2 }}>
           {person ? <strong style={{ fontSize: 15, fontWeight: 600, color: "#fff" }}>{person.name}</strong> : null}
@@ -242,7 +244,9 @@ export function CaseQuoteCard({ quote, bg = "var(--primary-dark)", ...attributio
       {person?.headshot ? (
         <img src={person.headshot} alt={person.name} style={{ width: 72, height: 72, borderRadius: "50%", objectFit: "cover", flexShrink: 0 }} />
       ) : person ? (
-        <span style={{ width: 72, height: 72, borderRadius: "50%", background: bg, color: "#fff", fontSize: 20, fontWeight: 600, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>{initialsOf(person.name)}</span>
+        <span aria-hidden="true" style={{ width: 72, height: 72, borderRadius: "50%", background: bg, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+          <span style={{ width: 10, height: 10, borderRadius: "50%", background: "#fff" }} />
+        </span>
       ) : null}
       <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
         <blockquote style={{ margin: 0, fontSize: 22, lineHeight: 1.5, fontWeight: 400, color: "var(--navy)" }}>&ldquo;{quote}&rdquo;</blockquote>

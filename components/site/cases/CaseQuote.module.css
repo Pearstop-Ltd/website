@@ -28,13 +28,17 @@
   height: 44px;
   border-radius: 50%;
   background: var(--navy);
-  color: #ffffff;
-  font-size: 14px;
-  font-weight: 600;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+}
+
+.avatarDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--tint-blue);
 }
 
 .avatarPhoto {
