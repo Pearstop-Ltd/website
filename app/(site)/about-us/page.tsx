@@ -82,6 +82,16 @@ export default function AboutPage() {
 
       <section>
         <div className="container">
+          <p className="light-copy" style={{ maxWidth: "760px", margin: "0 auto", textAlign: "center" }}>
+            The people who build, run and maintain buildings, sites and networks care about getting it right: safe
+            sites, compliant assets, and great places to work and live. The data behind that work should help them,
+            not slow them down. That is the part we fix.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div className="container">
           <div className="row">
             <div className="col-md-4">
               <div className="story-label">How it started</div>

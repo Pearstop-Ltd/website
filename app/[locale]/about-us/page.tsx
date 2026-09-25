@@ -85,6 +85,14 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
 
       <section>
         <div className="container">
+          <p className="light-copy" style={{ maxWidth: "760px", margin: "0 auto", textAlign: "center" }}>
+            {t("buyerIntro")}
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div className="container">
           <div className="row">
             <div className="col-md-4">
               <div className="story-label">{t("howItStarted.label")}</div>

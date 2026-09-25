@@ -150,7 +150,7 @@ const proofCards = [
 const faqItems = [
   {
     q: "What does Pearstop do?",
-    a: "Pearstop helps facilities management, infrastructure, and hard services companies clean procurement and asset data so teams can see what they are buying, plan maintenance more reliably, and feed trustworthy data into AI and reporting tools. If you need one plain answer, it is this: we turn messy operational data into something your business can actually use."
+    a: "Pearstop helps facilities management, construction, infrastructure and manufacturing companies clean procurement and asset data so teams can see what they are buying, plan maintenance on time, stay compliant, and feed trustworthy data into AI and reporting tools. If you need one plain answer, it is this: we turn messy operational data into something your business can actually use."
   },
   {
     q: "What is UNSPSC classification?",
@@ -171,6 +171,10 @@ const faqItems = [
   {
     q: "How long does spend classification take?",
     a: "A first sample of 200 lines is typically turned around within a few working days. Ongoing classification runs continuously as new invoices arrive."
+  },
+  {
+    q: "Does Pearstop help with safety and compliance?",
+    a: "Through the data behind it. Statutory maintenance is planned from asset lists, supplier checks run on supplier records, and repairs depend on the right part number. Pearstop cleans and matches those records, shows spend with suppliers outside your approved list, and never guesses a part number. It doesn't run inspections; it makes sure the data behind them is right."
   }
 ];
 
@@ -265,6 +269,10 @@ export default async function HomePage() {
         <div className="container">
           <div className="text-center" style={{ marginBottom: "2.75rem" }}>
             <h2 id="hiw-heading">How it works</h2>
+            <p className="section-lead-in">
+              Great buildings and sites run on hundreds of small decisions a day: which part, which supplier, what
+              price. Every one of them is only as good as the data behind it.
+            </p>
           </div>
           <div className="hiw-grid">
             <article className="hiw-card">
@@ -373,6 +381,10 @@ export default async function HomePage() {
         <div className="container">
           <div className="text-center" style={{ marginBottom: "2.75rem" }}>
             <h2 id="who-heading">Who it's for</h2>
+            <p className="section-lead-in">
+              You build, run and maintain the places people work, live and travel through. We look after the data
+              that keeps that work on budget.
+            </p>
           </div>
           <div className="who-grid">
             {whoTiles.map((tile) => (

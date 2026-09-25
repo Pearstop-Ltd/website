@@ -113,6 +113,7 @@
     },
     "howItWorks": {
       "title": "How it works",
+      "leadIn": "Great buildings and sites run on hundreds of small decisions a day: which part, which supplier, what price. Every one of them is only as good as the data behind it.",
       "stage1": {
         "label": "Stage 1",
         "title": "Send us what you have",
@@ -153,6 +154,7 @@
     },
     "who": {
       "title": "Who it's for",
+      "leadIn": "You build, run and maintain the places people work, live and travel through. We look after the data that keeps that work on budget.",
       "tiles": [
         {
           "title": "Facilities Management",
@@ -222,7 +224,7 @@
       "items": [
         {
           "q": "What does Pearstop do?",
-          "a": "Pearstop helps facilities management, infrastructure, and hard services companies clean procurement and asset data so teams can see what they are buying, plan maintenance more reliably, and feed trustworthy data into AI and reporting tools. If you need one plain answer, it is this: we turn messy operational data into something your business can actually use."
+          "a": "Pearstop helps facilities management, construction, infrastructure and manufacturing companies clean procurement and asset data so teams can see what they are buying, plan maintenance on time, stay compliant, and feed trustworthy data into AI and reporting tools. If you need one plain answer, it is this: we turn messy operational data into something your business can actually use."
         },
         {
           "q": "What is UNSPSC classification?",
@@ -243,6 +245,10 @@
         {
           "q": "How long does spend classification take?",
           "a": "A first sample of 200 lines is typically turned around within a few working days. Ongoing classification runs continuously as new invoices arrive."
+        },
+        {
+          "q": "Does Pearstop help with safety and compliance?",
+          "a": "Through the data behind it. Statutory maintenance is planned from asset lists, supplier checks run on supplier records, and repairs depend on the right part number. Pearstop cleans and matches those records, shows spend with suppliers outside your approved list, and never guesses a part number. It doesn't run inspections; it makes sure the data behind them is right."
         }
       ]
     },
@@ -266,6 +272,7 @@
       "title": "We started Pearstop because we were fed up.",
       "lead": "Fed up with watching smart people spend their days on manual data work that a machine should be doing. Fed up with insights that never made it to the decision-maker because the data underneath was not good enough. Fed up with inefficiency that was completely, entirely unnecessary."
     },
+    "buyerIntro": "The people who build, run and maintain buildings, sites and networks care about getting it right: safe sites, compliant assets, and great places to work and live. The data behind that work should help them, not slow them down. That is the part we fix.",
     "howItStarted": {
       "label": "How it started",
       "title": "How it started",
@@ -614,7 +621,7 @@
     "approach": {
       "eyebrow": "The Pearstop approach",
       "title": "One engine behind every solution",
-      "body": "Invoices, ERP exports, spreadsheets or portal downloads go in. Pearstop reads, cleans, labels and enriches every line, and the output plugs straight into the tools you already use.",
+      "body": "Running a safe, well-kept site means getting the details right, every time. We bring the same care to your data: every line read, cleaned and labelled, and anything uncertain checked by a person. The output plugs straight into the tools you already use.",
       "bullets": [
         "Works with your existing BI tools, ERP, and dashboards",
         "No lengthy implementation - results in days, not months",
@@ -782,6 +789,7 @@
     },
     "problem": {
       "eyebrow": "The problem",
+      "leadIn": "Every invoice is a record of work done on a site. If nobody reads it, nobody can check it.",
       "title": "Why spend data stays unusable months after the invoice arrives",
       "body": "Every supplier lays out an invoice differently. The same supplier changes layout depending on the depot or system that sent it. Plenty still arrive as a scan or a photo of a paper delivery note. Someone has to read each one before anything can be categorised, compared or reported on. At volume, that step becomes the permanent bottleneck.",
       "quote": {
@@ -882,6 +890,10 @@
       "b3": {
         "title": "No more keying and correcting",
         "copy": "The manual entry step that eats procurement and finance admin time goes away."
+      },
+      "b4": {
+        "title": "Invoices checked against the contract",
+        "copy": "Extracted lines can be compared with agreed rates and payment terms, so out-of-contract charges show up before they are paid."
       }
     },
     "quote": {
@@ -1160,6 +1172,10 @@
       "b3": {
         "title": "Framework compliance checked, not assumed",
         "copy": "See where live buying has drifted from an agreement signed years ago, across the whole business, not just the categories someone happens to be watching."
+      },
+      "b4": {
+        "title": "Off-contract spend in plain sight",
+        "copy": "Spend with suppliers outside your frameworks or approved list shows up by category, so compliance gaps are found before an audit finds them."
       }
     },
     "quote": {
@@ -1487,6 +1503,10 @@
       {
         "question": "How long does UNSPSC classification take?",
         "answer": "Most clients have a clean, classified dataset ready within four to six weeks of starting. The first engagement begins with a Data Stability Baseline so you can assess the output quality before committing to ongoing classification."
+      },
+      {
+        "question": "Can UNSPSC-classified spend be used for Scope 3 carbon reporting?",
+        "answer": "Yes. The spend-based method for Scope 3 multiplies the spend in each category by an emissions factor, so spend has to be classified by category first, and UNSPSC gives you consistent categories across suppliers, sites and years. Pearstop provides the classified spend; the emissions calculation happens in your carbon reporting tool."
       }
     ],
     "related": {
@@ -1927,7 +1947,7 @@
     "hero": {
       "eyebrow": "Industries",
       "title": "Industries We Serve",
-      "lead": "Most teams we work with can’t answer a simple question: what did we spend, on what, and with whom? It looks different in every industry. Find yours below.",
+      "lead": "Great places take a lot of work nobody sees: the maintenance plan, the parts order, the supplier check. Most of it runs on data, and most teams we work with can't answer a simple question about it: what did we spend, on what, and with whom? Find your industry below.",
       "primaryLabel": "Send us a data sample. We clean it for free.",
       "secondaryLabel": "Book a 15-minute discovery"
     },
@@ -2040,7 +2060,7 @@
         "dayToDay": {
           "work": "Rail, utilities, roads and energy networks. Many projects at once, often won through public tenders.",
           "spend": "Subcontractors, materials, plant hire and specialist services, bought by project teams across regions and entities.",
-          "matters": "Hitting savings targets, staying on framework agreements, and pricing the next tender on real costs."
+          "matters": "Hitting savings targets, staying on framework agreements, working with vetted suppliers on safety-critical work, and pricing the next tender on real costs."
         },
         "pains": [
           {
@@ -2098,7 +2118,7 @@
         "dayToDay": {
           "work": "Cleaning, maintenance, security and catering delivered together under one contract, often across hundreds of sites and several countries.",
           "spend": "Consumables, parts, subcontractors and labour, reported from a different system for every service line.",
-          "matters": "Knowing the real cost of each contract, and proving value at renewal."
+          "matters": "Knowing the real cost of each contract, proving value at renewal, and great, safe places for the people who use the client's buildings."
         },
         "pains": [
           {
@@ -2156,7 +2176,7 @@
         "dayToDay": {
           "work": "M&E, HVAC, fire, security and BMS maintenance and installation, often on fixed-price service contracts.",
           "spend": "Parts, subcontractors and equipment, plus an asset list from every client site.",
-          "matters": "Margin on fixed-price work, asset data good enough to plan maintenance, and bids priced on real costs."
+          "matters": "Margin on fixed-price work, statutory maintenance done on time, safe buildings, and bids priced on real costs."
         },
         "pains": [
           {
@@ -2179,6 +2199,7 @@
         "changes": [
           "Supplier matching: every spelling linked to one supplier, so spend per supplier is one number",
           "Asset lists cleaned and matched to one structure, whatever format the client sends",
+          "An accurate asset list to plan statutory maintenance from, so nothing that needs an inspection gets missed",
           "Manufacturer and equipment data checked against what is actually installed",
           "A cost history per part and subcontractor to price the next contract from"
         ],
@@ -2216,7 +2237,7 @@
         "dayToDay": {
           "work": "Main contractors and project-based firms running many projects at once, often across a dozen or more entities.",
           "spend": "Subcontractors, materials and plant, bought project by project.",
-          "matters": "Winning tenders at a margin, knowing group-wide spend, and keeping buying on framework agreements."
+          "matters": "Winning tenders at a margin, knowing group-wide spend, safe sites, and buying from approved subcontractors on agreed frameworks."
         },
         "pains": [
           {
@@ -2391,7 +2412,7 @@
         "dayToDay": {
           "work": "Property investors, landlords and public estate owners who outsource facilities management to a provider.",
           "spend": "Maintenance and services bought on your behalf and reported back by the provider.",
-          "matters": "Knowing what is spent for you is fair, comparing providers and sites, and approving standard costs fast."
+          "matters": "Knowing what is spent for you is fair, comparing providers and sites, approving standard costs fast, and buildings that work well for the people in them."
         },
         "pains": [
           {
@@ -2445,7 +2466,7 @@
         "dayToDay": {
           "work": "Keeping equipment running across sites, ordering spare parts and components every day.",
           "spend": "Thousands of different parts, most bought through intermediaries under their own part codes.",
-          "matters": "Knowing which high-volume parts can be bought direct, and at what price."
+          "matters": "Knowing which high-volume parts can be bought direct, at what price, and that every part is the right one, because the wrong part is a safety risk."
         },
         "pains": [
           {
@@ -2469,7 +2490,7 @@
           "The original manufacturer part number found for every part in your data, not just the top few",
           "A clear list of the high-volume parts you can order direct, in bulk",
           "A parts list back in days, sometimes hours, instead of months",
-          "No made-up part numbers: when a match can’t be confirmed, the field stays empty, so your team knows exactly what still needs checking"
+          "No made-up part numbers: when a match can't be confirmed, the field stays empty, because the wrong part is a safety risk, not just a cost"
         ],
         "proof": {
           "linkLabel": "See the MRO pattern",

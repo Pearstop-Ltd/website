@@ -1,7 +1,7 @@
 import { SolutionPage, type SolutionSection } from "../templates/SolutionPage";
 import { HeroTransform } from "../HeroTransform";
 import { ProblemBullets } from "../ProblemBullets";
-import { TrendUpIcon, LayersIcon, ZapIcon } from "../icons";
+import { TrendUpIcon, LayersIcon, ZapIcon, EyeIcon } from "../icons";
 import { SampleRequestModal } from "@/components/sample-request-modal";
 
 export interface ProcurementCopy {
@@ -26,6 +26,7 @@ export interface ProcurementCopy {
     b1: { title: string; copy: string };
     b2: { title: string; copy: string };
     b3: { title: string; copy: string };
+    b4: { title: string; copy: string };
   };
   quote: { text: string; author: string; role: string };
   geoBlock: { title: string; copy: string };
@@ -76,10 +77,12 @@ export function ProcurementPage({ copy }: { copy: ProcurementCopy }) {
       type: "outcomeCards",
       key: "outcome",
       title: copy.outcome.title,
+      columns: 2,
       cards: [
         { title: copy.outcome.b1.title, body: copy.outcome.b1.copy, icon: <TrendUpIcon /> },
         { title: copy.outcome.b2.title, body: copy.outcome.b2.copy, icon: <LayersIcon /> },
         { title: copy.outcome.b3.title, body: copy.outcome.b3.copy, icon: <ZapIcon /> },
+        { title: copy.outcome.b4.title, body: copy.outcome.b4.copy, icon: <EyeIcon /> },
       ],
     },
     {

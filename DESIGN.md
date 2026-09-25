@@ -72,6 +72,16 @@ Never use a heading tag for a paragraph. If text is longer than one line of a he
 - Copy: no em dashes, no "it's not X, it's Y" constructions, never the word "quick".
 - Illustrative data is always labelled as illustrative.
 
+## Their world
+
+Buyers build, run and maintain buildings, sites and networks. Copy uses their nouns: sites, buildings, places, workplaces, occupants, contracts, service lines, planned maintenance, statutory checks, tenders, on site.
+
+Avoid generic corporate nouns in page copy: organisation(s), operational data, data estate, stakeholders, digital transformation, leverage, solution (as a generic noun).
+
+"World lines" (lines that describe the reader's work) are concrete and plain, at most one per page section, and always tie back to the data in the same or next sentence. No slogans or rhyming pairs.
+
+Compliance and safety are mentioned only where Pearstop has a concrete mechanism (asset lists, supplier matching, part numbers, contract terms).
+
 ## Migration
 
 The tokens above currently live scoped to `components/site/` only (see `components/site/tokens.module.css`), so they have zero effect on any live page. Once every case-study and solution page has been migrated to the `CasePage`/`SolutionPage` templates, move the token values into `app/globals.css`'s `:root`, remapping every existing use of `--navy` (`#1f2a68`) to `--navy-deep` and introducing the brand's `--navy` (`#2A3990`) as a new token, so live pages do not visually shift when the merge happens. Do not do this until the migration is complete — merging early would silently change colours on pages nobody has re-approved against the new design.

@@ -179,6 +179,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         <div className="container">
           <div className="text-center" style={{ marginBottom: "2.75rem" }}>
             <h2 id="hiw-heading">{t("howItWorks.title")}</h2>
+            <p className="section-lead-in">{t("howItWorks.leadIn")}</p>
           </div>
           <div className="hiw-grid">
             <article className="hiw-card">
@@ -283,6 +284,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         <div className="container">
           <div className="text-center" style={{ marginBottom: "2.75rem" }}>
             <h2 id="who-heading">{t("who.title")}</h2>
+            <p className="section-lead-in">{t("who.leadIn")}</p>
           </div>
           <div className="who-grid">
             {whoTiles.map((tile) => (
