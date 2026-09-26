@@ -142,7 +142,7 @@ const proofCards = [
     stat: "~300",
     detail: "invoices a month",
     href: "/cases",
-    quote: "It would have taken five engineers and a full year to clean this up. So we decided to look for a better solution.",
+    quote: "It would have taken five engineers and a full year to clean this up. So we decided to look for a better way to do this.",
     quoteRole: "Head of Operations, Cleaning Services"
   }
 ];

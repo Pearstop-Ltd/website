@@ -210,7 +210,7 @@
           "stat": "~300",
           "detail": "invoices a month",
           "href": "/cases",
-          "quote": "It would have taken five engineers and a full year to clean this up. So we decided to look for a better solution.",
+          "quote": "It would have taken five engineers and a full year to clean this up. So we decided to look for a better way to do this.",
           "quoteRole": "Head of Operations, Cleaning Services"
         }
       ]
@@ -530,7 +530,7 @@
           "wide": true
         }
       ],
-      "exploreLink": "Explore solution →"
+      "exploreLink": "See how it works →"
     },
     "who": {
       "eyebrow": "Who it's for",
@@ -641,7 +641,7 @@
       "items": [
         {
           "q": "What data quality problems does Pearstop solve?",
-          "a": "Hard services, construction, infrastructure, and manufacturing companies share a common challenge: operational data that is decentralised, inconsistent, and difficult to use across teams and systems. Poor procurement data quality, unreliable asset registers, and unclassified spend are the most common blockers to category management, predictive maintenance, and digital transformation. Pearstop specialises in cleaning and structuring this operational data so technical businesses can act on it."
+          "a": "Hard services, construction, infrastructure, and manufacturing companies share a common challenge: spend and asset data that is scattered, inconsistent, and difficult to use across teams and systems. Poor procurement data quality, unreliable asset registers, and unclassified spend are the most common blockers to category management, predictive maintenance, and moving to new systems. Pearstop specialises in cleaning and structuring this spend and asset data so technical businesses can act on it."
         },
         {
           "q": "Which solution should I start with?",
@@ -1486,7 +1486,7 @@
     "faq": [
       {
         "question": "What is UNSPSC classification?",
-        "answer": "UNSPSC (United Nations Standard Products and Services Code) is a hierarchical classification system used worldwide to categorise procurement spend. It has four levels: Segment, Family, Class, and Commodity. Organisations use UNSPSC to enable consistent spend analysis, supplier benchmarking, and category management across contracts, sites, and ERP systems."
+        "answer": "UNSPSC (United Nations Standard Products and Services Code) is a hierarchical classification system used worldwide to categorise procurement spend. It has four levels: Segment, Family, Class, and Commodity. UNSPSC enables consistent spend analysis, supplier benchmarking, and category management across contracts, sites, and ERP systems."
       },
       {
         "question": "How accurate is automated UNSPSC classification?",
@@ -1938,7 +1938,7 @@
   "Industries": {
     "meta": {
       "title": "Spend Data by Industry: FM, Construction & Infrastructure",
-      "description": "Pearstop works with infrastructure, facilities management, cleaning, construction, manufacturing, and asset owner organisations. Each industry has a different data problem - see how we solve it."
+      "description": "Pearstop works with infrastructure, facilities management, cleaning, construction, manufacturing, and asset owners and asset managers. Each industry has a different data problem - see how we solve it."
     },
     "breadcrumb": {
       "home": "Home",
@@ -2069,7 +2069,7 @@
           },
           {
             "title": "Framework coverage nobody can see across the business",
-            "body": "One buyer can see the ten framework agreements for their category. The other fifty categories have no equivalent visibility, so the organisation cannot steer spend onto agreements it already has."
+            "body": "One buyer can see the ten framework agreements for their category. The other fifty categories have no equivalent visibility, so the company cannot steer spend onto agreements it already has."
           },
           {
             "title": "No baseline to negotiate or tender from",
@@ -2118,7 +2118,7 @@
         "dayToDay": {
           "work": "Cleaning, maintenance, security and catering delivered together under one contract, often across hundreds of sites and several countries.",
           "spend": "Consumables, parts, subcontractors and labour, reported from a different system for every service line.",
-          "matters": "Knowing the real cost of each contract, proving value at renewal, and great, safe places for the people who use the client's buildings."
+          "matters": "Knowing the real cost of each contract, proving value at renewal, and keeping the buildings you service running well."
         },
         "pains": [
           {
@@ -2322,7 +2322,7 @@
         ],
         "proof": {
           "stat": "Invoice extraction accuracy from about 70% to 99% for a cleaning services company",
-          "quote": "It would have taken five engineers and a full year to clean this up. So we decided to look for a better solution.",
+          "quote": "It would have taken five engineers and a full year to clean this up. So we decided to look for a better way to do this.",
           "role": "Head of Operations, Cleaning services company",
           "caseLabel": null,
           "caseHref": null
@@ -2466,7 +2466,7 @@
         "dayToDay": {
           "work": "Keeping equipment running across sites, ordering spare parts and components every day.",
           "spend": "Thousands of different parts, most bought through intermediaries under their own part codes.",
-          "matters": "Knowing which high-volume parts can be bought direct, at what price, and that every part is the right one, because the wrong part is a safety risk."
+          "matters": "Knowing which high-volume parts can be bought direct, at what price, and that every part is the right one, because a wrong match costs more than it saves."
         },
         "pains": [
           {
@@ -2490,7 +2490,7 @@
           "The original manufacturer part number found for every part in your data, not just the top few",
           "A clear list of the high-volume parts you can order direct, in bulk",
           "A parts list back in days, sometimes hours, instead of months",
-          "No made-up part numbers: when a match can't be confirmed, the field stays empty, because the wrong part is a safety risk, not just a cost"
+          "No made-up part numbers: when a match can't be confirmed, the field stays empty, because guessing costs you the saving you were trying to make"
         ],
         "proof": {
           "linkLabel": "See the MRO pattern",
@@ -2518,7 +2518,7 @@
     ],
     "workingDifferent": {
       "title": "Working in a different industry?",
-      "body": "Data quality problems are not unique to the industries above. If your teams are managing complex operational data, dealing with inconsistent supplier records, or preparing for a digital transformation, the chances are we can help. Let’s find out.",
+      "body": "Data quality problems are not unique to the industries above. If your teams are managing complex spend and asset data, dealing with inconsistent supplier records, or moving to a new ERP or reporting system, the chances are we can help. Let’s find out.",
       "primaryLabel": "Book a 15-minute discovery",
       "secondaryLabel": "Or send us a data sample →"
     },
@@ -2528,16 +2528,16 @@
       "lead": "Hard services, construction, infrastructure, and manufacturing companies share a common challenge.",
       "blocks": [
         {
-          "title": "Operational data that is decentralised, inconsistent, and difficult to act on",
-          "copy": "Poor procurement data quality, unreliable asset registers, and unclassified spend are the most common blockers to category management, predictive maintenance, and digital transformation in these industries. Pearstop specialises in cleaning and structuring this operational data so technical businesses can act on it."
+          "title": "Spend and asset data spread across systems and sites, inconsistent, and hard to act on",
+          "copy": "Poor procurement data quality, unreliable asset registers, and unclassified spend are the most common blockers to category management, predictive maintenance, and moving to new systems in these industries. Pearstop specialises in cleaning and structuring this spend and asset data so technical businesses can act on it."
         },
         {
           "title": "Inconsistent supplier records and fragmented procurement data",
           "copy": "Supplier data in hard services and construction is rarely standardised. Different ERP exports, legacy systems, and manual spreadsheets mean the same supplier or product can appear dozens of ways. Pearstop resolves and standardises this data automatically - creating a single, trusted procurement dataset."
         },
         {
-          "title": "Digital transformation initiatives stalling on data readiness",
-          "copy": "Microsoft Fabric, SAP migrations, AI tools, and BI platforms all depend on clean, structured input data. In technical industries, the data is rarely ready. Pearstop builds the data foundation - classified, deduplicated, and consistently structured - so digital transformation projects can proceed without months of manual preparation."
+          "title": "New system rollouts stalling on data readiness",
+          "copy": "Microsoft Fabric, SAP migrations, AI tools, and BI platforms all depend on clean, structured input data. In technical industries, the data is rarely ready. Pearstop builds the data foundation - classified, deduplicated, and consistently structured - so these rollouts can proceed without months of manual preparation."
         }
       ]
     },
