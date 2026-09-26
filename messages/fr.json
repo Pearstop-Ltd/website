@@ -1384,7 +1384,7 @@
       "title": "Ce que disent nos clients",
       "lead": "Des équipes achats aux directeurs des opérations - l'impact se voit dans les chiffres.",
       "t1": {
-        "text": "Nos données d'actifs étaient éparpillées entre des tableurs et alimentées par les anciens systèmes des clients. Rien n'était assez cohérent pour en tirer une quelconque analyse. Pearstop les a consolidées et structurées, et soudain nous avions quelque chose sur lequel construire.",
+        "text": "Le scoring de confiance a permis à notre équipe de savoir où concentrer son temps de vérification en premier, plutôt que de repartir de zéro sur 200 000 lignes.",
         "name": "Bart van Peij",
         "role": "Responsable Master Data Management · SPIE Building Solutions"
       },
@@ -3234,7 +3234,27 @@
         "title": "Vos dépenses restent classifiées",
         "copy": "À mesure que de nouvelles factures arrivent, elles sont classifiées de la même manière - plus besoin d'un projet de nettoyage chaque année."
       },
-      "beforeAfterCaption": "Exemple illustratif : six lignes de facture de trois fournisseurs. La description et le fournisseur d'origine sont conservés exactement tels que reçus - Pearstop ajoute uniquement les colonnes à droite."
+      "beforeAfterCaption": "Exemple illustratif : six lignes de facture de trois fournisseurs. La description et le fournisseur d'origine sont conservés exactement tels que reçus - Pearstop ajoute uniquement les colonnes à droite.",
+      "table": {
+        "asItArrives": "Tel que reçu",
+        "whatPearstopAdds": "Ce que Pearstop ajoute",
+        "columnDescription": "Description de la facture",
+        "columnSupplier": "Fournisseur",
+        "columnUnspsc": "UNSPSC",
+        "columnCategory": "Catégorie",
+        "columnUnifiedSupplier": "Fournisseur unifié",
+        "columnConfidence": "Fiabilité",
+        "footnote": "* Catégorie déduite de données complémentaires (historique d'achats et contexte contractuel), non indiquée directement sur la facture — signalée avec une fiabilité moyenne plutôt qu'élevée.",
+        "categories": {
+          "airFilters": "Filtres à air",
+          "generalPurposeCleaners": "Nettoyants multi-usages",
+          "temporaryManualLabour": "Main-d'œuvre temporaire"
+        },
+        "confidence": {
+          "high": "Élevée",
+          "medium": "Moyenne"
+        }
+      }
     },
     "labelledOutput": {
       "eyebrow": "Chaque ligne, labellisée",
@@ -3303,12 +3323,12 @@
           "quoteRole": "Directeur des Achats, Infrastructure"
         },
         {
-          "title": "Prestataire de services techniques",
+          "title": "Prestataire de facilities management",
           "stat": "9 175 → 1 493 variantes fournisseurs consolidées sur 204 029 fiches d'actifs",
           "detail": "73,1 % de correspondances confirmées.",
           "href": "/cases",
           "quote": "Nos listes d'actifs fonctionnaient pour les techniciens sur site, mais ne nous permettaient pas de planifier une maintenance intelligente ni de gérer le risque des offres de façon pilotée par les données.",
-          "quoteRole": "Asset Manager, services techniques"
+          "quoteRole": "Asset Manager, Facilities Management"
         },
         {
           "title": "Entreprise de services de nettoyage",

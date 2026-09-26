@@ -71,12 +71,12 @@ const clientLogos = [
 ];
 
 const beforeAfterRows = [
-  { description: "PMP FLTR 20X24 CS/6", supplier: "AAF INTL", unspsc: "40161505", category: "Air filters", unifiedSupplier: "AAF International", confidence: "High" },
-  { description: "FILTER,AIR,20X24,MERV8", supplier: "AAF FLANDERS", unspsc: "40161505", category: "Air filters", unifiedSupplier: "AAF International", confidence: "High" },
-  { description: "Air Flt 20x24x2 (6/box)", supplier: "AAF", unspsc: "40161505", category: "Air filters", unifiedSupplier: "AAF International", confidence: "High" },
-  { description: "GEN PURP CLNR 5L", supplier: "ISS FACILITY", unspsc: "47131805", category: "General purpose cleaners", unifiedSupplier: "ISS Facility Services", confidence: "High" },
-  { description: "Multi-surface cleaner 5ltr", supplier: "ISS", unspsc: "47131805", category: "General purpose cleaners", unifiedSupplier: "ISS Facility Services", confidence: "High" },
-  { description: "Additional hours", supplier: "M&P CONTRACTING", unspsc: "80111613", category: "Temporary manual labour", unifiedSupplier: "M&P Contracting Ltd", confidence: "Medium", inferred: true }
+  { description: "PMP FLTR 20X24 CS/6", supplier: "AAF INTL", unspsc: "40161505", categoryKey: "airFilters", unifiedSupplier: "AAF International", confidenceKey: "high" },
+  { description: "FILTER,AIR,20X24,MERV8", supplier: "AAF FLANDERS", unspsc: "40161505", categoryKey: "airFilters", unifiedSupplier: "AAF International", confidenceKey: "high" },
+  { description: "Air Flt 20x24x2 (6/box)", supplier: "AAF", unspsc: "40161505", categoryKey: "airFilters", unifiedSupplier: "AAF International", confidenceKey: "high" },
+  { description: "GEN PURP CLNR 5L", supplier: "ISS FACILITY", unspsc: "47131805", categoryKey: "generalPurposeCleaners", unifiedSupplier: "ISS Facility Services", confidenceKey: "high" },
+  { description: "Multi-surface cleaner 5ltr", supplier: "ISS", unspsc: "47131805", categoryKey: "generalPurposeCleaners", unifiedSupplier: "ISS Facility Services", confidenceKey: "high" },
+  { description: "Additional hours", supplier: "M&P CONTRACTING", unspsc: "80111613", categoryKey: "temporaryManualLabour", unifiedSupplier: "M&P Contracting Ltd", confidenceKey: "medium", inferred: true }
 ];
 
 type ProblemQuote = { quote: string; source: string };
@@ -206,16 +206,16 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             <table className="before-after-table">
               <thead>
                 <tr>
-                  <th colSpan={2}>As it arrives</th>
-                  <th colSpan={4}>What Pearstop adds</th>
+                  <th colSpan={2}>{t("howItWorks.table.asItArrives")}</th>
+                  <th colSpan={4}>{t("howItWorks.table.whatPearstopAdds")}</th>
                 </tr>
                 <tr>
-                  <th>Invoice description</th>
-                  <th>Supplier</th>
-                  <th>UNSPSC</th>
-                  <th>Category</th>
-                  <th>Unified supplier</th>
-                  <th>Confidence</th>
+                  <th>{t("howItWorks.table.columnDescription")}</th>
+                  <th>{t("howItWorks.table.columnSupplier")}</th>
+                  <th>{t("howItWorks.table.columnUnspsc")}</th>
+                  <th>{t("howItWorks.table.columnCategory")}</th>
+                  <th>{t("howItWorks.table.columnUnifiedSupplier")}</th>
+                  <th>{t("howItWorks.table.columnConfidence")}</th>
                 </tr>
               </thead>
               <tbody>
@@ -224,10 +224,10 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                     <td>{row.description}</td>
                     <td>{row.supplier}</td>
                     <td>{row.unspsc}</td>
-                    <td>{row.category}{row.inferred ? <sup>*</sup> : null}</td>
+                    <td>{t(`howItWorks.table.categories.${row.categoryKey}`)}{row.inferred ? <sup>*</sup> : null}</td>
                     <td>{row.unifiedSupplier}</td>
-                    <td className={row.confidence === "Medium" ? "confidence-medium" : "confidence-high"}>
-                      <span className="confidence-pill">{row.confidence}</span>
+                    <td className={row.confidenceKey === "medium" ? "confidence-medium" : "confidence-high"}>
+                      <span className="confidence-pill">{t(`howItWorks.table.confidence.${row.confidenceKey}`)}</span>
                     </td>
                   </tr>
                 ))}
@@ -235,10 +235,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             </table>
           </div>
           <p className="before-after-caption">{t("howItWorks.beforeAfterCaption")}</p>
-          <p className="before-after-footnote">
-            * Category inferred from additional data (purchase history and contract context), not stated directly on
-            the invoice &mdash; flagged at medium confidence rather than high.
-          </p>
+          <p className="before-after-footnote">{t("howItWorks.table.footnote")}</p>
         </div>
       </section>
 

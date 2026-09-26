@@ -1384,7 +1384,7 @@
       "title": "Was unsere Kunden sagen",
       "lead": "Von Einkaufsteams bis zu Betriebsleitern - die Wirkung zeigt sich in den Zahlen.",
       "t1": {
-        "text": "Unsere Anlagendaten waren über Tabellenkalkulationen verstreut und speisten sich aus den Altsystemen unserer Kunden. Nichts davon war konsistent genug, um analytisch etwas damit anzufangen. Pearstop konsolidierte und strukturierte es, und plötzlich hatten wir etwas, worauf wir tatsächlich aufbauen konnten.",
+        "text": "Das Confidence Scoring gab unserem Team Klarheit, wo es seine Prüfzeit zuerst einsetzen sollte, statt bei 200.000 Zeilen wieder bei null anzufangen.",
         "name": "Bart van Peij",
         "role": "Head of Master Data Management · SPIE Building Solutions"
       },
@@ -3234,7 +3234,27 @@
         "copy": "Neue Rechnungen werden auf dieselbe Weise klassifiziert, sobald sie eintreffen - kein jährliches Bereinigungsprojekt mehr."
       },
       "beforeAfterCaption": "Illustratives Beispiel: sechs Rechnungszeilen von drei Lieferanten. Die ursprüngliche Beschreibung und der Lieferant bleiben exakt so erhalten, wie sie eingegangen sind - Pearstop fügt nur die Spalten rechts hinzu.",
-      "leadIn": "Gute Gebäude und Standorte laufen auf Hunderten kleinen Entscheidungen pro Tag: welches Teil, welcher Lieferant, welcher Preis. Jede davon ist nur so gut wie die Daten dahinter."
+      "leadIn": "Gute Gebäude und Standorte laufen auf Hunderten kleinen Entscheidungen pro Tag: welches Teil, welcher Lieferant, welcher Preis. Jede davon ist nur so gut wie die Daten dahinter.",
+      "table": {
+        "asItArrives": "Eingehend",
+        "whatPearstopAdds": "Was Pearstop hinzufügt",
+        "columnDescription": "Rechnungsbeschreibung",
+        "columnSupplier": "Lieferant",
+        "columnUnspsc": "UNSPSC",
+        "columnCategory": "Kategorie",
+        "columnUnifiedSupplier": "Vereinheitlichter Lieferant",
+        "columnConfidence": "Konfidenz",
+        "footnote": "* Kategorie aus zusätzlichen Daten abgeleitet (Einkaufshistorie und Vertragskontext), nicht direkt auf der Rechnung angegeben — daher mit mittlerer statt hoher Konfidenz markiert.",
+        "categories": {
+          "airFilters": "Luftfilter",
+          "generalPurposeCleaners": "Allzweckreiniger",
+          "temporaryManualLabour": "Temporäre Hilfskräfte"
+        },
+        "confidence": {
+          "high": "Hoch",
+          "medium": "Mittel"
+        }
+      }
     },
     "labelledOutput": {
       "eyebrow": "Jede Zeile, gelabelt",

@@ -3130,7 +3130,27 @@
         "copy": "Naarmate nieuwe facturen binnenkomen, worden ze op dezelfde manier geclassificeerd - geen jaarlijks opschoningsproject nodig."
       },
       "beforeAfterCaption": "Illustratief voorbeeld: zes factuurregels van drie leveranciers. De originele omschrijving en leverancier blijven exact zoals ontvangen - Pearstop voegt alleen de kolommen rechts toe.",
-      "leadIn": "Grote gebouwen en locaties draaien op honderden kleine beslissingen per dag: welk onderdeel, welke leverancier, welke prijs. Elke beslissing is precies zo goed als de data erachter."
+      "leadIn": "Grote gebouwen en locaties draaien op honderden kleine beslissingen per dag: welk onderdeel, welke leverancier, welke prijs. Elke beslissing is precies zo goed als de data erachter.",
+      "table": {
+        "asItArrives": "Zoals binnengekomen",
+        "whatPearstopAdds": "Wat Pearstop toevoegt",
+        "columnDescription": "Factuuromschrijving",
+        "columnSupplier": "Leverancier",
+        "columnUnspsc": "UNSPSC",
+        "columnCategory": "Categorie",
+        "columnUnifiedSupplier": "Gekoppelde leverancier",
+        "columnConfidence": "Betrouwbaarheid",
+        "footnote": "* Categorie afgeleid uit aanvullende data (inkoophistorie en contractcontext), niet rechtstreeks op de factuur vermeld — daarom gemarkeerd met gemiddelde in plaats van hoge betrouwbaarheid.",
+        "categories": {
+          "airFilters": "Luchtfilters",
+          "generalPurposeCleaners": "Allesreinigers",
+          "temporaryManualLabour": "Tijdelijke handarbeid"
+        },
+        "confidence": {
+          "high": "Hoog",
+          "medium": "Gemiddeld"
+        }
+      }
     },
     "labelledOutput": {
       "eyebrow": "Elke regel, gelabeld",
@@ -3177,13 +3197,13 @@
           "href": "/industries#manufacturing"
         }
       ],
-      "linkText": "Bekijk hoe dit van toepassing is →",
+      "linkText": "Bekijk uw sector →",
       "leadIn": "U bouwt, beheert en onderhoudt de plekken waar mensen werken, wonen en reizen. Wij zorgen voor de data die dat werk binnen budget houdt."
     },
     "objection": {
-      "dataTitle": "“Onze data is hier niet schoon genoeg voor.”",
+      "dataTitle": "“Onze data is nog niet gecleaned.”",
       "dataCopy": "Dat horen we het vaakst - en het is juist de reden om nu te beginnen in plaats van te wachten. Het opschonen van de data is het eerste wat Pearstop doet, geen voorwaarde om met ons te werken.",
-      "inHouseTitle": "“Is het niet goedkoper om dit zelf te bouwen?”",
+      "inHouseTitle": "“Is het niet goedkoper om dit in-house op te lossen?”",
       "inHouseCopy": "Intern bouwen geeft volledige controle, maar reken op minstens twee data- of AI-specialisten om het goed te bouwen en te blijven onderhouden naarmate uw data verandert. We hebben interne bouwprojecten zien starten als nevenproject van een IT-team, live gaan zonder betrokkenheid van procurement, en binnen enkele maanden veranderen in een spreadsheet die niemand meer beheert. Pearstop is dat systeem al gebouwd - met een team dat als enige taak heeft het te blijven doorontwikkelen."
     },
     "proof": {
@@ -3199,12 +3219,12 @@
           "quoteRole": "Hoofd Inkoop, Infrastructuur"
         },
         {
-          "title": "Technisch dienstverlener",
+          "title": "FM-aanbieder",
           "stat": "9.175 → 1.493 leveranciersvarianten geconsolideerd over 204.029 asset-records",
           "detail": "73,1% bevestigde matches.",
           "href": "/cases",
           "quote": "Onze asset-lijsten werkten voor monteurs op locatie, maar stelden ons niet in staat om slim onderhoud te plannen of biedrisico datagedreven te beheren.",
-          "quoteRole": "Asset Manager, Technische dienstverlening"
+          "quoteRole": "Asset Manager, Facility Management"
         },
         {
           "title": "Schoonmaakbedrijf",

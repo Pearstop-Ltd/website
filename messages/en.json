@@ -129,7 +129,27 @@
         "title": "Your spend stays classified",
         "copy": "As new invoices arrive, they're classified the same way - no re-cleaning project every year."
       },
-      "beforeAfterCaption": "Illustrative example: six invoice lines from three suppliers. The original description and supplier are kept exactly as they arrived – Pearstop only adds the columns on the right."
+      "beforeAfterCaption": "Illustrative example: six invoice lines from three suppliers. The original description and supplier are kept exactly as they arrived – Pearstop only adds the columns on the right.",
+      "table": {
+        "asItArrives": "As it arrives",
+        "whatPearstopAdds": "What Pearstop adds",
+        "columnDescription": "Invoice description",
+        "columnSupplier": "Supplier",
+        "columnUnspsc": "UNSPSC",
+        "columnCategory": "Category",
+        "columnUnifiedSupplier": "Unified supplier",
+        "columnConfidence": "Confidence",
+        "footnote": "* Category inferred from additional data (purchase history and contract context), not stated directly on the invoice — flagged at medium confidence rather than high.",
+        "categories": {
+          "airFilters": "Air filters",
+          "generalPurposeCleaners": "General purpose cleaners",
+          "temporaryManualLabour": "Temporary manual labour"
+        },
+        "confidence": {
+          "high": "High",
+          "medium": "Medium"
+        }
+      }
     },
     "labelledOutput": {
       "eyebrow": "Every line, labelled",
