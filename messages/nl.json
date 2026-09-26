@@ -4634,5 +4634,59 @@
     "ctaTitle": "Wilt u een case study rond uw eigen data?",
     "ctaLead": "Wij laten u zien hoe dezelfde aanpak eruit zou zien voor uw procurement- of assetdata.",
     "backToCases": "Terug naar cases"
+  },
+  "SampleRequestModal": {
+    "close": "Sluiten",
+    "success": {
+      "title": "Sample ontvangen",
+      "lead": "Bedankt — we hebben uw bestanden en gegevens ontvangen. We nemen contact met u op via {email} zodra uw sample geclassificeerd is.",
+      "done": "Klaar"
+    },
+    "email": {
+      "title": "Stuur ons een sample",
+      "lead": "Stuur een representatieve steekproef van uw factuurregels — tot 200 regels, of een handvol facturen (max. 10) — en wij classificeren ze om u precies te laten zien hoe het werkt. Geen kosten, geen verplichtingen.",
+      "namePlaceholder": "Uw naam",
+      "companyPlaceholder": "Bedrijfsnaam",
+      "emailPlaceholder": "Uw e-mailadres",
+      "continuing": "Bezig…",
+      "continueLabel": "Doorgaan",
+      "legal": "Door door te gaan, gaat u akkoord met Pearstops <privacyLink>privacybeleid</privacyLink> en <termsLink>voorwaarden</termsLink>."
+    },
+    "fallback": {
+      "title": "Stuur het liever per e-mail",
+      "lead": "De automatische upload is niet gelukt, dus we hebben een e-mail geopend naar {email} met uw gegevens al ingevuld. Voeg uw factuurbestanden toe en verstuur — zo bereikt het ons net zo goed.",
+      "openEmail": "E-mail openen",
+      "close": "Sluiten"
+    },
+    "details": {
+      "title": "Bijna klaar",
+      "lead": "Nog een paar gegevens, en voeg dan uw bestanden toe — tot 200 regels, of een handvol facturen (max. 10).",
+      "spendLabel": "Geschatte inkoopuitgaven",
+      "spendOptions": {
+        "under5m": "Onder €5M",
+        "m5to50": "€5M–€50M",
+        "m50to500": "€50M–€500M",
+        "m500to1b": "€500M–€1B",
+        "over1b": "€1B+"
+      },
+      "goalPlaceholder": "Wat hoopt u hieruit te halen? (optioneel)",
+      "filesLabel": "Factuurbestanden (max. 10, PDF/Excel/CSV/afbeeldingen)",
+      "sending": "Bezig met versturen…",
+      "sendSample": "Sample versturen",
+      "note": "Uw bestanden gaan rechtstreeks naar ons en worden nooit gedeeld met anderen.",
+      "legal": "Door te versturen, gaat u akkoord met Pearstops <privacyLink>privacybeleid</privacyLink> en <termsLink>voorwaarden</termsLink>."
+    },
+    "error": "Er ging iets mis — probeer het opnieuw.",
+    "fallbackEmail": {
+      "greeting": "Hallo Pearstop,",
+      "uploadFailed": "De automatische upload op de website is mislukt, dus ik stuur dit per e-mail.",
+      "company": "Bedrijf",
+      "spend": "Geschatte inkoopuitgaven",
+      "goal": "Wat ik hiermee hoop te bereiken",
+      "notProvided": "Niet opgegeven",
+      "email": "E-mail",
+      "attached": "Ik heb tot 200 regels / een handvol facturen (max. 10) bijgevoegd aan deze e-mail.",
+      "signoff": "Met vriendelijke groet,"
+    }
   }
 }

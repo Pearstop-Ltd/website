@@ -4602,5 +4602,59 @@
     "ctaTitle": "Vous voulez une étude de cas construite autour de vos données ?",
     "ctaLead": "Nous pouvons vous montrer à quoi ressemblerait la même approche pour vos données d'achats ou d'actifs.",
     "backToCases": "Retour aux cas clients"
+  },
+  "SampleRequestModal": {
+    "close": "Fermer",
+    "success": {
+      "title": "Échantillon reçu",
+      "lead": "Merci — nous avons bien reçu vos fichiers et vos informations. Nous reviendrons vers vous à {email} dès que votre échantillon sera classifié.",
+      "done": "Terminé"
+    },
+    "email": {
+      "title": "Envoyez-nous un échantillon",
+      "lead": "Envoyez un échantillon représentatif de vos lignes de facture — jusqu'à 200 lignes, ou quelques factures (10 maximum) — et nous les classifierons pour vous montrer exactement comment cela fonctionne. Sans coût ni engagement.",
+      "namePlaceholder": "Votre nom",
+      "companyPlaceholder": "Nom de l'entreprise",
+      "emailPlaceholder": "Votre e-mail",
+      "continuing": "Poursuite…",
+      "continueLabel": "Continuer",
+      "legal": "En continuant, vous acceptez la <privacyLink>politique de confidentialité</privacyLink> et les <termsLink>conditions d'utilisation</termsLink> de Pearstop."
+    },
+    "fallback": {
+      "title": "Envoyons-le plutôt par e-mail",
+      "lead": "L'envoi automatique n'a pas abouti, nous avons donc ouvert un e-mail à {email} avec vos informations déjà remplies. Joignez vos fichiers de facture et envoyez — cela nous parvient tout aussi bien.",
+      "openEmail": "Ouvrir l'e-mail",
+      "close": "Fermer"
+    },
+    "details": {
+      "title": "Presque terminé",
+      "lead": "Encore quelques informations, puis joignez vos fichiers — jusqu'à 200 lignes, ou quelques factures (10 maximum).",
+      "spendLabel": "Dépenses d'achats approximatives",
+      "spendOptions": {
+        "under5m": "Moins de 5 M€",
+        "m5to50": "5 M€–50 M€",
+        "m50to500": "50 M€–500 M€",
+        "m500to1b": "500 M€–1 Md€",
+        "over1b": "1 Md€ et plus"
+      },
+      "goalPlaceholder": "Qu'espérez-vous en retirer ? (facultatif)",
+      "filesLabel": "Fichiers de facture (10 maximum, PDF/Excel/CSV/images)",
+      "sending": "Envoi…",
+      "sendSample": "Envoyer l'échantillon",
+      "note": "Vos fichiers nous parviennent directement et ne sont jamais partagés.",
+      "legal": "En envoyant, vous acceptez la <privacyLink>politique de confidentialité</privacyLink> et les <termsLink>conditions d'utilisation</termsLink> de Pearstop."
+    },
+    "error": "Une erreur s'est produite — veuillez réessayer.",
+    "fallbackEmail": {
+      "greeting": "Bonjour Pearstop,",
+      "uploadFailed": "L'envoi automatique sur le site a échoué, je vous l'envoie donc par e-mail.",
+      "company": "Entreprise",
+      "spend": "Dépenses d'achats approximatives",
+      "goal": "Ce que j'espère en retirer",
+      "notProvided": "Non renseigné",
+      "email": "E-mail",
+      "attached": "J'ai joint jusqu'à 200 lignes / quelques factures (10 maximum) à cet e-mail.",
+      "signoff": "Cordialement,"
+    }
   }
 }

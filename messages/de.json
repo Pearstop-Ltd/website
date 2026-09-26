@@ -4602,5 +4602,59 @@
     "ctaTitle": "Möchten Sie eine Fallstudie rund um Ihre eigenen Daten?",
     "ctaLead": "Wir zeigen Ihnen, wie derselbe Ansatz für Ihre Procurement- oder Anlagendaten aussehen würde.",
     "backToCases": "Zurück zu den Fallstudien"
+  },
+  "SampleRequestModal": {
+    "close": "Schließen",
+    "success": {
+      "title": "Sample erhalten",
+      "lead": "Vielen Dank — wir haben Ihre Dateien und Angaben erhalten. Wir melden uns unter {email}, sobald Ihr Sample klassifiziert ist.",
+      "done": "Fertig"
+    },
+    "email": {
+      "title": "Senden Sie uns ein Sample",
+      "lead": "Senden Sie ein repräsentatives Sample Ihrer Rechnungszeilen — bis zu 200 Zeilen oder ein paar Rechnungen (max. 10) — und wir klassifizieren sie, um Ihnen genau zu zeigen, wie es funktioniert. Ohne Kosten, ohne Verpflichtung.",
+      "namePlaceholder": "Ihr Name",
+      "companyPlaceholder": "Firmenname",
+      "emailPlaceholder": "Ihre E-Mail-Adresse",
+      "continuing": "Wird fortgesetzt…",
+      "continueLabel": "Weiter",
+      "legal": "Mit dem Fortfahren stimmen Sie den <privacyLink>Datenschutzbestimmungen</privacyLink> und <termsLink>Nutzungsbedingungen</termsLink> von Pearstop zu."
+    },
+    "fallback": {
+      "title": "Senden Sie es stattdessen per E-Mail",
+      "lead": "Der automatische Upload hat nicht funktioniert, daher haben wir eine E-Mail an {email} mit Ihren bereits ausgefüllten Angaben geöffnet. Fügen Sie Ihre Rechnungsdateien an und senden Sie sie ab — so erreicht es uns genauso gut.",
+      "openEmail": "E-Mail öffnen",
+      "close": "Schließen"
+    },
+    "details": {
+      "title": "Fast geschafft",
+      "lead": "Noch ein paar Angaben, dann fügen Sie Ihre Dateien hinzu — bis zu 200 Zeilen oder ein paar Rechnungen (max. 10).",
+      "spendLabel": "Ungefähres Beschaffungsvolumen",
+      "spendOptions": {
+        "under5m": "Unter 5 Mio. €",
+        "m5to50": "5–50 Mio. €",
+        "m50to500": "50–500 Mio. €",
+        "m500to1b": "500 Mio.–1 Mrd. €",
+        "over1b": "Über 1 Mrd. €"
+      },
+      "goalPlaceholder": "Was erhoffen Sie sich davon? (optional)",
+      "filesLabel": "Rechnungsdateien (max. 10, PDF/Excel/CSV/Bilder)",
+      "sending": "Wird gesendet…",
+      "sendSample": "Sample senden",
+      "note": "Ihre Dateien gehen direkt an uns und werden nie weitergegeben.",
+      "legal": "Mit dem Senden stimmen Sie den <privacyLink>Datenschutzbestimmungen</privacyLink> und <termsLink>Nutzungsbedingungen</termsLink> von Pearstop zu."
+    },
+    "error": "Etwas ist schiefgelaufen — bitte versuchen Sie es erneut.",
+    "fallbackEmail": {
+      "greeting": "Hallo Pearstop,",
+      "uploadFailed": "Der automatische Upload auf der Website ist fehlgeschlagen, daher sende ich dies per E-Mail.",
+      "company": "Unternehmen",
+      "spend": "Ungefähres Beschaffungsvolumen",
+      "goal": "Was ich mir davon erhoffe",
+      "notProvided": "Nicht angegeben",
+      "email": "E-Mail",
+      "attached": "Ich habe bis zu 200 Zeilen / ein paar Rechnungen (max. 10) an diese E-Mail angehängt.",
+      "signoff": "Mit freundlichen Grüßen,"
+    }
   }
 }

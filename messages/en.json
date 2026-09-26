@@ -4268,5 +4268,59 @@
     "ctaTitle": "Want a case study built around your data?",
     "ctaLead": "We can show you what the same approach would look like for your procurement or asset data.",
     "backToCases": "Back to cases"
+  },
+  "SampleRequestModal": {
+    "close": "Close",
+    "success": {
+      "title": "Sample received",
+      "lead": "Thanks — we've got your files and details. We'll come back to you at {email} once your sample is classified.",
+      "done": "Done"
+    },
+    "email": {
+      "title": "Send us a sample",
+      "lead": "Send a representative sample of your invoice lines — up to 200 lines, or a handful of invoices (max 10) — and we'll classify them to show you exactly how it works. No cost, no commitment.",
+      "namePlaceholder": "Your name",
+      "companyPlaceholder": "Company name",
+      "emailPlaceholder": "Your email",
+      "continuing": "Continuing…",
+      "continueLabel": "Continue",
+      "legal": "By continuing, you agree to Pearstop's <privacyLink>Privacy Policy</privacyLink> and <termsLink>Terms</termsLink>."
+    },
+    "fallback": {
+      "title": "Let's send it by email instead",
+      "lead": "The automatic upload didn't go through, so we've opened an email to {email} with your details pre-filled. Attach your invoice files and hit send — that reaches us just as well.",
+      "openEmail": "Open email",
+      "close": "Close"
+    },
+    "details": {
+      "title": "Almost there",
+      "lead": "A couple more details, then attach your files — up to 200 lines, or a handful of invoices (max 10).",
+      "spendLabel": "Approximate procurement spend",
+      "spendOptions": {
+        "under5m": "Under €5M",
+        "m5to50": "€5M–€50M",
+        "m50to500": "€50M–€500M",
+        "m500to1b": "€500M–€1B",
+        "over1b": "€1B+"
+      },
+      "goalPlaceholder": "What are you hoping to get out of this? (optional)",
+      "filesLabel": "Invoice files (up to 10, PDF/Excel/CSV/images)",
+      "sending": "Sending…",
+      "sendSample": "Send sample",
+      "note": "Your files are sent straight to us and never shared elsewhere.",
+      "legal": "By sending, you agree to Pearstop's <privacyLink>Privacy Policy</privacyLink> and <termsLink>Terms</termsLink>."
+    },
+    "error": "Something went wrong — please try again.",
+    "fallbackEmail": {
+      "greeting": "Hi Pearstop,",
+      "uploadFailed": "The automatic upload on the website failed, so I'm sending this by email instead.",
+      "company": "Company",
+      "spend": "Approximate procurement spend",
+      "goal": "What I'm hoping to get out of this",
+      "notProvided": "Not provided",
+      "email": "Email",
+      "attached": "I've attached up to 200 lines / a handful of invoices (max 10) to this email.",
+      "signoff": "Thanks,"
+    }
   }
 }

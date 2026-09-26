@@ -1,13 +1,15 @@
 "use client";
 
 import { useId, useRef, useState, type FormEvent } from "react";
+import { useTranslations } from "next-intl";
 import { RecaptchaNotice, RecaptchaScript, useRecaptchaV3 } from "@/components/recaptcha-widget";
 import { siteConfig } from "@/lib/site";
 
 type Step = "email" | "details" | "fallback" | "success";
 type Status = "idle" | "submitting";
 
-export function SampleRequestModal({ label = "Send us 200 lines", className = "btn btn-primary" }: { label?: string; className?: string }) {
+export function SampleRequestModal({ label, className = "btn btn-primary" }: { label?: string; className?: string }) {
+  const t = useTranslations("SampleRequestModal");
   const titleId = useId();
   const dialogRef = useRef<HTMLDialogElement>(null);
   const detailsFormRef = useRef<HTMLFormElement>(null);
@@ -38,20 +40,21 @@ export function SampleRequestModal({ label = "Send us 200 lines", className = "b
 
   const buildFallbackMailto = (companyName: string, contactEmail: string, spend: string, goal: string) => {
     const subject = encodeURIComponent(`Sample lines for classification (upload failed) – ${companyName}`);
+    const notProvided = t("fallbackEmail.notProvided");
     const body = encodeURIComponent(
       [
-        "Hi Pearstop,",
+        t("fallbackEmail.greeting"),
         "",
-        "The automatic upload on the website failed, so I'm sending this by email instead.",
+        t("fallbackEmail.uploadFailed"),
         "",
-        `Company: ${companyName}`,
-        `Approximate procurement spend: ${spend || "Not provided"}`,
-        `What I'm hoping to get out of this: ${goal || "Not provided"}`,
-        `Email: ${contactEmail}`,
+        `${t("fallbackEmail.company")}: ${companyName}`,
+        `${t("fallbackEmail.spend")}: ${spend || notProvided}`,
+        `${t("fallbackEmail.goal")}: ${goal || notProvided}`,
+        `${t("fallbackEmail.email")}: ${contactEmail}`,
         "",
-        "I've attached up to 200 lines / a handful of invoices (max 10) to this email.",
+        t("fallbackEmail.attached"),
         "",
-        "Thanks,"
+        t("fallbackEmail.signoff")
       ].join("\n")
     );
     return `mailto:${siteConfig.email}?subject=${subject}&body=${body}`;
@@ -85,7 +88,7 @@ export function SampleRequestModal({ label = "Send us 200 lines", className = "b
       const data = await response.json().catch(() => ({}));
 
       if (!response.ok) {
-        setErrorMessage(data.error || "Something went wrong — please try again.");
+        setErrorMessage(data.error || t("error"));
         setStatus("idle");
         return;
       }
@@ -97,7 +100,7 @@ export function SampleRequestModal({ label = "Send us 200 lines", className = "b
       setStatus("idle");
       setStep("details");
     } catch {
-      setErrorMessage("Something went wrong — please try again.");
+      setErrorMessage(t("error"));
       setStatus("idle");
     }
   };
@@ -149,84 +152,76 @@ export function SampleRequestModal({ label = "Send us 200 lines", className = "b
         {label}
       </button>
       <dialog ref={dialogRef} className="sample-modal" aria-labelledby={titleId}>
-        <button type="button" className="sample-modal-close" onClick={closeModal} aria-label="Close">
+        <button type="button" className="sample-modal-close" onClick={closeModal} aria-label={t("close")}>
           &times;
         </button>
 
         {step === "success" ? (
           <>
-            <h2 id={titleId}>Sample received</h2>
-            <p className="sample-modal-lead">
-              Thanks &mdash; we&rsquo;ve got your files and details. We&rsquo;ll come back to you at {email} once your
-              sample is classified.
-            </p>
+            <h2 id={titleId}>{t("success.title")}</h2>
+            <p className="sample-modal-lead">{t("success.lead", { email })}</p>
             <button type="button" className="btn btn-primary" onClick={closeModal}>
-              Done
+              {t("success.done")}
             </button>
           </>
         ) : step === "email" ? (
           <>
-            <h2 id={titleId}>Send us a sample</h2>
-            <p className="sample-modal-lead">
-              Send a representative sample of your invoice lines &mdash; up to 200 lines, or a handful of invoices
-              (max 10) &mdash; and we&rsquo;ll classify them to show you exactly how it works. No cost, no commitment.
-            </p>
+            <h2 id={titleId}>{t("email.title")}</h2>
+            <p className="sample-modal-lead">{t("email.lead")}</p>
             <form className="contact-form" onSubmit={handleEmailStep}>
-              <input type="text" name="name" placeholder="Your name" autoComplete="name" required aria-label="Your name" />
-              <input type="text" name="company" placeholder="Company name" autoComplete="organization" required aria-label="Company name" />
-              <input type="email" name="email" placeholder="Your email" autoComplete="email" required aria-label="Your email" />
+              <input type="text" name="name" placeholder={t("email.namePlaceholder")} autoComplete="name" required aria-label={t("email.namePlaceholder")} />
+              <input type="text" name="company" placeholder={t("email.companyPlaceholder")} autoComplete="organization" required aria-label={t("email.companyPlaceholder")} />
+              <input type="email" name="email" placeholder={t("email.emailPlaceholder")} autoComplete="email" required aria-label={t("email.emailPlaceholder")} />
               {errorMessage ? <p className="sample-modal-error">{errorMessage}</p> : null}
               <button type="submit" className="btn btn-primary" disabled={status === "submitting"}>
-                {status === "submitting" ? "Continuing…" : "Continue"}
+                {status === "submitting" ? t("email.continuing") : t("email.continueLabel")}
               </button>
               <RecaptchaNotice />
               <p className="sample-modal-legal">
-                By continuing, you agree to Pearstop&rsquo;s <a href="/privacy" target="_blank" rel="noreferrer">Privacy Policy</a> and{" "}
-                <a href="/terms-and-conditions" target="_blank" rel="noreferrer">Terms</a>.
+                {t.rich("email.legal", {
+                  privacyLink: (chunks) => <a href="/privacy" target="_blank" rel="noreferrer">{chunks}</a>,
+                  termsLink: (chunks) => <a href="/terms-and-conditions" target="_blank" rel="noreferrer">{chunks}</a>
+                })}
               </p>
             </form>
           </>
         ) : step === "fallback" ? (
           <>
-            <h2 id={titleId}>Let&rsquo;s send it by email instead</h2>
-            <p className="sample-modal-lead">
-              The automatic upload didn&rsquo;t go through, so we&rsquo;ve opened an email to {siteConfig.email} with
-              your details pre-filled. Attach your invoice files and hit send &mdash; that reaches us just as well.
-            </p>
+            <h2 id={titleId}>{t("fallback.title")}</h2>
+            <p className="sample-modal-lead">{t("fallback.lead", { email: siteConfig.email })}</p>
             <div className="hero-actions" style={{ justifyContent: "flex-start" }}>
-              <a href={fallbackMailto} className="btn btn-primary">Open email</a>
-              <button type="button" className="btn btn-outline" onClick={closeModal}>Close</button>
+              <a href={fallbackMailto} className="btn btn-primary">{t("fallback.openEmail")}</a>
+              <button type="button" className="btn btn-outline" onClick={closeModal}>{t("fallback.close")}</button>
             </div>
           </>
         ) : (
           <>
-            <h2 id={titleId}>Almost there</h2>
-            <p className="sample-modal-lead">
-              A couple more details, then attach your files &mdash; up to 200 lines, or a handful of invoices (max
-              10).
-            </p>
+            <h2 id={titleId}>{t("details.title")}</h2>
+            <p className="sample-modal-lead">{t("details.lead")}</p>
             <form ref={detailsFormRef} className="contact-form" onSubmit={handleDetailsStep}>
-              <select name="spend" defaultValue="" aria-label="Approximate procurement spend">
-                <option value="" disabled>Approximate procurement spend</option>
-                <option value="Under €5M">Under €5M</option>
-                <option value="€5M–€50M">€5M–€50M</option>
-                <option value="€50M–€500M">€50M–€500M</option>
-                <option value="€500M–€1B">€500M–€1B</option>
-                <option value="€1B+">€1B+</option>
+              <select name="spend" defaultValue="" aria-label={t("details.spendLabel")}>
+                <option value="" disabled>{t("details.spendLabel")}</option>
+                <option value="Under €5M">{t("details.spendOptions.under5m")}</option>
+                <option value="€5M–€50M">{t("details.spendOptions.m5to50")}</option>
+                <option value="€50M–€500M">{t("details.spendOptions.m50to500")}</option>
+                <option value="€500M–€1B">{t("details.spendOptions.m500to1b")}</option>
+                <option value="€1B+">{t("details.spendOptions.over1b")}</option>
               </select>
-              <textarea name="goal" placeholder="What are you hoping to get out of this? (optional)" rows={3} aria-label="Your goal" />
+              <textarea name="goal" placeholder={t("details.goalPlaceholder")} rows={3} aria-label={t("details.goalPlaceholder")} />
               <label className="sample-modal-file-label" htmlFor="sample-files">
-                Invoice files (up to 10, PDF/Excel/CSV/images)
+                {t("details.filesLabel")}
               </label>
-              <input id="sample-files" type="file" name="files" multiple aria-label="Invoice files" />
+              <input id="sample-files" type="file" name="files" multiple aria-label={t("details.filesLabel")} />
               <button type="submit" className="btn btn-primary" disabled={status === "submitting"}>
-                {status === "submitting" ? "Sending…" : "Send sample"}
+                {status === "submitting" ? t("details.sending") : t("details.sendSample")}
               </button>
               <RecaptchaNotice />
-              <p className="contact-form-note">Your files are sent straight to us and never shared elsewhere.</p>
+              <p className="contact-form-note">{t("details.note")}</p>
               <p className="sample-modal-legal">
-                By sending, you agree to Pearstop&rsquo;s <a href="/privacy" target="_blank" rel="noreferrer">Privacy Policy</a> and{" "}
-                <a href="/terms-and-conditions" target="_blank" rel="noreferrer">Terms</a>.
+                {t.rich("details.legal", {
+                  privacyLink: (chunks) => <a href="/privacy" target="_blank" rel="noreferrer">{chunks}</a>,
+                  termsLink: (chunks) => <a href="/terms-and-conditions" target="_blank" rel="noreferrer">{chunks}</a>
+                })}
               </p>
             </form>
           </>
