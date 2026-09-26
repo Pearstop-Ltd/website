@@ -1,4 +1,417 @@
 {
+  "CaseLemtech": {
+    "meta": {
+      "title": "Étude de cas Lemtech",
+      "description": "Pearstop transforme automatiquement les rapports de visite désordonnés de Lemtech en documents de proposition propres et prêts à l'emploi."
+    },
+    "breadcrumbCurrent": "Lemtech",
+    "factSheetRows": [
+      {
+        "label": "Client",
+        "value": "Lemtech"
+      },
+      {
+        "label": "Données",
+        "value": "Rapports de visite manuscrits et en texte libre"
+      },
+      {
+        "label": "Résultat",
+        "value": "Documents de proposition prêts à l'envoi"
+      },
+      {
+        "label": "Approche",
+        "value": "Extraction par IA + correspondance des spécifications"
+      }
+    ],
+    "badge": "Fabrication · Documents",
+    "h1": "Transformer des notes de visite désordonnées en propositions propres pour Lemtech",
+    "lead": "Les rapports de visite arrivaient sous tous les formats imaginables — notes manuscrites, fautes d'orthographe, mises en page variables. Pearstop a conçu un système qui lit les rapports entrants et génère automatiquement un document de proposition propre et précis.",
+    "stats": [
+      {
+        "value": "1 à 3 h",
+        "label": "économisées par proposition"
+      },
+      {
+        "value": "~0",
+        "label": "ressaisie manuelle"
+      },
+      {
+        "value": "Précise",
+        "label": "saisie des spécifications"
+      }
+    ],
+    "problem": {
+      "label": "Le problème",
+      "h2": "Pourquoi l'équipe commerciale ressaisissait-elle chaque note de visite à la main ?",
+      "body": "Les rapports de visite revenaient du terrain dans le format que le technicien avait sous la main — notes manuscrites, fautes d'orthographe, mises en page incohérentes. Chacun devait être ressaisi dans un document de proposition avant de partir chez un client, une tâche lente et répétitive qui empiétait sur le temps de l'équipe commerciale."
+    },
+    "how": {
+      "label": "Comment ça fonctionnait",
+      "h2": "D'une note manuscrite à une proposition prête à l'emploi",
+      "body": "Pearstop interprète les notes entrantes, en extrait les bons produits et spécifications, et restitue un processus de proposition plus fluide avec beaucoup moins de ressaisie manuelle.",
+      "inputs": [
+        "Notes manuscrites",
+        "Photos de site",
+        "Rapports en texte libre"
+      ],
+      "steps": [
+        "Lire le rapport",
+        "Faire correspondre produits et spécifications",
+        "Rédiger la proposition"
+      ],
+      "outputs": [
+        {
+          "text": "Document de proposition propre et précis"
+        },
+        {
+          "text": "Spécifications correctement saisies"
+        }
+      ]
+    },
+    "quote": "Pearstop a conçu un système qui extrait automatiquement les bons articles de nos rapports de visite pour les intégrer dans un document de proposition propre. Cela fait gagner beaucoup de temps à notre équipe en éliminant les tâches répétitives de regroupement des bons articles.",
+    "result": {
+      "label": "Le résultat",
+      "h2": "Le même problème, en dehors des achats",
+      "body": "Ceci est un exemple, dans l'industrie manufacturière, du même problème fondamental que Pearstop résout dans les données d'achats : une information opérationnelle désordonnée, incohérente et coûteuse à traiter à la main. Le même moteur sous-jacent la lit, l'interprète et la structure — que la source soit une facture, un bon de commande ou une note de visite manuscrite."
+    },
+    "moreLinks": [
+      {
+        "label": "Cas client · Distribution",
+        "title": "Marge visible avant l'engagement de l'achat, pour FARO"
+      },
+      {
+        "label": "Cas client · Hard Services FM",
+        "title": "9 175 orthographes de fournisseurs ramenées à 1 493 pour SPIE"
+      },
+      {
+        "label": "Schéma récurrent · Fabrication & MRO",
+        "title": "Le véritable numéro de pièce fabricant derrière chaque code revendeur"
+      }
+    ],
+    "closing": {
+      "title": "Le même problème avec vos propres documents ?",
+      "lead": "Envoyez-nous un échantillon de ce qui arrive - notes désordonnées, PDF ou texte libre - et nous vous montrerons ce qui en ressort, structuré.",
+      "ctaLabel": "Envoyez-nous un échantillon"
+    }
+  },
+  "CaseMroConfidential": {
+    "meta": {
+      "title": "Aller directement au fabricant",
+      "description": "Comment Pearstop remplace une recherche de pièces MRO offshore lente et sujette aux erreurs par une méthode rapide et vérifiée."
+    },
+    "breadcrumbCurrent": "Fabrication & MRO",
+    "badge": "Fabrication & MRO",
+    "h1": "Aller directement au fabricant",
+    "lead": "Comment Pearstop remplace une recherche de pièces MRO offshore lente et sujette aux erreurs par une méthode rapide et vérifiée.",
+    "patternNote": "Ce cas repose sur un schéma que nous observons sans cesse dans le MRO et l'achat de composants.",
+    "problem": {
+      "label": "Le problème",
+      "h2": "Pourquoi acheter des pièces MRO directement au fabricant est-il si lent ?",
+      "body1": "Cela commence généralement par une recherche : retrouver le véritable numéro de pièce du fabricant derrière le code utilisé par un revendeur ou un ancien bon de commande. Cette recherche est en général sous-traitée à des bureaux offshore, souvent en Inde, qui travaillent manuellement - efficace, mais lent.",
+      "body2": "L'IA peut mener cette recherche plus vite. Elle peut aussi se tromper d'une manière bien précise : les modèles d'IA généralistes inventent des numéros de pièce et ne vérifient pas leur propre travail. C'est exactement là qu'un prestataire spécialisé fait la différence - un prestataire ayant une réelle expérience de projets d'IA qui vérifient ce qu'ils produisent plutôt que de deviner."
+    },
+    "how": {
+      "label": "Comment ça fonctionne",
+      "h2": "Des correspondances vérifiées, pas des suppositions",
+      "body": "Pearstop fait correspondre les fiches pièces aux données de référence du fabricant, signale tout ce qu'il ne peut pas confirmer avec certitude pour une vérification humaine, et remplace un cycle de recherche offshore lent par un cycle rapide et vérifié.",
+      "inputs": [
+        "Codes pièce du revendeur",
+        "Anciens bons de commande",
+        "Catalogues fournisseurs"
+      ],
+      "steps": [
+        "Correspondance avec les données fabricant",
+        "Signaler ce qui n'est pas confirmé",
+        "Transmettre à une personne pour vérification"
+      ],
+      "outputs": [
+        {
+          "text": "Véritable numéro de pièce fabricant"
+        },
+        {
+          "text": "Score de confiance par correspondance"
+        }
+      ]
+    },
+    "partExample": {
+      "note": "Vérifié par rapport aux données fabricant"
+    },
+    "panels": [
+      {
+        "label": "Pourquoi c'est difficile",
+        "title": "La recherche offshore fonctionne, mais elle est lente",
+        "copy": "L'approche traditionnelle sous-traite la recherche de numéros de pièce à des bureaux offshore qui travaillent à la main - suffisamment précis, mais assez lent pour retarder une décision d'achat."
+      },
+      {
+        "label": "Pourquoi c'est possible aujourd'hui",
+        "title": "Une IA vérifiée, pas suivie les yeux fermés",
+        "copy": "Les modèles d'IA généralistes inventent des numéros de pièce dès qu'on les laisse deviner. Faire correspondre les données aux références réelles du fabricant, avec transmission à une personne en cas d'incertitude, permet de gagner la vitesse de l'IA sans en prendre le risque."
+      }
+    ],
+    "moreLinks": [
+      {
+        "label": "Cas client · Fabrication",
+        "title": "Transformer des notes de visite désordonnées en propositions propres pour Lemtech"
+      },
+      {
+        "label": "Schéma récurrent · Construction",
+        "title": "Un écart de prix de 45 % sur un seul rebord de fenêtre en aluminium, acheté sur dix projets"
+      },
+      {
+        "label": "Schéma récurrent · Nettoyage",
+        "title": "30 fournisseurs de papier toilette en douze mois, sans que personne ne les ait choisis"
+      }
+    ],
+    "closing": {
+      "title": "Le même problème avec vos données MRO ?",
+      "lead": "Envoyez-nous un échantillon de vos fiches pièces et nous vous montrerons à quoi ressemble une correspondance vérifiée par rapport aux données fabricant, sur vos propres chiffres.",
+      "ctaLabel": "Envoyez-nous un échantillon"
+    }
+  },
+  "CaseConstructionSpendBenchmarking": {
+    "meta": {
+      "title": "Benchmarking des dépenses de construction",
+      "description": "Un rebord de fenêtre en aluminium, acheté sur dix projets, décrit de dix manières différentes. Une fois classifié, l'écart de prix est visible en quelques jours."
+    },
+    "breadcrumbCurrent": "Construction & Infrastructure",
+    "badge": "Construction & Infrastructure",
+    "h1": "Benchmarking des dépenses de construction",
+    "lead": "Votre problème d'estimation n'en est pas un. Une estimation est une prédiction de votre propre base de coûts.",
+    "patternNote": "Ce cas repose sur un schéma que nous observons sans cesse dans les achats de construction et d'infrastructure.",
+    "section1": {
+      "label": "Le problème",
+      "h2": "Pourquoi le même article coûte-t-il des montants différents selon les projets ?",
+      "body": "Un rebord de fenêtre en aluminium, acheté sur dix projets différents, décrit de dix manières différentes. Une fois classifié, le schéma est visible en quelques jours : voici ce que chaque projet a réellement payé, et pourquoi deux d'entre eux diffèrent."
+    },
+    "table": {
+      "header": "Article (6 sur 10 affichés)",
+      "supplier": "Fournisseur",
+      "price": "Prix"
+    },
+    "classifiedBox": {
+      "label": "Classifié comme",
+      "title": "Rebord de fenêtre en aluminium, 200mm",
+      "meta": "UNSPSC 30161801 · 10 fournisseurs, 10 achats · 45 % d'écart de prix (36,75 £-53,40 £)"
+    },
+    "body2": "Deux achats se situent au-dessus de la médiane : un chantier en urgence sans délai pour comparer, un autre avec une épaisseur renforcée spécifiée pour un projet côtier. Les deux s'expliquent, mais restaient invisibles avant classification.",
+    "section2": {
+      "label": "Même périmètre, prix différent",
+      "h2": "Pourquoi deux devis pour le même périmètre arrivent-ils si différents ?",
+      "body": "Un lot de terrassement, comparé sur 8 projets similaires, montre un écart de 34 %. L'accès au site et un calendrier serré expliquent l'essentiel. Deux devis sortent de la fourchette, chacun avec une raison identifiée une fois classifiés. Les six autres montrent ce que le périmètre devrait réellement coûter."
+    },
+    "section3": {
+      "label": "Le blocage",
+      "h2": "Pourquoi ne pouvez-vous pas comparer des dépenses cachées derrière un code comptable ?",
+      "body": "Un champ comptable comme « 6100-42-K » est un code comptable nominal qui tient lieu de l'article lui-même. Fréquent dans les ERP conçus pour la finance, pas pour les achats. Personne ne peut comparer des dépenses qu'il ne voit pas derrière un tel code."
+    },
+    "ledgerExample": {
+      "resolved": "Fixations en acier de structure, M12"
+    },
+    "body3": "Pearstop travaille à partir de factures, d'exports ERP, de bons de commande et d'Excel - quel que soit le format dans lequel les données arrivent déjà - pour le benchmarking par code de coût, la détection d'anomalies et la consolidation fournisseurs.",
+    "section4h2": "Des factures dans n'importe quel format à un tableau exploitable",
+    "process": {
+      "inputs": [
+        "Factures",
+        "ERP",
+        "Bons de commande",
+        "Excel"
+      ],
+      "steps": [
+        "Nettoyer",
+        "Classifier",
+        "Enrichir"
+      ],
+      "outputs": [
+        {
+          "text": "Benchmarking par code de coût"
+        },
+        {
+          "text": "Détection d'anomalies"
+        },
+        {
+          "text": "Consolidation fournisseurs"
+        }
+      ]
+    },
+    "features": [
+      {
+        "t": "Vos données n'ont pas besoin d'être propres",
+        "c": "Les descriptions en texte libre et les codes comptables sont le point de départ, pas un obstacle."
+      },
+      {
+        "t": "IA d'abord, vérifié par des humains",
+        "c": "Chaque label est vérifié. La classification tient bon à mesure que de nouvelles factures et de nouveaux projets arrivent."
+      },
+      {
+        "t": "Tarification à l'usage",
+        "c": "Vous payez pour les lignes traitées. Pas de lourd abonnement annuel."
+      }
+    ],
+    "resultBadge": "Résultat typique dans la construction spécialisée",
+    "resultStat": "8-15 %",
+    "resultCopy": "d'économies sur les dépenses adressables. Les constats ci-dessus en sont l'origine.",
+    "quote": "Si vous ne pouvez pas justifier votre base de coûts, vous répondez à un appel d'offres au feeling.",
+    "quoteRole": "Directeur Commercial, Construction",
+    "moreLinks": [
+      {
+        "label": "Cas client · Infrastructure",
+        "title": "35 000 à 50 000 lignes de dépenses par mois classées en UNSPSC pour Strukton"
+      },
+      {
+        "label": "Schéma récurrent · Nettoyage",
+        "title": "30 fournisseurs de papier toilette en douze mois, sans que personne ne les ait choisis"
+      },
+      {
+        "label": "Schéma récurrent · Fabrication & MRO",
+        "title": "Le véritable numéro de pièce fabricant derrière chaque code revendeur"
+      }
+    ],
+    "closing": {
+      "title": "Vous voulez voir cela sur vos propres dépenses ?",
+      "lead": "Envoyez un échantillon de vos propres données d'achats et nous vous montrerons le même type de schéma sur vos propres chiffres.",
+      "ctaLabel": "Envoyez-nous un échantillon"
+    }
+  },
+  "CaseCleaningConsumablesConsolidation": {
+    "meta": {
+      "title": "Consolidation des consommables d'entretien",
+      "description": "Personne n'a choisi 30 fournisseurs de papier toilette. Une fois classifié, le schéma était visible en quelques jours."
+    },
+    "breadcrumbCurrent": "Nettoyage & FM léger",
+    "asideCaption": "Chaque tuile représente un fournisseur ayant facturé du papier toilette",
+    "asideLegend": "les trois à conserver",
+    "badge": "Nettoyage & FM léger",
+    "h1": "Personne n'a choisi 30 fournisseurs de papier toilette.",
+    "lead": "Ils ne pouvaient tout simplement pas les voir. Une entreprise de nettoyage, douze mois de factures, et une question simple à laquelle personne ne pouvait répondre : combien dépensons-nous en papier toilette ?",
+    "patternNote": "Ce cas repose sur un schéma que nous observons sans cesse dans les achats de FM léger.",
+    "section1": {
+      "label": "Avant",
+      "h2": "La dépense est là. La vision d'ensemble, non.",
+      "body": "Ce que nous entendons de la part des entreprises de nettoyage, avant tout échange de données."
+    },
+    "cards": [
+      {
+        "t": "Les factures arrivent en PDF",
+        "c": "Le détail des lignes reste enfermé dans des documents que personne ne relit. L'ERP conserve les totaux fournisseurs, pas ce qui a été acheté."
+      },
+      {
+        "t": "Chaque site commande à sa façon",
+        "c": "Les responsables de site achètent les consommables localement. Un même produit se retrouve sous vingt descriptions dans les comptes."
+      },
+      {
+        "t": "Une seule personne gère les achats",
+        "c": "Il y a le temps de garder les sites approvisionnés. Il n'y a pas le temps de comparer les prix ou de questionner ce qui arrive."
+      },
+      {
+        "t": "Rapports clients construits à la main",
+        "c": "Chaque mois, des chiffres extraits d'un outil d'audit, d'un portail fournisseur et d'e-mails. Chaque client veut une coupe différente."
+      }
+    ],
+    "section2": {
+      "label": "Une fois chaque ligne classifiée",
+      "h2": "Un produit. 30 fournisseurs. Maintenant côte à côte.",
+      "body": "Une fois classifié, le schéma était visible en quelques jours : chaque fournisseur, ce que chacun facturait par rouleau, et à quelles conditions. Lesquels des trois conserver, c'est votre décision. Le tableau la rend facile."
+    },
+    "decisionBox": {
+      "label": "La décision",
+      "items": [
+        "Bunzl CHS · approvisionnement de base sous contrat",
+        "Gompels · meilleur prix en volume",
+        "Pattersons · couverture régionale le lendemain"
+      ]
+    },
+    "table": {
+      "supplier": "Fournisseur",
+      "price": "£ / rouleau",
+      "terms": "Conditions",
+      "delivery": "Livraison",
+      "footnote": "4 sur 30 affichés · 2 épaisseurs standard"
+    },
+    "section3": {
+      "label": "Et ensuite",
+      "h2": "Ce qui apparaît d'autre une fois chaque ligne classifiée"
+    },
+    "offContract": {
+      "title": "Achats hors contrat",
+      "contractedLabel": "Sous contrat · Bunzl",
+      "contractedUnit": "carton de 36 rouleaux",
+      "actualLabel": "Réellement payé · Amazon",
+      "actualNote": "même carton, +40 %",
+      "body": "Un risque de coût et un risque de conformité. Les contrats clients spécifient produits et fournisseurs, et chaque ligne hors contrat affaiblit votre position lors de la renégociation."
+    },
+    "priceSpread": {
+      "title": "Même rouleau, cinq prix",
+      "subtitle": "Tork Advanced T4, prix payé par rouleau",
+      "body": "d'écart sur un seul produit. Chaque prix figure sur une facture différente sous une description différente."
+    },
+    "spendVisibility": {
+      "title": "Des dépenses invisibles",
+      "body": "des dépenses non catégorisées. Impossible de les comparer, de les négocier ou d'en rendre compte tant qu'elles n'ont pas d'étiquette."
+    },
+    "section4h2": "Des factures dans n'importe quel format à un tableau exploitable",
+    "process": {
+      "inputs": [
+        "Factures PDF",
+        "Exports ERP",
+        "Portails de commande",
+        "Feuilles Excel"
+      ],
+      "steps": [
+        "Nettoyer",
+        "Classifier",
+        "Enrichir"
+      ],
+      "outputs": [
+        {
+          "text": "Ce que vous dépensez, par produit"
+        },
+        {
+          "text": "Lignes hors contrat et anomalies"
+        },
+        {
+          "text": "Fournisseurs par catégorie, côte à côte"
+        }
+      ]
+    },
+    "features": [
+      {
+        "t": "Vos données n'ont pas besoin d'être propres",
+        "c": "Des données désordonnées sont le point de départ. Les nettoyer et les classifier, c'est le produit."
+      },
+      {
+        "t": "IA d'abord, vérifié par des humains",
+        "c": "Chaque label est vérifié. La classification tient bon à mesure que de nouveaux fournisseurs et factures arrivent."
+      },
+      {
+        "t": "Tarification à l'usage",
+        "c": "Vous payez pour les lignes traitées. Pas de lourd abonnement annuel."
+      }
+    ],
+    "resultBadge": "Résultat typique en FM léger",
+    "resultStat": "10-20 %",
+    "resultCopy": "d'économies sur les dépenses adressables. Les constats ci-dessus en sont l'origine.",
+    "quote": "Il aurait fallu cinq ingénieurs et une année complète pour nettoyer cela. Nous avons donc décidé de chercher une meilleure solution.",
+    "quoteRole": "Directeur des Opérations, Entreprise de nettoyage",
+    "moreLinks": [
+      {
+        "label": "Cas client · Hard Services FM",
+        "title": "9 175 orthographes de fournisseurs ramenées à 1 493 pour SPIE"
+      },
+      {
+        "label": "Schéma récurrent · Construction",
+        "title": "Un écart de prix de 45 % sur un seul rebord de fenêtre en aluminium, acheté sur dix projets"
+      },
+      {
+        "label": "Schéma récurrent · Fabrication & MRO",
+        "title": "Le véritable numéro de pièce fabricant derrière chaque code revendeur"
+      }
+    ],
+    "closing": {
+      "title": "Voyez cela sur vos propres factures",
+      "lead": "Envoyez jusqu'à 200 lignes de facture ou dix factures. Nous vous les renvoyons étiquetées, pour que vous voyiez le même type de schéma sur vos propres chiffres.",
+      "ctaLabel": "Envoyez votre échantillon"
+    }
+  },
   "Header": {
     "solutions": "Solutions",
     "allSolutions": "Toutes les solutions",
@@ -55,7 +468,30 @@
     "howItWorksEyebrow": "Comment ça marche",
     "whatChanges": "Ce qui change avec Pearstop",
     "keyBenefits": "Principaux avantages",
-    "sendSample": "Envoyez-nous un échantillon"
+    "sendSample": "Envoyez-nous un échantillon",
+    "faqEyebrow": "Questions",
+    "faqTitle": "Questions fréquentes",
+    "demoTable": {
+      "lineAsEntered": "Ligne telle que reçue",
+      "columnAsEntered": "Telle que reçue",
+      "columnCategory": "Catégorie",
+      "columnUnspsc": "UNSPSC",
+      "categories": {
+        "airFilters": "Filtres à air",
+        "generalPurposeCleaners": "Nettoyants multi-usages",
+        "temporaryManualLabour": "Main-d'œuvre temporaire"
+      }
+    },
+    "geoBanner": {
+      "nl": {
+        "message": "Ce guide est destiné au marché néerlandais.",
+        "cta": "Afficher en néerlandais"
+      },
+      "de": {
+        "message": "Ce guide est destiné au marché allemand.",
+        "cta": "Afficher en allemand"
+      }
+    }
   },
   "About": {
     "meta": {
@@ -112,7 +548,7 @@
       "title": "Parlons-en.",
       "lead": "Un problème de données qui mérite d'être résolu ? Nous serions ravis d'en entendre parler.",
       "getInTouch": "Contactez-nous",
-      "bookDiscovery": "Réservez un appel découverte de 15 minutes"
+      "bookDiscovery": "Parler à un commercial"
     },
     "leaders": [
       {
@@ -175,8 +611,8 @@
     },
     "hero": {
       "eyebrow": "Solutions",
-      "title": "Transformez des données désordonnées en décisions",
-      "lead": "Pearstop propose cinq solutions d'intégrité des données pour les secteurs techniques. Chacune cible un problème de données spécifique et chacune est conçue pour protéger vos marges.",
+      "title": "Quel problème de données de dépenses cherchez-vous à résoudre ?",
+      "lead": "La plupart des équipes découvrent que leurs données de dépenses ne fonctionnent pas le jour où quelqu'un pose une question à laquelle personne ne peut répondre. Commencez par le problème que vous avez devant vous. Chacun renvoie vers la façon dont nous le résolvons.",
       "primaryLabel": "Envoyez-nous 200 lignes",
       "secondaryLabel": "Parler à un commercial",
       "builtForLabel": "Conçu pour",
@@ -619,7 +1055,7 @@
     ],
     "cta": {
       "title": "Prêt à corriger les données à la base de votre prochain projet ?",
-      "button": "Réservez un appel découverte de 15 minutes",
+      "button": "Parler à un commercial",
       "lead": "Parlez à un commercial. Nous vous montrerons exactement où vos données feraient échouer aujourd'hui une migration ERP, un déploiement Fabric ou une initiative IA."
     }
   },
@@ -709,7 +1145,7 @@
     ],
     "cta": {
       "title": "Prêt à construire une véritable base de référence des dépenses ?",
-      "button": "Réservez un appel découverte de 15 minutes",
+      "button": "Parler à un commercial",
       "lead": "Parlez à un commercial. Nous vous montrerons exactement où vos données de dépenses cachent le chiffre dont vous avez besoin."
     }
   },
@@ -717,6 +1153,20 @@
     "meta": {
       "title": "Asset Data Management pour les propriétaires d'actifs et les opérateurs FM",
       "description": "Transformez les données d'actifs et de coûts que votre prestataire FM vous transmet en un enregistrement indépendant et classifié que vous pouvez évaluer et défendre, pas seulement un fichier que vous avez reçu de sa part."
+    },
+    "demo": {
+      "supplierLabel": "Un fournisseur",
+      "matchedOn": [
+        "Numéro de TVA",
+        "Adresse du siège social",
+        "Coordonnées bancaires"
+      ],
+      "sources": {
+        "erpVendorMaster": "Fichier fournisseurs ERP",
+        "invoiceHeader": "En-tête de facture",
+        "pCardStatement": "Relevé de carte d'achat",
+        "contractRegister": "Registre des contrats"
+      }
     },
     "hero": {
       "eyebrow": "Asset Management",
@@ -806,7 +1256,7 @@
     ],
     "cta": {
       "title": "Prêt à disposer de votre propre vision indépendante ?",
-      "button": "Réservez un appel découverte de 15 minutes",
+      "button": "Parler à un commercial",
       "lead": "Parlez à un commercial et voyez exactement comment Pearstop transforme les données que vous recevez déjà en quelque chose de vérifiable."
     }
   },
@@ -901,7 +1351,7 @@
     ],
     "cta": {
       "title": "Vos données sont-elles prêtes pour l'IA ?",
-      "button": "Réservez un appel découverte de 15 minutes",
+      "button": "Parler à un commercial",
       "fabricLink": "Découvrez aussi votre préparation pour Fabric",
       "lead": "Parlez à un commercial et nous vous dirons exactement ce qui doit se passer avant que vos initiatives IA puissent produire des résultats."
     }
@@ -911,10 +1361,26 @@
       "title": "Classification UNSPSC et vérification du code fabricant",
       "description": "Pearstop automatise la classification des achats, codant automatiquement jusqu'à 95 % des dépenses en UNSPSC et retrouvant le code fabricant réel à partir du propre code fournisseur, sans traçage manuel."
     },
+    "hierarchyDemo": {
+      "lineAsEntered": "Ligne telle que reçue",
+      "matchLabel": "Correspondance au niveau commodity",
+      "levels": {
+        "segment": "Segment",
+        "family": "Family",
+        "class": "Class",
+        "commodity": "Commodity"
+      },
+      "names": {
+        "constructionAndMaintenance": "Construction et maintenance",
+        "buildingAndFacilityMaintenance": "Maintenance des bâtiments et installations",
+        "electricalMaintenance": "Maintenance électrique",
+        "lightingMaintenance": "Maintenance de l'éclairage"
+      }
+    },
     "hero": {
       "eyebrow": "Classification UNSPSC",
       "title": "Vos données d'achats contiennent les réponses. Vous ne pouvez simplement pas encore les lire.",
-      "lead": "La plupart des entreprises de services techniques et de FM disposent de plusieurs années de données de bons de commande dans SAP ou Oracle. Sans classification UNSPSC, ce n'est qu'un amas de lignes en texte libre. Avec elle, vous pouvez voir exactement ce que vous dépensez par catégorie, comparer les fournisseurs et construire des appels d'offres à partir de données de coûts réelles. Pearstop classe 35 000 lignes par mois, automatiquement."
+      "lead": "La plupart des entreprises de services techniques et de FM disposent de plusieurs années de données de bons de commande dans SAP ou Oracle. Sans classification UNSPSC, ce n'est qu'un amas de lignes en texte libre. Avec elle, vous pouvez voir exactement ce que vous dépensez par catégorie, comparer les fournisseurs et construire des appels d'offres à partir de données de coûts réelles. Pearstop classe les factures à n'importe quelle échelle, d'un pilote de quelques centaines de lignes jusqu'au volume de production complet - le système s'adapte à votre rythme."
     },
     "standard": {
       "eyebrow": "Qu'est-ce qu'UNSPSC ?",
@@ -1027,7 +1493,7 @@
     },
     "cta": {
       "title": "Prêt à automatiser votre classification des achats ?",
-      "button": "Réservez un appel découverte de 15 minutes",
+      "button": "Parler à un commercial",
       "lead": "Parlez à un commercial. Nous vous montrerons exactement comment le moteur de classification fonctionnerait avec vos données."
     }
   },
@@ -1040,7 +1506,7 @@
       "eyebrow": "Guide de classification UNSPSC par IA",
       "title": "Vous avez un grand catalogue Excel. Vous voulez que l'IA le classe en UNSPSC.",
       "lead": "C'est la demande que nous entendons le plus souvent, parfois sous la forme d'un fichier de dépenses qui n'a jamais porté de code, parfois sous la forme d'une pile de factures PDF qui n'est même pas encore devenue un fichier de dépenses. Ce guide décrit le processus réel : comment Pearstop transforme l'un ou l'autre point de départ en un jeu de données codé UNSPSC, ce qu'un pilote mesure avant de vous engager sur le fichier complet, et pourquoi la classification ne provient pas simplement du fait de demander à un modèle quel devrait être un code.",
-      "ctaPrimary": "Réservez un appel découverte de 15 minutes",
+      "ctaPrimary": "Parler à un commercial",
       "ctaSecondary": "Voir le processus"
     },
     "paths": {
@@ -1162,7 +1628,7 @@
     },
     "cta": {
       "title": "Prêt à voir cela fonctionner sur vos propres données ?",
-      "button": "Réservez un appel découverte de 15 minutes",
+      "button": "Parler à un commercial",
       "secondaryButton": "Essayer la recherche gratuite",
       "lead": "Parlez à un commercial, ou testez d'abord une description sur l'outil de recherche gratuit."
     }
@@ -1244,7 +1710,7 @@
     "cta": {
       "title": "Vous planifiez une migration Fabric ?",
       "lead": "Parlez-nous avant que la migration ne commence. Un appel de 30 minutes maintenant peut vous économiser des mois de retouches plus tard.",
-      "button": "Réservez un appel découverte de 15 minutes",
+      "button": "Parler à un commercial",
       "aiLink": "Découvrez aussi votre préparation à l'IA"
     }
   },
@@ -1375,6 +1841,21 @@
       "title": "Résultats clients",
       "description": "Des résultats concrets d'entreprises de services techniques, d'infrastructure, de fabrication et de FM qui ont utilisé Pearstop pour nettoyer leurs données, réduire le travail manuel et protéger leurs marges."
     },
+    "index": {
+      "jumpLinkClientCases": "Cas clients",
+      "jumpLinkPatterns": "Tendances",
+      "featuredLabel": "Cas client à la une",
+      "readCase": "Lire le cas",
+      "clientCasesTitle": "Cas clients",
+      "clientCasesCaption": "Nommés, données réelles",
+      "patternsTitle": "Tendances observées",
+      "seePattern": "Voir la tendance",
+      "inTheirWords": "Dans leurs mots",
+      "closingTitle": "Envoyez-nous 200 lignes. Nous vous les renvoyons classifiées.",
+      "closingBody": "Pas de nettoyage préalable, pas de coût, rien à installer. La façon la plus rapide de voir à quoi ressemblent vos propres données une fois classifiées.",
+      "closingPrimaryLabel": "Envoyez votre échantillon",
+      "closingSecondaryLabel": "Ou parlez à un commercial →"
+    },
     "hero": {
       "eyebrow": "Résultats clients",
       "title": "Du travail concret. Des marges concrètes.",
@@ -1449,9 +1930,10 @@
     "hero": {
       "eyebrow": "Secteurs",
       "title": "Secteurs que nous servons",
-      "lead": "Pearstop nettoie et classe les données opérationnelles pour les secteurs qui portent les dépenses les plus lourdes et les plus désordonnées : infrastructure, facilities management, construction et fabrication. Trouvez votre secteur ci-dessous.",
+      "lead": "Un site qui fonctionne bien repose sur un travail que personne ne voit : le plan de maintenance, la commande de pièces, la vérification fournisseur. Presque tout cela dépend de données, et la plupart des équipes avec qui nous travaillons ne peuvent pas répondre à une question simple : qu'avons-nous dépensé, en quoi, et auprès de qui ? Trouvez votre secteur ci-dessous.",
       "primaryLabel": "Envoyez-nous un échantillon de données. Nous le nettoyons gratuitement.",
-      "secondaryLabel": "Réservez 15 minutes de découverte"
+      "secondaryLabel": "Réservez 15 minutes de découverte",
+      "imageAlt": "Silhouette urbaine représentant les secteurs que Pearstop sert"
     },
     "sixIndustries": {
       "title": "Où Pearstop s'intègre",
@@ -2589,7 +3071,7 @@
     "cta": {
       "title": "Vous préférez en discuter ?",
       "lead": "Nous pouvons aussi vous présenter la même réflexion lors d'un appel rapide.",
-      "bookDiscovery": "Réservez un appel découverte de 15 minutes",
+      "bookDiscovery": "Parler à un commercial",
       "backHome": "Retour à l'accueil"
     }
   },
@@ -2602,7 +3084,7 @@
       "eyebrow": "FAQ",
       "title": "Les questions qu'on nous pose le plus souvent.",
       "lead": "Tout ce que vous devez savoir sur le fonctionnement de Pearstop, son coût, et si c'est adapté à votre organisation.",
-      "cta": "Réservez un appel découverte de 15 minutes",
+      "cta": "Parler à un commercial",
       "secondary": "Accéder aux questions"
     },
     "sections": {
@@ -2775,13 +3257,13 @@
     },
     "stillHaveQuestions": {
       "label": "Encore une question ?",
-      "cta": "Réservez un appel découverte de 15 minutes",
+      "cta": "Parler à un commercial",
       "email": "Envoyez-nous un message",
       "copy": "Si votre question n'a pas de réponse ici, le moyen le plus rapide d'en obtenir une est de parler à un commercial. Il n'y a aucune pression commerciale - c'est une conversation directe sur votre situation de données."
     },
     "cta": {
       "title": "Prêt à le voir en action ?",
-      "button": "Réservez un appel découverte de 15 minutes",
+      "button": "Parler à un commercial",
       "lead": "Parlez à un commercial et nous vous montrerons exactement comment le moteur de classification fonctionne avec vos données."
     }
   },
@@ -2798,7 +3280,7 @@
       "eyebrow": "UNSPSC pour le Facilities Management",
       "title": "Les données d'achats FM sont les plus difficiles à classifier. Voici comment y remédier.",
       "lead": "Les entreprises de services techniques et de FM gèrent des milliers de lignes de facture réparties sur des centaines de fournisseurs et de sites. Pearstop classe automatiquement l'ensemble — 90 à 95 % sans intervention humaine — afin que votre équipe puisse se concentrer sur la gestion des catégories plutôt que sur la saisie de données.",
-      "cta": "Réservez un appel découverte de 15 minutes",
+      "cta": "Parler à un commercial",
       "secondary": "Comment ça marche"
     },
     "challenge": {
@@ -2888,7 +3370,7 @@
     },
     "cta": {
       "title": "Prêt à automatiser la classification des achats FM ?",
-      "button": "Réservez un appel découverte de 15 minutes",
+      "button": "Parler à un commercial",
       "lead": "Parlez à un commercial. Nous vous montrerons exactement comment le moteur fonctionne avec vos données de dépenses."
     }
   },
@@ -2905,7 +3387,7 @@
       "eyebrow": "Classification UNSPSC Pays-Bas",
       "title": "Classification UNSPSC pour les entreprises néerlandaises d'infrastructure, de FM et de construction.",
       "lead": "Pearstop automatise la classification des lignes d'achats selon la norme UNSPSC — 90 à 95 % sans effort manuel. Avec prise en charge de la facturation électronique Peppol et des systèmes ERP néerlandais.",
-      "cta": "Réservez un appel découverte de 15 minutes",
+      "cta": "Parler à un commercial",
       "secondary": "Peppol et UNSPSC"
     },
     "peppol": {
@@ -2982,8 +3464,8 @@
     },
     "cta": {
       "title": "Prêt à automatiser votre classification des achats ?",
-      "lead": "Réservez un appel découverte de 15 minutes. Nous vous montrerons comment le moteur de classification fonctionne avec vos données.",
-      "button": "Réservez un appel découverte de 15 minutes"
+      "lead": "Parlez à un commercial. Nous vous montrerons comment le moteur de classification fonctionne avec vos données.",
+      "button": "Parler à un commercial"
     }
   },
   "UnspscDE": {
@@ -2999,7 +3481,7 @@
       "eyebrow": "Classification UNSPSC Allemagne",
       "title": "Classification UNSPSC pour les entreprises allemandes de fabrication, de FM et d'infrastructure.",
       "lead": "Pearstop automatise la classification des lignes d'achats selon la norme UNSPSC — 90 à 95 % sans effort manuel. Avec prise en charge de l'obligation allemande de facturation électronique 2025 et de l'intégration SAP.",
-      "cta": "Réservez un appel découverte de 15 minutes",
+      "cta": "Parler à un commercial",
       "secondary": "Facturation électronique et UNSPSC"
     },
     "einvoicing": {
@@ -3074,8 +3556,8 @@
     },
     "cta": {
       "title": "Prêt à automatiser votre classification des achats ?",
-      "lead": "Réservez un appel découverte de 15 minutes. Nous vous montrerons comment le moteur de classification fonctionne avec vos données.",
-      "button": "Réservez un appel découverte de 15 minutes"
+      "lead": "Parlez à un commercial. Nous vous montrerons comment le moteur de classification fonctionne avec vos données.",
+      "button": "Parler à un commercial"
     }
   },
   "UnspscLookup": {
@@ -3111,7 +3593,7 @@
     },
     "bulk": {
       "label": "Besoin de classer des milliers de lignes ?",
-      "cta": "Réservez un appel découverte de 15 minutes",
+      "cta": "Parler à un commercial",
       "learnMore": "Découvrez comment ça marche",
       "copy": "Cet outil gère les recherches unitaires. Le moteur de classification automatisé de Pearstop traite 35 000 lignes d'achats par mois - avec 90 à 95 % de classification automatique et une intégration SAP complète. Parlez à un commercial pour le voir avec vos données."
     },
@@ -3158,7 +3640,7 @@
     },
     "cta": {
       "title": "Besoin de classer des milliers de lignes ?",
-      "button": "Réservez un appel découverte de 15 minutes",
+      "button": "Parler à un commercial",
       "lead": "Parlez à un commercial et nous vous montrerons comment le moteur de classification complet fonctionne avec vos données d'achats réelles."
     }
   },
@@ -3767,5 +4249,358 @@
       "lead": "Envoyez-nous un échantillon de vos factures et nous vous montrerons ce qui en ressort, sans appel nécessaire.",
       "action": "Voir comment ça marche"
     }
+  },
+  "CaseSpie": {
+    "meta": {
+      "title": "SPIE Case Study",
+      "description": "Pearstop a consolidé 9 175 variantes de noms de fournisseurs en 1 493 fournisseurs canoniques sur 204 029 fiches d'actifs pour SPIE Building Solutions — le même moteur de classification qui nettoie les données d'achats de Pearstop."
+    },
+    "breadcrumb": "SPIE Building Solutions",
+    "badge": "Hard Services FM · Données d'actifs",
+    "h1": "9 175 orthographes de fournisseurs ramenées à 1 493 pour SPIE Building Solutions",
+    "lead": "Le registre d'actifs de SPIE était alimenté depuis des années par différents systèmes de maintenance, des sous-traitants et des saisies manuelles. Pearstop a rapproché chaque fabricant de la liste validée de SPIE, attribué un score de confiance à chaque fiche, et fourni à l'équipe une liste classée indiquant par où commencer la vérification.",
+    "stats": {
+      "s1": {
+        "value": "9 175 → 1 493",
+        "label": "variantes de noms de fournisseurs consolidées"
+      },
+      "s2": {
+        "value": "73,1 %",
+        "label": "correspondances confirmées par rapport à la liste validée"
+      },
+      "s3": {
+        "value": "107 081",
+        "label": "lignes enrichies avec famille et variante"
+      },
+      "s4": {
+        "value": "100 %",
+        "label": "des fiches notées pour la confiance et la priorité de vérification"
+      }
+    },
+    "situation": {
+      "label": "La situation",
+      "title": "Un seul fabricant, une dizaine d'orthographes",
+      "p1": "SPIE Building Solutions gère un large portefeuille d'actifs immobiliers sur de nombreux sites. Au fil des années, son registre s'est constitué à partir de différents systèmes de maintenance, d'imports sous-traitants et de saisies manuelles.",
+      "p2": "Résultat : un même fabricant apparaissait sous une dizaine d'orthographes, et des types d'équipement étaient absents ou mal renseignés. Les listes fonctionnaient pour un technicien sur site. Elles ne permettaient pas de planifier la maintenance ni de chiffrer le risque des offres à l'échelle du portefeuille."
+    },
+    "whyProblemToo": {
+      "label": "Pourquoi c'est aussi notre problème",
+      "copy": "Chaque actif porte un fabricant et un type, tout comme chaque ligne de bon de commande porte un fournisseur et une description. Le moteur qui nettoie les données d'achats fonctionne sans modification sur un registre d'actifs.",
+      "poLabel": "Ligne de bon de commande",
+      "poValue": "Fournisseur + description",
+      "assetLabel": "Fiche d'actif",
+      "assetValue": "Fabricant + type"
+    },
+    "howItWorked": {
+      "label": "Comment cela a fonctionné",
+      "title": "Rapproché de la liste que SPIE utilise déjà",
+      "intro": "Dès le départ, nous avons constaté que les modèles d'IA généralistes devinaient ou inventaient des noms de fournisseurs. Chaque ligne a donc été rapprochée uniquement de la liste de fournisseurs validée par SPIE.",
+      "diagramInputs": {
+        "i1": "Systèmes de maintenance",
+        "i2": "Imports des sous-traitants",
+        "i3": "Saisie manuelle"
+      },
+      "diagramSteps": {
+        "s1": "Rapprochement avec la liste validée",
+        "s2": "Contre-vérification par un modèle de langage",
+        "s3": "Les conflits transmis à une personne"
+      },
+      "diagramOutputs": {
+        "o1": "Fournisseur canonique",
+        "o2": "Famille de produit + variante",
+        "o3": "Confiance + priorité de vérification"
+      },
+      "steps": {
+        "st1": {
+          "title": "Le rapprochement déterministe d'abord",
+          "copy": "Correspondance exacte, par préfixe, par distance d'édition et par correction de fautes de frappe avec les fournisseurs validés de SPIE, partout où une règle pouvait trancher."
+        },
+        "st2": {
+          "title": "Un second avis indépendant",
+          "copy": "Un grand modèle de langage vérifiait chaque correspondance de façon autonome. Quand les deux concordaient, la confiance augmentait."
+        },
+        "st3": {
+          "title": "Les cas difficiles tranchés par des personnes",
+          "copy": "Les correspondances contradictoires étaient transmises à l'équipe master data de SPIE, et chaque décision alimentait l'itération suivante."
+        }
+      }
+    },
+    "example": {
+      "label": "Un exemple concret",
+      "title": "Cinq orthographes d'un même fabricant de pompes, résolues",
+      "intro": "Une famille de pompes de circulation apparaissait sous cinq orthographes de fournisseur différentes, dont une simple faute de frappe. Le champ type était encore plus confus : un nom de famille brut sur une ligne, un code modèle complet sur la suivante.",
+      "tableColumns": {
+        "c1": "Fournisseur, tel que reçu",
+        "c2": "Type, tel que reçu",
+        "c3": "Fournisseur",
+        "c4": "Famille",
+        "c5": "Variante"
+      },
+      "tableFootnote": "Noms modifiés. La structure correspond au registre réel. Une équipe fournisseurs voit désormais cette famille de pompes précise, dans ces configurations précises, au lieu de « pompes, toutes sortes confondues »."
+    },
+    "whereToLook": {
+      "label": "Par où commencer",
+      "title": "Une liste de vérification classée plutôt qu'un mur de lignes",
+      "intro": "Chaque fiche a reçu trois scores : confiance fournisseur, confiance type, et priorité de vérification. L'équipe de SPIE a commencé en haut de la liste et a progressé vers le bas.",
+      "confirmedLabel": "confirmé",
+      "reviewLabel": "À vérifier",
+      "reviewLegend": "En attente de vérification, priorité la plus élevée d'abord"
+    },
+    "quoteBig": "Le score de confiance a permis à notre équipe de savoir où concentrer son temps de vérification en priorité, plutôt que de repartir de zéro sur 200 000 lignes.",
+    "twoPanel": {
+      "p1": {
+        "label": "Ce que nous avons appris",
+        "title": "Quand un client dispose d'une liste validée, rapprochez-vous de cette liste",
+        "copy": "Se rapprocher uniquement des fournisseurs validés par SPIE a amélioré à la fois la précision et la confiance de l'équipe dans le résultat. C'est désormais la norme sur chaque mission Pearstop disposant d'une base fournisseurs définie."
+      },
+      "p2": {
+        "label": "Ce que cela change",
+        "title": "De l'entretien des actifs au conseil sur ces actifs",
+        "copy": "Avec un registre structuré, SPIE peut examiner une famille d'équipements entière et repérer des pannes récurrentes sur l'ensemble d'un portefeuille client. Un technicien peut désormais dire :",
+        "pullQuote": "Cette famille de pompes tombe en panne à ce taux sur l'ensemble de vos sites. Voici ce que nous recommandons."
+      }
+    },
+    "quoteCard": "Le rapprochement des fabricants réalisé par Pearstop nous a donné le bon point de départ pour recharger les données dans l'ERP. Ce projet nous a beaucoup appris sur le nettoyage de données avec l'IA.",
+    "moreLinks": {
+      "l1": {
+        "label": "Cas client · Hard Services FM",
+        "title": "35 000 à 50 000 lignes de dépenses par mois classées en UNSPSC pour Strukton"
+      },
+      "l2": {
+        "label": "Cas client · Distribution",
+        "title": "Marge visible avant l'engagement de l'achat, pour FARO"
+      },
+      "l3": {
+        "label": "Cas type · Nettoyage",
+        "title": "30 fournisseurs de papier toilette en douze mois, sans que personne ne les ait choisis"
+      }
+    },
+    "closingCta": {
+      "title": "Le même problème dans votre registre d'actifs ?",
+      "lead": "Envoyez-nous un échantillon de vos données d'actifs ou d'équipements. Nous le rapprochons de votre propre liste de référence et vous le renvoyons noté, pour que vous voyiez un premier passage sur vos propres données.",
+      "ctaLabel": "Envoyer un échantillon"
+    }
+  },
+  "CaseStrukton": {
+    "meta": {
+      "title": "Strukton Case Study",
+      "description": "Pearstop a construit avec l'équipe achats de Strukton un système de classification par IA : 35 000 à 50 000 lignes de dépenses classées en UNSPSC chaque mois, en partant de zéro historique de classification."
+    },
+    "breadcrumb": "Strukton",
+    "badge": "Infrastructure · Pays-Bas",
+    "h1": "35 000 à 50 000 lignes d'achats par mois classées en UNSPSC, en partant de zéro, pour Strukton",
+    "lead": "Strukton est un grand entrepreneur néerlandais d'infrastructure. Pearstop a construit ce système avec leur direction des achats. Il classait automatiquement chaque ligne de dépenses en UNSPSC, chaque mois.",
+    "stats": {
+      "s1": {
+        "value": "35k–50k",
+        "label": "lignes de dépenses par mois"
+      },
+      "s2": {
+        "value": "0",
+        "label": "historique de classification au départ"
+      },
+      "s3": {
+        "value": "4",
+        "label": "niveaux UNSPSC par ligne"
+      },
+      "s4": {
+        "value": "Hebdomadaire",
+        "label": "rythme de retour des acheteurs"
+      },
+      "s5": {
+        "value": "+20 %",
+        "label": "de précision de classification gagnée en ajoutant une vérification humaine, comparé à l'IA seule et sans contexte"
+      }
+    },
+    "problem": {
+      "label": "Le problème",
+      "title": "Pourquoi ne peut-on pas identifier des économies d'achats sans données de dépenses détaillées ?",
+      "p1": "Strukton avait identifié une véritable opportunité d'économies sur les achats. Pour en tirer parti, l'entreprise avait besoin d'un niveau de détail plus fin dans ses données de dépenses. Ses achats étaient déjà bien organisés. Ce qui manquait, c'était la classification UNSPSC. Ce projet est parti de zéro historique de classification."
+    },
+    "howItWorked": {
+      "label": "Comment cela a fonctionné",
+      "title": "Comment un système de classification par IA évite-t-il de deviner sur vos données ?",
+      "intro": "Pearstop et l'équipe achats de Strukton ont construit un système à trois niveaux, en évitant l'erreur la plus courante des projets d'IA : réinventer la roue sans donner au modèle assez de contexte pour travailler.",
+      "diagramInputs": {
+        "i1": "Bons de commande SAP",
+        "i2": "Factures fournisseurs",
+        "i3": "Décisions d'achat antérieures"
+      },
+      "diagramSteps": {
+        "s1": "L'IA classait chaque ligne",
+        "s2": "Le pipeline ML apprenait du contexte",
+        "s3": "Intervention humaine pour le reste"
+      },
+      "diagramOutputs": {
+        "o1": "Segment → Famille → Classe → Article",
+        "o2": "Score de confiance par ligne",
+        "o3": "Boucle de retour hebdomadaire avec les acheteurs"
+      }
+    },
+    "granularity": {
+      "label": "Pourquoi le niveau de détail compte",
+      "title": "Pourquoi les quatre niveaux UNSPSC comptent-ils, pas seulement le premier ?",
+      "p1": "Chaque mois, un nouveau lot de dépenses arrivait. Pearstop le traitait intégralement. Chaque ligne recevait quatre niveaux de classification UNSPSC : segment, famille, classe et article.",
+      "boxLabel": "Quatre niveaux, du plus large au plus précis",
+      "boxValue": "Segment → Famille → Classe → Article",
+      "p2": "Un segment est la catégorie la plus large. Un article est le niveau le plus précis. Classer jusqu'aux quatre niveaux, pas seulement le premier, est ce qui rend les données exploitables pour de vraies décisions – comparer un produit précis entre fournisseurs, plutôt qu'une simple moyenne de catégorie.",
+      "readMoreLink": "En savoir plus sur le fonctionnement des quatre niveaux d'UNSPSC"
+    },
+    "quoteCard": "Construit et éprouvé avec un grand entrepreneur néerlandais d'infrastructure, en partant de zéro historique de classification.",
+    "twoPanel": {
+      "p1": {
+        "label": "Comment cela s'améliore",
+        "title": "Plus précis chaque mois, pas seulement plus utilisé",
+        "copy": "Les acheteurs de Strukton vérifiaient ce que l'IA classait, signalaient ce qui était juste et ce qui ne l'était pas, et chaque correction alimentait le système. Pearstop et l'équipe de Strukton se réunissaient chaque semaine pour passer en revue ce qui fonctionnait et ce qui ne fonctionnait pas."
+      },
+      "p2": {
+        "label": "Le résultat",
+        "title": "De zéro classification à un niveau de détail complet",
+        "copy": "Avant ce projet, Strukton n'avait aucune classification UNSPSC. À la fin de la mission, 35 000 à 50 000 lignes de dépenses étaient classées automatiquement chaque mois, jusqu'aux quatre niveaux UNSPSC. C'est le niveau de détail dont l'opportunité d'économies initiale avait besoin pour être réellement exploitée."
+      }
+    },
+    "moreLinks": {
+      "l1": {
+        "label": "Cas client · Hard Services FM",
+        "title": "9 175 orthographes de fournisseurs ramenées à 1 493 pour SPIE"
+      },
+      "l2": {
+        "label": "Cas client · Distribution",
+        "title": "Marge visible avant l'engagement de l'achat, pour FARO"
+      },
+      "l3": {
+        "label": "Cas type · Construction",
+        "title": "Un écart de prix de 45 % sur une même tablette de fenêtre en aluminium, achetée sur dix chantiers"
+      }
+    },
+    "closingCta": {
+      "title": "Une étude de cas construite autour de vos données ?",
+      "lead": "Nous pouvons vous montrer à quoi ressemblerait la même approche pour vos données d'achats ou d'actifs.",
+      "ctaLabel": "Envoyez-nous un échantillon"
+    }
+  },
+  "CaseFaro": {
+    "meta": {
+      "title": "FARO Case Study",
+      "description": "Pearstop a classé des milliers de lignes produits pour FARO, les a reliées aux données de vente, et a rendu la marge visible avant l'engagement de l'achat."
+    },
+    "faqQuestion": "Comment le fait de relier la classification aux données de vente rend-il la marge visible avant un achat ?",
+    "faqAnswer": "Une fois chaque ligne produit classée de façon cohérente, elle peut être rapprochée des performances de vente historiques de cette même catégorie. Cela donne une estimation de marge au moment de la décision d'achat, plutôt qu'après que le conteneur soit arrivé et ait été revendu.",
+    "breadcrumb": "FARO",
+    "badge": "Distribution · Afrique du Sud",
+    "h1": "30 000 lignes produits classées par décision d'achat, en une semaine, pour FARO",
+    "lead": "Pour chaque achat de conteneur, FARO devait catégoriser environ 30 000 lignes produits pour estimer la marge, le prix de vente et le délai d'écoulement avant d'engager le capital. Pearstop a automatisé la classification et l'a reliée directement à la base de données de vente de FARO.",
+    "stats": {
+      "s1": {
+        "value": "30k",
+        "label": "lignes classées par décision d'achat"
+      },
+      "s2": {
+        "value": "95 %",
+        "label": "classées automatiquement"
+      },
+      "s3": {
+        "value": "1 semaine",
+        "label": "temps de classification, contre six mois à la main"
+      },
+      "s4": {
+        "value": "Jusqu'à 7 %",
+        "label": "de taux d'écoulement en plus, grâce au lien entre données de vente et décisions d'achat"
+      }
+    },
+    "situation": {
+      "label": "La situation",
+      "title": "Pourquoi la marge restait invisible jusqu'après l'achat",
+      "p1": "Pour chaque achat de conteneur, FARO avait besoin d'une image fiable des coûts avant d'engager du capital. Cela impliquait de classer des milliers de lignes produits, de les relier aux résultats de vente, et de garder le processus assez rapide pour appuyer la décision d'achat elle-même.",
+      "p2": "Avant Pearstop, c'était le travail de deux personnes : signaler à la main chaque ligne produit entrante, et rattacher chacune à une catégorie à la main. Sans automatisation, le travail était répétitif, lent et difficile à faire évoluer.",
+      "p3": "Ce projet précède le moment où les grands modèles de langage généralistes sont devenus viables pour ce type de travail. Pearstop a construit le système de classification pour FARO avec du machine learning et sa propre technologie sur mesure, pas avec un grand modèle de langage – la preuve que l'approche sous-jacente tient sans s'appuyer sur les outils les plus récents."
+    },
+    "howItWorked": {
+      "label": "Comment cela a fonctionné",
+      "title": "Comment Pearstop estime la marge avant l'achat",
+      "steps": {
+        "st1": {
+          "title": "Classification automatique",
+          "copy": "Pearstop a classé 95 % des articles en moins d'une semaine, en utilisant la logique de catégories propre à l'entreprise."
+        },
+        "st2": {
+          "title": "Vue de marge reliée aux ventes",
+          "copy": "Le jeu de données a été relié aux informations de vente, pour que les acheteurs voient la marge avant que l'achat n'ait lieu."
+        },
+        "st3": {
+          "title": "Rapidité de décision",
+          "copy": "L'équipe a cessé de passer des jours sur la catégorisation manuelle et a obtenu une base propre pour la décision d'achat elle-même."
+        }
+      }
+    },
+    "quoteBig": "Nous avions des milliers de lignes de produits qui devaient être catégorisées avant même de pouvoir commencer à comprendre nos coûts. Pearstop les a classées en moins d'une semaine. Cela aurait pris six mois à notre équipe, et le résultat n'aurait toujours pas été aussi précis.",
+    "twoPanel": {
+      "p1": {
+        "label": "Ce qui a changé",
+        "title": "Du marquage manuel à un flux automatisé",
+        "copy": "L'équipe est passée d'une catégorisation manuelle à un flux automatisé capable de suivre le rythme des décisions d'achat. Cela a rendu la marge visible plus tôt et réduit la charge opérationnelle sur l'équipe achats."
+      },
+      "p2": {
+        "label": "Ce que cela change",
+        "title": "Une base plus fiable pour la planification",
+        "copy": "La classification n'étant plus le goulot d'étranglement, FARO dispose d'une base plus fiable pour la planification et l'analyse sur chaque décision d'achat, pas seulement celles qu'il y avait le temps de vérifier à la main."
+      }
+    },
+    "moreLinks": {
+      "l1": {
+        "label": "Cas client · Hard Services FM",
+        "title": "9 175 orthographes de fournisseurs ramenées à 1 493 pour SPIE"
+      },
+      "l2": {
+        "label": "Cas client · Infrastructure",
+        "title": "35 000 à 50 000 lignes de dépenses par mois classées en UNSPSC pour Strukton"
+      },
+      "l3": {
+        "label": "Cas type · Industrie & MRO",
+        "title": "Le vrai numéro de pièce du fabricant derrière chaque code de revendeur"
+      }
+    },
+    "closingCta": {
+      "title": "Une étude de cas construite autour de vos données ?",
+      "lead": "Nous pouvons vous montrer à quoi ressemblerait la même approche pour vos données d'achats ou d'actifs.",
+      "ctaLabel": "Envoyez-nous un échantillon"
+    }
+  },
+  "CaseFmo": {
+    "meta": {
+      "title": "Étude de cas FMO",
+      "description": "Le bureau PMO de FMO avait besoin d'une vision claire de la capacité projet et de l'allocation des ressources. Pearstop a nettoyé et structuré l'ensemble des données et construit les tableaux de bord donnant à la direction la visibilité nécessaire pour décider en confiance."
+    },
+    "eyebrow": "Finance · Pays-Bas",
+    "title": "De données projet fragmentées à une planification de capacité au niveau du comité de direction",
+    "lead": "Le bureau PMO de FMO avait besoin d'une vision claire de la capacité projet et de l'allocation des ressources sur un portefeuille complexe. Pearstop a nettoyé et structuré l'ensemble des données projet et construit les tableaux de bord donnant au comité de direction la visibilité nécessaire pour décider en confiance.",
+    "challengeLabel": "Le défi",
+    "problemLabel": "Le problème",
+    "challenge": "Les données du portefeuille étaient fragmentées et incohérentes, ce qui rendait difficile pour la direction d'obtenir une vision fiable de la charge de travail et de la capacité.",
+    "solution": "Pearstop a structuré les données sous-jacentes et produit une vue de reporting plus claire, permettant à la direction de prendre ses décisions de capacité en toute confiance.",
+    "wins": [
+      {
+        "value": "Totale",
+        "label": "visibilité du portefeuille"
+      },
+      {
+        "value": "CODIR",
+        "label": "niveau de décision"
+      },
+      {
+        "value": "0",
+        "label": "agrégation manuelle"
+      }
+    ],
+    "quote": "Une vision claire de la capacité projet fait toute la différence entre deviner et décider en confiance.",
+    "author": "Programme Lead",
+    "role": "FMO",
+    "resultLabel": "Le résultat",
+    "resultQuestion": "Qu'est-ce qui a changé ?",
+    "geo": "C'est le type de problème de qualité des données que l'on retrouve dans les organisations à forte activité de reporting, lorsque les données sources n'ont jamais été conçues pour un usage stratégique.",
+    "ctaLabel": "Voir plus de cas clients",
+    "ctaTitle": "Vous voulez une étude de cas construite autour de vos données ?",
+    "ctaLead": "Nous pouvons vous montrer à quoi ressemblerait la même approche pour vos données d'achats ou d'actifs.",
+    "backToCases": "Retour aux cas clients"
   }
 }

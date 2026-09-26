@@ -6,7 +6,7 @@ import { getRequestCurrency } from "@/lib/currency";
 import enMessages from "../../../messages/en.json";
 
 const PAGE_URL = `${siteConfig.url}/invoice-data-extraction`;
-const copy = enMessages.InvoiceExtraction as unknown as InvoiceDataExtractionCopy;
+const copy = { ...enMessages.InvoiceExtraction, common: enMessages.Common } as unknown as InvoiceDataExtractionCopy;
 
 export const metadata: Metadata = {
   title: "Invoice and Document Data Extraction (OCR) for FM and Construction",

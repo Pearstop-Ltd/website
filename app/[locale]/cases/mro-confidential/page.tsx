@@ -1,37 +1,55 @@
 import type { Metadata } from "next";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import {
   CaseBreadcrumb, CaseHeadlineAccent, CaseTypeBadge, CaseSectionLabel, CaseH2, CaseBodyP, CaseProcessDiagram, CaseTwoPanel,
   CaseMoreLinks, CaseClosingCTA
 } from "@/components/case-design";
 import { alternateLanguages, siteConfig } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "Going Direct to the Manufacturer",
-  description:
-    "How Pearstop replaces slow, error-prone offshore MRO part research with a fast, checked one.",
-  alternates: {
-    canonical: `${siteConfig.url}/cases/mro-confidential`,
-    languages: alternateLanguages("/cases/mro-confidential")
-  }
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "CaseMroConfidential" });
+  return {
+    title: t("meta.title"),
+    description: t("meta.description"),
+    alternates: {
+      canonical: `${siteConfig.url}/cases/mro-confidential`,
+      languages: alternateLanguages("/cases/mro-confidential")
+    }
+  };
+}
 
-export default function MroCaseStudyPage() {
+type MoreLink = { label: string; title: string };
+type Panel = { label: string; title: string; copy: string };
+
+export default async function MroCaseStudyPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const prefix = locale === "en" ? "" : `/${locale}`;
+  const t = await getTranslations("CaseMroConfidential");
+  const howInputs = t.raw("how.inputs") as string[];
+  const howSteps = t.raw("how.steps") as string[];
+  const howOutputs = t.raw("how.outputs") as { text: string }[];
+  const panels = t.raw("panels") as Panel[];
+  const moreLinksData = t.raw("moreLinks") as MoreLink[];
+  const moreLinkHrefs = ["/cases/lemtech", "/cases/construction-spend-benchmarking", "/cases/cleaning-consumables-consolidation"];
+
   return (
     <>
       <section style={{ background: "#fff", padding: "56px 0 72px" }}>
         <div className="container" style={{ display: "flex", flexDirection: "column", gap: 40 }}>
-          <CaseBreadcrumb current="Manufacturing & MRO" />
+          <CaseBreadcrumb current={t("breadcrumbCurrent")} />
           <div style={{ display: "flex", flexDirection: "column", gap: 22, maxWidth: 780 }}>
             <div style={{ display: "flex", gap: 10, alignItems: "center", flexWrap: "wrap" }}>
               <CaseTypeBadge type="pattern" />
-              <span style={{ fontSize: 13, color: "var(--muted)" }}>Manufacturing & MRO</span>
+              <span style={{ fontSize: 13, color: "var(--muted)" }}>{t("badge")}</span>
             </div>
             <h1 style={{ margin: 0, fontSize: "clamp(2.2rem, 4vw, 3.2rem)", lineHeight: 1.08, fontWeight: 600, letterSpacing: "-0.025em", color: "var(--primary-dark)" }}>
-              Going direct to the manufacturer
+              {t("h1")}
             </h1>
             <CaseHeadlineAccent />
             <p style={{ margin: 0, fontSize: 20, lineHeight: 1.6, fontWeight: 300, color: "var(--text)" }}>
-              How Pearstop replaces slow, error-prone offshore MRO part research with a fast, checked one.
+              {t("lead")}
             </p>
           </div>
         </div>
@@ -39,39 +57,39 @@ export default function MroCaseStudyPage() {
 
       <section style={{ background: "var(--purple-soft)", padding: "18px 0", fontSize: 14, color: "var(--navy)" }}>
         <div className="container">
-          This case is built on a pattern we see again and again in MRO and component sourcing.
+          {t("patternNote")}
         </div>
       </section>
 
       <section style={{ background: "#fff", padding: "104px 0" }}>
         <div className="container" style={{ display: "flex", flexDirection: "column", gap: 20, maxWidth: 900 }}>
-          <CaseSectionLabel>The problem</CaseSectionLabel>
-          <CaseH2>Why is buying MRO parts direct from the manufacturer so slow?</CaseH2>
-          <CaseBodyP>It usually starts with research: finding the real manufacturer part number behind whatever code a reseller or an old purchase order used. That research is typically outsourced to offshore research bureaus, commonly in India, working by hand &mdash; it works, but it is slow.</CaseBodyP>
-          <CaseBodyP>AI can do this research faster. It can also get it wrong in a specific way: general-purpose AI models hallucinate part numbers and don&rsquo;t check their own work. That is exactly where a specialized provider matters &mdash; one with real experience running AI projects that verify what they produce rather than guessing.</CaseBodyP>
+          <CaseSectionLabel>{t("problem.label")}</CaseSectionLabel>
+          <CaseH2>{t("problem.h2")}</CaseH2>
+          <CaseBodyP>{t("problem.body1")}</CaseBodyP>
+          <CaseBodyP>{t("problem.body2")}</CaseBodyP>
         </div>
       </section>
 
       <section style={{ background: "var(--bg-soft)", padding: "96px 0" }}>
         <div className="container" style={{ display: "flex", flexDirection: "column", gap: 48 }}>
           <div style={{ display: "flex", flexDirection: "column", gap: 16, maxWidth: 760 }}>
-            <CaseSectionLabel>How it works</CaseSectionLabel>
-            <CaseH2>Checked matches, not guesses</CaseH2>
-            <CaseBodyP>Pearstop matches part records against manufacturer reference data, flags anything it can&rsquo;t confirm with confidence for human review, and replaces a slow offshore research cycle with a fast, checked one.</CaseBodyP>
+            <CaseSectionLabel>{t("how.label")}</CaseSectionLabel>
+            <CaseH2>{t("how.h2")}</CaseH2>
+            <CaseBodyP>{t("how.body")}</CaseBodyP>
           </div>
           <CaseProcessDiagram
-            inputs={["Reseller part codes", "Old purchase orders", "Supplier catalogs"]}
-            steps={["Match against manufacturer data", "Flag anything unconfirmed", "Route to a person to verify"]}
+            inputs={howInputs}
+            steps={howSteps}
             outputs={[
-              { text: "Real manufacturer part number", bg: "#F1F8E9" },
-              { text: "Confidence score per match", bg: "var(--purple-soft)" }
+              { text: howOutputs[0].text, bg: "#F1F8E9" },
+              { text: howOutputs[1].text, bg: "var(--purple-soft)" }
             ]}
           />
           <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
             <span style={{ fontFamily: "'SF Mono', Menlo, monospace", fontSize: 13, padding: "8px 10px", borderRadius: 6, background: "#fff", color: "var(--muted)", textDecoration: "line-through" }}>RS-448120</span>
             <svg width="22" height="12" viewBox="0 0 22 12" fill="none" aria-hidden="true"><path d="M0 6 H16" stroke="var(--navy)" strokeWidth="1.6" /><path d="M15 1 L21 6 L15 11 Z" fill="var(--navy)" /></svg>
             <span style={{ fontFamily: "'SF Mono', Menlo, monospace", fontSize: 13, padding: "8px 10px", borderRadius: 6, background: "#F1F8E9", border: "1px solid var(--success)", color: "var(--navy)" }}>MFR 6205-2RS</span>
-            <span style={{ fontSize: 12, color: "#4E7D22", fontWeight: 500 }}>Checked against manufacturer data</span>
+            <span style={{ fontSize: 12, color: "#4E7D22", fontWeight: 500 }}>{t("partExample.note")}</span>
           </div>
         </div>
       </section>
@@ -81,18 +99,18 @@ export default function MroCaseStudyPage() {
           <CaseTwoPanel
             panels={[
               {
-                label: "Why it's hard",
+                label: panels[0].label,
                 labelColor: "#5A3FC0",
                 bg: "var(--purple-soft)",
-                title: "Offshore research works, but it's slow",
-                copy: "The traditional path outsources part-number research to offshore bureaus working by hand - accurate enough, but slow enough to hold up a purchasing decision."
+                title: panels[0].title,
+                copy: panels[0].copy
               },
               {
-                label: "Why it's possible now",
+                label: panels[1].label,
                 labelColor: "var(--primary)",
                 bg: "var(--bg-soft)",
-                title: "AI, checked rather than trusted blindly",
-                copy: "General AI models hallucinate part numbers if you let them guess. Matching against real manufacturer reference data, with anything uncertain routed to a person, gets the speed of AI without the risk."
+                title: panels[1].title,
+                copy: panels[1].copy
               }
             ]}
           />
@@ -100,18 +118,14 @@ export default function MroCaseStudyPage() {
       </section>
 
       <CaseMoreLinks
-        prefix=""
-        items={[
-          { href: "/cases/lemtech", label: "Client case · Manufacturing", title: "Turning messy site-visit notes into clean proposals for Lemtech" },
-          { href: "/cases/construction-spend-benchmarking", label: "Pattern · Construction", title: "A 45% price spread on one aluminium windowsill, bought on ten projects" },
-          { href: "/cases/cleaning-consumables-consolidation", label: "Pattern · Cleaning", title: "30 toilet paper suppliers in twelve months, and nobody chose them" }
-        ]}
+        prefix={prefix}
+        items={moreLinksData.map((item, i) => ({ href: moreLinkHrefs[i], label: item.label, title: item.title }))}
       />
 
       <CaseClosingCTA
-        title="Same problem with your MRO data?"
-        lead="Send us a sample of your part records and we'll show you what a checked match against manufacturer data looks like on your own numbers."
-        ctaLabel="Send us a sample"
+        title={t("closing.title")}
+        lead={t("closing.lead")}
+        ctaLabel={t("closing.ctaLabel")}
         sample
       />
     </>

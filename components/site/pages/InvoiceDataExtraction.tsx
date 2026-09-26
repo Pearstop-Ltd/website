@@ -17,6 +17,7 @@ import type { CurrencyInfo } from "@/lib/currency";
 import styles from "./InvoiceDataExtraction.module.css";
 
 export interface InvoiceDataExtractionCopy {
+  common: { faqEyebrow: string; faqTitle: string };
   hero: {
     eyebrow: string;
     title: string;
@@ -323,8 +324,8 @@ export function InvoiceDataExtractionPage({ copy, currency }: { copy: InvoiceDat
     {
       type: "faq",
       key: "faq",
-      eyebrow: "Questions",
-      title: "Frequently asked",
+      eyebrow: copy.common.faqEyebrow,
+      title: copy.common.faqTitle,
       items: copy.faq.map((item) => ({ q: item.question, a: item.answer })),
     },
   ];

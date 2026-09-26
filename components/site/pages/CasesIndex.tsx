@@ -12,48 +12,61 @@ import { featuredCase, clientCases, patternCases } from "@/lib/cases";
 import type { PersonId } from "@/lib/people";
 import styles from "./CasesIndex.module.css";
 
-const QUOTES: { personId: PersonId; quote: string }[] = [
-  {
-    personId: "bartVanPeij",
-    quote:
-      "The confidence scoring meant our team knew where to spend their review time first, instead of starting from scratch on 200,000 rows.",
-  },
-  {
-    personId: "davidTorr",
-    quote:
-      "We had thousands of product lines that needed to be categorised before we could even begin to understand our costs. Pearstop classified them in under a week.",
-  },
-  {
-    personId: "vinceOut",
-    quote: "It saves our team a lot of time by eliminating the repetitive tasks of combining the correct items.",
-  },
-];
+export interface CasesIndexCopy {
+  hero: { eyebrow: string; title: string; lead: string };
+  index: {
+    jumpLinkClientCases: string;
+    jumpLinkPatterns: string;
+    featuredLabel: string;
+    readCase: string;
+    clientCasesTitle: string;
+    clientCasesCaption: string;
+    patternsTitle: string;
+    seePattern: string;
+    inTheirWords: string;
+    closingTitle: string;
+    closingBody: string;
+    closingPrimaryLabel: string;
+    closingSecondaryLabel: string;
+  };
+  testimonials: {
+    t1: { text: string };
+    t2: { text: string };
+    t3: { text: string };
+  };
+}
 
 /** /cases index — mirrors design/refs/cases-index.dc.html. Rendered
  * identically by both route trees; case data comes from lib/cases.ts only. */
-export function CasesIndexPage() {
+export function CasesIndexPage({ copy }: { copy: CasesIndexCopy }) {
+  const QUOTES: { personId: PersonId; quote: string }[] = [
+    { personId: "bartVanPeij", quote: copy.testimonials.t1.text },
+    { personId: "vinceOut", quote: copy.testimonials.t2.text },
+    { personId: "davidTorr", quote: copy.testimonials.t3.text },
+  ];
+
   return (
     <div className={dsRoot()}>
       <Section background="white" paddingBottom={24}>
         <CasesHero
-          eyebrow="Cases"
-          title="Real work. Real margins."
-          lead="How project-based businesses in FM, construction, infrastructure and manufacturing turn messy procurement and asset data into something they can act on."
+          eyebrow={copy.hero.eyebrow}
+          title={copy.hero.title}
+          lead={copy.hero.lead}
           jumpLinks={[
-            { label: "Client cases", href: "#client-cases", dot: "client" },
-            { label: "Patterns", href: "#patterns", dot: "pattern" },
+            { label: copy.index.jumpLinkClientCases, href: "#client-cases", dot: "client" },
+            { label: copy.index.jumpLinkPatterns, href: "#patterns", dot: "pattern" },
           ]}
         />
       </Section>
 
       <Section background="white" paddingTop={24}>
         <CaseFeatured
-          metaLabel="Featured client case"
+          metaLabel={copy.index.featuredLabel}
           tag={featuredCase.tag}
           title={featuredCase.headline}
           summary={featuredCase.summary}
           stats={featuredCase.stats ?? []}
-          linkLabel="Read the case"
+          linkLabel={copy.index.readCase}
           href={featuredCase.href}
           logo={featuredCase.logo}
           visual={<CaseCardVisual variant={featuredCase.visual} />}
@@ -63,8 +76,8 @@ export function CasesIndexPage() {
       <Section background="white">
         <div id="client-cases" className={styles.sectionStack}>
           <div className={styles.sectionHead}>
-            <h2 className={styles.sectionTitle}>Client cases</h2>
-            <span className={styles.sectionCaption}>Named work, real data</span>
+            <h2 className={styles.sectionTitle}>{copy.index.clientCasesTitle}</h2>
+            <span className={styles.sectionCaption}>{copy.index.clientCasesCaption}</span>
           </div>
           <div className={styles.clientGrid}>
             {clientCases.map((c) => (
@@ -76,7 +89,7 @@ export function CasesIndexPage() {
                 title={c.headline}
                 stats={c.stats ?? []}
                 href={c.href}
-                linkLabel="Read the case"
+                linkLabel={copy.index.readCase}
                 visual={<CaseCardVisual variant={c.visual} />}
               />
             ))}
@@ -87,7 +100,7 @@ export function CasesIndexPage() {
       <Section background="soft">
         <div id="patterns" className={styles.sectionStack}>
           <div className={styles.sectionHead}>
-            <h2 className={styles.sectionTitle}>Patterns we see</h2>
+            <h2 className={styles.sectionTitle}>{copy.index.patternsTitle}</h2>
           </div>
           <div className={styles.patternsGrid}>
             {patternCases.map((c) => (
@@ -96,7 +109,7 @@ export function CasesIndexPage() {
                 eyebrow={c.tag}
                 title={c.headline}
                 summary={c.summary}
-                linkLabel="See the pattern"
+                linkLabel={copy.index.seePattern}
                 href={c.href}
                 visual={<CaseCardVisual variant={c.visual} />}
               />
@@ -107,7 +120,7 @@ export function CasesIndexPage() {
 
       <Section background="white">
         <div className={styles.sectionStack}>
-          <h2 className={styles.sectionTitle}>In their words</h2>
+          <h2 className={styles.sectionTitle}>{copy.index.inTheirWords}</h2>
           <div className={styles.quotesGrid}>
             {QUOTES.map((q) => (
               <CaseQuote key={q.personId} personId={q.personId} quote={q.quote} />
@@ -117,11 +130,11 @@ export function CasesIndexPage() {
       </Section>
 
       <ClosingCTA
-        title="Send us 200 lines. We send them back labelled."
-        body="No clean-up first, no cost, nothing to install. The fastest way to see what your own data looks like classified."
-        primaryLabel="Send your sample"
-        primaryAction={(className) => <SampleRequestModal label="Send your sample" className={className} />}
-        secondaryLabel="Or talk to Sales →"
+        title={copy.index.closingTitle}
+        body={copy.index.closingBody}
+        primaryLabel={copy.index.closingPrimaryLabel}
+        primaryAction={(className) => <SampleRequestModal label={copy.index.closingPrimaryLabel} className={className} />}
+        secondaryLabel={copy.index.closingSecondaryLabel}
         secondaryHref="/book-a-demo"
         footerLine={`© ${new Date().getFullYear()} Pearstop · Privacy · Terms`}
       />

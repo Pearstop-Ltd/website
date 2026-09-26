@@ -5,7 +5,18 @@ import { TrendUpIcon, LayersIcon, ZapIcon } from "../icons";
 import { SampleRequestModal } from "@/components/sample-request-modal";
 
 export interface UnspscCopy {
-  common: { sendSample: string; bookDiscovery: string };
+  common: { sendSample: string; bookDiscovery: string; howItWorksEyebrow: string; faqEyebrow: string; faqTitle: string };
+  hierarchyDemo: {
+    lineAsEntered: string;
+    matchLabel: string;
+    levels: { segment: string; family: string; class: string; commodity: string };
+    names: {
+      constructionAndMaintenance: string;
+      buildingAndFacilityMaintenance: string;
+      electricalMaintenance: string;
+      lightingMaintenance: string;
+    };
+  };
   hero: { eyebrow: string; title: string; lead: string };
   /** Hardcoded on the live page today (not translatable copy) — kept as-is. */
   stats: { s1: { title: string }; s2: { title: string }; s3: { title: string } };
@@ -29,21 +40,21 @@ export interface UnspscCopy {
   cta: { title: string; lead: string };
 }
 
-// Real, already-published UNSPSC hierarchy from this page's own worked
-// example (Segment/Family/Class/Commodity codes shown under "standard.p1/p2"
-// in messages/en.json). The raw line ("HVAC unt") is this page's own SPIE
-// enrichment example; the exact commodity-level code for that specific
-// example isn't published anywhere on the site, so the hierarchy output
-// below uses the page's other complete, code-real worked example instead of
-// inventing HVAC-specific digits.
-const HIERARCHY_LEVELS = [
-  { level: "Segment", code: "72000000", name: "Construction and Maintenance", bg: "var(--navy-deep)", fg: "#ffffff" },
-  { level: "Family", code: "72100000", name: "Building and Facility Maintenance", bg: "var(--navy)", fg: "#ffffff" },
-  { level: "Class", code: "72101000", name: "Electrical Maintenance", bg: "var(--blue)", fg: "#ffffff" },
-  { level: "Commodity", code: "72101505", name: "Lighting maintenance", bg: "var(--purple)", fg: "var(--navy-deep)" },
-];
-
 export function UnspscPage({ copy }: { copy: UnspscCopy }) {
+  // Real, already-published UNSPSC hierarchy from this page's own worked
+  // example (Segment/Family/Class/Commodity codes shown under "standard.p1/p2"
+  // in messages/en.json). The raw line ("HVAC unt") is this page's own SPIE
+  // enrichment example; the exact commodity-level code for that specific
+  // example isn't published anywhere on the site, so the hierarchy output
+  // below uses the page's other complete, code-real worked example instead of
+  // inventing HVAC-specific digits.
+  const HIERARCHY_LEVELS = [
+    { level: copy.hierarchyDemo.levels.segment, code: "72000000", name: copy.hierarchyDemo.names.constructionAndMaintenance, bg: "var(--navy-deep)", fg: "#ffffff" },
+    { level: copy.hierarchyDemo.levels.family, code: "72100000", name: copy.hierarchyDemo.names.buildingAndFacilityMaintenance, bg: "var(--navy)", fg: "#ffffff" },
+    { level: copy.hierarchyDemo.levels.class, code: "72101000", name: copy.hierarchyDemo.names.electricalMaintenance, bg: "var(--blue)", fg: "#ffffff" },
+    { level: copy.hierarchyDemo.levels.commodity, code: "72101505", name: copy.hierarchyDemo.names.lightingMaintenance, bg: "var(--purple)", fg: "var(--navy-deep)" },
+  ];
+
   const sections: SolutionSection[] = [
     {
       type: "statBand",
@@ -75,7 +86,7 @@ export function UnspscPage({ copy }: { copy: UnspscCopy }) {
     type: "steps",
     key: "howItWorks",
     anchorId: "how-it-works",
-    eyebrow: "How it works",
+    eyebrow: copy.common.howItWorksEyebrow,
     title: copy.howItWorks.title,
     lead: copy.howItWorks.lead,
     steps: [
@@ -113,8 +124,8 @@ export function UnspscPage({ copy }: { copy: UnspscCopy }) {
   sections.push({
     type: "faq",
     key: "faq",
-    eyebrow: "Questions",
-    title: "Frequently asked",
+    eyebrow: copy.common.faqEyebrow,
+    title: copy.common.faqTitle,
     items: copy.faq.map((item) => ({ q: item.question, a: item.answer })),
   });
 
@@ -130,8 +141,8 @@ export function UnspscPage({ copy }: { copy: UnspscCopy }) {
         secondaryHref: "/book-a-demo",
         visual: (
           <HeroTransform
-            input={{ variant: "rawLine", label: "Line as entered", value: "HVAC unt" }}
-            output={{ variant: "hierarchy", levels: HIERARCHY_LEVELS, matchLabel: "Commodity match" }}
+            input={{ variant: "rawLine", label: copy.hierarchyDemo.lineAsEntered, value: "HVAC unt" }}
+            output={{ variant: "hierarchy", levels: HIERARCHY_LEVELS, matchLabel: copy.hierarchyDemo.matchLabel }}
           />
         ),
       }}

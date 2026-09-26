@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import type { CSSProperties } from "react";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import {
   CaseBreadcrumb, CaseHeadlineAccent, CaseTypeBadge, CaseSectionLabel, CaseH2, CaseBodyP, CaseProcessDiagram, CaseQuoteCard,
   CaseMoreLinks, CaseClosingCTA
@@ -7,15 +8,18 @@ import {
 import { alternateLanguages, siteConfig } from "@/lib/site";
 import styles from "@/components/case-design.module.css";
 
-export const metadata: Metadata = {
-  title: "Construction Spend Benchmarking",
-  description:
-    "One aluminium windowsill, bought on ten projects, described ten different ways. Classified, the price spread is visible in days.",
-  alternates: {
-    canonical: `${siteConfig.url}/cases/construction-spend-benchmarking`,
-    languages: alternateLanguages("/cases/construction-spend-benchmarking")
-  }
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "CaseConstructionSpendBenchmarking" });
+  return {
+    title: t("meta.title"),
+    description: t("meta.description"),
+    alternates: {
+      canonical: `${siteConfig.url}/cases/construction-spend-benchmarking`,
+      languages: alternateLanguages("/cases/construction-spend-benchmarking")
+    }
+  };
+}
 
 const windowsillRows = [
   ["WS-ALU-2000", "AluBuild Ltd", "£42.10"],
@@ -26,23 +30,37 @@ const windowsillRows = [
   ["Aluminium sill 2000mm", "Fenster & Co", "£47.90"]
 ];
 
-export default function ConstructionSpendBenchmarkingPage() {
+type MoreLink = { label: string; title: string };
+type Feature = { t: string; c: string };
+
+export default async function ConstructionSpendBenchmarkingPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const prefix = locale === "en" ? "" : `/${locale}`;
+  const t = await getTranslations("CaseConstructionSpendBenchmarking");
+  const processInputs = t.raw("process.inputs") as string[];
+  const processSteps = t.raw("process.steps") as string[];
+  const processOutputs = t.raw("process.outputs") as { text: string }[];
+  const features = t.raw("features") as Feature[];
+  const moreLinksData = t.raw("moreLinks") as MoreLink[];
+  const moreLinkHrefs = ["/cases/strukton", "/cases/cleaning-consumables-consolidation", "/cases/mro-confidential"];
+
   return (
     <>
       <section style={{ background: "#fff", padding: "56px 0 88px" }}>
         <div className="container" style={{ display: "flex", flexDirection: "column", gap: 40 }}>
-          <CaseBreadcrumb current="Construction & Infrastructure" />
+          <CaseBreadcrumb current={t("breadcrumbCurrent")} />
           <div style={{ display: "flex", flexDirection: "column", gap: 22, maxWidth: 780 }}>
             <div style={{ display: "flex", gap: 10, alignItems: "center", flexWrap: "wrap" }}>
               <CaseTypeBadge type="pattern" />
-              <span style={{ fontSize: 13, color: "var(--muted)" }}>Construction & Infrastructure</span>
+              <span style={{ fontSize: 13, color: "var(--muted)" }}>{t("badge")}</span>
             </div>
             <h1 style={{ margin: 0, fontSize: "clamp(2.2rem, 4vw, 3.2rem)", lineHeight: 1.08, fontWeight: 600, letterSpacing: "-0.025em", color: "var(--primary-dark)" }}>
-              Construction Spend Benchmarking
+              {t("h1")}
             </h1>
             <CaseHeadlineAccent />
             <p style={{ margin: 0, fontSize: 20, lineHeight: 1.5, fontWeight: 300, color: "var(--text)" }}>
-              Your estimating problem is not an estimating problem. An estimate is a prediction of your own cost base.
+              {t("lead")}
             </p>
           </div>
         </div>
@@ -50,21 +68,21 @@ export default function ConstructionSpendBenchmarkingPage() {
 
       <section style={{ background: "var(--purple-soft)", padding: "18px 0", fontSize: 14, color: "var(--navy)" }}>
         <div className="container">
-          This case is built on a pattern we see again and again in construction and infrastructure procurement.
+          {t("patternNote")}
         </div>
       </section>
 
       <section style={{ background: "#fff", padding: "104px 0" }}>
         <div className="container" style={{ display: "flex", flexDirection: "column", gap: 40 }}>
           <div style={{ display: "flex", flexDirection: "column", gap: 16, maxWidth: 760 }}>
-            <CaseSectionLabel>The problem</CaseSectionLabel>
-            <CaseH2>Why does the same item cost different amounts on different projects?</CaseH2>
-            <CaseBodyP>One aluminium windowsill, bought on ten different projects, described ten different ways. Classified, the pattern is visible in days: here is what each project actually paid, and why two of them differ.</CaseBodyP>
+            <CaseSectionLabel>{t("section1.label")}</CaseSectionLabel>
+            <CaseH2>{t("section1.h2")}</CaseH2>
+            <CaseBodyP>{t("section1.body")}</CaseBodyP>
           </div>
           <div className={styles.microTableScroll}>
             <div style={{ border: "1px solid var(--border)", borderRadius: 20, overflow: "hidden" }}>
               <div className={styles.dataTableGrid} style={{ "--cols": 3, background: "var(--bg-soft)", padding: "14px 28px", fontSize: 12, fontWeight: 600, letterSpacing: "0.06em", textTransform: "uppercase", color: "var(--muted)" } as CSSProperties}>
-                <span>Item (6 of 10 shown)</span><span>Supplier</span><span>Price</span>
+                <span>{t("table.header")}</span><span>{t("table.supplier")}</span><span>{t("table.price")}</span>
               </div>
               {windowsillRows.map((row) => (
                 <div key={row[0]} className={styles.dataTableGrid} style={{ "--cols": 3, padding: "16px 28px", borderTop: "1px solid var(--border)", fontSize: 15, alignItems: "center" } as CSSProperties}>
@@ -76,56 +94,52 @@ export default function ConstructionSpendBenchmarkingPage() {
             </div>
           </div>
           <div style={{ background: "#F1F8E9", border: "1.5px solid var(--success)", borderRadius: 16, padding: "22px 24px" }}>
-            <span style={{ fontSize: 12, fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: "#4E7D22", display: "block", marginBottom: 6 }}>Classified as</span>
-            <strong style={{ fontSize: 18, color: "var(--navy)" }}>Aluminium windowsill, 200mm</strong>
-            <span style={{ display: "block", fontSize: 14, color: "var(--muted)", marginTop: 4 }}>UNSPSC 30161801 · 10 suppliers, 10 purchases · 45% price spread (£36.75&ndash;£53.40)</span>
+            <span style={{ fontSize: 12, fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: "#4E7D22", display: "block", marginBottom: 6 }}>{t("classifiedBox.label")}</span>
+            <strong style={{ fontSize: 18, color: "var(--navy)" }}>{t("classifiedBox.title")}</strong>
+            <span style={{ display: "block", fontSize: 14, color: "var(--muted)", marginTop: 4 }}>{t("classifiedBox.meta")}</span>
           </div>
-          <CaseBodyP>Two purchases sit above the median: one fast-track site with no lead time to shop around, one specified a heavier gauge for a coastal project. Both explainable, both invisible until classified.</CaseBodyP>
+          <CaseBodyP>{t("body2")}</CaseBodyP>
         </div>
       </section>
 
       <section style={{ background: "var(--bg-soft)", padding: "96px 0" }}>
         <div className="container" style={{ display: "flex", flexDirection: "column", gap: 20, maxWidth: 900 }}>
-          <CaseSectionLabel>Same scope, different price</CaseSectionLabel>
-          <CaseH2>Why do two quotes for the same scope come in so differently?</CaseH2>
-          <CaseBodyP>A groundworks package, compared across 8 comparable projects, shows a 34% spread. Site access and a fast timeline explain most of it. Two quotes sit outside the band, each with a reason attached once classified. The other six show what the scope should really cost.</CaseBodyP>
+          <CaseSectionLabel>{t("section2.label")}</CaseSectionLabel>
+          <CaseH2>{t("section2.h2")}</CaseH2>
+          <CaseBodyP>{t("section2.body")}</CaseBodyP>
         </div>
       </section>
 
       <section style={{ background: "#fff", padding: "104px 0" }}>
         <div className="container" style={{ display: "flex", flexDirection: "column", gap: 40 }}>
           <div style={{ display: "flex", flexDirection: "column", gap: 16, maxWidth: 760 }}>
-            <CaseSectionLabel>The blocker</CaseSectionLabel>
-            <CaseH2>Why can&rsquo;t you benchmark spend behind a ledger code?</CaseH2>
-            <CaseBodyP>A ledger item field like &ldquo;6100-42-K&rdquo; is a nominal accounting code standing in for the item itself. Common in ERPs built for finance, not procurement. Nobody can benchmark spend they can&rsquo;t see behind a code like that.</CaseBodyP>
+            <CaseSectionLabel>{t("section3.label")}</CaseSectionLabel>
+            <CaseH2>{t("section3.h2")}</CaseH2>
+            <CaseBodyP>{t("section3.body")}</CaseBodyP>
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: 20, flexWrap: "wrap" }}>
             <span style={{ fontFamily: "'SF Mono', Menlo, monospace", fontSize: 15, padding: "10px 14px", borderRadius: 8, background: "var(--bg-soft)", color: "var(--text)" }}>6100-42-K</span>
             <svg width="30" height="14" viewBox="0 0 30 14" fill="none" aria-hidden="true"><path d="M0 7 H24" stroke="var(--navy)" strokeWidth="1.6" /><path d="M22 2 L29 7 L22 12 Z" fill="var(--navy)" /></svg>
-            <span style={{ fontSize: 16, fontWeight: 600, padding: "10px 14px", borderRadius: 8, background: "#F1F8E9", border: "1px solid var(--success)", color: "var(--navy)" }}>Structural steel fixings, M12</span>
+            <span style={{ fontSize: 16, fontWeight: 600, padding: "10px 14px", borderRadius: 8, background: "#F1F8E9", border: "1px solid var(--success)", color: "var(--navy)" }}>{t("ledgerExample.resolved")}</span>
           </div>
-          <CaseBodyP>Pearstop works from invoices, ERP exports, purchase orders, and Excel &mdash; whatever format the data already arrives in &mdash; for cost-code benchmarking, outlier detection, and supplier consolidation.</CaseBodyP>
+          <CaseBodyP>{t("body3")}</CaseBodyP>
         </div>
       </section>
 
       <section style={{ background: "var(--bg-soft)", padding: "96px 0" }}>
         <div className="container" style={{ display: "flex", flexDirection: "column", gap: 40 }}>
-          <CaseH2>From invoices in any format to a table you can act on</CaseH2>
+          <CaseH2>{t("section4h2")}</CaseH2>
           <CaseProcessDiagram
-            inputs={["Invoices", "ERP", "POs", "Excel"]}
-            steps={["Clean", "Classify", "Enrich"]}
+            inputs={processInputs}
+            steps={processSteps}
             outputs={[
-              { text: "Cost-code benchmarking", bg: "var(--blue-soft)" },
-              { text: "Outlier detection", bg: "var(--purple-soft)" },
-              { text: "Supplier consolidation", bg: "#F1F8E9" }
+              { text: processOutputs[0].text, bg: "var(--blue-soft)" },
+              { text: processOutputs[1].text, bg: "var(--purple-soft)" },
+              { text: processOutputs[2].text, bg: "#F1F8E9" }
             ]}
           />
           <div className={styles.grid3} style={{ "--cols": 3, gap: 20 } as CSSProperties}>
-            {[
-              { t: "Your data doesn't need to be clean", c: "Free-text descriptions and accounting codes are the starting point, not a blocker." },
-              { t: "AI-first, human reviewed", c: "Every label checked. Classification holds up as new invoices and projects arrive." },
-              { t: "Usage-based pricing", c: "You pay for the lines processed. No heavy annual subscription." }
-            ].map((f) => (
+            {features.map((f) => (
               <div key={f.t} style={{ background: "#fff", borderRadius: 16, padding: 24, display: "flex", flexDirection: "column", gap: 8 }}>
                 <h3 style={{ margin: 0, fontSize: 17, fontWeight: 600, color: "var(--primary-dark)" }}>{f.t}</h3>
                 <p style={{ margin: 0, fontSize: 15, lineHeight: 1.6, fontWeight: 300, color: "var(--text)" }}>{f.c}</p>
@@ -138,30 +152,26 @@ export default function ConstructionSpendBenchmarkingPage() {
       <section style={{ background: "#fff", padding: "96px 0" }}>
         <div className={`container ${styles.twoPanel}`}>
           <div style={{ background: "#F1F8E9", borderRadius: 24, padding: 44, display: "flex", flexDirection: "column", gap: 14, justifyContent: "center" }}>
-            <span style={{ fontSize: 13, fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "#4E7D22" }}>Typical result in specialised construction</span>
-            <span style={{ fontSize: 64, lineHeight: 1, fontWeight: 600, letterSpacing: "-0.03em", color: "var(--navy)" }}>8&ndash;15%</span>
-            <p style={{ margin: 0, fontSize: 17, lineHeight: 1.6, fontWeight: 300, color: "var(--navy)" }}>savings on addressable spend. The findings above are where it comes from.</p>
+            <span style={{ fontSize: 13, fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "#4E7D22" }}>{t("resultBadge")}</span>
+            <span style={{ fontSize: 64, lineHeight: 1, fontWeight: 600, letterSpacing: "-0.03em", color: "var(--navy)" }}>{t("resultStat")}</span>
+            <p style={{ margin: 0, fontSize: 17, lineHeight: 1.6, fontWeight: 300, color: "var(--navy)" }}>{t("resultCopy")}</p>
           </div>
           <CaseQuoteCard
-            quote="If you cannot defend your cost baseline, you are bidding on a feeling."
-            role="Commercial Director, Construction"
+            quote={t("quote")}
+            role={t("quoteRole")}
           />
         </div>
       </section>
 
       <CaseMoreLinks
-        prefix=""
-        items={[
-          { href: "/cases/strukton", label: "Client case · Infrastructure", title: "35,000 to 50,000 spend lines a month to UNSPSC for Strukton" },
-          { href: "/cases/cleaning-consumables-consolidation", label: "Pattern · Cleaning", title: "30 toilet paper suppliers in twelve months, and nobody chose them" },
-          { href: "/cases/mro-confidential", label: "Pattern · Manufacturing & MRO", title: "The real manufacturer part number behind every reseller code" }
-        ]}
+        prefix={prefix}
+        items={moreLinksData.map((item, i) => ({ href: moreLinkHrefs[i], label: item.label, title: item.title }))}
       />
 
       <CaseClosingCTA
-        title="Want to see this on your own spend?"
-        lead="Send a sample of your own procurement data and we'll show you the same kind of pattern in your own numbers."
-        ctaLabel="Send us a sample"
+        title={t("closing.title")}
+        lead={t("closing.lead")}
+        ctaLabel={t("closing.ctaLabel")}
         sample
       />
     </>

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { getTranslations , setRequestLocale } from "next-intl/server";
 import Link from "next/link";
-import { CTABand, GeoBlock, PageHero, QuoteBox, SectionTitle } from "@/components/content";
+import { CTABand, GeoBlock, LanguageSuggestionBanner, PageHero, QuoteBox, SectionTitle } from "@/components/content";
 import { UnspscLookupCta } from "@/components/unspsc-lookup-cta";
 import { Faq } from "@/components/site/Faq";
 import { alternateLanguages, siteConfig } from "@/lib/site";
@@ -113,9 +113,17 @@ export default async function UnspscDEPage({ params }: { params: Promise<{ local
   setRequestLocale(locale);
   const prefix = locale === "en" ? "" : `/${locale}`;
   const t = await getTranslations({ locale, namespace: "UnspscDE" });
+  const common = await getTranslations({ locale, namespace: "Common" });
 
   return (
     <>
+      {locale !== "de" ? (
+        <LanguageSuggestionBanner
+          message={common("geoBanner.de.message")}
+          cta={common("geoBanner.de.cta")}
+          href="/de/unspsc-classification-germany"
+        />
+      ) : null}
       <Script
         id="faq-schema"
         type="application/ld+json"

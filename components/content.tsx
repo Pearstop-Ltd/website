@@ -208,6 +208,36 @@ export function GeoBlock({ title, copy }: { title: ReactNode; copy: ReactNode })
   );
 }
 
+export function LanguageSuggestionBanner({ message, cta, href }: { message: string; cta: string; href: string }) {
+  return (
+    <div
+      style={{
+        background: "var(--tint-blue, #DCE1F8)",
+        borderBottom: "1px solid var(--border, #ECEEF3)"
+      }}
+    >
+      <div
+        className="container"
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: "0.5rem",
+          flexWrap: "wrap",
+          padding: "0.65rem 1rem",
+          fontSize: "0.9rem",
+          color: "var(--navy-deep, #1F2A68)"
+        }}
+      >
+        <span>{message}</span>
+        <Link href={href} style={{ fontWeight: 600, textDecoration: "underline" }}>
+          {cta} →
+        </Link>
+      </div>
+    </div>
+  );
+}
+
 export function CTABand({
   title,
   lead,

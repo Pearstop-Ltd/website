@@ -4,7 +4,19 @@ import { ProblemBullets } from "../ProblemBullets";
 import { SampleRequestModal } from "@/components/sample-request-modal";
 
 export interface FabricCopy {
-  common: { sendSample: string; bookDiscovery: string };
+  common: {
+    sendSample: string;
+    bookDiscovery: string;
+    faqEyebrow: string;
+    faqTitle: string;
+    demoTable: {
+      lineAsEntered: string;
+      columnAsEntered: string;
+      columnCategory: string;
+      columnUnspsc: string;
+      categories: { airFilters: string; generalPurposeCleaners: string; temporaryManualLabour: string };
+    };
+  };
   hero: { eyebrow: string; title: string; lead: string };
   problem: { eyebrow: string; title: string; copy: string; bullets: string[] };
   howItWorks: {
@@ -20,14 +32,14 @@ export interface FabricCopy {
   cta: { title: string; lead: string };
 }
 
-const BEFORE_AFTER_ROWS = [
-  { raw: "PMP FLTR 20X24 CS/6", clean: "Air filters", unit: "40161505" },
-  { raw: "FILTER,AIR,20X24,MERV8", clean: "Air filters", unit: "40161505" },
-  { raw: "GEN PURP CLNR 5L", clean: "General purpose cleaners", unit: "47131805" },
-  { raw: "Additional hours", clean: "Temporary manual labour", unit: "80111613" },
-];
-
 export function FabricPage({ copy }: { copy: FabricCopy }) {
+  const BEFORE_AFTER_ROWS = [
+    { raw: "PMP FLTR 20X24 CS/6", clean: copy.common.demoTable.categories.airFilters, unit: "40161505" },
+    { raw: "FILTER,AIR,20X24,MERV8", clean: copy.common.demoTable.categories.airFilters, unit: "40161505" },
+    { raw: "GEN PURP CLNR 5L", clean: copy.common.demoTable.categories.generalPurposeCleaners, unit: "47131805" },
+    { raw: "Additional hours", clean: copy.common.demoTable.categories.temporaryManualLabour, unit: "80111613" },
+  ];
+
   const sections: SolutionSection[] = [
     {
       type: "statBand",
@@ -74,8 +86,8 @@ export function FabricPage({ copy }: { copy: FabricCopy }) {
     {
       type: "faq",
       key: "faq",
-      eyebrow: "Questions",
-      title: "Frequently asked",
+      eyebrow: copy.common.faqEyebrow,
+      title: copy.common.faqTitle,
       items: copy.faq.map((item) => ({ q: item.question, a: item.answer })),
     },
   ];
@@ -92,8 +104,8 @@ export function FabricPage({ copy }: { copy: FabricCopy }) {
         secondaryHref: "/book-a-demo",
         visual: (
           <HeroTransform
-            input={{ variant: "rawLine", label: "Line as entered", value: "PMP FLTR 20X24 CS/6" }}
-            output={{ variant: "table", columns: ["As entered", "Category", "UNSPSC"], rows: BEFORE_AFTER_ROWS }}
+            input={{ variant: "rawLine", label: copy.common.demoTable.lineAsEntered, value: "PMP FLTR 20X24 CS/6" }}
+            output={{ variant: "table", columns: [copy.common.demoTable.columnAsEntered, copy.common.demoTable.columnCategory, copy.common.demoTable.columnUnspsc], rows: BEFORE_AFTER_ROWS }}
           />
         ),
       }}

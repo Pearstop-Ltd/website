@@ -14,7 +14,7 @@ import styles from "./Industries.module.css";
 
 export interface IndustriesCopy {
   breadcrumb: { home: string; current: string };
-  hero: { eyebrow: string; title: string; lead: string; primaryLabel: string; secondaryLabel: string };
+  hero: { eyebrow: string; title: string; lead: string; primaryLabel: string; secondaryLabel: string; imageAlt?: string };
   overview: {
     eyebrow: string;
     title: string;
@@ -65,7 +65,7 @@ export function IndustriesPage({ copy }: { copy: IndustriesCopy }) {
           <div className={styles.heroImage}>
             <Image
               src="/images/photos/the-city-1.png"
-              alt="City skyline representing the range of industries Pearstop serves"
+              alt={copy.hero.imageAlt ?? ""}
               fill
               sizes="(max-width: 900px) 100vw, 560px"
               priority

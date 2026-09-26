@@ -53,7 +53,7 @@ export default async function InvoiceDataExtractionRoute({ params }: { params: P
   const { locale } = await params;
   setRequestLocale(locale);
   const messages = await getMessages({ locale });
-  const copy = messages.InvoiceExtraction as unknown as InvoiceDataExtractionCopy;
+  const copy = { ...messages.InvoiceExtraction, common: messages.Common } as unknown as InvoiceDataExtractionCopy;
   const currency = await getRequestCurrency();
 
   const faqSchema = {

@@ -1,4 +1,417 @@
 {
+  "CaseLemtech": {
+    "meta": {
+      "title": "Lemtech - case study",
+      "description": "Pearstop zet Lemtechs rommelige locatierapporten automatisch om in schone, kant-en-klare offertedocumenten."
+    },
+    "breadcrumbCurrent": "Lemtech",
+    "factSheetRows": [
+      {
+        "label": "Klant",
+        "value": "Lemtech"
+      },
+      {
+        "label": "Data",
+        "value": "Handgeschreven en vrije-vorm locatierapporten"
+      },
+      {
+        "label": "Resultaat",
+        "value": "Kant-en-klare offertedocumenten"
+      },
+      {
+        "label": "Aanpak",
+        "value": "AI-extractie + specificatiematching"
+      }
+    ],
+    "badge": "Productie · Documenten",
+    "h1": "Van rommelige locatienotities naar schone offertes voor Lemtech",
+    "lead": "Locatierapporten kwamen binnen in elk denkbaar formaat — handgeschreven notities, spelfouten, wisselende indelingen. Pearstop bouwde een systeem dat binnenkomende rapporten leest en automatisch een schoon, accuraat offertedocument oplevert.",
+    "stats": [
+      {
+        "value": "1-3 uur",
+        "label": "bespaard per offerte"
+      },
+      {
+        "value": "~0",
+        "label": "handmatige herinvoer"
+      },
+      {
+        "value": "Accuraat",
+        "label": "vastgelegde specificaties"
+      }
+    ],
+    "problem": {
+      "label": "Het probleem",
+      "h2": "Waarom typte het salesteam elke locatienotitie handmatig over?",
+      "body": "Locatierapporten kwamen terug van het veld in welk formaat een monteur ook bij de hand had — handgeschreven notities, spelfouten, wisselende indelingen. Elk rapport moest worden overgetypt in een offertedocument voordat het naar een klant kon, een trage, repetitieve klus die tijd van het salesteam opslokte."
+    },
+    "how": {
+      "label": "Hoe het werkte",
+      "h2": "Van een handgeschreven notitie naar een kant-en-klare offerte",
+      "body": "Pearstop interpreteerde de binnenkomende notities, haalde de juiste producten en specificaties eruit, en leverde een schoner offerteproces op met veel minder handmatige herinvoer.",
+      "inputs": [
+        "Handgeschreven notities",
+        "Locatiefoto's",
+        "Vrije-vorm rapporten"
+      ],
+      "steps": [
+        "Rapport lezen",
+        "Producten en specificaties matchen",
+        "Offerte opstellen"
+      ],
+      "outputs": [
+        {
+          "text": "Schoon, accuraat offertedocument"
+        },
+        {
+          "text": "Juiste specificaties vastgelegd"
+        }
+      ]
+    },
+    "quote": "Pearstop bouwde een systeem dat automatisch de juiste artikelen uit onze locatierapporten in een schoon offertedocument verwerkt. Het bespaart ons team veel tijd doordat het repetitieve werk van het samenvoegen van de juiste artikelen wegvalt.",
+    "result": {
+      "label": "Het resultaat",
+      "h2": "Hetzelfde probleem, buiten procurement",
+      "body": "Dit is een productievoorbeeld van hetzelfde kernprobleem dat Pearstop oplost in procurementdata: operationele informatie die rommelig, inconsistent en kostbaar is om handmatig te verwerken. Dezelfde onderliggende engine leest, interpreteert en structureert het — of de bron nu een factuur, een inkooporder of een handgeschreven locatienotitie is."
+    },
+    "moreLinks": [
+      {
+        "label": "Klantcase · Retail",
+        "title": "Marge zichtbaar vóór de aankoop wordt vastgelegd, voor FARO"
+      },
+      {
+        "label": "Klantcase · Hard Services FM",
+        "title": "9.175 leveranciersspellingen teruggebracht naar 1.493 voor SPIE"
+      },
+      {
+        "label": "Patroon · Productie & MRO",
+        "title": "Het echte fabrikantonderdeelnummer achter elke reseller-code"
+      }
+    ],
+    "closing": {
+      "title": "Zelfde probleem met uw eigen documenten?",
+      "lead": "Stuur ons een voorbeeld van wat er binnenkomt - rommelige notities, PDF's of vrije tekst - en wij laten zien wat er gestructureerd uitkomt.",
+      "ctaLabel": "Stuur ons een voorbeeld"
+    }
+  },
+  "CaseMroConfidential": {
+    "meta": {
+      "title": "Direct naar de fabrikant",
+      "description": "Hoe Pearstop trage, foutgevoelige offshore MRO-onderdeelresearch vervangt door een snelle, gecontroleerde aanpak."
+    },
+    "breadcrumbCurrent": "Productie & MRO",
+    "badge": "Productie & MRO",
+    "h1": "Direct naar de fabrikant",
+    "lead": "Hoe Pearstop trage, foutgevoelige offshore MRO-onderdeelresearch vervangt door een snelle, gecontroleerde aanpak.",
+    "patternNote": "Deze case is gebaseerd op een patroon dat we telkens weer zien in MRO en onderdeleninkoop.",
+    "problem": {
+      "label": "Het probleem",
+      "h2": "Waarom duurt het inkopen van MRO-onderdelen direct bij de fabrikant zo lang?",
+      "body1": "Het begint meestal met onderzoek: het achterhalen van het echte fabrikantonderdeelnummer achter welke code een reseller of een oude inkooporder ook gebruikte. Dat onderzoek wordt doorgaans uitbesteed aan offshore researchbureaus, vaak in India, die het handmatig doen — het werkt, maar het is traag.",
+      "body2": "AI kan dit onderzoek sneller doen. Het kan het ook op een specifieke manier fout doen: generieke AI-modellen verzinnen onderdeelnummers en controleren hun eigen werk niet. Precies daar telt een gespecialiseerde partij — een die echte ervaring heeft met AI-projecten die verifiëren wat ze opleveren, in plaats van te gokken."
+    },
+    "how": {
+      "label": "Hoe het werkt",
+      "h2": "Gecontroleerde matches, geen giswerk",
+      "body": "Pearstop matcht onderdeelrecords tegen fabrikantreferentiedata, markeert alles wat niet met voldoende zekerheid bevestigd kan worden voor menselijke controle, en vervangt een trage offshore onderzoekscyclus door een snelle, gecontroleerde.",
+      "inputs": [
+        "Reseller-onderdeelcodes",
+        "Oude inkooporders",
+        "Leverancierscatalogi"
+      ],
+      "steps": [
+        "Matchen tegen fabrikantdata",
+        "Onbevestigde items markeren",
+        "Doorzetten naar een persoon ter verificatie"
+      ],
+      "outputs": [
+        {
+          "text": "Echt fabrikantonderdeelnummer"
+        },
+        {
+          "text": "Betrouwbaarheidsscore per match"
+        }
+      ]
+    },
+    "partExample": {
+      "note": "Gecontroleerd tegen fabrikantdata"
+    },
+    "panels": [
+      {
+        "label": "Waarom het lastig is",
+        "title": "Offshore onderzoek werkt, maar is traag",
+        "copy": "Het traditionele traject besteedt onderdeelnummeronderzoek uit aan offshore bureaus die het handmatig doen - accuraat genoeg, maar traag genoeg om een inkoopbeslissing op te houden."
+      },
+      {
+        "label": "Waarom het nu kan",
+        "title": "AI, gecontroleerd in plaats van blind vertrouwd",
+        "copy": "Generieke AI-modellen verzinnen onderdeelnummers zodra je ze laat gokken. Matchen tegen echte fabrikantreferentiedata, met alles wat onzeker is doorgezet naar een persoon, geeft de snelheid van AI zonder het risico."
+      }
+    ],
+    "moreLinks": [
+      {
+        "label": "Klantcase · Productie",
+        "title": "Van rommelige locatienotities naar schone offertes voor Lemtech"
+      },
+      {
+        "label": "Patroon · Bouw",
+        "title": "Een prijsverschil van 45% op één aluminium vensterbank, gekocht op tien projecten"
+      },
+      {
+        "label": "Patroon · Schoonmaak",
+        "title": "30 leveranciers van toiletpapier in twaalf maanden, en niemand koos ze"
+      }
+    ],
+    "closing": {
+      "title": "Zelfde probleem met uw MRO-data?",
+      "lead": "Stuur ons een voorbeeld van uw onderdeelrecords en wij laten zien hoe een gecontroleerde match tegen fabrikantdata eruitziet op uw eigen cijfers.",
+      "ctaLabel": "Stuur ons een voorbeeld"
+    }
+  },
+  "CaseConstructionSpendBenchmarking": {
+    "meta": {
+      "title": "Benchmarking van bouwbestedingen",
+      "description": "Eén aluminium vensterbank, gekocht op tien projecten, tien keer anders omschreven. Geclassificeerd is het prijsverschil in dagen zichtbaar."
+    },
+    "breadcrumbCurrent": "Bouw & Infrastructuur",
+    "badge": "Bouw & Infrastructuur",
+    "h1": "Benchmarking van bouwbestedingen",
+    "lead": "Uw calculatieprobleem is geen calculatieprobleem. Een calculatie is een voorspelling van uw eigen kostenbasis.",
+    "patternNote": "Deze case is gebaseerd op een patroon dat we telkens weer zien in bouw- en infrastructuurinkoop.",
+    "section1": {
+      "label": "Het probleem",
+      "h2": "Waarom kost hetzelfde artikel op verschillende projecten een ander bedrag?",
+      "body": "Eén aluminium vensterbank, gekocht op tien verschillende projecten, tien keer anders omschreven. Geclassificeerd is het patroon in dagen zichtbaar: dit is wat elk project daadwerkelijk betaalde, en waarom twee ervan afwijken."
+    },
+    "table": {
+      "header": "Artikel (6 van 10 getoond)",
+      "supplier": "Leverancier",
+      "price": "Prijs"
+    },
+    "classifiedBox": {
+      "label": "Geclassificeerd als",
+      "title": "Aluminium vensterbank, 200mm",
+      "meta": "UNSPSC 30161801 · 10 leveranciers, 10 aankopen · 45% prijsverschil (£36,75-£53,40)"
+    },
+    "body2": "Twee aankopen liggen boven de mediaan: één fast-track locatie zonder tijd om rond te kijken, één met een zwaardere dikte gespecificeerd voor een kustproject. Beide verklaarbaar, beide onzichtbaar tot classificatie.",
+    "section2": {
+      "label": "Zelfde scope, andere prijs",
+      "h2": "Waarom verschillen twee offertes voor dezelfde scope zo sterk?",
+      "body": "Een grondwerkpakket, vergeleken over 8 vergelijkbare projecten, laat een spreiding van 34% zien. Terreintoegang en een krap tijdschema verklaren het grootste deel. Twee offertes vallen buiten de bandbreedte, elk met een reden zodra geclassificeerd. De andere zes laten zien wat de scope eigenlijk zou moeten kosten."
+    },
+    "section3": {
+      "label": "De blokkade",
+      "h2": "Waarom kunt u bestedingen achter een grootboekcode niet benchmarken?",
+      "body": "Een grootboekveld zoals “6100-42-K” is een nominale boekhoudcode die in de plaats staat van het artikel zelf. Gangbaar in ERP's gebouwd voor finance, niet voor inkoop. Niemand kan bestedingen benchmarken die achter zo'n code schuilgaan."
+    },
+    "ledgerExample": {
+      "resolved": "Constructiestaal bevestigingsmateriaal, M12"
+    },
+    "body3": "Pearstop werkt vanuit facturen, ERP-exports, inkooporders en Excel — welk formaat de data ook al binnenkomt — voor kostencode-benchmarking, uitschieterdetectie en leveranciersconsolidatie.",
+    "section4h2": "Van facturen in elk formaat naar een tabel waarmee u kunt handelen",
+    "process": {
+      "inputs": [
+        "Facturen",
+        "ERP",
+        "Inkooporders",
+        "Excel"
+      ],
+      "steps": [
+        "Opschonen",
+        "Classificeren",
+        "Verrijken"
+      ],
+      "outputs": [
+        {
+          "text": "Kostencode-benchmarking"
+        },
+        {
+          "text": "Uitschieterdetectie"
+        },
+        {
+          "text": "Leveranciersconsolidatie"
+        }
+      ]
+    },
+    "features": [
+      {
+        "t": "Uw data hoeft niet schoon te zijn",
+        "c": "Vrije-tekstomschrijvingen en boekhoudcodes zijn het startpunt, geen blokkade."
+      },
+      {
+        "t": "AI-first, menselijk gecontroleerd",
+        "c": "Elk label gecontroleerd. Classificatie blijft kloppen naarmate nieuwe facturen en projecten binnenkomen."
+      },
+      {
+        "t": "Prijs op basis van gebruik",
+        "c": "U betaalt voor de verwerkte regels. Geen zwaar jaarabonnement."
+      }
+    ],
+    "resultBadge": "Typisch resultaat in gespecialiseerde bouw",
+    "resultStat": "8-15%",
+    "resultCopy": "besparing op adresseerbare besteding. De bevindingen hierboven zijn waar dat vandaan komt.",
+    "quote": "Als u uw kostenbasis niet kunt onderbouwen, biedt u op een gevoel.",
+    "quoteRole": "Commercieel Directeur, Bouw",
+    "moreLinks": [
+      {
+        "label": "Klantcase · Infrastructuur",
+        "title": "35.000 tot 50.000 bestedingsregels per maand naar UNSPSC voor Strukton"
+      },
+      {
+        "label": "Patroon · Schoonmaak",
+        "title": "30 leveranciers van toiletpapier in twaalf maanden, en niemand koos ze"
+      },
+      {
+        "label": "Patroon · Productie & MRO",
+        "title": "Het echte fabrikantonderdeelnummer achter elke reseller-code"
+      }
+    ],
+    "closing": {
+      "title": "Wilt u dit zien op uw eigen besteding?",
+      "lead": "Stuur een voorbeeld van uw eigen inkoopdata en wij laten hetzelfde soort patroon zien in uw eigen cijfers.",
+      "ctaLabel": "Stuur ons een voorbeeld"
+    }
+  },
+  "CaseCleaningConsumablesConsolidation": {
+    "meta": {
+      "title": "Consolidatie van schoonmaakverbruiksartikelen",
+      "description": "Niemand koos 30 leveranciers van toiletpapier. Geclassificeerd was het patroon in dagen zichtbaar."
+    },
+    "breadcrumbCurrent": "Schoonmaak & soft FM",
+    "asideCaption": "Elke tegel is een leverancier die toiletpapier factureerde",
+    "asideLegend": "de drie waard om te behouden",
+    "badge": "Schoonmaak & soft FM",
+    "h1": "Niemand koos 30 leveranciers van toiletpapier.",
+    "lead": "Ze konden ze gewoon niet zien. Één schoonmaakbedrijf, twaalf maanden facturen, en een simpele vraag die niemand kon beantwoorden: wat geven we uit aan toiletpapier?",
+    "patternNote": "Deze case is gebaseerd op een patroon dat we telkens weer zien in soft FM-inkoop.",
+    "section1": {
+      "label": "Voorheen",
+      "h2": "De besteding is er. Het overzicht niet.",
+      "body": "Wat we horen van schoonmaakbedrijven, voordat er data van eigenaar wisselt."
+    },
+    "cards": [
+      {
+        "t": "Facturen komen binnen als PDF's",
+        "c": "Regeldetails zitten verstopt in documenten die niemand herleest. Het ERP houdt leverancierstotalen bij, niet wat er is gekocht."
+      },
+      {
+        "t": "Elke locatie bestelt op zijn eigen manier",
+        "c": "Locatiemanagers kopen verbruiksartikelen lokaal in. Eén product komt onder twintig omschrijvingen in de boeken terecht."
+      },
+      {
+        "t": "Eén persoon runt de inkoop",
+        "c": "Er is tijd om locaties bevoorraad te houden. Er is geen tijd om prijzen te benchmarken of te vragen wat er binnenkomt."
+      },
+      {
+        "t": "Klantrapportages handmatig opgebouwd",
+        "c": "Elke maand worden cijfers gehaald uit een audittool, een leveranciersportaal en e-mail. Elke klant wil een andere uitsplitsing."
+      }
+    ],
+    "section2": {
+      "label": "Zodra elke regel geclassificeerd is",
+      "h2": "Eén product. 30 leveranciers. Nu naast elkaar.",
+      "body": "Geclassificeerd was het patroon in dagen zichtbaar: elke leverancier, wat elk rekende per rol, en onder welke voorwaarden. Welke drie u behoudt, is uw keuze. De tabel maakt het een makkelijke."
+    },
+    "decisionBox": {
+      "label": "De beslissing",
+      "items": [
+        "Bunzl CHS · gecontracteerde kernlevering",
+        "Gompels · bulkprijsleider",
+        "Pattersons · regionale next-day dekking"
+      ]
+    },
+    "table": {
+      "supplier": "Leverancier",
+      "price": "£ / rol",
+      "terms": "Voorwaarden",
+      "delivery": "Levering",
+      "footnote": "4 van 30 getoond · Standaard 2-laags"
+    },
+    "section3": {
+      "label": "En dan",
+      "h2": "Wat er nog meer naar boven komt zodra elke regel geclassificeerd is"
+    },
+    "offContract": {
+      "title": "Off-contract inkopen",
+      "contractedLabel": "Gecontracteerd · Bunzl",
+      "contractedUnit": "doos van 36 rollen",
+      "actualLabel": "Werkelijk betaald · Amazon",
+      "actualNote": "zelfde doos, +40%",
+      "body": "Een kostenrisico én een compliancerisico. Klantcontracten specificeren producten en leveranciers, en elke off-contract regel verzwakt uw positie bij heronderhandeling."
+    },
+    "priceSpread": {
+      "title": "Zelfde rol, vijf prijzen",
+      "subtitle": "Tork Advanced T4, betaalde prijs per rol",
+      "body": "spreiding op één product. Elke prijs staat op een andere factuur onder een andere omschrijving."
+    },
+    "spendVisibility": {
+      "title": "Besteding die u niet kunt zien",
+      "body": "van de besteding ongecategoriseerd. U kunt het niet benchmarken, onderhandelen of erover rapporteren totdat het een label heeft."
+    },
+    "section4h2": "Van facturen in elk formaat naar een tabel waarmee u kunt handelen",
+    "process": {
+      "inputs": [
+        "PDF-facturen",
+        "ERP-exports",
+        "Bestelportalen",
+        "Excel-bestanden"
+      ],
+      "steps": [
+        "Opschonen",
+        "Classificeren",
+        "Verrijken"
+      ],
+      "outputs": [
+        {
+          "text": "Wat u uitgeeft, per product"
+        },
+        {
+          "text": "Off-contract en uitschieterregels"
+        },
+        {
+          "text": "Leveranciers per categorie, naast elkaar"
+        }
+      ]
+    },
+    "features": [
+      {
+        "t": "Uw data hoeft niet schoon te zijn",
+        "c": "Rommelige data is het startpunt. Opschonen en classificeren daarvan is het product."
+      },
+      {
+        "t": "AI-first, menselijk gecontroleerd",
+        "c": "Elk label gecontroleerd. Classificatie blijft kloppen naarmate nieuwe leveranciers en facturen binnenkomen."
+      },
+      {
+        "t": "Prijs op basis van gebruik",
+        "c": "U betaalt voor de verwerkte regels. Geen zwaar jaarabonnement."
+      }
+    ],
+    "resultBadge": "Typisch resultaat in soft FM",
+    "resultStat": "10-20%",
+    "resultCopy": "besparing op adresseerbare besteding. De bevindingen hierboven zijn waar dat vandaan komt.",
+    "quote": "Het zou vijf engineers en een heel jaar hebben gekost om dit op te schonen. Dus besloten we op zoek te gaan naar een betere oplossing.",
+    "quoteRole": "Head of Operations, Schoonmaakbedrijf",
+    "moreLinks": [
+      {
+        "label": "Klantcase · Hard Services FM",
+        "title": "9.175 leveranciersspellingen teruggebracht naar 1.493 voor SPIE"
+      },
+      {
+        "label": "Patroon · Bouw",
+        "title": "Een prijsverschil van 45% op één aluminium vensterbank, gekocht op tien projecten"
+      },
+      {
+        "label": "Patroon · Productie & MRO",
+        "title": "Het echte fabrikantonderdeelnummer achter elke reseller-code"
+      }
+    ],
+    "closing": {
+      "title": "Bekijk dit op uw eigen facturen",
+      "lead": "Stuur tot 200 factuurregels of tien facturen. Wij sturen ze gelabeld terug, zodat u hetzelfde soort patroon in uw eigen cijfers ziet.",
+      "ctaLabel": "Stuur uw voorbeeld"
+    }
+  },
   "Header": {
     "solutions": "Oplossingen",
     "allSolutions": "Alle oplossingen",
@@ -55,7 +468,30 @@
     "howItWorksEyebrow": "Hoe het werkt",
     "whatChanges": "Wat verandert er met Pearstop",
     "keyBenefits": "Belangrijkste voordelen",
-    "sendSample": "Stuur ons een data sample"
+    "sendSample": "Stuur ons een data sample",
+    "faqEyebrow": "Vragen",
+    "faqTitle": "Veelgestelde vragen",
+    "demoTable": {
+      "lineAsEntered": "Regel zoals ontvangen",
+      "columnAsEntered": "Zoals ontvangen",
+      "columnCategory": "Categorie",
+      "columnUnspsc": "UNSPSC",
+      "categories": {
+        "airFilters": "Luchtfilters",
+        "generalPurposeCleaners": "Allesreinigers",
+        "temporaryManualLabour": "Tijdelijke handarbeid"
+      }
+    },
+    "geoBanner": {
+      "nl": {
+        "message": "Deze gids is geschreven voor de Nederlandse markt.",
+        "cta": "Bekijk in het Nederlands"
+      },
+      "de": {
+        "message": "Deze gids is geschreven voor de Duitse markt.",
+        "cta": "Bekijk in het Duits"
+      }
+    }
   },
   "About": {
     "meta": {
@@ -71,13 +507,13 @@
       "label": "Hoe het begon",
       "title": "Hoe het begon",
       "p1": "Pearstop is gebouwd vanuit een eenvoudige observatie: dataproblemen zijn overal in technische sectoren, ze zijn duur en niemand loste ze goed op.",
-      "p2": "We begonnen met elk dataprobleem dat we konden vinden — ETL-projecten, rapportages, dashboards, integraties. Toen kwam FARO, een Zuid-Afrikaans retailbedrijf. Ze hadden iemand nodig om handmatig elke container die ze overwogen te kopen te categoriseren om een kostenpicture te maken. Twee fulltimemedewerkers, bezig met repetitief werk dat geen echte waarde toevoegde. We automatiseerden het, koppelden het aan andere databases en stelden de inzichten op.",
+      "p2": "We begonnen met elk dataprobleem dat we te pakken konden krijgen: ETL-projecten, rapportages, dashboards, integraties. Toen kwam FARO, een Zuid-Afrikaans retailbedrijf. Zij hadden iemand nodig die handmatig elke container die ze overwogen te kopen categoriseerde, om zo een kostenoverzicht op te bouwen. Twee fulltimemedewerkers, bezig met repetitief werk dat geen echte waarde toevoegde. Wij automatiseerden het, koppelden het aan andere databases, en bouwden daar de inzichten uit op.",
       "p3": "Dat werd de basis voor alles wat Pearstop vandaag doet."
     },
     "theName": {
       "label": "De naam",
       "title": "Waarom Pearstop?",
-      "copy": "Moeilijke problemen vereisen heldere hoofden. Als we diep in een lastige data-uitdaging zaten — echt diep — namen we een pauze met een grote schaal fruit. Stephanie's favoriet was altijd een peer. Dus toen we een naam nodig hadden, was het vanzelfsprekend: neem een peer. Stop. Kom scherper terug.",
+      "copy": "Moeilijke problemen vereisen heldere hoofden. Als we echt diep in een lastige data-uitdaging zaten, namen we een pauze met een grote schaal fruit. Stephanie's favoriet was altijd een peer. Dus toen we een naam nodig hadden, was het vanzelfsprekend: neem een peer (\"pear\"). Stop. Kom scherper terug.",
       "tagline": "Zo werken we nog steeds."
     },
     "leadership": {
@@ -93,15 +529,15 @@
       "lead": "Drie principes die alles wat we bouwen en elke klant die we bedienen sturen.",
       "v1": {
         "title": "Data-integriteit eerst",
-        "copy": "We geloven dat schone data de basis is van elke goede zakelijke beslissing. We compromitteren nooit over nauwkeurigheid of betrouwbaarheid."
+        "copy": "We geloven dat schone data de basis is van elke goede zakelijke beslissing. We doen nooit concessies aan nauwkeurigheid of betrouwbaarheid."
       },
       "v2": {
         "title": "Sectorexpertise",
-        "copy": "We begrijpen de sectoren die we bedienen diepgaand — hun druk, hun marges en hun data-uitdagingen. Generieke oplossingen volstaan hier niet."
+        "copy": "We begrijpen de sectoren die we bedienen door en door: hun druk, hun marges en hun data-uitdagingen. Generieke oplossingen volstaan hier niet."
       },
       "v3": {
         "title": "Meetbare impact",
-        "copy": "Elke opdracht wordt gemeten aan echte commerciële resultaten — margeverbetering, tijdsbesparing, gewonnen nauwkeurigheid. Als het niet meetbaar is, telt het niet."
+        "copy": "Elke opdracht wordt afgemeten aan echte commerciële resultaten: margeverbetering, tijdsbesparing, gewonnen nauwkeurigheid. Als het niet meetbaar is, telt het niet."
       }
     },
     "geoBlock": {
@@ -112,7 +548,7 @@
       "title": "Laten we praten.",
       "lead": "Een dataprobleem dat de moeite waard is om op te lossen? We horen er graag over.",
       "getInTouch": "Neem contact op",
-      "bookDiscovery": "Boek een ontdekkingsgesprek van 15 minuten"
+      "bookDiscovery": "Praat met sales"
     },
     "leaders": [
       {
@@ -122,7 +558,7 @@
       },
       {
         "name": "Richard Wallace",
-        "role": "COO",
+        "role": "CCO",
         "copy": "Richard leidt de klantlevering bij Pearstop en zorgt ervoor dat elke opdracht soepel verloopt en dat wat we op papier beloven in de praktijk resultaten oplevert."
       }
     ],
@@ -200,12 +636,12 @@
     },
     "meta": {
       "title": "Data Quality Oplossingen voor Hard Services en Infrastructuur",
-      "description": "Vijf data quality oplossingen voor technische sectoren - van extractie van factuurdata en UNSPSC procurement classificatie tot asset data management en uniforme data quality."
+      "description": "Factuurextractie, UNSPSC-classificatie, spend-zichtbaarheid, prijsbenchmarking en data readiness voor FM, bouw, infrastructuur en productie."
     },
     "hero": {
       "eyebrow": "Oplossingen",
-      "title": "Zet rommelige data om in beslissingen",
-      "lead": "Pearstop levert vijf data-integriteitsoplossingen voor technische sectoren. Elk richt zich op een specifiek dataprobleem en elk is gebouwd om uw marges te beschermen.",
+      "title": "Met welk spend-dataprobleem worstelt u?",
+      "lead": "De meeste teams komen er pas achter dat hun spend data niet klopt zodra iemand een vraag stelt die niemand kan beantwoorden. Begin bij het probleem waar u nu tegenaan loopt. Elke oplossing hieronder laat zien hoe wij het aanpakken.",
       "primaryLabel": "Stuur ons 200 regels",
       "secondaryLabel": "Praat met sales",
       "builtForLabel": "Gebouwd voor",
@@ -405,42 +841,42 @@
           "id": "facilities-management",
           "title": "Facility management",
           "pain": "Data komt van elke servicelijn in een ander formaat binnen.",
-          "linkLabel": "Zie hoe het van toepassing is →",
+          "linkLabel": "Bekijk uw sector →",
           "href": "/industries#facilities-management"
         },
         {
           "id": "hard-services",
           "title": "Hard services",
           "pain": "Dezelfde leverancier duikt onder tientallen namen op, en assetlijsten komen nooit overeen.",
-          "linkLabel": "Zie hoe het van toepassing is →",
+          "linkLabel": "Bekijk uw sector →",
           "href": "/industries#hard-services"
         },
         {
           "id": "cleaning",
           "title": "Cleaning",
           "pain": "Facturen stapelen ongelezen op, en dunne marges laten geen ruimte voor gokwerk.",
-          "linkLabel": "Zie hoe het van toepassing is →",
+          "linkLabel": "Bekijk uw sector →",
           "href": "/industries#cleaning"
         },
         {
           "id": "construction",
           "title": "Bouw",
           "pain": "U schat biedingen uit het hoofd omdat niemand historische cijfers kan opvragen.",
-          "linkLabel": "Zie hoe het van toepassing is →",
+          "linkLabel": "Bekijk uw sector →",
           "href": "/industries#construction"
         },
         {
           "id": "infrastructure",
           "title": "Infrastructuur",
           "pain": "Er is een besparingsdoelstelling genoemd en de data kan niet laten zien waar die zit.",
-          "linkLabel": "Zie hoe het van toepassing is →",
+          "linkLabel": "Bekijk uw sector →",
           "href": "/industries#infrastructure"
         },
         {
           "id": "manufacturing",
           "title": "Productie",
           "pain": "Eén entiteit gebruikt al UNSPSC en een andere moet zich daarop afstemmen.",
-          "linkLabel": "Zie hoe het van toepassing is →",
+          "linkLabel": "Bekijk uw sector →",
           "href": "/industries#manufacturing"
         },
         {
@@ -519,8 +955,8 @@
     },
     "closing": {
       "title": "Niet zeker welke oplossing u nodig heeft?",
-      "body": "Boek een discovery van 15 minuten. Wij stellen precies vast welk dataprobleem u het meeste kost — en laten zien hoe u het oplost.",
-      "primaryLabel": "Boek een discovery van 15 minuten",
+      "body": "Boek een kennismakingsgesprek van 15 minuten. Wij stellen precies vast welk dataprobleem u het meeste kost — en laten zien hoe u het oplost.",
+      "primaryLabel": "Boek een kennismakingsgesprek van 15 minuten",
       "secondaryLabel": "Of stuur ons 200 regels →",
       "tertiaryLabel": "Bekijk sectoren"
     }
@@ -532,7 +968,7 @@
       "role": "Facility Management"
     },
     "cta": {
-      "button": "Boek een ontdekkingsgesprek van 15 minuten",
+      "button": "Praat met sales",
       "title": "Klaar om de data onder uw volgende project te herstellen?",
       "lead": "Praat met sales. Wij laten precies zien waar uw data vandaag een ERP-migratie, een Fabric-uitrol of een AI-initiatief zou breken."
     },
@@ -630,8 +1066,8 @@
     },
     "hero": {
       "eyebrow": "Inkoop",
-      "title": "U kunt geen categoriemanagement doen zonder schone inkoopdata.",
-      "lead": "De meeste inkoopteams weten wat ze willen bereiken. De data eronder is wat hen tegenhoudt. Pearstop lost dat op — automatisch, op schaal."
+      "title": "U kunt niet onderhandelen over wat u niet ziet.",
+      "lead": "De meeste inkoopteams weten hun omzet tot op de euro. Weinigen weten waar ze dat daadwerkelijk aan uitgaven, categorie voor categorie, over elke locatie, entiteit en gebundeld contract. Pearstop bouwt die baseline, zodat een onderhandeling, een tender of een raamovereenkomst-review start vanuit een echt getal in plaats van een gok."
     },
     "problem": {
       "eyebrow": "Het probleem",
@@ -713,7 +1149,7 @@
     ],
     "cta": {
       "title": "Klaar om uw inkoopdata te herstellen?",
-      "button": "Boek een ontdekkingsgesprek van 15 minuten",
+      "button": "Praat met sales",
       "lead": "Praat met sales. Wij laten precies zien waar uw spend-data het cijfer verbergt dat u nodig heeft."
     }
   },
@@ -722,10 +1158,24 @@
       "title": "Assetdatabeheer voor FM en infrastructuur",
       "description": "Zet gefragmenteerde assetregisters om in een schone, betrouwbare dataset. Pearstop structureert assetdata voor facility management-, infrastructuur- en hard services-bedrijven."
     },
+    "demo": {
+      "supplierLabel": "Eén leverancier",
+      "matchedOn": [
+        "BTW-nummer",
+        "Statutaire vestigingsadres",
+        "Bankgegevens"
+      ],
+      "sources": {
+        "erpVendorMaster": "ERP-leveranciersbestand",
+        "invoiceHeader": "Factuurkop",
+        "pCardStatement": "Inkoopkaart-afschrift",
+        "contractRegister": "Contractregister"
+      }
+    },
     "hero": {
       "eyebrow": "Assetbeheer",
-      "title": "Uw assetlijst moet voor u werken, niet tegen u.",
-      "lead": "Als uw assetdata menselijke interpretatie nodig heeft om bruikbaar te zijn, is het niet bruikbaar. Pearstop reinigt, structureert en standaardiseert assetregisters zodat onderhoudsteams, inkopers en management allemaal kunnen werken vanuit dezelfde vertrouwde bron."
+      "title": "U ziet de facturen niet. Toch moet u weten wat erin staat.",
+      "lead": "Asset owners die facility management uitbesteden, genereren hun eigen spend- en onderhoudsdata niet. Ze ontvangen die, gefilterd via de provider die het contract uitvoert. Pearstop geeft u een onafhankelijke, geclassificeerde versie van diezelfde data, goed genoeg gestructureerd om providers, locaties en jaren op dezelfde basis te vergelijken."
     },
     "problem": {
       "eyebrow": "Het probleem",
@@ -800,7 +1250,7 @@
     },
     "cta": {
       "title": "Klaar om uw assetdata om te zetten in een strategisch asset?",
-      "button": "Boek een ontdekkingsgesprek van 15 minuten",
+      "button": "Praat met sales",
       "lead": "Praat met sales en zie precies hoe Pearstop de data die u al ontvangt omzet in iets dat u kunt verifiëren."
     },
     "faq": [
@@ -895,7 +1345,7 @@
     },
     "cta": {
       "title": "Is uw data klaar voor AI?",
-      "button": "Boek een ontdekkingsgesprek van 15 minuten",
+      "button": "Praat met sales",
       "fabricLink": "Bekijk ook Fabric-gereedheid",
       "lead": "Praat met sales en wij vertellen precies wat er moet gebeuren voordat uw AI-initiatieven resultaten kunnen leveren."
     },
@@ -915,10 +1365,26 @@
       "title": "Geautomatiseerde UNSPSC-classificatie voor inkoopteams",
       "description": "Pearstop classificeert automatisch tot 95% van uw inkoopbestedingsregels naar UNSPSC-standaard zonder handmatig werk."
     },
+    "hierarchyDemo": {
+      "lineAsEntered": "Regel zoals ontvangen",
+      "matchLabel": "Match op commodity-niveau",
+      "levels": {
+        "segment": "Segment",
+        "family": "Family",
+        "class": "Class",
+        "commodity": "Commodity"
+      },
+      "names": {
+        "constructionAndMaintenance": "Bouw en onderhoud",
+        "buildingAndFacilityMaintenance": "Gebouw- en facilitair onderhoud",
+        "electricalMaintenance": "Elektrisch onderhoud",
+        "lightingMaintenance": "Verlichtingsonderhoud"
+      }
+    },
     "hero": {
       "eyebrow": "UNSPSC",
-      "title": "Ongeclassificeerde bestedingen zijn de vijand van inkoopprestaties.",
-      "lead": "Pearstop classificeert automatisch tot 95% van uw inkoopregels met UNSPSC — de wereldwijde standaard voor inkoopclassificatie — zodat uw team dit niet meer handmatig hoeft te doen."
+      "title": "Uw inkoopdata bevat de antwoorden. U kunt ze alleen nog niet lezen.",
+      "lead": "De meeste FM- en bouwbedrijven hebben jaren aan inkooporderdata in SAP of Oracle staan. Zonder UNSPSC-classificatie is dat een stapel vrije-tekstregels. Met classificatie ziet u precies wat u per categorie uitgeeft, benchmarkt u suppliers en bouwt u tenders op basis van echte kostendata. Pearstop classificeert facturen op elke schaal, van een pilot van een paar honderd regels tot volledig productievolume: het schaalt met u mee."
     },
     "standard": {
       "eyebrow": "De standaard",
@@ -977,7 +1443,7 @@
     },
     "cta": {
       "title": "Klaar om uw inkoopclassificatie te automatiseren?",
-      "button": "Boek een ontdekkingsgesprek van 15 minuten",
+      "button": "Praat met sales",
       "lead": "Praat met sales. Wij laten precies zien hoe de classificatie-engine met uw data zou werken."
     },
     "stats": {
@@ -1106,7 +1572,7 @@
     "cta": {
       "title": "Plant u een Fabric-migratie?",
       "lead": "Praat met ons voordat de migratie begint. Een gesprek van 30 minuten nu kan maanden herstelwerk later besparen.",
-      "button": "Boek een ontdekkingsgesprek van 15 minuten",
+      "button": "Praat met sales",
       "aiLink": "Bekijk ook AI-gereedheid"
     },
     "faq": [
@@ -1247,6 +1713,21 @@
       "title": "Klantresultaten",
       "description": "Echte resultaten van hard services-, infrastructuur-, productie- en FM-bedrijven die Pearstop hebben gebruikt om hun data te reinigen, handmatig werk te verminderen en marges te beschermen."
     },
+    "index": {
+      "jumpLinkClientCases": "Klantcases",
+      "jumpLinkPatterns": "Patronen",
+      "featuredLabel": "Uitgelichte klantcase",
+      "readCase": "Lees de case",
+      "clientCasesTitle": "Klantcases",
+      "clientCasesCaption": "Met naam genoemd, echte data",
+      "patternsTitle": "Patronen die we zien",
+      "seePattern": "Bekijk het patroon",
+      "inTheirWords": "In hun eigen woorden",
+      "closingTitle": "Stuur ons 200 regels. Wij sturen ze gelabeld terug.",
+      "closingBody": "Geen opschoning vooraf, geen kosten, niets te installeren. De snelste manier om te zien hoe uw eigen data er geclassificeerd uitziet.",
+      "closingPrimaryLabel": "Stuur uw steekproef",
+      "closingSecondaryLabel": "Of praat met sales →"
+    },
     "hero": {
       "eyebrow": "Klantresultaten",
       "title": "Echt werk. Echte marges.",
@@ -1323,7 +1804,8 @@
       "title": "Sectoren die we bedienen",
       "lead": "Achter een goede locatie zit werk dat niemand ziet: het onderhoudsplan, de onderdelenbestelling, de leverancierscheck. Bijna alles daarvan draait op data, en de meeste teams waarmee we werken kunnen een simpele vraag erover niet beantwoorden: wat hebben we uitgegeven, aan wat, en bij wie? Vind hieronder uw sector.",
       "primaryLabel": "Stuur ons een datasample. Wij reinigen die gratis.",
-      "secondaryLabel": "Boek een discovery van 15 minuten"
+      "secondaryLabel": "Boek een kennismakingsgesprek van 15 minuten",
+      "imageAlt": "Skyline van een stad, symbool voor de sectoren die Pearstop bedient"
     },
     "sixIndustries": {
       "title": "Zes sectoren, één oplossing",
@@ -2213,7 +2695,7 @@
     "workingDifferent": {
       "title": "Actief in een andere sector?",
       "body": "Datakwaliteitsproblemen zijn niet uniek voor de sectoren hierboven. Als uw teams complexe spend- en assetdata beheren, te maken hebben met inconsistente leveranciersgegevens, of overstappen op een nieuw ERP- of rapportagesysteem, is de kans groot dat we kunnen helpen. Laten we het uitzoeken.",
-      "primaryLabel": "Boek een discovery van 15 minuten",
+      "primaryLabel": "Boek een kennismakingsgesprek van 15 minuten",
       "secondaryLabel": "Of stuur ons een datasample →"
     }
   },
@@ -2461,7 +2943,7 @@
     "cta": {
       "title": "Liever een gesprek?",
       "lead": "We kunnen u ook hetzelfde denken toelichten in een kort gesprek.",
-      "bookDiscovery": "Boek een ontdekkingsgesprek van 15 minuten",
+      "bookDiscovery": "Praat met sales",
       "backHome": "Terug naar startpagina"
     }
   },
@@ -2474,7 +2956,7 @@
       "eyebrow": "FAQ",
       "title": "Vragen die ons het meest worden gesteld.",
       "lead": "Alles wat u moet weten over hoe Pearstop werkt, wat het kost en of het geschikt is voor uw organisatie.",
-      "cta": "Boek een 15-minuten discovery",
+      "cta": "Praat met sales",
       "secondary": "Ga naar vragen"
     },
     "sections": {
@@ -2671,13 +3153,13 @@
     },
     "stillHaveQuestions": {
       "label": "Nog een vraag?",
-      "cta": "Boek een discovery van 15 minuten",
+      "cta": "Praat met sales",
       "email": "Stuur ons een bericht",
       "copy": "Als uw vraag hier niet beantwoord wordt, is de snelste manier om een antwoord te krijgen door met sales te praten. Er is geen verkoopdruk - het is een direct gesprek over uw datasituatie."
     },
     "cta": {
       "title": "Klaar om het in actie te zien?",
-      "button": "Boek een discovery van 15 minuten",
+      "button": "Praat met sales",
       "lead": "Praat met sales en wij laten precies zien hoe de classificatie-engine werkt met uw data."
     }
   },
@@ -2690,7 +3172,7 @@
       "eyebrow": "UNSPSC voor Facilities Management",
       "title": "FM procurement data is het moeilijkst te classificeren. Zo lost u het op.",
       "lead": "Hard services en FM-bedrijven beheren duizenden invoice-regels over honderden suppliers en locaties. Pearstop classificeert dit alles automatisch — 90–95% zonder menselijke input — zodat uw team zich kan richten op category management, niet op data-invoer.",
-      "cta": "Boek een discovery van 15 minuten",
+      "cta": "Praat met sales",
       "secondary": "Hoe het werkt"
     },
     "challenge": {
@@ -2780,7 +3262,7 @@
     },
     "cta": {
       "title": "Ready to automate FM procurement classification?",
-      "button": "Book a 15-minute discovery",
+      "button": "Praat met sales",
       "lead": "Praat met sales. Wij laten precies zien hoe de engine werkt met uw spend-data."
     },
     "geoBlock": {
@@ -3003,7 +3485,7 @@
     },
     "bulk": {
       "label": "Moet u duizenden regels classificeren?",
-      "cta": "Boek een 15-minuten ontdekking",
+      "cta": "Praat met sales",
       "learnMore": "Bekijk hoe het werkt",
       "copy": "Deze tool verwerkt losse opzoekingen. Pearstops geautomatiseerde classificatie-engine verwerkt 35.000 procurement-regels per maand - met 90-95% automatische classificatie en volledige SAP-integratie. Praat met sales om het met uw data te zien."
     },
@@ -3050,7 +3532,7 @@
     },
     "cta": {
       "title": "Moet u duizenden regels classificeren?",
-      "button": "Boek een 15-minuten ontdekking",
+      "button": "Praat met sales",
       "lead": "Praat met sales en wij laten zien hoe de volledige classificatie-engine werkt met uw daadwerkelijke procurement-data."
     },
     "geoBlock": {
@@ -3799,5 +4281,358 @@
       "button": "Praat met sales",
       "secondaryButton": "Probeer de gratis opzoektool"
     }
+  },
+  "CaseSpie": {
+    "meta": {
+      "title": "SPIE Case Study",
+      "description": "Pearstop consolideerde 9.175 leveranciersvarianten tot 1.493 canonieke leveranciers over 204.029 assetrecords voor SPIE Building Solutions — dezelfde classificatiepipeline die ook Pearstops inkoopdata reinigt."
+    },
+    "breadcrumb": "SPIE Building Solutions",
+    "badge": "Hard Services FM · Assetdata",
+    "h1": "9.175 leveranciersspellingen teruggebracht tot 1.493 voor SPIE Building Solutions",
+    "lead": "Het assetregister van SPIE werd al jaren gevoed door onderhoudssystemen, aannemers en handmatige invoer. Pearstop matchte elke fabrikant tegen SPIE’s eigen goedgekeurde lijst, gaf elk record een betrouwbaarheidsscore, en leverde het team een gerangschikte lijst op van wat het eerst te controleren.",
+    "stats": {
+      "s1": {
+        "value": "9.175 → 1.493",
+        "label": "geconsolideerde leveranciersvarianten"
+      },
+      "s2": {
+        "value": "73,1%",
+        "label": "matches bevestigd tegen de goedgekeurde lijst"
+      },
+      "s3": {
+        "value": "107.081",
+        "label": "regels verrijkt met family en variant"
+      },
+      "s4": {
+        "value": "100%",
+        "label": "van de records gescoord op betrouwbaarheid en controleprioriteit"
+      }
+    },
+    "situation": {
+      "label": "De situatie",
+      "title": "Eén fabrikant, een dozijn spellingen",
+      "p1": "SPIE Building Solutions beheert een grote portefeuille aan gebouwgebonden assets op veel locaties. Door de jaren heen werd het register gevuld vanuit verschillende onderhoudssystemen, aannemersuploads en handmatige invoer.",
+      "p2": "Het resultaat: dezelfde fabrikant onder een dozijn spellingen, en apparatuurtypes die ontbraken of verkeerd waren vastgelegd. De lijsten werkten voor een monteur op locatie. Ze werkten niet om onderhoud te plannen of biedrisico over een hele portefeuille in te schatten."
+    },
+    "whyProblemToo": {
+      "label": "Waarom dit ook ons probleem is",
+      "copy": "Elk asset heeft een fabrikant en een type, net zoals elke inkooporderregel een leverancier en een omschrijving heeft. De engine die spend data opschoont, werkt zonder aanpassingen ook op een assetregister.",
+      "poLabel": "Inkooporderregel",
+      "poValue": "Leverancier + omschrijving",
+      "assetLabel": "Assetrecord",
+      "assetValue": "Fabrikant + type"
+    },
+    "howItWorked": {
+      "label": "Hoe het werkte",
+      "title": "Gematcht tegen de lijst die SPIE al vertrouwt",
+      "intro": "In een vroeg stadium zagen we algemene AI-modellen leveranciersnamen gokken of verzinnen. Daarom werd elke regel uitsluitend gematcht tegen SPIE’s eigen goedgekeurde leverancierslijst.",
+      "diagramInputs": {
+        "i1": "Onderhoudssystemen",
+        "i2": "Aannemersuploads",
+        "i3": "Handmatige invoer"
+      },
+      "diagramSteps": {
+        "s1": "Matchen tegen de goedgekeurde lijst",
+        "s2": "Kruiscontrole met een taalmodel",
+        "s3": "Conflicten doorzetten naar een medewerker"
+      },
+      "diagramOutputs": {
+        "o1": "Canonieke leverancier",
+        "o2": "Productfamilie + variant",
+        "o3": "Betrouwbaarheid + controleprioriteit"
+      },
+      "steps": {
+        "st1": {
+          "title": "Eerst deterministisch matchen",
+          "copy": "Exacte, prefix-, edit-distance- en typfoutcorrectiematching tegen SPIE's goedgekeurde leveranciers, overal waar een regel kon beslissen."
+        },
+        "st2": {
+          "title": "Een onafhankelijke tweede mening",
+          "copy": "Een large language model beoordeelde elke match zelfstandig. Waar beide overeenkwamen, steeg de betrouwbaarheid."
+        },
+        "st3": {
+          "title": "Mensen beslissen de lastige gevallen",
+          "copy": "Tegenstrijdige matches gingen naar SPIE's master-data-team, en elke beslissing voedde de volgende iteratie."
+        }
+      }
+    },
+    "example": {
+      "label": "Een concreet voorbeeld",
+      "title": "Vijf spellingen van één pompfabrikant, opgelost",
+      "intro": "Eén familie circulatiepompen kwam voor onder vijf leveranciersspellingen, waarvan één een simpele typfout. Het typeveld was nog rommeliger: in de ene regel een kale familienaam, in de volgende een volledige modelcode.",
+      "tableColumns": {
+        "c1": "Leverancier, zoals binnengekomen",
+        "c2": "Type, zoals binnengekomen",
+        "c3": "Leverancier",
+        "c4": "Family",
+        "c5": "Variant"
+      },
+      "tableFootnote": "Namen aangepast. De vorm komt overeen met het echte register. Een leveranciersteam ziet nu deze exacte pompfamilie, in deze exacte configuraties, in plaats van “pompen, allerlei soorten”."
+    },
+    "whereToLook": {
+      "label": "Waar eerst te kijken",
+      "title": "Een gerangschikte controlelijst in plaats van een muur aan regels",
+      "intro": "Elk record kreeg drie scores: leveranciersbetrouwbaarheid, typebetrouwbaarheid en controleprioriteit. SPIE’s team begon bovenaan de lijst en werkte van boven naar beneden.",
+      "confirmedLabel": "bevestigd",
+      "reviewLabel": "Te controleren",
+      "reviewLegend": "In de wachtrij voor controle, hoogste prioriteit eerst"
+    },
+    "quoteBig": "Dankzij de confidence scoring wist ons team waar ze hun reviewtijd het eerst aan moesten besteden, in plaats van bij nul te beginnen op 200.000 regels.",
+    "twoPanel": {
+      "p1": {
+        "label": "Wat we leerden",
+        "title": "Als een klant een goedgekeurde lijst heeft, match daar dan tegen",
+        "copy": "Alleen matchen tegen SPIE's gevalideerde leveranciers verhoogde zowel de nauwkeurigheid als het vertrouwen van het team in de uitkomst. Het is nu standaard bij elk Pearstop-traject met een vastgestelde leveranciersbasis."
+      },
+      "p2": {
+        "label": "Wat het verandert",
+        "title": "Van assets onderhouden naar erover adviseren",
+        "copy": "Met een gestructureerd register kan SPIE een hele apparatuurfamilie bekijken en terugkerende storingen over een portefeuille heen opsporen. Een monteur kan dan zeggen:",
+        "pullQuote": "Deze pompfamilie faalt met dit percentage op al uw locaties. Dit adviseren wij."
+      }
+    },
+    "quoteCard": "Pearstops fabrikantmatching gaf ons het juiste startpunt om data terug in het ERP te laden. Dit project heeft ons veel geleerd over data cleaning met AI.",
+    "moreLinks": {
+      "l1": {
+        "label": "Klantcase · Hard Services FM",
+        "title": "35.000 tot 50.000 bestedingsregels per maand naar UNSPSC voor Strukton"
+      },
+      "l2": {
+        "label": "Klantcase · Retail",
+        "title": "Marge zichtbaar voordat de inkoop wordt vastgelegd, voor FARO"
+      },
+      "l3": {
+        "label": "Patroon · Schoonmaak",
+        "title": "30 toiletpapierleveranciers in twaalf maanden, en niemand had ervoor gekozen"
+      }
+    },
+    "closingCta": {
+      "title": "Hetzelfde probleem in uw assetregister?",
+      "lead": "Stuur ons een steekproef van uw asset- of apparatuurdata. Wij matchen die tegen uw eigen referentielijst en sturen hem gescoord terug, zodat u een eerste doorloop op uw eigen records ziet.",
+      "ctaLabel": "Stuur een steekproef"
+    }
+  },
+  "CaseStrukton": {
+    "meta": {
+      "title": "Strukton Case Study",
+      "description": "Pearstop bouwde samen met het inkoopteam van Strukton een AI-classificatiesysteem: 35.000 tot 50.000 bestedingsregels per maand geclassificeerd naar UNSPSC, startend vanaf nul classificatiehistorie."
+    },
+    "breadcrumb": "Strukton",
+    "badge": "Infrastructuur · Nederland",
+    "h1": "35.000 tot 50.000 inkoopregels per maand geclassificeerd naar UNSPSC, vanaf nul, voor Strukton",
+    "lead": "Strukton is een grote Nederlandse infrastructuuraannemer. Pearstop bouwde dit systeem samen met hun inkoopafdeling. Het classificeerde elke bestedingsregel automatisch naar UNSPSC, elke maand.",
+    "stats": {
+      "s1": {
+        "value": "35k–50k",
+        "label": "bestedingsregels per maand"
+      },
+      "s2": {
+        "value": "0",
+        "label": "classificatiehistorie bij de start"
+      },
+      "s3": {
+        "value": "4",
+        "label": "UNSPSC-niveaus per regel"
+      },
+      "s4": {
+        "value": "Wekelijks",
+        "label": "feedbackritme van inkopers"
+      },
+      "s5": {
+        "value": "+20%",
+        "label": "extra classificatienauwkeurigheid door menselijke controle toe te voegen, vergeleken met AI alleen en zonder context"
+      }
+    },
+    "problem": {
+      "label": "Het probleem",
+      "title": "Waarom vindt u geen inkoopbesparingen zonder gedetailleerde bestedingsdata?",
+      "p1": "Strukton had een reële kostenbesparing in de inkoop geïdentificeerd. Om daarop te acteren, hadden ze meer detail in hun bestedingsdata nodig. Hun spend was al goed georganiseerd. Wat ontbrak, was UNSPSC-classificatie. Dit project startte vanaf nul classificatiehistorie."
+    },
+    "howItWorked": {
+      "label": "Hoe het werkte",
+      "title": "Hoe voorkomt een AI-classificatiesysteem dat het op uw data gaat gokken?",
+      "intro": "Pearstop en het inkoopteam van Strukton bouwden een systeem met drie lagen, en vermeden zo de meest voorkomende fout in AI-projecten: het wiel opnieuw uitvinden zonder het model genoeg context te geven om mee te werken.",
+      "diagramInputs": {
+        "i1": "SAP-inkooporders",
+        "i2": "Leveranciersfacturen",
+        "i3": "Eerdere inkoopbeslissingen"
+      },
+      "diagramSteps": {
+        "s1": "AI classificeerde elke regel",
+        "s2": "ML-pipeline leerde van context",
+        "s3": "Human-in-the-loop voor de rest"
+      },
+      "diagramOutputs": {
+        "o1": "Segment → Family → Class → Commodity",
+        "o2": "Betrouwbaarheidsscore per regel",
+        "o3": "Wekelijkse feedbackloop met inkopers"
+      }
+    },
+    "granularity": {
+      "label": "Waarom detailniveau ertoe doet",
+      "title": "Waarom zijn alle vier UNSPSC-niveaus belangrijk, niet alleen het hoogste?",
+      "p1": "Elke maand kwam een nieuwe batch spend binnen. Pearstop verwerkte die volledig. Elke regel kreeg vier niveaus van UNSPSC-classificatie: segment, family, class en commodity.",
+      "boxLabel": "Vier niveaus, van breed naar specifiek",
+      "boxValue": "Segment → Family → Class → Commodity",
+      "p2": "Een segment is de breedste categorie. Een commodity is het meest specifiek. Classificeren tot alle vier de niveaus, niet alleen het hoogste, is wat de data bruikbaar maakt voor echte beslissingen – het benchmarken van één specifiek product tussen leveranciers, niet alleen een brede categoriegemiddelde.",
+      "readMoreLink": "Lees meer over hoe de vier niveaus van UNSPSC werken"
+    },
+    "quoteCard": "Gebouwd en bewezen bij een grote Nederlandse infrastructuuraannemer, startend vanaf nul classificatiehistorie.",
+    "twoPanel": {
+      "p1": {
+        "label": "Hoe het verbetert",
+        "title": "Elke maand nauwkeuriger, niet alleen vaker gebruikt",
+        "copy": "Strukton's inkopers beoordeelden wat de AI classificeerde, markeerden wat klopte en wat niet, en elke correctie voedde het systeem. Pearstop en Strukton's team kwamen wekelijks samen om te bespreken wat werkte en wat niet."
+      },
+      "p2": {
+        "label": "Het resultaat",
+        "title": "Van nul classificatie naar volledig detailniveau",
+        "copy": "Voor dit project had Strukton helemaal geen UNSPSC-classificatie. Aan het eind van het traject werden 35.000 tot 50.000 bestedingsregels automatisch geclassificeerd per maand, tot op alle vier de UNSPSC-niveaus. Dat is het detailniveau dat de oorspronkelijke besparingskans nodig had om er daadwerkelijk op te kunnen acteren."
+      }
+    },
+    "moreLinks": {
+      "l1": {
+        "label": "Klantcase · Hard Services FM",
+        "title": "9.175 leveranciersspellingen teruggebracht tot 1.493 voor SPIE"
+      },
+      "l2": {
+        "label": "Klantcase · Retail",
+        "title": "Marge zichtbaar voordat de inkoop wordt vastgelegd, voor FARO"
+      },
+      "l3": {
+        "label": "Patroon · Bouw",
+        "title": "Een prijsverschil van 45% op één aluminium vensterbank, gekocht op tien projecten"
+      }
+    },
+    "closingCta": {
+      "title": "Wilt u een case study rond uw eigen data?",
+      "lead": "We laten u zien hoe dezelfde aanpak eruit zou zien voor uw inkoop- of assetdata.",
+      "ctaLabel": "Stuur ons een steekproef"
+    }
+  },
+  "CaseFaro": {
+    "meta": {
+      "title": "FARO Case Study",
+      "description": "Pearstop classificeerde duizenden productregels voor FARO, koppelde ze aan verkoopdata, en maakte marge zichtbaar voordat de inkoop werd vastgelegd."
+    },
+    "faqQuestion": "Hoe maakt het koppelen van classificatie aan verkoopdata marge zichtbaar vóór een inkoop?",
+    "faqAnswer": "Zodra elke productregel consistent is geclassificeerd, kan die worden gekoppeld aan historische verkoopprestaties voor diezelfde categorie. Dat levert een margeschatting op het moment van de inkoopbeslissing, in plaats van nadat de container is aangekomen en doorverkocht.",
+    "breadcrumb": "FARO",
+    "badge": "Retail · Zuid-Afrika",
+    "h1": "30.000 productregels geclassificeerd per inkoopbeslissing, in een week, voor FARO",
+    "lead": "Voor elke containerinkoop moest FARO ongeveer 30.000 productregels categoriseren om marge, verkoopprijs en doorlooptijd in te schatten voordat kapitaal werd vastgelegd. Pearstop automatiseerde de classificatie en koppelde die rechtstreeks aan FARO’s verkoopdatabase.",
+    "stats": {
+      "s1": {
+        "value": "30k",
+        "label": "regels geclassificeerd per inkoopbeslissing"
+      },
+      "s2": {
+        "value": "95%",
+        "label": "automatisch geclassificeerd"
+      },
+      "s3": {
+        "value": "1 week",
+        "label": "classificatietijd, was zes maanden met de hand"
+      },
+      "s4": {
+        "value": "Tot 7%",
+        "label": "hogere doorverkoop, door verkoopdata aan inkoopbeslissingen te koppelen"
+      }
+    },
+    "situation": {
+      "label": "De situatie",
+      "title": "Waarom marge onzichtbaar was tot na de inkoop",
+      "p1": "Voor elke containerinkoop had FARO een betrouwbaar kostenbeeld nodig voordat er kapitaal werd vastgelegd. Dat betekende duizenden productregels classificeren, ze koppelen aan verkoopresultaten, en het proces snel genoeg houden om de inkoopbeslissing zelf te ondersteunen.",
+      "p2": "Vóór Pearstop was dit het werk van twee mensen: elke binnenkomende productregel met de hand markeren, en elke regel met de hand aan een categorie koppelen. Zonder automatisering was het werk repetitief, traag en moeilijk op te schalen.",
+      "p3": "Dit project dateert van vóór het moment dat algemene LLM's bruikbaar werden voor dit soort werk. Pearstop bouwde het classificatiesysteem voor FARO met machine learning en eigen, speciaal gebouwde technologie, niet met een large language model – het bewijs dat de onderliggende aanpak overeind blijft zonder op de nieuwste tooling te leunen."
+    },
+    "howItWorked": {
+      "label": "Hoe het werkte",
+      "title": "Hoe Pearstop marge inschat vóór de inkoop",
+      "steps": {
+        "st1": {
+          "title": "Automatische classificatie",
+          "copy": "Pearstop classificeerde 95% van de items in minder dan een week, met de eigen categorielogica van het bedrijf."
+        },
+        "st2": {
+          "title": "Aan verkoop gekoppeld margebeeld",
+          "copy": "De dataset werd gekoppeld aan verkoopinformatie, zodat inkopers marge konden zien vóórdat de inkoop plaatsvond."
+        },
+        "st3": {
+          "title": "Snellere besluitvorming",
+          "copy": "Het team besteedde geen dagen meer aan handmatige categorisering en kreeg een schone basis voor de inkoopbeslissing zelf."
+        }
+      }
+    },
+    "quoteBig": "We hadden duizenden productregels die gecategoriseerd moesten worden voordat we zelfs maar onze kosten konden begrijpen. Pearstop classificeerde ze in minder dan een week. Dat had ons team zes maanden gekost en zou nog steeds niet zo nauwkeurig zijn geweest.",
+    "twoPanel": {
+      "p1": {
+        "label": "Wat er veranderde",
+        "title": "Van handmatig markeren naar een geautomatiseerde flow",
+        "copy": "Het team ging van handmatige categorisering naar een geautomatiseerde flow die het tempo van inkoopbeslissingen kon bijhouden. Dat maakte marge eerder zichtbaar en verminderde de operationele last voor het inkoopteam."
+      },
+      "p2": {
+        "label": "Wat het verandert",
+        "title": "Een betrouwbaardere basis voor planning",
+        "copy": "Nu classificatie niet langer de bottleneck is, heeft FARO een betrouwbaardere basis voor planning en analyse bij elke inkoopbeslissing, niet alleen bij de beslissingen waar tijd was om ze met de hand te controleren."
+      }
+    },
+    "moreLinks": {
+      "l1": {
+        "label": "Klantcase · Hard Services FM",
+        "title": "9.175 leveranciersspellingen teruggebracht tot 1.493 voor SPIE"
+      },
+      "l2": {
+        "label": "Klantcase · Infrastructuur",
+        "title": "35.000 tot 50.000 bestedingsregels per maand naar UNSPSC voor Strukton"
+      },
+      "l3": {
+        "label": "Patroon · Productie & MRO",
+        "title": "Het echte fabrikant-onderdeelnummer achter elke reseller-code"
+      }
+    },
+    "closingCta": {
+      "title": "Wilt u een case study rond uw eigen data?",
+      "lead": "We laten u zien hoe dezelfde aanpak eruit zou zien voor uw inkoop- of assetdata.",
+      "ctaLabel": "Stuur ons een steekproef"
+    }
+  },
+  "CaseFmo": {
+    "meta": {
+      "title": "FMO Case Study",
+      "description": "Het PMO-bureau van FMO had behoefte aan duidelijk zicht op projectcapaciteit en resourceverdeling. Pearstop bracht de volledige dataset op orde en bouwde de dashboards die het management het overzicht gaven om zelfverzekerde beslissingen te nemen."
+    },
+    "eyebrow": "Finance · Nederland",
+    "title": "Van gefragmenteerde projectdata naar capaciteitsplanning op MT-niveau",
+    "lead": "Het PMO-bureau van FMO had behoefte aan duidelijk zicht op projectcapaciteit en resourceverdeling binnen een complexe portefeuille. Pearstop bracht de volledige projectdataset op orde en bouwde de dashboards die het MT het overzicht gaven om zelfverzekerde beslissingen te nemen.",
+    "challengeLabel": "De uitdaging",
+    "problemLabel": "Het probleem",
+    "challenge": "De portefeuilledata was gefragmenteerd en inconsistent, waardoor het voor het management lastig was een betrouwbaar beeld te krijgen van werklast en capaciteit.",
+    "solution": "Pearstop bracht de onderliggende dataset op orde en leverde een helderder rapportagebeeld, zodat het management met vertrouwen capaciteitsbeslissingen kon nemen.",
+    "wins": [
+      {
+        "value": "Volledig",
+        "label": "overzicht over de portefeuille"
+      },
+      {
+        "value": "MT",
+        "label": "niveau besluitvorming"
+      },
+      {
+        "value": "0",
+        "label": "handmatige aggregatie"
+      }
+    ],
+    "quote": "Een helder overzicht van projectcapaciteit maakt het verschil tussen gissen en zelfverzekerd beslissen.",
+    "author": "Programme Lead",
+    "role": "FMO",
+    "resultLabel": "Het resultaat",
+    "resultQuestion": "Wat veranderde er?",
+    "geo": "Dit is het type datakwaliteitsprobleem dat vaak voorkomt bij organisaties met veel rapportagewerk, wanneer brondata nooit is ontworpen voor strategisch gebruik.",
+    "ctaLabel": "Bekijk meer cases",
+    "ctaTitle": "Wilt u een case study rond uw eigen data?",
+    "ctaLead": "Wij laten u zien hoe dezelfde aanpak eruit zou zien voor uw procurement- of assetdata.",
+    "backToCases": "Terug naar cases"
   }
 }

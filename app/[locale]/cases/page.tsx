@@ -1,17 +1,26 @@
 import type { Metadata } from "next";
-import { CasesIndexPage } from "@/components/site/pages/CasesIndex";
+import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
+import { CasesIndexPage, type CasesIndexCopy } from "@/components/site/pages/CasesIndex";
 import { alternateLanguages, siteConfig } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "Client Results",
-  description:
-    "Real results from hard services, infrastructure, manufacturing, and FM companies that used Pearstop to clean their data, cut manual work, and protect their margins.",
-  alternates: {
-    canonical: `${siteConfig.url}/cases`,
-    languages: alternateLanguages("/cases")
-  }
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "Cases" });
+  return {
+    title: t("meta.title"),
+    description: t("meta.description"),
+    alternates: {
+      canonical: `${siteConfig.url}/cases`,
+      languages: alternateLanguages("/cases")
+    }
+  };
+}
 
-export default function CasesPage() {
-  return <CasesIndexPage />;
+export default async function CasesPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const messages = await getMessages({ locale });
+  const copy = messages.Cases as unknown as CasesIndexCopy;
+  return <CasesIndexPage copy={copy} />;
 }

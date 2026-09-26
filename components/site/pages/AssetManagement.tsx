@@ -5,7 +5,12 @@ import { TrendUpIcon, LayersIcon, ZapIcon } from "../icons";
 import { SampleRequestModal } from "@/components/sample-request-modal";
 
 export interface AssetManagementCopy {
-  common: { sendSample: string; bookDiscovery: string };
+  common: { sendSample: string; bookDiscovery: string; faqEyebrow: string; faqTitle: string };
+  demo: {
+    supplierLabel: string;
+    matchedOn: string[];
+    sources: { erpVendorMaster: string; invoiceHeader: string; pCardStatement: string; contractRegister: string };
+  };
   hero: { eyebrow: string; title: string; lead: string };
   problem: {
     eyebrow: string;
@@ -33,16 +38,16 @@ export interface AssetManagementCopy {
   cta: { title: string; lead: string };
 }
 
-// Anonymised illustrative example from design/refs/hero-visuals.dc.html's
-// "05 Supplier merge" variant — not real client data.
-const SUPPLIER_VARIANTS = [
-  { name: "BUNZL CHS LTD", source: "ERP vendor master" },
-  { name: "Bunzl Cleaning & Hygiene", source: "Invoice header" },
-  { name: "Bunzl C.H.S. (Depot 14)", source: "P-card statement" },
-  { name: "BUNZL PLC", source: "Contract register" },
-];
-
 export function AssetManagementPage({ copy }: { copy: AssetManagementCopy }) {
+  // Anonymised illustrative example from design/refs/hero-visuals.dc.html's
+  // "05 Supplier merge" variant — not real client data.
+  const SUPPLIER_VARIANTS = [
+    { name: "BUNZL CHS LTD", source: copy.demo.sources.erpVendorMaster },
+    { name: "Bunzl Cleaning & Hygiene", source: copy.demo.sources.invoiceHeader },
+    { name: "Bunzl C.H.S. (Depot 14)", source: copy.demo.sources.pCardStatement },
+    { name: "BUNZL PLC", source: copy.demo.sources.contractRegister },
+  ];
+
   const sections: SolutionSection[] = [
     {
       type: "problem",
@@ -100,8 +105,8 @@ export function AssetManagementPage({ copy }: { copy: AssetManagementCopy }) {
     {
       type: "faq",
       key: "faq",
-      eyebrow: "Questions",
-      title: "Frequently asked",
+      eyebrow: copy.common.faqEyebrow,
+      title: copy.common.faqTitle,
       items: copy.faq.map((item) => ({ q: item.question, a: item.answer })),
     },
   ];
@@ -121,10 +126,10 @@ export function AssetManagementPage({ copy }: { copy: AssetManagementCopy }) {
             input={{ variant: "nameList", items: SUPPLIER_VARIANTS }}
             output={{
               variant: "merge",
-              supplierLabel: "One supplier",
+              supplierLabel: copy.demo.supplierLabel,
               supplierName: "Bunzl Cleaning & Hygiene Supplies",
               mergedChip: "4 names merged",
-              matchedOn: ["VAT number", "Registered address", "Bank details"],
+              matchedOn: copy.demo.matchedOn,
             }}
           />
         ),

@@ -1,4 +1,417 @@
 {
+  "CaseLemtech": {
+    "meta": {
+      "title": "Lemtech Fallstudie",
+      "description": "Pearstop verwandelt Lemtechs unübersichtliche Standortberichte automatisch in saubere, versandfertige Angebotsdokumente."
+    },
+    "breadcrumbCurrent": "Lemtech",
+    "factSheetRows": [
+      {
+        "label": "Kunde",
+        "value": "Lemtech"
+      },
+      {
+        "label": "Daten",
+        "value": "Handschriftliche und freiformulierte Standortberichte"
+      },
+      {
+        "label": "Ergebnis",
+        "value": "Versandfertige Angebotsdokumente"
+      },
+      {
+        "label": "Ansatz",
+        "value": "KI-Extraktion + Spezifikationsabgleich"
+      }
+    ],
+    "badge": "Fertigung · Dokumente",
+    "h1": "Aus unübersichtlichen Standortnotizen werden für Lemtech saubere Angebote",
+    "lead": "Standortberichte kamen in jedem erdenklichen Format herein — handschriftliche Notizen, Rechtschreibfehler, wechselnde Layouts. Pearstop hat ein System gebaut, das eingehende Berichte liest und automatisch ein sauberes, präzises Angebotsdokument erstellt.",
+    "stats": [
+      {
+        "value": "1-3 Std.",
+        "label": "gespart pro Angebot"
+      },
+      {
+        "value": "~0",
+        "label": "manuelle Neueingabe"
+      },
+      {
+        "value": "Präzise",
+        "label": "Spezifikationserfassung"
+      }
+    ],
+    "problem": {
+      "label": "Das Problem",
+      "h2": "Warum tippte das Vertriebsteam jede Standortnotiz von Hand neu ab?",
+      "body": "Standortberichte kamen vom Außendienst in dem Format zurück, das der Techniker gerade zur Hand hatte — handschriftliche Notizen, Rechtschreibfehler, uneinheitliche Layouts. Jeder einzelne musste in ein Angebotsdokument abgetippt werden, bevor er an einen Kunden gehen konnte — eine langsame, sich wiederholende Aufgabe, die Zeit des Vertriebsteams fraß."
+    },
+    "how": {
+      "label": "So funktionierte es",
+      "h2": "Von einer handschriftlichen Notiz zu einem fertigen Angebot",
+      "body": "Pearstop interpretierte die eingehenden Notizen, extrahierte die richtigen Produkte und Spezifikationen und lieferte einen saubereren Angebotsprozess mit deutlich weniger manueller Neueingabe.",
+      "inputs": [
+        "Handschriftliche Notizen",
+        "Standortfotos",
+        "Freiformulierte Berichte"
+      ],
+      "steps": [
+        "Bericht lesen",
+        "Produkte und Spezifikationen abgleichen",
+        "Angebot entwerfen"
+      ],
+      "outputs": [
+        {
+          "text": "Sauberes, präzises Angebotsdokument"
+        },
+        {
+          "text": "Korrekt erfasste Spezifikationen"
+        }
+      ]
+    },
+    "quote": "Pearstop hat ein System gebaut, das automatisch die richtigen Positionen aus unseren Standortberichten in ein sauberes Angebotsdokument überführt. Das spart unserem Team viel Zeit, weil die sich wiederholenden Aufgaben beim Zusammenstellen der richtigen Positionen entfallen.",
+    "result": {
+      "label": "Das Ergebnis",
+      "h2": "Dasselbe Problem, außerhalb des Einkaufs",
+      "body": "Dies ist ein Beispiel aus der Fertigung für dasselbe Kernproblem, das Pearstop bei Procurement-Daten löst: operative Informationen, die unübersichtlich, inkonsistent und teuer von Hand zu verarbeiten sind. Dieselbe zugrunde liegende Engine liest, interpretiert und strukturiert sie — egal ob die Quelle eine Rechnung, eine Bestellung oder eine handschriftliche Standortnotiz ist."
+    },
+    "moreLinks": [
+      {
+        "label": "Kundenfall · Einzelhandel",
+        "title": "Marge sichtbar, bevor der Kauf verbindlich wird, für FARO"
+      },
+      {
+        "label": "Kundenfall · Hard Services FM",
+        "title": "9.175 Lieferantenschreibweisen auf 1.493 zurückgeführt für SPIE"
+      },
+      {
+        "label": "Muster · Fertigung & MRO",
+        "title": "Die echte Hersteller-Teilenummer hinter jedem Wiederverkäufer-Code"
+      }
+    ],
+    "closing": {
+      "title": "Dasselbe Problem mit Ihren eigenen Dokumenten?",
+      "lead": "Senden Sie uns ein Beispiel dessen, was bei Ihnen eingeht - unübersichtliche Notizen, PDFs oder Freitext - und wir zeigen Ihnen, was strukturiert dabei herauskommt.",
+      "ctaLabel": "Senden Sie uns ein Beispiel"
+    }
+  },
+  "CaseMroConfidential": {
+    "meta": {
+      "title": "Direkt zum Hersteller",
+      "description": "Wie Pearstop eine langsame, fehleranfällige Offshore-MRO-Teilerecherche durch eine schnelle, geprüfte ersetzt."
+    },
+    "breadcrumbCurrent": "Fertigung & MRO",
+    "badge": "Fertigung & MRO",
+    "h1": "Direkt zum Hersteller",
+    "lead": "Wie Pearstop eine langsame, fehleranfällige Offshore-MRO-Teilerecherche durch eine schnelle, geprüfte ersetzt.",
+    "patternNote": "Dieser Fall basiert auf einem Muster, das wir bei MRO und Komponentenbeschaffung immer wieder sehen.",
+    "problem": {
+      "label": "Das Problem",
+      "h2": "Warum ist der Direktkauf von MRO-Teilen beim Hersteller so langsam?",
+      "body1": "Es beginnt meist mit Recherche: die echte Hersteller-Teilenummer hinter dem Code herausfinden, den ein Wiederverkäufer oder eine alte Bestellung verwendet hat. Diese Recherche wird meist an Offshore-Recherchebüros ausgelagert, häufig in Indien, die manuell arbeiten - es funktioniert, ist aber langsam.",
+      "body2": "KI kann diese Recherche schneller erledigen. Sie kann dabei auch auf eine bestimmte Weise danebenliegen: allgemeine KI-Modelle halluzinieren Teilenummern und prüfen ihre eigene Arbeit nicht. Genau da zählt ein spezialisierter Anbieter - einer mit echter Erfahrung in KI-Projekten, die überprüfen, was sie liefern, statt zu raten."
+    },
+    "how": {
+      "label": "So funktioniert es",
+      "h2": "Geprüfte Treffer statt Vermutungen",
+      "body": "Pearstop gleicht Teiledatensätze mit Herstellerreferenzdaten ab, markiert alles, was nicht mit Sicherheit bestätigt werden kann, zur menschlichen Prüfung, und ersetzt einen langsamen Offshore-Rechercheprozess durch einen schnellen, geprüften.",
+      "inputs": [
+        "Wiederverkäufer-Teilecodes",
+        "Alte Bestellungen",
+        "Lieferantenkataloge"
+      ],
+      "steps": [
+        "Abgleich mit Herstellerdaten",
+        "Unbestätigtes markieren",
+        "Zur Prüfung an eine Person weiterleiten"
+      ],
+      "outputs": [
+        {
+          "text": "Echte Hersteller-Teilenummer"
+        },
+        {
+          "text": "Konfidenzwert je Treffer"
+        }
+      ]
+    },
+    "partExample": {
+      "note": "Gegen Herstellerdaten geprüft"
+    },
+    "panels": [
+      {
+        "label": "Warum es schwierig ist",
+        "title": "Offshore-Recherche funktioniert, ist aber langsam",
+        "copy": "Der klassische Weg lagert die Teilenummernrecherche an Offshore-Büros aus, die manuell arbeiten - genau genug, aber langsam genug, um eine Kaufentscheidung aufzuhalten."
+      },
+      {
+        "label": "Warum es jetzt möglich ist",
+        "title": "KI, geprüft statt blind vertraut",
+        "copy": "Allgemeine KI-Modelle halluzinieren Teilenummern, sobald man sie raten lässt. Der Abgleich mit echten Herstellerreferenzdaten, bei dem alles Unsichere an eine Person weitergeleitet wird, bringt die Geschwindigkeit der KI ohne das Risiko."
+      }
+    ],
+    "moreLinks": [
+      {
+        "label": "Kundenfall · Fertigung",
+        "title": "Aus unübersichtlichen Standortnotizen werden für Lemtech saubere Angebote"
+      },
+      {
+        "label": "Muster · Bau",
+        "title": "45 % Preisspanne bei einer einzigen Aluminium-Fensterbank, gekauft auf zehn Projekten"
+      },
+      {
+        "label": "Muster · Reinigung",
+        "title": "30 Toilettenpapier-Lieferanten in zwölf Monaten, und niemand hatte sie ausgewählt"
+      }
+    ],
+    "closing": {
+      "title": "Dasselbe Problem mit Ihren MRO-Daten?",
+      "lead": "Senden Sie uns ein Beispiel Ihrer Teiledatensätze, und wir zeigen Ihnen, wie ein geprüfter Abgleich mit Herstellerdaten anhand Ihrer eigenen Zahlen aussieht.",
+      "ctaLabel": "Senden Sie uns ein Beispiel"
+    }
+  },
+  "CaseConstructionSpendBenchmarking": {
+    "meta": {
+      "title": "Benchmarking von Baubeschaffung",
+      "description": "Eine Aluminium-Fensterbank, auf zehn Projekten gekauft, zehnmal unterschiedlich beschrieben. Klassifiziert wird die Preisspanne in Tagen sichtbar."
+    },
+    "breadcrumbCurrent": "Bau & Infrastruktur",
+    "badge": "Bau & Infrastruktur",
+    "h1": "Benchmarking von Baubeschaffung",
+    "lead": "Ihr Kalkulationsproblem ist kein Kalkulationsproblem. Eine Kalkulation ist eine Vorhersage Ihrer eigenen Kostenbasis.",
+    "patternNote": "Dieser Fall basiert auf einem Muster, das wir im Bau- und Infrastruktureinkauf immer wieder sehen.",
+    "section1": {
+      "label": "Das Problem",
+      "h2": "Warum kostet dasselbe Teil auf verschiedenen Projekten unterschiedlich viel?",
+      "body": "Eine Aluminium-Fensterbank, auf zehn verschiedenen Projekten gekauft, zehnmal unterschiedlich beschrieben. Klassifiziert wird das Muster in Tagen sichtbar: hier sehen Sie, was jedes Projekt tatsächlich bezahlt hat, und warum zwei davon abweichen."
+    },
+    "table": {
+      "header": "Position (6 von 10 gezeigt)",
+      "supplier": "Lieferant",
+      "price": "Preis"
+    },
+    "classifiedBox": {
+      "label": "Klassifiziert als",
+      "title": "Aluminium-Fensterbank, 200mm",
+      "meta": "UNSPSC 30161801 · 10 Lieferanten, 10 Käufe · 45 % Preisspanne (36,75-53,40 £)"
+    },
+    "body2": "Zwei Käufe liegen über dem Median: ein Fast-Track-Standort ohne Vorlaufzeit zum Preisvergleich, ein weiterer mit einer stärkeren Materialstärke für ein Küstenprojekt. Beides erklärbar, beides unsichtbar bis zur Klassifizierung.",
+    "section2": {
+      "label": "Gleicher Umfang, anderer Preis",
+      "h2": "Warum weichen zwei Angebote für denselben Leistungsumfang so stark voneinander ab?",
+      "body": "Ein Erdarbeitenpaket, verglichen über 8 vergleichbare Projekte, zeigt eine Spanne von 34 %. Standortzugang und ein enger Zeitplan erklären das meiste. Zwei Angebote liegen außerhalb der Bandbreite, jedes mit einem Grund, sobald klassifiziert. Die übrigen sechs zeigen, was der Leistungsumfang eigentlich kosten sollte."
+    },
+    "section3": {
+      "label": "Der Blocker",
+      "h2": "Warum können Sie Ausgaben hinter einem Kontencode nicht benchmarken?",
+      "body": "Ein Kontenfeld wie „6100-42-K“ ist ein nomineller Buchhaltungscode, der stellvertretend für die eigentliche Position steht. Üblich in ERPs, die für Finanzen gebaut wurden, nicht für den Einkauf. Niemand kann Ausgaben benchmarken, die hinter einem solchen Code verborgen bleiben."
+    },
+    "ledgerExample": {
+      "resolved": "Stahlbau-Befestigungsmaterial, M12"
+    },
+    "body3": "Pearstop arbeitet mit Rechnungen, ERP-Exporten, Bestellungen und Excel — in welchem Format die Daten auch ankommen — für Kostenstellen-Benchmarking, Ausreißererkennung und Lieferantenkonsolidierung.",
+    "section4h2": "Von Rechnungen in jedem Format zu einer Tabelle, mit der Sie handeln können",
+    "process": {
+      "inputs": [
+        "Rechnungen",
+        "ERP",
+        "Bestellungen",
+        "Excel"
+      ],
+      "steps": [
+        "Bereinigen",
+        "Klassifizieren",
+        "Anreichern"
+      ],
+      "outputs": [
+        {
+          "text": "Kostenstellen-Benchmarking"
+        },
+        {
+          "text": "Ausreißererkennung"
+        },
+        {
+          "text": "Lieferantenkonsolidierung"
+        }
+      ]
+    },
+    "features": [
+      {
+        "t": "Ihre Daten müssen nicht sauber sein",
+        "c": "Freitextbeschreibungen und Buchhaltungscodes sind der Ausgangspunkt, kein Hindernis."
+      },
+      {
+        "t": "KI zuerst, von Menschen geprüft",
+        "c": "Jedes Label wird geprüft. Die Klassifizierung hält stand, wenn neue Rechnungen und Projekte eintreffen."
+      },
+      {
+        "t": "Nutzungsbasierte Preisgestaltung",
+        "c": "Sie zahlen für die verarbeiteten Zeilen. Kein schweres Jahresabonnement."
+      }
+    ],
+    "resultBadge": "Typisches Ergebnis im spezialisierten Bau",
+    "resultStat": "8-15 %",
+    "resultCopy": "Einsparung bei adressierbaren Ausgaben. Die obigen Erkenntnisse sind die Grundlage dafür.",
+    "quote": "Wenn Sie Ihre Kostenbasis nicht belegen können, bieten Sie nach Gefühl.",
+    "quoteRole": "Commercial Director, Bau",
+    "moreLinks": [
+      {
+        "label": "Kundenfall · Infrastruktur",
+        "title": "35.000 bis 50.000 Ausgabenzeilen pro Monat zu UNSPSC für Strukton"
+      },
+      {
+        "label": "Muster · Reinigung",
+        "title": "30 Toilettenpapier-Lieferanten in zwölf Monaten, und niemand hatte sie ausgewählt"
+      },
+      {
+        "label": "Muster · Fertigung & MRO",
+        "title": "Die echte Hersteller-Teilenummer hinter jedem Wiederverkäufer-Code"
+      }
+    ],
+    "closing": {
+      "title": "Möchten Sie das an Ihren eigenen Ausgaben sehen?",
+      "lead": "Senden Sie ein Beispiel Ihrer eigenen Procurement-Daten, und wir zeigen Ihnen dasselbe Muster anhand Ihrer eigenen Zahlen.",
+      "ctaLabel": "Senden Sie uns ein Beispiel"
+    }
+  },
+  "CaseCleaningConsumablesConsolidation": {
+    "meta": {
+      "title": "Konsolidierung von Reinigungsverbrauchsmaterial",
+      "description": "Niemand hatte 30 Toilettenpapier-Lieferanten ausgewählt. Klassifiziert war das Muster in Tagen sichtbar."
+    },
+    "breadcrumbCurrent": "Reinigung & Soft FM",
+    "asideCaption": "Jede Kachel steht für einen Lieferanten, der Toilettenpapier abgerechnet hat",
+    "asideLegend": "die drei, die es wert sind, behalten zu werden",
+    "badge": "Reinigung & Soft FM",
+    "h1": "Niemand hatte 30 Toilettenpapier-Lieferanten ausgewählt.",
+    "lead": "Man konnte sie einfach nicht sehen. Ein Reinigungsunternehmen, zwölf Monate Rechnungen, und eine einfache Frage, die niemand beantworten konnte: Was geben wir für Toilettenpapier aus?",
+    "patternNote": "Dieser Fall basiert auf einem Muster, das wir im Soft-FM-Einkauf immer wieder sehen.",
+    "section1": {
+      "label": "Vorher",
+      "h2": "Die Ausgaben sind da. Der Überblick nicht.",
+      "body": "Was wir von Reinigungsunternehmen hören, bevor Daten den Besitzer wechseln."
+    },
+    "cards": [
+      {
+        "t": "Rechnungen kommen als PDF",
+        "c": "Positionsdetails stecken in Dokumenten, die niemand erneut liest. Das ERP führt Lieferantensummen, nicht was tatsächlich gekauft wurde."
+      },
+      {
+        "t": "Jeder Standort bestellt auf seine Weise",
+        "c": "Standortleiter kaufen Verbrauchsmaterial lokal ein. Ein Produkt landet unter zwanzig Beschreibungen in den Büchern."
+      },
+      {
+        "t": "Eine Person betreibt den Einkauf",
+        "c": "Es bleibt Zeit, die Standorte zu versorgen. Es bleibt keine Zeit, Preise zu benchmarken oder zu hinterfragen, was hereinkommt."
+      },
+      {
+        "t": "Kundenberichte von Hand erstellt",
+        "c": "Jeden Monat werden Zahlen aus einem Audit-Tool, einem Lieferantenportal und E-Mails zusammengetragen. Jeder Kunde will einen anderen Zuschnitt."
+      }
+    ],
+    "section2": {
+      "label": "Sobald jede Zeile klassifiziert ist",
+      "h2": "Ein Produkt. 30 Lieferanten. Jetzt nebeneinander.",
+      "body": "Klassifiziert war das Muster in Tagen sichtbar: jeder Lieferant, was er pro Rolle berechnete, und zu welchen Konditionen. Welche drei Sie behalten, ist Ihre Entscheidung. Die Tabelle macht sie einfach."
+    },
+    "decisionBox": {
+      "label": "Die Entscheidung",
+      "items": [
+        "Bunzl CHS · vertraglich gebundene Kernversorgung",
+        "Gompels · Preisführer im Großeinkauf",
+        "Pattersons · regionale Lieferung am Folgetag"
+      ]
+    },
+    "table": {
+      "supplier": "Lieferant",
+      "price": "£ / Rolle",
+      "terms": "Konditionen",
+      "delivery": "Lieferung",
+      "footnote": "4 von 30 gezeigt · Standard, 2-lagig"
+    },
+    "section3": {
+      "label": "Und dann",
+      "h2": "Was sonst noch sichtbar wird, sobald jede Zeile klassifiziert ist"
+    },
+    "offContract": {
+      "title": "Einkauf außerhalb des Vertrags",
+      "contractedLabel": "Vertraglich · Bunzl",
+      "contractedUnit": "Karton mit 36 Rollen",
+      "actualLabel": "Tatsächlich bezahlt · Amazon",
+      "actualNote": "gleicher Karton, +40 %",
+      "body": "Ein Kostenrisiko und ein Compliance-Risiko. Kundenverträge legen Produkte und Lieferanten fest, und jede vertragsfremde Position schwächt Ihre Position bei der Neuverhandlung."
+    },
+    "priceSpread": {
+      "title": "Gleiche Rolle, fünf Preise",
+      "subtitle": "Tork Advanced T4, bezahlter Preis pro Rolle",
+      "body": "Spanne bei einem Produkt. Jeder Preis steht auf einer anderen Rechnung unter einer anderen Beschreibung."
+    },
+    "spendVisibility": {
+      "title": "Ausgaben, die Sie nicht sehen können",
+      "body": "der Ausgaben nicht kategorisiert. Sie können sie nicht benchmarken, verhandeln oder darüber berichten, solange sie kein Label haben."
+    },
+    "section4h2": "Von Rechnungen in jedem Format zu einer Tabelle, mit der Sie handeln können",
+    "process": {
+      "inputs": [
+        "PDF-Rechnungen",
+        "ERP-Exporte",
+        "Bestellportale",
+        "Excel-Tabellen"
+      ],
+      "steps": [
+        "Bereinigen",
+        "Klassifizieren",
+        "Anreichern"
+      ],
+      "outputs": [
+        {
+          "text": "Was Sie ausgeben, je Produkt"
+        },
+        {
+          "text": "Vertragsfremde und auffällige Positionen"
+        },
+        {
+          "text": "Lieferanten je Kategorie, nebeneinander"
+        }
+      ]
+    },
+    "features": [
+      {
+        "t": "Ihre Daten müssen nicht sauber sein",
+        "c": "Unübersichtliche Daten sind der Ausgangspunkt. Sie zu bereinigen und zu klassifizieren, ist das Produkt."
+      },
+      {
+        "t": "KI zuerst, von Menschen geprüft",
+        "c": "Jedes Label wird geprüft. Die Klassifizierung hält stand, wenn neue Lieferanten und Rechnungen eintreffen."
+      },
+      {
+        "t": "Nutzungsbasierte Preisgestaltung",
+        "c": "Sie zahlen für die verarbeiteten Zeilen. Kein schweres Jahresabonnement."
+      }
+    ],
+    "resultBadge": "Typisches Ergebnis im Soft FM",
+    "resultStat": "10-20 %",
+    "resultCopy": "Einsparung bei adressierbaren Ausgaben. Die obigen Erkenntnisse sind die Grundlage dafür.",
+    "quote": "Es hätte fünf Ingenieure und ein ganzes Jahr gekostet, das zu bereinigen. Also haben wir uns entschieden, nach einer besseren Lösung zu suchen.",
+    "quoteRole": "Head of Operations, Reinigungsunternehmen",
+    "moreLinks": [
+      {
+        "label": "Kundenfall · Hard Services FM",
+        "title": "9.175 Lieferantenschreibweisen auf 1.493 zurückgeführt für SPIE"
+      },
+      {
+        "label": "Muster · Bau",
+        "title": "45 % Preisspanne bei einer einzigen Aluminium-Fensterbank, gekauft auf zehn Projekten"
+      },
+      {
+        "label": "Muster · Fertigung & MRO",
+        "title": "Die echte Hersteller-Teilenummer hinter jedem Wiederverkäufer-Code"
+      }
+    ],
+    "closing": {
+      "title": "Sehen Sie das an Ihren eigenen Rechnungen",
+      "lead": "Senden Sie bis zu 200 Rechnungszeilen oder zehn Rechnungen. Wir senden sie gelabelt zurück, damit Sie dasselbe Muster in Ihren eigenen Zahlen sehen.",
+      "ctaLabel": "Senden Sie Ihr Beispiel"
+    }
+  },
   "Header": {
     "solutions": "Lösungen",
     "allSolutions": "Alle Lösungen",
@@ -55,7 +468,30 @@
     "howItWorksEyebrow": "So funktioniert es",
     "whatChanges": "Was sich mit Pearstop ändert",
     "keyBenefits": "Wichtigste Vorteile",
-    "sendSample": "Senden Sie uns eine Datenprobe"
+    "sendSample": "Senden Sie uns eine Datenprobe",
+    "faqEyebrow": "Fragen",
+    "faqTitle": "Häufig gestellte Fragen",
+    "demoTable": {
+      "lineAsEntered": "Zeile wie eingegangen",
+      "columnAsEntered": "Wie eingegangen",
+      "columnCategory": "Kategorie",
+      "columnUnspsc": "UNSPSC",
+      "categories": {
+        "airFilters": "Luftfilter",
+        "generalPurposeCleaners": "Allzweckreiniger",
+        "temporaryManualLabour": "Temporäre Hilfskräfte"
+      }
+    },
+    "geoBanner": {
+      "nl": {
+        "message": "Dieser Leitfaden richtet sich an den niederländischen Markt.",
+        "cta": "Auf Niederländisch ansehen"
+      },
+      "de": {
+        "message": "Dieser Leitfaden richtet sich an den deutschen Markt.",
+        "cta": "Auf Deutsch ansehen"
+      }
+    }
   },
   "About": {
     "meta": {
@@ -77,7 +513,7 @@
     "theName": {
       "label": "Der Name",
       "title": "Warum Pearstop?",
-      "copy": "Schwierige Probleme brauchen klare Köpfe. Wenn wir tief in eine harte Datenherausforderung eintauchten - wirklich tief - machten wir eine Pause mit einer großen Schale Obst. Stephanies Favorit war immer eine Birne (Pear). Als wir also einen Namen brauchten, war es naheliegend: Nimm eine Birne (Pear). Stop. Komm schärfer zurück.",
+      "copy": "Schwierige Probleme brauchen einen klaren Kopf. Wenn wir tief in einer kniffligen Datenherausforderung steckten, wirklich tief, legten wir eine Pause mit einer großen Schale Obst ein. Stephanies liebste Frucht war immer eine Birne, auf Englisch 'pear'. Als wir einen Namen brauchten, lag er also nahe: Pearstop, aus 'pear' und 'stop'. Kurz innehalten. Geschärft zurückkommen.",
       "tagline": "So arbeiten wir noch heute."
     },
     "leadership": {
@@ -112,7 +548,7 @@
       "title": "Lassen Sie uns sprechen.",
       "lead": "Haben Sie ein Datenproblem, das es wert ist, gelöst zu werden? Wir würden gerne davon hören.",
       "getInTouch": "Kontakt aufnehmen",
-      "bookDiscovery": "7-minütige Discovery buchen"
+      "bookDiscovery": "Mit Vertrieb sprechen"
     },
     "leaders": [
       {
@@ -176,7 +612,7 @@
     "hero": {
       "eyebrow": "Lösungen",
       "title": "Verwandeln Sie unübersichtliche Daten in Entscheidungen",
-      "lead": "Pearstop liefert fünf Datenintegritätslösungen für technische Branchen. Jede zielt auf ein bestimmtes Datenproblem ab, und jede ist darauf ausgelegt, Ihre Margen zu schützen.",
+      "lead": "Die meisten Teams merken erst, dass ihre Spend-Daten nicht funktionieren, wenn jemand eine Frage stellt, die niemand beantworten kann. Beginnen Sie bei dem Problem, das gerade vor Ihnen liegt. Jedes verlinkt direkt zu unserer Lösung.",
       "primaryLabel": "Senden Sie uns 200 Zeilen",
       "secondaryLabel": "Mit Vertrieb sprechen",
       "builtForLabel": "Entwickelt für",
@@ -619,7 +1055,7 @@
     ],
     "cta": {
       "title": "Bereit, die Daten unter Ihrem nächsten Projekt zu reparieren?",
-      "button": "7-minütige Discovery buchen",
+      "button": "Mit Vertrieb sprechen",
       "lead": "Sprechen Sie mit Vertrieb. Wir zeigen Ihnen genau, wo Ihre Daten heute eine ERP-Migration, einen Fabric-Rollout oder eine KI-Initiative zum Scheitern bringen würden."
     }
   },
@@ -709,7 +1145,7 @@
     ],
     "cta": {
       "title": "Bereit, eine echte Spend Baseline aufzubauen?",
-      "button": "7-minütige Discovery buchen",
+      "button": "Mit Vertrieb sprechen",
       "lead": "Sprechen Sie mit Vertrieb. Wir zeigen Ihnen genau, wo Ihre Spend-Daten die Zahl verstecken, die Sie brauchen."
     }
   },
@@ -717,6 +1153,20 @@
     "meta": {
       "title": "Asset Data Management für Asset-Eigentümer und FM-Betreiber",
       "description": "Verwandeln Sie die Anlagen- und Kostendaten, die Ihnen Ihr FM-Anbieter übergibt, in einen unabhängigen, klassifizierten Datensatz, den Sie benchmarken und verteidigen können - nicht nur eine Datei, die Sie von ihm erhalten haben."
+    },
+    "demo": {
+      "supplierLabel": "Ein Lieferant",
+      "matchedOn": [
+        "USt-IdNr.",
+        "Eingetragene Anschrift",
+        "Bankverbindung"
+      ],
+      "sources": {
+        "erpVendorMaster": "ERP-Lieferantenstamm",
+        "invoiceHeader": "Rechnungskopf",
+        "pCardStatement": "P-Card-Abrechnung",
+        "contractRegister": "Vertragsregister"
+      }
     },
     "hero": {
       "eyebrow": "Asset Management",
@@ -806,7 +1256,7 @@
     ],
     "cta": {
       "title": "Bereit, eine eigene unabhängige Sicht zu haben?",
-      "button": "7-minütige Discovery buchen",
+      "button": "Mit Vertrieb sprechen",
       "lead": "Sprechen Sie mit Vertrieb und sehen Sie genau, wie Pearstop die Daten, die Sie bereits erhalten, in etwas Verifizierbares verwandelt."
     }
   },
@@ -901,7 +1351,7 @@
     ],
     "cta": {
       "title": "Sind Ihre Daten bereit für KI?",
-      "button": "7-minütige Discovery buchen",
+      "button": "Mit Vertrieb sprechen",
       "fabricLink": "Auch Fabric-Bereitschaft ansehen",
       "lead": "Sprechen Sie mit Vertrieb, und wir sagen Ihnen genau, was passieren muss, bevor Ihre KI-Initiativen Ergebnisse liefern können."
     }
@@ -911,10 +1361,26 @@
       "title": "UNSPSC-Klassifizierung und Hersteller-Teileverifizierung",
       "description": "Pearstop automatisiert die Beschaffungsklassifizierung, kodiert bis zu 95% der Ausgaben automatisch nach UNSPSC und löst den eigenen Teilecode eines Lieferanten zum echten Herstellercode auf, ohne manuelle Rückverfolgung."
     },
+    "hierarchyDemo": {
+      "lineAsEntered": "Zeile wie eingegangen",
+      "matchLabel": "Treffer auf Commodity-Ebene",
+      "levels": {
+        "segment": "Segment",
+        "family": "Family",
+        "class": "Class",
+        "commodity": "Commodity"
+      },
+      "names": {
+        "constructionAndMaintenance": "Bau und Instandhaltung",
+        "buildingAndFacilityMaintenance": "Gebäude- und Anlagenwartung",
+        "electricalMaintenance": "Elektrische Instandhaltung",
+        "lightingMaintenance": "Beleuchtungswartung"
+      }
+    },
     "hero": {
       "eyebrow": "UNSPSC-Klassifizierung",
       "title": "Ihre Beschaffungsdaten enthalten die Antworten. Sie können sie nur noch nicht lesen.",
-      "lead": "Die meisten Hard-Services- und FM-Unternehmen verfügen über Jahre an Bestelldaten in SAP oder Oracle. Ohne UNSPSC-Klassifizierung ist das ein Haufen Freitext-Positionen. Mit ihr sehen Sie genau, was Sie nach Kategorie ausgeben, benchmarken Lieferanten und erstellen Ausschreibungen auf Basis echter Kostendaten. Pearstop klassifiziert automatisch 35.000 Positionen pro Monat."
+      "lead": "Die meisten Hard-Services- und FM-Unternehmen verfügen über Jahre an Bestelldaten in SAP oder Oracle. Ohne UNSPSC-Klassifizierung ist das ein Haufen Freitext-Positionen. Mit ihr sehen Sie genau, was Sie nach Kategorie ausgeben, benchmarken Lieferanten und erstellen Ausschreibungen auf Basis echter Kostendaten. Pearstop klassifiziert Rechnungen in jeder Größenordnung, von einem Pilotprojekt mit wenigen Hundert Zeilen bis zum vollen Produktionsvolumen - das System wächst mit Ihnen."
     },
     "standard": {
       "eyebrow": "Was ist UNSPSC?",
@@ -1027,7 +1493,7 @@
     },
     "cta": {
       "title": "Bereit, Ihre Beschaffungsklassifizierung zu automatisieren?",
-      "button": "7-minütige Discovery buchen",
+      "button": "Mit Vertrieb sprechen",
       "lead": "Sprechen Sie mit Vertrieb. Wir zeigen Ihnen genau, wie die Klassifizierungs-Engine mit Ihren Daten arbeiten würde."
     }
   },
@@ -1040,7 +1506,7 @@
       "eyebrow": "Leitfaden zur KI-UNSPSC-Klassifizierung",
       "title": "Sie haben einen großen Excel-Katalog. Sie möchten, dass KI ihn in UNSPSC klassifiziert.",
       "lead": "Das ist die Anfrage, die wir am häufigsten hören, mal als Spend-Datei, die noch nie einen Code getragen hat, mal als Stapel PDF-Rechnungen, der noch nicht einmal zu einer Spend-Datei geworden ist. Dieser Leitfaden beschreibt den tatsächlichen Prozess: wie Pearstop beide Ausgangspunkte in einen UNSPSC-codierten Datensatz verwandelt, was ein Pilot misst, bevor Sie sich auf die vollständige Datei festlegen, und warum die Klassifizierung nicht daraus entsteht, ein Modell einfach zu fragen, welcher Code passen sollte.",
-      "ctaPrimary": "7-minütige Erstberatung buchen",
+      "ctaPrimary": "Mit Vertrieb sprechen",
       "ctaSecondary": "Den Prozess ansehen"
     },
     "paths": {
@@ -1162,7 +1628,7 @@
     },
     "cta": {
       "title": "Bereit, das an Ihren eigenen Daten zu sehen?",
-      "button": "7-minütige Erstberatung buchen",
+      "button": "Mit Vertrieb sprechen",
       "secondaryButton": "Kostenloses Nachschlagetool testen",
       "lead": "Sprechen Sie mit Vertrieb, oder testen Sie zuerst eine einzelne Beschreibung im kostenlosen Lookup-Tool."
     }
@@ -1244,7 +1710,7 @@
     "cta": {
       "title": "Planen Sie eine Fabric-Migration?",
       "lead": "Sprechen Sie mit uns, bevor die Migration beginnt. Ein 30-minütiges Gespräch jetzt kann später Monate an Nacharbeit sparen.",
-      "button": "7-minütige Discovery buchen",
+      "button": "Mit Vertrieb sprechen",
       "aiLink": "Auch AI Readiness ansehen"
     }
   },
@@ -1375,6 +1841,21 @@
       "title": "Kundenergebnisse",
       "description": "Echte Ergebnisse von Hard-Services-, Infrastruktur-, Fertigungs- und FM-Unternehmen, die Pearstop genutzt haben, um ihre Daten zu bereinigen, manuelle Arbeit zu reduzieren und ihre Margen zu schützen."
     },
+    "index": {
+      "jumpLinkClientCases": "Kundenfälle",
+      "jumpLinkPatterns": "Muster",
+      "featuredLabel": "Ausgewählter Kundenfall",
+      "readCase": "Fallstudie lesen",
+      "clientCasesTitle": "Kundenfälle",
+      "clientCasesCaption": "Namentlich genannt, echte Daten",
+      "patternsTitle": "Muster, die wir sehen",
+      "seePattern": "Muster ansehen",
+      "inTheirWords": "In ihren eigenen Worten",
+      "closingTitle": "Senden Sie uns 200 Zeilen. Wir schicken sie klassifiziert zurück.",
+      "closingBody": "Keine Bereinigung im Voraus, keine Kosten, nichts zu installieren. Der schnellste Weg zu sehen, wie Ihre eigenen Daten klassifiziert aussehen.",
+      "closingPrimaryLabel": "Datenprobe senden",
+      "closingSecondaryLabel": "Oder mit Vertrieb sprechen →"
+    },
     "hero": {
       "eyebrow": "Kundenergebnisse",
       "title": "Echte Arbeit. Echte Margen.",
@@ -1449,9 +1930,10 @@
     "hero": {
       "primaryLabel": "Senden Sie uns eine Datenprobe. Wir bereinigen sie kostenlos.",
       "secondaryLabel": "15-minütiges Erstgespräch buchen",
+      "imageAlt": "Skyline einer Stadt, sinnbildlich für die Branchen, die Pearstop bedient",
       "eyebrow": "Branchen",
       "title": "Branchen, die wir bedienen",
-      "lead": "Pearstop bereinigt und klassifiziert operative Daten für die Branchen mit den umfangreichsten und unübersichtlichsten Ausgaben: Infrastruktur, Facility Management, Bau und Fertigung. Finden Sie unten Ihre Branche."
+      "lead": "Gute Standorte stecken voller Arbeit, die niemand sieht: der Wartungsplan, die Teilebestellung, die Lieferantenprüfung. Das meiste davon läuft über Daten, und die meisten Teams, mit denen wir arbeiten, können eine einfache Frage dazu nicht beantworten: Was haben wir wofür und bei wem ausgegeben? Finden Sie unten Ihre Branche."
     },
     "sixIndustries": {
       "title": "Wo Pearstop ansetzt",
@@ -2589,7 +3071,7 @@
     "cta": {
       "title": "Lieber ein Gespräch?",
       "lead": "Wir können Ihnen dieselben Überlegungen auch in einem kurzen Telefonat erläutern.",
-      "bookDiscovery": "7-minütige Erstberatung buchen",
+      "bookDiscovery": "Mit Vertrieb sprechen",
       "backHome": "Zurück zur Startseite"
     }
   },
@@ -2602,7 +3084,7 @@
       "eyebrow": "FAQ",
       "title": "Die Fragen, die uns am häufigsten gestellt werden.",
       "lead": "Alles, was Sie darüber wissen müssen, wie Pearstop funktioniert, was es kostet und ob es zu Ihrer Organisation passt.",
-      "cta": "7-minütige Erstberatung buchen",
+      "cta": "Mit Vertrieb sprechen",
       "secondary": "Zu den Fragen springen"
     },
     "sections": {
@@ -2775,13 +3257,13 @@
     },
     "stillHaveQuestions": {
       "label": "Noch eine Frage?",
-      "cta": "7-minütige Erstberatung buchen",
+      "cta": "Mit Vertrieb sprechen",
       "email": "Schreiben Sie uns",
       "copy": "Wenn Ihre Frage hier nicht beantwortet wird, ist der schnellste Weg zu einer Antwort, mit Vertrieb zu sprechen. Es gibt keinen Verkaufsdruck - es ist ein direktes Gespräch über Ihre Datensituation."
     },
     "cta": {
       "title": "Bereit, es in Aktion zu sehen?",
-      "button": "7-minütige Erstberatung buchen",
+      "button": "Mit Vertrieb sprechen",
       "lead": "Sprechen Sie mit Vertrieb, und wir zeigen Ihnen genau, wie die Klassifizierungs-Engine mit Ihren Daten arbeitet."
     }
   },
@@ -2798,7 +3280,7 @@
       "eyebrow": "UNSPSC für Facility Management",
       "title": "FM-Beschaffungsdaten sind am schwersten zu klassifizieren. So beheben Sie das.",
       "lead": "Hard-Services- und FM-Unternehmen verwalten Tausende von Rechnungszeilen über Hunderte von Lieferanten und Standorten hinweg. Pearstop klassifiziert alles automatisch — 90–95 % ohne menschliches Zutun —, sodass sich Ihr Team auf Category Management statt Dateneingabe konzentrieren kann.",
-      "cta": "7-minütige Erstberatung buchen",
+      "cta": "Mit Vertrieb sprechen",
       "secondary": "So funktioniert es"
     },
     "challenge": {
@@ -2888,7 +3370,7 @@
     },
     "cta": {
       "title": "Bereit, die FM-Beschaffungsklassifizierung zu automatisieren?",
-      "button": "7-minütige Erstberatung buchen",
+      "button": "Mit Vertrieb sprechen",
       "lead": "Sprechen Sie mit Vertrieb. Wir zeigen Ihnen genau, wie die Engine mit Ihren Spend-Daten arbeitet."
     }
   },
@@ -2905,7 +3387,7 @@
       "eyebrow": "UNSPSC-Klassifizierung Niederlande",
       "title": "UNSPSC-Klassifizierung für niederländische Infrastruktur-, FM- und Bauunternehmen.",
       "lead": "Pearstop automatisiert die Klassifizierung von Einkaufszeilen nach UNSPSC-Standard — 90–95 % ohne manuellen Aufwand. Mit Unterstützung für Peppol-E-Rechnungen und niederländische ERP-Systeme.",
-      "cta": "7-minütige Erstberatung buchen",
+      "cta": "Mit Vertrieb sprechen",
       "secondary": "Peppol und UNSPSC"
     },
     "peppol": {
@@ -2983,7 +3465,7 @@
     "cta": {
       "title": "Bereit, Ihre Beschaffungsklassifizierung zu automatisieren?",
       "lead": "Buchen Sie eine 7-minütige Erstberatung. Wir zeigen Ihnen, wie die Klassifizierungs-Engine mit Ihren Daten arbeitet.",
-      "button": "7-minütige Erstberatung buchen"
+      "button": "Mit Vertrieb sprechen"
     }
   },
   "UnspscDE": {
@@ -3111,7 +3593,7 @@
     },
     "bulk": {
       "label": "Müssen Sie Tausende von Zeilen klassifizieren?",
-      "cta": "7-minütige Erstberatung buchen",
+      "cta": "Mit Vertrieb sprechen",
       "learnMore": "So funktioniert es",
       "copy": "Dieses Tool verarbeitet Einzelabfragen. Pearstops automatisierte Klassifizierungs-Engine verarbeitet 35.000 Procurement-Zeilen pro Monat - mit 90-95 % automatischer Klassifizierung und vollständiger SAP-Integration. Sprechen Sie mit Vertrieb, um es mit Ihren Daten zu sehen."
     },
@@ -3158,7 +3640,7 @@
     },
     "cta": {
       "title": "Müssen Sie Tausende von Zeilen klassifizieren?",
-      "button": "7-minütige Erstberatung buchen",
+      "button": "Mit Vertrieb sprechen",
       "lead": "Sprechen Sie mit Vertrieb, und wir zeigen Ihnen, wie die vollständige Klassifizierungs-Engine mit Ihren tatsächlichen Procurement-Daten arbeitet."
     }
   },
@@ -3767,5 +4249,358 @@
       "lead": "Senden Sie uns eine Stichprobe Ihrer Rechnungen, und wir zeigen Ihnen, was dabei herauskommt - ohne Gespräch.",
       "action": "So funktioniert es"
     }
+  },
+  "CaseSpie": {
+    "meta": {
+      "title": "SPIE Case Study",
+      "description": "Pearstop konsolidierte 9.175 Lieferantennamen-Varianten zu 1.493 kanonischen Lieferanten über 204.029 Anlagendatensätze für SPIE Building Solutions — dieselbe Klassifikations-Pipeline, die auch Pearstops Procurement-Daten bereinigt."
+    },
+    "breadcrumb": "SPIE Building Solutions",
+    "badge": "Hard Services FM · Anlagendaten",
+    "h1": "9.175 Lieferantenschreibweisen auf 1.493 zurückgeführt, für SPIE Building Solutions",
+    "lead": "Das Anlagenregister von SPIE wurde über Jahre aus verschiedenen Instandhaltungssystemen, von Subunternehmern und durch manuelle Eingabe gespeist. Pearstop glich jeden Hersteller mit SPIEs eigener freigegebener Liste ab, vergab für jeden Datensatz einen Konfidenzwert und lieferte dem Team eine priorisierte Liste, wo zuerst zu prüfen ist.",
+    "stats": {
+      "s1": {
+        "value": "9.175 → 1.493",
+        "label": "konsolidierte Lieferantenvarianten"
+      },
+      "s2": {
+        "value": "73,1 %",
+        "label": "gegen die freigegebene Liste bestätigte Treffer"
+      },
+      "s3": {
+        "value": "107.081",
+        "label": "Zeilen um Family und Variante angereichert"
+      },
+      "s4": {
+        "value": "100 %",
+        "label": "der Datensätze mit Konfidenz und Prüfpriorität bewertet"
+      }
+    },
+    "situation": {
+      "label": "Die Ausgangslage",
+      "title": "Ein Hersteller, ein Dutzend Schreibweisen",
+      "p1": "SPIE Building Solutions verwaltet ein umfangreiches Portfolio an Gebäudeanlagen über viele Standorte hinweg. Über die Jahre wurde das Register aus unterschiedlichen Instandhaltungssystemen, Subunternehmer-Uploads und manueller Eingabe befüllt.",
+      "p2": "Das Ergebnis: derselbe Hersteller unter einem Dutzend Schreibweisen, und Anlagentypen, die fehlten oder falsch erfasst waren. Die Listen funktionierten für einen Techniker vor Ort. Sie funktionierten nicht, um Instandhaltung zu planen oder Angebotsrisiken über das gesamte Portfolio hinweg zu bepreisen."
+    },
+    "whyProblemToo": {
+      "label": "Warum das auch unser Problem ist",
+      "copy": "Jede Anlage trägt einen Hersteller und einen Typ, genauso wie jede Bestellzeile einen Lieferanten und eine Beschreibung trägt. Die Engine, die Ausgabendaten bereinigt, funktioniert ohne Anpassungen auch auf einem Anlagenregister.",
+      "poLabel": "Bestellzeile",
+      "poValue": "Lieferant + Beschreibung",
+      "assetLabel": "Anlagendatensatz",
+      "assetValue": "Hersteller + Typ"
+    },
+    "howItWorked": {
+      "label": "So funktionierte es",
+      "title": "Abgeglichen mit der Liste, der SPIE bereits vertraut",
+      "intro": "Schon früh sahen wir, wie allgemeine KI-Modelle Lieferantennamen rieten oder erfanden. Deshalb wurde jede Zeile ausschließlich mit SPIEs eigener freigegebener Lieferantenliste abgeglichen.",
+      "diagramInputs": {
+        "i1": "Instandhaltungssysteme",
+        "i2": "Subunternehmer-Uploads",
+        "i3": "Manuelle Eingabe"
+      },
+      "diagramSteps": {
+        "s1": "Abgleich mit der freigegebenen Liste",
+        "s2": "Gegenprüfung mit einem Sprachmodell",
+        "s3": "Konflikte an eine Person weiterleiten"
+      },
+      "diagramOutputs": {
+        "o1": "Kanonischer Lieferant",
+        "o2": "Produktfamilie + Variante",
+        "o3": "Konfidenz + Prüfpriorität"
+      },
+      "steps": {
+        "st1": {
+          "title": "Zuerst deterministischer Abgleich",
+          "copy": "Exakter Abgleich, Präfix-, Edit-Distance- und Tippfehlerkorrektur-Matching gegen SPIEs freigegebene Lieferanten, überall dort, wo eine Regel entscheiden konnte."
+        },
+        "st2": {
+          "title": "Eine unabhängige zweite Meinung",
+          "copy": "Ein Large Language Model prüfte jeden Treffer eigenständig. Stimmten beide überein, stieg die Konfidenz."
+        },
+        "st3": {
+          "title": "Menschen entscheiden die schwierigen Fälle",
+          "copy": "Widersprüchliche Treffer gingen an SPIEs Master-Data-Team, und jede Entscheidung floss in die nächste Iteration ein."
+        }
+      }
+    },
+    "example": {
+      "label": "Ein konkretes Beispiel",
+      "title": "Fünf Schreibweisen eines Pumpenherstellers, aufgelöst",
+      "intro": "Eine Familie von Umwälzpumpen tauchte unter fünf Lieferantenschreibweisen auf, eine davon ein reiner Tippfehler. Das Typfeld war noch unübersichtlicher: in einer Zeile ein bloßer Familienname, in der nächsten ein vollständiger Modellcode.",
+      "tableColumns": {
+        "c1": "Lieferant, wie eingegangen",
+        "c2": "Typ, wie eingegangen",
+        "c3": "Lieferant",
+        "c4": "Family",
+        "c5": "Variante"
+      },
+      "tableFootnote": "Namen geändert. Die Struktur entspricht dem echten Register. Ein Lieferantenteam sieht jetzt genau diese Pumpenfamilie, in genau diesen Konfigurationen, statt „Pumpen, alle möglichen“."
+    },
+    "whereToLook": {
+      "label": "Wo zuerst hinschauen",
+      "title": "Eine priorisierte Prüfliste statt einer Wand aus Zeilen",
+      "intro": "Jeder Datensatz erhielt drei Werte: Lieferantenkonfidenz, Typkonfidenz und Prüfpriorität. SPIEs Team begann oben auf der Liste und arbeitete sich nach unten vor.",
+      "confirmedLabel": "bestätigt",
+      "reviewLabel": "Zur Prüfung",
+      "reviewLegend": "In der Prüfwarteschlange, höchste Priorität zuerst"
+    },
+    "quoteBig": "Das Confidence Scoring gab unserem Team Klarheit, wo es seine Prüfzeit zuerst einsetzen sollte, statt bei 200.000 Zeilen wieder bei null anzufangen.",
+    "twoPanel": {
+      "p1": {
+        "label": "Was wir gelernt haben",
+        "title": "Hat ein Kunde eine freigegebene Liste, gegen genau diese abgleichen",
+        "copy": "Der Abgleich ausschließlich gegen SPIEs validierte Lieferanten erhöhte sowohl die Genauigkeit als auch das Vertrauen des Teams in das Ergebnis. Das ist inzwischen Standard bei jedem Pearstop-Projekt mit einer definierten Lieferantenbasis."
+      },
+      "p2": {
+        "label": "Was sich dadurch ändert",
+        "title": "Von der Anlagenwartung zur Beratung darüber",
+        "copy": "Mit einem strukturierten Register kann SPIE eine ganze Anlagenfamilie betrachten und wiederkehrende Ausfälle über das gesamte Kundenportfolio hinweg erkennen. Ein Techniker kann dann sagen:",
+        "pullQuote": "Diese Pumpenfamilie fällt mit dieser Rate an all Ihren Standorten aus. Das empfehlen wir."
+      }
+    },
+    "quoteCard": "Der Herstellerabgleich von Pearstop hat uns den richtigen Ausgangspunkt gegeben, um die Daten zurück ins ERP zu laden. Dieses Projekt hat uns viel über Data Cleaning mit KI gelehrt.",
+    "moreLinks": {
+      "l1": {
+        "label": "Kundenfall · Hard Services FM",
+        "title": "35.000 bis 50.000 Ausgabenzeilen pro Monat zu UNSPSC für Strukton"
+      },
+      "l2": {
+        "label": "Kundenfall · Einzelhandel",
+        "title": "Marge sichtbar, bevor der Einkauf verbindlich wird, für FARO"
+      },
+      "l3": {
+        "label": "Muster · Reinigung",
+        "title": "30 Toilettenpapier-Lieferanten in zwölf Monaten, ausgewählt hatte sie niemand"
+      }
+    },
+    "closingCta": {
+      "title": "Dasselbe Problem in Ihrem Anlagenregister?",
+      "lead": "Senden Sie uns eine Stichprobe Ihrer Anlagen- oder Ausrüstungsdaten. Wir gleichen sie mit Ihrer eigenen Referenzliste ab und senden sie bewertet zurück, damit Sie einen ersten Durchlauf an Ihren eigenen Daten sehen.",
+      "ctaLabel": "Stichprobe senden"
+    }
+  },
+  "CaseStrukton": {
+    "meta": {
+      "title": "Strukton Case Study",
+      "description": "Pearstop baute gemeinsam mit dem Einkaufsteam von Strukton ein KI-Klassifikationssystem: 35.000 bis 50.000 Ausgabenzeilen pro Monat nach UNSPSC klassifiziert, beginnend bei null Klassifikationshistorie."
+    },
+    "breadcrumb": "Strukton",
+    "badge": "Infrastruktur · Niederlande",
+    "h1": "35.000 bis 50.000 Einkaufszeilen pro Monat nach UNSPSC klassifiziert, ausgehend von null, für Strukton",
+    "lead": "Strukton ist ein großer niederländischer Infrastrukturdienstleister. Pearstop baute dieses System gemeinsam mit dessen Einkaufsabteilung. Es klassifizierte jede Ausgabenzeile automatisch nach UNSPSC, jeden Monat.",
+    "stats": {
+      "s1": {
+        "value": "35k–50k",
+        "label": "Ausgabenzeilen pro Monat"
+      },
+      "s2": {
+        "value": "0",
+        "label": "Klassifikationshistorie zu Beginn"
+      },
+      "s3": {
+        "value": "4",
+        "label": "UNSPSC-Ebenen pro Zeile"
+      },
+      "s4": {
+        "value": "Wöchentlich",
+        "label": "Feedback-Rhythmus der Einkäufer"
+      },
+      "s5": {
+        "value": "+20 %",
+        "label": "höhere Klassifikationsgenauigkeit durch menschliche Prüfung, verglichen mit KI allein und ohne Kontext"
+      }
+    },
+    "problem": {
+      "label": "Das Problem",
+      "title": "Warum lassen sich ohne granulare Ausgabendaten keine Einkaufseinsparungen finden?",
+      "p1": "Strukton hatte im Einkauf eine reale Einsparmöglichkeit identifiziert. Um darauf zu reagieren, brauchte das Unternehmen mehr Detailtiefe in seinen Ausgabendaten. Der Einkauf war bereits gut organisiert. Was fehlte, war die UNSPSC-Klassifikation. Dieses Projekt startete bei null Klassifikationshistorie."
+    },
+    "howItWorked": {
+      "label": "So funktionierte es",
+      "title": "Wie vermeidet ein KI-Klassifikationssystem, bei Ihren Daten zu raten?",
+      "intro": "Pearstop und das Einkaufsteam von Strukton bauten ein System mit drei Ebenen und vermieden dabei den häufigsten Fehler bei KI-Projekten: das Rad neu zu erfinden, ohne dem Modell genug Kontext zum Arbeiten zu geben.",
+      "diagramInputs": {
+        "i1": "SAP-Bestellungen",
+        "i2": "Lieferantenrechnungen",
+        "i3": "Frühere Einkaufsentscheidungen"
+      },
+      "diagramSteps": {
+        "s1": "KI klassifizierte jede Zeile",
+        "s2": "ML-Pipeline lernte aus dem Kontext",
+        "s3": "Human-in-the-Loop für den Rest"
+      },
+      "diagramOutputs": {
+        "o1": "Segment → Family → Class → Commodity",
+        "o2": "Konfidenzwert pro Zeile",
+        "o3": "Wöchentliche Feedback-Schleife mit Einkäufern"
+      }
+    },
+    "granularity": {
+      "label": "Warum Detailtiefe zählt",
+      "title": "Warum zählen alle vier UNSPSC-Ebenen, nicht nur die oberste?",
+      "p1": "Jeden Monat kam eine neue Charge Ausgaben herein. Pearstop verarbeitete sie vollständig. Jede Zeile erhielt vier Ebenen der UNSPSC-Klassifikation: Segment, Family, Class und Commodity.",
+      "boxLabel": "Vier Ebenen, von breit bis spezifisch",
+      "boxValue": "Segment → Family → Class → Commodity",
+      "p2": "Ein Segment ist die breiteste Kategorie. Eine Commodity ist am spezifischsten. Erst die Klassifikation auf allen vier Ebenen, nicht nur der obersten, macht die Daten für echte Entscheidungen nutzbar – den Vergleich eines konkreten Produkts über Lieferanten hinweg, statt nur eines groben Kategoriedurchschnitts.",
+      "readMoreLink": "Mehr darüber, wie die vier Ebenen von UNSPSC funktionieren"
+    },
+    "quoteCard": "Gebaut und bewährt bei einem großen niederländischen Infrastrukturdienstleister, ausgehend von null Klassifikationshistorie.",
+    "twoPanel": {
+      "p1": {
+        "label": "Wie es sich verbessert",
+        "title": "Jeden Monat genauer, nicht nur häufiger genutzt",
+        "copy": "Struktons Einkäufer prüften, was die KI klassifiziert hatte, markierten, was stimmte und was nicht, und jede Korrektur floss ins System zurück. Pearstop und das Team von Strukton trafen sich wöchentlich, um zu besprechen, was funktionierte und was nicht."
+      },
+      "p2": {
+        "label": "Das Ergebnis",
+        "title": "Von null Klassifikation zu voller Detailtiefe",
+        "copy": "Vor diesem Projekt hatte Strukton überhaupt keine UNSPSC-Klassifikation. Am Ende des Projekts wurden monatlich 35.000 bis 50.000 Ausgabenzeilen automatisch klassifiziert, auf allen vier UNSPSC-Ebenen. Das ist die Detailtiefe, die die ursprüngliche Einsparmöglichkeit brauchte, um tatsächlich umgesetzt zu werden."
+      }
+    },
+    "moreLinks": {
+      "l1": {
+        "label": "Kundenfall · Hard Services FM",
+        "title": "9.175 Lieferantenschreibweisen auf 1.493 zurückgeführt, für SPIE"
+      },
+      "l2": {
+        "label": "Kundenfall · Einzelhandel",
+        "title": "Marge sichtbar, bevor der Einkauf verbindlich wird, für FARO"
+      },
+      "l3": {
+        "label": "Muster · Bau",
+        "title": "45 % Preisspanne bei einer Aluminium-Fensterbank, gekauft in zehn Projekten"
+      }
+    },
+    "closingCta": {
+      "title": "Möchten Sie eine Case Study rund um Ihre eigenen Daten?",
+      "lead": "Wir zeigen Ihnen, wie derselbe Ansatz für Ihre Einkaufs- oder Anlagendaten aussehen würde.",
+      "ctaLabel": "Senden Sie uns eine Stichprobe"
+    }
+  },
+  "CaseFaro": {
+    "meta": {
+      "title": "FARO Case Study",
+      "description": "Pearstop klassifizierte für FARO Tausende Produktzeilen, verknüpfte sie mit Verkaufsdaten und machte die Marge sichtbar, bevor der Einkauf verbindlich wurde."
+    },
+    "faqQuestion": "Wie macht die Verknüpfung von Klassifikation mit Verkaufsdaten die Marge vor einem Einkauf sichtbar?",
+    "faqAnswer": "Sobald jede Produktzeile konsistent klassifiziert ist, lässt sie sich mit der historischen Verkaufsleistung derselben Kategorie verknüpfen. Das liefert eine Margenschätzung bereits im Moment der Einkaufsentscheidung, statt erst, nachdem der Container angekommen und verkauft wurde.",
+    "breadcrumb": "FARO",
+    "badge": "Einzelhandel · Südafrika",
+    "h1": "30.000 Produktzeilen pro Einkaufsentscheidung klassifiziert, in einer Woche, für FARO",
+    "lead": "Für jeden Containereinkauf musste FARO rund 30.000 Produktzeilen kategorisieren, um Marge, Verkaufspreis und Lagerdauer zu schätzen, bevor Kapital gebunden wurde. Pearstop automatisierte die Klassifikation und verknüpfte sie direkt mit FAROs Verkaufsdatenbank.",
+    "stats": {
+      "s1": {
+        "value": "30k",
+        "label": "Zeilen klassifiziert pro Einkaufsentscheidung"
+      },
+      "s2": {
+        "value": "95 %",
+        "label": "automatisch klassifiziert"
+      },
+      "s3": {
+        "value": "1 Woche",
+        "label": "Klassifikationszeit, vorher sechs Monate von Hand"
+      },
+      "s4": {
+        "value": "Bis zu 7 %",
+        "label": "höherer Abverkauf durch die Verknüpfung von Verkaufsdaten mit Einkaufsentscheidungen"
+      }
+    },
+    "situation": {
+      "label": "Die Ausgangslage",
+      "title": "Warum die Marge bis nach dem Einkauf unsichtbar war",
+      "p1": "Für jeden Containereinkauf brauchte FARO ein verlässliches Kostenbild, bevor Kapital gebunden wurde. Das bedeutete, Tausende Produktzeilen zu klassifizieren, sie mit Verkaufsergebnissen zu verknüpfen und den Prozess schnell genug zu halten, um die Einkaufsentscheidung selbst zu unterstützen.",
+      "p2": "Vor Pearstop war das die Aufgabe von zwei Personen: jede eingehende Produktzeile von Hand zu kennzeichnen und jede von Hand einer Kategorie zuzuordnen. Ohne Automatisierung war die Arbeit repetitiv, langsam und schwer skalierbar.",
+      "p3": "Dieses Projekt liegt vor dem Zeitpunkt, an dem allgemeine LLMs für diese Art von Arbeit praktikabel wurden. Pearstop baute das Klassifikationssystem für FARO mit Machine Learning und eigens entwickelter Technologie, nicht mit einem Large Language Model – der Beweis, dass der zugrunde liegende Ansatz auch ohne die neueste Tooling-Generation trägt."
+    },
+    "howItWorked": {
+      "label": "So funktionierte es",
+      "title": "Wie Pearstop die Marge vor dem Einkauf schätzt",
+      "steps": {
+        "st1": {
+          "title": "Automatische Klassifikation",
+          "copy": "Pearstop klassifizierte 95 % der Artikel in weniger als einer Woche, mit der eigenen Kategorielogik des Unternehmens."
+        },
+        "st2": {
+          "title": "Mit Verkauf verknüpfte Margenansicht",
+          "copy": "Der Datensatz wurde mit Verkaufsinformationen verknüpft, damit Einkäufer die Marge sehen konnten, bevor der Einkauf stattfand."
+        },
+        "st3": {
+          "title": "Entscheidungsgeschwindigkeit",
+          "copy": "Das Team verbrachte keine Tage mehr mit manueller Kategorisierung und erhielt eine saubere Grundlage für die Einkaufsentscheidung selbst."
+        }
+      }
+    },
+    "quoteBig": "Wir hatten Tausende von Produktpositionen, die klassifiziert werden mussten, bevor wir überhaupt anfangen konnten, unsere Kosten zu verstehen. Pearstop klassifizierte sie in weniger als einer Woche. Das hätte unser Team sechs Monate gekostet und wäre immer noch nicht so genau gewesen.",
+    "twoPanel": {
+      "p1": {
+        "label": "Was sich änderte",
+        "title": "Von manueller Kennzeichnung zu einem automatisierten Ablauf",
+        "copy": "Das Team wechselte von manueller Kategorisierung zu einem automatisierten Ablauf, der mit dem Tempo der Einkaufsentscheidungen mithalten konnte. Das machte die Marge früher sichtbar und reduzierte die operative Last für das Einkaufsteam."
+      },
+      "p2": {
+        "label": "Was sich dadurch ändert",
+        "title": "Eine verlässlichere Grundlage für die Planung",
+        "copy": "Da die Klassifikation nicht mehr der Engpass ist, hat FARO bei jeder Einkaufsentscheidung eine verlässlichere Grundlage für Planung und Analyse – nicht nur bei denen, die Zeit für eine manuelle Prüfung ließen."
+      }
+    },
+    "moreLinks": {
+      "l1": {
+        "label": "Kundenfall · Hard Services FM",
+        "title": "9.175 Lieferantenschreibweisen auf 1.493 zurückgeführt, für SPIE"
+      },
+      "l2": {
+        "label": "Kundenfall · Infrastruktur",
+        "title": "35.000 bis 50.000 Ausgabenzeilen pro Monat zu UNSPSC für Strukton"
+      },
+      "l3": {
+        "label": "Muster · Fertigung & MRO",
+        "title": "Die echte Hersteller-Teilenummer hinter jedem Reseller-Code"
+      }
+    },
+    "closingCta": {
+      "title": "Möchten Sie eine Case Study rund um Ihre eigenen Daten?",
+      "lead": "Wir zeigen Ihnen, wie derselbe Ansatz für Ihre Einkaufs- oder Anlagendaten aussehen würde.",
+      "ctaLabel": "Senden Sie uns eine Stichprobe"
+    }
+  },
+  "CaseFmo": {
+    "meta": {
+      "title": "FMO Fallstudie",
+      "description": "Das PMO-Büro von FMO brauchte einen klaren Überblick über Projektkapazität und Ressourcenverteilung. Pearstop bereinigte und strukturierte den gesamten Datensatz und baute die Dashboards, die der Geschäftsführung die nötige Transparenz für sichere Entscheidungen gaben."
+    },
+    "eyebrow": "Finance · Niederlande",
+    "title": "Von fragmentierten Projektdaten zur Kapazitätsplanung auf Geschäftsführungsebene",
+    "lead": "Das PMO-Büro von FMO brauchte einen klaren Überblick über Projektkapazität und Ressourcenverteilung über ein komplexes Portfolio hinweg. Pearstop bereinigte und strukturierte den gesamten Projektdatensatz und baute die Dashboards, die der Geschäftsführung die nötige Transparenz für sichere Entscheidungen gaben.",
+    "challengeLabel": "Die Herausforderung",
+    "problemLabel": "Das Problem",
+    "challenge": "Die Portfoliodaten waren fragmentiert und inkonsistent, sodass die Geschäftsführung nur schwer einen verlässlichen Überblick über Auslastung und Kapazität bekam.",
+    "solution": "Pearstop strukturierte den zugrunde liegenden Datensatz und lieferte eine klarere Reporting-Ansicht, sodass das Management Kapazitätsentscheidungen mit Zuversicht treffen konnte.",
+    "wins": [
+      {
+        "value": "Vollständige",
+        "label": "Portfolio-Transparenz"
+      },
+      {
+        "value": "GF-Ebene",
+        "label": "Entscheidungsfindung"
+      },
+      {
+        "value": "0",
+        "label": "manuelle Aggregation"
+      }
+    ],
+    "quote": "Ein klarer Überblick über die Projektkapazität macht den Unterschied zwischen Raten und sicherer Entscheidungsfindung.",
+    "author": "Programme Lead",
+    "role": "FMO",
+    "resultLabel": "Das Ergebnis",
+    "resultQuestion": "Was hat sich geändert?",
+    "geo": "Das ist die Art von Datenqualitätsproblem, die in reportinglastigen Organisationen auftritt, wenn die Quelldaten nie für den strategischen Einsatz konzipiert wurden.",
+    "ctaLabel": "Weitere Fallstudien ansehen",
+    "ctaTitle": "Möchten Sie eine Fallstudie rund um Ihre eigenen Daten?",
+    "ctaLead": "Wir zeigen Ihnen, wie derselbe Ansatz für Ihre Procurement- oder Anlagendaten aussehen würde.",
+    "backToCases": "Zurück zu den Fallstudien"
   }
 }

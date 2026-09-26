@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
-import { CasesIndexPage } from "@/components/site/pages/CasesIndex";
+import { CasesIndexPage, type CasesIndexCopy } from "@/components/site/pages/CasesIndex";
 import { alternateLanguages, siteConfig } from "@/lib/site";
+import enMessages from "../../../messages/en.json";
+
+const copy = enMessages.Cases as unknown as CasesIndexCopy;
 
 export const metadata: Metadata = {
   title: "Client Results",
@@ -13,5 +16,5 @@ export const metadata: Metadata = {
 };
 
 export default function CasesPage() {
-  return <CasesIndexPage />;
+  return <CasesIndexPage copy={copy} />;
 }

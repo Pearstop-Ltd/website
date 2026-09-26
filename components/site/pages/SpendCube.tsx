@@ -5,7 +5,19 @@ import { TrendUpIcon, LayersIcon, ZapIcon } from "../icons";
 import { SampleRequestModal } from "@/components/sample-request-modal";
 
 export interface SpendCubeCopy {
-  common: { sendSample: string; bookDiscovery: string };
+  common: {
+    sendSample: string;
+    bookDiscovery: string;
+    faqEyebrow: string;
+    faqTitle: string;
+    demoTable: {
+      lineAsEntered: string;
+      columnAsEntered: string;
+      columnCategory: string;
+      columnUnspsc: string;
+      categories: { airFilters: string; generalPurposeCleaners: string; temporaryManualLabour: string };
+    };
+  };
   hero: { eyebrow: string; title: string; lead: string };
   problem: { eyebrow: string; title: string; copy: string; bullets: string[] };
   howItWorks: {
@@ -27,16 +39,16 @@ export interface SpendCubeCopy {
   cta: { title: string; lead: string };
 }
 
+export function SpendCubePage({ copy }: { copy: SpendCubeCopy }) {
 // Reused verbatim from the homepage's "As it arrives / What Pearstop adds"
 // worked example (app/[locale]/page.tsx's beforeAfterRows).
-const BEFORE_AFTER_ROWS = [
-  { raw: "PMP FLTR 20X24 CS/6", clean: "Air filters", unit: "40161505" },
-  { raw: "FILTER,AIR,20X24,MERV8", clean: "Air filters", unit: "40161505" },
-  { raw: "GEN PURP CLNR 5L", clean: "General purpose cleaners", unit: "47131805" },
-  { raw: "Additional hours", clean: "Temporary manual labour", unit: "80111613" },
-];
+  const BEFORE_AFTER_ROWS = [
+    { raw: "PMP FLTR 20X24 CS/6", clean: copy.common.demoTable.categories.airFilters, unit: "40161505" },
+    { raw: "FILTER,AIR,20X24,MERV8", clean: copy.common.demoTable.categories.airFilters, unit: "40161505" },
+    { raw: "GEN PURP CLNR 5L", clean: copy.common.demoTable.categories.generalPurposeCleaners, unit: "47131805" },
+    { raw: "Additional hours", clean: copy.common.demoTable.categories.temporaryManualLabour, unit: "80111613" },
+  ];
 
-export function SpendCubePage({ copy }: { copy: SpendCubeCopy }) {
   const sections: SolutionSection[] = [
     {
       type: "problem",
@@ -89,8 +101,8 @@ export function SpendCubePage({ copy }: { copy: SpendCubeCopy }) {
     {
       type: "faq",
       key: "faq",
-      eyebrow: "Questions",
-      title: "Frequently asked",
+      eyebrow: copy.common.faqEyebrow,
+      title: copy.common.faqTitle,
       items: copy.faq.map((item) => ({ q: item.question, a: item.answer })),
     },
   ];
@@ -107,8 +119,8 @@ export function SpendCubePage({ copy }: { copy: SpendCubeCopy }) {
         secondaryHref: "/book-a-demo",
         visual: (
           <HeroTransform
-            input={{ variant: "rawLine", label: "Line as entered", value: "PMP FLTR 20X24 CS/6" }}
-            output={{ variant: "table", columns: ["As entered", "Category", "UNSPSC"], rows: BEFORE_AFTER_ROWS }}
+            input={{ variant: "rawLine", label: copy.common.demoTable.lineAsEntered, value: "PMP FLTR 20X24 CS/6" }}
+            output={{ variant: "table", columns: [copy.common.demoTable.columnAsEntered, copy.common.demoTable.columnCategory, copy.common.demoTable.columnUnspsc], rows: BEFORE_AFTER_ROWS }}
           />
         ),
       }}
