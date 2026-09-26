@@ -28,6 +28,7 @@ export default async function StruktonCaseStudyPage({ params }: { params: Promis
   setRequestLocale(locale);
   const prefix = locale === "en" ? "" : `/${locale}`;
   const t = await getTranslations({ locale, namespace: "CaseStrukton" });
+  const common = await getTranslations({ locale, namespace: "Common" });
 
   return (
     <>
@@ -156,6 +157,7 @@ export default async function StruktonCaseStudyPage({ params }: { params: Promis
       />
 
       <CaseClosingCTA
+        secondaryLabel={common("bookDiscovery")}
         title={t("closingCta.title")}
         lead={t("closingCta.lead")}
         ctaLabel={t("closingCta.ctaLabel")}

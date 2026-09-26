@@ -1,9 +1,12 @@
 "use client";
 
 import type { FormEvent } from "react";
+import { useTranslations } from "next-intl";
 import { siteConfig } from "@/lib/site";
 
 export function ContactMailtoForm() {
+  const t = useTranslations("ContactMailtoForm");
+
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
@@ -12,22 +15,25 @@ export function ContactMailtoForm() {
     const email = String(formData.get("email") || "").trim();
     const company = String(formData.get("company") || "").trim();
     const message = String(formData.get("message") || "").trim();
+    const notProvided = t("email.notProvided");
 
-    const subject = encodeURIComponent(`Pearstop enquiry${name ? ` from ${name}` : ""}${company ? ` at ${company}` : ""}`);
+    const subject = encodeURIComponent(
+      `${t("email.subject")}${name ? ` ${t("email.subjectFrom", { name })}` : ""}${company ? ` ${t("email.subjectAt", { company })}` : ""}`
+    );
     const body = encodeURIComponent(
       [
-        "Hi Pearstop,",
+        t("email.greeting"),
         "",
-        "I'd like to talk about:",
+        t("email.intro"),
         "",
         message,
         "",
-        "Contact details",
-        `Name: ${name}`,
-        `Email: ${email}`,
-        `Company: ${company || "Not provided"}`,
+        t("email.detailsHeading"),
+        `${t("email.name")}: ${name}`,
+        `${t("email.email")}: ${email}`,
+        `${t("email.company")}: ${company || notProvided}`,
         "",
-        "Thanks,"
+        t("email.signoff")
       ].join("\n")
     );
 
@@ -36,14 +42,14 @@ export function ContactMailtoForm() {
 
   return (
     <form className="contact-form" onSubmit={handleSubmit}>
-      <input type="text" name="name" placeholder="Your name" autoComplete="name" required aria-label="Your name" />
-      <input type="email" name="email" placeholder="Your email" autoComplete="email" required aria-label="Your email" />
-      <input type="text" name="company" placeholder="Company (optional)" autoComplete="organization" aria-label="Company" />
-      <textarea name="message" placeholder="What would you like to talk about?" rows={6} required aria-label="Your message" />
+      <input type="text" name="name" placeholder={t("namePlaceholder")} autoComplete="name" required aria-label={t("namePlaceholder")} />
+      <input type="email" name="email" placeholder={t("emailPlaceholder")} autoComplete="email" required aria-label={t("emailPlaceholder")} />
+      <input type="text" name="company" placeholder={t("companyPlaceholder")} autoComplete="organization" aria-label={t("companyPlaceholder")} />
+      <textarea name="message" placeholder={t("messagePlaceholder")} rows={6} required aria-label={t("messagePlaceholder")} />
       <button type="submit" className="btn btn-primary">
-        Open email draft
+        {t("submit")}
       </button>
-      <p className="contact-form-note">Your email app will open with a prefilled message ready to send.</p>
+      <p className="contact-form-note">{t("note")}</p>
     </form>
   );
 }

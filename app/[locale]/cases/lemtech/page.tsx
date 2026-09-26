@@ -27,6 +27,7 @@ export default async function LemtechCaseStudyPage({ params }: { params: Promise
   setRequestLocale(locale);
   const prefix = locale === "en" ? "" : `/${locale}`;
   const t = await getTranslations("CaseLemtech");
+  const common = await getTranslations("Common");
   const factSheetRows = t.raw("factSheetRows") as Row[];
   const stats = t.raw("stats") as { value: string; label: string }[];
   const howInputs = t.raw("how.inputs") as string[];
@@ -109,6 +110,7 @@ export default async function LemtechCaseStudyPage({ params }: { params: Promise
       />
 
       <CaseClosingCTA
+        secondaryLabel={common("bookDiscovery")}
         title={t("closing.title")}
         lead={t("closing.lead")}
         ctaLabel={t("closing.ctaLabel")}

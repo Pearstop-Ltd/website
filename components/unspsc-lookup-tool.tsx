@@ -2,6 +2,7 @@
 import { CalendlyButton } from "@/components/calendly-button";
 import { RecaptchaNotice, RecaptchaScript, useRecaptchaV3 } from "@/components/recaptcha-widget";
 import { INDUSTRIES, type IndustryKey } from "@/lib/unspsc-industries";
+import { useTranslations } from "next-intl";
 
 import { useState, useEffect } from "react";
 
@@ -41,14 +42,6 @@ const CONFIDENCE_COLOURS: Record<string, string> = {
   low: "#cf222e",
 };
 
-const EXAMPLES = [
-  "Lighting maintenance",
-  "HVAC filter replacement",
-  "Galvanised M8 bolt",
-  "Electrical panel inspection",
-  "Subcontractor plumbing works",
-];
-
 export function UnspscLookupTool({
   placeholder,
   buttonLabel,
@@ -60,6 +53,8 @@ export function UnspscLookupTool({
   loadingLabel: string;
   resultLabels: ResultLabels;
 }) {
+  const t = useTranslations("UnspscLookup.tool");
+  const EXAMPLES = t.raw("examples") as string[];
   const [description, setDescription] = useState("");
   const [supplier, setSupplier] = useState("");
   const [industry, setIndustry] = useState<IndustryKey | "">("");
@@ -79,7 +74,7 @@ export function UnspscLookupTool({
     if (!description.trim()) return;
     if (usesLeft <= 0) return;
     if (!configured) {
-      setError("Bot protection isn't configured yet. Please try again later.");
+      setError(t("errors.botProtection"));
       return;
     }
     setLoading(true);
@@ -90,7 +85,7 @@ export function UnspscLookupTool({
     // before every submit rather than reusing one generated earlier.
     const recaptchaToken = await getToken("unspsc_lookup");
     if (!recaptchaToken) {
-      setError("Verification failed. Please refresh the page and try again.");
+      setError(t("errors.verification"));
       setLoading(false);
       return;
     }
@@ -109,7 +104,7 @@ export function UnspscLookupTool({
       const data: LookupResult = await res.json();
 
       if (data.rateLimited) {
-        setError(data.error ?? "You've reached today's free limit.");
+        setError(data.error ?? t("errors.rateLimited"));
         setUsesLeft(0);
       } else if (data.consumed) {
         // The request actually reached the model (success, or a verified "no
@@ -127,10 +122,10 @@ export function UnspscLookupTool({
       } else {
         // Rejected before reaching the model (bad input, failed bot check) —
         // doesn't cost anything, so it shouldn't count against the quota.
-        setError(data.error ?? "Something went wrong. Please try again.");
+        setError(data.error ?? t("errors.generic"));
       }
     } catch {
-      setError("Something went wrong. Please try again.");
+      setError(t("errors.generic"));
     } finally {
       setLoading(false);
     }
@@ -238,7 +233,7 @@ export function UnspscLookupTool({
               {description.length}/500
             </span>
             <span style={{ fontSize: "0.8rem", color: usesLeft <= 2 ? "#b45309" : "#888", marginLeft: "auto" }}>
-              {usesLeft} free {usesLeft === 1 ? "lookup" : "lookups"} remaining
+              {t("usesLeft", { count: usesLeft })}
             </span>
           </div>
         </div>

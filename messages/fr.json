@@ -3589,7 +3589,21 @@
         "high": "Élevée",
         "medium": "Moyenne",
         "low": "Faible"
-      }
+      },
+      "errors": {
+        "botProtection": "La protection anti-robots n'est pas encore configurée. Veuillez réessayer plus tard.",
+        "verification": "Échec de la vérification. Veuillez actualiser la page et réessayer.",
+        "generic": "Une erreur s'est produite. Veuillez réessayer.",
+        "rateLimited": "Vous avez atteint la limite gratuite du jour."
+      },
+      "examples": [
+        "Maintenance éclairage",
+        "Remplacement filtre CVC",
+        "Boulon M8 galvanisé",
+        "Inspection tableau électrique",
+        "Travaux de plomberie sous-traitant"
+      ],
+      "usesLeft": "{count, plural, one {# recherche gratuite restante} other {# recherches gratuites restantes}}"
     },
     "bulk": {
       "label": "Besoin de classer des milliers de lignes ?",
@@ -4654,6 +4668,27 @@
       "notProvided": "Non renseigné",
       "email": "E-mail",
       "attached": "J'ai joint jusqu'à 200 lignes / quelques factures (10 maximum) à cet e-mail.",
+      "signoff": "Cordialement,"
+    }
+  },
+  "ContactMailtoForm": {
+    "namePlaceholder": "Votre nom",
+    "emailPlaceholder": "Votre e-mail",
+    "companyPlaceholder": "Entreprise (facultatif)",
+    "messagePlaceholder": "De quoi souhaitez-vous parler ?",
+    "submit": "Ouvrir le brouillon d'e-mail",
+    "note": "Votre application e-mail s'ouvrira avec un message prérempli, prêt à envoyer.",
+    "email": {
+      "subject": "Demande pour Pearstop",
+      "subjectFrom": "de {name}",
+      "subjectAt": "chez {company}",
+      "greeting": "Bonjour Pearstop,",
+      "intro": "J'aimerais échanger à propos de :",
+      "detailsHeading": "Coordonnées",
+      "name": "Nom",
+      "email": "E-mail",
+      "company": "Entreprise",
+      "notProvided": "Non renseigné",
       "signoff": "Cordialement,"
     }
   }

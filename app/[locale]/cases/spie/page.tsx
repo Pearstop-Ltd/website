@@ -38,6 +38,7 @@ export default async function SpieCaseStudyPage({ params }: { params: Promise<{ 
   setRequestLocale(locale);
   const prefix = locale === "en" ? "" : `/${locale}`;
   const t = await getTranslations({ locale, namespace: "CaseSpie" });
+  const common = await getTranslations({ locale, namespace: "Common" });
 
   return (
     <>
@@ -218,6 +219,7 @@ export default async function SpieCaseStudyPage({ params }: { params: Promise<{ 
       />
 
       <CaseClosingCTA
+        secondaryLabel={common("bookDiscovery")}
         title={t("closingCta.title")}
         lead={t("closingCta.lead")}
         ctaLabel={t("closingCta.ctaLabel")}

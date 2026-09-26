@@ -3589,7 +3589,21 @@
         "high": "Hoch",
         "medium": "Mittel",
         "low": "Niedrig"
-      }
+      },
+      "errors": {
+        "botProtection": "Der Bot-Schutz ist noch nicht konfiguriert. Bitte versuchen Sie es später erneut.",
+        "verification": "Verifizierung fehlgeschlagen. Bitte laden Sie die Seite neu und versuchen Sie es erneut.",
+        "generic": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.",
+        "rateLimited": "Sie haben das heutige kostenlose Limit erreicht."
+      },
+      "examples": [
+        "Beleuchtungswartung",
+        "Austausch HLK-Filter",
+        "Verzinkte M8-Schraube",
+        "Prüfung Schaltschrank",
+        "Sanitärarbeiten Subunternehmer"
+      ],
+      "usesLeft": "{count, plural, one {# kostenlose Suche übrig} other {# kostenlose Suchen übrig}}"
     },
     "bulk": {
       "label": "Müssen Sie Tausende von Zeilen klassifizieren?",
@@ -4654,6 +4668,27 @@
       "notProvided": "Nicht angegeben",
       "email": "E-Mail",
       "attached": "Ich habe bis zu 200 Zeilen / ein paar Rechnungen (max. 10) an diese E-Mail angehängt.",
+      "signoff": "Mit freundlichen Grüßen,"
+    }
+  },
+  "ContactMailtoForm": {
+    "namePlaceholder": "Ihr Name",
+    "emailPlaceholder": "Ihre E-Mail-Adresse",
+    "companyPlaceholder": "Unternehmen (optional)",
+    "messagePlaceholder": "Worüber möchten Sie sprechen?",
+    "submit": "E-Mail-Entwurf öffnen",
+    "note": "Ihre E-Mail-App öffnet sich mit einer vorausgefüllten Nachricht, bereit zum Senden.",
+    "email": {
+      "subject": "Anfrage an Pearstop",
+      "subjectFrom": "von {name}",
+      "subjectAt": "bei {company}",
+      "greeting": "Hallo Pearstop,",
+      "intro": "Ich möchte gerne sprechen über:",
+      "detailsHeading": "Kontaktdaten",
+      "name": "Name",
+      "email": "E-Mail",
+      "company": "Unternehmen",
+      "notProvided": "Nicht angegeben",
       "signoff": "Mit freundlichen Grüßen,"
     }
   }

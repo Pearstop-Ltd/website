@@ -38,6 +38,7 @@ export default async function ConstructionSpendBenchmarkingPage({ params }: { pa
   setRequestLocale(locale);
   const prefix = locale === "en" ? "" : `/${locale}`;
   const t = await getTranslations("CaseConstructionSpendBenchmarking");
+  const common = await getTranslations("Common");
   const processInputs = t.raw("process.inputs") as string[];
   const processSteps = t.raw("process.steps") as string[];
   const processOutputs = t.raw("process.outputs") as { text: string }[];
@@ -169,6 +170,7 @@ export default async function ConstructionSpendBenchmarkingPage({ params }: { pa
       />
 
       <CaseClosingCTA
+        secondaryLabel={common("bookDiscovery")}
         title={t("closing.title")}
         lead={t("closing.lead")}
         ctaLabel={t("closing.ctaLabel")}

@@ -27,6 +27,7 @@ export default async function MroCaseStudyPage({ params }: { params: Promise<{ l
   setRequestLocale(locale);
   const prefix = locale === "en" ? "" : `/${locale}`;
   const t = await getTranslations("CaseMroConfidential");
+  const common = await getTranslations("Common");
   const howInputs = t.raw("how.inputs") as string[];
   const howSteps = t.raw("how.steps") as string[];
   const howOutputs = t.raw("how.outputs") as { text: string }[];
@@ -123,6 +124,7 @@ export default async function MroCaseStudyPage({ params }: { params: Promise<{ l
       />
 
       <CaseClosingCTA
+        secondaryLabel={common("bookDiscovery")}
         title={t("closing.title")}
         lead={t("closing.lead")}
         ctaLabel={t("closing.ctaLabel")}

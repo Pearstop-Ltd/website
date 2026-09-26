@@ -3481,7 +3481,21 @@
         "high": "Hoog",
         "medium": "Gemiddeld",
         "low": "Laag"
-      }
+      },
+      "errors": {
+        "botProtection": "Botbeveiliging is nog niet geconfigureerd. Probeer het later opnieuw.",
+        "verification": "Verificatie mislukt. Ververs de pagina en probeer het opnieuw.",
+        "generic": "Er ging iets mis. Probeer het opnieuw.",
+        "rateLimited": "U heeft de gratis limiet voor vandaag bereikt."
+      },
+      "examples": [
+        "Verlichting onderhoud",
+        "HVAC-filter vervangen",
+        "Gegalvaniseerde M8-bout",
+        "Inspectie elektriciteitskast",
+        "Loodgieterswerk onderaannemer"
+      ],
+      "usesLeft": "{count, plural, one {# gratis zoekopdracht over} other {# gratis zoekopdrachten over}}"
     },
     "bulk": {
       "label": "Moet u duizenden regels classificeren?",
@@ -4686,6 +4700,27 @@
       "notProvided": "Niet opgegeven",
       "email": "E-mail",
       "attached": "Ik heb tot 200 regels / een handvol facturen (max. 10) bijgevoegd aan deze e-mail.",
+      "signoff": "Met vriendelijke groet,"
+    }
+  },
+  "ContactMailtoForm": {
+    "namePlaceholder": "Uw naam",
+    "emailPlaceholder": "Uw e-mailadres",
+    "companyPlaceholder": "Bedrijf (optioneel)",
+    "messagePlaceholder": "Waar wilt u het over hebben?",
+    "submit": "E-mailconcept openen",
+    "note": "Uw e-mailapp opent met een vooringevuld bericht, klaar om te versturen.",
+    "email": {
+      "subject": "Vraag voor Pearstop",
+      "subjectFrom": "van {name}",
+      "subjectAt": "bij {company}",
+      "greeting": "Hallo Pearstop,",
+      "intro": "Ik wil graag praten over:",
+      "detailsHeading": "Contactgegevens",
+      "name": "Naam",
+      "email": "E-mail",
+      "company": "Bedrijf",
+      "notProvided": "Niet opgegeven",
       "signoff": "Met vriendelijke groet,"
     }
   }

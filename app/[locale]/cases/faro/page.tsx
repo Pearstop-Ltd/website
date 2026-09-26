@@ -28,6 +28,7 @@ export default async function FaroCaseStudyPage({ params }: { params: Promise<{ 
   setRequestLocale(locale);
   const prefix = locale === "en" ? "" : `/${locale}`;
   const t = await getTranslations({ locale, namespace: "CaseFaro" });
+  const common = await getTranslations({ locale, namespace: "Common" });
 
   const faqSchema = {
     "@context": "https://schema.org",
@@ -152,6 +153,7 @@ export default async function FaroCaseStudyPage({ params }: { params: Promise<{ 
       />
 
       <CaseClosingCTA
+        secondaryLabel={common("bookDiscovery")}
         title={t("closingCta.title")}
         lead={t("closingCta.lead")}
         ctaLabel={t("closingCta.ctaLabel")}

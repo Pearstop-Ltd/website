@@ -3822,7 +3822,21 @@
         "high": "High",
         "medium": "Medium",
         "low": "Low"
-      }
+      },
+      "errors": {
+        "botProtection": "Bot protection isn't configured yet. Please try again later.",
+        "verification": "Verification failed. Please refresh the page and try again.",
+        "generic": "Something went wrong. Please try again.",
+        "rateLimited": "You've reached today's free limit."
+      },
+      "examples": [
+        "Lighting maintenance",
+        "HVAC filter replacement",
+        "Galvanised M8 bolt",
+        "Electrical panel inspection",
+        "Subcontractor plumbing works"
+      ],
+      "usesLeft": "{count, plural, one {# free lookup remaining} other {# free lookups remaining}}"
     },
     "bulk": {
       "label": "Need to classify thousands of lines?",
@@ -4320,6 +4334,27 @@
       "notProvided": "Not provided",
       "email": "Email",
       "attached": "I've attached up to 200 lines / a handful of invoices (max 10) to this email.",
+      "signoff": "Thanks,"
+    }
+  },
+  "ContactMailtoForm": {
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "Your email",
+    "companyPlaceholder": "Company (optional)",
+    "messagePlaceholder": "What would you like to talk about?",
+    "submit": "Open email draft",
+    "note": "Your email app will open with a prefilled message ready to send.",
+    "email": {
+      "subject": "Pearstop enquiry",
+      "subjectFrom": "from {name}",
+      "subjectAt": "at {company}",
+      "greeting": "Hi Pearstop,",
+      "intro": "I'd like to talk about:",
+      "detailsHeading": "Contact details",
+      "name": "Name",
+      "email": "Email",
+      "company": "Company",
+      "notProvided": "Not provided",
       "signoff": "Thanks,"
     }
   }

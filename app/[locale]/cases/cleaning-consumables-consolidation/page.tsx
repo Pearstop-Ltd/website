@@ -45,6 +45,7 @@ export default async function CleaningCaseStudyPage({ params }: { params: Promis
   setRequestLocale(locale);
   const prefix = locale === "en" ? "" : `/${locale}`;
   const t = await getTranslations("CaseCleaningConsumablesConsolidation");
+  const common = await getTranslations("Common");
   const cards = t.raw("cards") as Card[];
   const features = t.raw("features") as Card[];
   const processInputs = t.raw("process.inputs") as string[];
@@ -232,6 +233,7 @@ export default async function CleaningCaseStudyPage({ params }: { params: Promis
       />
 
       <CaseClosingCTA
+        secondaryLabel={common("bookDiscovery")}
         title={t("closing.title")}
         lead={t("closing.lead")}
         ctaLabel={t("closing.ctaLabel")}

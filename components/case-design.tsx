@@ -272,7 +272,7 @@ export function CaseMoreLinks({ prefix, items }: { prefix: string; items: { href
   );
 }
 
-export function CaseClosingCTA({ title, lead, ctaLabel, ctaHref, external, sample }: { title: string; lead: string; ctaLabel: string; ctaHref?: string; external?: boolean; sample?: boolean }) {
+export function CaseClosingCTA({ title, lead, ctaLabel, ctaHref, external, sample, secondaryLabel = "Talk to sales" }: { title: string; lead: string; ctaLabel: string; ctaHref?: string; external?: boolean; sample?: boolean; secondaryLabel?: string }) {
   const primaryButtonClassName = "btn btn-primary";
   const primaryButtonStyle = { background: "#fff", color: "var(--navy)", fontSize: 16, fontWeight: 600, padding: "16px 28px", borderRadius: 12 };
 
@@ -292,7 +292,7 @@ export function CaseClosingCTA({ title, lead, ctaLabel, ctaHref, external, sampl
             ) : (
               <a href={ctaHref} target={external ? "_blank" : undefined} rel={external ? "noopener noreferrer" : undefined} style={primaryButtonStyle}>{ctaLabel}</a>
             )}
-            <CalendlyButton label="Talk to sales →" style={{ background: "none", border: "none", cursor: "pointer", color: "var(--purple)", fontSize: 15, fontWeight: 500, padding: 0 }} />
+            <CalendlyButton label={`${secondaryLabel} →`} style={{ background: "none", border: "none", cursor: "pointer", color: "var(--purple)", fontSize: 15, fontWeight: 500, padding: 0 }} />
           </div>
         </div>
         <div style={{ borderTop: "1px solid rgba(220,225,248,0.2)", marginTop: 56, paddingTop: 28, display: "flex", justifyContent: "space-between", fontSize: 13, color: "#7A8BE6", flexWrap: "wrap", gap: 12 }}>
