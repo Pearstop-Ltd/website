@@ -8,9 +8,9 @@ import { alternateLanguages, siteConfig } from "@/lib/site";
 import styles from "@/components/case-design.module.css";
 
 export const metadata: Metadata = {
-  title: "Construction Spend Benchmarking (Anonymized Use Case)",
+  title: "Construction Spend Benchmarking",
   description:
-    "One aluminium windowsill, bought on ten projects, described ten different ways. Classified, the price spread is visible in days. An anonymized, illustrative use case for construction and infrastructure procurement.",
+    "One aluminium windowsill, bought on ten projects, described ten different ways. Classified, the price spread is visible in days.",
   alternates: {
     canonical: `${siteConfig.url}/cases/construction-spend-benchmarking`,
     languages: alternateLanguages("/cases/construction-spend-benchmarking")
@@ -35,7 +35,7 @@ export default function ConstructionSpendBenchmarkingPage() {
           <div style={{ display: "flex", flexDirection: "column", gap: 22, maxWidth: 780 }}>
             <div style={{ display: "flex", gap: 10, alignItems: "center", flexWrap: "wrap" }}>
               <CaseTypeBadge type="pattern" />
-              <span style={{ fontSize: 13, color: "var(--muted)" }}>Construction & Infrastructure · Illustrative data</span>
+              <span style={{ fontSize: 13, color: "var(--muted)" }}>Construction & Infrastructure</span>
             </div>
             <h1 style={{ margin: 0, fontSize: "clamp(2.2rem, 4vw, 3.2rem)", lineHeight: 1.08, fontWeight: 600, letterSpacing: "-0.025em", color: "var(--primary-dark)" }}>
               Construction Spend Benchmarking
@@ -50,7 +50,7 @@ export default function ConstructionSpendBenchmarkingPage() {
 
       <section style={{ background: "var(--purple-soft)", padding: "18px 0", fontSize: 14, color: "var(--navy)" }}>
         <div className="container">
-          <strong style={{ fontWeight: 600 }}>Illustrative data.</strong> Based on a real pattern in construction procurement &mdash; not a named client engagement.
+          This case is built on a pattern we see again and again in construction and infrastructure procurement.
         </div>
       </section>
 

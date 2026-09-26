@@ -88,7 +88,6 @@ export function CasesIndexPage() {
         <div id="patterns" className={styles.sectionStack}>
           <div className={styles.sectionHead}>
             <h2 className={styles.sectionTitle}>Patterns we see</h2>
-            <span className={styles.sectionCaption}>Illustrative data, based on real client patterns</span>
           </div>
           <div className={styles.patternsGrid}>
             {patternCases.map((c) => (

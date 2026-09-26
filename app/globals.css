@@ -131,6 +131,15 @@ strong {
   text-align: center;
 }
 
+.section-lead-in {
+  max-width: 640px;
+  margin: 0.75rem auto 0;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--muted, #666666);
+}
+
 .dark {
   color: #fff;
 }

@@ -247,9 +247,9 @@ export const caseStudies: CaseStudy[] = [
     slug: "construction-spend-benchmarking",
     type: "pattern",
     title: "Your estimating problem is not an estimating problem",
-    category: "Construction & Infrastructure · Anonymized use case",
+    category: "Construction & Infrastructure",
     excerpt:
-      "One aluminium windowsill, bought on ten projects, described ten different ways - a 45% price spread, invisible until classified. An illustrative use case based on a real pattern in construction and infrastructure procurement.",
+      "One aluminium windowsill, bought on ten projects, described ten different ways - a 45% price spread, invisible until classified. This case is built on a pattern we see again and again in construction and infrastructure procurement.",
     tags: ["Procurement", "UNSPSC"],
     statPrimary: "45%",
     statPrimaryLabel: "Price spread, one item",
@@ -263,9 +263,9 @@ export const caseStudies: CaseStudy[] = [
     slug: "cleaning-consumables-consolidation",
     type: "pattern",
     title: "Nobody chose 30 toilet paper suppliers. They just couldn't see them.",
-    category: "Cleaning & Soft FM · Anonymized use case",
+    category: "Cleaning & Soft FM",
     excerpt:
-      "30 different suppliers invoiced one cleaning business for toilet paper in twelve months. Classified, the pattern - and the three suppliers worth keeping - was visible in days. An illustrative use case based on a real pattern in soft FM procurement.",
+      "30 different suppliers invoiced one cleaning business for toilet paper in twelve months. Classified, the pattern - and the three suppliers worth keeping - was visible in days. This case is built on a pattern we see again and again in soft FM procurement.",
     tags: ["Procurement", "Data Quality"],
     statPrimary: "68%",
     statPrimaryLabel: "Price spread, same product",
@@ -295,7 +295,7 @@ export const caseStudies: CaseStudy[] = [
     slug: "mro-confidential",
     type: "pattern",
     title: "Going direct to the manufacturer on MRO parts",
-    category: "Manufacturing / MRO · Anonymized use case",
+    category: "Manufacturing / MRO",
     excerpt:
       "Buying MRO parts direct from the manufacturer usually means researching the real part number by hand, typically outsourced to an offshore research bureau. AI can do that research faster, but general models hallucinate part numbers and don't check their own work - which is exactly where a specialized, checked AI pipeline matters.",
     tags: ["Procurement", "Data Quality"],

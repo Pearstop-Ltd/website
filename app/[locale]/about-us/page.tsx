@@ -38,7 +38,7 @@ const operationsTeam = [
     name: "Neharika Kishore",
     role: "Marketing and Public Relations Manager",
     image: siteConfig.assets.team.neharika,
-    copy: "Neharika is the voice behind clean data. Seamlessly blending marketing, public relations, and content strategy, Neharika crafts campaigns that build trust, spark conversations, and turn technical solutions into stories that resonate.",
+    copy: "Neharika is the voice behind clean data. Seamlessly blending marketing, public relations, and content strategy, Neharika crafts campaigns that build trust, spark conversations, and turn technical work into stories that resonate.",
   },
   {
     name: "Max Capelle",
@@ -82,6 +82,14 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
         title={t("hero.title")}
         lead={t("hero.lead")}
       />
+
+      <section>
+        <div className="container">
+          <p className="light-copy" style={{ maxWidth: "760px", margin: "0 auto", textAlign: "center" }}>
+            {t("buyerIntro")}
+          </p>
+        </div>
+      </section>
 
       <section>
         <div className="container">

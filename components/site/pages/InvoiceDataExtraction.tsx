@@ -26,6 +26,7 @@ export interface InvoiceDataExtractionCopy {
   };
   problem: {
     eyebrow: string;
+    leadIn?: string;
     title: string;
     body: string;
     quote: { text: string; attribution: string };
@@ -66,6 +67,7 @@ export interface InvoiceDataExtractionCopy {
     b1: { title: string; copy: string };
     b2: { title: string; copy: string };
     b3: { title: string; copy: string };
+    b4: { title: string; copy: string };
   };
   quote: { text: string; author: string; role: string };
   geoBlock: { title: string; copy: string };
@@ -226,6 +228,7 @@ export function InvoiceDataExtractionPage({ copy, currency }: { copy: InvoiceDat
     {
       type: "problem",
       key: "problem",
+      leadIn: copy.problem.leadIn,
       eyebrow: copy.problem.eyebrow,
       title: copy.problem.title,
       body: <p>{copy.problem.body}</p>,
@@ -297,10 +300,12 @@ export function InvoiceDataExtractionPage({ copy, currency }: { copy: InvoiceDat
       key: "outcome",
       eyebrow: copy.whatMakesPossible.eyebrow,
       title: copy.whatMakesPossible.title,
+      columns: 2,
       cards: [
         { title: copy.whatMakesPossible.b1.title, body: copy.whatMakesPossible.b1.copy, variant: "tinted-blue" },
         { title: copy.whatMakesPossible.b2.title, body: copy.whatMakesPossible.b2.copy, variant: "tinted-purple" },
         { title: copy.whatMakesPossible.b3.title, body: copy.whatMakesPossible.b3.copy, variant: "tinted-green" },
+        { title: copy.whatMakesPossible.b4.title, body: copy.whatMakesPossible.b4.copy, variant: "tinted-blue" },
       ],
     },
     {

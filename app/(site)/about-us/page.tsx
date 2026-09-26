@@ -40,7 +40,7 @@ const operationsTeam = [
     name: "Neharika Kishore",
     role: "Marketing and Public Relations Manager",
     image: siteConfig.assets.team.neharika,
-    copy: "Neharika is the voice behind clean data. Seamlessly blending marketing, public relations, and content strategy, Neharika crafts campaigns that build trust, spark conversations, and turn technical solutions into stories that resonate."
+    copy: "Neharika is the voice behind clean data. Seamlessly blending marketing, public relations, and content strategy, Neharika crafts campaigns that build trust, spark conversations, and turn technical work into stories that resonate."
   },
   {
     name: "Max Capelle",
@@ -79,6 +79,16 @@ export default function AboutPage() {
         title="We started Pearstop because we were fed up."
         lead="Fed up with watching smart people spend their days on manual data work that a machine should be doing. Fed up with insights that never made it to the decision-maker because the data underneath was not good enough. Fed up with inefficiency that was completely, entirely unnecessary."
       />
+
+      <section>
+        <div className="container">
+          <p className="light-copy" style={{ maxWidth: "760px", margin: "0 auto", textAlign: "center" }}>
+            The people who build, run and maintain buildings, sites and networks care about getting it right: safe
+            sites, compliant assets, and great places to work and live. The data behind that work should help them,
+            not slow them down. That is the part we fix.
+          </p>
+        </div>
+      </section>
 
       <section>
         <div className="container">

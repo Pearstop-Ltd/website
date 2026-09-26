@@ -37,6 +37,8 @@ export type SolutionSection =
   | {
       type: "problem";
       key?: string;
+      /** Optional one-line lead-in rendered above the eyebrow/H2, small. */
+      leadIn?: ReactNode;
       eyebrow: ReactNode;
       title: ReactNode;
       body: ReactNode;
@@ -79,7 +81,7 @@ export type SolutionSection =
       caption?: ReactNode;
       background?: "white" | "soft";
     }
-  | { type: "outcomeCards"; key?: string; eyebrow?: ReactNode; title: ReactNode; cards: CardProps[]; background?: "white" | "soft" }
+  | { type: "outcomeCards"; key?: string; eyebrow?: ReactNode; title: ReactNode; cards: CardProps[]; columns?: 2 | 3 | 4; background?: "white" | "soft" }
   | { type: "quote"; key?: string; quote: QuoteCardProps; background?: "white" | "soft" }
   | { type: "definition"; key?: string; title: ReactNode; body: ReactNode; background?: "white" | "soft" }
   | { type: "faq"; key?: string; eyebrow?: ReactNode; title: ReactNode; items: FaqItem[]; background?: "white" | "soft" }
@@ -116,7 +118,10 @@ function renderSection(section: SolutionSection) {
         <Section key={section.key ?? "problem"} background={section.background ?? "soft"}>
           <div className={styles.stack}>
             <div className={styles.problemGrid}>
-              <SectionHeader eyebrow={section.eyebrow} title={section.title} />
+              <div>
+                {section.leadIn ? <p className={styles.leadIn}>{section.leadIn}</p> : null}
+                <SectionHeader eyebrow={section.eyebrow} title={section.title} />
+              </div>
               {section.quote ? <QuoteCard {...section.quote} variant="panel" /> : null}
             </div>
             <div className={styles.body}>{section.body}</div>
@@ -182,7 +187,11 @@ function renderSection(section: SolutionSection) {
         <Section key={section.key ?? "outcomeCards"} background={section.background}>
           <div className={styles.stack}>
             <SectionHeader eyebrow={section.eyebrow} title={section.title} />
-            <div className={styles.cardsGrid3}>
+            <div
+              className={
+                section.columns === 2 ? styles.cardsGrid2 : section.columns === 4 ? styles.cardsGrid4 : styles.cardsGrid3
+              }
+            >
               {section.cards.map((card, i) => (
                 <Card {...card} key={i} />
               ))}

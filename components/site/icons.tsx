@@ -40,6 +40,15 @@ export function ZapIcon({ color = "var(--blue)" }: { color?: string }) {
   );
 }
 
+export function EyeIcon({ color = "var(--blue)" }: { color?: string }) {
+  return (
+    <svg {...commonProps} stroke={color}>
+      <path d="M2 12 C5 6 9 4 12 4 C15 4 19 6 22 12 C19 18 15 20 12 20 C9 20 5 18 2 12 Z" />
+      <circle cx="12" cy="12" r="3" />
+    </svg>
+  );
+}
+
 /** Small marker replacing the "×" bullet character in problem-list items. */
 export function XMarkIcon({ color = "var(--purple)" }: { color?: string }) {
   return (

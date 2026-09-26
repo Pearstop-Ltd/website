@@ -6,9 +6,9 @@ import {
 import { alternateLanguages, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Going Direct to the Manufacturer (Anonymized Use Case)",
+  title: "Going Direct to the Manufacturer",
   description:
-    "How Pearstop replaces slow, error-prone offshore MRO part research with a fast, checked one. An anonymized, illustrative use case for manufacturing and MRO.",
+    "How Pearstop replaces slow, error-prone offshore MRO part research with a fast, checked one.",
   alternates: {
     canonical: `${siteConfig.url}/cases/mro-confidential`,
     languages: alternateLanguages("/cases/mro-confidential")
@@ -24,7 +24,7 @@ export default function MroCaseStudyPage() {
           <div style={{ display: "flex", flexDirection: "column", gap: 22, maxWidth: 780 }}>
             <div style={{ display: "flex", gap: 10, alignItems: "center", flexWrap: "wrap" }}>
               <CaseTypeBadge type="pattern" />
-              <span style={{ fontSize: 13, color: "var(--muted)" }}>Manufacturing & MRO · Illustrative data</span>
+              <span style={{ fontSize: 13, color: "var(--muted)" }}>Manufacturing & MRO</span>
             </div>
             <h1 style={{ margin: 0, fontSize: "clamp(2.2rem, 4vw, 3.2rem)", lineHeight: 1.08, fontWeight: 600, letterSpacing: "-0.025em", color: "var(--primary-dark)" }}>
               Going direct to the manufacturer
@@ -39,7 +39,7 @@ export default function MroCaseStudyPage() {
 
       <section style={{ background: "var(--purple-soft)", padding: "18px 0", fontSize: 14, color: "var(--navy)" }}>
         <div className="container">
-          <strong style={{ fontWeight: 600 }}>Illustrative use case.</strong> Not a named client story &mdash; it reflects a pattern Pearstop sees repeatedly in MRO and component sourcing, built to show clearly what the product actually does.
+          This case is built on a pattern we see again and again in MRO and component sourcing.
         </div>
       </section>
 
