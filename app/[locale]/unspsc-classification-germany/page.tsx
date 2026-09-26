@@ -215,9 +215,9 @@ export default async function UnspscDEPage({ params }: { params: Promise<{ local
           <div className="row">
             <div className="col-md-8 col-md-offset-2">
               <QuoteBox
-                quote="It would have taken five engineers and a full year to clean this up manually. We needed a better solution — and the turnaround went from weeks to under a day."
-                author="Head of Operations"
-                role="FARO"
+                quote={t("testimonial.quote")}
+                author={t("testimonial.author")}
+                role={t("testimonial.role")}
               />
             </div>
           </div>

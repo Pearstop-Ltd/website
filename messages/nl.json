@@ -562,7 +562,37 @@
         "copy": "Richard leidt de klantlevering bij Pearstop en zorgt ervoor dat elke opdracht soepel verloopt en dat wat we op papier beloven in de praktijk resultaten oplevert."
       }
     ],
-    "buyerIntro": "De mensen die gebouwen, locaties en netwerken bouwen, beheren en onderhouden, willen het goed doen: veilige locaties, compliant assets en fijne plekken om te werken en te wonen. De data achter dat werk zou moeten helpen, niet vertragen. Dat is het deel dat wij oplossen."
+    "buyerIntro": "De mensen die gebouwen, locaties en netwerken bouwen, beheren en onderhouden, willen het goed doen: veilige locaties, compliant assets en fijne plekken om te werken en te wonen. De data achter dat werk zou moeten helpen, niet vertragen. Dat is het deel dat wij oplossen.",
+    "operationsTeamTitle": "Operationeel team",
+    "developmentTeamTitle": "Ontwikkelteam",
+    "operationsTeam": [
+      {
+        "role": "Director of Operations",
+        "copy": "Raeesah richt zich op praktische resultaten, efficiëntie en groei. Ze combineert operationeel overzicht met hands-on projectmanagement en salesleiderschap, stroomlijnt processen, stuurt op klantsucces en vertaalt strategie naar meetbare resultaten."
+      },
+      {
+        "role": "Marketing- en pr-manager",
+        "copy": "Neharika is de stem achter schone data. Ze combineert marketing, pr en contentstrategie tot campagnes die vertrouwen opbouwen, gesprekken op gang brengen en technisch werk vertalen naar verhalen die aanslaan."
+      },
+      {
+        "role": "Technisch adviseur",
+        "copy": "Max is gespecialiseerd in het kritisch beoordelen van backendarchitectuur, het finetunen van AI en het afstemmen van softwareontwerp op klantbehoeften. Met zorgvuldig opgebouwde expertise zorgt Max dat het technische en het praktische naadloos samenkomen in oplossingen die zowel robuust als klantgericht zijn."
+      }
+    ],
+    "developmentTeam": [
+      {
+        "role": "Lead Developer",
+        "copy": "Robin is de solutions architect. Hij stuurt innovatie in backendsystemen aan, leidt het ontwikkelteam en ontwerpt schaalbare platforms, en zorgt dat elk algoritme nauwkeurig en efficiënt blijft werken."
+      },
+      {
+        "role": "Senior Developer",
+        "copy": "Dania bouwt intuïtieve interfaces die complexe datasets omzetten in gebruiksvriendelijke dashboards en tools."
+      },
+      {
+        "role": "Junior Developer",
+        "copy": "Sjoerd beheert de digitale voordeur van Pearstop. Hij houdt de website up-to-date en verbetert deze voortdurend, met oog voor zowel strak design als betrouwbare functionaliteit."
+      }
+    ]
   },
   "Contact": {
     "meta": {
@@ -595,7 +625,8 @@
     },
     "team": {
       "title": "Technisch team",
-      "lead": "De mensen achter het werk."
+      "lead": "De mensen achter het werk.",
+      "directorOfOperations": "Director of Operations"
     },
     "cta": {
       "title": "Niet zeker of Pearstop iets voor u is?",
@@ -3268,6 +3299,11 @@
     "geoBlock": {
       "title": "Wat houdt UNSPSC-classificatie voor facilities management precies in?",
       "copy": "Een facilities management bedrijf koopt doorgaans in bij 500 tot 3.000 suppliers per locatie die het bedient, en elk factureert anders. UNSPSC-classificatie kent dezelfde 8-cijferige commodity code toe aan hetzelfde onderliggende werk, of een invoice regel nu 'elektra werkzaamheden Q3' of 'electrical maintenance callout' luidt, zodat procurement en finance spend kunnen vergelijken tussen suppliers en locaties in plaats van vrije tekst regel voor regel te lezen. De engine van Pearstop doet dit automatisch voor FM-bedrijven die 5.000 tot 35.000 invoice regels per maand verwerken, waarbij 90 tot 95% ervan wordt geclassificeerd zonder menselijke tussenkomst."
+    },
+    "testimonial": {
+      "quote": "Onze asset-lijsten werkten voor monteurs op locatie, maar stelden ons niet in staat om slim onderhoud te plannen of biedrisico datagedreven te beheren.",
+      "author": "Asset Manager",
+      "role": "Facility Management, Europa"
     }
   },
   "UnspscNL": {
@@ -3362,6 +3398,11 @@
     "geoBlock": {
       "title": "Hoe ziet UNSPSC-classificatie eruit voor een Nederlands infrastructuur- of FM-bedrijf?",
       "copy": "Nederlandse infrastructuur- en FM-bedrijven voeren purchasing doorgaans uit via SAP of AFAS, met invoice regels die door field teams zijn geschreven in plaats van buyers, bijvoorbeeld 'elektra werkzaamheden Q3' of 'pompafdichting vervangen'. UNSPSC-classificatie kent aan elk van deze regels een consistente 8-cijferige commodity code toe, wat een Peppol-compliant invoice machine-readable maakt in plaats van alleen gestructureerd. Strukton, een Nederlandse infrastructuur contractor, verwerkt op deze manier 35.000 procurement regels per maand via de SAP-integratie van Pearstop, waarbij 90 tot 95% automatisch wordt geclassificeerd."
+    },
+    "testimonial": {
+      "quote": "We hadden twee fulltime medewerkers die categorie-toewijzing deden. Nu doet het systeem dit voor ons — wat verderop in het proces ook margeschattingen mogelijk heeft gemaakt.",
+      "author": "Hoofd Inkoop",
+      "role": "Infrastructuur-aannemer, Nederland"
     }
   },
   "UnspscDE": {
@@ -3454,6 +3495,11 @@
     "geoBlock": {
       "title": "Hoe ziet UNSPSC-classificatie eruit voor een Duits productie- of FM-bedrijf?",
       "copy": "Duitse productie- en FM-bedrijven bewaren doorgaans jaren aan purchase order data in SAP, vaak met invoice regels geschreven in Duits technisch jargon zoals 'Wartung Pumpe Dichtung' of 'Elektra Rundgang Q3'. UNSPSC-classificatie kent aan elk van deze regels dezelfde 8-cijferige commodity code toe als het Engelse equivalent, zodat een fabriek in München en een fabriek in Rotterdam als dezelfde category of spend verschijnen. De engine van Pearstop leest Duitstalige beschrijvingen native en bereikt 90 tot 95% automatische classificatie zonder vertaling als aparte stap."
+    },
+    "testimonial": {
+      "quote": "Het zou vijf engineers en een heel jaar hebben gekost om dit handmatig op te schonen. We hadden een betere oplossing nodig — en de doorlooptijd ging van weken naar minder dan een dag.",
+      "author": "Head of Operations",
+      "role": "FARO"
     }
   },
   "UnspscLookup": {
@@ -4294,6 +4340,10 @@
       "lead": "Praat met sales, of test eerst een enkele omschrijving op de gratis opzoektool.",
       "button": "Praat met sales",
       "secondaryButton": "Probeer de gratis opzoektool"
+    },
+    "howItWorks": {
+      "title": "Hoe werkt AI-gedreven UNSPSC-classificatie in de praktijk?",
+      "copy": "AI-gedreven UNSPSC-classificatie neemt een inkoopomschrijving — uit een gestructureerd spend-bestand of geëxtraheerd uit een PDF-factuur — en kent er de juiste 8-cijferige UNSPSC-commodity-code aan toe. Goed gedaan betekent dat niet dat je een taalmodel om een code vraagt en het antwoord zomaar vertrouwt. Het systeem van Pearstop stelt een code voor via een LLM-laag, valideert die code vervolgens tegen de echte UNSPSC-dataset voordat hij wordt geaccepteerd, combineert dit met deterministische keyword-regels en een leveranciersspecifieke database, en slaat elke menselijke correctie op als leveranciersspecifiek geheugen, zodat hetzelfde patroon niet twee keer opnieuw hoeft te worden doordacht. Een gratis pilot van ongeveer 500 regels laat een klant de nauwkeurigheid controleren, de verhouding tussen automatisch geclassificeerd en gemarkeerd voor review, en hoe diep het resultaat in de vierlaagse hiërarchie reikt, voordat hetzelfde proces op een volledige dataset draait."
     }
   },
   "CaseSpie": {
@@ -4425,6 +4475,15 @@
       "title": "Hetzelfde probleem in uw assetregister?",
       "lead": "Stuur ons een steekproef van uw asset- of apparatuurdata. Wij matchen die tegen uw eigen referentielijst en sturen hem gescoord terug, zodat u een eerste doorloop op uw eigen records ziet.",
       "ctaLabel": "Stuur een steekproef"
+    },
+    "factSheet": {
+      "clientLabel": "Klant",
+      "dataLabel": "Data",
+      "dataValue": "Assetregister: fabrikant en apparatuurtype",
+      "scopeLabel": "Omvang",
+      "approachLabel": "Aanpak",
+      "approachValue": "Regels + LLM-kruiscontrole + menselijke review",
+      "scopeValue": "204.029 assetrecords"
     }
   },
   "CaseStrukton": {
@@ -4523,6 +4582,15 @@
       "title": "Wilt u een case study rond uw eigen data?",
       "lead": "We laten u zien hoe dezelfde aanpak eruit zou zien voor uw inkoop- of assetdata.",
       "ctaLabel": "Stuur ons een steekproef"
+    },
+    "factSheet": {
+      "clientLabel": "Klant",
+      "dataLabel": "Data",
+      "dataValue": "Inkoopbestedingen, via SAP en inkoopsysteem",
+      "scopeLabel": "Omvang",
+      "approachLabel": "Aanpak",
+      "approachValue": "AI- en ML-pipeline met menselijke controle",
+      "scopeValue": "35.000 tot 50.000 regels per maand"
     }
   },
   "CaseFaro": {
@@ -4610,6 +4678,15 @@
       "title": "Wilt u een case study rond uw eigen data?",
       "lead": "We laten u zien hoe dezelfde aanpak eruit zou zien voor uw inkoop- of assetdata.",
       "ctaLabel": "Stuur ons een steekproef"
+    },
+    "factSheet": {
+      "clientLabel": "Klant",
+      "dataLabel": "Data",
+      "dataValue": "Inkomende productregels, per container",
+      "scopeLabel": "Omvang",
+      "approachLabel": "Aanpak",
+      "approachValue": "Machine learning, pre-LLM (zelf gebouwde technologie)",
+      "scopeValue": "~30.000 regels per inkoopbeslissing"
     }
   },
   "CaseFmo": {
@@ -4723,5 +4800,17 @@
       "notProvided": "Niet opgegeven",
       "signoff": "Met vriendelijke groet,"
     }
+  },
+  "TermsShort": {
+    "meta": {
+      "title": "Algemene voorwaarden",
+      "description": "Algemene voorwaarden voor het gebruik van de Pearstop-website."
+    },
+    "eyebrow": "Juridisch",
+    "title": "Algemene voorwaarden",
+    "lead": "Een korte, begrijpelijke versie van hoe u de Pearstop-website mag gebruiken.",
+    "sectionTitle": "Gebruik van deze site",
+    "p1": "De inhoud van deze site dient uitsluitend ter algemene informatie. Het is geen juridisch, financieel of inkoopadvies. We houden de informatie zo nauwkeurig en actueel mogelijk, maar garanderen niet dat elke pagina altijd volledig is.",
+    "p2": "Wilt u inhoud, merkmateriaal of screenshots hergebruiken, vraag dit dan vooraf aan ons. Vragen over deze voorwaarden? Neem contact op via {email}."
   }
 }

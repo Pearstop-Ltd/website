@@ -1,31 +1,37 @@
 import type { Metadata } from "next";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { PageHero, SectionTitle } from "@/components/content";
 import { alternateLanguages, siteConfig } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "Terms and Conditions",
-  description: "Terms and conditions for using the Pearstop website.",
-  alternates: {
-    canonical: `${siteConfig.url}/terms-and-conditions`,
-    languages: alternateLanguages("/terms-and-conditions")
-  }
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "TermsShort" });
+  return {
+    title: t("meta.title"),
+    description: t("meta.description"),
+    alternates: {
+      canonical: `${siteConfig.url}/terms-and-conditions`,
+      languages: alternateLanguages("/terms-and-conditions")
+    }
+  };
+}
 
-export default function TermsPage() {
+export default async function TermsPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "TermsShort" });
+
   return (
     <>
-      <PageHero eyebrow="Legal" title="Terms and Conditions" lead="A short, plain-English version of how you can use the Pearstop website." />
+      <PageHero eyebrow={t("eyebrow")} title={t("title")} lead={t("lead")} />
       <section>
         <div className="container">
-          <SectionTitle title="Using this site" />
+          <SectionTitle title={t("sectionTitle")} />
           <div className="row">
             <div className="col-md-8 col-md-offset-2">
-              <p className="light-copy">
-                The content on this site is provided for general information only. It is not legal, financial, or procurement advice. We try to keep the information accurate and current, but we do not guarantee that every page will always be complete.
-              </p>
-              <p className="light-copy">
-                If you reuse the content, brand assets, or screenshots, please ask first. For questions about these terms, contact {siteConfig.email}.
-              </p>
+              <p className="light-copy">{t("p1")}</p>
+              <p className="light-copy">{t("p2", { email: siteConfig.email })}</p>
             </div>
           </div>
         </div>

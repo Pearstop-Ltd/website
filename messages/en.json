@@ -787,6 +787,36 @@
         "role": "CCO",
         "copy": "Richard leads client delivery at Pearstop, ensuring every engagement runs smoothly and that what we promise on paper becomes results in practice."
       }
+    ],
+    "operationsTeamTitle": "Operations Team",
+    "developmentTeamTitle": "Development Team",
+    "operationsTeam": [
+      {
+        "role": "Director of Operations",
+        "copy": "Raeesah's priority is practical results, efficiency, and growth. Balancing operations oversight with hands-on project management and sales leadership, Raeesah streamlines processes, drives client success, and turns strategy into measurable results."
+      },
+      {
+        "role": "Marketing and Public Relations Manager",
+        "copy": "Neharika is the voice behind clean data. Seamlessly blending marketing, public relations, and content strategy, Neharika crafts campaigns that build trust, spark conversations, and turn technical work into stories that resonate."
+      },
+      {
+        "role": "Technical Advisor",
+        "copy": "Max specialises in critically evaluating backend architecture, fine-tuning artificial intelligence, and aligning software design and client needs. Drawing on carefully honed expertise, Max ensures that the technical and practical dimensions are harmoniously integrated to deliver solutions that are both robust and client-focused."
+      }
+    ],
+    "developmentTeam": [
+      {
+        "role": "Lead Developer",
+        "copy": "Robin is the solutions architect. Driving innovation in backend systems, Robin leads the development team, designs scalable platforms, and ensures every algorithm delivers accuracy and efficiency."
+      },
+      {
+        "role": "Senior Developer",
+        "copy": "Dania focuses on building intuitive interfaces which turns complex datasets into user-friendly dashboards and tools."
+      },
+      {
+        "role": "Junior Developer",
+        "copy": "Sjoerd manages Pearstop's digital front door. Sjoerd is dedicated to maintaining and enhancing Pearstop's website, blending clean design and reliable functionality together."
+      }
     ]
   },
   "Contact": {
@@ -820,7 +850,8 @@
     },
     "team": {
       "title": "Leadership Team",
-      "lead": "Your Solution Drivers"
+      "lead": "Your Solution Drivers",
+      "directorOfOperations": "Director of Operations"
     },
     "cta": {
       "title": "Not sure if Pearstop is for you?",
@@ -2145,6 +2176,10 @@
       "lead": "Talk to sales, or test a single description on the free lookup tool first.",
       "button": "Talk to sales",
       "secondaryButton": "Try the free lookup"
+    },
+    "howItWorks": {
+      "title": "How does AI UNSPSC classification actually work?",
+      "copy": "AI UNSPSC classification takes a procurement description, whether from a structured spend file or extracted from a PDF invoice, and assigns it the correct 8-digit UNSPSC commodity code. Done well, it does not mean asking a language model for a code and trusting the answer. Pearstop's engine proposes a code with an LLM layer, then validates that code against the real UNSPSC dataset before accepting it, combines that with deterministic keyword rules and a supplier-specific database, and stores every human correction as supplier-specific memory so the same pattern does not need reasoning through twice. A free pilot of roughly 500 rows lets a customer check accuracy, the auto-classified versus flagged-for-review split, and how deep the result reaches into the four-level hierarchy, before the same process runs across a full dataset."
     }
   },
   "Fabric": {
@@ -3605,6 +3640,11 @@
       "title": "Ready to automate FM procurement classification?",
       "lead": "Talk to sales. We will show you exactly how the engine works with your spend data.",
       "button": "Talk to sales"
+    },
+    "testimonial": {
+      "quote": "Our asset lists worked for mechanics on-site, but did not allow us to plan smart maintenance or manage bid risk in a data-driven way.",
+      "author": "Asset Manager",
+      "role": "Facilities Management, Europe"
     }
   },
   "UnspscNL": {
@@ -3699,6 +3739,11 @@
       "title": "Klaar om uw inkoopclassificatie te automatiseren?",
       "lead": "Praat met sales. We laten u zien hoe de classificatie-engine met uw data werkt.",
       "button": "Praat met sales"
+    },
+    "testimonial": {
+      "quote": "We used to have two full-time staff working on category assignment. Now the system does this for us — which has unlocked margin estimations further down the line too.",
+      "author": "Head of Procurement",
+      "role": "Infrastructure Contractor, Netherlands"
     }
   },
   "UnspscDE": {
@@ -3791,6 +3836,11 @@
       "title": "Bereit, Ihre Beschaffungsklassifizierung zu automatisieren?",
       "lead": "Sprechen Sie mit unserem Vertrieb. Wir zeigen Ihnen, wie die Klassifizierungs-Engine mit Ihren Daten funktioniert.",
       "button": "Mit Vertrieb sprechen"
+    },
+    "testimonial": {
+      "quote": "It would have taken five engineers and a full year to clean this up manually. We needed a better solution — and the turnaround went from weeks to under a day.",
+      "author": "Head of Operations",
+      "role": "FARO"
     }
   },
   "UnspscLookup": {
@@ -4059,6 +4109,15 @@
       "title": "Same problem in your asset register?",
       "lead": "Send us a sample of your asset or equipment data. We match it against your own reference list and send it back scored, so you see a first pass on your own records.",
       "ctaLabel": "Send a sample"
+    },
+    "factSheet": {
+      "clientLabel": "Client",
+      "dataLabel": "Data",
+      "dataValue": "Asset register: manufacturer and equipment type",
+      "scopeLabel": "Scope",
+      "approachLabel": "Approach",
+      "approachValue": "Rules + LLM cross-check + human review",
+      "scopeValue": "204,029 asset records"
     }
   },
   "CaseStrukton": {
@@ -4157,6 +4216,15 @@
       "title": "Want a case study built around your data?",
       "lead": "We can show you what the same approach would look like for your procurement or asset data.",
       "ctaLabel": "Send us a sample"
+    },
+    "factSheet": {
+      "clientLabel": "Client",
+      "dataLabel": "Data",
+      "dataValue": "Procurement spend, via SAP & procurement system",
+      "scopeLabel": "Scope",
+      "approachLabel": "Approach",
+      "approachValue": "AI + ML pipeline + human-in-the-loop",
+      "scopeValue": "35,000 to 50,000 lines a month"
     }
   },
   "CaseFaro": {
@@ -4244,6 +4312,15 @@
       "title": "Want a case study built around your data?",
       "lead": "We can show you what the same approach would look like for your procurement or asset data.",
       "ctaLabel": "Send us a sample"
+    },
+    "factSheet": {
+      "clientLabel": "Client",
+      "dataLabel": "Data",
+      "dataValue": "Incoming product lines, per container",
+      "scopeLabel": "Scope",
+      "approachLabel": "Approach",
+      "approachValue": "Machine learning, pre-LLM (own built technology)",
+      "scopeValue": "~30,000 lines per buying decision"
     }
   },
   "CaseFmo": {
@@ -4357,5 +4434,17 @@
       "notProvided": "Not provided",
       "signoff": "Thanks,"
     }
+  },
+  "TermsShort": {
+    "meta": {
+      "title": "Terms and Conditions",
+      "description": "Terms and conditions for using the Pearstop website."
+    },
+    "eyebrow": "Legal",
+    "title": "Terms and Conditions",
+    "lead": "A short, plain-English version of how you can use the Pearstop website.",
+    "sectionTitle": "Using this site",
+    "p1": "The content on this site is provided for general information only. It is not legal, financial, or procurement advice. We try to keep the information accurate and current, but we do not guarantee that every page will always be complete.",
+    "p2": "If you reuse the content, brand assets, or screenshots, please ask first. For questions about these terms, contact {email}."
   }
 }

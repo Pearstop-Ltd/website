@@ -27,53 +27,29 @@ const leaders = [
   },
 ];
 
-const operationsTeam = [
-  {
-    name: "Raeesah Thomas",
-    role: "Director of Operations",
-    image: siteConfig.assets.team.raeesah,
-    copy: "Raeesah's priority is practical results, efficiency, and growth. Balancing operations oversight with hands-on project management and sales leadership, Raeesah streamlines processes, drives client success, and turns strategy into measurable results.",
-  },
-  {
-    name: "Neharika Kishore",
-    role: "Marketing and Public Relations Manager",
-    image: siteConfig.assets.team.neharika,
-    copy: "Neharika is the voice behind clean data. Seamlessly blending marketing, public relations, and content strategy, Neharika crafts campaigns that build trust, spark conversations, and turn technical work into stories that resonate.",
-  },
-  {
-    name: "Max Capelle",
-    role: "Technical Advisor",
-    image: siteConfig.assets.team.max,
-    copy: "Max specialises in critically evaluating backend architecture, fine-tuning artificial intelligence, and aligning software design and client needs. Drawing on carefully honed expertise, Max ensures that the technical and practical dimensions are harmoniously integrated to deliver solutions that are both robust and client-focused.",
-  },
-];
+const operationsTeamImages = [siteConfig.assets.team.raeesah, siteConfig.assets.team.neharika, siteConfig.assets.team.max];
+const operationsTeamNames = ["Raeesah Thomas", "Neharika Kishore", "Max Capelle"];
 
-const developmentTeam = [
-  {
-    name: "Robin Muhia",
-    role: "Lead Developer",
-    image: siteConfig.assets.team.robin,
-    copy: "Robin is the solutions architect. Driving innovation in backend systems, Robin leads the development team, designs scalable platforms, and ensures every algorithm delivers accuracy and efficiency.",
-  },
-  {
-    name: "Dania Butt",
-    role: "Senior Developer",
-    image: siteConfig.assets.team.dania,
-    copy: "Dania focuses on building intuitive interfaces which turns complex datasets into user-friendly dashboards and tools.",
-  },
-  {
-    name: "Sjoerd Schoufs",
-    role: "Junior Developer",
-    image: siteConfig.assets.team.sjoerd,
-    copy: "Sjoerd manages Pearstop's digital front door. Sjoerd is dedicated to maintaining and enhancing Pearstop's website, blending clean design and reliable functionality together.",
-  },
-];
+const developmentTeamImages = [siteConfig.assets.team.robin, siteConfig.assets.team.dania, siteConfig.assets.team.sjoerd];
+const developmentTeamNames = ["Robin Muhia", "Dania Butt", "Sjoerd Schoufs"];
 
 export default async function AboutPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
   const prefix = locale === "en" ? "" : `/${locale}`;
   const t = await getTranslations("About");
+  const operationsTeamRaw = t.raw("operationsTeam") as { role: string; copy: string }[];
+  const developmentTeamRaw = t.raw("developmentTeam") as { role: string; copy: string }[];
+  const operationsTeam = operationsTeamRaw.map((person, i) => ({
+    ...person,
+    name: operationsTeamNames[i],
+    image: operationsTeamImages[i],
+  }));
+  const developmentTeam = developmentTeamRaw.map((person, i) => ({
+    ...person,
+    name: developmentTeamNames[i],
+    image: developmentTeamImages[i],
+  }));
 
   return (
     <>
@@ -147,7 +123,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
 
       <section className="about-leadership">
         <div className="container">
-          <SectionTitle title="Operations Team" />
+          <SectionTitle title={t("operationsTeamTitle")} />
           <div className="testimonials-grid">
             {operationsTeam.map((person) => (
               <article key={person.name} className="person-card">
@@ -167,7 +143,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
 
       <section className="about-leadership section-soft">
         <div className="container">
-          <SectionTitle title="Development Team" />
+          <SectionTitle title={t("developmentTeamTitle")} />
           <div className="testimonials-grid">
             {developmentTeam.map((person) => (
               <article key={person.name} className="person-card">

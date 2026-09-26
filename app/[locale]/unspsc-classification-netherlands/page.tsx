@@ -215,9 +215,9 @@ export default async function UnspscNLPage({ params }: { params: Promise<{ local
           <div className="row">
             <div className="col-md-8 col-md-offset-2">
               <QuoteBox
-                quote="We used to have two full-time staff working on category assignment. Now the system does this for us — which has unlocked margin estimations further down the line too."
-                author="Head of Procurement"
-                role="Infrastructure Contractor, Netherlands"
+                quote={t("testimonial.quote")}
+                author={t("testimonial.author")}
+                role={t("testimonial.role")}
               />
             </div>
           </div>

@@ -54,10 +54,10 @@ export default async function FaroCaseStudyPage({ params }: { params: Promise<{ 
             aside={
               <CaseFactSheet
                 rows={[
-                  { label: "Client", value: "FARO" },
-                  { label: "Data", value: "Incoming product lines, per container" },
-                  { label: "Scope", value: "~30,000 lines per buying decision" },
-                  { label: "Approach", value: "Machine learning, pre-LLM (own built technology)" }
+                  { label: t("factSheet.clientLabel"), value: "FARO" },
+                  { label: t("factSheet.dataLabel"), value: t("factSheet.dataValue") },
+                  { label: t("factSheet.scopeLabel"), value: t("factSheet.scopeValue") },
+                  { label: t("factSheet.approachLabel"), value: t("factSheet.approachValue") }
                 ]}
               />
             }

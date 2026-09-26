@@ -40,10 +40,10 @@ export default async function StruktonCaseStudyPage({ params }: { params: Promis
             aside={
               <CaseFactSheet
                 rows={[
-                  { label: "Client", value: "Strukton" },
-                  { label: "Data", value: "Procurement spend, via SAP & procurement system" },
-                  { label: "Scope", value: "35,000 to 50,000 lines a month" },
-                  { label: "Approach", value: "AI + ML pipeline + human-in-the-loop" }
+                  { label: t("factSheet.clientLabel"), value: "Strukton" },
+                  { label: t("factSheet.dataLabel"), value: t("factSheet.dataValue") },
+                  { label: t("factSheet.scopeLabel"), value: t("factSheet.scopeValue") },
+                  { label: t("factSheet.approachLabel"), value: t("factSheet.approachValue") }
                 ]}
               />
             }

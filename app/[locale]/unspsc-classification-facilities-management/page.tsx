@@ -233,9 +233,9 @@ export default async function UnspscFMPage({ params }: { params: Promise<{ local
           <div className="row">
             <div className="col-md-8 col-md-offset-2">
               <QuoteBox
-                quote="Our asset lists worked for mechanics on-site, but did not allow us to plan smart maintenance or manage bid risk in a data-driven way."
-                author="Asset Manager"
-                role="Facilities Management, Europe"
+                quote={t("testimonial.quote")}
+                author={t("testimonial.author")}
+                role={t("testimonial.role")}
               />
             </div>
           </div>

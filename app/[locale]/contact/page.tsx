@@ -24,7 +24,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
   const leaders = [
     { name: "Stephanie Wiechers", role: "CEO", image: siteConfig.assets.team.stephanie },
     { name: "Richard Wallace", role: "CCO", image: siteConfig.assets.team.richard },
-    { name: "Raeesah Thomas", role: "Director of Operations", image: siteConfig.assets.team.raeesah },
+    { name: "Raeesah Thomas", role: t("team.directorOfOperations"), image: siteConfig.assets.team.raeesah },
   ];
 
   return (

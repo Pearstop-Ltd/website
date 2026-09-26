@@ -562,7 +562,37 @@
         "copy": "Richard leitet die Kundenbetreuung bei Pearstop und sorgt dafür, dass jedes Projekt reibungslos läuft und das, was wir auf dem Papier versprechen, in der Praxis zu Ergebnissen wird."
       }
     ],
-    "buyerIntro": "Die Menschen, die Gebäude, Standorte und Netze bauen, betreiben und warten, wollen es richtig machen: sichere Standorte, konforme Anlagen und gute Orte zum Arbeiten und Leben. Die Daten dahinter sollten ihnen dabei helfen, nicht sie ausbremsen. Genau das reparieren wir."
+    "buyerIntro": "Die Menschen, die Gebäude, Standorte und Netze bauen, betreiben und warten, wollen es richtig machen: sichere Standorte, konforme Anlagen und gute Orte zum Arbeiten und Leben. Die Daten dahinter sollten ihnen dabei helfen, nicht sie ausbremsen. Genau das reparieren wir.",
+    "operationsTeamTitle": "Operations-Team",
+    "developmentTeamTitle": "Entwicklungsteam",
+    "operationsTeam": [
+      {
+        "role": "Director of Operations",
+        "copy": "Raeesahs Fokus liegt auf praktischen Ergebnissen, Effizienz und Wachstum. Sie verbindet operative Steuerung mit direktem Projektmanagement und Vertriebsführung, strafft Prozesse, treibt den Erfolg der Kunden voran und macht aus Strategie messbare Ergebnisse."
+      },
+      {
+        "role": "Marketing- und PR-Managerin",
+        "copy": "Neharika ist die Stimme hinter sauberen Daten. Sie verbindet Marketing, PR und Content-Strategie zu Kampagnen, die Vertrauen aufbauen, Gespräche anstoßen und technische Arbeit in Geschichten verwandeln, die wirken."
+      },
+      {
+        "role": "Technischer Berater",
+        "copy": "Max ist darauf spezialisiert, Backend-Architekturen kritisch zu bewerten, künstliche Intelligenz feinzujustieren und Softwaredesign auf die Bedürfnisse der Kunden abzustimmen. Mit gezielt geschärfter Expertise sorgt er dafür, dass technische und praktische Anforderungen zusammenpassen und robuste, kundenorientierte Lösungen entstehen."
+      }
+    ],
+    "developmentTeam": [
+      {
+        "role": "Lead Developer",
+        "copy": "Robin ist der Solutions Architect. Er treibt Innovation in den Backend-Systemen voran, leitet das Entwicklungsteam, entwirft skalierbare Plattformen und sorgt dafür, dass jeder Algorithmus präzise und effizient bleibt."
+      },
+      {
+        "role": "Senior Developer",
+        "copy": "Dania baut intuitive Oberflächen, die komplexe Datensätze in benutzerfreundliche Dashboards und Tools verwandeln."
+      },
+      {
+        "role": "Junior Developer",
+        "copy": "Sjoerd betreut die digitale Eingangstür von Pearstop. Er pflegt und verbessert die Website kontinuierlich und verbindet dabei klares Design mit zuverlässiger Funktionalität."
+      }
+    ]
   },
   "Contact": {
     "meta": {
@@ -595,7 +625,8 @@
     },
     "team": {
       "title": "Führungsteam",
-      "lead": "Ihre Lösungsverantwortlichen"
+      "lead": "Ihre Lösungsverantwortlichen",
+      "directorOfOperations": "Director of Operations"
     },
     "cta": {
       "title": "Nicht sicher, ob Pearstop das Richtige für Sie ist?",
@@ -1631,6 +1662,10 @@
       "button": "Mit Vertrieb sprechen",
       "secondaryButton": "Kostenloses Nachschlagetool testen",
       "lead": "Sprechen Sie mit Vertrieb, oder testen Sie zuerst eine einzelne Beschreibung im kostenlosen Lookup-Tool."
+    },
+    "howItWorks": {
+      "title": "Wie funktioniert KI-gestützte UNSPSC-Klassifizierung tatsächlich?",
+      "copy": "KI-gestützte UNSPSC-Klassifizierung nimmt eine Beschaffungsbeschreibung — aus einer strukturierten Ausgabendatei oder aus einer PDF-Rechnung extrahiert — und ordnet ihr den richtigen 8-stelligen UNSPSC-Commodity-Code zu. Gut gemacht bedeutet das nicht, ein Sprachmodell nach einem Code zu fragen und der Antwort blind zu vertrauen. Die Engine von Pearstop schlägt über eine LLM-Schicht einen Code vor, validiert diesen Code dann gegen den echten UNSPSC-Datensatz, bevor er akzeptiert wird, kombiniert das mit deterministischen Schlüsselwortregeln und einer lieferantenspezifischen Datenbank und speichert jede menschliche Korrektur als lieferantenspezifisches Gedächtnis, sodass dasselbe Muster nicht zweimal durchdacht werden muss. Ein kostenloser Pilot von rund 500 Zeilen lässt einen Kunden die Genauigkeit prüfen, die Aufteilung zwischen automatisch klassifiziert und zur Prüfung markiert, und wie tief das Ergebnis in die vierstufige Hierarchie reicht, bevor derselbe Prozess auf den vollständigen Datensatz angewendet wird."
     }
   },
   "Fabric": {
@@ -3372,6 +3407,11 @@
       "title": "Bereit, die FM-Beschaffungsklassifizierung zu automatisieren?",
       "button": "Mit Vertrieb sprechen",
       "lead": "Sprechen Sie mit Vertrieb. Wir zeigen Ihnen genau, wie die Engine mit Ihren Spend-Daten arbeitet."
+    },
+    "testimonial": {
+      "quote": "Unsere Anlagenlisten funktionierten für Techniker vor Ort, erlaubten uns aber nicht, Instandhaltung intelligent zu planen oder Angebotsrisiken datengestützt zu steuern.",
+      "author": "Asset Manager",
+      "role": "Facilities Management, Europa"
     }
   },
   "UnspscNL": {
@@ -3466,6 +3506,11 @@
       "title": "Bereit, Ihre Beschaffungsklassifizierung zu automatisieren?",
       "lead": "Buchen Sie eine 7-minütige Erstberatung. Wir zeigen Ihnen, wie die Klassifizierungs-Engine mit Ihren Daten arbeitet.",
       "button": "Mit Vertrieb sprechen"
+    },
+    "testimonial": {
+      "quote": "Früher hatten wir zwei Vollzeitkräfte für die Kategoriezuordnung. Jetzt übernimmt das System das für uns — was auch Margenschätzungen weiter unten im Prozess ermöglicht hat.",
+      "author": "Head of Procurement",
+      "role": "Infrastruktur-Dienstleister, Niederlande"
     }
   },
   "UnspscDE": {
@@ -3558,6 +3603,11 @@
       "title": "Bereit, Ihre Beschaffungsklassifizierung zu automatisieren?",
       "lead": "Sprechen Sie mit unserem Vertrieb. Wir zeigen Ihnen, wie die Klassifizierungs-Engine mit Ihren Daten funktioniert.",
       "button": "Mit Vertrieb sprechen"
+    },
+    "testimonial": {
+      "quote": "Das hätte fünf Ingenieure und ein ganzes Jahr gekostet, um das manuell zu bereinigen. Wir brauchten eine bessere Lösung — und die Durchlaufzeit sank von Wochen auf unter einen Tag.",
+      "author": "Head of Operations",
+      "role": "FARO"
     }
   },
   "UnspscLookup": {
@@ -4393,6 +4443,15 @@
       "title": "Dasselbe Problem in Ihrem Anlagenregister?",
       "lead": "Senden Sie uns eine Stichprobe Ihrer Anlagen- oder Ausrüstungsdaten. Wir gleichen sie mit Ihrer eigenen Referenzliste ab und senden sie bewertet zurück, damit Sie einen ersten Durchlauf an Ihren eigenen Daten sehen.",
       "ctaLabel": "Stichprobe senden"
+    },
+    "factSheet": {
+      "clientLabel": "Kunde",
+      "dataLabel": "Daten",
+      "dataValue": "Anlagenregister: Hersteller und Gerätetyp",
+      "scopeLabel": "Umfang",
+      "approachLabel": "Ansatz",
+      "approachValue": "Regeln + LLM-Gegenprüfung + menschliche Kontrolle",
+      "scopeValue": "204.029 Anlagendatensätze"
     }
   },
   "CaseStrukton": {
@@ -4491,6 +4550,15 @@
       "title": "Möchten Sie eine Case Study rund um Ihre eigenen Daten?",
       "lead": "Wir zeigen Ihnen, wie derselbe Ansatz für Ihre Einkaufs- oder Anlagendaten aussehen würde.",
       "ctaLabel": "Senden Sie uns eine Stichprobe"
+    },
+    "factSheet": {
+      "clientLabel": "Kunde",
+      "dataLabel": "Daten",
+      "dataValue": "Beschaffungsausgaben, über SAP und Procurement-System",
+      "scopeLabel": "Umfang",
+      "approachLabel": "Ansatz",
+      "approachValue": "KI- und ML-Pipeline mit menschlicher Kontrolle",
+      "scopeValue": "35.000 bis 50.000 Zeilen pro Monat"
     }
   },
   "CaseFaro": {
@@ -4578,6 +4646,15 @@
       "title": "Möchten Sie eine Case Study rund um Ihre eigenen Daten?",
       "lead": "Wir zeigen Ihnen, wie derselbe Ansatz für Ihre Einkaufs- oder Anlagendaten aussehen würde.",
       "ctaLabel": "Senden Sie uns eine Stichprobe"
+    },
+    "factSheet": {
+      "clientLabel": "Kunde",
+      "dataLabel": "Daten",
+      "dataValue": "Eingehende Produktzeilen, pro Container",
+      "scopeLabel": "Umfang",
+      "approachLabel": "Ansatz",
+      "approachValue": "Machine Learning, vor LLM (eigene Technologie)",
+      "scopeValue": "~30.000 Zeilen pro Kaufentscheidung"
     }
   },
   "CaseFmo": {
@@ -4691,5 +4768,17 @@
       "notProvided": "Nicht angegeben",
       "signoff": "Mit freundlichen Grüßen,"
     }
+  },
+  "TermsShort": {
+    "meta": {
+      "title": "Allgemeine Geschäftsbedingungen",
+      "description": "Allgemeine Geschäftsbedingungen für die Nutzung der Pearstop-Website."
+    },
+    "eyebrow": "Rechtliches",
+    "title": "Allgemeine Geschäftsbedingungen",
+    "lead": "Eine kurze, verständliche Version davon, wie Sie die Pearstop-Website nutzen dürfen.",
+    "sectionTitle": "Nutzung dieser Website",
+    "p1": "Die Inhalte dieser Website dienen ausschließlich der allgemeinen Information. Sie stellen keine Rechts-, Finanz- oder Beschaffungsberatung dar. Wir bemühen uns, die Informationen korrekt und aktuell zu halten, garantieren aber nicht, dass jede Seite jederzeit vollständig ist.",
+    "p2": "Wenn Sie Inhalte, Markenmaterial oder Screenshots weiterverwenden möchten, fragen Sie bitte vorher bei uns an. Bei Fragen zu diesen Bedingungen kontaktieren Sie uns unter {email}."
   }
 }

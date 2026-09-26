@@ -50,10 +50,10 @@ export default async function SpieCaseStudyPage({ params }: { params: Promise<{ 
             aside={
               <CaseFactSheet
                 rows={[
-                  { label: "Client", value: "SPIE Building Solutions BV" },
-                  { label: "Data", value: "Asset register: manufacturer and equipment type" },
-                  { label: "Scope", value: "204,029 asset records" },
-                  { label: "Approach", value: "Rules + LLM cross-check + human review" }
+                  { label: t("factSheet.clientLabel"), value: "SPIE Building Solutions BV" },
+                  { label: t("factSheet.dataLabel"), value: t("factSheet.dataValue") },
+                  { label: t("factSheet.scopeLabel"), value: t("factSheet.scopeValue") },
+                  { label: t("factSheet.approachLabel"), value: t("factSheet.approachValue") }
                 ]}
               />
             }

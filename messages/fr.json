@@ -562,7 +562,37 @@
         "copy": "Richard dirige la livraison client chez Pearstop, en veillant à ce que chaque mission se déroule sans accroc et à ce que les promesses sur papier deviennent des résultats concrets."
       }
     ],
-    "buyerIntro": "Les personnes qui construisent, exploitent et entretiennent bâtiments, sites et réseaux tiennent à bien faire les choses : des sites sûrs, des actifs conformes, des lieux où il fait bon travailler et vivre. Les données derrière ce travail devraient les aider, pas les ralentir. C'est cette partie-là que nous réparons."
+    "buyerIntro": "Les personnes qui construisent, exploitent et entretiennent bâtiments, sites et réseaux tiennent à bien faire les choses : des sites sûrs, des actifs conformes, des lieux où il fait bon travailler et vivre. Les données derrière ce travail devraient les aider, pas les ralentir. C'est cette partie-là que nous réparons.",
+    "operationsTeamTitle": "Équipe opérations",
+    "developmentTeamTitle": "Équipe développement",
+    "operationsTeam": [
+      {
+        "role": "Directrice des opérations",
+        "copy": "Raeesah privilégie les résultats concrets, l'efficacité et la croissance. Entre pilotage opérationnel, gestion de projet de terrain et direction commerciale, elle simplifie les processus, porte la réussite client et transforme la stratégie en résultats mesurables."
+      },
+      {
+        "role": "Responsable marketing et relations publiques",
+        "copy": "Neharika est la voix derrière des données propres. En alliant marketing, relations publiques et stratégie de contenu, elle conçoit des campagnes qui installent la confiance, suscitent la conversation et transforment un travail technique en histoires qui marquent."
+      },
+      {
+        "role": "Conseiller technique",
+        "copy": "Max est spécialisé dans l'évaluation critique de l'architecture back-end, l'ajustement fin de l'intelligence artificielle et l'alignement entre conception logicielle et besoins clients. Grâce à une expertise soigneusement affûtée, il veille à ce que les dimensions techniques et pratiques s'articulent pour livrer des solutions à la fois robustes et centrées sur le client."
+      }
+    ],
+    "developmentTeam": [
+      {
+        "role": "Lead Developer",
+        "copy": "Robin est l'architecte solutions. Moteur de l'innovation sur les systèmes back-end, il dirige l'équipe de développement, conçoit des plateformes évolutives et veille à ce que chaque algorithme reste précis et performant."
+      },
+      {
+        "role": "Développeuse senior",
+        "copy": "Dania conçoit des interfaces intuitives qui transforment des jeux de données complexes en tableaux de bord et outils faciles à utiliser."
+      },
+      {
+        "role": "Développeur junior",
+        "copy": "Sjoerd gère la porte d'entrée numérique de Pearstop. Il veille à maintenir et améliorer le site web de l'entreprise, en alliant design soigné et fonctionnement fiable."
+      }
+    ]
   },
   "Contact": {
     "meta": {
@@ -595,7 +625,8 @@
     },
     "team": {
       "title": "Équipe dirigeante",
-      "lead": "Les artisans de votre solution"
+      "lead": "Les artisans de votre solution",
+      "directorOfOperations": "Directrice des opérations"
     },
     "cta": {
       "title": "Vous ne savez pas si Pearstop est fait pour vous ?",
@@ -1631,6 +1662,10 @@
       "button": "Parler à un commercial",
       "secondaryButton": "Essayer la recherche gratuite",
       "lead": "Parlez à un commercial, ou testez d'abord une description sur l'outil de recherche gratuit."
+    },
+    "howItWorks": {
+      "title": "Comment fonctionne réellement la classification UNSPSC par IA ?",
+      "copy": "La classification UNSPSC par IA part d'une description d'achat — issue d'un fichier de dépenses structuré ou extraite d'une facture PDF — et lui attribue le bon code commodité UNSPSC à 8 chiffres. Bien faite, cela ne consiste pas à demander un code à un modèle de langage et à faire confiance à la réponse telle quelle. Le moteur de Pearstop propose un code via une couche LLM, puis valide ce code par rapport au véritable jeu de données UNSPSC avant de l'accepter, combine cela avec des règles de mots-clés déterministes et une base de données propre à chaque fournisseur, et conserve chaque correction humaine comme mémoire spécifique au fournisseur, afin de ne pas devoir raisonner deux fois sur le même cas. Un pilote gratuit d'environ 500 lignes permet à un client de vérifier la précision, la répartition entre classification automatique et lignes signalées pour révision, ainsi que la profondeur atteinte dans la hiérarchie à quatre niveaux, avant que le même processus ne s'applique à l'ensemble du jeu de données."
     }
   },
   "Fabric": {
@@ -3372,6 +3407,11 @@
       "title": "Prêt à automatiser la classification des achats FM ?",
       "button": "Parler à un commercial",
       "lead": "Parlez à un commercial. Nous vous montrerons exactement comment le moteur fonctionne avec vos données de dépenses."
+    },
+    "testimonial": {
+      "quote": "Nos listes d'actifs fonctionnaient pour les techniciens sur site, mais ne nous permettaient pas de planifier une maintenance intelligente ni de gérer le risque des offres de façon pilotée par les données.",
+      "author": "Asset Manager",
+      "role": "Facilities management, Europe"
     }
   },
   "UnspscNL": {
@@ -3466,6 +3506,11 @@
       "title": "Prêt à automatiser votre classification des achats ?",
       "lead": "Parlez à un commercial. Nous vous montrerons comment le moteur de classification fonctionne avec vos données.",
       "button": "Parler à un commercial"
+    },
+    "testimonial": {
+      "quote": "Nous avions deux collaborateurs à temps plein sur l'attribution des catégories. Désormais, le système le fait pour nous — ce qui a aussi débloqué les estimations de marge en aval.",
+      "author": "Directeur des Achats",
+      "role": "Entreprise d'infrastructure, Pays-Bas"
     }
   },
   "UnspscDE": {
@@ -3558,6 +3603,11 @@
       "title": "Prêt à automatiser votre classification des achats ?",
       "lead": "Parlez à un commercial. Nous vous montrerons comment le moteur de classification fonctionne avec vos données.",
       "button": "Parler à un commercial"
+    },
+    "testimonial": {
+      "quote": "Il aurait fallu cinq ingénieurs et une année complète pour nettoyer cela manuellement. Nous avions besoin d'une meilleure solution — et le délai est passé de plusieurs semaines à moins d'une journée.",
+      "author": "Head of Operations",
+      "role": "FARO"
     }
   },
   "UnspscLookup": {
@@ -4393,6 +4443,15 @@
       "title": "Le même problème dans votre registre d'actifs ?",
       "lead": "Envoyez-nous un échantillon de vos données d'actifs ou d'équipements. Nous le rapprochons de votre propre liste de référence et vous le renvoyons noté, pour que vous voyiez un premier passage sur vos propres données.",
       "ctaLabel": "Envoyer un échantillon"
+    },
+    "factSheet": {
+      "clientLabel": "Client",
+      "dataLabel": "Données",
+      "dataValue": "Registre des actifs : fabricant et type d'équipement",
+      "scopeLabel": "Périmètre",
+      "approachLabel": "Approche",
+      "approachValue": "Règles + vérification croisée par LLM + contrôle humain",
+      "scopeValue": "204 029 fiches d'actifs"
     }
   },
   "CaseStrukton": {
@@ -4491,6 +4550,15 @@
       "title": "Une étude de cas construite autour de vos données ?",
       "lead": "Nous pouvons vous montrer à quoi ressemblerait la même approche pour vos données d'achats ou d'actifs.",
       "ctaLabel": "Envoyez-nous un échantillon"
+    },
+    "factSheet": {
+      "clientLabel": "Client",
+      "dataLabel": "Données",
+      "dataValue": "Dépenses d'achats, via SAP et système d'achats",
+      "scopeLabel": "Périmètre",
+      "approachLabel": "Approche",
+      "approachValue": "Pipeline IA + ML avec contrôle humain",
+      "scopeValue": "35 000 à 50 000 lignes par mois"
     }
   },
   "CaseFaro": {
@@ -4578,6 +4646,15 @@
       "title": "Une étude de cas construite autour de vos données ?",
       "lead": "Nous pouvons vous montrer à quoi ressemblerait la même approche pour vos données d'achats ou d'actifs.",
       "ctaLabel": "Envoyez-nous un échantillon"
+    },
+    "factSheet": {
+      "clientLabel": "Client",
+      "dataLabel": "Données",
+      "dataValue": "Lignes de produits entrants, par conteneur",
+      "scopeLabel": "Périmètre",
+      "approachLabel": "Approche",
+      "approachValue": "Machine learning, pré-LLM (technologie développée en interne)",
+      "scopeValue": "~30 000 lignes par décision d'achat"
     }
   },
   "CaseFmo": {
@@ -4691,5 +4768,17 @@
       "notProvided": "Non renseigné",
       "signoff": "Cordialement,"
     }
+  },
+  "TermsShort": {
+    "meta": {
+      "title": "Conditions générales",
+      "description": "Conditions générales d'utilisation du site web Pearstop."
+    },
+    "eyebrow": "Mentions légales",
+    "title": "Conditions générales",
+    "lead": "Une version courte et claire des conditions d'utilisation du site web Pearstop.",
+    "sectionTitle": "Utilisation de ce site",
+    "p1": "Le contenu de ce site est fourni à titre d'information générale uniquement. Il ne constitue pas un conseil juridique, financier ou en matière d'achats. Nous nous efforçons de maintenir les informations exactes et à jour, mais ne garantissons pas l'exhaustivité de chaque page à tout moment.",
+    "p2": "Si vous souhaitez réutiliser le contenu, les éléments de marque ou des captures d'écran, merci de nous demander au préalable. Pour toute question sur ces conditions, contactez {email}."
   }
 }
