@@ -9,9 +9,9 @@ import { alternateLanguages, siteConfig } from "@/lib/site";
 import styles from "@/components/case-design.module.css";
 
 export const metadata: Metadata = {
-  title: "Cleaning Consumables Consolidation (Anonymized Use Case)",
+  title: "Cleaning Consumables Consolidation",
   description:
-    "Nobody chose 30 toilet paper suppliers. Classified, the pattern was visible in days. An anonymized, illustrative use case for cleaning and soft FM procurement.",
+    "Nobody chose 30 toilet paper suppliers. Classified, the pattern was visible in days.",
   alternates: {
     canonical: `${siteConfig.url}/cases/cleaning-consumables-consolidation`,
     languages: alternateLanguages("/cases/cleaning-consumables-consolidation")
@@ -55,7 +55,7 @@ export default function CleaningCaseStudyPage() {
           >
             <div style={{ display: "flex", gap: 10, alignItems: "center", flexWrap: "wrap" }}>
               <CaseTypeBadge type="pattern" />
-              <span style={{ fontSize: 13, color: "var(--muted)" }}>Cleaning & soft FM · Illustrative data</span>
+              <span style={{ fontSize: 13, color: "var(--muted)" }}>Cleaning & soft FM</span>
             </div>
             <h1 style={{ margin: 0, fontSize: "clamp(2.2rem, 4.2vw, 3.6rem)", lineHeight: 1.06, fontWeight: 600, letterSpacing: "-0.025em", color: "var(--primary-dark)" }}>
               Nobody chose 30 toilet paper suppliers.
