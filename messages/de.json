@@ -125,7 +125,8 @@
         "role": "CCO",
         "copy": "Richard leitet die Kundenbetreuung bei Pearstop und sorgt dafür, dass jedes Projekt reibungslos läuft und das, was wir auf dem Papier versprechen, in der Praxis zu Ergebnissen wird."
       }
-    ]
+    ],
+    "buyerIntro": "Die Menschen, die Gebäude, Standorte und Netze bauen, betreiben und warten, wollen es richtig machen: sichere Standorte, konforme Anlagen und gute Orte zum Arbeiten und Leben. Die Daten dahinter sollten ihnen dabei helfen, nicht sie ausbremsen. Genau das reparieren wir."
   },
   "Contact": {
     "meta": {
@@ -175,7 +176,44 @@
     "hero": {
       "eyebrow": "Lösungen",
       "title": "Verwandeln Sie unübersichtliche Daten in Entscheidungen",
-      "lead": "Pearstop liefert fünf Datenintegritätslösungen für technische Branchen. Jede zielt auf ein bestimmtes Datenproblem ab, und jede ist darauf ausgelegt, Ihre Margen zu schützen."
+      "lead": "Pearstop liefert fünf Datenintegritätslösungen für technische Branchen. Jede zielt auf ein bestimmtes Datenproblem ab, und jede ist darauf ausgelegt, Ihre Margen zu schützen.",
+      "primaryLabel": "Senden Sie uns 200 Zeilen",
+      "secondaryLabel": "Mit Vertrieb sprechen",
+      "builtForLabel": "Entwickelt für",
+      "builtFor": [
+        {
+          "id": "facilities-management",
+          "label": "Facility Management"
+        },
+        {
+          "id": "hard-services",
+          "label": "Hard Services"
+        },
+        {
+          "id": "cleaning",
+          "label": "Reinigung"
+        },
+        {
+          "id": "construction",
+          "label": "Bau"
+        },
+        {
+          "id": "infrastructure",
+          "label": "Infrastruktur"
+        },
+        {
+          "id": "manufacturing",
+          "label": "Fertigung"
+        },
+        {
+          "id": "asset-owners",
+          "label": "Asset-Owner"
+        },
+        {
+          "id": "procurement-consultancies",
+          "label": "Procurement-Beratungen"
+        }
+      ]
     },
     "cards": {
       "title": "Fünf Lösungen. Ein Ziel.",
@@ -219,7 +257,9 @@
       "engineLabel": "Pearstop-Engine",
       "engineCopy": "Automatisierte Bereinigung, Standardisierung und Kategorisierung. Bis zu 95% Genauigkeit, kein manueller Aufwand.",
       "outputLabel": "Saubere, entscheidungsreife Daten",
-      "outputCopy": "Vertrauenswürdige Daten, die sich in Ihre BI-Tools einbinden lassen, Ihre Angebote fundieren und Ihre Margen schützen."
+      "outputCopy": "Vertrauenswürdige Daten, die sich in Ihre BI-Tools einbinden lassen, Ihre Angebote fundieren und Ihre Margen schützen.",
+      "eyebrow": "Der Pearstop-Ansatz",
+      "body": "Eine sichere, gut geführte Baustelle lebt davon, dass jedes Detail stimmt, jedes Mal. Genau diese Sorgfalt bringen wir in Ihre Daten: jede Zeile gelesen, bereinigt und gekennzeichnet, alles Unsichere von einem Menschen geprüft. Der Output lässt sich direkt in die Tools einbinden, die Sie bereits nutzen."
     },
     "geoBlock": {
       "title": "Welche Datenqualitätsprobleme löst Pearstop?",
@@ -244,6 +284,245 @@
           "copy": "White-Label-Spend-Klassifizierung unter Ihrer eigenen Taxonomie, sodass die Mandatsmarge in die Analyse fließt, nicht in manuelle Bereinigung."
         }
       ]
+    },
+    "breadcrumb": {
+      "home": "Startseite",
+      "current": "Lösungen"
+    },
+    "problems": {
+      "eyebrow": "Beginnen Sie, wo es wehtut",
+      "title": "Wählen Sie das Problem. Wir setzen dort an.",
+      "orderLabel": "Die meisten Teams durchlaufen diese Schritte in dieser Reihenfolge:",
+      "order": [
+        {
+          "id": "extraction",
+          "label": "Rechnungen lesen"
+        },
+        {
+          "id": "classification",
+          "label": "Jede Zeile kennzeichnen"
+        },
+        {
+          "id": "visibility",
+          "label": "Ausgaben sichtbar machen"
+        },
+        {
+          "id": "benchmarking",
+          "label": "Jeden Preis prüfen"
+        },
+        {
+          "id": "readiness",
+          "label": "Bereit für ERP, Fabric und KI"
+        }
+      ],
+      "items": [
+        {
+          "id": "extraction",
+          "badgeLabel": "Rechnungen lesen",
+          "pain": "Rechnungen liegen ungelesen im Posteingang, sodass noch nichts zu analysieren ist.",
+          "title": "Rechnungs- und Dokumentenextraktion",
+          "body": "Verwandeln Sie ungelesene PDF-Rechnungen, Scans und Lieferscheine automatisch in strukturierte, gekennzeichnete Positionen. Der Ausgangspunkt für die Ausgabenanalyse und alles, was danach kommt.",
+          "href": "/invoice-data-extraction",
+          "related": []
+        },
+        {
+          "id": "classification",
+          "badgeLabel": "Jede Zeile kennzeichnen",
+          "pain": "Ausgaben werden von Hand kodiert, an jedem Standort anders, oder gar nicht.",
+          "title": "UNSPSC-Klassifizierung",
+          "body": "Klassifizieren Sie automatisch Jahre an Freitext-Bestelldaten mithilfe von UNSPSC, einschließlich der Rückverfolgung von Hard-Services-Teilen zum echten Herstellercode. Bis zu 95 % der Ausgabenpositionen werden automatisch klassifiziert.",
+          "related": [
+            {
+              "label": "UNSPSC für FM",
+              "href": "/unspsc-classification-facilities-management"
+            },
+            {
+              "label": "Niederlande",
+              "href": "/unspsc-classification-netherlands"
+            },
+            {
+              "label": "Deutschland",
+              "href": "/unspsc-classification-germany"
+            }
+          ],
+          "href": "/unspsc"
+        },
+        {
+          "id": "visibility",
+          "badgeLabel": "Ausgaben sichtbar machen",
+          "pain": "Ein Einsparziel oder eine Ausschreibung braucht eine echte Basis, und niemand kann sie liefern.",
+          "title": "Spend Visibility",
+          "body": "Erstellen Sie eine echte Ausgabenbasis aus unübersichtlichen Rechnungs- und Lieferantendaten, aufgeschlüsselt nach Leistungslinie und Gesellschaft, sodass eine Verhandlung, Ausschreibung oder Rahmenvertragsprüfung von einer Zahl statt von einer Vermutung ausgeht.",
+          "related": [
+            {
+              "label": "Spend Cube & Dashboards",
+              "href": "/spend-cube"
+            }
+          ],
+          "href": "/procurement-data-quality"
+        },
+        {
+          "id": "benchmarking",
+          "badgeLabel": "Jeden Preis prüfen",
+          "pain": "Jede Rechnung braucht ein Ja oder Nein, und es fehlt ein Benchmark, um zu sagen, ob der Preis angemessen ist.",
+          "title": "Spend Benchmarking",
+          "body": "Jede Zeile wird gekennzeichnet und mit dem verglichen, was Sie normalerweise zahlen, über Lieferanten, Standorte und Dienstleister hinweg, sodass Sie sofort sehen, ob ein Preis im üblichen Rahmen liegt, und ihn freigeben können, ohne zu eskalieren.",
+          "related": [
+            {
+              "label": "Spend Cube & Dashboards",
+              "href": "/spend-cube"
+            }
+          ],
+          "href": "/asset-data-management"
+        },
+        {
+          "id": "readiness",
+          "badgeLabel": "Bereit für ERP, Fabric und KI",
+          "pain": "Ein ERP-, Fabric- oder KI-Projekt steht an, und die Daten sind nicht bereit dafür.",
+          "title": "Datenbereitschaft",
+          "body": "Eine ERP-Migration, ein Microsoft-Fabric-Rollout und eine KI-Initiative gehen alle davon aus, dass die zugrunde liegenden Daten bereits sauber und strukturiert sind. Ist das nicht der Fall, trägt jede von ihnen die Unordnung einfach in ein neues System. Pearstop bereinigt zuerst die Daten.",
+          "related": [
+            {
+              "label": "Fabric-bereit",
+              "href": "/fabric"
+            },
+            {
+              "label": "KI-Bereitschaft",
+              "href": "/ai-readiness"
+            }
+          ],
+          "href": "/data-quality",
+          "wide": true
+        }
+      ],
+      "exploreLink": "So funktioniert es →"
+    },
+    "who": {
+      "eyebrow": "Für wen",
+      "title": "Entwickelt für Unternehmen, die projektbezogen einkaufen",
+      "items": [
+        {
+          "id": "facilities-management",
+          "title": "Facility Management",
+          "pain": "Daten treffen aus jeder Leistungslinie in einem anderen Format ein.",
+          "linkLabel": "So wirkt es sich aus →",
+          "href": "/industries#facilities-management"
+        },
+        {
+          "id": "hard-services",
+          "title": "Hard Services",
+          "pain": "Derselbe Lieferant taucht unter Dutzenden Namen auf, und Anlagenlisten stimmen nie überein.",
+          "linkLabel": "So wirkt es sich aus →",
+          "href": "/industries#hard-services"
+        },
+        {
+          "id": "cleaning",
+          "title": "Reinigung",
+          "pain": "Rechnungen stapeln sich ungelesen, und dünne Margen lassen keinen Raum für Vermutungen.",
+          "linkLabel": "So wirkt es sich aus →",
+          "href": "/industries#cleaning"
+        },
+        {
+          "id": "construction",
+          "title": "Bau",
+          "pain": "Sie kalkulieren Angebote aus dem Gedächtnis, weil niemand historische Ist-Zahlen abrufen kann.",
+          "linkLabel": "So wirkt es sich aus →",
+          "href": "/industries#construction"
+        },
+        {
+          "id": "infrastructure",
+          "title": "Infrastruktur",
+          "pain": "Ein Einsparziel ist benannt, und die Daten zeigen nicht, wo es sich verbirgt.",
+          "linkLabel": "So wirkt es sich aus →",
+          "href": "/industries#infrastructure"
+        },
+        {
+          "id": "manufacturing",
+          "title": "Fertigung",
+          "pain": "Eine Gesellschaft nutzt bereits UNSPSC, eine andere muss sich daran ausrichten.",
+          "linkLabel": "So wirkt es sich aus →",
+          "href": "/industries#manufacturing"
+        },
+        {
+          "id": "asset-owners",
+          "title": "Asset-Owner",
+          "pain": "Ihr FM-Dienstleister liefert die Kostendaten, und Sie haben keine Möglichkeit, sie zu prüfen.",
+          "linkLabel": "Asset Data Management →",
+          "href": "/asset-data-management"
+        },
+        {
+          "id": "procurement-consultancies",
+          "title": "Procurement-Beratungen",
+          "pain": "Ihre Analysten verbringen Kundenzeit mit Datenbereinigung, bevor die Analyse überhaupt beginnt.",
+          "linkLabel": "Für Procurement-Beratungen →",
+          "href": "/procurement-consultancies"
+        }
+      ]
+    },
+    "tools": {
+      "eyebrow": "Kostenlose UNSPSC-Tools",
+      "title": "Noch nicht bereit für ein Gespräch? Schlagen Sie etwas nach.",
+      "items": [
+        {
+          "title": "Kostenloser UNSPSC-Lookup",
+          "body": "Finden Sie den passenden Code für jedes Produkt oder jede Dienstleistung.",
+          "linkLabel": "Öffnen →",
+          "href": "/unspsc-code-lookup"
+        },
+        {
+          "title": "UNSPSC-Taxonomiebaum",
+          "body": "Durchsuchen Sie die vollständige Hierarchie, vom Segment bis zur Commodity.",
+          "linkLabel": "Öffnen →",
+          "href": "/unspsc-classification-demo"
+        },
+        {
+          "title": "KI-UNSPSC-Klassifizierungsleitfaden",
+          "body": "Wie KI-Klassifizierung funktioniert und wo es einen Menschen braucht.",
+          "linkLabel": "Öffnen →",
+          "href": "/unspsc-ai-classification-guide"
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "Fragen",
+      "title": "Häufig gestellt",
+      "items": [
+        {
+          "q": "Welche Datenqualitätsprobleme löst Pearstop?",
+          "a": "Hard-Services-, Bau-, Infrastruktur- und Fertigungsunternehmen teilen eine gemeinsame Herausforderung: Ausgaben- und Anlagendaten, die verstreut, uneinheitlich und teamübergreifend schwer nutzbar sind. Schlechte Procurement-Datenqualität, unzuverlässige Anlagenregister und unklassifizierte Ausgaben sind die häufigsten Blockaden für Category Management, vorausschauende Wartung und die Umstellung auf neue Systeme. Pearstop ist darauf spezialisiert, diese Ausgaben- und Anlagendaten zu bereinigen und zu strukturieren, damit technische Unternehmen darauf handeln können."
+        },
+        {
+          "q": "Mit welcher Lösung sollte ich beginnen?",
+          "a": "Beginnen Sie mit dem Problem, das gerade vor Ihnen liegt. Wenn Rechnungen ungelesen liegen bleiben, beginnen Sie mit der Extraktion. Wenn Ausgaben von Hand oder gar nicht kodiert werden, beginnen Sie mit der UNSPSC-Klassifizierung. Wenn Sie eine Basis für eine Ausschreibung oder ein Einsparziel brauchen, beginnen Sie mit Spend Visibility. Die meisten Teams durchlaufen diese Schritte in genau dieser Reihenfolge."
+        },
+        {
+          "q": "Müssen unsere Daten vorher schon sauber sein?",
+          "a": "Nein. Die Datenbereinigung ist der erste Schritt, den Pearstop übernimmt. Senden Sie Rechnungen, ERP-Exporte, Portal-Downloads oder Tabellenkalkulationen in dem Zustand, in dem sie sind."
+        },
+        {
+          "q": "Kann Pearstop uns sagen, ob ein Preis angemessen ist?",
+          "a": "Ja. Jede Zeile erhält eine einheitliche Kennzeichnung, sodass sich derselbe Artikel über Lieferanten, Standorte und Dienstleister hinweg vergleichen lässt. Sie sehen sofort, ob ein Preis im üblichen Rahmen liegt, bevor Sie ihn freigeben. Asset-Owner nutzen das, um die Ausgaben zu prüfen, die ihr FM-Dienstleister für sie verwaltet."
+        },
+        {
+          "q": "Mit welchen Branchen arbeitet Pearstop?",
+          "a": "Facility Management, Hard Services, Reinigung, Bau, Infrastruktur und Fertigung. Außerdem Asset-Owner, die FM auslagern, und Procurement-Beratungen, die Ausgabenanalysen für ihre Kunden durchführen."
+        },
+        {
+          "q": "Wie genau ist die automatische Ausgabenklassifizierung?",
+          "a": "Rund 95 % der Zeilen werden automatisch klassifiziert. Der Rest wird markiert und an eine Person weitergeleitet, sodass die Genauigkeit hoch bleibt, ohne dass jede Zeile manuell geprüft werden muss."
+        },
+        {
+          "q": "Wie lange dauert das?",
+          "a": "Eine erste Probe von 200 Zeilen kommt in der Regel innerhalb weniger Werktage zurück. Danach läuft die Klassifizierung fortlaufend, sobald neue Rechnungen eintreffen."
+        }
+      ]
+    },
+    "closing": {
+      "title": "Nicht sicher, welche Lösung Sie brauchen?",
+      "body": "Buchen Sie ein 15-minütiges Erstgespräch. Wir identifizieren genau, welches Datenproblem Sie am meisten kostet, und zeigen Ihnen, wie Sie es lösen.",
+      "primaryLabel": "15-minütiges Erstgespräch buchen",
+      "secondaryLabel": "Oder senden Sie uns 200 Zeilen →",
+      "tertiaryLabel": "Branchen ansehen"
     }
   },
   "DataQuality": {
@@ -399,6 +678,10 @@
       "b3": {
         "title": "Rahmenvertragstreue geprüft, nicht angenommen",
         "copy": "Sehen Sie, wo sich der laufende Einkauf von einer vor Jahren unterzeichneten Vereinbarung entfernt hat - im gesamten Unternehmen, nicht nur in den Kategorien, die zufällig jemand beobachtet."
+      },
+      "b4": {
+        "title": "Vertragsfremde Ausgaben sichtbar gemacht",
+        "copy": "Ausgaben bei Lieferanten außerhalb Ihrer Rahmenverträge oder zugelassenen Liste werden nach Kategorie sichtbar, sodass Compliance-Lücken auffallen, bevor eine Prüfung sie findet."
       }
     },
     "quote": {
@@ -726,6 +1009,10 @@
       {
         "question": "Wie lange dauert die UNSPSC-Klassifizierung?",
         "answer": "Die meisten Kunden haben innerhalb von vier bis sechs Wochen nach dem Start einen sauberen, klassifizierten Datensatz. Das erste Projekt beginnt mit einer Data Stability Baseline, damit Sie die Ausgabequalität beurteilen können, bevor Sie sich zur laufenden Klassifizierung verpflichten."
+      },
+      {
+        "question": "Kann UNSPSC-klassifizierter Spend für die Scope-3-Emissionsberichterstattung genutzt werden?",
+        "answer": "Ja. Die ausgabenbasierte Methode für Scope 3 multipliziert die Ausgaben je Kategorie mit einem Emissionsfaktor. Die Ausgaben müssen daher zunächst nach Kategorie klassifiziert werden, und UNSPSC liefert konsistente Kategorien über Lieferanten, Standorte und Jahre hinweg. Pearstop liefert die klassifizierten Ausgaben; die Emissionsberechnung erfolgt in Ihrem Tool für die Klimabilanzierung."
       }
     ],
     "related": {
@@ -1097,11 +1384,14 @@
       "title": "Was unsere Kunden sagen",
       "lead": "Von Einkaufsteams bis zu Betriebsleitern - die Wirkung zeigt sich in den Zahlen.",
       "t1": {
-        "text": "Unsere Anlagendaten waren über Tabellenkalkulationen verstreut und speisten sich aus den Altsystemen unserer Kunden. Nichts davon war konsistent genug, um analytisch etwas damit anzufangen. Pearstop konsolidierte und strukturierte es, und plötzlich hatten wir etwas, worauf wir tatsächlich aufbauen konnten."
+        "text": "Unsere Anlagendaten waren über Tabellenkalkulationen verstreut und speisten sich aus den Altsystemen unserer Kunden. Nichts davon war konsistent genug, um analytisch etwas damit anzufangen. Pearstop konsolidierte und strukturierte es, und plötzlich hatten wir etwas, worauf wir tatsächlich aufbauen konnten.",
+        "name": "Bart van Peij",
+        "role": "Head of Master Data Management · SPIE Building Solutions"
       },
       "t2": {
         "text": "Unsere Standortbesuchsberichte kommen in jedem erdenklichen Format - handschriftliche Notizen, Rechtschreibfehler, Kritzeleien. Pearstop hat ein System gebaut, das sie automatisch in ein sauberes Angebotsdokument überführt. Das spart unserem Team bei jedem Auftrag Stunden.",
-        "name": "Vince Out"
+        "name": "Vince Out",
+        "role": "Commercial Manager · Fertigung"
       },
       "t3": {
         "text": "Wir hatten Tausende von Produktpositionen, die klassifiziert werden mussten, bevor wir überhaupt anfangen konnten, unsere Kosten zu verstehen. Pearstop klassifizierte sie in weniger als einer Woche. Das hätte unser Team sechs Monate gekostet und wäre immer noch nicht so genau gewesen.",
@@ -1121,6 +1411,34 @@
       "lead": "Sagen Sie uns, wo Ihre Margen verloren gehen. Wir zeigen Ihnen genau, wie Pearstop das behebt.",
       "bookDemo": "Demo buchen",
       "exploreSolutions": "Lösungen entdecken"
+    },
+    "featured": {
+      "pill": "Ausgewählte Fallstudie",
+      "p1": "Das Anlagenregister von SPIE Building Solutions wurde über viele Jahre aus unterschiedlichen Wartungssystemen, von Subunternehmern und durch manuelle Erfassung gespeist. Derselbe Hersteller konnte unter einem Dutzend verschiedener Schreibweisen auftauchen, und Ausrüstungstypen fehlten oder waren häufig falsch erfasst.",
+      "p2": "Pearstop wendete seine Klassifikations-Pipeline für Procurement-Daten an, um 9.175 Lieferantennamen-Varianten zu 1.493 kanonischen Lieferanten über 204.029 Anlagendatensätze zu konsolidieren – dieselbe Engine, die auch Ausgabendaten bereinigt, hier auf einem anderen unübersichtlichen Datensatz erprobt.",
+      "quote": "Das Confidence-Scoring gab unserem Team Klarheit, wo die Prüfzeit zuerst investiert werden sollte, statt bei 200.000 Zeilen bei null anzufangen.",
+      "quoteAuthor": "Bart van Peij",
+      "quoteRole": "Head of Master Data Management, SPIE Building Solutions",
+      "readFull": "Vollständige Fallstudie lesen →",
+      "statsHeader": "Ergebnisse auf einen Blick",
+      "stats": [
+        {
+          "num": "204.029",
+          "label": "Verarbeitete Anlagendatensätze"
+        },
+        {
+          "num": "9.175 → 1.493",
+          "label": "Konsolidierte Lieferantenvarianten"
+        },
+        {
+          "num": "73,1%",
+          "label": "Bestätigte Übereinstimmungsrate"
+        },
+        {
+          "num": "107.081",
+          "label": "Angereicherte Zeilen"
+        }
+      ]
     }
   },
   "Industries": {
@@ -1129,6 +1447,8 @@
       "description": "Pearstop arbeitet mit Infrastruktur, Facility Management, Reinigung, Bau, Fertigung und Asset-Owner-Organisationen. Jede Branche hat ein anderes Datenproblem - sehen Sie, wie wir es lösen."
     },
     "hero": {
+      "primaryLabel": "Senden Sie uns eine Datenprobe. Wir bereinigen sie kostenlos.",
+      "secondaryLabel": "15-minütiges Erstgespräch buchen",
       "eyebrow": "Branchen",
       "title": "Branchen, die wir bedienen",
       "lead": "Pearstop bereinigt und klassifiziert operative Daten für die Branchen mit den umfangreichsten und unübersichtlichsten Ausgaben: Infrastruktur, Facility Management, Bau und Fertigung. Finden Sie unten Ihre Branche."
@@ -1448,6 +1768,581 @@
           "a": "Die oben genannten Datenprobleme sind nicht auf diese Branchen beschränkt. Wenn Ihr Team komplexe operative Ausgaben- oder Anlagendaten verwaltet, mit uneinheitlichen Lieferantendaten zu tun hat oder sich auf eine digitale Transformation vorbereitet, ist das zugrunde liegende Problem in der Regel dasselbe. Buchen Sie ein Gespräch, und wir sagen Ihnen offen, ob es passt."
         }
       ]
+    },
+    "breadcrumb": {
+      "home": "Startseite",
+      "current": "Branchen"
+    },
+    "overview": {
+      "eyebrow": "Wo Pearstop ansetzt",
+      "title": "Was trifft auf Sie zu?",
+      "cards": [
+        {
+          "id": "infrastructure",
+          "name": "Infrastruktur",
+          "pain": "Ein Einsparziel ist benannt, und die Daten zeigen nicht, wo es sich verbirgt.",
+          "outcome": "Erkennen Sie, wo ein benanntes Einsparziel tatsächlich in den Ausgaben steckt, bevor Sie es mühsam von Hand suchen.",
+          "linkLabel": "Ihre Branche ansehen ↓",
+          "href": "#infrastructure",
+          "photoAlt": "Gleisbau oder Tiefbauarbeiten",
+          "photo": "/images/photos/construction-infra-1.png"
+        },
+        {
+          "id": "integrated-fm",
+          "name": "Integriertes FM",
+          "pain": "Jede Leistungslinie liefert ihre Daten in einem anderen Format.",
+          "outcome": "Führen Sie fünf Leistungslinien und fünf Datenformate in einer strukturierten Vertragsübersicht zusammen.",
+          "linkLabel": "Ihre Branche ansehen ↓",
+          "href": "#integrated-fm",
+          "photoAlt": "Mehrfach-Dienstleistungsteam im Facility Management vor Ort",
+          "photo": "/images/photos/construction-team-2.png"
+        },
+        {
+          "id": "hard-services",
+          "name": "Hard Services",
+          "pain": "Derselbe Lieferant taucht unter Dutzenden Namen auf, und Anlagenlisten stimmen nie überein.",
+          "outcome": "Gleichen Sie Lieferantennamen ab und bereinigen Sie Anlagenlisten, damit Ausgaben und Wartungspläne auf verlässlichen Daten beruhen.",
+          "linkLabel": "Ihre Branche ansehen ↓",
+          "href": "#hard-services",
+          "photoAlt": "HLK-Techniker oder Anlagenraum-Ingenieur",
+          "photo": "/images/photos/maintenance-cleanroom-woman-1.png"
+        },
+        {
+          "id": "construction",
+          "name": "Bau",
+          "pain": "Der Umsatz ist auf den Euro genau bekannt. Was tatsächlich eingekauft wurde, nicht.",
+          "outcome": "Verwandeln Sie über Gesellschaften und Projekte verteilte Ausgaben in eine einzige, kategorisierte, konzernweite Sicht.",
+          "linkLabel": "Ihre Branche ansehen ↓",
+          "href": "#construction",
+          "photoAlt": "Baustelle",
+          "photo": "/images/photos/construction-planner-woman-1.png"
+        },
+        {
+          "id": "soft-services",
+          "name": "Soft Services & Reinigung",
+          "pain": "Rechnungen treffen schneller ein, als jemand sie lesen kann.",
+          "outcome": "Lassen Sie Rechnungen automatisch erfassen und strukturieren, damit belastbare Ausgabendaten für die Preisverteidigung vorliegen.",
+          "linkLabel": "Ihre Branche ansehen ↓",
+          "href": "#soft-services",
+          "photoAlt": "Reinigungsteam in einem Geschäftsgebäude",
+          "photo": "/images/photos/cleaning-office-woman-1.png"
+        },
+        {
+          "id": "manufacturing",
+          "name": "Hersteller von Gebäudetechnik",
+          "pain": "Eine Gesellschaft nutzt bereits einen Standard. Der Rest des Konzerns nicht.",
+          "outcome": "Erweitern Sie den Klassifikationsstandard, den eine Gesellschaft bereits einsetzt, auf jedes Werk und jeden Standort.",
+          "linkLabel": "Ihre Branche ansehen ↓",
+          "href": "#manufacturing",
+          "photoAlt": "Fertigungshalle für Gebäudetechnik",
+          "photo": "/images/photos/hvac-manufacture.jpeg"
+        },
+        {
+          "id": "asset-owners",
+          "name": "Asset-Owner",
+          "pain": "Ihr Dienstleister meldet die Zahlen, und Sie haben keine Möglichkeit, sie zu prüfen.",
+          "outcome": "Erhalten Sie eine unabhängige, vergleichbare Sicht auf die in Ihrem Auftrag getätigten Ausgaben, nicht nur den Bericht eines Dienstleisters.",
+          "linkLabel": "Ihre Branche ansehen ↓",
+          "href": "#asset-owners",
+          "photoAlt": "Bürogebäude oder Liegenschaft von außen",
+          "photo": "/images/photos/the-city-2.png"
+        },
+        {
+          "id": "mro",
+          "name": "MRO & Teilebeschaffung",
+          "pain": "Sie kaufen Teile über Zwischenhändler und zahlen deren Aufschlag auf alles.",
+          "outcome": "Finden Sie für jedes Teil die Original-Herstellerteilenummer, damit Sie Großmengen direkt beziehen können.",
+          "linkLabel": "Ihre Branche ansehen ↓",
+          "href": "#mro",
+          "photoAlt": "Ersatzteillager oder Werkstatt",
+          "photo": "/images/photos/construction-planner-team-1.png"
+        },
+        {
+          "id": "procurement-consultancies",
+          "name": "Procurement-Beratungen",
+          "pain": "Ihre Analysten verbringen Kundenzeit mit Datenbereinigung, bevor die Analyse überhaupt beginnt.",
+          "outcome": "White-Label-Klassifikation nach Ihrer eigenen Taxonomie, damit die Marge des Mandats in die Analyse fließt.",
+          "linkLabel": "Für Procurement-Beratungen →",
+          "href": "/procurement-consultancies",
+          "photoAlt": "Person bei der Prüfung von Ausgabendaten",
+          "photo": "/images/photos/office-desk-woman-1.png"
+        }
+      ]
+    },
+    "sections": [
+      {
+        "id": "infrastructure",
+        "tabLabel": "Infrastruktur",
+        "eyebrow": "Infrastruktur",
+        "ctaIndustry": "Infrastruktur",
+        "h2": "Was Sie nicht sehen, können Sie nicht verhandeln.",
+        "intro": "Ein Einsparziel wird benannt, mitunter im achtstelligen Bereich, doch niemand kann sagen, wo genau in den Ausgaben es sich verbirgt. Diese Lücke zwischen Ziel und Daten ist ein wiederkehrendes Muster in Infrastruktur und Schiene: Ein Sparprogramm identifiziert Einsparpotenziale in zweistelliger Millionenhöhe, doch die zugrunde liegenden Ausgabendaten können nicht zeigen, wo sie zu finden sind. Einsparungen kommen an dritter Stelle. Zuerst sehen Sie, wohin das Geld fließt, dann die Lücken in der Rahmenvertragsabdeckung, dann verhandeln Sie.",
+        "photo": "/images/photos/construction-infra-1.png",
+        "photoAlt": "Gleisbau oder Tiefbauarbeiten",
+        "dayToDay": {
+          "work": "Schiene, Versorgungsnetze, Straßen und Energienetze. Viele Projekte gleichzeitig, oft über öffentliche Ausschreibungen gewonnen.",
+          "spend": "Subunternehmer, Materialien, Gerätevermietung und Fachdienstleistungen, eingekauft von Projektteams über Regionen und Gesellschaften hinweg.",
+          "matters": "Einsparziele erreichen, Rahmenverträge einhalten, mit geprüften Lieferanten bei sicherheitskritischen Arbeiten zusammenarbeiten und die nächste Ausschreibung auf Basis echter Kosten kalkulieren."
+        },
+        "pains": [
+          {
+            "title": "Ein Einsparziel ohne Daten dahinter",
+            "body": "Ein Transformationsprogramm nennt eine Zahl. Die Ausgaben sind nicht konsistent genug klassifiziert, um zu sagen, in welchen Kategorien sich diese Zahl verbirgt."
+          },
+          {
+            "title": "Rahmenvertragsabdeckung, die niemand unternehmensweit sieht",
+            "body": "Ein Einkäufer sieht die zehn Rahmenverträge seiner eigenen Kategorie. Für die anderen fünfzig Kategorien fehlt die entsprechende Sicht, sodass das Unternehmen Ausgaben nicht auf bestehende Verträge lenken kann."
+          },
+          {
+            "title": "Keine Basis für Verhandlung oder Ausschreibung",
+            "body": "Sowohl die Verhandlung mit einem Lieferanten als auch die Kalkulation einer neuen Ausschreibung beginnen mit dem Wissen, was bereits ausgegeben wird. Ohne diese Basis beginnt jede Verhandlung mit einer Schätzung."
+          }
+        ],
+        "solutionLink": {
+          "label": "So schafft Pearstop eine echte Ausgabenbasis",
+          "href": "/procurement-data-quality"
+        },
+        "changes": [
+          "Ausgaben so konsistent klassifiziert, dass sichtbar wird, wo ein benanntes Einsparziel tatsächlich liegt",
+          "Rahmenvertrags- und Vertragsabdeckung über alle Kategorien sichtbar, nicht nur die bereits beobachteten",
+          "Eine echte Ausgabenbasis, um Lieferanten zu verhandeln und Ausschreibungen zu kalkulieren, statt zu schätzen"
+        ],
+        "proof": {
+          "quote": "Früher hatten wir zwei Vollzeitkräfte, die Kategorien zugeordnet haben. Jetzt übernimmt das System diese Arbeit für uns – was auch Margenschätzungen weiter unten in der Kette ermöglicht hat. Es ist zuverlässiger, und das zu einem Bruchteil der Kosten.",
+          "role": "Head of Procurement, Infrastruktur",
+          "caseLabel": "Fallstudie lesen",
+          "caseHref": "/cases/strukton"
+        },
+        "faq": [
+          {
+            "q": "Wie finden Infrastrukturunternehmen heraus, wo ein Einsparziel in ihren Ausgaben liegt?",
+            "a": "Klassifizieren Sie jede Ausgabenzeile nach einem einheitlichen Standard, etwa UNSPSC, über alle Projekte und Gesellschaften hinweg. Sobald Ausgaben nach Kategorie gruppiert sind, erkennen Sie, welche Kategorien groß, auf viele Lieferanten verteilt oder außerhalb von Rahmenverträgen sind. Dort liegen meist die Einsparungen. Pearstop übernimmt die Klassifikation automatisch, unsichere Fälle prüft ein Mensch."
+          },
+          {
+            "q": "Wie kann ein Schienen- oder Infrastrukturunternehmen die Abdeckung von Rahmenverträgen prüfen?",
+            "a": "Ordnen Sie jede Ausgabenzeile einer Kategorie und einem Lieferanten zu und vergleichen Sie dies mit der Abdeckung Ihrer Rahmenverträge. Die Lücke zeigt Ausgaben bei Lieferanten außerhalb Ihrer Vereinbarungen. Das funktioniert nur, wenn Ausgaben überall einheitlich gekennzeichnet sind."
+          },
+          {
+            "q": "Welche Ausgabendaten braucht ein Infrastrukturunternehmen vor einer Ausschreibungskalkulation?",
+            "a": "Eine Kostenbasis: was Sie in der Vergangenheit je Kategorie, Lieferant und Projekttyp gezahlt haben. Ohne sie ist der Angebotspreis eine Schätzung. Pearstop baut diese Basis aus den Rechnungen und ERP-Exporten auf, die Sie bereits haben."
+          }
+        ]
+      },
+      {
+        "id": "integrated-fm",
+        "tabLabel": "Integriertes FM",
+        "eyebrow": "Integriertes FM",
+        "ctaIndustry": "integriertes FM",
+        "h2": "Ein Vertrag, fünf Leistungslinien, fünf Datenformate.",
+        "intro": "Multiservice-FM-Verträge gewinnen durch Breite: Reinigung, Hard Services, Sicherheit und Catering unter einem Dach. Die Daten darunter spiegeln diese Einheit selten wider. Jede Leistungslinie kommt aus ihrem eigenen System, in ihrem eigenen Format, und Anlagen- oder Kostendatensätze, die eigentlich dasselbe beschreiben sollten, wirken am Ende, als gehörten sie zu unterschiedlichen Unternehmen.",
+        "photo": "/images/photos/construction-team-2.png",
+        "photoAlt": "Mehrfach-Dienstleistungsteam im Facility Management vor Ort",
+        "dayToDay": {
+          "work": "Reinigung, Instandhaltung, Sicherheit und Catering, gemeinsam unter einem Vertrag erbracht, oft über Hunderte Standorte und mehrere Länder hinweg.",
+          "spend": "Verbrauchsmaterial, Ersatzteile, Subunternehmer und Personal, aus einem jeweils anderen System pro Leistungslinie gemeldet.",
+          "matters": "Die tatsächlichen Kosten jedes Vertrags kennen, den Mehrwert bei der Vertragsverlängerung belegen und die betreuten Gebäude reibungslos am Laufen halten."
+        },
+        "pains": [
+          {
+            "title": "Jede Leistungslinie meldet auf ihre eigene Art",
+            "body": "Reinigung, Hard Services und Sicherheit liefern jeweils Daten aus ihrem eigenen System, in ihrem eigenen Format. Niemand sieht die Gesamtkosten eines Vertrags."
+          },
+          {
+            "title": "Durch Zukäufe gewachsen",
+            "body": "Jedes zugekaufte Unternehmen kodiert Ausgaben weiterhin auf seine eigene Art, oft in seiner eigenen Sprache, sodass der Konzern nicht Gleiches mit Gleichem vergleichen kann."
+          },
+          {
+            "title": "Referenzdaten, die von Anfang an falsch sind",
+            "body": "Hersteller- und Anlagendaten, die bei Vertragsbeginn übergeben werden, sind mitunter schlicht falsch, und die Fehler vervielfachen sich über Standorte und Jahre."
+          }
+        ],
+        "solutionLink": {
+          "label": "So vereinheitlicht Pearstop FM-Daten",
+          "href": "/data-quality"
+        },
+        "changes": [
+          "Eine Kostenübersicht über alle Leistungslinien eines Vertrags hinweg",
+          "Lieferanten und Kategorien in jeder Geschäftseinheit und jedem Land einheitlich kodiert",
+          "Korrigierte Hersteller- und Anlagendaten, damit darauf aufbauende Berichte belastbar sind"
+        ],
+        "proof": {
+          "quote": "Was Sie nicht sehen, können Sie nicht verhandeln.",
+          "role": "Head of Procurement, Facility Management",
+          "caseLabel": null,
+          "caseHref": null
+        },
+        "faq": [
+          {
+            "q": "Wie erhalten integrierte FM-Anbieter die Gesamtkosten eines Vertrags über alle Leistungslinien hinweg?",
+            "a": "Führen Sie die Ausgaben jeder Leistungslinie in einem Datensatz zusammen und kennzeichnen Sie sie mit denselben Kategorien und Lieferantennamen. Dann lassen sich Kosten je Vertrag, Standort oder Leistungslinie direkt vergleichen. Pearstop erledigt dies mit den Daten, die jede Leistungslinie bereits liefert, unabhängig vom Format."
+          },
+          {
+            "q": "Wie standardisieren FM-Unternehmen Ausgabendaten nach Zukäufen?",
+            "a": "Ordnen Sie die Lieferanten und Kategorien jedes zugekauften Unternehmens einem einheitlichen Konzernstandard zu, statt zunächst jedes einzelne auf ein neues System umzustellen. Pearstop klassifiziert Ausgaben jeder Gesellschaft nach derselben Taxonomie, in jeder Sprache."
+          },
+          {
+            "q": "Welcher Klassifikationsstandard eignet sich für Facility Management?",
+            "a": "UNSPSC ist der gängigste globale Standard und funktioniert gut für FM-Ausgaben. Viele FM-Konzerne führen zusätzlich eine eigene Kategorienliste. Pearstop kann jede Zeile mit beiden kennzeichnen."
+          }
+        ]
+      },
+      {
+        "id": "hard-services",
+        "tabLabel": "Hard Services",
+        "eyebrow": "Hard Services",
+        "ctaIndustry": "Hard Services",
+        "h2": "Ein Lieferant, Dutzende Schreibweisen. Eine Anlagenliste, der niemand ganz vertraut.",
+        "intro": "Technische Dienstleister warten und installieren HLK-, Elektro-, Brandschutz- und Gebäudeleittechnik an Hunderten Kundenstandorten. Ein Großteil der Arbeit ist Festpreis, sodass die Marge davon abhängt, die tatsächlichen Kosten für Teile, Subunternehmer und Anlagen zu kennen. Die Daten lassen das selten zu: Derselbe Lieferant wird auf ein Dutzend Arten geschrieben, und jeder Kunde liefert seine Anlagenliste in einem anderen Format.",
+        "photo": "/images/photos/maintenance-cleanroom-woman-1.png",
+        "photoAlt": "HLK-Techniker oder Anlagenraum-Ingenieur",
+        "dayToDay": {
+          "work": "Elektro-, HLK-, Brandschutz-, Sicherheits- und GLT-Wartung und -Installation, oft im Rahmen von Festpreis-Serviceverträge.",
+          "spend": "Teile, Subunternehmer und Anlagen, dazu eine Anlagenliste von jedem Kundenstandort.",
+          "matters": "Marge bei Festpreisarbeiten, termingerechte gesetzliche Wartung, sichere Gebäude und Angebote, die auf echten Kosten beruhen."
+        },
+        "pains": [
+          {
+            "title": "Ein Lieferant, Dutzende Namen",
+            "body": "Derselbe Lieferant erscheint in jedem System und an jedem Standort unter einer anderen Schreibweise, sodass niemand zusammenrechnen kann, was Sie bei ihm ausgeben."
+          },
+          {
+            "title": "Anlagenlisten, die vor Ort funktionieren, im Büro nicht",
+            "body": "Jeder Kunde liefert seine Anlagenliste in seinem eigenen Format. Eine davon in Form zu bringen, dauert ein bis zwei Tage von Hand – und das passiert immer wieder übers Jahr."
+          },
+          {
+            "title": "Festpreisverträge, kalkuliert nach Gefühl",
+            "body": "Teile- und Subunternehmerkosten werden geschätzt statt nachgeschlagen, sodass die Marge verschwunden sein kann, bevor die Arbeit beginnt."
+          }
+        ],
+        "solutionLink": {
+          "label": "So bereinigt Pearstop Lieferanten- und Anlagendaten",
+          "href": "/data-quality"
+        },
+        "changes": [
+          "Lieferantenabgleich: jede Schreibweise einem Lieferanten zugeordnet, sodass die Ausgaben je Lieferant eine einzige Zahl ergeben",
+          "Anlagenlisten bereinigt und auf eine Struktur abgebildet, unabhängig vom Format des Kunden",
+          "Eine präzise Anlagenliste als Grundlage für die gesetzliche Wartungsplanung, damit keine fällige Prüfung übersehen wird",
+          "Hersteller- und Anlagendaten mit der tatsächlich installierten Ausstattung abgeglichen",
+          "Eine Kostenhistorie je Teil und Subunternehmer als Grundlage für die nächste Vertragskalkulation"
+        ],
+        "proof": {
+          "stat": "9.175 Lieferantenschreibweisen auf 1.493 zurückgeführt, über 204.029 Anlagendatensätze hinweg",
+          "quote": "Unsere Anlagenlisten funktionierten für die Techniker vor Ort, erlaubten uns aber keine vorausschauende Wartungsplanung oder ein datengestütztes Risikomanagement bei Angeboten.",
+          "role": "Asset Manager, Facility Management",
+          "caseLabel": "SPIE-Fallstudie lesen",
+          "caseHref": "/cases/spie"
+        },
+        "faq": [
+          {
+            "q": "Wie bereinigen Hard-Services-Unternehmen Lieferantennamen in ihren Ausgabendaten?",
+            "a": "Gruppieren Sie jede Schreibweise desselben Lieferanten unter einem Namen, unter Nutzung von Namen, Adressen und weiteren vorhandenen Lieferantendaten, und lassen Sie unsichere Treffer von einer Person prüfen. In einem Hard-Services-Projekt wurden 9.175 Lieferantenschreibweisen auf 1.493 tatsächliche Lieferanten reduziert."
+          },
+          {
+            "q": "Wie können Elektro- oder HLK-Wartungsunternehmen Anlagenlisten verschiedener Kunden vereinheitlichen?",
+            "a": "Bilden Sie die Anlagenliste jedes Kunden auf eine einheitliche Struktur ab, mit Anlagentyp, Hersteller, Modell und Standort jedes Mal einheitlich benannt und kodiert. Pearstop übernimmt die Zuordnung automatisch und kennzeichnet Datensätze, die nicht sicher zugeordnet werden können."
+          },
+          {
+            "q": "Wie kalkulieren technische Dienstleister Festpreis-Wartungsverträge präziser?",
+            "a": "Ausgangspunkt sind die tatsächlichen Kosten für Teile und Subunternehmer bei vergleichbaren Verträgen, aus klassifizierten vergangenen Ausgaben. Pearstop erstellt diese Kostenhistorie aus den Rechnungen und ERP-Daten, die Sie bereits haben."
+          }
+        ]
+      },
+      {
+        "id": "construction",
+        "tabLabel": "Bau",
+        "eyebrow": "Bau",
+        "ctaIndustry": "Bau",
+        "h2": "Jahre an Ausgaben in eine Zahl zu verwandeln, sollte nicht Jahre dauern.",
+        "intro": "Ein Baukonzern mit mehreren hundert Millionen Jahresausgaben über mehr als ein Dutzend Gesellschaften kann seinen Umsatz auf den Euro genau angeben und weiß trotzdem nicht präzise, was er im letzten Jahr tatsächlich ausgegeben hat oder wofür. Rahmenverträge existieren, wurden aber vor Jahren unterzeichnet, und niemand hat seither geprüft, ob der Einkauf ihnen noch folgt.",
+        "photo": "/images/photos/construction-planner-woman-1.png",
+        "photoAlt": "Baustelle",
+        "dayToDay": {
+          "work": "Generalunternehmer und projektbasierte Firmen mit vielen gleichzeitigen Projekten, oft über ein Dutzend oder mehr Gesellschaften.",
+          "spend": "Subunternehmer, Materialien und Gerätevermietung, projektweise eingekauft.",
+          "matters": "Ausschreibungen mit Marge gewinnen, konzernweite Ausgaben kennen, sichere Baustellen und Einkauf bei zugelassenen Subunternehmern gemäß vereinbarter Rahmenverträge."
+        },
+        "pains": [
+          {
+            "title": "Konzernweite Ausgaben, die niemand präzise zusammenrechnen kann",
+            "body": "Über viele Gesellschaften und Systeme verteilte Ausgaben bedeuten: Der Umsatz ist auf den Euro bekannt, was tatsächlich eingekauft wurde, so gut wie nie."
+          },
+          {
+            "title": "Rahmenverträge, die lange nicht geprüft wurden",
+            "body": "Vor Jahren unterzeichnete Vereinbarungen laufen auf Vertrauensbasis weiter, ohne laufenden Abgleich, ob der aktuelle Einkauf ihnen noch folgt."
+          },
+          {
+            "title": "Jede Ausschreibung beginnt mit einem Neuaufbau",
+            "body": "Vor der Angebotskalkulation baut jemand Jahre an Rohdaten von Hand in Mengen und Auftragnehmer um. Danach beginnt es für die nächste Ausschreibung von vorn."
+          }
+        ],
+        "solutionLink": {
+          "label": "So bereinigt Pearstop Procurement-Daten im großen Maßstab",
+          "href": "/procurement-data-quality"
+        },
+        "changes": [
+          "Konzernweite Ausgaben in einer kodierten Übersicht, nicht in einer Tabelle je Gesellschaft",
+          "Einhaltung von Rahmenverträgen gegen den tatsächlichen Einkauf geprüft, nicht angenommen",
+          "Kostenhistorie für die nächste Ausschreibung bereit, ohne sie von Hand neu aufzubauen"
+        ],
+        "proof": {
+          "quote": "Wenn Sie Ihre Kostenbasis nicht belegen können, kalkulieren Sie nach Gefühl.",
+          "role": "Commercial Director, Bau",
+          "caseLabel": null,
+          "caseHref": null
+        },
+        "faq": [
+          {
+            "q": "Wie sieht ein Baukonzern die Ausgaben über alle Gesellschaften hinweg?",
+            "a": "Kennzeichnen Sie jede Ausgabenzeile jeder Gesellschaft mit denselben Kategorien und Lieferantennamen und führen Sie sie in einer Übersicht zusammen. Pearstop erledigt dies anhand von ERP-Exporten und Rechnungen, ohne zuvor jede Gesellschaft auf ein gemeinsames System umzustellen."
+          },
+          {
+            "q": "Wie prüfen Bauunternehmen, ob der Einkauf Rahmenverträgen folgt?",
+            "a": "Vergleichen Sie klassifizierte Ausgaben nach Kategorie und Lieferant mit den bestehenden Rahmenverträgen. Ausgaben bei Lieferanten außerhalb der Vereinbarungen werden sofort sichtbar."
+          },
+          {
+            "q": "Wie nutzen Bau-Kalkulatoren historische Kostendaten für Ausschreibungen?",
+            "a": "Sie brauchen vergangene Ausgaben, aufbereitet als Kosten je Kategorie, Auftragnehmer und Projekttyp. Sobald diese Daten klassifiziert sind, lassen sie sich in Minuten abrufen, statt für jedes Angebot von Hand neu aufgebaut zu werden."
+          }
+        ]
+      },
+      {
+        "id": "soft-services",
+        "tabLabel": "Soft Services & Reinigung",
+        "eyebrow": "Soft Services & Reinigung",
+        "ctaIndustry": "Soft Services und Reinigung",
+        "h2": "Wird die Rechnung nie gelesen, existieren die Ausgaben dahinter noch nicht.",
+        "intro": "Fragen Sie das Procurement-Team eines Reinigungsunternehmens, wie sicher es sich bei den eigenen Zahlen fühlt, und „auf Sicht\" ist eine gängige, selbstkritische Antwort. Bevor Ausgaben gegen einen Vertrag geprüft werden können, muss zunächst jemand die Rechnung tatsächlich lesen – und unabhängig davon entsprechen rund achtzig Prozent der Rechnungen bei Reinigungsverträgen nicht den vereinbarten Konditionen. Zwei Transparenzprobleme, übereinandergestapelt.",
+        "photo": "/images/photos/cleaning-office-woman-1.png",
+        "photoAlt": "Reinigungsteam in einem Geschäftsgebäude",
+        "dayToDay": {
+          "work": "Reinigung und Soft Services an Hunderten Kundenstandorten, bei dünnen Margen und hohem Personalanteil.",
+          "spend": "Verbrauchsmaterial, Geräte und Subunternehmer, oft von ein oder zwei großen Lieferanten.",
+          "matters": "Angebotspreise verteidigen, Verbrauchsmaterialkosten kontrollieren und nicht auf die eigenen Zahlen eines Lieferanten angewiesen sein."
+        },
+        "pains": [
+          {
+            "title": "Rechnungen treffen schneller ein, als jemand sie lesen kann",
+            "body": "ERP-Stammdaten gelten als zu schlecht, um den automatischen Ablauf überhaupt zu starten, mit Fristen, die seit Jahren, nicht Monaten, gerissen werden."
+          },
+          {
+            "title": "Ausgaben, die niemand gegen den Vertrag geprüft hat",
+            "body": "Auf die Frage, eine Angebotskalkulation zu belegen, lautet die ehrliche Antwort oft: Es fühlt sich nach 3 % des Vertrags an, könnte aber auch sechs oder zwei sein. Niemand weiß es."
+          },
+          {
+            "title": "Keine Rechtfertigung, wenn ein Kunde einen Preis infrage stellt",
+            "body": "Auf die Frage, eine Angebotskalkulation zu belegen, lautet die ehrliche Antwort oft, dass es niemand weiß. Die Marge auf die Zahl war ein Gefühl, keine Berechnung."
+          }
+        ],
+        "solutionLink": {
+          "label": "So liest Pearstop zuerst die Rechnung",
+          "href": "/invoice-data-extraction"
+        },
+        "changes": [
+          "Rechnungen automatisch gelesen und strukturiert, in jedem Format, sodass überhaupt etwas zu prüfen ist",
+          "Tatsächliche Ausgaben routinemäßig gegen vereinbarte Vertragskonditionen geprüft, nicht nur bei einer Prüfung",
+          "Eine echte Kostenbasis, um Preise gegenüber dem Kunden zu verteidigen, statt eines Gefühls"
+        ],
+        "proof": {
+          "stat": "Genauigkeit der Rechnungserfassung von rund 70 % auf 99 % gesteigert, bei einem Reinigungsunternehmen",
+          "quote": "Das hätte fünf Ingenieure und ein ganzes Jahr gebraucht, um das zu bereinigen. Also haben wir uns nach einem besseren Weg umgesehen.",
+          "role": "Head of Operations, Reinigungsunternehmen",
+          "caseLabel": null,
+          "caseHref": null
+        },
+        "faq": [
+          {
+            "q": "Wie automatisieren Reinigungsunternehmen die Rechnungsverarbeitung?",
+            "a": "Mit einer Rechnungserfassung, die PDFs, Scans und E-Mail-Anhänge liest, jede Zeile in strukturierte Daten umwandelt und kennzeichnet. Bei einem Reinigungsunternehmen stieg die Genauigkeit der Ersterfassung von rund 70 % auf 99 %."
+          },
+          {
+            "q": "Wie kann ein Reinigungsunternehmen Verbrauchsmaterialkosten in einem Angebot begründen?",
+            "a": "Mit einer Kostenbasis aus vergangenen Rechnungen: was Verbrauchsmaterial und Geräte je Standort oder Vertrag tatsächlich kosten. Ohne sie ist die Zahl im Angebot eine Schätzung."
+          },
+          {
+            "q": "Wie prüfen Reinigungsunternehmen Lieferantenpreise, wenn ein Lieferant dominiert?",
+            "a": "Klassifizieren Sie Ihre eigenen Rechnungszeilen, um den Preis jeder Position über die Zeit zu sehen, statt sich auf die Berichte des Lieferanten zu verlassen."
+          }
+        ]
+      },
+      {
+        "id": "manufacturing",
+        "tabLabel": "Hersteller",
+        "eyebrow": "Hersteller von Gebäudetechnik",
+        "ctaIndustry": "Fertigung",
+        "h2": "Eine Gesellschaft nutzt bereits einen Standard. Der Rest des Konzerns nicht.",
+        "intro": "Bei Herstellern mit mehreren Gesellschaften klassifiziert häufig ein Unternehmensteil – oft der am längsten etablierte oder zuletzt geprüfte – seine Ausgaben bereits nach einem echten Standard, während Schwestergesellschaften und neuere Standorte weiterhin mit uneinheitlichen Freitext-Lieferanten- und Teiledaten arbeiten. Diese Lücke bleibt selten lange auf eine Region begrenzt: Audits, Konzernberichterstattung und gemeinsamer Einkauf verlangen früher oder später überall dieselbe Sicht.",
+        "photo": "/images/photos/hvac-manufacture.jpeg",
+        "photoAlt": "Fertigungshalle für Gebäudetechnik",
+        "dayToDay": {
+          "work": "Hersteller von HLK-, Elektro- und Industrieanlagen mit mehreren Werken oder Gesellschaften, oft in mehreren Ländern.",
+          "spend": "Teile und Materialien in hohem Volumen, in jedem Werk anders beschrieben.",
+          "matters": "Ein Klassifikationsstandard für den ganzen Konzern, schnelle und genaue Angebote sowie keine doppelten Lagerbestände."
+        },
+        "pains": [
+          {
+            "title": "Eine Gesellschaft auf Standard, andere nicht",
+            "body": "Ein konzernweiter Klassifikationsstandard existiert bereits irgendwo im Unternehmen. Ihn von Hand auf jede Gesellschaft auszuweiten, dauert länger als der Grund, aus dem er ursprünglich gefordert wurde."
+          },
+          {
+            "title": "Doppelte und uneinheitliche Teiledaten über Werke hinweg",
+            "body": "Dasselbe Teil erscheint je nach erfassendem Werk oder System unter unterschiedlichen Codes und Schreibweisen, was Lieferanten-Benchmarking blockiert und doppelte Bestände verbirgt."
+          },
+          {
+            "title": "Langsame Angebote durch manuelle Nachschlagearbeit",
+            "body": "Teile- und Standortdaten von Hand neu zu erfassen, verlangsamt jedes Angebot. Bei einem Hersteller dauerte das 1 bis 3 Stunden je Angebot."
+          }
+        ],
+        "solutionLink": {
+          "label": "So richtet Pearstop jede Gesellschaft an einem Standard aus",
+          "href": "/unspsc"
+        },
+        "changes": [
+          "Der bestehende Klassifikationsstandard des Konzerns auf jede Gesellschaft ausgeweitet, nicht nur auf die, die ihn bereits hatte",
+          "Teiledaten bereinigt und über Werke und Systeme hinweg abgeglichen",
+          "Schnellere Angebote auf Basis von Kosten- und Lieferantendaten, die nicht von Hand nachgeprüft werden müssen"
+        ],
+        "proof": {
+          "quote": "Es spart unserem Team viel Zeit, weil die sich wiederholende Aufgabe entfällt, die richtigen Positionen zusammenzuführen.",
+          "personId": "vinceOut",
+          "caseLabel": "Fallstudie lesen",
+          "caseHref": "/cases/lemtech"
+        },
+        "faq": [
+          {
+            "q": "Wie rollen Hersteller UNSPSC über mehrere Werke aus?",
+            "a": "Übernehmen Sie die Klassifikation, die eine Gesellschaft bereits nutzt, und wenden Sie sie auf die Ausgaben- und Teiledaten jedes Werks an, indem lokale Beschreibungen denselben Codes zugeordnet werden. Pearstop erledigt dies automatisch, in jeder Sprache."
+          },
+          {
+            "q": "Wie findet man doppelte Teile über Fertigungsstandorte hinweg?",
+            "a": "Vereinheitlichen Sie Teilebeschreibungen und -codes über Werke hinweg und gleichen Sie dann Datensätze ab, die dasselbe Teil beschreiben. Doppelte und mehrfach gehaltene Bestände werden sichtbar."
+          },
+          {
+            "q": "Unsere US-Gesellschaft nutzt UNSPSC. Wie richten wir unsere europäischen Gesellschaften daran aus?",
+            "a": "Klassifizieren Sie die Ausgaben- und Teiledaten der europäischen Gesellschaften nach denselben UNSPSC-Codes, damit die Konzernberichterstattung Gleiches mit Gleichem vergleicht. Sie müssen dafür nicht zuerst deren ERP ersetzen."
+          }
+        ]
+      },
+      {
+        "id": "asset-owners",
+        "tabLabel": "Asset-Owner",
+        "eyebrow": "Asset-Owner",
+        "ctaIndustry": "Asset-Owner",
+        "h2": "Sie fassen die Rechnungen nicht an. Trotzdem müssen Sie wissen, was darin steht.",
+        "intro": "Immobilieninvestoren, Vermieter und öffentliche Liegenschaftseigentümer, die Facility Management auslagern, erzeugen ihre Ausgabendaten nicht selbst. Sie erhalten sie, gefiltert durch den jeweiligen Dienstleister, der den Vertrag erfüllt. Die daraus folgende Frage ist keine Frage der Kategoriestrategie. Sie ist einfacher – und schwerer auszuweichen: Was wird tatsächlich in unserem Auftrag ausgegeben, ist es wettbewerbsfähig, und woran würden wir es erkennen, wenn nicht?",
+        "photo": "/images/photos/the-city-2.png",
+        "photoAlt": "Bürogebäude oder Liegenschaft von außen",
+        "dayToDay": {
+          "work": "Immobilieninvestoren, Vermieter und öffentliche Liegenschaftseigentümer, die Facility Management an einen Dienstleister auslagern.",
+          "spend": "Wartung und Dienstleistungen, in Ihrem Auftrag eingekauft und vom Dienstleister zurückgemeldet.",
+          "matters": "Wissen, dass die für Sie getätigten Ausgaben fair sind, Dienstleister und Standorte vergleichen, Standardkosten schnell freigeben und Gebäude, die für die Menschen darin gut funktionieren."
+        },
+        "pains": [
+          {
+            "title": "Kostendaten, die Sie erhalten, aber nicht kontrollieren",
+            "body": "Ein Verwalter oder FM-Dienstleister meldet die Zahlen. Eine unabhängige Möglichkeit, sie mit dem zu vergleichen, was ähnliche Standorte oder Portfolios zahlen, gibt es selten."
+          },
+          {
+            "title": "Kein Benchmark über Dienstleister oder Standorte hinweg",
+            "body": "Ohne eine gemeinsame, klassifizierte Sicht auf die Ausgaben ist es nicht möglich, die Kosten eines Dienstleisters mit denen eines anderen oder einen Standort mit dem nächsten zu vergleichen."
+          },
+          {
+            "title": "Standardkosten gehen weiterhin zur Freigabe nach oben",
+            "body": "Niemand unterhalb Ihrer Ebene weiß, was ein Standardauftrag kosten sollte, sodass es zur Prüfung an leitende Manager oder an einen externen Gutachter geht."
+          }
+        ],
+        "solutionLink": {
+          "label": "So verschafft Pearstop Asset-Ownern Sicherheit",
+          "href": "/asset-data-management"
+        },
+        "changes": [
+          "Eine unabhängige, klassifizierte Sicht auf die in Ihrem Auftrag verwalteten Ausgaben, nicht nur der Bericht des Dienstleisters",
+          "Kosten-Benchmarking über Dienstleister und Standorte hinweg, auf derselben Basis",
+          "Belege, die Sie in ein Dienstleister-Review mitbringen können, nicht nur eine Akte, die Sie erhalten haben",
+          "Standardkosten gegen einen Benchmark freigegeben, ohne Eskalation"
+        ],
+        "proof": null,
+        "faq": [
+          {
+            "q": "Wie kann ein Immobilieneigentümer die von seinem FM-Dienstleister gemeldeten Kosten prüfen?",
+            "a": "Klassifizieren Sie die Kostendaten des Dienstleisters selbst, Zeile für Zeile, um einen unabhängigen Datensatz zu führen. Vergleichen Sie ihn dann mit anderen Standorten, anderen Dienstleistern und vergangenen Jahren."
+          },
+          {
+            "q": "Wie vergleichen Asset-Owner Facility-Management-Kosten über Dienstleister hinweg?",
+            "a": "Kennzeichnen Sie jede Kostenzeile jedes Dienstleisters mit demselben Standard, damit derselbe Auftrag oder dieselbe Position gleich mit gleich verglichen wird. Ohne einen gemeinsamen Standard lassen sich Dienstleisterberichte nicht vergleichen."
+          },
+          {
+            "q": "Wie können Asset-Owner Standardwartungskosten freigeben, ohne zu eskalieren?",
+            "a": "Legen Sie aus klassifizierten vergangenen Ausgaben eine Benchmark-Spanne für jeden Auftrags- oder Positionstyp fest. Alles innerhalb der Spanne kann sofort freigegeben werden, alles außerhalb wird gekennzeichnet."
+          }
+        ]
+      },
+      {
+        "id": "mro",
+        "tabLabel": "MRO",
+        "eyebrow": "MRO & Teilebeschaffung",
+        "ctaIndustry": "MRO",
+        "h2": "Zahlen Sie nicht länger an einen Zwischenhändler, nur weil niemand bestätigen kann, um welches Teil es sich handelt.",
+        "intro": "Die meisten MRO-Teams kaufen Teile über Zwischenhändler: einen Gerätehersteller oder Distributor, der das Teil unter seinem eigenen Code verkauft. Für die Teile, die Sie in großer Menge kaufen, ist der Direkteinkauf beim Originalhersteller günstiger. Dafür brauchen Sie die Original-Herstellerteilenummer – und zwar für jedes Teil in Ihren Daten, nicht nur für eine Handvoll. Diese Recherche wird meist an ein Offshore-Team ausgelagert und pro Zeile bezahlt, und eine große Teileliste kann Monate dauern. Pearstop erledigt das mit KI, für jede Zeile, in Tagen statt Monaten, und lässt ein Feld leer, wenn ein Treffer nicht bestätigt werden kann.",
+        "photo": "/images/photos/construction-planner-team-1.png",
+        "photoAlt": "Ersatzteillager oder Werkstatt",
+        "dayToDay": {
+          "work": "Anlagen an mehreren Standorten am Laufen halten, tägliche Bestellung von Ersatzteilen und Komponenten.",
+          "spend": "Tausende unterschiedliche Teile, die meisten über Zwischenhändler unter deren eigenen Teilecodes gekauft.",
+          "matters": "Wissen, welche hochvolumigen Teile direkt gekauft werden können, zu welchem Preis, und dass jedes Teil das richtige ist, denn eine Fehlzuordnung kostet mehr, als sie einspart."
+        },
+        "pains": [
+          {
+            "title": "Der Original-Herstellercode verbirgt sich hinter einem Lieferantencode",
+            "body": "Ohne ihn gibt es keinen alternativen Lieferanten und keine Möglichkeit zu prüfen, ob der Preis fair ist."
+          },
+          {
+            "title": "Zu viele Teile für eine manuelle Recherche",
+            "body": "Die Herstellerteilenummer für ein Teil zu finden, ist machbar. Für Tausende, über jeden Lieferanten und Standort hinweg, ist es das nicht."
+          },
+          {
+            "title": "Recherche zeilenweise ausgelagert",
+            "body": "Die Nachschlagearbeit geht meist an ein Offshore-Team, bezahlt pro Zeile. Ein Kunde zahlte rund 30 Pence pro Zeile, und eine große Teileliste brauchte Monate, um zurückzukommen."
+          }
+        ],
+        "solutionLink": {
+          "label": "So verifiziert Pearstop Teile und Komponenten",
+          "href": "/unspsc"
+        },
+        "changes": [
+          "Die Original-Herstellerteilenummer für jedes Teil in Ihren Daten gefunden, nicht nur für die wichtigsten",
+          "Eine klare Liste der hochvolumigen Teile, die Sie direkt und in großen Mengen bestellen können",
+          "Eine Teileliste in Tagen zurück, manchmal Stunden, statt Monaten",
+          "Keine erfundenen Teilenummern: Kann ein Treffer nicht bestätigt werden, bleibt das Feld leer, denn Raten kostet die Einsparung, die Sie erzielen wollten"
+        ],
+        "proof": {
+          "linkLabel": "Das MRO-Muster ansehen",
+          "linkHref": "/cases/mro-confidential"
+        },
+        "faq": [
+          {
+            "q": "Wie finden MRO-Teams die Original-Herstellerteilenummer hinter einem Lieferantencode?",
+            "a": "Indem der Lieferantencode und die Beschreibung jedes Teils mit Herstellerdaten und früheren Einkäufen abgeglichen werden, bis die Original-Teilenummer bestätigt ist. Pearstop erledigt dies mit KI für jede Zeile Ihrer Daten und zeigt die Belege für jeden Treffer, damit Ihr Team vor der Bestellung prüfen kann."
+          },
+          {
+            "q": "Kann man Ersatzteile direkt beim Originalhersteller statt über einen Zwischenhändler kaufen?",
+            "a": "Oft ja, für die Teile, die Sie in großer Menge kaufen. Zwischenhändler verkaufen Komponenten unter eigenen Codes weiter. Sobald Sie die Original-Herstellerteilenummer kennen, können Sie Großbestellungen direkt platzieren und Preise vergleichen."
+          },
+          {
+            "q": "Ist KI günstiger als ein ausgelagertes Team für die Recherche von Teilenummern?",
+            "a": "Bei großen Teilelisten meist ja. Ausgelagerte Recherche wird pro Zeile bezahlt (ein Kunde zahlte rund 30 Pence pro Zeile), und eine große Liste kann Monate dauern. Mit KI kommt dieselbe Liste in Tagen zurück, manchmal Stunden, und eine Person prüft nur die unsicheren Treffer."
+          },
+          {
+            "q": "Kann KI Herstellerteilenummern finden, ohne sie zu erfinden?",
+            "a": "Das hängt davon ab, wie sie gebaut ist. Pearstop liefert eine Teilenummer nur bei einem sicheren Treffer und lässt das Feld leer, wenn keiner vorliegt. Sie erhalten möglicherweise weniger Antworten als bei einem Tool, das rät, aber keine davon ist erfunden, und Sie wissen genau, welche Teile noch geprüft werden müssen."
+          }
+        ]
+      }
+    ],
+    "workingDifferent": {
+      "title": "Arbeiten Sie in einer anderen Branche?",
+      "body": "Datenqualitätsprobleme sind nicht auf die oben genannten Branchen beschränkt. Wenn Ihre Teams komplexe Ausgaben- und Anlagendaten verwalten, mit uneinheitlichen Lieferantendaten zu tun haben oder auf ein neues ERP- oder Reporting-System umsteigen, können wir wahrscheinlich helfen. Lassen Sie es uns herausfinden.",
+      "primaryLabel": "15-minütiges Erstgespräch buchen",
+      "secondaryLabel": "Oder senden Sie uns eine Datenprobe →"
     }
   },
   "Privacy": {
@@ -1505,6 +2400,7 @@
           "Die KI/ML-Systeme, die wir zur Klassifizierung eingereichter Rechnungsdaten nutzen, betrieben auf EU-gehosteter oder gleichwertig geschützter Infrastruktur."
         ],
         "paragraphsAfter": [
+          "Alle Daten werden auf Servern in der Europäischen Union gespeichert und verarbeitet.",
           "Jeder dieser Anbieter ist vertraglich verpflichtet, Ihre Daten zu schützen und nur für den von uns festgelegten Zweck zu verwenden."
         ]
       },
@@ -1594,7 +2490,9 @@
       {
         "title": "3. Anfragen zur Musterklassifizierung",
         "paragraphs": [
-          "Wenn Sie uns über die Website ein Muster von Rechnungspositionen senden, klassifizieren wir es und senden das Ergebnis als Demonstration unserer Leistung zurück, kostenlos und ohne Verpflichtung auf beiden Seiten. Musterergebnisse werden „wie besehen“ bereitgestellt, um zu veranschaulichen, was Pearstop leisten kann, und sollten nicht als endgültiger, geprüfter Datensatz betrachtet werden. Die Einreichung eines Musters begründet keinen Vertrag über fortlaufende Leistungen; dafür ist eine separate Vereinbarung erforderlich."
+          "Wenn Sie uns über die Website ein Muster von Rechnungspositionen senden, klassifizieren wir es und senden das Ergebnis als Demonstration unserer Leistung zurück, kostenlos und ohne Verpflichtung auf beiden Seiten. Musterergebnisse werden „wie besehen“ bereitgestellt, um zu veranschaulichen, was Pearstop leisten kann, und sollten nicht als endgültiger, geprüfter Datensatz betrachtet werden. Die Einreichung eines Musters begründet keinen Vertrag über fortlaufende Leistungen; dafür ist eine separate Vereinbarung erforderlich.",
+          "Mit dem Hochladen einer Probe bestätigen Sie, dass Sie von Ihrer Organisation dazu befugt sind, sie mit uns zu teilen. Rechnungsdateien enthalten häufig personenbezogene Daten Dritter, etwa von Lieferantenkontakten, Technikern oder auf Rechnungen genannten Mitarbeitenden. Sie sind dafür verantwortlich, dass eine rechtliche Grundlage nach geltendem Datenschutzrecht (DSGVO oder POPIA) besteht, um diese Daten mit uns zu teilen, und wir empfehlen Ihnen, Namen, E-Mail-Adressen und Bankdaten zu entfernen, die für die Klassifizierung nicht benötigt werden.",
+          "Für personenbezogene Daten in einer Probe handeln wir im Auftrag Ihrer Organisation. Wir nutzen sie ausschließlich, um Ihr Musterergebnis zu erstellen und zu besprechen, behandeln sie vertraulich und beschränken den Zugriff auf die Personen, die ihn benötigen. Musterdateien werden automatisch nach 90 Tagen gelöscht, oder früher auf Ihre Anfrage hin, sofern Sie uns nicht schriftlich bitten, sie für ein laufendes Engagement aufzubewahren."
         ]
       },
       {
@@ -1851,6 +2749,26 @@
           {
             "q": "Welches UNSPSC-Tool eignet sich am besten für Infrastruktur- und Facility-Unternehmen in den Niederlanden?",
             "a": "Pearstop wurde speziell für niederländische und europäische Infrastruktur-, Facility- und Bauunternehmen gebaut. Die Klassifizierungs-Engine verarbeitet niederländischsprachige Rechnungsbeschreibungen nativ — einschließlich der Abkürzungen und Fachbegriffe, die Techniker und Projekteinkäufer verwenden. Pearstop klassifiziert derzeit 35.000 Einkaufszeilen pro Monat für einen großen niederländischen Infrastrukturauftragnehmer über eine SAP-Integration. Für niederländische Unternehmen, die auch in öffentlichen Ausschreibungen aktiv sind, bietet UNSPSC eine direkte Anbindung an das Peppol-E-Rechnungsnetzwerk."
+          },
+          {
+            "q": "Was sind typische Datenqualitätsprobleme im Facility-Management-Einkauf?",
+            "a": "FM-Ausgaben stammen meist aus mehreren Wartungssystemen, Subunternehmer-Rechnungen und manuellen Arbeitsaufträgen, jeweils mit unterschiedlichen Lieferantennamen und Produktbeschreibungen für denselben Einkauf. Anlagen- und Materialdaten sind selten mit einer einheitlichen Taxonomie verknüpft, sodass dasselbe Teil oder dieselbe Leistung an verschiedenen Standorten unter Dutzenden Varianten auftaucht. Ohne Klassifizierung können FM-Teams die tatsächlichen Ausgaben je Kategorie nicht sehen, Lieferantenpreise nicht vergleichen und keine vorausschauende Wartung aus historischen Daten planen."
+          },
+          {
+            "q": "Was sind typische Datenqualitätsprobleme im Bau-Einkauf?",
+            "a": "Bauausgaben verteilen sich auf Projekte, Subunternehmer und standortbezogenen Einkauf, mit wenig gemeinsamer Kodierdisziplin. Dasselbe Material oder dieselbe Leistung kann auf jeder Bestellung anders beschrieben sein, und historische Ist-Zahlen werden selten projektübergreifend zusammengeführt. Das erschwert es, neue Ausschreibungen auf Basis echter Kostenerfahrung zu kalkulieren, Lieferanten zu benchmarken oder zu erkennen, wo Budgets regelmäßig überschritten werden."
+          },
+          {
+            "q": "Was sind typische Datenqualitätsprobleme im Infrastruktur-Einkauf?",
+            "a": "Infrastruktur-Einkauf verteilt sich auf Standorte, Gesellschaften und langlaufende Rahmenverträge, sodass derselbe Lieferant oder dasselbe Material unter vielen verschiedenen Namen und Codes auftauchen kann. Bestellungen werden ohne konsistente Kategoriezuordnung angelegt, und Altsysteme teilen selten eine gemeinsame Taxonomie. Das Ergebnis sind Ausgabendaten, die sich nicht verlässlich zusammenführen lassen, was Lieferantenkonsolidierung und präzise Ausschreibungskalkulation erschwert."
+          },
+          {
+            "q": "Was sind typische Datenqualitätsprobleme im Einkauf von Herstellern?",
+            "a": "Ausgaben für Fertigung und MRO werden von Teilenummern und lieferantenspezifischen Codes dominiert statt von Klartextbeschreibungen, und dasselbe Teil wird von verschiedenen Lieferanten oft unter unterschiedlichen Wiederverkäufercodes verkauft. Ohne einen Rückbezug zur echten Herstellerteilenummer können Einkaufsteams Preise über Lieferanten hinweg nicht vergleichen oder erkennen, wo sie einen Wiederverkäuferaufschlag für ein Teil zahlen, das sie auch direkt beziehen könnten."
+          },
+          {
+            "q": "Was sind typische Datenqualitätsprobleme im Einkauf von Reinigungsdienstleistungen?",
+            "a": "Ausgaben für Reinigung und Soft FM verteilen sich meist auf viele kleine Lieferanten und Verbrauchsmaterial-SKUs, lokal von Standortleitern bestellt statt zentral. Dasselbe Produkt – eine Packung Toilettenpapier, ein Oberflächenreiniger – landet an verschiedenen Standorten unter Dutzenden verschiedenen Beschreibungen und Preisen, sodass es keine verlässliche Möglichkeit gibt, die Gesamtausgaben je Produkt zu sehen oder mit einem bevorzugten Lieferanten einen einheitlichen Preis auszuhandeln."
           }
         ]
       }
@@ -2315,7 +3233,8 @@
         "title": "Ihr Spend bleibt klassifiziert",
         "copy": "Neue Rechnungen werden auf dieselbe Weise klassifiziert, sobald sie eintreffen - kein jährliches Bereinigungsprojekt mehr."
       },
-      "beforeAfterCaption": "Illustratives Beispiel: sechs Rechnungszeilen von drei Lieferanten. Die ursprüngliche Beschreibung und der Lieferant bleiben exakt so erhalten, wie sie eingegangen sind - Pearstop fügt nur die Spalten rechts hinzu."
+      "beforeAfterCaption": "Illustratives Beispiel: sechs Rechnungszeilen von drei Lieferanten. Die ursprüngliche Beschreibung und der Lieferant bleiben exakt so erhalten, wie sie eingegangen sind - Pearstop fügt nur die Spalten rechts hinzu.",
+      "leadIn": "Gute Gebäude und Standorte laufen auf Hunderten kleinen Entscheidungen pro Tag: welches Teil, welcher Lieferant, welcher Preis. Jede davon ist nur so gut wie die Daten dahinter."
     },
     "labelledOutput": {
       "eyebrow": "Jede Zeile, gelabelt",
@@ -2362,7 +3281,8 @@
           "href": "/industries#manufacturing"
         }
       ],
-      "linkText": "Sehen Sie, wie das für Sie gilt →"
+      "linkText": "Sehen Sie, wie das für Sie gilt →",
+      "leadIn": "Sie bauen, betreiben und warten die Orte, an denen Menschen arbeiten, leben und unterwegs sind. Wir kümmern uns um die Daten, die diese Arbeit im Budget halten."
     },
     "objection": {
       "dataTitle": "„Unsere Daten sind dafür nicht sauber genug.“",
@@ -2430,6 +3350,10 @@
         {
           "q": "Wie lange dauert die Spend-Klassifizierung?",
           "a": "Eine erste Stichprobe von 200 Zeilen wird in der Regel innerhalb weniger Werktage bearbeitet. Die laufende Klassifizierung läuft kontinuierlich, sobald neue Rechnungen eintreffen."
+        },
+        {
+          "q": "Unterstützt Pearstop auch Sicherheit und Compliance?",
+          "a": "Über die Daten dahinter. Gesetzliche Wartung wird aus Anlagenlisten geplant, Lieferantenprüfungen laufen auf Lieferantendatensätzen, und Reparaturen hängen von der richtigen Teilenummer ab. Pearstop bereinigt und gleicht diese Datensätze ab, zeigt Ausgaben bei Lieferanten außerhalb Ihrer zugelassenen Liste und rät niemals eine Teilenummer. Es führt keine Inspektionen durch – es sorgt dafür, dass die Daten dahinter stimmen."
         }
       ]
     },
@@ -2462,7 +3386,8 @@
       "quote": {
         "text": "Unsere internen Systeme reichen nicht aus. Ich würde sagen, wir sind auf Bodenniveau. Irgendwo unter der Erde.",
         "attribution": "Einkaufsleiter, Reinigungsdienstleister mit mehreren Standorten"
-      }
+      },
+      "leadIn": "Jede Rechnung ist ein Beleg für geleistete Arbeit an einem Standort. Liest sie niemand, kann sie auch niemand prüfen."
     },
     "painCards": [
       {
@@ -2557,6 +3482,10 @@
       "b3": {
         "title": "Kein Erfassen und Korrigieren mehr",
         "copy": "Der manuelle Erfassungsschritt, der Einkaufs- und Finanzadministrationszeit auffrisst, entfällt."
+      },
+      "b4": {
+        "title": "Rechnungen gegen den Vertrag geprüft",
+        "copy": "Erfasste Positionen lassen sich mit vereinbarten Sätzen und Zahlungsbedingungen abgleichen, sodass vertragswidrige Kosten auffallen, bevor sie bezahlt werden."
       }
     },
     "quote": {

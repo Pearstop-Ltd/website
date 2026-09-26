@@ -125,7 +125,8 @@
         "role": "CCO",
         "copy": "Richard dirige la livraison client chez Pearstop, en veillant à ce que chaque mission se déroule sans accroc et à ce que les promesses sur papier deviennent des résultats concrets."
       }
-    ]
+    ],
+    "buyerIntro": "Les personnes qui construisent, exploitent et entretiennent bâtiments, sites et réseaux tiennent à bien faire les choses : des sites sûrs, des actifs conformes, des lieux où il fait bon travailler et vivre. Les données derrière ce travail devraient les aider, pas les ralentir. C'est cette partie-là que nous réparons."
   },
   "Contact": {
     "meta": {
@@ -175,7 +176,44 @@
     "hero": {
       "eyebrow": "Solutions",
       "title": "Transformez des données désordonnées en décisions",
-      "lead": "Pearstop propose cinq solutions d'intégrité des données pour les secteurs techniques. Chacune cible un problème de données spécifique et chacune est conçue pour protéger vos marges."
+      "lead": "Pearstop propose cinq solutions d'intégrité des données pour les secteurs techniques. Chacune cible un problème de données spécifique et chacune est conçue pour protéger vos marges.",
+      "primaryLabel": "Envoyez-nous 200 lignes",
+      "secondaryLabel": "Parler à un commercial",
+      "builtForLabel": "Conçu pour",
+      "builtFor": [
+        {
+          "id": "facilities-management",
+          "label": "Facilities management"
+        },
+        {
+          "id": "hard-services",
+          "label": "Services techniques"
+        },
+        {
+          "id": "cleaning",
+          "label": "Nettoyage"
+        },
+        {
+          "id": "construction",
+          "label": "Construction"
+        },
+        {
+          "id": "infrastructure",
+          "label": "Infrastructure"
+        },
+        {
+          "id": "manufacturing",
+          "label": "Fabrication"
+        },
+        {
+          "id": "asset-owners",
+          "label": "Propriétaires d'actifs"
+        },
+        {
+          "id": "procurement-consultancies",
+          "label": "Cabinets de conseil en achats"
+        }
+      ]
     },
     "cards": {
       "title": "Cinq solutions. Un seul objectif.",
@@ -219,7 +257,9 @@
       "engineLabel": "Système Pearstop",
       "engineCopy": "Nettoyage, standardisation et catégorisation automatisés. Jusqu'à 95 % de précision, sans effort manuel.",
       "outputLabel": "Données propres, prêtes à la décision",
-      "outputCopy": "Des données fiables qui s'intègrent à vos outils BI, éclairent vos offres et protègent vos marges."
+      "outputCopy": "Des données fiables qui s'intègrent à vos outils BI, éclairent vos offres et protègent vos marges.",
+      "eyebrow": "L'approche Pearstop",
+      "body": "Faire fonctionner un site sûr et bien tenu suppose de faire les choses bien, à chaque fois. Nous appliquons la même rigueur à vos données : chaque ligne lue, nettoyée et étiquetée, et tout ce qui reste incertain vérifié par une personne. Le résultat s'intègre directement aux outils que vous utilisez déjà."
     },
     "geoBlock": {
       "title": "Quels problèmes de qualité des données Pearstop résout-il ?",
@@ -244,6 +284,245 @@
           "copy": "Classification des dépenses en marque blanche sous votre propre taxonomie, afin que la marge de mission aille à l'analyse, pas au nettoyage manuel."
         }
       ]
+    },
+    "breadcrumb": {
+      "home": "Accueil",
+      "current": "Solutions"
+    },
+    "problems": {
+      "eyebrow": "Commencez là où ça fait mal",
+      "title": "Choisissez le problème. Nous commençons là.",
+      "orderLabel": "La plupart des équipes suivent cet ordre :",
+      "order": [
+        {
+          "id": "extraction",
+          "label": "Lire les factures"
+        },
+        {
+          "id": "classification",
+          "label": "Étiqueter chaque ligne"
+        },
+        {
+          "id": "visibility",
+          "label": "Voir les dépenses"
+        },
+        {
+          "id": "benchmarking",
+          "label": "Vérifier chaque prix"
+        },
+        {
+          "id": "readiness",
+          "label": "Prêt pour l'ERP, Fabric et l'IA"
+        }
+      ],
+      "items": [
+        {
+          "id": "extraction",
+          "badgeLabel": "Lire les factures",
+          "pain": "Les factures restent non lues dans une boîte mail, donc il n'y a encore rien à analyser.",
+          "title": "Extraction de factures et documents",
+          "body": "Transformez automatiquement les factures PDF non lues, les scans et les bons de livraison en lignes structurées et étiquetées. Le point de départ de l'analyse des dépenses, et de tout ce qui suit.",
+          "related": [],
+          "href": "/invoice-data-extraction"
+        },
+        {
+          "id": "classification",
+          "badgeLabel": "Étiqueter chaque ligne",
+          "pain": "Les dépenses sont codées à la main, différemment selon les sites, ou pas du tout.",
+          "title": "Classification UNSPSC",
+          "body": "Classez automatiquement des années de données de bons de commande en texte libre selon UNSPSC, y compris en retraçant les pièces de services techniques jusqu'au véritable code fabricant. Jusqu'à 95 % des lignes de dépenses classées automatiquement.",
+          "related": [
+            {
+              "label": "UNSPSC pour le FM",
+              "href": "/unspsc-classification-facilities-management"
+            },
+            {
+              "label": "Pays-Bas",
+              "href": "/unspsc-classification-netherlands"
+            },
+            {
+              "label": "Allemagne",
+              "href": "/unspsc-classification-germany"
+            }
+          ],
+          "href": "/unspsc"
+        },
+        {
+          "id": "visibility",
+          "badgeLabel": "Voir les dépenses",
+          "pain": "Un objectif d'économies ou un appel d'offres a besoin d'une base de référence réelle, et personne ne peut en produire une.",
+          "title": "Visibilité des dépenses",
+          "body": "Construisez une véritable base de dépenses à partir de données de factures et de fournisseurs désordonnées, ventilée par ligne de service et par entité, pour qu'une négociation, un appel d'offres ou une revue de contrat-cadre parte d'un chiffre plutôt que d'une estimation.",
+          "related": [
+            {
+              "label": "Spend Cube et tableaux de bord",
+              "href": "/spend-cube"
+            }
+          ],
+          "href": "/procurement-data-quality"
+        },
+        {
+          "id": "benchmarking",
+          "badgeLabel": "Vérifier chaque prix",
+          "pain": "Chaque facture appelle un oui ou un non, et il n'existe aucun benchmark pour dire si le prix est raisonnable.",
+          "title": "Benchmarking des dépenses",
+          "body": "Chaque ligne est étiquetée et comparée à ce que vous payez habituellement, entre fournisseurs, sites et prestataires, pour que vous puissiez voir immédiatement si un prix se situe dans la fourchette normale et l'approuver sans faire remonter la décision.",
+          "related": [
+            {
+              "label": "Spend Cube et tableaux de bord",
+              "href": "/spend-cube"
+            }
+          ],
+          "href": "/asset-data-management"
+        },
+        {
+          "id": "readiness",
+          "badgeLabel": "Prêt pour l'ERP, Fabric et l'IA",
+          "pain": "Un projet ERP, Fabric ou IA arrive, et les données ne sont pas prêtes pour cela.",
+          "title": "Préparation des données",
+          "body": "Une migration ERP, un déploiement Microsoft Fabric et une initiative IA supposent tous que les données sous-jacentes sont déjà propres et structurées. Quand ce n'est pas le cas, chacun de ces projets ne fait que transporter le désordre vers un nouveau système. Pearstop corrige d'abord les données.",
+          "related": [
+            {
+              "label": "Fabric Ready",
+              "href": "/fabric"
+            },
+            {
+              "label": "AI Readiness",
+              "href": "/ai-readiness"
+            }
+          ],
+          "href": "/data-quality",
+          "wide": true
+        }
+      ],
+      "exploreLink": "Voir comment ça marche →"
+    },
+    "who": {
+      "eyebrow": "Pour qui",
+      "title": "Conçu pour les entreprises qui achètent par projet",
+      "items": [
+        {
+          "id": "facilities-management",
+          "title": "Facilities management",
+          "pain": "Les données arrivent de chaque ligne de service dans un format différent.",
+          "linkLabel": "Voir comment cela s'applique →",
+          "href": "/industries#facilities-management"
+        },
+        {
+          "id": "hard-services",
+          "title": "Services techniques",
+          "pain": "Le même fournisseur apparaît sous des dizaines de noms, et les listes d'actifs ne concordent jamais.",
+          "linkLabel": "Voir comment cela s'applique →",
+          "href": "/industries#hard-services"
+        },
+        {
+          "id": "cleaning",
+          "title": "Nettoyage",
+          "pain": "Les factures s'accumulent sans être lues, et les marges fines ne laissent aucune place à l'approximation.",
+          "linkLabel": "Voir comment cela s'applique →",
+          "href": "/industries#cleaning"
+        },
+        {
+          "id": "construction",
+          "title": "Construction",
+          "pain": "Vous chiffrez vos offres de mémoire car personne ne peut retrouver les chiffres réels historiques.",
+          "linkLabel": "Voir comment cela s'applique →",
+          "href": "/industries#construction"
+        },
+        {
+          "id": "infrastructure",
+          "title": "Infrastructure",
+          "pain": "Un objectif d'économies a été fixé et les données ne peuvent pas montrer où il se situe.",
+          "linkLabel": "Voir comment cela s'applique →",
+          "href": "/industries#infrastructure"
+        },
+        {
+          "id": "manufacturing",
+          "title": "Fabrication",
+          "pain": "Une entité applique déjà UNSPSC et une autre doit s'y aligner.",
+          "linkLabel": "Voir comment cela s'applique →",
+          "href": "/industries#manufacturing"
+        },
+        {
+          "id": "asset-owners",
+          "title": "Propriétaires d'actifs",
+          "pain": "Votre prestataire FM envoie les données de coûts, et vous n'avez aucun moyen de les vérifier.",
+          "linkLabel": "Asset Data Management →",
+          "href": "/asset-data-management"
+        },
+        {
+          "id": "procurement-consultancies",
+          "title": "Cabinets de conseil en achats",
+          "pain": "Vos analystes passent des heures facturées au client à nettoyer les données avant même de commencer l'analyse.",
+          "linkLabel": "Pour les cabinets de conseil en achats →",
+          "href": "/procurement-consultancies"
+        }
+      ]
+    },
+    "tools": {
+      "eyebrow": "Outils UNSPSC gratuits",
+      "title": "Pas encore prêt à en parler ? Faites une recherche.",
+      "items": [
+        {
+          "title": "Recherche UNSPSC gratuite",
+          "body": "Trouvez le bon code pour n'importe quel produit ou service.",
+          "linkLabel": "Ouvrir →",
+          "href": "/unspsc-code-lookup"
+        },
+        {
+          "title": "Arborescence de la taxonomie UNSPSC",
+          "body": "Parcourez toute la hiérarchie, du segment jusqu'au produit de base.",
+          "linkLabel": "Ouvrir →",
+          "href": "/unspsc-classification-demo"
+        },
+        {
+          "title": "Guide de classification UNSPSC par IA",
+          "body": "Comment fonctionne la classification par IA, et où une vérification humaine reste nécessaire.",
+          "linkLabel": "Ouvrir →",
+          "href": "/unspsc-ai-classification-guide"
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "Questions",
+      "title": "Questions fréquentes",
+      "items": [
+        {
+          "q": "Quels problèmes de qualité de données Pearstop résout-il ?",
+          "a": "Les entreprises de services techniques, de construction, d'infrastructure et de fabrication partagent un défi commun : des données de dépenses et d'actifs dispersées, incohérentes et difficiles à exploiter entre équipes et systèmes. Une mauvaise qualité des données d'achats, des registres d'actifs peu fiables et des dépenses non classifiées sont les principaux obstacles à la gestion des catégories, à la maintenance prédictive et à la migration vers de nouveaux systèmes. Pearstop est spécialisé dans le nettoyage et la structuration de ces données de dépenses et d'actifs, pour que les entreprises techniques puissent agir dessus."
+        },
+        {
+          "q": "Par quelle solution dois-je commencer ?",
+          "a": "Commencez par le problème qui se présente à vous. Si les factures restent non lues, commencez par l'extraction. Si les dépenses sont codées à la main ou pas du tout, commencez par la classification UNSPSC. Si vous avez besoin d'une base de référence pour un appel d'offres ou un objectif d'économies, commencez par la visibilité des dépenses. La plupart des équipes suivent cet ordre."
+        },
+        {
+          "q": "Nos données doivent-elles être propres au préalable ?",
+          "a": "Non. Nettoyer les données est la première chose que fait Pearstop. Envoyez vos factures, exports ERP, téléchargements de portails ou tableurs dans l'état où ils sont."
+        },
+        {
+          "q": "Pearstop peut-il nous dire si un prix est raisonnable ?",
+          "a": "Oui. Chaque ligne reçoit un label standard, afin que le même article puisse être comparé entre fournisseurs, sites et prestataires. Vous pouvez voir si un prix se situe dans la fourchette normale avant de l'approuver. Les propriétaires d'actifs s'en servent pour vérifier les dépenses que leur prestataire FM gère en leur nom."
+        },
+        {
+          "q": "Avec quels secteurs Pearstop travaille-t-il ?",
+          "a": "Facilities management, services techniques, nettoyage, construction, infrastructure et fabrication. Ainsi que les propriétaires d'actifs qui externalisent le FM, et les cabinets de conseil en achats qui mènent des analyses de dépenses pour leurs clients."
+        },
+        {
+          "q": "Quelle est la précision de la classification automatisée des dépenses ?",
+          "a": "Environ 95 % des lignes sont classifiées automatiquement. Le reste est signalé et transmis à une personne, afin que la précision reste élevée sans que chaque ligne nécessite une vérification manuelle."
+        },
+        {
+          "q": "Combien de temps cela prend-il ?",
+          "a": "Un premier échantillon de 200 lignes revient généralement en quelques jours ouvrés. Ensuite, la classification se poursuit en continu à mesure que de nouvelles factures arrivent."
+        }
+      ]
+    },
+    "closing": {
+      "title": "Vous ne savez pas quelle solution vous convient ?",
+      "body": "Réservez un appel de découverte de 15 minutes. Nous identifierons précisément quel problème de données vous coûte le plus - et vous montrerons comment le résoudre.",
+      "primaryLabel": "Réservez 15 minutes de découverte",
+      "secondaryLabel": "Ou envoyez-nous 200 lignes →",
+      "tertiaryLabel": "Voir les secteurs"
     }
   },
   "DataQuality": {
@@ -399,6 +678,10 @@
       "b3": {
         "title": "Conformité aux accords-cadres vérifiée, pas supposée",
         "copy": "Voyez où les achats réels ont dérivé par rapport à un accord signé des années auparavant, sur l'ensemble de l'entreprise, pas seulement les catégories que quelqu'un surveille par hasard."
+      },
+      "b4": {
+        "title": "Les dépenses hors contrat mises en pleine lumière",
+        "copy": "Les dépenses auprès de fournisseurs hors de vos accords-cadres ou de votre liste approuvée apparaissent par catégorie, afin que les écarts de conformité soient détectés avant qu'un audit ne les découvre."
       }
     },
     "quote": {
@@ -726,6 +1009,10 @@
       {
         "question": "Combien de temps prend la classification UNSPSC ?",
         "answer": "La plupart des clients disposent d'un jeu de données propre et classifié dans un délai de quatre à six semaines après le démarrage. Le premier engagement commence par un Data Stability Baseline afin que vous puissiez évaluer la qualité du résultat avant de vous engager dans une classification continue."
+      },
+      {
+        "question": "Les dépenses classifiées UNSPSC peuvent-elles être utilisées pour le reporting carbone Scope 3 ?",
+        "answer": "Oui. La méthode basée sur les dépenses pour le Scope 3 multiplie les dépenses de chaque catégorie par un facteur d'émission ; les dépenses doivent donc d'abord être classifiées par catégorie, et UNSPSC offre des catégories cohérentes entre fournisseurs, sites et années. Pearstop fournit les dépenses classifiées ; le calcul des émissions se fait dans votre outil de reporting carbone."
       }
     ],
     "related": {
@@ -1097,11 +1384,14 @@
       "title": "Ce que disent nos clients",
       "lead": "Des équipes achats aux directeurs des opérations - l'impact se voit dans les chiffres.",
       "t1": {
-        "text": "Nos données d'actifs étaient éparpillées entre des tableurs et alimentées par les anciens systèmes des clients. Rien n'était assez cohérent pour en tirer une quelconque analyse. Pearstop les a consolidées et structurées, et soudain nous avions quelque chose sur lequel construire."
+        "text": "Nos données d'actifs étaient éparpillées entre des tableurs et alimentées par les anciens systèmes des clients. Rien n'était assez cohérent pour en tirer une quelconque analyse. Pearstop les a consolidées et structurées, et soudain nous avions quelque chose sur lequel construire.",
+        "name": "Bart van Peij",
+        "role": "Responsable Master Data Management · SPIE Building Solutions"
       },
       "t2": {
         "text": "Nos rapports de visite de site arrivent sous tous les formats imaginables - notes manuscrites, fautes d'orthographe, gribouillages. Pearstop a conçu un système qui les intègre automatiquement dans un document de proposition propre. Cela fait gagner des heures à notre équipe sur chaque mission.",
-        "name": "Vince Out"
+        "name": "Vince Out",
+        "role": "Directeur commercial · Fabrication"
       },
       "t3": {
         "text": "Nous avions des milliers de lignes de produits qui devaient être catégorisées avant même de pouvoir commencer à comprendre nos coûts. Pearstop les a classées en moins d'une semaine. Cela aurait pris six mois à notre équipe, et le résultat n'aurait toujours pas été aussi précis.",
@@ -1121,6 +1411,34 @@
       "lead": "Dites-nous où vos marges fuient. Nous vous montrerons exactement comment Pearstop y remédie.",
       "bookDemo": "Réservez une démo",
       "exploreSolutions": "Découvrir les solutions"
+    },
+    "featured": {
+      "pill": "Étude de cas à la une",
+      "p1": "Le registre d'actifs de SPIE Building Solutions avait été alimenté par différents systèmes de maintenance, sous-traitants et saisies manuelles pendant de nombreuses années. Le même fabricant pouvait apparaître sous une douzaine d'orthographes différentes, et les types d'équipements étaient souvent manquants ou mal renseignés.",
+      "p2": "Pearstop a appliqué son moteur de classification des données d'achats pour consolider 9 175 variantes de noms de fournisseurs en 1 493 fournisseurs canoniques, sur 204 029 fiches d'actifs — le même moteur qui nettoie les données de dépenses, éprouvé ici sur un tout autre type de jeu de données désordonné.",
+      "quote": "Le score de confiance a permis à notre équipe de savoir où concentrer son temps de vérification en priorité, plutôt que de repartir de zéro sur 200 000 lignes.",
+      "quoteAuthor": "Bart van Peij",
+      "quoteRole": "Responsable Master Data Management, SPIE Building Solutions",
+      "readFull": "Lire l'étude de cas complète →",
+      "statsHeader": "Résultats en un coup d'œil",
+      "stats": [
+        {
+          "num": "204 029",
+          "label": "Fiches d'actifs traitées"
+        },
+        {
+          "num": "9 175 → 1 493",
+          "label": "Variantes de fournisseurs consolidées"
+        },
+        {
+          "num": "73,1 %",
+          "label": "Taux de correspondance confirmé"
+        },
+        {
+          "num": "107 081",
+          "label": "Lignes enrichies"
+        }
+      ]
     }
   },
   "Industries": {
@@ -1131,7 +1449,9 @@
     "hero": {
       "eyebrow": "Secteurs",
       "title": "Secteurs que nous servons",
-      "lead": "Pearstop nettoie et classe les données opérationnelles pour les secteurs qui portent les dépenses les plus lourdes et les plus désordonnées : infrastructure, facilities management, construction et fabrication. Trouvez votre secteur ci-dessous."
+      "lead": "Pearstop nettoie et classe les données opérationnelles pour les secteurs qui portent les dépenses les plus lourdes et les plus désordonnées : infrastructure, facilities management, construction et fabrication. Trouvez votre secteur ci-dessous.",
+      "primaryLabel": "Envoyez-nous un échantillon de données. Nous le nettoyons gratuitement.",
+      "secondaryLabel": "Réservez 15 minutes de découverte"
     },
     "sixIndustries": {
       "title": "Où Pearstop s'intègre",
@@ -1448,6 +1768,581 @@
           "a": "Les problèmes de données ci-dessus ne sont pas propres à ces secteurs. Si votre équipe gère des dépenses opérationnelles ou des données d'actifs complexes, fait face à des fiches fournisseurs incohérentes, ou se prépare à une transformation numérique, le problème sous-jacent est généralement le même. Réservez un appel et nous vous dirons clairement si c'est adapté."
         }
       ]
+    },
+    "breadcrumb": {
+      "home": "Accueil",
+      "current": "Secteurs"
+    },
+    "overview": {
+      "eyebrow": "Là où Pearstop intervient",
+      "title": "Lequel vous ressemble ?",
+      "cards": [
+        {
+          "id": "infrastructure",
+          "name": "Infrastructure",
+          "pain": "Un objectif d'économies a été fixé, et les données ne peuvent pas montrer où il se situe.",
+          "outcome": "Savoir où se situe réellement un objectif d'économies nommé dans les dépenses, avant de tenter de le retrouver à la main.",
+          "linkLabel": "Voir votre secteur ↓",
+          "href": "#infrastructure",
+          "photoAlt": "travaux ferroviaires ou de génie civil",
+          "photo": "/images/photos/construction-infra-1.png"
+        },
+        {
+          "id": "integrated-fm",
+          "name": "FM intégré",
+          "pain": "Chaque ligne de service envoie ses données dans un format différent.",
+          "outcome": "Réunir cinq lignes de service et cinq formats de données dans une seule vue structurée du contrat.",
+          "linkLabel": "Voir votre secteur ↓",
+          "href": "#integrated-fm",
+          "photoAlt": "équipe FM multiservices sur site",
+          "photo": "/images/photos/construction-team-2.png"
+        },
+        {
+          "id": "hard-services",
+          "name": "Services techniques",
+          "pain": "Le même fournisseur apparaît sous des dizaines de noms, et les listes d'actifs ne concordent jamais.",
+          "outcome": "Rapprocher les noms de fournisseurs et nettoyer les listes d'actifs, pour que dépenses et plans de maintenance reposent sur des données fiables.",
+          "linkLabel": "Voir votre secteur ↓",
+          "href": "#hard-services",
+          "photoAlt": "technicien CVC ou en salle des machines",
+          "photo": "/images/photos/maintenance-cleanroom-woman-1.png"
+        },
+        {
+          "id": "construction",
+          "name": "Construction",
+          "pain": "Le chiffre d'affaires est connu à l'euro près. Ce que vous avez réellement acheté ne l'est pas.",
+          "outcome": "Transformer des dépenses réparties entre entités et projets en une seule vue catégorisée, à l'échelle du groupe.",
+          "linkLabel": "Voir votre secteur ↓",
+          "href": "#construction",
+          "photoAlt": "chantier de construction",
+          "photo": "/images/photos/construction-planner-woman-1.png"
+        },
+        {
+          "id": "soft-services",
+          "name": "Services non techniques et nettoyage",
+          "pain": "Les factures arrivent plus vite que quiconque ne peut les lire.",
+          "outcome": "Faire lire et structurer les factures automatiquement, pour disposer enfin de données de dépenses permettant de défendre un prix.",
+          "linkLabel": "Voir votre secteur ↓",
+          "href": "#soft-services",
+          "photoAlt": "équipe de nettoyage dans un bâtiment commercial",
+          "photo": "/images/photos/cleaning-office-woman-1.png"
+        },
+        {
+          "id": "manufacturing",
+          "name": "Fabricants de systèmes de construction",
+          "pain": "Une entité applique déjà un standard. Le reste du groupe, non.",
+          "outcome": "Étendre à chaque site et à chaque usine le standard de classification qu'une entité applique déjà.",
+          "linkLabel": "Voir votre secteur ↓",
+          "href": "#manufacturing",
+          "photoAlt": "atelier de fabrication de systèmes du bâtiment",
+          "photo": "/images/photos/hvac-manufacture.jpeg"
+        },
+        {
+          "id": "asset-owners",
+          "name": "Propriétaires d'actifs",
+          "pain": "Votre prestataire rapporte les chiffres, et vous n'avez aucun moyen de les vérifier.",
+          "outcome": "Obtenir une vue indépendante et comparable de ce qui est dépensé en votre nom, pas seulement le rapport d'un prestataire.",
+          "linkLabel": "Voir votre secteur ↓",
+          "href": "#asset-owners",
+          "photoAlt": "extérieur d'un immeuble de bureaux ou d'un patrimoine",
+          "photo": "/images/photos/the-city-2.png"
+        },
+        {
+          "id": "mro",
+          "name": "MRO et sourcing de composants",
+          "pain": "Vous achetez des pièces via des intermédiaires, et payez leur marge sur chaque ligne.",
+          "outcome": "Retrouver le numéro de pièce du fabricant d'origine pour chaque pièce, afin d'acheter directement celles à fort volume.",
+          "linkLabel": "Voir votre secteur ↓",
+          "href": "#mro",
+          "photoAlt": "magasin de pièces détachées ou atelier",
+          "photo": "/images/photos/construction-planner-team-1.png"
+        },
+        {
+          "id": "procurement-consultancies",
+          "name": "Cabinets de conseil en achats",
+          "pain": "Vos analystes passent des heures facturées au client à nettoyer les données avant même de commencer l'analyse.",
+          "outcome": "Une classification en marque blanche sous votre propre taxonomie, pour que la marge de la mission aille à l'analyse.",
+          "linkLabel": "Pour les cabinets de conseil en achats →",
+          "href": "/procurement-consultancies",
+          "photoAlt": "personne consultant des données de dépenses",
+          "photo": "/images/photos/office-desk-woman-1.png"
+        }
+      ]
+    },
+    "sections": [
+      {
+        "id": "infrastructure",
+        "tabLabel": "Infrastructure",
+        "eyebrow": "Infrastructure",
+        "ctaIndustry": "infrastructure",
+        "h2": "Vous ne pouvez pas négocier ce que vous ne voyez pas.",
+        "intro": "Un objectif d'économies est fixé, parfois à huit chiffres, et personne ne peut indiquer où il se situe réellement dans les dépenses. Cet écart entre l'objectif et les données est un schéma récurrent dans l'infrastructure et le ferroviaire : un programme d'économies identifie des dizaines de millions d'économies potentielles, et les données de dépenses sous-jacentes ne permettent pas de savoir où les trouver. Les économies viennent en troisième. D'abord vous voyez où va l'argent, ensuite vous voyez les lacunes de couverture, puis vous négociez.",
+        "photo": "/images/photos/construction-infra-1.png",
+        "photoAlt": "travaux ferroviaires ou de génie civil",
+        "dayToDay": {
+          "work": "Ferroviaire, réseaux d'eau, d'énergie et routiers. De nombreux projets menés en parallèle, souvent remportés par appels d'offres publics.",
+          "spend": "Sous-traitants, matériaux, location de matériel et services spécialisés, achetés par les équipes projet à travers les régions et les entités.",
+          "matters": "Atteindre les objectifs d'économies, rester sur les accords-cadres, travailler avec des fournisseurs agréés sur les travaux critiques pour la sécurité, et chiffrer le prochain appel d'offres sur des coûts réels."
+        },
+        "pains": [
+          {
+            "title": "Un objectif d'économies sans données pour l'étayer",
+            "body": "Un programme de transformation fixe un chiffre. Les dépenses ne sont pas classifiées de manière suffisamment cohérente pour dire dans quelles catégories ce chiffre se cache."
+          },
+          {
+            "title": "Une couverture des accords-cadres que personne ne voit à l'échelle de l'entreprise",
+            "body": "Un acheteur peut voir les dix accords-cadres de sa propre catégorie. Les cinquante autres catégories n'ont pas de visibilité équivalente, si bien que l'entreprise ne peut pas orienter les dépenses vers des accords qu'elle a déjà."
+          },
+          {
+            "title": "Aucune base de référence pour négocier ou répondre à un appel d'offres",
+            "body": "Négocier avec un fournisseur, ou chiffrer un nouvel appel d'offres, commencent tous deux par savoir ce que vous dépensez déjà. Sans cette base de référence, chaque négociation part d'une estimation."
+          }
+        ],
+        "solutionLink": {
+          "label": "Voir comment Pearstop construit une véritable base de dépenses",
+          "href": "/procurement-data-quality"
+        },
+        "changes": [
+          "Des dépenses classifiées de manière suffisamment cohérente pour montrer où se situe réellement un objectif d'économies nommé",
+          "Une couverture des accords-cadres et des contrats visible sur toutes les catégories, pas seulement celles déjà surveillées",
+          "Une véritable base de dépenses pour négocier avec les fournisseurs et chiffrer les appels d'offres, pas une estimation"
+        ],
+        "proof": {
+          "quote": "Nous avions deux collaborateurs à temps plein sur l'attribution des catégories. Désormais, le système le fait pour nous – ce qui a aussi débloqué les estimations de marge en aval. C'est plus fiable, pour une fraction du coût.",
+          "role": "Directeur des Achats, Infrastructure",
+          "caseLabel": "Lire le cas",
+          "caseHref": "/cases/strukton"
+        },
+        "faq": [
+          {
+            "q": "Comment les entreprises d'infrastructure retrouvent-elles où se situe un objectif d'économies dans leurs dépenses ?",
+            "a": "Classifiez chaque ligne de dépense selon un même standard, comme UNSPSC, sur tous les projets et entités. Une fois les dépenses regroupées par catégorie, vous pouvez voir lesquelles sont importantes, réparties entre de nombreux fournisseurs, ou hors accord-cadre. C'est généralement là que se situent les économies. Pearstop effectue la classification automatiquement, et une personne vérifie tout ce qui reste incertain."
+          },
+          {
+            "q": "Comment une entreprise ferroviaire ou d'infrastructure peut-elle vérifier la couverture de ses accords-cadres ?",
+            "a": "Rapprochez chaque ligne de dépense d'une catégorie et d'un fournisseur, puis comparez-la à ce que couvrent vos accords-cadres. L'écart révèle les dépenses allant vers des fournisseurs hors de vos accords. Cela ne fonctionne qu'une fois les dépenses étiquetées de la même façon partout."
+          },
+          {
+            "q": "De quelles données de dépenses un entrepreneur en infrastructure a-t-il besoin avant de chiffrer un appel d'offres ?",
+            "a": "D'une base de coûts : ce que vous avez payé par le passé pour chaque catégorie, fournisseur et type de projet. Sans elle, le prix de l'offre est une estimation. Pearstop construit cette base à partir des factures et des exports ERP que vous possédez déjà."
+          }
+        ]
+      },
+      {
+        "id": "integrated-fm",
+        "tabLabel": "FM intégré",
+        "eyebrow": "FM intégré",
+        "ctaIndustry": "FM intégré",
+        "h2": "Un contrat, cinq lignes de service, cinq formats de données.",
+        "intro": "Les contrats FM multiservices l'emportent par leur étendue : nettoyage, services techniques, sécurité et restauration sous un même toit. Les données sous-jacentes reflètent rarement cette unité. Chaque ligne de service arrive depuis son propre système, dans son propre format, et des fiches d'actifs ou de coûts censées décrire la même chose finissent par sembler appartenir à des entreprises différentes.",
+        "photo": "/images/photos/construction-team-2.png",
+        "photoAlt": "équipe FM multiservices sur site",
+        "dayToDay": {
+          "work": "Nettoyage, maintenance, sécurité et restauration livrés ensemble sous un même contrat, souvent sur des centaines de sites et plusieurs pays.",
+          "spend": "Consommables, pièces, sous-traitants et main-d'œuvre, rapportés depuis un système différent pour chaque ligne de service.",
+          "matters": "Connaître le coût réel de chaque contrat, prouver sa valeur au renouvellement, et maintenir le bon fonctionnement des bâtiments desservis."
+        },
+        "pains": [
+          {
+            "title": "Chaque ligne de service fait son propre reporting",
+            "body": "Le nettoyage, les services techniques et la sécurité envoient chacun leurs données depuis leur propre système, dans leur propre format. Personne ne voit le coût total d'un seul contrat."
+          },
+          {
+            "title": "Une croissance par acquisitions",
+            "body": "Chaque entreprise rachetée code encore ses dépenses à sa façon, souvent dans sa propre langue, si bien que le groupe ne peut pas comparer ce qui est comparable."
+          },
+          {
+            "title": "Des données de référence fausses dès le départ",
+            "body": "Les données fabricants et équipements transmises au démarrage du contrat sont parfois tout simplement erronées, et les erreurs se multiplient au fil des sites et des années."
+          }
+        ],
+        "solutionLink": {
+          "label": "Voir comment Pearstop unifie les données FM",
+          "href": "/data-quality"
+        },
+        "changes": [
+          "Une vue unique des coûts sur toutes les lignes de service d'un contrat",
+          "Des fournisseurs et catégories codés de la même façon dans chaque filiale et chaque pays",
+          "Des données fabricants et équipements corrigées, pour que les rapports qui s'appuient dessus tiennent la route"
+        ],
+        "proof": {
+          "quote": "Vous ne pouvez pas négocier ce que vous ne voyez pas.",
+          "role": "Directeur des Achats, Facilities Management",
+          "caseLabel": null,
+          "caseHref": null
+        },
+        "faq": [
+          {
+            "q": "Comment les prestataires FM intégrés obtiennent-ils une vue complète du coût d'un contrat sur toutes les lignes de service ?",
+            "a": "Réunissez les dépenses de chaque ligne de service dans un seul jeu de données et étiquetez-les avec les mêmes catégories et noms de fournisseurs. Le coût par contrat, site ou ligne de service peut alors être comparé directement. Pearstop le fait à partir des données que chaque ligne de service produit déjà, quel que soit le format d'arrivée."
+          },
+          {
+            "q": "Comment les entreprises FM standardisent-elles leurs données de dépenses après une acquisition ?",
+            "a": "Faites correspondre les fournisseurs et catégories de chaque entreprise rachetée à un standard de groupe unique, plutôt que de d'abord migrer chacune vers un nouveau système. Pearstop classe les dépenses de chaque entité selon la même taxonomie, quelle que soit la langue."
+          },
+          {
+            "q": "Quel standard de classification des dépenses convient au facilities management ?",
+            "a": "UNSPSC est le standard mondial le plus répandu et fonctionne bien pour les dépenses FM. De nombreux groupes FM conservent aussi leur propre liste de catégories. Pearstop peut étiqueter chaque ligne selon les deux."
+          }
+        ]
+      },
+      {
+        "id": "hard-services",
+        "tabLabel": "Services techniques",
+        "eyebrow": "Services techniques",
+        "ctaIndustry": "services techniques",
+        "h2": "Un fournisseur, des dizaines d'orthographes. Une liste d'actifs à laquelle personne ne fait pleinement confiance.",
+        "intro": "Les prestataires de services techniques entretiennent et installent CVC, électricité, sécurité incendie et gestion technique du bâtiment sur des centaines de sites clients. Une grande partie du travail est au forfait, donc la marge dépend de la connaissance réelle du coût des pièces, sous-traitants et actifs. Les données le permettent rarement : le même fournisseur s'écrit d'une douzaine de façons, et chaque client envoie sa liste d'actifs dans un format différent.",
+        "photo": "/images/photos/maintenance-cleanroom-woman-1.png",
+        "photoAlt": "technicien CVC ou en salle des machines",
+        "dayToDay": {
+          "work": "Maintenance et installation CVC, électricité, sécurité incendie et GTB, souvent sur des contrats de service au forfait.",
+          "spend": "Pièces, sous-traitants et équipements, plus une liste d'actifs par site client.",
+          "matters": "La marge sur les travaux au forfait, la maintenance réglementaire réalisée à temps, des bâtiments sûrs, et des offres chiffrées sur des coûts réels."
+        },
+        "pains": [
+          {
+            "title": "Un fournisseur, des dizaines de noms",
+            "body": "Le même fournisseur apparaît sous des orthographes différentes dans chaque système et chaque site, si bien que personne ne peut additionner ce que vous dépensez avec lui."
+          },
+          {
+            "title": "Des listes d'actifs qui fonctionnent sur le terrain, pas au bureau",
+            "body": "Chaque client envoie sa liste d'actifs dans son propre format. La remettre en forme prend un ou deux jours à la main, et cela recommence encore et encore tout au long de l'année."
+          },
+          {
+            "title": "Des contrats au forfait chiffrés à l'estimation",
+            "body": "Les coûts des pièces et des sous-traitants sont estimés, pas vérifiés, si bien que la marge peut avoir disparu avant même que le travail commence."
+          }
+        ],
+        "solutionLink": {
+          "label": "Voir comment Pearstop nettoie les données fournisseurs et actifs",
+          "href": "/data-quality"
+        },
+        "changes": [
+          "Rapprochement fournisseurs : chaque orthographe reliée à un seul fournisseur, pour que la dépense par fournisseur soit un chiffre unique",
+          "Listes d'actifs nettoyées et rapprochées dans une structure unique, quel que soit le format envoyé par le client",
+          "Une liste d'actifs fiable pour planifier la maintenance réglementaire, afin qu'aucune inspection requise ne soit oubliée",
+          "Des données fabricants et équipements vérifiées par rapport à ce qui est réellement installé",
+          "Un historique de coûts par pièce et par sous-traitant pour chiffrer le prochain contrat"
+        ],
+        "proof": {
+          "stat": "9 175 orthographes de fournisseurs ramenées à 1 493 sur 204 029 fiches d'actifs",
+          "quote": "Nos listes d'actifs fonctionnaient pour les techniciens sur site, mais ne nous permettaient pas de planifier une maintenance intelligente ni de gérer le risque des offres de façon pilotée par les données.",
+          "role": "Asset Manager, Facilities Management",
+          "caseLabel": "Lire le cas SPIE",
+          "caseHref": "/cases/spie"
+        },
+        "faq": [
+          {
+            "q": "Comment les prestataires de services techniques nettoient-ils les noms de fournisseurs dans leurs données de dépenses ?",
+            "a": "Regroupez chaque orthographe d'un même fournisseur sous un seul nom, en utilisant les noms, adresses et autres informations fournisseurs disponibles, et faites vérifier les correspondances incertaines par une personne. Sur un projet de services techniques, 9 175 orthographes de fournisseurs se sont ainsi ramenées à 1 493 fournisseurs réels."
+          },
+          {
+            "q": "Comment un prestataire de maintenance CVC ou électrique peut-il standardiser des listes d'actifs venant de clients différents ?",
+            "a": "Faites correspondre la liste d'actifs de chaque client à une structure unique, où type d'actif, fabricant, modèle et emplacement sont nommés et codés de la même façon à chaque fois. Pearstop effectue ce rapprochement automatiquement et signale les fiches qu'il ne peut pas relier avec confiance."
+          },
+          {
+            "q": "Comment les prestataires de services techniques chiffrent-ils plus précisément leurs contrats de maintenance au forfait ?",
+            "a": "En partant de ce que coûtent réellement les pièces et les sous-traitants sur des contrats similaires, à partir de dépenses passées classifiées. Pearstop construit cet historique de coûts à partir des factures et des données ERP que vous possédez déjà."
+          }
+        ]
+      },
+      {
+        "id": "construction",
+        "tabLabel": "Construction",
+        "eyebrow": "Construction",
+        "ctaIndustry": "construction",
+        "h2": "Transformer des années de dépenses en un seul chiffre ne devrait pas prendre des années.",
+        "intro": "Un groupe de construction réalisant des centaines de millions de dépenses annuelles sur plus d'une douzaine d'entités peut annoncer son chiffre d'affaires à l'euro près, et pourtant ignorer, avec précision, ce qu'il a réellement dépensé l'an dernier, ou sur quoi. Des accords-cadres existent, mais ils ont été signés il y a des années et personne n'a vérifié depuis si les achats les suivent encore.",
+        "photo": "/images/photos/construction-planner-woman-1.png",
+        "photoAlt": "chantier de construction",
+        "dayToDay": {
+          "work": "Entreprises générales et sociétés par projet menant de nombreux chantiers en parallèle, souvent réparties sur une douzaine d'entités ou plus.",
+          "spend": "Sous-traitants, matériaux et matériel, achetés projet par projet.",
+          "matters": "Remporter des appels d'offres avec de la marge, connaître les dépenses à l'échelle du groupe, des chantiers sûrs, et acheter auprès de sous-traitants agréés sur des accords-cadres convenus."
+        },
+        "pains": [
+          {
+            "title": "Des dépenses de groupe que personne ne peut additionner précisément",
+            "body": "Des dépenses réparties entre de nombreuses entités et systèmes font que le chiffre d'affaires est connu à l'euro près ; ce qui a été réellement acheté l'est rarement."
+          },
+          {
+            "title": "Des accords-cadres que personne n'a vérifiés récemment",
+            "body": "Des accords signés il y a des années continuent de fonctionner sur la confiance, sans comparaison en temps réel pour savoir si les achats actuels les suivent toujours."
+          },
+          {
+            "title": "Chaque appel d'offres repart de zéro",
+            "body": "Avant de chiffrer une offre, quelqu'un transforme à la main des années de dépenses brutes en quantités et en sous-traitants. Puis recommence pour la suivante."
+          }
+        ],
+        "solutionLink": {
+          "label": "Voir comment Pearstop nettoie les données d'achats à grande échelle",
+          "href": "/procurement-data-quality"
+        },
+        "changes": [
+          "Des dépenses de groupe réunies dans une seule vue codée, pas un tableur par entité",
+          "Une conformité aux accords-cadres vérifiée par rapport aux achats réels, pas supposée",
+          "Un historique de coûts prêt pour le prochain appel d'offres, sans devoir le reconstruire à la main"
+        ],
+        "proof": {
+          "quote": "Si vous ne pouvez pas défendre votre base de coûts, vous chiffrez au feeling.",
+          "role": "Directeur Commercial, Construction",
+          "caseLabel": null,
+          "caseHref": null
+        },
+        "faq": [
+          {
+            "q": "Comment un groupe de construction peut-il voir ses dépenses sur toutes ses entités ?",
+            "a": "Étiquetez chaque ligne de dépense de chaque entité avec les mêmes catégories et noms de fournisseurs, puis réunissez-les dans une seule vue. Pearstop le fait à partir des exports ERP et des factures, sans devoir d'abord migrer chaque entité vers un système unique."
+          },
+          {
+            "q": "Comment les entreprises de construction vérifient-elles que leurs achats suivent les accords-cadres ?",
+            "a": "Comparez les dépenses classifiées par catégorie et par fournisseur avec les accords-cadres en vigueur. Les dépenses allant vers des fournisseurs hors accord apparaissent immédiatement."
+          },
+          {
+            "q": "Comment les métreurs et estimateurs en construction exploitent-ils l'historique de coûts pour leurs appels d'offres ?",
+            "a": "Ils ont besoin de dépenses passées converties en coûts par catégorie, sous-traitant et type de projet. Une fois ces données classifiées, elles peuvent être extraites en quelques minutes plutôt que reconstruites à la main pour chaque offre."
+          }
+        ]
+      },
+      {
+        "id": "soft-services",
+        "tabLabel": "Services non techniques et nettoyage",
+        "eyebrow": "Services non techniques et nettoyage",
+        "ctaIndustry": "services non techniques et nettoyage",
+        "h2": "Si la facture n'est jamais lue, la dépense sous-jacente n'existe pas encore.",
+        "intro": "Demandez à l'équipe achats d'un prestataire de nettoyage à quel point elle a confiance dans ses propres chiffres, et « au ras du sol » est une réponse courante et autodépréciative. Avant que les dépenses puissent être vérifiées par rapport à un contrat, quelqu'un doit d'abord réellement lire la facture, et séparément, environ quatre-vingts pour cent des factures des contrats de nettoyage ne correspondent pas aux conditions convenues. Deux problèmes de visibilité, superposés.",
+        "photo": "/images/photos/cleaning-office-woman-1.png",
+        "photoAlt": "équipe de nettoyage dans un bâtiment commercial",
+        "dayToDay": {
+          "work": "Nettoyage et services non techniques livrés sur des centaines de sites clients, avec des marges fines et beaucoup de main-d'œuvre.",
+          "spend": "Consommables, équipements et sous-traitants, souvent auprès d'un ou deux fournisseurs principaux.",
+          "matters": "Défendre les prix d'appel d'offres, maîtriser le coût des consommables, et ne pas dépendre des seuls chiffres d'un fournisseur."
+        },
+        "pains": [
+          {
+            "title": "Des factures qui arrivent plus vite que quiconque ne peut les lire",
+            "body": "Des données de référence ERP jugées trop médiocres pour que le flux automatique puisse même démarrer, avec des échéances manquées depuis des années, pas des mois."
+          },
+          {
+            "title": "Des dépenses que personne n'a vérifiées par rapport au contrat",
+            "body": "Interrogée sur le coût réel d'une offre, la réponse honnête est souvent : ça semble être 3 % du contrat, mais ça pourrait être six, ou deux. Personne ne sait."
+          },
+          {
+            "title": "Aucune justification quand un client conteste un prix",
+            "body": "Interrogée pour défendre le coût d'une offre, la réponse honnête est souvent que personne ne sait. La marge sur le chiffre était une impression, pas un calcul."
+          }
+        ],
+        "solutionLink": {
+          "label": "Voir comment Pearstop lit la facture en premier",
+          "href": "/invoice-data-extraction"
+        },
+        "changes": [
+          "Des factures lues et structurées automatiquement, quel que soit le format, pour qu'il y ait enfin quelque chose à vérifier",
+          "Des dépenses réelles vérifiées par rapport aux conditions contractuelles convenues, par défaut, et non comme un exercice d'audit",
+          "Une véritable base de coûts pour défendre les prix face à une contestation client, pas une impression"
+        ],
+        "proof": {
+          "stat": "Précision de l'extraction de factures passée d'environ 70 % à 99 % pour une entreprise de services de nettoyage",
+          "quote": "Il aurait fallu cinq ingénieurs et une année complète pour nettoyer cela. Nous avons donc décidé de chercher une meilleure solution.",
+          "role": "Directeur des Opérations, Entreprise de services de nettoyage",
+          "caseLabel": null,
+          "caseHref": null
+        },
+        "faq": [
+          {
+            "q": "Comment les entreprises de nettoyage automatisent-elles le traitement de leurs factures ?",
+            "a": "En utilisant l'extraction de factures qui lit les PDF, les scans et les pièces jointes d'e-mails, transforme chaque ligne en donnée structurée et l'étiquette. Pour une entreprise de nettoyage, la précision d'extraction au premier passage est passée d'environ 70 % à 99 %."
+          },
+          {
+            "q": "Comment un prestataire de nettoyage peut-il justifier ses coûts de consommables dans un appel d'offres ?",
+            "a": "Avec une base de coûts construite à partir des factures passées : ce que coûtent réellement les consommables et équipements par site ou par contrat. Sans elle, le chiffre de l'offre est une estimation."
+          },
+          {
+            "q": "Comment les entreprises de nettoyage vérifient-elles les prix fournisseurs lorsqu'un seul fournisseur domine ?",
+            "a": "En classifiant vos propres lignes de facture, vous pouvez suivre le prix de chaque article dans le temps, plutôt que de dépendre des rapports fournis par le fournisseur."
+          }
+        ]
+      },
+      {
+        "id": "manufacturing",
+        "tabLabel": "Fabricants",
+        "eyebrow": "Fabricants de systèmes de construction",
+        "ctaIndustry": "fabrication",
+        "h2": "Une entité applique déjà un standard. Le reste du groupe, non.",
+        "intro": "Il est courant, chez les fabricants multi-entités, qu'une partie de l'entreprise, souvent la plus ancienne ou la plus récemment auditée, classe déjà les dépenses selon un véritable standard, tandis que les entités sœurs et les sites plus récents fonctionnent encore avec des données fournisseurs et pièces incohérentes, en texte libre. Cet écart ne reste pas longtemps confiné à une seule région : les audits, le reporting de groupe et les achats mutualisés finissent tous par exiger la même vue partout.",
+        "photo": "/images/photos/hvac-manufacture.jpeg",
+        "photoAlt": "atelier de fabrication de systèmes du bâtiment",
+        "dayToDay": {
+          "work": "Fabricants de CVC, d'équipements électromécaniques et industriels, exploitant plusieurs usines ou entités, souvent dans plusieurs pays.",
+          "spend": "Des pièces et matériaux en gros volume, décrits différemment dans chaque usine.",
+          "matters": "Un standard de classification unique à l'échelle du groupe, des devis rapides et précis, et aucun stock en double."
+        },
+        "pains": [
+          {
+            "title": "Une entité sur un standard, les autres non",
+            "body": "Un standard de classification de groupe existe déjà quelque part dans l'entreprise. L'étendre manuellement à chaque entité est plus lent que la raison même pour laquelle il avait été demandé."
+          },
+          {
+            "title": "Des fiches de pièces dupliquées et incohérentes entre usines",
+            "body": "La même pièce apparaît sous des codes et orthographes différents selon l'usine ou le système qui l'a saisie, ce qui bloque le benchmarking fournisseurs et masque les stocks en double."
+          },
+          {
+            "title": "Des devis ralentis par des recherches manuelles",
+            "body": "Ressaisir à la main les données de pièces et de sites ralentit chaque devis. Chez un fabricant, cela prenait de 1 à 3 heures par proposition."
+          }
+        ],
+        "solutionLink": {
+          "label": "Voir comment Pearstop aligne chaque entité sur un seul standard",
+          "href": "/unspsc"
+        },
+        "changes": [
+          "Le standard de classification existant du groupe étendu à chaque entité, pas seulement celle qui l'avait déjà",
+          "Des données de pièces nettoyées et rapprochées entre usines et systèmes",
+          "Des devis plus rapides, sur des données de coûts et de fournisseurs qui n'ont plus besoin d'être revérifiées à la main"
+        ],
+        "proof": {
+          "quote": "Cela fait gagner beaucoup de temps à notre équipe en éliminant les tâches répétitives de rapprochement des bons articles.",
+          "personId": "vinceOut",
+          "caseLabel": "Lire le cas",
+          "caseHref": "/cases/lemtech"
+        },
+        "faq": [
+          {
+            "q": "Comment les fabricants déploient-ils UNSPSC sur plusieurs usines ?",
+            "a": "En appliquant la classification qu'une entité utilise déjà aux données de dépenses et de pièces de chaque usine, en faisant correspondre les descriptions locales aux mêmes codes. Pearstop le fait automatiquement, dans n'importe quelle langue."
+          },
+          {
+            "q": "Comment repérer les pièces en double entre plusieurs sites de fabrication ?",
+            "a": "Standardisez les descriptions et codes de pièces entre usines, puis rapprochez les fiches qui décrivent la même pièce. Les doublons et les stocks détenus deux fois deviennent visibles."
+          },
+          {
+            "q": "Notre entité américaine utilise UNSPSC. Comment aligner nos entités européennes ?",
+            "a": "Classifiez les données de dépenses et de pièces des entités européennes selon les mêmes codes UNSPSC, pour que le reporting de groupe compare ce qui est comparable. Vous n'avez pas besoin de remplacer leur ERP au préalable."
+          }
+        ]
+      },
+      {
+        "id": "asset-owners",
+        "tabLabel": "Propriétaires d'actifs",
+        "eyebrow": "Propriétaires d'actifs",
+        "ctaIndustry": "propriétaire d'actifs",
+        "h2": "Vous ne touchez pas aux factures. Vous devez quand même savoir ce qu'elles disent.",
+        "intro": "Les investisseurs immobiliers, les bailleurs et les propriétaires de patrimoine public qui externalisent le facilities management ne génèrent pas leurs propres données de dépenses. Ils les reçoivent, filtrées par le prestataire qui exécute le contrat. La question qui suit n'est pas une question de stratégie de catégorie. Elle est plus simple, et plus difficile à éviter : qu'est-ce qui est réellement dépensé en notre nom, est-ce compétitif, et comment le saurions-nous si ce n'était pas le cas.",
+        "photo": "/images/photos/the-city-2.png",
+        "photoAlt": "extérieur d'un immeuble de bureaux ou d'un patrimoine",
+        "dayToDay": {
+          "work": "Investisseurs immobiliers, bailleurs et propriétaires de patrimoine public qui externalisent le facilities management à un prestataire.",
+          "spend": "Maintenance et services achetés en votre nom et rapportés par le prestataire.",
+          "matters": "Savoir si ce qui est dépensé en votre nom est équitable, comparer prestataires et sites, valider rapidement les coûts standards, et des bâtiments qui fonctionnent bien pour ceux qui les occupent."
+        },
+        "pains": [
+          {
+            "title": "Des données de coûts que vous recevez mais ne contrôlez pas",
+            "body": "Un mandataire de gestion ou un prestataire FM rapporte les chiffres. Il existe rarement un moyen indépendant de les vérifier par rapport à ce que paient des sites ou portefeuilles similaires."
+          },
+          {
+            "title": "Aucun benchmark entre prestataires ou sites",
+            "body": "Sans une vue commune et classifiée des dépenses, comparer les coûts d'un prestataire à un autre, ou d'un site au suivant, n'est pas possible."
+          },
+          {
+            "title": "Les coûts standards remontent encore pour validation",
+            "body": "Personne en dessous de vous ne sait ce que devrait coûter une intervention standard, alors le dossier remonte aux directeurs, ou part chez un métreur externe, pour vérification."
+          }
+        ],
+        "solutionLink": {
+          "label": "Voir comment Pearstop rassure les propriétaires d'actifs",
+          "href": "/asset-data-management"
+        },
+        "changes": [
+          "Une vue indépendante et classifiée des dépenses gérées en votre nom, pas seulement le rapport du prestataire",
+          "Un benchmarking des coûts entre prestataires et sites, sur la même base",
+          "Une assurance à apporter à une revue de prestataire, pas seulement un fichier reçu de sa part",
+          "Des coûts standards validés par rapport à un benchmark, sans escalade"
+        ],
+        "proof": null,
+        "faq": [
+          {
+            "q": "Comment un propriétaire immobilier peut-il vérifier les coûts rapportés par son prestataire FM ?",
+            "a": "Classifiez vous-même les données de coûts du prestataire, ligne par ligne, pour disposer d'un registre indépendant. Comparez-les ensuite avec d'autres sites, d'autres prestataires et les années précédentes."
+          },
+          {
+            "q": "Comment les propriétaires d'actifs comparent-ils les coûts de facilities management entre prestataires ?",
+            "a": "Étiquetez chaque ligne de coût de chaque prestataire selon le même standard, pour que la même intervention ou le même article soit comparé de façon identique. Sans standard commun, les rapports de prestataires ne peuvent pas être comparés."
+          },
+          {
+            "q": "Comment les propriétaires d'actifs peuvent-ils valider les coûts de maintenance standards sans faire remonter chaque décision ?",
+            "a": "Définissez une fourchette de référence pour chaque type d'intervention ou d'article, à partir de dépenses passées classifiées. Tout ce qui rentre dans la fourchette peut être validé immédiatement ; tout ce qui en sort est signalé."
+          }
+        ]
+      },
+      {
+        "id": "mro",
+        "tabLabel": "MRO",
+        "eyebrow": "MRO et sourcing de composants",
+        "ctaIndustry": "MRO",
+        "h2": "Arrêtez de payer un intermédiaire parce que personne ne peut confirmer ce qu'est la pièce.",
+        "intro": "La plupart des équipes MRO achètent leurs pièces via des intermédiaires : un fabricant d'équipement ou un distributeur qui vend la pièce sous son propre code. Pour les pièces achetées en volume, passer directement par le fabricant d'origine coûte moins cher. Pour cela, il faut connaître le numéro de pièce du fabricant d'origine, et le connaître pour chaque pièce de vos données, pas seulement pour quelques-unes. Cette recherche est habituellement sous-traitée à une équipe offshore et payée à la ligne, et une grosse liste de pièces peut prendre des mois. Pearstop le fait avec l'IA, pour chaque ligne, en quelques jours plutôt qu'en quelques mois, et laisse un champ vide lorsqu'il ne peut pas confirmer une correspondance.",
+        "photo": "/images/photos/construction-planner-team-1.png",
+        "photoAlt": "magasin de pièces détachées ou atelier",
+        "dayToDay": {
+          "work": "Maintenir les équipements en état de marche sur plusieurs sites, en commandant pièces et composants au quotidien.",
+          "spend": "Des milliers de pièces différentes, la plupart achetées via des intermédiaires sous leurs propres codes.",
+          "matters": "Savoir quelles pièces à fort volume peuvent être achetées directement, à quel prix, et que chaque pièce est la bonne, car une correspondance erronée coûte plus cher qu'elle ne fait économiser."
+        },
+        "pains": [
+          {
+            "title": "Le code fabricant d'origine est caché derrière un code fournisseur",
+            "body": "Sans lui, il n'existe aucun fournisseur alternatif chez qui acheter, ni aucun moyen de vérifier que le prix est équitable."
+          },
+          {
+            "title": "Trop de pièces à rechercher à la main",
+            "body": "Retrouver le numéro de pièce du fabricant pour une seule pièce est faisable. Le faire pour des milliers, sur tous les fournisseurs et sites, ne l'est pas."
+          },
+          {
+            "title": "Une recherche sous-traitée ligne par ligne",
+            "body": "Le travail de recherche part généralement vers une équipe offshore, payée à la ligne. Un client payait environ 30 centimes la ligne, et une grosse liste de pièces mettait des mois à revenir."
+          }
+        ],
+        "solutionLink": {
+          "label": "Voir comment Pearstop vérifie pièces et composants",
+          "href": "/unspsc"
+        },
+        "changes": [
+          "Le numéro de pièce du fabricant d'origine retrouvé pour chaque pièce de vos données, pas seulement les plus courantes",
+          "Une liste claire des pièces à fort volume que vous pouvez commander directement, en gros",
+          "Une liste de pièces traitée en quelques jours, parfois en quelques heures, plutôt qu'en quelques mois",
+          "Aucun numéro de pièce inventé : quand une correspondance ne peut pas être confirmée, le champ reste vide, car deviner coûte plus cher que l'économie recherchée"
+        ],
+        "proof": {
+          "linkLabel": "Voir le cas type MRO",
+          "linkHref": "/cases/mro-confidential"
+        },
+        "faq": [
+          {
+            "q": "Comment les équipes MRO retrouvent-elles le numéro de pièce du fabricant d'origine derrière un code fournisseur ?",
+            "a": "En rapprochant le code fournisseur et la description de chaque pièce des données fabricants et des achats passés, jusqu'à confirmer le numéro de pièce d'origine. Pearstop le fait avec l'IA pour chaque ligne de vos données et montre les preuves de chaque correspondance, pour que votre équipe puisse vérifier avant de commander."
+          },
+          {
+            "q": "Peut-on acheter des pièces détachées directement auprès du fabricant d'origine plutôt que via un intermédiaire ?",
+            "a": "Souvent oui, pour les pièces achetées en volume. Les intermédiaires revendent des composants sous leurs propres codes. Une fois le numéro de pièce du fabricant d'origine connu, vous pouvez passer des commandes groupées directement et comparer les prix."
+          },
+          {
+            "q": "Est-il moins cher d'utiliser l'IA plutôt qu'une équipe sous-traitée pour rechercher des numéros de pièces ?",
+            "a": "Pour de grandes listes de pièces, généralement oui. La recherche sous-traitée est payée à la ligne (un client payait environ 30 centimes la ligne), et une grosse liste peut prendre des mois à revenir. Avec l'IA, la même liste revient en quelques jours, parfois en quelques heures, et une personne ne vérifie que les correspondances incertaines."
+          },
+          {
+            "q": "L'IA peut-elle trouver des numéros de pièces fabricants sans les inventer ?",
+            "a": "Cela dépend de la façon dont elle est conçue. Pearstop ne renvoie un numéro de pièce que lorsqu'il trouve une correspondance fiable, et laisse le champ vide quand ce n'est pas le cas. Vous obtiendrez peut-être moins de réponses qu'avec un outil qui devine, mais aucune n'est inventée, et vous savez exactement quelles pièces restent à vérifier."
+          }
+        ]
+      }
+    ],
+    "workingDifferent": {
+      "title": "Vous travaillez dans un autre secteur ?",
+      "body": "Les problèmes de qualité de données ne sont pas propres aux secteurs ci-dessus. Si vos équipes gèrent des dépenses et des données d'actifs complexes, font face à des fiches fournisseurs incohérentes, ou passent à un nouvel ERP ou système de reporting, il y a de fortes chances que nous puissions vous aider. Voyons cela ensemble.",
+      "primaryLabel": "Réservez 15 minutes de découverte",
+      "secondaryLabel": "Ou envoyez-nous un échantillon de données →"
     }
   },
   "Privacy": {
@@ -1505,6 +2400,7 @@
           "Les systèmes IA/ML que nous utilisons pour classifier les données de factures soumises, exécutés sur une infrastructure hébergée dans l'UE ou bénéficiant de garanties équivalentes."
         ],
         "paragraphsAfter": [
+          "Toutes les données sont stockées et traitées sur des serveurs situés dans l'Union européenne.",
           "Chacun de ces prestataires est contractuellement tenu de protéger vos données et de ne les utiliser que dans le but que nous spécifions."
         ]
       },
@@ -1594,7 +2490,9 @@
       {
         "title": "3. Demandes de classification d'échantillon",
         "paragraphs": [
-          "Si vous nous envoyez un échantillon de lignes de facture via le Site, nous le classifierons et renverrons le résultat à titre de démonstration de notre service, gratuitement et sans obligation d'aucune part. Les résultats d'échantillon sont fournis « en l'état » pour illustrer ce que Pearstop peut faire, et ne doivent pas être considérés comme un jeu de données final et audité. La soumission d'un échantillon ne crée pas de contrat pour des services continus ; cela nécessite un accord séparé."
+          "Si vous nous envoyez un échantillon de lignes de facture via le Site, nous le classifierons et renverrons le résultat à titre de démonstration de notre service, gratuitement et sans obligation d'aucune part. Les résultats d'échantillon sont fournis « en l'état » pour illustrer ce que Pearstop peut faire, et ne doivent pas être considérés comme un jeu de données final et audité. La soumission d'un échantillon ne crée pas de contrat pour des services continus ; cela nécessite un accord séparé.",
+          "En téléversant un échantillon, vous confirmez être autorisé par votre organisation à le partager avec nous. Les fichiers de facture contiennent souvent des données personnelles concernant des personnes autres que vous, comme des contacts fournisseurs, des techniciens ou des membres du personnel nommés sur les factures. Vous êtes responsable de disposer d'une base légale au titre du droit applicable en matière de protection des données (RGPD ou POPIA) pour partager ces données avec nous, et nous vous encourageons à retirer les noms, adresses e-mail et coordonnées bancaires qui ne sont pas nécessaires à la classification.",
+          "Pour toute donnée personnelle contenue dans un échantillon, nous agissons pour le compte de votre organisation. Nous ne l'utilisons que pour produire et discuter du résultat de votre échantillon, la gardons confidentielle, et en limitons l'accès aux personnes qui en ont besoin. Les fichiers d'échantillon sont supprimés automatiquement après 90 jours, ou plus tôt si vous nous le demandez, sauf si vous nous demandez par écrit de les conserver pour une mission en cours."
         ]
       },
       {
@@ -1851,6 +2749,26 @@
           {
             "q": "Quel outil UNSPSC fonctionne le mieux pour les entreprises d'infrastructure et de facilities aux Pays-Bas ?",
             "a": "Pearstop est spécifiquement conçu pour les entreprises d'infrastructure, de facilities management et de construction néerlandaises et européennes. Le moteur de classification traite nativement les descriptions de factures en langue néerlandaise — y compris les abréviations et les termes techniques utilisés par les techniciens et les acheteurs de projet. Pearstop classe actuellement 35 000 lignes d'achats par mois pour un important entrepreneur d'infrastructure néerlandais via une intégration SAP. Pour les entreprises néerlandaises également actives dans les marchés publics, UNSPSC offre une connexion directe au réseau de facturation électronique Peppol."
+          },
+          {
+            "q": "Quels sont les problèmes de qualité de données typiques dans les achats de facilities management ?",
+            "a": "Les dépenses d'achats FM proviennent généralement de plusieurs systèmes de maintenance, de factures de sous-traitants et d'ordres de travail manuels, chacun utilisant des noms de fournisseurs et des descriptions de produits différents pour le même achat. Les données d'actifs et de matériaux sont rarement rattachées à une taxonomie cohérente, si bien que la même pièce ou le même service apparaît sous des dizaines de variantes selon les sites. Sans classification, les équipes FM ne peuvent pas voir les dépenses réelles par catégorie, comparer les prix des fournisseurs, ni planifier la maintenance préventive à partir de données historiques."
+          },
+          {
+            "q": "Quels sont les problèmes de qualité de données typiques dans les achats de construction ?",
+            "a": "Les dépenses de construction sont réparties entre projets, sous-traitants et achats au niveau du site, avec peu de discipline de codage partagée. Le même matériau ou service peut être décrit différemment sur chaque bon de commande, et les montants réels historiques sont rarement agrégés entre projets. Cela rend difficile le chiffrage de nouveaux appels d'offres à partir de coûts réels, le benchmarking des fournisseurs, ou l'identification des postes où les budgets sont systématiquement dépassés."
+          },
+          {
+            "q": "Quels sont les problèmes de qualité de données typiques dans les achats d'infrastructure ?",
+            "a": "Les achats d'infrastructure sont répartis entre sites, entités et accords-cadres de longue durée, si bien que le même fournisseur ou matériau peut apparaître sous de nombreux noms et codes différents. Les bons de commande sont créés sans attribution de catégorie cohérente, et les systèmes hérités partagent rarement une taxonomie commune. Il en résulte des données de dépenses qui ne peuvent pas être agrégées avec confiance, ce qui complique la consolidation des fournisseurs et le chiffrage précis des appels d'offres."
+          },
+          {
+            "q": "Quels sont les problèmes de qualité de données typiques dans les achats de fabrication ?",
+            "a": "Les dépenses de fabrication et de MRO sont dominées par des numéros de pièces et des codes propres à chaque fournisseur plutôt que par des descriptions en langage clair, et la même pièce est souvent vendue sous des codes revendeur différents selon les fournisseurs. Sans lien vers le véritable numéro de pièce du fabricant, les équipes achats ne peuvent pas comparer les prix entre fournisseurs, ni repérer les cas où elles paient une marge de revendeur pour une pièce qu'elles pourraient acheter directement."
+          },
+          {
+            "q": "Quels sont les problèmes de qualité de données typiques dans les achats de services de nettoyage ?",
+            "a": "Les dépenses de nettoyage et de FM non technique sont généralement réparties entre de nombreux petits fournisseurs et références de consommables, commandés localement par les responsables de site plutôt que de manière centralisée. Un même produit, un carton de papier toilette, un type de nettoyant de surface, finit par apparaître sous des dizaines de descriptions et de prix différents selon les sites, si bien qu'il n'existe aucun moyen fiable de voir la dépense totale par produit ou de négocier un prix unique avec un fournisseur préféré."
           }
         ]
       }
@@ -2300,6 +3218,7 @@
     },
     "howItWorks": {
       "title": "Comment ça marche",
+      "leadIn": "De grands bâtiments et sites reposent sur des centaines de petites décisions par jour : quelle pièce, quel fournisseur, à quel prix. Chacune ne vaut que ce que valent les données qui la soutiennent.",
       "stage1": {
         "label": "Étape 1",
         "title": "Envoyez-nous ce que vous avez",
@@ -2340,6 +3259,7 @@
     },
     "who": {
       "title": "Pour qui",
+      "leadIn": "Vous construisez, exploitez et entretenez les lieux où l'on travaille, vit et se déplace. Nous nous occupons des données qui permettent de garder ce travail dans le budget.",
       "tiles": [
         {
           "title": "Services techniques",
@@ -2430,6 +3350,10 @@
         {
           "q": "Combien de temps prend la classification des dépenses ?",
           "a": "Un premier échantillon de 200 lignes est généralement traité en quelques jours ouvrés. La classification continue se poursuit en permanence à mesure que de nouvelles factures arrivent."
+        },
+        {
+          "q": "Pearstop aide-t-il sur la sécurité et la conformité ?",
+          "a": "Par les données qui les sous-tendent. La maintenance réglementaire se planifie à partir des listes d'actifs, les contrôles fournisseurs s'appuient sur les fiches fournisseurs, et les réparations dépendent du bon numéro de pièce. Pearstop nettoie et rapproche ces données, révèle les dépenses passées auprès de fournisseurs hors de votre liste approuvée, et ne devine jamais un numéro de pièce. Nous ne réalisons pas les inspections ; nous nous assurons que les données sur lesquelles elles reposent sont justes."
         }
       ]
     },
@@ -2462,7 +3386,8 @@
       "quote": {
         "text": "Nos systèmes internes sont insuffisants. Je dirais qu'on est au niveau du sol. Quelque part sous terre.",
         "attribution": "Responsable achats, prestataire de nettoyage multi-sites"
-      }
+      },
+      "leadIn": "Chaque facture est la trace d'un travail réalisé sur un site. Si personne ne la lit, personne ne peut la vérifier."
     },
     "painCards": [
       {
@@ -2557,6 +3482,10 @@
       "b3": {
         "title": "Fini la saisie et la correction",
         "copy": "L'étape de saisie manuelle qui consomme le temps administratif des achats et de la finance disparaît."
+      },
+      "b4": {
+        "title": "Des factures vérifiées par rapport au contrat",
+        "copy": "Les lignes extraites peuvent être comparées aux tarifs et conditions de paiement convenus, afin que les charges hors contrat apparaissent avant d'être payées."
       }
     },
     "quote": {

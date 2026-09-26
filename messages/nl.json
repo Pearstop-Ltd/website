@@ -125,7 +125,8 @@
         "role": "COO",
         "copy": "Richard leidt de klantlevering bij Pearstop en zorgt ervoor dat elke opdracht soepel verloopt en dat wat we op papier beloven in de praktijk resultaten oplevert."
       }
-    ]
+    ],
+    "buyerIntro": "De mensen die gebouwen, locaties en netwerken bouwen, beheren en onderhouden, willen het goed doen: veilige locaties, compliant assets en fijne plekken om te werken en te wonen. De data achter dat werk zou moeten helpen, niet vertragen. Dat is het deel dat wij oplossen."
   },
   "Contact": {
     "meta": {
@@ -183,7 +184,9 @@
       "engineLabel": "Pearstop-systeem",
       "engineCopy": "Geautomatiseerd reinigen, standaardiseren en categoriseren. Tot 95% nauwkeurigheid, geen handmatig werk.",
       "outputLabel": "Schone, beslissingsklare data",
-      "outputCopy": "Vertrouwde data die aansluit op uw BI-tools, uw aanbiedingen informeert en uw marges beschermt."
+      "outputCopy": "Vertrouwde data die aansluit op uw BI-tools, uw aanbiedingen informeert en uw marges beschermt.",
+      "eyebrow": "De Pearstop-aanpak",
+      "body": "Een veilige, goed onderhouden locatie draaien betekent dat u elk detail voortdurend goed doet. Diezelfde zorgvuldigheid brengen we naar uw data: elke regel gelezen, gereinigd en gelabeld, en alles wat onzeker is gecontroleerd door een medewerker. De output sluit direct aan op de tools die u al gebruikt."
     },
     "geoBlock": {
       "title": "Welke datakwaliteitsproblemen lost Pearstop op?",
@@ -202,7 +205,44 @@
     "hero": {
       "eyebrow": "Oplossingen",
       "title": "Zet rommelige data om in beslissingen",
-      "lead": "Pearstop levert vijf data-integriteitsoplossingen voor technische sectoren. Elk richt zich op een specifiek dataprobleem en elk is gebouwd om uw marges te beschermen."
+      "lead": "Pearstop levert vijf data-integriteitsoplossingen voor technische sectoren. Elk richt zich op een specifiek dataprobleem en elk is gebouwd om uw marges te beschermen.",
+      "primaryLabel": "Stuur ons 200 regels",
+      "secondaryLabel": "Praat met sales",
+      "builtForLabel": "Gebouwd voor",
+      "builtFor": [
+        {
+          "id": "facilities-management",
+          "label": "Facility management"
+        },
+        {
+          "id": "hard-services",
+          "label": "Hard services"
+        },
+        {
+          "id": "cleaning",
+          "label": "Cleaning"
+        },
+        {
+          "id": "construction",
+          "label": "Bouw"
+        },
+        {
+          "id": "infrastructure",
+          "label": "Infrastructuur"
+        },
+        {
+          "id": "manufacturing",
+          "label": "Productie"
+        },
+        {
+          "id": "asset-owners",
+          "label": "Asset owners"
+        },
+        {
+          "id": "procurement-consultancies",
+          "label": "Procurement consultancies"
+        }
+      ]
     },
     "cards": {
       "title": "Vijf Oplossingen. Eén Doel.",
@@ -244,6 +284,245 @@
           "copy": "White-labeled spend-classificatie onder uw eigen taxonomie, zodat de engagementmarge naar analyse gaat, niet naar handmatige opschoning."
         }
       ]
+    },
+    "breadcrumb": {
+      "home": "Home",
+      "current": "Oplossingen"
+    },
+    "problems": {
+      "eyebrow": "Begin waar het pijn doet",
+      "title": "Kies het probleem. Daar beginnen we.",
+      "orderLabel": "De meeste teams doorlopen deze stappen in deze volgorde:",
+      "order": [
+        {
+          "id": "extraction",
+          "label": "Lees de facturen"
+        },
+        {
+          "id": "classification",
+          "label": "Label elke regel"
+        },
+        {
+          "id": "visibility",
+          "label": "Maak de spend zichtbaar"
+        },
+        {
+          "id": "benchmarking",
+          "label": "Controleer elke prijs"
+        },
+        {
+          "id": "readiness",
+          "label": "Klaar voor ERP, Fabric en AI"
+        }
+      ],
+      "items": [
+        {
+          "id": "extraction",
+          "badgeLabel": "Lees de facturen",
+          "pain": "Facturen liggen ongelezen in een inbox, dus is er nog niets om te analyseren.",
+          "title": "Factuur- & documentextractie",
+          "body": "Zet ongelezen pdf-facturen, scans en pakbonnen automatisch om in gestructureerde, gelabelde regels. Het startpunt voor spend analysis en alles daarna.",
+          "related": [],
+          "href": "/invoice-data-extraction"
+        },
+        {
+          "id": "classification",
+          "badgeLabel": "Label elke regel",
+          "pain": "Spend wordt met de hand gecodeerd, op elke locatie anders, of helemaal niet.",
+          "title": "UNSPSC-classificatie",
+          "body": "Classificeer automatisch jaren aan vrije-tekst inkooporderdata met UNSPSC, inclusief het terugleiden van hard services-onderdelen naar de echte fabrikantcode. Tot 95% van de spendregels wordt automatisch geclassificeerd.",
+          "related": [
+            {
+              "label": "UNSPSC voor FM",
+              "href": "/unspsc-classification-facilities-management"
+            },
+            {
+              "label": "Nederland",
+              "href": "/unspsc-classification-netherlands"
+            },
+            {
+              "label": "Duitsland",
+              "href": "/unspsc-classification-germany"
+            }
+          ],
+          "href": "/unspsc"
+        },
+        {
+          "id": "visibility",
+          "badgeLabel": "Maak de spend zichtbaar",
+          "pain": "Een besparingsdoelstelling of tender heeft een echte basislijn nodig, en niemand kan die leveren.",
+          "title": "Spend visibility",
+          "body": "Bouw een echte spend-basislijn op basis van rommelige factuur- en leveranciersdata, uitgesplitst per servicelijn en entiteit, zodat een onderhandeling, tender of raamovereenkomstbeoordeling begint bij een getal in plaats van een gok.",
+          "related": [
+            {
+              "label": "Spend Cube & Dashboards",
+              "href": "/spend-cube"
+            }
+          ],
+          "href": "/procurement-data-quality"
+        },
+        {
+          "id": "benchmarking",
+          "badgeLabel": "Controleer elke prijs",
+          "pain": "Elke factuur vraagt om een ja of nee, en er is geen benchmark om te zeggen of de prijs redelijk is.",
+          "title": "Spend benchmarking",
+          "body": "Elke regel wordt gelabeld en vergeleken met wat u normaal betaalt, over leveranciers, locaties en providers heen, zodat u direct ziet of een prijs binnen de normale bandbreedte valt en hem kunt goedkeuren zonder te escaleren.",
+          "related": [
+            {
+              "label": "Spend Cube & Dashboards",
+              "href": "/spend-cube"
+            }
+          ],
+          "href": "/asset-data-management"
+        },
+        {
+          "id": "readiness",
+          "badgeLabel": "Klaar voor ERP, Fabric en AI",
+          "pain": "Er komt een ERP-, Fabric- of AI-project aan, en de data is er niet klaar voor.",
+          "title": "Data readiness",
+          "body": "Een ERP-migratie, een Microsoft Fabric-uitrol en een AI-initiatief gaan er allemaal van uit dat de onderliggende data al schoon en gestructureerd is. Als dat niet zo is, draagt elk project de rommel gewoon over naar een nieuw systeem. Pearstop lost eerst de data op.",
+          "related": [
+            {
+              "label": "Fabric Ready",
+              "href": "/fabric"
+            },
+            {
+              "label": "AI Readiness",
+              "href": "/ai-readiness"
+            }
+          ],
+          "href": "/data-quality",
+          "wide": true
+        }
+      ],
+      "exploreLink": "Zie hoe het werkt →"
+    },
+    "who": {
+      "eyebrow": "Voor wie",
+      "title": "Gebouwd voor bedrijven die per project inkopen",
+      "items": [
+        {
+          "id": "facilities-management",
+          "title": "Facility management",
+          "pain": "Data komt van elke servicelijn in een ander formaat binnen.",
+          "linkLabel": "Zie hoe het van toepassing is →",
+          "href": "/industries#facilities-management"
+        },
+        {
+          "id": "hard-services",
+          "title": "Hard services",
+          "pain": "Dezelfde leverancier duikt onder tientallen namen op, en assetlijsten komen nooit overeen.",
+          "linkLabel": "Zie hoe het van toepassing is →",
+          "href": "/industries#hard-services"
+        },
+        {
+          "id": "cleaning",
+          "title": "Cleaning",
+          "pain": "Facturen stapelen ongelezen op, en dunne marges laten geen ruimte voor gokwerk.",
+          "linkLabel": "Zie hoe het van toepassing is →",
+          "href": "/industries#cleaning"
+        },
+        {
+          "id": "construction",
+          "title": "Bouw",
+          "pain": "U schat biedingen uit het hoofd omdat niemand historische cijfers kan opvragen.",
+          "linkLabel": "Zie hoe het van toepassing is →",
+          "href": "/industries#construction"
+        },
+        {
+          "id": "infrastructure",
+          "title": "Infrastructuur",
+          "pain": "Er is een besparingsdoelstelling genoemd en de data kan niet laten zien waar die zit.",
+          "linkLabel": "Zie hoe het van toepassing is →",
+          "href": "/industries#infrastructure"
+        },
+        {
+          "id": "manufacturing",
+          "title": "Productie",
+          "pain": "Eén entiteit gebruikt al UNSPSC en een andere moet zich daarop afstemmen.",
+          "linkLabel": "Zie hoe het van toepassing is →",
+          "href": "/industries#manufacturing"
+        },
+        {
+          "id": "asset-owners",
+          "title": "Asset owners",
+          "pain": "Uw FM-provider stuurt de kostendata, en u heeft geen manier om die te controleren.",
+          "linkLabel": "Asset Data Management →",
+          "href": "/asset-data-management"
+        },
+        {
+          "id": "procurement-consultancies",
+          "title": "Procurement consultancies",
+          "pain": "Uw analisten besteden cliënturen aan het opschonen van data voordat de analyse begint.",
+          "linkLabel": "Voor Procurement Consultancies →",
+          "href": "/procurement-consultancies"
+        }
+      ]
+    },
+    "tools": {
+      "eyebrow": "Gratis UNSPSC-tools",
+      "title": "Nog niet klaar om te praten? Zoek iets op.",
+      "items": [
+        {
+          "title": "Gratis UNSPSC-lookup",
+          "body": "Vind de juiste code voor elk product of elke dienst.",
+          "linkLabel": "Openen →",
+          "href": "/unspsc-code-lookup"
+        },
+        {
+          "title": "UNSPSC-taxonomieboom",
+          "body": "Blader door de volledige hiërarchie, van segment tot commodity.",
+          "linkLabel": "Openen →",
+          "href": "/unspsc-classification-demo"
+        },
+        {
+          "title": "AI UNSPSC-classificatiegids",
+          "body": "Hoe AI-classificatie werkt, en waar een mens nodig is.",
+          "linkLabel": "Openen →",
+          "href": "/unspsc-ai-classification-guide"
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "Vragen",
+      "title": "Veelgestelde vragen",
+      "items": [
+        {
+          "q": "Welke datakwaliteitsproblemen lost Pearstop op?",
+          "a": "Hard services-, bouw-, infrastructuur- en productiebedrijven delen dezelfde uitdaging: spend- en assetdata die versnipperd, inconsistent en lastig te gebruiken is over teams en systemen heen. Slechte inkoopdatakwaliteit, onbetrouwbare assetregisters en ongeclassificeerde spend zijn de meest voorkomende blokkades voor categoriemanagement, predictief onderhoud en de overstap naar nieuwe systemen. Pearstop is gespecialiseerd in het reinigen en structureren van deze spend- en assetdata, zodat technische bedrijven ernaar kunnen handelen."
+        },
+        {
+          "q": "Met welke oplossing moet ik beginnen?",
+          "a": "Begin bij het probleem dat nu voor u ligt. Als facturen ongelezen blijven liggen, begin bij extractie. Als spend met de hand of helemaal niet wordt gecodeerd, begin bij UNSPSC-classificatie. Als u een basislijn nodig heeft voor een tender of besparingsdoelstelling, begin bij spend visibility. De meeste teams doorlopen ze in die volgorde."
+        },
+        {
+          "q": "Moet onze data eerst schoon zijn?",
+          "a": "Nee. Het opschonen van de data is juist het eerste dat Pearstop doet. Stuur facturen, ERP-exports, portal-downloads of spreadsheets aan, in welke staat ze ook zijn."
+        },
+        {
+          "q": "Kan Pearstop ons vertellen of een prijs redelijk is?",
+          "a": "Ja. Elke regel krijgt een standaardlabel, zodat hetzelfde item kan worden vergeleken over leveranciers, locaties en providers heen. U ziet direct of een prijs binnen de normale bandbreedte valt voordat u hem goedkeurt. Asset owners gebruiken dit om de spend te controleren die hun FM-provider namens hen beheert."
+        },
+        {
+          "q": "Met welke sectoren werkt Pearstop?",
+          "a": "Facility management, hard services, cleaning, bouw, infrastructuur en productie. Ook asset owners die FM uitbesteden, en procurement consultancies die spend analysis uitvoeren voor hun klanten."
+        },
+        {
+          "q": "Hoe nauwkeurig is geautomatiseerde spend-classificatie?",
+          "a": "Ongeveer 95% van de regels wordt automatisch geclassificeerd. De rest wordt gemarkeerd en doorgezet naar een medewerker, zodat de nauwkeurigheid hoog blijft zonder dat elke regel handmatig hoeft te worden gecontroleerd."
+        },
+        {
+          "q": "Hoe lang duurt het?",
+          "a": "Een eerste sample van 200 regels komt meestal binnen een paar werkdagen terug. Daarna loopt de classificatie continu door zodra nieuwe facturen binnenkomen."
+        }
+      ]
+    },
+    "closing": {
+      "title": "Niet zeker welke oplossing u nodig heeft?",
+      "body": "Boek een discovery van 15 minuten. Wij stellen precies vast welk dataprobleem u het meeste kost — en laten zien hoe u het oplost.",
+      "primaryLabel": "Boek een discovery van 15 minuten",
+      "secondaryLabel": "Of stuur ons 200 regels →",
+      "tertiaryLabel": "Bekijk sectoren"
     }
   },
   "DataQuality": {
@@ -403,6 +682,10 @@
       "b3": {
         "title": "Projectoverstijgend bestedingsinzicht",
         "copy": "Identificeer kostenbesparingsmogelijkheden, vermijd herhaling van dezelfde inkoopfouten en benchmark prestaties over projecten en locaties heen."
+      },
+      "b4": {
+        "title": "Spend buiten contract in beeld",
+        "copy": "Spend bij leveranciers buiten uw raamovereenkomsten of goedgekeurde lijst wordt zichtbaar per categorie, zodat compliance-hiaten worden gevonden vóórdat een audit ze vindt."
       }
     },
     "quote": {
@@ -749,6 +1032,10 @@
       {
         "question": "Hoe lang duurt UNSPSC classificatie?",
         "answer": "De meeste klanten hebben binnen vier tot zes weken na aanvang een schone, geclassificeerde dataset klaar. De eerste engagement begint met een Data Stability Baseline, zodat u de output quality kunt beoordelen voordat u zich verbindt aan doorlopende classificatie."
+      },
+      {
+        "question": "Kan met UNSPSC geclassificeerde spend worden gebruikt voor Scope 3-rapportage van CO2-uitstoot?",
+        "answer": "Ja. De spend-gebaseerde methode voor Scope 3 vermenigvuldigt de spend in elke categorie met een emissiefactor, dus spend moet eerst per categorie worden geclassificeerd. UNSPSC geeft u consistente categorieën over leveranciers, locaties en jaren heen. Pearstop levert de geclassificeerde spend; de CO2-berekening gebeurt in uw eigen rapportagetool."
       }
     ]
   },
@@ -969,11 +1256,14 @@
       "title": "Wat onze klanten zeggen",
       "lead": "Van inkoopteams tot operationeel directeuren — de impact is zichtbaar in de cijfers.",
       "t1": {
-        "text": "Onze assetdata was verspreid over spreadsheets en gevoed vanuit legacy-systemen van klanten. Niets was consistent genoeg om iets analytisch mee te doen. Pearstop consolideerde en structureerde het en plotseling hadden we iets waarop we daadwerkelijk konden voortbouwen."
+        "text": "Dankzij de confidence scoring wist ons team waar ze hun reviewtijd het eerst aan moesten besteden, in plaats van bij nul te beginnen op 200.000 regels.",
+        "name": "Bart van Peij",
+        "role": "Head of Master Data Management · SPIE Building Solutions"
       },
       "t2": {
-        "text": "Onze locatiebezoekrepporten komen in elk voorstelbaar formaat — handgeschreven aantekeningen, spelfouten, krabbels. Pearstop bouwde een systeem dat ze automatisch in een schoon ofertedocument verwerkt. Het bespaart ons team uren bij elke opdracht.",
-        "name": "Klant"
+        "text": "Onze locatiebezoekrapporten komen in elk voorstelbaar formaat — handgeschreven aantekeningen, spelfouten, krabbels. Pearstop bouwde een systeem dat ze automatisch in een schoon offertedocument verwerkt. Het bespaart ons team uren bij elke opdracht.",
+        "name": "Vince Out",
+        "role": "Commercial Manager · Productie"
       },
       "t3": {
         "text": "We hadden duizenden productregels die gecategoriseerd moesten worden voordat we zelfs maar onze kosten konden begrijpen. Pearstop classificeerde ze in minder dan een week. Dat had ons team zes maanden gekost en zou nog steeds niet zo nauwkeurig zijn geweest.",
@@ -993,6 +1283,34 @@
       "lead": "Vertel ons waar uw marges lekken. We laten u precies zien hoe Pearstop het oplost.",
       "bookDemo": "Demo boeken",
       "exploreSolutions": "Oplossingen verkennen"
+    },
+    "featured": {
+      "pill": "Uitgelichte case study",
+      "p1": "Het assetregister van SPIE Building Solutions was jarenlang gevoed door verschillende onderhoudssystemen, aannemers en handmatige invoer. Dezelfde fabrikant kon onder wel een dozijn verschillende spellingen voorkomen, en apparatuurtypes ontbraken vaak of waren onjuist geregistreerd.",
+      "p2": "Pearstop paste zijn classificatiepipeline voor procurementdata toe om 9.175 leveranciersvarianten te consolideren tot 1.493 canonieke leveranciers, over 204.029 assetrecords — dezelfde engine die spend data reinigt, nu bewezen op een andere soort rommelige dataset.",
+      "quote": "Dankzij de confidence scoring wist ons team waar ze hun reviewtijd het eerst aan moesten besteden, in plaats van bij nul te beginnen op 200.000 regels.",
+      "quoteAuthor": "Bart van Peij",
+      "quoteRole": "Head of Master Data Management, SPIE Building Solutions",
+      "readFull": "Lees de volledige case study →",
+      "statsHeader": "Resultaten in het kort",
+      "stats": [
+        {
+          "num": "204.029",
+          "label": "Verwerkte assetrecords"
+        },
+        {
+          "num": "9.175 → 1.493",
+          "label": "Geconsolideerde leveranciersvarianten"
+        },
+        {
+          "num": "73,1%",
+          "label": "Bevestigd matchpercentage"
+        },
+        {
+          "num": "107.081",
+          "label": "Verrijkte regels"
+        }
+      ]
     }
   },
   "Industries": {
@@ -1003,7 +1321,9 @@
     "hero": {
       "eyebrow": "Sectoren",
       "title": "Sectoren die we bedienen",
-      "lead": "Pearstop levert data-integriteitsoplossingen voor de sectoren die onze wereld bouwen, onderhouden en exploiteren. Van facility management tot infrastructuur — we reinigen rommelige data zodat uw marges kunnen ademen."
+      "lead": "Achter een goede locatie zit werk dat niemand ziet: het onderhoudsplan, de onderdelenbestelling, de leverancierscheck. Bijna alles daarvan draait op data, en de meeste teams waarmee we werken kunnen een simpele vraag erover niet beantwoorden: wat hebben we uitgegeven, aan wat, en bij wie? Vind hieronder uw sector.",
+      "primaryLabel": "Stuur ons een datasample. Wij reinigen die gratis.",
+      "secondaryLabel": "Boek een discovery van 15 minuten"
     },
     "sixIndustries": {
       "title": "Zes sectoren, één oplossing",
@@ -1320,6 +1640,581 @@
           "a": "De bovengenoemde dataproblemen zijn niet uniek voor deze sectoren. Als uw team complexe operationele spend- of asset data beheert, te maken heeft met inconsistente supplier records, of zich voorbereidt op een digitale transformatie, is het onderliggende probleem meestal hetzelfde. Boek een gesprek en we vertellen u duidelijk of het een match is."
         }
       ]
+    },
+    "breadcrumb": {
+      "home": "Home",
+      "current": "Sectoren"
+    },
+    "overview": {
+      "eyebrow": "Waar Pearstop past",
+      "title": "Welke past bij u?",
+      "cards": [
+        {
+          "id": "infrastructure",
+          "name": "Infrastructuur",
+          "pain": "Er is een besparingsdoelstelling genoemd, en de data kan niet laten zien waar die zit.",
+          "outcome": "Weet waar een genoemde besparingsdoelstelling daadwerkelijk in de spend zit, voordat u hem met de hand gaat zoeken.",
+          "linkLabel": "Bekijk uw sector ↓",
+          "href": "#infrastructure",
+          "photoAlt": "spoor- of civiele werken",
+          "photo": "/images/photos/construction-infra-1.png"
+        },
+        {
+          "id": "integrated-fm",
+          "name": "Geïntegreerde FM",
+          "pain": "Elke servicelijn levert zijn data in een ander formaat aan.",
+          "outcome": "Breng vijf servicelijnen en vijf dataformaten samen in één gestructureerd overzicht van een contract.",
+          "linkLabel": "Bekijk uw sector ↓",
+          "href": "#integrated-fm",
+          "photoAlt": "multidisciplinair FM-team op locatie",
+          "photo": "/images/photos/construction-team-2.png"
+        },
+        {
+          "id": "hard-services",
+          "name": "Hard services",
+          "pain": "Dezelfde leverancier duikt onder tientallen namen op, en assetlijsten komen nooit overeen.",
+          "outcome": "Match leveranciersnamen en reinig assetlijsten, zodat spend en onderhoudsplannen rusten op data die u kunt vertrouwen.",
+          "linkLabel": "Bekijk uw sector ↓",
+          "href": "#hard-services",
+          "photoAlt": "HVAC- of installatiemonteur",
+          "photo": "/images/photos/maintenance-cleanroom-woman-1.png"
+        },
+        {
+          "id": "construction",
+          "name": "Bouw",
+          "pain": "De omzet is bekend tot op de euro. Wat u daadwerkelijk heeft ingekocht, niet.",
+          "outcome": "Zet spend die verspreid is over entiteiten en projecten om in één gecategoriseerd, groepsbreed overzicht.",
+          "linkLabel": "Bekijk uw sector ↓",
+          "href": "#construction",
+          "photoAlt": "bouwplaats",
+          "photo": "/images/photos/construction-planner-woman-1.png"
+        },
+        {
+          "id": "soft-services",
+          "name": "Soft services & cleaning",
+          "pain": "Facturen komen sneller binnen dan wie dan ook ze kan lezen.",
+          "outcome": "Laat facturen automatisch lezen en structureren, zodat er spend data is om een prijs mee te verdedigen.",
+          "linkLabel": "Bekijk uw sector ↓",
+          "href": "#soft-services",
+          "photoAlt": "schoonmaakteam in een bedrijfspand",
+          "photo": "/images/photos/cleaning-office-woman-1.png"
+        },
+        {
+          "id": "manufacturing",
+          "name": "Fabrikanten van bouwsystemen",
+          "pain": "Eén entiteit hanteert al een standaard. De rest van de groep niet.",
+          "outcome": "Breid de classificatiestandaard die één entiteit al gebruikt uit naar elke fabriek en locatie.",
+          "linkLabel": "Bekijk uw sector ↓",
+          "href": "#manufacturing",
+          "photoAlt": "productievloer voor bouwsystemen",
+          "photo": "/images/photos/hvac-manufacture.jpeg"
+        },
+        {
+          "id": "asset-owners",
+          "name": "Asset owners",
+          "pain": "Uw provider rapporteert de cijfers, en u heeft geen manier om ze te controleren.",
+          "outcome": "Krijg een onafhankelijk, vergelijkbaar overzicht van wat er namens u wordt uitgegeven, niet alleen het rapport van een provider.",
+          "linkLabel": "Bekijk uw sector ↓",
+          "href": "#asset-owners",
+          "photoAlt": "kantoor- of vastgoedgebouw van buiten",
+          "photo": "/images/photos/the-city-2.png"
+        },
+        {
+          "id": "mro",
+          "name": "MRO & onderdelen sourcen",
+          "pain": "U koopt onderdelen via tussenpersonen, en betaalt hun marge op alles.",
+          "outcome": "Vind het originele fabrikantonderdeelnummer voor elk onderdeel, zodat u de veelgekochte onderdelen direct kunt inkopen.",
+          "linkLabel": "Bekijk uw sector ↓",
+          "href": "#mro",
+          "photoAlt": "onderdelenmagazijn of werkplaats",
+          "photo": "/images/photos/construction-planner-team-1.png"
+        },
+        {
+          "id": "procurement-consultancies",
+          "name": "Procurement consultancies",
+          "pain": "Uw analisten besteden cliënturen aan het opschonen van data voordat de analyse begint.",
+          "outcome": "White-labelclassificatie onder uw eigen taxonomie, zodat engagementmarge naar analyse gaat.",
+          "linkLabel": "Voor Procurement Consultancies →",
+          "href": "/procurement-consultancies",
+          "photoAlt": "iemand die spend data bekijkt",
+          "photo": "/images/photos/office-desk-woman-1.png"
+        }
+      ]
+    },
+    "sections": [
+      {
+        "id": "infrastructure",
+        "tabLabel": "Infrastructuur",
+        "eyebrow": "Infrastructuur",
+        "ctaIndustry": "infrastructuur",
+        "h2": "U kunt niet onderhandelen over wat u niet ziet.",
+        "intro": "Er wordt een besparingsdoelstelling genoemd, soms met acht cijfers, en niemand kan aanwijzen waar die in de spend precies zit. Die kloof tussen doelstelling en data is een terugkerend patroon in infrastructuur en spoor: een besparingsprogramma identificeert tientallen miljoenen aan potentiële besparingen, en de onderliggende spend data kan niet laten zien waar ze te vinden zijn. Besparingen komen op de derde plaats. Eerst ziet u waar het geld naartoe gaat, dan de dekkingshiaten, dan onderhandelt u.",
+        "photo": "/images/photos/construction-infra-1.png",
+        "photoAlt": "spoor- of civiele werken",
+        "dayToDay": {
+          "work": "Spoor, nutsvoorzieningen, wegen en energienetwerken. Veel projecten tegelijk, vaak gewonnen via openbare aanbestedingen.",
+          "spend": "Onderaannemers, materialen, materieelverhuur en gespecialiseerde diensten, ingekocht door projectteams over regio's en entiteiten heen.",
+          "matters": "Besparingsdoelstellingen halen, raamovereenkomsten aanhouden, werken met gescreende leveranciers voor veiligheidskritisch werk, en de volgende tender prijzen op basis van echte kosten."
+        },
+        "pains": [
+          {
+            "title": "Een besparingsdoelstelling zonder data om die te onderbouwen",
+            "body": "Een transformatieprogramma noemt een getal. Spend is niet consistent genoeg geclassificeerd om te zeggen in welke categorieën dat getal zich verbergt."
+          },
+          {
+            "title": "Framework-dekking die niemand binnen het bedrijf kan overzien",
+            "body": "Eén inkoper ziet de tien raamovereenkomsten voor zijn categorie. De andere vijftig categorieën hebben geen vergelijkbaar overzicht, waardoor het bedrijf spend niet kan sturen naar overeenkomsten die het al heeft."
+          },
+          {
+            "title": "Geen basislijn om vanuit te onderhandelen of te tenderen",
+            "body": "Onderhandelen met een leverancier, of een nieuwe tender prijzen, begint allebei met weten wat u al uitgeeft. Zonder die basislijn begint elke onderhandeling met een gok."
+          }
+        ],
+        "solutionLink": {
+          "label": "Zie hoe Pearstop een echte spend-basislijn bouwt",
+          "href": "/procurement-data-quality"
+        },
+        "changes": [
+          "Spend consistent genoeg geclassificeerd om te laten zien waar een genoemde besparingsdoelstelling daadwerkelijk zit",
+          "Framework- en contractdekking zichtbaar in elke categorie, niet alleen de categorieën die al worden gevolgd",
+          "Een echte spend-basislijn om leveranciers mee te onderhandelen en tenders op te prijzen, geen schatting"
+        ],
+        "proof": {
+          "quote": "We hadden twee fulltime medewerkers die zich bezighielden met categorie-indeling. Nu doet het systeem dat voor ons — wat ook margeberekeningen verderop in de keten heeft ontsloten. Het is betrouwbaarder tegen een fractie van de kosten.",
+          "role": "Head of Procurement, Infrastructuur",
+          "caseLabel": "Lees de case",
+          "caseHref": "/cases/strukton"
+        },
+        "faq": [
+          {
+            "q": "Hoe vinden infrastructuuraannemers waar een besparingsdoelstelling in hun spend zit?",
+            "a": "Classificeer elke spendregel naar één standaard, zoals UNSPSC, over alle projecten en entiteiten heen. Zodra spend per categorie is gegroepeerd, ziet u welke categorieën groot zijn, over veel leveranciers zijn verspreid, of buiten een raamovereenkomst vallen. Daar zitten de besparingen meestal. Pearstop doet de classificatie automatisch, en een medewerker controleert alles wat onzeker is."
+          },
+          {
+            "q": "Hoe kan een spoor- of infrastructuurbedrijf de dekking van raamovereenkomsten controleren?",
+            "a": "Match elke spendregel aan een categorie en een leverancier, en vergelijk dat met wat uw raamovereenkomsten dekken. Het gat laat zien welke spend naar leveranciers buiten uw overeenkomsten gaat. Dit werkt alleen als spend overal op dezelfde manier is gelabeld."
+          },
+          {
+            "q": "Welke spend data heeft een infrastructuuraannemer nodig voordat hij een tender prijst?",
+            "a": "Een kostenbasislijn: wat u in het verleden per categorie, leverancier en projecttype heeft betaald. Zonder die basislijn is de tenderprijs een schatting. Pearstop bouwt die basislijn op basis van de facturen en ERP-exports die u al heeft."
+          }
+        ]
+      },
+      {
+        "id": "integrated-fm",
+        "tabLabel": "Geïntegreerde FM",
+        "eyebrow": "Geïntegreerde FM",
+        "ctaIndustry": "geïntegreerde FM",
+        "h2": "Eén contract, vijf servicelijnen, vijf dataformaten.",
+        "intro": "Multiservice FM-contracten winnen op breedte: schoonmaak, hard services, beveiliging en catering onder één dak. De onderliggende data weerspiegelt die eenheid zelden. Elke servicelijn komt uit een eigen systeem, in een eigen formaat, en asset- of kostenregistraties die hetzelfde zouden moeten beschrijven, lijken uiteindelijk van verschillende bedrijven te zijn.",
+        "photo": "/images/photos/construction-team-2.png",
+        "photoAlt": "multidisciplinair FM-team op locatie",
+        "dayToDay": {
+          "work": "Schoonmaak, onderhoud, beveiliging en catering samen geleverd onder één contract, vaak over honderden locaties en meerdere landen.",
+          "spend": "Verbruiksartikelen, onderdelen, onderaannemers en arbeid, gerapporteerd vanuit een ander systeem per servicelijn.",
+          "matters": "De echte kostprijs van elk contract kennen, waarde aantonen bij verlenging, en de gebouwen die u onderhoudt goed laten draaien."
+        },
+        "pains": [
+          {
+            "title": "Elke servicelijn rapporteert op zijn eigen manier",
+            "body": "Schoonmaak, hard services en beveiliging sturen elk data vanuit hun eigen systeem, in hun eigen formaat. Niemand ziet de volledige kostprijs van één contract."
+          },
+          {
+            "title": "Gegroeid door overnames",
+            "body": "Elk bedrijf dat u heeft overgenomen codeert spend nog op zijn eigen manier, vaak in zijn eigen taal, waardoor de groep niet appels met appels kan vergelijken."
+          },
+          {
+            "title": "Referentiedata die vanaf dag één al fout is",
+            "body": "Fabrikant- en apparatuurgegevens die bij contractstart worden overgedragen, kloppen soms simpelweg niet, en de fouten stapelen zich op over locaties en jaren heen."
+          }
+        ],
+        "solutionLink": {
+          "label": "Zie hoe Pearstop FM-data verenigt",
+          "href": "/data-quality"
+        },
+        "changes": [
+          "Eén overzicht van kosten over elke servicelijn binnen een contract",
+          "Leveranciers en categorieën op dezelfde manier gecodeerd in elke business unit en elk land",
+          "Fabrikant- en apparatuurgegevens gecorrigeerd, zodat de rapportages die erop zijn gebaseerd standhouden"
+        ],
+        "proof": {
+          "quote": "U kunt niet onderhandelen over wat u niet ziet.",
+          "role": "Head of Procurement, Facility Management",
+          "caseLabel": null,
+          "caseHref": null
+        },
+        "faq": [
+          {
+            "q": "Hoe zien geïntegreerde FM-providers de volledige kostprijs van een contract over servicelijnen heen?",
+            "a": "Breng de spend van elke servicelijn samen in één dataset en label die met dezelfde categorieën en leveranciersnamen. Dan kunt u kosten per contract, locatie of servicelijn direct vergelijken. Pearstop doet dit met de data die elke servicelijn al oplevert, in welk formaat die ook binnenkomt."
+          },
+          {
+            "q": "Hoe standaardiseren FM-bedrijven spend data na overnames?",
+            "a": "Koppel de leveranciers en categorieën van elk overgenomen bedrijf aan één groepsstandaard, in plaats van elk bedrijf eerst op een nieuw systeem te zetten. Pearstop classificeert spend van elke entiteit naar dezelfde taxonomie, in elke taal."
+          },
+          {
+            "q": "Welke classificatiestandaard werkt voor facility management?",
+            "a": "UNSPSC is de meest gebruikte wereldwijde standaard en werkt goed voor FM-spend. Veel FM-groepen houden daarnaast een eigen categorielijst aan. Pearstop kan elke regel met beide labelen."
+          }
+        ]
+      },
+      {
+        "id": "hard-services",
+        "tabLabel": "Hard services",
+        "eyebrow": "Hard services",
+        "ctaIndustry": "hard services",
+        "h2": "Eén leverancier, tientallen spellingen. Een assetlijst die niemand volledig vertrouwt.",
+        "intro": "Technische dienstverleners onderhouden en installeren HVAC-, elektrotechnische, brand- en gebouwbeheersystemen op honderden locaties van klanten. Veel van dat werk is fixed-price, dus marge hangt af van weten wat onderdelen, onderaannemers en assets daadwerkelijk kosten. De data staat dat zelden toe: dezelfde leverancier wordt op tien manieren gespeld, en elke klant levert zijn assetlijst in een andere vorm aan.",
+        "photo": "/images/photos/maintenance-cleanroom-woman-1.png",
+        "photoAlt": "HVAC- of installatiemonteur",
+        "dayToDay": {
+          "work": "Onderhoud en installatie van E&W, HVAC, brand, beveiliging en BMS, vaak op fixed-price servicecontracten.",
+          "spend": "Onderdelen, onderaannemers en apparatuur, plus een assetlijst per klantlocatie.",
+          "matters": "Marge op fixed-price werk, wettelijk onderhoud op tijd, veilige gebouwen, en biedingen geprijsd op echte kosten."
+        },
+        "pains": [
+          {
+            "title": "Eén leverancier, tientallen namen",
+            "body": "Dezelfde leverancier komt in elk systeem en op elke locatie onder een andere spelling voor, waardoor niemand kan optellen wat u er daadwerkelijk aan uitgeeft."
+          },
+          {
+            "title": "Assetlijsten die werken op locatie, niet op kantoor",
+            "body": "Elke klant levert zijn assetlijst in zijn eigen formaat aan. Er één op orde brengen kost een dag of twee met de hand, en dat gebeurt het hele jaar door opnieuw."
+          },
+          {
+            "title": "Fixed-price contracten geprijsd op een gok",
+            "body": "Onderdelen- en onderaannemerskosten worden geschat, niet opgezocht, waardoor de marge er soms al af is voordat het werk begint."
+          }
+        ],
+        "solutionLink": {
+          "label": "Zie hoe Pearstop leveranciers- en assetdata reinigt",
+          "href": "/data-quality"
+        },
+        "changes": [
+          "Leveranciersmatching: elke spelling gekoppeld aan één leverancier, zodat spend per leverancier één getal is",
+          "Assetlijsten opgeschoond en gekoppeld aan één structuur, in welk formaat de klant ze ook aanlevert",
+          "Een nauwkeurige assetlijst om wettelijk onderhoud op te plannen, zodat niets dat een inspectie nodig heeft, wordt gemist",
+          "Fabrikant- en apparatuurgegevens gecontroleerd tegen wat er daadwerkelijk is geïnstalleerd",
+          "Een kostenhistorie per onderdeel en onderaannemer om het volgende contract op te prijzen"
+        ],
+        "proof": {
+          "stat": "9.175 leveranciersspellingen teruggebracht naar 1.493 over 204.029 assetrecords",
+          "quote": "Onze assetlijsten werkten prima voor monteurs op locatie, maar lieten ons niet toe om slim onderhoud te plannen of biedrisico datagedreven te beheren.",
+          "role": "Asset Manager, Facility Management",
+          "caseLabel": "Lees de SPIE-case",
+          "caseHref": "/cases/spie"
+        },
+        "faq": [
+          {
+            "q": "Hoe schonen hard services-aannemers leveranciersnamen op in hun spend data?",
+            "a": "Groepeer elke spelling van dezelfde leverancier onder één naam, met behulp van namen, adressen en andere leveranciersgegevens waar die bestaan, en laat een medewerker de onzekere matches controleren. Bij één hard services-project kwamen 9.175 leveranciersspellingen terug tot 1.493 echte leveranciers."
+          },
+          {
+            "q": "Hoe kan een E&W- of HVAC-onderhoudsaannemer assetlijsten van verschillende klanten standaardiseren?",
+            "a": "Koppel de assetlijst van elke klant aan één structuur, waarbij assettype, fabrikant, model en locatie steeds op dezelfde manier worden benoemd en gecodeerd. Pearstop doet die koppeling automatisch en markeert de records die het niet met zekerheid kan matchen."
+          },
+          {
+            "q": "Hoe prijzen technische dienstverleners fixed-price onderhoudscontracten nauwkeuriger?",
+            "a": "Begin bij wat onderdelen en onderaannemers daadwerkelijk kosten op vergelijkbare contracten, afgeleid uit geclassificeerde historische spend. Pearstop bouwt die kostenhistorie op uit de facturen en ERP-data die u al heeft."
+          }
+        ]
+      },
+      {
+        "id": "construction",
+        "tabLabel": "Bouw",
+        "eyebrow": "Bouw",
+        "ctaIndustry": "bouw",
+        "h2": "Jaren aan spend omzetten in één getal zou geen jaren moeten kosten.",
+        "intro": "Een bouwgroep met honderden miljoenen aan jaarlijkse spend over meer dan een dozijn entiteiten kan zijn omzet tot op de euro noemen, en toch niet precies weten wat er vorig jaar daadwerkelijk is uitgegeven, of waaraan. Raamovereenkomsten bestaan, maar zijn jaren geleden getekend en niemand heeft sindsdien gecontroleerd of de inkoop ze nog volgt.",
+        "photo": "/images/photos/construction-planner-woman-1.png",
+        "photoAlt": "bouwplaats",
+        "dayToDay": {
+          "work": "Hoofdaannemers en projectgedreven bedrijven die veel projecten tegelijk draaien, vaak over een dozijn of meer entiteiten.",
+          "spend": "Onderaannemers, materialen en materieel, project voor project ingekocht.",
+          "matters": "Tenders winnen met marge, groepsbrede spend kennen, veilige bouwplaatsen, en inkopen bij goedgekeurde onderaannemers op afgesproken raamovereenkomsten."
+        },
+        "pains": [
+          {
+            "title": "Groepsbrede spend die niemand precies kan optellen",
+            "body": "Spend verspreid over veel entiteiten en systemen betekent dat de omzet tot op de euro bekend is; wat er daadwerkelijk is gekocht, zelden."
+          },
+          {
+            "title": "Raamovereenkomsten die niemand nog heeft gecontroleerd",
+            "body": "Jaren geleden getekende overeenkomsten blijven op vertrouwen draaien, zonder actuele vergelijking of de huidige inkoop ze nog volgt."
+          },
+          {
+            "title": "Elke tender begint met een reconstructie",
+            "body": "Voordat een bod wordt geprijsd, zet iemand jaren aan ruwe spend met de hand om in hoeveelheden en aannemers. En doet dat voor de volgende tender weer opnieuw."
+          }
+        ],
+        "solutionLink": {
+          "label": "Zie hoe Pearstop procurementdata op schaal opschoont",
+          "href": "/procurement-data-quality"
+        },
+        "changes": [
+          "Groepsbrede spend in één gecodeerd overzicht, niet een spreadsheet per entiteit",
+          "Naleving van raamovereenkomsten gecontroleerd tegen actuele inkoop, niet aangenomen",
+          "Kostenhistorie klaar voor de volgende tender, zonder die met de hand te reconstrueren"
+        ],
+        "proof": {
+          "quote": "Als u uw kostenbasislijn niet kunt verdedigen, biedt u op een gevoel.",
+          "role": "Commercial Director, Bouw",
+          "caseLabel": null,
+          "caseHref": null
+        },
+        "faq": [
+          {
+            "q": "Hoe kan een bouwgroep spend zien over al zijn entiteiten heen?",
+            "a": "Label elke spendregel van elke entiteit met dezelfde categorieën en leveranciersnamen, en breng ze samen in één overzicht. Pearstop doet dit op basis van ERP-exports en facturen, zonder dat elke entiteit eerst op één systeem hoeft te staan."
+          },
+          {
+            "q": "Hoe controleren bouwbedrijven of inkoop raamovereenkomsten volgt?",
+            "a": "Vergelijk geclassificeerde spend per categorie en leverancier met de raamovereenkomsten die er zijn. Spend die naar leveranciers buiten die overeenkomsten gaat, wordt direct zichtbaar."
+          },
+          {
+            "q": "Hoe gebruiken bouwcalculators historische kostendata voor tenders?",
+            "a": "Ze hebben historische spend nodig, omgezet naar kosten per categorie, aannemer en projecttype. Zodra die data is geclassificeerd, is ze in minuten op te vragen in plaats van met de hand te reconstrueren voor elk bod."
+          }
+        ]
+      },
+      {
+        "id": "soft-services",
+        "tabLabel": "Soft services & cleaning",
+        "eyebrow": "Soft services & cleaning",
+        "ctaIndustry": "soft services en cleaning",
+        "h2": "Als de factuur nooit wordt gelezen, bestaat de spend erachter nog niet.",
+        "intro": "Vraag het procurementteam van een cleaningaannemer hoe zeker ze zijn van hun eigen cijfers, en \"grondniveau\" is een veelgehoord, zelfspottend antwoord. Voordat spend tegen een contract kan worden gecontroleerd, moet iemand de factuur eerst daadwerkelijk lezen, en los daarvan komt ruwweg tachtig procent van de facturen op cleaningcontracten niet overeen met de afgesproken voorwaarden. Twee zichtbaarheidsproblemen, op elkaar gestapeld.",
+        "photo": "/images/photos/cleaning-office-woman-1.png",
+        "photoAlt": "schoonmaakteam in een bedrijfspand",
+        "dayToDay": {
+          "work": "Cleaning en soft services geleverd op honderden klantlocaties, met dunne marges en veel arbeid.",
+          "spend": "Verbruiksartikelen, apparatuur en onderaannemers, vaak bij één of twee grote leveranciers.",
+          "matters": "Tenderprijzen verdedigen, kosten van verbruiksartikelen beheersen, en niet afhankelijk zijn van de eigen cijfers van een leverancier."
+        },
+        "pains": [
+          {
+            "title": "Facturen komen sneller binnen dan wie dan ook ze kan lezen",
+            "body": "ERP-stamdata omschreven als te slecht om de automatische flow zelfs maar te starten, met deadlines die al jaren, niet maanden, worden gemist."
+          },
+          {
+            "title": "Spend die niemand tegen het contract heeft gecontroleerd",
+            "body": "Gevraagd om een tenderkost te verdedigen, is het eerlijke antwoord vaak: het voelt als 3% van het contract, maar het kan ook zes zijn, of twee. Niemand weet het."
+          },
+          {
+            "title": "Geen verantwoording wanneer een klant een prijs betwist",
+            "body": "Gevraagd om een tenderkost te verdedigen, is het eerlijke antwoord vaak dat niemand het weet. De marge op het getal was een gevoel, geen berekening."
+          }
+        ],
+        "solutionLink": {
+          "label": "Zie hoe Pearstop de factuur als eerste leest",
+          "href": "/invoice-data-extraction"
+        },
+        "changes": [
+          "Facturen automatisch gelezen en gestructureerd, in elk formaat, zodat er iets is om te controleren",
+          "Werkelijke spend standaard gecontroleerd tegen afgesproken contractvoorwaarden, geen aparte audit-exercitie",
+          "Een echte kostenbasislijn om prijzen te verdedigen bij een klantbetwisting, geen gevoel"
+        ],
+        "proof": {
+          "stat": "Nauwkeurigheid van factuurextractie van circa 70% naar 99% voor een cleaningbedrijf",
+          "quote": "Het zou vijf engineers en een heel jaar hebben gekost om dit op te schonen. Dus besloten we op zoek te gaan naar een betere manier om dit te doen.",
+          "role": "Head of Operations, Cleaningbedrijf",
+          "caseLabel": null,
+          "caseHref": null
+        },
+        "faq": [
+          {
+            "q": "Hoe automatiseren cleaningbedrijven factuurverwerking?",
+            "a": "Gebruik factuurextractie die pdf's, scans en e-mailbijlagen leest, elke regel omzet in gestructureerde data en labelt. Bij één cleaningbedrijf steeg de nauwkeurigheid van de eerste automatische extractie van circa 70% naar 99%."
+          },
+          {
+            "q": "Hoe kan een cleaningaannemer verbruikskosten in een tender onderbouwen?",
+            "a": "Met een kostenbasislijn opgebouwd uit historische facturen: wat verbruiksartikelen en apparatuur daadwerkelijk kosten per locatie of contract. Zonder die basislijn is het getal in de tender een schatting."
+          },
+          {
+            "q": "Hoe controleren cleaningbedrijven leveranciersprijzen als één leverancier dominant is?",
+            "a": "Classificeer uw eigen factuurregels, zodat u de prijs van elk item over tijd kunt zien, in plaats van te vertrouwen op de rapportages die de leverancier zelf aanlevert."
+          }
+        ]
+      },
+      {
+        "id": "manufacturing",
+        "tabLabel": "Fabrikanten",
+        "eyebrow": "Fabrikanten van bouwsystemen",
+        "ctaIndustry": "productie",
+        "h2": "Eén entiteit hanteert al een standaard. De rest van de groep niet.",
+        "intro": "Het komt vaak voor bij fabrikanten met meerdere entiteiten dat één deel van het bedrijf, vaak het meest gevestigde of het meest recent doorgelichte, de spend al classificeert volgens een echte standaard, terwijl zusterentiteiten en nieuwere locaties nog steeds draaien op inconsistente, vrije-tekst leveranciers- en onderdelendata. Die kloof blijft niet lang beperkt tot één regio: audits, groepsrapportage en gedeelde procurement hebben uiteindelijk allemaal hetzelfde overzicht overal nodig.",
+        "photo": "/images/photos/hvac-manufacture.jpeg",
+        "photoAlt": "productievloer voor bouwsystemen",
+        "dayToDay": {
+          "work": "Fabrikanten van HVAC-, E&W- en industriële apparatuur, met meerdere fabrieken of entiteiten, vaak in meerdere landen.",
+          "spend": "Onderdelen en materialen in hoog volume, op elke fabriekslocatie anders omschreven.",
+          "matters": "Eén classificatiestandaard door de hele groep, snelle en nauwkeurige offertes, en geen dubbele voorraad."
+        },
+        "pains": [
+          {
+            "title": "Eén entiteit op een standaard, de rest niet",
+            "body": "Ergens in het bedrijf bestaat al een groepsclassificatiestandaard. Die met de hand uitrollen naar elke entiteit is trager dan de reden waarom erom werd gevraagd."
+          },
+          {
+            "title": "Dubbele en inconsistente onderdelendata over fabrieken heen",
+            "body": "Hetzelfde onderdeel duikt op onder verschillende codes en spellingen, afhankelijk van welke fabriek of welk systeem het invoerde, wat leveranciersbenchmarking blokkeert en dubbele voorraad verbergt."
+          },
+          {
+            "title": "Trage offertes gebouwd op handmatig opzoekwerk",
+            "body": "Onderdeel- en locatiegegevens met de hand overtypen vertraagt elke offerte. Bij één fabrikant kostte dat 1 tot 3 uur per voorstel."
+          }
+        ],
+        "solutionLink": {
+          "label": "Zie hoe Pearstop elke entiteit op één standaard afstemt",
+          "href": "/unspsc"
+        },
+        "changes": [
+          "De bestaande classificatiestandaard van de groep uitgebreid naar elke entiteit, niet alleen degene die hem al had",
+          "Onderdelendata opgeschoond en gekoppeld over fabrieken en systemen heen",
+          "Snellere offertes op basis van kosten- en leveranciersdata die niet met de hand hoeft te worden nagekeken"
+        ],
+        "proof": {
+          "quote": "Het bespaart ons team veel tijd door het repetitieve werk van het samenvoegen van de juiste items weg te nemen.",
+          "personId": "vinceOut",
+          "caseLabel": "Lees de case",
+          "caseHref": "/cases/lemtech"
+        },
+        "faq": [
+          {
+            "q": "Hoe rollen fabrikanten UNSPSC uit over meerdere fabrieken?",
+            "a": "Neem de classificatie die één entiteit al gebruikt en pas die toe op de spend- en onderdelendata van elke fabriek, door lokale omschrijvingen aan dezelfde codes te koppelen. Pearstop doet dit automatisch, in elke taal."
+          },
+          {
+            "q": "Hoe vindt u dubbele onderdelen over productielocaties heen?",
+            "a": "Standaardiseer onderdeelomschrijvingen en -codes over fabrieken heen, en match records die hetzelfde onderdeel beschrijven. Duplicaten en dubbel aangehouden voorraad worden zichtbaar."
+          },
+          {
+            "q": "Onze Amerikaanse entiteit gebruikt UNSPSC. Hoe stemmen we onze Europese entiteiten daarop af?",
+            "a": "Classificeer de spend- en onderdelendata van de Europese entiteiten naar dezelfde UNSPSC-codes, zodat groepsrapportage appels met appels vergelijkt. U hoeft hun ERP niet eerst te vervangen."
+          }
+        ]
+      },
+      {
+        "id": "asset-owners",
+        "tabLabel": "Asset owners",
+        "eyebrow": "Asset owners",
+        "ctaIndustry": "asset owner",
+        "h2": "U raakt de facturen niet aan. U moet nog steeds weten wat erop staat.",
+        "intro": "Vastgoedbeleggers, verhuurders en publieke vastgoedeigenaren die facility management uitbesteden, genereren hun eigen spend data niet. Ze ontvangen die, gefilterd via de provider die het contract uitvoert. De vraag die daarop volgt is geen categoriestrategie-vraag. Hij is eenvoudiger, en moeilijker te ontwijken: wat wordt er daadwerkelijk namens ons uitgegeven, is dat concurrerend, en hoe zouden we weten of dat niet zo was.",
+        "photo": "/images/photos/the-city-2.png",
+        "photoAlt": "kantoor- of vastgoedgebouw van buiten",
+        "dayToDay": {
+          "work": "Vastgoedbeleggers, verhuurders en publieke vastgoedeigenaren die facility management uitbesteden aan een provider.",
+          "spend": "Onderhoud en diensten namens u ingekocht en teruggerapporteerd door de provider.",
+          "matters": "Weten dat wat namens u wordt uitgegeven eerlijk is, providers en locaties vergelijken, standaardkosten snel goedkeuren, en gebouwen die goed werken voor de mensen erin."
+        },
+        "pains": [
+          {
+            "title": "Kostendata die u ontvangt maar niet controleert",
+            "body": "Een beheerder of FM-provider rapporteert de cijfers. Er is zelden een onafhankelijke manier om ze te controleren tegen wat vergelijkbare locaties of portefeuilles betalen."
+          },
+          {
+            "title": "Geen benchmark tussen providers of locaties",
+            "body": "Zonder een gemeenschappelijk, geclassificeerd overzicht van spend is het niet mogelijk om de kosten van de ene provider met de andere te vergelijken, of de ene locatie met de volgende."
+          },
+          {
+            "title": "Standaardkosten die nog steeds voor goedkeuring worden voorgelegd",
+            "body": "Niemand onder u weet wat een standaardklus zou moeten kosten, dus komt het terug bij senior managers, of gaat het naar een kostendeskundige, om te controleren."
+          }
+        ],
+        "solutionLink": {
+          "label": "Zie hoe Pearstop asset owners zekerheid geeft",
+          "href": "/asset-data-management"
+        },
+        "changes": [
+          "Een onafhankelijk, geclassificeerd overzicht van spend die namens u wordt beheerd, niet alleen het rapport van de provider",
+          "Kostenbenchmarking over providers en locaties, op dezelfde basis",
+          "Zekerheid die u kunt meenemen naar een providerbeoordeling, niet alleen een bestand dat u van één provider ontving",
+          "Standaardkosten goedgekeurd tegen een benchmark, zonder te escaleren"
+        ],
+        "proof": null,
+        "faq": [
+          {
+            "q": "Hoe kan een vastgoedeigenaar de kosten controleren die zijn FM-provider rapporteert?",
+            "a": "Classificeer de kostendata van de provider zelf, regel voor regel, zodat u een onafhankelijk record heeft. Vergelijk die vervolgens met andere locaties, andere providers en eerdere jaren."
+          },
+          {
+            "q": "Hoe benchmarken asset owners facility management-kosten tussen providers?",
+            "a": "Label elke kostenregel van elke provider met dezelfde standaard, zodat dezelfde klus of hetzelfde item appels met appels wordt vergeleken. Zonder gemeenschappelijke standaard kunnen providerrapportages niet worden vergeleken."
+          },
+          {
+            "q": "Hoe kunnen asset owners standaard onderhoudskosten goedkeuren zonder te escaleren?",
+            "a": "Stel een benchmarkbereik in per type klus of item, op basis van geclassificeerde historische spend. Alles binnen dat bereik kan direct worden goedgekeurd; alles erbuiten wordt gemarkeerd."
+          }
+        ]
+      },
+      {
+        "id": "mro",
+        "tabLabel": "MRO",
+        "eyebrow": "MRO & onderdelen sourcen",
+        "ctaIndustry": "MRO",
+        "h2": "Stop met betalen aan een tussenpersoon omdat niemand kan bevestigen wat het onderdeel is.",
+        "intro": "De meeste MRO-teams kopen onderdelen via tussenpersonen: een fabrikant of distributeur die het onderdeel onder zijn eigen code verkoopt. Voor de onderdelen die u in volume koopt, is rechtstreeks bij de originele fabrikant inkopen goedkoper. Daarvoor heeft u het originele fabrikantonderdeelnummer nodig, en wel voor elk onderdeel in uw data, niet alleen een handvol. Dat opzoekwerk wordt meestal uitbesteed aan een offshoreteam en per regel betaald, en een grote onderdelenlijst kan maanden duren. Pearstop doet het met AI, voor elke regel, in dagen in plaats van maanden, en laat een veld leeg wanneer het geen match kan bevestigen.",
+        "photo": "/images/photos/construction-planner-team-1.png",
+        "photoAlt": "onderdelenmagazijn of werkplaats",
+        "dayToDay": {
+          "work": "Apparatuur op locaties draaiend houden, elke dag reserveonderdelen en componenten bestellen.",
+          "spend": "Duizenden verschillende onderdelen, de meeste ingekocht via tussenpersonen onder hun eigen onderdeelcodes.",
+          "matters": "Weten welke veelgekochte onderdelen direct kunnen worden ingekocht, tegen welke prijs, en dat elk onderdeel het juiste is, want een verkeerde match kost meer dan hij bespaart."
+        },
+        "pains": [
+          {
+            "title": "De originele fabrikantcode zit verstopt achter een leverancierscode",
+            "body": "Zonder die code is er geen alternatieve leverancier om bij in te kopen, en geen manier om te controleren of de prijs eerlijk is."
+          },
+          {
+            "title": "Te veel onderdelen om met de hand uit te zoeken",
+            "body": "Het fabrikantonderdeelnummer van één onderdeel vinden is te doen. Het voor duizenden doen, over elke leverancier en locatie heen, niet."
+          },
+          {
+            "title": "Opzoekwerk uitbesteed, regel voor regel",
+            "body": "Het opzoekwerk gaat meestal naar een offshoreteam, betaald per regel. Eén klant betaalde ongeveer 30 pence per regel, en een grote onderdelenlijst kwam pas na maanden terug."
+          }
+        ],
+        "solutionLink": {
+          "label": "Zie hoe Pearstop onderdelen en componenten verifieert",
+          "href": "/unspsc"
+        },
+        "changes": [
+          "Het originele fabrikantonderdeelnummer gevonden voor elk onderdeel in uw data, niet alleen de bovenste paar",
+          "Een duidelijke lijst van de veelgekochte onderdelen die u direct en in bulk kunt bestellen",
+          "Een onderdelenlijst terug in dagen, soms uren, in plaats van maanden",
+          "Geen verzonnen onderdeelnummers: als een match niet kan worden bevestigd, blijft het veld leeg, want gokken kost u de besparing die u probeerde te maken"
+        ],
+        "proof": {
+          "linkLabel": "Bekijk het MRO-patroon",
+          "linkHref": "/cases/mro-confidential"
+        },
+        "faq": [
+          {
+            "q": "Hoe vinden MRO-teams het originele fabrikantonderdeelnummer achter een leverancierscode?",
+            "a": "Door de leverancierscode en omschrijving van elk onderdeel te matchen met fabrikantdata en eerdere inkopen, tot het originele onderdeelnummer is bevestigd. Pearstop doet dit met AI voor elke regel in uw data en toont het bewijs bij elke match, zodat uw team het kan controleren voordat er wordt besteld."
+          },
+          {
+            "q": "Kunt u reserveonderdelen rechtstreeks bij de originele fabrikant kopen in plaats van via een tussenpersoon?",
+            "a": "Vaak wel, voor de onderdelen die u in volume koopt. Tussenpersonen verkopen componenten door onder hun eigen codes. Zodra u het originele fabrikantonderdeelnummer kent, kunt u rechtstreeks in bulk bestellen en prijzen vergelijken."
+          },
+          {
+            "q": "Is het goedkoper om AI te gebruiken dan een uitbesteed team voor het opzoeken van onderdeelnummers?",
+            "a": "Voor grote onderdelenlijsten meestal wel. Uitbesteed opzoekwerk wordt per regel betaald (één klant betaalde ongeveer 30 pence per regel), en een grote lijst kan maanden duren. Met AI komt dezelfde lijst terug in dagen, soms uren, en controleert een medewerker alleen de matches waar het systeem niet zeker van is."
+          },
+          {
+            "q": "Kan AI fabrikantonderdeelnummers vinden zonder ze te verzinnen?",
+            "a": "Dat hangt af van hoe het is gebouwd. Pearstop geeft alleen een onderdeelnummer terug wanneer het een betrouwbare match vindt, en laat het veld leeg wanneer dat niet lukt. U krijgt mogelijk minder antwoorden dan van een tool die gokt, maar geen ervan is verzonnen, en u weet precies welke onderdelen nog gecontroleerd moeten worden."
+          }
+        ]
+      }
+    ],
+    "workingDifferent": {
+      "title": "Actief in een andere sector?",
+      "body": "Datakwaliteitsproblemen zijn niet uniek voor de sectoren hierboven. Als uw teams complexe spend- en assetdata beheren, te maken hebben met inconsistente leveranciersgegevens, of overstappen op een nieuw ERP- of rapportagesysteem, is de kans groot dat we kunnen helpen. Laten we het uitzoeken.",
+      "primaryLabel": "Boek een discovery van 15 minuten",
+      "secondaryLabel": "Of stuur ons een datasample →"
     }
   },
   "Privacy": {
@@ -1377,6 +2272,7 @@
           "De AI/ML-systemen die wij gebruiken om ingediende factuurdata te classificeren, draaiend op EU-gehoste of gelijkwaardig beveiligde infrastructuur."
         ],
         "paragraphsAfter": [
+          "Alle data wordt opgeslagen en verwerkt op servers binnen de Europese Unie.",
           "Elk van deze leveranciers is contractueel verplicht uw gegevens te beschermen en alleen te gebruiken voor het door ons opgegeven doel."
         ]
       },
@@ -1466,7 +2362,9 @@
       {
         "title": "3. Aanvragen voor steekproefclassificatie",
         "paragraphs": [
-          "Als u ons via de Site een steekproef van factuurregels stuurt, classificeren wij deze en sturen wij het resultaat terug als demonstratie van onze dienst, kosteloos en zonder verplichting aan beide zijden. Steekproefresultaten worden “as is” geleverd om te illustreren wat Pearstop kan, en dienen niet te worden beschouwd als een definitieve, geauditeerde dataset. Het indienen van een steekproef creëert geen overeenkomst voor doorlopende diensten; daarvoor is een aparte overeenkomst nodig."
+          "Als u ons via de Site een steekproef van factuurregels stuurt, classificeren wij deze en sturen wij het resultaat terug als demonstratie van onze dienst, kosteloos en zonder verplichting aan beide zijden. Steekproefresultaten worden “as is” geleverd om te illustreren wat Pearstop kan, en dienen niet te worden beschouwd als een definitieve, geauditeerde dataset. Het indienen van een steekproef creëert geen overeenkomst voor doorlopende diensten; daarvoor is een aparte overeenkomst nodig.",
+          "Door een sample te uploaden, bevestigt u dat u door uw organisatie bevoegd bent om dit met ons te delen. Factuurbestanden bevatten vaak persoonsgegevens van anderen dan uzelf, zoals contactpersonen bij leveranciers, technici of medewerkers die op facturen worden genoemd. U bent verantwoordelijk voor een rechtsgrond onder de toepasselijke privacywetgeving (AVG/GDPR of POPIA) om die gegevens met ons te delen, en wij raden u aan namen, e-mailadressen en bankgegevens te verwijderen die niet nodig zijn voor classificatie.",
+          "Voor persoonsgegevens in een sample handelen wij namens uw organisatie. Wij gebruiken ze alleen om uw sampleresultaat op te leveren en te bespreken, houden ze vertrouwelijk en beperken toegang tot de mensen die dit nodig hebben. Samplebestanden worden automatisch na 90 dagen verwijderd, of eerder als u dit vraagt, tenzij u ons schriftelijk vraagt ze te bewaren voor een lopende samenwerking."
         ]
       },
       {
@@ -1706,6 +2604,22 @@
           {
             "q": "Welke UNSPSC-tool werkt het best voor infrastructuur- en facilitaire bedrijven in Nederland?",
             "a": "Pearstop is specifiek gebouwd voor Nederlandse en Europese infrastructuur-, facilitaire- en bouwbedrijven. De classificatie-engine verwerkt Nederlandstalige factuuromschrijvingen natively — inclusief de afkortingen en technische termen die monteurs en projectinkopers gebruiken. Pearstop classificeert momenteel 35.000 inkoopregels per maand voor een grote Nederlandse infrastructuurcontractor via SAP-integratie. Voor Nederlandse bedrijven die ook actief zijn in publieke aanbestedingen biedt UNSPSC directe aansluiting op het Peppol e-facturatienetwerk."
+          },
+          {
+            "q": "Wat zijn typische datakwaliteitsproblemen in bouwprocurement?",
+            "a": "Bouwuitgaven zijn versnipperd over projecten, onderaannemers en inkoop op locatieniveau, met weinig gedeelde coderingsdiscipline. Hetzelfde materiaal of dezelfde dienst kan op elke inkooporder anders worden omschreven, en historische realisaties worden zelden over projecten heen samengevoegd. Dat maakt het lastig om nieuwe tenders te prijzen op basis van echte kostenervaring, leveranciers te benchmarken, of te zien waar budgetten structureel worden overschreden."
+          },
+          {
+            "q": "Wat zijn typische datakwaliteitsproblemen in infrastructuurprocurement?",
+            "a": "Infrastructuurprocurement is verspreid over locaties, entiteiten en langlopende raamovereenkomsten, waardoor dezelfde leverancier of hetzelfde materiaal onder veel verschillende namen en codes kan voorkomen. Inkooporders worden aangemaakt zonder consistente categorie-indeling, en legacysystemen delen zelden dezelfde taxonomie. Het resultaat is spend data die niet met vertrouwen kan worden samengevoegd, wat leverancierconsolidatie en nauwkeurige tenderprijzen lastig maakt."
+          },
+          {
+            "q": "Wat zijn typische datakwaliteitsproblemen in inkoop voor productiebedrijven?",
+            "a": "Spend voor productie en MRO wordt gedomineerd door onderdeelnummers en leveranciersspecifieke codes in plaats van gewone taalomschrijvingen, en hetzelfde onderdeel wordt vaak onder verschillende resellercodes door verschillende leveranciers verkocht. Zonder een koppeling naar het echte fabrikantonderdeelnummer kunnen procurementteams prijzen tussen leveranciers niet vergelijken of zien waar ze een reseller-opslag betalen voor een onderdeel dat ze ook direct hadden kunnen inkopen."
+          },
+          {
+            "q": "Wat zijn typische datakwaliteitsproblemen in inkoop voor schoonmaakdiensten?",
+            "a": "Spend voor cleaning en soft FM is meestal verspreid over veel kleine leveranciers en verbruiksartikelen, lokaal besteld door locatiemanagers in plaats van centraal. Hetzelfde product, een doos toiletpapier, een type reinigingsmiddel, komt uiteindelijk onder tientallen verschillende omschrijvingen en prijzen terecht op verschillende locaties, waardoor er geen betrouwbare manier is om totale spend per product te zien of één prijs met een preferred leverancier te onderhandelen."
           }
         ]
       },
@@ -2215,7 +3129,8 @@
         "title": "Uw spend blijft geclassificeerd",
         "copy": "Naarmate nieuwe facturen binnenkomen, worden ze op dezelfde manier geclassificeerd - geen jaarlijks opschoningsproject nodig."
       },
-      "beforeAfterCaption": "Illustratief voorbeeld: zes factuurregels van drie leveranciers. De originele omschrijving en leverancier blijven exact zoals ontvangen - Pearstop voegt alleen de kolommen rechts toe."
+      "beforeAfterCaption": "Illustratief voorbeeld: zes factuurregels van drie leveranciers. De originele omschrijving en leverancier blijven exact zoals ontvangen - Pearstop voegt alleen de kolommen rechts toe.",
+      "leadIn": "Grote gebouwen en locaties draaien op honderden kleine beslissingen per dag: welk onderdeel, welke leverancier, welke prijs. Elke beslissing is precies zo goed als de data erachter."
     },
     "labelledOutput": {
       "eyebrow": "Elke regel, gelabeld",
@@ -2262,7 +3177,8 @@
           "href": "/industries#manufacturing"
         }
       ],
-      "linkText": "Bekijk hoe dit van toepassing is →"
+      "linkText": "Bekijk hoe dit van toepassing is →",
+      "leadIn": "U bouwt, beheert en onderhoudt de plekken waar mensen werken, wonen en reizen. Wij zorgen voor de data die dat werk binnen budget houdt."
     },
     "objection": {
       "dataTitle": "“Onze data is hier niet schoon genoeg voor.”",
@@ -2330,6 +3246,10 @@
         {
           "q": "Hoe lang duurt spend-classificatie?",
           "a": "Een eerste steekproef van 200 regels wordt doorgaans binnen enkele werkdagen opgeleverd. Doorlopende classificatie loopt continu mee naarmate nieuwe facturen binnenkomen."
+        },
+        {
+          "q": "Helpt Pearstop ook met veiligheid en compliance?",
+          "a": "Via de data erachter. Wettelijk verplicht onderhoud wordt gepland vanuit assetlijsten, leverancierscontroles draaien op leveranciersgegevens, en reparaties zijn afhankelijk van het juiste onderdeelnummer. Pearstop reinigt en koppelt die gegevens, laat spend zien bij leveranciers buiten uw goedgekeurde lijst, en verzint nooit een onderdeelnummer. We voeren geen inspecties uit; we zorgen dat de data erachter klopt."
         }
       ]
     },
@@ -2362,7 +3282,8 @@
       "quote": {
         "text": "Onze interne systemen schieten tekort. Ik zou zeggen dat we op grondniveau zitten. Ergens ondergronds.",
         "attribution": "Inkoopmanager, schoonmaakbedrijf met meerdere locaties"
-      }
+      },
+      "leadIn": "Elke factuur is een registratie van werk dat op een locatie is uitgevoerd. Als niemand hem leest, kan niemand hem controleren."
     },
     "painCards": [
       {
@@ -2457,6 +3378,10 @@
       "b3": {
         "title": "Geen invoeren en corrigeren meer",
         "copy": "De handmatige invoerstap die inkoop- en financiële administratietijd opslokt, verdwijnt."
+      },
+      "b4": {
+        "title": "Facturen gecontroleerd tegen het contract",
+        "copy": "Geëxtraheerde regels kunnen worden vergeleken met afgesproken tarieven en betalingsvoorwaarden, zodat kosten buiten het contract zichtbaar worden voordat ze worden betaald."
       }
     },
     "quote": {
