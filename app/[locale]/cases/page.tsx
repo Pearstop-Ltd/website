@@ -22,5 +22,6 @@ export default async function CasesPage({ params }: { params: Promise<{ locale: 
   setRequestLocale(locale);
   const messages = await getMessages({ locale });
   const copy = messages.Cases as unknown as CasesIndexCopy;
-  return <CasesIndexPage copy={copy} />;
+  const prefix = locale === "en" ? "" : `/${locale}`;
+  return <CasesIndexPage copy={copy} prefix={prefix} />;
 }

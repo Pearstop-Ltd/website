@@ -42,14 +42,14 @@ const CARD_TINTS = ["blue", "purple", "green", "soft", "soft", "blue", "purple",
  * prop (see CLAUDE.md's site migration convention); each route tree's
  * page.tsx supplies its own copy source and keeps its own
  * metadata/canonical/hreflang/JSON-LD. */
-export function IndustriesPage({ copy }: { copy: IndustriesCopy }) {
+export function IndustriesPage({ copy, prefix = "", trustLabel }: { copy: IndustriesCopy; prefix?: string; trustLabel?: string }) {
   return (
     <>
       <Section background="white" paddingTop={0} paddingBottom={72}>
         <div className={styles.hero}>
           <div className={styles.heroText}>
             <nav aria-label="Breadcrumb" className={styles.breadcrumb}>
-              <Link href="/">{copy.breadcrumb.home}</Link>
+              <Link href={prefix || "/"}>{copy.breadcrumb.home}</Link>
               <span aria-hidden="true">›</span>
               <span>{copy.breadcrumb.current}</span>
             </nav>
@@ -96,7 +96,7 @@ export function IndustriesPage({ copy }: { copy: IndustriesCopy }) {
 
       <IndustrySlider sections={copy.sections} />
 
-      <TrustStrip />
+      <TrustStrip prefix={prefix} label={trustLabel} />
 
       <Section background="soft">
         <div className={styles.workingDifferent}>

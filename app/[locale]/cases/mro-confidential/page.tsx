@@ -28,6 +28,7 @@ export default async function MroCaseStudyPage({ params }: { params: Promise<{ l
   const prefix = locale === "en" ? "" : `/${locale}`;
   const t = await getTranslations("CaseMroConfidential");
   const common = await getTranslations("Common");
+  const header = await getTranslations("Header");
   const howInputs = t.raw("how.inputs") as string[];
   const howSteps = t.raw("how.steps") as string[];
   const howOutputs = t.raw("how.outputs") as { text: string }[];
@@ -39,7 +40,7 @@ export default async function MroCaseStudyPage({ params }: { params: Promise<{ l
     <>
       <section style={{ background: "#fff", padding: "56px 0 72px" }}>
         <div className="container" style={{ display: "flex", flexDirection: "column", gap: 40 }}>
-          <CaseBreadcrumb current={t("breadcrumbCurrent")} />
+          <CaseBreadcrumb current={t("breadcrumbCurrent")} prefix={prefix} label={header("cases")} />
           <div style={{ display: "flex", flexDirection: "column", gap: 22, maxWidth: 780 }}>
             <div style={{ display: "flex", gap: 10, alignItems: "center", flexWrap: "wrap" }}>
               <CaseTypeBadge type="pattern" />

@@ -1,7 +1,7 @@
 "use client";
 
 import { useId, useRef, useState, type FormEvent } from "react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { RecaptchaNotice, RecaptchaScript, useRecaptchaV3 } from "@/components/recaptcha-widget";
 import { siteConfig } from "@/lib/site";
 
@@ -10,6 +10,8 @@ type Status = "idle" | "submitting";
 
 export function SampleRequestModal({ label, className = "btn btn-primary" }: { label?: string; className?: string }) {
   const t = useTranslations("SampleRequestModal");
+  const locale = useLocale();
+  const prefix = locale === "en" ? "" : `/${locale}`;
   const titleId = useId();
   const dialogRef = useRef<HTMLDialogElement>(null);
   const detailsFormRef = useRef<HTMLFormElement>(null);
@@ -179,8 +181,8 @@ export function SampleRequestModal({ label, className = "btn btn-primary" }: { l
               <RecaptchaNotice />
               <p className="sample-modal-legal">
                 {t.rich("email.legal", {
-                  privacyLink: (chunks) => <a href="/privacy" target="_blank" rel="noreferrer">{chunks}</a>,
-                  termsLink: (chunks) => <a href="/terms-and-conditions" target="_blank" rel="noreferrer">{chunks}</a>
+                  privacyLink: (chunks) => <a href={`${prefix}/privacy`} target="_blank" rel="noreferrer">{chunks}</a>,
+                  termsLink: (chunks) => <a href={`${prefix}/terms-and-conditions`} target="_blank" rel="noreferrer">{chunks}</a>
                 })}
               </p>
             </form>
@@ -219,8 +221,8 @@ export function SampleRequestModal({ label, className = "btn btn-primary" }: { l
               <p className="contact-form-note">{t("details.note")}</p>
               <p className="sample-modal-legal">
                 {t.rich("details.legal", {
-                  privacyLink: (chunks) => <a href="/privacy" target="_blank" rel="noreferrer">{chunks}</a>,
-                  termsLink: (chunks) => <a href="/terms-and-conditions" target="_blank" rel="noreferrer">{chunks}</a>
+                  privacyLink: (chunks) => <a href={`${prefix}/privacy`} target="_blank" rel="noreferrer">{chunks}</a>,
+                  termsLink: (chunks) => <a href={`${prefix}/terms-and-conditions`} target="_blank" rel="noreferrer">{chunks}</a>
                 })}
               </p>
             </form>

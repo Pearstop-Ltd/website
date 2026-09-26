@@ -13,10 +13,10 @@ import styles from "./case-design.module.css";
    #A383FF -> --purple, #8BC34A -> --success, #F8F9FA -> --bg-soft,
    #DCE1F8 -> --blue-soft, #E8E0FC -> --purple-soft. */
 
-export function CaseBreadcrumb({ current }: { current: string }) {
+export function CaseBreadcrumb({ current, prefix = "", label = "Cases" }: { current: string; prefix?: string; label?: string }) {
   return (
     <nav style={{ fontSize: 14, color: "var(--muted)", display: "flex", gap: 8 }}>
-      <Link href="/cases" style={{ color: "var(--muted)" }}>Cases</Link>
+      <Link href={`${prefix}/cases`} style={{ color: "var(--muted)" }}>{label}</Link>
       <span>/</span>
       <span style={{ color: "var(--navy)" }}>{current}</span>
     </nav>

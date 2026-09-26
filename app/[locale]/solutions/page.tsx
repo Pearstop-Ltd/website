@@ -74,7 +74,7 @@ export default async function SolutionsRoute({ params }: { params: Promise<{ loc
       <Script id="itemlist-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
       <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
-      <SolutionsIndexPage copy={copy} />
+      <SolutionsIndexPage copy={copy} prefix={locale === "en" ? "" : `/${locale}`} />
     </>
   );
 }

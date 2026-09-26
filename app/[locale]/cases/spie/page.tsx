@@ -39,12 +39,13 @@ export default async function SpieCaseStudyPage({ params }: { params: Promise<{ 
   const prefix = locale === "en" ? "" : `/${locale}`;
   const t = await getTranslations({ locale, namespace: "CaseSpie" });
   const common = await getTranslations({ locale, namespace: "Common" });
+  const header = await getTranslations({ locale, namespace: "Header" });
 
   return (
     <>
       <section style={{ background: "#fff", padding: "56px 0 72px" }}>
         <div className="container" style={{ display: "flex", flexDirection: "column", gap: 40 }}>
-          <CaseBreadcrumb current={t("breadcrumb")} />
+          <CaseBreadcrumb current={t("breadcrumb")} prefix={prefix} label={header("cases")} />
           <CaseHero
             aside={
               <CaseFactSheet

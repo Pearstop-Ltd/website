@@ -38,7 +38,7 @@ export interface CasesIndexCopy {
 
 /** /cases index — mirrors design/refs/cases-index.dc.html. Rendered
  * identically by both route trees; case data comes from lib/cases.ts only. */
-export function CasesIndexPage({ copy }: { copy: CasesIndexCopy }) {
+export function CasesIndexPage({ copy, prefix = "" }: { copy: CasesIndexCopy; prefix?: string }) {
   const QUOTES: { personId: PersonId; quote: string }[] = [
     { personId: "bartVanPeij", quote: copy.testimonials.t1.text },
     { personId: "vinceOut", quote: copy.testimonials.t2.text },
@@ -67,7 +67,7 @@ export function CasesIndexPage({ copy }: { copy: CasesIndexCopy }) {
           summary={featuredCase.summary}
           stats={featuredCase.stats ?? []}
           linkLabel={copy.index.readCase}
-          href={featuredCase.href}
+          href={`${prefix}${featuredCase.href}`}
           logo={featuredCase.logo}
           visual={<CaseCardVisual variant={featuredCase.visual} />}
         />
@@ -88,7 +88,7 @@ export function CasesIndexPage({ copy }: { copy: CasesIndexCopy }) {
                 eyebrow={c.tag}
                 title={c.headline}
                 stats={c.stats ?? []}
-                href={c.href}
+                href={`${prefix}${c.href}`}
                 linkLabel={copy.index.readCase}
                 visual={<CaseCardVisual variant={c.visual} />}
               />
@@ -110,7 +110,7 @@ export function CasesIndexPage({ copy }: { copy: CasesIndexCopy }) {
                 title={c.headline}
                 summary={c.summary}
                 linkLabel={copy.index.seePattern}
-                href={c.href}
+                href={`${prefix}${c.href}`}
                 visual={<CaseCardVisual variant={c.visual} />}
               />
             ))}
@@ -135,7 +135,7 @@ export function CasesIndexPage({ copy }: { copy: CasesIndexCopy }) {
         primaryLabel={copy.index.closingPrimaryLabel}
         primaryAction={(className) => <SampleRequestModal label={copy.index.closingPrimaryLabel} className={className} />}
         secondaryLabel={copy.index.closingSecondaryLabel}
-        secondaryHref="/book-a-demo"
+        secondaryHref={`${prefix}/book-a-demo`}
         footerLine={`© ${new Date().getFullYear()} Pearstop · Privacy · Terms`}
       />
     </div>

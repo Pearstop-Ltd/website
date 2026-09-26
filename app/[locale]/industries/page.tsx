@@ -25,6 +25,8 @@ export default async function IndustriesRoute({ params }: { params: Promise<{ lo
   setRequestLocale(locale);
   const messages = await getMessages({ locale });
   const copy = messages.Industries as unknown as IndustriesCopy;
+  const prefix = locale === "en" ? "" : `/${locale}`;
+  const trustLabel = (messages.Home as { clients?: { label?: string } } | undefined)?.clients?.label;
 
   const allFaqItems = [...copy.faq.items, ...copy.sections.flatMap((section) => section.faq)];
 
@@ -52,7 +54,7 @@ export default async function IndustriesRoute({ params }: { params: Promise<{ lo
       <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
-      <IndustriesPage copy={copy} />
+      <IndustriesPage copy={copy} prefix={prefix} trustLabel={trustLabel} />
     </>
   );
 }

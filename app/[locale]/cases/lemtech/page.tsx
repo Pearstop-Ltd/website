@@ -28,6 +28,7 @@ export default async function LemtechCaseStudyPage({ params }: { params: Promise
   const prefix = locale === "en" ? "" : `/${locale}`;
   const t = await getTranslations("CaseLemtech");
   const common = await getTranslations("Common");
+  const header = await getTranslations("Header");
   const factSheetRows = t.raw("factSheetRows") as Row[];
   const stats = t.raw("stats") as { value: string; label: string }[];
   const howInputs = t.raw("how.inputs") as string[];
@@ -40,7 +41,7 @@ export default async function LemtechCaseStudyPage({ params }: { params: Promise
     <>
       <section style={{ background: "#fff", padding: "56px 0 72px" }}>
         <div className="container" style={{ display: "flex", flexDirection: "column", gap: 40 }}>
-          <CaseBreadcrumb current={t("breadcrumbCurrent")} />
+          <CaseBreadcrumb current={t("breadcrumbCurrent")} prefix={prefix} label={header("cases")} />
           <CaseHero
             aside={<CaseFactSheet rows={factSheetRows} />}
           >

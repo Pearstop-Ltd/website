@@ -46,6 +46,7 @@ export default async function CleaningCaseStudyPage({ params }: { params: Promis
   const prefix = locale === "en" ? "" : `/${locale}`;
   const t = await getTranslations("CaseCleaningConsumablesConsolidation");
   const common = await getTranslations("Common");
+  const header = await getTranslations("Header");
   const cards = t.raw("cards") as Card[];
   const features = t.raw("features") as Card[];
   const processInputs = t.raw("process.inputs") as string[];
@@ -65,7 +66,7 @@ export default async function CleaningCaseStudyPage({ params }: { params: Promis
     <>
       <section style={{ background: "#fff", padding: "56px 0 88px" }}>
         <div className="container" style={{ display: "flex", flexDirection: "column", gap: 40 }}>
-          <CaseBreadcrumb current={t("breadcrumbCurrent")} />
+          <CaseBreadcrumb current={t("breadcrumbCurrent")} prefix={prefix} label={header("cases")} />
           <CaseHero
             equal
             aside={

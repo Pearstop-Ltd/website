@@ -85,7 +85,7 @@ function ArrowRightIcon() {
  * from a `copy` prop (see CLAUDE.md's site migration convention); each
  * route tree's page.tsx supplies its own copy source and keeps its own
  * metadata/canonical/hreflang/JSON-LD. */
-export function SolutionsIndexPage({ copy }: { copy: SolutionsIndexCopy }) {
+export function SolutionsIndexPage({ copy, prefix = "" }: { copy: SolutionsIndexCopy; prefix?: string }) {
   return (
     <>
       <Section background="white" paddingBottom={0}>
@@ -96,7 +96,7 @@ export function SolutionsIndexPage({ copy }: { copy: SolutionsIndexCopy }) {
           <p className={styles.heroLead}>{copy.hero.lead}</p>
           <div className={styles.heroActions}>
             <SampleRequestModal label={copy.hero.primaryLabel} className="btn btn-primary" />
-            <Link href="/book-a-demo" className="btn btn-outline">
+            <Link href={`${prefix}/book-a-demo`} className="btn btn-outline">
               {copy.hero.secondaryLabel}
             </Link>
           </div>
@@ -232,7 +232,7 @@ export function SolutionsIndexPage({ copy }: { copy: SolutionsIndexCopy }) {
         secondaryAction={(className) => (
           <>
             <SampleRequestModal label={copy.closing.secondaryLabel} className={className} />
-            <Link href="/industries" className={styles.viewIndustriesLink}>
+            <Link href={`${prefix}/industries`} className={styles.viewIndustriesLink}>
               {copy.closing.tertiaryLabel}
             </Link>
           </>

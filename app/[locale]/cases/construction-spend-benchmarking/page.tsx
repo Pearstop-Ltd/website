@@ -39,6 +39,7 @@ export default async function ConstructionSpendBenchmarkingPage({ params }: { pa
   const prefix = locale === "en" ? "" : `/${locale}`;
   const t = await getTranslations("CaseConstructionSpendBenchmarking");
   const common = await getTranslations("Common");
+  const header = await getTranslations("Header");
   const processInputs = t.raw("process.inputs") as string[];
   const processSteps = t.raw("process.steps") as string[];
   const processOutputs = t.raw("process.outputs") as { text: string }[];
@@ -50,7 +51,7 @@ export default async function ConstructionSpendBenchmarkingPage({ params }: { pa
     <>
       <section style={{ background: "#fff", padding: "56px 0 88px" }}>
         <div className="container" style={{ display: "flex", flexDirection: "column", gap: 40 }}>
-          <CaseBreadcrumb current={t("breadcrumbCurrent")} />
+          <CaseBreadcrumb current={t("breadcrumbCurrent")} prefix={prefix} label={header("cases")} />
           <div style={{ display: "flex", flexDirection: "column", gap: 22, maxWidth: 780 }}>
             <div style={{ display: "flex", gap: 10, alignItems: "center", flexWrap: "wrap" }}>
               <CaseTypeBadge type="pattern" />

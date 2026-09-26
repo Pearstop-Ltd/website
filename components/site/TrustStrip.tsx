@@ -14,10 +14,10 @@ const LOGOS = [
 
 /** navy-deep logo strip, matching the homepage's "Trusted by leading
  * organisations" section (#clients-and-quotes), for reuse on other pages. */
-export function TrustStrip({ className }: { className?: string }) {
+export function TrustStrip({ className, prefix = "", label = "Trusted by leading organisations" }: { className?: string; prefix?: string; label?: string }) {
   return (
     <div className={dsRoot(styles.root, className)}>
-      <span className={styles.label}>Trusted by leading organisations</span>
+      <span className={styles.label}>{label}</span>
       <div className={styles.logos}>
         {LOGOS.map((logo) =>
           logo.external ? (
@@ -25,7 +25,7 @@ export function TrustStrip({ className }: { className?: string }) {
               <img src={logo.src} alt={logo.name} className={styles.logo} />
             </a>
           ) : (
-            <Link key={logo.name} href={logo.href} aria-label={`${logo.name} case study`}>
+            <Link key={logo.name} href={`${prefix}${logo.href}`} aria-label={`${logo.name} case study`}>
               <img src={logo.src} alt={logo.name} className={styles.logo} />
             </Link>
           )
