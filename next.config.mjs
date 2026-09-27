@@ -38,6 +38,8 @@ const nextConfig = {
       { source: "/learning-centre.html", destination: "/learning-centre", permanent: true },
       { source: "/use-cases.html", destination: "/use-cases", permanent: true },
       { source: "/work.html", destination: "/work", permanent: true },
+      { source: "/assistants", destination: "/", permanent: false },
+      { source: "/assistants/:path*", destination: "/", permanent: false },
     ];
   },
 };
