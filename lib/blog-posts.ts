@@ -1369,6 +1369,12 @@ const _allBlogPosts: BlogPost[] = [
       { id: "the-manual-review-that-actually-moves-it", label: "The manual review that actually moves it" },
       { id: "what-good-supplier-resolution-looks-like", label: "What good supplier resolution looks like" },
     ],
+    tocItemsNl: [
+      { id: "classification-hits-its-ceiling-fast", label: "Classificatie bereikt snel zijn plafond" },
+      { id: "supplier-matching-is-the-harder-problem", label: "Supplier matching is het lastigere probleem" },
+      { id: "the-manual-review-that-actually-moves-it", label: "De handmatige review die het echt verplaatst" },
+      { id: "what-good-supplier-resolution-looks-like", label: "Hoe goede supplier resolution eruitziet" },
+    ],
     softCta: "discovery",
     faqItems: [
       { q: "Why does supplier matching take longer than line classification in a spend cleanup?", a: "Line classification works from a self-contained description that a rules engine or model can read directly. Supplier matching has to reconcile several different spellings of the same real-world company, and a wrong merge is worse than a missed one, so an automated match deliberately leaves ambiguous pairs unresolved rather than guessing. That unresolved tail takes the extra time, not the bulk of straightforward matches, which resolve quickly." },
@@ -1393,6 +1399,12 @@ const _allBlogPosts: BlogPost[] = [
       { id: "where-consistency-breaks-down", label: "Where consistency breaks down" },
       { id: "why-a-better-prompt-does-not-fix-it", label: "Why a better prompt does not fix it" },
       { id: "what-a-constrained-system-does-differently", label: "What a constrained system does differently" },
+    ],
+    tocItemsNl: [
+      { id: "why-the-first-attempt-looks-promising", label: "Waarom de eerste poging veelbelovend lijkt" },
+      { id: "where-consistency-breaks-down", label: "Waar consistentie het laat afweten" },
+      { id: "why-a-better-prompt-does-not-fix-it", label: "Waarom een betere prompt het niet oplost" },
+      { id: "what-a-constrained-system-does-differently", label: "Wat een constrained systeem anders doet" },
     ],
     softCta: "discovery",
     faqItems: [
@@ -1419,6 +1431,12 @@ const _allBlogPosts: BlogPost[] = [
       { id: "how-an-automated-pass-catches-it", label: "How an automated pass catches it" },
       { id: "what-to-check-once-it-is-found", label: "What to check once it is found" },
     ],
+    tocItemsNl: [
+      { id: "how-the-swap-actually-happens", label: "Hoe de swap daadwerkelijk gebeurt" },
+      { id: "why-nobody-notices-immediately", label: "Waarom niemand het meteen merkt" },
+      { id: "how-an-automated-pass-catches-it", label: "Hoe een geautomatiseerde doorloop het vangt" },
+      { id: "what-to-check-once-it-is-found", label: "Wat te checken zodra het gevonden is" },
+    ],
     softCta: "discovery",
     faqItems: [
       { q: "What causes manufacturer and type fields to swap in spend data?", a: "A column mapping error is the usual cause: an export job, a manual entry template, or a system migration maps two adjacent fields incorrectly, so the manufacturer name lands where the type description should be and the type description lands where the manufacturer name should be. This typically happens after a system upgrade, a template change, or a migration that maps fields by position rather than by name." },
@@ -1443,6 +1461,12 @@ const _allBlogPosts: BlogPost[] = [
       { id: "an-example-from-a-construction-supplier", label: "An example from construction" },
       { id: "what-high-confidence-should-actually-mean", label: "What high confidence should mean" },
       { id: "hard-fm-cleaning-and-construction-differ", label: "Hard FM, cleaning, and construction differ" },
+    ],
+    tocItemsNl: [
+      { id: "why-one-accuracy-number-is-not-the-point", label: "Waarom één accuracy-getal niet het punt is" },
+      { id: "an-example-from-a-construction-supplier", label: "Een voorbeeld uit construction" },
+      { id: "what-high-confidence-should-actually-mean", label: "Wat high confidence zou moeten betekenen" },
+      { id: "hard-fm-cleaning-and-construction-differ", label: "Hard FM, cleaning en construction verschillen" },
     ],
     softCta: "discovery",
     faqItems: [
@@ -1469,6 +1493,12 @@ const _allBlogPosts: BlogPost[] = [
       { id: "the-conflict-is-in-your-erp", label: "The conflict is in your ERP" },
       { id: "how-to-pick-when-you-cannot-avoid-both", label: "How to pick when you need both" },
     ],
+    tocItemsNl: [
+      { id: "two-standards-answering-two-different-questions", label: "Twee standaarden, twee vragen" },
+      { id: "where-each-one-actually-gets-used", label: "Waar elk daadwerkelijk wordt gebruikt" },
+      { id: "the-conflict-is-in-your-erp", label: "Het conflict zit in uw ERP" },
+      { id: "how-to-pick-when-you-cannot-avoid-both", label: "Hoe te kiezen als u beide nodig heeft" },
+    ],
     softCta: "discovery",
     faqItems: [
       { q: "What is the main difference between UNSPSC and eCl@ss?", a: "UNSPSC classifies what category a purchase belongs to for spend analysis and category management, using a four level hierarchy from segment down to commodity. eCl@ss classifies the technical attributes of a specific item at the material master level, the properties an engineer needs to specify or match a part correctly. They answer different questions rather than competing to answer the same one." },
@@ -1493,6 +1523,12 @@ const _allBlogPosts: BlogPost[] = [
       { id: "treat-the-software-like-a-team", label: "Treat the software like a team" },
       { id: "what-accountability-requires-from-software", label: "What accountability requires" },
       { id: "why-pilots-and-validation-mattered", label: "Why pilots and validation mattered" },
+    ],
+    tocItemsNl: [
+      { id: "start-small-before-you-scale", label: "Begin klein voordat u opschaalt" },
+      { id: "treat-the-software-like-a-team", label: "Behandel de software als een team" },
+      { id: "what-accountability-requires-from-software", label: "Wat accountability vraagt" },
+      { id: "why-pilots-and-validation-mattered", label: "Waarom pilots en validatie het verschil maakten" },
     ],
     softCta: "discovery",
     faqItems: [

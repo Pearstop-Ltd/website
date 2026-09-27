@@ -1,0 +1,65 @@
+---
+title: "L'impasse de l'IA généraliste dans la classification des dépenses"
+description: "Un assistant IA généraliste ressemble à la solution rapide pour classifier les dépenses. À volume, il invente des catégories et perd en cohérence, et cet échec est prévisible."
+date: "2026-09-16"
+category: "AI & Digital"
+slug: "general-purpose-ai-classification-dead-end"
+author: "rae"
+lang: "fr"
+---
+
+**Réponse rapide :** demander à un assistant IA généraliste de classifier un fichier de dépenses fonctionne pour les premières dizaines de lignes puis s'effondre à volume, car le modèle n'a aucune taxonomie fixe à respecter et aucune mémoire des décisions précédentes prises dans le même fichier. Il invente des catégories qui n'existent pas dans votre structure de reporting et classe un même article différemment quelques milliers de lignes plus loin. La solution est un système conçu pour rester à l'intérieur d'une taxonomie fixe, pas un meilleur prompt.
+
+Sur cette page : [Pourquoi le premier essai semble prometteur](#why-the-first-attempt-looks-promising) · [Où la cohérence se brise](#where-consistency-breaks-down) · [Pourquoi un meilleur prompt ne règle pas le problème](#why-a-better-prompt-does-not-fix-it) · [Ce qu'un système contraint fait différemment](#what-a-constrained-system-does-differently) · [FAQ](#frequently-asked-questions)
+
+## Pourquoi le premier essai semble prometteur
+
+Les équipes se tournent vers un assistant IA généraliste pour un problème de classification pour une raison compréhensible : il est déjà sous licence, déjà ouvert dans un autre onglet, et il comprend visiblement assez bien le langage pour lire une description de ligne et suggérer une catégorie. On colle vingt ou trente lignes, et le résultat semble crédible. Les catégories sonnent plausible, le raisonnement dans la réponse semble sensé, et l'exercice entier prend quelques minutes au lieu des jours qu'exigerait une passe manuelle.
+
+Ce succès précoce est précisément ce qui rend l'échec final surprenant plutôt qu'attendu. Rien dans ce premier essai ne signale que la même approche s'effondre une fois qu'un volume réel la frappe, car un petit échantillon ne sollicite jamais les deux points qui cassent réellement : rester à l'intérieur d'une taxonomie fixe sur des milliers de lignes, et rester cohérent avec une décision prise plus tôt dans le même fichier.
+
+## Où la cohérence s'effondre
+
+Un assistant généraliste n'a aucune liste fixe de catégories parmi lesquelles il est tenu de choisir, à moins qu'on lui en fournisse une et qu'on la fasse respecter, et même quand une taxonomie est collée dans le prompt, rien n'empêche le modèle de s'en écarter une fois que la conversation dure assez longtemps. Le résultat concret : une ligne pour des gants de travail d'entrepôt se retrouve classée dans une catégorie qui sonne raisonnable mais qui n'existe en réalité nulle part dans la structure de reporting de l'entreprise, et personne ne le remarque jusqu'à ce qu'un rapport tente de totaliser les dépenses sur cette catégorie et la trouve vide.
+
+La cohérence sur l'ensemble d'un fichier est un échec distinct, et il se manifeste même quand chaque catégorie individuelle choisie par le modèle est techniquement valide. Le même fournisseur, le même article, décrit légèrement différemment sur deux lignes distinctes à deux mille lignes d'écart, peut atterrir dans deux catégories différentes, car un assistant généraliste n'a aucune mémoire persistante de la façon dont il a classé la première occurrence au moment où il atteint la seconde. Un analyste de dépenses qui revoit le résultat n'a aucun moyen de dire, ligne par ligne, quelles décisions de classification sont cohérentes avec les précédentes et lesquelles ne le sont pas, sans vérifier manuellement tout le fichier, ce qui annule l'intérêt d'utiliser l'IA pour accélérer le travail.
+
+C'est exactement le moment « on a essayé l'évidence et ça n'a pas marché » que l'on retrouve dans les premières conversations avec les équipes achats : quelqu'un essaie d'abord un assistant généraliste sur le problème de classification, parce que c'est l'évidence à essayer, et le mode d'échec n'est pas un plantage ou un message d'erreur. C'est un fichier de dépenses qui a l'air classé et qui n'est pas assez fiable pour bâtir un rapport dessus.
+
+## Pourquoi un meilleur prompt ne résout pas le problème
+
+Le réflexe une fois le premier essai raté est d'écrire un prompt plus long et plus détaillé : coller la taxonomie complète, ajouter des exemples, préciser les noms de catégories exacts autorisés. Cela améliore mesurablement la première réponse. Cela ne résout pas le problème sous-jacent, car un prompt est un ensemble d'instructions pour une seule réponse, pas une contrainte persistante que le modèle est structurellement tenu de respecter sur une tâche longue de plusieurs milliers de lignes. Suffisamment loin dans n'importe quelle passe de classification en masse, la tendance générative propre au modèle à produire un texte au son plausible reprend le dessus sur l'instruction littérale reçue au début de la conversation.
+
+La même chose est vraie si l'on découpe le fichier en lots plus petits traités séparément. Cela réduit la dérive au sein d'un même lot, mais introduit exactement le problème d'incohérence entre lots décrit plus haut, car rien ne transporte une décision de classification d'un lot à l'autre. Aucun des deux correctifs ne règle l'écart structurel : un assistant généraliste est construit pour générer une réponse plausible à ce qu'on lui demande, pas pour faire respecter une structure de catégories fixe et auditable sur un jeu de données entier.
+
+## Ce qu'un système contraint fait différemment
+
+Un pipeline de classification construit pour ce problème inverse la relation : la taxonomie n'est pas une suggestion dans un prompt, c'est la limite que le système n'est pas autorisé à franchir. Chaque ligne reçoit un score de confiance par rapport à cet ensemble fixe de catégories, et toute ligne pour laquelle le système n'est pas confiant est envoyée à une personne plutôt que de recevoir une supposition au son plausible. Ce signal de confiance est l'élément pour lequel un assistant généraliste n'a aucun équivalent, car une réponse de chat n'est pas accompagnée d'un score de fiabilité.
+
+Le moteur de classification de Pearstop maintient chaque ligne à l'intérieur d'une taxonomie fixe sur laquelle le client rapporte réellement, signale pour revue humaine tout ce dont il n'est pas confiant, et apprend de chaque décision de revue afin que le même article ambigu soit résolu plus vite la fois suivante, pour les équipes achats qui ont besoin d'un fichier de dépenses sur lequel bâtir un rapport de direction la semaine même où il est classé. La différence n'est pas que l'IA sous-jacente est plus intelligente qu'un assistant généraliste. C'est que le système autour de l'IA est construit pour faire de la cohérence et du respect de la taxonomie des propriétés structurelles du résultat, plutôt que quelque chose que l'utilisateur doit espérer qu'un bon prompt ait produit.
+
+## Questions fréquentes
+
+**Pourquoi un assistant IA généraliste fonctionne-t-il sur un petit échantillon de données de dépenses mais échoue-t-il à volume ?**
+
+Un petit échantillon ne sollicite jamais les deux points de rupture qui n'apparaissent qu'à l'échelle : rester à l'intérieur d'un ensemble fixe de catégories sur des milliers de lignes, et rester cohérent avec les décisions de classification prises plus tôt dans le même fichier. Un assistant généraliste n'a aucun mécanisme structurel imposant l'un ou l'autre, si bien qu'un test court paraît réussi tandis qu'un fichier de dépenses complet expose les deux problèmes.
+
+**Un prompt plus détaillé corrige-t-il des résultats de classification incohérents ?**
+
+Un prompt plus détaillé améliore les réponses individuelles mais ne corrige pas le problème sous-jacent, car un prompt est une instruction pour une réponse plutôt qu'une contrainte persistante appliquée sur une tâche entière de plusieurs milliers de lignes. Les passes de classification longues tendent à dériver à nouveau vers des catégories au son plausible mais incorrectes, quelle que soit la précision du prompt initial.
+
+**Que signifie, pour un système de classification, rester à l'intérieur d'une taxonomie fixe ?**
+
+Cela signifie que chaque ligne n'est jamais attribuée qu'à une catégorie qui existe réellement dans la structure de reporting de l'entreprise, sans possibilité d'inventer une catégorie au son plausible qui ne fait pas réellement partie de cette structure. Ceci est imposé structurellement par le système de classification plutôt que demandé par instruction, ce qui est la principale différence avec un assistant généraliste auquel on donne la même taxonomie en prompt.
+
+**Comment savoir si mes résultats de classification sont fiables avant de bâtir un rapport dessus ?**
+
+Vérifiez si chaque catégorie du résultat existe réellement dans votre structure de reporting, et vérifiez ponctuellement si le même article ou fournisseur est classé de la même façon à plusieurs endroits du fichier. Si l'un de ces contrôles échoue sur un petit échantillon, les mêmes problèmes sont presque certainement présents à l'échelle, et le jeu de données a besoin d'une passe avec score de confiance, contrainte par taxonomie, avant qu'il soit sûr d'en tirer un rapport.
+
+**Comment Pearstop évite-t-il les problèmes d'incohérence d'un assistant IA généraliste ?**
+
+Le pipeline de classification de Pearstop restreint chaque ligne à une taxonomie fixe sur laquelle le client rapporte déjà, attribue un score de confiance à chaque classification, et envoie tout ce qui est sous ce seuil de confiance à une personne plutôt que de deviner. Chaque décision de revue humaine nourrit le système en retour, si bien que la cohérence s'améliore avec l'usage plutôt que de se dégrader avec le volume.
+
+**Un assistant IA généraliste est-il un jour suffisant pour la classification achats ?**
+
+Il peut fonctionner pour un lot vraiment restreint et ponctuel, où une personne peut réalistement revoir chaque ligne après coup. Il devient peu fiable dès que le volume ou la récurrence rend une revue manuelle complète impraticable, ce qui est précisément le moment où la plupart des équipes achats cherchent à utiliser l'IA pour la classification.

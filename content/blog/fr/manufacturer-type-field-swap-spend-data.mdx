@@ -1,0 +1,63 @@
+---
+title: "Quand les champs fabricant et type s'inversent dans vos données de dépenses"
+description: "Une inversion silencieuse entre les champs fabricant et type corrompt la classification sans le moindre message d'erreur. Voici comment cela arrive et comment on la détecte."
+date: "2026-09-17"
+category: "Data Quality"
+slug: "manufacturer-type-field-swap-spend-data"
+author: "rae"
+lang: "fr"
+---
+
+**Réponse rapide :** les champs fabricant et type s'inversent quand un export en amont, un modèle de saisie manuelle, ou une migration système mappe mal deux colonnes adjacentes, plaçant le nom du fabricant là où devrait figurer le type de produit, et inversement. Rien dans cette inversion ne déclenche d'erreur, car les deux champs contiennent toujours un texte d'apparence valide. Le problème ne remonte que lorsque les résultats de classification cessent de correspondre à ce que les acheteurs savent être vrai, et c'est un contrôle de cohérence automatisé sur l'ensemble du fichier qui le détecte réellement.
+
+Sur cette page : [Comment l'inversion se produit réellement](#how-the-swap-actually-happens) · [Pourquoi personne ne le remarque immédiatement](#why-nobody-notices-immediately) · [Comment une passe automatisée la détecte](#how-an-automated-pass-catches-it) · [Que vérifier une fois qu'elle est trouvée](#what-to-check-once-it-is-found) · [FAQ](#frequently-asked-questions)
+
+## Comment l'inversion se produit réellement
+
+Chaque fichier de dépenses possède un champ fabricant et un champ type ou catégorie, situés l'un à côté de l'autre sous une forme ou une autre, que ce soit une structure ERP native ou un modèle de tableur bâti par un acheteur des années plus tôt. L'inversion que je décris n'est pas une faute de frappe à l'intérieur d'un champ. C'est les deux champs qui échangent entièrement leur place : « Bosch » apparaît là où devrait figurer la description du type, « perceuse électrique » apparaît là où devrait figurer le nom du fabricant, de façon cohérente, sur tout un lot de lignes.
+
+Cela se produit pour un petit nombre de raisons prévisibles. Un mappage de colonnes dans un export de données ou un job ETL est configuré une fois, correctement, puis une mise à niveau système ou un changement de modèle décale l'ordre des colonnes sans que personne ne mette à jour le mappage en conséquence. Un modèle de saisie manuelle est dupliqué à partir d'une version plus ancienne avec des champs dans un ordre différent, et la personne qui saisit les données colle les valeurs sans vérifier que les en-têtes correspondent toujours. Une migration entre systèmes mappe les champs par position plutôt que par nom, ce qui fonctionne bien jusqu'à ce que le système source et le système cible n'ordonnent pas leurs colonnes de la même façon. Dans chaque cas, la personne ou le système effectuant le mappage travaillait correctement par rapport à la structure qu'il croyait exister. Cette structure avait déjà changé sous ses pieds.
+
+## Pourquoi personne ne le remarque immédiatement
+
+La raison pour laquelle ce type d'erreur survit aussi longtemps est que les deux champs contiennent toujours des valeurs plausibles et réelles. Un champ fabricant est du texte libre, tout comme un champ type dans la plupart des systèmes, si bien qu'aucune règle de validation ne rejetterait « perceuse électrique » d'un champ étiqueté fabricant ou « Bosch » d'un champ étiqueté type. Rien ne plante, rien ne déclenche d'avertissement, et une personne qui parcourt rapidement le fichier à la recherche de données manifestement cassées voit deux colonnes remplies de mots reconnaissables et passe son chemin.
+
+L'inversion ne devient visible que lorsque quelqu'un tente d'utiliser les données pour quelque chose qui dépend du fait que les champs signifient ce que leurs en-têtes indiquent. Un rapport de dépenses par fabricant qui affiche « perceuse électrique » et « visseuse à chocs » comme principaux fabricants est manifestement faux pour une personne qui regarde directement ce rapport. Mais la plupart des pipelines de classification et la plupart des personnes travaillant à partir d'un extrait en aval ne regardent jamais directement le champ fabricant brut. Elles voient la catégorie attribuée par le classificateur, et si le classificateur a reçu les données inversées, il produit des catégories bâties sur le mauvais signal, sans aucun indice évident sur l'origine de l'erreur. Un lot classé à partir de champs inversés peut sembler complet et fiable tout en étant systématiquement faux, d'une façon que seul un acheteur expérimenté, en regardant des lignes précises, détecterait à l'instinct.
+
+## Comment un contrôle automatisé le détecte
+
+Le schéma qui détecte réellement ce problème est un contrôle de cohérence exécuté sur l'ensemble du lot plutôt qu'une règle de validation sur un seul champ. Un champ fabricant est censé contenir un petit ensemble récurrent de valeurs, des noms de marques qui se répètent sur de nombreuses lignes, car la majorité des dépenses transitent par un nombre gérable de fabricants. Un champ type est censé montrer bien plus de variété, car l'éventail des choses achetées est naturellement plus large que l'éventail des marques dont elles proviennent. Quand ces deux profils statistiques s'inversent sur un lot, un contrôle de distribution au niveau du champ le signale immédiatement, avant qu'une seule ligne n'atteigne la classification.
+
+Ce contrôle n'est possible que parce qu'il regarde le lot dans son ensemble plutôt qu'une ligne à la fois. Une règle de validation ligne par ligne ne peut pas détecter cette erreur, car une ligne inversée prise individuellement contient toujours deux valeurs textuelles d'apparence valide ; l'erreur ne devient visible que dans le motif observé sur de nombreuses lignes. C'est la même raison pour laquelle l'erreur est invisible pour une personne qui parcourt rapidement un tableur : les humains aussi repèrent mieux les motifs sur toute une colonne qu'une cellule individuelle techniquement valide mais sémantiquement fausse.
+
+## Ce qu'il faut vérifier une fois le problème trouvé
+
+Une fois qu'une inversion de champs est identifiée, le correctif lui-même est généralement mécanique : réinverser les deux colonnes pour le lot concerné et relancer la classification, car le texte sous-jacent n'a en réalité jamais été faux, seulement mal étiqueté. L'étape la plus importante est de retracer l'inversion jusqu'à sa source, qu'il s'agisse d'un job d'export, d'un modèle, ou d'un mappage de migration, et de la corriger à cet endroit, car un correctif au niveau du lot n'empêche pas le même export de reproduire la même erreur le mois suivant.
+
+Le pipeline de classification de Pearstop exécute un contrôle de cohérence au niveau du champ sur chaque lot avant le début de la classification, détectant une inversion fabricant ou type avant qu'elle n'atteigne un rapport, pour les équipes achats et finance qui ont besoin de faire confiance à un fichier de dépenses classé dès sa première production, plutôt qu'après que quelqu'un remarque un rapport fabricant rempli de noms de produits. Le contrôle n'a pas besoin de savoir à l'avance qu'une inversion s'est produite. Il a seulement besoin que le profil statistique d'un champ fabricant correct diffère de celui d'un champ type correct, ce qui reste vrai pour pratiquement tous les jeux de données de dépenses, quel que soit le secteur.
+
+## Questions fréquentes
+
+**Qu'est-ce qui provoque l'inversion des champs fabricant et type dans les données de dépenses ?**
+
+Une erreur de mappage de colonnes en est généralement la cause : un job d'export, un modèle de saisie manuelle, ou une migration système mappe mal deux champs adjacents, si bien que le nom du fabricant atterrit là où devrait figurer la description du type et inversement. Cela survient typiquement après une mise à niveau système, un changement de modèle, ou une migration qui mappe les champs par position plutôt que par nom.
+
+**Pourquoi une inversion des champs fabricant et type passe-t-elle inaperçue aussi longtemps ?**
+
+Les deux champs sont généralement du texte libre, si bien qu'ils contiennent toujours des valeurs plausibles et valides après l'inversion. Aucune règle de validation ne rejette les données, et une personne qui parcourt le fichier à la recherche d'entrées manifestement cassées voit deux colonnes de mots reconnaissables plutôt qu'une erreur. Le problème ne devient visible que lorsque quelqu'un s'appuie sur le fait que les champs signifient ce que leurs en-têtes affirment.
+
+**Comment détecter automatiquement une inversion des champs fabricant et type ?**
+
+Par un contrôle statistique au niveau du lot plutôt qu'une règle ligne par ligne. Un champ fabricant correct présente un petit ensemble récurrent de valeurs sur de nombreuses lignes, tandis qu'un champ type correct présente une bien plus grande variété, car beaucoup moins de marques fournissent beaucoup plus de types de produits. Quand ce motif s'inverse sur un lot, l'inversion est détectable avant qu'une seule ligne n'atteigne la classification.
+
+**Ce type d'inversion de champs affecte-t-il la précision de la classification ?**
+
+Oui, significativement. Une classification bâtie sur le mauvais signal, traitant un nom de fabricant comme une description de type ou inversement, produit des catégories qui semblent complètes et fiables tout en étant systématiquement fausses, car le signal sous-jacent sur lequel s'appuyait le classificateur décrivait la mauvaise chose.
+
+**Comment Pearstop détecte-t-il les inversions fabricant/type avant la classification ?**
+
+Pearstop exécute un contrôle de cohérence au niveau du champ sur l'ensemble du lot avant le début de la classification, comparant le profil statistique de chaque champ à ce à quoi devrait ressembler un champ fabricant ou type correctement étiqueté. Une inversion est signalée et corrigée avant de pouvoir fausser les résultats de catégorie, plutôt que d'être découverte plus tard dans un rapport en aval.
+
+**Que devons-nous vérifier après avoir corrigé une inversion de champs dans nos données de dépenses ?**
+
+Retracez l'inversion jusqu'à sa source plutôt que de vous contenter de corriger le lot concerné. Vérifiez le job d'export, le modèle de saisie, ou le mappage de migration à l'origine du fichier, car une correction au niveau du lot n'empêche pas la même erreur en amont de reproduire l'inversion lors du prochain cycle d'export.

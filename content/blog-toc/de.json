@@ -976,5 +976,113 @@
       "id": "industry-depth-versus-generic-spend-platforms",
       "label": "Branchentiefe vs. generische Plattformen"
     }
+  ],
+  "data-cleaning-ai-project-manager": [
+    {
+      "id": "start-small-before-you-scale",
+      "label": "Klein anfangen, bevor Sie skalieren"
+    },
+    {
+      "id": "treat-the-software-like-a-team",
+      "label": "Die Software wie ein Team behandeln"
+    },
+    {
+      "id": "what-accountability-requires-from-software",
+      "label": "Was Verantwortlichkeit verlangt"
+    },
+    {
+      "id": "why-pilots-and-validation-mattered",
+      "label": "Warum Pilotphasen und Validierung entscheidend waren"
+    }
+  ],
+  "general-purpose-ai-classification-dead-end": [
+    {
+      "id": "why-the-first-attempt-looks-promising",
+      "label": "Warum der erste Versuch vielversprechend wirkt"
+    },
+    {
+      "id": "where-consistency-breaks-down",
+      "label": "Wo die Konsistenz zusammenbricht"
+    },
+    {
+      "id": "why-a-better-prompt-does-not-fix-it",
+      "label": "Warum ein besserer Prompt es nicht behebt"
+    },
+    {
+      "id": "what-a-constrained-system-does-differently",
+      "label": "Was ein eingeschränktes System anders macht"
+    }
+  ],
+  "manufacturer-type-field-swap-spend-data": [
+    {
+      "id": "how-the-swap-actually-happens",
+      "label": "Wie die Vertauschung tatsächlich passiert"
+    },
+    {
+      "id": "why-nobody-notices-immediately",
+      "label": "Warum es niemand sofort bemerkt"
+    },
+    {
+      "id": "how-an-automated-pass-catches-it",
+      "label": "Wie ein automatisierter Durchlauf sie erkennt"
+    },
+    {
+      "id": "what-to-check-once-it-is-found",
+      "label": "Was nach dem Finden zu prüfen ist"
+    }
+  ],
+  "supplier-matching-classification-bottleneck": [
+    {
+      "id": "classification-hits-its-ceiling-fast",
+      "label": "Die Klassifizierung stößt schnell an ihre Grenze"
+    },
+    {
+      "id": "supplier-matching-is-the-harder-problem",
+      "label": "Der Lieferantenabgleich ist das schwierigere Problem"
+    },
+    {
+      "id": "the-manual-review-that-actually-moves-it",
+      "label": "Die manuelle Prüfung, die tatsächlich weiterhilft"
+    },
+    {
+      "id": "what-good-supplier-resolution-looks-like",
+      "label": "Wie guter Lieferantenabgleich aussieht"
+    }
+  ],
+  "unspsc-best-in-class-by-industry": [
+    {
+      "id": "why-one-accuracy-number-is-not-the-point",
+      "label": "Warum eine einzelne Genauigkeitszahl nicht der Punkt ist"
+    },
+    {
+      "id": "an-example-from-a-construction-supplier",
+      "label": "Ein Beispiel aus einem Bauunternehmen"
+    },
+    {
+      "id": "what-high-confidence-should-actually-mean",
+      "label": "Was hohe Konfidenz tatsächlich bedeuten sollte"
+    },
+    {
+      "id": "hard-fm-cleaning-and-construction-differ",
+      "label": "Hard FM, Reinigung und Bau unterscheiden sich"
+    }
+  ],
+  "unspsc-vs-eclass-erp-reporting": [
+    {
+      "id": "two-standards-answering-two-different-questions",
+      "label": "Zwei Standards, zwei unterschiedliche Fragen"
+    },
+    {
+      "id": "where-each-one-actually-gets-used",
+      "label": "Wo jeder Standard tatsächlich genutzt wird"
+    },
+    {
+      "id": "the-conflict-is-in-your-erp",
+      "label": "Der Konflikt sitzt in Ihrem ERP"
+    },
+    {
+      "id": "how-to-pick-when-you-cannot-avoid-both",
+      "label": "Wie Sie wählen, wenn Sie beide nicht vermeiden können"
+    }
   ]
 }

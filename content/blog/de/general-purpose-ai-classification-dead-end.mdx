@@ -1,0 +1,65 @@
+---
+title: "Die Sackgasse allgemeiner KI-Assistenten bei der Spend-Klassifizierung"
+description: "Ein allgemeiner KI-Assistent wirkt wie der schnelle Weg, Spend zu klassifizieren. Bei Volumen erfindet er Kategorien und verliert Konsistenz, und das Scheitern ist vorhersehbar."
+date: "2026-09-16"
+category: "AI & Digital"
+slug: "general-purpose-ai-classification-dead-end"
+author: "rae"
+lang: "en"
+---
+
+**Kurzantwort:** Einen allgemeinen KI-Assistenten auf eine Spend-Datei anzusetzen, funktioniert für die ersten paar Dutzend Zeilen und bricht bei Volumen zusammen, weil das Modell keine feste Taxonomie hat, innerhalb derer es bleiben muss, und kein Gedächtnis für frühere Entscheidungen in derselben Datei. Es erfindet Kategorien, die in Ihrer Berichtsstruktur nicht existieren, und klassifiziert denselben Artikel ein paar Tausend Zeilen später anders. Die Lösung ist ein System, das darauf gebaut ist, innerhalb einer festen Taxonomie zu bleiben, nicht ein besserer Prompt.
+
+Auf dieser Seite: [Warum der erste Versuch vielversprechend wirkt](#why-the-first-attempt-looks-promising) · [Wo die Konsistenz zusammenbricht](#where-consistency-breaks-down) · [Warum ein besserer Prompt es nicht behebt](#why-a-better-prompt-does-not-fix-it) · [Was ein eingeschränktes System anders macht](#what-a-constrained-system-does-differently) · [FAQ](#frequently-asked-questions)
+
+## Warum der erste Versuch vielversprechend wirkt
+
+Teams greifen aus einem nachvollziehbaren Grund bei einem Klassifizierungsproblem zu einem allgemeinen KI-Assistenten: Er ist bereits lizenziert, bereits in einem anderen Tab geöffnet, und er versteht Sprache offensichtlich gut genug, um eine Zeilenbeschreibung zu lesen und eine Kategorie vorzuschlagen. Fügen Sie zwanzig oder dreißig Zeilen ein, und das Ergebnis wirkt glaubwürdig. Die Kategorien klingen plausibel, die Begründung in der Antwort klingt sinnvoll, und die gesamte Übung dauert Minuten statt der Tage, die ein manueller Durchgang bräuchte.
+
+Genau dieser frühe Erfolg macht das spätere Scheitern überraschend statt erwartet. Nichts am ersten Testlauf signalisiert, dass derselbe Ansatz zusammenbricht, sobald echtes Volumen darauf trifft, denn eine kleine Stichprobe fordert nie die zwei Dinge heraus, die tatsächlich versagen: innerhalb einer festen Taxonomie über Tausende Zeilen hinweg zu bleiben und mit einer früher in derselben Datei getroffenen Entscheidung konsistent zu bleiben.
+
+## Wo die Konsistenz zusammenbricht
+
+Ein allgemeiner Assistent hat keine feste Liste von Kategorien, aus der er wählen muss, es sei denn, eine wird vorgegeben und durchgesetzt, und selbst wenn eine Taxonomie in den Prompt eingefügt wird, hindert nichts das Modell daran, davon abzuweichen, sobald das Gespräch lang genug läuft. Das praktische Ergebnis: Eine Zeile für Arbeitshandschuhe im Lager wird in eine Kategorie eingeordnet, die vernünftig klingt, aber tatsächlich nirgends in der Berichtsstruktur des Unternehmens existiert, und niemand bemerkt es, bis ein Bericht versucht, Spend gegen diese Kategorie zu summieren, und sie leer vorfindet.
+
+Konsistenz über eine Datei hinweg ist ein separates Versagen, und es zeigt sich selbst dann, wenn jede einzelne vom Modell gewählte Kategorie technisch gültig ist. Derselbe Lieferant, derselbe Artikel, auf zwei verschiedenen Zeilen zweitausend Zeilen auseinander leicht anders beschrieben, kann in zwei verschiedenen Kategorien landen, weil ein allgemeiner Assistent kein dauerhaftes Gedächtnis dafür hat, wie er das erste Vorkommen klassifiziert hat, wenn er das zweite erreicht. Ein Spend-Analyst, der das Ergebnis prüft, hat keine Möglichkeit, Zeile für Zeile zu erkennen, welche Klassifizierungsentscheidungen mit früheren konsistent sind und welche nicht, außer die gesamte Datei manuell abzugleichen, was den Sinn zunichtemacht, KI zur Beschleunigung der Arbeit einzusetzen.
+
+Das ist genau der „wir haben das Naheliegende versucht, und es hat nicht funktioniert"-Moment, der in frühen Gesprächen mit Procurement-Teams auftaucht: Jemand probiert zuerst einen allgemeinen Assistenten am Klassifizierungsproblem, weil das der naheliegende Versuch ist, und der Fehlermodus ist kein Absturz oder eine Fehlermeldung. Es ist eine Spend-Datei, die klassifiziert aussieht und nicht verlässlich genug ist, um einen Bericht darauf aufzubauen.
+
+## Warum ein besserer Prompt es nicht behebt
+
+Der Instinkt, sobald der erste Versuch scheitert, ist, einen längeren, detaillierteren Prompt zu schreiben: die vollständige Taxonomie einfügen, Beispiele hinzufügen, die genauen erlaubten Kategorienamen festlegen. Das verbessert die erste Antwort messbar. Es löst das zugrunde liegende Problem nicht, weil ein Prompt eine Reihe von Anweisungen für eine einzelne Antwort ist, keine dauerhafte Einschränkung, an die sich das Modell strukturell über eine lange Aufgabe mit mehreren Tausend Zeilen halten muss. Weit genug in jeden Massenklassifizierungslauf hinein setzt sich die eigene generative Tendenz des Modells, plausibel klingenden Text zu produzieren, wieder über die wörtliche Anweisung durch, die es zu Beginn des Gesprächs erhalten hat.
+
+Dasselbe gilt für das Aufteilen der Datei in kleinere Batches und das separate Verarbeiten jedes einzelnen. Das reduziert Drift innerhalb eines einzelnen Batches, führt aber genau das oben beschriebene batchübergreifende Inkonsistenzproblem ein, weil nichts eine Klassifizierungsentscheidung von einem Batch zum nächsten trägt. Keine der beiden Lösungen adressiert die strukturelle Lücke: Ein allgemeiner Assistent ist darauf gebaut, eine plausible Antwort auf das zu erzeugen, wonach auch immer gefragt wird, nicht darauf, eine feste, auditierbare Kategoriestruktur über einen gesamten Datensatz durchzusetzen.
+
+## Was ein eingeschränktes System anders macht
+
+Eine für dieses Problem gebaute Klassifizierungspipeline dreht die Beziehung um: Die Taxonomie ist kein Vorschlag innerhalb eines Prompts, sie ist die Grenze, außerhalb derer das System nicht klassifizieren darf. Jede Zeile wird gegen diesen festen Satz von Kategorien auf Konfidenz bewertet, und jede Zeile, bei der das System nicht sicher ist, wird an eine Person weitergeleitet, statt eine plausibel klingende Vermutung zuzuweisen. Diese Konfidenzmarkierung ist das Element, für das ein allgemeiner Assistent kein Äquivalent hat, weil eine Chat-Antwort nicht mit einem Verlässlichkeitswert versehen ist.
+
+Die Klassifizierungs-Engine von Pearstop hält jede Zeile an eine feste Taxonomie, gegen die der Kunde tatsächlich berichtet, markiert alles, worüber sie nicht sicher ist, für die menschliche Prüfung, und lernt aus jeder Prüfentscheidung, sodass derselbe mehrdeutige Artikel beim nächsten Auftreten schneller gelöst wird, für Procurement-Teams, die eine Spend-Datei brauchen, auf die sie noch in derselben Woche, in der sie klassifiziert wurde, einen Vorstandsbericht aufbauen können. Der Unterschied ist nicht, dass die zugrunde liegende KI klüger ist als ein allgemeiner Assistent. Es ist, dass das System um die KI herum so gebaut ist, dass Konsistenz und Taxonomietreue strukturelle Eigenschaften des Ergebnisses sind, statt etwas, von dem der Nutzer nur hoffen kann, dass ein guter Prompt es hervorgebracht hat.
+
+## Häufig gestellte Fragen
+
+**Warum funktioniert ein allgemeiner KI-Assistent bei einer kleinen Stichprobe von Spend-Daten, scheitert aber bei Volumen?**
+
+Eine kleine Stichprobe fordert nie die zwei Versagenspunkte heraus, die erst im großen Maßstab auftreten: innerhalb eines festen Satzes von Kategorien über Tausende Zeilen hinweg zu bleiben und mit früheren, in derselben Datei getroffenen Klassifizierungsentscheidungen konsistent zu bleiben. Ein allgemeiner Assistent hat keinen strukturellen Mechanismus, der eines von beidem durchsetzt, sodass ein kurzer Test erfolgreich aussieht, während eine vollständige Spend-Datei beide Probleme offenlegt.
+
+**Behebt ein detaillierterer Prompt inkonsistente Klassifizierungsergebnisse?**
+
+Ein detaillierterer Prompt verbessert einzelne Antworten, behebt aber nicht das zugrunde liegende Problem, weil ein Prompt eine Anweisung für eine Antwort ist, keine dauerhafte Einschränkung, die über eine gesamte Aufgabe mit mehreren Tausend Zeilen angewendet wird. Lange Klassifizierungsläufe tendieren dazu, unabhängig davon, wie sorgfältig der ursprüngliche Prompt formuliert war, zu plausibel klingenden, aber falschen Kategorien zurückzudriften.
+
+**Was bedeutet es für ein Klassifizierungssystem, innerhalb einer festen Taxonomie zu bleiben?**
+
+Es bedeutet, dass jede Zeile ausschließlich einer Kategorie zugeordnet wird, die in der eigenen Berichtsstruktur des Unternehmens existiert, ohne die Möglichkeit, eine plausibel klingende Kategorie zu erfinden, die tatsächlich nicht Teil dieser Struktur ist. Das wird strukturell vom Klassifizierungssystem durchgesetzt statt per Anweisung erbeten, was der Hauptunterschied zu einem allgemeinen Assistenten ist, dem dieselbe Taxonomie nur als Prompt gegeben wird.
+
+**Woran erkenne ich, ob meine Klassifizierungsergebnisse vertrauenswürdig genug sind, um darauf einen Bericht aufzubauen?**
+
+Prüfen Sie, ob jede Kategorie im Ergebnis tatsächlich in Ihrer Berichtsstruktur existiert, und stichproben Sie, ob derselbe Artikel oder Lieferant an mehreren Stellen in der Datei gleich klassifiziert wird. Scheitert eine der beiden Prüfungen bei einer kleinen Stichprobe, liegen dieselben Probleme mit hoher Wahrscheinlichkeit auch im großen Maßstab vor, und der Datensatz braucht einen konfidenzbewerteten, taxonomiebeschränkten Durchgang, bevor er sicher als Berichtsgrundlage dient.
+
+**Wie vermeidet Pearstop die Inkonsistenzprobleme eines allgemeinen KI-Assistenten?**
+
+Die Klassifizierungspipeline von Pearstop beschränkt jede Zeile auf eine feste Taxonomie, gegen die der Kunde bereits berichtet, vergibt für jede Klassifizierung einen Konfidenzwert und leitet alles unterhalb dieser Konfidenzschwelle an eine Person weiter, statt zu raten. Jede menschliche Prüfentscheidung fließt zurück ins System, sodass sich die Konsistenz mit der Nutzung verbessert, statt mit steigendem Volumen zu sinken.
+
+**Reicht ein allgemeiner KI-Assistent jemals für die Procurement-Klassifizierung aus?**
+
+Er kann für eine wirklich kleine, einmalige Charge funktionieren, bei der eine Person realistischerweise jede Zeile im Nachhinein prüfen kann. Er wird unzuverlässig, sobald Volumen oder Wiederholung eine vollständige manuelle Prüfung unpraktikabel machen, was genau der Punkt ist, an dem die meisten Procurement-Teams überhaupt erst versuchen, KI für die Klassifizierung einzusetzen.

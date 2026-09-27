@@ -1,0 +1,63 @@
+---
+title: "De echte bottleneck in een spend cleanup is supplier matching"
+description: "Line classification bereikt snel hoge nauwkeurigheid. Supplier matching is de echte bottleneck, en het laatste gat dichten vraagt om een korte handmatige review."
+date: "2026-09-16"
+category: "Data Quality"
+slug: "supplier-matching-classification-bottleneck"
+author: "rae"
+lang: "en"
+---
+
+**Kort antwoord:** Line classification is niet het lastige deel van een spend cleanup. Moderne classificatiepipelines bereiken al in de eerste doorloop een hoog geautomatiseerd matchpercentage. Wat bepaalt hoe lang een cleanup daadwerkelijk duurt, is supplier matching: dezelfde supplier die onder een dozijn naamvarianten verschijnt herleiden tot één record. Dat laatste gat dichten vraagt om een korte, gerichte handmatige review van de lastigste onopgeloste suppliers, niet meer automatisering.
+
+Op deze pagina: [Classificatie bereikt snel zijn plafond](#classification-hits-its-ceiling-fast) · [Supplier matching is het lastigere probleem](#supplier-matching-is-the-harder-problem) · [De handmatige review die het echt verplaatst](#the-manual-review-that-actually-moves-it) · [Hoe goede supplier resolution eruitziet](#what-good-supplier-resolution-looks-like) · [FAQ](#frequently-asked-questions)
+
+## Classificatie loopt snel tegen zijn grens aan
+
+Ik run delivery op de meeste van onze projecten, dus ben ik meestal degene die een cleanup zijn eerste week ziet doorlopen. Het patroon dat klanten bijna elke keer verrast, is hoe snel line classification goed wordt. Zet een constrained taxonomy en een rules-laag op een spend-bestand en het gros van de regels landt binnen de eerste geautomatiseerde doorloop in een correcte category, met de echt ambigue regels gemarkeerd voor review in plaats van gegokt. Dat deel van het werk gedraagt zich zoals mensen verwachten dat AI zich gedraagt: snel, consistent, en het blijft verbeteren naarmate reviewbeslissingen terugvoeden naar het model.
+
+Supplier-data gedraagt zich niet zo, en dat komt niet doordat de onderliggende matchingtechnologie zwakker is. Het komt doordat het probleem zelf structureel anders is. Een line description is rommelig maar op zichzelf staand: een M8-bout is te herkennen uit de tekst voor u. Een supplier-naam is niet op dezelfde manier op zichzelf staand, want hetzelfde echte bedrijf verschijnt onder net zoveel namen als zijn eigen facturatie- en onboardinggeschiedenis heeft opgeleverd.
+
+## Leveranciersmatching is het lastigere probleem
+
+Over de FM- en constructiebestanden heen waar ik doorheen heb gewerkt, verschijnt dezelfde supplier routinematig op drie of vier verschillende manieren: de legal entity-naam op de ene factuur, een handelsnaam op de andere, een regionale dochter met en zonder leestekens gespeld, een naam die een inkoper op vrijdagmiddag om vijf uur uit het hoofd typte. Geen van die varianten is op zichzelf fout. Een rules engine die matcht op exacte tekstvergelijking ziet vier verschillende suppliers. Een category manager die probeert te achterhalen "hoeveel hebben we vorig jaar bij deze supplier uitgegeven" krijgt vier verschillende, allemaal gedeeltelijke antwoorden.
+
+Fuzzy matching op naam, adres en btw-nummer dicht het meeste van dat gat automatisch, en het doet dat snel, net als classificatie. Maar fuzzy matching heeft een eigenschap die line classification niet heeft: een verkeerde match is erger dan een gemiste. Twee daadwerkelijk verschillende suppliers samenvoegen tot één record corrumpeert stilletjes elke rapportage die daarna wordt opgebouwd, want niets aan het samengevoegde record meldt dat het fout is. Die asymmetrie is waarom een geautomatiseerde supplier match, correct gebouwd, bewust een staart onopgelost laat in plaats van een match te forceren onder een strikte confidence-drempel. Die staart is waar de eigenlijke bottleneck zit, klein in absoluut aantal maar groot in de tijd die het kost om hem handmatig te sluiten, één ambigu paar tegelijk.
+
+## De handmatige controle die echt verschil maakt
+
+Bij een cleanup die ik recent runde, matchte de geautomatiseerde doorloop binnen dagen de grote meerderheid van supplier-namen aan een schoon referentierecord. Wat overbleef, was een korte lijst van echt lastige gevallen: bijna identieke namen voor verschillende regionale vestigingen van dezelfde groep, een dochteronderneming die was overgenomen en midden in een contract hernoemd, twee suppliers wier adressen één cijfer verschilden, wat een invoerfout bleek te zijn in plaats van twee locaties. Geen van die gevallen lost veilig op zonder iemand die het account kent en het paar direct bekijkt.
+
+Die review is geen falen van de matching-engine, en het als zodanig behandelen is de fout die ik klanten het vaakst zie maken. Proberen dat laatste procentpunt eruit te persen met meer rules of een grotere trainingset steekt inspanning in de verkeerde plek, want de resterende gevallen zijn precies degene die het oordeel vragen dat de automatisering bewust is gebouwd om niet naar te gokken. De juiste zet is het omgekeerde: laat de geautomatiseerde match alles doen wat hij met vertrouwen kan doen, en zet vervolgens iemand met echte kennis van het supplierbestand voor de korte lijst die overblijft. Die review duurt uren, geen weken, juist omdat de lijst kort is.
+
+## Hoe goede leveranciersresolutie eruitziet
+
+Pearstop lost de onopgeloste supplier-staart van een klant op tot onder de 10 procent van het totale aantal supplier-records na de eerste reviewcyclus, voor procurement- en financeteams die een category-rapportage op tijd willen afronden in plaats van te wachten tot supplier-data zichzelf uitkristalliseert. Het mechanisme is dezelfde constrained, confidence-gescoorde aanpak die voor line classification wordt gebruikt: geautomatiseerde matching doet het volume, iemand lost de gemarkeerde paren op, en elk opgelost paar voedt terug zodat dezelfde supplier-variant niet twee keer hoeft te worden opgelost.
+
+De praktische implicatie voor wie een cleanup plant, gaat over sequencing, niet over tooling. Begroot het grootste deel van de kalendertijd voor geautomatiseerde classificatie en matching om te draaien, want dat deel is echt snel. Begroot een apart, kleiner blok tijd, met de juiste persoon beschikbaar, voor de supplier-review die daarop volgt. Proberen dat tweede blok te comprimeren door er meer automatisering tegenaan te gooien werkt niet, want het probleem dat in die staart overbleef was nooit echt een automatiseringsprobleem.
+
+## Veelgestelde vragen
+
+**Waarom duurt supplier matching langer dan line classification in een spend cleanup?**
+
+Line classification werkt vanuit een op zichzelf staande omschrijving die een rules engine of model direct kan lezen. Supplier matching moet verschillende spellingen van hetzelfde echte bedrijf met elkaar verzoenen, en een verkeerde merge is erger dan een gemiste, dus laat een geautomatiseerde match bewust ambigue paren onopgelost in plaats van te gokken. Die onopgeloste staart kost de extra tijd, niet het gros van de eenvoudige matches, die snel oplossen.
+
+**Wat veroorzaakt dat dezelfde supplier onder meerdere namen verschijnt in een spend-bestand?**
+
+Legal entity-namen, handelsnamen, regionale dochternaamgeving, fusies en overnames, en handmatige invoer door verschillende inkopers produceren allemaal verschillende tekststrings voor hetzelfde onderliggende bedrijf. Geen van deze is op zichzelf een invoerfout. Het probleem wordt pas zichtbaar zodra iemand probeert de spend per supplier op te tellen en merkt dat het totaal over meerdere records is verdeeld in plaats van één.
+
+**Hoeveel handmatige review heeft supplier matching daadwerkelijk nodig?**
+
+In de praktijk lost een goed gebouwde geautomatiseerde match de grote meerderheid van supplier-records zelfstandig op, met een kleine resterende set echt ambigue paren, doorgaans onder de 10 procent van het totale aantal records, die door een persoon direct wordt beoordeeld. Die review is kort omdat de ambigue set kort is, niet omdat de review zelf per paar snel gaat.
+
+**Is meer automatisering het antwoord om de laatste onopgeloste suppliers te sluiten?**
+
+Nee. De suppliers die na een geautomatiseerde doorloop onopgelost blijven, blijven onopgelost omdat ze een oordeel vragen dat de automatisering bewust is gebouwd om niet naar te gokken, zoals bevestigen of twee vergelijkbaar genoemde entiteiten daadwerkelijk hetzelfde bedrijf zijn. Meer rules of een groter model toevoegen haalt dat oordeel niet weg, het verplaatst alleen waar het moet worden geveld.
+
+**Hoe handelt Pearstop supplier matching af tijdens een spend cleanup?**
+
+Pearstop draait eerst geautomatiseerde supplier resolution tegen een referentiedatabase, matchend op naam, adres en btw-nummer met een confidence-drempel die verkeerde merges vermijdt, en stuurt vervolgens de onopgeloste staart, doorgaans onder de 10 procent van de supplier-records, door naar iemand met accountkennis voor directe review. Opgeloste matches voeden terug in de referentiedata zodat dezelfde variant niet opnieuw wordt gemarkeerd bij de volgende spend-cyclus.
+
+**Beïnvloedt slechte supplier matching meer dan alleen spend-rapportage?**
+
+Ja. Dubbele supplier-records verhogen ook het risico op dubbele betalingen, aangezien de meeste betalingscontroles alleen op dubbele factuurnummers binnen één vendor-record controleren, niet over twee records voor dezelfde echte supplier. Supplier-identiteit oplossen is daarmee net zo goed een betalingscontrolevraag als een rapportagevraag.

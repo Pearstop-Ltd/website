@@ -1,0 +1,65 @@
+---
+title: "De doodlopende weg van general-purpose AI in spend classification"
+description: "Een general-purpose assistant lijkt de snelle manier om spend te classificeren. Bij volume verzint hij categories en verliest hij consistentie, en dat falen is voorspelbaar."
+date: "2026-09-16"
+category: "AI & Digital"
+slug: "general-purpose-ai-classification-dead-end"
+author: "rae"
+lang: "en"
+---
+
+**Kort antwoord:** Een general-purpose AI-assistent op een spend-bestand loslaten werkt voor de eerste paar dozijn regels en valt bij volume uit elkaar, omdat het model geen vaste taxonomy heeft om binnen te blijven en geen geheugen van eerdere beslissingen in hetzelfde bestand. Het verzint categories die niet bestaan in uw rapportagestructuur en classificeert hetzelfde item anders een paar duizend regels verderop. De oplossing is een systeem gebouwd om binnen een vaste taxonomy te blijven, geen betere prompt.
+
+Op deze pagina: [Waarom de eerste poging veelbelovend lijkt](#why-the-first-attempt-looks-promising) · [Waar consistentie het laat afweten](#where-consistency-breaks-down) · [Waarom een betere prompt het niet oplost](#why-a-better-prompt-does-not-fix-it) · [Wat een constrained systeem anders doet](#what-a-constrained-system-does-differently) · [FAQ](#frequently-asked-questions)
+
+## Waarom de eerste poging veelbelovend oogt
+
+Teams grijpen om een begrijpelijke reden naar een general-purpose AI-assistent voor een classificatieprobleem: het is al gelicenseerd, al open in een ander tabblad, en het begrijpt taal duidelijk goed genoeg om een line description te lezen en een category voor te stellen. Plak er twintig of dertig regels in en de output ziet er geloofwaardig uit. De categories klinken plausibel, de redenering in het antwoord klinkt zinnig, en het hele exercitie kost minuten in plaats van de dagen die een handmatige doorloop zou kosten.
+
+Dat vroege succes is precies wat het uiteindelijke falen verrassend maakt in plaats van verwacht. Niets aan die eerste testrun signaleert dat dezelfde aanpak instort zodra echt volume erop losgaat, want een kleine steekproef test nooit de twee dingen die daadwerkelijk breken: binnen een vaste taxonomy blijven over duizenden regels, en consistent blijven met een beslissing die eerder in hetzelfde bestand is genomen.
+
+## Waar de consistentie wegvalt
+
+Een general-purpose assistant heeft geen vaste lijst van categories waaruit hij verplicht moet kiezen, tenzij er een wordt meegegeven en afgedwongen, en zelfs als een taxonomy in de prompt wordt geplakt, houdt niets het model tegen om er alsnog van af te wijken zodra het gesprek lang genoeg loopt. Het praktische resultaat: een regel voor werkhandschoenen voor het magazijn wordt geclassificeerd in een category die redelijk klinkt maar nergens daadwerkelijk bestaat in de rapportagestructuur van het bedrijf, en niemand merkt het totdat een rapportage probeert spend tegen die category op te tellen en hem leeg aantreft.
+
+Consistentie binnen een bestand is een apart faalpunt, en het treedt zelfs op wanneer elke individuele category die het model kiest technisch geldig is. Dezelfde supplier, hetzelfde item, iets anders omschreven op twee verschillende regels tweeduizend regels uit elkaar, kan in twee verschillende categories terechtkomen, omdat een general-purpose assistant geen blijvend geheugen heeft van hoe hij de eerste keer classificeerde tegen de tijd dat hij de tweede bereikt. Een spend analyst die de output beoordeelt, kan niet regel voor regel zien welke classificatiebeslissingen consistent zijn met eerdere en welke niet, tenzij hij het hele bestand handmatig kruiscontroleert, wat het hele punt van AI als versneller teniet doet.
+
+Dit is precies het "we probeerden het voor de hand liggende en het werkte niet"-moment dat vaak naar voren komt in eerste gesprekken met procurement-teams: iemand probeert eerst een general-purpose assistant op het classificatieprobleem, omdat dat het voor de hand liggende is om te proberen, en het faalscenario is geen crash of foutmelding. Het is een spend-bestand dat geclassificeerd oogt en niet betrouwbaar genoeg is om een rapportage op te bouwen.
+
+## Waarom een betere prompt het niet oplost
+
+Het instinct zodra de eerste poging faalt, is een langere, gedetailleerdere prompt te schrijven: de volledige taxonomy erin plakken, voorbeelden toevoegen, de exacte toegestane category-namen specificeren. Dat verbetert het eerste antwoord meetbaar. Het lost het onderliggende probleem niet op, want een prompt is een set instructies voor één enkel antwoord, geen blijvende beperking die het model structureel verplicht is te gehoorzamen over een lange taak van duizenden regels. Ver genoeg in elke bulk-classificatie duikt de eigen generatieve neiging van het model om plausibel klinkende tekst te produceren weer op boven de letterlijke instructie die het aan het begin van het gesprek kreeg.
+
+Hetzelfde geldt voor het bestand opsplitsen in kleinere batches en elke batch apart draaien. Dat vermindert drift binnen één batch, maar introduceert precies het cross-batch-inconsistentieprobleem hierboven beschreven, omdat niets een classificatiebeslissing van de ene batch naar de volgende draagt. Geen van beide oplossingen pakt het structurele gat aan: een general-purpose assistant is gebouwd om een plausibel antwoord te genereren op wat er ook wordt gevraagd, niet om een vaste, controleerbare category-structuur af te dwingen over een hele dataset.
+
+## Wat een begrensd systeem anders doet
+
+Een classificatiepipeline gebouwd voor dit probleem keert de relatie om: de taxonomy is geen suggestie in een prompt, het is de grens waarbuiten het systeem niet mag classificeren. Elke regel wordt gescoord op confidence tegen die vaste set categories, en elke regel waar het systeem niet zeker over is, wordt doorgestuurd naar een persoon in plaats van een plausibel klinkende gok te krijgen. Die confidence-markering is het onderdeel waar een general-purpose assistant geen equivalent voor heeft, want een chatantwoord komt niet met een betrouwbaarheidsscore.
+
+Pearstops classificatie-engine houdt elke regel aan een vaste taxonomy waar de klant daadwerkelijk tegen rapporteert, markeert alles waar het niet zeker over is voor menselijke review, en leert van elke reviewbeslissing zodat hetzelfde ambigue item de volgende keer sneller wordt opgelost, voor procurement-teams die dezelfde week nog een bestuursrapportage willen bouwen op een geclassificeerd spend-bestand. Het verschil zit niet in een slimmere onderliggende AI dan een general-purpose assistant. Het zit in het systeem eromheen, gebouwd om consistentie en taxonomy-naleving structurele eigenschappen van de output te maken, in plaats van iets waarvan de gebruiker moet hopen dat een goede prompt het heeft geproduceerd.
+
+## Veelgestelde vragen
+
+**Waarom werkt een general-purpose AI-assistent op een kleine steekproef spend-data maar faalt hij bij volume?**
+
+Een kleine steekproef test nooit de twee faalpunten die alleen op schaal optreden: binnen een vaste set categories blijven over duizenden regels, en consistent blijven met eerdere classificatiebeslissingen in hetzelfde bestand. Een general-purpose assistant heeft geen structureel mechanisme dat een van beide afdwingt, dus een korte test oogt succesvol terwijl een volledig spend-bestand beide problemen blootlegt.
+
+**Lost een gedetailleerdere prompt inconsistente classificatieresultaten op?**
+
+Een gedetailleerdere prompt verbetert individuele antwoorden maar lost het onderliggende probleem niet op, want een prompt is een instructie voor één antwoord in plaats van een blijvende beperking die over een hele taak van duizenden regels wordt toegepast. Lange classificatieruns neigen terug te driften naar plausibel klinkende maar onjuiste categories, ongeacht hoe zorgvuldig de oorspronkelijke prompt is geschreven.
+
+**Wat betekent het voor een classificatiesysteem om binnen een vaste taxonomy te blijven?**
+
+Het betekent dat elke regel alleen ooit wordt toegewezen aan een category die daadwerkelijk bestaat in de eigen rapportagestructuur van het bedrijf, zonder de mogelijkheid een plausibel klinkende category te verzinnen die geen daadwerkelijk onderdeel is van die structuur. Dit wordt structureel afgedwongen door het classificatiesysteem in plaats van gevraagd via instructies, wat het belangrijkste verschil is met een general-purpose assistant die dezelfde taxonomy als prompt krijgt.
+
+**Hoe weet ik of mijn classificatieresultaten betrouwbaar zijn voordat ik er een rapportage op bouw?**
+
+Controleer of elke category in de output daadwerkelijk bestaat in uw rapportagestructuur, en steekproef of hetzelfde item of dezelfde supplier op meerdere plekken in het bestand hetzelfde wordt geclassificeerd. Als een van beide checks faalt op een kleine steekproef, zijn dezelfde problemen vrijwel zeker aanwezig op schaal, en heeft de dataset een confidence-gescoorde, taxonomy-constrained doorloop nodig voordat het veilig is om erop te rapporteren.
+
+**Hoe voorkomt Pearstop de inconsistentieproblemen van een general-purpose AI-assistent?**
+
+Pearstops classificatiepipeline beperkt elke regel tot een vaste taxonomy waar de klant al tegen rapporteert, kent elke classificatie een confidence-score toe, en stuurt alles onder die confidence-drempel door naar een persoon in plaats van te gokken. Elke menselijke reviewbeslissing voedt terug in het systeem, zodat consistentie verbetert met gebruik in plaats van te verslechteren naarmate het volume toeneemt.
+
+**Is een general-purpose AI-assistent ooit goed genoeg voor procurement-classificatie?**
+
+Het kan werken voor een echt kleine, eenmalige batch waar iemand realistisch elke regel achteraf kan controleren. Het wordt onbetrouwbaar zodra volume of herhaling volledige handmatige review onpraktisch maakt, en dat is precies het punt waarop de meeste procurement-teams AI proberen te gebruiken voor classificatie.
