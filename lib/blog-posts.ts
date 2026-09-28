@@ -1641,6 +1641,34 @@ const _allBlogPosts: BlogPost[] = [
       { q: "What happens to classified data when the ERP integration goes live?", a: "It carries over. Classifications, supplier mappings and review corrections remain in place, and new lines arriving through the integration are classified against the same taxonomy." },
     ],
   },
+  {
+    slug: "charts-worth-building-hard-services-spend",
+    title: "The charts worth building from hard-services spend data",
+    description: "Nine charts worth building from hard-services spend data: what each answers, where it misleads, and the data it needs before it goes to a stakeholder.",
+    publishedAt: "2026-09-28",
+    category: "Procurement",
+    tags: ["spend cube", "hard FM analytics", "Pareto analysis", "spend classification", "procurement data quality"],
+    readingTime: 12,
+    tocItems: [
+      { id: "1-the-two-paretos-by-supplier-and-by-category", label: "The two Paretos" },
+      { id: "2-tail-spend-concentration", label: "Tail-spend concentration" },
+      { id: "3-price-variance-for-the-same-item-or-task-across-sites", label: "Price variance across sites" },
+      { id: "4-planned-preventive-maintenance-versus-reactive-spend-over-time", label: "Planned vs reactive spend" },
+      { id: "5-labour-versus-materials-split-by-category", label: "Labour vs materials split" },
+      { id: "6-spend-per-asset-or-per-square-metre-by-site", label: "Spend per site" },
+      { id: "7-subcontractor-concentration-and-single-source-exposure", label: "Subcontractor concentration" },
+      { id: "8-on-contract-versus-off-contract-maverick-spend", label: "On-contract vs off-contract spend" },
+      { id: "9-category-spend-trend-against-a-materials-or-labour-index", label: "Category spend trend vs index" },
+      { id: "what-has-to-be-true-before-any-of-this-goes-in-front-of-a-stakeholder", label: "What has to be true first" },
+    ],
+    softCta: "discovery",
+    faqItems: [
+      { q: "How do you do a Pareto analysis of procurement spend?", a: "Aggregate spend by supplier or by category over a fixed twelve-month period, sort descending, and read the cumulative percentage alongside the values to see how many entries reach 80%. It is only valid once supplier names have been normalised and grouped; otherwise a supplier split across several records sits lower in the ranking than it belongs." },
+      { q: "What charts belong in a spend analysis?", a: "At minimum, a Pareto by supplier and one by category, a tail-spend count, an on-contract versus off-contract split, and spend over time. For hard services, add planned versus reactive spend, a labour-versus-materials split, and price variance for the same task across sites, since those are the ones that produce an action rather than a description." },
+      { q: "What data do you need for a spend cube?", a: "Supplier, category and time as the three dimensions, net spend as the measure. In practice: normalised supplier names with parent-child grouping, every line classified to a consistent taxonomy at family level or deeper, and one consistent date basis. Site or cost centre is a valuable fourth dimension for facilities spend, and needs identifiers that reconcile across systems." },
+      { q: "How do you compare prices across sites?", a: "Match on the item or task rather than the description text, using commodity-level classification plus a manufacturer part number or normalised item identifier, and convert every unit of measure to one base unit. Separate unit price from quantity, hold the specification constant, and keep out-of-hours and emergency rates in their own comparison." },
+    ],
+  },
 ];
 
 export const blogPosts: BlogPost[] = _allBlogPosts.filter((p) => !p.hidden);
