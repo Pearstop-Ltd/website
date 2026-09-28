@@ -1,48 +1,38 @@
 import { NextRequest, NextResponse } from "next/server";
-import { buildIndustryContext, getValidationIndex, isIndustryKey, type IndustryKey } from "@/lib/unspsc-industries";
+import { getValidationIndex, isIndustryKey, type IndustryKey } from "@/lib/unspsc-industries";
+import { searchCandidates, type SearchCandidate } from "@/lib/unspsc-search";
 import { checkRateLimit, getClientIp } from "@/lib/rate-limit";
 import { verifyRecaptcha } from "@/lib/recaptcha";
 
-const BASE_SYSTEM_PROMPT = `You are a UNSPSC classification expert. Your job is to find the single most accurate 8-digit UNSPSC commodity code for a product or service description.
+// Retrieval-first: lib/unspsc-search.ts keyword-matches the description
+// against the real ~10,700-commodity dataset first, and the model below only
+// ever picks between those real candidates - it can no longer hallucinate a
+// plausible-sounding code, or a real code for the wrong item, because every
+// option it's shown already exists and is already in roughly the right area.
+const SYSTEM_PROMPT = `You are a UNSPSC classification expert. You will be given a procurement line description and a shortlist of candidate UNSPSC commodities retrieved from the real taxonomy for this description. Pick the single candidate whose title most precisely matches the description.
 
-UNSPSC hierarchy:
-- Segment (2 digits): broadest category
-- Family (4 digits): narrows by type
-- Class (6 digits): specific product/service type
-- Commodity (8 digits): most precise level — always aim for this
-
-CLASSIFICATION PROCESS — work through this internally before answering:
-1. SEGMENT: Which of the ~55 top-level segments fits best? Consider all candidates before choosing.
-2. FAMILY: Within that segment, which family is the closest match?
-3. CLASS: Within that family, which class fits?
-4. COMMODITY: What is the most specific 8-digit code? If multiple commodities could apply, pick the one that most closely matches the exact wording of the description.
-5. CONFIDENCE CHECK: Would a procurement professional agree with this code? If not, reconsider.
-   - "high": clear, unambiguous match at commodity level
-   - "medium": reasonable match but description was vague or could fit multiple codes
-   - "low": best guess — description too generic or unusual to classify with certainty
-
-IMPORTANT RULES:
-- Never invent codes. Only use codes that exist in the real UNSPSC taxonomy.
-- The 8-digit code must follow the pattern: digits 1-2 = segment, digits 3-4 = family, digits 5-6 = class, digits 7-8 = commodity.
+RULES:
+- You may only answer with a code from the candidate list below. Never invent a code or use one that isn't listed.
+- Match on what the item actually is, not just its general category - e.g. if the description says "toilet tissue" and the list has both "Toilet tissue" and "Parchment paper", pick "Toilet tissue".
+- A supplier name, if given, is context only - it narrows which candidate is plausible, it is never itself the answer.
 - If the description contains a brand name or model number, classify the underlying product type, not the brand.
-- For maintenance/repair services, use segment 72 (Construction and Maintenance Services), not the segment for the physical product being maintained.
-- For supply/purchase of physical goods, do NOT use segment 72.
-- A supplier name, if given, is context only — it narrows which category is plausible, it is never itself the answer.
+- If truly none of the candidates fit the description (they're all about a different, unrelated kind of item), respond with {"no_match": true, "reason": "one sentence why"} instead of forcing a guess.
+- confidence: "high" for a clear, unambiguous match; "medium" for a reasonable match where the description was vague or more than one candidate could apply; "low" for a best-effort guess among weak candidates.
 
-Respond ONLY with valid JSON — no markdown, no explanation outside the JSON:
+Respond ONLY with valid JSON, no markdown, no explanation outside the JSON:
 {
-  "code": "72101505",
-  "segment": "72 — Construction and Maintenance Services",
-  "family": "7210 — Building and Facility Maintenance Services",
-  "class": "721015 — Electrical Systems Maintenance and Repair Services",
-  "commodity": "72101505 — Lighting Maintenance and Repair Services",
+  "code": "<one of the candidate codes exactly as listed>",
   "confidence": "high",
-  "notes": "Optional: mention only if the description was ambiguous, if a nearby code might also apply, or if the user should verify at commodity level."
-}
-
-If the description is completely unclassifiable, return: { "error": "Could not classify: [reason]" }`;
+  "notes": "Optional: mention only if ambiguous or a nearby candidate might also apply."
+}`;
 
 const RECAPTCHA_ACTION = "unspsc_lookup";
+
+function formatCandidates(candidates: SearchCandidate[]): string {
+  return candidates
+    .map((c) => `${c.code} — ${c.title} (Class: ${c.classTitle}; Family: ${c.familyTitle}; Segment: ${c.segmentTitle})`)
+    .join("\n");
+}
 
 export async function POST(req: NextRequest) {
   const body = await req.json();
@@ -79,14 +69,28 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Service not configured." }, { status: 500 });
   }
 
-  const industryContext = buildIndustryContext(industryKey);
-  const systemPrompt = industryContext
-    ? `${BASE_SYSTEM_PROMPT}\n\nThe user has indicated this item is most likely related to one of these UNSPSC categories (real segments/families from the official standard) — strongly prefer a commodity under one of them, but pick a different real segment if the description clearly doesn't fit any of these:\n${industryContext}`
-    : BASE_SYSTEM_PROMPT;
+  const trimmedDescription = description.trim();
+  const candidates = searchCandidates(trimmedDescription, industryKey, 25);
 
-  const userMessage = supplier?.trim()
-    ? `Supplier: "${supplier.trim()}"\nDescription: "${description.trim()}"\n\nClassify this procurement line and return JSON only.`
-    : `Classify this procurement description and return JSON only: "${description.trim()}"`;
+  if (candidates.length === 0) {
+    return NextResponse.json({
+      error: "Couldn't find any close matches for this description. Try rephrasing with more detail, or book a call for classification support.",
+      consumed: false,
+      remaining: rateLimit.remaining,
+    });
+  }
+
+  const candidateByCode = new Map(candidates.map((c) => [c.code, c]));
+
+  const userMessage = [
+    supplier?.trim() ? `Supplier: "${supplier.trim()}"` : null,
+    `Description: "${trimmedDescription}"`,
+    "",
+    "Candidates:",
+    formatCandidates(candidates),
+  ]
+    .filter((line) => line !== null)
+    .join("\n");
 
   try {
     const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
@@ -98,13 +102,12 @@ export async function POST(req: NextRequest) {
       body: JSON.stringify({
         // llama-3.3-70b-versatile was decommissioned by Groq on 2026-08-16;
         // gpt-oss-120b is Groq's recommended replacement. It's a reasoning
-        // model - reasoning_effort "low" keeps latency/cost down for this
-        // deterministic-style task, and include_reasoning: false keeps its
-        // chain-of-thought out of message.content (reasoning models can
-        // otherwise leak reasoning text into content on some requests).
+        // model - include_reasoning: false keeps its chain-of-thought out of
+        // message.content (reasoning models can otherwise leak reasoning
+        // text into content on some requests).
         model: "openai/gpt-oss-120b",
         messages: [
-          { role: "system", content: systemPrompt },
+          { role: "system", content: SYSTEM_PROMPT },
           { role: "user", content: userMessage },
         ],
         temperature: 0.1,
@@ -128,19 +131,48 @@ export async function POST(req: NextRequest) {
 
     const result = JSON.parse(jsonMatch[0]);
 
-    if (result.error) {
-      return NextResponse.json({ ...result, consumed: true, remaining: rateLimit.remaining });
+    if (result.no_match || result.error) {
+      return NextResponse.json({
+        error: "Couldn't confidently match this to a verified official UNSPSC code. Try rephrasing with more detail, or book a call for classification support.",
+        consumed: true,
+        remaining: rateLimit.remaining,
+      });
     }
 
-    // Never trust the model's code (or its own hierarchy labels) blindly —
-    // verify against the real UNSPSC dataset and, if valid, replace the
-    // hierarchy fields with our authoritative titles so they can't drift
-    // from what the code actually means.
+    // The model may only pick from the candidates it was shown, but never
+    // trust it blindly - confirm the code is one of those candidates (falling
+    // back to the full validated dataset only as a last-resort safety net)
+    // and always serve our own authoritative titles, never the model's.
     const rawCode = typeof result.code === "string" || typeof result.code === "number" ? String(result.code).trim() : "";
-    const validated = rawCode ? getValidationIndex().get(rawCode) : undefined;
+    const fromCandidates = candidateByCode.get(rawCode);
+    const fromFullIndex = !fromCandidates && rawCode ? getValidationIndex().get(rawCode) : undefined;
 
-    if (!validated) {
-      console.error("UNSPSC code not found in validation index:", { rawCode, modelOutput: text });
+    const hierarchy = fromCandidates
+      ? {
+          code: fromCandidates.code,
+          segmentCode: fromCandidates.segmentCode,
+          segmentTitle: fromCandidates.segmentTitle,
+          familyCode: fromCandidates.familyCode,
+          familyTitle: fromCandidates.familyTitle,
+          classCode: fromCandidates.classCode,
+          classTitle: fromCandidates.classTitle,
+          commodityTitle: fromCandidates.title,
+        }
+      : fromFullIndex
+        ? {
+            code: fromFullIndex.commodity.code,
+            segmentCode: fromFullIndex.segment.code,
+            segmentTitle: fromFullIndex.segment.title,
+            familyCode: fromFullIndex.family.code,
+            familyTitle: fromFullIndex.family.title,
+            classCode: fromFullIndex.class.code,
+            classTitle: fromFullIndex.class.title,
+            commodityTitle: fromFullIndex.commodity.title,
+          }
+        : null;
+
+    if (!hierarchy) {
+      console.error("UNSPSC model picked a code outside the candidate list:", { rawCode, modelOutput: text, candidateCodes: candidates.map((c) => c.code) });
       return NextResponse.json({
         error: "Couldn't confidently match this to a verified official UNSPSC code. Try rephrasing with more detail, or book a call for classification support.",
         consumed: true,
@@ -149,11 +181,11 @@ export async function POST(req: NextRequest) {
     }
 
     return NextResponse.json({
-      code: validated.commodity.code,
-      segment: `${validated.segment.code} — ${validated.segment.title}`,
-      family: `${validated.family.code} — ${validated.family.title}`,
-      class: `${validated.class.code} — ${validated.class.title}`,
-      commodity: `${validated.commodity.code} — ${validated.commodity.title}`,
+      code: hierarchy.code,
+      segment: `${hierarchy.segmentCode} — ${hierarchy.segmentTitle}`,
+      family: `${hierarchy.familyCode} — ${hierarchy.familyTitle}`,
+      class: `${hierarchy.classCode} — ${hierarchy.classTitle}`,
+      commodity: `${hierarchy.code} — ${hierarchy.commodityTitle}`,
       confidence: result.confidence === "high" || result.confidence === "medium" || result.confidence === "low" ? result.confidence : "medium",
       notes: typeof result.notes === "string" ? result.notes : undefined,
       consumed: true,
