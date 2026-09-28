@@ -96,17 +96,27 @@ export async function POST(req: NextRequest) {
         "Authorization": `Bearer ${apiKey}`,
       },
       body: JSON.stringify({
-        model: "llama-3.3-70b-versatile",
+        // llama-3.3-70b-versatile was decommissioned by Groq on 2026-08-16;
+        // gpt-oss-120b is Groq's recommended replacement. It's a reasoning
+        // model - reasoning_effort "low" keeps latency/cost down for this
+        // deterministic-style task, and include_reasoning: false keeps its
+        // chain-of-thought out of message.content (reasoning models can
+        // otherwise leak reasoning text into content on some requests).
+        model: "openai/gpt-oss-120b",
         messages: [
           { role: "system", content: systemPrompt },
           { role: "user", content: userMessage },
         ],
         temperature: 0.1,
         max_tokens: 1024,
+        reasoning_effort: "low",
+        include_reasoning: false,
       }),
     });
 
     if (!response.ok) {
+      const errorBody = await response.text().catch(() => "");
+      console.error(`Groq API error: ${response.status} ${errorBody}`);
       throw new Error(`Groq API error: ${response.status}`);
     }
 
@@ -147,7 +157,8 @@ export async function POST(req: NextRequest) {
       consumed: true,
       remaining: rateLimit.remaining,
     });
-  } catch {
+  } catch (err) {
+    console.error("UNSPSC lookup failed:", err);
     return NextResponse.json({ error: "Classification failed. Please try again.", consumed: true, remaining: rateLimit.remaining }, { status: 500 });
   }
 }
