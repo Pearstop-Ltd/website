@@ -109,7 +109,7 @@ export async function POST(req: NextRequest) {
         ],
         temperature: 0.1,
         max_tokens: 1024,
-        reasoning_effort: "low",
+        reasoning_effort: "medium",
         include_reasoning: false,
       }),
     });
@@ -136,9 +136,11 @@ export async function POST(req: NextRequest) {
     // verify against the real UNSPSC dataset and, if valid, replace the
     // hierarchy fields with our authoritative titles so they can't drift
     // from what the code actually means.
-    const validated = typeof result.code === "string" ? getValidationIndex().get(result.code) : undefined;
+    const rawCode = typeof result.code === "string" || typeof result.code === "number" ? String(result.code).trim() : "";
+    const validated = rawCode ? getValidationIndex().get(rawCode) : undefined;
 
     if (!validated) {
+      console.error("UNSPSC code not found in validation index:", { rawCode, modelOutput: text });
       return NextResponse.json({
         error: "Couldn't confidently match this to a verified official UNSPSC code. Try rephrasing with more detail, or book a call for classification support.",
         consumed: true,
