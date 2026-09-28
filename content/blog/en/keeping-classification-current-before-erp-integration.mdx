@@ -1,0 +1,105 @@
+---
+title: "Keeping classification current before your ERP integration is even scoped"
+description: "Waiting on an ERP integration doesn't mean waiting on spend visibility. Here's how to run interim classification so the migration inherits clean data."
+date: "2026-09-28"
+category: "Procurement"
+slug: "keeping-classification-current-before-erp-integration"
+author: "rae"
+lang: "en"
+---
+
+**Quick answer:** If your ERP integration is a year or two out, don't wait for it to get spend visibility. Run periodic manual uploads instead: export on a fixed schedule, classify against a stable taxonomy, and let confidence levels route review. Done consistently, the interim workflow builds a normalised supplier list and a corrected classification history that the eventual integration simply inherits.
+
+On this page: [Why the interim period matters](#why-the-interim-period-matters) · [How often to upload](#how-often-to-upload) · [What to export](#what-to-export) · [How new lines get classified](#how-new-lines-get-classified) · [How confidence levels route review](#how-confidence-levels-route-review) · [How supplier matching carries over](#how-supplier-matching-carries-over) · [How corrections accumulate](#how-corrections-accumulate) · [What the integration inherits](#what-the-integration-inherits) · [FAQ](#frequently-asked-questions)
+
+A prospect we spoke with this week has an SAP integration planned for one to two years from now. It is not yet scoped. In the meantime, procurement still needs to know what the business spends, with whom, and on what.
+
+Their answer is periodic manual uploads: export, classify, review, repeat. This is a common position, and a sensible one. The risk is that each upload gets treated as a one-off exercise. The team then arrives at integration day with a set of disconnected snapshots and no single history.
+
+This piece sets out what the interim workflow looks like when it is run well, so the eventual integration inherits clean, consistent data.
+
+## Why the interim period matters
+
+For many organisations on SAP ECC, the integration date is tied to a wider migration. SAP's mainstream maintenance for Business Suite 7 core applications, which include ECC, runs to the end of 2027. Optional extended maintenance runs to the end of 2030. An integration one to two years out is likely to land close to those dates, alongside every other workstream a migration brings.
+
+If a year or two of spend is classified inconsistently, or left unclassified until the new system arrives, the migration project inherits the problem. We covered the wider question in [SAP migration readiness for construction](https://pearstop.com/blog/sap-migration-readiness-construction). The short version: data quality work done now is work the migration team does not have to do later.
+
+## How often to upload
+
+Monthly suits most organisations. It lines up with month-end close, so the export reflects posted invoices. It also keeps each batch small enough for the review queue to stay manageable.
+
+Quarterly works where spend is stable and review capacity is limited. The trade-off is that new suppliers and new items wait longer to be matched, and review arrives in larger blocks.
+
+Weekly is rarely worth the effort before integration, unless a specific category is under active negotiation.
+
+Whatever the cadence, keep it fixed. A predictable rhythm is what turns a series of uploads into a continuous record.
+
+## What to export
+
+Export the same fields in the same format every time. Changing the template between uploads is one of the easiest ways to corrupt a dataset without noticing. Two adjacent columns can swap and both still look plausible.
+
+At minimum, each export should carry:
+
+- a unique line identifier, such as the PO line or invoice line number
+- the line description as entered
+- supplier name and supplier number from the vendor master
+- quantity, unit, unit price and line value
+- posting date and invoice date
+- cost centre, site or contract reference
+- material or item number, where one exists
+- any existing material group or category code
+
+The line identifier matters most. It lets each upload be reconciled against the last, so a corrected invoice or credit note updates the existing record.
+
+Export from a fixed cut-off date and include a short overlap with the previous period. Late postings and reversals then get picked up on the next run.
+
+## How new lines get classified
+
+Each upload is classified against the same taxonomy as the one before it. That might be UNSPSC, an internal category tree, or UNSPSC mapped to internal reporting categories. The taxonomy should change rarely and deliberately. When it does change, record the change so historical lines can be remapped in one pass.
+
+Most lines in a monthly file will resemble lines already seen: the same consumables, contracts and materials from the same suppliers. Pearstop classifies each new line with AI and assigns it a high, medium or low confidence level. Lines that follow an established pattern generally come back with high confidence. New items, vague descriptions and unfamiliar suppliers are more likely to come back lower.
+
+For guidance on how deep into UNSPSC it is worth going in your sector, see [UNSPSC best in class by industry](https://pearstop.com/blog/unspsc-best-in-class-by-industry).
+
+## How confidence levels route review
+
+Confidence levels decide where human time goes.
+
+High-confidence lines never need re-review. Once a line is classified with high confidence, it stays classified.
+
+Medium-confidence lines are worth a sample check, weighted toward high-value and frequently purchased items.
+
+Low-confidence lines go to human review, where a person confirms or corrects the category.
+
+Low-confidence lines do not all deserve the same attention. A one-off purchase just needs to land somewhere sensible. If a single replacement part for an unusual asset ends up in the right family, that is good enough. The accuracy that matters is on regularly sourced materials: the items bought every month, across many sites, from a small group of suppliers. Those lines drive the spend cube, the category strategy and the next negotiation. Review effort belongs there first.
+
+## How supplier matching carries over
+
+Supplier names drift. The same company can appear as a legal entity, a trading name and a regional subsidiary, sometimes within a single month's file. Pearstop matches and normalises supplier names so each variant resolves to one supplier.
+
+In an interim workflow, that matching should carry forward. A variant resolved in March should be recognised in April without being matched again. New variants still appear, and those go through matching as they arrive. Over successive uploads, the share of unresolved names tends to fall, because most suppliers have already been seen.
+
+The ambiguous remainder is where manual effort is best spent. We wrote about this in [the real bottleneck in a spend cleanup is supplier matching](https://pearstop.com/blog/supplier-matching-classification-bottleneck).
+
+By integration day, the result is a normalised supplier list with every mapped variant behind it, which is directly useful when the vendor master is cleansed for migration.
+
+## How corrections accumulate
+
+Every correction a reviewer makes is a decision about how a type of line should be classified. Recorded properly, those decisions become the reference for later uploads. A line corrected in one month should come back consistently the next.
+
+Keep a simple log alongside the classified data: what changed, when, and who approved it. It gives you an auditable history, and it lets a new team member, or a migration consultant, see why a line sits where it does.
+
+Over one to two years, the review queue should shrink. The early uploads carry the heaviest review load. Later uploads mostly confirm what is already known.
+
+## What the integration inherits
+
+When the SAP integration is finally scoped, the team already has:
+
+- one to two years of spend classified against a stable taxonomy
+- a normalised supplier list with mapped variants
+- a record of corrections and the reasoning behind them
+- a spend cube built from consistent data across the whole interim period
+
+The integration then changes how data arrives. The classification logic, supplier mappings and review decisions stay as they are. That is a far smaller job than classifying two years of history at the point of migration. For more on keeping a data project like this moving, see [why a data-cleaning AI project needs a project manager](https://pearstop.com/blog/data-cleaning-ai-project-manager).
+
+If your integration is still unscoped and spend visibility cannot wait, a monthly upload to Pearstop is a practical place to start.

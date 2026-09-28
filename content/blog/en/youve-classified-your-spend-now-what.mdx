@@ -1,0 +1,96 @@
+---
+title: "You've classified your spend. Now what?"
+description: "Charge lines like freight and fuel surcharges don't fit a product taxonomy, but dropping or misclassifying them quietly breaks your spend category totals."
+date: "2026-09-28"
+category: "Procurement"
+slug: "youve-classified-your-spend-now-what"
+author: "stephanie"
+lang: "en"
+---
+
+**Quick answer:** A classified line isn't the finish line — it's what lets you finally ask real questions: category totals, supplier consolidation, price comparison, negotiation leverage. But charge lines like freight, fuel surcharges, and packaging don't fit a product taxonomy. Tag them by charge type instead of forcing a product code, and decide deliberately whether to allocate them into the goods or report them on their own.
+
+On this page: [The invoice that doesn't fit](#the-invoice-that-doesnt-fit) · [The principle](#the-principle) · [How to actually treat them](#how-to-actually-treat-them) · [What the analysis looks like once they're tagged](#what-the-analysis-looks-like-once-theyre-tagged) · [Where Pearstop fits](#where-pearstop-fits) · [FAQ](#frequently-asked-questions)
+
+Classification is usually sold as the finish line. You send over a few hundred thousand invoice or PO lines, they come back with a category on every row, and the project is declared done. Except that a classified dataset isn't an answer. It's the point at which you can finally start asking questions.
+
+The questions are the whole reason anyone pays for classification in the first place:
+
+- **Category totals you can act on.** Not "roughly what do we spend on cleaning", but a number a category manager is willing to defend in a meeting.
+- **Supplier consolidation.** Eleven suppliers delivering the same category across five sites, and no single view that showed it before.
+- **Price comparison across sites.** The same goods bought by two locations at two different prices, from the same supplier.
+- **Negotiation leverage.** Knowing your real annual volume with a supplier before you sit down with them.
+
+We've written before about how that analysis is structured — see [the spend cube framework, executed with AI](https://pearstop.com/blog/spend-cube-execution-framework). This piece is about a small, dull-looking thing that quietly breaks all four of those questions if you get it wrong.
+
+## The invoice that doesn't fit
+
+Take a single invoice. Nothing unusual about it — this is an illustrative one with round numbers, not a real customer's:
+
+| Line | Description | Amount |
+|---|---|---|
+| 1 | Cleaning consumables, bulk | 4,000 |
+| 2 | Paper hand towels, cases | 1,000 |
+| 3 | Fuel surcharge | 200 |
+| 4 | Packaging | 100 |
+| 5 | Transport | 700 |
+| | **Invoice total** | **6,000** |
+
+Lines 1 and 2 are products. They classify cleanly. Lines 3, 4 and 5 are the problem.
+
+A fuel surcharge is not a thing you can buy. Neither is "packaging" in this context, and neither is the transport line — it isn't a freight service you went out and sourced, it's a cost of receiving the goods above it. A product taxonomy like UNSPSC is built to answer the question *what is this item?*, and for these three lines there is no honest answer. They have no home.
+
+So what happens to them in practice? Usually one of three things, and all three are bad in a different way.
+
+| What people do | What it does to the numbers |
+|---|---|
+| **Drop the charge lines** | Category totals now understate what it actually cost to get the goods through the door. Your cleaning-consumables number is 5,000 when the invoice was 6,000. Every comparison built on it is quietly wrong in the same direction. |
+| **Force them into a product code** | The category is now polluted with something that isn't a product. Average unit prices stop meaning anything, and a report on "packaging spend" mixes real packaging purchases with freight-adjacent charges. |
+| **Leave them unclassified** | They disappear from every category report, which feels safe — until "unclassified" becomes one of the largest lines in the spend cube, and the first question in the steering meeting is what's in it. |
+
+The third option is the most common, and it's the one that erodes trust in the dataset fastest. A spend cube with a large unclassified bucket doesn't get used.
+
+## The principle
+
+You could not have bought the goods without paying those charges. That makes the charges part of the spend — even though they are not part of the taxonomy.
+
+Those are two different statements, and the mistake is treating them as one. The charge belongs to the spend. It does not belong in a product category. Both things are true at once, and a data model that can't hold both will force you into one of the three bad options above.
+
+So: recognise these lines, decide deliberately how you treat them, and count them. In that order.
+
+## How to actually treat them
+
+**Separate the taxonomy question from the accounting question.** "What is this thing?" and "does this cost attach to a category?" are separate fields, and they should be stored separately. A fuel surcharge has no product identity but it does have a cost attachment. Once those are two columns instead of one, the conflict disappears.
+
+**Tag the line with a charge type, not a product code.** Freight, fuel surcharge, packaging, handling, small-order fee, environmental levy — whatever your suppliers actually put on invoices. This is a small, closed list, and it wants to be your list, not a branch of a product taxonomy bent to fit. Keep it short — a list that grows past a dozen values usually means someone is classifying free text rather than recognising a pattern.
+
+Worth saying: freight and logistics *services* do have a legitimate place in a product-and-services taxonomy. If you source transport from a carrier under its own contract, that is a service you bought and it classifies as one. The charge-type tag is for the other case — a charge riding along on an invoice for something else.
+
+**Then decide: allocate, or report on its own.** This is the choice that changes what a category manager sees, so make it on purpose.
+
+- *Allocate the charge back onto the goods it accompanied* when you want landed cost — the true cost of having that material available at that site. Pro-rate the 1,000 of charges across the 5,000 of goods and the cleaning-consumables category now carries 6,000. This is the right basis for comparing sites, comparing suppliers, and building a business case.
+- *Report the charge on its own* when the charge itself is the thing you want to manage. If freight across all categories adds up to a meaningful number, it is a sourcing target in its own right, and burying it inside forty product categories hides it from the person who could renegotiate it.
+
+In most cases you want both, which is exactly why the tag matters: one tagged dataset supports both views. An allocated-only dataset can't show you the freight question, and a standalone-only dataset can't show you landed cost.
+
+**Keep it visible either way.** Whichever treatment you choose, the line stays in the dataset with its tag intact and its treatment recorded. That's the part that beats both dropping and burying: someone can always ask "what's in this total?" and get an answer.
+
+## What the analysis looks like once they're tagged
+
+These are the questions that become answerable — and that simply aren't, on an untagged dataset:
+
+- **How much of this category is product and how much is freight?** A category that's 15% transport is a logistics conversation, not a price conversation, and you'd never see the difference from a single blended total.
+- **Why is one site's landed cost higher than another's for the same goods?** Same supplier, same items, different delivery pattern. Often the answer is order frequency: lots of small drops, each carrying its own charge.
+- **Does this supplier's headline price advantage survive their surcharges?** The cheapest unit price on the tender isn't always the cheapest invoice. With charge types tagged you can compare like for like, after charges.
+- **Is freight worth consolidating or renegotiating on its own?** Sum every freight and fuel-surcharge line across all categories and suppliers. That total is often the first time anyone in the organisation has seen it, and it's frequently large enough to source deliberately.
+- **Are surcharges growing faster than prices?** Fuel surcharges move on an index, not on your contract. Tracking them separately means you notice.
+
+None of these need new data. They need the data you already have to stop throwing away one part of the invoice.
+
+## Where Pearstop fits
+
+This is one of the things our classification engine handles directly: charge lines get a charge-type tag alongside the product classification, so they stay trackable and it stays clear what's actually in a category total. They aren't dropped, they aren't pushed into a product code where they don't belong, and they don't disappear into an unclassified bucket.
+
+The trigger for writing this up was a facilities-management pilot where the surcharges on supplier invoices didn't fit the standard taxonomy at all, and a custom charge-type flag was the clean way through. It's a pattern, not an exception — if your suppliers invoice freight, you have this problem whether or not it's been named yet.
+
+It sits alongside the other unglamorous parts of getting a spend dataset to a usable state: [supplier matching](https://pearstop.com/blog/supplier-matching-classification-bottleneck), which is usually the real bottleneck, and [classification quality itself](https://pearstop.com/blog/unspsc-best-in-class-by-industry), where the standard that matters is trustworthy confidence levels rather than raw accuracy.
