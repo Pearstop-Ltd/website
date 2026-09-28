@@ -6,12 +6,14 @@ import { ContactMailtoForm } from "@/components/contact-mailto-form";
 import { CTABand, PageHero, SectionTitle } from "@/components/content";
 import { alternateLanguages, siteConfig } from "@/lib/site";
 
-export async function generateMetadata(): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const prefix = locale === "en" ? "" : `/${locale}`;
   const t = await getTranslations("Contact.meta");
   return {
     title: t("title"),
     description: t("description"),
-    alternates: { canonical: `${siteConfig.url}/contact`, languages: alternateLanguages("/contact") },
+    alternates: { canonical: `${siteConfig.url}${prefix}/contact`, languages: alternateLanguages("/contact") },
   };
 }
 

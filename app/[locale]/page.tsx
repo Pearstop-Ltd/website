@@ -40,16 +40,18 @@ const organizationSchema = {
     "Facilities Management Procurement"
   ]
 };
-export async function generateMetadata(): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const prefix = locale === "en" ? "" : `/${locale}`;
   const t = await getTranslations("Home.meta");
   return {
     title: t("title"),
     description: t("description"),
-    alternates: { canonical: siteConfig.url, languages: alternateLanguages("") },
+    alternates: { canonical: `${siteConfig.url}${prefix}`, languages: alternateLanguages("") },
     openGraph: {
       title: t("title"),
       description: t("description"),
-      url: siteConfig.url,
+      url: `${siteConfig.url}${prefix}`,
       images: ["/opengraph-image"],
     },
     twitter: {

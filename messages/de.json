@@ -1526,6 +1526,10 @@
       "title": "Bereit, Ihre Beschaffungsklassifizierung zu automatisieren?",
       "button": "Mit Vertrieb sprechen",
       "lead": "Sprechen Sie mit Vertrieb. Wir zeigen Ihnen genau, wie die Klassifizierungs-Engine mit Ihren Daten arbeiten würde."
+    },
+    "breadcrumb": {
+      "home": "Startseite",
+      "current": "UNSPSC-Klassifizierung"
     }
   },
   "UnspscAiGuide": {
@@ -1666,6 +1670,10 @@
     "howItWorks": {
       "title": "Wie funktioniert KI-gestützte UNSPSC-Klassifizierung tatsächlich?",
       "copy": "KI-gestützte UNSPSC-Klassifizierung nimmt eine Beschaffungsbeschreibung — aus einer strukturierten Ausgabendatei oder aus einer PDF-Rechnung extrahiert — und ordnet ihr den richtigen 8-stelligen UNSPSC-Commodity-Code zu. Gut gemacht bedeutet das nicht, ein Sprachmodell nach einem Code zu fragen und der Antwort blind zu vertrauen. Die Engine von Pearstop schlägt über eine LLM-Schicht einen Code vor, validiert diesen Code dann gegen den echten UNSPSC-Datensatz, bevor er akzeptiert wird, kombiniert das mit deterministischen Schlüsselwortregeln und einer lieferantenspezifischen Datenbank und speichert jede menschliche Korrektur als lieferantenspezifisches Gedächtnis, sodass dasselbe Muster nicht zweimal durchdacht werden muss. Ein kostenloser Pilot von rund 500 Zeilen lässt einen Kunden die Genauigkeit prüfen, die Aufteilung zwischen automatisch klassifiziert und zur Prüfung markiert, und wie tief das Ergebnis in die vierstufige Hierarchie reicht, bevor derselbe Prozess auf den vollständigen Datensatz angewendet wird."
+    },
+    "breadcrumb": {
+      "home": "Startseite",
+      "current": "KI-UNSPSC-Klassifizierungsleitfaden"
     }
   },
   "Fabric": {
@@ -3412,6 +3420,10 @@
       "quote": "Unsere Anlagenlisten funktionierten für Techniker vor Ort, erlaubten uns aber nicht, Instandhaltung intelligent zu planen oder Angebotsrisiken datengestützt zu steuern.",
       "author": "Asset Manager",
       "role": "Facilities Management, Europa"
+    },
+    "breadcrumb": {
+      "home": "Startseite",
+      "current": "UNSPSC für Facility Management"
     }
   },
   "UnspscNL": {
@@ -3511,6 +3523,10 @@
       "quote": "Früher hatten wir zwei Vollzeitkräfte für die Kategoriezuordnung. Jetzt übernimmt das System das für uns — was auch Margenschätzungen weiter unten im Prozess ermöglicht hat.",
       "author": "Head of Procurement",
       "role": "Infrastruktur-Dienstleister, Niederlande"
+    },
+    "breadcrumb": {
+      "home": "Startseite",
+      "current": "UNSPSC-Klassifizierung Niederlande"
     }
   },
   "UnspscDE": {
@@ -3608,6 +3624,10 @@
       "quote": "Das hätte fünf Ingenieure und ein ganzes Jahr gekostet, um das manuell zu bereinigen. Wir brauchten eine bessere Lösung — und die Durchlaufzeit sank von Wochen auf unter einen Tag.",
       "author": "Head of Operations",
       "role": "FARO"
+    },
+    "breadcrumb": {
+      "home": "Startseite",
+      "current": "UNSPSC-Klassifizierung Deutschland"
     }
   },
   "UnspscLookup": {
@@ -3706,6 +3726,10 @@
       "title": "Müssen Sie Tausende von Zeilen klassifizieren?",
       "button": "Mit Vertrieb sprechen",
       "lead": "Sprechen Sie mit Vertrieb, und wir zeigen Ihnen, wie die vollständige Klassifizierungs-Engine mit Ihren tatsächlichen Procurement-Daten arbeitet."
+    },
+    "breadcrumb": {
+      "home": "Startseite",
+      "current": "Kostenlose UNSPSC-Codesuche"
     }
   },
   "Home": {
@@ -4082,6 +4106,10 @@
       "lead": "Senden Sie uns bis zu zehn Rechnungen, in welchem Zustand auch immer. Wir schicken sie als strukturierte Positionen zurück, damit Sie sehen, wie Ihr eigener Rechnungsstream gelesen wird.",
       "primaryLabel": "Senden Sie Ihre Rechnungen",
       "secondaryLabel": "Oder mit Vertrieb sprechen →"
+    },
+    "breadcrumb": {
+      "home": "Startseite",
+      "current": "Rechnungs- und Dokumentendatenextraktion"
     }
   },
   "ProcurementConsultancies": {

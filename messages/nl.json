@@ -1534,7 +1534,11 @@
         "question": "Kan met UNSPSC geclassificeerde spend worden gebruikt voor Scope 3-rapportage van CO2-uitstoot?",
         "answer": "Ja. De spend-gebaseerde methode voor Scope 3 vermenigvuldigt de spend in elke categorie met een emissiefactor, dus spend moet eerst per categorie worden geclassificeerd. UNSPSC geeft u consistente categorieën over leveranciers, locaties en jaren heen. Pearstop levert de geclassificeerde spend; de CO2-berekening gebeurt in uw eigen rapportagetool."
       }
-    ]
+    ],
+    "breadcrumb": {
+      "home": "Home",
+      "current": "UNSPSC-classificatie"
+    }
   },
   "Fabric": {
     "meta": {
@@ -3304,6 +3308,10 @@
       "quote": "Onze asset-lijsten werkten voor monteurs op locatie, maar stelden ons niet in staat om slim onderhoud te plannen of biedrisico datagedreven te beheren.",
       "author": "Asset Manager",
       "role": "Facility Management, Europa"
+    },
+    "breadcrumb": {
+      "home": "Home",
+      "current": "UNSPSC voor facility management"
     }
   },
   "UnspscNL": {
@@ -3403,6 +3411,10 @@
       "quote": "We hadden twee fulltime medewerkers die categorie-toewijzing deden. Nu doet het systeem dit voor ons — wat verderop in het proces ook margeschattingen mogelijk heeft gemaakt.",
       "author": "Hoofd Inkoop",
       "role": "Infrastructuur-aannemer, Nederland"
+    },
+    "breadcrumb": {
+      "home": "Home",
+      "current": "UNSPSC-classificatie Nederland"
     }
   },
   "UnspscDE": {
@@ -3500,6 +3512,10 @@
       "quote": "Het zou vijf engineers en een heel jaar hebben gekost om dit handmatig op te schonen. We hadden een betere oplossing nodig — en de doorlooptijd ging van weken naar minder dan een dag.",
       "author": "Head of Operations",
       "role": "FARO"
+    },
+    "breadcrumb": {
+      "home": "Home",
+      "current": "UNSPSC-classificatie Duitsland"
     }
   },
   "UnspscLookup": {
@@ -3598,6 +3614,10 @@
     "geoBlock": {
       "title": "Hoe zoek je een UNSPSC- of procurement classificatiecode op?",
       "copy": "Om een UNSPSC code op te zoeken, schrijf je een eenvoudige beschrijving van het product of de dienst, bijvoorbeeld 'HVAC filter replacement' of 'subcontractor plumbing works', en plak je deze in een lookup tool. De gratis tool van Pearstop vergelijkt die beschrijving met de volledige UNSPSC taxonomy en retourneert de 8-cijferige commodity code, het segment, de family en class, en een confidence level, binnen enkele seconden. Voor een enkele regel is dat voldoende om een code handmatig te controleren. Voor een volledig spend file of invoice history wordt dezelfde classificatielogica automatisch toegepast op elke regel via de engine van Pearstop, met een nauwkeurigheid van 90 tot 95% zonder dat een persoon de lookup regel voor regel uitvoert."
+    },
+    "breadcrumb": {
+      "home": "Home",
+      "current": "Gratis UNSPSC-codezoeker"
     }
   },
   "Home": {
@@ -3974,6 +3994,10 @@
       "lead": "Stuur ons tot tien facturen, in welke staat dan ook. Wij sturen ze terug als gestructureerde regels, zodat u ziet hoe uw eigen factuurstroom gelezen wordt.",
       "primaryLabel": "Stuur uw facturen",
       "secondaryLabel": "Of praat met sales →"
+    },
+    "breadcrumb": {
+      "home": "Home",
+      "current": "Factuur- en documentdata-extractie"
     }
   },
   "ProcurementConsultancies": {
@@ -4344,6 +4368,10 @@
     "howItWorks": {
       "title": "Hoe werkt AI-gedreven UNSPSC-classificatie in de praktijk?",
       "copy": "AI-gedreven UNSPSC-classificatie neemt een inkoopomschrijving — uit een gestructureerd spend-bestand of geëxtraheerd uit een PDF-factuur — en kent er de juiste 8-cijferige UNSPSC-commodity-code aan toe. Goed gedaan betekent dat niet dat je een taalmodel om een code vraagt en het antwoord zomaar vertrouwt. Het systeem van Pearstop stelt een code voor via een LLM-laag, valideert die code vervolgens tegen de echte UNSPSC-dataset voordat hij wordt geaccepteerd, combineert dit met deterministische keyword-regels en een leveranciersspecifieke database, en slaat elke menselijke correctie op als leveranciersspecifiek geheugen, zodat hetzelfde patroon niet twee keer opnieuw hoeft te worden doordacht. Een gratis pilot van ongeveer 500 regels laat een klant de nauwkeurigheid controleren, de verhouding tussen automatisch geclassificeerd en gemarkeerd voor review, en hoe diep het resultaat in de vierlaagse hiërarchie reikt, voordat hetzelfde proces op een volledige dataset draait."
+    },
+    "breadcrumb": {
+      "home": "Home",
+      "current": "AI UNSPSC-classificatiegids"
     }
   },
   "CaseSpie": {

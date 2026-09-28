@@ -29,7 +29,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/ai-readiness",
     "/faq",
     "/unspsc-code-lookup",
-    "/unspsc-classification-demo",
     "/unspsc-classification-facilities-management",
     "/unspsc-classification-netherlands",
     "/unspsc-classification-germany",
@@ -41,10 +40,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/contact",
     "/privacy",
     "/terms-and-conditions",
+    "/terms",
+    "/book-a-demo",
+    "/procurement-consultancies",
+    "/spend-cube",
   ];
 
   const dynamicPaths = [
     ...caseStudies.map((item) => `/cases/${item.slug}`),
+    "/cases/fmo",
     ...blogPosts.map((post) => `/blog/${post.slug}`),
   ];
 

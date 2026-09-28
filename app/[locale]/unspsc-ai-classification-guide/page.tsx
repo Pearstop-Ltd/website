@@ -8,11 +8,12 @@ import { alternateLanguages, siteConfig } from "@/lib/site";
 
 type FaqItem = { question: string; answer: string };
 
-const PAGE_URL = `${siteConfig.url}/unspsc-ai-classification-guide`;
+const PAGE_PATH = "/unspsc-ai-classification-guide";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   setRequestLocale(locale);
+  const prefix = locale === "en" ? "" : `/${locale}`;
   const t = await getTranslations({ locale, namespace: "UnspscAiGuide" });
   return {
     title: t("meta.title"),
@@ -25,34 +26,36 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       "UNSPSC classification software",
     ],
     alternates: {
-      canonical: PAGE_URL,
+      canonical: `${siteConfig.url}${prefix}${PAGE_PATH}`,
       languages: alternateLanguages("/unspsc-ai-classification-guide")
     },
     openGraph: {
       title: t("meta.title"),
       description: t("meta.description"),
-      url: PAGE_URL,
+      url: `${siteConfig.url}${prefix}${PAGE_PATH}`,
       siteName: siteConfig.name,
       images: ["/opengraph-image"]
     }
   };
 }
 
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: siteConfig.url },
-    { "@type": "ListItem", position: 2, name: "UNSPSC Classification", item: `${siteConfig.url}/unspsc` },
-    { "@type": "ListItem", position: 3, name: "AI UNSPSC Classification Guide", item: PAGE_URL }
-  ]
-};
-
 export default async function UnspscAiGuidePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
   const prefix = locale === "en" ? "" : `/${locale}`;
   const t = await getTranslations("UnspscAiGuide");
+  const breadcrumbCopy = t.raw("breadcrumb") as { home: string; current: string };
+  const unspscLabel = ((await getTranslations("Unspsc")).raw("breadcrumb") as { current: string }).current;
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: breadcrumbCopy.home, item: `${siteConfig.url}${prefix}` },
+      { "@type": "ListItem", position: 2, name: unspscLabel, item: `${siteConfig.url}${prefix}/unspsc` },
+      { "@type": "ListItem", position: 3, name: breadcrumbCopy.current, item: `${siteConfig.url}${prefix}${PAGE_PATH}` }
+    ]
+  };
   const common = await getTranslations("Common");
   const faqItems = t.raw("faq") as FaqItem[];
 

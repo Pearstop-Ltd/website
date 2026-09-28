@@ -7,17 +7,18 @@ import {
 } from "@/components/case-design";
 import { alternateLanguages, siteConfig } from "@/lib/site";
 
-const PAGE_URL = `${siteConfig.url}/cases/faro`;
+const PAGE_PATH = "/cases/faro";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   setRequestLocale(locale);
+  const prefix = locale === "en" ? "" : `/${locale}`;
   const t = await getTranslations({ locale, namespace: "CaseFaro" });
   return {
     title: t("meta.title"),
     description: t("meta.description"),
     alternates: {
-      canonical: PAGE_URL,
+      canonical: `${siteConfig.url}${prefix}${PAGE_PATH}`,
       languages: alternateLanguages("/cases/faro")
     }
   };

@@ -3,12 +3,14 @@ import { getTranslations , setRequestLocale } from "next-intl/server";
 import { CTABand, GeoBlock, PageHero, SectionTitle } from "@/components/content";
 import { alternateLanguages, siteConfig } from "@/lib/site";
 
-export async function generateMetadata(): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const prefix = locale === "en" ? "" : `/${locale}`;
   const t = await getTranslations("About.meta");
   return {
     title: t("title"),
     description: t("description"),
-    alternates: { canonical: `${siteConfig.url}/about-us`, languages: alternateLanguages("/about-us") },
+    alternates: { canonical: `${siteConfig.url}${prefix}/about-us`, languages: alternateLanguages("/about-us") },
   };
 }
 

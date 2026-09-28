@@ -7,12 +7,13 @@ import { alternateLanguages, siteConfig } from "@/lib/site";
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   setRequestLocale(locale);
+  const prefix = locale === "en" ? "" : `/${locale}`;
   const t = await getTranslations({ locale, namespace: "SpendCube" });
   return {
     title: t("meta.title"),
     description: t("meta.description"),
     alternates: {
-      canonical: `${siteConfig.url}/spend-cube`,
+      canonical: `${siteConfig.url}${prefix}/spend-cube`,
       languages: alternateLanguages("/spend-cube")
     }
   };

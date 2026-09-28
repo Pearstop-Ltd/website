@@ -22,6 +22,7 @@ const serviceSchema = {
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   setRequestLocale(locale);
+  const prefix = locale === "en" ? "" : `/${locale}`;
   const t = await getTranslations({ locale, namespace: "Unspsc" });
   return {
     title: t("meta.title"),
@@ -34,26 +35,28 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       "automated procurement classification",
     ],
     alternates: {
-      canonical: `${siteConfig.url}/unspsc`,
+      canonical: `${siteConfig.url}${prefix}/unspsc`,
       languages: alternateLanguages("/unspsc")
     }
   };
 }
 
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: siteConfig.url },
-    { "@type": "ListItem", position: 2, name: "UNSPSC Classification", item: `${siteConfig.url}/unspsc` }
-  ]
-};
-
 export default async function UnspscRoute({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const prefix = locale === "en" ? "" : `/${locale}`;
   const messages = await getMessages({ locale });
   const copy = { ...messages.Unspsc, common: messages.Common } as unknown as UnspscCopy;
+  const breadcrumbCopy = messages.Unspsc.breadcrumb as { home: string; current: string };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: breadcrumbCopy.home, item: `${siteConfig.url}${prefix}` },
+      { "@type": "ListItem", position: 2, name: breadcrumbCopy.current, item: `${siteConfig.url}${prefix}/unspsc` }
+    ]
+  };
 
   const faqSchema = {
     "@context": "https://schema.org",

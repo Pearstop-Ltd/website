@@ -10,18 +10,19 @@ import { alternateLanguages, siteConfig } from "@/lib/site";
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   setRequestLocale(locale);
+  const prefix = locale === "en" ? "" : `/${locale}`;
   const t = await getTranslations({ locale, namespace: "Faq" });
   return {
     title: t("meta.title"),
     description: t("meta.description"),
     alternates: {
-      canonical: `${siteConfig.url}/faq`,
+      canonical: `${siteConfig.url}${prefix}/faq`,
       languages: alternateLanguages("/faq")
     },
     openGraph: {
       title: t("meta.title"),
       description: t("meta.description"),
-      url: `${siteConfig.url}/faq`,
+      url: `${siteConfig.url}${prefix}/faq`,
       siteName: siteConfig.name,
       images: ["/opengraph-image"]
     }

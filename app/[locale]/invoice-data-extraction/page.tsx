@@ -5,20 +5,21 @@ import { InvoiceDataExtractionPage, type InvoiceDataExtractionCopy } from "@/com
 import { alternateLanguages, siteConfig } from "@/lib/site";
 import { getRequestCurrency } from "@/lib/currency";
 
-const PAGE_URL = `${siteConfig.url}/invoice-data-extraction`;
+const PAGE_PATH = "/invoice-data-extraction";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   setRequestLocale(locale);
+  const prefix = locale === "en" ? "" : `/${locale}`;
   const t = await getTranslations({ locale, namespace: "InvoiceExtraction" });
   return {
     title: t("meta.title"),
     description: t("meta.description"),
-    alternates: { canonical: PAGE_URL, languages: alternateLanguages("/invoice-data-extraction") },
+    alternates: { canonical: `${siteConfig.url}${prefix}${PAGE_PATH}`, languages: alternateLanguages("/invoice-data-extraction") },
     openGraph: {
       title: `${t("meta.title")} | Pearstop`,
       description: t("meta.description"),
-      url: PAGE_URL,
+      url: `${siteConfig.url}${prefix}${PAGE_PATH}`,
       siteName: siteConfig.name
     },
     twitter: {
@@ -39,22 +40,25 @@ const serviceSchema = {
   areaServed: "Europe"
 };
 
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: siteConfig.url },
-    { "@type": "ListItem", position: 2, name: "Solutions", item: `${siteConfig.url}/solutions` },
-    { "@type": "ListItem", position: 3, name: "Invoice and Document Data Extraction", item: PAGE_URL }
-  ]
-};
-
 export default async function InvoiceDataExtractionRoute({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const prefix = locale === "en" ? "" : `/${locale}`;
   const messages = await getMessages({ locale });
   const copy = { ...messages.InvoiceExtraction, common: messages.Common } as unknown as InvoiceDataExtractionCopy;
+  const breadcrumbCopy = messages.InvoiceExtraction.breadcrumb as { home: string; current: string };
+  const solutionsLabel = (messages.Header as { solutions?: string } | undefined)?.solutions ?? "Solutions";
   const currency = await getRequestCurrency();
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: breadcrumbCopy.home, item: `${siteConfig.url}${prefix}` },
+      { "@type": "ListItem", position: 2, name: solutionsLabel, item: `${siteConfig.url}${prefix}/solutions` },
+      { "@type": "ListItem", position: 3, name: breadcrumbCopy.current, item: `${siteConfig.url}${prefix}${PAGE_PATH}` }
+    ]
+  };
 
   const faqSchema = {
     "@context": "https://schema.org",

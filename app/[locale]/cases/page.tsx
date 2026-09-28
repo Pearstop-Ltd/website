@@ -6,12 +6,13 @@ import { alternateLanguages, siteConfig } from "@/lib/site";
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   setRequestLocale(locale);
+  const prefix = locale === "en" ? "" : `/${locale}`;
   const t = await getTranslations({ locale, namespace: "Cases" });
   return {
     title: t("meta.title"),
     description: t("meta.description"),
     alternates: {
-      canonical: `${siteConfig.url}/cases`,
+      canonical: `${siteConfig.url}${prefix}/cases`,
       languages: alternateLanguages("/cases")
     }
   };

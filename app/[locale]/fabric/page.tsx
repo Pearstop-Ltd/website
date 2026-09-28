@@ -7,12 +7,13 @@ import { alternateLanguages, siteConfig } from "@/lib/site";
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   setRequestLocale(locale);
+  const prefix = locale === "en" ? "" : `/${locale}`;
   const t = await getTranslations({ locale, namespace: "Fabric" });
   return {
     title: t("meta.title"),
     description: t("meta.description"),
     alternates: {
-      canonical: `${siteConfig.url}/fabric`,
+      canonical: `${siteConfig.url}${prefix}/fabric`,
       languages: alternateLanguages("/fabric")
     }
   };

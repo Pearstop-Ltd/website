@@ -1526,6 +1526,10 @@
       "title": "Prêt à automatiser votre classification des achats ?",
       "button": "Parler à un commercial",
       "lead": "Parlez à un commercial. Nous vous montrerons exactement comment le moteur de classification fonctionnerait avec vos données."
+    },
+    "breadcrumb": {
+      "home": "Accueil",
+      "current": "Classification UNSPSC"
     }
   },
   "UnspscAiGuide": {
@@ -1666,6 +1670,10 @@
     "howItWorks": {
       "title": "Comment fonctionne réellement la classification UNSPSC par IA ?",
       "copy": "La classification UNSPSC par IA part d'une description d'achat — issue d'un fichier de dépenses structuré ou extraite d'une facture PDF — et lui attribue le bon code commodité UNSPSC à 8 chiffres. Bien faite, cela ne consiste pas à demander un code à un modèle de langage et à faire confiance à la réponse telle quelle. Le moteur de Pearstop propose un code via une couche LLM, puis valide ce code par rapport au véritable jeu de données UNSPSC avant de l'accepter, combine cela avec des règles de mots-clés déterministes et une base de données propre à chaque fournisseur, et conserve chaque correction humaine comme mémoire spécifique au fournisseur, afin de ne pas devoir raisonner deux fois sur le même cas. Un pilote gratuit d'environ 500 lignes permet à un client de vérifier la précision, la répartition entre classification automatique et lignes signalées pour révision, ainsi que la profondeur atteinte dans la hiérarchie à quatre niveaux, avant que le même processus ne s'applique à l'ensemble du jeu de données."
+    },
+    "breadcrumb": {
+      "home": "Accueil",
+      "current": "Guide de classification UNSPSC par IA"
     }
   },
   "Fabric": {
@@ -3412,6 +3420,10 @@
       "quote": "Nos listes d'actifs fonctionnaient pour les techniciens sur site, mais ne nous permettaient pas de planifier une maintenance intelligente ni de gérer le risque des offres de façon pilotée par les données.",
       "author": "Asset Manager",
       "role": "Facilities management, Europe"
+    },
+    "breadcrumb": {
+      "home": "Accueil",
+      "current": "UNSPSC pour le facilities management"
     }
   },
   "UnspscNL": {
@@ -3511,6 +3523,10 @@
       "quote": "Nous avions deux collaborateurs à temps plein sur l'attribution des catégories. Désormais, le système le fait pour nous — ce qui a aussi débloqué les estimations de marge en aval.",
       "author": "Directeur des Achats",
       "role": "Entreprise d'infrastructure, Pays-Bas"
+    },
+    "breadcrumb": {
+      "home": "Accueil",
+      "current": "Classification UNSPSC Pays-Bas"
     }
   },
   "UnspscDE": {
@@ -3608,6 +3624,10 @@
       "quote": "Il aurait fallu cinq ingénieurs et une année complète pour nettoyer cela manuellement. Nous avions besoin d'une meilleure solution — et le délai est passé de plusieurs semaines à moins d'une journée.",
       "author": "Head of Operations",
       "role": "FARO"
+    },
+    "breadcrumb": {
+      "home": "Accueil",
+      "current": "Classification UNSPSC Allemagne"
     }
   },
   "UnspscLookup": {
@@ -3706,6 +3726,10 @@
       "title": "Besoin de classer des milliers de lignes ?",
       "button": "Parler à un commercial",
       "lead": "Parlez à un commercial et nous vous montrerons comment le moteur de classification complet fonctionne avec vos données d'achats réelles."
+    },
+    "breadcrumb": {
+      "home": "Accueil",
+      "current": "Recherche gratuite de code UNSPSC"
     }
   },
   "Home": {
@@ -4082,6 +4106,10 @@
       "lead": "Envoyez-nous jusqu'à dix factures, quel que soit leur état. Nous vous les renvoyons sous forme de lignes structurées, pour que vous voyiez votre propre flux de factures lu.",
       "primaryLabel": "Envoyez vos factures",
       "secondaryLabel": "Ou parlez à un commercial →"
+    },
+    "breadcrumb": {
+      "home": "Accueil",
+      "current": "Extraction de données de factures et documents"
     }
   },
   "ProcurementConsultancies": {

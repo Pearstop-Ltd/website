@@ -10,12 +10,13 @@ import styles from "@/components/case-design.module.css";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
+  const prefix = locale === "en" ? "" : `/${locale}`;
   const t = await getTranslations({ locale, namespace: "CaseConstructionSpendBenchmarking" });
   return {
     title: t("meta.title"),
     description: t("meta.description"),
     alternates: {
-      canonical: `${siteConfig.url}/cases/construction-spend-benchmarking`,
+      canonical: `${siteConfig.url}${prefix}/cases/construction-spend-benchmarking`,
       languages: alternateLanguages("/cases/construction-spend-benchmarking")
     }
   };

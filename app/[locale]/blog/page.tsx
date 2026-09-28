@@ -32,12 +32,13 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   setRequestLocale(locale);
+  const prefix = locale === "en" ? "" : `/${locale}`;
   const t = await getTranslations({ locale, namespace: "Blog" });
   return {
     title: t("meta.title"),
     description: t("meta.description"),
     alternates: {
-      canonical: `${siteConfig.url}/blog`,
+      canonical: `${siteConfig.url}${prefix}/blog`,
       languages: alternateLanguages("/blog")
     }
   };

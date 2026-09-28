@@ -9,17 +9,18 @@ import { CaseStatBar } from "@/components/case-design-charts";
 import { alternateLanguages, siteConfig } from "@/lib/site";
 import styles from "@/components/case-design.module.css";
 
-const PAGE_URL = `${siteConfig.url}/cases/spie`;
+const PAGE_PATH = "/cases/spie";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   setRequestLocale(locale);
+  const prefix = locale === "en" ? "" : `/${locale}`;
   const t = await getTranslations({ locale, namespace: "CaseSpie" });
   return {
     title: t("meta.title"),
     description: t("meta.description"),
     alternates: {
-      canonical: PAGE_URL,
+      canonical: `${siteConfig.url}${prefix}${PAGE_PATH}`,
       languages: alternateLanguages("/cases/spie")
     }
   };

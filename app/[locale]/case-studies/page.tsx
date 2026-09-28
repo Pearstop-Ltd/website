@@ -11,18 +11,19 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   setRequestLocale(locale);
+  const prefix = locale === "en" ? "" : `/${locale}`;
   const t = await getTranslations({ locale, namespace: "CaseStudies" });
   return {
     title: t("meta.title"),
     description: t("meta.description"),
     alternates: {
-      canonical: `${siteConfig.url}/case-studies`,
+      canonical: `${siteConfig.url}${prefix}/case-studies`,
       languages: alternateLanguages("/case-studies")
     },
     openGraph: {
       title: t("meta.ogTitle"),
       description: t("meta.ogDescription"),
-      url: `${siteConfig.url}/case-studies`,
+      url: `${siteConfig.url}${prefix}/case-studies`,
       siteName: siteConfig.name,
       images: ["/opengraph-image"]
     },

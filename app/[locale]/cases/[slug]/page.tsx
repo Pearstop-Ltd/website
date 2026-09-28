@@ -21,6 +21,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string; locale: string }>;
 }): Promise<Metadata> {
   const { slug, locale } = await params;
+  const prefix = locale === "en" ? "" : `/${locale}`;
   const namespace = SLUG_NAMESPACES[slug];
   if (!namespace) {
     return {
@@ -33,7 +34,7 @@ export async function generateMetadata({
     title: t("meta.title"),
     description: t("meta.description"),
     alternates: {
-      canonical: `${siteConfig.url}/cases/${slug}`,
+      canonical: `${siteConfig.url}${prefix}/cases/${slug}`,
       languages: alternateLanguages(`/cases/${slug}`)
     }
   };

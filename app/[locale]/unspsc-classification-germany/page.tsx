@@ -10,6 +10,7 @@ import { alternateLanguages, siteConfig } from "@/lib/site";
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   setRequestLocale(locale);
+  const prefix = locale === "en" ? "" : `/${locale}`;
   const t = await getTranslations({ locale, namespace: "UnspscDE" });
   return {
     title: t("meta.title"),
@@ -21,13 +22,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       "UNSPSC E-Rechnung",
     ],
     alternates: {
-      canonical: `${siteConfig.url}/unspsc-classification-germany`,
+      canonical: `${siteConfig.url}${prefix}/unspsc-classification-germany`,
       languages: alternateLanguages("/unspsc-classification-germany")
     },
     openGraph: {
       title: t("meta.title"),
       description: t("meta.description"),
-      url: `${siteConfig.url}/unspsc-classification-germany`,
+      url: `${siteConfig.url}${prefix}/unspsc-classification-germany`,
       siteName: siteConfig.name,
       images: ["/opengraph-image"]
     }
@@ -98,22 +99,24 @@ const serviceSchema = {
   }
 };
 
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: siteConfig.url },
-    { "@type": "ListItem", position: 2, name: "UNSPSC Classification", item: `${siteConfig.url}/unspsc` },
-    { "@type": "ListItem", position: 3, name: "UNSPSC Classification Germany", item: `${siteConfig.url}/unspsc-classification-germany` }
-  ]
-};
-
 export default async function UnspscDEPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
   const prefix = locale === "en" ? "" : `/${locale}`;
   const t = await getTranslations({ locale, namespace: "UnspscDE" });
   const common = await getTranslations({ locale, namespace: "Common" });
+  const breadcrumbCopy = t.raw("breadcrumb") as { home: string; current: string };
+  const unspscLabel = ((await getTranslations("Unspsc")).raw("breadcrumb") as { current: string }).current;
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: breadcrumbCopy.home, item: `${siteConfig.url}${prefix}` },
+      { "@type": "ListItem", position: 2, name: unspscLabel, item: `${siteConfig.url}${prefix}/unspsc` },
+      { "@type": "ListItem", position: 3, name: breadcrumbCopy.current, item: `${siteConfig.url}${prefix}/unspsc-classification-germany` }
+    ]
+  };
 
   return (
     <>

@@ -1411,6 +1411,10 @@
       "lead": "Send us up to ten invoices, in whatever state they are in. We send them back as structured line items, so you see your own invoice stream read.",
       "primaryLabel": "Send your invoices",
       "secondaryLabel": "Or talk to Sales →"
+    },
+    "breadcrumb": {
+      "home": "Home",
+      "current": "Invoice and Document Data Extraction"
     }
   },
   "ProcurementConsultancies": {
@@ -2040,6 +2044,10 @@
       "title": "Ready to automate your procurement classification?",
       "lead": "Talk to sales. We will show you exactly how the classification engine would work with your data.",
       "button": "Talk to sales"
+    },
+    "breadcrumb": {
+      "home": "Home",
+      "current": "UNSPSC Classification"
     }
   },
   "UnspscAiGuide": {
@@ -2180,6 +2188,10 @@
     "howItWorks": {
       "title": "How does AI UNSPSC classification actually work?",
       "copy": "AI UNSPSC classification takes a procurement description, whether from a structured spend file or extracted from a PDF invoice, and assigns it the correct 8-digit UNSPSC commodity code. Done well, it does not mean asking a language model for a code and trusting the answer. Pearstop's engine proposes a code with an LLM layer, then validates that code against the real UNSPSC dataset before accepting it, combines that with deterministic keyword rules and a supplier-specific database, and stores every human correction as supplier-specific memory so the same pattern does not need reasoning through twice. A free pilot of roughly 500 rows lets a customer check accuracy, the auto-classified versus flagged-for-review split, and how deep the result reaches into the four-level hierarchy, before the same process runs across a full dataset."
+    },
+    "breadcrumb": {
+      "home": "Home",
+      "current": "AI UNSPSC Classification Guide"
     }
   },
   "Fabric": {
@@ -3645,6 +3657,10 @@
       "quote": "Our asset lists worked for mechanics on-site, but did not allow us to plan smart maintenance or manage bid risk in a data-driven way.",
       "author": "Asset Manager",
       "role": "Facilities Management, Europe"
+    },
+    "breadcrumb": {
+      "home": "Home",
+      "current": "UNSPSC for Facilities Management"
     }
   },
   "UnspscNL": {
@@ -3744,6 +3760,10 @@
       "quote": "We used to have two full-time staff working on category assignment. Now the system does this for us — which has unlocked margin estimations further down the line too.",
       "author": "Head of Procurement",
       "role": "Infrastructure Contractor, Netherlands"
+    },
+    "breadcrumb": {
+      "home": "Home",
+      "current": "UNSPSC Classification Netherlands"
     }
   },
   "UnspscDE": {
@@ -3841,6 +3861,10 @@
       "quote": "It would have taken five engineers and a full year to clean this up manually. We needed a better solution — and the turnaround went from weeks to under a day.",
       "author": "Head of Operations",
       "role": "FARO"
+    },
+    "breadcrumb": {
+      "home": "Home",
+      "current": "UNSPSC Classification Germany"
     }
   },
   "UnspscLookup": {
@@ -3939,6 +3963,10 @@
       "title": "Need to classify thousands of lines?",
       "lead": "Talk to sales and we will show you how the full classification engine works with your actual procurement data.",
       "button": "Talk to sales"
+    },
+    "breadcrumb": {
+      "home": "Home",
+      "current": "Free UNSPSC Code Lookup"
     }
   },
   "BookDemo": {

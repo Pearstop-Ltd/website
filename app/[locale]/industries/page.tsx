@@ -4,17 +4,18 @@ import { getMessages, getTranslations, setRequestLocale } from "next-intl/server
 import { IndustriesPage, type IndustriesCopy } from "@/components/site/pages/Industries";
 import { alternateLanguages, siteConfig } from "@/lib/site";
 
-const PAGE_URL = `${siteConfig.url}/industries`;
+const PAGE_PATH = "/industries";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   setRequestLocale(locale);
+  const prefix = locale === "en" ? "" : `/${locale}`;
   const t = await getTranslations({ locale, namespace: "Industries" });
   return {
     title: t("meta.title"),
     description: t("meta.description"),
     alternates: {
-      canonical: PAGE_URL,
+      canonical: `${siteConfig.url}${prefix}${PAGE_PATH}`,
       languages: alternateLanguages("/industries")
     }
   };
@@ -44,8 +45,8 @@ export default async function IndustriesRoute({ params }: { params: Promise<{ lo
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: siteConfig.url },
-      { "@type": "ListItem", position: 2, name: "Industries", item: PAGE_URL }
+      { "@type": "ListItem", position: 1, name: copy.breadcrumb.home, item: `${siteConfig.url}${prefix}` },
+      { "@type": "ListItem", position: 2, name: copy.breadcrumb.current, item: `${siteConfig.url}${prefix}${PAGE_PATH}` }
     ]
   };
 

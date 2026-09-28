@@ -108,16 +108,6 @@ const faqSchema = {
   ]
 };
 
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: siteConfig.url },
-    { "@type": "ListItem", position: 2, name: "UNSPSC Classification", item: `${siteConfig.url}/unspsc` },
-    { "@type": "ListItem", position: 3, name: "Free UNSPSC Code Lookup", item: `${siteConfig.url}/unspsc-code-lookup` }
-  ]
-};
-
 const definedTermSetSchema = {
   "@context": "https://schema.org",
   "@type": "DefinedTermSet",
@@ -135,6 +125,7 @@ const definedTermSetSchema = {
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   setRequestLocale(locale);
+  const prefix = locale === "en" ? "" : `/${locale}`;
   const t = await getTranslations({ locale, namespace: "UnspscLookup" });
   return {
     title: t("meta.title"),
@@ -146,11 +137,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       "UNSPSC taxonomy",
       "United Nations Standard Products and Services Code",
     ],
-    alternates: { canonical: `${siteConfig.url}/unspsc-code-lookup`, languages: alternateLanguages("/unspsc-code-lookup") },
+    alternates: { canonical: `${siteConfig.url}${prefix}/unspsc-code-lookup`, languages: alternateLanguages("/unspsc-code-lookup") },
     openGraph: {
       title: t("meta.title"),
       description: t("meta.description"),
-      url: `${siteConfig.url}/unspsc-code-lookup`,
+      url: `${siteConfig.url}${prefix}/unspsc-code-lookup`,
       siteName: siteConfig.name,
       images: ["/opengraph-image"]
     }
@@ -162,6 +153,18 @@ export default async function UnspscLookupPage({ params }: { params: Promise<{ l
   setRequestLocale(locale);
   const prefix = locale === "en" ? "" : `/${locale}`;
   const t = await getTranslations({ locale, namespace: "UnspscLookup" });
+  const breadcrumbCopy = t.raw("breadcrumb") as { home: string; current: string };
+  const unspscLabel = ((await getTranslations("Unspsc")).raw("breadcrumb") as { current: string }).current;
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: breadcrumbCopy.home, item: `${siteConfig.url}${prefix}` },
+      { "@type": "ListItem", position: 2, name: unspscLabel, item: `${siteConfig.url}${prefix}/unspsc` },
+      { "@type": "ListItem", position: 3, name: breadcrumbCopy.current, item: `${siteConfig.url}${prefix}/unspsc-code-lookup` }
+    ]
+  };
 
   return (
     <>

@@ -7,18 +7,19 @@ import { alternateLanguages, siteConfig } from "@/lib/site";
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   setRequestLocale(locale);
+  const prefix = locale === "en" ? "" : `/${locale}`;
   const t = await getTranslations({ locale, namespace: "AssetManagement" });
   return {
     title: t("meta.title"),
     description: t("meta.description"),
     alternates: {
-      canonical: `${siteConfig.url}/asset-data-management`,
+      canonical: `${siteConfig.url}${prefix}/asset-data-management`,
       languages: alternateLanguages("/asset-data-management")
     },
     openGraph: {
       title: `${t("meta.title")} | Pearstop`,
       description: t("meta.description"),
-      url: `${siteConfig.url}/asset-data-management`,
+      url: `${siteConfig.url}${prefix}/asset-data-management`,
       siteName: siteConfig.name
     },
     twitter: {
