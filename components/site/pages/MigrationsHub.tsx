@@ -5,7 +5,7 @@ import { Section } from "../internal/Section";
 import { Card } from "../Card";
 import { ClosingCTA } from "../ClosingCTA";
 import { HeadlineAccent } from "../HeadlineAccent";
-import { VENDOR_LOGOS } from "../migrations/vendor-logos";
+import { logoFor } from "../migrations/vendor-logos";
 import { SampleRequestModal } from "@/components/sample-request-modal";
 import { siteConfig } from "@/lib/site";
 import { migrationEntries, basePathFor } from "@/content/migrations";
@@ -50,27 +50,35 @@ export function MigrationsHub() {
 
       <Section background="soft" paddingTop={0}>
         <div className={styles.groups}>
-          {groups.map((group) => {
-            const logo = VENDOR_LOGOS[group.vendor];
-            return (
+          {groups.map((group) => (
             <div key={group.vendor}>
-              <div className={styles.groupHeader}>
-                {logo ? (
-                  <Image src={logo.src} alt={logo.alt} width={120} height={32} className={styles.groupLogo} />
-                ) : null}
-                <h2 className={styles.groupTitle}>{group.vendor}</h2>
-              </div>
+              <h2 className={styles.groupTitle}>{group.vendor}</h2>
               <div className={styles.cardGrid}>
-                {group.entries.map((entry) => (
-                  <Link href={`${basePathFor(entry)}/${entry.slug}`} key={entry.slug} className={styles.cardLink}>
-                    <Card title={entry.h1} body={entry.kind === "migration" ? entry.trigger : entry.intro} variant="plain" />
-                  </Link>
-                ))}
+                {group.entries.map((entry) => {
+                  const logo = logoFor(entry);
+                  return (
+                    <Link href={`${basePathFor(entry)}/${entry.slug}`} key={entry.slug} className={styles.cardLink}>
+                      <Card
+                        title={entry.h1}
+                        body={entry.kind === "migration" ? entry.trigger : entry.intro}
+                        variant="plain"
+                        icon={
+                          logo ? (
+                            <Image src={logo.src} alt={logo.alt} width={logo.width} height={logo.height} className={styles.cardLogo} />
+                          ) : undefined
+                        }
+                      />
+                    </Link>
+                  );
+                })}
               </div>
             </div>
-            );
-          })}
+          ))}
         </div>
+        <p className={styles.trademarkNote}>
+          System names and logos are trademarks of their respective owners. Pearstop is not affiliated with or
+          endorsed by any of them.
+        </p>
       </Section>
 
       <ClosingCTA
