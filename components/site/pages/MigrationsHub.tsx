@@ -1,9 +1,11 @@
+import Image from "next/image";
 import Link from "next/link";
 import { dsRoot } from "../tokens";
 import { Section } from "../internal/Section";
 import { Card } from "../Card";
 import { ClosingCTA } from "../ClosingCTA";
 import { HeadlineAccent } from "../HeadlineAccent";
+import { VENDOR_LOGOS } from "../migrations/vendor-logos";
 import { SampleRequestModal } from "@/components/sample-request-modal";
 import { siteConfig } from "@/lib/site";
 import { migrationEntries, basePathFor } from "@/content/migrations";
@@ -48,9 +50,16 @@ export function MigrationsHub() {
 
       <Section background="soft" paddingTop={0}>
         <div className={styles.groups}>
-          {groups.map((group) => (
+          {groups.map((group) => {
+            const logo = VENDOR_LOGOS[group.vendor];
+            return (
             <div key={group.vendor}>
-              <h2 className={styles.groupTitle}>{group.vendor}</h2>
+              <div className={styles.groupHeader}>
+                {logo ? (
+                  <Image src={logo.src} alt={logo.alt} width={120} height={32} className={styles.groupLogo} />
+                ) : null}
+                <h2 className={styles.groupTitle}>{group.vendor}</h2>
+              </div>
               <div className={styles.cardGrid}>
                 {group.entries.map((entry) => (
                   <Link href={`${basePathFor(entry)}/${entry.slug}`} key={entry.slug} className={styles.cardLink}>
@@ -59,7 +68,8 @@ export function MigrationsHub() {
                 ))}
               </div>
             </div>
-          ))}
+            );
+          })}
         </div>
       </Section>
 

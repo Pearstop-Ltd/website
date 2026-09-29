@@ -107,6 +107,7 @@ export const solutionLinks: NavLink[] = [
     href: "/data-quality",
     description: "The clean, structured data an ERP migration, Microsoft Fabric, or an AI initiative all depend on.",
     children: [
+      { label: "ERP Migrations", href: "/migrations" },
       { label: "Fabric Ready", href: "/fabric" },
       { label: "AI Readiness", href: "/ai-readiness" }
     ]
@@ -136,6 +137,7 @@ export const footerCompanyLinks: NavLink[] = [
 export const footerSolutionLinks: NavLink[] = [
   { label: "Invoice & Document Extraction", href: "/invoice-data-extraction" },
   { label: "Data Readiness", href: "/data-quality" },
+  { label: "ERP Migrations", href: "/migrations" },
   { label: "Spend Visibility", href: "/procurement-data-quality" },
   { label: "Spend Cube & Dashboards", href: "/spend-cube" },
   { label: "Asset Data Management", href: "/asset-data-management" },

@@ -98,7 +98,6 @@ export const migrationEntries: MigrationEntry[] = [
         a: "Classify every spend line to one standard, such as UNSPSC, before it moves, so category totals in S/4HANA match what your old system reported and nothing has to be reconciled after go-live.",
       },
     ],
-    proof: { stat: "77,000 lines", label: "classified to UNSPSC for a one-time S/4HANA migration (anonymised)" },
     relatedSlugs: [
       "/unspsc",
       "/procurement-data-quality",
@@ -952,7 +951,6 @@ export const migrationEntries: MigrationEntry[] = [
         a: "Yes. It fits naturally alongside the rest of the material master cleanup an S/4HANA migration already requires, and doing it during the assessment phase means the classified data is ready for the same test runs as everything else.",
       },
     ],
-    proof: { stat: "77,000 lines", label: "classified to UNSPSC for a one-time S/4HANA migration (anonymised)" },
     relatedSlugs: [
       "/eclass/eclass-classification",
       "/eclass/eclass-to-unspsc-mapping",

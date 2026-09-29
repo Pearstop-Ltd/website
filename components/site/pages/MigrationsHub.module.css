@@ -36,11 +36,25 @@
   gap: 56px;
 }
 
-.groupTitle {
+.groupHeader {
+  display: flex;
+  align-items: center;
+  gap: 14px;
   margin: 0 0 20px;
+}
+
+.groupTitle {
+  margin: 0;
   font-size: 24px;
   font-weight: 600;
   color: var(--navy);
+}
+
+.groupLogo {
+  height: 28px;
+  width: auto;
+  object-fit: contain;
+  object-position: left center;
 }
 
 .cardGrid {
