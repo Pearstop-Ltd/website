@@ -5,7 +5,7 @@ import { UnspscTree } from "@/components/unspsc-tree";
 import { CalendlyButton } from "@/components/calendly-button";
 import { GeoBlock } from "@/components/content";
 import { Faq } from "@/components/site/Faq";
-import { demoData, unspscDataSource, treeStats } from "@/lib/unspsc-demo-data";
+import { treeShell, unspscDataSource, treeShellStats as treeStats } from "@/lib/unspsc-tree-shell";
 import { alternateLanguages, siteConfig } from "@/lib/site";
 
 const PAGE_URL = `${siteConfig.url}/unspsc-classification-demo`;
@@ -89,7 +89,7 @@ const breadcrumbSchema = {
   ],
 };
 
-const allSegments = demoData.flatMap((group) => group.segments);
+const allSegments = treeShell.flatMap((group) => group.segments);
 
 const segmentListSchema = {
   "@context": "https://schema.org",

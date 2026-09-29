@@ -1,9 +1,10 @@
 // Server-only: the full official UNSPSC codeset (v260801, UNDP/UNGM export),
-// ~149,000 commodities across 58 segments - about 14x the size of the curated
-// subset used by the public taxonomy browser (lib/unspsc-demo-data.ts). At
-// ~12MB this must never be imported from a client component; it exists purely
-// to back server-side search/classification (lib/unspsc-search.ts and
-// app/api/unspsc-lookup/route.ts).
+// ~149,000 commodities across 58 segments. At ~12MB this must never be
+// imported from a client component; it backs both the classification search
+// (lib/unspsc-search.ts / app/api/unspsc-lookup/route.ts) and the interactive
+// taxonomy browser's on-demand commodity/search endpoints
+// (lib/unspsc-tree-server.ts) - the browser itself only ever ships the
+// lightweight segment/family/class shell (lib/unspsc-tree-shell.ts).
 import fullTreeData from "./data/unspsc-official-full.json";
 
 interface RawCommodity { code: string; title: string }

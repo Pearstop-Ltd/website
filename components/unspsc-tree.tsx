@@ -1,10 +1,10 @@
 "use client";
 
 import { useState, useEffect, useMemo, useRef, useDeferredValue } from "react";
-import { demoData, type UNSPSCCommodity } from "@/lib/unspsc-demo-data";
+import { treeShell, type ShellClass } from "@/lib/unspsc-tree-shell";
 
-/* ── Flat search index, built once from the static dataset ── */
-interface IndexNode {
+/* ── Node shape shared by the shell tree and by lazily-fetched commodities/search results ── */
+interface TreeNode {
   id: string;
   level: 0 | 1 | 2 | 3 | 4; // group, segment, family, class, commodity
   code: string;
@@ -14,92 +14,48 @@ interface IndexNode {
   childCount: number;
   description?: string;
   exampleItems?: string[];
-  searchText: string;
-  words: string[];
 }
 
-function tokenize(s: string): string[] {
-  return s.toLowerCase().split(/[^a-z0-9]+/).filter(Boolean);
+interface FetchedCommodity {
+  code: string;
+  title: string;
+  description?: string;
+  exampleItems?: string[];
 }
 
-function buildIndex(): IndexNode[] {
-  const nodes: Array<Omit<IndexNode, "words">> = [];
-  for (const group of demoData) {
-    const groupPath = [group.title];
-    nodes.push({
-      id: group.code,
-      level: 0,
-      code: group.code,
-      title: group.title,
-      color: group.color,
-      path: [],
-      childCount: group.segments.length,
-      searchText: `${group.code} ${group.title}`.toLowerCase(),
+/* ── shell node lookup (groups/segments/families/classes only - no commodities) ── */
+const SHELL_BY_ID = new Map<string, TreeNode>();
+for (const group of treeShell) {
+  const groupPath: string[] = [];
+  SHELL_BY_ID.set(group.code, {
+    id: group.code, level: 0, code: group.code, title: group.title, color: group.color,
+    path: groupPath, childCount: group.segments.length,
+  });
+  for (const segment of group.segments) {
+    const segId = `${group.code}|${segment.code}`;
+    const segPath = [group.title];
+    SHELL_BY_ID.set(segId, {
+      id: segId, level: 1, code: segment.code, title: segment.title, color: group.color,
+      path: segPath, childCount: segment.families.length,
     });
-    for (const segment of group.segments) {
-      const segId = `${group.code}|${segment.code}`;
-      const segPath = [...groupPath, segment.title];
-      nodes.push({
-        id: segId,
-        level: 1,
-        code: segment.code,
-        title: segment.title,
-        color: group.color,
-        path: groupPath,
-        childCount: segment.families.length,
-        searchText: `${segment.code} ${segment.title}`.toLowerCase(),
+    for (const family of segment.families) {
+      const famId = `${segId}|${family.code}`;
+      const famPath = [...segPath, segment.title];
+      SHELL_BY_ID.set(famId, {
+        id: famId, level: 2, code: family.code, title: family.title, color: group.color,
+        path: famPath, childCount: family.classes.length,
       });
-      for (const family of segment.families) {
-        const famId = `${segId}|${family.code}`;
-        const famPath = [...segPath, family.title];
-        nodes.push({
-          id: famId,
-          level: 2,
-          code: family.code,
-          title: family.title,
-          color: group.color,
-          path: segPath,
-          childCount: family.classes.length,
-          searchText: `${family.code} ${family.title}`.toLowerCase(),
+      for (const cls of family.classes) {
+        const clsId = `${famId}|${cls.code}`;
+        const clsPath = [...famPath, family.title];
+        SHELL_BY_ID.set(clsId, {
+          id: clsId, level: 3, code: cls.code, title: cls.title, color: group.color,
+          path: clsPath, childCount: cls.commodityCount,
         });
-        for (const cls of family.classes) {
-          const clsId = `${famId}|${cls.code}`;
-          const clsPath = [...famPath, cls.title];
-          nodes.push({
-            id: clsId,
-            level: 3,
-            code: cls.code,
-            title: cls.title,
-            color: group.color,
-            path: famPath,
-            childCount: cls.commodities.length,
-            searchText: `${cls.code} ${cls.title}`.toLowerCase(),
-          });
-          for (const commodity of cls.commodities) {
-            const comId = `${clsId}|${commodity.code}`;
-            const extra = [commodity.description ?? "", ...(commodity.exampleItems ?? [])].join(" ");
-            nodes.push({
-              id: comId,
-              level: 4,
-              code: commodity.code,
-              title: commodity.title,
-              color: group.color,
-              path: clsPath,
-              childCount: 0,
-              description: commodity.description,
-              exampleItems: commodity.exampleItems,
-              searchText: `${commodity.code} ${commodity.title} ${extra}`.toLowerCase(),
-            });
-          }
-        }
       }
     }
   }
-  return nodes.map((n) => ({ ...n, words: tokenize(n.searchText) }));
 }
-
-const SEARCH_INDEX = buildIndex();
-const NODE_BY_ID = new Map(SEARCH_INDEX.map((n) => [n.id, n]));
 
 function ancestorIds(id: string): string[] {
   const parts = id.split("|");
@@ -108,90 +64,14 @@ function ancestorIds(id: string): string[] {
   return ids;
 }
 
-interface SearchMatch extends IndexNode {
+/** classId ("group|segment|family|class") -> the six-digit class code at the end. */
+function classCodeFromId(classId: string): string {
+  const parts = classId.split("|");
+  return parts[parts.length - 1];
+}
+
+interface SearchMatch extends TreeNode {
   rank: number;
-}
-
-// Iterative Levenshtein edit distance — used only as a fallback for short word
-// lists, so a one- or two-letter typo still finds the right commodity.
-function levenshtein(a: string, b: string): number {
-  if (a === b) return 0;
-  const al = a.length, bl = b.length;
-  if (al === 0) return bl;
-  if (bl === 0) return al;
-  let prev = new Array(bl + 1);
-  for (let j = 0; j <= bl; j++) prev[j] = j;
-  for (let i = 1; i <= al; i++) {
-    const curr = new Array(bl + 1);
-    curr[0] = i;
-    for (let j = 1; j <= bl; j++) {
-      const cost = a[i - 1] === b[j - 1] ? 0 : 1;
-      curr[j] = Math.min(curr[j - 1] + 1, prev[j] + 1, prev[j - 1] + cost);
-    }
-    prev = curr;
-  }
-  return prev[bl];
-}
-
-// Does query token `token` match dataset word `word`? "tight" = exact/prefix/substring
-// (no typo involved); a non-tight hit means it only matched via fuzzy distance.
-function wordMatches(token: string, word: string): { hit: boolean; tight: boolean } {
-  if (word === token || word.startsWith(token) || token.startsWith(word)) return { hit: true, tight: true };
-  if (token.length >= 3 && word.includes(token)) return { hit: true, tight: true };
-  if (token.length >= 3 && Math.abs(word.length - token.length) <= 2) {
-    const maxDist = token.length <= 5 ? 1 : 2;
-    if (levenshtein(token, word) <= maxDist) return { hit: true, tight: false };
-  }
-  return { hit: false, tight: false };
-}
-
-function search(query: string): SearchMatch[] {
-  const q = query.trim().toLowerCase();
-  if (q.length < 1) return [];
-  const tokens = tokenize(q);
-  const results: SearchMatch[] = [];
-
-  for (const node of SEARCH_INDEX) {
-    const titleLower = node.title.toLowerCase();
-    const codeLower = node.code.toLowerCase();
-    let rank: number | null = null;
-
-    // Phrase-level matches first — a query typed as a contiguous phrase that
-    // appears in the title/code/description ranks above everything else.
-    if (codeLower === q) rank = 0;
-    else if (titleLower === q) rank = 1;
-    else if (titleLower.startsWith(q)) rank = 2;
-    else if (codeLower.startsWith(q)) rank = 3;
-    else if (titleLower.includes(q)) rank = 4;
-    else if (codeLower.includes(q)) rank = 5;
-    else if (node.searchText.includes(q)) rank = 6;
-
-    // Fall back to order-independent, typo-tolerant token matching: every word
-    // typed has to show up somewhere on the node (title, code, description or
-    // example items), in any order, allowing a small spelling mistake.
-    if (rank === null && tokens.length > 0) {
-      let allMatched = true;
-      let fuzzyCount = 0;
-      for (const token of tokens) {
-        let tokenHit = false;
-        let tokenTight = false;
-        for (const word of node.words) {
-          const m = wordMatches(token, word);
-          if (m.hit) {
-            tokenHit = true;
-            if (m.tight) { tokenTight = true; break; }
-          }
-        }
-        if (!tokenHit) { allMatched = false; break; }
-        if (!tokenTight) fuzzyCount++;
-      }
-      if (allMatched) rank = 7 + fuzzyCount;
-    }
-
-    if (rank !== null) results.push({ ...node, rank });
-  }
-  results.sort((a, b) => (a.rank - b.rank) || (a.level - b.level) || a.title.localeCompare(b.title));
-  return results.slice(0, 60);
 }
 
 /* ── styles ── */
@@ -305,10 +185,10 @@ function useCSS() {
 
 /* ── one row, any level ── */
 function Row({
-  node, depth, expanded, onToggle, rowRef, boxed, matched,
+  node, depth, expanded, onToggle, rowRef, boxed, matched, loading,
 }: {
-  node: IndexNode; depth: number; expanded: boolean; onToggle: () => void;
-  rowRef?: (el: HTMLDivElement | null) => void; boxed?: boolean; matched?: boolean;
+  node: TreeNode; depth: number; expanded: boolean; onToggle: () => void;
+  rowRef?: (el: HTMLDivElement | null) => void; boxed?: boolean; matched?: boolean; loading?: boolean;
 }) {
   const canExpand = node.level === 4 ? !!(node.description || (node.exampleItems && node.exampleItems.length > 0)) : node.childCount > 0;
   return (
@@ -322,9 +202,11 @@ function Row({
         transition: "box-shadow 200ms ease, background 200ms ease",
       }}
     >
-      <button type="button" className="ut-row" onClick={onToggle} disabled={!canExpand} style={{ cursor: canExpand ? "pointer" : "default" }}>
+      <button type="button" className="ut-row" onClick={onToggle} disabled={!canExpand && !loading} style={{ cursor: canExpand || loading ? "pointer" : "default" }}>
         <span className={`ut-chevron-btn${expanded ? " open" : ""}`}>
-          {canExpand ? (
+          {loading ? (
+            <span style={{ width: 8, height: 8, borderRadius: "50%", border: "1.5px solid #cbd5e1", borderTopColor: "#64748b", display: "inline-block", animation: "ut-spin 600ms linear infinite" }} />
+          ) : canExpand ? (
             <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
               <path d="M3 1.5l4.5 3.5L3 8.5" stroke="#94a3b8" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
@@ -343,7 +225,7 @@ function Row({
 }
 
 /* ── inline commodity detail ── */
-function CommodityDetail({ node, depth }: { node: IndexNode; depth: number }) {
+function CommodityDetail({ node, depth }: { node: TreeNode; depth: number }) {
   return (
     <div className="ut-detail" style={{ paddingLeft: 8 + depth * 20 + 20, paddingRight: 12, paddingBottom: 10 }}>
       <div style={{
@@ -379,32 +261,40 @@ function CommodityDetail({ node, depth }: { node: IndexNode; depth: number }) {
 
 /* ── recursive branch: renders a node's children (if expanded) ── */
 function Children({
-  parentId, level, items, expandedIds, onToggle, rowRefs, pickedId, matchIds,
+  parentId, level, items, expandedIds, onToggle, rowRefs, pickedId, matchIds, loadedCommodities, loadingClassIds,
 }: {
   parentId: string; level: 0 | 1 | 2 | 3 | 4; items: { code: string; title: string }[];
-  expandedIds: Set<string>; onToggle: (id: string) => void;
+  expandedIds: Set<string>; onToggle: (id: string, node: TreeNode) => void;
   rowRefs: React.MutableRefObject<Map<string, HTMLDivElement | null>>;
   pickedId: string | null; matchIds: Set<string>;
+  loadedCommodities: Map<string, FetchedCommodity[]>;
+  loadingClassIds: Set<string>;
 }) {
   return (
     <div className="ut-children-enter">
       {items.map((item) => {
         const id = parentId ? `${parentId}|${item.code}` : item.code;
-        const node = NODE_BY_ID.get(id)!;
+        const node = nodeFor(id, level, item);
+        if (!node) return null;
         const isOpen = expandedIds.has(id);
+        const isLoading = level === 3 && isOpen && loadingClassIds.has(id);
         return (
           <div key={id}>
             <Row
               node={node}
               depth={level}
               expanded={isOpen}
-              onToggle={() => onToggle(id)}
+              onToggle={() => onToggle(id, node)}
               rowRef={(el) => rowRefs.current.set(id, el)}
               boxed={pickedId === id}
               matched={pickedId !== id && matchIds.has(id)}
+              loading={isLoading}
             />
             {isOpen && node.level !== 4 && (
-              <Branch id={id} level={node.level} expandedIds={expandedIds} onToggle={onToggle} rowRefs={rowRefs} pickedId={pickedId} matchIds={matchIds} />
+              <Branch
+                id={id} level={node.level} expandedIds={expandedIds} onToggle={onToggle} rowRefs={rowRefs}
+                pickedId={pickedId} matchIds={matchIds} loadedCommodities={loadedCommodities} loadingClassIds={loadingClassIds}
+              />
             )}
             {isOpen && node.level === 4 && <CommodityDetail node={node} depth={level} />}
           </div>
@@ -414,46 +304,73 @@ function Children({
   );
 }
 
+function nodeFor(
+  id: string,
+  level: 0 | 1 | 2 | 3 | 4,
+  item: { code: string; title: string }
+): TreeNode | null {
+  if (level < 4) return SHELL_BY_ID.get(id) ?? null;
+  // Level 4: item is a fetched commodity, not in the shell. Reconstruct its
+  // node shape (path/color) from its parent class, which is in the shell.
+  const parts = id.split("|");
+  const classId = parts.slice(0, 4).join("|");
+  const classNode = SHELL_BY_ID.get(classId);
+  if (!classNode) return null;
+  const commodity = item as FetchedCommodity;
+  return {
+    id, level: 4, code: commodity.code, title: commodity.title, color: classNode.color,
+    path: [...classNode.path, classNode.title], childCount: 0,
+    description: commodity.description, exampleItems: commodity.exampleItems,
+  };
+}
+
 function Branch({
-  id, level, expandedIds, onToggle, rowRefs, pickedId, matchIds,
+  id, level, expandedIds, onToggle, rowRefs, pickedId, matchIds, loadedCommodities, loadingClassIds,
 }: {
   id: string; level: 0 | 1 | 2 | 3;
-  expandedIds: Set<string>; onToggle: (id: string) => void;
+  expandedIds: Set<string>; onToggle: (id: string, node: TreeNode) => void;
   rowRefs: React.MutableRefObject<Map<string, HTMLDivElement | null>>;
   pickedId: string | null; matchIds: Set<string>;
+  loadedCommodities: Map<string, FetchedCommodity[]>;
+  loadingClassIds: Set<string>;
 }) {
   const parts = id.split("|");
-  const group = demoData.find((g) => g.code === parts[0]);
+  const group = treeShell.find((g) => g.code === parts[0]);
   if (level === 0) {
     const segments = group?.segments ?? [];
-    return <Children parentId={id} level={1} items={segments} expandedIds={expandedIds} onToggle={onToggle} rowRefs={rowRefs} pickedId={pickedId} matchIds={matchIds} />;
+    return <Children parentId={id} level={1} items={segments} expandedIds={expandedIds} onToggle={onToggle} rowRefs={rowRefs} pickedId={pickedId} matchIds={matchIds} loadedCommodities={loadedCommodities} loadingClassIds={loadingClassIds} />;
   }
   const segment = group?.segments.find((s) => s.code === parts[1]);
   if (level === 1) {
     const families = segment?.families ?? [];
-    return <Children parentId={id} level={2} items={families} expandedIds={expandedIds} onToggle={onToggle} rowRefs={rowRefs} pickedId={pickedId} matchIds={matchIds} />;
+    return <Children parentId={id} level={2} items={families} expandedIds={expandedIds} onToggle={onToggle} rowRefs={rowRefs} pickedId={pickedId} matchIds={matchIds} loadedCommodities={loadedCommodities} loadingClassIds={loadingClassIds} />;
   }
   const family = segment?.families.find((f) => f.code === parts[2]);
   if (level === 2) {
     const classes = family?.classes ?? [];
-    return <Children parentId={id} level={3} items={classes} expandedIds={expandedIds} onToggle={onToggle} rowRefs={rowRefs} pickedId={pickedId} matchIds={matchIds} />;
+    return <Children parentId={id} level={3} items={classes} expandedIds={expandedIds} onToggle={onToggle} rowRefs={rowRefs} pickedId={pickedId} matchIds={matchIds} loadedCommodities={loadedCommodities} loadingClassIds={loadingClassIds} />;
   }
-  const cls = family?.classes.find((c) => c.code === parts[3]);
-  const commodities: UNSPSCCommodity[] = cls?.commodities ?? [];
-  return <Children parentId={id} level={4} items={commodities} expandedIds={expandedIds} onToggle={onToggle} rowRefs={rowRefs} pickedId={pickedId} matchIds={matchIds} />;
+  const cls: ShellClass | undefined = family?.classes.find((c) => c.code === parts[3]);
+  const commodities: FetchedCommodity[] = loadedCommodities.get(id) ?? [];
+  if (!cls) return null;
+  return <Children parentId={id} level={4} items={commodities} expandedIds={expandedIds} onToggle={onToggle} rowRefs={rowRefs} pickedId={pickedId} matchIds={matchIds} loadedCommodities={loadedCommodities} loadingClassIds={loadingClassIds} />;
 }
 
 /* ── search results list ── */
 function SearchResults({
-  matches, onPick,
+  matches, onPick, isSearching,
 }: {
-  matches: SearchMatch[]; onPick: (node: IndexNode) => void;
+  matches: SearchMatch[]; onPick: (node: TreeNode) => void; isSearching: boolean;
 }) {
   if (matches.length === 0) {
-    return <div style={{ padding: "20px 12px", textAlign: "center", color: "#c0c8d8", fontSize: "0.85rem" }}>No matches. Try a different word or code.</div>;
+    return (
+      <div style={{ padding: "20px 12px", textAlign: "center", color: "#c0c8d8", fontSize: "0.85rem" }}>
+        {isSearching ? "Searching…" : "No matches. Try a different word or code."}
+      </div>
+    );
   }
   return (
-    <div>
+    <div style={{ opacity: isSearching ? 0.6 : 1, transition: "opacity 150ms" }}>
       {matches.map((m) => (
         <button
           key={m.id}
@@ -482,6 +399,20 @@ function SearchResults({
   );
 }
 
+async function fetchClassCommodities(classCode: string): Promise<FetchedCommodity[]> {
+  const res = await fetch(`/api/unspsc-tree/commodities?class=${encodeURIComponent(classCode)}`);
+  if (!res.ok) return [];
+  const data = await res.json();
+  return Array.isArray(data.commodities) ? data.commodities : [];
+}
+
+async function fetchSearchMatches(query: string): Promise<SearchMatch[]> {
+  const res = await fetch(`/api/unspsc-tree/search?q=${encodeURIComponent(query)}`);
+  if (!res.ok) return [];
+  const data = await res.json();
+  return Array.isArray(data.matches) ? data.matches : [];
+}
+
 /* ── Root ── */
 export function UnspscTree() {
   useCSS();
@@ -489,30 +420,67 @@ export function UnspscTree() {
   const [query, setQuery] = useState("");
   const deferredQuery = useDeferredValue(query);
   const [scrollToId, setScrollToId] = useState<string | null>(null);
-  // pickedId: the specific match the user clicked. Set means "show the tree,
-  // with every current match highlighted and this one boxed"; null while the
-  // user is still typing/choosing, which shows the flat results list instead.
   const [pickedId, setPickedId] = useState<string | null>(null);
   const rowRefs = useRef<Map<string, HTMLDivElement | null>>(new Map());
 
-  const matches = useMemo(() => search(deferredQuery), [deferredQuery]);
+  const [loadedCommodities, setLoadedCommodities] = useState<Map<string, FetchedCommodity[]>>(new Map());
+  const [loadingClassIds, setLoadingClassIds] = useState<Set<string>>(new Set());
+
+  const [matches, setMatches] = useState<SearchMatch[]>([]);
+  const [isSearching, setIsSearching] = useState(false);
+  const searchSeq = useRef(0);
+
   const matchIds = useMemo(() => new Set(matches.map((m) => m.id)), [matches]);
 
-  // Scroll to a freshly-picked search result once its ancestors have expanded.
+  // Debounced server search - the full ~150k-commodity search runs server-side
+  // (see app/api/unspsc-tree/search), never shipped to the browser.
+  useEffect(() => {
+    const q = deferredQuery.trim();
+    if (q.length === 0) {
+      setMatches([]);
+      setIsSearching(false);
+      return;
+    }
+    setIsSearching(true);
+    const seq = ++searchSeq.current;
+    const timer = setTimeout(() => {
+      fetchSearchMatches(q).then((results) => {
+        if (searchSeq.current === seq) {
+          setMatches(results);
+          setIsSearching(false);
+        }
+      });
+    }, 200);
+    return () => clearTimeout(timer);
+  }, [deferredQuery]);
+
   useEffect(() => {
     if (!scrollToId) return;
     const el = rowRefs.current.get(scrollToId);
     if (el) el.scrollIntoView({ behavior: "smooth", block: "center" });
     setScrollToId(null);
-  }, [scrollToId, expandedIds]);
+  }, [scrollToId, expandedIds, loadedCommodities]);
 
-  const toggle = (id: string) => {
+  const loadClass = async (classId: string) => {
+    if (loadedCommodities.has(classId) || loadingClassIds.has(classId)) return;
+    setLoadingClassIds((prev) => new Set(prev).add(classId));
+    const commodities = await fetchClassCommodities(classCodeFromId(classId));
+    setLoadedCommodities((prev) => new Map(prev).set(classId, commodities));
+    setLoadingClassIds((prev) => {
+      const next = new Set(prev);
+      next.delete(classId);
+      return next;
+    });
+  };
+
+  const toggle = (id: string, node: TreeNode) => {
     setExpandedIds((prev) => {
       const next = new Set(prev);
       if (next.has(id)) next.delete(id);
       else next.add(id);
       return next;
     });
+    if (node.level === 3 && !loadedCommodities.has(id)) void loadClass(id);
   };
 
   const clearSearch = () => {
@@ -520,13 +488,22 @@ export function UnspscTree() {
     setPickedId(null);
   };
 
-  const pickResult = (node: IndexNode) => {
+  const pickResult = async (node: TreeNode) => {
     setPickedId(node.id);
-    // Expand enough of the tree that every current match is visible at once,
-    // not just the one clicked. The clicked node also opens its own children
-    // (if it has any) since that's the one the user is actually looking at;
-    // every other match only gets its ancestor path opened, so the row itself
-    // is visible without also popping open its detail/children.
+
+    // Every commodity-level match's parent class is about to be marked
+    // expanded below, which only shows something once that class's
+    // commodities are fetched (they aren't in the shell). The picked node's
+    // own class is awaited so the scroll-to below has something to scroll
+    // to; the others just get a background prefetch.
+    const pickedClassId = node.level === 4 ? node.id.split("|").slice(0, 4).join("|") : null;
+    if (pickedClassId) await loadClass(pickedClassId);
+    for (const m of matches) {
+      if (m.level !== 4) continue;
+      const classId = m.id.split("|").slice(0, 4).join("|");
+      if (classId !== pickedClassId) void loadClass(classId);
+    }
+
     setExpandedIds((prev) => {
       const next = new Set(prev);
       for (const m of matches) {
@@ -543,6 +520,7 @@ export function UnspscTree() {
 
   return (
     <div className="ut-root">
+      <style>{"@keyframes ut-spin { to { transform: rotate(360deg); } }"}</style>
       <div style={{ position: "relative", marginBottom: 16 }}>
         <svg width="15" height="15" viewBox="0 0 15 15" fill="none" style={{ position: "absolute", left: 13, top: "50%", transform: "translateY(-50%)", pointerEvents: "none" }}>
           <circle cx="6.5" cy="6.5" r="5" stroke="#94a3b8" strokeWidth="1.5" />
@@ -568,17 +546,19 @@ export function UnspscTree() {
       </div>
 
       {showResultsList ? (
-        <SearchResults matches={matches} onPick={pickResult} />
+        <SearchResults matches={matches} onPick={pickResult} isSearching={isSearching} />
       ) : (
         <Children
           parentId=""
           level={0}
-          items={demoData}
+          items={treeShell}
           expandedIds={expandedIds}
           onToggle={toggle}
           rowRefs={rowRefs}
           pickedId={pickedId}
           matchIds={matchIds}
+          loadedCommodities={loadedCommodities}
+          loadingClassIds={loadingClassIds}
         />
       )}
     </div>
