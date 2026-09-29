@@ -1,0 +1,87 @@
+---
+title: "Why the same supplier has three different names across your CAFM and your ERP"
+description: "The same subcontractor can sit under three names across your CAFM and ERP. Here's how that fragmentation happens, what it breaks, and how to fix it for good."
+date: "2026-09-28"
+category: "Data Quality"
+slug: "why-the-same-supplier-has-three-names-cafm-erp"
+author: "rae"
+lang: "en"
+---
+
+**Quick answer:** The same subcontractor often appears under three names — a legal entity in the ERP, a trading name in CAFM, and a separate record for a regional branch — because each system collects supplier names for a different purpose. That fragmentation splits spend totals, hides real supplier concentration, and breaks reconciliation between systems. The fix is supplier matching: mapping every variant to one canonical, validated supplier record.
+
+On this page: [One subcontractor, three names](#one-subcontractor-three-names) · [How it happens](#how-it-happens) · [What breaks](#what-breaks) · [How to spot it](#how-to-spot-it) · [How to fix it](#how-to-fix-it) · [Where Pearstop fits](#where-pearstop-fits) · [FAQ](#frequently-asked-questions)
+
+Ask your CAFM for last year's spend with your main HVAC subcontractor. Then ask your ERP the same question. In many FM organisations the two answers will differ, sometimes by a wide margin.
+
+Usually nobody has made a mistake. Both systems hold the same supplier under different names, and nothing links them. The gap stays invisible until someone puts two reports side by side and the totals stop adding up.
+
+This piece covers how that fragmentation builds up, what it breaks, how to spot it and how to fix it for good.
+
+## One subcontractor, three names
+
+Here is an illustrative example. The company is invented. The pattern is common in FM spend data.
+
+An HVAC subcontractor is registered as Ashgrove Climate Services Ltd. That is the name in the ERP vendor master, set up by finance from the company's registration documents.
+
+On site, engineers know the firm as "Ashgrove Aircon", the name on the vans. That is what the helpdesk and site teams type into CAFM work orders.
+
+Two years ago Ashgrove opened a northern branch, which invoices with its own address and bank details. Accounts payable created a second vendor record for it: "Ashgrove Climate (North)".
+
+Three names, one supplier. Each record is correct in its own system. None of them knows about the others.
+
+## How it happens
+
+Each system collects supplier names for a different purpose, from different people, at different moments.
+
+**CAFM work orders.** Site teams and helpdesk staff assign jobs to subcontractors quickly. They type or pick the name they use day to day. Free-text fields collect abbreviations, spelling variants and nicknames.
+
+**The ERP vendor master.** Finance sets up vendors as legal entities, because payment, tax and contracts attach to the entity. In the UK, a limited company can trade under a name different from its registered name. Its invoices must still show the full registered company name. So the ERP tends to hold the legal name while site teams use the trading name.
+
+**AP and invoice data.** Invoices arrive with whatever name, address and bank details the supplier prints. When a branch or a new billing entity appears, the quickest route is often a new vendor record.
+
+**Regional branches.** A national subcontractor may run several regional offices. Some invoice under the parent entity, some under their own. Each can end up as a separate supplier.
+
+**Acquisitions.** When a larger group buys a subcontractor, the subcontractor's name may stay the same for years while the owner changes. Your data shows two independent suppliers. Commercially, you are dealing with one group.
+
+Each of these steps makes sense on its own. Nobody owns the link between them.
+
+## What breaks
+
+**Supplier spend totals.** Spend with one supplier is split across several records. Your top-supplier list understates your largest relationships and can rank the wrong supplier first.
+
+**Concentration and risk views.** If three records belong to one group, your dependence on that group is higher than any single record shows. A supplier failure or a price increase hits all three at once.
+
+**Rebates and contract compliance.** If a rebate is agreed at group level and spend sits under unlinked names, you can't show the full volume. Off-contract spend with a branch can also go unnoticed.
+
+**Category reports that disagree.** CAFM reports built on work orders and ERP reports built on invoices both show HVAC maintenance spend. With different supplier keys, they never reconcile. Review meetings then turn into arguments about whose number is right.
+
+Classification suffers too. A line from an unrecognised supplier name gives a classifier less context to work with. We covered this in [why supplier matching is the real bottleneck](https://pearstop.com/blog/supplier-matching-classification-bottleneck).
+
+## How to spot it
+
+A few checks will tell you quickly whether you have the problem.
+
+- **Compare counts.** Export supplier lists from both systems. If your CAFM holds far more subcontractor names than your ERP has active vendors for the same services, variants are likely.
+- **Sort and scan.** Sort names alphabetically and look at neighbours. Variants often share a first word or an abbreviation.
+- **Match on identifiers.** Bank details, VAT numbers and company registration numbers make better matching keys than names. In the UK, a company's registration number stays the same when it changes its name.
+- **Trace your top ten.** Take your top ten suppliers by ERP spend and search for each one in CAFM. Count the variants.
+- **Reconcile one category.** Pick HVAC maintenance, for example, and compare both systems for one quarter. Where the totals differ, trace the gap back to supplier records.
+
+These checks show the scale of the problem. Like the [manufacturer and type field swap](https://pearstop.com/blog/manufacturer-type-field-swap-spend-data), fragmentation stays hidden because every individual record looks plausible.
+
+## How to fix it
+
+**Match every variant to one parent.** Supplier matching, or normalisation, maps each name variant to a single canonical supplier. It also links entities and branches to their parent group. Deterministic methods catch exact matches, shared prefixes and typos. Harder cases, such as a trading name with no overlap with its legal name, need identifiers or human judgement.
+
+**Build a validated supplier list.** Keep one reference list of approved suppliers, with legal names, parent relationships and key identifiers. Match against that list. A model left to guess matches without a reference will produce wrong or invented suppliers.
+
+**Maintain the mapping rules.** New variants appear every month. Site staff change, branches open, acquisitions complete. Treat the mapping as a living set of rules, review new names as they arrive, and route uncertain matches to a person.
+
+**Report both systems on the same key.** The goal is one supplier key that CAFM and ERP data both roll up to. A shared mapping layer across both systems does this, and both systems stay as they are.
+
+## Where Pearstop fits
+
+Pearstop matches supplier names from CAFM, ERP and AP data against a validated supplier list. It then classifies each line into a taxonomy such as UNSPSC. Every classified line carries a high, medium or low confidence level. Low-confidence lines go to human review, so people spend their time on the uncertain cases.
+
+The output is a spend cube in which each supplier appears once, under its parent. CAFM and ERP spend can then be compared on the same supplier key, and the totals can finally be reconciled.

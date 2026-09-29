@@ -1,0 +1,94 @@
+---
+title: "What the four levels of UNSPSC actually tell you"
+description: "A UNSPSC code can look wrong at segment level and still be correct. Here is what each of the four levels, segment through commodity, actually tells you."
+date: "2026-09-28"
+category: "Procurement"
+slug: "what-the-four-levels-of-unspsc-tell-you"
+author: "stephanie"
+lang: "en"
+---
+
+**Quick answer:** UNSPSC is a four-level hierarchy — segment, family, class, commodity — and each level tells you something different. Segment is a broad rollup and often looks wrong at a glance; family and class are where an item's real category lives; commodity is the item itself. Judge a classification at the level you're actually claiming, not the segment title alone.
+
+On this page: [The four levels and what each one is for](#the-four-levels-and-what-each-one-is-for) · [Gloves, which are everywhere](#gloves-which-are-everywhere) · [What each step adds](#what-each-step-adds) · [Where UNSPSC stops](#where-unspsc-stops) · [The takeaway for a team doing this work](#the-takeaway-for-a-team-doing-this-work) · [FAQ](#frequently-asked-questions)
+
+In a pilot review for a facilities-management prospect, a batch of PPE lines — gloves, safety glasses, hard hats — came back classified under a segment titled "Defense and Law Enforcement and Security and Safety Equipment and Supplies".
+
+The reaction in the room was immediate, and it was fair. Nobody in that business buys weapons. Reading a segment title that starts with "Defense" against a line item that says "nitrile gloves, box of 100" looks like exactly the kind of error a classification review exists to catch.
+
+It wasn't an error. Segment 46 is where UNSPSC keeps ordinary workplace PPE. Its families run from light weapons and ammunition through to fire protection, and one of them — 46180000, Personal safety and protection — is entirely everyday safety kit: safety apparel, safety footwear, face and head protection, vision protection, hearing protectors, respiratory protection, anti-static equipment, ergonomic support aids, fall protection and rescue equipment, decontamination aids, personal safety devices. Hard hats are 46181701. Safety glasses are 46181802. Safety shoes are 46181605. Lab coats are 46181532. The codes were right.
+
+What went wrong was the level people read them at. A segment title is a rollup label for a group of families, not a description of the item in front of you. If you judge a classification by its segment, you will keep finding errors that aren't there — and miss the ones that are.
+
+## The four levels and what each one is for
+
+UNSPSC is a four-level hierarchy, one two-digit pair per level:
+
+| Level | Code shape | What it groups | How much it tells you about the item |
+|---|---|---|---|
+| Segment | XX-00-00-00 | The broadest grouping of families | Very little. Treat it as a reporting rollup. |
+| Family | XX-XX-00-00 | Interrelated commodity categories | Narrows meaningfully — often the first useful signal. |
+| Class | XX-XX-XX-00 | Commodities sharing a use or function | This is where the code becomes about your item. |
+| Commodity | XX-XX-XX-XX | The substitutable item itself | The item, as far as UNSPSC goes. |
+
+Two things about that structure are worth being precise on.
+
+First, the trailing zeros are semantics, not padding. 46000000 is a real row in the code set whose title is the segment name; 46180000 is a real row whose title is the family name. A code ending in six zeros is not an incomplete eight-digit code, it is a deliberate statement that the classification stops at segment level. That distinction matters when you are measuring how far a dataset has actually been classified.
+
+Second, there is an optional fifth level. A Business Function code takes a UNSPSC identifier to ten digits and says what the transaction was — rental or lease, maintenance or repair, manufacturer, wholesaler, retailer. In practice it is rarely used. Across two independent full datasets we checked for this piece, neither contained a single ten-digit code. If you are designing a data model around it, confirm your trading partners actually populate it before you rely on it.
+
+## Gloves, which are everywhere
+
+Gloves are the clearest illustration in the whole standard, because the same physical object appears in nine different places in the tree depending on what it is *for*.
+
+| Code | Title | Path |
+|---|---|---|
+| 46181504 | Protective gloves | 46 → 46180000 Personal safety and protection → 46181500 Safety apparel |
+| 42132203 | Medical exam or non surgical procedure gloves | 42 → 42130000 Medical apparel and textiles → 42132200 Medical gloves and accessories |
+| 42132205 | Surgical gloves | 42 → 42130000 → 42132200 |
+| 42204005 | Medical radiological shielding gloves | 42 → 42200000 — a different family entirely |
+| 53102504 | Gloves or mittens | 53 Apparel and Luggage and Personal Care Products → 53100000 Clothing → 53102500 Clothing accessories |
+| 49161502 / 49161521 | Baseball gloves / Softball gloves | 49 → 49160000 → 49161500 |
+| 49171603 | Boxing gloves | 49 → 49170000 → 49171600 |
+| 49211606 | Golf gloves | 49 → 49210000 → 49211600 |
+| 49181609 | Archery gloves | 49 → 49180000 → 49181600 |
+| 48102107 | Catering gloves or glove dispensers | 48 → 48100000 → 48102100 |
+
+Look at what segment 49 does. Gloves land in four separate classes there — baseball and softball, boxing, golf, archery — because the sports segment is organised by sport, not by object. Nothing in that structure is trying to collect "gloves" in one place. The same logic explains why medical gloves sit in two unrelated families: exam and surgical gloves are soft goods worn on the hands, radiological shielding gloves are radiation protection, and the taxonomy follows function.
+
+So if your spend data has gloves distributed across segments 42, 46, 48, 49 and 53, that may be entirely correct. It depends on what the lines are.
+
+## What each step adds
+
+Take a single item — a box of medical examination gloves — and walk it down:
+
+| Code | Title | What you now know |
+|---|---|---|
+| 42000000 | Medical Equipment and Accessories and Supplies | Almost nothing. This is the same segment as MRI scanners and hospital beds. |
+| 42130000 | Medical apparel and textiles | It is a soft good, not a machine. Real progress. |
+| 42132200 | Medical gloves and accessories | Now specific: this is a glove used in a clinical context. |
+| 42132203 | Medical exam or non surgical procedure gloves | The item. |
+
+Two digits is not a quarter of the answer. The information is heavily back-loaded: the class does most of the work, and the segment does almost none. Any report or dashboard built at segment level is reporting on a very coarse rollup, whatever the titles suggest.
+
+## Where UNSPSC stops
+
+Here is the limit, stated plainly: there is no nitrile code and no latex code. A nitrile exam glove and a latex exam glove are both 42132203. We checked across roughly 148,000 commodity rows — no material-specific glove code exists anywhere in the standard. There is no gardening-glove code, no cleanroom-glove code, no electrical-insulating-glove code either; all of those route to 46181504 Protective gloves. Work gloves are PPE, not a tools-segment item.
+
+If a code turns up in a draft or a vendor output for any of those, it is fabricated. That is a useful test to keep in your back pocket.
+
+The code set is also not frozen. Class 46181500 Safety apparel differs between published vintages — 28 codes in an older dataset, 41 in a newer one, six of the additions gloves (46181540 Welder gloves and 46181541 Chemical resistant gloves among them). Which vintage your team and your client are working from is worth establishing before you argue about whether a code exists.
+
+None of this is a criticism of the standard — eight digits was never meant to get you to a SKU. But it is better to say so than to let a stakeholder believe a UNSPSC code carries material, grade and specification, and then watch that belief break a sourcing analysis.
+
+## The takeaway for a team doing this work
+
+Two things follow, and they are the practical value of understanding the levels.
+
+**Judge a classification at the level you are claiming.** The PPE lines in that pilot were right at segment, family, class and commodity. But plenty of lines are right at class and guessing at commodity — a description reading "gloves, blue, 100pk" genuinely supports 42132200 or 46181500, and picking between the eight-digit codes underneath is inference, not classification. That means a confidence score attached to "the code" is not saying anything precise. Confidence has to be about a level: high at class, medium at commodity, is a statement someone can act on. "87% confident" is not.
+
+**And accuracy alone is not the point.** What a classification system owes you is trustworthy confidence levels — high, medium, low — that hold up, so that high-confidence lines never need re-reviewing and your team's attention goes where the genuine ambiguity is. A one-off purchase only needs to land somewhere sensible without cluttering an overview. The accuracy that actually matters is on the materials you source regularly, because that is what your category work, your supplier negotiations and your ERP reporting rest on.
+
+Review is what catches the class-right, commodity-guessed cases. Pearstop is built around that split: the classification engine returns a confidence level per line and tells you which lines to review, instead of leaving you to check everything or trust everything. That is the difference between a classified dataset and a usable one.
+
+If you want to go further: [what "best in class" UNSPSC classification means](https://pearstop.com/blog/unspsc-best-in-class-by-industry) covers the confidence framing by industry, [UNSPSC vs eCl@ss](https://pearstop.com/blog/unspsc-vs-eclass-erp-reporting) covers what to do when your ERP and your reporting want different standards, and [UNSPSC classification tools compared](https://pearstop.com/blog/unspsc-classification-tools-compared) covers the options if you are choosing one.
