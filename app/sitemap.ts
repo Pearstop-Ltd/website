@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { caseStudies, siteConfig } from "@/lib/site";
 import { blogPosts } from "@/lib/blog-posts";
 import { routing } from "@/i18n/routing";
+import { migrationEntries, basePathFor } from "@/content/migrations";
 
 // Derived from routing.locales (not a second hardcoded list) so the sitemap
 // can't drift out of sync with the locales the site actually serves.
@@ -44,12 +45,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/book-a-demo",
     "/procurement-consultancies",
     "/spend-cube",
+    "/migrations",
   ];
 
   const dynamicPaths = [
     ...caseStudies.map((item) => `/cases/${item.slug}`),
     "/cases/fmo",
     ...blogPosts.map((post) => `/blog/${post.slug}`),
+    ...migrationEntries
+      .filter((entry) => entry.status === "published")
+      .map((entry) => `${basePathFor(entry)}/${entry.slug}`),
   ];
 
   const allPaths = [...staticPaths, ...dynamicPaths];

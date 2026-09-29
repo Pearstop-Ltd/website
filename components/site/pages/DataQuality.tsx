@@ -1,8 +1,11 @@
+import Link from "next/link";
 import { SolutionPage, type SolutionSection } from "../templates/SolutionPage";
+import { Section } from "../internal/Section";
 import { HeroTransform } from "../HeroTransform";
 import { ProblemBullets } from "../ProblemBullets";
 import { TrendUpIcon, LayersIcon, ZapIcon } from "../icons";
 import { SampleRequestModal } from "@/components/sample-request-modal";
+import styles from "./DataQuality.module.css";
 
 export interface DataQualityCopy {
   common: {
@@ -90,6 +93,17 @@ export function DataQualityPage({ copy }: { copy: DataQualityCopy }) {
         { title: copy.whatMakesPossible.b2.title, body: copy.whatMakesPossible.b2.copy, icon: <LayersIcon /> },
         { title: copy.whatMakesPossible.b3.title, body: copy.whatMakesPossible.b3.copy, icon: <ZapIcon /> },
       ],
+    },
+    {
+      type: "custom",
+      key: "migrationLink",
+      node: (
+        <Section paddingTop={0}>
+          <Link href="/migrations" className={styles.migrationLink}>
+            Planning an ERP migration? →
+          </Link>
+        </Section>
+      ),
     },
     {
       type: "quote",

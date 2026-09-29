@@ -1,0 +1,11 @@
+.migrationLink {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.migrationLink:hover {
+  text-decoration: underline;
+}
