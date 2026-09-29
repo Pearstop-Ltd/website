@@ -1,11 +1,15 @@
 import { SolutionPage, type SolutionSection } from "../templates/SolutionPage";
 import { HeroTransform } from "../HeroTransform";
 import { ProblemBullets } from "../ProblemBullets";
+import { ResourcesBar } from "../ResourcesBar";
+import { Section } from "../internal/Section";
 import { TrendUpIcon, LayersIcon, ZapIcon } from "../icons";
 import { SampleRequestModal } from "@/components/sample-request-modal";
 
 export interface UnspscCopy {
   common: { sendSample: string; bookDiscovery: string; howItWorksEyebrow: string; faqEyebrow: string; faqTitle: string };
+  resources: { label: string; lookup: string; tree: string; guide: string };
+  standard: { eyebrow: string; title: string; p1: string; p2: string };
   hierarchyDemo: {
     lineAsEntered: string;
     matchLabel: string;
@@ -57,8 +61,38 @@ export function UnspscPage({ copy }: { copy: UnspscCopy }) {
 
   const sections: SolutionSection[] = [
     {
+      type: "custom",
+      key: "resources",
+      node: (
+        <Section background="white" paddingTop={32} paddingBottom={32}>
+          <ResourcesBar
+            label={copy.resources.label}
+            items={[
+              { label: copy.resources.lookup, href: "/unspsc-code-lookup" },
+              { label: copy.resources.tree, href: "/unspsc-classification-demo" },
+              { label: copy.resources.guide, href: "/unspsc-ai-classification-guide" },
+            ]}
+          />
+        </Section>
+      ),
+    },
+    {
+      type: "problem",
+      key: "standard",
+      eyebrow: copy.standard.eyebrow,
+      title: copy.standard.title,
+      body: (
+        <>
+          <p>{copy.standard.p1}</p>
+          <p>{copy.standard.p2}</p>
+        </>
+      ),
+      background: "soft",
+    },
+    {
       type: "statBand",
       key: "stats",
+      paddingBottom: 32,
       stats: [
         { value: "100-100k", caption: copy.stats.s1.title },
         { value: "90-95%", caption: copy.stats.s2.title },
@@ -86,6 +120,7 @@ export function UnspscPage({ copy }: { copy: UnspscCopy }) {
     type: "steps",
     key: "howItWorks",
     anchorId: "how-it-works",
+    paddingTop: 32,
     eyebrow: copy.common.howItWorksEyebrow,
     title: copy.howItWorks.title,
     lead: copy.howItWorks.lead,

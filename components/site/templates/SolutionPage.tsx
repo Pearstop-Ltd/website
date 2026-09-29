@@ -33,7 +33,7 @@ export interface SolutionPageHero {
 }
 
 export type SolutionSection =
-  | { type: "statBand"; key?: string; stats: StatBandItem[]; background?: "white" | "soft" }
+  | { type: "statBand"; key?: string; stats: StatBandItem[]; background?: "white" | "soft"; paddingBottom?: number }
   | {
       type: "problem";
       key?: string;
@@ -70,6 +70,7 @@ export type SolutionSection =
       steps: NumberedStepProps[];
       background?: "white" | "soft";
       anchorId?: string;
+      paddingTop?: number;
     }
   | {
       type: "table";
@@ -109,7 +110,7 @@ function renderSection(section: SolutionSection) {
   switch (section.type) {
     case "statBand":
       return (
-        <Section key={section.key ?? "statBand"} background={section.background} paddingTop={0}>
+        <Section key={section.key ?? "statBand"} background={section.background} paddingTop={0} paddingBottom={section.paddingBottom}>
           <StatBand stats={section.stats} />
         </Section>
       );
@@ -159,7 +160,7 @@ function renderSection(section: SolutionSection) {
       );
     case "steps":
       return (
-        <Section key={section.key ?? "steps"} background={section.background}>
+        <Section key={section.key ?? "steps"} background={section.background} paddingTop={section.paddingTop}>
           <div id={section.anchorId} className={styles.stack}>
             <SectionHeader eyebrow={section.eyebrow} title={section.title} lead={section.lead} />
             <div className={styles.cardsGrid3}>

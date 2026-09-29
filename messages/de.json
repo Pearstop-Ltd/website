@@ -1413,6 +1413,12 @@
       "title": "Ihre Beschaffungsdaten enthalten die Antworten. Sie können sie nur noch nicht lesen.",
       "lead": "Die meisten Hard-Services- und FM-Unternehmen verfügen über Jahre an Bestelldaten in SAP oder Oracle. Ohne UNSPSC-Klassifizierung ist das ein Haufen Freitext-Positionen. Mit ihr sehen Sie genau, was Sie nach Kategorie ausgeben, benchmarken Lieferanten und erstellen Ausschreibungen auf Basis echter Kostendaten. Pearstop klassifiziert Rechnungen in jeder Größenordnung, von einem Pilotprojekt mit wenigen Hundert Zeilen bis zum vollen Produktionsvolumen - das System wächst mit Ihnen."
     },
+    "resources": {
+      "label": "Direkt zu Ressourcen",
+      "lookup": "Code-Suche",
+      "tree": "Taxonomiebaum",
+      "guide": "KI-Klassifizierungsleitfaden"
+    },
     "standard": {
       "eyebrow": "Was ist UNSPSC?",
       "title": "Der vierstufige Code, der Beschaffungsdaten vergleichbar macht.",
@@ -3679,7 +3685,7 @@
       "label": "Müssen Sie Tausende von Zeilen klassifizieren?",
       "cta": "Mit Vertrieb sprechen",
       "learnMore": "So funktioniert es",
-      "copy": "Dieses Tool verarbeitet Einzelabfragen. Pearstops automatisierte Klassifizierungs-Engine verarbeitet 35.000 Procurement-Zeilen pro Monat - mit 90-95 % automatischer Klassifizierung und vollständiger SAP-Integration. Sprechen Sie mit Vertrieb, um es mit Ihren Daten zu sehen."
+      "copy": "Dieses Tool durchsucht jeweils einen Artikel. Pearstop klassifiziert komplette Rechnungsdateien, ERP-Exporte und Tabellen, von ein paar hundert Zeilen bis zu mehreren hunderttausend. Rund 95 % der Zeilen werden automatisch klassifiziert, den Rest prüft eine Person. Sprechen Sie mit Vertrieb, um es mit Ihren Daten zu sehen."
     },
     "faq": {
       "title": "Wie UNSPSC-Codes funktionieren",
@@ -3698,7 +3704,7 @@
         },
         {
           "q": "Ist dieses UNSPSC-Nachschlagetool kostenlos?",
-          "a": "Ja. Das UNSPSC-Nachschlagetool von Pearstop ist für einzelne Abfragen vollständig kostenlos. Für die Massenklassifizierung — die automatische Verarbeitung Tausender Rechnungszeilen — bietet Pearstop einen automatisierten Klassifizierungsservice, der bis zu 35.000 Zeilen pro Monat bewältigt."
+          "a": "Ja. Das UNSPSC-Nachschlagetool von Pearstop ist für einzelne Abfragen vollständig kostenlos. Für die Massenklassifizierung — komplette Rechnungsdateien, ERP-Exporte oder Tabellen, von ein paar hundert Zeilen bis zu mehreren hunderttausend — bietet Pearstop einen automatisierten Klassifizierungsservice."
         },
         {
           "q": "Wie genau ist der vorgeschlagene UNSPSC-Code?",

@@ -1417,6 +1417,12 @@
       "title": "Uw inkoopdata bevat de antwoorden. U kunt ze alleen nog niet lezen.",
       "lead": "De meeste FM- en bouwbedrijven hebben jaren aan inkooporderdata in SAP of Oracle staan. Zonder UNSPSC-classificatie is dat een stapel vrije-tekstregels. Met classificatie ziet u precies wat u per categorie uitgeeft, benchmarkt u suppliers en bouwt u tenders op basis van echte kostendata. Pearstop classificeert facturen op elke schaal, van een pilot van een paar honderd regels tot volledig productievolume: het schaalt met u mee."
     },
+    "resources": {
+      "label": "Direct naar resources",
+      "lookup": "Code opzoeken",
+      "tree": "Taxonomieboom",
+      "guide": "AI-classificatiegids"
+    },
     "standard": {
       "eyebrow": "De standaard",
       "title": "UNSPSC: de wereldwijde standaard voor het classificeren van wat u koopt.",
@@ -3563,7 +3569,7 @@
       "label": "Moet u duizenden regels classificeren?",
       "cta": "Praat met sales",
       "learnMore": "Bekijk hoe het werkt",
-      "copy": "Deze tool verwerkt losse opzoekingen. Pearstops geautomatiseerde classificatie-engine verwerkt 35.000 procurement-regels per maand - met 90-95% automatische classificatie en volledige SAP-integratie. Praat met sales om het met uw data te zien."
+      "copy": "Deze tool zoekt één item tegelijk op. Pearstop classificeert complete factuurbestanden, ERP-exports en spreadsheets, van een paar honderd regels tot honderdduizenden. Rond de 95% van de regels wordt automatisch geclassificeerd, en iemand controleert de rest. Praat met sales om het met uw data te zien."
     },
     "faq": {
       "title": "Hoe UNSPSC-codes werken",
@@ -3578,7 +3584,7 @@
         },
         {
           "q": "Is dit UNSPSC-zoekhulpmiddel gratis?",
-          "a": "Ja. Het Pearstop UNSPSC-zoekhulpmiddel is volledig gratis voor individuele queries. Voor bulkclassificatie — het verwerken van duizenden factuurregels automatisch — biedt Pearstop een geautomatiseerde classificatiedienst die tot 35.000 regels per maand aan kan."
+          "a": "Ja. Het Pearstop UNSPSC-zoekhulpmiddel is volledig gratis voor individuele queries. Voor bulkclassificatie — complete factuurbestanden, ERP-exports of spreadsheets, van een paar honderd regels tot honderdduizenden — biedt Pearstop een geautomatiseerde classificatiedienst."
         },
         {
           "q": "Hoe nauwkeurig is de UNSPSC-code-suggestie?",

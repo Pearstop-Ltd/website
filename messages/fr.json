@@ -1413,6 +1413,12 @@
       "title": "Vos données d'achats contiennent les réponses. Vous ne pouvez simplement pas encore les lire.",
       "lead": "La plupart des entreprises de services techniques et de FM disposent de plusieurs années de données de bons de commande dans SAP ou Oracle. Sans classification UNSPSC, ce n'est qu'un amas de lignes en texte libre. Avec elle, vous pouvez voir exactement ce que vous dépensez par catégorie, comparer les fournisseurs et construire des appels d'offres à partir de données de coûts réelles. Pearstop classe les factures à n'importe quelle échelle, d'un pilote de quelques centaines de lignes jusqu'au volume de production complet - le système s'adapte à votre rythme."
     },
+    "resources": {
+      "label": "Accès direct aux ressources",
+      "lookup": "Recherche de code",
+      "tree": "Arborescence taxonomique",
+      "guide": "Guide de classification IA"
+    },
     "standard": {
       "eyebrow": "Qu'est-ce qu'UNSPSC ?",
       "title": "Le code à quatre niveaux qui rend les données d'achats comparables.",
@@ -3679,7 +3685,7 @@
       "label": "Besoin de classer des milliers de lignes ?",
       "cta": "Parler à un commercial",
       "learnMore": "Découvrez comment ça marche",
-      "copy": "Cet outil gère les recherches unitaires. Le moteur de classification automatisé de Pearstop traite 35 000 lignes d'achats par mois - avec 90 à 95 % de classification automatique et une intégration SAP complète. Parlez à un commercial pour le voir avec vos données."
+      "copy": "Cet outil recherche un article à la fois. Pearstop classe des fichiers de factures entiers, des exports ERP et des tableurs, de quelques centaines de lignes à plusieurs centaines de milliers. Environ 95 % des lignes sont classées automatiquement, et une personne vérifie le reste. Parlez à un commercial pour le voir avec vos données."
     },
     "faq": {
       "title": "Comment fonctionnent les codes UNSPSC",
@@ -3698,7 +3704,7 @@
         },
         {
           "q": "Cet outil de recherche UNSPSC est-il gratuit ?",
-          "a": "Oui. L'outil de recherche UNSPSC de Pearstop est entièrement gratuit pour les recherches individuelles. Pour la classification en masse — le traitement automatique de milliers de lignes de facture — Pearstop propose un service de classification automatisé traitant jusqu'à 35 000 lignes par mois."
+          "a": "Oui. L'outil de recherche UNSPSC de Pearstop est entièrement gratuit pour les recherches individuelles. Pour la classification en masse — fichiers de factures complets, exports ERP ou tableurs, de quelques centaines de lignes à plusieurs centaines de milliers — Pearstop propose un service de classification automatisé."
         },
         {
           "q": "Quelle est la précision de la suggestion de code UNSPSC ?",

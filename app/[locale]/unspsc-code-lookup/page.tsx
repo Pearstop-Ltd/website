@@ -62,7 +62,7 @@ const faqSchema = {
       name: "Is this UNSPSC lookup tool free?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. The Pearstop UNSPSC lookup tool is completely free for individual queries. For bulk classification — processing thousands of invoice lines automatically — Pearstop offers an automated classification service that handles up to 35,000 lines per month."
+        text: "Yes. The Pearstop UNSPSC lookup tool is completely free for individual queries. For bulk classification — whole invoice files, ERP exports or spreadsheets, from a few hundred lines to hundreds of thousands — Pearstop offers an automated classification service."
       }
     },
     {

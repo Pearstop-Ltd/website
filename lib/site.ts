@@ -161,7 +161,7 @@ export const homeBenefits: FeatureCard[] = [
   {
     title: "Maximize Spend Control",
     copy:
-      "Automatically classify every procurement line, at scale. 35,000 lines a month, no manual work. Turn incoherent ledger lines into a single source of truth so your procurement team can see exactly where money is going, activate competition across suppliers, and negotiate better contracts.",
+      "Automatically classify every procurement line, at scale, from a few hundred lines a month to hundreds of thousands, no manual work. Turn incoherent ledger lines into a single source of truth so your procurement team can see exactly where money is going, activate competition across suppliers, and negotiate better contracts.",
     href: "/unspsc"
   },
   {

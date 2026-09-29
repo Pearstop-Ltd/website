@@ -1931,6 +1931,12 @@
       "title": "Your procurement data contains the answers. You just cannot read it yet.",
       "lead": "Most FM and construction companies have years of purchase order data in SAP or Oracle. Without UNSPSC classification, it is a pile of free-text line items. With it, you can see exactly what you spend by category, benchmark suppliers, and build tenders from actual cost data. Pearstop classifies invoices at any scale, from a pilot of a few hundred lines to full production volume - it scales with you."
     },
+    "resources": {
+      "label": "Direct to resources",
+      "lookup": "Code Lookup",
+      "tree": "Taxonomy Tree",
+      "guide": "AI Classification Guide"
+    },
     "standard": {
       "eyebrow": "What is UNSPSC?",
       "title": "The four-level code that makes procurement data comparable.",
@@ -3914,7 +3920,7 @@
     },
     "bulk": {
       "label": "Need to classify thousands of lines?",
-      "copy": "This tool handles single lookups. Pearstop’s automated classification engine processes 35,000 procurement lines per month — with 90-95% auto-classification and full SAP integration. Talk to sales to see it with your data.",
+      "copy": "This tool looks up one item at a time. Pearstop classifies whole invoice files, ERP exports and spreadsheets, from a few hundred lines to hundreds of thousands. Around 95% of lines are classified automatically, and a person checks the rest. Talk to sales to see it with your data.",
       "cta": "Talk to sales",
       "learnMore": "See how it works"
     },
@@ -3935,7 +3941,7 @@
         },
         {
           "q": "Is this UNSPSC lookup tool free?",
-          "a": "Yes. The Pearstop UNSPSC lookup tool is completely free for individual queries. For bulk classification — processing thousands of invoice lines automatically — Pearstop offers an automated classification service that handles up to 35,000 lines per month."
+          "a": "Yes. The Pearstop UNSPSC lookup tool is completely free for individual queries. For bulk classification — whole invoice files, ERP exports or spreadsheets, from a few hundred lines to hundreds of thousands — Pearstop offers an automated classification service."
         },
         {
           "q": "How accurate is the UNSPSC code suggestion?",
