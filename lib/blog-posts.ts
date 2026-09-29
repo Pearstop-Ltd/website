@@ -1543,6 +1543,7 @@ const _allBlogPosts: BlogPost[] = [
   },
   {
     slug: "what-the-four-levels-of-unspsc-tell-you",
+    image: "/images/blog/what-the-four-levels-of-unspsc-tell-you.jpg",
     title: "What the four levels of UNSPSC actually tell you",
     description: "A UNSPSC code can look wrong at segment level and still be correct. Here is what each of the four levels, segment through commodity, actually tells you.",
     publishedAt: "2026-09-28",
@@ -1567,6 +1568,7 @@ const _allBlogPosts: BlogPost[] = [
   },
   {
     slug: "youve-classified-your-spend-now-what",
+    image: "/images/blog/youve-classified-your-spend-now-what.jpg",
     title: "You've classified your spend. Now what?",
     description: "Charge lines like freight and fuel surcharges don't fit a product taxonomy, but dropping or misclassifying them quietly breaks your spend category totals.",
     publishedAt: "2026-09-28",
@@ -1590,6 +1592,7 @@ const _allBlogPosts: BlogPost[] = [
   },
   {
     slug: "why-the-same-supplier-has-three-names-cafm-erp",
+    image: "/images/blog/why-the-same-supplier-has-three-names-cafm-erp.jpg",
     title: "Why the same supplier has three different names across your CAFM and your ERP",
     description: "The same subcontractor can sit under three names across your CAFM and ERP. Here's how that fragmentation happens, what it breaks, and how to fix it for good.",
     publishedAt: "2026-09-28",
@@ -1616,6 +1619,7 @@ const _allBlogPosts: BlogPost[] = [
   },
   {
     slug: "keeping-classification-current-before-erp-integration",
+    image: "/images/blog/keeping-classification-current-before-erp-integration.jpg",
     title: "Keeping classification current before your ERP integration is even scoped",
     description: "Waiting on an ERP integration doesn't mean waiting on spend visibility. Here's how to run interim classification so the migration inherits clean data.",
     publishedAt: "2026-09-28",
@@ -1643,6 +1647,7 @@ const _allBlogPosts: BlogPost[] = [
   },
   {
     slug: "charts-worth-building-hard-services-spend",
+    image: "/images/blog/charts-worth-building-hard-services-spend.jpg",
     title: "The charts worth building from hard-services spend data",
     description: "Nine charts worth building from hard-services spend data: what each answers, where it misleads, and the data it needs before it goes to a stakeholder.",
     publishedAt: "2026-09-28",

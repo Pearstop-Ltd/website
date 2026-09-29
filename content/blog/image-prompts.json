@@ -281,5 +281,45 @@
     "scene": "A wide-angle view of a modern office building entrance plaza showing a loading dock with stacked pallets, a service hallway with exposed conduit and pipework, and a nearby cleaning supplies cabinet beside a building façade with glass and metal panels.",
     "prompt": "A wide-angle view of a modern office building entrance plaza showing a loading dock with stacked pallets, a service hallway with exposed conduit and pipework, and a nearby cleaning supplies cabinet beside a building façade with glass and metal panels., moody low-key interior lighting with warm sodium work-lights, deep shadows, dramatic contrast, photorealistic photograph, true-to-life colour rendering for whatever light is described, NOT desaturated, NOT a flat monochrome grade, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
     "seed": 2012673534
+  },
+  "what-the-four-levels-of-unspsc-tell-you": {
+    "sector": "construction",
+    "includePeople": false,
+    "lightingMood": "bright overcast daylight, soft even shadows, clean neutral-to-cool colour",
+    "scene": "A stacked pile of steel I-beams on a cleared site, each with a visible metal tag bearing a numeric code, against a backdrop of exposed rebar and scaffolding",
+    "prompt": "A stacked pile of steel I-beams on a cleared site, each with a visible metal tag bearing a numeric code, against a backdrop of exposed rebar and scaffolding, bright overcast daylight, soft even shadows, clean neutral-to-cool colour, photorealistic photograph, true-to-life colour rendering for whatever light is described, NOT desaturated, NOT a flat monochrome grade, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
+    "seed": 3769800483
+  },
+  "youve-classified-your-spend-now-what": {
+    "sector": "integrated-fm",
+    "includePeople": false,
+    "lightingMood": "cool early-morning blue-hour light outside with warm interior lamps glowing through windows, mixed colour temperature",
+    "scene": "A loading dock beside a modern mixed-use building, with stacked pallets, empty shipping containers, and a delivery truck parked under an overhead canopy, all bathed in soft daylight.",
+    "prompt": "A loading dock beside a modern mixed-use building, with stacked pallets, empty shipping containers, and a delivery truck parked under an overhead canopy, all bathed in soft daylight., cool early-morning blue-hour light outside with warm interior lamps glowing through windows, mixed colour temperature, photorealistic photograph, true-to-life colour rendering for whatever light is described, NOT desaturated, NOT a flat monochrome grade, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
+    "seed": 4150389584
+  },
+  "why-the-same-supplier-has-three-names-cafm-erp": {
+    "sector": "soft-fm-cleaning",
+    "includePeople": true,
+    "lightingMood": "warm late-afternoon sunlight raking low through windows or open doors, long soft shadows, golden warm tones",
+    "scene": "A cleaning supervisor in a navy‑blue uniform checks a cleaning cart stocked with supplies while a junior cleaner mops the marble floor of a busy office reception area during early morning hours.",
+    "prompt": "A cleaning supervisor in a navy‑blue uniform checks a cleaning cart stocked with supplies while a junior cleaner mops the marble floor of a busy office reception area during early morning hours., warm late-afternoon sunlight raking low through windows or open doors, long soft shadows, golden warm tones, photorealistic photograph, true-to-life colour rendering for whatever light is described, NOT desaturated, NOT a flat monochrome grade, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
+    "seed": 3434390362
+  },
+  "keeping-classification-current-before-erp-integration": {
+    "sector": "integrated-fm",
+    "includePeople": false,
+    "lightingMood": "golden-hour exterior light with long shadows and a warm-to-cool gradient across the scene",
+    "scene": "A wide-angle view of a modern office building's ground-level plaza showing a sleek glass entrance flanked by a loading dock with freight elevators and service doors, alongside a landscaped courtyard with planters and benches, all under clear sky.",
+    "prompt": "A wide-angle view of a modern office building's ground-level plaza showing a sleek glass entrance flanked by a loading dock with freight elevators and service doors, alongside a landscaped courtyard with planters and benches, all under clear sky., golden-hour exterior light with long shadows and a warm-to-cool gradient across the scene, photorealistic photograph, true-to-life colour rendering for whatever light is described, NOT desaturated, NOT a flat monochrome grade, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
+    "seed": 2014192684
+  },
+  "charts-worth-building-hard-services-spend": {
+    "sector": "hard-fm",
+    "includePeople": false,
+    "lightingMood": "warm late-afternoon sunlight raking low through windows or open doors, long soft shadows, golden warm tones",
+    "scene": "A dimly lit building plant room with exposed pipework, valve banks, and a humming HVAC control panel illuminated by a single overhead lamp.",
+    "prompt": "A dimly lit building plant room with exposed pipework, valve banks, and a humming HVAC control panel illuminated by a single overhead lamp., warm late-afternoon sunlight raking low through windows or open doors, long soft shadows, golden warm tones, photorealistic photograph, true-to-life colour rendering for whatever light is described, NOT desaturated, NOT a flat monochrome grade, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
+    "seed": 4072207786
   }
 }
