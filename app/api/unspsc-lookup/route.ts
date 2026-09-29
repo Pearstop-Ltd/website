@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getValidationIndex, isIndustryKey, type IndustryKey } from "@/lib/unspsc-industries";
+import { isIndustryKey, type IndustryKey } from "@/lib/unspsc-industries";
+import { getValidationIndex } from "@/lib/unspsc-taxonomy-index";
 import { searchCandidates, type SearchCandidate } from "@/lib/unspsc-search";
 import { checkRateLimit, getClientIp } from "@/lib/rate-limit";
 import { verifyRecaptcha } from "@/lib/recaptcha";

@@ -1,4 +1,4 @@
-import { getValidationIndex } from "./unspsc-industries";
+import { getValidationIndex } from "./unspsc-taxonomy-index";
 import { INDUSTRIES, type IndustryKey } from "./unspsc-industries";
 
 export type SearchCandidate = {
@@ -39,8 +39,15 @@ function stem(token: string): string {
 type Indexed = {
   candidate: SearchCandidate;
   titleTokens: string[];
+  titleTokenSet: Set<string>;
   classTokens: Set<string>;
   familyTokens: Set<string>;
+  /** Lowercased title padded with boundary spaces, precomputed once so a
+   * whole-phrase match against the query can be a plain substring check
+   * instead of compiling a RegExp per candidate on every request - with
+   * ~150k candidates in the full official dataset, per-entry RegExp
+   * compilation alone took multiple seconds per search. */
+  paddedTitle: string;
 };
 
 let indexed: Indexed[] | null = null;
@@ -64,14 +71,16 @@ function buildIndex(): { indexed: Indexed[]; idf: Map<string, number> } {
       segmentTitle: entry.segment.title,
     };
     const titleTokens = tokenize(candidate.title).map(stem);
+    const titleTokenSet = new Set(titleTokens);
     const classTokens = new Set(tokenize(candidate.classTitle).map(stem));
     const familyTokens = new Set(tokenize(candidate.familyTitle).map(stem));
+    const paddedTitle = ` ${normalizeForBoundaryMatch(candidate.title)} `;
 
-    for (const t of new Set(titleTokens)) {
+    for (const t of titleTokenSet) {
       documentFrequency.set(t, (documentFrequency.get(t) ?? 0) + 1);
     }
 
-    list.push({ candidate, titleTokens, classTokens, familyTokens });
+    list.push({ candidate, titleTokens, titleTokenSet, classTokens, familyTokens, paddedTitle });
   }
 
   const n = list.length;
@@ -95,6 +104,12 @@ function sharesRoot(a: string, b: string): boolean {
   return a.slice(0, prefixLen) === b.slice(0, prefixLen);
 }
 
+/** Lowercases and collapses to single spaces, for cheap substring-based
+ * whole-phrase boundary checks (see `paddedTitle`). */
+function normalizeForBoundaryMatch(text: string): string {
+  return text.toLowerCase().replace(/[^a-z0-9\s]/g, " ").replace(/\s+/g, " ").trim();
+}
+
 function tokenWeight(token: string, idfMap: Map<string, number>): number {
   // A token that appears in very few titles (e.g. "toilet") is far more
   // useful for telling candidates apart than one that appears in hundreds
@@ -102,8 +117,8 @@ function tokenWeight(token: string, idfMap: Map<string, number>): number {
   return idfMap.get(token) ?? Math.log(2);
 }
 
-function scoreEntry(queryTokens: string[], queryText: string, entry: Indexed, idfMap: Map<string, number>): number {
-  const titleTokenSet = new Set(entry.titleTokens);
+function scoreEntry(queryTokens: string[], paddedQuery: string, entry: Indexed, idfMap: Map<string, number>): number {
+  const titleTokenSet = entry.titleTokenSet;
   let titleTokenMatches = 0;
   let matchedTitleWeight = 0;
   let secondaryScore = 0;
@@ -137,16 +152,15 @@ function scoreEntry(queryTokens: string[], queryText: string, entry: Indexed, id
   const breadth = queryTokens.length > 0 ? titleTokenMatches / queryTokens.length : 0;
   let score = breadth * 1000 + matchedTitleWeight * 10 + secondaryScore;
 
-  const titleLower = entry.candidate.title.toLowerCase();
-  const queryLower = queryText.toLowerCase();
-  if (titleLower === queryLower) {
+  // Word-boundary phrase match, as a plain substring check against strings
+  // padded with boundary spaces on both sides - a naive .includes() without
+  // padding would treat "Lace" or "Cement" as present in "HVAC filter
+  // replacement" since those words are literal substrings of
+  // "rep-LACE-ment"/"repla-CEMENT".
+  if (entry.paddedTitle.trim() === paddedQuery.trim()) {
     score += 5000;
-  } else if (titleLower.length > 3) {
-    // Word-boundary match only - a naive .includes() would treat "Lace" or
-    // "Cement" as present in "HVAC filter replacement" since those words
-    // are literal substrings of "rep-LACE-ment"/"repla-CEMENT".
-    const boundaryPattern = new RegExp(`(?:^|\\W)${titleLower.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}(?:$|\\W)`);
-    if (boundaryPattern.test(queryLower)) score += 2000;
+  } else if (entry.paddedTitle.length > 5 && paddedQuery.includes(entry.paddedTitle)) {
+    score += 2000;
   }
 
   return score;
@@ -164,11 +178,12 @@ function scoreEntry(queryTokens: string[], queryText: string, entry: Indexed, id
 export function searchCandidates(description: string, industryKey: IndustryKey | null, limit = 25): SearchCandidate[] {
   const { indexed: entries, idf: idfMap } = buildIndex();
   const queryTokens = tokenize(description).map(stem);
+  const paddedQuery = ` ${normalizeForBoundaryMatch(description)} `;
   const industry = INDUSTRIES.find((i) => i.key === industryKey);
   const boostSegments = industry && industry.segments.length > 0 ? new Set(industry.segments) : null;
 
   const scored = entries.map((entry) => {
-    let score = scoreEntry(queryTokens, description, entry, idfMap);
+    let score = scoreEntry(queryTokens, paddedQuery, entry, idfMap);
     if (boostSegments?.has(entry.candidate.segmentCode)) score *= 1.15;
     return { candidate: entry.candidate, score };
   });
