@@ -7,7 +7,7 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import rehypeSlug from "rehype-slug";
 import remarkGfm from "remark-gfm";
 import { getBlogPost, blogPosts } from "@/lib/blog-posts";
-import { ArticleSchema, FaqSchema, Faq, BlogLayout, BlogQuote, SoftCta, ComparisonCards, ChecklistSection, KraljicMatrix, AUTHORS, isAuthorKey, type AuthorKey } from "@/components/blog";
+import { ArticleSchema, FaqSchema, Faq, BlogHero, BlogLayout, BlogQuote, SoftCta, ComparisonCards, ChecklistSection, KraljicMatrix, AUTHORS, isAuthorKey, type AuthorKey } from "@/components/blog";
 import { alternateLanguages, siteConfig } from "@/lib/site";
 import { getLocalizedFaqItems, FAQ_HEADINGS } from "@/lib/blog-faq-i18n";
 import { getLocalizedTocItems } from "@/lib/blog-toc-i18n";
@@ -142,26 +142,7 @@ export default async function BlogPostPage({
         authorName={AUTHORS[author].name}
       />
       {faqItems && <FaqSchema items={faqItems} slug={post.slug} />}
-      <header
-        className="page-hero dark"
-        style={{ minHeight: "auto", paddingTop: "5rem", paddingBottom: "3.5rem" }}
-      >
-        <div className="hero-bg" aria-hidden="true" />
-        <div className="container hero-copy">
-          <div className="text-center">
-            <span className="pill">{post.category}</span>
-            <h1
-              className="hero-title dark"
-              style={{ fontSize: "clamp(1.75rem, 4vw, 2.75rem)", marginTop: "0.75rem", maxWidth: 1000, marginInline: "auto" }}
-            >
-              {title}
-            </h1>
-            <p className="hero-lead" style={{ marginTop: "0.75rem", opacity: 0.85 }}>
-              {description}
-            </p>
-          </div>
-        </div>
-      </header>
+      <BlogHero category={post.category} title={title} description={description} image={post.image} />
       <BlogLayout
         tocItems={tocItems}
         tocHeading={tocHeading}

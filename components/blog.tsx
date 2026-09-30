@@ -6,7 +6,35 @@ import { siteConfig } from "@/lib/site";
 import { UnspscLookupCta } from "@/components/unspsc-lookup-cta";
 import { BlogNewsletterWidget } from "@/components/blog-newsletter-widget";
 import { CalendlyButton } from "@/components/calendly-button";
+import { HeadlineAccent } from "@/components/site/HeadlineAccent";
 import { blogPosts, type BlogPost } from "@/lib/blog-posts";
+
+// Shared blog post header, used by both route trees ([locale]/blog/[slug]
+// and (site)/blog/[slug]) so the hero stays in sync with the rest of the
+// site's PageHero (left-aligned title + HeadlineAccent dash), plus a
+// desktop-only cover image card.
+export function BlogHero({ category, title, description, image }: { category: string; title: string; description: string; image?: string }) {
+  return (
+    <header className="page-hero dark blog-hero">
+      <div className="hero-bg" aria-hidden="true" />
+      <div className="container hero-copy">
+        <div className="blog-hero-inner">
+          {image ? (
+            <div className="blog-hero-image" aria-hidden="true">
+              <img src={image} alt="" />
+            </div>
+          ) : null}
+          <div style={{ textAlign: "left" }}>
+            <span className="pill">{category}</span>
+            <h1 className="hero-title dark hero-title-sm">{title}</h1>
+            <HeadlineAccent tone="dark" className="hero-accent" />
+            <p className="hero-lead">{description}</p>
+          </div>
+        </div>
+      </div>
+    </header>
+  );
+}
 
 export function ArticleSchema({ title, description, slug, publishedAt, updatedAt, authorName }: {
   title: string; description: string; slug: string; publishedAt: string; updatedAt?: string; authorName: string;
@@ -172,6 +200,7 @@ export function BlogLayout({ children, tocItems, tocHeading, author, publishedAt
         <article className="blog-article" style={{ minWidth: 0 }}>
           <div style={{ display: "flex", gap: "1rem", alignItems: "center", fontSize: "0.8rem", color: "var(--muted)", marginBottom: "2.5rem", flexWrap: "wrap" }}>
             <span style={{ background: "var(--purple-soft)", color: "var(--primary-dark)", padding: "0.25rem 0.75rem", borderRadius: "999px", fontWeight: 600, fontSize: "0.75rem" }}>{category}</span>
+            <span>{AUTHORS[author].name}</span>
             <span>{new Date(publishedAt).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}</span>
             <span>{readingTime} min read</span>
           </div>
