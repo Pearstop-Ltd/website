@@ -1674,6 +1674,52 @@ const _allBlogPosts: BlogPost[] = [
       { q: "How do you compare prices across sites?", a: "Match on the item or task rather than the description text, using commodity-level classification plus a manufacturer part number or normalised item identifier, and convert every unit of measure to one base unit. Separate unit price from quantity, hold the specification constant, and keep out-of-hours and emergency rates in their own comparison." },
     ],
   },
+  {
+    slug: "cafm-erp-data-fragmentation-ownership",
+    title: "CAFM and ERP Integration: Why It Keeps Failing and What Actually Works",
+    description: "CAFM and ERP systems rarely sync on suppliers or assets. Here is why that gap persists, what it costs, and who actually has to own the fix.",
+    publishedAt: "2026-09-30",
+    category: "Data Quality",
+    tags: ["CAFM ERP integration", "duplicate vendor records", "supplier data matching", "hard FM data quality", "data ownership"],
+    readingTime: 7,
+    tocItems: [
+      { id: "why-cafm-and-erp-drift-apart", label: "Why CAFM and ERP drift apart" },
+      { id: "the-ownership-gap-behind-fragmentation", label: "The ownership gap" },
+      { id: "what-duplicate-vendor-records-cost-you", label: "What duplicate records cost" },
+      { id: "fixing-the-gap-without-ripping-out-systems", label: "Fixing the gap" },
+    ],
+    softCta: "discovery",
+    faqItems: [
+      { q: "Why do not my CAFM and ERP systems match on suppliers?", a: "Each system was built for a different job, by a different team, and nobody owns the record that says a supplier in one system is the same supplier in the other. Integration tools move data between systems, they do not decide which records match, so the mismatch persists until a person or a rule is made responsible for it." },
+      { q: "What causes duplicate supplier records across systems?", a: "Every entry point into a system applies its own naming convention. A work order raised on-site logs a trading name. An invoice processed by accounts payable logs a legal entity name. Neither is wrong, but nothing forces them to agree, so the same supplier accumulates multiple records over years of normal use." },
+      { q: "How do you fix data fragmentation between CAFM and ERP?", a: "Start by matching what already exists rather than buying a new integration layer first. Assign one owner for supplier and asset data accuracy, run a matching pass to surface duplicates, standardise on a single identifier per supplier and per asset, and require every new entry point to use it going forward." },
+      { q: "Does integrating CAFM and ERP fix data quality automatically?", a: "No. Integration moves data between systems faster. It does not decide that two differently-named records describe the same supplier or asset. Without a matching step first, integration usually surfaces existing fragmentation sooner and more visibly, rather than resolving it." },
+      { q: "How does Pearstop fix CAFM and ERP data mismatches?", a: "Pearstop matches and cleans supplier and asset records across the systems a hard FM operator already runs, without requiring either system to be replaced. The result is one matched vendor record instead of several scattered ones, so spend reporting, negotiation, and audit trails all start from the same set of facts." },
+    ],
+  },
+  {
+    slug: "unspsc-mandate-no-budget-scoping",
+    title: "The UNSPSC Mandate Nobody Budgeted For",
+    description: "A head office UNSPSC mandate rarely comes with budget or expertise attached. Here is how to scope it properly before it stalls as an unowned spreadsheet project.",
+    publishedAt: "2026-09-30",
+    category: "Procurement",
+    tags: ["UNSPSC", "UNSPSC classification", "spend classification", "procurement mandate", "commodity level classification"],
+    readingTime: 6,
+    tocItems: [
+      { id: "the-mandate-arrives-the-budget-does-not", label: "The mandate arrives, the budget does not" },
+      { id: "why-classification-stalls-without-an-owner", label: "Why classification stalls" },
+      { id: "what-proper-unspsc-classification-requires", label: "What proper classification requires" },
+      { id: "how-to-scope-this-before-it-lands", label: "How to scope this" },
+    ],
+    softCta: "discovery",
+    faqItems: [
+      { q: "What is a UNSPSC classification mandate?", a: "A UNSPSC mandate is an instruction, usually obtained from a parent company, head office, or a client. This mandate requires spend or product data to be classified against the United Nations Standard Products and Services Code. It is typically issued as a compliance requirement with a deadline attached, rather than as a scoped project with a budget and a named owner." },
+      { q: "Why does a UNSPSC mandate usually have no budget attached?", a: "The instruction is issued as a compliance requirement rather than a project brief. Whoever sends it typically assumes classification is a short, mechanical task. Accordingly, no budget line or dedicated resource gets allocated, and the work defaults to whoever in the business happens to be available when the deadline is announced." },
+      { q: "What level of UNSPSC classification is actually required?", a: "In almost every case that supports real reporting, negotiation, or tender comparison, Commodity level (the most specific level in the UNSPSC hierarchy). Classifying only at Segment or Family level is faster but produces data too broad to support the decisions the mandate was issued to enable." },
+      { q: "How long does it take to deliver a UNSPSC mandate properly?", a: "It depends on volume and how inconsistent the underlying descriptions are. However, confirming the required depth, the real volume, and a named owner before starting is what keeps the timeline predictable. An unscoped spreadsheet exercise tends to run long precisely because none of that was established first." },
+      { q: "How does Pearstop help with a UNSPSC classification mandate?", a: "Pearstop classifies procurement spend to Commodity level for hard FM, construction, and manufacturing categories specifically, for teams that have received a mandate and a deadline but do not have a classification specialist in-house. The output is consistent, negotiation-grade classification rather than a compliant-looking spreadsheet that still needs redoing." },
+    ],
+  },
 ];
 
 export const blogPosts: BlogPost[] = _allBlogPosts.filter((p) => !p.hidden);

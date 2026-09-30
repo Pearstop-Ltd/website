@@ -1,0 +1,100 @@
+---
+title: "CAFM and ERP Integration: Why It Keeps Failing and What Actually Works"
+description: "CAFM and ERP systems rarely sync on suppliers or assets. Here is why that gap persists, what it costs, and who actually has to own the fix."
+date: "2026-09-30"
+category: "Data Quality"
+slug: "cafm-erp-data-fragmentation-ownership"
+author: "rae"
+lang: "en"
+---
+
+**Quick answer:** CAFM and ERP systems stay disconnected because nobody owns the data that sits between them. Each system was bought to solve a different problem, by a different team, on a different timeline, and neither vendor is responsible for making supplier or asset records match across the two. Buying an integration tool does not fix this. Someone has to own the matching first.
+
+On this page: [Why CAFM and ERP drift apart](#why-cafm-and-erp-drift-apart) · [The ownership gap behind fragmentation](#the-ownership-gap-behind-fragmentation) · [What duplicate vendor records cost you](#what-duplicate-vendor-records-cost-you) · [Fixing the gap without ripping out systems](#fixing-the-gap-without-ripping-out-systems) · [FAQ](#frequently-asked-questions)
+
+## Why CAFM and ERP Drift Apart
+
+### Why do CAFM and ERP not sync automatically?
+
+They were never built to describe the same thing the same way. CAFM systems track assets, sites, and work orders. ERP systems track spend, suppliers, and cost centres. The overlap between them, the same supplier, the same asset, the same site, is exactly the part neither system was designed to own.
+
+- A CAFM system logs a supplier by trading name, entered by whoever raised the work order that week.
+- The ERP logs the same supplier by legal entity name, entered by accounts payable using an invoice.
+- Nobody reconciles the two until a report needs both systems at once, and the totals do not add up.
+
+### Does buying an integration platform solve this?
+
+No, not on its own. An integration platform moves data between systems. It does not decide that "ABC Cleaning Services Ltd" in the ERP and "ABC Cleaning" in the CAFM are the same supplier. That decision needs a matching rule and someone accountable for applying it, which is a data problem dressed up as a plumbing problem.
+
+### What does this look like in a real portfolio?
+
+Ask a hard FM operator running a CAFM and ERP with a few hundred suppliers between them how many suppliers they actually have, and you will usually get an estimate, not a number. Duplicate supplier records are created constantly because every entry point, procurement raising a PO, accounts payable processing an invoice, a site manager setting up a new contractor, applies its own naming convention, and nothing forces them to agree.
+
+This is not a one-off oversight that a clean-up project resolves for good. It is a running total. Every week a new work order goes in under a slightly different supplier name, a new site comes onto the CAFM with its own historic contractor list, or a new starter in accounts payable sets up a vendor from an invoice without checking whether it already exists. The gap does not close on its own, and nothing in either system is designed to notice it opening.
+
+## The Ownership Gap Behind Fragmentation
+
+### Who is supposed to own CAFM and ERP data alignment?
+
+In most hard FM organisations, nobody. IT owns the systems. Procurement owns the suppliers. Facilities owns the assets. Finance owns the spend. Each of those groups can point at the other three and be technically correct that alignment is not their job, which is exactly why it never gets done.
+
+### Is this a technology problem?
+
+No. It shows up as a technology problem because the symptom is two screens showing two different numbers, but the cause is that the record connecting them was never someone's job to maintain. A model can classify a line of spend. It cannot decide that two supplier records, one in each system, describe the same company.
+
+### How does the gap get worse over time?
+
+- Every new site added multiplies the naming variations already in play.
+- Every staff change resets whatever informal knowledge existed about which records were duplicates.
+- Every system upgrade or migration carries the unresolved duplicates forward instead of resolving them.
+
+Fragmentation across systems is not a tooling problem. Bolting an AI classification layer on top of it gets you a faster, more confident version of the same wrong answer, because the underlying identifiers still do not match.
+
+### Why does ownership fall through the gaps specifically here, and not elsewhere?
+
+Most cross-functional problems eventually land on someone's desk because a budget, a deadline, or a named risk forces the issue. Vendor and asset record alignment rarely does, because the cost is diffuse rather than sudden. Nobody gets a single invoice for "three years of unmatched supplier records." The cost shows up as a slightly longer month-end close, a slightly less confident tender submission, a slightly slower audit response, repeated often enough that it becomes the accepted baseline rather than a problem anyone escalates.
+
+## What Duplicate Vendor Records Cost You
+
+### What does a duplicate supplier record actually cost?
+
+Beyond the obvious risk of a duplicate payment, the real cost is time. Every reconciliation, every audit, and every tender comparison starts with someone manually working out which CAFM entries and which ERP entries refer to the same supplier, before the actual analysis can begin.
+
+| Where the mismatch shows up | What it blocks |
+| --- | --- |
+| Spend reporting | Cannot see true total spend with one supplier across sites |
+| Supplier negotiation | Cannot prove combined volume to negotiate a better rate |
+| Compliance and audit | Cannot show a clean trail from work order to invoice to payment |
+| ERP or CAFM migration | Carries every unresolved duplicate into the new system |
+
+### Why does this matter more at migration time?
+
+Whatever is unmatched in the current systems gets carried into the next one. A migration does not clean the data, it moves it, and the cutover deadline usually forces a "fix it later" decision that rarely gets revisited once the new system is live.
+
+Pearstop matches supplier and asset records across CAFM and ERP systems without requiring either system to be replaced, one matched vendor record instead of three, for hard FM operators who need a single view of a supplier across every site.
+
+## Fixing the Gap Without Ripping Out Systems
+
+### Do we need to replace our CAFM or ERP to fix this?
+
+No. Replacing either system resets the clock without solving the underlying problem: identifiers still will not match unless something matches them. The fix sits below both systems, in the data, not in which platform sits on top of it.
+
+### What is the first step that actually works?
+
+- Assign a single owner for vendor and asset record accuracy across systems. Not a committee. One person or one small team whose job this actually is.
+- Run a matching pass across the existing CAFM and ERP data to surface duplicates before adding any new integration.
+- Standardise on one identifier per supplier and one identifier per asset, and require every new entry point to use it.
+- Treat that matched dataset as infrastructure. It needs maintaining continuously, the same way a network gets patched, not a one-off project with an end date.
+
+### What happens if we skip straight to integration tooling?
+
+The tool will faithfully move badly-matched data between two systems faster than before, which usually surfaces the fragmentation earlier and more visibly, not later and quietly. That is not a reason to avoid integration. It is a reason to fix the matching first.
+
+### How long does a first matching pass typically take?
+
+It depends on portfolio size and how many years of accumulated records are involved. However, the pattern is consistent across engagements:
+
+- Automated matching resolves the majority of records quickly on structured fields (e.g. tax identifiers or bank details); and
+- A smaller, genuinely ambiguous set needs a person to make the final call.
+
+That remaining genuinely ambiguous set is usually a fraction of the total as opposed to the whole vendor master, which is why treating this as a wholesale re-platforming project overstates the job.
