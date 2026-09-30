@@ -62,14 +62,6 @@
   text-decoration: none;
 }
 
-.trademarkNote {
-  margin: 40px 0 0;
-  font-size: 13px;
-  line-height: 1.6;
-  font-weight: 300;
-  color: var(--muted);
-}
-
 @media (max-width: 900px) {
   .cardGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));

@@ -75,10 +75,6 @@ export function MigrationsHub() {
             </div>
           ))}
         </div>
-        <p className={styles.trademarkNote}>
-          System names and logos are trademarks of their respective owners. Pearstop is not affiliated with or
-          endorsed by any of them.
-        </p>
       </Section>
 
       <ClosingCTA
