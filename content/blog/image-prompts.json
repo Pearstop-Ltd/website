@@ -321,5 +321,21 @@
     "scene": "A dimly lit building plant room with exposed pipework, valve banks, and a humming HVAC control panel illuminated by a single overhead lamp.",
     "prompt": "A dimly lit building plant room with exposed pipework, valve banks, and a humming HVAC control panel illuminated by a single overhead lamp., warm late-afternoon sunlight raking low through windows or open doors, long soft shadows, golden warm tones, photorealistic photograph, true-to-life colour rendering for whatever light is described, NOT desaturated, NOT a flat monochrome grade, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
     "seed": 4072207786
+  },
+  "cafm-erp-data-fragmentation-ownership": {
+    "sector": "integrated-fm",
+    "includePeople": false,
+    "lightingMood": "overcast winter daylight, muted cool tones, flat soft shadows, quiet documentary feel",
+    "scene": "A wide-angle view of a modern office building entrance plaza showing the glass-fronted lobby with its reception desk area alongside a adjacent loading dock with freight doors and pallet racks, all under a unified canopy.",
+    "prompt": "A wide-angle view of a modern office building entrance plaza showing the glass-fronted lobby with its reception desk area alongside a adjacent loading dock with freight doors and pallet racks, all under a unified canopy., overcast winter daylight, muted cool tones, flat soft shadows, quiet documentary feel, photorealistic photograph, true-to-life colour rendering for whatever light is described, NOT desaturated, NOT a flat monochrome grade, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
+    "seed": 3017204997
+  },
+  "unspsc-mandate-no-budget-scoping": {
+    "sector": "integrated-fm",
+    "includePeople": false,
+    "lightingMood": "cool early-morning blue-hour light outside with warm interior lamps glowing through windows, mixed colour temperature",
+    "scene": "A wide-angle view of a modern office building entrance plaza showing a glass-fronted lobby with a sleek reception desk, adjacent loading dock bays with rolling steel doors, and a well-lit walkway leading to both areas, all under a clear sky.",
+    "prompt": "A wide-angle view of a modern office building entrance plaza showing a glass-fronted lobby with a sleek reception desk, adjacent loading dock bays with rolling steel doors, and a well-lit walkway leading to both areas, all under a clear sky., cool early-morning blue-hour light outside with warm interior lamps glowing through windows, mixed colour temperature, photorealistic photograph, true-to-life colour rendering for whatever light is described, NOT desaturated, NOT a flat monochrome grade, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
+    "seed": 1993652944
   }
 }

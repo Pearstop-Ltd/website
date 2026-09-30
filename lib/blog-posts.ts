@@ -1676,6 +1676,7 @@ const _allBlogPosts: BlogPost[] = [
   },
   {
     slug: "cafm-erp-data-fragmentation-ownership",
+    image: "/images/blog/cafm-erp-data-fragmentation-ownership.jpg",
     title: "CAFM and ERP Integration: Why It Keeps Failing and What Actually Works",
     description: "CAFM and ERP systems rarely sync on suppliers or assets. Here is why that gap persists, what it costs, and who actually has to own the fix.",
     publishedAt: "2026-09-30",
@@ -1699,6 +1700,7 @@ const _allBlogPosts: BlogPost[] = [
   },
   {
     slug: "unspsc-mandate-no-budget-scoping",
+    image: "/images/blog/unspsc-mandate-no-budget-scoping.jpg",
     title: "The UNSPSC Mandate Nobody Budgeted For",
     description: "A head office UNSPSC mandate rarely comes with budget or expertise attached. Here is how to scope it properly before it stalls as an unowned spreadsheet project.",
     publishedAt: "2026-09-30",
