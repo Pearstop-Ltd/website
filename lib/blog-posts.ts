@@ -1724,6 +1724,7 @@ const _allBlogPosts: BlogPost[] = [
   },
   {
     slug: "ai-ready-procurement-data-requirements",
+    image: "/images/blog/ai-ready-procurement-data-requirements.jpg",
     title: "What AI-Ready Procurement Data Actually Requires",
     description: "Clean rows and deduplicated suppliers are not what AI-ready procurement data means in 2026. Here is the checklist that actually matters before an AI project starts.",
     publishedAt: "2026-10-01",
@@ -1747,6 +1748,7 @@ const _allBlogPosts: BlogPost[] = [
   },
   {
     slug: "maverick-spend-supplier-risk-charts",
+    image: "/images/blog/maverick-spend-supplier-risk-charts.jpg",
     title: "Two charts that catch maverick spend and supplier risk",
     description: "Two charts, two different problems. One catches spend leaking off-contract. The other catches suppliers who carry too much risk for how much you spend with them.",
     publishedAt: "2026-10-01",
