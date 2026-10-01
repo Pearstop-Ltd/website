@@ -1722,6 +1722,52 @@ const _allBlogPosts: BlogPost[] = [
       { q: "How does Pearstop help with a UNSPSC classification mandate?", a: "Pearstop classifies procurement spend to Commodity level for hard FM, construction, and manufacturing categories specifically, for teams that have received a mandate and a deadline but do not have a classification specialist in-house. The output is consistent, negotiation-grade classification rather than a compliant-looking spreadsheet that still needs redoing." },
     ],
   },
+  {
+    slug: "ai-ready-procurement-data-requirements",
+    title: "What AI-Ready Procurement Data Actually Requires",
+    description: "Clean rows and deduplicated suppliers are not what AI-ready procurement data means in 2026. Here is the checklist that actually matters before an AI project starts.",
+    publishedAt: "2026-10-01",
+    category: "Procurement",
+    tags: ["AI-ready data", "procurement data quality", "AI readiness", "supplier data governance", "spend classification"],
+    readingTime: 6,
+    tocItems: [
+      { id: "what-ai-ready-data-means-in-2026", label: "What AI-ready data means in 2026" },
+      { id: "why-clean-rows-are-not-enough", label: "Why clean rows are not enough" },
+      { id: "the-readiness-checklist-before-any-ai-project", label: "The readiness checklist" },
+      { id: "what-happens-when-this-gets-skipped", label: "What happens when this gets skipped" },
+    ],
+    softCta: "checklist",
+    faqItems: [
+      { q: "What does AI-ready procurement data actually mean?", a: "It means spend and supplier data that is unified across every source system, governed by a named owner at the entity level, and classified to a consistent standard that holds regardless of who entered the line or which system it came from. It is a maintained standard, not a one-off clean-up." },
+      { q: "Is deduplicated supplier data the same as AI-ready data?", a: "No. Deduplication removes obvious duplicate records, which is a necessary first step, but it does not confirm that every remaining record is classified consistently or that the underlying entity relationships between suppliers, sites, and contracts are correct. AI-ready is a broader and ongoing standard." },
+      { q: "Why do so many AI procurement projects get abandoned?", a: "Because the underlying data was not actually ready when the project started, even though it looked clean enough on the surface. Gartner predicts organisations will abandon 60 percent of AI projects through 2026 that are not backed by properly AI-ready data, and the pattern is consistent: gaps in the data surface once volume and edge cases scale up." },
+      { q: "How do I know if my procurement data is AI-ready?", a: "Check whether every supplier and asset has one governed record rather than several near-duplicates, whether spend is classified to a consistent standard already, and whether someone is accountable for keeping that accuracy over time. If any of those three are missing, the data is not ready yet, whatever the export looks like at first glance." },
+      { q: "How does Pearstop get procurement data to an AI-ready standard?", a: "Pearstop unifies and classifies spend and supplier data across the systems a procurement team already runs, then puts a maintained standard in place so the data stays AI-ready as new suppliers, sites, and categories get added, rather than degrading again within months of a one-off clean-up." },
+    ],
+  },
+  {
+    slug: "maverick-spend-supplier-risk-charts",
+    title: "Two charts that catch maverick spend and supplier risk",
+    description: "Two charts, two different problems. One catches spend leaking off-contract. The other catches suppliers who carry too much risk for how much you spend with them.",
+    publishedAt: "2026-10-01",
+    category: "Procurement",
+    tags: ["maverick spend", "supplier risk matrix", "procurement data visualisation", "spend analytics", "supplier data quality"],
+    readingTime: 6,
+    tocItems: [
+      { id: "the-chart-that-catches-maverick-spend", label: "The chart that catches maverick spend" },
+      { id: "the-chart-that-catches-supplier-risk", label: "The chart that catches supplier risk" },
+      { id: "why-both-charts-need-clean-ids", label: "Why both charts need clean IDs" },
+      { id: "what-breaks-when-the-ids-are-messy", label: "What breaks when the IDs are messy" },
+    ],
+    softCta: "discovery",
+    faqItems: [
+      { q: "What is maverick spend and why does it matter?", a: "Maverick spend is money spent with a supplier or at a rate outside your agreed contracts. It matters because it quietly erodes savings you already negotiated. Industry benchmarks put a healthy target below 10 percent of total spend, and organisations without strong controls often run well above that without realising it." },
+      { q: "How do you build a supplier risk matrix?", a: "Plot every meaningful supplier on two axes: how much you spend with them, and how risky losing them would be, based on how many alternatives exist and how fast you could switch. Four groups appear naturally: high spend and high risk, high spend and low risk, low spend and high risk, and low spend and low risk. Each group needs a different kind of attention." },
+      { q: "Why do supplier spend and supplier risk need to be tracked separately?", a: "Because they answer different questions. Spend tells you where the money goes. Risk tells you where the danger sits. A supplier with low spend but no alternative can cause more disruption than a high-spend supplier you could replace in a week, and a single combined number hides that difference completely." },
+      { q: "What causes these charts to give a misleading answer?", a: "Duplicate or inconsistent supplier records, and missing or wrong contract IDs on individual spend lines. Both charts count on those fields being accurate. If a supplier appears under three different names, or a contract tag is missing, the chart still draws a confident line, it is just drawing the wrong one." },
+      { q: "How does Pearstop help make these charts trustworthy?", a: "Pearstop cleans and matches supplier and contract identifiers across your spend data, so a supplier is one record instead of two or three, and every line carries the right contract tag. That is the groundwork both charts need before the numbers on them mean anything to a room full of people asking questions." },
+    ],
+  },
 ];
 
 export const blogPosts: BlogPost[] = _allBlogPosts.filter((p) => !p.hidden);

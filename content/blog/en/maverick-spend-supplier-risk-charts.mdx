@@ -1,0 +1,95 @@
+---
+title: "Two charts that catch maverick spend and supplier risk"
+description: "Two charts, two different problems. One catches spend leaking off-contract. The other catches suppliers who carry too much risk for how much you spend with them."
+date: "2026-10-01"
+category: "Procurement"
+slug: "maverick-spend-supplier-risk-charts"
+author: "stephanie"
+lang: "en"
+---
+
+**Quick answer:** Build two charts, not one. The first shows how much of your spend is going through approved contracts versus outside them (maverick spend). The second plots your suppliers by how much you spend with them against how risky they are to lose. One is a compliance problem. The other is a pricing and risk problem. Both fall apart if your supplier and contract IDs are not clean.
+
+On this page: [The chart that catches maverick spend](#the-chart-that-catches-maverick-spend) · [The chart that catches supplier risk](#the-chart-that-catches-supplier-risk) · [Why both charts need clean IDs](#why-both-charts-need-clean-ids) · [What breaks when the IDs are messy](#what-breaks-when-the-ids-are-messy) · [FAQ](#frequently-asked-questions)
+
+## The chart that catches maverick spend
+
+### What is maverick spend, in plain terms?
+
+Money going to a supplier your team did not agree a contract with, or to the right supplier but off the negotiated rate. Somebody needed something fast, went around the process, and paid whatever the supplier asked. It happens in every organisation. The question is how much.
+
+### What does the compliance chart actually show?
+
+Split your spend into two columns every month: on-contract and off-contract. Plot both over time. That is it. No clever maths, just an honest split, done consistently.
+
+- On-contract: spend that went through an approved supplier at the negotiated rate.
+- Off-contract: everything else, whatever the reason.
+
+### Why bother charting something this simple?
+
+Because the number surprises people every time. Industry benchmarking puts a healthy target below 10 percent of spend going off-contract. Organisations without strong controls run a lot higher than that, and [research from the Hackett Group](https://umbrex.com/resources/company-analysis/supply-chain-logistics/maverick-spend-rate/) found some companies lose between 10 and 20 percent of their targeted savings to maverick buying. That is money you already negotiated for, quietly walking out the door because somebody bought from outside the contract.
+
+### What does a healthy trend line look like?
+
+Off-contract spend falling month over month, ideally toward single digits. If it is flat, or worse, drifting up, that is worth a conversation with whoever is doing the buying, not the chart.
+
+### Should this chart be broken down further, by category or by site?
+
+Once the headline trend is in front of people, yes. A single company-wide number hides which sites or which categories are actually driving the off-contract spend. Split it by category first (cleaning consumables behaves very differently to plant hire), then by site if one location keeps showing up as the outlier. The headline number tells you there is a problem. The breakdown tells you where to go and have the conversation.
+
+## The chart that catches supplier risk
+
+### What is the supplier risk matrix?
+
+A simple plot. One axis is how much you spend with a supplier. The other is how risky that supplier is, meaning how hard it would be if they let you down tomorrow. Plot every meaningful supplier as a dot. Four zones appear.
+
+| Spend | Risk | What this quadrant means |
+| --- | --- | --- |
+| High | High | Your most exposed suppliers. Protect these relationships actively. |
+| High | Low | Where you have real negotiating leverage on price. |
+| Low | High | Small spend, but a problem if they disappear. Worth a backup plan. |
+| Low | Low | Routine purchases. Do not spend management time here. |
+
+This is a version of a framework procurement teams have used for decades, [the Kraljic matrix](https://business.amazon.com/en/blog/kraljic-matrix), applied at supplier level instead of category level.
+
+### Why does risk matter as much as spend?
+
+Because spend alone tells you where the money goes, not where the danger is. A supplier you barely spend anything with can still stop a site working tomorrow if they are the only one who does that job. A high-spend supplier with three competitors down the road is not actually a risk, whatever the invoice total suggests.
+
+### What counts as risk here?
+
+Keep it concrete. How many alternative suppliers exist. How long it would take to switch. Whether they are the only one certified for a specific job. Financial stability, if you can see it. Not a gut feeling, an actual answer to "what happens if this supplier is gone next month."
+
+## Why both charts need clean IDs
+
+### Why do both of these fall apart on messy data?
+
+Because both charts assume you can count. Counting on-contract versus off-contract spend needs every line matched to the right contract ID. Counting spend per supplier needs every line matched to the right supplier, not three near-duplicate versions of the same supplier.
+
+- If the same supplier appears three times under three slightly different names, your spend-per-supplier number for all three is wrong, and so is the risk matrix built on top of it.
+- If a contract ID is missing or wrong on a line, that spend looks off-contract even when it is not, or on-contract when it is not.
+- Neither chart notices its own mistake. It just draws a confident line through bad data.
+
+### Is this the same problem as last time?
+
+Yes, and it keeps coming up because it keeps being true. Every chart worth building from spend data depends on the same foundation: clean supplier records and clean contract IDs on every line. The chart is the easy part. Getting the IDs right underneath it is the actual work.
+
+Pearstop cleans and matches supplier and contract identifiers across your spend data, one trustworthy supplier record instead of three, for procurement teams who want charts that hold up when someone challenges the number.
+
+## What breaks when the IDs are messy
+
+### What actually goes wrong if you build these charts on unclean data?
+
+You present a compliance number in a leadership meeting. Somebody asks why a specific supplier is not on the list. Turns out they are, twice, under two different names, and the real off-contract number is higher than what is on the slide. That is an uncomfortable five minutes, and it did not need to happen.
+
+### How do you know if your IDs are clean enough to trust these charts?
+
+Ask a blunt question of your own data: how many suppliers do you actually have? If the answer is an estimate rather than a number, the charts are not ready yet. Fix that first. The charts themselves take an afternoon once the data underneath them is honest.
+
+### What should come first, the charts or the data clean-up?
+
+The clean-up. Every time. A beautiful chart built on duplicate supplier records is not a small problem wearing a nice visualisation. It is the same problem, presented with more confidence.
+
+### How often should these two charts get updated?
+
+Monthly, at minimum, for the maverick spend chart. Buying behaviour drifts fast, and a quarterly view hides three months of small decisions adding up. The supplier risk matrix moves slower. Quarterly is usually enough, unless a supplier's situation changes suddenly (a factory fire, a buyout, a contract dispute), in which case update it the day you hear about it, not on the usual schedule.
