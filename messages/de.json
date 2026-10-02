@@ -4317,30 +4317,30 @@
     "hero": {
       "eyebrow": "Demo buchen",
       "title": "Das besprechen wir genau in 30 Minuten",
-      "lead": "Kein generischer Pitch. Wir verbringen das Gespräch mit Ihren Daten, Ihren Blockaden und der Frage, ob Pearstop Sie tatsächlich dorthin bringt, wo Sie hinwollen.",
+      "lead": "Wir verbringen das Gespräch mit Ihren Daten, Ihren Blockaden und der Frage, ob Pearstop Sie tatsächlich dorthin bringt, wo Sie hinwollen.",
       "cta": "Verfügbare Termine ansehen"
     },
     "steps": [
       {
         "title": "Ihre aktuellen Blockaden",
-        "copy": "Wir beginnen dort, wo es tatsächlich hakt. Ist es die Rechnungsextraktion? Wo liegen Ihre Rechnungen heute eigentlich - in einem ERP-System, in Posteingängen, oder kommen sie noch auf Papier an? Wir gehen die Optionen durch und finden genau heraus, wo Ihre hängen bleiben."
+        "copy": "Wir beginnen dort, wo es tatsächlich hakt. Ihre Rechnungen liegen an unterschiedlichen Stellen: in einem ERP-System, in Posteingängen, oder sie kommen noch auf Papier an. Wir gehen Ihre durch und finden genau heraus, wo sie hängen bleiben."
       },
       {
         "title": "Ihr Prozess, kartiert",
-        "copy": "Sobald Rechnungen verarbeitet sind, was passiert dann? Wir kartieren Ihren Prozess schnell von Anfang bis Ende, damit wir von dem ausgehen, wie Dinge heute tatsächlich ablaufen - nicht, wie sie ablaufen sollten."
+        "copy": "Sobald Rechnungen verarbeitet sind, gehen diese Daten irgendwohin. Wir kartieren Ihren Prozess von Anfang bis Ende, basierend darauf, wie er heute tatsächlich abläuft, nicht wie er ablaufen sollte."
       },
       {
         "title": "Ihre Ziele",
-        "copy": "Was wollen Sie eigentlich aus Ihren Rechnungs- und Spend-Daten herausholen? Wir gehen tief darauf ein, was Sie erreichen wollen, nicht nur, was gerade nicht funktioniert."
+        "copy": "Was nicht funktioniert, ist meist offensichtlich. Was Sie tatsächlich aus Ihren Rechnungs- und Spend-Daten herausholen wollen, steht oft nirgendwo fest. Das halten wir schriftlich fest, bevor wir über die Plattform sprechen."
       },
       {
         "title": "Die Plattform, durchgegangen",
-        "copy": "Wir zeigen Ihnen die Teile von Pearstop, die direkt zu Ihren Zielen passen, damit Sie das Gespräch mit einer klaren Antwort verlassen: Bringt Sie das dorthin, wo Sie hinwollen?"
+        "copy": "Wir zeigen Ihnen die Teile von Pearstop, die zu Ihren Zielen passen, damit Sie das Gespräch mit einer klaren Antwort verlassen: ob Sie das dorthin bringt, wo Sie hinwollen."
       }
     ],
     "book": {
       "title": "Wählen Sie einen Termin",
-      "lead": "Wählen Sie unten einen Termin - kein Hin und Her, kein Pop-up."
+      "lead": "Wählen Sie unten einen Termin, kein Hin und Her, kein Pop-up."
     },
     "cta": {
       "title": "Noch nicht bereit zu buchen?",

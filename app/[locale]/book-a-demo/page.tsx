@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { CalendlyInlineWidget } from "@/components/calendly-inline-widget";
 import { CTABand, PageHero } from "@/components/content";
 import { alternateLanguages, siteConfig } from "@/lib/site";
 
@@ -69,19 +69,11 @@ export default async function BookDemoPage({
                 <h2>{t("book.title")}</h2>
                 <p className="light-copy">{t("book.lead")}</p>
               </div>
-              <div className="calendly-card">
-                <div
-                  className="calendly-inline-widget"
-                  data-url={siteConfig.demoCalendly}
-                  style={{ minWidth: "320px", height: "700px" }}
-                />
-              </div>
+              <CalendlyInlineWidget url={siteConfig.demoCalendly} />
             </div>
           </div>
         </div>
       </section>
-
-      <Script id="calendly-widget" src="https://assets.calendly.com/assets/external/widget.js" strategy="afterInteractive" />
 
       <CTABand
         title={t("cta.title")}

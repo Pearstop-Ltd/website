@@ -4205,30 +4205,30 @@
     "hero": {
       "eyebrow": "Boek een demo",
       "title": "Dit bespreken we precies in 30 minuten",
-      "lead": "Geen generieke pitch. We besteden het gesprek aan uw data, uw blokkades, en of Pearstop u daadwerkelijk brengt waar u wilt komen.",
+      "lead": "We besteden het gesprek aan uw data, uw blokkades, en of Pearstop u daadwerkelijk brengt waar u wilt komen.",
       "cta": "Bekijk beschikbare tijden"
     },
     "steps": [
       {
         "title": "Uw huidige blokkades",
-        "copy": "We beginnen bij waar het daadwerkelijk misgaat. Is het factuurextractie? Waar bevinden uw facturen zich vandaag eigenlijk - in een ERP-systeem, in inboxen, of komen ze nog op papier binnen? We lopen de opties door en ontdekken precies waar de uwe vastlopen."
+        "copy": "We beginnen bij waar het daadwerkelijk misgaat. Uw facturen staan op verschillende plekken: in een ERP-systeem, in inboxen, of ze komen nog op papier binnen. We lopen de uwe door en vinden precies waar ze vastlopen."
       },
       {
         "title": "Uw proces, in kaart gebracht",
-        "copy": "Zodra facturen verwerkt zijn, wat gebeurt er dan? We brengen snel uw proces van begin tot eind in kaart, zodat we uitgaan van hoe dingen vandaag daadwerkelijk verlopen, niet hoe ze zouden moeten verlopen."
+        "copy": "Zodra facturen verwerkt zijn, gaat die data ergens heen. We brengen uw proces van begin tot eind in kaart, op basis van hoe het vandaag daadwerkelijk verloopt, niet hoe het zou moeten verlopen."
       },
       {
         "title": "Uw doelen",
-        "copy": "Wat wilt u daadwerkelijk uit uw factuur- en spend-data halen? We duiken diep in wat u probeert te bereiken, niet alleen wat er kapot is."
+        "copy": "Wat er kapot is, is meestal duidelijk. Wat u daadwerkelijk uit uw factuur- en spend-data wilt halen, staat vaak nergens vast. Dat leggen we vast voordat we het over het platform hebben."
       },
       {
         "title": "Het platform, doorgenomen",
-        "copy": "We laten u de onderdelen van Pearstop zien die direct aansluiten bij uw doelen, zodat u het gesprek verlaat met een duidelijk antwoord: brengt dit u waar u wilt zijn?"
+        "copy": "We laten u de onderdelen van Pearstop zien die aansluiten bij uw doelen, zodat u het gesprek verlaat met een duidelijk antwoord: of dit u brengt waar u wilt zijn."
       }
     ],
     "book": {
       "title": "Kies een tijdstip",
-      "lead": "Kies hieronder een moment - geen heen-en-weer, geen pop-up."
+      "lead": "Kies hieronder een moment, geen heen-en-weer, geen pop-up."
     },
     "cta": {
       "title": "Nog niet klaar om te boeken?",

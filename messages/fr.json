@@ -4317,30 +4317,30 @@
     "hero": {
       "eyebrow": "Réserver une démo",
       "title": "Voici exactement ce que nous aborderons en 30 minutes",
-      "lead": "Pas de discours générique. Nous consacrons l'appel à vos données, vos blocages, et à la question de savoir si Pearstop vous mène là où vous voulez aller.",
+      "lead": "Nous consacrons l'appel à vos données, vos blocages, et à la question de savoir si Pearstop vous mène là où vous voulez aller.",
       "cta": "Voir les créneaux disponibles"
     },
     "steps": [
       {
         "title": "Vos blocages actuels",
-        "copy": "Nous commençons par où ça coince vraiment. Est-ce l'extraction des factures ? Où se trouvent vos factures aujourd'hui - dans un système ERP, dans des boîtes mail, ou encore sur papier ? Nous passerons en revue les options pour identifier précisément où les vôtres bloquent."
+        "copy": "Nous commençons par où ça coince vraiment. Vos factures se trouvent à différents endroits : dans un système ERP, dans des boîtes mail, ou encore sur papier. Nous passons en revue les vôtres et identifions précisément où elles bloquent."
       },
       {
         "title": "Votre processus, cartographié",
-        "copy": "Une fois les factures traitées, que se passe-t-il ensuite ? Nous cartographierons rapidement votre processus de bout en bout, pour partir de la façon dont les choses se passent réellement aujourd'hui, pas de la façon dont elles sont censées se passer."
+        "copy": "Une fois les factures traitées, ces données vont quelque part. Nous cartographions votre processus de bout en bout, à partir de la façon dont les choses se passent réellement aujourd'hui, pas de la façon dont elles sont censées se passer."
       },
       {
         "title": "Vos objectifs",
-        "copy": "Que voulez-vous vraiment tirer de vos données de factures et de dépenses ? Nous explorerons en profondeur ce que vous cherchez à accomplir, pas seulement ce qui ne fonctionne pas."
+        "copy": "Ce qui ne fonctionne pas est généralement évident. Ce que vous voulez vraiment tirer de vos données de factures et de dépenses n'est souvent écrit nulle part. Nous le mettons par écrit avant de parler de la plateforme."
       },
       {
         "title": "La plateforme, présentée",
-        "copy": "Nous vous montrerons les parties de Pearstop qui répondent directement à vos objectifs, afin que vous terminiez l'appel avec une réponse claire : est-ce que cela vous mène là où vous voulez être ?"
+        "copy": "Nous vous montrons les parties de Pearstop qui répondent à vos objectifs, afin que vous terminiez l'appel avec une réponse claire : si cela vous mène là où vous voulez être."
       }
     ],
     "book": {
       "title": "Choisissez un créneau",
-      "lead": "Choisissez un créneau ci-dessous - pas d'aller-retour, pas de pop-up."
+      "lead": "Choisissez un créneau ci-dessous, pas d'aller-retour, pas de pop-up."
     },
     "cta": {
       "title": "Pas encore prêt à réserver ?",

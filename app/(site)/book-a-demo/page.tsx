@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Script from "next/script";
+import { CalendlyInlineWidget } from "@/components/calendly-inline-widget";
 import { CTABand, PageHero } from "@/components/content";
 import { alternateLanguages, siteConfig } from "@/lib/site";
 
@@ -16,22 +16,22 @@ const STEPS = [
   {
     title: "Your current blockers",
     copy:
-      "We start with where things actually break down. Is it invoice extraction? Where do your invoices even live today - in an ERP system, sitting in inboxes, or still arriving on paper? We'll walk through the options and find out exactly where yours get stuck."
+      "We start with where things actually break down. Invoices live in different places: an ERP system, inboxes, or still arriving on paper. We walk through yours and find exactly where it gets stuck."
   },
   {
     title: "Your process, mapped",
     copy:
-      "Once invoices are processed, what happens next? We'll quickly map your process end to end, so we're working from how things actually flow today, not how they're supposed to."
+      "Once invoices are processed, that data goes somewhere. We map your process end to end, based on how it actually flows today, not how it's supposed to."
   },
   {
     title: "Your goals",
     copy:
-      "What do you actually want out of your invoice and spend data? We'll do a deep dive into what you're trying to achieve, not just what's broken."
+      "What's broken is usually obvious. What you actually want from your invoice and spend data often isn't written down anywhere. We get that in writing before we talk about the platform."
   },
   {
     title: "The platform, walked through",
     copy:
-      "We'll show you the parts of Pearstop that map directly to your goals, so you leave the call with a clear answer: will this get you where you want to be?"
+      "We show you the parts of Pearstop that map to your goals, so you leave the call with a clear answer: whether this gets you where you want to be."
   }
 ];
 
@@ -41,7 +41,7 @@ export default function BookDemoPage() {
       <PageHero
         eyebrow="Book a Demo"
         title="Here's exactly what we'll cover in 30 minutes"
-        lead="No generic pitch. We spend the call on your data, your blockers, and whether Pearstop actually gets you where you want to go."
+        lead="We spend the call on your data, your blockers, and whether Pearstop actually gets you where you want to go."
         actions={[{ label: "See available times", href: "#book", variant: "primary" }]}
       />
 
@@ -65,21 +65,13 @@ export default function BookDemoPage() {
             <div className="col-md-8 col-md-offset-2">
               <div className="text-center" style={{ marginBottom: "1.5rem" }}>
                 <h2>Pick a time</h2>
-                <p className="light-copy">Choose a slot below - no back-and-forth, no popup.</p>
+                <p className="light-copy">Choose a slot below, no back-and-forth, no popup.</p>
               </div>
-              <div className="calendly-card">
-                <div
-                  className="calendly-inline-widget"
-                  data-url={siteConfig.demoCalendly}
-                  style={{ minWidth: "320px", height: "700px" }}
-                />
-              </div>
+              <CalendlyInlineWidget url={siteConfig.demoCalendly} />
             </div>
           </div>
         </div>
       </section>
-
-      <Script id="calendly-widget" src="https://assets.calendly.com/assets/external/widget.js" strategy="afterInteractive" />
 
       <CTABand
         title="Not ready to book yet?"
