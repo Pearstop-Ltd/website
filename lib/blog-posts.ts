@@ -1770,6 +1770,52 @@ const _allBlogPosts: BlogPost[] = [
       { q: "How does Pearstop help make these charts trustworthy?", a: "Pearstop cleans and matches supplier and contract identifiers across your spend data, so a supplier is one record instead of two or three, and every line carries the right contract tag. That is the groundwork both charts need before the numbers on them mean anything to a room full of people asking questions." },
     ],
   },
+  {
+    slug: "new-head-of-procurement-data-baseline-audit",
+    title: "What a new head of procurement actually inherits",
+    description: "A new head of procurement usually inherits a spend list nobody has properly classified in years. Here is the fastest way to find out what you actually have.",
+    publishedAt: "2026-10-02",
+    category: "Procurement",
+    tags: ["new head of procurement", "spend baseline", "spend classification", "spend under management", "procurement data audit"],
+    readingTime: 6,
+    tocItems: [
+      { id: "what-a-categorisation-vacuum-looks-like", label: "What a categorisation vacuum looks like" },
+      { id: "why-nobody-flagged-this-before-you", label: "Why nobody flagged this before you" },
+      { id: "how-to-find-your-real-spend-baseline", label: "How to find your real spend baseline" },
+      { id: "what-to-prioritise-in-the-first-month", label: "What to prioritise in the first month" },
+    ],
+    softCta: "discovery",
+    faqItems: [
+      { q: "What should a new head of procurement do in their first 30 days?", a: "Establish a real spend baseline before setting any targets. That means pulling spend from every system that touches it, matching suppliers so the same one is not counted multiple times, and classifying every line to one consistent standard. Standard guidance for procurement leaders places this diagnosis specifically within the first month, ahead of any strategy decisions." },
+      { q: "Why do procurement data problems usually stay hidden until a new hire arrives?", a: "Because the cost builds up gradually rather than showing up as one clear failure. A slightly longer month-end close or a slightly less confident tender submission gets absorbed into normal working life over years, until someone new asks a basic question and discovers three systems cannot agree on the answer." },
+      { q: "What percentage of spend is typically under proper management?", a: "Benchmarking from the Hackett Group puts world-class organisations at around 97 percent of direct spend under management, compared with roughly 70 percent for typical organisations. That gap represents spend that is not reliably classified, matched to the right supplier, or visible in one place." },
+      { q: "How long does a proper spend baseline audit take?", a: "With the right classification support, weeks rather than months. The bottleneck is not usually the data volume, it is the manual effort of matching suppliers and reclassifying spend consistently by hand, which is exactly the part that can be done faster with the right process in place." },
+      { q: "How does Pearstop help a new head of procurement build a baseline?", a: "Pearstop classifies spend to commodity level across every system in a portfolio, matches suppliers so each one is counted once, and produces a real percentage of spend under management within weeks, giving a new head of procurement a credible number to work from before their first board update." },
+    ],
+  },
+  {
+    slug: "erp-migration-data-quality-before-go-live",
+    title: "Why the data has to be right before go-live, not after",
+    description: "Whatever is dirty in your data at cutover moves into the new ERP with you. Here is why the clean-up has to happen before go-live, not after.",
+    publishedAt: "2026-10-02",
+    category: "Data Quality",
+    tags: ["ERP migration", "data quality", "S/4HANA migration", "Business Central migration", "data cleansing"],
+    readingTime: 6,
+    tocItems: [
+      { id: "what-goes-wrong-on-cutover-weekend", label: "What goes wrong on cutover weekend" },
+      { id: "why-dirty-data-becomes-permanent", label: "Why dirty data becomes permanent" },
+      { id: "what-proper-pre-migration-cleanup-requires", label: "What proper pre-migration cleanup requires" },
+      { id: "how-long-this-actually-takes", label: "How long this actually takes" },
+    ],
+    softCta: "discovery",
+    faqItems: [
+      { q: "Why does data quality matter so much for an ERP migration?", a: "Because a migration copies whatever data exists, mistakes included. Poor master data quality is the leading cause of go-live failures in SAP migrations specifically, and projects affected by it typically run around 30 percent longer than planned. The software is rarely the actual problem." },
+      { q: "What happens to duplicate supplier records during a migration?", a: "They move into the new system exactly as duplicated as they were in the old one. A migration has no built-in step that detects or merges duplicate records, so whatever exists at cutover becomes the new system's version of the truth, and correcting it afterwards is significantly harder than fixing it before load." },
+      { q: "How much does pre-migration data clean-up actually reduce risk?", a: "Industry data migration guidance puts the reduction in post-migration defects at roughly 60 percent when cleansing happens before the move, compared with loading data as-is and fixing problems afterwards. That is a substantial difference in how smooth the first few months after go-live actually feel." },
+      { q: "How much time should be budgeted for data clean-up in a migration project?", a: "Around 25 to 30 percent of total project effort, based on standard migration guidance, with discovery and cleansing alone often consuming close to 40 percent of the working timeline. Treating this as a proper workstream with its own deadline, rather than an assumed side effect of migration, is what keeps that estimate realistic." },
+      { q: "How does Pearstop help before an ERP migration?", a: "Pearstop cleans and classifies spend and supplier data before cutover, matching duplicate records and applying a consistent classification standard, so the new S/4HANA or Business Central system inherits one correct dataset instead of carrying the old system's problems forward under a new interface." },
+    ],
+  },
 ];
 
 export const blogPosts: BlogPost[] = _allBlogPosts.filter((p) => !p.hidden);

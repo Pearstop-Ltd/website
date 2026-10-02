@@ -1,0 +1,57 @@
+---
+title: "Why the data has to be right before go-live, not after"
+description: "Whatever is dirty in your data at cutover moves into the new ERP with you. Here is why the clean-up has to happen before go-live, not after."
+date: "2026-10-02"
+category: "Data Quality"
+slug: "erp-migration-data-quality-before-go-live"
+author: "stephanie"
+lang: "en"
+---
+
+| Field | Value |
+| --- | --- |
+| Description | Whatever is dirty in your data at cutover moves into the new ERP with you. Here is why the clean-up has to happen before go-live, not after. |
+| Key Takeaway | Whatever is wrong with your data on cutover weekend, duplicate suppliers, inconsistent categories, missing fields, moves straight into your new ERP with you. The migration does not clean anything. It copies what is there. Fixing data quality before go-live takes real effort, usually a quarter or more of the project timeline, but it is far cheaper than fixing the same problems inside a live system afterwards. |
+| Pearstop's view | Whatever is dirty at cutover gets inherited by the new system permanently, not fixed by the migration. |
+| Pearstop's solution | Cleaning and classifying spend and supplier data before cutover, not after. |
+| Next step | Build data clean-up into the project plan now, not as a fix-it-later item. |
+
+## What goes wrong on cutover weekend
+
+**What actually happens during a migration cutover?** Data gets extracted from the old system, mapped to the new system's structure, and loaded in. That is the whole job. Nothing in that process asks whether a supplier record is a duplicate, or whether a category still makes sense. It moves what exists, faithfully, mistakes included.
+
+**Why does data quality tend to surface specifically at this point?** Because cutover weekend is when everyone finally looks closely at the full dataset, all at once, under time pressure, right before go-live. Problems that sat quietly for years in the old system suddenly block a load, fail a validation check, or produce numbers in testing that make nobody comfortable signing off.
+
+**Is this a common way for migrations to go wrong?** Common enough to be the leading cause. Industry analysis of SAP migrations names poor master data quality as the leading cause of go-live failures, not the software itself. Projects that hit this typically run around 30 percent longer than planned, and the reason is rarely the new system. It is the data underneath it, discovered too late to fix calmly.
+
+## Why dirty data becomes permanent
+
+**What happens to bad data that gets loaded anyway?** It becomes the new baseline. Once a duplicate supplier or an inconsistent category is live in the new ERP, it looks exactly as official as everything else in the system. Nobody flags it again, because there is nothing visually different about it. It just sits there, correct-looking and wrong, until someone happens to notice.
+
+* A duplicate supplier loaded into the new system stays duplicated, now inside a system that is harder to bulk-correct than the one you just left.
+* An inconsistent category loaded into the new system becomes the category going forward, inherited by every report built on top of it.
+* A missing field loaded as blank stays blank, because nothing in the new system knows what should have been there.
+
+**Why is fixing this after go-live harder than fixing it before?** Because the system is live. People are using it for real transactions, real reports, real decisions. Correcting a supplier record or a category structure after go-live means doing it around live operations, with far more caution and far more approval steps than a pre-migration clean-up needs, where the data can be reworked freely before anyone depends on it.
+
+**What does whatever's dirty at cutover actually cost, longer term?** Every report the new system produces inherits the same uncertainty the old system had, just presented with more confidence because it is coming from a shiny new interface. The migration was supposed to be the moment things got cleaner. Skipping the clean-up step turns it into the moment the mess became permanent instead.
+
+## What proper pre-migration cleanup requires
+
+**What does the clean-up actually involve?** Matching duplicate supplier and asset records before they load, so the new system gets one record per supplier rather than three. Classifying spend consistently before it loads, so categories mean the same thing across every site rather than whatever the old system happened to have. Filling or correctly flagging missing fields, so the new system is not inheriting blanks it cannot explain.
+
+**Does this actually reduce the risk of go-live problems?** Yes, measurably. Data migration best practice guidance puts pre-move cleansing at roughly a 60 percent reduction in post-migration defects. That is not a marginal improvement. It is the difference between a go-live that mostly works and one that spends its first few months fielding data complaints nobody expected.
+
+Pearstop cleans and classifies spend and supplier data before cutover, one matched, correctly categorised dataset instead of the mess the old system was quietly carrying, for teams migrating to S/4HANA or Business Central who do not want to inherit their old problems into a brand-new system.
+
+**Who should actually own this work inside the project?** Whoever owns the migration timeline needs to treat data clean-up as a workstream with its own deadline, not a task absorbed into "data migration" generically and assumed to happen automatically. It has a different skill set to system configuration, and it needs to finish before load, not run in parallel with it and hope both land in time.
+
+## How long this actually takes
+
+**How much of the project timeline should data clean-up realistically take?** Industry guidance puts data preparation at 25 to 30 percent of total project effort, with discovery and cleansing alone consuming around 40 percent of the timeline once work actually starts. That is a meaningful share of the project, which is exactly why it needs planning in from the start rather than being squeezed into the final weeks before cutover.
+
+**What happens if the timeline gets compressed and clean-up gets cut short?** The project still goes live, on the date everyone committed to, carrying whatever was not finished. That is usually how "we will fix it after go-live" decisions get made, not as a deliberate strategy but as a deadline decision under pressure, and it is exactly the decision that produces the permanent inheritance described above.
+
+**Is there a point where it becomes too late to do this properly?** Not too late, but progressively more expensive. Clean-up done months before cutover is calm, planned work. The same clean-up attempted in the final week before go-live is rushed, done under pressure, and more likely to miss things. The same clean-up done after go-live is the most expensive version of all three, because it now has to work around a live system instead of an empty one waiting to be filled properly.
+
+**Does the type of ERP change any of this, S/4HANA versus Business Central?** Not the underlying principle. Both systems load whatever data they are given, and neither one checks for duplicate suppliers or inconsistent categories on your behalf. The specific mapping and validation steps differ between platforms, but the core decision, clean before load or clean after go-live, is the same conversation regardless of which system you are moving to.
