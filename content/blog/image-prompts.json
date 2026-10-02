@@ -353,5 +353,21 @@
     "scene": "A sleek multi‑service building entrance plaza showing a loading dock on one side and a glass‑front office lobby with a service stairwell and utility cabinets visible, all under a unified canopy.",
     "prompt": "A sleek multi‑service building entrance plaza showing a loading dock on one side and a glass‑front office lobby with a service stairwell and utility cabinets visible, all under a unified canopy., overcast winter daylight, muted cool tones, flat soft shadows, quiet documentary feel, photorealistic photograph, true-to-life colour rendering for whatever light is described, NOT desaturated, NOT a flat monochrome grade, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
     "seed": 3281805357
+  },
+  "new-head-of-procurement-data-baseline-audit": {
+    "sector": "integrated-fm",
+    "includePeople": false,
+    "lightingMood": "cool early-morning blue-hour light outside with warm interior lamps glowing through windows, mixed colour temperature",
+    "scene": "A building entrance plaza featuring a line of sealed waste bins, a mop‑bucket trolley, and the open doors of a service elevator beside a covered loading dock area.",
+    "prompt": "A building entrance plaza featuring a line of sealed waste bins, a mop‑bucket trolley, and the open doors of a service elevator beside a covered loading dock area., cool early-morning blue-hour light outside with warm interior lamps glowing through windows, mixed colour temperature, photorealistic photograph, true-to-life colour rendering for whatever light is described, NOT desaturated, NOT a flat monochrome grade, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
+    "seed": 1761532096
+  },
+  "erp-migration-data-quality-before-go-live": {
+    "sector": "hard-fm",
+    "includePeople": true,
+    "lightingMood": "golden-hour exterior light with long shadows and a warm-to-cool gradient across the scene",
+    "scene": "A facilities manager in a high‑visibility safety vest is scanning a barcode on a boiler’s control panel while a maintenance technician in coveralls checks the pressure gauge on the adjacent pipework.",
+    "prompt": "A facilities manager in a high‑visibility safety vest is scanning a barcode on a boiler’s control panel while a maintenance technician in coveralls checks the pressure gauge on the adjacent pipework., golden-hour exterior light with long shadows and a warm-to-cool gradient across the scene, photorealistic photograph, true-to-life colour rendering for whatever light is described, NOT desaturated, NOT a flat monochrome grade, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
+    "seed": 3470228500
   }
 }

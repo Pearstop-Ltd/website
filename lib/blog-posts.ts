@@ -1772,6 +1772,7 @@ const _allBlogPosts: BlogPost[] = [
   },
   {
     slug: "new-head-of-procurement-data-baseline-audit",
+    image: "/images/blog/new-head-of-procurement-data-baseline-audit.jpg",
     title: "What a new head of procurement actually inherits",
     description: "A new head of procurement usually inherits a spend list nobody has properly classified in years. Here is the fastest way to find out what you actually have.",
     publishedAt: "2026-10-02",
@@ -1795,6 +1796,7 @@ const _allBlogPosts: BlogPost[] = [
   },
   {
     slug: "erp-migration-data-quality-before-go-live",
+    image: "/images/blog/erp-migration-data-quality-before-go-live.jpg",
     title: "Why the data has to be right before go-live, not after",
     description: "Whatever is dirty in your data at cutover moves into the new ERP with you. Here is why the clean-up has to happen before go-live, not after.",
     publishedAt: "2026-10-02",
