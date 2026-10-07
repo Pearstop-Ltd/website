@@ -1,0 +1,79 @@
+---
+title: "The expired supplier certificate nobody noticed"
+description: "A supplier certificate lapsed six months ago and nobody caught it. Here is why compliance tracking fails quietly in a spreadsheet, not a data model."
+date: "2026-10-07"
+category: "Asset Management"
+slug: "expired-supplier-certificate-compliance-data-gap"
+author: "rae"
+lang: "en"
+---
+
+| Field | Value |
+| --- | --- |
+| Description | A supplier certificate lapsed six months ago and nobody caught it. Here is why compliance tracking fails quietly in a spreadsheet, not a data model. |
+| Key Takeaway | A certificate tracked in a spreadsheet depends entirely on someone remembering to check it. A certificate tracked as a field in the data model gets flagged automatically, against the asset or supplier record it actually belongs to, the moment it lapses. The gap between those two approaches is rarely visible until an audit, a renewal, or an incident forces the question, by which point the certificate has often been expired for months. |
+| Pearstop's view | A lapsed certificate is rarely a single missed email. It is a tracking method with no structural mechanism for catching the miss at all. |
+| Pearstop's solution | Pearstop builds compliance fields directly into a client's classified asset and supplier data during a migration, so a certificate that previously depended on memory becomes a field the system checks on its own. |
+| Next step | Pull every compliance document tracked outside the core system and check each one against today's date before the next migration project begins. |
+
+## Why compliance tracking fails quietly
+
+A lapsed certificate does not announce itself. Operationally, nothing changes the day it expires. The supplier keeps delivering, the site keeps running, and the spreadsheet cell that should have flagged a renewal sits exactly as it did the week before, unchanged and unchecked.
+
+### What usually sits behind a compliance tracking failure
+
+Traditionally, certificate tracking for facilities and construction suppliers has lived in a spreadsheet maintained alongside, not inside, the core data used to run the business. This practice remained the standard approach for a considerable period, largely because it required no system change and felt adequate for a manageable supplier list. It stops being adequate the moment that list grows past what one person can hold in their head.
+
+### Why does a spreadsheet miss what a data model catches
+
+A spreadsheet has no structural relationship between a certificate's expiry date and the asset or supplier record it belongs to. Nothing forces a review. Nothing flags a gap automatically. A data model, by contrast, holds the certificate as a field attached directly to the supplier or asset record, which means a query or a rule can check it against today's date without anyone remembering to look.
+
+### What an ERP migration forces into the open
+
+An ERP migration, particularly a move to a platform such as Microsoft Dynamics Business Central, forces every field in the legacy system to be accounted for before go-live. [Migration guidance for Business Central](https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/administration/migration-clean-data) is explicit that data accuracy during this process determines whether the project stays on schedule, which means a compliance field that was quietly tracked off-system for years has nowhere left to hide. It either gets mapped properly into the new model, or it gets left behind entirely.
+
+## What one migration review surfaced
+
+One hard FM client of ours was midway through a Business Central migration when this exact gap surfaced. We will refer to them as Site Partners. Their existing compliance tracking sat in a shared spreadsheet, updated manually whenever someone remembered, alongside an asset register that had never been built to hold a certificate field at all.
+
+### What the migration review actually found
+
+The review found a supplier certificate that had lapsed six months earlier. Nobody on the facilities team had caught it, because nothing in daily operations depended on the spreadsheet being current, and the supplier in question had continued delivering without incident in the meantime. The certificate had expired quietly, and the business had been operating against an expired document for half a year before the migration review forced the question.
+
+### Why this specific gap is common
+
+Site Partners is not unusual in this respect. Supplier compliance management research consistently points to manual tracking through email and spreadsheets as the leading cause of certification failures. A single missed email is rarely the real failure. The tracking method itself has no structural mechanism for catching the miss at all.
+
+## What this costs when it goes unnoticed
+
+A lapsed certificate is not automatically a crisis. Most expire, get noticed late, and get renewed without incident. The operational exposure sitting underneath an unnoticed lapse, for however long nobody looks, is the actual risk worth attention.
+
+### What does a lapsed certificate actually put at risk
+
+Depending on what the certificate covers, a lapse can affect insurance standing, regulatory compliance, and contractual obligations with the client the supplier is ultimately serving. Facilities-specific research on equipment and license lapses has found that a single lapsed certification can trigger significant regulatory penalties and, in some cases, void related insurance coverage retroactively, which is a materially different exposure from a late paperwork renewal.
+
+### Which certificates carry the highest exposure
+
+Not every compliance document carries equal weight. A certificate tied directly to a regulatory licence, an insurance condition, or a specific contractual obligation with the end client sits at a different level of exposure than a general supplier accreditation reviewed annually as a formality. Site Partners' lapsed certificate fell into the first category, tied to a safety-related accreditation the end client's own insurer required as a standing condition, which is precisely why the six-month gap mattered more than its age alone would suggest.
+
+### How much does fixing this actually cost
+
+Moving certificate tracking from a spreadsheet into the data model is largely a modelling and discipline exercise, not a large technology spend. The work is in defining the field properly against the right asset or supplier record and building the rule that checks it, which is exactly the kind of structural fix an ERP migration already forces a business to consider for every other field. Discovering the gap during an audit, a renewal, or an incident, after the exposure has already existed for months, is the genuinely expensive version of this problem.
+
+## How to catch this before the next migration forces it
+
+Waiting for a migration to surface a gap like this is not a plan. It is a six-month head start handed to whichever lapse happens to get caught first.
+
+### What should a facilities team check before their next ERP project
+
+Pull the current list of every compliance document tracked outside the core system, whichever spreadsheet, shared drive, or inbox it currently lives in, and check each one against today's date before the migration project even begins. Treat anything found lapsed as the real finding, not an embarrassing footnote, and build its replacement field into the new data model from day one rather than retrofitting it after go-live.
+
+Pearstop builds compliance fields directly into a client's classified asset and supplier data during a migration, turning a certificate that previously depended on someone remembering into a field the system checks on its own, for facilities teams who need the gap caught before the client relationship, not the spreadsheet, is what notices it.
+
+### What ongoing monitoring should look like once the field exists
+
+A field in the data model is only as useful as the rule checking it. Once compliance tracking sits inside the core system, the sensible next step is a standing report, reviewed on a fixed schedule, of every certificate due to expire within a defined window, rather than a dashboard someone has to remember to open. The structural fix is the field. The discipline fix is making sure something actually looks at it on a cadence nobody has to hold in their head.
+
+## Does this earn its place before your next migration
+
+A certificate expiring is not unusual. A certificate expiring unnoticed for six months is a tracking failure, not a compliance failure, and tracking failures are exactly what moving from a spreadsheet to a proper data model is built to close. The question worth asking before any migration project starts is not whether your compliance documents are current. It is whether anything in your system would actually tell you if they were not.
