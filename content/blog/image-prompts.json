@@ -369,5 +369,21 @@
     "scene": "A facilities manager in a high‑visibility safety vest is scanning a barcode on a boiler’s control panel while a maintenance technician in coveralls checks the pressure gauge on the adjacent pipework.",
     "prompt": "A facilities manager in a high‑visibility safety vest is scanning a barcode on a boiler’s control panel while a maintenance technician in coveralls checks the pressure gauge on the adjacent pipework., golden-hour exterior light with long shadows and a warm-to-cool gradient across the scene, photorealistic photograph, true-to-life colour rendering for whatever light is described, NOT desaturated, NOT a flat monochrome grade, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
     "seed": 3470228500
+  },
+  "expired-supplier-certificate-compliance-data-gap": {
+    "sector": "soft-fm-cleaning",
+    "includePeople": false,
+    "lightingMood": "overcast winter daylight, muted cool tones, flat soft shadows, quiet documentary feel",
+    "scene": "A neatly organized cleaning cart stocked with mop buckets, microfiber cloths, and chemical containers parked in a bright office foyer with polished marble flooring",
+    "prompt": "A neatly organized cleaning cart stocked with mop buckets, microfiber cloths, and chemical containers parked in a bright office foyer with polished marble flooring, overcast winter daylight, muted cool tones, flat soft shadows, quiet documentary feel, photorealistic photograph, true-to-life colour rendering for whatever light is described, NOT desaturated, NOT a flat monochrome grade, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
+    "seed": 2322533509
+  },
+  "spend-report-cfo-procurement-commercial-director-needs": {
+    "sector": "integrated-fm",
+    "includePeople": true,
+    "lightingMood": "moody low-key interior lighting with warm sodium work-lights, deep shadows, dramatic contrast",
+    "scene": "A facilities manager in a crisp uniform inspects a loading dock while a cleaning supervisor in high‑visibility vest checks the condition of the floor‑squeegee, both reviewing a stack of physical invoices on a clipboard beside the building entrance.",
+    "prompt": "A facilities manager in a crisp uniform inspects a loading dock while a cleaning supervisor in high‑visibility vest checks the condition of the floor‑squeegee, both reviewing a stack of physical invoices on a clipboard beside the building entrance., moody low-key interior lighting with warm sodium work-lights, deep shadows, dramatic contrast, photorealistic photograph, true-to-life colour rendering for whatever light is described, NOT desaturated, NOT a flat monochrome grade, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
+    "seed": 2684739462
   }
 }

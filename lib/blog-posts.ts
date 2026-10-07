@@ -1820,6 +1820,7 @@ const _allBlogPosts: BlogPost[] = [
   },
   {
     slug: "expired-supplier-certificate-compliance-data-gap",
+    image: "/images/blog/expired-supplier-certificate-compliance-data-gap.jpg",
     title: "The expired supplier certificate nobody noticed",
     description: "A supplier certificate lapsed six months ago and nobody caught it. Here is why compliance tracking fails quietly in a spreadsheet, not a data model.",
     publishedAt: "2026-10-07",
@@ -1845,6 +1846,7 @@ const _allBlogPosts: BlogPost[] = [
   },
   {
     slug: "spend-report-cfo-procurement-commercial-director-needs",
+    image: "/images/blog/spend-report-cfo-procurement-commercial-director-needs.jpg",
     title: "One spend report, three leaders, three different needs",
     description: "A CFO, a head of procurement, and a commercial director read the same spend report and reach three different conclusions. Here is why.",
     publishedAt: "2026-10-07",
