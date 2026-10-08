@@ -1894,6 +1894,31 @@ const _allBlogPosts: BlogPost[] = [
       { q: "How often should procurement spend charts be refreshed?", a: "Quarterly is sufficient for most categories, but anything feeding an active renewal or tender should be rebuilt the week beforehand rather than pulled from an older snapshot. Spend data shifts faster than most reporting calendars assume, and a stale chart can misstate how consolidated a supplier relationship actually is." },
     ],
   },
+  {
+    slug: "general-ai-tool-classification-failure-wrong-question",
+    title: "Why a general AI tool failed our classification problem",
+    description: "A general-purpose AI tool hallucinated categories at volume and lost consistency across thousands of lines. The tool was asked the wrong question.",
+    publishedAt: "2026-10-08",
+    category: "AI & Digital",
+    tags: ["AI classification", "AI hallucination", "spend classification", "classification guardrails", "taxonomy consistency"],
+    readingTime: 6,
+    tocItems: [
+      { id: "why-teams-reach-for-a-general-tool", label: "Why teams reach for a general tool" },
+      { id: "why-a-general-purpose-tool-struggles-here", label: "Why a general tool struggles" },
+      { id: "what-one-facilities-contractor-experienced", label: "What one contractor experienced" },
+      { id: "what-this-means-for-the-task-ahead", label: "What this means for the task ahead" },
+      { id: "does-this-earn-its-place-as-a-lesson", label: "Does this earn its place" },
+    ],
+    softCta: "checklist",
+    faqItems: [
+      { q: "Why does a general-purpose AI tool invent categories that do not exist?", a: "General-purpose AI tools can produce factuality and faithfulness hallucinations, meaning an answer that sounds entirely plausible and is simply wrong, including a category name that reads as sensible but does not actually exist in the taxonomy being applied. It passes a cursory review precisely because it sounds right." },
+      { q: "Why does the same item get classified differently by a general AI tool on different runs?", a: "Without a fixed rule set and a persistent memory of every prior decision, the same description can land in a different category depending on what surrounded it in that specific run. Consistency across sessions was never the problem a general-purpose conversational tool was built to solve." },
+      { q: "Does this mean AI cannot be trusted for spend classification?", a: "No. It means a large, repeatable classification job against one fixed taxonomy is a different task from open-ended conversation, and needs guardrails a general-purpose tool does not include by default: a hard limit on inventing categories, a context mechanism that holds taxonomy consistently across a run, and a review step for uncertain lines." },
+      { q: "How do you check whether a classification tool's output can be trusted?", a: "Check a genuinely random sample against the real, approved taxonomy rather than judging whether the output looks reasonable. Confirm the same item classified twice lands in the same category both times, and confirm that every category name returned actually exists in the taxonomy being applied." },
+      { q: "How does Pearstop avoid the problems a general-purpose AI tool runs into?", a: "Pearstop applies deterministic rule guardrails on top of AI-assisted classification, tested against the organisation's actual approved taxonomy rather than general training knowledge, with low-confidence lines routed to a person instead of resolved by a guess. The taxonomy, not the tool's own judgement, sets the boundary on what counts as a valid category." },
+      { q: "What should a team do if they already classified spend using a general-purpose AI tool?", a: "Sample the existing output against the real taxonomy before trusting it further, since a confident, well-formatted result is not the same as a correct one at volume. The longer flawed output goes unchecked, the more decisions end up resting on a spend breakdown that only looks settled." },
+    ],
+  },
 ];
 
 export const blogPosts: BlogPost[] = _allBlogPosts.filter((p) => !p.hidden);

@@ -1,0 +1,83 @@
+---
+title: "Why a general AI tool failed our classification problem"
+description: "A general-purpose AI tool hallucinated categories at volume and lost consistency across thousands of lines. The tool was asked the wrong question."
+date: "2026-10-08"
+category: "AI & Digital"
+slug: "general-ai-tool-classification-failure-wrong-question"
+author: "rae"
+lang: "en"
+---
+
+| Field | Value |
+| --- | --- |
+| Description | A general-purpose AI tool hallucinated categories at volume and lost consistency across thousands of lines. The tool was asked the wrong question. |
+| Key Takeaway | A general-purpose AI tool, pointed at a large spend classification problem, produced inconsistent categories, and invented plausible-sounding ones that did not exist in the taxonomy. The tool was not malfunctioning. It was built to hold an open-ended conversation within a bounded context, not to apply one fixed taxonomy consistently across tens of thousands of lines without drifting. The tool is not broken. It is being asked the wrong kind of question. |
+| Pearstop's view | A tool failing a large classification job shows it was asked to guarantee something its design was never built for, being perfect consistency at volume against one fixed taxonomy. |
+| Pearstop's solution | Pearstop applies deterministic rule guardrails on top of AI-assisted classification, tested against the real approved taxonomy, with low-confidence lines routed to a person instead of a guess. |
+| Next step | Before trusting any classification tool's output at volume, sample it against the real taxonomy and confirm the same item classifies the same way twice. |
+
+## Why teams reach for a general tool
+
+A general-purpose AI assistant is already in the building for most organisations. It's familiar, low friction, and free of a procurement process of its own. When a classification backlog appears, pointing that same tool at it is the obvious first move.
+
+### What usually happens in the first attempt
+
+The early results look promising. A handful of lines come back correctly categorised, in a format that looks exactly like the taxonomy the organisation already uses. Confidence builds quickly, and the backlog that seemed daunting a week earlier looks like a solved problem.
+
+### Where does it start to go wrong
+
+Scale changes the picture. [Research into large language model failure modes](https://arxiv.org/pdf/2510.06265) consistently documents factuality and faithfulness hallucinations. This means that the tool can produce an answer that sounds entirely plausible and is simply wrong, including inventing a category that does not exist anywhere in the actual taxonomy being applied. At a hundred lines, a reviewer catches this quickly. At several thousand, the same error pattern repeats quietly across the file.
+
+## Why a general-purpose tool struggles here
+
+The tool struggles specifically at a task its underlying design was never built to guarantee, being a perfect, repeatable consistency across a very large, structured input, against one fixed, and unchanging taxonomy.
+
+### What does context window behaviour actually mean for classification accuracy
+
+A general-purpose assistant works within a bounded context window, and [documented behaviour around long or heavily loaded contexts](https://www.producttalk.org/context-rot/) shows that accuracy degrades as that window fills, with earlier detail competing against more recent input for the model's attention. A classification taxonomy with hundreds of categories, applied consistently across thousands of lines, is exactly the kind of sustained, structured load that this behaviour affects most.
+
+### Why does the same item get classified differently on different days
+
+Without a fixed rule set and a memory of every prior decision, the same description can land in a different category depending on what surrounded it in that particular run. Two invoices for materially the same item, submitted a week apart, come back coded differently, and nothing in a general-purpose conversational tool's design guarantees otherwise. Consistency across sessions was never the problem it was built to solve.
+
+### Why do invented categories look so convincing
+
+A hallucinated category is rarely nonsensical. It typically reads as a plausible, sensibly named addition to a real taxonomy, which is exactly why it passes a cursory review. Catching it requires checking every output against the actual approved category list, rather than checking whether the output looks reasonable on its own terms.
+
+## What one facilities contractor experienced
+
+One hard FM client of ours ran directly into this before engaging Pearstop. We will refer to them as a mid-sized facilities contractor managing several hundred thousand spend lines across multiple sites. Their team had tried a general-purpose AI tool first, as most organisations in this position do.
+
+### What the client actually found when they checked the output
+
+Spot checks against a verified sample showed categories invented outright, alongside real categories applied inconsistently to materially identical line items. The team had assumed that a confident, well-formatted answer meant a correct one. The review process that would have caught the pattern earlier had not yet been built, because nobody had expected to need it for a tool this familiar.
+
+The scale of the backlog made the problem worse. A few hundred lines could plausibly be spot-checked by hand within a day. Several hundred thousand lines meant that even a thorough reviewer could only sample a small fraction. Accordingly, the error pattern survived comfortably inside the portion nobody had time to check.
+
+### How long had the problem been running before anyone noticed
+
+By the time Pearstop was engaged to help, the problem had been running for weeks. The team had kept working from the tool's output in the meantime, as nothing about a hallucinated category looks obviously wrong at the point it is produced. The cost was not just the eventual reclassification effort. It was every decision made in the interim against a spend breakdown that looked settled and was not.
+
+### What changed once the underlying task was reframed
+
+Recognising that large-scale, repeatable classification against a fixed taxonomy is a different task from open-ended conversation turned out to matter more than any better prompt or alternative general-purpose tool could have. The task needed guardrails against drifting outside the approved category list, a context mechanism built specifically to hold taxonomy and supplier history consistently across a run, and a review step that checks output against the real taxonomy rather than against whether it merely sounds right.
+
+## What this means for the task ahead
+
+None of this is an argument against AI for classification. Pearstop's own approach is built on it. The distinction is in how the tool is constrained, not whether one is used at all.
+
+### What should guardrail a classification tool that a general-purpose one lacks by default
+
+In order to protect against this, a rule set that blocks the tool from inventing a category outside the approved taxonomy is required. Further, a supplier and item context window that persists consistently across the whole run rather than degrading as it fills, and a confidence threshold that routes uncertain lines to a person instead of forcing a guess are necessary. A general-purpose conversational tool offers none of these by default, because none of them were the problem it was designed to solve.
+
+### What should a team check before trusting any classification tool's output
+
+Before relying on any tool's output at volume, a genuinely random sample should be checked against the real, approved taxonomy as opposed to checking whether the output looks reasonable on its own terms. Confirm that the same item, submitted twice, lands in the same category both times. Confirm that every category name returned actually exists in the taxonomy being applied, rather than assuming a well-formatted answer implies a correct one.
+
+### How does Pearstop handle the same classification task differently
+
+Pearstop applies deterministic rule guardrails on top of AI-assisted classification, which is tested against the actual approved taxonomy rather than general training knowledge, with low-confidence lines routed to a person.
+
+## Does this earn its place as a lesson
+
+A general-purpose AI tool failing a large classification job mainly shows that the tool was asked to do something its design was never built to guarantee, essentially to be perfectly consistent at volume, against one fixed taxonomy, with zero drift across thousands of lines.
