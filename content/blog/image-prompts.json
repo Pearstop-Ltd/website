@@ -385,5 +385,21 @@
     "scene": "A facilities manager in a crisp uniform inspects a loading dock while a cleaning supervisor in high‑visibility vest checks the condition of the floor‑squeegee, both reviewing a stack of physical invoices on a clipboard beside the building entrance.",
     "prompt": "A facilities manager in a crisp uniform inspects a loading dock while a cleaning supervisor in high‑visibility vest checks the condition of the floor‑squeegee, both reviewing a stack of physical invoices on a clipboard beside the building entrance., moody low-key interior lighting with warm sodium work-lights, deep shadows, dramatic contrast, photorealistic photograph, true-to-life colour rendering for whatever light is described, NOT desaturated, NOT a flat monochrome grade, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
     "seed": 2684739462
+  },
+  "unspsc-treemap-tail-spend-visibility": {
+    "sector": "integrated-fm",
+    "includePeople": false,
+    "lightingMood": "overcast winter daylight, muted cool tones, flat soft shadows, quiet documentary feel",
+    "scene": "A spacious loading dock beside a modern office building entrance, showing stacked pallets, a commercial waste compactor, a cleaning equipment trolley, and a HVAC service van parked under a canopy.",
+    "prompt": "A spacious loading dock beside a modern office building entrance, showing stacked pallets, a commercial waste compactor, a cleaning equipment trolley, and a HVAC service van parked under a canopy., overcast winter daylight, muted cool tones, flat soft shadows, quiet documentary feel, photorealistic photograph, true-to-life colour rendering for whatever light is described, NOT desaturated, NOT a flat monochrome grade, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
+    "seed": 740653997
+  },
+  "general-ai-tool-classification-failure-wrong-question": {
+    "sector": "integrated-fm",
+    "includePeople": true,
+    "lightingMood": "cool early-morning blue-hour light outside with warm interior lamps glowing through windows, mixed colour temperature",
+    "scene": "A facilities manager and a cleaning supervisor walk side‑by‑side through the modern office lobby, pointing at a wall‑mounted asset tag while a mechanical technician checks a nearby HVAC access panel.",
+    "prompt": "A facilities manager and a cleaning supervisor walk side‑by‑side through the modern office lobby, pointing at a wall‑mounted asset tag while a mechanical technician checks a nearby HVAC access panel., cool early-morning blue-hour light outside with warm interior lamps glowing through windows, mixed colour temperature, photorealistic photograph, true-to-life colour rendering for whatever light is described, NOT desaturated, NOT a flat monochrome grade, shallow depth of field, documentary photography style, no text, no logos, no watermark, 16:9 landscape, shot on a full-frame DSLR with a 35mm lens, sharp focus, high detail",
+    "seed": 2940078072
   }
 }

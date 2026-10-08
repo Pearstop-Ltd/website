@@ -1872,6 +1872,7 @@ const _allBlogPosts: BlogPost[] = [
   },
   {
     slug: "unspsc-treemap-tail-spend-visibility",
+    image: "/images/blog/unspsc-treemap-tail-spend-visibility.jpg",
     title: "A UNSPSC treemap exposes tail spend before it costs you",
     description: "Pair a UNSPSC category treemap with an on-contract vs tail-spend bar chart to see where procurement spend hides, and negotiate with real leverage.",
     publishedAt: "2026-10-08",
@@ -1896,6 +1897,7 @@ const _allBlogPosts: BlogPost[] = [
   },
   {
     slug: "general-ai-tool-classification-failure-wrong-question",
+    image: "/images/blog/general-ai-tool-classification-failure-wrong-question.jpg",
     title: "Why a general AI tool failed our classification problem",
     description: "A general-purpose AI tool hallucinated categories at volume and lost consistency across thousands of lines. The tool was asked the wrong question.",
     publishedAt: "2026-10-08",
