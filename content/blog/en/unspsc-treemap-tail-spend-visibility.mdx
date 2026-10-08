@@ -1,0 +1,86 @@
+---
+title: "A UNSPSC treemap exposes tail spend before it costs you"
+description: "Pair a UNSPSC category treemap with an on-contract vs tail-spend bar chart to see where procurement spend hides, and negotiate with real leverage."
+date: "2026-10-08"
+category: "Procurement"
+slug: "unspsc-treemap-tail-spend-visibility"
+author: "stephanie"
+lang: "en"
+---
+
+| Field | Value |
+| --- | --- |
+| Description | Pair a UNSPSC category treemap with an on-contract vs tail-spend bar chart to see where procurement spend hides, and negotiate with real leverage. |
+| Key Takeaway | A category-spend treemap and an on-contract versus tail-spend bar chart answer two different questions: where the money sits, and how much of it nobody is managing. Both only work if every line is coded to a UNSPSC level and matched to a contract ID first. Build them in that order and the charts take an afternoon. Skip the coding step and they take a quarter, or they lie to you. |
+| Pearstop's view | A chart built on inconsistently coded spend data looks precise and is not, so the coding has to come before the visualisation, not after it. |
+| Pearstop's solution | Pearstop classifies every spend line to UNSPSC and matches it to an active contract ID, so the treemap and tail-spend bar are trustworthy the first time they are built. |
+| Next step | Run the treemap first to pick the two or three categories worth a Q4 negotiation, then apply the tail-spend bar to just those categories. |
+
+## Why a treemap beats a pie chart
+
+A pie chart tells you Facilities is 40% of spend. A treemap tells you Facilities is 40%, HVAC maintenance is half of that, and one sub-category of filter replacement is quietly bigger than three other categories combined.
+
+### What does a UNSPSC spend treemap actually show
+
+It shows nested rectangles sized by spend value, grouped by UNSPSC segment, family, class and commodity. The box size is the money. The nesting is the taxonomy. A category that looks small on a flat bar chart can turn out to be the third-biggest block in the building once its sub-categories are coded and grouped together instead of scattered across a dozen free-text supplier descriptions.
+
+### How many UNSPSC levels should the treemap use
+
+Two is usually enough for a first read: segment for the outer rectangles, family for the inner ones. Going to class or commodity level in the same view makes the treemap unreadable. Save that depth for a drill-down, not the headline chart.
+
+### What breaks a treemap before it is even built
+
+Inconsistent coding. If the same supplier invoice gets filed under three different free-text categories depending on who typed it in, the treemap draws three small boxes where there should be one large one, and the negotiation case for consolidating that supplier disappears into the noise.
+
+### Who should actually read the treemap
+
+Give it to whoever runs the next renewal conversation, not just the person who built it. A commercial director staring at a treemap for the first time tends to ask the same question within thirty seconds: why is that box bigger than I expected. That question is the whole point. It surfaces categories that have been quietly growing while nobody was looking at a line-item report, because a line-item report does not show relative size the way a treemap does.
+
+## Why tail spend needs its own chart
+
+The treemap answers "where is the money." It does not answer "how much of it is actually under control." That is a second question, and it needs a second chart: a simple bar split between spend running through an active, negotiated contract and spend that is not.
+
+### What counts as tail spend versus maverick spend
+
+Tail spend is the low-value, high-volume end of the business: small, scattered purchases spread across many suppliers, rarely covered by a negotiated agreement. Maverick spend is different: it is spend that should be going through an existing contract or approved supplier and is not. A line can be both tail spend and maverick spend at once, or neither. The bar chart should show both, because they call for different fixes.
+
+### How big is tail spend usually
+
+Industry benchmarking puts tail spend at roughly 20 percent of total spend but 80 percent of transactions and suppliers, the inverse of the 80/20 pattern that strategic spend follows. Twenty percent of the money, but the overwhelming majority of the invoices, the suppliers, and the admin.
+
+### How big is maverick spend usually
+
+Ardent Partners' benchmarking puts the average organisation's maverick spend rate at around 30 percent, against under 10 percent for the best-in-class group. Separately, the Hackett Group has found close to 30 percent of indirect spend running off-contract at a typical organisation, and considerably higher at some. That gap between average and best-in-class comes down to visibility, not talent.
+
+## Reading the two charts together
+
+One hard FM client of ours ran this pair for the first time ahead of a renewal cycle. We will call them Bright Clean. The treemap showed cleaning consumables as a mid-sized block, nothing remarkable. The tail-spend bar told the real story: over half of that block was off-contract, spread across eleven suppliers for what was functionally one product line. The treemap said "worth a look." The bar chart said "worth a negotiation this quarter."
+
+### Which chart should procurement look at first
+
+Start with the treemap. It sets the agenda: the two or three categories worth spending negotiation time on this quarter. Then apply the tail-spend bar only to those categories, rather than running it across the whole spend file at once. A tail-spend view across everything just produces a long list nobody acts on.
+
+### What goes wrong when teams build these charts in the wrong order
+
+Building the tail-spend bar first, before the UNSPSC coding is solid, produces a chart that looks precise and is not. Every line sitting in a vague or inconsistent category gets counted as "uncategorised" rather than correctly split between on-contract and tail, and the bar quietly understates the real control gap.
+
+### How often should these charts be refreshed
+
+Quarterly is enough for most categories. Anything feeding an active renewal or tender should be rebuilt the week before the conversation, not pulled from a quarter-old snapshot. Spend data moves faster than most procurement calendars assume. A supplier that looked consolidated in January can have three new free-text entries by March, each one quietly undoing the coding work that made the original chart trustworthy.
+
+| Approach | What it shows | What it misses |
+| --- | --- | --- |
+| Pie chart by top-level category | Rough share of total spend | Sub-category concentration, coding inconsistency |
+| Treemap, two UNSPSC levels | Where the money actually sits, nested | Contract coverage |
+| On-contract vs tail-spend bar | How much of each category is under control | Where in the taxonomy the gap sits |
+| Treemap plus tail-spend bar, run together | Both of the above, on the same coded data | Nothing, if the coding is solid first |
+
+Pearstop classifies every spend line to UNSPSC and matches it to an active contract ID before either chart gets built, which is what lets a head of procurement move from "we think cleaning is expensive" to a two-chart negotiation brief for a specific supplier conversation.
+
+### What this looks like without clean coding first
+
+Most teams already have a BI tool that can draw a treemap in minutes. The chart was never the hard part. The hard part is getting every line coded to the same taxonomy level and matched to the right contract ID before the chart is built, which is exactly the step most spend data has never been through. A treemap built on inconsistently coded data is still a treemap. It is just drawing the wrong picture with full confidence.
+
+## Does this earn its place before renewal
+
+Build both charts, in that order, and a renewal conversation stops being a guess about which supplier to push on. It becomes a short list, backed by two numbers: how much money sits in the category, and how much of it is actually protected by a contract. That is the difference between negotiating from a hunch and negotiating from a position.

@@ -1870,6 +1870,30 @@ const _allBlogPosts: BlogPost[] = [
       { q: "What should a board do when a spend report cannot answer the question being asked of it?", a: "Treat it as a signal that the report was built for a different audience, not that the underlying numbers are wrong. The fix is reclassifying the spend data consistently enough to support every required view, rather than rebuilding a new report for each meeting as questions arise." },
     ],
   },
+  {
+    slug: "unspsc-treemap-tail-spend-visibility",
+    title: "A UNSPSC treemap exposes tail spend before it costs you",
+    description: "Pair a UNSPSC category treemap with an on-contract vs tail-spend bar chart to see where procurement spend hides, and negotiate with real leverage.",
+    publishedAt: "2026-10-08",
+    category: "Procurement",
+    tags: ["spend treemap", "tail spend", "maverick spend", "UNSPSC", "procurement data visualisation"],
+    readingTime: 7,
+    tocItems: [
+      { id: "why-a-treemap-beats-a-pie-chart", label: "Why a treemap beats a pie chart" },
+      { id: "why-tail-spend-needs-its-own-chart", label: "Why tail spend needs its own chart" },
+      { id: "reading-the-two-charts-together", label: "Reading the two charts together" },
+      { id: "does-this-earn-its-place-before-renewal", label: "Does this earn its place" },
+    ],
+    softCta: "discovery",
+    faqItems: [
+      { q: "How do you build a spend treemap from procurement data?", a: "Code every spend line to a UNSPSC segment and family first, then plot nested rectangles sized by spend value, segment on the outside, family nested inside. Two taxonomy levels is usually the readable limit for a headline chart. Deeper levels belong in a drill-down view, not the first chart a stakeholder sees." },
+      { q: "What is the difference between tail spend and maverick spend?", a: "Tail spend is the low-value, high-volume end of procurement: small purchases spread across many suppliers, rarely covered by a contract. Maverick spend is spend that should be going through an existing contract or approved supplier and is not. A purchase can be both at once, or neither, which is why they need separate charts." },
+      { q: "How much of total spend is usually tail spend?", a: "Tail spend typically follows an inverse 80/20 pattern: roughly 20 percent of total spend value, but around 80 percent of transactions and suppliers. It is small money spread very thin, which is exactly why it rarely gets proper procurement attention despite the administrative load it creates." },
+      { q: "Why does UNSPSC coding matter before building a spend chart?", a: "Any chart built on inconsistently coded data understates concentration and contract coverage. A supplier invoiced under three different free-text categories shows up as three small, unremarkable entries instead of one large one worth negotiating. The chart only tells the truth once every line sits at the same taxonomy level." },
+      { q: "How does Pearstop help with tail-spend visibility?", a: "Pearstop classifies every spend line to UNSPSC and matches it to an active contract ID, which is the step most spend data has never been through, for procurement teams who need a trustworthy treemap and tail-spend view before a renewal, not just a chart that looks precise." },
+      { q: "How often should procurement spend charts be refreshed?", a: "Quarterly is sufficient for most categories, but anything feeding an active renewal or tender should be rebuilt the week beforehand rather than pulled from an older snapshot. Spend data shifts faster than most reporting calendars assume, and a stale chart can misstate how consolidated a supplier relationship actually is." },
+    ],
+  },
 ];
 
 export const blogPosts: BlogPost[] = _allBlogPosts.filter((p) => !p.hidden);
