@@ -5166,7 +5166,7 @@
       "hard": "Un taux de recyclage et un chiffre carbone dépendent de l'article pris individuellement. Les lignes de facture décrivent les articles en texte libre, un même fournisseur livre dans de nombreuses catégories, et son nom ne dit pas de quoi l'article est fait. Sans l'article, tout chiffre est une estimation.",
       "changes": [
         "Chaque article traité, identifié au niveau de la ligne.",
-        "Émissions de carbone et filière de recyclage rattachées à chaque article.",
+        "Émissions de carbone et taux de recyclage rattachés à chaque article.",
         "Un taux de recyclage et un chiffre carbone qui remontent aux lignes qui les fondent."
       ],
       "proof": {
@@ -5179,7 +5179,7 @@
       "faq": [
         {
           "question": "Comment calculer un taux de recyclage à partir des données d'achats ?",
-          "answer": "Chaque article acheté et traité est identifié, puis ceux qui suivent une filière de recyclage sont totalisés. Pearstop lit chaque ligne de facture jusqu'à l'article, de sorte que le taux repose sur des articles et sur les lignes qui les fondent."
+          "answer": "Chaque article acheté et traité est identifié, puis le taux de recyclage de chacun est appliqué et totalisé. Pearstop lit chaque ligne de facture jusqu'à l'article, de sorte que le taux repose sur des articles et sur les lignes qui les fondent."
         },
         {
           "question": "Comment calculer les émissions de carbone des matériaux achetés par une entreprise ?",
@@ -5191,11 +5191,11 @@
         },
         {
           "question": "Comment repérer des opportunités de recyclage dans les données d'achats ?",
-          "answer": "Les articles achetés sont listés, puis on vérifie lesquels disposent d'une filière de recyclage ou de réemploi. Pearstop identifie chaque article au niveau de la ligne : les opportunités cachées sous des libellés comme « matériaux divers » deviennent visibles."
+          "answer": "Les articles achetés sont listés, puis le taux de recyclage de chacun est vérifié. Pearstop identifie chaque article au niveau de la ligne : les opportunités cachées sous des libellés comme « matériaux divers » deviennent visibles."
         },
         {
           "question": "De quelles données a-t-on besoin pour un reporting carbone par article ?",
-          "answer": "Des lignes de facture et des données d'achats, lues jusqu'à l'article. Pearstop les extrait et les classe, si bien que chaque article peut porter son propre facteur d'émission et sa filière de recyclage."
+          "answer": "Des lignes de facture et des données d'achats, lues jusqu'à l'article. Pearstop les extrait et les classe, si bien que chaque article peut porter son propre facteur d'émission et son taux de recyclage."
         }
       ],
       "cta": {

@@ -4867,7 +4867,7 @@
       "hard": "A recycling rate and a carbon figure depend on the individual item. Invoice lines describe items in free text, one supplier delivers across many categories, and the supplier name does not say what an item is made of. Without the item, every number is an estimate.",
       "changes": [
         "See every item processed, identified at line level.",
-        "Attach carbon emissions and a recycling route to each specific item.",
+        "Attach carbon emissions and a recycling rate to each specific item.",
         "Report a recycling rate and a carbon figure that trace back to the lines behind them."
       ],
       "proof": {
@@ -4880,7 +4880,7 @@
       "faq": [
         {
           "question": "How do you calculate a recycling rate from procurement data?",
-          "answer": "Identify every item bought and processed, then total the items that follow a recycling route. Pearstop reads every invoice line down to the individual item, so the rate rests on items and the lines behind them."
+          "answer": "Identify every item bought and processed, then apply each item's recycling rate and total the result. Pearstop reads every invoice line down to the individual item, so the rate rests on items and the lines behind them."
         },
         {
           "question": "How do you work out the carbon emissions of the materials a company buys?",
@@ -4892,11 +4892,11 @@
         },
         {
           "question": "How do you find recycling opportunities in spend data?",
-          "answer": "List the items bought, then check which have a recycling or reuse route. Pearstop identifies every item at line level, so the opportunities that sit under labels like \"mixed materials\" become visible."
+          "answer": "List the items bought, then check the recycling rate of each. Pearstop identifies every item at line level, so the opportunities that sit under labels like \"mixed materials\" become visible."
         },
         {
           "question": "What data is needed for item-level carbon reporting?",
-          "answer": "Invoice lines and purchase data, read down to the individual item. Pearstop extracts and classifies them, so each item is ready to carry its own emissions factor and recycling route."
+          "answer": "Invoice lines and purchase data, read down to the individual item. Pearstop extracts and classifies them, so each item is ready to carry its own emissions factor and recycling rate."
         }
       ],
       "cta": {

@@ -5198,7 +5198,7 @@
       "hard": "Een recyclingpercentage en een CO₂-cijfer hangen af van het afzonderlijke artikel. Factuurregels beschrijven artikelen in vrije tekst, één leverancier levert in veel categorieën en de leveranciersnaam zegt niet waarvan een artikel is gemaakt. Zonder artikelgegevens is elk cijfer een schatting.",
       "changes": [
         "Elk verwerkt artikel zichtbaar, herkend op regelniveau.",
-        "Per artikel de CO₂-uitstoot en een recyclingroute vastgelegd.",
+        "Per artikel de CO₂-uitstoot en het recyclingpercentage vastgelegd.",
         "Een recyclingpercentage en CO₂-cijfer dat terug te voeren is op de regels erachter."
       ],
       "proof": {
@@ -5211,7 +5211,7 @@
       "faq": [
         {
           "question": "Hoe wordt een recyclingpercentage berekend uit inkoopdata?",
-          "answer": "Elk ingekocht en verwerkt artikel wordt herkend, daarna worden de artikelen opgeteld die een recyclingroute volgen. Pearstop leest elke factuurregel tot op artikelniveau, zodat het percentage op artikelen rust en op de regels erachter."
+          "answer": "Elk ingekocht en verwerkt artikel wordt herkend, daarna wordt per artikel het recyclingpercentage toegepast en opgeteld. Pearstop leest elke factuurregel tot op artikelniveau, zodat het percentage op artikelen rust en op de regels erachter."
         },
         {
           "question": "Hoe wordt de CO₂-uitstoot van ingekochte materialen bepaald?",
@@ -5223,11 +5223,11 @@
         },
         {
           "question": "Hoe zijn recyclekansen te vinden in inkoopdata?",
-          "answer": "De ingekochte artikelen komen op een lijst en per artikel wordt gekeken of er een recycling- of hergebruikroute is. Pearstop herkent elk artikel op regelniveau, zodat kansen onder labels als 'divers materiaal' zichtbaar worden."
+          "answer": "De ingekochte artikelen komen op een lijst en per artikel wordt het recyclingpercentage bekeken. Pearstop herkent elk artikel op regelniveau, zodat kansen onder labels als 'divers materiaal' zichtbaar worden."
         },
         {
           "question": "Welke gegevens zijn nodig voor CO₂-rapportage op artikelniveau?",
-          "answer": "Factuurregels en inkoopdata, gelezen tot op het afzonderlijke artikel. Pearstop haalt ze op en classificeert ze, zodat elk artikel zijn eigen emissiefactor en recyclingroute kan dragen."
+          "answer": "Factuurregels en inkoopdata, gelezen tot op het afzonderlijke artikel. Pearstop haalt ze op en classificeert ze, zodat elk artikel zijn eigen emissiefactor en recyclingpercentage kan dragen."
         }
       ],
       "cta": {

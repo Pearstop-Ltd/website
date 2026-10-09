@@ -5161,7 +5161,7 @@
       "hard": "Recyclingquote und CO₂-Wert hängen am einzelnen Artikel. Rechnungspositionen beschreiben Artikel in Freitext, ein Lieferant liefert über viele Warengruppen hinweg, und der Lieferantenname zeigt nicht, woraus ein Artikel besteht. Ohne den Artikel ist jede Zahl eine Schätzung.",
       "changes": [
         "Jeder verarbeitete Artikel sichtbar, erkannt auf Positionsebene.",
-        "Zu jedem einzelnen Artikel CO₂-Emissionen und Recyclingweg zugeordnet.",
+        "Zu jedem einzelnen Artikel CO₂-Emissionen und Recyclingquote zugeordnet.",
         "Eine Recyclingquote und ein CO₂-Wert, die sich bis zu den zugehörigen Positionen zurückverfolgen lassen."
       ],
       "proof": {
@@ -5174,7 +5174,7 @@
       "faq": [
         {
           "question": "Wie wird eine Recyclingquote aus Einkaufsdaten berechnet?",
-          "answer": "Jeder gekaufte und verarbeitete Artikel wird erkannt, anschließend werden die Artikel summiert, die einen Recyclingweg durchlaufen. Pearstop liest jede Rechnungsposition bis auf Artikelebene, sodass die Quote auf Artikeln und den zugehörigen Positionen beruht."
+          "answer": "Jeder gekaufte und verarbeitete Artikel wird erkannt, anschließend wird je Artikel die Recyclingquote angewendet und summiert. Pearstop liest jede Rechnungsposition bis auf Artikelebene, sodass die Quote auf Artikeln und den zugehörigen Positionen beruht."
         },
         {
           "question": "Wie werden die CO₂-Emissionen der eingekauften Materialien ermittelt?",
@@ -5186,11 +5186,11 @@
         },
         {
           "question": "Wie lassen sich Recyclingchancen in Einkaufsdaten finden?",
-          "answer": "Die gekauften Artikel werden aufgelistet, danach wird geprüft, welche einen Recycling- oder Wiederverwendungsweg haben. Pearstop erkennt jeden Artikel auf Positionsebene, sodass Chancen hinter Bezeichnungen wie „Materialmix“ sichtbar werden."
+          "answer": "Die gekauften Artikel werden aufgelistet, danach wird die Recyclingquote je Artikel geprüft. Pearstop erkennt jeden Artikel auf Positionsebene, sodass Chancen hinter Bezeichnungen wie „Materialmix“ sichtbar werden."
         },
         {
           "question": "Welche Daten sind für CO₂-Berichte auf Artikelebene nötig?",
-          "answer": "Rechnungspositionen und Einkaufsdaten, gelesen bis auf den einzelnen Artikel. Pearstop extrahiert und klassifiziert sie, sodass jeder Artikel seinen eigenen Emissionsfaktor und Recyclingweg trägt."
+          "answer": "Rechnungspositionen und Einkaufsdaten, gelesen bis auf den einzelnen Artikel. Pearstop extrahiert und klassifiziert sie, sodass jeder Artikel seinen eigenen Emissionsfaktor und seine Recyclingquote trägt."
         }
       ],
       "cta": {
