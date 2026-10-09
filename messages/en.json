@@ -932,15 +932,15 @@
         },
         {
           "id": "visibility",
-          "label": "See the spend"
-        },
-        {
-          "id": "benchmarking",
-          "label": "Check every price"
+          "label": "See the spend and check every price"
         },
         {
           "id": "readiness",
           "label": "Ready for ERP, Fabric and AI"
+        },
+        {
+          "id": "compliance",
+          "label": "Answer questions from the auditor, the regulator and finance"
         }
       ],
       "items": [
@@ -977,31 +977,21 @@
         },
         {
           "id": "visibility",
-          "badgeLabel": "See the spend",
-          "pain": "A savings target or tender needs a real baseline, and nobody can produce one.",
-          "title": "Spend Visibility",
-          "body": "Build a real spend baseline from messy invoice and supplier data, broken out by service line and entity, so a negotiation, tender, or framework review starts from a number instead of a guess.",
+          "badgeLabel": "See the spend and check every price",
+          "pain": "A savings target or tender needs a real baseline, and nobody can produce one. Every invoice needs a yes or no, with no benchmark to say whether the price is reasonable.",
+          "title": "Spend Visibility and Benchmarking",
+          "body": "Build a real spend baseline from messy invoice and supplier data, broken out by service line and entity. Every line is labelled and compared with what you normally pay, so a negotiation, tender or approval starts from a number instead of a guess.",
           "related": [
             {
               "label": "Spend Cube & Dashboards",
               "href": "/spend-cube"
+            },
+            {
+              "label": "Spend benchmarking",
+              "href": "/asset-data-management"
             }
           ],
           "href": "/procurement-data-quality"
-        },
-        {
-          "id": "benchmarking",
-          "badgeLabel": "Check every price",
-          "pain": "Every invoice needs a yes or no, and there is no benchmark to say whether the price is reasonable.",
-          "title": "Spend Benchmarking",
-          "body": "Every line is labelled and compared with what you normally pay, across suppliers, sites and providers, so you can see straight away whether a price sits in the normal range and approve it without escalating.",
-          "related": [
-            {
-              "label": "Spend Cube & Dashboards",
-              "href": "/spend-cube"
-            }
-          ],
-          "href": "/asset-data-management"
         },
         {
           "id": "readiness",
@@ -1019,7 +1009,16 @@
               "href": "/ai-readiness"
             }
           ],
-          "href": "/data-quality",
+          "href": "/data-quality"
+        },
+        {
+          "id": "compliance",
+          "badgeLabel": "Answer questions from the auditor, the regulator and finance",
+          "pain": "An auditor, regulator or finance asks a question the data can only answer after days of manual work.",
+          "title": "Compliance questions",
+          "body": "Freelancer hours, subcontractor certification, certified timber, hazardous substances and recycling rates all sit at invoice line level. Pearstop reads every line, so the answer is ready when the question arrives.",
+          "related": [],
+          "href": "/solutions#compliance",
           "wide": true
         }
       ],
@@ -1168,10 +1167,6 @@
       "primaryLabel": "Book a 15-minute discovery",
       "secondaryLabel": "Or send us 200 lines →",
       "tertiaryLabel": "View industries"
-    },
-    "compliance": {
-      "eyebrow": "Compliance",
-      "title": "Questions auditors, clients and HR ask"
     }
   },
   "DataQuality": {

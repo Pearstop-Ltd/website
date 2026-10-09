@@ -777,15 +777,15 @@
         },
         {
           "id": "visibility",
-          "label": "Maak de spend zichtbaar"
-        },
-        {
-          "id": "benchmarking",
-          "label": "Controleer elke prijs"
+          "label": "Maak de spend zichtbaar en controleer elke prijs"
         },
         {
           "id": "readiness",
           "label": "Klaar voor ERP, Fabric en AI"
+        },
+        {
+          "id": "compliance",
+          "label": "Beantwoord vragen van de auditor, de toezichthouder en finance"
         }
       ],
       "items": [
@@ -822,31 +822,21 @@
         },
         {
           "id": "visibility",
-          "badgeLabel": "Maak de spend zichtbaar",
-          "pain": "Een besparingsdoelstelling of tender heeft een echte basislijn nodig, en niemand kan die leveren.",
-          "title": "Spend visibility",
-          "body": "Bouw een echte spend-basislijn op basis van rommelige factuur- en leveranciersdata, uitgesplitst per servicelijn en entiteit, zodat een onderhandeling, tender of raamovereenkomstbeoordeling begint bij een getal in plaats van een gok.",
+          "badgeLabel": "Maak de spend zichtbaar en controleer elke prijs",
+          "pain": "Een besparingsdoelstelling of tender heeft een echte basislijn nodig, en elke factuur vraagt om een ja of nee zonder benchmark om de prijs aan te toetsen.",
+          "title": "Spend visibility en benchmarking",
+          "body": "Bouw een echte spend-basislijn op basis van rommelige factuur- en leveranciersdata, uitgesplitst per servicelijn en entiteit. Elke regel wordt gelabeld en vergeleken met wat u normaal betaalt, zodat een onderhandeling, tender of goedkeuring begint bij een getal in plaats van een gok.",
           "related": [
             {
               "label": "Spend Cube & Dashboards",
               "href": "/spend-cube"
+            },
+            {
+              "label": "Spend benchmarking",
+              "href": "/asset-data-management"
             }
           ],
           "href": "/procurement-data-quality"
-        },
-        {
-          "id": "benchmarking",
-          "badgeLabel": "Controleer elke prijs",
-          "pain": "Elke factuur vraagt om een ja of nee, en er is geen benchmark om te zeggen of de prijs redelijk is.",
-          "title": "Spend benchmarking",
-          "body": "Elke regel wordt gelabeld en vergeleken met wat u normaal betaalt, over leveranciers, locaties en providers heen, zodat u direct ziet of een prijs binnen de normale bandbreedte valt en hem kunt goedkeuren zonder te escaleren.",
-          "related": [
-            {
-              "label": "Spend Cube & Dashboards",
-              "href": "/spend-cube"
-            }
-          ],
-          "href": "/asset-data-management"
         },
         {
           "id": "readiness",
@@ -864,7 +854,16 @@
               "href": "/ai-readiness"
             }
           ],
-          "href": "/data-quality",
+          "href": "/data-quality"
+        },
+        {
+          "id": "compliance",
+          "badgeLabel": "Beantwoord vragen van de auditor, de toezichthouder en finance",
+          "pain": "Een auditor, toezichthouder of finance stelt een vraag die de data pas na dagen handwerk beantwoordt.",
+          "title": "Compliancevragen",
+          "body": "Zzp-uren, certificering van onderaannemers, gecertificeerd hout, gevaarlijke stoffen en recyclingpercentages zitten allemaal op factuurregelniveau. Pearstop leest elke regel, zodat het antwoord klaarligt als de vraag komt.",
+          "related": [],
+          "href": "/solutions#compliance",
           "wide": true
         }
       ],
@@ -996,10 +995,6 @@
       "primaryLabel": "Boek een kennismakingsgesprek van 15 minuten",
       "secondaryLabel": "Of stuur ons 200 regels →",
       "tertiaryLabel": "Bekijk sectoren"
-    },
-    "compliance": {
-      "eyebrow": "Compliance",
-      "title": "Vragen van auditors, opdrachtgevers en HR"
     }
   },
   "DataQuality": {

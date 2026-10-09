@@ -777,15 +777,15 @@
         },
         {
           "id": "visibility",
-          "label": "Voir les dépenses"
-        },
-        {
-          "id": "benchmarking",
-          "label": "Vérifier chaque prix"
+          "label": "Voir les dépenses et vérifier chaque prix"
         },
         {
           "id": "readiness",
           "label": "Prêt pour l'ERP, Fabric et l'IA"
+        },
+        {
+          "id": "compliance",
+          "label": "Répondre aux questions de l'auditeur, du régulateur et de la finance"
         }
       ],
       "items": [
@@ -822,31 +822,21 @@
         },
         {
           "id": "visibility",
-          "badgeLabel": "Voir les dépenses",
-          "pain": "Un objectif d'économies ou un appel d'offres a besoin d'une base de référence réelle, et personne ne peut en produire une.",
-          "title": "Visibilité des dépenses",
-          "body": "Construisez une véritable base de dépenses à partir de données de factures et de fournisseurs désordonnées, ventilée par ligne de service et par entité, pour qu'une négociation, un appel d'offres ou une revue de contrat-cadre parte d'un chiffre plutôt que d'une estimation.",
+          "badgeLabel": "Voir les dépenses et vérifier chaque prix",
+          "pain": "Un objectif d'économies ou un appel d'offres a besoin d'une base de référence réelle, et chaque facture appelle un oui ou un non sans benchmark pour juger le prix.",
+          "title": "Visibilité et benchmarking des dépenses",
+          "body": "Construisez une véritable base de dépenses à partir de données de factures et de fournisseurs désordonnées, ventilée par ligne de service et par entité. Chaque ligne est étiquetée et comparée à ce que vous payez habituellement, pour qu'une négociation, un appel d'offres ou une approbation parte d'un chiffre plutôt que d'une estimation.",
           "related": [
             {
               "label": "Spend Cube et tableaux de bord",
               "href": "/spend-cube"
+            },
+            {
+              "label": "Benchmarking des dépenses",
+              "href": "/asset-data-management"
             }
           ],
           "href": "/procurement-data-quality"
-        },
-        {
-          "id": "benchmarking",
-          "badgeLabel": "Vérifier chaque prix",
-          "pain": "Chaque facture appelle un oui ou un non, et il n'existe aucun benchmark pour dire si le prix est raisonnable.",
-          "title": "Benchmarking des dépenses",
-          "body": "Chaque ligne est étiquetée et comparée à ce que vous payez habituellement, entre fournisseurs, sites et prestataires, pour que vous puissiez voir immédiatement si un prix se situe dans la fourchette normale et l'approuver sans faire remonter la décision.",
-          "related": [
-            {
-              "label": "Spend Cube et tableaux de bord",
-              "href": "/spend-cube"
-            }
-          ],
-          "href": "/asset-data-management"
         },
         {
           "id": "readiness",
@@ -864,7 +854,16 @@
               "href": "/ai-readiness"
             }
           ],
-          "href": "/data-quality",
+          "href": "/data-quality"
+        },
+        {
+          "id": "compliance",
+          "badgeLabel": "Répondre aux questions de l'auditeur, du régulateur et de la finance",
+          "pain": "Un auditeur, un régulateur ou la finance pose une question à laquelle les données ne répondent qu'après des jours de travail manuel.",
+          "title": "Questions de conformité",
+          "body": "Heures d'indépendants, certification des sous-traitants, bois certifié, substances dangereuses et taux de recyclage se trouvent tous au niveau de la ligne de facture. Pearstop lit chaque ligne : la réponse est prête quand la question arrive.",
+          "related": [],
+          "href": "/solutions#compliance",
           "wide": true
         }
       ],
@@ -996,10 +995,6 @@
       "primaryLabel": "Réservez 15 minutes de découverte",
       "secondaryLabel": "Ou envoyez-nous 200 lignes →",
       "tertiaryLabel": "Voir les secteurs"
-    },
-    "compliance": {
-      "eyebrow": "Conformité",
-      "title": "Questions des auditeurs, clients et RH"
     }
   },
   "DataQuality": {

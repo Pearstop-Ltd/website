@@ -777,15 +777,15 @@
         },
         {
           "id": "visibility",
-          "label": "Ausgaben sichtbar machen"
-        },
-        {
-          "id": "benchmarking",
-          "label": "Jeden Preis prüfen"
+          "label": "Ausgaben sichtbar machen und jeden Preis prüfen"
         },
         {
           "id": "readiness",
           "label": "Bereit für ERP, Fabric und KI"
+        },
+        {
+          "id": "compliance",
+          "label": "Fragen von Auditor, Aufsichtsbehörde und Finanzabteilung beantworten"
         }
       ],
       "items": [
@@ -822,31 +822,21 @@
         },
         {
           "id": "visibility",
-          "badgeLabel": "Ausgaben sichtbar machen",
-          "pain": "Ein Einsparziel oder eine Ausschreibung braucht eine echte Basis, und niemand kann sie liefern.",
-          "title": "Spend Visibility",
-          "body": "Erstellen Sie eine echte Ausgabenbasis aus unübersichtlichen Rechnungs- und Lieferantendaten, aufgeschlüsselt nach Leistungslinie und Gesellschaft, sodass eine Verhandlung, Ausschreibung oder Rahmenvertragsprüfung von einer Zahl statt von einer Vermutung ausgeht.",
+          "badgeLabel": "Ausgaben sichtbar machen und jeden Preis prüfen",
+          "pain": "Ein Einsparziel oder eine Ausschreibung braucht eine echte Basis, und jede Rechnung braucht ein Ja oder Nein, ohne Benchmark für den Preis.",
+          "title": "Spend Visibility und Benchmarking",
+          "body": "Erstellen Sie eine echte Ausgabenbasis aus unübersichtlichen Rechnungs- und Lieferantendaten, aufgeschlüsselt nach Leistungslinie und Gesellschaft. Jede Zeile wird gekennzeichnet und mit dem verglichen, was Sie normalerweise zahlen, sodass Verhandlung, Ausschreibung oder Freigabe von einer Zahl statt von einer Vermutung ausgeht.",
           "related": [
             {
               "label": "Spend Cube & Dashboards",
               "href": "/spend-cube"
+            },
+            {
+              "label": "Spend Benchmarking",
+              "href": "/asset-data-management"
             }
           ],
           "href": "/procurement-data-quality"
-        },
-        {
-          "id": "benchmarking",
-          "badgeLabel": "Jeden Preis prüfen",
-          "pain": "Jede Rechnung braucht ein Ja oder Nein, und es fehlt ein Benchmark, um zu sagen, ob der Preis angemessen ist.",
-          "title": "Spend Benchmarking",
-          "body": "Jede Zeile wird gekennzeichnet und mit dem verglichen, was Sie normalerweise zahlen, über Lieferanten, Standorte und Dienstleister hinweg, sodass Sie sofort sehen, ob ein Preis im üblichen Rahmen liegt, und ihn freigeben können, ohne zu eskalieren.",
-          "related": [
-            {
-              "label": "Spend Cube & Dashboards",
-              "href": "/spend-cube"
-            }
-          ],
-          "href": "/asset-data-management"
         },
         {
           "id": "readiness",
@@ -864,7 +854,16 @@
               "href": "/ai-readiness"
             }
           ],
-          "href": "/data-quality",
+          "href": "/data-quality"
+        },
+        {
+          "id": "compliance",
+          "badgeLabel": "Fragen von Auditor, Aufsichtsbehörde und Finanzabteilung beantworten",
+          "pain": "Ein Auditor, eine Behörde oder die Finanzabteilung stellt eine Frage, die sich aus den Daten nur nach Tagen manueller Arbeit beantworten lässt.",
+          "title": "Compliance-Fragen",
+          "body": "Freelancer-Stunden, Nachunternehmer-Zertifizierung, zertifiziertes Holz, Gefahrstoffe und Recyclingquoten liegen alle auf Ebene der Rechnungsposition. Pearstop liest jede Position, sodass die Antwort bereitliegt, wenn die Frage kommt.",
+          "related": [],
+          "href": "/solutions#compliance",
           "wide": true
         }
       ],
@@ -996,10 +995,6 @@
       "primaryLabel": "15-minütiges Erstgespräch buchen",
       "secondaryLabel": "Oder senden Sie uns 200 Zeilen →",
       "tertiaryLabel": "Branchen ansehen"
-    },
-    "compliance": {
-      "eyebrow": "Compliance",
-      "title": "Fragen von Auditoren, Kunden und Personalabteilung"
     }
   },
   "DataQuality": {

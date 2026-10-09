@@ -41,7 +41,6 @@ export interface SolutionsIndexCopy {
     title: string;
     items: { id: string; title: string; pain: string; linkLabel: string; href: string }[];
   };
-  compliance: { eyebrow: string; title: string };
   tools: {
     eyebrow: string;
     title: string;
@@ -151,37 +150,37 @@ export function SolutionsIndexPage({
               <div className={styles.problemCardDivider} />
               <h3 className={styles.problemCardTitle}>{item.title}</h3>
               <p className={styles.problemCardBody}>{item.body}</p>
-              {item.related.length ? (
+              {item.id === "compliance" ? (
                 <div className={styles.relatedRow}>
-                  <span className={styles.relatedLabel}>Related:</span>
-                  {item.related.map((rel) => (
-                    <Link key={rel.href} href={rel.href} className={styles.chip}>
-                      {rel.label}
+                  {complianceCards.map((card) => (
+                    <Link key={card.href} href={card.href} className={styles.chip}>
+                      {card.title}
                     </Link>
                   ))}
                 </div>
-              ) : null}
-              <Link href={item.href} className={styles.problemCardLink}>
-                {copy.problems.exploreLink}
-              </Link>
+              ) : (
+                <>
+                  {item.related.length ? (
+                    <div className={styles.relatedRow}>
+                      <span className={styles.relatedLabel}>Related:</span>
+                      {item.related.map((rel) => (
+                        <Link key={rel.href} href={rel.href} className={styles.chip}>
+                          {rel.label}
+                        </Link>
+                      ))}
+                    </div>
+                  ) : null}
+                  <Link href={item.href} className={styles.problemCardLink}>
+                    {copy.problems.exploreLink}
+                  </Link>
+                </>
+              )}
             </article>
           ))}
         </div>
       </Section>
 
-      <Section id="compliance" background="white">
-        <SectionHeader eyebrow={copy.compliance.eyebrow} title={copy.compliance.title} />
-        <div className={styles.whoGrid}>
-          {complianceCards.map((card) => (
-            <Link key={card.href} href={card.href} className={styles.whoCard}>
-              <h3 className={styles.whoCardTitle}>{card.title}</h3>
-              <span className={styles.whoCardPain}>{card.pain}</span>
-            </Link>
-          ))}
-        </div>
-      </Section>
-
-      <Section background="soft">
+      <Section background="white">
         <SectionHeader eyebrow={copy.who.eyebrow} title={copy.who.title} />
         <div className={styles.whoGrid}>
           {copy.who.items.map((item) => (
@@ -194,7 +193,7 @@ export function SolutionsIndexPage({
         </div>
       </Section>
 
-      <Section background="white">
+      <Section background="soft">
         <SectionHeader eyebrow={copy.tools.eyebrow} title={copy.tools.title} />
         <div className={styles.toolsGrid}>
           {copy.tools.items.map((tool) => (
