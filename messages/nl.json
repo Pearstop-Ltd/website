@@ -427,13 +427,13 @@
     "blog": "Blog",
     "cases": "Cases",
     "nav": {
-      "procurementDataQuality": "Procurement datakwaliteit",
-      "assetDataManagement": "Asset Data Management",
+      "procurementDataQuality": "Inkoop",
+      "assetDataManagement": "Assetdata",
       "dataQuality": "Datakwaliteit",
       "fabricReady": "Fabric Ready",
       "aiReadiness": "AI Readiness",
       "unspsc": "UNSPSC",
-      "complianceQuestions": "Compliancevragen",
+      "complianceQuestions": "Compliance",
       "complianceFreelancers": "Zzp'ers en freelancers",
       "complianceCertification": "Certificering onderaannemers",
       "complianceTimber": "Duurzaam hout",
@@ -996,6 +996,10 @@
       "primaryLabel": "Boek een kennismakingsgesprek van 15 minuten",
       "secondaryLabel": "Of stuur ons 200 regels →",
       "tertiaryLabel": "Bekijk sectoren"
+    },
+    "compliance": {
+      "eyebrow": "Compliance",
+      "title": "Vragen van auditors, opdrachtgevers en HR"
     }
   },
   "DataQuality": {

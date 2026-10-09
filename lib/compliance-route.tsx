@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { ComplianceQuestionPage, type ComplianceQuestionCopy } from "@/components/site/pages/ComplianceQuestion";
 import { siteConfig } from "@/lib/site";
-import { complianceAlternates, complianceUrl, type ComplianceKey } from "@/lib/compliance-pages";
+import { COMPLIANCE_KEYS, complianceAlternates, compliancePath, complianceUrl, type ComplianceKey } from "@/lib/compliance-pages";
 
 type ComplianceMessages = { Compliance: { shared: ComplianceQuestionCopy["shared"] } & Record<string, unknown> };
 
@@ -64,4 +64,21 @@ export function ComplianceRoute({ pageKey, locale, copy }: { pageKey: Compliance
       <ComplianceQuestionPage copy={copy} localePrefix={locale === "en" ? "" : `/${locale}`} />
     </>
   );
+}
+
+/** Cards for the "Compliance" section on /solutions: menu label as title, the page's own question as the pain line. */
+export function complianceCards(messages: unknown, locale: string): { title: string; pain: string; href: string }[] {
+  const m = messages as { Header: { nav: Record<string, string> }; Compliance: Record<string, { hero: { title: string } }> };
+  const labelKeys: Record<ComplianceKey, string> = {
+    freelancers: "complianceFreelancers",
+    certification: "complianceCertification",
+    timber: "complianceTimber",
+    hazardous: "complianceHazardous",
+    recycling: "complianceRecycling",
+  };
+  return COMPLIANCE_KEYS.map((key) => ({
+    title: m.Header.nav[labelKeys[key]],
+    pain: m.Compliance[key].hero.title,
+    href: compliancePath(key, locale),
+  }));
 }

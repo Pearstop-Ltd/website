@@ -51,7 +51,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const dynamicPaths = [
     ...caseStudies.map((item) => `/cases/${item.slug}`),
-    "/cases/fmo",
     ...blogPosts.map((post) => `/blog/${post.slug}`),
     ...migrationEntries
       .filter((entry) => entry.status === "published")

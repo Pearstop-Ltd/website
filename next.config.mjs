@@ -34,6 +34,9 @@ const nextConfig = {
   async redirects() {
     return [
       ...complianceRedirects,
+      // FMO case taken offline (temporary, so it can be restored): back to the cases index.
+      { source: "/cases/fmo", destination: "/cases", permanent: false },
+      { source: "/:locale(nl|fr|de)/cases/fmo", destination: "/:locale/cases", permanent: false },
       {
         source: "/:path*",
         has: [{ type: "host", value: "pearstop.com" }],

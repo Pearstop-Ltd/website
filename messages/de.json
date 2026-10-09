@@ -427,13 +427,13 @@
     "blog": "Blog",
     "cases": "Fallstudien",
     "nav": {
-      "procurementDataQuality": "Beschaffungsdatenqualität",
-      "assetDataManagement": "Asset Data Management",
+      "procurementDataQuality": "Einkauf",
+      "assetDataManagement": "Anlagendaten",
       "dataQuality": "Datenqualität",
       "fabricReady": "Fabric Ready",
       "aiReadiness": "AI Readiness",
       "unspsc": "UNSPSC",
-      "complianceQuestions": "Compliance-Fragen",
+      "complianceQuestions": "Compliance",
       "complianceFreelancers": "Freelancer und Selbstständige",
       "complianceCertification": "Nachunternehmer-Zertifizierung",
       "complianceTimber": "Zertifiziertes Holz",
@@ -996,6 +996,10 @@
       "primaryLabel": "15-minütiges Erstgespräch buchen",
       "secondaryLabel": "Oder senden Sie uns 200 Zeilen →",
       "tertiaryLabel": "Branchen ansehen"
+    },
+    "compliance": {
+      "eyebrow": "Compliance",
+      "title": "Fragen von Auditoren, Kunden und Personalabteilung"
     }
   },
   "DataQuality": {

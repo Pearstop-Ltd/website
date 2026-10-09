@@ -491,28 +491,6 @@ main {
   color: var(--primary);
 }
 
-.nav-group {
-  margin-top: 0.35rem;
-  padding-top: 0.35rem;
-  border-top: 1px solid var(--border);
-}
-
-.nav-group > ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.nav-group-label {
-  display: block;
-  padding: 0.5rem 1rem 0.25rem;
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--muted, #666);
-}
-
 .nav-subitem-wrap {
   position: relative;
 }
@@ -2114,15 +2092,6 @@ section {
   .nav-dropdown-menu li a:hover {
     background: transparent;
     color: #fff;
-  }
-
-  .nav-group {
-    border-top-color: rgba(255, 255, 255, 0.18);
-  }
-
-  .nav-group-label {
-    padding-left: 0;
-    color: rgba(255, 255, 255, 0.65);
   }
 
   .nav-menu.open .nav-dropdown-toggle-btn:hover {

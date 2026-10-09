@@ -100,7 +100,7 @@ const SOLUTION_NAV_KEYS: Record<string, string> = {
   "/fabric": "fabricReady",
   "/ai-readiness": "aiReadiness",
   "/unspsc": "unspsc",
-  "#compliance-questions": "complianceQuestions",
+  "/solutions#compliance": "complianceQuestions",
   "/freelancer-spend": "complianceFreelancers",
   "/subcontractor-certification": "complianceCertification",
   "/fsc-timber-spend": "complianceTimber",
@@ -332,20 +332,7 @@ export function SiteHeader() {
                   </Link>
                 </li>
                 {solutionLinks.map((link) =>
-                  link.group && link.children ? (
-                    <li key={link.href} className="nav-group">
-                      <span className="nav-group-label">{t(`nav.${SOLUTION_NAV_KEYS[link.href]}`)}</span>
-                      <ul>
-                        {link.children.map((child) => (
-                          <li key={child.href}>
-                            <Link href={complianceHrefForEnglishPath(child.href, locale) ?? `${prefix}${child.href}`} onClick={closeMenus}>
-                              {t(`nav.${SOLUTION_NAV_KEYS[child.href]}`)}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </li>
-                  ) : link.children && link.children.length > 0 ? (
+                  link.children && link.children.length > 0 ? (
                     <li
                       key={link.href}
                       className={`nav-subitem-wrap ${openSubmenu === link.href ? "open" : ""}`}
@@ -369,8 +356,8 @@ export function SiteHeader() {
                       <ul className="nav-submenu">
                         {link.children.map((child) => (
                           <li key={child.href}>
-                            <Link href={`${prefix}${child.href}`} onClick={closeMenus}>
-                              {child.label}
+                            <Link href={complianceHrefForEnglishPath(child.href, locale) ?? `${prefix}${child.href}`} onClick={closeMenus}>
+                              {SOLUTION_NAV_KEYS[child.href] ? t(`nav.${SOLUTION_NAV_KEYS[child.href]}`) : child.label}
                             </Link>
                           </li>
                         ))}

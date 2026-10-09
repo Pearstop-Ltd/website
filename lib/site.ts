@@ -78,49 +78,46 @@ export type NavLink = {
   href: string;
   description?: string;
   children?: NavLink[];
-  /** Renders as a non-link heading with its children listed inline (header Solutions menu). */
-  group?: boolean;
 };
 
 export const solutionLinks: NavLink[] = [
-  { label: "Invoice & Document Extraction", href: "/invoice-data-extraction", description: "Turn unread PDFs and scans into structured data." },
   {
-    label: "UNSPSC Classification",
-    href: "/unspsc",
-    description: "Automated classification, including tracing parts to the real manufacturer code.",
-    children: [
-      { label: "AI UNSPSC Classification Guide", href: "/unspsc-ai-classification-guide" },
-      { label: "Free UNSPSC Lookup", href: "/unspsc-code-lookup" },
-      { label: "UNSPSC Taxonomy Tree", href: "/unspsc-classification-demo" },
-      { label: "UNSPSC for FM", href: "/unspsc-classification-facilities-management" },
-      { label: "UNSPSC Netherlands", href: "/unspsc-classification-netherlands" },
-      { label: "UNSPSC Germany", href: "/unspsc-classification-germany" }
-    ]
-  },
-  {
-    label: "Spend Visibility",
+    label: "Procurement",
     href: "/procurement-data-quality",
     description: "A real spend baseline to negotiate, tender, and check framework compliance from.",
     children: [
-      { label: "Spend Cube & Dashboards", href: "/spend-cube" }
+      { label: "Spend visibility", href: "/procurement-data-quality" },
+      { label: "Spend cube & dashboards", href: "/spend-cube" }
     ]
   },
+  { label: "Asset data", href: "/asset-data-management", description: "An independent, classified view of spend and maintenance data you don't generate yourself." },
   {
-    label: "Data Readiness",
+    label: "Data quality",
     href: "/data-quality",
     description: "The clean, structured data an ERP migration, Microsoft Fabric, or an AI initiative all depend on.",
     children: [
-      { label: "ERP Migrations", href: "/migrations" },
-      { label: "Fabric Ready", href: "/fabric" },
-      { label: "AI Readiness", href: "/ai-readiness" }
+      { label: "ERP migrations", href: "/migrations" },
+      { label: "Fabric ready", href: "/fabric" },
+      { label: "AI readiness", href: "/ai-readiness" }
     ]
   },
-  { label: "Asset Data Management", href: "/asset-data-management", description: "An independent, classified view of spend and maintenance data you don't generate yourself." },
-  { label: "For Procurement Consultancies", href: "/procurement-consultancies", description: "White-labelled spend classification under your own taxonomy, delivered as your engagement's data layer." },
   {
-    label: "Compliance questions",
-    href: "#compliance-questions",
-    group: true,
+    label: "UNSPSC",
+    href: "/unspsc",
+    description: "Automated classification, including tracing parts to the real manufacturer code.",
+    children: [
+      { label: "UNSPSC Netherlands", href: "/unspsc-classification-netherlands" },
+      { label: "UNSPSC Germany", href: "/unspsc-classification-germany" },
+      { label: "UNSPSC for FM", href: "/unspsc-classification-facilities-management" },
+      { label: "UNSPSC AI classification guide", href: "/unspsc-ai-classification-guide" },
+      { label: "Free UNSPSC lookup", href: "/unspsc-code-lookup" },
+      { label: "UNSPSC taxonomy tree", href: "/unspsc-classification-demo" }
+    ]
+  },
+  { label: "Invoice & document extraction", href: "/invoice-data-extraction", description: "Turn unread PDFs and scans into structured data." },
+  {
+    label: "Compliance",
+    href: "/solutions#compliance",
     children: [
       { label: "Freelancers and contractors", href: "/freelancer-spend" },
       { label: "Subcontractor certification", href: "/subcontractor-certification" },

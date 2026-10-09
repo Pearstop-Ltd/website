@@ -41,6 +41,7 @@ export interface SolutionsIndexCopy {
     title: string;
     items: { id: string; title: string; pain: string; linkLabel: string; href: string }[];
   };
+  compliance: { eyebrow: string; title: string };
   tools: {
     eyebrow: string;
     title: string;
@@ -85,7 +86,21 @@ function ArrowRightIcon() {
  * from a `copy` prop (see CLAUDE.md's site migration convention); each
  * route tree's page.tsx supplies its own copy source and keeps its own
  * metadata/canonical/hreflang/JSON-LD. */
-export function SolutionsIndexPage({ copy, prefix = "" }: { copy: SolutionsIndexCopy; prefix?: string }) {
+export interface ComplianceCard {
+  title: string;
+  pain: string;
+  href: string;
+}
+
+export function SolutionsIndexPage({
+  copy,
+  prefix = "",
+  complianceCards,
+}: {
+  copy: SolutionsIndexCopy;
+  prefix?: string;
+  complianceCards: ComplianceCard[];
+}) {
   return (
     <>
       <Section background="white" paddingBottom={0}>
@@ -154,7 +169,19 @@ export function SolutionsIndexPage({ copy, prefix = "" }: { copy: SolutionsIndex
         </div>
       </Section>
 
-      <Section background="white">
+      <Section id="compliance" background="white">
+        <SectionHeader eyebrow={copy.compliance.eyebrow} title={copy.compliance.title} />
+        <div className={styles.whoGrid}>
+          {complianceCards.map((card) => (
+            <Link key={card.href} href={card.href} className={styles.whoCard}>
+              <h3 className={styles.whoCardTitle}>{card.title}</h3>
+              <span className={styles.whoCardPain}>{card.pain}</span>
+            </Link>
+          ))}
+        </div>
+      </Section>
+
+      <Section background="soft">
         <SectionHeader eyebrow={copy.who.eyebrow} title={copy.who.title} />
         <div className={styles.whoGrid}>
           {copy.who.items.map((item) => (
@@ -167,7 +194,7 @@ export function SolutionsIndexPage({ copy, prefix = "" }: { copy: SolutionsIndex
         </div>
       </Section>
 
-      <Section background="soft">
+      <Section background="white">
         <SectionHeader eyebrow={copy.tools.eyebrow} title={copy.tools.title} />
         <div className={styles.toolsGrid}>
           {copy.tools.items.map((tool) => (

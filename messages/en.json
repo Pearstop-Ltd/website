@@ -427,13 +427,13 @@
     "blog": "Blog",
     "cases": "Cases",
     "nav": {
-      "procurementDataQuality": "Procurement data quality",
-      "assetDataManagement": "Asset Data Management",
-      "dataQuality": "Data Quality",
+      "procurementDataQuality": "Procurement",
+      "assetDataManagement": "Asset data",
+      "dataQuality": "Data quality",
       "fabricReady": "Fabric Ready",
       "aiReadiness": "AI Readiness",
       "unspsc": "UNSPSC",
-      "complianceQuestions": "Compliance questions",
+      "complianceQuestions": "Compliance",
       "complianceFreelancers": "Freelancers and contractors",
       "complianceCertification": "Subcontractor certification",
       "complianceTimber": "Sustainable timber",
@@ -1168,6 +1168,10 @@
       "primaryLabel": "Book a 15-minute discovery",
       "secondaryLabel": "Or send us 200 lines →",
       "tertiaryLabel": "View industries"
+    },
+    "compliance": {
+      "eyebrow": "Compliance",
+      "title": "Questions auditors, clients and HR ask"
     }
   },
   "DataQuality": {

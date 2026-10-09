@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import { complianceCards } from "@/lib/compliance-route";
 import { SolutionsIndexPage, type SolutionsIndexCopy } from "@/components/site/pages/SolutionsIndex";
 import { alternateLanguages, siteConfig } from "@/lib/site";
 import enMessages from "../../../messages/en.json";
@@ -68,7 +69,7 @@ export default function SolutionsRoute() {
       <Script id="itemlist-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
       <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
-      <SolutionsIndexPage copy={copy} />
+      <SolutionsIndexPage copy={copy} complianceCards={complianceCards(enMessages, "en")} />
     </>
   );
 }

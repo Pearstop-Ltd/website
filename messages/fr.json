@@ -427,13 +427,13 @@
     "blog": "Blog",
     "cases": "Études de cas",
     "nav": {
-      "procurementDataQuality": "Qualité des données achats",
-      "assetDataManagement": "Asset Data Management",
+      "procurementDataQuality": "Achats",
+      "assetDataManagement": "Données d'actifs",
       "dataQuality": "Qualité des données",
       "fabricReady": "Fabric Ready",
       "aiReadiness": "AI Readiness",
       "unspsc": "UNSPSC",
-      "complianceQuestions": "Questions de conformité",
+      "complianceQuestions": "Conformité",
       "complianceFreelancers": "Indépendants",
       "complianceCertification": "Certification des sous-traitants",
       "complianceTimber": "Bois certifié",
@@ -996,6 +996,10 @@
       "primaryLabel": "Réservez 15 minutes de découverte",
       "secondaryLabel": "Ou envoyez-nous 200 lignes →",
       "tertiaryLabel": "Voir les secteurs"
+    },
+    "compliance": {
+      "eyebrow": "Conformité",
+      "title": "Questions des auditeurs, clients et RH"
     }
   },
   "DataQuality": {
