@@ -4832,7 +4832,8 @@
       "changesTitle": "Was sich mit Pearstop ändert",
       "proofEyebrow": "Belege",
       "faqEyebrow": "Fragen",
-      "faqTitle": "Häufig gestellte Fragen"
+      "faqTitle": "Häufig gestellte Fragen",
+      "updatedLabel": "Zuletzt aktualisiert"
     },
     "freelancers": {
       "meta": {
@@ -5201,7 +5202,8 @@
     "aiact": {
       "meta": {
         "title": "EU-KI-Verordnung: Lassen sich die Daten hinter unserer KI nachweisen?",
-        "description": "Pearstop klassifiziert und bereinigt Einkaufs- und Anlagendaten und führt einen Audit-Trail mit Zeitstempel, sodass die Daten hinter KI-gestützten Entscheidungen nachweisbar sind, sobald ein Kunde, Auditor oder eine Behörde nachfragt."
+        "description": "Pearstop klassifiziert und bereinigt Einkaufs- und Anlagendaten und führt einen Audit-Trail mit Zeitstempel, sodass die Daten hinter KI-gestützten Entscheidungen nachweisbar sind, sobald ein Kunde, Auditor oder eine Behörde nachfragt.",
+        "updated": "2026-10-09"
       },
       "hero": {
         "eyebrow": "EU-KI-Verordnung",
@@ -5231,7 +5233,7 @@
       "registers": {
         "eyebrow": "Die Anforderungen",
         "title": "Was die Verordnung von den Daten verlangt",
-        "lead": "Welche Pflichten für ein bestimmtes System gelten, klärt die eigene Rechtsabteilung. Alle beruhen auf den Daten. Die Datenseite liefert Pearstop.",
+        "lead": "Für Hochrisiko-KI-Systeme gelten diese Pflichten nach dem Digital Omnibus ab dem 2. Dezember 2027 (Anhang III) und dem 2. August 2028 (Anhang I). Welche Pflichten für ein bestimmtes System gelten, klärt die eigene Rechtsabteilung. Alle beruhen auf den Daten. Die Datenseite liefert Pearstop.",
         "columns": {
           "country": "Anforderung",
           "registers": "Was die Verordnung verlangt",

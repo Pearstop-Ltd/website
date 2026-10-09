@@ -40,6 +40,7 @@ export function ComplianceRoute({ pageKey, locale, copy }: { pageKey: Compliance
         name: copy.meta.title,
         description: copy.meta.description,
         inLanguage: locale,
+        ...(copy.meta.updated ? { dateModified: copy.meta.updated } : {}),
         isPartOf: { "@type": "WebSite", name: siteConfig.name, url: siteConfig.url },
         publisher: { "@type": "Organization", name: siteConfig.name, url: siteConfig.url },
         mainEntity: { "@id": `${url}#faq` },
@@ -61,7 +62,7 @@ export function ComplianceRoute({ pageKey, locale, copy }: { pageKey: Compliance
     <>
       {/* Plain tag, not next/script: it must be in the server-rendered HTML for crawlers. */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(graph).replace(/</g, "\\u003c") }} />
-      <ComplianceQuestionPage copy={copy} localePrefix={locale === "en" ? "" : `/${locale}`} />
+      <ComplianceQuestionPage copy={copy} localePrefix={locale === "en" ? "" : `/${locale}`} locale={locale} />
     </>
   );
 }

@@ -109,7 +109,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       />
       {post.faqItems && <FaqSchema items={post.faqItems} slug={post.slug} />}
       <BlogHero category={post.category} title={post.title} description={post.description} image={post.image} />
-      <BlogLayout tocItems={post.tocItems} author={author} publishedAt={post.publishedAt} readingTime={post.readingTime} category={post.category} slug={post.slug} tags={post.tags}>
+      <BlogLayout tocItems={post.tocItems} author={author} publishedAt={post.publishedAt} updatedAt={post.updatedAt} readingTime={post.readingTime} category={post.category} slug={post.slug} tags={post.tags}>
         {mdxContent ? (
           <MDXRemote source={mdxContent} components={MDX_COMPONENTS} options={{ mdxOptions: { rehypePlugins: [rehypeSlug], remarkPlugins: [remarkGfm] } }} />
         ) : (

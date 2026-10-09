@@ -4832,7 +4832,8 @@
       "changesTitle": "Ce qui change avec Pearstop",
       "proofEyebrow": "Preuves",
       "faqEyebrow": "Questions",
-      "faqTitle": "Questions fréquentes"
+      "faqTitle": "Questions fréquentes",
+      "updatedLabel": "Dernière mise à jour"
     },
     "freelancers": {
       "meta": {
@@ -5206,7 +5207,8 @@
     "aiact": {
       "meta": {
         "title": "Règlement européen sur l'IA : peut-on montrer les données derrière notre IA ?",
-        "description": "Pearstop classe et nettoie les données d'achats et d'actifs et tient une piste d'audit horodatée : les données derrière les décisions assistées par IA peuvent être présentées dès qu'un client, un auditeur ou une autorité de contrôle les demande."
+        "description": "Pearstop classe et nettoie les données d'achats et d'actifs et tient une piste d'audit horodatée : les données derrière les décisions assistées par IA peuvent être présentées dès qu'un client, un auditeur ou une autorité de contrôle les demande.",
+        "updated": "2026-10-09"
       },
       "hero": {
         "eyebrow": "Règlement européen sur l'IA",
@@ -5236,7 +5238,7 @@
       "registers": {
         "eyebrow": "Les exigences",
         "title": "Ce que le règlement demande aux données",
-        "lead": "Les obligations applicables à un système donné relèvent du service juridique de l'entreprise. Toutes reposent sur les données. Voici l'apport de Pearstop.",
+        "lead": "Pour les systèmes à haut risque, ces obligations s'appliquent, selon le Digital Omnibus, à partir du 2 décembre 2027 (annexe III) et du 2 août 2028 (annexe I). Les obligations applicables à un système donné relèvent du service juridique de l'entreprise. Toutes reposent sur les données. Voici l'apport de Pearstop.",
         "columns": {
           "country": "Exigence",
           "registers": "Ce que demande le règlement",

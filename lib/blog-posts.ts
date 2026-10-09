@@ -931,6 +931,7 @@ const _allBlogPosts: BlogPost[] = [
     title: "Compliant by Design: How Pearstop Answers the EU AI Act's Data Obligations",
     description: "The EU AI Act's latest obligations took effect on 2 August 2026. Meeting them starts with data that is clean, categorised, and auditable — here's how Pearstop gets you there.",
     publishedAt: "2026-08-17",
+    updatedAt: "2026-10-09",
     category: "AI & Digital",
     tags: ["EU AI Act", "AI compliance", "data quality", "audit trail"],
     readingTime: 6,
@@ -952,7 +953,7 @@ const _allBlogPosts: BlogPost[] = [
     faqItems: [
       {
         q: "What EU AI Act obligations came into effect on 2 August 2026?",
-        a: "The latest wave covers high-risk system obligations and most remaining general obligations under the Act, building on provisions already in force since 2024 and 2025, including prohibited practices, GPAI provider duties, and transparency requirements.",
+        a: "The latest wave covers the Article 50 transparency obligations, governance and enforcement provisions, and measures in support of innovation, building on provisions already in force since 2024 and 2025, including prohibited practices and GPAI provider duties. The high-risk system obligations were postponed by the Digital Omnibus on AI to 2 December 2027 for Annex III systems and 2 August 2028 for Annex I systems.",
       },
       {
         q: "What are the penalties for non-compliance with the EU AI Act?",

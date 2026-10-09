@@ -10,7 +10,7 @@ import styles from "./ComplianceQuestion.module.css";
 
 /** Copy for one "Compliance questions" page: `messages/<locale>.json` → `Compliance.<key>`, plus `Compliance.shared`. */
 export interface ComplianceQuestionCopy {
-  meta: { title: string; description: string };
+  meta: { title: string; description: string; /** ISO date; shown as "Last updated" next to the registers table. */ updated?: string };
   shared: {
     sampleLabel: string;
     discoveryLabel: string;
@@ -20,6 +20,7 @@ export interface ComplianceQuestionCopy {
     changesEyebrow: string;
     changesTitle: string;
     proofEyebrow: string;
+    updatedLabel: string;
     faqEyebrow: string;
     faqTitle: string;
   };
@@ -45,7 +46,7 @@ export interface ComplianceQuestionCopy {
   cta: { title: string; body: string };
 }
 
-export function ComplianceQuestionPage({ copy, localePrefix }: { copy: ComplianceQuestionCopy; localePrefix: string }) {
+export function ComplianceQuestionPage({ copy, localePrefix, locale }: { copy: ComplianceQuestionCopy; localePrefix: string; locale: string }) {
   const { shared } = copy;
   const sections: SolutionSection[] = [
     {
@@ -81,6 +82,9 @@ export function ComplianceQuestionPage({ copy, localePrefix }: { copy: Complianc
       eyebrow: copy.registers.eyebrow,
       title: copy.registers.title,
       lead: copy.registers.lead,
+      caption: copy.meta.updated
+        ? `${shared.updatedLabel}: ${new Date(copy.meta.updated).toLocaleDateString(locale === "en" ? "en-GB" : locale, { day: "numeric", month: "long", year: "numeric" })}`
+        : undefined,
       table: {
         columns: [
           { key: "country", label: columns.country, width: "1fr" },

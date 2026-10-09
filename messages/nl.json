@@ -4864,7 +4864,8 @@
       "changesTitle": "Wat er verandert met Pearstop",
       "proofEyebrow": "Bewijs",
       "faqEyebrow": "Vragen",
-      "faqTitle": "Veelgestelde vragen"
+      "faqTitle": "Veelgestelde vragen",
+      "updatedLabel": "Laatst bijgewerkt"
     },
     "freelancers": {
       "meta": {
@@ -5238,7 +5239,8 @@
     "aiact": {
       "meta": {
         "title": "EU AI-verordening: kunnen we de data achter onze AI aantonen?",
-        "description": "Pearstop classificeert en schoont inkoop- en assetdata op en houdt een audittrail met tijdstempel bij, zodat de data achter AI-ondersteunde beslissingen aantoonbaar is als een klant, auditor of toezichthouder erom vraagt."
+        "description": "Pearstop classificeert en schoont inkoop- en assetdata op en houdt een audittrail met tijdstempel bij, zodat de data achter AI-ondersteunde beslissingen aantoonbaar is als een klant, auditor of toezichthouder erom vraagt.",
+        "updated": "2026-10-09"
       },
       "hero": {
         "eyebrow": "EU AI-verordening",
@@ -5268,7 +5270,7 @@
       "registers": {
         "eyebrow": "De eisen",
         "title": "Wat de verordening van de data vraagt",
-        "lead": "Welke plichten voor een systeem gelden, beoordeelt de eigen juridische afdeling. Ze rusten allemaal op data. Dit is wat Pearstop levert.",
+        "lead": "Voor hoogrisicosystemen gelden deze plichten volgens de Digital Omnibus vanaf 2 december 2027 (bijlage III) en 2 augustus 2028 (bijlage I). Welke plichten voor een systeem gelden, beoordeelt de eigen juridische afdeling. Ze rusten allemaal op data. Dit is wat Pearstop levert.",
         "columns": {
           "country": "Eis",
           "registers": "Wat de verordening vraagt",

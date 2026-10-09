@@ -190,8 +190,8 @@ function getRelatedPosts(currentSlug: string, currentTags: string[]): BlogPost[]
   return scored.slice(0, 2).map((s) => s.post);
 }
 
-export function BlogLayout({ children, tocItems, tocHeading, author, publishedAt, readingTime, category, slug, tags }: {
-  children: ReactNode; tocItems: TocItem[]; tocHeading?: string; author: AuthorKey; publishedAt: string; readingTime: number; category: string; slug: string; tags: string[];
+export function BlogLayout({ children, tocItems, tocHeading, author, publishedAt, updatedAt, updatedLabel = "Updated", readingTime, category, slug, tags }: {
+  children: ReactNode; tocItems: TocItem[]; tocHeading?: string; author: AuthorKey; publishedAt: string; updatedAt?: string; updatedLabel?: string; readingTime: number; category: string; slug: string; tags: string[];
 }) {
   const related = getRelatedPosts(slug, tags);
   return (
@@ -202,6 +202,9 @@ export function BlogLayout({ children, tocItems, tocHeading, author, publishedAt
             <span style={{ background: "var(--purple-soft)", color: "var(--primary-dark)", padding: "0.25rem 0.75rem", borderRadius: "999px", fontWeight: 600, fontSize: "0.75rem" }}>{category}</span>
             <span>{AUTHORS[author].name}</span>
             <span>{new Date(publishedAt).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}</span>
+            {updatedAt && updatedAt !== publishedAt ? (
+              <span>{updatedLabel} {new Date(updatedAt).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}</span>
+            ) : null}
             <span>{readingTime} min read</span>
           </div>
           {children}

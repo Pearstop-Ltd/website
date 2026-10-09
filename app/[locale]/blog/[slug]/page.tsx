@@ -109,6 +109,8 @@ export async function generateMetadata({
   };
 }
 
+const UPDATED_LABELS: Record<string, string> = { en: "Updated", nl: "Bijgewerkt", fr: "Mis à jour", de: "Aktualisiert" };
+
 export default async function BlogPostPage({
   params,
 }: {
@@ -148,6 +150,8 @@ export default async function BlogPostPage({
         tocHeading={tocHeading}
         author={author}
         publishedAt={post.publishedAt}
+        updatedAt={post.updatedAt}
+        updatedLabel={UPDATED_LABELS[locale] ?? UPDATED_LABELS.en}
         readingTime={post.readingTime}
         category={post.category}
         slug={post.slug}
