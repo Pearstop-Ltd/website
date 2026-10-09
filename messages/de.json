@@ -438,7 +438,8 @@
       "complianceCertification": "Nachunternehmer-Zertifizierung",
       "complianceTimber": "Zertifiziertes Holz",
       "complianceHazardous": "Gefahrstoffe",
-      "complianceRecycling": "Recyclingquote"
+      "complianceRecycling": "Recyclingquote",
+      "complianceAiAct": "EU-KI-Verordnung"
     }
   },
   "Footer": {
@@ -5195,6 +5196,113 @@
       "cta": {
         "title": "Stichprobe von Einkaufsdaten senden",
         "body": "Eine Stichprobe genügt. Jeder Artikel kommt auf Positionsebene erkannt zurück."
+      }
+    },
+    "aiact": {
+      "meta": {
+        "title": "EU-KI-Verordnung: Lassen sich die Daten hinter unserer KI nachweisen?",
+        "description": "Pearstop klassifiziert und bereinigt Einkaufs- und Anlagendaten und führt einen Audit-Trail mit Zeitstempel, sodass die Daten hinter KI-gestützten Entscheidungen nachweisbar sind, sobald ein Kunde, Auditor oder eine Behörde nachfragt."
+      },
+      "hero": {
+        "eyebrow": "EU-KI-Verordnung",
+        "title": "Lässt sich nachweisen, woher die Daten hinter unserer KI stammen, wie sie bereinigt wurden und wer sie geprüft hat?",
+        "lead": "Pearstop liefert die Antwort aus den Rechnungen und Einkaufsdaten, die im Unternehmen bereits vorliegen."
+      },
+      "moments": [
+        {
+          "title": "Der Kundenfragebogen",
+          "body": "Eine Ausschreibung oder ein Lieferantenfragebogen fragt, wie KI auf den Daten des Kunden eingesetzt wird und wie diese Daten gesteuert werden. Die Antwort steckt verstreut in mehreren Tools und in einzelnen Köpfen."
+        },
+        {
+          "title": "Die interne KI-Prüfung",
+          "body": "Rechtsabteilung oder IT will wissen, welche KI-Systeme Einkaufs- und Anlagendaten verarbeiten und welche Daten dabei eingehen. Eine Übersicht fehlt."
+        },
+        {
+          "title": "Die Klassifizierung ohne Erklärung",
+          "body": "Eine per KI klassifizierte Spend-Analyse wird hinterfragt. Niemand kann zeigen, welche Positionen die KI klassifiziert hat, was ein Mensch geprüft hat und was sich geändert hat."
+        }
+      ],
+      "hard": "Die Verordnung verlangt dokumentierte Daten-Governance, Daten, die relevant, repräsentativ und so fehlerfrei und vollständig wie möglich sind, Aufzeichnungen über die Arbeit des Systems und menschliche Aufsicht. Einkaufs- und Anlagendaten beginnen als Freitext auf Rechnungspositionen, mit Lieferantennamen, die nichts über das Leistungsspektrum des Lieferanten aussagen, und mit Änderungen, die niemand protokolliert hat. Der Nachweis ist aus den einzelnen Positionen aufzubauen.",
+      "changes": [
+        "Jede von der KI klassifizierte Position einsehbar, samt den Daten, aus denen sie stammt.",
+        "Prüfschritte und menschliche Prüfung hinter jeder Klassifizierung belegbar.",
+        "Aufzeichnungen exportierbar, sobald ein Kunde, Auditor oder eine Behörde danach fragt."
+      ],
+      "registers": {
+        "eyebrow": "Die Anforderungen",
+        "title": "Was die Verordnung von den Daten verlangt",
+        "lead": "Welche Pflichten für ein bestimmtes System gelten, klärt die eigene Rechtsabteilung. Alle beruhen auf den Daten. Die Datenseite liefert Pearstop.",
+        "columns": {
+          "country": "Anforderung",
+          "registers": "Was die Verordnung verlangt",
+          "confirms": "Was Pearstop liefert"
+        },
+        "rows": [
+          {
+            "country": "Daten-Governance",
+            "registers": "Dokumentierte Verfahren für Erhebung, Aufbereitung, Kennzeichnung und Bereinigung der Daten sowie für das Erkennen von Lücken und Verzerrungen (Artikel 10, Hochrisiko-KI-Systeme)",
+            "confirms": "Jede Position wird klassifiziert, bereinigt und geprüft, jeder Schritt wird protokolliert."
+          },
+          {
+            "country": "Datenqualität",
+            "registers": "Daten, die relevant, hinreichend repräsentativ und im Hinblick auf den Zweck so fehlerfrei und vollständig wie möglich sind",
+            "confirms": "Jede Lieferantenschreibweise einem Lieferanten zugeordnet, jede Position bis auf Artikelebene klassifiziert, Qualitätsprüfungen in jedem Schritt."
+          },
+          {
+            "country": "Aufzeichnungspflicht",
+            "registers": "Automatische Protokollierung von Ereignissen über die gesamte Lebensdauer des Systems (Artikel 12)",
+            "confirms": "Ein Audit-Trail mit Zeitstempel für jede verarbeitete Datei, auf Anfrage exportierbar."
+          },
+          {
+            "country": "Pflichten der Betreiber",
+            "registers": "Relevante und repräsentative Eingabedaten, soweit das Unternehmen sie kontrolliert, aufbewahrte Protokolle und menschliche Aufsicht (Artikel 26)",
+            "confirms": "Saubere, strukturierte Eingabedaten, mit dem Audit-Trail dahinter."
+          },
+          {
+            "country": "Menschliche Aufsicht",
+            "registers": "Personen, die die Ergebnisse des Systems überwachen, verstehen und korrigieren können (Artikel 14)",
+            "confirms": "Menschliche Prüfung zusätzlich zur KI-Klassifizierung."
+          }
+        ]
+      },
+      "proof": {
+        "title": "Ergebnisse aus der Kundenarbeit",
+        "stats": [
+          {
+            "value": "+20 Punkte",
+            "caption": "mehr Genauigkeit durch menschliche Prüfung zusätzlich zur KI-Klassifizierung, verglichen mit KI allein ohne Kontext"
+          },
+          {
+            "value": "70 % auf 99 %",
+            "caption": "Genauigkeit der Rechnungsdatenextraktion bei einem Reinigungsunternehmen"
+          }
+        ]
+      },
+      "faq": [
+        {
+          "question": "Was verlangt die EU-KI-Verordnung von den Daten hinter einem KI-System?",
+          "answer": "Für Hochrisiko-KI-Systeme verlangt die Verordnung dokumentierte Daten-Governance und Daten, die relevant, repräsentativ und so fehlerfrei und vollständig wie möglich sind. Hinzu kommen automatische Protokolle und menschliche Aufsicht. Pearstop strukturiert Einkaufs- und Anlagendaten und protokolliert jeden Schritt, sodass diese Aufzeichnungen bei Nachfrage vorliegen."
+        },
+        {
+          "question": "Wie lassen sich Einkaufsdaten auf die KI-Verordnung vorbereiten?",
+          "answer": "Ausgangspunkt sind die Rechnungs- und Einkaufspositionen. Jede Position wird klassifiziert, jede Lieferantenschreibweise einem Lieferanten zugeordnet und jeder Schritt protokolliert. Pearstop übernimmt das und erzeugt den Audit-Trail als Nebenprodukt der Arbeit."
+        },
+        {
+          "question": "Gilt die KI-Verordnung auch für Unternehmen, die KI-Tools nur nutzen?",
+          "answer": "Ja. Auch Betreiber von KI-Systemen haben Pflichten, unter anderem zu Eingabedaten, Protokollen und menschlicher Aufsicht bei Hochrisiko-KI-Systemen. Welche Pflichten für welches System gelten, klärt die Rechtsabteilung. Pearstop liefert die Datenseite."
+        },
+        {
+          "question": "Welche Aufzeichnungen verlangt die KI-Verordnung bei KI-klassifizierten Einkaufsdaten?",
+          "answer": "Aufzeichnungen über die Arbeit des Systems während seiner Lebensdauer: was eingegangen ist, was herauskam und was sich geändert hat. Pearstop erzeugt für jede verarbeitete Datei einen Audit-Trail mit Zeitstempel, hält die Klassifizierung nachvollziehbar und exportiert die Aufzeichnungen auf Anfrage."
+        },
+        {
+          "question": "Welche Rolle spielt die menschliche Prüfung bei der Umsetzung der KI-Verordnung?",
+          "answer": "Die Verordnung erwartet, dass Menschen Hochrisiko-KI-Systeme beaufsichtigen und deren Ergebnisse korrigieren können. Pearstop ergänzt die KI-Klassifizierung um menschliche Prüfung, die gegenüber KI allein ohne Kontext 20 Punkte Genauigkeit gebracht hat."
+        }
+      ],
+      "cta": {
+        "title": "Stichprobe von Einkaufsdaten senden",
+        "body": "Eine Stichprobe genügt. Jede Position kommt klassifiziert zurück, mit dem Audit-Trail dahinter."
       }
     }
   }

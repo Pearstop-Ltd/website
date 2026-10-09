@@ -438,7 +438,8 @@
       "complianceCertification": "Certificering onderaannemers",
       "complianceTimber": "Duurzaam hout",
       "complianceHazardous": "Gevaarlijke stoffen",
-      "complianceRecycling": "Recyclingpercentage"
+      "complianceRecycling": "Recyclingpercentage",
+      "complianceAiAct": "EU AI-verordening"
     }
   },
   "Footer": {
@@ -5232,6 +5233,113 @@
       "cta": {
         "title": "Sample van inkoopdata insturen",
         "body": "Een sample is genoeg. Elk artikel komt terug, herkend op regelniveau."
+      }
+    },
+    "aiact": {
+      "meta": {
+        "title": "EU AI-verordening: kunnen we de data achter onze AI aantonen?",
+        "description": "Pearstop classificeert en schoont inkoop- en assetdata op en houdt een audittrail met tijdstempel bij, zodat de data achter AI-ondersteunde beslissingen aantoonbaar is als een klant, auditor of toezichthouder erom vraagt."
+      },
+      "hero": {
+        "eyebrow": "EU AI-verordening",
+        "title": "Kunnen we aantonen waar de data achter onze AI vandaan komt, hoe ze is opgeschoond en wie ze heeft gecontroleerd?",
+        "lead": "Pearstop haalt het antwoord uit de facturen en inkoopdata die het bedrijf al heeft."
+      },
+      "moments": [
+        {
+          "title": "De vragenlijst van de klant",
+          "body": "Een aanbesteding of leveranciersvragenlijst wil weten hoe AI met de data van de klant werkt en hoe die data wordt beheerd. Het antwoord zit verspreid over meerdere tools en in een paar hoofden."
+        },
+        {
+          "title": "De interne AI-toetsing",
+          "body": "Juridische zaken of IT vraagt welke AI-systemen inkoop- en assetdata raken en welke data erin gaat. Niemand heeft die lijst."
+        },
+        {
+          "title": "De classificatie die niemand kan uitleggen",
+          "body": "Een spendrapport met AI-classificatie wordt in twijfel getrokken. Niemand kan laten zien welke regels de AI classificeerde, wat een mens controleerde en wat er veranderde."
+        }
+      ],
+      "hard": "De verordening vraagt om gedocumenteerd databeheer, data die relevant, representatief en zo foutloos en compleet mogelijk is, logs van wat het systeem deed en mensen die toezicht houden. Inkoop- en assetdata begint als vrije tekst op factuurregels, leveranciersnamen die niet zeggen wat een leverancier doet en wijzigingen die niemand vastlegde. Het bewijs moet uit de regels zelf komen.",
+      "changes": [
+        "Zicht op elke regel die de AI classificeerde, met de data waar die uit komt.",
+        "Aantoonbare controles en menselijke controle achter elke classificatie.",
+        "Export van de vastlegging zodra een klant, auditor of toezichthouder erom vraagt."
+      ],
+      "registers": {
+        "eyebrow": "De eisen",
+        "title": "Wat de verordening van de data vraagt",
+        "lead": "Welke plichten voor een systeem gelden, beoordeelt de eigen juridische afdeling. Ze rusten allemaal op data. Dit is wat Pearstop levert.",
+        "columns": {
+          "country": "Eis",
+          "registers": "Wat de verordening vraagt",
+          "confirms": "Wat Pearstop levert"
+        },
+        "rows": [
+          {
+            "country": "Databeheer",
+            "registers": "Gedocumenteerde werkwijze voor het verzamelen, voorbereiden, labelen en opschonen van data en voor het signaleren van hiaten en vertekeningen (artikel 10, hoogrisicosystemen)",
+            "confirms": "Elke regel wordt geclassificeerd, opgeschoond en gecontroleerd, en elke stap wordt vastgelegd."
+          },
+          {
+            "country": "Datakwaliteit",
+            "registers": "Data die relevant en voldoende representatief is en zo foutloos en compleet mogelijk voor het beoogde doel",
+            "confirms": "Elke leveranciersspelling gekoppeld aan één leverancier, elke regel geclassificeerd tot op artikelniveau, controles bij elke stap."
+          },
+          {
+            "country": "Logging",
+            "registers": "Automatische logs van gebeurtenissen gedurende de levensduur van het systeem (artikel 12)",
+            "confirms": "Een audittrail met tijdstempel van elk verwerkt bestand, op verzoek te exporteren."
+          },
+          {
+            "country": "Plichten van gebruiksverantwoordelijken",
+            "registers": "Invoerdata die relevant en representatief is voor zover het bedrijf die zelf beheert, bewaarde logs en menselijk toezicht (artikel 26)",
+            "confirms": "Schone, gestructureerde invoerdata, met de audittrail erachter."
+          },
+          {
+            "country": "Menselijk toezicht",
+            "registers": "Mensen die de output van het systeem kunnen beoordelen, begrijpen en corrigeren (artikel 14)",
+            "confirms": "Menselijke controle bovenop de AI-classificatie."
+          }
+        ]
+      },
+      "proof": {
+        "title": "Zo ziet het eruit in klantwerk",
+        "stats": [
+          {
+            "value": "+20 punten",
+            "caption": "meer nauwkeurigheid door menselijke controle bovenop AI-classificatie, vergeleken met AI alleen zonder context"
+          },
+          {
+            "value": "70% naar 99%",
+            "caption": "nauwkeurigheid bij het uitlezen van facturen bij een schoonmaakbedrijf"
+          }
+        ]
+      },
+      "faq": [
+        {
+          "question": "Wat eist de AI-verordening van de data achter een AI-systeem?",
+          "answer": "Voor hoogrisicosystemen eist de verordening gedocumenteerd databeheer en om data die relevant, representatief en zo foutloos en compleet mogelijk is. Ook eist ze automatische logs en menselijk toezicht. Pearstop structureert inkoop- en assetdata en legt elke stap vast, zodat die vastlegging er is als erom gevraagd wordt."
+        },
+        {
+          "question": "Hoe maken we inkoopdata klaar voor de AI-verordening?",
+          "answer": "Het begint bij de regels. Elke factuur- en inkoopregel wordt geclassificeerd, elke leveranciersspelling wordt teruggebracht tot één leverancier en elke stap wordt vastgelegd. Pearstop doet dat en levert de audittrail als bijproduct van het werk."
+        },
+        {
+          "question": "Geldt de AI-verordening ook als we AI-tools alleen gebruiken?",
+          "answer": "Ja. Bedrijven die AI-systemen inzetten hebben ook plichten, onder meer rond invoerdata, logs en menselijk toezicht bij hoogrisicosystemen. Welke plichten voor welk systeem gelden, bevestigt de juridische afdeling. Pearstop levert de datakant."
+        },
+        {
+          "question": "Welke logs vraagt de AI-verordening bij door AI geclassificeerde inkoopdata?",
+          "answer": "Logs van wat het systeem deed gedurende zijn levensduur: wat erin ging, wat eruit kwam en wat er veranderde. Pearstop maakt een audittrail met tijdstempel van elk verwerkt bestand en houdt de classificatie herleidbaar, op verzoek te exporteren."
+        },
+        {
+          "question": "Hoe past menselijke controle in de AI-verordening?",
+          "answer": "De verordening verwacht dat mensen toezicht houden op hoogrisicosystemen en de output kunnen corrigeren. Pearstop voegt menselijke controle toe bovenop AI-classificatie, wat 20 punten nauwkeurigheid opleverde ten opzichte van AI alleen zonder context."
+        }
+      ],
+      "cta": {
+        "title": "Sample van inkoopdata insturen",
+        "body": "Een sample is genoeg. Elke regel komt geclassificeerd terug, met de audittrail erachter."
       }
     }
   }

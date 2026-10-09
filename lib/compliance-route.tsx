@@ -75,6 +75,7 @@ export function complianceCards(messages: unknown, locale: string): { title: str
     timber: "complianceTimber",
     hazardous: "complianceHazardous",
     recycling: "complianceRecycling",
+    aiact: "complianceAiAct",
   };
   return COMPLIANCE_KEYS.map((key) => ({
     title: m.Header.nav[labelKeys[key]],

@@ -438,7 +438,8 @@
       "complianceCertification": "Subcontractor certification",
       "complianceTimber": "Sustainable timber",
       "complianceHazardous": "Hazardous substances",
-      "complianceRecycling": "Recycling rates"
+      "complianceRecycling": "Recycling rates",
+      "complianceAiAct": "EU AI Act"
     }
   },
   "Footer": {
@@ -4901,6 +4902,113 @@
       "cta": {
         "title": "Send us a sample of your purchase data",
         "body": "A sample is enough. We send back every item identified at line level."
+      }
+    },
+    "aiact": {
+      "meta": {
+        "title": "EU AI Act Compliance: Can We Show the Data Behind Our AI?",
+        "description": "Pearstop classifies and cleans procurement and asset data and keeps a timestamped audit trail, so the data behind AI-assisted decisions can be shown when a client, auditor or regulator asks."
+      },
+      "hero": {
+        "eyebrow": "EU AI Act",
+        "title": "Can we show where the data behind our AI comes from, how it was cleaned and who checked it?",
+        "lead": "Pearstop answers it from the invoices and purchase data the company already has."
+      },
+      "moments": [
+        {
+          "title": "The client questionnaire",
+          "body": "A tender or supplier questionnaire asks how AI is used on the client's data and how that data is governed. The answer sits in several tools and a few people's heads."
+        },
+        {
+          "title": "The internal AI review",
+          "body": "Legal or IT asks which AI systems touch procurement and asset data, and what data goes in. Nobody has the list."
+        },
+        {
+          "title": "The classification nobody can explain",
+          "body": "An AI-classified spend report gets questioned. Nobody can show which lines the AI classified, what a person checked and what changed."
+        }
+      ],
+      "hard": "The Act asks for documented data governance, data that is relevant, representative and as free of errors and as complete as possible, records of what the system did, and people who oversee it. Procurement and asset data starts as free text on invoice lines, supplier names that do not say what a supplier does, and edits nobody logged. The evidence has to be built from the lines.",
+      "changes": [
+        "See every line the AI classified, with the data it came from.",
+        "Show the checks and the human review behind each classification.",
+        "Export the records when a client, auditor or regulator asks."
+      ],
+      "registers": {
+        "eyebrow": "The requirements",
+        "title": "What the Act asks of the data",
+        "lead": "Which duties apply to a given system is a question for the company's own legal team. They all rest on the data. This is what Pearstop supplies.",
+        "columns": {
+          "country": "Requirement",
+          "registers": "What the Act asks",
+          "confirms": "What Pearstop provides"
+        },
+        "rows": [
+          {
+            "country": "Data governance",
+            "registers": "Documented practices for how data is collected, prepared, labelled and cleaned, and for finding gaps and bias (Article 10, high-risk systems)",
+            "confirms": "Every line is classified, cleaned and checked, and each step is recorded."
+          },
+          {
+            "country": "Data quality",
+            "registers": "Data that is relevant, sufficiently representative and as free of errors and as complete as possible for the intended purpose",
+            "confirms": "Every supplier spelling matched to one supplier, every line classified down to the item, quality checks at every step."
+          },
+          {
+            "country": "Record-keeping",
+            "registers": "Automatic logs of events over the lifetime of the system (Article 12)",
+            "confirms": "A timestamped audit trail of every file processed, exportable on request."
+          },
+          {
+            "country": "Deployer duties",
+            "registers": "Input data that is relevant and representative where the company controls it, retained logs and human oversight (Article 26)",
+            "confirms": "Clean, structured input data, with the audit trail behind it."
+          },
+          {
+            "country": "Human oversight",
+            "registers": "People who can oversee, understand and correct the output of the system (Article 14)",
+            "confirms": "Human review on top of the AI classification."
+          }
+        ]
+      },
+      "proof": {
+        "title": "What this looks like in client work",
+        "stats": [
+          {
+            "value": "+20 points",
+            "caption": "accuracy gained by adding human review to AI classification, compared with AI alone without context"
+          },
+          {
+            "value": "70% to 99%",
+            "caption": "invoice extraction accuracy at a cleaning services company"
+          }
+        ]
+      },
+      "faq": [
+        {
+          "question": "What does the EU AI Act require for the data behind an AI system?",
+          "answer": "For high-risk systems, the Act asks for documented data governance and for data that is relevant, representative and as free of errors and as complete as possible. It also asks for automatic logs and human oversight. Pearstop structures procurement and asset data and records each step, so those records exist when they are asked for."
+        },
+        {
+          "question": "How do you prepare procurement data for the EU AI Act?",
+          "answer": "Start with the lines. Classify every invoice and purchase line, match every supplier spelling to one supplier and keep a record of each step. Pearstop does this and produces the audit trail as a by-product of the work."
+        },
+        {
+          "question": "Does the EU AI Act apply to companies that only use AI tools?",
+          "answer": "Yes. Companies that deploy AI systems carry duties too, including around input data, logs and human oversight for high-risk systems. The company's legal team confirms which duties apply to which system. Pearstop supplies the data side."
+        },
+        {
+          "question": "What records does the EU AI Act expect for AI-classified procurement data?",
+          "answer": "Records of what the system did over its lifetime: what went in, what came out and what changed. Pearstop generates a timestamped audit trail for every file it processes and keeps the classification traceable, exportable on request."
+        },
+        {
+          "question": "How does human review fit into EU AI Act compliance?",
+          "answer": "The Act expects people to oversee high-risk systems and to be able to correct their output. Pearstop adds human review on top of AI classification, which gained 20 accuracy points compared with AI alone without context."
+        }
+      ],
+      "cta": {
+        "title": "Send us a sample of your procurement data",
+        "body": "A sample is enough. We send back every line classified, with the audit trail behind it."
       }
     }
   }

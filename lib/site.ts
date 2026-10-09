@@ -123,7 +123,8 @@ export const solutionLinks: NavLink[] = [
       { label: "Subcontractor certification", href: "/subcontractor-certification" },
       { label: "Sustainable timber", href: "/fsc-timber-spend" },
       { label: "Hazardous substances", href: "/hazardous-substances-spend" },
-      { label: "Recycling rates", href: "/recycling-rate-data" }
+      { label: "Recycling rates", href: "/recycling-rate-data" },
+      { label: "EU AI Act", href: "/eu-ai-act-compliance" }
     ]
   }
 ];

@@ -248,6 +248,12 @@
   text-decoration: none;
 }
 
+/* Colour follows the column; the second row is one step deeper than the
+   first so no two cards look the same. Top row = the plain brand tints. */
+.whoGrid .whoCard {
+  border: 1px solid var(--border);
+}
+
 .whoGrid .whoCard:nth-of-type(4n + 1) {
   background: var(--tint-blue);
 }
@@ -262,6 +268,22 @@
 
 .whoGrid .whoCard:nth-of-type(4n) {
   background: var(--bg-soft);
+}
+
+.whoGrid .whoCard:nth-of-type(n + 5):nth-of-type(4n + 1) {
+  background: color-mix(in srgb, var(--tint-blue) 72%, var(--light-blue));
+}
+
+.whoGrid .whoCard:nth-of-type(n + 5):nth-of-type(4n + 2) {
+  background: color-mix(in srgb, var(--tint-purple) 72%, var(--purple));
+}
+
+.whoGrid .whoCard:nth-of-type(n + 5):nth-of-type(4n + 3) {
+  background: color-mix(in srgb, var(--tint-green) 68%, var(--green));
+}
+
+.whoGrid .whoCard:nth-of-type(n + 5):nth-of-type(4n) {
+  background: var(--border);
 }
 
 .whoCardTitle {

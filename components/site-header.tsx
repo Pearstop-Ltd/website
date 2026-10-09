@@ -106,6 +106,7 @@ const SOLUTION_NAV_KEYS: Record<string, string> = {
   "/fsc-timber-spend": "complianceTimber",
   "/hazardous-substances-spend": "complianceHazardous",
   "/recycling-rate-data": "complianceRecycling",
+  "/eu-ai-act-compliance": "complianceAiAct",
 };
 
 // Header height in px, must match .nav-inner's min-height in globals.css.

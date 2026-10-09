@@ -438,7 +438,8 @@
       "complianceCertification": "Certification des sous-traitants",
       "complianceTimber": "Bois certifié",
       "complianceHazardous": "Substances dangereuses",
-      "complianceRecycling": "Taux de recyclage"
+      "complianceRecycling": "Taux de recyclage",
+      "complianceAiAct": "Règlement européen sur l'IA"
     }
   },
   "Footer": {
@@ -5200,6 +5201,113 @@
       "cta": {
         "title": "Envoyer un échantillon de données d'achats",
         "body": "Un échantillon suffit. Chaque article revient identifié au niveau de la ligne."
+      }
+    },
+    "aiact": {
+      "meta": {
+        "title": "Règlement européen sur l'IA : peut-on montrer les données derrière notre IA ?",
+        "description": "Pearstop classe et nettoie les données d'achats et d'actifs et tient une piste d'audit horodatée : les données derrière les décisions assistées par IA peuvent être présentées dès qu'un client, un auditeur ou une autorité de contrôle les demande."
+      },
+      "hero": {
+        "eyebrow": "Règlement européen sur l'IA",
+        "title": "Peut-on démontrer d'où viennent les données qui alimentent notre IA, comment elles ont été nettoyées et qui les a vérifiées ?",
+        "lead": "Pearstop y répond à partir des factures et des données d'achats que l'entreprise détient déjà."
+      },
+      "moments": [
+        {
+          "title": "Le questionnaire du client",
+          "body": "Un appel d'offres ou un questionnaire fournisseur demande comment l'IA est utilisée sur les données du client et comment ces données sont encadrées. La réponse est éparpillée entre plusieurs outils et dans la tête de quelques personnes."
+        },
+        {
+          "title": "La revue interne de l'IA",
+          "body": "Le service juridique ou la DSI demande quels systèmes d'IA utilisent les données d'achats et d'actifs, et quelles données y entrent. Personne n'a cette liste."
+        },
+        {
+          "title": "La classification que personne ne sait expliquer",
+          "body": "Un rapport de dépenses classé par IA est contesté. Personne ne peut montrer quelles lignes l'IA a classées, ce qu'une personne a vérifié et ce qui a été modifié."
+        }
+      ],
+      "hard": "Le règlement exige une gouvernance des données documentée, des données pertinentes, représentatives et aussi exemptes d'erreurs et complètes que possible, une journalisation de l'activité du système et une supervision humaine. Or les données d'achats et d'actifs se présentent d'abord en texte libre sur des lignes de facture, avec des noms de fournisseurs qui n'indiquent pas leur activité et des modifications que personne n'a consignées. La preuve se construit ligne par ligne.",
+      "changes": [
+        "Chaque ligne classée par l'IA consultable, avec les données dont elle provient.",
+        "Les contrôles et la revue humaine derrière chaque classification démontrables.",
+        "Les enregistrements exportables dès qu'un client, un auditeur ou une autorité de contrôle les demande."
+      ],
+      "registers": {
+        "eyebrow": "Les exigences",
+        "title": "Ce que le règlement demande aux données",
+        "lead": "Les obligations applicables à un système donné relèvent du service juridique de l'entreprise. Toutes reposent sur les données. Voici l'apport de Pearstop.",
+        "columns": {
+          "country": "Exigence",
+          "registers": "Ce que demande le règlement",
+          "confirms": "Ce que Pearstop apporte"
+        },
+        "rows": [
+          {
+            "country": "Gouvernance des données",
+            "registers": "Pratiques documentées de collecte, de préparation, d'étiquetage et de nettoyage des données, et de détection des lacunes et des biais (article 10, systèmes d'IA à haut risque)",
+            "confirms": "Chaque ligne est classée, nettoyée et contrôlée, et chaque étape est consignée."
+          },
+          {
+            "country": "Qualité des données",
+            "registers": "Données pertinentes, suffisamment représentatives et aussi exemptes d'erreurs et complètes que possible au regard de la finalité prévue",
+            "confirms": "Chaque variante d'écriture rattachée à un seul fournisseur, chaque ligne classée jusqu'à l'article, des contrôles à chaque étape."
+          },
+          {
+            "country": "Journalisation",
+            "registers": "Enregistrement automatique des événements pendant toute la durée de vie du système (article 12)",
+            "confirms": "Une piste d'audit horodatée de chaque fichier traité, exportable sur demande."
+          },
+          {
+            "country": "Obligations des déployeurs",
+            "registers": "Données d'entrée pertinentes et représentatives lorsque l'entreprise les maîtrise, conservation des journaux et contrôle humain (article 26)",
+            "confirms": "Des données d'entrée propres et structurées, avec la piste d'audit derrière."
+          },
+          {
+            "country": "Contrôle humain",
+            "registers": "Des personnes en mesure de superviser, de comprendre et de corriger les résultats du système (article 14)",
+            "confirms": "Une revue humaine par-dessus la classification par IA."
+          }
+        ]
+      },
+      "proof": {
+        "title": "Ce que cela donne chez nos clients",
+        "stats": [
+          {
+            "value": "+20 points",
+            "caption": "de précision gagnés en ajoutant une revue humaine à la classification par IA, par rapport à l'IA seule sans contexte"
+          },
+          {
+            "value": "70 % à 99 %",
+            "caption": "de précision d'extraction des factures chez une entreprise de nettoyage"
+          }
+        ]
+      },
+      "faq": [
+        {
+          "question": "Que demande le règlement européen sur l'IA concernant les données d'un système d'IA ?",
+          "answer": "Pour les systèmes d'IA à haut risque, le règlement exige une gouvernance des données documentée et des données pertinentes, représentatives et aussi exemptes d'erreurs et complètes que possible. Il exige aussi une journalisation automatique et un contrôle humain. Pearstop structure les données d'achats et d'actifs et consigne chaque étape : ces enregistrements existent lorsqu'ils sont demandés."
+        },
+        {
+          "question": "Comment préparer ses données d'achats au règlement européen sur l'IA ?",
+          "answer": "Tout part des lignes. Chaque ligne de facture et d'achat est classée, chaque variante d'écriture d'un fournisseur est rattachée à un seul fournisseur et chaque étape est consignée. Pearstop s'en charge et produit la piste d'audit comme sous-produit du travail."
+        },
+        {
+          "question": "Le règlement européen sur l'IA concerne-t-il aussi les entreprises qui se contentent d'utiliser des outils d'IA ?",
+          "answer": "Oui. Les entreprises qui déploient des systèmes d'IA, les déployeurs, ont aussi des obligations, notamment sur les données d'entrée, les journaux et le contrôle humain pour les systèmes à haut risque. Le service juridique confirme quelles obligations s'appliquent à quel système. Pearstop couvre le volet données."
+        },
+        {
+          "question": "Quels enregistrements le règlement européen sur l'IA attend-il pour des données d'achats classées par IA ?",
+          "answer": "Des enregistrements de l'activité du système sur toute sa durée de vie : ce qui est entré, ce qui est sorti et ce qui a été modifié. Pearstop génère une piste d'audit horodatée pour chaque fichier traité et garde la classification traçable, exportable sur demande."
+        },
+        {
+          "question": "Quelle place pour la revue humaine dans la conformité au règlement européen sur l'IA ?",
+          "answer": "Le règlement attend de personnes qu'elles supervisent les systèmes d'IA à haut risque et soient en mesure de corriger leurs résultats. Pearstop ajoute une revue humaine par-dessus la classification par IA, ce qui a apporté 20 points de précision par rapport à l'IA seule sans contexte."
+        }
+      ],
+      "cta": {
+        "title": "Envoyer un échantillon de ses données d'achats",
+        "body": "Un échantillon suffit. Chaque ligne revient classée, avec la piste d'audit derrière."
       }
     }
   }
