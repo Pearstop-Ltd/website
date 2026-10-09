@@ -24,6 +24,19 @@
   color: var(--text);
 }
 
+.legal {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  font-weight: 300;
+  color: var(--muted);
+}
+
+.legalLink {
+  color: var(--blue);
+  text-decoration: underline;
+}
+
 .link {
   align-self: flex-start;
   font-size: 16px;

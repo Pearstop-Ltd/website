@@ -5305,6 +5305,66 @@
       "cta": {
         "title": "Stichprobe von Einkaufsdaten senden",
         "body": "Eine Stichprobe genügt. Jede Position kommt klassifiziert zurück, mit dem Audit-Trail dahinter."
+      },
+      "timeline": {
+        "eyebrow": "Was gilt wann",
+        "title": "Was gilt, wann und für wen",
+        "lead": "Einfach gesagt: Die Verordnung greift in Stufen. Einige Regeln gelten bereits. Die strengsten, für Hochrisiko-KI, wurden verschoben.",
+        "columns": {
+          "when": "Wann",
+          "what": "Was gilt",
+          "who": "Wen betrifft es"
+        },
+        "rows": [
+          {
+            "when": "Seit 2. Februar 2025",
+            "what": "Bestimmte KI-Anwendungen sind schlicht verboten, zum Beispiel KI, die Menschen manipuliert oder nach ihrem Sozialverhalten bewertet.",
+            "who": "Alle, die in der EU KI entwickeln oder nutzen"
+          },
+          {
+            "when": "Seit 2. August 2025",
+            "what": "Regeln für die großen KI-Modelle mit allgemeinem Verwendungszweck hinter Chatbots und Schreibwerkzeugen: Dokumentation und Transparenz beim Urheberrecht.",
+            "who": "Unternehmen, die KI-Modelle mit allgemeinem Verwendungszweck entwickeln"
+          },
+          {
+            "when": "Ab 2. August 2026",
+            "what": "Der größte Teil der übrigen Verordnung, nun durchgesetzt vom KI-Büro der EU und den nationalen Behörden. Dazu gehört Transparenz: KI, die mit Menschen spricht oder Inhalte erzeugt, muss das offenlegen.",
+            "who": "Unternehmen, die KI-Systeme entwickeln (Anbieter), und Unternehmen, die sie einsetzen (Betreiber)"
+          },
+          {
+            "when": "Bis 2. Dezember 2026",
+            "what": "Mehr Zeit für die Kennzeichnung KI-generierter Inhalte bei generativen KI-Systemen, die am 2. August 2026 bereits auf dem Markt waren.",
+            "who": "Anbieter dieser generativen KI-Systeme"
+          },
+          {
+            "when": "Ab 2. Dezember 2027 (zuvor 2. August 2026)",
+            "what": "Die strengsten Regeln, für Hochrisiko-KI in Bereichen wie Beschäftigung, Bildung, Biometrie und kritische Infrastruktur: dokumentierte Daten-Governance, Protokolle, menschliche Aufsicht.",
+            "who": "Anbieter und Betreiber dieser Hochrisiko-Systeme"
+          },
+          {
+            "when": "Ab 2. August 2028",
+            "what": "Dieselben Hochrisiko-Regeln für KI, die in regulierte Produkte eingebaut ist, etwa Aufzüge und Spielzeug.",
+            "who": "Anbieter dieser Produkte"
+          }
+        ],
+        "meaning": "Was das für ein Bau-, FM- oder Infrastrukturunternehmen bedeutet: Die meisten nutzen KI-Werkzeuge, die andere entwickelt haben, und sind damit Betreiber. Ob ein Werkzeug als Hochrisiko-System gilt, hängt vom Einsatzzweck ab, etwa Einstellung, Personalsteuerung oder Betrieb kritischer Infrastruktur. Die Transparenzpflichten betreffen alle. In jedem Fall ist KI nur so verlässlich wie die Daten dahinter, und Kunden und Auditoren fragen schon heute danach.",
+        "legal": {
+          "text": "(Rechtsgrundlage: [[0]] des Europäischen Parlaments und des Rates vom 13. Juni 2024 zur Festlegung harmonisierter Vorschriften für künstliche Intelligenz (KI-Verordnung), geändert durch [[1]] vom 8. Juli 2026 zur Änderung der Verordnungen (EU) 2024/1689, (EU) 2018/1139 und (EU) 2023/1230 im Hinblick auf die Vereinfachung der Umsetzung harmonisierter Vorschriften für künstliche Intelligenz (Digital-Omnibus zur KI), in Kraft seit 27. Juli 2026. Die Änderung hat die Anwendung der Pflichten für Hochrisiko-Systeme auf den 2. Dezember 2027 (Anhang III) und den 2. August 2028 (Anhang I) verschoben. Quelle für den Zeitplan: [[2]].)",
+          "links": [
+            {
+              "label": "Verordnung (EU) 2024/1689",
+              "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"
+            },
+            {
+              "label": "Verordnung (EU) 2026/1744",
+              "url": "https://eur-lex.europa.eu/eli/reg/2026/1744/oj"
+            },
+            {
+              "label": "Europäische Kommission, Zeitplan zur Umsetzung der KI-Verordnung",
+              "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
+            }
+          ]
+        }
       }
     }
   }

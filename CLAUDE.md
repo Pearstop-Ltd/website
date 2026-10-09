@@ -47,6 +47,8 @@ Blog metadata is split across two places that must stay consistent for a post to
 
 ### Auto-translation pipeline (blog content only — never site UI copy)
 
+**Hard rule: never use `scripts/translate.js` or the auto-translate workflow (Gemini) when building or changing anything in this repo other than blog posts.** It exists only to translate blog content. For every page, component, menu label, landing page and `messages/*.json` change, write the nl, fr and de text yourself (Claude), directly in the locale files, in natural local language, and have it checked in a native-buyer pass where the brief asks for one. Do not run `npm run translate`, do not rely on the workflow to fill translations later, and do not leave a locale to fall back to English as a substitute for translating.
+
 `scripts/translate.js` (invoked via `npm run prebuild` and in CI) uses the Gemini API (`GEMINI_API_KEY`, Gemini 2.5 Flash) for **blog content only**: it translates new/changed MDX files from `content/blog/en/` into `content/blog/{nl,fr,de}/`, leaving frontmatter keys, headings, and JSX untouched; translates blog post `faqItems` (read from `lib/blog-posts.ts`, read-only) into `content/blog-faq/{nl,fr,de}.json`; and translates `tocItems` labels (same read-only source) into `content/blog-toc/{fr,de}.json` — nl is skipped there since it's hand-maintained via `tocItemsNl`.
 
 `.github/workflows/auto-translate.yml` runs this script on pushes to `main` that touch `content/blog/en/**` or `lib/blog-posts.ts`, and commits the resulting `content/blog/{nl,fr,de}/**` / `content/blog-faq/{nl,fr,de}.json` / `content/blog-toc/{fr,de}.json` changes back to `main` directly.

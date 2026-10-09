@@ -3,6 +3,7 @@ import { SolutionPage, type SolutionSection } from "../templates/SolutionPage";
 import { Section } from "../internal/Section";
 import { SectionHeader } from "../SectionHeader";
 import { StatBand } from "../StatBand";
+import { DataTable } from "../DataTable";
 import { DotList } from "../migrations/DotList";
 import { SampleRequestModal } from "@/components/sample-request-modal";
 import { siteConfig } from "@/lib/site";
@@ -28,6 +29,17 @@ export interface ComplianceQuestionCopy {
   moments: { title: string; body: string }[];
   hard: string;
   changes: string[];
+  /** Plain-language "what applies when, to whom" table plus the formal legal basis in brackets (EU AI Act page). */
+  timeline?: {
+    eyebrow: string;
+    title: string;
+    lead: string;
+    columns: { when: string; what: string; who: string };
+    rows: { when: string; what: string; who: string }[];
+    meaning: string;
+    /** `text` contains [[0]], [[1]]... tokens that are replaced by the matching link. */
+    legal: { text: string; links: { label: string; url: string }[] };
+  };
   registers?: {
     eyebrow: string;
     title: string;
@@ -73,12 +85,49 @@ export function ComplianceQuestionPage({ copy, localePrefix, locale }: { copy: C
     },
   ];
 
+  if (copy.timeline) {
+    const { timeline } = copy;
+    sections.push({
+      type: "custom",
+      key: "timeline",
+      node: (
+        <Section background="soft">
+          <div className={styles.proofStack}>
+            <SectionHeader eyebrow={timeline.eyebrow} title={timeline.title} lead={timeline.lead} />
+            <DataTable
+              columns={[
+                { key: "when", label: timeline.columns.when, width: "1fr" },
+                { key: "what", label: timeline.columns.what, width: "2.5fr" },
+                { key: "who", label: timeline.columns.who, width: "1.5fr" },
+              ]}
+              rows={timeline.rows}
+            />
+            <div className={styles.cases}>
+              <p className={styles.case}>{timeline.meaning}</p>
+              <p className={styles.legal}>
+                {timeline.legal.text.split(/\[\[(\d+)\]\]/).map((part, i) =>
+                  i % 2 === 1 ? (
+                    <a key={i} href={timeline.legal.links[Number(part)].url} target="_blank" rel="noopener noreferrer" className={styles.legalLink}>
+                      {timeline.legal.links[Number(part)].label}
+                    </a>
+                  ) : (
+                    part
+                  )
+                )}
+              </p>
+            </div>
+          </div>
+        </Section>
+      ),
+    });
+  }
+
   if (copy.registers) {
     const { columns, rows } = copy.registers;
     sections.push({
       type: "table",
       key: "registers",
-      background: "soft",
+      background: copy.timeline ? "white" : "soft",
       eyebrow: copy.registers.eyebrow,
       title: copy.registers.title,
       lead: copy.registers.lead,
@@ -101,7 +150,7 @@ export function ComplianceQuestionPage({ copy, localePrefix, locale }: { copy: C
       type: "custom",
       key: "proof",
       node: (
-        <Section background={copy.registers ? "white" : "soft"}>
+        <Section background={copy.timeline ? "soft" : copy.registers ? "white" : "soft"}>
           <div className={styles.proofStack}>
             <SectionHeader eyebrow={shared.proofEyebrow} title={copy.proof.title} />
             {copy.proof.stats ? <StatBand stats={copy.proof.stats} /> : null}
@@ -126,7 +175,7 @@ export function ComplianceQuestionPage({ copy, localePrefix, locale }: { copy: C
     {
       type: "faq",
       key: "faq",
-      background: copy.registers ? "soft" : "white",
+      background: copy.timeline ? "white" : copy.registers ? "soft" : "white",
       eyebrow: shared.faqEyebrow,
       title: shared.faqTitle,
       items: copy.faq.map((item) => ({ q: item.question, a: item.answer })),
