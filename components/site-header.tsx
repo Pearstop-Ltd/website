@@ -47,8 +47,10 @@ function LanguageSwitcher() {
         if (path.startsWith(`/${code}/`)) { path = path.slice(code.length + 1); break; }
         if (path === `/${code}`) { path = "/"; break; }
       }
-      const target = next === "en" ? path || "/" : `/${next}${path === "/" ? "" : path}`;
-      router.push(target);
+      const target =
+        complianceSwitchPath(pathname, next) ??
+        (next === "en" ? path || "/" : `/${next}${path === "/" ? "" : path}`);
+      router.push(target, { scroll: false });
     });
   }
 
@@ -98,14 +100,14 @@ const SOLUTION_NAV_KEYS: Record<string, string> = {
   "/fabric": "fabricReady",
   "/ai-readiness": "aiReadiness",
   "/unspsc": "unspsc",
-};
-
   "#compliance-questions": "complianceQuestions",
   "/freelancer-spend": "complianceFreelancers",
   "/subcontractor-certification": "complianceCertification",
   "/fsc-timber-spend": "complianceTimber",
   "/hazardous-substances-spend": "complianceHazardous",
   "/recycling-rate-data": "complianceRecycling",
+};
+
 // Header height in px, must match .nav-inner's min-height in globals.css.
 const HEADER_HEIGHT = 68;
 

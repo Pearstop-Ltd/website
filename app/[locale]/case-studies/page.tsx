@@ -53,7 +53,7 @@ export default async function CaseStudiesPage({
         lead={t("hero.lead")}
         actions={[
           { label: t("hero.getPdf"), href: "#get-the-download", variant: "primary" },
-          { label: t("hero.followLinkedIn"), href: siteConfig.socials.linkedin, variant: "secondary", external: true }
+          { label: t("hero.followLinkedIn"), href: siteConfig.socials.stephanieLinkedin, variant: "secondary", external: true }
         ]}
       />
 
@@ -129,7 +129,7 @@ export default async function CaseStudiesPage({
         title={t("cta.title")}
         lead={t("cta.lead")}
         actions={[
-          { label: t("cta.followLinkedIn"), href: siteConfig.socials.linkedin, variant: "secondary", external: true },
+          { label: t("cta.followLinkedIn"), href: siteConfig.socials.stephanieLinkedin, variant: "secondary", external: true },
           { label: t("cta.bookDiscovery"), href: siteConfig.calendly, variant: "primary", external: true }
         ]}
       />

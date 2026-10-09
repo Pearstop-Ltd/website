@@ -53,7 +53,7 @@ export default function CaseStudiesPage() {
         actions={[
           { label: "Get the PDF", href: "#get-the-download", variant: "primary" },
           { label: "View in browser", href: siteConfig.downloads.caseStudiesView, variant: "secondary", external: true },
-          { label: "Follow Stephanie on LinkedIn", href: siteConfig.socials.linkedin, variant: "secondary", external: true }
+          { label: "Follow Stephanie on LinkedIn", href: siteConfig.socials.stephanieLinkedin, variant: "secondary", external: true }
         ]}
       />
 
@@ -135,7 +135,7 @@ export default function CaseStudiesPage() {
         title="Want to talk it through?"
         lead="If you’d rather discuss your data problem directly, we’re happy to help."
         actions={[
-          { label: "Follow Stephanie on LinkedIn", href: siteConfig.socials.linkedin, variant: "secondary", external: true },
+          { label: "Follow Stephanie on LinkedIn", href: siteConfig.socials.stephanieLinkedin, variant: "secondary", external: true },
           { label: "Talk to sales", href: siteConfig.calendly, variant: "primary", external: true }
         ]}
       />

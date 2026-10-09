@@ -67,6 +67,7 @@ export const siteConfig = {
   },
   socials: {
     linkedin: "https://www.linkedin.com/company/pearstop",
+    stephanieLinkedin: "https://www.linkedin.com/in/stephanie-wiechers/",
     youtube: "https://www.youtube.com/playlist?list=PLBmjBcqpuejp4B-A1ZuiXYt-P5DFwR4yH",
     instagram: "https://www.instagram.com/pearstop_/"
   }
@@ -77,9 +78,9 @@ export type NavLink = {
   href: string;
   description?: string;
   children?: NavLink[];
-};
   /** Renders as a non-link heading with its children listed inline (header Solutions menu). */
   group?: boolean;
+};
 
 export const solutionLinks: NavLink[] = [
   { label: "Invoice & Document Extraction", href: "/invoice-data-extraction", description: "Turn unread PDFs and scans into structured data." },
