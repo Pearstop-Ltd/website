@@ -5068,7 +5068,7 @@
     "hazardous": {
       "meta": {
         "title": "Gefahrstoffe im Einkauf: Was wurde gekauft, bei wem, und wohin ist es gegangen?",
-        "description": "Pearstop erkennt Gefahrstoffe Position für Position, auch bei Universalgroßhändlern, und liefert eine Liste je Lieferant und Standort für den Abgleich mit Sicherheitsdatenblättern (SDB)."
+        "description": "Pearstop erkennt Gefahrstoffe Position für Position, auch bei technischen Großhändlern, und liefert eine Liste je Lieferant und Standort für den Abgleich mit Sicherheitsdatenblättern (SDB)."
       },
       "hero": {
         "eyebrow": "Gefahrstoffe",
@@ -5078,7 +5078,7 @@
       "moments": [
         {
           "title": "Die Anfrage der Arbeitssicherheit",
-          "body": "Die Arbeitssicherheit (HSE) verlangt eine Liste aller im letzten Jahr gekauften Gefahrstoffe. Das meiste kam von einem Universalgroßhändler, vermischt mit Kabelbindern und Schrauben."
+          "body": "Die Arbeitssicherheit (HSE) verlangt eine Liste aller im letzten Jahr gekauften Gefahrstoffe. Das meiste kam von einem technischen Großhändler, vermischt mit Kabelbindern und Schrauben."
         },
         {
           "title": "Die einzelne Position",
@@ -5089,9 +5089,9 @@
           "body": "Für die bekannten Produkte liegen Sicherheitsdatenblätter (SDB) vor. Offen ist, welche Produkte nicht bekannt sind."
         }
       ],
-      "hard": "Die Antwort liegt auf Ebene der Rechnungsposition. Der Name eines Universalgroßhändlers zeigt nicht, dass er Lösungsmittel, Sprays und Kleber verkauft. Ein Lieferant liefert über viele Warengruppen hinweg, sodass die Gefahrstoffpositionen im Rest untergehen.",
+      "hard": "Die Antwort liegt auf Ebene der Rechnungsposition. Der Name eines technischen Großhändlers zeigt nicht, dass er Lösungsmittel, Sprays und Kleber verkauft. Ein Lieferant liefert über viele Warengruppen hinweg, sodass die Gefahrstoffpositionen im Rest untergehen.",
       "changes": [
-        "Gefahrstoffe Position für Position sichtbar, auch aus dem Einkauf bei Universalgroßhändlern.",
+        "Gefahrstoffe Position für Position sichtbar, auch aus dem Einkauf bei technischen Großhändlern.",
         "Eine Liste je Lieferant und Standort, bereit für den Abgleich mit den Sicherheitsdatenblättern.",
         "Dieselbe Liste, laufend aktualisiert, sobald neue Rechnungen eintreffen."
       ],
@@ -5104,13 +5104,13 @@
           }
         ],
         "cases": [
-          "Gefahrstoffe stecken oft in Rechnungen von Universalgroßhändlern. Das Lesen jeder Position bringt sie zum Vorschein."
+          "Gefahrstoffe stecken oft in Rechnungen von technischen Großhändlern. Das Lesen jeder Position bringt sie zum Vorschein."
         ]
       },
       "faq": [
         {
           "question": "Wie wird eine Liste aller eingekauften Gefahrstoffe erstellt?",
-          "answer": "Jede Rechnungsposition wird gelesen, die gefährlichen Produkte werden bestimmt und nach Lieferant und Standort gruppiert. Pearstop arbeitet Position für Position, auch bei Rechnungen von Universalgroßhändlern, auf denen ein Lösungsmittel neben Kabelbindern steht."
+          "answer": "Jede Rechnungsposition wird gelesen, die gefährlichen Produkte werden bestimmt und nach Lieferant und Standort gruppiert. Pearstop arbeitet Position für Position, auch bei Rechnungen von technischen Großhändlern, auf denen ein Lösungsmittel neben Kabelbindern steht."
         },
         {
           "question": "Wie lassen sich Chemikalien in Einkaufsdaten finden?",
@@ -5125,7 +5125,7 @@
           "answer": "Eine Auswertung je Lieferant ordnet das gesamte Einkaufsvolumen der Hauptwarengruppe des Lieferanten zu. Ein Großhändler für Befestigungsmaterial erscheint als Befestigungsmaterial, und die Lösungsmittel darin verschwinden. Pearstop wertet auf Positionsebene aus, daher tauchen sie wieder auf."
         },
         {
-          "question": "Lassen sich Gefahrstoffe von einem Universalgroßhändler erkennen?",
+          "question": "Lassen sich Gefahrstoffe von einem technischen Großhändler erkennen?",
           "answer": "Ja. Pearstop liest und klassifiziert jede Rechnungsposition, sodass eine einzelne Dose Lösungsmittel auf einer großen Großhandelsrechnung wie jeder andere Artikel erkannt wird."
         }
       ],
