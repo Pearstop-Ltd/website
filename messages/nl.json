@@ -432,7 +432,13 @@
       "dataQuality": "Datakwaliteit",
       "fabricReady": "Fabric Ready",
       "aiReadiness": "AI Readiness",
-      "unspsc": "UNSPSC"
+      "unspsc": "UNSPSC",
+      "complianceQuestions": "Compliancevragen",
+      "complianceFreelancers": "Zzp'ers en freelancers",
+      "complianceCertification": "Certificering onderaannemers",
+      "complianceTimber": "Duurzaam hout",
+      "complianceHazardous": "Gevaarlijke stoffen",
+      "complianceRecycling": "Recyclingpercentage"
     }
   },
   "Footer": {
@@ -4846,5 +4852,388 @@
     "sectionTitle": "Gebruik van deze site",
     "p1": "De inhoud van deze site dient uitsluitend ter algemene informatie. Het is geen juridisch, financieel of inkoopadvies. We houden de informatie zo nauwkeurig en actueel mogelijk, maar garanderen niet dat elke pagina altijd volledig is.",
     "p2": "Wilt u inhoud, merkmateriaal of screenshots hergebruiken, vraag dit dan vooraf aan ons. Vragen over deze voorwaarden? Neem contact op via {email}."
+  },
+  "Compliance": {
+    "shared": {
+      "sampleLabel": "Sample insturen",
+      "discoveryLabel": "Kennismaking van 15 minuten plannen",
+      "momentEyebrow": "Het moment",
+      "momentTitle": "Herkenbaar?",
+      "hardTitle": "Waarom dit nu lastig is",
+      "changesEyebrow": "Met Pearstop",
+      "changesTitle": "Wat er verandert met Pearstop",
+      "proofEyebrow": "Bewijs",
+      "faqEyebrow": "Vragen",
+      "faqTitle": "Veelgestelde vragen"
+    },
+    "freelancers": {
+      "meta": {
+        "title": "Zzp-inkoop: hoeveel zzp'ers, welk werk, hoeveel uren",
+        "description": "Pearstop leest elke factuurregel en laat zien hoeveel zzp'ers er voor het bedrijf werkten, welk werk ze deden en hoeveel uren. Het antwoord ligt klaar als de auditor erom vraagt."
+      },
+      "hero": {
+        "eyebrow": "Zzp'ers en freelancers",
+        "title": "Hoeveel zzp'ers zijn er dit jaar ingezet, voor welk werk en hoeveel uren?",
+        "lead": "Pearstop haalt het antwoord uit de facturen en inkoopdata die het bedrijf al heeft."
+      },
+      "moments": [
+        {
+          "title": "Het verzoek van de auditor",
+          "body": "De auditor of de Belastingdienst vraagt hoeveel zzp'ers dit jaar zijn ingezet, hoeveel uren ze maakten en welk werk ze deden. De gegevens staan verspreid over honderden facturen."
+        },
+        {
+          "title": "De splitsing naar aard van het werk",
+          "body": "Gevraagd wordt een splitsing tussen zzp'ers met werk van stoffelijke aard op locatie en zzp'ers met advies of ander werk van niet-stoffelijke aard. De regels behandelen die twee verschillend."
+        },
+        {
+          "title": "De inkooporder met uren",
+          "body": "Op de inkooporder staan uren. Naam en soort werk staan pas op de factuur."
+        }
+      ],
+      "hard": "Het antwoord zit op factuurregelniveau. Een leveranciersnaam zegt niet of het een zzp'er, een uitzendbureau of een detacheerder is, en één leverancier levert vaak meerdere soorten werk. De inkooporder legt de uren vast. Wie het werk deed en wat het was, staat er niet op.",
+      "changes": [
+        "Elke factuurregel van een zzp'er zichtbaar, met uren en soort werk.",
+        "Werk van stoffelijke en niet-stoffelijke aard gesplitst.",
+        "Het antwoord ligt klaar als de auditor, de Belastingdienst of HR erom vraagt, zonder een dag handmatig zoeken."
+      ],
+      "proof": {
+        "title": "Zo ziet het eruit in klantdata",
+        "stats": [
+          {
+            "value": "€ 9,5 mln",
+            "caption": "aan zzp'ers en tijdelijk personeel gesorteerd bij één klant, uitgesplitst naar losse zzp'ers en bureaus"
+          },
+          {
+            "value": "€ 2 mln",
+            "caption": "gemiddelde jaarlijkse uitgaven aan tijdelijk personeel bij een andere klant, uitgesplitst naar zzp'er, bureau en soort werk"
+          }
+        ],
+        "cases": [
+          "Klanten weten dat ze veel zzp'ers inzetten. De koppeling laat zien wie waaraan werkt."
+        ]
+      },
+      "faq": [
+        {
+          "question": "Hoe worden zzp-gegevens klaargezet voor een controle van de Belastingdienst?",
+          "answer": "Het vertrekpunt zijn de facturen, want daar staan uren, namen en soort werk. Pearstop leest elke factuurregel van een zzp'er, onderscheidt zzp'ers van bureaus en levert een lijst met de regels erachter. Ook de FOD Financiën in België vraagt om cijfers die te herleiden zijn."
+        },
+        {
+          "question": "Welke vragen stellen auditors over zzp'ers?",
+          "answer": "Auditors vragen hoeveel zzp'ers er voor het bedrijf werkten, hoeveel uren ze maakten en welk werk ze deden. Ook vragen ze of het werk van stoffelijke of niet-stoffelijke aard was. Pearstop beantwoordt alle drie vanuit de factuurregels."
+        },
+        {
+          "question": "Hoe is te zien hoeveel zzp'ers een bedrijf heeft ingezet?",
+          "answer": "Door ze uit de facturen te tellen. Op de inkooporder staan de uren, op de factuur de naam en het werk. Pearstop leest elke factuurregel, brengt elke spelling terug tot één leverancier en markeert welke leveranciers zzp'ers zijn."
+        },
+        {
+          "question": "Hoe worden zzp-uitgaven gesplitst naar soort werk?",
+          "answer": "Elke factuurregel wordt geclassificeerd op het werk dat erin staat en daarna gegroepeerd. Pearstop classificeert elke regel tot op artikelniveau, zodat werk op locatie en advies of ander werk van niet-stoffelijke aard netjes uit elkaar gaan."
+        },
+        {
+          "question": "Zijn zzp-uren uit facturen te halen?",
+          "answer": "Ja. De uren staan op de factuurregel naast het tarief en de naam. Pearstop haalt ze regel voor regel op en telt ze op per zzp'er en per soort werk."
+        }
+      ],
+      "cta": {
+        "title": "Sample van zzp-facturen insturen",
+        "body": "Een sample is genoeg. Elke regel komt terug herkend, met uren en soort werk."
+      }
+    },
+    "certification": {
+      "meta": {
+        "title": "Certificering onderaannemers: wie werkte aan het project, en waren ze gecertificeerd?",
+        "description": "Pearstop brengt elke leveranciersspelling terug tot één leverancier en toetst elke onderaannemer aan het officiële register van het land, met de certificeringsstatus naast de uitgaven."
+      },
+      "hero": {
+        "eyebrow": "Certificering onderaannemers en audits",
+        "title": "Welke onderaannemers hebben aan dit project gewerkt, en is aan te tonen dat ze gecertificeerd waren?",
+        "lead": "Pearstop haalt het antwoord uit de facturen en inkoopdata die het bedrijf al heeft."
+      },
+      "moments": [
+        {
+          "title": "De audit",
+          "body": "Een auditor pakt een project erbij en vraagt welke onderaannemers erop werkten en of ze allemaal een geldig veiligheidscertificaat hadden."
+        },
+        {
+          "title": "De migratie",
+          "body": "De leveranciersgegevens zijn naar een nieuw systeem verhuisd. De certificaten zijn niet meegegaan."
+        },
+        {
+          "title": "De grote opdracht",
+          "body": "Een grote opdracht gaat naar een leverancier en niemand heeft gecontroleerd of die groot genoeg is om hem aan te kunnen."
+        }
+      ],
+      "hard": "Het antwoord zit op factuurregelniveau en onderaannemers staan onder veel spellingen in de administratie, dus de lijst van wie er werkte is nooit compleet. Het certificaat staat in een register dat niet aan de uitgaven is gekoppeld. De factuur laat zien wat er is ingekocht. Of de leverancier gecertificeerd is of groot genoeg voor de opdracht, staat er niet op.",
+      "changes": [
+        "De complete lijst van wie voor het bedrijf werkte, met elke spelling teruggebracht tot één leverancier.",
+        "De certificeringsstatus naast de uitgaven, getoetst aan het officiële register van het land.",
+        "Opdrachtomvang naast leveranciersomvang vóór de gunning, zodat concentratierisico zichtbaar is."
+      ],
+      "registers": {
+        "eyebrow": "Registers",
+        "title": "De geraadpleegde registers",
+        "lead": "Pearstop toetst elke onderaannemer aan het officiële register van het land.",
+        "columns": {
+          "country": "Land",
+          "registers": "Registers waaraan Pearstop toetst",
+          "confirms": "Wat het bevestigt"
+        },
+        "rows": [
+          {
+            "country": "Nederland",
+            "registers": "VCA-register (SSVV)",
+            "confirms": "Veiligheids-, gezondheids- en milieucertificering van aannemers (VCA*, VCA**, VCA-Petrochemie)"
+          },
+          {
+            "country": "België (Vlaanderen)",
+            "registers": "VCA-register (BeSaCC-VCA)",
+            "confirms": "Veiligheidscertificering van aannemers, wederzijds erkend met de Nederlandse VCA"
+          }
+        ]
+      },
+      "proof": {
+        "title": "Zo ziet het eruit in klantdata",
+        "stats": [
+          {
+            "value": "9.175",
+            "caption": "leveranciersspellingen bij SPIE, een hard services-bedrijf"
+          },
+          {
+            "value": "1.493",
+            "caption": "echte leveranciers waartoe ze zijn teruggebracht"
+          },
+          {
+            "value": "204.029",
+            "caption": "assetrecords verwerkt"
+          }
+        ],
+        "cases": [
+          "Klanten krijgen een dashboard dat toont wanneer een certificaat aandacht vraagt. Inkoop grijpt in voordat het een probleem wordt."
+        ],
+        "link": {
+          "label": "De SPIE-case lezen",
+          "path": "/cases/spie"
+        }
+      },
+      "faq": [
+        {
+          "question": "Hoe wordt gecontroleerd of onderaannemers VCA-gecertificeerd zijn?",
+          "answer": "Elke onderaannemer wordt getoetst aan het officiële register: in Nederland het VCA-register (SSVV), in Vlaanderen BeSaCC-VCA. Pearstop doet dat voor elke onderaannemer in de uitgaven en zet de status naast het bedrag."
+        },
+        {
+          "question": "Hoe wordt inkoopdata klaargemaakt voor een audit?",
+          "answer": "Eerst komt een complete leverancierslijst, want een audit begint bij de vraag wie er aan het project werkte. Pearstop brengt elke leveranciersspelling terug tot één leverancier en voegt certificeringsstatus en uitgaven toe."
+        },
+        {
+          "question": "Hoe zijn leveranciers zonder VCA te vinden?",
+          "answer": "De volledige leverancierslijst wordt getoetst aan de registers en gesorteerd op uitgaven. Pearstop doet die toetsing voor elke leverancier en zet de leveranciers zonder geldig certificaat bovenaan, grootste uitgaven eerst."
+        },
+        {
+          "question": "Hoeveel werk kan één onderaannemer aan?",
+          "answer": "De omvang van de opdracht gaat naast de omvang van de leverancier en naast wat het bedrijf al bij die leverancier onderbrengt. Pearstop legt opdrachtomvang naast leveranciersomvang vóór de gunning, zodat concentratierisico zichtbaar is."
+        }
+      ],
+      "cta": {
+        "title": "Sample van onderaannemersuitgaven insturen",
+        "body": "Een sample is genoeg. Er komt één leverancierslijst terug, met certificeringsstatus naast de uitgaven."
+      }
+    },
+    "timber": {
+      "meta": {
+        "title": "Inkoop FSC- en PEFC-hout: hoeveel is er vorig jaar ingekocht?",
+        "description": "Pearstop herkent hout op factuurregelniveau en splitst gecertificeerd en niet-gecertificeerd, per leverancier en per project, zodat het FSC- of PEFC-aandeel uit te leggen is."
+      },
+      "hero": {
+        "eyebrow": "Duurzaam hout",
+        "title": "Hoeveel FSC- of PEFC-hout is er vorig jaar ingekocht?",
+        "lead": "Pearstop haalt het antwoord uit de facturen en inkoopdata die het bedrijf al heeft."
+      },
+      "moments": [
+        {
+          "title": "De aanbesteding",
+          "body": "Een aanbesteding vraagt welk aandeel van het hout gecertificeerd was. De grootste houtleverancier levert ook badkamers en deuren."
+        },
+        {
+          "title": "Het beeld per leverancier",
+          "body": "De leverancier is bekend. De factuurregels daaronder zijn nooit gesplitst in hout en de rest."
+        },
+        {
+          "title": "De schatting",
+          "body": "Het antwoord wordt geschat en niemand kan aantonen hoe."
+        }
+      ],
+      "hard": "Het antwoord zit op factuurregelniveau. Een houthandel verkoopt ook deuren, sanitair en bevestigingsmateriaal, dus het leveranciersbedrag zegt weinig over hout. De certificering hoort bij het product en het product staat op de regel.",
+      "changes": [
+        "Hout zichtbaar op regelniveau, los van alles wat dezelfde leverancier verder levert.",
+        "Gecertificeerd en niet-gecertificeerd hout gesplitst, per leverancier en per project.",
+        "Een cijfer dat uit te leggen is als een opdrachtgever of auditor vraagt hoe het tot stand kwam."
+      ],
+      "proof": {
+        "title": "Zo ziet het eruit in klantdata",
+        "cases": [
+          "Veel klanten kopen hout bij een leverancier die ook andere categorieën levert. Op leveranciersniveau blijft het hout, FSC en PEFC inbegrepen, verborgen. Op regelniveau komt het naar boven.",
+          "Hetzelfde patroon komt voor bij bouwmaterialenhandels, timmerfabrieken, afbouwleveranciers en groothandels die plaatmateriaal naast gereedschap en bevestigingsmateriaal verkopen."
+        ]
+      },
+      "faq": [
+        {
+          "question": "Hoe wordt berekend hoeveel FSC-hout een bedrijf heeft ingekocht?",
+          "answer": "Het hout wordt op elke factuurregel herkend en daarna wordt bepaald welke regels FSC- of PEFC-gecertificeerd zijn. Pearstop doet dat op regelniveau, zodat het totaal alleen hout bevat, wat de leverancier verder ook levert."
+        },
+        {
+          "question": "Hoe wordt gecertificeerd hout gerapporteerd in een aanbesteding?",
+          "answer": "Het gecertificeerde aandeel gaat erin als cijfer, met de regels erachter. Pearstop levert het aandeel per leverancier en per project, zodat het cijfer standhoudt als de opdrachtgever vraagt hoe het tot stand kwam."
+        },
+        {
+          "question": "Hoe is houtinkoop te scheiden van andere inkoop bij dezelfde leverancier?",
+          "answer": "Elke factuurregel wordt geclassificeerd op wat er is gekocht. Pearstop leest elke regel tot op artikelniveau, zodat hout scheidt van deuren, sanitair en bevestigingsmateriaal bij dezelfde leverancier."
+        },
+        {
+          "question": "Bij welke leveranciers moet op FSC- of PEFC-hout worden gecontroleerd?",
+          "answer": "Bij elke leverancier die hout levert, ook bij handels waar hout een klein deel van de factuur is. Pearstop zet ze allemaal op een rij vanuit de factuurregels, met de houtuitgaven per leverancier."
+        },
+        {
+          "question": "Welke gegevens zijn nodig om het FSC-aandeel van de houtinkoop te bepalen?",
+          "answer": "Factuurregels en inkoopdata zijn genoeg. Pearstop leest ze, herkent het hout en levert het gecertificeerde aandeel per leverancier en per project."
+        }
+      ],
+      "cta": {
+        "title": "Sample van houtfacturen insturen",
+        "body": "Een sample is genoeg. Het hout komt terug op regelniveau, met gecertificeerd en niet-gecertificeerd gesplitst."
+      }
+    },
+    "hazardous": {
+      "meta": {
+        "title": "Inkoop gevaarlijke stoffen: wat is er gekocht, bij wie en waar is het gebleven?",
+        "description": "Pearstop herkent gevaarlijke producten regel voor regel, ook bij algemene groothandels, en levert een lijst per leverancier en locatie, klaar om naast de veiligheidsinformatiebladen te leggen."
+      },
+      "hero": {
+        "eyebrow": "Gevaarlijke stoffen",
+        "title": "Hoeveel gevaarlijke stoffen zijn er ingekocht, bij welke leveranciers en waar zijn ze gebleven?",
+        "lead": "Pearstop haalt het antwoord uit de facturen en inkoopdata die het bedrijf al heeft."
+      },
+      "moments": [
+        {
+          "title": "Het verzoek van HSE",
+          "body": "HSE vraagt een lijst van alle gevaarlijke stoffen die vorig jaar zijn ingekocht. Het meeste kwam van een algemene groothandel, tussen de tiewraps en schroeven."
+        },
+        {
+          "title": "De enkele regel",
+          "body": "Een bus oplosmiddel is één regel op een grote factuur en niemand heeft die regels doorgenomen."
+        },
+        {
+          "title": "De onbekende producten",
+          "body": "Van de bekende producten zijn veiligheidsinformatiebladen (VIB) aanwezig. De vraag is welke producten niet bekend zijn."
+        }
+      ],
+      "hard": "Het antwoord zit op factuurregelniveau. De naam van een algemene groothandel zegt niet dat die oplosmiddelen, spuitbussen en lijmen verkoopt. Eén leverancier levert in veel categorieën, dus de gevaarlijke regels verdwijnen tussen de rest.",
+      "changes": [
+        "Gevaarlijke producten regel voor regel zichtbaar, ook als ze bij algemene groothandels zijn gekocht.",
+        "Een lijst per leverancier en locatie, klaar om naast de veiligheidsinformatiebladen te leggen.",
+        "De lijst wordt bijgewerkt zodra er nieuwe facturen binnenkomen."
+      ],
+      "proof": {
+        "title": "Zo ziet het eruit in klantdata",
+        "stats": [
+          {
+            "value": "€ 500.000",
+            "caption": "aan gevaarlijke stoffen bleek in één dataset onherkend, gekocht bij een leverancier die vooral iets anders levert"
+          }
+        ],
+        "cases": [
+          "Gevaarlijke producten zitten vaak in facturen van algemene groothandels. Door elke regel te lezen komen ze naar boven."
+        ]
+      },
+      "faq": [
+        {
+          "question": "Hoe komt een bedrijf aan een lijst van alle gevaarlijke stoffen die het inkoopt?",
+          "answer": "Elke factuurregel wordt gelezen, waarna de gevaarlijke producten per leverancier en locatie worden gegroepeerd. Pearstop doet dat regel voor regel, ook bij algemene groothandels waar een oplosmiddel naast tiewraps staat."
+        },
+        {
+          "question": "Hoe zijn chemicaliën te vinden in inkoopdata?",
+          "answer": "De data wordt op artikelniveau geclassificeerd. Een leveranciersnaam zegt weinig over het assortiment, dus chemicaliën zijn pas zichtbaar als elke regel is herkend. Pearstop herkent elke regel en markeert de gevaarlijke."
+        },
+        {
+          "question": "Hoe worden veiligheidsinformatiebladen vergeleken met de inkoop?",
+          "answer": "Eerst komt een complete lijst van ingekochte gevaarlijke producten per leverancier en locatie, die naast de aanwezige VIB's wordt gelegd. Pearstop levert die lijst, zodat producten zonder blad opvallen."
+        },
+        {
+          "question": "Waarom ontbreken gevaarlijke stoffen in rapportages per leverancier?",
+          "answer": "Een rapportage per leverancier schrijft alle uitgaven toe aan de hoofdcategorie van die leverancier. Een groothandel in bevestigingsmateriaal telt als bevestigingsmateriaal en de oplosmiddelen erin verdwijnen. Pearstop rapporteert op regelniveau, dus ze komen terug."
+        },
+        {
+          "question": "Zijn gevaarlijke producten van een algemene groothandel te herkennen?",
+          "answer": "Ja. Pearstop leest en classificeert elke factuurregel, dus één bus oplosmiddel op een grote groothandelsfactuur wordt herkend zoals elk ander artikel."
+        }
+      ],
+      "cta": {
+        "title": "Sample van groothandelsfacturen insturen",
+        "body": "Een sample is genoeg. De gevaarlijke producten komen terug, regel voor regel, per leverancier en locatie."
+      }
+    },
+    "recycling": {
+      "meta": {
+        "title": "Recyclingpercentage en CO₂-data: wat wordt er precies verwerkt?",
+        "description": "Pearstop herkent elk artikel op factuurregelniveau, zodat een recyclingpercentage en een CO₂-cijfer op de artikelen zelf rusten en terug te voeren zijn op de regels erachter."
+      },
+      "hero": {
+        "eyebrow": "Recyclingpercentage en CO₂",
+        "title": "Wat is het recyclingpercentage, en welke CO₂-uitstoot zit erachter?",
+        "lead": "Pearstop haalt het antwoord uit de facturen en inkoopdata die het bedrijf al heeft."
+      },
+      "moments": [
+        {
+          "title": "Het duurzaamheidsverslag",
+          "body": "Het verslag vraagt om een recyclingpercentage en een CO₂-cijfer. Beide komen uit totalen per materiaal en zijn dus schattingen."
+        },
+        {
+          "title": "De vraag van de opdrachtgever",
+          "body": "Een opdrachtgever vraagt welk deel van de gebruikte materialen wordt gerecycled en wat de CO₂-voetafdruk is. Het antwoord is een gemiddelde."
+        },
+        {
+          "title": "De recyclekans",
+          "body": "Niemand kan zeggen welke artikelen te recyclen of te hergebruiken zijn, want op de factuurregel staat 'divers materiaal'."
+        }
+      ],
+      "hard": "Een recyclingpercentage en een CO₂-cijfer hangen af van het afzonderlijke artikel. Factuurregels beschrijven artikelen in vrije tekst, één leverancier levert in veel categorieën en de leveranciersnaam zegt niet waarvan een artikel is gemaakt. Zonder artikelgegevens is elk cijfer een schatting.",
+      "changes": [
+        "Elk verwerkt artikel zichtbaar, herkend op regelniveau.",
+        "Per artikel de CO₂-uitstoot en een recyclingroute vastgelegd.",
+        "Een recyclingpercentage en CO₂-cijfer dat terug te voeren is op de regels erachter."
+      ],
+      "proof": {
+        "title": "Wat regelniveau laat zien",
+        "cases": [
+          "Bij een bouwklant beweerde een extern adviesrapport € 12 miljoen aan besparingen, zonder plan of onderbouwing. Pearstop bracht alle uitgaven terug tot regelniveau, zodat inkoop kon zien waar te onderhandelen.",
+          "Eén besparingskans met het label 'waterpompen' bleek uitgaven bij een bureau voor managementtraining. Een categorielabel verbergt wat een artikel is. De regel laat het zien."
+        ]
+      },
+      "faq": [
+        {
+          "question": "Hoe wordt een recyclingpercentage berekend uit inkoopdata?",
+          "answer": "Elk ingekocht en verwerkt artikel wordt herkend, daarna worden de artikelen opgeteld die een recyclingroute volgen. Pearstop leest elke factuurregel tot op artikelniveau, zodat het percentage op artikelen rust en op de regels erachter."
+        },
+        {
+          "question": "Hoe wordt de CO₂-uitstoot van ingekochte materialen bepaald?",
+          "answer": "Aan elk afzonderlijk artikel hoort een emissiefactor, daarna wordt opgeteld. Daarvoor moet elk artikel eerst herkend zijn. Pearstop herkent elke regel en levert zo de beginlijst voor de berekening."
+        },
+        {
+          "question": "Waarom is een recyclingpercentage vaak een schatting?",
+          "answer": "Omdat de data stopt bij materiaaltotalen of leveranciersnamen. Een leverancier die in veel categorieën levert, verbergt waarvan zijn artikelen zijn gemaakt. Herkenning op artikelniveau vervangt de schatting door een telling."
+        },
+        {
+          "question": "Hoe zijn recyclekansen te vinden in inkoopdata?",
+          "answer": "De ingekochte artikelen komen op een lijst en per artikel wordt gekeken of er een recycling- of hergebruikroute is. Pearstop herkent elk artikel op regelniveau, zodat kansen onder labels als 'divers materiaal' zichtbaar worden."
+        },
+        {
+          "question": "Welke gegevens zijn nodig voor CO₂-rapportage op artikelniveau?",
+          "answer": "Factuurregels en inkoopdata, gelezen tot op het afzonderlijke artikel. Pearstop haalt ze op en classificeert ze, zodat elk artikel zijn eigen emissiefactor en recyclingroute kan dragen."
+        }
+      ],
+      "cta": {
+        "title": "Sample van inkoopdata insturen",
+        "body": "Een sample is genoeg. Elk artikel komt terug, herkend op regelniveau."
+      }
+    }
   }
 }

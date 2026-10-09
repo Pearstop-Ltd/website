@@ -432,7 +432,13 @@
       "dataQuality": "Data Quality",
       "fabricReady": "Fabric Ready",
       "aiReadiness": "AI Readiness",
-      "unspsc": "UNSPSC"
+      "unspsc": "UNSPSC",
+      "complianceQuestions": "Compliance questions",
+      "complianceFreelancers": "Freelancers and contractors",
+      "complianceCertification": "Subcontractor certification",
+      "complianceTimber": "Sustainable timber",
+      "complianceHazardous": "Hazardous substances",
+      "complianceRecycling": "Recycling rates"
     }
   },
   "Footer": {
@@ -4480,5 +4486,423 @@
     "sectionTitle": "Using this site",
     "p1": "The content on this site is provided for general information only. It is not legal, financial, or procurement advice. We try to keep the information accurate and current, but we do not guarantee that every page will always be complete.",
     "p2": "If you reuse the content, brand assets, or screenshots, please ask first. For questions about these terms, contact {email}."
+  },
+  "Compliance": {
+    "shared": {
+      "sampleLabel": "Send us a sample",
+      "discoveryLabel": "Book a 15-minute discovery",
+      "momentEyebrow": "The moment",
+      "momentTitle": "Sound familiar?",
+      "hardTitle": "Why it's hard today",
+      "changesEyebrow": "With Pearstop",
+      "changesTitle": "What changes with Pearstop",
+      "proofEyebrow": "Proof",
+      "faqEyebrow": "Questions",
+      "faqTitle": "Frequently asked questions"
+    },
+    "freelancers": {
+      "meta": {
+        "title": "Freelancer Spend: How Many Freelancers, What Work, How Many Hours",
+        "description": "Pearstop reads every invoice line to show how many freelancers worked for the company, on what kind of work and for how many hours. The answer is ready when the auditor asks."
+      },
+      "hero": {
+        "eyebrow": "Freelancers and contractors",
+        "title": "How many freelancers did we use this year, for what kind of work, and how many hours?",
+        "lead": "Pearstop answers it from the invoices and purchase data the company already has."
+      },
+      "moments": [
+        {
+          "title": "The auditor's request",
+          "body": "An auditor or the tax authority asks how many freelancers worked for the company this year, for how many hours and on what kind of work. The data sits across hundreds of invoices."
+        },
+        {
+          "title": "The physical work split",
+          "body": "Someone needs the split between freelancers doing physical work on site and those giving advice or doing other non-physical work. The rules treat the two differently."
+        },
+        {
+          "title": "The purchase order that says hours",
+          "body": "A purchase order says \"hours\". The invoice is where the name and the type of work appear."
+        }
+      ],
+      "hard": "The answer sits at invoice line level. A supplier name does not say whether it is a freelancer, an agency or a bureau, and one supplier often delivers several kinds of work. The purchase order records hours. It does not record who did the work or what the work was.",
+      "changes": [
+        "See every freelancer invoice line, with the hours and the type of work.",
+        "Split physical and non-physical work.",
+        "Hand over the answer when the auditor, the tax authority or HR asks, without a day of manual searching."
+      ],
+      "proof": {
+        "title": "What this looks like in client data",
+        "stats": [
+          {
+            "value": "€9.5m",
+            "caption": "in freelancers and temporary personnel sorted at one client, across individual freelancers and agencies"
+          },
+          {
+            "value": "€2m",
+            "caption": "average yearly temporary personnel spend at another client, split by freelancer, agency and type of work"
+          }
+        ],
+        "cases": [
+          "Clients know they use many freelancers. The mapping shows who works on what."
+        ]
+      },
+      "faq": [
+        {
+          "question": "How do you prepare freelancer data for a tax authority inspection?",
+          "answer": "Start from the invoices, because the hours, the names and the type of work sit there. Pearstop reads every freelancer invoice line, identifies who is a freelancer and who is an agency, and gives the inspector a list with the lines behind it. Inspectors such as HMRC want numbers they can trace."
+        },
+        {
+          "question": "What do auditors ask about self-employed contractors?",
+          "answer": "Auditors ask how many self-employed contractors worked for the company, for how many hours and on what kind of work. They also ask whether the work was physical or non-physical. Pearstop answers all three from the invoice lines."
+        },
+        {
+          "question": "How do you find out how many freelancers a company used?",
+          "answer": "Count them from the invoices. The purchase order carries hours, and the invoice carries the name and the work. Pearstop reads every invoice line, matches each supplier spelling to one supplier and marks which suppliers are freelancers."
+        },
+        {
+          "question": "How do you split freelancer spend by type of work?",
+          "answer": "Classify each invoice line by the work it describes, then group the lines. Pearstop classifies every line down to the individual item, so physical work on site separates cleanly from advice and other non-physical work."
+        },
+        {
+          "question": "Can freelancer hours be taken from invoices?",
+          "answer": "Yes. The hours appear on the invoice line next to the rate and the name. Pearstop extracts them line by line and totals them per freelancer and per type of work."
+        }
+      ],
+      "cta": {
+        "title": "Send us a sample of your freelancer invoices",
+        "body": "A sample is enough. We send back every line identified, with hours and type of work."
+      }
+    },
+    "certification": {
+      "meta": {
+        "title": "Subcontractor Certification: Who Worked on the Project, and Were They Certified?",
+        "description": "Pearstop matches every supplier spelling to one supplier and checks every subcontractor against the official register for their country, with certification status next to the spend."
+      },
+      "hero": {
+        "eyebrow": "Subcontractor certification and audits",
+        "title": "Which of our subcontractors did the work on this project, and can you show they were certified?",
+        "lead": "Pearstop answers it from the invoices and purchase data the company already has."
+      },
+      "moments": [
+        {
+          "title": "The audit",
+          "body": "An auditor pulls a project and asks which subcontractors worked on it and whether each held valid safety certification."
+        },
+        {
+          "title": "The migration",
+          "body": "Supplier records moved to a new system and the certificates did not come with them."
+        },
+        {
+          "title": "The large order",
+          "body": "A large order is about to go to a supplier, and nobody has checked whether the supplier's size can carry it."
+        }
+      ],
+      "hard": "The answer sits at invoice line level, and subcontractors appear under many spellings, so the list of who worked on a project is never complete. The certificate sits in a register that is not linked to the spend. The invoice shows what was bought. It says nothing about whether the supplier is certified or large enough for the order.",
+      "changes": [
+        "See the complete list of who worked for the company, with every supplier spelling matched to one supplier.",
+        "See certification status next to the spend, checked against the official register for each country.",
+        "Compare order size with supplier size before awarding, so concentration risk is visible."
+      ],
+      "registers": {
+        "eyebrow": "Registers",
+        "title": "The registers we check",
+        "lead": "Pearstop checks every subcontractor against the official register for their country.",
+        "columns": {
+          "country": "Country",
+          "registers": "Registers Pearstop checks against",
+          "confirms": "What it confirms"
+        },
+        "rows": [
+          {
+            "country": "Netherlands",
+            "registers": "VCA register (SSVV)",
+            "confirms": "Contractor safety, health and environment certification (VCA*, VCA**, VCA-Petrochemie)"
+          },
+          {
+            "country": "Belgium",
+            "registers": "VCA register (BeSaCC-VCA)",
+            "confirms": "Contractor safety certification, mutually recognised with NL VCA"
+          },
+          {
+            "country": "United Kingdom",
+            "registers": "SSIP portal and member schemes (CHAS, Constructionline, SafeContractor, SMAS)",
+            "confirms": "Health and safety pre-qualification against the SSIP core criteria"
+          },
+          {
+            "country": "Ireland",
+            "registers": "CIRI (Construction Industry Register Ireland)",
+            "confirms": "Statutory register of competent builders and contractors"
+          },
+          {
+            "country": "United States",
+            "registers": "ISNetworld, Avetta",
+            "confirms": "Contractor safety pre-qualification and insurance verification"
+          },
+          {
+            "country": "Canada",
+            "registers": "COR (Certificate of Recognition), ISNetworld, ComplyWorks",
+            "confirms": "Health and safety management system certification and pre-qualification"
+          },
+          {
+            "country": "South Africa",
+            "registers": "CIDB Register of Contractors",
+            "confirms": "Contractor registration and grading (grades 1 to 9)"
+          },
+          {
+            "country": "France",
+            "registers": "MASE, Qualibat",
+            "confirms": "Subcontractor safety certification (MASE) and building trade qualification (Qualibat)"
+          },
+          {
+            "country": "Germany",
+            "registers": "SCC, PQ-VOB (Präqualifikationsverzeichnis)",
+            "confirms": "Contractor safety certification (SCC) and pre-qualification for construction work (PQ-VOB)"
+          }
+        ]
+      },
+      "proof": {
+        "title": "What this looks like in client data",
+        "stats": [
+          {
+            "value": "9,175",
+            "caption": "supplier spellings at SPIE, a hard services company"
+          },
+          {
+            "value": "1,493",
+            "caption": "real suppliers they were brought back to"
+          },
+          {
+            "value": "204,029",
+            "caption": "asset records covered"
+          }
+        ],
+        "cases": [
+          "Clients get a dashboard that shows when a certificate needs attention. Procurement acts before it becomes a problem."
+        ],
+        "link": {
+          "label": "Read the SPIE case",
+          "path": "/cases/spie"
+        }
+      },
+      "faq": [
+        {
+          "question": "How do you check whether subcontractors are safety certified?",
+          "answer": "Match each subcontractor to the official register for their country, such as the VCA register in the Netherlands or the SSIP schemes in the UK. Pearstop does this for every subcontractor in the spend and shows the status next to the money."
+        },
+        {
+          "question": "How do you prepare procurement data for an audit?",
+          "answer": "Start with a complete supplier list, because an audit begins with who worked on the project. Pearstop matches every supplier spelling to one supplier, then adds certification status and the spend behind it."
+        },
+        {
+          "question": "How do you find suppliers that lack certification?",
+          "answer": "Check the full supplier list against the registers and sort by spend. Pearstop runs the check for every supplier and lists those without valid certification, largest spend first."
+        },
+        {
+          "question": "How much work can you give one subcontractor?",
+          "answer": "Compare the size of the order with the size of the supplier and with what the company already places with it. Pearstop puts order size next to supplier size before the award, so concentration risk is visible."
+        }
+      ],
+      "cta": {
+        "title": "Send us a sample of your subcontractor spend",
+        "body": "A sample is enough. We send back one supplier list, with certification status next to the spend."
+      }
+    },
+    "timber": {
+      "meta": {
+        "title": "FSC and PEFC Timber Spend: How Much Did We Buy Last Year?",
+        "description": "Pearstop identifies timber at invoice line level and splits certified from uncertified, per supplier and per project, so the FSC or PEFC share can be explained."
+      },
+      "hero": {
+        "eyebrow": "Sustainable timber",
+        "title": "How much FSC or PEFC timber did we buy last year?",
+        "lead": "Pearstop answers it from the invoices and purchase data the company already has."
+      },
+      "moments": [
+        {
+          "title": "The tender",
+          "body": "A tender asks what share of the timber was certified. The biggest timber supplier also sells bathrooms and doors."
+        },
+        {
+          "title": "The supplier-level view",
+          "body": "The supplier is known. The invoice lines underneath it have never been sorted into timber and everything else."
+        },
+        {
+          "title": "The estimate",
+          "body": "The answer gets estimated, and nobody can show how."
+        }
+      ],
+      "hard": "The answer sits at invoice line level. A timber merchant also sells doors, bathrooms and fixings, so the supplier total says little about timber. Certification belongs to the product, and the product sits on the line.",
+      "changes": [
+        "See timber at line level, separate from everything else the same supplier sells.",
+        "See certified and uncertified timber split out, per supplier and per project.",
+        "Explain the number when a client or auditor asks how it was reached."
+      ],
+      "proof": {
+        "title": "What this looks like in client data",
+        "cases": [
+          "Many clients buy timber from a supplier that sells other categories too. At supplier level the timber, FSC and PEFC included, stays hidden. At line level it shows.",
+          "The same pattern appears with builders' merchants, joinery suppliers, fit-out suppliers and general wholesalers that sell sheet material next to tools and fixings."
+        ]
+      },
+      "faq": [
+        {
+          "question": "How do you calculate how much FSC timber a company bought?",
+          "answer": "Identify the timber on every invoice line, then check which lines carry FSC or PEFC certification. Pearstop does this at line level, so the total covers timber only, whatever else the supplier sells."
+        },
+        {
+          "question": "How do you report certified timber in a tender?",
+          "answer": "Give the certified share as a number, with the lines behind it. Pearstop delivers the share per supplier and per project, so the figure holds when the client asks how it was reached."
+        },
+        {
+          "question": "How do you separate timber spend from other spend at the same supplier?",
+          "answer": "Classify each invoice line by what was bought. Pearstop reads every line down to the individual item, so timber separates from doors, bathrooms and fixings at the same supplier."
+        },
+        {
+          "question": "Which suppliers need checking for FSC or PEFC timber?",
+          "answer": "Every supplier that sells timber, including merchants where timber is a small part of the invoice. Pearstop lists them all from the invoice lines, with the timber spend per supplier."
+        },
+        {
+          "question": "What data is needed to calculate the FSC share of timber purchases?",
+          "answer": "Invoice lines and purchase data are enough. Pearstop reads them, identifies the timber and returns the certified share per supplier and per project."
+        }
+      ],
+      "cta": {
+        "title": "Send us a sample of your timber invoices",
+        "body": "A sample is enough. We send back the timber at line level, with certified and uncertified split out."
+      }
+    },
+    "hazardous": {
+      "meta": {
+        "title": "Hazardous Substances Spend: What Did We Buy, From Whom, and Where Did It Go?",
+        "description": "Pearstop identifies hazardous products line by line, including those bought from general wholesalers, and delivers a list per supplier and site ready to check against safety data sheets."
+      },
+      "hero": {
+        "eyebrow": "Hazardous substances",
+        "title": "How much hazardous material did we buy, from whom, and where did it go?",
+        "lead": "Pearstop answers it from the invoices and purchase data the company already has."
+      },
+      "moments": [
+        {
+          "title": "The HSE request",
+          "body": "HSE asks for a list of every hazardous substance bought last year. Most of it came from a general wholesaler, mixed in with cable ties and screws."
+        },
+        {
+          "title": "The single line",
+          "body": "A can of solvent is one line on a large invoice, and nobody has gone through those lines."
+        },
+        {
+          "title": "The unknown products",
+          "body": "Safety data sheets exist for the products the company knows about. The question is which ones it does not know about."
+        }
+      ],
+      "hard": "The answer sits at invoice line level. The name of a general wholesaler does not say that it sells solvents, aerosols and adhesives. One supplier delivers across many categories, so the hazardous lines hide inside everything else.",
+      "changes": [
+        "See hazardous products line by line, including those bought from general wholesalers.",
+        "Get a list per supplier and site, ready to check against safety data sheets.",
+        "Keep the list current as new invoices arrive."
+      ],
+      "proof": {
+        "title": "What this looks like in client data",
+        "stats": [
+          {
+            "value": "€500,000",
+            "caption": "of hazardous substances sat unidentified in one data set, bought from a supplier that mainly delivers something else"
+          }
+        ],
+        "cases": [
+          "Hazardous products often sit inside general wholesaler invoices. Reading every line finds them."
+        ]
+      },
+      "faq": [
+        {
+          "question": "How do you list all the hazardous substances a company buys?",
+          "answer": "Read every invoice line and identify which products are hazardous, then group them by supplier and site. Pearstop does this line by line, including lines from general wholesalers where a solvent sits next to cable ties."
+        },
+        {
+          "question": "How do you find chemicals in procurement data?",
+          "answer": "Classify the data at item level. Supplier names say little about what a supplier sells, so the chemicals only show once each line is identified. Pearstop identifies every line and flags the hazardous ones."
+        },
+        {
+          "question": "How do you check safety data sheets against purchases?",
+          "answer": "Start from a complete list of hazardous products bought, per supplier and site, then compare it with the safety data sheets on file. Pearstop delivers that list, so the products without a sheet stand out."
+        },
+        {
+          "question": "Why are hazardous substances missing from supplier-level spend reports?",
+          "answer": "A supplier-level report assigns all spend to the supplier's main category. A wholesaler that mainly supplies fixings shows as fixings, and the solvents inside it disappear. Pearstop reports at line level, so they appear."
+        },
+        {
+          "question": "Can hazardous products from a general wholesaler be identified?",
+          "answer": "Yes. Pearstop reads and classifies every invoice line, so a single can of solvent on a large wholesaler invoice is identified like any other item."
+        }
+      ],
+      "cta": {
+        "title": "Send us a sample of your wholesaler invoices",
+        "body": "A sample is enough. We send back the hazardous products line by line, per supplier and site."
+      }
+    },
+    "recycling": {
+      "meta": {
+        "title": "Recycling Rate and Carbon Data: What Exactly Are We Processing?",
+        "description": "Pearstop identifies every item at invoice line level, so a recycling rate and a carbon figure can be built on the items themselves and traced back to the lines behind them."
+      },
+      "hero": {
+        "eyebrow": "Recycling rates and carbon",
+        "title": "What is our recycling rate, and what carbon emissions sit behind it?",
+        "lead": "Pearstop answers it from the invoices and purchase data the company already has."
+      },
+      "moments": [
+        {
+          "title": "The sustainability report",
+          "body": "The report needs a recycling rate and a carbon figure. Both come from totals per material, so both are estimates."
+        },
+        {
+          "title": "The client request",
+          "body": "A client asks what share of the materials used is recycled and what the carbon footprint is. The answer is an average."
+        },
+        {
+          "title": "The recycling opportunity",
+          "body": "Nobody can say which items could be recycled or reused, because the invoice line says \"mixed materials\"."
+        }
+      ],
+      "hard": "A recycling rate and a carbon figure depend on the individual item. Invoice lines describe items in free text, one supplier delivers across many categories, and the supplier name does not say what an item is made of. Without the item, every number is an estimate.",
+      "changes": [
+        "See every item processed, identified at line level.",
+        "Attach carbon emissions and a recycling route to each specific item.",
+        "Report a recycling rate and a carbon figure that trace back to the lines behind them."
+      ],
+      "proof": {
+        "title": "What line level shows",
+        "cases": [
+          "At a construction client, an outside consultancy report claimed €12m in savings, with no plan or substantiation behind it. Pearstop cleaned all spend down to line level so procurement could see where to negotiate.",
+          "One savings lever labelled \"water pumps\" turned out to be spend with an executive training agency. A category label hides what an item is. The line shows it."
+        ]
+      },
+      "faq": [
+        {
+          "question": "How do you calculate a recycling rate from procurement data?",
+          "answer": "Identify every item bought and processed, then total the items that follow a recycling route. Pearstop reads every invoice line down to the individual item, so the rate rests on items and the lines behind them."
+        },
+        {
+          "question": "How do you work out the carbon emissions of the materials a company buys?",
+          "answer": "Attach an emissions factor to each specific item, then total them. That requires every item identified first. Pearstop identifies every line, which gives the carbon calculation its starting list."
+        },
+        {
+          "question": "Why is a recycling rate often an estimate?",
+          "answer": "Because the data stops at material totals or supplier names. A supplier that delivers across many categories hides what its items are made of. Item-level identification replaces the estimate with a count."
+        },
+        {
+          "question": "How do you find recycling opportunities in spend data?",
+          "answer": "List the items bought, then check which have a recycling or reuse route. Pearstop identifies every item at line level, so the opportunities that sit under labels like \"mixed materials\" become visible."
+        },
+        {
+          "question": "What data is needed for item-level carbon reporting?",
+          "answer": "Invoice lines and purchase data, read down to the individual item. Pearstop extracts and classifies them, so each item is ready to carry its own emissions factor and recycling route."
+        }
+      ],
+      "cta": {
+        "title": "Send us a sample of your purchase data",
+        "body": "A sample is enough. We send back every item identified at line level."
+      }
+    }
   }
 }

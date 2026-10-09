@@ -3,6 +3,7 @@ import { caseStudies, siteConfig } from "@/lib/site";
 import { blogPosts } from "@/lib/blog-posts";
 import { routing } from "@/i18n/routing";
 import { migrationEntries, basePathFor } from "@/content/migrations";
+import { COMPLIANCE_KEYS, complianceAlternates, complianceUrl } from "@/lib/compliance-pages";
 
 // Derived from routing.locales (not a second hardcoded list) so the sitemap
 // can't drift out of sync with the locales the site actually serves.
@@ -68,6 +69,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lastModified: new Date(),
         changeFrequency: path === "" ? "daily" : "weekly",
         priority: path === "" ? 1 : locale === "" ? 0.8 : 0.6,
+      });
+    }
+  }
+
+  // Compliance landing pages have a different slug per locale, so they are
+  // listed per page with hreflang alternates rather than from one shared path.
+  for (const key of COMPLIANCE_KEYS) {
+    for (const locale of routing.locales) {
+      entries.push({
+        url: complianceUrl(key, locale),
+        lastModified: new Date(),
+        changeFrequency: "weekly",
+        priority: locale === routing.defaultLocale ? 0.8 : 0.6,
+        alternates: { languages: complianceAlternates(key) },
       });
     }
   }

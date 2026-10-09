@@ -432,7 +432,13 @@
       "dataQuality": "Qualité des données",
       "fabricReady": "Fabric Ready",
       "aiReadiness": "AI Readiness",
-      "unspsc": "UNSPSC"
+      "unspsc": "UNSPSC",
+      "complianceQuestions": "Questions de conformité",
+      "complianceFreelancers": "Indépendants",
+      "complianceCertification": "Certification des sous-traitants",
+      "complianceTimber": "Bois certifié",
+      "complianceHazardous": "Substances dangereuses",
+      "complianceRecycling": "Taux de recyclage"
     }
   },
   "Footer": {
@@ -4814,5 +4820,388 @@
     "sectionTitle": "Utilisation de ce site",
     "p1": "Le contenu de ce site est fourni à titre d'information générale uniquement. Il ne constitue pas un conseil juridique, financier ou en matière d'achats. Nous nous efforçons de maintenir les informations exactes et à jour, mais ne garantissons pas l'exhaustivité de chaque page à tout moment.",
     "p2": "Si vous souhaitez réutiliser le contenu, les éléments de marque ou des captures d'écran, merci de nous demander au préalable. Pour toute question sur ces conditions, contactez {email}."
+  },
+  "Compliance": {
+    "shared": {
+      "sampleLabel": "Envoyer un échantillon",
+      "discoveryLabel": "Réserver un échange de 15 minutes",
+      "momentEyebrow": "Le déclencheur",
+      "momentTitle": "Une situation familière ?",
+      "hardTitle": "Pourquoi c'est difficile aujourd'hui",
+      "changesEyebrow": "Avec Pearstop",
+      "changesTitle": "Ce qui change avec Pearstop",
+      "proofEyebrow": "Preuves",
+      "faqEyebrow": "Questions",
+      "faqTitle": "Questions fréquentes"
+    },
+    "freelancers": {
+      "meta": {
+        "title": "Achats d'indépendants : combien, pour quels travaux, pour combien d'heures",
+        "description": "Pearstop lit chaque ligne de facture pour établir combien d'indépendants sont intervenus, sur quel type de travail et pour combien d'heures. La réponse est prête dès que l'auditeur la demande."
+      },
+      "hero": {
+        "eyebrow": "Indépendants et prestataires",
+        "title": "Combien d'indépendants sont intervenus cette année, sur quel type de travail et pour combien d'heures ?",
+        "lead": "Pearstop répond à partir des factures et des données d'achats que l'entreprise possède déjà."
+      },
+      "moments": [
+        {
+          "title": "La demande de l'auditeur",
+          "body": "Un auditeur ou l'URSSAF demande combien d'indépendants sont intervenus cette année, pour combien d'heures et sur quel type de travail. Les données sont dispersées sur des centaines de factures."
+        },
+        {
+          "title": "Travail matériel ou immatériel",
+          "body": "Il faut distinguer les indépendants qui réalisent un travail matériel sur site de ceux qui conseillent ou assurent un travail immatériel. La crainte d'une requalification des indépendants en salariés rend la distinction sensible."
+        },
+        {
+          "title": "Le bon de commande qui indique des heures",
+          "body": "Le bon de commande mentionne des heures. Le nom et le type de travail ne figurent que sur la facture."
+        }
+      ],
+      "hard": "La réponse se trouve au niveau de la ligne de facture. Le nom d'un fournisseur ne dit pas s'il s'agit d'un indépendant, d'une agence ou d'un bureau, et un même fournisseur livre souvent plusieurs types de prestations. Le bon de commande enregistre les heures, mais ni qui a réalisé le travail, ni de quel travail il s'agit.",
+      "changes": [
+        "Chaque ligne de facture d'indépendant identifiée, avec les heures et le type de travail.",
+        "Travail matériel et immatériel séparés.",
+        "La réponse prête dès que l'auditeur, l'URSSAF ou les RH la demandent, sans une journée de recherche manuelle."
+      ],
+      "proof": {
+        "title": "Ce que cela donne dans les données clients",
+        "stats": [
+          {
+            "value": "9,5 M€",
+            "caption": "d'achats d'indépendants et de personnel temporaire triés chez un client, répartis entre indépendants individuels et agences"
+          },
+          {
+            "value": "2 M€",
+            "caption": "d'achats annuels moyens de personnel temporaire chez un autre client, répartis par indépendant, agence et type de travail"
+          }
+        ],
+        "cases": [
+          "Les clients savent qu'ils font appel à de nombreux indépendants. La cartographie montre qui intervient sur quoi."
+        ]
+      },
+      "faq": [
+        {
+          "question": "Comment préparer les données d'indépendants en vue d'un contrôle de l'URSSAF ?",
+          "answer": "Il faut partir des factures, car les heures, les noms et le type de travail s'y trouvent. Pearstop lit chaque ligne de facture d'indépendant, distingue les indépendants des agences et livre au contrôleur une liste avec les lignes à l'appui. En Belgique, le SPF Finances attend la même chose : des chiffres traçables."
+        },
+        {
+          "question": "Que demandent les auditeurs à propos des travailleurs indépendants ?",
+          "answer": "Les auditeurs demandent combien d'indépendants sont intervenus, pour combien d'heures et sur quel type de travail. Ils demandent aussi si le travail est matériel ou immatériel. Pearstop répond aux trois questions à partir des lignes de facture."
+        },
+        {
+          "question": "Comment savoir combien d'indépendants une entreprise a mobilisés ?",
+          "answer": "Il suffit de les compter à partir des factures. Le bon de commande porte les heures, la facture porte le nom et le travail. Pearstop lit chaque ligne, rattache chaque variante de nom à un seul fournisseur et repère les fournisseurs qui sont des indépendants."
+        },
+        {
+          "question": "Comment ventiler les achats d'indépendants par type de travail ?",
+          "answer": "Chaque ligne de facture est classée selon le travail décrit, puis les lignes sont regroupées. Pearstop classe chaque ligne jusqu'à l'article, ce qui sépare nettement le travail matériel sur site du conseil et des autres travaux immatériels."
+        },
+        {
+          "question": "Peut-on extraire les heures des indépendants à partir des factures ?",
+          "answer": "Oui. Les heures figurent sur la ligne de facture, à côté du tarif et du nom. Pearstop les extrait ligne par ligne et les totalise par indépendant et par type de travail."
+        }
+      ],
+      "cta": {
+        "title": "Envoyer un échantillon de factures d'indépendants",
+        "body": "Un échantillon suffit. Chaque ligne revient identifiée, avec les heures et le type de travail."
+      }
+    },
+    "certification": {
+      "meta": {
+        "title": "Certification des sous-traitants : qui est intervenu sur le projet, et était-il certifié ?",
+        "description": "Pearstop rattache chaque variante de nom à un seul fournisseur et vérifie chaque sous-traitant dans le registre officiel de son pays, avec le statut de certification en regard des achats."
+      },
+      "hero": {
+        "eyebrow": "Certification des sous-traitants et audits",
+        "title": "Quels sous-traitants sont intervenus sur ce projet, et peut-on prouver qu'ils étaient certifiés ?",
+        "lead": "Pearstop répond à partir des factures et des données d'achats que l'entreprise possède déjà."
+      },
+      "moments": [
+        {
+          "title": "L'audit",
+          "body": "Un auditeur sélectionne un projet et demande quels sous-traitants y sont intervenus et si chacun détenait une certification sécurité valide."
+        },
+        {
+          "title": "La migration",
+          "body": "Les fiches fournisseurs ont migré vers un nouveau système, sans les certificats."
+        },
+        {
+          "title": "La commande importante",
+          "body": "Une commande importante est sur le point d'être attribuée à un fournisseur, sans que personne ait vérifié si sa taille lui permet de l'absorber."
+        }
+      ],
+      "hard": "La réponse se trouve au niveau de la ligne de facture, et les sous-traitants apparaissent sous de multiples variantes de nom : la liste de ceux qui sont intervenus sur un projet n'est jamais complète. Le certificat figure dans un registre sans lien avec les dépenses. La facture montre ce qui a été acheté. Elle ne dit rien de la certification du fournisseur ni de sa capacité à absorber la commande.",
+      "changes": [
+        "La liste complète de ceux qui sont intervenus pour l'entreprise, chaque variante de nom rattachée à un seul fournisseur.",
+        "Le statut de certification en regard des dépenses, vérifié dans le registre officiel de chaque pays.",
+        "La taille de la commande comparée à celle du fournisseur avant l'attribution, pour rendre le risque de concentration visible."
+      ],
+      "registers": {
+        "eyebrow": "Registres",
+        "title": "Les registres vérifiés",
+        "lead": "Pearstop vérifie chaque sous-traitant dans le registre officiel de son pays.",
+        "columns": {
+          "country": "Pays",
+          "registers": "Registres vérifiés par Pearstop",
+          "confirms": "Ce qu'ils confirment"
+        },
+        "rows": [
+          {
+            "country": "France",
+            "registers": "MASE, Qualibat",
+            "confirms": "Certification sécurité des sous-traitants (MASE) et qualification des métiers du bâtiment (Qualibat)"
+          },
+          {
+            "country": "Belgique (Wallonie et Bruxelles)",
+            "registers": "Registre VCA (BeSaCC-VCA)",
+            "confirms": "Certification sécurité des entrepreneurs, reconnue mutuellement avec la VCA néerlandaise"
+          }
+        ]
+      },
+      "proof": {
+        "title": "Ce que cela donne dans les données clients",
+        "stats": [
+          {
+            "value": "9 175",
+            "caption": "variantes de nom de fournisseurs chez SPIE, une entreprise de services techniques"
+          },
+          {
+            "value": "1 493",
+            "caption": "fournisseurs réels auxquels elles ont été ramenées"
+          },
+          {
+            "value": "204 029",
+            "caption": "enregistrements d'actifs couverts"
+          }
+        ],
+        "cases": [
+          "Les clients disposent d'un tableau de bord qui signale quand un certificat demande une action. Les achats interviennent avant que cela ne devienne un problème."
+        ],
+        "link": {
+          "label": "Lire le cas SPIE",
+          "path": "/cases/spie"
+        }
+      },
+      "faq": [
+        {
+          "question": "Comment vérifier que des sous-traitants sont certifiés MASE ?",
+          "answer": "Chaque sous-traitant est rapproché du registre officiel de son pays : MASE et Qualibat en France, BeSaCC-VCA en Belgique. Pearstop le fait pour chaque sous-traitant présent dans les achats et affiche le statut en regard du montant."
+        },
+        {
+          "question": "Comment préparer les données d'achats pour un audit ?",
+          "answer": "Il faut commencer par une liste complète des fournisseurs, car un audit part de la question de savoir qui est intervenu sur le projet. Pearstop rattache chaque variante de nom à un seul fournisseur, puis ajoute le statut de certification et les dépenses correspondantes."
+        },
+        {
+          "question": "Comment repérer les fournisseurs non certifiés ?",
+          "answer": "La liste complète des fournisseurs est confrontée aux registres et triée par montant. Pearstop effectue la vérification pour chaque fournisseur et liste ceux sans certification valide, du montant le plus élevé au plus faible."
+        },
+        {
+          "question": "Quelle part de travaux confier à un seul sous-traitant ?",
+          "answer": "La taille de la commande se compare à celle du fournisseur et à ce que l'entreprise lui confie déjà. Pearstop place la taille de la commande à côté de celle du fournisseur avant l'attribution, ce qui rend le risque de concentration visible."
+        }
+      ],
+      "cta": {
+        "title": "Envoyer un échantillon d'achats de sous-traitance",
+        "body": "Un échantillon suffit. Une liste unique de fournisseurs revient, avec le statut de certification en regard des dépenses."
+      }
+    },
+    "timber": {
+      "meta": {
+        "title": "Achats de bois certifié FSC ou PEFC : quelle part l'an dernier ?",
+        "description": "Pearstop identifie le bois au niveau de la ligne de facture et sépare le certifié du non certifié, par fournisseur et par projet, pour pouvoir expliquer la part FSC ou PEFC."
+      },
+      "hero": {
+        "eyebrow": "Bois certifié",
+        "title": "Quelle quantité de bois certifié FSC ou PEFC a été achetée l'an dernier ?",
+        "lead": "Pearstop répond à partir des factures et des données d'achats que l'entreprise possède déjà."
+      },
+      "moments": [
+        {
+          "title": "L'appel d'offres",
+          "body": "Un appel d'offres demande quelle part du bois était certifiée. Le principal fournisseur de bois vend aussi des salles de bains et des portes."
+        },
+        {
+          "title": "La vue par fournisseur",
+          "body": "Le fournisseur est connu. Les lignes de facture qui s'y rattachent n'ont jamais été triées entre bois et reste des achats."
+        },
+        {
+          "title": "L'estimation",
+          "body": "Le chiffre est estimé, et personne ne peut montrer comment."
+        }
+      ],
+      "hard": "La réponse se trouve au niveau de la ligne de facture. Un négociant en bois vend aussi des portes, des salles de bains et de la visserie, si bien que le total par fournisseur dit peu de chose sur le bois. La certification appartient au produit, et le produit figure sur la ligne.",
+      "changes": [
+        "Le bois visible au niveau de la ligne, distinct de tout ce que le même fournisseur vend par ailleurs.",
+        "Bois certifié et non certifié séparés, par fournisseur et par projet.",
+        "Un chiffre qui s'explique quand un client ou un auditeur demande comment il a été obtenu."
+      ],
+      "proof": {
+        "title": "Ce que cela donne dans les données clients",
+        "cases": [
+          "De nombreux clients achètent leur bois chez un fournisseur qui vend aussi d'autres catégories. Au niveau du fournisseur, le bois, FSC et PEFC compris, reste invisible. Au niveau de la ligne, il apparaît.",
+          "Le même schéma se retrouve chez les négociants en matériaux, les fournisseurs de menuiserie, les fournisseurs d'agencement et les grossistes généralistes qui vendent des panneaux à côté d'outillage et de visserie."
+        ]
+      },
+      "faq": [
+        {
+          "question": "Comment calculer la quantité de bois FSC achetée par une entreprise ?",
+          "answer": "Le bois est identifié sur chaque ligne de facture, puis les lignes certifiées FSC ou PEFC sont repérées. Pearstop le fait au niveau de la ligne, de sorte que le total ne couvre que le bois, quoi que le fournisseur vende par ailleurs."
+        },
+        {
+          "question": "Comment justifier la part de bois certifié dans un appel d'offres ?",
+          "answer": "La part certifiée s'indique sous forme de chiffre, avec les lignes à l'appui. Pearstop livre la part par fournisseur et par projet, ce qui permet au chiffre de résister quand le client demande comment il a été obtenu."
+        },
+        {
+          "question": "Comment séparer les achats de bois des autres achats chez un même fournisseur ?",
+          "answer": "Chaque ligne de facture est classée selon ce qui a été acheté. Pearstop lit chaque ligne jusqu'à l'article, si bien que le bois se sépare des portes, des salles de bains et de la visserie chez un même fournisseur."
+        },
+        {
+          "question": "Quels fournisseurs faut-il contrôler pour le bois FSC ou PEFC ?",
+          "answer": "Tous ceux qui vendent du bois, y compris les négociants chez qui le bois ne représente qu'une petite part de la facture. Pearstop les liste tous à partir des lignes de facture, avec les achats de bois par fournisseur."
+        },
+        {
+          "question": "De quelles données a-t-on besoin pour calculer la part de bois FSC ?",
+          "answer": "Les lignes de facture et les données d'achats suffisent. Pearstop les lit, identifie le bois et restitue la part certifiée par fournisseur et par projet."
+        }
+      ],
+      "cta": {
+        "title": "Envoyer un échantillon de factures de bois",
+        "body": "Un échantillon suffit. Le bois revient au niveau de la ligne, avec le certifié et le non certifié séparés."
+      }
+    },
+    "hazardous": {
+      "meta": {
+        "title": "Achats de substances dangereuses : quoi, auprès de qui, et où sont-elles allées ?",
+        "description": "Pearstop identifie les produits dangereux ligne par ligne, y compris chez les grossistes généralistes, et livre une liste par fournisseur et par site à rapprocher des fiches de données de sécurité."
+      },
+      "hero": {
+        "eyebrow": "Substances dangereuses",
+        "title": "Quelle quantité de substances dangereuses a été achetée, auprès de qui, et où sont-elles allées ?",
+        "lead": "Pearstop répond à partir des factures et des données d'achats que l'entreprise possède déjà."
+      },
+      "moments": [
+        {
+          "title": "La demande HSE",
+          "body": "Le service HSE demande la liste de toutes les substances dangereuses achetées l'an dernier. La plupart provenaient d'un grossiste généraliste, noyées parmi des colliers de serrage et des vis."
+        },
+        {
+          "title": "La ligne isolée",
+          "body": "Un bidon de solvant tient sur une seule ligne d'une grosse facture, et personne n'a passé ces lignes en revue."
+        },
+        {
+          "title": "Les produits inconnus",
+          "body": "Des fiches de données de sécurité (FDS) existent pour les produits connus. Reste la question des produits qui ne le sont pas."
+        }
+      ],
+      "hard": "La réponse se trouve au niveau de la ligne de facture. Le nom d'un grossiste généraliste ne dit pas qu'il vend des solvants, des aérosols et des colles. Un même fournisseur livre dans de nombreuses catégories : les lignes dangereuses se perdent parmi toutes les autres.",
+      "changes": [
+        "Les produits dangereux visibles ligne par ligne, y compris ceux achetés chez des grossistes généralistes.",
+        "Une liste par fournisseur et par site, prête à être rapprochée des fiches de données de sécurité.",
+        "La même liste, actualisée à mesure que de nouvelles factures arrivent."
+      ],
+      "proof": {
+        "title": "Ce que cela donne dans les données clients",
+        "stats": [
+          {
+            "value": "500 000 €",
+            "caption": "de substances dangereuses sont restées non identifiées dans un jeu de données, achetées auprès d'un fournisseur dont l'activité principale est ailleurs"
+          }
+        ],
+        "cases": [
+          "Les produits dangereux se cachent souvent dans les factures des grossistes généralistes. La lecture de chaque ligne les fait ressortir."
+        ]
+      },
+      "faq": [
+        {
+          "question": "Comment dresser la liste de toutes les substances dangereuses achetées par une entreprise ?",
+          "answer": "Chaque ligne de facture est lue, les produits dangereux sont repérés puis regroupés par fournisseur et par site. Pearstop procède ligne par ligne, y compris sur les factures de grossistes généralistes où un solvant côtoie des colliers de serrage."
+        },
+        {
+          "question": "Comment trouver des produits chimiques dans les données d'achats ?",
+          "answer": "Les données sont classées au niveau de l'article. Un nom de fournisseur dit peu de chose sur son catalogue : les produits chimiques n'apparaissent qu'une fois chaque ligne identifiée. Pearstop identifie chaque ligne et signale les lignes dangereuses."
+        },
+        {
+          "question": "Comment rapprocher les fiches de données de sécurité des achats ?",
+          "answer": "Il faut partir d'une liste complète des produits dangereux achetés, par fournisseur et par site, puis la comparer aux FDS disponibles. Pearstop livre cette liste, et les produits sans fiche ressortent."
+        },
+        {
+          "question": "Pourquoi les substances dangereuses n'apparaissent-elles pas dans les rapports d'achats par fournisseur ?",
+          "answer": "Un rapport par fournisseur attribue tous les achats à la catégorie principale du fournisseur. Un grossiste de visserie apparaît comme visserie, et les solvants qu'il vend disparaissent. Pearstop travaille au niveau de la ligne : ils réapparaissent."
+        },
+        {
+          "question": "Peut-on identifier des produits dangereux achetés chez un grossiste généraliste ?",
+          "answer": "Oui. Pearstop lit et classe chaque ligne de facture : un bidon de solvant sur une grosse facture de grossiste est identifié comme n'importe quel autre article."
+        }
+      ],
+      "cta": {
+        "title": "Envoyer un échantillon de factures de grossistes",
+        "body": "Un échantillon suffit. Les produits dangereux reviennent ligne par ligne, par fournisseur et par site."
+      }
+    },
+    "recycling": {
+      "meta": {
+        "title": "Taux de recyclage et données carbone : que traite-t-on exactement ?",
+        "description": "Pearstop identifie chaque article au niveau de la ligne de facture : un taux de recyclage et un chiffre carbone reposent alors sur les articles eux-mêmes et remontent aux lignes qui les fondent."
+      },
+      "hero": {
+        "eyebrow": "Taux de recyclage et carbone",
+        "title": "Quel est le taux de recyclage de l'entreprise, et quelles émissions de carbone y sont associées ?",
+        "lead": "Pearstop répond à partir des factures et des données d'achats que l'entreprise possède déjà."
+      },
+      "moments": [
+        {
+          "title": "Le rapport de développement durable",
+          "body": "Le rapport exige un taux de recyclage et un chiffre carbone. Les deux découlent de totaux par matériau : ce sont des estimations."
+        },
+        {
+          "title": "La demande du client",
+          "body": "Un client demande quelle part des matériaux utilisés est recyclée et quelle est l'empreinte carbone. La réponse est une moyenne."
+        },
+        {
+          "title": "L'opportunité de recyclage",
+          "body": "Personne ne peut dire quels articles sont recyclables ou réutilisables, car la ligne de facture indique « matériaux divers »."
+        }
+      ],
+      "hard": "Un taux de recyclage et un chiffre carbone dépendent de l'article pris individuellement. Les lignes de facture décrivent les articles en texte libre, un même fournisseur livre dans de nombreuses catégories, et son nom ne dit pas de quoi l'article est fait. Sans l'article, tout chiffre est une estimation.",
+      "changes": [
+        "Chaque article traité, identifié au niveau de la ligne.",
+        "Émissions de carbone et filière de recyclage rattachées à chaque article.",
+        "Un taux de recyclage et un chiffre carbone qui remontent aux lignes qui les fondent."
+      ],
+      "proof": {
+        "title": "Ce que montre le niveau de la ligne",
+        "cases": [
+          "Chez un client du secteur de la construction, un rapport d'un cabinet extérieur annonçait 12 M€ d'économies, sans plan ni justification. Pearstop a ramené tous les achats au niveau de la ligne pour que la fonction achats voie où négocier.",
+          "Un levier d'économies intitulé « pompes à eau » s'est révélé être des dépenses auprès d'un organisme de formation de dirigeants. Un libellé de catégorie masque ce qu'est un article. La ligne le montre."
+        ]
+      },
+      "faq": [
+        {
+          "question": "Comment calculer un taux de recyclage à partir des données d'achats ?",
+          "answer": "Chaque article acheté et traité est identifié, puis ceux qui suivent une filière de recyclage sont totalisés. Pearstop lit chaque ligne de facture jusqu'à l'article, de sorte que le taux repose sur des articles et sur les lignes qui les fondent."
+        },
+        {
+          "question": "Comment calculer les émissions de carbone des matériaux achetés par une entreprise ?",
+          "answer": "Un facteur d'émission est rattaché à chaque article, puis le tout est totalisé. Cela suppose que chaque article soit d'abord identifié. Pearstop identifie chaque ligne et fournit ainsi la liste de départ du calcul carbone."
+        },
+        {
+          "question": "Pourquoi un taux de recyclage est-il souvent une estimation ?",
+          "answer": "Parce que les données s'arrêtent aux totaux par matériau ou aux noms de fournisseurs. Un fournisseur présent dans de nombreuses catégories masque la composition de ses articles. L'identification au niveau de l'article remplace l'estimation par un décompte."
+        },
+        {
+          "question": "Comment repérer des opportunités de recyclage dans les données d'achats ?",
+          "answer": "Les articles achetés sont listés, puis on vérifie lesquels disposent d'une filière de recyclage ou de réemploi. Pearstop identifie chaque article au niveau de la ligne : les opportunités cachées sous des libellés comme « matériaux divers » deviennent visibles."
+        },
+        {
+          "question": "De quelles données a-t-on besoin pour un reporting carbone par article ?",
+          "answer": "Des lignes de facture et des données d'achats, lues jusqu'à l'article. Pearstop les extrait et les classe, si bien que chaque article peut porter son propre facteur d'émission et sa filière de recyclage."
+        }
+      ],
+      "cta": {
+        "title": "Envoyer un échantillon de données d'achats",
+        "body": "Un échantillon suffit. Chaque article revient identifié au niveau de la ligne."
+      }
+    }
   }
 }

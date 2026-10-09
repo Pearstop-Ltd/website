@@ -5,6 +5,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useRef, useState, useTransition } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { mainNavLinks, solutionLinks, siteConfig } from "@/lib/site";
+import { complianceHrefForEnglishPath, complianceSwitchPath } from "@/lib/compliance-pages";
 
 const LOCALES = [
   { code: "en", label: "EN" },
@@ -99,6 +100,12 @@ const SOLUTION_NAV_KEYS: Record<string, string> = {
   "/unspsc": "unspsc",
 };
 
+  "#compliance-questions": "complianceQuestions",
+  "/freelancer-spend": "complianceFreelancers",
+  "/subcontractor-certification": "complianceCertification",
+  "/fsc-timber-spend": "complianceTimber",
+  "/hazardous-substances-spend": "complianceHazardous",
+  "/recycling-rate-data": "complianceRecycling",
 // Header height in px, must match .nav-inner's min-height in globals.css.
 const HEADER_HEIGHT = 68;
 
@@ -323,7 +330,20 @@ export function SiteHeader() {
                   </Link>
                 </li>
                 {solutionLinks.map((link) =>
-                  link.children && link.children.length > 0 ? (
+                  link.group && link.children ? (
+                    <li key={link.href} className="nav-group">
+                      <span className="nav-group-label">{t(`nav.${SOLUTION_NAV_KEYS[link.href]}`)}</span>
+                      <ul>
+                        {link.children.map((child) => (
+                          <li key={child.href}>
+                            <Link href={complianceHrefForEnglishPath(child.href, locale) ?? `${prefix}${child.href}`} onClick={closeMenus}>
+                              {t(`nav.${SOLUTION_NAV_KEYS[child.href]}`)}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </li>
+                  ) : link.children && link.children.length > 0 ? (
                     <li
                       key={link.href}
                       className={`nav-subitem-wrap ${openSubmenu === link.href ? "open" : ""}`}

@@ -1,0 +1,7 @@
+{
+  "freelancers": { "en": "freelancer-spend", "nl": "zzp-inkoop", "fr": "depenses-independants", "de": "freelancer-ausgaben" },
+  "certification": { "en": "subcontractor-certification", "nl": "onderaannemers-certificering", "fr": "certification-sous-traitants", "de": "nachunternehmer-zertifizierung" },
+  "timber": { "en": "fsc-timber-spend", "nl": "fsc-hout-inkoop", "fr": "bois-certifie-achats", "de": "fsc-holz-einkauf" },
+  "hazardous": { "en": "hazardous-substances-spend", "nl": "gevaarlijke-stoffen-inkoop", "fr": "substances-dangereuses-achats", "de": "gefahrstoffe-einkauf" },
+  "recycling": { "en": "recycling-rate-data", "nl": "recyclingpercentage", "fr": "taux-de-recyclage", "de": "recyclingquote" }
+}

@@ -78,6 +78,8 @@ export type NavLink = {
   description?: string;
   children?: NavLink[];
 };
+  /** Renders as a non-link heading with its children listed inline (header Solutions menu). */
+  group?: boolean;
 
 export const solutionLinks: NavLink[] = [
   { label: "Invoice & Document Extraction", href: "/invoice-data-extraction", description: "Turn unread PDFs and scans into structured data." },
@@ -113,7 +115,19 @@ export const solutionLinks: NavLink[] = [
     ]
   },
   { label: "Asset Data Management", href: "/asset-data-management", description: "An independent, classified view of spend and maintenance data you don't generate yourself." },
-  { label: "For Procurement Consultancies", href: "/procurement-consultancies", description: "White-labelled spend classification under your own taxonomy, delivered as your engagement's data layer." }
+  { label: "For Procurement Consultancies", href: "/procurement-consultancies", description: "White-labelled spend classification under your own taxonomy, delivered as your engagement's data layer." },
+  {
+    label: "Compliance questions",
+    href: "#compliance-questions",
+    group: true,
+    children: [
+      { label: "Freelancers and contractors", href: "/freelancer-spend" },
+      { label: "Subcontractor certification", href: "/subcontractor-certification" },
+      { label: "Sustainable timber", href: "/fsc-timber-spend" },
+      { label: "Hazardous substances", href: "/hazardous-substances-spend" },
+      { label: "Recycling rates", href: "/recycling-rate-data" }
+    ]
+  }
 ];
 
 export const mainNavLinks: NavLink[] = [

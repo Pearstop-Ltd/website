@@ -1,12 +1,39 @@
+import { readFileSync } from "node:fs";
 import createNextIntlPlugin from "next-intl/plugin";
 
 const withNextIntl = createNextIntlPlugin("./i18n/request.ts");
 
+// Localised slugs for the "Compliance questions" landing pages (see
+// lib/compliance-pages.ts). Each nl/fr/de slug is rewritten to the English
+// named route, and the English-named path under a locale prefix is
+// redirected to the localised slug so there is one URL per page and language.
+const complianceSlugs = JSON.parse(readFileSync(new URL("./lib/compliance-pages.json", import.meta.url), "utf8"));
+const complianceLocales = ["nl", "fr", "de"];
+const complianceRedirects = [];
+const complianceRewrites = [];
+for (const slugsByLocale of Object.values(complianceSlugs)) {
+  for (const locale of complianceLocales) {
+    complianceRedirects.push({
+      source: `/${locale}/${slugsByLocale.en}`,
+      destination: `/${locale}/${slugsByLocale[locale]}`,
+      permanent: true,
+    });
+    complianceRewrites.push({
+      source: `/${locale}/${slugsByLocale[locale]}`,
+      destination: `/${locale}/${slugsByLocale.en}`,
+    });
+  }
+}
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  async rewrites() {
+    return { beforeFiles: complianceRewrites };
+  },
   async redirects() {
     return [
+      ...complianceRedirects,
       {
         source: "/:path*",
         has: [{ type: "host", value: "pearstop.com" }],

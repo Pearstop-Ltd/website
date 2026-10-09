@@ -432,7 +432,13 @@
       "dataQuality": "Datenqualität",
       "fabricReady": "Fabric Ready",
       "aiReadiness": "AI Readiness",
-      "unspsc": "UNSPSC"
+      "unspsc": "UNSPSC",
+      "complianceQuestions": "Compliance-Fragen",
+      "complianceFreelancers": "Freelancer und Selbstständige",
+      "complianceCertification": "Nachunternehmer-Zertifizierung",
+      "complianceTimber": "Zertifiziertes Holz",
+      "complianceHazardous": "Gefahrstoffe",
+      "complianceRecycling": "Recyclingquote"
     }
   },
   "Footer": {
@@ -4814,5 +4820,383 @@
     "sectionTitle": "Nutzung dieser Website",
     "p1": "Die Inhalte dieser Website dienen ausschließlich der allgemeinen Information. Sie stellen keine Rechts-, Finanz- oder Beschaffungsberatung dar. Wir bemühen uns, die Informationen korrekt und aktuell zu halten, garantieren aber nicht, dass jede Seite jederzeit vollständig ist.",
     "p2": "Wenn Sie Inhalte, Markenmaterial oder Screenshots weiterverwenden möchten, fragen Sie bitte vorher bei uns an. Bei Fragen zu diesen Bedingungen kontaktieren Sie uns unter {email}."
+  },
+  "Compliance": {
+    "shared": {
+      "sampleLabel": "Stichprobe senden",
+      "discoveryLabel": "15-minütiges Erstgespräch buchen",
+      "momentEyebrow": "Der Moment",
+      "momentTitle": "Kommt das bekannt vor?",
+      "hardTitle": "Warum das heute schwierig ist",
+      "changesEyebrow": "Mit Pearstop",
+      "changesTitle": "Was sich mit Pearstop ändert",
+      "proofEyebrow": "Belege",
+      "faqEyebrow": "Fragen",
+      "faqTitle": "Häufig gestellte Fragen"
+    },
+    "freelancers": {
+      "meta": {
+        "title": "Freelancer im Einkauf: Wie viele, welche Tätigkeiten, wie viele Stunden",
+        "description": "Pearstop liest jede Rechnungsposition und zeigt, wie viele Freelancer für das Unternehmen tätig waren, welche Tätigkeiten sie ausübten und mit wie vielen Stunden. Die Antwort liegt bereit, sobald das Audit fragt."
+      },
+      "hero": {
+        "eyebrow": "Freelancer und Selbstständige",
+        "title": "Wie viele Freelancer waren in diesem Jahr im Einsatz, mit welchen Tätigkeiten und wie vielen Stunden?",
+        "lead": "Pearstop beantwortet das aus den Rechnungen und Einkaufsdaten, die im Unternehmen bereits vorliegen."
+      },
+      "moments": [
+        {
+          "title": "Die Anfrage aus dem Audit",
+          "body": "Ein Auditor, die Deutsche Rentenversicherung oder der Zoll (FKS) fragt, wie viele Freelancer in diesem Jahr im Einsatz waren, mit wie vielen Stunden und für welche Tätigkeiten. Die Daten verteilen sich auf Hunderte Rechnungen."
+        },
+        {
+          "title": "Körperliche und nicht-körperliche Tätigkeit",
+          "body": "Benötigt wird die Trennung zwischen Freelancern mit körperlicher Tätigkeit vor Ort und solchen, die beraten oder nicht-körperlich arbeiten. Dahinter steht die Sorge vor Scheinselbstständigkeit."
+        },
+        {
+          "title": "Die Bestellung mit Stundenangabe",
+          "body": "Auf der Bestellung stehen Stunden. Name und Art der Tätigkeit erscheinen erst auf der Rechnung."
+        }
+      ],
+      "hard": "Die Antwort liegt auf Ebene der Rechnungsposition. Der Lieferantenname zeigt nicht, ob es sich um einen Freelancer, eine Agentur oder einen Personaldienstleister handelt, und ein Lieferant erbringt oft mehrere Arten von Leistungen. Die Bestellung hält die Stunden fest, nennt aber weder die ausführende Person noch die Tätigkeit.",
+      "changes": [
+        "Jede Rechnungsposition eines Freelancers erfasst, mit Stunden und Art der Tätigkeit.",
+        "Körperliche und nicht-körperliche Tätigkeit getrennt ausgewiesen.",
+        "Die Antwort liegt bereit, sobald Audit, Deutsche Rentenversicherung oder Personalabteilung fragen, ohne einen Tag manueller Suche."
+      ],
+      "proof": {
+        "title": "So sieht das in Kundendaten aus",
+        "stats": [
+          {
+            "value": "9,5 Mio. €",
+            "caption": "für Freelancer und Zeitarbeitskräfte bei einem Kunden sortiert, aufgeteilt auf einzelne Freelancer und Agenturen"
+          },
+          {
+            "value": "2 Mio. €",
+            "caption": "durchschnittliches jährliches Einkaufsvolumen für Zeitarbeitskräfte bei einem weiteren Kunden, aufgeteilt nach Freelancer, Agentur und Art der Tätigkeit"
+          }
+        ],
+        "cases": [
+          "Kunden wissen, dass viele Freelancer im Einsatz sind. Die Zuordnung zeigt, wer woran arbeitet."
+        ]
+      },
+      "faq": [
+        {
+          "question": "Wie werden Freelancer-Daten für eine Prüfung der Deutschen Rentenversicherung aufbereitet?",
+          "answer": "Ausgangspunkt sind die Rechnungen, denn dort stehen Stunden, Namen und Art der Tätigkeit. Pearstop liest jede Rechnungsposition eines Freelancers, unterscheidet Freelancer von Agenturen und liefert eine Liste mit den zugehörigen Positionen. Prüfer verlangen nachvollziehbare Zahlen."
+        },
+        {
+          "question": "Was wird bei einem Audit zu Selbstständigen gefragt?",
+          "answer": "Gefragt wird, wie viele Selbstständige für das Unternehmen tätig waren, mit wie vielen Stunden und für welche Tätigkeiten, außerdem ob die Tätigkeit körperlich oder nicht-körperlich war. Pearstop beantwortet alle drei Fragen aus den Rechnungspositionen."
+        },
+        {
+          "question": "Wie viele Freelancer hat das Unternehmen eingesetzt?",
+          "answer": "Gezählt wird anhand der Rechnungen. Die Bestellung enthält die Stunden, die Rechnung Namen und Tätigkeit. Pearstop liest jede Rechnungsposition, ordnet jede Schreibweise einem einzigen Lieferanten zu und kennzeichnet, welche Lieferanten Freelancer sind."
+        },
+        {
+          "question": "Wie lässt sich das Einkaufsvolumen für Freelancer nach Art der Tätigkeit aufteilen?",
+          "answer": "Jede Rechnungsposition wird nach der beschriebenen Tätigkeit klassifiziert und anschließend gruppiert. Pearstop klassifiziert jede Position bis auf Artikelebene, sodass körperliche Arbeit vor Ort sauber von Beratung und anderer nicht-körperlicher Arbeit getrennt ist."
+        },
+        {
+          "question": "Lassen sich Freelancer-Stunden aus Rechnungen auslesen?",
+          "answer": "Ja. Die Stunden stehen auf der Rechnungsposition neben Stundensatz und Name. Pearstop liest sie Position für Position aus und summiert sie je Freelancer und je Art der Tätigkeit."
+        }
+      ],
+      "cta": {
+        "title": "Stichprobe von Freelancer-Rechnungen senden",
+        "body": "Eine Stichprobe genügt. Jede Position kommt zugeordnet zurück, mit Stunden und Art der Tätigkeit."
+      }
+    },
+    "certification": {
+      "meta": {
+        "title": "Nachunternehmer-Zertifizierung: Wer hat am Projekt gearbeitet, und waren alle zertifiziert?",
+        "description": "Pearstop ordnet jede Lieferantenschreibweise einem einzigen Lieferanten zu und gleicht jeden Nachunternehmer mit dem offiziellen Register seines Landes ab. Der Zertifizierungsstatus steht neben dem Einkaufsvolumen."
+      },
+      "hero": {
+        "eyebrow": "Nachunternehmer-Zertifizierung und Audits",
+        "title": "Welche Nachunternehmer haben an diesem Projekt gearbeitet, und ist ihre Zertifizierung nachweisbar?",
+        "lead": "Pearstop beantwortet das aus den Rechnungen und Einkaufsdaten, die im Unternehmen bereits vorliegen."
+      },
+      "moments": [
+        {
+          "title": "Das Audit",
+          "body": "Ein Auditor greift ein Projekt heraus und fragt, welche Nachunternehmer daran gearbeitet haben und ob jeder über eine gültige Sicherheitszertifizierung verfügte."
+        },
+        {
+          "title": "Die Migration",
+          "body": "Die Lieferantenstammdaten sind in ein neues System umgezogen. Die Zertifikate wurden nicht mit übernommen."
+        },
+        {
+          "title": "Die Großbestellung",
+          "body": "Ein großer Auftrag steht kurz vor der Vergabe an einen Lieferanten, und niemand hat geprüft, ob die Größe dieses Lieferanten dafür ausreicht."
+        }
+      ],
+      "hard": "Die Antwort liegt auf Ebene der Rechnungsposition. Nachunternehmer tauchen unter vielen Schreibweisen auf, sodass die Liste der Beteiligten an einem Projekt nie vollständig ist. Das Zertifikat steht in einem Register, das nicht mit dem Einkaufsvolumen verknüpft ist. Die Rechnung zeigt, was gekauft wurde, aber nicht, ob der Lieferant zertifiziert oder für den Auftrag groß genug ist.",
+      "changes": [
+        "Die vollständige Liste aller für das Unternehmen tätigen Nachunternehmer, jede Schreibweise einem Lieferanten zugeordnet.",
+        "Der Zertifizierungsstatus neben dem Einkaufsvolumen, abgeglichen mit dem offiziellen Register des jeweiligen Landes.",
+        "Auftragsgröße und Lieferantengröße vor der Vergabe gegenübergestellt, sodass das Konzentrationsrisiko sichtbar ist."
+      ],
+      "registers": {
+        "eyebrow": "Register",
+        "title": "Geprüfte Register",
+        "lead": "Pearstop gleicht jeden Nachunternehmer mit dem offiziellen Register seines Landes ab.",
+        "columns": {
+          "country": "Land",
+          "registers": "Register, mit denen Pearstop abgleicht",
+          "confirms": "Was das Register bestätigt"
+        },
+        "rows": [
+          {
+            "country": "Deutschland",
+            "registers": "SCC, PQ-VOB (Präqualifikationsverzeichnis)",
+            "confirms": "Sicherheitszertifizierung von Auftragnehmern (SCC) und Präqualifikation für Bauleistungen (PQ-VOB)"
+          }
+        ]
+      },
+      "proof": {
+        "title": "So sieht das in Kundendaten aus",
+        "stats": [
+          {
+            "value": "9.175",
+            "caption": "Lieferantenschreibweisen bei SPIE, einem Anbieter technischer Gebäudedienstleistungen (Hard Services)"
+          },
+          {
+            "value": "1.493",
+            "caption": "echte Lieferanten, auf die sie zurückgeführt wurden"
+          },
+          {
+            "value": "204.029",
+            "caption": "Anlagendatensätze erfasst"
+          }
+        ],
+        "cases": [
+          "Kunden erhalten ein Dashboard, das anzeigt, wann ein Zertifikat Aufmerksamkeit braucht. Der Einkauf handelt, bevor daraus ein Problem wird."
+        ],
+        "link": {
+          "label": "Zum SPIE-Fall",
+          "path": "/cases/spie"
+        }
+      },
+      "faq": [
+        {
+          "question": "Wie wird geprüft, ob Nachunternehmer SCC-zertifiziert sind?",
+          "answer": "Jeder Nachunternehmer wird mit dem offiziellen Register seines Landes abgeglichen, in Deutschland mit SCC und dem Präqualifikationsverzeichnis (PQ-VOB). Pearstop gleicht jeden Nachunternehmer im Einkaufsvolumen ab und zeigt den Status neben dem Betrag."
+        },
+        {
+          "question": "Wie werden Einkaufsdaten für ein Audit aufbereitet?",
+          "answer": "Am Anfang steht eine vollständige Lieferantenliste, denn ein Audit beginnt mit der Frage, wer am Projekt gearbeitet hat. Pearstop ordnet jede Schreibweise einem Lieferanten zu und ergänzt Zertifizierungsstatus und Einkaufsvolumen."
+        },
+        {
+          "question": "Wie werden Lieferanten ohne Zertifizierung gefunden?",
+          "answer": "Die vollständige Lieferantenliste wird mit den Registern abgeglichen und nach Einkaufsvolumen sortiert. Pearstop führt den Abgleich für jeden Lieferanten durch und listet die ohne gültige Zertifizierung auf, größtes Volumen zuerst."
+        },
+        {
+          "question": "Wie viel Auftragsvolumen kann an einen einzelnen Nachunternehmer vergeben werden?",
+          "answer": "Die Auftragsgröße wird mit der Größe des Lieferanten und mit dem bereits vergebenen Volumen verglichen. Pearstop stellt vor der Vergabe Auftragsgröße und Lieferantengröße nebeneinander, sodass das Konzentrationsrisiko sichtbar ist."
+        }
+      ],
+      "cta": {
+        "title": "Stichprobe von Nachunternehmer-Ausgaben senden",
+        "body": "Eine Stichprobe genügt. Zurück kommt eine einzige Lieferantenliste, mit Zertifizierungsstatus neben dem Einkaufsvolumen."
+      }
+    },
+    "timber": {
+      "meta": {
+        "title": "FSC-Holz im Einkauf: Wie viel wurde im letzten Jahr gekauft?",
+        "description": "Pearstop erkennt Holz auf Ebene der Rechnungsposition und trennt zertifiziertes von nicht zertifiziertem Holz, je Lieferant und je Projekt. Der FSC- oder PEFC-Anteil lässt sich damit belegen."
+      },
+      "hero": {
+        "eyebrow": "Nachhaltiges Holz",
+        "title": "Wie viel FSC- oder PEFC-zertifiziertes Holz wurde im letzten Jahr eingekauft?",
+        "lead": "Pearstop beantwortet das aus den Rechnungen und Einkaufsdaten, die das Unternehmen bereits hat."
+      },
+      "moments": [
+        {
+          "title": "Die Ausschreibung",
+          "body": "Eine Ausschreibung fragt, welcher Anteil des Holzes zertifiziert war. Der größte Holzlieferant liefert auch Sanitärausstattung und Türen."
+        },
+        {
+          "title": "Die Sicht je Lieferant",
+          "body": "Der Lieferant ist bekannt. Die Rechnungspositionen darunter wurden nie in Holz und alles andere getrennt."
+        },
+        {
+          "title": "Die Schätzung",
+          "body": "Die Antwort beruht auf einer Schätzung, und niemand kann den Rechenweg zeigen."
+        }
+      ],
+      "hard": "Die Antwort liegt auf Ebene der Rechnungsposition. Ein Holzhändler verkauft auch Türen, Sanitärausstattung und Befestigungsmaterial, daher sagt die Summe je Lieferant wenig über Holz aus. Die Zertifizierung gehört zum Produkt, und das Produkt steht auf der Position.",
+      "changes": [
+        "Holz auf Positionsebene sichtbar, getrennt von allem anderen, was derselbe Lieferant verkauft.",
+        "Zertifiziertes und nicht zertifiziertes Holz getrennt ausgewiesen, je Lieferant und je Projekt.",
+        "Eine Zahl, deren Herleitung sich erklären lässt, wenn ein Auftraggeber oder Auditor danach fragt."
+      ],
+      "proof": {
+        "title": "So sieht das in Kundendaten aus",
+        "cases": [
+          "Viele Kunden kaufen Holz bei einem Lieferanten, der auch andere Warengruppen führt. Auf Lieferantenebene bleibt das Holz, FSC und PEFC eingeschlossen, verborgen. Auf Positionsebene wird es sichtbar.",
+          "Dasselbe Muster zeigt sich bei Baustoffhändlern, Tischlereibetrieben, Ausbaulieferanten und Großhändlern, die Plattenware neben Werkzeug und Befestigungsmaterial verkaufen."
+        ]
+      },
+      "faq": [
+        {
+          "question": "Wie wird berechnet, wie viel FSC-Holz ein Unternehmen eingekauft hat?",
+          "answer": "Auf jeder Rechnungsposition wird das Holz erkannt, anschließend werden die FSC- oder PEFC-zertifizierten Positionen herausgefiltert. Pearstop arbeitet auf Positionsebene, sodass die Summe nur Holz enthält, was der Lieferant sonst auch verkauft."
+        },
+        {
+          "question": "Wie wird zertifiziertes Holz in einer Ausschreibung nachgewiesen?",
+          "answer": "Der zertifizierte Anteil wird als Zahl angegeben, mit den Positionen dahinter. Pearstop liefert den Anteil je Lieferant und je Projekt, sodass die Zahl auch der Nachfrage des Auftraggebers nach dem Rechenweg standhält."
+        },
+        {
+          "question": "Wie lässt sich Holz von anderen Einkäufen beim selben Lieferanten trennen?",
+          "answer": "Jede Rechnungsposition wird danach klassifiziert, was gekauft wurde. Pearstop liest jede Position bis auf Artikelebene, sodass Holz beim selben Lieferanten von Türen, Sanitärausstattung und Befestigungsmaterial getrennt ist."
+        },
+        {
+          "question": "Bei welchen Lieferanten ist FSC- oder PEFC-Holz zu prüfen?",
+          "answer": "Bei jedem Lieferanten, der Holz verkauft, auch bei Händlern, bei denen Holz nur einen kleinen Teil der Rechnung ausmacht. Pearstop listet sie alle aus den Rechnungspositionen auf, mit dem Holzvolumen je Lieferant."
+        },
+        {
+          "question": "Welche Daten sind nötig, um den FSC-Anteil im Holzeinkauf zu berechnen?",
+          "answer": "Rechnungspositionen und Einkaufsdaten genügen. Pearstop liest sie, erkennt das Holz und liefert den zertifizierten Anteil je Lieferant und je Projekt."
+        }
+      ],
+      "cta": {
+        "title": "Stichprobe von Holzrechnungen senden",
+        "body": "Eine Stichprobe genügt. Das Holz kommt auf Positionsebene zurück, zertifiziert und nicht zertifiziert getrennt."
+      }
+    },
+    "hazardous": {
+      "meta": {
+        "title": "Gefahrstoffe im Einkauf: Was wurde gekauft, bei wem, und wohin ist es gegangen?",
+        "description": "Pearstop erkennt Gefahrstoffe Position für Position, auch bei Universalgroßhändlern, und liefert eine Liste je Lieferant und Standort für den Abgleich mit Sicherheitsdatenblättern (SDB)."
+      },
+      "hero": {
+        "eyebrow": "Gefahrstoffe",
+        "title": "Welche Mengen an Gefahrstoffen wurden eingekauft, bei welchen Lieferanten, und wohin sind sie gegangen?",
+        "lead": "Pearstop beantwortet das aus den Rechnungen und Einkaufsdaten, die das Unternehmen bereits hat."
+      },
+      "moments": [
+        {
+          "title": "Die Anfrage der Arbeitssicherheit",
+          "body": "Die Arbeitssicherheit (HSE) verlangt eine Liste aller im letzten Jahr gekauften Gefahrstoffe. Das meiste kam von einem Universalgroßhändler, vermischt mit Kabelbindern und Schrauben."
+        },
+        {
+          "title": "Die einzelne Position",
+          "body": "Eine Dose Lösungsmittel ist eine einzige Position auf einer großen Rechnung, und niemand hat diese Positionen durchgesehen."
+        },
+        {
+          "title": "Die unbekannten Produkte",
+          "body": "Für die bekannten Produkte liegen Sicherheitsdatenblätter (SDB) vor. Offen ist, welche Produkte nicht bekannt sind."
+        }
+      ],
+      "hard": "Die Antwort liegt auf Ebene der Rechnungsposition. Der Name eines Universalgroßhändlers zeigt nicht, dass er Lösungsmittel, Sprays und Kleber verkauft. Ein Lieferant liefert über viele Warengruppen hinweg, sodass die Gefahrstoffpositionen im Rest untergehen.",
+      "changes": [
+        "Gefahrstoffe Position für Position sichtbar, auch aus dem Einkauf bei Universalgroßhändlern.",
+        "Eine Liste je Lieferant und Standort, bereit für den Abgleich mit den Sicherheitsdatenblättern.",
+        "Dieselbe Liste, laufend aktualisiert, sobald neue Rechnungen eintreffen."
+      ],
+      "proof": {
+        "title": "So sieht das in Kundendaten aus",
+        "stats": [
+          {
+            "value": "500.000 €",
+            "caption": "an Gefahrstoffen blieben in einem Datensatz unerkannt, eingekauft bei einem Lieferanten, dessen Hauptsortiment ein anderes ist"
+          }
+        ],
+        "cases": [
+          "Gefahrstoffe stecken oft in Rechnungen von Universalgroßhändlern. Das Lesen jeder Position bringt sie zum Vorschein."
+        ]
+      },
+      "faq": [
+        {
+          "question": "Wie wird eine Liste aller eingekauften Gefahrstoffe erstellt?",
+          "answer": "Jede Rechnungsposition wird gelesen, die gefährlichen Produkte werden bestimmt und nach Lieferant und Standort gruppiert. Pearstop arbeitet Position für Position, auch bei Rechnungen von Universalgroßhändlern, auf denen ein Lösungsmittel neben Kabelbindern steht."
+        },
+        {
+          "question": "Wie lassen sich Chemikalien in Einkaufsdaten finden?",
+          "answer": "Die Daten werden auf Artikelebene klassifiziert. Ein Lieferantenname sagt wenig über das Sortiment, daher werden Chemikalien erst sichtbar, wenn jede Position erkannt ist. Pearstop erkennt jede Position und kennzeichnet die gefährlichen."
+        },
+        {
+          "question": "Wie werden Sicherheitsdatenblätter (SDB) mit den Einkäufen abgeglichen?",
+          "answer": "Ausgangspunkt ist eine vollständige Liste der gekauften Gefahrstoffe je Lieferant und Standort, die mit den vorhandenen SDB verglichen wird. Pearstop liefert diese Liste, sodass Produkte ohne Datenblatt auffallen."
+        },
+        {
+          "question": "Warum fehlen Gefahrstoffe in Auswertungen je Lieferant?",
+          "answer": "Eine Auswertung je Lieferant ordnet das gesamte Einkaufsvolumen der Hauptwarengruppe des Lieferanten zu. Ein Großhändler für Befestigungsmaterial erscheint als Befestigungsmaterial, und die Lösungsmittel darin verschwinden. Pearstop wertet auf Positionsebene aus, daher tauchen sie wieder auf."
+        },
+        {
+          "question": "Lassen sich Gefahrstoffe von einem Universalgroßhändler erkennen?",
+          "answer": "Ja. Pearstop liest und klassifiziert jede Rechnungsposition, sodass eine einzelne Dose Lösungsmittel auf einer großen Großhandelsrechnung wie jeder andere Artikel erkannt wird."
+        }
+      ],
+      "cta": {
+        "title": "Stichprobe von Großhandelsrechnungen senden",
+        "body": "Eine Stichprobe genügt. Die Gefahrstoffe kommen Position für Position zurück, je Lieferant und Standort."
+      }
+    },
+    "recycling": {
+      "meta": {
+        "title": "Recyclingquote und CO₂-Daten: Was wird eigentlich verarbeitet?",
+        "description": "Pearstop erkennt jeden Artikel auf Ebene der Rechnungsposition, sodass Recyclingquote und CO₂-Wert auf den Artikeln selbst beruhen und sich bis zu den zugehörigen Positionen zurückverfolgen lassen."
+      },
+      "hero": {
+        "eyebrow": "Recyclingquote und CO₂",
+        "title": "Wie hoch ist die Recyclingquote, und welche CO₂-Emissionen stehen dahinter?",
+        "lead": "Pearstop beantwortet das aus den Rechnungen und Einkaufsdaten, die das Unternehmen bereits hat."
+      },
+      "moments": [
+        {
+          "title": "Der Nachhaltigkeitsbericht",
+          "body": "Der Bericht benötigt eine Recyclingquote und einen CO₂-Wert. Beides stammt aus Summen je Material und ist damit eine Schätzung."
+        },
+        {
+          "title": "Die Kundenanfrage",
+          "body": "Ein Kunde fragt, welcher Anteil der eingesetzten Materialien recycelt wird und wie hoch der CO₂-Fußabdruck ist. Die Antwort ist ein Durchschnittswert."
+        },
+        {
+          "title": "Die Recyclingchance",
+          "body": "Niemand kann sagen, welche Artikel recycelbar oder wiederverwendbar wären, denn auf der Rechnungsposition steht „Materialmix“."
+        }
+      ],
+      "hard": "Recyclingquote und CO₂-Wert hängen am einzelnen Artikel. Rechnungspositionen beschreiben Artikel in Freitext, ein Lieferant liefert über viele Warengruppen hinweg, und der Lieferantenname zeigt nicht, woraus ein Artikel besteht. Ohne den Artikel ist jede Zahl eine Schätzung.",
+      "changes": [
+        "Jeder verarbeitete Artikel sichtbar, erkannt auf Positionsebene.",
+        "Zu jedem einzelnen Artikel CO₂-Emissionen und Recyclingweg zugeordnet.",
+        "Eine Recyclingquote und ein CO₂-Wert, die sich bis zu den zugehörigen Positionen zurückverfolgen lassen."
+      ],
+      "proof": {
+        "title": "Was die Positionsebene zeigt",
+        "cases": [
+          "Bei einem Baukunden behauptete der Bericht einer externen Unternehmensberatung Einsparungen von 12 Mio. €, ohne Plan und ohne Herleitung. Pearstop bereinigte das gesamte Einkaufsvolumen bis auf Positionsebene, sodass der Einkauf sah, wo zu verhandeln ist.",
+          "Ein Einsparhebel mit der Bezeichnung „Wasserpumpen“ entpuppte sich als Einkaufsvolumen bei einem Anbieter für Führungskräftetraining. Eine Warengruppenbezeichnung verbirgt, was ein Artikel ist. Die Position zeigt es."
+        ]
+      },
+      "faq": [
+        {
+          "question": "Wie wird eine Recyclingquote aus Einkaufsdaten berechnet?",
+          "answer": "Jeder gekaufte und verarbeitete Artikel wird erkannt, anschließend werden die Artikel summiert, die einen Recyclingweg durchlaufen. Pearstop liest jede Rechnungsposition bis auf Artikelebene, sodass die Quote auf Artikeln und den zugehörigen Positionen beruht."
+        },
+        {
+          "question": "Wie werden die CO₂-Emissionen der eingekauften Materialien ermittelt?",
+          "answer": "Jedem einzelnen Artikel wird ein Emissionsfaktor zugeordnet, danach wird summiert. Voraussetzung ist, dass jeder Artikel zuerst erkannt ist. Pearstop erkennt jede Position und liefert damit die Ausgangsliste für die CO₂-Berechnung."
+        },
+        {
+          "question": "Warum ist eine Recyclingquote oft nur eine Schätzung?",
+          "answer": "Weil die Daten bei Materialsummen oder Lieferantennamen enden. Ein Lieferant, der über viele Warengruppen hinweg liefert, verbirgt, woraus seine Artikel bestehen. Die Erkennung auf Artikelebene ersetzt die Schätzung durch eine Zählung."
+        },
+        {
+          "question": "Wie lassen sich Recyclingchancen in Einkaufsdaten finden?",
+          "answer": "Die gekauften Artikel werden aufgelistet, danach wird geprüft, welche einen Recycling- oder Wiederverwendungsweg haben. Pearstop erkennt jeden Artikel auf Positionsebene, sodass Chancen hinter Bezeichnungen wie „Materialmix“ sichtbar werden."
+        },
+        {
+          "question": "Welche Daten sind für CO₂-Berichte auf Artikelebene nötig?",
+          "answer": "Rechnungspositionen und Einkaufsdaten, gelesen bis auf den einzelnen Artikel. Pearstop extrahiert und klassifiziert sie, sodass jeder Artikel seinen eigenen Emissionsfaktor und Recyclingweg trägt."
+        }
+      ],
+      "cta": {
+        "title": "Stichprobe von Einkaufsdaten senden",
+        "body": "Eine Stichprobe genügt. Jeder Artikel kommt auf Positionsebene erkannt zurück."
+      }
+    }
   }
 }

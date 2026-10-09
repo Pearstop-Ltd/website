@@ -1,6 +1,7 @@
 import createMiddleware from "next-intl/middleware";
 import { NextRequest, NextResponse } from "next/server";
 import { routing } from "./i18n/routing";
+import { complianceKeyForPath } from "./lib/compliance-pages";
 
 const intlMiddleware = createMiddleware(routing);
 
@@ -39,7 +40,14 @@ export default function proxy(request: NextRequest) {
     }
   }
 
-  return intlMiddleware(request);
+  const response = intlMiddleware(request);
+
+  // next-intl's alternate-link header assumes one slug for every locale. The
+  // compliance pages have a slug per locale and emit the right hreflang set in
+  // their own metadata, so the header would only contradict it.
+  if (complianceKeyForPath(pathname)) response.headers.delete("link");
+
+  return response;
 }
 
 export const config = {
