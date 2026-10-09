@@ -10,6 +10,14 @@
   align-items: center;
 }
 
+.heroGridSolo {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.heroGridSolo .heroMain {
+  max-width: 880px;
+}
+
 .heroMain {
   display: flex;
   flex-direction: column;

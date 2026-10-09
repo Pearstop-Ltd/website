@@ -255,7 +255,7 @@ export function SolutionPage({ hero, sections, closingCTA, emitFaqSchema = true,
       ) : null}
 
       <Section background="white">
-        <div className={styles.heroGrid}>
+        <div className={hero.visual ? styles.heroGrid : `${styles.heroGrid} ${styles.heroGridSolo}`}>
           <div className={styles.heroMain}>
             <span className={styles.eyebrow}>{hero.eyebrow}</span>
             <h1 className={styles.title}>{hero.title}</h1>
