@@ -458,7 +458,8 @@
     "termsConditions": "Terms & Conditions",
     "linkedin": "LinkedIn",
     "youtube": "YouTube",
-    "instagram": "Instagram"
+    "instagram": "Instagram",
+    "cookieSettings": "Cookie settings"
   },
   "Common": {
     "bookDiscovery": "Talk to sales",
@@ -498,6 +499,13 @@
         "message": "This guide is written for the German market.",
         "cta": "View it in German"
       }
+    },
+    "consent": {
+      "label": "Cookie consent",
+      "message": "We’d like to use analytics cookies (Google Analytics and Microsoft Clarity) to see how the site is used and improve it. They only run if you accept.",
+      "privacyLink": "Privacy policy",
+      "accept": "Accept",
+      "decline": "Decline"
     }
   },
   "Home": {
@@ -3129,7 +3137,7 @@
       "title": "Privacy Policy",
       "lead": "How we collect, use, and protect your data, and the rights you have over it."
     },
-    "lastUpdated": "Last updated: 25 September 2026",
+    "lastUpdated": "Last updated: 18 October 2026",
     "sections": [
       {
         "title": "1. Who we are",
@@ -3148,7 +3156,7 @@
           "Newsletter sign-up: your email address and, if provided, your name.",
           "Sample classification requests: your name, email address, company name, an approximate spend range, a free-text description of what you're hoping to achieve, and any invoice files or line items you choose to upload.",
           "Case study downloads: your name, email address, and company.",
-          "Site usage: aggregate, privacy-respecting analytics on how the site is used (pages viewed, general location, device type). We do not use this data to identify you personally."
+          "Site usage: aggregate, cookie-free statistics on how the site is used (pages viewed, general location, device type), which can’t identify you. If you accept analytics cookies, we also collect more detailed usage data through Google Analytics and Microsoft Clarity – see section 8."
         ]
       },
       {
@@ -3160,7 +3168,7 @@
           "To respond to your enquiry or prepare a demo – legitimate interest, or performance of a contract you've asked us to prepare.",
           "To classify a sample you send us – legitimate interest in delivering the service you requested, or your consent.",
           "To send you the newsletter or case studies – your consent, which you can withdraw at any time.",
-          "To understand and improve the site – our legitimate interest in running it well."
+          "To understand and improve the site – our legitimate interest in running it well, for cookie-free statistics, and your consent, for Google Analytics and Microsoft Clarity."
         ]
       },
       {
@@ -3171,10 +3179,11 @@
         "list": [
           "Hosting and infrastructure providers that run the website and store any files you upload.",
           "Email and workflow tools we use to route enquiries to the right person on our team.",
-          "The AI/ML systems we use to classify submitted invoice data, run on EU-hosted infrastructure."
+          "The AI/ML systems we use to classify submitted invoice data, run on EU-hosted infrastructure.",
+          "Google and Microsoft, as analytics providers – only if you accept analytics cookies (see section 8)."
         ],
         "paragraphsAfter": [
-          "All data is stored and processed on servers in the European Union.",
+          "Apart from the analytics data described in section 8, all data is stored and processed on servers in the European Union.",
           "Each of these providers is bound by contract to protect your data and use it only for the purpose we specify."
         ]
       },
@@ -3184,7 +3193,8 @@
         "list": [
           "Sample invoice files and the data submitted alongside them: deleted automatically after 90 days, or sooner if you ask us to, unless you ask us in writing to keep them for an ongoing engagement.",
           "Contact form and newsletter data: kept until you unsubscribe or ask us to delete it, or for as long as we have a legitimate reason to stay in touch, whichever is shorter.",
-          "Aggregate analytics: retained only in anonymised or aggregated form and cannot be used to identify you."
+          "Cookie-free analytics: kept only in aggregated form that cannot be used to identify you.",
+          "Google Analytics and Microsoft Clarity data: deleted automatically by those providers after no more than 14 months."
         ]
       },
       {
@@ -3214,7 +3224,17 @@
       {
         "title": "8. Cookies and analytics",
         "paragraphs": [
-          "We use privacy-respecting analytics to understand how the site is used in aggregate. We don't use third-party advertising trackers, and we don't sell or share analytics data with anyone outside Pearstop."
+          "We use three analytics tools to understand how the site is used, so we can improve it:"
+        ],
+        "list": [
+          "Vercel Web Analytics, provided by our hosting provider. It sets no cookies and records only aggregate data: pages viewed, referring site, country and device type. It runs for every visitor.",
+          "Google Analytics 4, provided by Google Ireland Limited. It sets first-party cookies (named _ga and _ga_<ID>) to tell visits apart, and records the pages you view, how you arrived at the site, your approximate location, and your device and browser type. Google Analytics does not log or store IP addresses.",
+          "Microsoft Clarity, provided by Microsoft Ireland Operations Limited. It sets cookies (such as _clck and _clsk) and records how you interact with pages – clicks, scrolling and mouse movement – to produce heatmaps and session replays. Text you type into form fields is masked and not recorded."
+        ],
+        "paragraphsAfter": [
+          "Google Analytics and Microsoft Clarity load only after you click “Accept” in the cookie banner. If you click “Decline”, or don’t make a choice, they don’t run and set no cookies. You can change your choice at any time with the “Cookie settings” link at the bottom of every page; if you withdraw consent, we delete their cookies from your browser.",
+          "Google and Microsoft process this data on our behalf and may transfer it outside the EU, including to the United States. Those transfers are covered by the EU-US Data Privacy Framework and the European Commission’s standard contractual clauses.",
+          "We don’t use advertising cookies or remarketing, we don’t use analytics data to identify you, and we never sell it."
         ]
       },
       {

@@ -458,7 +458,8 @@
     "termsConditions": "Algemene voorwaarden",
     "linkedin": "LinkedIn",
     "youtube": "YouTube",
-    "instagram": "Instagram"
+    "instagram": "Instagram",
+    "cookieSettings": "Cookie-instellingen"
   },
   "Common": {
     "bookDiscovery": "Praat met sales",
@@ -498,6 +499,13 @@
         "message": "Deze gids is geschreven voor de Duitse markt.",
         "cta": "Bekijk in het Duits"
       }
+    },
+    "consent": {
+      "label": "Cookietoestemming",
+      "message": "Wij willen graag analytische cookies (Google Analytics en Microsoft Clarity) gebruiken om te zien hoe de site wordt gebruikt en hem te verbeteren. Ze worden alleen geladen als u akkoord gaat.",
+      "privacyLink": "Privacybeleid",
+      "accept": "Accepteren",
+      "decline": "Weigeren"
     }
   },
   "About": {
@@ -2756,7 +2764,7 @@
       "title": "Privacybeleid",
       "lead": "Hoe we uw gegevens verzamelen, gebruiken en beschermen, en welke rechten u daarover heeft."
     },
-    "lastUpdated": "Laatst bijgewerkt: 17 september 2026",
+    "lastUpdated": "Laatst bijgewerkt: 18 oktober 2026",
     "sections": [
       {
         "title": "1. Wie wij zijn",
@@ -2775,7 +2783,7 @@
           "Nieuwsbriefaanmelding: uw e-mailadres en, indien opgegeven, uw naam.",
           "Aanvragen voor steekproefclassificatie: uw naam, e-mailadres, bedrijfsnaam, een geschatte spend-range, een vrije tekstomschrijving van wat u hoopt te bereiken, en eventuele factuurbestanden of regels die u kiest te uploaden.",
           "Downloads van case studies: uw naam, e-mailadres en bedrijf.",
-          "Sitegebruik: geaggregeerde, privacyvriendelijke analyses over hoe de site wordt gebruikt (bekeken pagina's, algemene locatie, apparaattype). Wij gebruiken deze data niet om u persoonlijk te identificeren."
+          "Sitegebruik: geaggregeerde, cookievrije statistieken over hoe de site wordt gebruikt (bekeken pagina's, algemene locatie, apparaattype), waarmee u niet te identificeren bent. Als u analytische cookies accepteert, verzamelen wij via Google Analytics en Microsoft Clarity ook gedetailleerdere gebruiksgegevens – zie paragraaf 8."
         ]
       },
       {
@@ -2787,7 +2795,7 @@
           "Om te reageren op uw aanvraag of een demo voor te bereiden - gerechtvaardigd belang, of uitvoering van een overeenkomst die u ons heeft gevraagd voor te bereiden.",
           "Om een steekproef te classificeren die u ons stuurt - gerechtvaardigd belang bij het leveren van de door u gevraagde dienst, of uw toestemming.",
           "Om u de nieuwsbrief of case studies te sturen - uw toestemming, die u op elk moment kunt intrekken.",
-          "Om de site te begrijpen en te verbeteren - ons gerechtvaardigd belang bij een goede werking ervan."
+          "Om de site te begrijpen en te verbeteren – ons gerechtvaardigd belang bij een goed werkende site, voor cookievrije statistieken, en uw toestemming, voor Google Analytics en Microsoft Clarity."
         ]
       },
       {
@@ -2798,10 +2806,11 @@
         "list": [
           "Hosting- en infrastructuurleveranciers die de website draaien en eventuele geüploade bestanden opslaan.",
           "E-mail- en workflowtools die wij gebruiken om aanvragen naar de juiste persoon in ons team te routeren.",
-          "De AI/ML-systemen die wij gebruiken om ingediende factuurdata te classificeren, draaiend op EU-gehoste of gelijkwaardig beveiligde infrastructuur."
+          "De AI/ML-systemen die wij gebruiken om ingediende factuurdata te classificeren, draaiend op EU-gehoste of gelijkwaardig beveiligde infrastructuur.",
+          "Google en Microsoft als analyseleveranciers – alleen als u analytische cookies accepteert (zie paragraaf 8)."
         ],
         "paragraphsAfter": [
-          "Alle data wordt opgeslagen en verwerkt op servers binnen de Europese Unie.",
+          "Met uitzondering van de analysegegevens uit paragraaf 8 wordt alle data opgeslagen en verwerkt op servers binnen de Europese Unie.",
           "Elk van deze leveranciers is contractueel verplicht uw gegevens te beschermen en alleen te gebruiken voor het door ons opgegeven doel."
         ]
       },
@@ -2811,7 +2820,8 @@
         "list": [
           "Steekproef-factuurbestanden en de daarbij ingediende data: alleen bewaard zolang nodig om de door u gevraagde classificatie te voltooien en op te volgen, en daarna verwijderd - tenzij u ons vraagt deze te bewaren voor een lopend traject.",
           "Contactformulier- en nieuwsbriefdata: bewaard totdat u zich afmeldt of ons vraagt deze te verwijderen, of zolang wij een gerechtvaardigde reden hebben om contact te houden, welke van beide korter is.",
-          "Geaggregeerde analyses: alleen bewaard in geanonimiseerde of geaggregeerde vorm en kunnen niet worden gebruikt om u te identificeren."
+          "Cookievrije analyses: alleen bewaard in geaggregeerde vorm waarmee u niet te identificeren bent.",
+          "Gegevens van Google Analytics en Microsoft Clarity: na maximaal 14 maanden automatisch verwijderd door deze leveranciers."
         ]
       },
       {
@@ -2841,7 +2851,17 @@
       {
         "title": "8. Cookies en analyses",
         "paragraphs": [
-          "Wij gebruiken privacyvriendelijke analyses om geaggregeerd te begrijpen hoe de site wordt gebruikt. Wij gebruiken geen advertentietrackers van derden, en wij verkopen of delen analysedata niet met wie dan ook buiten Pearstop."
+          "Wij gebruiken drie analysetools om te begrijpen hoe de site wordt gebruikt, zodat wij hem kunnen verbeteren:"
+        ],
+        "list": [
+          "Vercel Web Analytics, van onze hostingprovider. Deze tool plaatst geen cookies en registreert alleen geaggregeerde gegevens: bekeken pagina's, verwijzende website, land en apparaattype. Hij draait voor iedere bezoeker.",
+          "Google Analytics 4, van Google Ireland Limited. Deze tool plaatst first-party cookies (_ga en _ga_<ID>) om bezoeken van elkaar te onderscheiden, en registreert welke pagina's u bekijkt, hoe u op de site bent gekomen, uw globale locatie en uw apparaat- en browsertype. Google Analytics registreert of bewaart geen IP-adressen.",
+          "Microsoft Clarity, van Microsoft Ireland Operations Limited. Deze tool plaatst cookies (zoals _clck en _clsk) en registreert hoe u met pagina's omgaat – klikken, scrollen en muisbewegingen – voor heatmaps en sessie-opnames. Tekst die u in formuliervelden typt, wordt afgeschermd en niet opgenomen."
+        ],
+        "paragraphsAfter": [
+          "Google Analytics en Microsoft Clarity worden pas geladen nadat u in de cookiebanner op ‘Accepteren’ klikt. Klikt u op ‘Weigeren’, of maakt u geen keuze, dan draaien ze niet en plaatsen ze geen cookies. U kunt uw keuze altijd wijzigen via de link ‘Cookie-instellingen’ onderaan elke pagina; trekt u uw toestemming in, dan verwijderen wij hun cookies uit uw browser.",
+          "Google en Microsoft verwerken deze gegevens in onze opdracht en kunnen ze doorgeven naar landen buiten de EU, onder meer de Verenigde Staten. Die doorgifte valt onder het EU-VS-gegevensprivacykader (Data Privacy Framework) en de standaardcontractbepalingen van de Europese Commissie.",
+          "Wij gebruiken geen advertentiecookies of remarketing, wij gebruiken analysegegevens niet om u te identificeren, en wij verkopen ze nooit."
         ]
       },
       {

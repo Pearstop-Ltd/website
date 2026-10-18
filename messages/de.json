@@ -458,7 +458,8 @@
     "termsConditions": "Allgemeine Geschäftsbedingungen",
     "linkedin": "LinkedIn",
     "youtube": "YouTube",
-    "instagram": "Instagram"
+    "instagram": "Instagram",
+    "cookieSettings": "Cookie-Einstellungen"
   },
   "Common": {
     "bookDiscovery": "Mit Vertrieb sprechen",
@@ -498,6 +499,13 @@
         "message": "Dieser Leitfaden richtet sich an den deutschen Markt.",
         "cta": "Auf Deutsch ansehen"
       }
+    },
+    "consent": {
+      "label": "Cookie-Einwilligung",
+      "message": "Wir möchten Analyse-Cookies (Google Analytics und Microsoft Clarity) verwenden, um zu verstehen, wie die Website genutzt wird, und sie zu verbessern. Sie werden nur geladen, wenn Sie zustimmen.",
+      "privacyLink": "Datenschutzerklärung",
+      "accept": "Akzeptieren",
+      "decline": "Ablehnen"
     }
   },
   "About": {
@@ -2892,7 +2900,7 @@
       "title": "Datenschutzerklärung",
       "lead": "Wie wir Ihre Daten erheben, nutzen und schützen, und welche Rechte Sie darüber haben."
     },
-    "lastUpdated": "Zuletzt aktualisiert: 17. September 2026",
+    "lastUpdated": "Zuletzt aktualisiert: 18. Oktober 2026",
     "sections": [
       {
         "title": "1. Wer wir sind",
@@ -2911,7 +2919,7 @@
           "Newsletter-Anmeldung: Ihre E-Mail-Adresse und, falls angegeben, Ihr Name.",
           "Anfragen zur Musterklassifizierung: Ihr Name, Ihre E-Mail-Adresse, Ihr Firmenname, eine ungefähre Spend-Größenordnung, eine Freitextbeschreibung dessen, was Sie erreichen möchten, sowie alle Rechnungsdateien oder Positionen, die Sie hochladen möchten.",
           "Downloads von Case Studies: Ihr Name, Ihre E-Mail-Adresse und Ihr Unternehmen.",
-          "Website-Nutzung: aggregierte, datenschutzfreundliche Analysen dazu, wie die Website genutzt wird (aufgerufene Seiten, ungefährer Standort, Gerätetyp). Wir nutzen diese Daten nicht, um Sie persönlich zu identifizieren."
+          "Website-Nutzung: aggregierte, cookiefreie Statistiken dazu, wie die Website genutzt wird (aufgerufene Seiten, ungefährer Standort, Gerätetyp), mit denen Sie nicht identifiziert werden können. Wenn Sie Analyse-Cookies akzeptieren, erheben wir über Google Analytics und Microsoft Clarity zusätzlich detailliertere Nutzungsdaten – siehe Abschnitt 8."
         ]
       },
       {
@@ -2923,7 +2931,7 @@
           "Um auf Ihre Anfrage zu antworten oder eine Demo vorzubereiten - berechtigtes Interesse, oder Erfüllung eines Vertrags, um dessen Vorbereitung Sie uns gebeten haben.",
           "Um ein von Ihnen gesendetes Sample zu klassifizieren - berechtigtes Interesse an der Erbringung der von Ihnen angeforderten Leistung, oder Ihre Einwilligung.",
           "Um Ihnen den Newsletter oder Case Studies zu senden - Ihre Einwilligung, die Sie jederzeit widerrufen können.",
-          "Um die Website zu verstehen und zu verbessern - unser berechtigtes Interesse, sie gut zu betreiben."
+          "Um die Website zu verstehen und zu verbessern – unser berechtigtes Interesse an einem gut funktionierenden Angebot, für cookiefreie Statistiken, und Ihre Einwilligung, für Google Analytics und Microsoft Clarity."
         ]
       },
       {
@@ -2934,10 +2942,11 @@
         "list": [
           "Hosting- und Infrastrukturanbieter, die die Website betreiben und von Ihnen hochgeladene Dateien speichern.",
           "E-Mail- und Workflow-Tools, die wir nutzen, um Anfragen an die richtige Person in unserem Team weiterzuleiten.",
-          "Die KI/ML-Systeme, die wir zur Klassifizierung eingereichter Rechnungsdaten nutzen, betrieben auf EU-gehosteter oder gleichwertig geschützter Infrastruktur."
+          "Die KI/ML-Systeme, die wir zur Klassifizierung eingereichter Rechnungsdaten nutzen, betrieben auf EU-gehosteter oder gleichwertig geschützter Infrastruktur.",
+          "Google und Microsoft als Analyseanbieter – nur wenn Sie Analyse-Cookies akzeptieren (siehe Abschnitt 8)."
         ],
         "paragraphsAfter": [
-          "Alle Daten werden auf Servern in der Europäischen Union gespeichert und verarbeitet.",
+          "Mit Ausnahme der in Abschnitt 8 beschriebenen Analysedaten werden alle Daten auf Servern in der Europäischen Union gespeichert und verarbeitet.",
           "Jeder dieser Anbieter ist vertraglich verpflichtet, Ihre Daten zu schützen und nur für den von uns festgelegten Zweck zu verwenden."
         ]
       },
@@ -2947,7 +2956,8 @@
         "list": [
           "Rechnungs-Sample-Dateien und die dazu eingereichten Daten: nur solange aufbewahrt, wie es zur Durchführung und Nachverfolgung der von Ihnen angeforderten Klassifizierung nötig ist, dann gelöscht - außer Sie bitten uns, sie für ein laufendes Mandat aufzubewahren.",
           "Kontaktformular- und Newsletter-Daten: aufbewahrt, bis Sie sich abmelden oder uns um Löschung bitten, oder solange wir einen berechtigten Grund haben, in Kontakt zu bleiben - je nachdem, was kürzer ist.",
-          "Aggregierte Analysen: nur in anonymisierter oder aggregierter Form aufbewahrt und können nicht zu Ihrer Identifizierung verwendet werden."
+          "Cookiefreie Analysen: nur in aggregierter Form aufbewahrt, mit der Sie nicht identifiziert werden können.",
+          "Daten aus Google Analytics und Microsoft Clarity: werden von diesen Anbietern nach spätestens 14 Monaten automatisch gelöscht."
         ]
       },
       {
@@ -2977,7 +2987,17 @@
       {
         "title": "8. Cookies und Analysen",
         "paragraphs": [
-          "Wir nutzen datenschutzfreundliche Analysen, um zu verstehen, wie die Website aggregiert genutzt wird. Wir verwenden keine Werbe-Tracker von Drittanbietern und verkaufen oder teilen keine Analysedaten mit jemandem außerhalb von Pearstop."
+          "Wir nutzen drei Analysetools, um zu verstehen, wie die Website genutzt wird, und sie zu verbessern:"
+        ],
+        "list": [
+          "Vercel Web Analytics, bereitgestellt von unserem Hosting-Anbieter. Es setzt keine Cookies und erfasst nur aggregierte Daten: aufgerufene Seiten, verweisende Website, Land und Gerätetyp. Es läuft für alle Besucher.",
+          "Google Analytics 4, bereitgestellt von Google Ireland Limited. Es setzt eigene Cookies (_ga und _ga_<ID>), um Besuche voneinander zu unterscheiden, und erfasst, welche Seiten Sie aufrufen, wie Sie auf die Website gekommen sind, Ihren ungefähren Standort sowie Ihren Geräte- und Browsertyp. Google Analytics protokolliert oder speichert keine IP-Adressen.",
+          "Microsoft Clarity, bereitgestellt von Microsoft Ireland Operations Limited. Es setzt Cookies (etwa _clck und _clsk) und erfasst, wie Sie mit Seiten interagieren – Klicks, Scrollen und Mausbewegungen –, um Heatmaps und Sitzungsaufzeichnungen zu erstellen. Text, den Sie in Formularfelder eingeben, wird maskiert und nicht aufgezeichnet."
+        ],
+        "paragraphsAfter": [
+          "Google Analytics und Microsoft Clarity werden erst geladen, nachdem Sie im Cookie-Banner auf „Akzeptieren“ geklickt haben. Klicken Sie auf „Ablehnen“ oder treffen Sie keine Auswahl, laufen sie nicht und setzen keine Cookies. Sie können Ihre Auswahl jederzeit über den Link „Cookie-Einstellungen“ unten auf jeder Seite ändern; wenn Sie Ihre Einwilligung widerrufen, löschen wir deren Cookies aus Ihrem Browser.",
+          "Google und Microsoft verarbeiten diese Daten in unserem Auftrag und können sie in Länder außerhalb der EU übermitteln, auch in die USA. Diese Übermittlungen stützen sich auf das EU-US Data Privacy Framework und die Standardvertragsklauseln der Europäischen Kommission.",
+          "Wir verwenden keine Werbe-Cookies und kein Remarketing, wir nutzen Analysedaten nicht, um Sie zu identifizieren, und wir verkaufen sie niemals."
         ]
       },
       {

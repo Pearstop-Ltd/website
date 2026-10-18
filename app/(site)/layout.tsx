@@ -4,6 +4,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { LatestBlogPosts } from "@/components/latest-blog-posts";
+import { AnalyticsConsent } from "@/components/analytics-consent";
 import enMessages from "../../messages/en.json";
 import { siteConfig } from "@/lib/site";
 import { inter } from "@/lib/fonts";
@@ -27,6 +28,7 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
           <main>{children}</main>
           <LatestBlogPosts locale="en" />
           <SiteFooter />
+          <AnalyticsConsent />
           <Analytics />
         </NextIntlClientProvider>
       </body>

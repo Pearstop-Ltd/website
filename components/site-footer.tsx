@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
+import { CookieSettingsButton } from "@/components/analytics-consent";
 import { footerCompanyLinks, footerSolutionLinks, siteConfig } from "@/lib/site";
 
 export function SiteFooter() {
@@ -108,6 +109,8 @@ export function SiteFooter() {
             <Link href={`${prefix}/privacy`}>{t("privacyPolicy")}</Link>
             <span className="ft-sep">·</span>
             <Link href={`${prefix}/terms-and-conditions`}>{t("termsConditions")}</Link>
+            <span className="ft-sep">·</span>
+            <CookieSettingsButton label={t("cookieSettings")} />
           </div>
           <img className="ft-fav" src={siteConfig.assets.logoInverse} alt="" aria-hidden="true" />
         </div>

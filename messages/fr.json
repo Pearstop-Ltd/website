@@ -458,7 +458,8 @@
     "termsConditions": "Conditions générales",
     "linkedin": "LinkedIn",
     "youtube": "YouTube",
-    "instagram": "Instagram"
+    "instagram": "Instagram",
+    "cookieSettings": "Paramètres des cookies"
   },
   "Common": {
     "bookDiscovery": "Parlez à un commercial",
@@ -498,6 +499,13 @@
         "message": "Ce guide est destiné au marché allemand.",
         "cta": "Afficher en allemand"
       }
+    },
+    "consent": {
+      "label": "Consentement aux cookies",
+      "message": "Nous souhaitons utiliser des cookies de mesure d'audience (Google Analytics et Microsoft Clarity) pour comprendre comment le site est utilisé et l'améliorer. Ils ne sont activés que si vous les acceptez.",
+      "privacyLink": "Politique de confidentialité",
+      "accept": "Accepter",
+      "decline": "Refuser"
     }
   },
   "About": {
@@ -2892,7 +2900,7 @@
       "title": "Politique de confidentialité",
       "lead": "Comment nous collectons, utilisons et protégeons vos données, et les droits dont vous disposez sur celles-ci."
     },
-    "lastUpdated": "Dernière mise à jour : 17 septembre 2026",
+    "lastUpdated": "Dernière mise à jour : 18 octobre 2026",
     "sections": [
       {
         "title": "1. Qui nous sommes",
@@ -2911,7 +2919,7 @@
           "Inscription à la newsletter : votre adresse e-mail et, si fourni, votre nom.",
           "Demandes de classification d'échantillon : votre nom, adresse e-mail, nom d'entreprise, une fourchette de dépenses approximative, une description libre de ce que vous espérez accomplir, et tout fichier de facture ou ligne que vous choisissez de téléverser.",
           "Téléchargements d'études de cas : votre nom, adresse e-mail, et entreprise.",
-          "Utilisation du site : analyses agrégées respectueuses de la vie privée sur l'utilisation du site (pages consultées, localisation générale, type d'appareil). Nous n'utilisons pas ces données pour vous identifier personnellement."
+          "Utilisation du site : statistiques agrégées, sans cookies, sur l'utilisation du site (pages consultées, localisation générale, type d'appareil), qui ne permettent pas de vous identifier. Si vous acceptez les cookies de mesure d'audience, nous collectons aussi des données d'utilisation plus détaillées via Google Analytics et Microsoft Clarity – voir la section 8."
         ]
       },
       {
@@ -2923,7 +2931,7 @@
           "Pour répondre à votre demande ou préparer une démonstration – intérêt légitime, ou exécution d'un contrat que vous nous avez demandé de préparer.",
           "Pour classifier un échantillon que vous nous envoyez – intérêt légitime à fournir le service demandé, ou votre consentement.",
           "Pour vous envoyer la newsletter ou les études de cas – votre consentement, que vous pouvez retirer à tout moment.",
-          "Pour comprendre et améliorer le site – notre intérêt légitime à bien le gérer."
+          "Pour comprendre et améliorer le site – notre intérêt légitime à bien le faire fonctionner, pour les statistiques sans cookies, et votre consentement, pour Google Analytics et Microsoft Clarity."
         ]
       },
       {
@@ -2934,10 +2942,11 @@
         "list": [
           "Les fournisseurs d'hébergement et d'infrastructure qui font fonctionner le site et stockent les fichiers que vous téléversez.",
           "Les outils d'e-mail et de flux de travail que nous utilisons pour acheminer les demandes vers la bonne personne de notre équipe.",
-          "Les systèmes IA/ML que nous utilisons pour classifier les données de factures soumises, exécutés sur une infrastructure hébergée dans l'UE ou bénéficiant de garanties équivalentes."
+          "Les systèmes IA/ML que nous utilisons pour classifier les données de factures soumises, exécutés sur une infrastructure hébergée dans l'UE ou bénéficiant de garanties équivalentes.",
+          "Google et Microsoft, en tant que fournisseurs de mesure d'audience – uniquement si vous acceptez les cookies correspondants (voir la section 8)."
         ],
         "paragraphsAfter": [
-          "Toutes les données sont stockées et traitées sur des serveurs situés dans l'Union européenne.",
+          "À l'exception des données de mesure d'audience décrites à la section 8, toutes les données sont stockées et traitées sur des serveurs situés dans l'Union européenne.",
           "Chacun de ces prestataires est contractuellement tenu de protéger vos données et de ne les utiliser que dans le but que nous spécifions."
         ]
       },
@@ -2947,7 +2956,8 @@
         "list": [
           "Fichiers de factures échantillons et données soumises avec eux : conservés uniquement le temps nécessaire pour effectuer et suivre la classification que vous avez demandée, puis supprimés – sauf si vous nous demandez de les conserver pour une mission en cours.",
           "Données du formulaire de contact et de la newsletter : conservées jusqu'à ce que vous vous désabonniez ou nous demandiez de les supprimer, ou tant que nous avons une raison légitime de rester en contact, selon la durée la plus courte.",
-          "Analyses agrégées : conservées uniquement sous forme anonymisée ou agrégée et ne peuvent pas être utilisées pour vous identifier."
+          "Mesure d'audience sans cookies : conservée uniquement sous forme agrégée, qui ne permet pas de vous identifier.",
+          "Données Google Analytics et Microsoft Clarity : supprimées automatiquement par ces fournisseurs au bout de 14 mois au maximum."
         ]
       },
       {
@@ -2977,7 +2987,17 @@
       {
         "title": "8. Cookies et analyses",
         "paragraphs": [
-          "Nous utilisons des analyses respectueuses de la vie privée pour comprendre l'utilisation agrégée du site. Nous n'utilisons pas de traceurs publicitaires tiers, et nous ne vendons ni ne partageons de données d'analyse avec quiconque en dehors de Pearstop."
+          "Nous utilisons trois outils de mesure d'audience pour comprendre comment le site est utilisé et l'améliorer :"
+        ],
+        "list": [
+          "Vercel Web Analytics, fourni par notre hébergeur. Il ne dépose aucun cookie et n'enregistre que des données agrégées : pages consultées, site d'origine, pays et type d'appareil. Il fonctionne pour tous les visiteurs.",
+          "Google Analytics 4, fourni par Google Ireland Limited. Il dépose des cookies internes (_ga et _ga_<ID>) pour distinguer les visites, et enregistre les pages que vous consultez, la façon dont vous êtes arrivé sur le site, votre localisation approximative ainsi que votre type d'appareil et de navigateur. Google Analytics n'enregistre ni ne conserve les adresses IP.",
+          "Microsoft Clarity, fourni par Microsoft Ireland Operations Limited. Il dépose des cookies (comme _clck et _clsk) et enregistre vos interactions avec les pages – clics, défilement et mouvements de souris – pour produire des cartes de chaleur et des enregistrements de session. Le texte saisi dans les champs de formulaire est masqué et n'est pas enregistré."
+        ],
+        "paragraphsAfter": [
+          "Google Analytics et Microsoft Clarity ne se chargent qu'après que vous avez cliqué sur « Accepter » dans le bandeau cookies. Si vous cliquez sur « Refuser », ou si vous ne faites aucun choix, ils ne fonctionnent pas et ne déposent aucun cookie. Vous pouvez modifier votre choix à tout moment via le lien « Paramètres des cookies » en bas de chaque page ; si vous retirez votre consentement, nous supprimons leurs cookies de votre navigateur.",
+          "Google et Microsoft traitent ces données pour notre compte et peuvent les transférer hors de l'UE, notamment vers les États-Unis. Ces transferts sont encadrés par le cadre de protection des données UE–États-Unis (Data Privacy Framework) et les clauses contractuelles types de la Commission européenne.",
+          "Nous n'utilisons ni cookies publicitaires ni remarketing, nous n'utilisons pas les données de mesure d'audience pour vous identifier, et nous ne les vendons jamais."
         ]
       },
       {

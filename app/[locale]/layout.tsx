@@ -7,6 +7,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { LatestBlogPosts } from "@/components/latest-blog-posts";
+import { AnalyticsConsent } from "@/components/analytics-consent";
 import { routing } from "@/i18n/routing";
 import { siteConfig } from "@/lib/site";
 import { inter } from "@/lib/fonts";
@@ -132,6 +133,7 @@ export default async function LocaleLayout({
           <main>{children}</main>
           <LatestBlogPosts locale={locale} />
           <SiteFooter />
+          <AnalyticsConsent />
         </NextIntlClientProvider>
         <Analytics />
       </body>
