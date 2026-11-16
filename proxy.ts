@@ -2,6 +2,7 @@ import createMiddleware from "next-intl/middleware";
 import { NextRequest, NextResponse } from "next/server";
 import { routing } from "./i18n/routing";
 import { complianceKeyForPath } from "./lib/compliance-pages";
+import { COUNTRY_COOKIE } from "./lib/currency";
 
 const intlMiddleware = createMiddleware(routing);
 
@@ -17,8 +18,20 @@ const COUNTRY_LOCALE: Record<string, string> = {
   CH: "de",
 };
 
+// Hand the visitor's country to the browser so pages showing prices in the
+// visitor's currency (see lib/currency.ts) can stay statically cached
+// instead of reading the geo header at render time. Only written when it
+// changes, so repeat visits carry no Set-Cookie.
+function withCountryCookie(request: NextRequest, response: NextResponse, country: string | null) {
+  if (country && request.cookies.get(COUNTRY_COOKIE)?.value !== country) {
+    response.cookies.set(COUNTRY_COOKIE, country, { path: "/", maxAge: 60 * 60 * 24 * 7, sameSite: "lax" });
+  }
+  return response;
+}
+
 export default function proxy(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
+  const country = request.headers.get("x-vercel-ip-country")?.toUpperCase() ?? null;
   const hasLocalePrefix = routing.locales.some(
     (locale) => pathname === `/${locale}` || pathname.startsWith(`/${locale}/`)
   );
@@ -29,14 +42,13 @@ export default function proxy(request: NextRequest) {
   // (a visitor or link explicitly asked for that language), and never
   // override someone who has already picked a language on a prior visit.
   if (!hasLocalePrefix && !hasStoredPreference) {
-    const country = request.headers.get("x-vercel-ip-country");
-    const geoLocale = country ? COUNTRY_LOCALE[country.toUpperCase()] : undefined;
+    const geoLocale = country ? COUNTRY_LOCALE[country] : undefined;
     if (geoLocale) {
       const url = request.nextUrl.clone();
       url.pathname = `/${geoLocale}${pathname === "/" ? "" : pathname}`;
       const response = NextResponse.redirect(url);
       response.cookies.set("NEXT_LOCALE", geoLocale, { path: "/", maxAge: 60 * 60 * 24 * 365 });
-      return response;
+      return withCountryCookie(request, response, country);
     }
   }
 
@@ -47,7 +59,7 @@ export default function proxy(request: NextRequest) {
   // their own metadata, so the header would only contradict it.
   if (complianceKeyForPath(pathname)) response.headers.delete("link");
 
-  return response;
+  return withCountryCookie(request, response, country);
 }
 
 export const config = {

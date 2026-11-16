@@ -5,17 +5,10 @@ import { PageHero } from "@/components/content";
 import { FaqSchema } from "@/components/blog";
 import { FaqSection } from "@/components/site/FaqSection";
 import { FaqHighlight } from "@/components/site/FaqHighlight";
-import { LabelledOutputPanel } from "@/components/site/LabelledOutputPanel";
+import { VisitorCurrencyLabelledOutputPanel } from "@/components/site/VisitorCurrencyLabelledOutputPanel";
 import { SampleRequestModal } from "@/components/sample-request-modal";
 import { alternateLanguages, siteConfig } from "@/lib/site";
-import {
-  TAXONOMY_EDGES,
-  taxonomyNodesForCurrency,
-  tissueSuppliersForCurrency,
-  tissueLineItemsForCurrency,
-  tissueDetailForCurrency,
-} from "@/lib/taxonomy-demo-data";
-import { getRequestCurrency } from "@/lib/currency";
+import { TAXONOMY_EDGES } from "@/lib/taxonomy-demo-data";
 
 const organizationSchema = {
   "@context": "https://schema.org",
@@ -179,7 +172,6 @@ const faqItems = [
 ];
 
 export default async function HomePage() {
-  const currency = await getRequestCurrency();
 
   return (
     <>
@@ -342,23 +334,19 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <LabelledOutputPanel
+      <VisitorCurrencyLabelledOutputPanel
         contained
         background="soft"
         eyebrow="Every line, labelled"
         title="The same label on every supplier's line"
         lead="Each line gets a UNSPSC label as it is read. Toilet tissue from four suppliers ends up in one place, so you can compare it one-to-one."
         columns={["Segment", "Family", "Class", "Commodity"]}
-        nodes={taxonomyNodesForCurrency(currency)}
         edges={TAXONOMY_EDGES}
         breakdownLabel="Breakdown"
         name="Toilet tissue"
-        detail={tissueDetailForCurrency(currency)}
         suppliersLabel="Suppliers"
-        suppliers={tissueSuppliersForCurrency(currency)}
         lineItemsLabel="Line items"
         columnLabels={{ description: "Description", qty: "Qty", unit: "Unit", total: "Total" }}
-        lineItems={tissueLineItemsForCurrency(currency)}
       />
 
       <section className="section-soft" aria-labelledby="demo-heading">

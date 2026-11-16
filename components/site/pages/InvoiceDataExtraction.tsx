@@ -1,19 +1,10 @@
 import { SolutionPage, type SolutionSection } from "../templates/SolutionPage";
 import { Section } from "../internal/Section";
 import { SectionHeader } from "../SectionHeader";
-import { TaxonomyTree } from "../TaxonomyTree";
-import { BreakdownPanel } from "../BreakdownPanel";
 import { StatusChip } from "../DataTable";
 import { SampleRequestModal } from "@/components/sample-request-modal";
 import { siteConfig } from "@/lib/site";
-import {
-  TAXONOMY_EDGES,
-  taxonomyNodesForCurrency,
-  tissueSuppliersForCurrency,
-  tissueLineItemsForCurrency,
-  tissueDetailForCurrency,
-} from "@/lib/taxonomy-demo-data";
-import type { CurrencyInfo } from "@/lib/currency";
+import { InvoiceLabelledOutputPanel } from "./InvoiceLabelledOutputPanel";
 import styles from "./InvoiceDataExtraction.module.css";
 
 export interface InvoiceDataExtractionCopy {
@@ -185,9 +176,9 @@ function dsChip(ok: boolean) {
 /** "Every line, labelled" — the taxonomy fold-out below the worked-example
  * table, matching design/refs/solution-invoice-extraction.dc.html. Built
  * from the reusable TaxonomyTree/BreakdownPanel components. Amounts are
- * converted to the visitor's currency by the caller (see
- * lib/currency.ts / lib/taxonomy-demo-data.ts). */
-function LabelledOutputSection({ copy, currency }: { copy: InvoiceDataExtractionCopy["labelledOutput"]; currency: CurrencyInfo }) {
+ * converted to the visitor's currency in the browser (see
+ * InvoiceLabelledOutputPanel), so the page stays static. */
+function LabelledOutputSection({ copy }: { copy: InvoiceDataExtractionCopy["labelledOutput"] }) {
   return (
     <Section background="soft" paddingTop={0}>
       <div className={styles.labelledOutputStack}>
@@ -195,31 +186,13 @@ function LabelledOutputSection({ copy, currency }: { copy: InvoiceDataExtraction
           <SectionHeader eyebrow={copy.eyebrow} title={copy.title} lead={copy.lead} />
           <span className={styles.caption}>{copy.illustrativeLabel}</span>
         </div>
-        <div className={styles.labelledOutputPanel}>
-          <TaxonomyTree
-            columns={["Segment", "Family", "Class", "Commodity"]}
-            nodes={taxonomyNodesForCurrency(currency)}
-            edges={TAXONOMY_EDGES}
-            className={styles.labelledOutputTree}
-          />
-          <BreakdownPanel
-            breakdownLabel={copy.breakdownLabel}
-            name="Toilet tissue"
-            detail={tissueDetailForCurrency(currency)}
-            suppliersLabel={copy.suppliersLabel}
-            suppliers={tissueSuppliersForCurrency(currency)}
-            lineItemsLabel={copy.lineItemsLabel}
-            columnLabels={{ description: copy.columnDescription, qty: copy.columnQty, unit: copy.columnUnit, total: copy.columnTotal }}
-            lineItems={tissueLineItemsForCurrency(currency)}
-            className={styles.labelledOutputBreakdown}
-          />
-        </div>
+        <InvoiceLabelledOutputPanel copy={copy} />
       </div>
     </Section>
   );
 }
 
-export function InvoiceDataExtractionPage({ copy, currency }: { copy: InvoiceDataExtractionCopy; currency: CurrencyInfo }) {
+export function InvoiceDataExtractionPage({ copy }: { copy: InvoiceDataExtractionCopy }) {
   const sections: SolutionSection[] = [
     {
       type: "statBand",
@@ -294,7 +267,7 @@ export function InvoiceDataExtractionPage({ copy, currency }: { copy: InvoiceDat
     {
       type: "custom",
       key: "labelledOutput",
-      node: <LabelledOutputSection copy={copy.labelledOutput} currency={currency} />,
+      node: <LabelledOutputSection copy={copy.labelledOutput} />,
     },
     {
       type: "outcomeCards",

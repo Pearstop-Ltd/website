@@ -1,5 +1,3 @@
-import { headers } from "next/headers";
-
 export type CurrencyCode = "GBP" | "EUR" | "USD" | "ZAR";
 
 export interface CurrencyInfo {
@@ -40,16 +38,12 @@ export function currencyForCountry(countryCode: string | null | undefined): Curr
   return CURRENCIES.USD;
 }
 
-/** Reads the visitor's country from the Vercel edge geo header (set
- * automatically in production; absent in local dev, where we fall back to
- * EUR — see currencyForCountry). Call once per request from a server
- * component and thread the result down as a prop — cheaper than re-reading
- * headers() per section. */
-export async function getRequestCurrency(): Promise<CurrencyInfo> {
-  const headerList = await headers();
-  const country = headerList.get("x-vercel-ip-country");
-  return currencyForCountry(country);
-}
+/** Cookie the proxy (proxy.ts) sets from Vercel's `x-vercel-ip-country`
+ * edge header, so pages can stay statically cached and still show amounts in
+ * the visitor's currency: the browser reads it (see
+ * components/site/useVisitorCurrency.ts) instead of the server reading the
+ * request header, which would force every page render onto a function. */
+export const COUNTRY_COOKIE = "pearstop_country";
 
 /** Converts a GBP base amount into the target currency and formats it with
  * the currency's symbol, e.g. formatMoney(29600, EUR) -> "€34,336". */

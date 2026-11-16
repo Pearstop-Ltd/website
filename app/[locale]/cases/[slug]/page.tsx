@@ -3,10 +3,18 @@ import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { CTABand, PageHero, QuoteBox, StatsGrid } from "@/components/content";
 import { alternateLanguages, siteConfig } from "@/lib/site";
+import { routing } from "@/i18n/routing";
 
 const SLUG_NAMESPACES: Record<string, string> = {
   fmo: "CaseFmo"
 };
+
+export function generateStaticParams() {
+  return routing.locales.flatMap((locale) => Object.keys(SLUG_NAMESPACES).map((slug) => ({ locale, slug })));
+}
+
+// Unknown slugs 404 at the CDN instead of rendering on demand.
+export const dynamicParams = false;
 
 function titleFromSlug(slug: string) {
   return slug

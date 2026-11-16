@@ -6,17 +6,10 @@ import { PageHero } from "@/components/content";
 import { FaqSchema } from "@/components/blog";
 import { FaqSection } from "@/components/site/FaqSection";
 import { FaqHighlight } from "@/components/site/FaqHighlight";
-import { LabelledOutputPanel } from "@/components/site/LabelledOutputPanel";
+import { VisitorCurrencyLabelledOutputPanel } from "@/components/site/VisitorCurrencyLabelledOutputPanel";
 import { SampleRequestModal } from "@/components/sample-request-modal";
 import { alternateLanguages, siteConfig } from "@/lib/site";
-import {
-  TAXONOMY_EDGES,
-  taxonomyNodesForCurrency,
-  tissueSuppliersForCurrency,
-  tissueLineItemsForCurrency,
-  tissueDetailForCurrency,
-} from "@/lib/taxonomy-demo-data";
-import { getRequestCurrency } from "@/lib/currency";
+import { TAXONOMY_EDGES } from "@/lib/taxonomy-demo-data";
 
 const organizationSchema = {
   "@context": "https://schema.org",
@@ -91,7 +84,6 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   setRequestLocale(locale);
   const prefix = locale === "en" ? "" : `/${locale}`;
   const t = await getTranslations("Home");
-  const currency = await getRequestCurrency();
 
   const problemQuotes = t.raw("problemQuotes.items") as ProblemQuote[];
   const whoTiles = t.raw("who.tiles") as WhoTile[];
@@ -241,20 +233,17 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         </div>
       </section>
 
-      <LabelledOutputPanel
+      <VisitorCurrencyLabelledOutputPanel
         contained
         background="soft"
         eyebrow={t("labelledOutput.eyebrow")}
         title={t("labelledOutput.title")}
         lead={t("labelledOutput.lead")}
         columns={["Segment", "Family", "Class", "Commodity"]}
-        nodes={taxonomyNodesForCurrency(currency)}
         edges={TAXONOMY_EDGES}
         breakdownLabel={t("labelledOutput.breakdownLabel")}
         name="Toilet tissue"
-        detail={tissueDetailForCurrency(currency)}
         suppliersLabel={t("labelledOutput.suppliersLabel")}
-        suppliers={tissueSuppliersForCurrency(currency)}
         lineItemsLabel={t("labelledOutput.lineItemsLabel")}
         columnLabels={{
           description: t("labelledOutput.columnDescription"),
@@ -262,7 +251,6 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           unit: t("labelledOutput.columnUnit"),
           total: t("labelledOutput.columnTotal"),
         }}
-        lineItems={tissueLineItemsForCurrency(currency)}
       />
 
       <section className="section-soft" aria-labelledby="demo-heading">

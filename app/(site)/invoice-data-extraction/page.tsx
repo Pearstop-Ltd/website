@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { InvoiceDataExtractionPage, type InvoiceDataExtractionCopy } from "@/components/site/pages/InvoiceDataExtraction";
 import { alternateLanguages, siteConfig } from "@/lib/site";
-import { getRequestCurrency } from "@/lib/currency";
 import enMessages from "../../../messages/en.json";
 
 const PAGE_URL = `${siteConfig.url}/invoice-data-extraction`;
@@ -60,14 +59,13 @@ const breadcrumbSchema = {
 };
 
 export default async function InvoiceDataExtractionRoute() {
-  const currency = await getRequestCurrency();
   return (
     <>
       <Script id="service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
-      <InvoiceDataExtractionPage copy={copy} currency={currency} />
+      <InvoiceDataExtractionPage copy={copy} />
     </>
   );
 }
